@@ -1,40 +1,46 @@
 ---
-title: "C&#243;mo: Animar un objeto Boolean mediante fotogramas clave | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, valores Boolean con fotogramas clave"
-  - "Boolean (valores), animar con fotogramas clave"
-  - "fotogramas clave, animar valores Boolean con"
+title: "Cómo: Animar un objeto Boolean mediante fotogramas clave"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Booleans [WPF], animating with key frames
+- animation [WPF], Booleans with key frames
+- key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0ac129bf133cca88a6d2f6a724d25ea2519cb72e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Animar un objeto Boolean mediante fotogramas clave
-En este ejemplo se muestra cómo animar el valor de propiedad de tipo Boolean de un control <xref:System.Windows.Controls.Button> mediante fotogramas clave.  
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a><span data-ttu-id="9142f-102">Cómo: Animar un objeto Boolean mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9142f-102">How to: Animate a Boolean by Using Key Frames</span></span>
+<span data-ttu-id="9142f-103">Este ejemplo muestra cómo animar el valor de propiedad booleana de una <xref:System.Windows.Controls.Button> control mediante el uso de fotogramas clave.</span><span class="sxs-lookup"><span data-stu-id="9142f-103">This example shows how to animate the Boolean property value of a <xref:System.Windows.Controls.Button> control by using key frames.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza la clase <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> para animar la propiedad <xref:System.Windows.UIElement.IsEnabled%2A> de un control <xref:System.Windows.Controls.Button>.  Todos los fotogramas clave de este ejemplo utilizan una instancia de la clase <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame>.  Los fotogramas clave discretos como <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> crean saltos súbitos entre los valores, es decir, el movimiento de la animación es brusco.  
+## <a name="example"></a><span data-ttu-id="9142f-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9142f-104">Example</span></span>  
+ <span data-ttu-id="9142f-105">En el ejemplo siguiente se usa el <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> clase para animar la <xref:System.Windows.UIElement.IsEnabled%2A> propiedad de un <xref:System.Windows.Controls.Button> control.</span><span class="sxs-lookup"><span data-stu-id="9142f-105">The following example uses the <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> class to animate the <xref:System.Windows.UIElement.IsEnabled%2A> property of a <xref:System.Windows.Controls.Button> control.</span></span> <span data-ttu-id="9142f-106">Todos los fotogramas clave en este ejemplo utilizan una instancia de la <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> clase.</span><span class="sxs-lookup"><span data-stu-id="9142f-106">All the key frames in this example use an instance of the <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> class.</span></span> <span data-ttu-id="9142f-107">Los fotogramas clave discretos como <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> crean saltos súbitos entre valores, es decir, el movimiento de la animación es irregular.</span><span class="sxs-lookup"><span data-stu-id="9142f-107">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> create sudden jumps between values, that is, the movement of the animation is jerky.</span></span>  
   
  [!code-csharp[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/BooleanAnimationUsingKeyFramesExample.cs#booleananimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/booleananimationusingkeyframesexample.vb#booleananimationusingkeyframeswholepage)]
- [!code-xml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
   
- Para obtener el ejemplo completo, vea [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ <span data-ttu-id="9142f-108">Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](http://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="9142f-108">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>   
- <xref:System.Windows.UIElement.IsEnabled%2A>   
- <xref:System.Windows.Controls.Button>   
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Temas "Cómo..." de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="9142f-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="9142f-109">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
+ <xref:System.Windows.UIElement.IsEnabled%2A>  
+ <xref:System.Windows.Controls.Button>  
+ [<span data-ttu-id="9142f-110">Información general sobre animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9142f-110">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="9142f-111">Temas de procedimientos de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="9142f-111">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

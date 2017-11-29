@@ -1,62 +1,82 @@
 ---
-title: "Integer (Tipo de datos, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Integer"
-  - "Integer"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "% (carácter de tipo identificador)"
-  - "tipos de datos [Visual Basic], asignar"
-  - "tipos de datos [Visual Basic], integrales"
-  - "valores enumerados"
-  - "I (carácter de tipo literal)"
-  - "caracteres de tipo identificador, %"
-  - "Integer (tipo de datos)"
-  - "números enteros"
-  - "enteros, tipos de datos"
-  - "enteros, tipos"
-  - "tipos de datos integrales"
-  - "caracteres de tipo literal, I"
-  - "números, enteros"
-  - "números, enteros"
-  - "números enteros"
+title: Integer (Tipo de datos, Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Integer
+- Integer
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- enumerated values [Visual Basic]
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- literal type characters [Visual Basic], I
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- '% identifier type character'
+- data types [Visual Basic], assigning
+- identifier type characters [Visual Basic], %
+- I literal type character [Visual Basic]
+- Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 69c7fb6caf5d9a10c7d033d1ba0a05c9230d472c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Integer (Tipo de datos, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+# <a name="integer-data-type-visual-basic"></a><span data-ttu-id="0470f-102">Tipo de datos entero (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0470f-102">Integer data type (Visual Basic)</span></span>
+<span data-ttu-id="0470f-103">Contiene enteros de 32 bits con signo (4 bytes) comprendidos en el intervalo entre -2.147.483.648 y 2.147.483.647.</span><span class="sxs-lookup"><span data-stu-id="0470f-103">Holds signed 32-bit (4-byte) integers that range in value from -2,147,483,648 through 2,147,483,647.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="0470f-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0470f-104">Remarks</span></span>
+ <span data-ttu-id="0470f-105">El tipo de datos `Integer` proporciona un rendimiento óptimo en un procesador de 32 bits.</span><span class="sxs-lookup"><span data-stu-id="0470f-105">The `Integer` data type provides optimal performance on a 32-bit processor.</span></span> <span data-ttu-id="0470f-106">Los demás tipos enteros son más lentos a la hora de cargarse y almacenarse en la memoria.</span><span class="sxs-lookup"><span data-stu-id="0470f-106">The other integral types are slower to load and store from and to memory.</span></span>  
+  
+ <span data-ttu-id="0470f-107">El valor predeterminado de `Integer` es 0.</span><span class="sxs-lookup"><span data-stu-id="0470f-107">The default value of `Integer` is 0.</span></span>  
 
-Contiene enteros de 32 bits con signo \(4 bytes\) comprendidos en el intervalo entre \-2.147.483.648 y 2.147.483.647.  
+## <a name="literal-assignments"></a><span data-ttu-id="0470f-108">Asignaciones de literales</span><span class="sxs-lookup"><span data-stu-id="0470f-108">Literal assignments</span></span>
+
+<span data-ttu-id="0470f-109">Puede declarar e inicializar un `Integer` variable asignarle un decimal literal, un literal hexadecimal, un literal octal, o (a partir de Visual Basic de 2017) un literal binario.</span><span class="sxs-lookup"><span data-stu-id="0470f-109">You can declare and initialize an `Integer` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.</span></span> <span data-ttu-id="0470f-110">Si el literal entero está fuera del intervalo de `Integer` (es decir, si es inferior a <xref:System.Int32.MinValue?displayProperty=nameWithType> o mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>, se produce un error de compilación.</span><span class="sxs-lookup"><span data-stu-id="0470f-110">If the integer literal is outside the range of `Integer` (that is, if it is less than <xref:System.Int32.MinValue?displayProperty=nameWithType> or greater than <xref:System.Int32.MaxValue?displayProperty=nameWithType>, a compilation error occurs.</span></span>
+
+<span data-ttu-id="0470f-111">En el ejemplo siguiente, los enteros que equivalen a 16 342 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `Integer`.</span><span class="sxs-lookup"><span data-stu-id="0470f-111">In the following example, integers equal to 16,342 that are represented as decimal, hexadecimal, and binary literals are assigned to `Integer` values.</span></span>
+
+[!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
+
+> [!NOTE]
+> <span data-ttu-id="0470f-112">Use el prefijo `&h` o `&H` para denotar un literal hexadecimal, el prefijo `&b` o `&B` para denotar un literal binario y el prefijo `&o` o `&O` para denotar un literal octal.</span><span class="sxs-lookup"><span data-stu-id="0470f-112">You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal.</span></span> <span data-ttu-id="0470f-113">Los literales decimales no tienen prefijo.</span><span class="sxs-lookup"><span data-stu-id="0470f-113">Decimal literals have no prefix.</span></span>
+
+<span data-ttu-id="0470f-114">A partir de Visual Basic de 2017, también puede utilizar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como en el ejemplo siguiente se muestra.</span><span class="sxs-lookup"><span data-stu-id="0470f-114">Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
+
+[!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
+
+<span data-ttu-id="0470f-115">También pueden incluir literales numéricos el `I` [escriba carácter](../../programming-guide\language-features\data-types/type-characters.md) para denotar el `Integer` tipo de datos, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="0470f-115">Numeric literals can also include the `I` [type character](../../programming-guide\language-features\data-types/type-characters.md) to denote the `Integer` data type, as the following example shows.</span></span>
+
+```vb
+Dim number = &H035826I
+```
+
+## <a name="programming-tips"></a><span data-ttu-id="0470f-116">Sugerencias de programación</span><span class="sxs-lookup"><span data-stu-id="0470f-116">Programming tips</span></span>
+
+-   <span data-ttu-id="0470f-117">**Consideraciones de interoperabilidad.**</span><span class="sxs-lookup"><span data-stu-id="0470f-117">**Interop Considerations.**</span></span> <span data-ttu-id="0470f-118">Si interactúa con componentes no se han escrito para .NET Framework, como los objetos de automatización o COM, recuerde que `Integer` tiene un ancho de datos diferente (16 bits) en otros entornos.</span><span class="sxs-lookup"><span data-stu-id="0470f-118">If you are interfacing with components not written for the .NET Framework, such as Automation or COM objects, remember that `Integer` has a different data width (16 bits) in other environments.</span></span> <span data-ttu-id="0470f-119">Al pasar un argumento de 16 bits a esos componentes, declárelo en el código de Visual Basic como `Short` en lugar de como `Integer`.</span><span class="sxs-lookup"><span data-stu-id="0470f-119">If you are passing a 16-bit argument to such a component, declare it as `Short` instead of `Integer` in your new Visual Basic code.</span></span>  
   
-## Comentarios  
- El tipo de datos `Integer` proporciona un rendimiento óptimo en un procesador de 32 bits.  Los demás tipos enteros son más lentos a la hora de cargarse y almacenarse en la memoria.  
+-   <span data-ttu-id="0470f-120">**De ampliación.**</span><span class="sxs-lookup"><span data-stu-id="0470f-120">**Widening.**</span></span> <span data-ttu-id="0470f-121">El tipo de datos `Integer` se amplía a `Long`, `Decimal`, `Single` o `Double`.</span><span class="sxs-lookup"><span data-stu-id="0470f-121">The `Integer` data type widens to `Long`, `Decimal`, `Single`, or `Double`.</span></span> <span data-ttu-id="0470f-122">Esto significa que puede convertir un tipo de datos `Integer` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0470f-122">This means you can convert `Integer` to any one of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
   
- El valor predeterminado de `Integer` es 0.  
+-   <span data-ttu-id="0470f-123">**Caracteres de tipo.**</span><span class="sxs-lookup"><span data-stu-id="0470f-123">**Type Characters.**</span></span> <span data-ttu-id="0470f-124">Al agregar el carácter de tipo literal `I` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Integer`.</span><span class="sxs-lookup"><span data-stu-id="0470f-124">Appending the literal type character `I` to a literal forces it to the `Integer` data type.</span></span> <span data-ttu-id="0470f-125">Si se agrega el carácter de tipo identificador `%` a cualquier identificador, se convierte forzosamente al tipo `Integer`.</span><span class="sxs-lookup"><span data-stu-id="0470f-125">Appending the identifier type character `%` to any identifier forces it to `Integer`.</span></span>  
   
-## Sugerencias de programación  
+-   <span data-ttu-id="0470f-126">**Tipo de Framework.**</span><span class="sxs-lookup"><span data-stu-id="0470f-126">**Framework Type.**</span></span> <span data-ttu-id="0470f-127">El tipo correspondiente en .NET Framework es la estructura <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0470f-127">The corresponding type in the .NET Framework is the <xref:System.Int32?displayProperty=nameWithType> structure.</span></span>  
   
--   **Consideraciones de interoperabilidad.** Si interactúa con componentes que no se han escrito para .NET Framework, por ejemplo, objetos de automatización o COM, recuerde que `Integer` tiene un ancho de datos diferente \(16 bits\) en otros entornos.  Al pasar un argumento de 16 bits a esos componentes, declárelo en el código de Visual Basic como `Short` en lugar de como `Integer`.  
-  
--   **Ampliación.** El tipo de datos `Integer` se amplía a `Long`, `Decimal`, `Single` o `Double`.  Esto significa que puede convertir un tipo de datos `Integer` en cualquiera de estos tipos sin que se produzca un error <xref:System.OverflowException?displayProperty=fullName>.  
-  
--   **Caracteres de tipo.** Al agregar el carácter de tipo literal `I` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Integer`.  Si se agrega el carácter de tipo identificador `%` a cualquier identificador, se convierte forzosamente al tipo `Integer`.  
-  
--   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Int32?displayProperty=fullName>.  
-  
-## Intervalo  
- Si intenta establecer una variable de un tipo entero en un número que está fuera del intervalo correspondiente a ese tipo, se produce un error.  Si intenta establecerlo en una fracción, el número se redondea hacia arriba o hacia abajo al valor entero más cercano.  Si el número está equidistante a dos valores enteros, el valor se redondea al entero par más próximo.  Este comportamiento minimiza los errores de redondeo que se derivan de redondear de forma consistente un valor de punto medio en una dirección única.  En el código siguiente se muestran ejemplos de redondeo.  
-  
-```  
+## <a name="range"></a><span data-ttu-id="0470f-128">Intervalo</span><span class="sxs-lookup"><span data-stu-id="0470f-128">Range</span></span>
+
+<span data-ttu-id="0470f-129">Si intenta establecer una variable de un tipo entero en un número que está fuera del intervalo correspondiente a ese tipo, se produce un error.</span><span class="sxs-lookup"><span data-stu-id="0470f-129">If you try to set a variable of an integral type to a number outside the range for that type, an error occurs.</span></span> <span data-ttu-id="0470f-130">Si intenta establecerlo en una fracción, el número se redondea hacia arriba o hacia abajo al valor entero más cercano.</span><span class="sxs-lookup"><span data-stu-id="0470f-130">If you try to set it to a fraction, the number is rounded up or down to the nearest integer value.</span></span> <span data-ttu-id="0470f-131">Si el número está equidistante a dos valores enteros, el valor se redondea al entero par más próximo.</span><span class="sxs-lookup"><span data-stu-id="0470f-131">If the number is equally close to two integer values, the value is rounded to the nearest even integer.</span></span> <span data-ttu-id="0470f-132">Este comportamiento minimiza los errores de redondeo que se derivan de redondear de forma consistente un valor de punto medio en una dirección única.</span><span class="sxs-lookup"><span data-stu-id="0470f-132">This behavior minimizes rounding errors that result from consistently rounding a midpoint value in a single direction.</span></span> <span data-ttu-id="0470f-133">En el código siguiente se muestran ejemplos de redondeo.</span><span class="sxs-lookup"><span data-stu-id="0470f-133">The following code shows examples of rounding.</span></span>  
+
+```vb  
 ' The valid range of an Integer variable is -2147483648 through +2147483647.  
 Dim k As Integer  
 ' The following statement causes an error because the value is too large.  
@@ -68,13 +88,14 @@ k = 4.5
 ' The following statement sets k to 6  
 ' Note, Visual Basic uses banker’s rounding (toward nearest even number)  
 k = 5.5  
-```  
-  
-## Vea también  
- <xref:System.Int32?displayProperty=fullName>   
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Long \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/long-data-type.md)   
- [Short \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+```
+
+## <a name="see-also"></a><span data-ttu-id="0470f-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="0470f-134">See also</span></span>
+
+<span data-ttu-id="0470f-135"><xref:System.Int32?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="0470f-135"><xref:System.Int32?displayProperty=nameWithType></span></span>   
+ [<span data-ttu-id="0470f-136">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="0470f-136">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="0470f-137">Long (tipo de datos)</span><span class="sxs-lookup"><span data-stu-id="0470f-137">Long Data Type</span></span>](../../../visual-basic/language-reference/data-types/long-data-type.md)  
+ [<span data-ttu-id="0470f-138">Short (tipo de datos)</span><span class="sxs-lookup"><span data-stu-id="0470f-138">Short Data Type</span></span>](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [<span data-ttu-id="0470f-139">Funciones de conversión de tipos</span><span class="sxs-lookup"><span data-stu-id="0470f-139">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="0470f-140">Resumen de conversión</span><span class="sxs-lookup"><span data-stu-id="0470f-140">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="0470f-141">Uso eficiente de tipos de datos</span><span class="sxs-lookup"><span data-stu-id="0470f-141">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

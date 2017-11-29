@@ -1,61 +1,60 @@
 ---
-title: "Convenciones tipogr&#225;ficas y de c&#243;digo (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedimientos recomendados, convenciones de código"
-  - "convenciones de código, Visual Basic"
-  - "convenciones, documentación"
-  - "convenciones, código en Visual Basic"
-  - "convenciones de documentos"
-  - "convenciones tipográficas"
-  - "código de Visual Basic, convenciones"
+title: "Convenciones tipográficas y de código (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- coding conventions [Visual Basic], Visual Basic
+- best practices [Visual Basic], coding conventions
+- conventions [Visual Basic], Visual Basic coding
+- typographic conventions [Visual Basic]
+- document conventions [Visual Basic]
+- conventions [Visual Basic], documentation
+- Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Convenciones tipogr&#225;ficas y de c&#243;digo (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-La documentación de Visual Basic utiliza las siguientes convenciones tipográficas y de código.  
+# <a name="typographic-and-code-conventions-visual-basic"></a><span data-ttu-id="9328b-102">Convenciones tipográficas y de código (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9328b-102">Typographic and Code Conventions (Visual Basic)</span></span>
+<span data-ttu-id="9328b-103">Documentación de Visual Basic utiliza la siguiente tipográfico y convenciones de código.</span><span class="sxs-lookup"><span data-stu-id="9328b-103">Visual Basic documentation uses the following typographic and code conventions.</span></span>  
   
-## Convenciones tipográficas  
+## <a name="typographic-conventions"></a><span data-ttu-id="9328b-104">Convenciones tipográficas</span><span class="sxs-lookup"><span data-stu-id="9328b-104">Typographic Conventions</span></span>  
   
-|Ejemplo|Descripción|  
+|<span data-ttu-id="9328b-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9328b-105">Example</span></span>|<span data-ttu-id="9328b-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="9328b-106">Description</span></span>|  
 |-------------|-----------------|  
-|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Las palabras clave específicas del lenguaje y los miembros en tiempo de ejecución se escriben con letras mayúsculas iniciales y tienen el formato que se muestra en este ejemplo.|  
-|PequeñoProyecto, ColecciónDeBotones|Las letras y frases que se le pide que escriba tienen el formato que se muestra en este ejemplo.|  
-|[Module \(Instrucción\)](../../visual-basic/language-reference/statements/module-statement.md)|Los vínculos que llevan a otra página de Ayuda tienen el formato que aparece en este ejemplo.|  
-|*objeto*, *NombreDeVariable*, `argumentList`|Los marcadores de posición para información que proporcione tienen el formato mostrado en este ejemplo.|  
-|\[ Shadows \], \[ *listaDeExpresiones* \]|En sintaxis, los elementos opcionales se encierran entre corchetes.|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|En sintaxis, si hay que elegir entre dos o más elementos, éstos se encierran entre llaves, separados por barras verticales.<br /><br /> Debe elegir uno, y sólo uno, de los elementos.|  
-|\[ `Protected` &#124; `Friend` \]|En sintaxis, si existe la posibilidad de elegir entre dos o más elementos, éstos se encierran entre corchetes, separados por barras verticales.<br /><br /> Puede seleccionar cualquier combinación de elementos o ningún elemento.|  
-|\[{ `ByVal` &#124; `ByRef` }\]|En sintaxis, si no puede seleccionar más de un elemento, pero también puede omitir los elementos por completo, éstos se encierran entre corchetes, acotados a su vez por llaves y separados por barras verticales.|  
-|*nombreDeMiembro* 1, *nombreDeMiembro*2, *nombreDeMiembro*3|Como se observa en el ejemplo, las diferentes instancias del mismo marcador de posición se distinguen por los subíndices.|  
-|*nombreDeMiembro1*<br /><br /> ...<br /><br /> *nombreDeMiembroN*|En sintaxis, se usan puntos suspensivos \(...\) para indicar un número indefinido de elementos del tipo situado inmediatamente delante de los puntos suspensivos.<br /><br /> En código, los puntos suspensivos significan que se ha omitido código en favor de una mayor claridad.|  
-|Esc, Entrar|Los nombres de las teclas y las secuencias de teclas en el teclado aparecen en mayúsculas.|  
-|ALT\+F1|Si aparece el signo más \(\+\) entre los nombres de las teclas, debe mantener presionada una tecla mientras presiona la otra.  Por ejemplo, Alt\+F1 significa mantener presionada la tecla Alt mientras se presiona la tecla F1.|  
+|<span data-ttu-id="9328b-107">`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`</span><span class="sxs-lookup"><span data-stu-id="9328b-107">`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`</span></span>|<span data-ttu-id="9328b-108">Palabras clave específicas del idioma y los miembros de tiempo de ejecución tienen letras mayúsculas iniciales y se da formato como se muestra en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9328b-108">Language-specific keywords and runtime members have initial uppercase letters and are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="9328b-109">**SmallProject**, **ButtonCollection**</span><span class="sxs-lookup"><span data-stu-id="9328b-109">**SmallProject**, **ButtonCollection**</span></span>|<span data-ttu-id="9328b-110">Palabras y frases que se le solicita que escriba se da formato como se muestra en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9328b-110">Words and phrases you are instructed to type are formatted as shown in this example.</span></span>|  
+|[<span data-ttu-id="9328b-111">Module (instrucción)</span><span class="sxs-lookup"><span data-stu-id="9328b-111">Module Statement</span></span>](../../visual-basic/language-reference/statements/module-statement.md)|<span data-ttu-id="9328b-112">Como se muestra en este ejemplo, se da formato a vínculos que puede hacer clic para ir a otra página de ayuda.</span><span class="sxs-lookup"><span data-stu-id="9328b-112">Links you can click to go to another Help page are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="9328b-113">*objeto*, *variableName*,`argumentList`</span><span class="sxs-lookup"><span data-stu-id="9328b-113">*object*, *variableName*, `argumentList`</span></span>|<span data-ttu-id="9328b-114">Tal como se muestra en este ejemplo, se da formato a los marcadores de posición para obtener información que proporcione.</span><span class="sxs-lookup"><span data-stu-id="9328b-114">Placeholders for information that you supply are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="9328b-115">[Shadows], [ *expressionList* ]</span><span class="sxs-lookup"><span data-stu-id="9328b-115">[ Shadows ], [ *expressionList* ]</span></span>|<span data-ttu-id="9328b-116">En la sintaxis, los elementos opcionales aparecen entre corchetes.</span><span class="sxs-lookup"><span data-stu-id="9328b-116">In syntax, optional items are enclosed in brackets.</span></span>|  
+|<span data-ttu-id="9328b-117">{ `Public` &#124; `Friend` &#124; `Private` }</span><span class="sxs-lookup"><span data-stu-id="9328b-117">{ `Public` &#124; `Friend` &#124; `Private` }</span></span>|<span data-ttu-id="9328b-118">En la sintaxis, cuando debe tomar una decisión entre dos o más elementos de los elementos están entre llaves y separados por barras verticales.</span><span class="sxs-lookup"><span data-stu-id="9328b-118">In syntax, when you must make a choice between two or more items, the items are enclosed in braces and separated by vertical bars.</span></span><br /><br /> <span data-ttu-id="9328b-119">Debe seleccionar uno y solo uno de los elementos.</span><span class="sxs-lookup"><span data-stu-id="9328b-119">You must select one, and only one, of the items.</span></span>|  
+|<span data-ttu-id="9328b-120">[ `Protected` &#124; `Friend` ]</span><span class="sxs-lookup"><span data-stu-id="9328b-120">[ `Protected` &#124; `Friend` ]</span></span>|<span data-ttu-id="9328b-121">En la sintaxis, si tiene la opción de seleccionar entre dos o más elementos de los elementos son entre corchetes y separados por barras verticales.</span><span class="sxs-lookup"><span data-stu-id="9328b-121">In syntax, when you have the option of selecting between two or more items, the items are enclosed in square brackets and separated by vertical bars.</span></span><br /><br /> <span data-ttu-id="9328b-122">Puede seleccionar cualquier combinación de los elementos, o no hay ningún elemento.</span><span class="sxs-lookup"><span data-stu-id="9328b-122">You can select any combination of the items, or no item.</span></span>|  
+|<span data-ttu-id="9328b-123">[{ `ByVal` &#124; `ByRef` }]</span><span class="sxs-lookup"><span data-stu-id="9328b-123">[{ `ByVal` &#124; `ByRef` }]</span></span>|<span data-ttu-id="9328b-124">En la sintaxis, cuando puede seleccionar no más de un elemento, pero también puede omitir los elementos por completo, los elementos se incluyen entre corchetes entre llaves y separados por barras verticales.</span><span class="sxs-lookup"><span data-stu-id="9328b-124">In syntax, when you can select no more than one item, but you can also omit the items completely, the items are enclosed in square brackets surrounded by braces and separated by vertical bars.</span></span>|  
+|<span data-ttu-id="9328b-125">*memberName*1, *memberName*2, *memberName*3</span><span class="sxs-lookup"><span data-stu-id="9328b-125">*memberName*1, *memberName*2, *memberName*3</span></span>|<span data-ttu-id="9328b-126">Varias instancias del mismo marcador de posición se distinguen por los subíndices, tal como se muestra en el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9328b-126">Multiple instances of the same placeholder are differentiated by subscripts, as shown in the example.</span></span>|  
+|<span data-ttu-id="9328b-127">*Nombredemiembro1*</span><span class="sxs-lookup"><span data-stu-id="9328b-127">*memberName1*</span></span><br /><br /> <span data-ttu-id="9328b-128">...</span><span class="sxs-lookup"><span data-stu-id="9328b-128">...</span></span><br /><br /> <span data-ttu-id="9328b-129">*memberNameN*</span><span class="sxs-lookup"><span data-stu-id="9328b-129">*memberNameN*</span></span>|<span data-ttu-id="9328b-130">En la sintaxis de puntos suspensivos (...) se utiliza para indicar un número indefinido de elementos del tipo inmediatamente delante de los puntos suspensivos.</span><span class="sxs-lookup"><span data-stu-id="9328b-130">In syntax, an ellipsis (...) is used to indicate an indefinite number of items of the kind immediately in front of the ellipsis.</span></span><br /><br /> <span data-ttu-id="9328b-131">En el código, puntos suspensivos significan que el código que se omite por razones de claridad.</span><span class="sxs-lookup"><span data-stu-id="9328b-131">In code, ellipses signify code omitted for the sake of clarity.</span></span>|  
+|<span data-ttu-id="9328b-132">ESC, ESCRIBA</span><span class="sxs-lookup"><span data-stu-id="9328b-132">ESC, ENTER</span></span>|<span data-ttu-id="9328b-133">Los nombres de clave y las secuencias de claves en el teclado aparecen en todas las letras mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="9328b-133">Key names and key sequences on the keyboard appear in all uppercase letters.</span></span>|  
+|<span data-ttu-id="9328b-134">ALT + F1</span><span class="sxs-lookup"><span data-stu-id="9328b-134">ALT+F1</span></span>|<span data-ttu-id="9328b-135">Cuando aparezca la signos más (+) entre los nombres de clave, debe mantener presionada una tecla mientras presiona la otra.</span><span class="sxs-lookup"><span data-stu-id="9328b-135">When plus signs (+) appear between key names, you must hold down one key while pressing the other.</span></span> <span data-ttu-id="9328b-136">Por ejemplo, ALT + F1 significa mantener presionada la tecla ALT mientras presiona la tecla F1.</span><span class="sxs-lookup"><span data-stu-id="9328b-136">For example, ALT+F1 means hold down the ALT key while pressing the F1 key.</span></span>|  
   
-## Convenciones de código  
+## <a name="code-conventions"></a><span data-ttu-id="9328b-137">Convenciones de código</span><span class="sxs-lookup"><span data-stu-id="9328b-137">Code Conventions</span></span>  
   
-|Ejemplo|Descripción|  
+|<span data-ttu-id="9328b-138">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9328b-138">Example</span></span>|<span data-ttu-id="9328b-139">Descripción</span><span class="sxs-lookup"><span data-stu-id="9328b-139">Description</span></span>|  
 |-------------|-----------------|  
-|`sampleString = "Hello, world!"`|Los ejemplos de códigos aparecen con una fuente de punto fijo y tienen el formato que aparece en este ejemplo.|  
-|La instrucción anterior establece el valor de `sampleString` en "Hello, world\!".|Los elementos de código en texto explicativo aparecen en una fuente de punto fijo, como se muestra en este ejemplo.|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Los comentarios de código se introducen mediante un apóstrofo \('\) o la palabra clave REM.|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|Un espacio seguido de un signo de subrayado \( \_\) al final de una línea indica que la instrucción continúa en la línea siguiente.|  
+|`sampleString = "Hello, world!"`|<span data-ttu-id="9328b-140">Ejemplos de código aparecen en una fuente de punto fijo y se da formato como se muestra en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9328b-140">Code samples appear in a fixed-pitch font and are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="9328b-141">La instrucción anterior establece el valor de `sampleString` a "Hello, world!"</span><span class="sxs-lookup"><span data-stu-id="9328b-141">The previous statement sets the value of `sampleString` to "Hello, world!"</span></span>|<span data-ttu-id="9328b-142">Elementos de código en texto explicativo aparecen en una fuente de tamaño fijo, como se muestra en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9328b-142">Code elements in explanatory text appear in a fixed-pitch font, as shown in this example.</span></span>|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|<span data-ttu-id="9328b-143">Comentarios de código se introducen mediante un apóstrofo (') o la palabra clave REM.</span><span class="sxs-lookup"><span data-stu-id="9328b-143">Code comments are introduced by an apostrophe (') or the REM keyword.</span></span>|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|<span data-ttu-id="9328b-144">Un espacio seguido por un carácter de subrayado (_) al final de una línea indica que la instrucción continúa en la línea siguiente.</span><span class="sxs-lookup"><span data-stu-id="9328b-144">A space followed by an underscore ( _) at the end of a line indicates that the statement continues on the following line.</span></span>|  
   
-## Vea también  
- [Referencia del lenguaje Visual Basic](../../visual-basic/language-reference/index.md)   
- [Palabras clave](../../visual-basic/language-reference/keywords/index.md)   
- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)   
- [Convenciones de nomenclatura de Visual Basic](../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [Cómo: Interrumpir y combinar instrucciones en código](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)   
- [Comentarios en código](../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+## <a name="see-also"></a><span data-ttu-id="9328b-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="9328b-145">See Also</span></span>  
+ [<span data-ttu-id="9328b-146">Referencia del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9328b-146">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ [<span data-ttu-id="9328b-147">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="9328b-147">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="9328b-148">Miembros de la biblioteca en tiempo de ejecución de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9328b-148">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="9328b-149">Convenciones de nomenclatura de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9328b-149">Visual Basic Naming Conventions</span></span>](../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [<span data-ttu-id="9328b-150">Interrumpir y combinar instrucciones en código</span><span class="sxs-lookup"><span data-stu-id="9328b-150">How to: Break and Combine Statements in Code</span></span>](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+ [<span data-ttu-id="9328b-151">Comentarios en código</span><span class="sxs-lookup"><span data-stu-id="9328b-151">Comments in Code</span></span>](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

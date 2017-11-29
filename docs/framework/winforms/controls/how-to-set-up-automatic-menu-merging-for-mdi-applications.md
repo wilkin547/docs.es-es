@@ -1,46 +1,47 @@
 ---
-title: "C&#243;mo: Configurar la combinaci&#243;n autom&#225;tica de men&#250;s para aplicaciones MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MenuStrip, combinar"
-  - "Combinación, automática de menús"
+title: "Cómo: Configurar la combinación automática de menús para aplicaciones MDI"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip [Windows Forms], merging
+- Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e99aed38ed6c3af3424c264631f0eaf27e46af7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Configurar la combinaci&#243;n autom&#225;tica de men&#250;s para aplicaciones MDI
-En el procedimiento siguiente se describen los pasos básicos para configurar la combinación automática en una aplicación de interfaz de múltiples documentos \(MDI\) con <xref:System.Windows.Forms.MenuStrip>.  
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a><span data-ttu-id="1dc3c-102">Cómo: Configurar la combinación automática de menús para aplicaciones MDI</span><span class="sxs-lookup"><span data-stu-id="1dc3c-102">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>
+<span data-ttu-id="1dc3c-103">El siguiente procedimiento proporciona los pasos básicos para configurar la combinación automática en una aplicación de interfaz de múltiples documentos (MDI) con <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-103">The following procedure gives the basic steps for setting up automatic merging in a multiple-document interface (MDI) application with <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-### Para configurar la combinación automática de menús  
+### <a name="to-set-up-automatic-menu-merging"></a><span data-ttu-id="1dc3c-104">Para configurar la combinación automática de menús</span><span class="sxs-lookup"><span data-stu-id="1dc3c-104">To set up automatic menu merging</span></span>  
   
-1.  Cree el formulario primario de MDI estableciendo la propiedad <xref:System.Windows.Forms.Form.IsMdiContainer%2A> en `true`.  
+1.  <span data-ttu-id="1dc3c-105">Crear el formulario MDI primario estableciendo su <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-105">Create the MDI parent form by setting its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2.  Agregue un objeto <xref:System.Windows.Forms.MenuStrip> al elemento primario de MDI, estableciendo la propiedad <xref:System.Windows.Forms.Form.MainMenuStrip%2A> en <xref:System.Windows.Forms.MenuStrip>.  
+2.  <span data-ttu-id="1dc3c-106">Agregar un <xref:System.Windows.Forms.MenuStrip> para el formulario MDI primario, establecer su <xref:System.Windows.Forms.Form.MainMenuStrip%2A> propiedad a la que se <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-106">Add a <xref:System.Windows.Forms.MenuStrip> to the MDI parent, setting its <xref:System.Windows.Forms.Form.MainMenuStrip%2A> property to that <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-3.  Cree un formulario secundario de MDI y establezca su propiedad <xref:System.Windows.Forms.Form.MdiParent%2A> en el nombre del formulario principal.  
+3.  <span data-ttu-id="1dc3c-107">Crear un formulario MDI secundario y establecer su <xref:System.Windows.Forms.Form.MdiParent%2A> propiedad en el nombre del formulario primario.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-107">Create an MDI child form, and set its <xref:System.Windows.Forms.Form.MdiParent%2A> property to the name of the parent form.</span></span>  
   
-4.  Agregue un objeto <xref:System.Windows.Forms.MenuStrip> al formulario secundario de MDI.  
+4.  <span data-ttu-id="1dc3c-108">Agregar un <xref:System.Windows.Forms.MenuStrip> para el formulario MDI secundario.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-108">Add a <xref:System.Windows.Forms.MenuStrip> to the MDI child form.</span></span>  
   
-5.  En el formulario secundario, establezca la propiedad <xref:System.Windows.Forms.ToolStripItem.Visible%2A> de <xref:System.Windows.Forms.MenuStrip> en `false`.  
+5.  <span data-ttu-id="1dc3c-109">En el formulario secundario, establezca el <xref:System.Windows.Forms.ToolStripItem.Visible%2A> propiedad de la <xref:System.Windows.Forms.MenuStrip> a `false`.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-109">On the child form, set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property of the <xref:System.Windows.Forms.MenuStrip> to `false`.</span></span>  
   
-6.  Agregue elementos de menú a <xref:System.Windows.Forms.MenuStrip> del formulario secundario que desee combinar en <xref:System.Windows.Forms.MenuStrip> del formulario principal cuando se active el formulario secundario.  
+6.  <span data-ttu-id="1dc3c-110">Agregar elementos de menú para el formulario secundario <xref:System.Windows.Forms.MenuStrip> que desea combinar en el formulario principal <xref:System.Windows.Forms.MenuStrip> cuando se activa el formulario secundario.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-110">Add menu items to the child form's <xref:System.Windows.Forms.MenuStrip> that you want to merge into the parent form's <xref:System.Windows.Forms.MenuStrip> when the child form is activated.</span></span>  
   
-7.  Use la propiedad <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> en los elementos de menú del objeto <xref:System.Windows.Forms.MenuStrip> del formulario secundario para controlar cómo se combinan en el formulario principal.  
+7.  <span data-ttu-id="1dc3c-111">Use la <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> elementos de propiedad en el menú en el formulario secundario <xref:System.Windows.Forms.MenuStrip> para controlar cómo se combinan en el formulario principal.</span><span class="sxs-lookup"><span data-stu-id="1dc3c-111">Use the <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> property on the menu items in the child form's <xref:System.Windows.Forms.MenuStrip> to control how they merge into the parent form.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1dc3c-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="1dc3c-112">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [<span data-ttu-id="1dc3c-113">Información general sobre el control MenuStrip</span><span class="sxs-lookup"><span data-stu-id="1dc3c-113">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

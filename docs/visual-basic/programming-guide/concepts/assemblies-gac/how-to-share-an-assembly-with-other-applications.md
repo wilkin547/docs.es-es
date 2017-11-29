@@ -1,49 +1,40 @@
 ---
-title: "Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8065a66c8f7c7b9ccb9125b060b0c03cde273482
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 491791ba9b6f0cf6da86a160eddf8e78109b11c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)
-Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la mayoría de los programas sencillos constan de un ensamblado privado porque no se han diseñado para ser utilizados por otras aplicaciones.  
+# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a><span data-ttu-id="41135-102">Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41135-102">How to: Share an Assembly with Other Applications (Visual Basic)</span></span>
+<span data-ttu-id="41135-103">Los ensamblados pueden ser privados o compartidos: de forma predeterminada, la mayoría de los programas sencillos constan de un ensamblado privado porque no se diseñaron para ser usados por otras aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="41135-103">Assemblies can be private or shared: by default, most simple programs consist of a private assembly because they are not intended to be used by other applications.</span></span>  
   
- Para compartir un ensamblado con otras aplicaciones, debe colocarse en el [caché Global de ensamblados](http://msdn.microsoft.com/library/cf5eacd0-d3ec-4879-b6da-5fd5e4372202) (GAC).  
+ <span data-ttu-id="41135-104">Para compartir un ensamblado con otras aplicaciones, debe colocarse en la [caché global de ensamblados](../../../../framework/app-domains/gac.md) (GAC).</span><span class="sxs-lookup"><span data-stu-id="41135-104">In order to share an assembly with other applications, it must be placed in the [Global Assembly Cache](../../../../framework/app-domains/gac.md) (GAC).</span></span>  
   
-### <a name="sharing-an-assembly"></a>Compartir un ensamblado  
+### <a name="sharing-an-assembly"></a><span data-ttu-id="41135-105">Compartir un ensamblado</span><span class="sxs-lookup"><span data-stu-id="41135-105">Sharing an assembly</span></span>  
   
-1.  Cree el ensamblado. Para obtener más información, consulte [crear ensamblados](http://msdn.microsoft.com/library/54832ee9-dca8-4c8b-913c-c0b9d265e9a4).  
+1.  <span data-ttu-id="41135-106">Cree el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="41135-106">Create your assembly.</span></span> <span data-ttu-id="41135-107">Para obtener más información, vea [Creating Assemblies](../../../../framework/app-domains/create-assemblies.md) (Crear ensamblados).</span><span class="sxs-lookup"><span data-stu-id="41135-107">For more information, see [Creating Assemblies](../../../../framework/app-domains/create-assemblies.md).</span></span>  
   
-2.  Asignar un nombre seguro al ensamblado. Para obtener más información, consulte [Cómo: firmar un ensamblado con un nombre seguro](http://msdn.microsoft.com/library/2c30799a-a826-46b4-a25d-c584027a6c67).  
+2.  <span data-ttu-id="41135-108">Asigne un nombre seguro al ensamblado.</span><span class="sxs-lookup"><span data-stu-id="41135-108">Assign a strong name to your assembly.</span></span> <span data-ttu-id="41135-109">Para obtener más información, vea [Cómo: Firmar un ensamblado con un nombre seguro](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span><span class="sxs-lookup"><span data-stu-id="41135-109">For more information, see [How to: Sign an Assembly with a Strong Name](../../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>  
   
-3.  Asigne la información de versión al ensamblado. Para obtener más información, consulte [versiones del ensamblado](https://msdn.microsoft.com/library/51ket42z).  
+3.  <span data-ttu-id="41135-110">Asigne la información de versión al ensamblado.</span><span class="sxs-lookup"><span data-stu-id="41135-110">Assign version information to your assembly.</span></span> <span data-ttu-id="41135-111">Para obtener más información, vea [Versiones de los ensamblados](https://msdn.microsoft.com/library/51ket42z).</span><span class="sxs-lookup"><span data-stu-id="41135-111">For more information, see [Assembly Versioning](https://msdn.microsoft.com/library/51ket42z).</span></span>  
   
-4.  Agregue el ensamblado a la caché de ensamblados Global. Para obtener más información, consulte [Cómo: instalar un ensamblado en la caché de ensamblados Global](http://msdn.microsoft.com/library/a7e6f091-d02c-49ba-b736-7295cb0eb743).  
+4.  <span data-ttu-id="41135-112">Agregue el ensamblado a la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="41135-112">Add your assembly to the Global Assembly Cache.</span></span> <span data-ttu-id="41135-113">Para obtener más información, vea [Cómo: Instalar un ensamblado en la memoria caché global de ensamblados](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="41135-113">For more information, see [How to: Install an Assembly into the Global Assembly Cache](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).</span></span>  
   
-5.  Obtener acceso a los tipos contenidos en el ensamblado de las otras aplicaciones. Para obtener más información, consulte [Cómo: hacer referencia a un ensamblado con nombre seguro](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  <span data-ttu-id="41135-114">Obtenga acceso a los tipos contenidos en el ensamblado desde las otras aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="41135-114">Access the types contained in the assembly from the other applications.</span></span> <span data-ttu-id="41135-115">Para obtener más información, vea [Cómo: Hacer referencia a un ensamblado con nombre seguro](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).</span><span class="sxs-lookup"><span data-stu-id="41135-115">For more information, see [How to: Reference a Strong-Named Assembly](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
- [ensamblados y caché Global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Programar con ensamblados](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)
+## <a name="see-also"></a><span data-ttu-id="41135-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="41135-116">See Also</span></span>  
+ <span data-ttu-id="41135-117">[Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md) [ensamblados y caché Global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)</span><span class="sxs-lookup"><span data-stu-id="41135-117">[Programming Concepts](../../../../visual-basic/programming-guide/concepts/index.md) [Assemblies and the Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)</span></span>  
+ [<span data-ttu-id="41135-118">Programar con ensamblados</span><span class="sxs-lookup"><span data-stu-id="41135-118">Programming with Assemblies</span></span>](../../../../framework/app-domains/programming-with-assemblies.md)

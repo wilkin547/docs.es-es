@@ -1,51 +1,43 @@
 ---
-title: LINQ to XML Overview (Visual Basic) | Documentos de Microsoft
+title: "LINQ to XML Introducción (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 05d756bc5cd7655a5220c3564d120f90a59ce901
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 41dd5818dc33a690c7abe4c33aa7a7becfde2123
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML Overview (Visual Basic)
-XML se ha adoptado ampliamente como un modo de dar formato a datos en diversos contextos. Por ejemplo, puede encontrar XML en la web, en archivos de configuración, en archivos de Microsoft Office Word y en bases de datos.  
+# <a name="linq-to-xml-overview-visual-basic"></a><span data-ttu-id="d3d18-102">LINQ to XML Introducción (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d3d18-102">LINQ to XML Overview (Visual Basic)</span></span>
+<span data-ttu-id="d3d18-103">XML se ha adoptado ampliamente como un modo de dar formato a datos en diversos contextos.</span><span class="sxs-lookup"><span data-stu-id="d3d18-103">XML has been widely adopted as a way to format data in many contexts.</span></span> <span data-ttu-id="d3d18-104">Por ejemplo, puede encontrar XML en la web, en archivos de configuración, en archivos de Microsoft Office Word y en bases de datos.</span><span class="sxs-lookup"><span data-stu-id="d3d18-104">For example, you can find XML on the Web, in configuration files, in Microsoft Office Word files, and in databases.</span></span>  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] es un método actualizado y rediseñado para la programación con XML. Proporciona capacidades de modificación de documento en memoria de Document Object Model (DOM), y es compatible con expresiones de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Aunque estas expresiones de consulta difieren sintácticamente de XPath, proporcionan una funcionalidad similar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="d3d18-105"> es un método actualizado y rediseñado para la programación con XML.</span><span class="sxs-lookup"><span data-stu-id="d3d18-105"> is an up-to-date, redesigned approach to programming with XML.</span></span> <span data-ttu-id="d3d18-106">Proporciona capacidades de modificación de documento en memoria de Document Object Model (DOM), y es compatible con expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3d18-106">It provides the in-memory document modification capabilities of the Document Object Model (DOM), and supports [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span> <span data-ttu-id="d3d18-107">Aunque estas expresiones de consulta difieren sintácticamente de XPath, proporcionan una funcionalidad similar.</span><span class="sxs-lookup"><span data-stu-id="d3d18-107">Although these query expressions are syntactically different from XPath, they provide similar functionality.</span></span>  
   
-## <a name="linq-to-xml-developers"></a>Desarrolladores de LINQ to XML  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] se dirige a diversos desarrolladores. Para el desarrollador medio que solo desea completar una tarea, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] simplifica el código XML al proporcionar una experiencia de consulta similar a SQL. Con un poco de estudio, los programadores pueden aprender a escribir consultas sucintas y eficaces en el lenguaje de programación que prefieran.  
+## <a name="linq-to-xml-developers"></a><span data-ttu-id="d3d18-108">Desarrolladores de LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="d3d18-108">LINQ to XML Developers</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="d3d18-109"> se dirige a diversos desarrolladores.</span><span class="sxs-lookup"><span data-stu-id="d3d18-109"> targets a variety of developers.</span></span> <span data-ttu-id="d3d18-110">Para el desarrollador medio que solo desea completar una tarea, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica el código XML al proporcionar una experiencia de consulta similar a SQL.</span><span class="sxs-lookup"><span data-stu-id="d3d18-110">For an average developer who just wants to get something done, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] makes XML easier by providing a query experience that is similar to SQL.</span></span> <span data-ttu-id="d3d18-111">Con un poco de estudio, los programadores pueden aprender a escribir consultas sucintas y eficaces en el lenguaje de programación que prefieran.</span><span class="sxs-lookup"><span data-stu-id="d3d18-111">With just a bit of study, programmers can learn to write succinct and powerful queries in their programming language of choice.</span></span>  
   
- Los desarrolladores profesionales pueden usar [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] para aumentar considerablemente su productividad. Con [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], pueden escribir menos código, que a su vez resulte más expresivo, compacto y eficaz. Pueden usar expresiones de consulta de distintos dominios de datos simultáneamente.  
+ <span data-ttu-id="d3d18-112">Los desarrolladores profesionales pueden usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para aumentar considerablemente su productividad.</span><span class="sxs-lookup"><span data-stu-id="d3d18-112">Professional developers can use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to greatly increase their productivity.</span></span> <span data-ttu-id="d3d18-113">Con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], pueden escribir menos código, que a su vez resulte más expresivo, compacto y eficaz.</span><span class="sxs-lookup"><span data-stu-id="d3d18-113">With [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], they can write less code that is more expressive, more compact, and more powerful.</span></span> <span data-ttu-id="d3d18-114">Pueden usar expresiones de consulta de distintos dominios de datos simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="d3d18-114">They can use query expressions from multiple data domains at the same time.</span></span>  
   
-## <a name="what-is-linq-to-xml"></a>¿Qué es LINQ to XML?  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] es una interfaz de programación XML en memoria y habilitada para LINQ que permite trabajar con XML desde los lenguajes de programación de [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+## <a name="what-is-linq-to-xml"></a><span data-ttu-id="d3d18-115">¿Qué es LINQ to XML?</span><span class="sxs-lookup"><span data-stu-id="d3d18-115">What Is LINQ to XML?</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="d3d18-116"> es una interfaz de programación XML en memoria y habilitada para LINQ que permite trabajar con XML desde los lenguajes de programación de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3d18-116"> is a LINQ-enabled, in-memory XML programming interface that enables you to work with XML from within the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] programming languages.</span></span>  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]es como el modelo de objetos de documento (DOM) que pone el documento XML en memoria. Puede consultar y modificar el documento; una vez modificado, puede guardarlo en un archivo o serializarlo y enviarlo a través de Internet. Sin embargo, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] difiere de DOM: proporciona un nuevo modelo de objeto ligero y fáciles de usar, y que aprovecha las características de lenguaje en Visual Basic.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="d3d18-117"> se parece a Document Object Model (DOM) en lo que respecta a la inserción del documento XML en la memoria.</span><span class="sxs-lookup"><span data-stu-id="d3d18-117"> is like the Document Object Model (DOM) in that it brings the XML document into memory.</span></span> <span data-ttu-id="d3d18-118">Puede consultar y modificar el documento; una vez modificado, puede guardarlo en un archivo o serializarlo y enviarlo a través de Internet.</span><span class="sxs-lookup"><span data-stu-id="d3d18-118">You can query and modify the document, and after you modify it you can save it to a file or serialize it and send it over the Internet.</span></span> <span data-ttu-id="d3d18-119">Sin embargo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es diferente de DOM: proporciona un nuevo modelo de objeto que es ligero y más fácil trabajar con, y que aprovecha las características del lenguaje en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d3d18-119">However, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] differs from DOM: It provides a new object model that is lighter weight and easier to work with, and that takes advantage of language features in Visual Basic.</span></span>  
   
- La ventaja más importante de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] radica en su integración con [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]. Esta integración permite escribir consultas en el documento XML en memoria para recuperar colecciones de elementos y atributos. La capacidad de consulta de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] es comparable en cuanto a funcionalidad (aunque no cuanto a sintaxis) a XPath y XQuery. La integración de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] en Visual Basic, proporciona más fuerte escritura, tiempo de compilación la comprobación y compatibilidad del depurador mejorada.  
+ <span data-ttu-id="d3d18-120">La ventaja más importante de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] radica en su integración con [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3d18-120">The most important advantage of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is its integration with [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span></span> <span data-ttu-id="d3d18-121">Esta integración permite escribir consultas en el documento XML en memoria para recuperar colecciones de elementos y atributos.</span><span class="sxs-lookup"><span data-stu-id="d3d18-121">This integration enables you to write queries on the in-memory XML document to retrieve collections of elements and attributes.</span></span> <span data-ttu-id="d3d18-122">La capacidad de consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es comparable en cuanto a funcionalidad (aunque no cuanto a sintaxis) a XPath y XQuery.</span><span class="sxs-lookup"><span data-stu-id="d3d18-122">The query capability of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is comparable in functionality (although not in syntax) to XPath and XQuery.</span></span> <span data-ttu-id="d3d18-123">La integración de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en Visual Basic proporciona más rápida, tiempo de compilación comprobación y mejora de la compatibilidad del depurador.</span><span class="sxs-lookup"><span data-stu-id="d3d18-123">The integration of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] in Visual Basic provides stronger typing, compile-time checking, and improved debugger support.</span></span>  
   
- Otra ventaja de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] es la capacidad de usar los resultados de la consulta como parámetros en <xref:System.Xml.Linq.XElement>y <xref:System.Xml.Linq.XAttribute>constructores de objetos habilita un método eficaz para crear árboles XML.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> Este método, denominado *construcción funcional*, permite a los desarrolladores transformen fácilmente árboles XML de una forma a otra.  
+ <span data-ttu-id="d3d18-124">Otra ventaja de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es la capacidad de usar los resultados de la consulta como parámetros en constructores de objetos <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XAttribute>, que habilita un método eficaz para crear árboles XML.</span><span class="sxs-lookup"><span data-stu-id="d3d18-124">Another advantage of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is the ability to use query results as parameters to <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XAttribute> object constructors enables a powerful approach to creating XML trees.</span></span> <span data-ttu-id="d3d18-125">Este método, denominado *construcción funcional*, permite que los desarrolladores transformen fácilmente árboles XML de una forma a otra.</span><span class="sxs-lookup"><span data-stu-id="d3d18-125">This approach, called *functional construction*, enables developers to easily transform XML trees from one shape to another.</span></span>  
   
- Por ejemplo, podría tener un archivo XML típico de pedido de compra, como se describe en [archivo XML de ejemplo: pedido de compra típico (LINQ to XML)](http://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348). Mediante [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], podría ejecutar la siguiente consulta para obtener el valor del atributo de número de pieza relativo a cada elemento del pedido de compra:  
+ <span data-ttu-id="d3d18-126">Por ejemplo, podría tener un pedido de compra XML común, como el que se describe en [Sample XML File: Typical Purchase Order (LINQ to XML)](http://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]).</span><span class="sxs-lookup"><span data-stu-id="d3d18-126">For example, you might have a typical XML purchase order as described in [Sample XML File: Typical Purchase Order (LINQ to XML)](http://msdn.microsoft.com/library/0606c09f-6e43-4f8d-95c8-e8e2e08d2348).</span></span> <span data-ttu-id="d3d18-127">Mediante [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], podría ejecutar la siguiente consulta para obtener el valor del atributo de número de pieza relativo a cada elemento del pedido de compra:</span><span class="sxs-lookup"><span data-stu-id="d3d18-127">By using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you could run the following query to obtain the part number attribute value for every item element in the purchase order:</span></span>  
   
 ```vb  
 Dim partNos = _  
@@ -53,7 +45,7 @@ Dim partNos = _
     Select item.@PartNumber  
 ```  
   
- A modo de ejemplo, imagine que necesita una lista, ordenada por números de pieza, de los elementos con un valor superior a&100; $. Para obtener esta información, podría ejecutar la siguiente consulta:  
+ <span data-ttu-id="d3d18-128">A modo de ejemplo, imagine que necesita una lista, ordenada por números de pieza, de los elementos con un valor superior a 100 $.</span><span class="sxs-lookup"><span data-stu-id="d3d18-128">As another example, you might want a list, sorted by part number, of the items with a value greater than $100.</span></span> <span data-ttu-id="d3d18-129">Para obtener esta información, podría ejecutar la siguiente consulta:</span><span class="sxs-lookup"><span data-stu-id="d3d18-129">To obtain this information, you could run the following query:</span></span>  
   
 ```vb  
 Dim partNos = _  
@@ -64,24 +56,24 @@ Order By item.<PartNumber>.Value _
 Select item  
 ```  
   
- Además de estas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] capacidades, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] proporciona una interfaz de programación XML mejorada. Con [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], se puede:  
+ <span data-ttu-id="d3d18-130">Además de estas capacidades de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona una interfaz de programación XML mejorada.</span><span class="sxs-lookup"><span data-stu-id="d3d18-130">In addition to these [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] capabilities, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides an improved XML programming interface.</span></span> <span data-ttu-id="d3d18-131">Con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se puede:</span><span class="sxs-lookup"><span data-stu-id="d3d18-131">Using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you can:</span></span>  
   
--   Cargar XML a partir de archivos o secuencias.  
+-   <span data-ttu-id="d3d18-132">Cargar XML a partir de archivos o secuencias.</span><span class="sxs-lookup"><span data-stu-id="d3d18-132">Load XML from files or streams.</span></span>  
   
--   Serializar XML a archivos o secuencias.  
+-   <span data-ttu-id="d3d18-133">Serializar XML a archivos o secuencias.</span><span class="sxs-lookup"><span data-stu-id="d3d18-133">Serialize XML to files or streams.</span></span>  
   
--   Crear árboles XML desde cero mediante la construcción funcional.  
+-   <span data-ttu-id="d3d18-134">Crear árboles XML desde cero mediante la construcción funcional.</span><span class="sxs-lookup"><span data-stu-id="d3d18-134">Create XML from scratch by using functional construction.</span></span>  
   
--   Realizar consultas de XML con ejes de tipo XPath.  
+-   <span data-ttu-id="d3d18-135">Realizar consultas de XML con ejes de tipo XPath.</span><span class="sxs-lookup"><span data-stu-id="d3d18-135">Query XML using XPath-like axes.</span></span>  
   
--   Manipular el árbol XML en memoria con métodos como <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A>y <xref:System.Xml.Linq.XElement.SetValue%2A>.</xref:System.Xml.Linq.XElement.SetValue%2A> </xref:System.Xml.Linq.XNode.ReplaceWith%2A> </xref:System.Xml.Linq.XNode.Remove%2A> </xref:System.Xml.Linq.XContainer.Add%2A>  
+-   <span data-ttu-id="d3d18-136">Manipular el árbol XML en memoria con métodos como <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A> y <xref:System.Xml.Linq.XElement.SetValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="d3d18-136">Manipulate the in-memory XML tree by using methods such as <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A>, and <xref:System.Xml.Linq.XElement.SetValue%2A>.</span></span>  
   
--   Validar árboles XML mediante XSD.  
+-   <span data-ttu-id="d3d18-137">Validar árboles XML mediante XSD.</span><span class="sxs-lookup"><span data-stu-id="d3d18-137">Validate XML trees using XSD.</span></span>  
   
--   Usar una combinación de estas características para transformar las formas de los árboles XML.  
+-   <span data-ttu-id="d3d18-138">Usar una combinación de estas características para transformar las formas de los árboles XML.</span><span class="sxs-lookup"><span data-stu-id="d3d18-138">Use a combination of these features to transform XML trees from one shape into another.</span></span>  
   
-## <a name="creating-xml-trees"></a>Crear árboles XML  
- Una de la ventajas más significativas de la programación con [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] es la facilidad con que se pueden crear árboles XML. Por ejemplo, para crear un árbol XML pequeño, puede escribir código como sigue:  
+## <a name="creating-xml-trees"></a><span data-ttu-id="d3d18-139">Crear árboles XML</span><span class="sxs-lookup"><span data-stu-id="d3d18-139">Creating XML Trees</span></span>  
+ <span data-ttu-id="d3d18-140">Una de la ventajas más significativas de la programación con [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es la facilidad con que se pueden crear árboles XML.</span><span class="sxs-lookup"><span data-stu-id="d3d18-140">IOne of the most significant advantages of programming with [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is that it is easy to create XML trees.</span></span> <span data-ttu-id="d3d18-141">Por ejemplo, para crear un árbol XML pequeño, puede escribir código como se indica a continuación:</span><span class="sxs-lookup"><span data-stu-id="d3d18-141">For example, to create a small XML tree, you can write  code as follows:</span></span>  
   
 ```vb  
 Dim contacts = _  
@@ -100,12 +92,12 @@ Dim contacts = _
 </Contacts>  
 ```  
   
- El [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador traduce los literales XML en [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] llamadas al método.  
+ <span data-ttu-id="d3d18-142">El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador traduce los literales XML en [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] llamadas al método.</span><span class="sxs-lookup"><span data-stu-id="d3d18-142">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler translates XML literals into [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] method calls.</span></span>  
   
- Para obtener más información, consulte [crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
+ <span data-ttu-id="d3d18-143">Para obtener más información, consulte [crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).</span><span class="sxs-lookup"><span data-stu-id="d3d18-143">For more information, see [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq>   
- [Introducción (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)   
- [Información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="d3d18-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="d3d18-144">See Also</span></span>  
+ <xref:System.Xml.Linq>  
+ [<span data-ttu-id="d3d18-145">Introducción (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d3d18-145">Getting Started (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+ [<span data-ttu-id="d3d18-146">Información general sobre LINQ to XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d3d18-146">Overview of LINQ to XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ [<span data-ttu-id="d3d18-147">XML</span><span class="sxs-lookup"><span data-stu-id="d3d18-147">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)

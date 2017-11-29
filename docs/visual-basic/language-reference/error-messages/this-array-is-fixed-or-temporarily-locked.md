@@ -1,40 +1,38 @@
 ---
-title: "Esta matriz es fija o est&#225; bloqueada temporalmente (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID10"
-dev_langs: 
-  - "VB"
+title: "Esta matriz es fija o está bloqueada temporalmente (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: adff10d4ae61e45402df64ebaa3baf146371ff9e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Esta matriz es fija o est&#225; bloqueada temporalmente (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Este error tiene las causas posibles siguientes:  
+# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="a1534-102">Esta matriz es fija o está bloqueada temporalmente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a1534-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
+<span data-ttu-id="a1534-103">Este error tiene las siguientes causas posibles:</span><span class="sxs-lookup"><span data-stu-id="a1534-103">This error has the following possible causes:</span></span>  
   
--   Uso de `ReDim` para cambiar el número de elementos de una matriz de tamaño fijo.  
+-   <span data-ttu-id="a1534-104">Usar `ReDim` para cambiar el número de elementos de una matriz de tamaño fijo.</span><span class="sxs-lookup"><span data-stu-id="a1534-104">Using `ReDim` to change the number of elements of a fixed-size array.</span></span>  
   
--   Redimensionamiento de una matriz dinámica de nivel de módulo, donde se ha pasado un elemento como argumento a un procedimiento.  Si se ha pasado un elemento, se ha bloqueado la matriz para impedir la desasignación de memoria para el parámetro de referencia dentro del procedimiento.  
+-   <span data-ttu-id="a1534-105">Cambiar el tamaño de una matriz dinámica de nivel de módulo, en el que se ha pasado un elemento como un argumento a un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="a1534-105">Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure.</span></span> <span data-ttu-id="a1534-106">Si se pasa un elemento, la matriz está bloqueada para evitar la desasignación de memoria para el parámetro de referencia dentro del procedimiento.</span><span class="sxs-lookup"><span data-stu-id="a1534-106">If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.</span></span>  
   
--   Intento de asignar un valor a una variable `Variant` que contiene una matriz, pero la variable `Variant` está bloqueada actualmente.  
+-   <span data-ttu-id="a1534-107">Intenta asignar un valor a un `Variant` variable que contiene una matriz, pero la `Variant` está bloqueado actualmente.</span><span class="sxs-lookup"><span data-stu-id="a1534-107">Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a1534-108">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="a1534-108">To correct this error</span></span>  
   
-1.  Haga dinámica la matriz original en lugar de fija declarándola con `ReDim` \(si se ha declarado la matriz dentro del procedimiento\) o declarándola sin especificar el número de elementos \(si se ha declarado la matriz en el nivel de módulo\).  
+1.  <span data-ttu-id="a1534-109">Hacer que la matriz original dinámica en lugar de fija declarándola con `ReDim` (si la matriz se declara dentro de un procedimiento), o mediante la declaración sin especificar el número de elementos (si la matriz se declara en el nivel de módulo.</span><span class="sxs-lookup"><span data-stu-id="a1534-109">Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.</span></span>  
   
-2.  Determine si realmente necesita pasar el elemento, dado que es visible dentro de todos los procedimientos del módulo.  
+2.  <span data-ttu-id="a1534-110">Determine si realmente necesita pasar el elemento, ya que es visible dentro de todos los procedimientos en el módulo.</span><span class="sxs-lookup"><span data-stu-id="a1534-110">Determine whether you really need to pass the element, since it is visible within all procedures in the module.</span></span>  
   
-3.  Determine la causa del bloqueo del `Variant` y soluciónelo.  
+3.  <span data-ttu-id="a1534-111">Determinar la causa del bloqueo del `Variant` y soluciónelo.</span><span class="sxs-lookup"><span data-stu-id="a1534-111">Determine what is locking the `Variant` and remedy it.</span></span>  
   
-## Vea también  
- [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="a1534-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1534-112">See Also</span></span>  
+ [<span data-ttu-id="a1534-113">Matrices</span><span class="sxs-lookup"><span data-stu-id="a1534-113">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -1,40 +1,47 @@
 ---
-title: "C&#243;mo crear un participante de seguimiento personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo crear un participante de seguimiento personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef647068e6ec757de391015f4959335c29038cfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo crear un participante de seguimiento personalizado
-El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo.El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores.Los participantes de seguimiento usan estos registros de seguimiento.[!INCLUDE[wf](../../../includes/wf-md.md)] incluye un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de Seguimiento de eventos para Windows \(ETW\).Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.  
+# <a name="how-to-create-a-custom-tracking-participant"></a><span data-ttu-id="975fa-102">Cómo crear un participante de seguimiento personalizado</span><span class="sxs-lookup"><span data-stu-id="975fa-102">How to: Create a Custom Tracking Participant</span></span>
+<span data-ttu-id="975fa-103">El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="975fa-103">Workflow tracking provides visibility into the status of workflow execution.</span></span> <span data-ttu-id="975fa-104">El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores.</span><span class="sxs-lookup"><span data-stu-id="975fa-104">The workflow runtime emits tracking records that describe workflow lifecycle events, activity lifecycle events, bookmark resumptions, and faults.</span></span> <span data-ttu-id="975fa-105">Los participantes de seguimiento usan estos registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="975fa-105">These tracking records are consumed by tracking participants.</span></span> [!INCLUDE[wf](../../../includes/wf-md.md)]<span data-ttu-id="975fa-106"> incluye un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de Seguimiento de eventos para Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="975fa-106"> includes a standard tracking participant that writes tracking records as Event Tracing for Windows (ETW) events.</span></span> <span data-ttu-id="975fa-107">Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.</span><span class="sxs-lookup"><span data-stu-id="975fa-107">If that does not meet your requirements, you can also write a custom tracking participant.</span></span> <span data-ttu-id="975fa-108">Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.</span><span class="sxs-lookup"><span data-stu-id="975fa-108">This tutorial step describes how to create a custom tracking participant and tracking profile that capture the output of `WriteLine` activities so that they can be displayed to the user.</span></span>  
   
 > [!NOTE]
->  Cada uno de los temas del tutorial de introducción depende de los temas anteriores.Para completar este tema, primero debe finalizar los temas anteriores.Para descargar una versión completada o consultar una descripción en vídeo del tutorial, vea [Windows Workflow Foundation \(WF45\): tutorial de introducción](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="975fa-109">Cada uno de los temas del tutorial de introducción depende de los temas anteriores.</span><span class="sxs-lookup"><span data-stu-id="975fa-109">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="975fa-110">Para completar este tema, primero debe finalizar los temas anteriores.</span><span class="sxs-lookup"><span data-stu-id="975fa-110">To complete this topic, you must first complete the previous topics.</span></span> <span data-ttu-id="975fa-111">Para descargar una versión completada o ver un tutorial en vídeo del tutorial, vea [Windows Workflow Foundation (WF45) - Tutorial de introducción](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="975fa-111">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## En este tema  
+## <a name="in-this-topic"></a><span data-ttu-id="975fa-112">En este tema</span><span class="sxs-lookup"><span data-stu-id="975fa-112">In this topic</span></span>  
   
--   [Para crear el participante de seguimiento personalizado](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
+-   [<span data-ttu-id="975fa-113">Para crear al participante de seguimiento personalizado</span><span class="sxs-lookup"><span data-stu-id="975fa-113">To create the custom tracking participant</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
   
--   [Para crear el perfil de seguimiento y registrar el participante de seguimiento](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
+-   [<span data-ttu-id="975fa-114">Para crear el perfil de seguimiento y registrar al participante de seguimiento</span><span class="sxs-lookup"><span data-stu-id="975fa-114">To create the tracking profile and register the tracking participant</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
   
--   [Para mostrar la información de seguimiento](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
+-   [<span data-ttu-id="975fa-115">Para mostrar la información de seguimiento</span><span class="sxs-lookup"><span data-stu-id="975fa-115">To display the tracking information</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
   
--   [Para compilar y ejecutar la aplicación](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="975fa-116">Para compilar y ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="975fa-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a> Para crear el participante de seguimiento personalizado  
+###  <span data-ttu-id="975fa-117"><a name="BKMK_CustomTrackingParticipant"></a>Para crear al participante de seguimiento personalizado</span><span class="sxs-lookup"><span data-stu-id="975fa-117"><a name="BKMK_CustomTrackingParticipant"></a> To create the custom tracking participant</span></span>  
   
-1.  Haga clic con el botón secundario en **NumberGuessWorkflowHost** en el **Explorador de soluciones** y elija **Agregar**, **Clase**.Escriba `StatusTrackingParticipant` en el cuadro **Nombre** y haga clic en **Agregar**.  
+1.  <span data-ttu-id="975fa-118">Haga clic en **NumberGuessWorkflowHost** en **el Explorador de soluciones** y elija **agregar**, **clase**.</span><span class="sxs-lookup"><span data-stu-id="975fa-118">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="975fa-119">Tipo de `StatusTrackingParticipant` en el **nombre** cuadro y haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="975fa-119">Type `StatusTrackingParticipant` into the **Name** box, and click **Add**.</span></span>  
   
-2.  Agregue las siguientes instrucciones `using` \(o `Imports`\) al principio del archivo con las demás instrucciones `using` \(o `Imports`\).  
+2.  <span data-ttu-id="975fa-120">Agregue las siguientes instrucciones `using` (o `Imports`) al principio del archivo con las demás instrucciones `using` (o `Imports`).</span><span class="sxs-lookup"><span data-stu-id="975fa-120">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -46,7 +53,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     using System.IO;  
     ```  
   
-3.  Modifique la clase `StatusTrackingParticipant` para que herede de `TrackingParticipant`.  
+3.  <span data-ttu-id="975fa-121">Modifique la clase `StatusTrackingParticipant` para que herede de `TrackingParticipant`.</span><span class="sxs-lookup"><span data-stu-id="975fa-121">Modify the `StatusTrackingParticipant` class so that it inherits from `TrackingParticipant`.</span></span>  
   
     ```vb  
     Public Class StatusTrackingParticipant  
@@ -61,7 +68,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     }  
     ```  
   
-4.  Agregue el siguiente remplazo de método `Track`.Hay varios tipos distintos de registros de seguimiento.Estamos interesados en el resultado de las actividades de `WriteLine` , contenidas en registros de seguimiento de actividad.Si `TrackingRecord` es un `ActivityTrackingRecord` para una actividad `WriteLine`, `Text` de `WriteLine` se anexa a un archivo con una nombre según `InstanceId` del flujo de trabajo.En este tutorial, el archivo se guarda en la carpeta actual de la aplicación de host.  
+4.  <span data-ttu-id="975fa-122">Agregue el siguiente remplazo de método `Track`.</span><span class="sxs-lookup"><span data-stu-id="975fa-122">Add the following `Track` method override.</span></span> <span data-ttu-id="975fa-123">Hay varios tipos distintos de registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="975fa-123">There are several different types of tracking records.</span></span> <span data-ttu-id="975fa-124">Estamos interesados en el resultado de las actividades de `WriteLine` , contenidas en registros de seguimiento de actividad.</span><span class="sxs-lookup"><span data-stu-id="975fa-124">We are interested in the output of `WriteLine` activities, which are contained in activity tracking records.</span></span> <span data-ttu-id="975fa-125">Si `TrackingRecord` es un `ActivityTrackingRecord` para una actividad `WriteLine`, `Text` de `WriteLine` se anexa a un archivo con una nombre según `InstanceId` del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="975fa-125">If the `TrackingRecord` is an `ActivityTrackingRecord` for a `WriteLine` activity, the `Text` of the `WriteLine` is appended to a file named after the `InstanceId` of the workflow.</span></span> <span data-ttu-id="975fa-126">En este tutorial, el archivo se guarda en la carpeta actual de la aplicación de host.</span><span class="sxs-lookup"><span data-stu-id="975fa-126">In this tutorial, the file is saved to the current folder of the host application.</span></span>  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -104,13 +111,13 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     }  
     ```  
   
-     Cuando no se especifica ningún perfil de seguimiento, se usa el perfil de seguimiento predeterminado.Cuando se usa el perfil de seguimiento predeterminado, los registros de seguimiento se emiten para todos `ActivityStates`.Dado que solo debemos capturar el texto una vez durante el ciclo de vida de la actividad `WriteLine` , solo extraemos el texto del estado `ActivityStates.Executing` .En [Para crear el perfil de seguimiento y registrar el participante de seguimiento](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), se crea un perfil de seguimiento que especifica que solo se emiten los registros de seguimiento de `WriteLine` `ActivityStates.Executing`.  
+     <span data-ttu-id="975fa-127">Cuando no se especifica ningún perfil de seguimiento, se usa el perfil de seguimiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="975fa-127">When no tracking profile is specified, the default tracking profile is used.</span></span> <span data-ttu-id="975fa-128">Cuando se usa el perfil de seguimiento predeterminado, los registros de seguimiento se emiten para todos `ActivityStates`.</span><span class="sxs-lookup"><span data-stu-id="975fa-128">When the default tracking profile is used, tracking records are emitted for all `ActivityStates`.</span></span> <span data-ttu-id="975fa-129">Dado que solo debemos capturar el texto una vez durante el ciclo de vida de la actividad `WriteLine` , solo extraemos el texto del estado `ActivityStates.Executing` .</span><span class="sxs-lookup"><span data-stu-id="975fa-129">Because we only need to capture the text one time during the lifecycle of the `WriteLine` activity, we only extract the text from the `ActivityStates.Executing` state.</span></span> <span data-ttu-id="975fa-130">En [para crear el perfil de seguimiento y registrar el participante de seguimiento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), se crea un perfil de seguimiento que especifica que solo `WriteLine` `ActivityStates.Executing` se emiten registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="975fa-130">In [To create the tracking profile and register the tracking participant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), a tracking profile is created that specifies that only `WriteLine` `ActivityStates.Executing` tracking records are emitted.</span></span>  
   
-###  <a name="BKMK_TrackingProfile"></a> Para crear el perfil de seguimiento y registrar el participante de seguimiento  
+###  <span data-ttu-id="975fa-131"><a name="BKMK_TrackingProfile"></a>Para crear el perfil de seguimiento y registrar al participante de seguimiento</span><span class="sxs-lookup"><span data-stu-id="975fa-131"><a name="BKMK_TrackingProfile"></a> To create the tracking profile and register the tracking participant</span></span>  
   
-1.  Haga clic con el botón secundario en **WorkflowHostForm** en **Explorador de soluciones** y elija **Ver código**.  
+1.  <span data-ttu-id="975fa-132">Haga clic en **WorkflowHostForm** en **el Explorador de soluciones** y elija **ver código**.</span><span class="sxs-lookup"><span data-stu-id="975fa-132">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
-2.  Agregue las siguientes instrucciones `using` \(o `Imports`\) al principio del archivo con las demás instrucciones `using` \(o `Imports`\).  
+2.  <span data-ttu-id="975fa-133">Agregue las siguientes instrucciones `using` (o `Imports`) al principio del archivo con las demás instrucciones `using` (o `Imports`).</span><span class="sxs-lookup"><span data-stu-id="975fa-133">Add the following `using` (or `Imports`) statement at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -120,7 +127,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     using System.Activities.Tracking;  
     ```  
   
-3.  Agregue el código siguiente a `ConfigureWorkflowApplication` justo después del código que agrega `StringWriter` a las extensiones de flujo de trabajo y justo antes de los controladores de ciclo de vida de flujo de trabajo.  
+3.  <span data-ttu-id="975fa-134">Agregue el código siguiente a `ConfigureWorkflowApplication` justo después del código que agrega `StringWriter` a las extensiones de flujo de trabajo y justo antes de los controladores de ciclo de vida de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="975fa-134">Add the following code to `ConfigureWorkflowApplication` just after the code that adds the `StringWriter` to the workflow extensions and before the workflow lifecycle handlers.</span></span>  
   
     ```vb  
     'Add the custom tracking participant with a tracking profile  
@@ -161,9 +168,9 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     wfApp.Extensions.Add(stp);  
     ```  
   
-     Este perfil de seguimiento especifica que solo los registros de estado de actividad para actividades `WriteLine` en el estado de `Executing` se emiten al participante de seguimiento personalizado.  
+     <span data-ttu-id="975fa-135">Este perfil de seguimiento especifica que solo los registros de estado de actividad para actividades `WriteLine` en el estado de `Executing` se emiten al participante de seguimiento personalizado.</span><span class="sxs-lookup"><span data-stu-id="975fa-135">This tracking profile specifies that only activity state records for `WriteLine` activities in the `Executing` state are emitted to the custom tracking participant.</span></span>  
   
-     Después de agregar el código, el inicio de `ConfigureWorkflowApplication` será como el ejemplo siguiente.  
+     <span data-ttu-id="975fa-136">Después de agregar el código, el inicio de `ConfigureWorkflowApplication` será como el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="975fa-136">After adding the code, the start of `ConfigureWorkflowApplication` will look like the following example.</span></span>  
   
     ```vb  
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)  
@@ -227,11 +234,11 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a> Para mostrar la información de seguimiento  
+###  <span data-ttu-id="975fa-137"><a name="BKMK_DisplayTracking"></a>Para mostrar la información de seguimiento</span><span class="sxs-lookup"><span data-stu-id="975fa-137"><a name="BKMK_DisplayTracking"></a> To display the tracking information</span></span>  
   
-1.  Haga clic con el botón secundario en **WorkflowHostForm** en **Explorador de soluciones** y elija **Ver código**.  
+1.  <span data-ttu-id="975fa-138">Haga clic en **WorkflowHostForm** en **el Explorador de soluciones** y elija **ver código**.</span><span class="sxs-lookup"><span data-stu-id="975fa-138">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
-2.  En el controlador de `InstanceId_SelectedIndexChanged` , agregue el código siguiente inmediatamente después del código que borra la ventana de estado.  
+2.  <span data-ttu-id="975fa-139">En el controlador de `InstanceId_SelectedIndexChanged` , agregue el código siguiente inmediatamente después del código que borra la ventana de estado.</span><span class="sxs-lookup"><span data-stu-id="975fa-139">In the `InstanceId_SelectedIndexChanged` handler, add the following code immediately after the code that clears the status window.</span></span>  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -252,7 +259,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     }  
     ```  
   
-     Cuando se selecciona un nuevo flujo de trabajo en la lista de flujos de trabajo, los registros de seguimiento para ese flujo de trabajo se cargan y se muestran en la ventana de estado.El siguiente ejemplo es el controlador `InstanceId_SelectedIndexChanged` completado.  
+     <span data-ttu-id="975fa-140">Cuando se selecciona un nuevo flujo de trabajo en la lista de flujos de trabajo, los registros de seguimiento para ese flujo de trabajo se cargan y se muestran en la ventana de estado.</span><span class="sxs-lookup"><span data-stu-id="975fa-140">When a new workflow is selected in the workflow list, the tracking records for that workflow are loaded and displayed in the status window.</span></span> <span data-ttu-id="975fa-141">El siguiente ejemplo es el controlador `InstanceId_SelectedIndexChanged` completado.</span><span class="sxs-lookup"><span data-stu-id="975fa-141">The following example is the completed `InstanceId_SelectedIndexChanged` handler.</span></span>  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -320,32 +327,31 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
             instance.Abandon();  
         }  
     }  
-  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> Para compilar y ejecutar la aplicación  
+###  <span data-ttu-id="975fa-142"><a name="BKMK_BuildAndRun"></a>Para compilar y ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="975fa-142"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
   
-1.  Presione Ctrl\+Mayús\+B para compilar la aplicación.  
+1.  <span data-ttu-id="975fa-143">Presione Ctrl+Mayús+B para compilar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="975fa-143">Press Ctrl+Shift+B to build the application.</span></span>  
   
-2.  Presione Ctrl \+ F5 para iniciar la aplicación.  
+2.  <span data-ttu-id="975fa-144">Presione Ctrl + F5 para iniciar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="975fa-144">Press Ctrl+F5 to start the application.</span></span>  
   
-3.  Seleccione un intervalo para el juego de adivinar un número y el tipo de flujo de trabajo que se va a iniciar, y haga clic en **New Game**.Escriba un intento en el cuadro de **Guess** y haga clic en **Go** para enviarlo.Observe que el estado del flujo de trabajo se muestra en la ventana de estado.Este resultado se captura de las actividades de `WriteLine`.Cambie a un flujo de trabajo diferente mediante la selección de uno en el cuadro combinado **Identificador de instancia de flujo de trabajo** y observe que el estado del flujo de trabajo actual se ha quitado.Cambie de nuevo al flujo de trabajo anterior y observe que se restablece el estado, similar al siguiente ejemplo.  
+3.  <span data-ttu-id="975fa-145">Seleccione un intervalo para el juego de adivinanzas y el tipo de flujo de trabajo para iniciar y haga clic en **New Game**.</span><span class="sxs-lookup"><span data-stu-id="975fa-145">Select a range for the guessing game and the type of workflow to start, and click **New Game**.</span></span> <span data-ttu-id="975fa-146">Escriba un intento en el **estimación** y haga clic en **vaya** para enviarlo.</span><span class="sxs-lookup"><span data-stu-id="975fa-146">Enter a guess in the **Guess** box and click **Go** to submit your guess.</span></span> <span data-ttu-id="975fa-147">Observe que el estado del flujo de trabajo se muestra en la ventana de estado.</span><span class="sxs-lookup"><span data-stu-id="975fa-147">Note that the status of the workflow is displayed in the status window.</span></span> <span data-ttu-id="975fa-148">Este resultado se captura de las actividades de `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="975fa-148">This output is captured from the `WriteLine` activities.</span></span> <span data-ttu-id="975fa-149">Cambie a un flujo de trabajo diferente mediante la selección de uno de los **Id. de instancia de flujo de trabajo** cuadro combinado y observe que se ha quitado el estado del flujo de trabajo actual.</span><span class="sxs-lookup"><span data-stu-id="975fa-149">Switch to a different workflow by selecting one from the **Workflow Instance Id** combo box and note that the status of the current workflow is removed.</span></span> <span data-ttu-id="975fa-150">Cambie de nuevo al flujo de trabajo anterior y observe que se restablece el estado, similar al siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="975fa-150">Switch back to the previous workflow and note that the status is restored, similar to the following example.</span></span>  
   
     > [!NOTE]
-    >  Si cambia a un flujo de trabajo que se había iniciado antes de que se habilitara el seguimiento, no se mostrará ningún estado.Sin embargo, si hace intentos adicionales, el estado se guarda porque ahora se ha habilitado el seguimiento.  
+    >  <span data-ttu-id="975fa-151">Si cambia a un flujo de trabajo que se había iniciado antes de que se habilitara el seguimiento, no se mostrará ningún estado.</span><span class="sxs-lookup"><span data-stu-id="975fa-151">If you switch to a workflow that was started before tracking was enabled no status is displayed.</span></span> <span data-ttu-id="975fa-152">Sin embargo, si hace intentos adicionales, el estado se guarda porque ahora se ha habilitado el seguimiento.</span><span class="sxs-lookup"><span data-stu-id="975fa-152">However if you make additional guesses, their status is saved because tracking is now enabled.</span></span>  
   
- **Escriba un número entre el 1 y el 10**   
-**Su intento es demasiado alto.**   
-**Escriba un número entre el 1 y el 10**    
+ <span data-ttu-id="975fa-153">**Escriba un número entre 1 y 10**</span><span class="sxs-lookup"><span data-stu-id="975fa-153">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="975fa-154">**Su intento es demasiado alto.** </span><span class="sxs-lookup"><span data-stu-id="975fa-154">**Your guess is too high.** </span></span>  
+<span data-ttu-id="975fa-155">**Escriba un número entre 1 y 10**</span><span class="sxs-lookup"><span data-stu-id="975fa-155">**Please enter a number between 1 and 10**</span></span>    
     > [!NOTE]
-    >  Esta información es útil para determinar el intervalo del número aleatorio, pero no contiene información sobre qué intentos se han hecho anteriormente.Esta información está en el siguiente paso, [Cómo hospedar varias versiones de un flujo de trabajo en paralelo](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+    >  <span data-ttu-id="975fa-156">Esta información es útil para determinar el intervalo del número aleatorio, pero no contiene información sobre qué intentos se han hecho anteriormente.</span><span class="sxs-lookup"><span data-stu-id="975fa-156">This information is useful for determining the range of the random number, but it does not contain any information about what guesses have been previously made.</span></span> <span data-ttu-id="975fa-157">Esta información se encuentra en el paso siguiente, [Cómo: Host varias versiones de un flujo de trabajo paralelo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="975fa-157">This information is in the next step, [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-     Anote el identificador de instancias de flujo de trabajo, y juegue hasta completar el juego.  
+     <span data-ttu-id="975fa-158">Anote el identificador de instancias de flujo de trabajo, y juegue hasta completar el juego.</span><span class="sxs-lookup"><span data-stu-id="975fa-158">Make a note of the workflow instance id, and play the game through to its completion.</span></span>  
   
-4.  Abra el Explorador de Windows y navegue a la carpeta **NumberGuessWorkflowHost\\bin\\debug** \(o **bin\\release** según la configuración del proyecto\).Observe que además de los archivos ejecutables del proyecto hay archivos con nombres de archivo guid.Identifique cuál corresponde al identificador de instancia del flujo de trabajo completado en el paso anterior y ábralo en el Bloc de notas.La información de seguimiento incluye información similar a la siguiente.  
+4.  <span data-ttu-id="975fa-159">Abra el Explorador de Windows y navegue hasta la **NumberGuessWorkflowHost\bin\debug** carpeta (o **bin\release** según la configuración del proyecto).</span><span class="sxs-lookup"><span data-stu-id="975fa-159">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="975fa-160">Observe que además de los archivos ejecutables del proyecto hay archivos con nombres de archivo guid.</span><span class="sxs-lookup"><span data-stu-id="975fa-160">Note that in addition to the project executable files there are files with guid filenames.</span></span> <span data-ttu-id="975fa-161">Identifique cuál corresponde al identificador de instancia del flujo de trabajo completado en el paso anterior y ábralo en el Bloc de notas.</span><span class="sxs-lookup"><span data-stu-id="975fa-161">Identify the one that corresponds to the workflow instance id from the completed workflow in the previous step and open it in Notepad.</span></span> <span data-ttu-id="975fa-162">La información de seguimiento incluye información similar a la siguiente.</span><span class="sxs-lookup"><span data-stu-id="975fa-162">The tracking information contains information similar to the following.</span></span>  
   
- **Escriba un número entre el 1 y el 10**   
-**Su intento es demasiado alto.**   
-**Escriba un número entre el 1 y el 10**   
-**Su intento es demasiado alto.**   
-**Escriba un número entre el 1 y el 10**      Además de no contener los intentos del usuario, este dato de seguimiento no contiene información sobre el último intento del flujo de trabajo.Esto se debe a que la información de seguimiento solo consta del resultado de `WriteLine` del flujo de trabajo, y el mensaje final que se muestra se hace así desde el controlador de `Completed` una vez el flujo de trabajo se ha completado.En el siguiente paso del tutorial, [Cómo hospedar varias versiones de un flujo de trabajo en paralelo](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md), las actividades `WriteLine` existentes se modifican para mostrar los intentos del usuario y se agrega una actividad `WriteLine` adicional que muestra el resultado final.Una vez que estos cambios se han integrado, [Cómo hospedar varias versiones de un flujo de trabajo en paralelo](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md) muestra cómo hospedar varias versiones de un flujo de trabajo simultáneamente.
+ <span data-ttu-id="975fa-163">**Escriba un número entre 1 y 10**</span><span class="sxs-lookup"><span data-stu-id="975fa-163">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="975fa-164">**Su intento es demasiado alto.** </span><span class="sxs-lookup"><span data-stu-id="975fa-164">**Your guess is too high.** </span></span>  
+<span data-ttu-id="975fa-165">**Escriba un número entre 1 y 10** </span><span class="sxs-lookup"><span data-stu-id="975fa-165">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="975fa-166">**Su intento es demasiado alto.** </span><span class="sxs-lookup"><span data-stu-id="975fa-166">**Your guess is too high.** </span></span>  
+<span data-ttu-id="975fa-167">**Escriba un número entre 1 y 10** además de la ausencia de intentos del usuario, estos datos de seguimiento no contienen información sobre el último intento del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="975fa-167">**Please enter a number between 1 and 10**      In addition to the absence of the user's guesses, this tracking data does not contain information about the final guess of the workflow.</span></span> <span data-ttu-id="975fa-168">Esto se debe a que la información de seguimiento solo consta del resultado de `WriteLine` del flujo de trabajo, y el mensaje final que se muestra se hace así desde el controlador de `Completed` una vez el flujo de trabajo se ha completado.</span><span class="sxs-lookup"><span data-stu-id="975fa-168">That is because the tracking information consists only of the `WriteLine` output from the workflow, and the final message that is displayed is done so from the `Completed` handler after the workflow completes.</span></span> <span data-ttu-id="975fa-169">En el siguiente paso del tutorial, [Cómo: Host varias versiones de un flujo de trabajo paralelo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` las actividades se han modificado para mostrar los intentos del usuario y más `WriteLine` actividad se agrega que Muestra los resultados finales.</span><span class="sxs-lookup"><span data-stu-id="975fa-169">In next step of the tutorial, [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), the existing `WriteLine` activities are modified to display the user's guesses, and an additional `WriteLine` activity is added that displays the final results.</span></span> <span data-ttu-id="975fa-170">Después de que estos cambios se integran, [Cómo: Host varias versiones de un flujo de trabajo paralelo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) muestra cómo hospedar varias versiones de un flujo de trabajo al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="975fa-170">After these changes are integrated, [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) demonstrates how to host multiple versions of a workflow at the same time.</span></span>

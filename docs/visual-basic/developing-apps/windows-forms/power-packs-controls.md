@@ -1,34 +1,33 @@
 ---
-title: "Controles Visual Basic Power Packs | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "componentes, Power Packs"
-  - "controles, Power Packs"
-  - "Power Packs"
+title: Controles Visual Basic Power Packs
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- controls, Power Packs
+- components, Power Packs
+- Power Packs
 ms.assetid: 5e53a2d2-f200-4357-8b20-430f8f4860a4
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 643cfded8d6d7806dc02fb2b445948d723559dfd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Controles Visual Basic Power Packs
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Los controles Power Packs de Visual Basic son controles adicionales de Windows Forms.  No se incluyen en Visual Studio.  Puede [descargarlos](http://go.microsoft.com/fwlink/?LinkId=321343), pero se proporcionan tal cual, sin soporte técnico.  
+# <a name="visual-basic-power-packs-controls"></a><span data-ttu-id="519a8-102">Controles Visual Basic Power Packs</span><span class="sxs-lookup"><span data-stu-id="519a8-102">Visual Basic Power Packs Controls</span></span>
+<span data-ttu-id="519a8-103">Power Packs de Visual Basic son controles adicionales de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="519a8-103">Visual Basic Power Packs controls are additional Windows Forms controls.</span></span> <span data-ttu-id="519a8-104">No se incluyen en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="519a8-104">They are not included in Visual Studio.</span></span>  <span data-ttu-id="519a8-105">También puede [descargarlos](http://go.microsoft.com/fwlink/?LinkId=321343), pero se proporcionan como-son, sin soporte técnico.</span><span class="sxs-lookup"><span data-stu-id="519a8-105">You can [download them](http://go.microsoft.com/fwlink/?LinkId=321343), but they are provided as-is, without support.</span></span>  
   
-## En esta sección  
- [Controles de líneas y formas](../../../visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)  
- Presenta los controles Line y Shape y proporciona vínculos a más información.  
+## <a name="in-this-section"></a><span data-ttu-id="519a8-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="519a8-106">In This Section</span></span>  
+ [<span data-ttu-id="519a8-107">Controles de líneas y formas</span><span class="sxs-lookup"><span data-stu-id="519a8-107">Line and Shape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)  
+ <span data-ttu-id="519a8-108">Presenta los controles Line y Shape y proporciona vínculos a más información.</span><span class="sxs-lookup"><span data-stu-id="519a8-108">Introduces the Line and Shape controls and provides links to more information.</span></span>  
   
- [DataRepeater, control](../../../visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)  
- Presenta el control DataRepeater y proporciona vínculos a más información.  
+ [<span data-ttu-id="519a8-109">Control DataRepeater </span><span class="sxs-lookup"><span data-stu-id="519a8-109">DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)  
+ <span data-ttu-id="519a8-110">Presenta el control DataRepeater y proporciona vínculos a más información.</span><span class="sxs-lookup"><span data-stu-id="519a8-110">Introduces the DataRepeater control and provides links to additional information.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="519a8-111">Referencia</span><span class="sxs-lookup"><span data-stu-id="519a8-111">Reference</span></span>  
  <xref:Microsoft.VisualBasic.PowerPacks>

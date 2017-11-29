@@ -1,34 +1,36 @@
 ---
-title: "C&#243;mo implementar un contrato de servicio de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "contratos de servicio [WCF], implementar"
+title: "Cómo implementar un contrato de servicio de Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c8ef9d97d9ed76175c0ca4c4d5ba40ca401f8f6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo implementar un contrato de servicio de Windows Communication Foundation
-Ésta es la segunda de las seis tareas que son necesarias para crear un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] básico y un cliente que llame al servicio.  Para obtener una introducción a las seis tareas, consulte el tema [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="4b2d9-102">Cómo implementar un contrato de servicio de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="4b2d9-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
+<span data-ttu-id="4b2d9-103">Ésta es la segunda de las seis tareas que son necesarias para crear un servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] básico y un cliente que llame al servicio.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-103">This is the second of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service and a client that can call the service.</span></span> <span data-ttu-id="4b2d9-104">Para obtener información general de las seis tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- El siguiente paso para crear una aplicación de WCF es implementar la interfaz de servicio.  Esto implica la creación de una clase denominada `CalculatorService` que implemente la interfaz `ICalculator` definida por el usuario.  
+ <span data-ttu-id="4b2d9-105">El siguiente paso para crear una aplicación de WCF es implementar la interfaz de servicio.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="4b2d9-106">Esto implica la creación de una clase denominada `CalculatorService` que implemente la interfaz `ICalculator` definida por el usuario.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>  
   
-### Para implementar un contrato de servicio WCF  
+### <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="4b2d9-107">Para implementar un contrato de servicio WCF</span><span class="sxs-lookup"><span data-stu-id="4b2d9-107">To implement a WCF service contract</span></span>  
   
-1.  Abra el archivo Service1.cs o Service1.vb y agregue el código siguiente:  
+1.  <span data-ttu-id="4b2d9-108">Abra el archivo Service1.cs o Service1.vb y agregue el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="4b2d9-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>  
   
     ```csharp  
     //Service1.cs  
@@ -77,10 +79,9 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
-    ```  
+    ```vb
     ‘Service1.vb  
     Imports System  
     Imports System.ServiceModel  
@@ -125,12 +126,12 @@ caps.handback.revision: 38
     End Namespace  
     ```  
   
-     Cada método implementa la operación de la calculadora y escribe texto en la consola para simplificar las pruebas.  
+     <span data-ttu-id="4b2d9-109">Cada método implementa la operación de la calculadora y escribe texto en la consola para simplificar las pruebas.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>  
   
-## Ejemplo  
- El siguiente ejemplo de código muestra la interfaz que define el contrato de servicio y la implementación de la interfaz.  
+## <a name="example"></a><span data-ttu-id="4b2d9-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4b2d9-110">Example</span></span>  
+ <span data-ttu-id="4b2d9-111">El siguiente ejemplo de código muestra la interfaz que define el contrato de servicio y la implementación de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>  
   
-```  
+```csharp
 // IService1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -154,10 +155,9 @@ namespace GettingStartedLib
             double Divide(double n1, double n2);  
         }  
 }  
-  
 ```  
   
-```  
+```csharp
 // Service1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -204,10 +204,9 @@ namespace GettingStartedLib
         }  
     }  
 }  
-  
 ```  
   
-```  
+```vb
 ‘IService.vb  
 Imports System  
 Imports System.ServiceModel  
@@ -229,7 +228,7 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
-```  
+```vb
 Imports System  
 Imports System.ServiceModel  
   
@@ -273,11 +272,11 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
- Ahora, el contrato de servicio se ha creado e implementado.  Compile la solución para asegurarse de que no hay ningún error de compilación y, a continuación, continúe en [Procedimiento para hospedar y ejecutar un servicio básico](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) para ejecutar el servicio.  Para obtener más información, vea [Solución de problemas con el tutorial de introducción](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
+ <span data-ttu-id="4b2d9-112">Ahora, el contrato de servicio se ha creado e implementado.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-112">Now the service contract is created and implemented.</span></span> <span data-ttu-id="4b2d9-113">Compile la solución para asegurarse de que no hay ningún error de compilación y, a continuación, continúe con [Cómo: hospedar y ejecutar un servicio básico](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) para ejecutar el servicio.</span><span class="sxs-lookup"><span data-stu-id="4b2d9-113">Build the solution to ensure there are no compilation errors and then proceed to [How to: Host and Run a Basic Service](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) to run the service.</span></span> <span data-ttu-id="4b2d9-114">Para obtener información de solución de problemas, consulte [el Tutorial de introducción de la solución de problemas](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="4b2d9-114">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>  
   
-## Compilar el código  
- Si usa Visual Studio, en el menú Compilar, haga clic en Compilar solución \(o presione CTRL\+MAYÚS\+B\).  
+## <a name="compiling-the-code"></a><span data-ttu-id="4b2d9-115">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="4b2d9-115">Compiling the Code</span></span>  
+ <span data-ttu-id="4b2d9-116">Si se utiliza Visual Studio, en el menú Generar haga clic en generar solución (o presione CTRL + MAYÚS + B).</span><span class="sxs-lookup"><span data-stu-id="4b2d9-116">If you are using Visual Studio, on the Build menu click Build Solution (or press CTRL+SHIFT+B).</span></span>  
   
-## Vea también  
- [Introducción:](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [Autohospedaje](../../../docs/framework/wcf/samples/self-host.md)
+## <a name="see-also"></a><span data-ttu-id="4b2d9-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="4b2d9-117">See Also</span></span>  
+ [<span data-ttu-id="4b2d9-118">Introducción</span><span class="sxs-lookup"><span data-stu-id="4b2d9-118">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="4b2d9-119">Autohospedaje</span><span class="sxs-lookup"><span data-stu-id="4b2d9-119">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

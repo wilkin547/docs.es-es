@@ -1,90 +1,92 @@
 ---
-title: "Tutorial: Crear un control compuesto con Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles compuestos, crear"
-  - "controles [Windows Forms], controles compuestos"
-  - "controles personalizados [Visual Basic]"
-  - "controles personalizados [Windows Forms], crear"
-  - "controles de usuario [Visual Basic]"
-  - "controles de usuario [Windows Forms], crear con Visual Basic"
-  - "UserControl (clase), tutoriales"
+title: 'Tutorial: Crear un control compuesto con Visual Basic'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Visual Basic]
+- user controls [Visual Basic]
+- UserControl class [Windows Forms], walkthroughs
+- user controls [Windows Forms], creating with Visual Basic
+- controls [Windows Forms], composite controls
+- composite controls [Windows Forms], creating
+- custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Crear un control compuesto con Visual Basic
-Los controles compuestos proporcionan un medio para crear y reutilizar interfaces gráficas personalizadas.  Un control compuesto es esencialmente un componente con una representación visual.  Como tal, puede constar de uno o más controles de formularios Windows Forms, componentes o bloques de código, que pueden extender su funcionalidad mediante la validación de la entrada del usuario, la modificación de las propiedades de presentación o la ejecución de otras tareas requeridas por su autor.  Los controles compuestos se pueden colocar en formularios Windows Forms del mismo modo que otros controles.  En la primera parte del tutorial, creará un control de usuario sencillo denominado `ctlClock`.  En la segunda parte del tutorial, ampliará la funcionalidad de `ctlClock` a través de herencia.  
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a><span data-ttu-id="13509-102">Tutorial: Crear un control compuesto con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="13509-102">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>
+<span data-ttu-id="13509-103">Los controles compuestos proporcionan una forma de crear y reutilizar interfaces gráficas personalizadas.</span><span class="sxs-lookup"><span data-stu-id="13509-103">Composite controls provide a means by which custom graphical interfaces can be created and reused.</span></span> <span data-ttu-id="13509-104">Un control compuesto es esencialmente un componente con una representación visual.</span><span class="sxs-lookup"><span data-stu-id="13509-104">A composite control is essentially a component with a visual representation.</span></span> <span data-ttu-id="13509-105">Como tal, puede constar de uno o varios controles de Windows Forms, componentes o bloques de código que pueden extender funcionalidad al validar la entrada del usuario, modificar propiedades de presentación o realizar otras tareas requeridas por el autor.</span><span class="sxs-lookup"><span data-stu-id="13509-105">As such, it might consist of one or more Windows Forms controls, components, or blocks of code that can extend functionality by validating user input, modifying display properties, or performing other tasks required by the author.</span></span> <span data-ttu-id="13509-106">Los controles compuestos se pueden colocar en Windows Forms de la misma manera que otros controles.</span><span class="sxs-lookup"><span data-stu-id="13509-106">Composite controls can be placed on Windows Forms in the same manner as other controls.</span></span> <span data-ttu-id="13509-107">En la primera parte de este tutorial, creará un control compuesto simple denominado `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-107">In the first part of this walkthrough, you create a simple composite control called `ctlClock`.</span></span> <span data-ttu-id="13509-108">En la segunda parte, extenderá la funcionalidad de `ctlClock` mediante herencia.</span><span class="sxs-lookup"><span data-stu-id="13509-108">In the second part of the walkthrough, you extend the functionality of `ctlClock` through inheritance.</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="13509-109">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="13509-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="13509-110">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="13509-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="13509-111">Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="13509-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## Crear el proyecto  
- Cuando cree un nuevo proyecto, debe establecer el espacio de nombres de la raíz, el nombre de ensamblado y el de proyecto, además de asegurarse de que el componente predeterminado estará en el espacio de nombres correcto.  
+## <a name="creating-the-project"></a><span data-ttu-id="13509-112">Crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="13509-112">Creating the Project</span></span>  
+ <span data-ttu-id="13509-113">Cuando cree un proyecto, especifique su nombre para establecer el espacio de nombres raíz, el nombre de ensamblado y el nombre del proyecto, y asegúrese de que el componente predeterminado estará en el espacio de nombres correcto.</span><span class="sxs-lookup"><span data-stu-id="13509-113">When you create a new project, you specify its name to set the root namespace, assembly name, and project name, and ensure that the default component will be in the correct namespace.</span></span>  
   
-#### Para crear la biblioteca de controles ctlClockLib y el control ctlClock  
+#### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a><span data-ttu-id="13509-114">Para crear la biblioteca de controles ctlClockLib y el control ctlClock</span><span class="sxs-lookup"><span data-stu-id="13509-114">To create the ctlClockLib control library and the ctlClock control</span></span>  
   
-1.  En el menú **Archivo**, elija **Nuevo** y, a continuación, haga clic en **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.  
+1.  <span data-ttu-id="13509-115">En el menú **Archivo**, elija **Nuevo** y haga clic en **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.</span><span class="sxs-lookup"><span data-stu-id="13509-115">On the **File** menu, point to **New**, and then click **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  En la lista de proyectos de [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], seleccione la plantilla de proyectos **Biblioteca de controles de Windows**, escriba `ctlClockLib` en el cuadro **Nombre** y, a continuación, haga clic en **Aceptar**.  
+2.  <span data-ttu-id="13509-116">En la lista de proyectos de [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], seleccione la plantilla de proyecto **Biblioteca de controles de Windows**, escriba `ctlClockLib` en el cuadro **Nombre** y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="13509-116">From the list of [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] projects, select the **Windows Control Library** project template, type `ctlClockLib` in the **Name** box, and then click **OK**.</span></span>  
   
-     El nombre del proyecto, `ctlClockLib`, se asigna también de forma predeterminada al espacio de nombres de la raíz.  El espacio de nombres de la raíz se utiliza para calificar los nombres de los componentes del ensamblado.  Por ejemplo, si dos ensamblados proporcionan componentes denominados `ctlClock`, puede especificar el componente `ctlClock` mediante `ctlClockLib.ctlClock.` .  
+     <span data-ttu-id="13509-117">El nombre del proyecto, `ctlClockLib` también se asigna de forma predeterminada al espacio de nombres raíz.</span><span class="sxs-lookup"><span data-stu-id="13509-117">The project name, `ctlClockLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="13509-118">El espacio de nombres raíz se utiliza para calificar los nombres de los componentes del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="13509-118">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="13509-119">Por ejemplo, si dos ensamblados proporcionan componentes denominados `ctlClock`, puede especificar su componente `ctlClock` mediante `ctlClockLib.ctlClock.`</span><span class="sxs-lookup"><span data-stu-id="13509-119">For example, if two assemblies provide components named `ctlClock`, you can specify your `ctlClock` component using `ctlClockLib.ctlClock.`</span></span>  
   
-3.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **UserControl1.vb** y haga clic en **Cambiar nombre**.  Cambie el nombre de archivo a `ctlClock.vb`.  Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "UserControl1".  
+3.  <span data-ttu-id="13509-120">En el Explorador de soluciones, haga clic con el botón derecho en **UserControl1.vb** y haga clic en **Cambiar nombre**.</span><span class="sxs-lookup"><span data-stu-id="13509-120">In Solution Explorer, right-click **UserControl1.vb**, and then click **Rename**.</span></span> <span data-ttu-id="13509-121">Cambie el nombre del archivo a `ctlClock.vb`.</span><span class="sxs-lookup"><span data-stu-id="13509-121">Change the file name to `ctlClock.vb`.</span></span> <span data-ttu-id="13509-122">Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "UserControl1".</span><span class="sxs-lookup"><span data-stu-id="13509-122">Click the **Yes** button when you are asked if you want to rename all references to the code element "UserControl1".</span></span>  
   
     > [!NOTE]
-    >  De forma predeterminada, un control compuesto hereda de la clase <xref:System.Windows.Forms.UserControl> proporcionada por el sistema.  La clase <xref:System.Windows.Forms.UserControl> proporciona la funcionalidad necesaria para todos los controles de usuario e implementa métodos y propiedades estándar.  
+    >  <span data-ttu-id="13509-123">De forma predeterminada, un control compuesto hereda de la <xref:System.Windows.Forms.UserControl> clase proporcionada por el sistema.</span><span class="sxs-lookup"><span data-stu-id="13509-123">By default, a composite control inherits from the <xref:System.Windows.Forms.UserControl> class provided by the system.</span></span> <span data-ttu-id="13509-124">La <xref:System.Windows.Forms.UserControl> clase proporciona la funcionalidad requerida por los controles compuestos todos los e implementa métodos estándares y las propiedades.</span><span class="sxs-lookup"><span data-stu-id="13509-124">The <xref:System.Windows.Forms.UserControl> class provides functionality required by all composite controls, and implements standard methods and properties.</span></span>  
   
-4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
+4.  <span data-ttu-id="13509-125">En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="13509-125">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Agregar controles y componentes de Windows al control compuesto  
- Una parte esencial del control compuesto es una interfaz visual.  Esta interfaz visual se implementa mediante la adición de uno o más controles de Windows a la superficie del diseñador.  En la demostración siguiente, incorporará controles de Windows al control compuesto y escribirá código para implementar funcionalidad.  
+## <a name="adding-windows-controls-and-components-to-the-composite-control"></a><span data-ttu-id="13509-126">Agregar componentes y controles de Windows al control compuesto</span><span class="sxs-lookup"><span data-stu-id="13509-126">Adding Windows Controls and Components to the Composite Control</span></span>  
+ <span data-ttu-id="13509-127">Una interfaz visual es una parte esencial de su control compuesto.</span><span class="sxs-lookup"><span data-stu-id="13509-127">A visual interface is an essential part of your composite control.</span></span> <span data-ttu-id="13509-128">Esta interfaz visual se implementa agregando uno o más controles de Windows a la superficie del diseñador.</span><span class="sxs-lookup"><span data-stu-id="13509-128">This visual interface is implemented by the addition of one or more Windows controls to the designer surface.</span></span> <span data-ttu-id="13509-129">En la demostración siguiente, incorporará controles de Windows al control compuesto y escribirá código para implementar funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="13509-129">In the following demonstration, you will incorporate Windows controls into your composite control and write code to implement functionality.</span></span>  
   
-#### Para agregar un control Label y un componente Timer al control compuesto  
+#### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a><span data-ttu-id="13509-130">Para agregar una etiqueta y un temporizador al control compuesto</span><span class="sxs-lookup"><span data-stu-id="13509-130">To add a Label and a Timer to your composite control</span></span>  
   
-1.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **ctlClock.vb** y haga clic en **Diseñador de vistas**.  
+1.  <span data-ttu-id="13509-131">En el Explorador de soluciones, haga clic con el botón derecho en **ctlClock.vb** y haga clic en **Ver diseñador**.</span><span class="sxs-lookup"><span data-stu-id="13509-131">In Solution Explorer, right-click **ctlClock.vb**, and then click **View Designer**.</span></span>  
   
-2.  En el Cuadro de herramientas, expanda el nodo **Controles comunes** y, a continuación, haga doble clic en **Label**.  
+2.  <span data-ttu-id="13509-132">En el cuadro de herramientas, expanda el nodo **Controles comunes** y haga doble clic en **Label**.</span><span class="sxs-lookup"><span data-stu-id="13509-132">In the Toolbox, expand the **Common Controls** node, and then double-click **Label**.</span></span>  
   
-     Un control <xref:System.Windows.Forms.Label> denominado `Label1` se agrega al control en la superficie del diseñador.  
+     <span data-ttu-id="13509-133">A <xref:System.Windows.Forms.Label> control denominado `Label1` se agrega al control en la superficie del diseñador.</span><span class="sxs-lookup"><span data-stu-id="13509-133">A <xref:System.Windows.Forms.Label> control named `Label1` is added to your control on the designer surface.</span></span>  
   
-3.  En el diseñador, haga clic en **Label1**.  En la ventana Propiedades, establezca las propiedades siguientes:  
+3.  <span data-ttu-id="13509-134">En el diseñador, haga clic en **label1**.</span><span class="sxs-lookup"><span data-stu-id="13509-134">In the designer, click **Label1**.</span></span> <span data-ttu-id="13509-135">En la ventana Propiedades, establezca las propiedades siguientes.</span><span class="sxs-lookup"><span data-stu-id="13509-135">In the Properties window, set the following properties.</span></span>  
   
-    |Propiedad.|Cambie a|  
-    |----------------|--------------|  
-    |**Name**|`lblDisplay`|  
-    |**Text**|`(espacio en blanco)`|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Font.Size**|`14`|  
+    |<span data-ttu-id="13509-136">Propiedad</span><span class="sxs-lookup"><span data-stu-id="13509-136">Property</span></span>|<span data-ttu-id="13509-137">Cambiar a</span><span class="sxs-lookup"><span data-stu-id="13509-137">Change to</span></span>|  
+    |--------------|---------------|  
+    |<span data-ttu-id="13509-138">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="13509-138">**Name**</span></span>|`lblDisplay`|  
+    |<span data-ttu-id="13509-139">**Text**</span><span class="sxs-lookup"><span data-stu-id="13509-139">**Text**</span></span>|`(blank space)`|  
+    |<span data-ttu-id="13509-140">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="13509-140">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="13509-141">**Font.Size**</span><span class="sxs-lookup"><span data-stu-id="13509-141">**Font.Size**</span></span>|`14`|  
   
-4.  En el **Cuadro de herramientas**, expanda el nodo **Componentes** y, a continuación, haga doble clic en el componente **Timer**.  
+4.  <span data-ttu-id="13509-142">En el **cuadro de herramientas**, expanda el nodo **Componentes** y haga doble clic en **Temporizador**.</span><span class="sxs-lookup"><span data-stu-id="13509-142">In the **Toolbox**, expand the **Components** node, and then double-click **Timer**.</span></span>  
   
-     Dado que <xref:System.Windows.Forms.Timer> es un componente, no tiene representación visual en tiempo de ejecución.  Por tanto, no aparece con los controles en la superficie del diseñador, sino en el Diseñador de componentes \(una bandeja situada en la parte inferior de la superficie del diseñador\).  
+     <span data-ttu-id="13509-143">Dado que un <xref:System.Windows.Forms.Timer> es un componente, no tiene ninguna representación visual en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="13509-143">Because a <xref:System.Windows.Forms.Timer> is a component, it has no visual representation at run time.</span></span> <span data-ttu-id="13509-144">Por lo tanto, no aparece con los controles en la superficie del diseñador, sino en el Diseñador de componentes (una bandeja en la parte inferior de la superficie del diseñador).</span><span class="sxs-lookup"><span data-stu-id="13509-144">Therefore, it does not appear with the controls on the designer surface, but rather in the Component Designer (a tray at the bottom of the designer surface).</span></span>  
   
-5.  En el Diseñador de componentes, haga clic en **timer1** y, a continuación, establezca la propiedad <xref:System.Windows.Forms.Timer.Interval%2A> en `1000` y la propiedad <xref:System.Windows.Forms.Timer.Enabled%2A> en `True`.  
+5.  <span data-ttu-id="13509-145">En el Diseñador de componentes, haga clic en **Timer1**y, a continuación, establezca el <xref:System.Windows.Forms.Timer.Interval%2A> propiedad `1000` y <xref:System.Windows.Forms.Timer.Enabled%2A> propiedad `True`.</span><span class="sxs-lookup"><span data-stu-id="13509-145">In the Component Designer, click **Timer1**, and then set the <xref:System.Windows.Forms.Timer.Interval%2A> property to `1000` and the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `True`.</span></span>  
   
-     La propiedad <xref:System.Windows.Forms.Timer.Interval%2A> controla la frecuencia con la que se incrementa el valor del componente temporizador.  Cada vez que `Timer1` marca un paso, ejecuta el código del evento `Timer1_Tick`.  El intervalo representa el número de milisegundos entre paso y paso.  
+     <span data-ttu-id="13509-146">El <xref:System.Windows.Forms.Timer.Interval%2A> propiedad controla la frecuencia con la que el componente de temporizador.</span><span class="sxs-lookup"><span data-stu-id="13509-146">The <xref:System.Windows.Forms.Timer.Interval%2A> property controls the frequency with which the timer component ticks.</span></span> <span data-ttu-id="13509-147">Cada vez que `Timer1` hace tic, se ejecuta el código en el evento `Timer1_Tick`.</span><span class="sxs-lookup"><span data-stu-id="13509-147">Each time `Timer1` ticks, it runs the code in the `Timer1_Tick` event.</span></span> <span data-ttu-id="13509-148">El intervalo representa el número de milisegundos entre tics.</span><span class="sxs-lookup"><span data-stu-id="13509-148">The interval represents the number of milliseconds between ticks.</span></span>  
   
-6.  En el Diseñador de componentes, haga doble clic en **Timer1** para ir al evento `Timer1_Tick` de `ctlClock`.  
+6.  <span data-ttu-id="13509-149">En el Diseñador de componentes, haga doble clic en **Timer1** para ir al evento `Timer1_Tick` de `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-149">In the Component Designer, double-click **Timer1** to go to the `Timer1_Tick` event for `ctlClock`.</span></span>  
   
-7.  Modifique el código de modo que se asemeje al siguiente ejemplo:  Asegúrese de cambiar el modificador de acceso de `Private` a `Protected`.  
+7.  <span data-ttu-id="13509-150">Modifique el código para que se parezca al siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="13509-150">Modify the code so that it resembles the following code sample.</span></span> <span data-ttu-id="13509-151">Asegúrese de cambiar el modificador de acceso de `Private` a `Protected`.</span><span class="sxs-lookup"><span data-stu-id="13509-151">Be sure to change the access modifier from `Private` to `Protected`.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Sub Timer1_Tick(ByVal sender As Object, ByVal e As _  
         System.EventArgs) Handles Timer1.Tick  
         ' Causes the label to display the current time.    
@@ -92,44 +94,38 @@ Los controles compuestos proporcionan un medio para crear y reutilizar interface
     End Sub  
     ```  
   
-     Este código hace que se muestre la hora actual en `lblDisplay`.  Dado que el intervalo de `Timer1` se estableció en `1000`, este evento se activará cada mil milisegundos, por lo que la hora se actualizará cada segundo.  
+     <span data-ttu-id="13509-152">Este código hará que la hora actual se muestre en `lblDisplay`.</span><span class="sxs-lookup"><span data-stu-id="13509-152">This code will cause the current time to be shown in `lblDisplay`.</span></span> <span data-ttu-id="13509-153">Como el intervalo de `Timer1` se estableció en `1000`, este evento se producirá cada mil milisegundos, lo que actualiza la hora actual cada segundo.</span><span class="sxs-lookup"><span data-stu-id="13509-153">Because the interval of `Timer1` was set to `1000`, this event will occur every thousand milliseconds, thus updating the current time every second.</span></span>  
   
-8.  Modifique el método para que pueda reemplazarse.  Para obtener más información, vea la sección siguiente "Heredar de un control de usuario".  
+8.  <span data-ttu-id="13509-154">Modifique el método para que se pueda invalidar.</span><span class="sxs-lookup"><span data-stu-id="13509-154">Modify the method to be overridable.</span></span> <span data-ttu-id="13509-155">Para más información, consulte la sección "Heredar de un control de usuario", más adelante.</span><span class="sxs-lookup"><span data-stu-id="13509-155">For more information, see the "Inheriting from a User Control" section below.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Overridable Sub Timer1_Tick(ByVal sender As Object, ByVal _  
         e As System.EventArgs) Handles Timer1.Tick  
     ```  
   
-9. En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
+9. <span data-ttu-id="13509-156">En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="13509-156">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Agregar propiedades al control compuesto  
- El control de reloj encapsula ahora un control <xref:System.Windows.Forms.Label> y un componente <xref:System.Windows.Forms.Timer>, cada uno con su propio conjunto de propiedades inherentes.  Aunque las propiedades individuales de estos controles no estarán disponibles para los futuros usuarios del control, puede crear y exponer propiedades personalizadas escribiendo los bloques de código adecuados.  En el procedimiento siguiente, agregará al control propiedades que permiten que el usuario cambie el color del fondo y del texto.  
+## <a name="adding-properties-to-the-composite-control"></a><span data-ttu-id="13509-157">Agregar propiedades al control compuesto</span><span class="sxs-lookup"><span data-stu-id="13509-157">Adding Properties to the Composite Control</span></span>  
+ <span data-ttu-id="13509-158">El control de reloj encapsula ahora un <xref:System.Windows.Forms.Label> control y un <xref:System.Windows.Forms.Timer> componente, cada uno con su propio conjunto de propiedades inherentes.</span><span class="sxs-lookup"><span data-stu-id="13509-158">Your clock control now encapsulates a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.Timer> component, each with its own set of inherent properties.</span></span> <span data-ttu-id="13509-159">Aunque las propiedades individuales de estos controles no resultarán accesibles a los usuarios posteriores del control, puede crear y exponer propiedades personalizadas escribiendo los bloques de código adecuados.</span><span class="sxs-lookup"><span data-stu-id="13509-159">While the individual properties of these controls will not be accessible to subsequent users of your control, you can create and expose custom properties by writing the appropriate blocks of code.</span></span> <span data-ttu-id="13509-160">En el siguiente procedimiento, agregará al control propiedades que permiten al usuario cambiar el color de fondo y del texto.</span><span class="sxs-lookup"><span data-stu-id="13509-160">In the following procedure, you will add properties to your control that enable the user to change the color of the background and text.</span></span>  
   
-#### Para agregar una propiedad al control compuesto  
+#### <a name="to-add-a-property-to-your-composite-control"></a><span data-ttu-id="13509-161">Para agregar una propiedad al control compuesto</span><span class="sxs-lookup"><span data-stu-id="13509-161">To add a property to your composite control</span></span>  
   
-1.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **ctlClock.vb** y haga clic en **Ver código**.  
+1.  <span data-ttu-id="13509-162">En el Explorador de soluciones, haga clic con el botón derecho en **ctlClock.vb** y haga clic en **Ver código**.</span><span class="sxs-lookup"><span data-stu-id="13509-162">In Solution Explorer, right-click **ctlClock.vb**, and then click **View Code**.</span></span>  
   
-     Se abrirá el Editor de código para el control.  
+     <span data-ttu-id="13509-163">Se abre el Editor de código del control.</span><span class="sxs-lookup"><span data-stu-id="13509-163">The Code Editor for your control opens.</span></span>  
   
-2.  Busque la instrucción `Public Class ctlClock`.  A continuación, escriba el código siguiente:  
+2.  <span data-ttu-id="13509-164">Busque la instrucción `Public Class ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-164">Locate the `Public Class ctlClock` statement.</span></span> <span data-ttu-id="13509-165">Debajo de ella, escriba el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="13509-165">Beneath it, type the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private colFColor as Color  
     Private colBColor as Color  
     ```  
   
-     Estas instrucciones crean las variables privadas que se utilizarán para almacenar los valores de las propiedades que va a crear.  
+     <span data-ttu-id="13509-166">Estas instrucciones crean las variables privadas que usará para almacenar los valores de las propiedades que va a crear.</span><span class="sxs-lookup"><span data-stu-id="13509-166">These statements create the private variables that you will use to store the values for the properties you are about to create.</span></span>  
   
-3.  Inserte el código siguiente bajo las declaraciones de variables del paso 2.  
+3.  <span data-ttu-id="13509-167">Inserte el código siguiente debajo de las declaraciones de variable del paso 2.</span><span class="sxs-lookup"><span data-stu-id="13509-167">Insert the following code beneath the variable declarations from step 2.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     ' Declares the name and type of the property.  
     Property ClockBackColor() as Color  
         ' Retrieves the value of the private variable colBColor.  
@@ -156,65 +152,63 @@ Los controles compuestos proporcionan un medio para crear y reutilizar interface
     End Property  
     ```  
   
-     El código precedente crea dos propiedades personalizadas, `ClockForeColor` y `ClockBackColor`, que permiten el acceso a los usuarios del control por medio de la invocación a la instrucción `Property`.  Las instrucciones `Get` y `Set` permiten el almacenamiento y la recuperación del valor de propiedad; además, proporcionan el código necesario para implementar la funcionalidad adecuada para la propiedad.  
+     <span data-ttu-id="13509-168">El código anterior crea dos propiedades personalizadas, `ClockForeColor` y `ClockBackColor`, que estarán disponibles para que posteriores usuarios de este control las invoquen mediante la instrucción `Property`.</span><span class="sxs-lookup"><span data-stu-id="13509-168">The preceding code makes two custom properties, `ClockForeColor` and `ClockBackColor`, available to subsequent users of this control by invoking the `Property` statement.</span></span> <span data-ttu-id="13509-169">Las instrucciones `Get` y `Set` permiten almacenar y recuperar el valor de propiedad, además de proporcionar código para implementar funcionalidad adecuada para la propiedad.</span><span class="sxs-lookup"><span data-stu-id="13509-169">The `Get` and `Set` statements provide for storage and retrieval of the property value, as well as code to implement functionality appropriate to the property.</span></span>  
   
-4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
+4.  <span data-ttu-id="13509-170">En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="13509-170">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Probar el control  
- Los controles no son proyectos independientes; deben hospedarse en un contenedor.  Pruebe el comportamiento del control en tiempo de ejecución y pruebe sus propiedades con el **UserControl Test Container**.  Para obtener más información, vea [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="testing-the-control"></a><span data-ttu-id="13509-171">Probar el control</span><span class="sxs-lookup"><span data-stu-id="13509-171">Testing the Control</span></span>  
+ <span data-ttu-id="13509-172">Los controles no son proyectos independientes; deben hospedarse en un contenedor.</span><span class="sxs-lookup"><span data-stu-id="13509-172">Controls are not stand-alone projects; they must be hosted in a container.</span></span> <span data-ttu-id="13509-173">Pruebe el comportamiento en tiempo de ejecución del control y sus propiedades con **UserControl Test Container**.</span><span class="sxs-lookup"><span data-stu-id="13509-173">Test your control's run-time behavior and exercise its properties with the **UserControl Test Container**.</span></span> <span data-ttu-id="13509-174">Para más información, consulte [Cómo: Comprobar el comportamiento de un control UserControl en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="13509-174">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-#### Para probar el control  
+#### <a name="to-test-your-control"></a><span data-ttu-id="13509-175">Para probar el control</span><span class="sxs-lookup"><span data-stu-id="13509-175">To test your control</span></span>  
   
-1.  Presione F5 para compilar el proyecto y ejecutar el control en el **UserControl Test Container**.  
+1.  <span data-ttu-id="13509-176">Presione F5 para compilar el proyecto y ejecutar el control en **UserControl Test Container**.</span><span class="sxs-lookup"><span data-stu-id="13509-176">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>  
   
-2.  En la cuadrícula de propiedades del contenedor de prueba, seleccione la propiedad `ClockBackColor` y haga clic en la flecha de la lista desplegable para mostrar la paleta de color.  
+2.  <span data-ttu-id="13509-177">En la cuadrícula de propiedades del contenedor de prueba, seleccione la propiedad `ClockBackColor` y haga clic en la flecha desplegable para mostrar la paleta de colores.</span><span class="sxs-lookup"><span data-stu-id="13509-177">In the test container's property grid, select the `ClockBackColor` property, and then click the drop-down arrow to display the color palette.</span></span>  
   
-3.  Haga doble clic en un color para elegirlo.  
+3.  <span data-ttu-id="13509-178">Haga clic en un color para elegirlo.</span><span class="sxs-lookup"><span data-stu-id="13509-178">Choose a color by clicking it.</span></span>  
   
-     El color de fondo del control cambiará al color seleccionado.  
+     <span data-ttu-id="13509-179">El color de fondo del control cambia al color seleccionado.</span><span class="sxs-lookup"><span data-stu-id="13509-179">The background color of your control changes to the color you selected.</span></span>  
   
-4.  Utilice una secuencia de eventos similar para comprobar que la propiedad `ClockForeColor` funciona como se esperaba.  
+4.  <span data-ttu-id="13509-180">Use una secuencia similar de eventos para comprobar que la propiedad `ClockForeColor` funciona según lo esperado.</span><span class="sxs-lookup"><span data-stu-id="13509-180">Use a similar sequence of events to verify that the `ClockForeColor` property is functioning as expected.</span></span>  
   
-5.  Haga clic en **Cerrar** para cerrar la ventana **UserControl Test Container**.  
+5.  <span data-ttu-id="13509-181">Haga clic en **Cerrar** para cerrar **UserControl Test Container**.</span><span class="sxs-lookup"><span data-stu-id="13509-181">Click **Close** to close the **UserControl Test Container**.</span></span>  
   
-     En esta sección y en las secciones anteriores, vio cómo se pueden combinar componentes y controles de Windows con código y empaquetamiento para ofrecer funcionalidad personalizada en forma de control de usuario.  Aprendió a exponer propiedades en el control compuesto, así como a probar el control una vez terminado.  En la siguiente sección, aprenderá a construir un control de usuario heredado utilizando `ctlClock` como base.  
+     <span data-ttu-id="13509-182">En esta sección y en las anteriores, ha visto cómo se pueden combinar componentes y controles de Windows con código y empaquetado para ofrecer funcionalidad personalizada en forma de control compuesto.</span><span class="sxs-lookup"><span data-stu-id="13509-182">In this section and the preceding sections, you have seen how components and Windows controls can be combined with code and packaging to provide custom functionality in the form of a composite control.</span></span> <span data-ttu-id="13509-183">Ha aprendido a exponer propiedades en el control compuesto y a probar el control una vez completado.</span><span class="sxs-lookup"><span data-stu-id="13509-183">You have learned to expose properties in your composite control, and how to test your control after it is complete.</span></span> <span data-ttu-id="13509-184">En la siguiente sección, aprenderá a crear un control compuesto heredado utilizando `ctlClock` como base.</span><span class="sxs-lookup"><span data-stu-id="13509-184">In the next section you will learn how to construct an inherited composite control using `ctlClock` as a base.</span></span>  
   
-## Heredar de un control compuesto  
- En las secciones anteriores, aprendió a combinar controles de Windows, componentes y código en controles de usuario reutilizables.  Ahora puede utilizar el control compuesto como base a partir de la cual se compilarán otros controles.  El proceso de derivación de una clase a partir de una clase base se denomina *herencia*.  En esta sección, creará un control de usuario denominado `ctlAlarmClock`.  Este control se derivará de su control principal, `ctlClock`.  Aprenderá a ampliar la funcionalidad de `ctlClock` reemplazando los métodos principales y agregando métodos y propiedades nuevos.  
+## <a name="inheriting-from-a-composite-control"></a><span data-ttu-id="13509-185">Heredar de un control compuesto</span><span class="sxs-lookup"><span data-stu-id="13509-185">Inheriting from a Composite Control</span></span>  
+ <span data-ttu-id="13509-186">En las secciones anteriores, ha aprendido a combinar controles de Windows, componentes y código en controles compuestos reutilizables.</span><span class="sxs-lookup"><span data-stu-id="13509-186">In the previous sections, you learned how to combine Windows controls, components, and code into reusable composite controls.</span></span> <span data-ttu-id="13509-187">Ahora puede utilizar su control compuesto como base sobre la que crear otros controles.</span><span class="sxs-lookup"><span data-stu-id="13509-187">Your composite control can now be used as a base upon which other controls can be built.</span></span> <span data-ttu-id="13509-188">El proceso de derivar una clase a partir de una clase base se denomina *herencia*.</span><span class="sxs-lookup"><span data-stu-id="13509-188">The process of deriving a class from a base class is called *inheritance*.</span></span> <span data-ttu-id="13509-189">En esta sección, creará un control de usuario denominado `ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-189">In this section, you will create a composite control called `ctlAlarmClock`.</span></span> <span data-ttu-id="13509-190">Este control se derivará de su control primario, `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-190">This control will be derived from its parent control, `ctlClock`.</span></span> <span data-ttu-id="13509-191">Aprenderá a extender la funcionalidad de `ctlClock` reemplazando los métodos primarios y agregando nuevos métodos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="13509-191">You will learn to extend the functionality of `ctlClock` by overriding parent methods and adding new methods and properties.</span></span>  
   
- El primer paso para crear un control heredado es derivarlo de su control primario.  Esta acción crea un nuevo control que tiene todas las propiedades, métodos y características gráficas del control primario, pero que también actúa como base para la adición de funcionalidad nueva o modificada.  
+ <span data-ttu-id="13509-192">El primer paso para crear un control heredado es derivarlo de su elemento primario.</span><span class="sxs-lookup"><span data-stu-id="13509-192">The first step in creating an inherited control is to derive it from its parent.</span></span> <span data-ttu-id="13509-193">Esta acción crea un control que tiene todas las propiedades, los métodos y las características gráficas del control primario, pero que también puede servir de base para agregar funcionalidad nueva o modificada.</span><span class="sxs-lookup"><span data-stu-id="13509-193">This action creates a new control that has all of the properties, methods, and graphical characteristics of the parent control, but can also act as a base for the addition of new or modified functionality.</span></span>  
   
-#### Para crear el control heredado  
+#### <a name="to-create-the-inherited-control"></a><span data-ttu-id="13509-194">Para crear el control heredado</span><span class="sxs-lookup"><span data-stu-id="13509-194">To create the inherited control</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic en el proyecto con el botón secundario del mouse, elija **Agregar** y haga clic en **Control de usuario**.  
+1.  <span data-ttu-id="13509-195">En el Explorador de soluciones, haga clic con el botón derecho en **ctlClockLib**, elija **Agregar** y haga clic en **Control de usuario**.</span><span class="sxs-lookup"><span data-stu-id="13509-195">In Solution Explorer, right-click **ctlClockLib**, point to **Add**, and then click **User Control**.</span></span>  
   
-     Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.  
+     <span data-ttu-id="13509-196">Se abre el cuadro de diálogo **Agregar nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="13509-196">The **Add New Item** dialog box opens.</span></span>  
   
-2.  Seleccione la plantilla **Control de usuario heredado**.  
+2.  <span data-ttu-id="13509-197">Seleccione la plantilla **Control de usuario heredado**.</span><span class="sxs-lookup"><span data-stu-id="13509-197">Select the **Inherited User Control** template.</span></span>  
   
-3.  En el cuadro **Nombre**, escriba `ctlAlarmClock.vb` y haga clic en **Agregar**.  
+3.  <span data-ttu-id="13509-198">En el cuadro **Nombre**, escriba `ctlAlarmClock.vb` y haga clic en **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="13509-198">In the **Name** box, type `ctlAlarmClock.vb`, and then click **Add**.</span></span>  
   
-     Aparece el cuadro de diálogo **Selector de herencia**.  
+     <span data-ttu-id="13509-199">Aparece el cuadro de diálogo **Selector de herencia**.</span><span class="sxs-lookup"><span data-stu-id="13509-199">The **Inheritance Picker** dialog box appears.</span></span>  
   
-4.  En **Nombre de componente**, haga doble clic en **ctlClock**.  
+4.  <span data-ttu-id="13509-200">En **Nombre de componente**, haga doble clic en **ctlClock**.</span><span class="sxs-lookup"><span data-stu-id="13509-200">Under **Component Name**, double-click **ctlClock**.</span></span>  
   
-5.  En el Explorador de soluciones, examine los proyectos actuales.  
+5.  <span data-ttu-id="13509-201">En el Explorador de soluciones, examine los proyectos actuales.</span><span class="sxs-lookup"><span data-stu-id="13509-201">In Solution Explorer, browse through the current projects.</span></span>  
   
     > [!NOTE]
-    >  Se ha agregado un archivo denominado **ctlAlarmClock.vb** al proyecto actual.  
+    >  <span data-ttu-id="13509-202">Se ha agregado un archivo denominado **ctlAlarmClock.vb** al proyecto actual.</span><span class="sxs-lookup"><span data-stu-id="13509-202">A file called **ctlAlarmClock.vb** has been added to the current project.</span></span>  
   
-### Agregar propiedades de alarma  
- Las propiedades se agregan a un control heredado del mismo modo que se agregan a un control compuesto.  Ahora utilizará la sintaxis de declaración de propiedades para agregar dos propiedades al control: `AlarmTime`, que almacenará el valor de fecha y hora en que se activará la alarma y `AlarmSet`, que indica si está establecida o no la alarma.  
+### <a name="adding-the-alarm-properties"></a><span data-ttu-id="13509-203">Agregar las propiedades de alarma</span><span class="sxs-lookup"><span data-stu-id="13509-203">Adding the Alarm Properties</span></span>  
+ <span data-ttu-id="13509-204">Las propiedades se agregan a un control heredado de la misma forma que si fuera un control compuesto.</span><span class="sxs-lookup"><span data-stu-id="13509-204">Properties are added to an inherited control in the same way they are added to a composite control.</span></span> <span data-ttu-id="13509-205">Ahora utilizará la sintaxis de declaración de propiedades para agregar dos propiedades al control: `AlarmTime`, que almacenará el valor de la fecha y la hora en que debe activarse la alarma, y `AlarmSet`, que indicará si la alarma está definida.</span><span class="sxs-lookup"><span data-stu-id="13509-205">You will now use the property declaration syntax to add two properties to your control: `AlarmTime`, which will store the value of the date and time the alarm is to go off, and `AlarmSet`, which will indicate whether the alarm is set.</span></span>  
   
-##### Para agregar propiedades al control compuesto  
+##### <a name="to-add-properties-to-your-composite-control"></a><span data-ttu-id="13509-206">Para agregar propiedades al control compuesto</span><span class="sxs-lookup"><span data-stu-id="13509-206">To add properties to your composite control</span></span>  
   
-1.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **ctlAlarmClock** y, a continuación, haga clic en **Ver código**.  
+1.  <span data-ttu-id="13509-207">En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock** y haga clic en **Ver código**.</span><span class="sxs-lookup"><span data-stu-id="13509-207">In Solution Explorer, right-click **ctlAlarmClock**, and then click **View Code**.</span></span>  
   
-2.  Busque la declaración de clase del control ctlAlarmClock, que aparece como `Public Class ctlAlarmClock`.  En la declaración de clase, inserte el código siguiente.  
+2.  <span data-ttu-id="13509-208">Busque la declaración de clase del control ctlAlarmClock, que aparece como `Public Class ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-208">Locate the class declaration for the ctlAlarmClock control, which appears as `Public Class ctlAlarmClock`.</span></span>  <span data-ttu-id="13509-209">Inserte el siguiente código en la declaración de clase.</span><span class="sxs-lookup"><span data-stu-id="13509-209">In the class declaration, insert the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private dteAlarmTime As Date  
     Private blnAlarmSet As Boolean  
     ' These properties will be declared as Public to allow future   
@@ -237,54 +231,50 @@ Los controles compuestos proporcionan un medio para crear y reutilizar interface
     End Property  
     ```  
   
-### Agregar a la interfaz gráfica del control  
- El control heredado tiene una interfaz visual que es idéntica a la del control del que se hereda.  Posee los mismos controles constituyentes que su control primario, pero las propiedades de los controles constituyentes no estarán disponibles a menos que se expongan de manera específica.  Puede agregar a la interfaz gráfica de un control compuesto heredado del mismo modo que agregaría a cualquier control compuesto.  Para continuar agregando a la interfaz visual de su reloj de alarma, agregará un control Label que parpadeará cuando esté sonando la alarma.  
+### <a name="adding-to-the-graphical-interface-of-the-control"></a><span data-ttu-id="13509-210">Agregar a la interfaz gráfica del control</span><span class="sxs-lookup"><span data-stu-id="13509-210">Adding to the Graphical Interface of the Control</span></span>  
+ <span data-ttu-id="13509-211">El control heredado tiene una interfaz visual que es idéntica a la del control del que hereda.</span><span class="sxs-lookup"><span data-stu-id="13509-211">Your inherited control has a visual interface that is identical to the control it inherits from.</span></span> <span data-ttu-id="13509-212">Posee los mismos controles constituyentes que su control primario, pero las propiedades de estos no estarán disponibles a menos que se expusieran específicamente.</span><span class="sxs-lookup"><span data-stu-id="13509-212">It possesses the same constituent controls as its parent control, but the properties of the constituent controls will not be available unless they were specifically exposed.</span></span> <span data-ttu-id="13509-213">Puede agregar a la interfaz gráfica de un control compuesto heredado del mismo modo que agregaría a cualquier control compuesto.</span><span class="sxs-lookup"><span data-stu-id="13509-213">You may add to the graphical interface of an inherited composite control in the same manner as you would add to any composite control.</span></span> <span data-ttu-id="13509-214">Para seguir agregando a la interfaz visual de su reloj despertador, agregará un control de etiqueta que parpadeará cuando suene la alarma.</span><span class="sxs-lookup"><span data-stu-id="13509-214">To continue adding to your alarm clock's visual interface, you will add a label control that will flash when the alarm is sounding.</span></span>  
   
-##### Para agregar el control Label  
+##### <a name="to-add-the-label-control"></a><span data-ttu-id="13509-215">Para agregar el control de etiqueta</span><span class="sxs-lookup"><span data-stu-id="13509-215">To add the label control</span></span>  
   
-1.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **ctlAlarmClock** y, a continuación, haga clic en **Ver diseñador**.  
+1.  <span data-ttu-id="13509-216">En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock** y haga clic en **Ver diseñador**.</span><span class="sxs-lookup"><span data-stu-id="13509-216">In Solution Explorer, right-click **ctlAlarmClock**, and click **View Designer**.</span></span>  
   
-     Aparecerá el diseñador de `ctlAlarmClock` en la ventana principal.  
+     <span data-ttu-id="13509-217">Se abre el diseñador para `ctlAlarmClock` en la ventana principal.</span><span class="sxs-lookup"><span data-stu-id="13509-217">The designer for `ctlAlarmClock` opens in the main window.</span></span>  
   
-2.  Haga clic en `lblDisplay` \(la zona de presentación del control\) y observe la ventana Propiedades.  
-  
-    > [!NOTE]
-    >  Observe que, aunque se muestran todas las propiedades, están atenuadas.  Esto indica que estas propiedades son nativas de `lblDisplay` y no se pueden modificar ni se puede tener acceso a ellas en la ventana Propiedades.  De manera predeterminada, los controles contenidos en un control compuesto son `Private` y no se puede tener acceso a sus propiedades de ningún modo.  
+2.  <span data-ttu-id="13509-218">Haga clic en `lblDisplay` (la parte de visualización del control) y observe la ventana Propiedades.</span><span class="sxs-lookup"><span data-stu-id="13509-218">Click `lblDisplay` (the display portion of the control), and view the Properties window.</span></span>  
   
     > [!NOTE]
-    >  Si desea que los futuros usuarios del control de usuario tengan acceso a los controles internos, declárelos como `Public` o `Protected`.  Esto le permitirá establecer y modificar las propiedades de los controles contenidos en el control compuesto, mediante el código adecuado.  
+    >  <span data-ttu-id="13509-219">Aunque se muestran todas las propiedades, están atenuadas.</span><span class="sxs-lookup"><span data-stu-id="13509-219">While all the properties are displayed, they are dimmed.</span></span> <span data-ttu-id="13509-220">Esto indica que estas propiedades son nativas de `lblDisplay` y no se pueden modificar ni se puede acceder a ellas en la ventana Propiedades.</span><span class="sxs-lookup"><span data-stu-id="13509-220">This indicates that these properties are native to `lblDisplay` and cannot be modified or accessed in the Properties window.</span></span> <span data-ttu-id="13509-221">De forma predeterminada, los controles contenidos en un control compuesto son `Private`, y sus propiedades no son accesibles por ningún medio.</span><span class="sxs-lookup"><span data-stu-id="13509-221">By default, controls contained in a composite control are `Private`, and their properties are not accessible by any means.</span></span>  
   
-3.  Agregue el control <xref:System.Windows.Forms.Label> al control compuesto.  
+    > [!NOTE]
+    >  <span data-ttu-id="13509-222">Si desea que los posteriores usuarios de su control compuesto tengan acceso a sus controles internos, declárelos como `Public` o `Protected`.</span><span class="sxs-lookup"><span data-stu-id="13509-222">If you want subsequent users of your composite control to have access to its internal controls, declare them as `Public` or `Protected`.</span></span> <span data-ttu-id="13509-223">Esto le permitirá establecer y modificar las propiedades de los controles contenidos en el control compuesto mediante el código adecuado.</span><span class="sxs-lookup"><span data-stu-id="13509-223">This will allow you to set and modify properties of controls contained within your composite control by using the appropriate code.</span></span>  
   
-4.  Con el mouse, mueva el control <xref:System.Windows.Forms.Label> justo debajo del cuadro de vista.  En la ventana Propiedades, establezca las propiedades siguientes:  
+3.  <span data-ttu-id="13509-224">Agregar un <xref:System.Windows.Forms.Label> hasta su control compuesto.</span><span class="sxs-lookup"><span data-stu-id="13509-224">Add a <xref:System.Windows.Forms.Label> control to your composite control.</span></span>  
   
-    |Propiedad.|Configuración|  
-    |----------------|-------------------|  
-    |**Name**|`lblAlarm`|  
-    |**Text**|¡Alarma\!|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`False`|  
+4.  <span data-ttu-id="13509-225">Con el mouse, arrastre el <xref:System.Windows.Forms.Label> control inmediatamente debajo del cuadro de visualización.</span><span class="sxs-lookup"><span data-stu-id="13509-225">Using the mouse, drag the <xref:System.Windows.Forms.Label> control immediately beneath the display box.</span></span> <span data-ttu-id="13509-226">En la ventana Propiedades, establezca las propiedades siguientes.</span><span class="sxs-lookup"><span data-stu-id="13509-226">In the Properties window, set the following properties.</span></span>  
   
-### Agregar la funcionalidad de alarma  
- En los procedimientos anteriores, agregó propiedades y un control que habilitará la funcionalidad de alarma en el control compuesto.  En este procedimiento, agregará código para comparar la hora actual con la hora de alarma y, si son iguales, hacer que suene y parpadee una alarma.  Al anular el método `Timer1_Tick` de `ctlClock` y agregar código adicional en él, ampliará la capacidad de `ctlAlarmClock` mientras conserva toda la funcionalidad inherente de `ctlClock`.  
+    |<span data-ttu-id="13509-227">Propiedad</span><span class="sxs-lookup"><span data-stu-id="13509-227">Property</span></span>|<span data-ttu-id="13509-228">Parámetro</span><span class="sxs-lookup"><span data-stu-id="13509-228">Setting</span></span>|  
+    |--------------|-------------|  
+    |<span data-ttu-id="13509-229">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="13509-229">**Name**</span></span>|`lblAlarm`|  
+    |<span data-ttu-id="13509-230">**Text**</span><span class="sxs-lookup"><span data-stu-id="13509-230">**Text**</span></span>|<span data-ttu-id="13509-231">**¡Alarma!**</span><span class="sxs-lookup"><span data-stu-id="13509-231">**Alarm!**</span></span>|  
+    |<span data-ttu-id="13509-232">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="13509-232">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="13509-233">**Visible**</span><span class="sxs-lookup"><span data-stu-id="13509-233">**Visible**</span></span>|`False`|  
   
-##### Para reemplazar el método Timer1\_Tick de ctlClock  
+### <a name="adding-the-alarm-functionality"></a><span data-ttu-id="13509-234">Agregar la funcionalidad de alarma</span><span class="sxs-lookup"><span data-stu-id="13509-234">Adding the Alarm Functionality</span></span>  
+ <span data-ttu-id="13509-235">En los procedimientos anteriores, agregó propiedades y un control que habilitará la funcionalidad de alarma en el control compuesto.</span><span class="sxs-lookup"><span data-stu-id="13509-235">In the previous procedures, you added properties and a control that will enable alarm functionality in your composite control.</span></span> <span data-ttu-id="13509-236">En este procedimiento, agregará código para comparar la hora actual con la hora de la alarma y, si son iguales, hacer que parpadee y suene una alarma.</span><span class="sxs-lookup"><span data-stu-id="13509-236">In this procedure, you will add code to compare the current time to the alarm time and, if they are the same, to sound and flash an alarm.</span></span> <span data-ttu-id="13509-237">Al reemplazar el método `Timer1_Tick` de `ctlClock` y agregarle código adicional, extenderá la funcionalidad de `ctlAlarmClock` al mismo tiempo que conserva toda la funcionalidad inherente de `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-237">By overriding the `Timer1_Tick` method of `ctlClock` and adding additional code to it, you will extend the capability of `ctlAlarmClock` while retaining all of the inherent functionality of `ctlClock`.</span></span>  
   
-1.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **ctlAlarmClock.vb** y haga clic en **Ver código**.  
+##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a><span data-ttu-id="13509-238">Para reemplazar el método Timer1_Tick de ctlClock</span><span class="sxs-lookup"><span data-stu-id="13509-238">To override the Timer1_Tick method of ctlClock</span></span>  
   
-2.  Busque la instrucción `Private blnAlarmSet As Boolean`.  Justo después, agregue la siguiente instrucción.  
+1.  <span data-ttu-id="13509-239">En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock.vb** y haga clic en **Ver código**.</span><span class="sxs-lookup"><span data-stu-id="13509-239">In Solution Explorer, right-click **ctlAlarmClock.vb**, and then click **View Code**.</span></span>  
   
-     \[Visual Basic\]  
+2.  <span data-ttu-id="13509-240">Busque la instrucción `Private blnAlarmSet As Boolean`.</span><span class="sxs-lookup"><span data-stu-id="13509-240">Locate the `Private blnAlarmSet As Boolean` statement.</span></span> <span data-ttu-id="13509-241">Justo debajo de ella, agregue la siguiente instrucción.</span><span class="sxs-lookup"><span data-stu-id="13509-241">Immediately beneath it, add the following statement.</span></span>  
   
-    ```  
+    ```vb  
     Dim blnColorTicker as Boolean  
     ```  
   
-3.  Busque la instrucción `End Class` en la parte inferior de la página.  Inmediatamente antes de la instrucción `End Class`, agregue el código siguiente:  
+3.  <span data-ttu-id="13509-242">Busque la instrucción `End Class` en la parte inferior de la página.</span><span class="sxs-lookup"><span data-stu-id="13509-242">Locate the `End Class` statement at the bottom of the page.</span></span> <span data-ttu-id="13509-243">Justo antes de la instrucción `End Class`, agregue el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="13509-243">Just before the `End Class` statement, add the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Overrides Sub Timer1_Tick(ByVal sender As Object, ByVal e _  
         As System.EventArgs)  
         ' Calls the Timer1_Tick method of ctlClock.  
@@ -318,24 +308,22 @@ Los controles compuestos proporcionan un medio para crear y reutilizar interface
     End Sub  
     ```  
   
-     Al agregar este código se realizan varias tareas.  La instrucción `Overrides` indica al control que utilice este método en lugar del método heredado del control base.  Cuando se llama a este método, éste llama al que reemplaza al invocar la instrucción `MyBase.Timer1_Tick`; de este modo, se asegura que toda la funcionalidad incorporada en el control original se reproduzca en este control.  A continuación, ejecuta código adicional para incorporar la funcionalidad de la alarma.  Cuando suena la alarma, aparece un control de etiqueta intermitente y se oye un sonido.  
+     <span data-ttu-id="13509-244">Con la adición de este código, se llevan a cabo varias tareas.</span><span class="sxs-lookup"><span data-stu-id="13509-244">The addition of this code accomplishes several tasks.</span></span> <span data-ttu-id="13509-245">La instrucción `Overrides` indica al control que utilice este método en lugar del que heredó del control base.</span><span class="sxs-lookup"><span data-stu-id="13509-245">The `Overrides` statement directs the control to use this method in place of the method that was inherited from the base control.</span></span> <span data-ttu-id="13509-246">Cuando se llama a este método, llama al método que reemplaza invocando la instrucción `MyBase.Timer1_Tick`, lo que garantiza que toda la funcionalidad incorporada en el control original se reproduzca en este control.</span><span class="sxs-lookup"><span data-stu-id="13509-246">When this method is called, it calls the method it overrides by invoking the `MyBase.Timer1_Tick` statement, ensuring that all of the functionality incorporated in the original control is reproduced in this control.</span></span> <span data-ttu-id="13509-247">A continuación, ejecuta código adicional para incorporar la funcionalidad de alarma.</span><span class="sxs-lookup"><span data-stu-id="13509-247">It then runs additional code to incorporate the alarm functionality.</span></span> <span data-ttu-id="13509-248">Aparecerá un control de etiqueta parpadeante cuando se active la alarma, y se oirá un pitido.</span><span class="sxs-lookup"><span data-stu-id="13509-248">A flashing label control will appear when the alarm occurs, and an audible beep will be heard.</span></span>  
   
     > [!NOTE]
-    >  Observe que desde que reemplaza un controlador de eventos heredado, no tiene que especificar el evento con la palabra clave `Handles`.  El evento ya está enlazado.  Lo único que reemplaza es la implementación del controlador.  
+    >  <span data-ttu-id="13509-249">Dado que va a reemplazar un controlador de eventos heredado, no es necesario especificar el evento con la palabra clave `Handles`.</span><span class="sxs-lookup"><span data-stu-id="13509-249">Because you are overriding an inherited event handler, you do not have to specify the event with the `Handles` keyword.</span></span> <span data-ttu-id="13509-250">El evento ya está enlazado.</span><span class="sxs-lookup"><span data-stu-id="13509-250">The event is already hooked up.</span></span> <span data-ttu-id="13509-251">Lo que se va a reemplazar es la implementación del controlador.</span><span class="sxs-lookup"><span data-stu-id="13509-251">All you are overriding is the implementation of the handler.</span></span>  
   
-     El control de reloj de alarma está casi completo.  Lo único que queda es implementar un medio para desactivarlo.  Para ello, agregará el código al método `lblAlarm_Click`.  
+     <span data-ttu-id="13509-252">El control de reloj despertador está casi completado.</span><span class="sxs-lookup"><span data-stu-id="13509-252">Your alarm clock control is almost complete.</span></span> <span data-ttu-id="13509-253">Lo único que queda es implementar una forma de desactivarlo.</span><span class="sxs-lookup"><span data-stu-id="13509-253">The only thing that remains is to implement a way to turn it off.</span></span> <span data-ttu-id="13509-254">Para ello, agregará código al método `lblAlarm_Click`.</span><span class="sxs-lookup"><span data-stu-id="13509-254">To do this, you will add code to the `lblAlarm_Click` method.</span></span>  
   
-##### Para implementar el método de apagado  
+##### <a name="to-implement-the-shutoff-method"></a><span data-ttu-id="13509-255">Para implementar el método de apagado</span><span class="sxs-lookup"><span data-stu-id="13509-255">To implement the shutoff method</span></span>  
   
-1.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **ctlAlarmClock.vb** y haga clic en **Ver diseñador**.  
+1.  <span data-ttu-id="13509-256">En el Explorador de soluciones, haga clic con el botón derecho en **ctlAlarmClock.vb** y haga clic en **Ver diseñador**.</span><span class="sxs-lookup"><span data-stu-id="13509-256">In Solution Explorer, right-click **ctlAlarmClock.vb**, and then click **View Designer**.</span></span>  
   
-2.  En el diseñador, haga doble clic en **lblAlarm**.  Se abrirá el **Editor de código** en la línea `Private Sub lblAlarm_Click`.  
+2.  <span data-ttu-id="13509-257">En el diseñador, haga doble clic en **lblAlarm**.</span><span class="sxs-lookup"><span data-stu-id="13509-257">In the designer, double-click **lblAlarm**.</span></span> <span data-ttu-id="13509-258">Se abre el **Editor de código** en la línea `Private Sub lblAlarm_Click`.</span><span class="sxs-lookup"><span data-stu-id="13509-258">The **Code Editor** opens to the `Private Sub lblAlarm_Click` line.</span></span>  
   
-3.  Modifique este método de forma que se asemeje al código siguiente.  
+3.  <span data-ttu-id="13509-259">Modifique este método para que se parezca al siguiente código.</span><span class="sxs-lookup"><span data-stu-id="13509-259">Modify this method so that it resembles the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub lblAlarm_Click(ByVal sender As Object, ByVal e As _  
      System.EventArgs) Handles lblAlarm.Click  
         ' Turns off the alarm.  
@@ -345,55 +333,53 @@ Los controles compuestos proporcionan un medio para crear y reutilizar interface
     End Sub  
     ```  
   
-4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
+4.  <span data-ttu-id="13509-260">En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="13509-260">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-### Utilizar el control heredado en un formulario  
- Puede probar el control heredado de la misma forma que probó el control de la clase base, `ctlClock`: presione F5 para compilar el proyecto y ejecute el control en **UserControl Test Container**.  Para obtener más información, vea [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+### <a name="using-the-inherited-control-on-a-form"></a><span data-ttu-id="13509-261">Usar el control heredado en un formulario</span><span class="sxs-lookup"><span data-stu-id="13509-261">Using the Inherited Control on a Form</span></span>  
+ <span data-ttu-id="13509-262">Puede probar el control heredado de la misma forma que probó el control de la clase base, `ctlClock`: presione F5 para compilar el proyecto y ejecute el control en **UserControl Test Container**.</span><span class="sxs-lookup"><span data-stu-id="13509-262">You can test your inherited control the same way you tested the base class control, `ctlClock`: Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span> <span data-ttu-id="13509-263">Para más información, consulte [Cómo: Comprobar el comportamiento de un control UserControl en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="13509-263">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
- Para colocar el control para su uso, tendrá que hospedarlo en un formulario.  Como ocurre con los controles compuestos estándar, los controles compuestos heredados no son independientes y deben hospedarse en un formulario o en otro contenedor.  Puesto que `ctlAlarmClock` ofrece una funcionalidad más profunda, será necesario código adicional para probarlo.  En esta sección, escribirá un programa sencillo para probar la funcionalidad de `ctlAlarmClock`.  Escribirá código para definir y mostrar la propiedad `AlarmTime` de `ctlAlarmClock` y probar sus funciones heredadas.  
+ <span data-ttu-id="13509-264">Para utilizar el control, debe hospedarlo en un formulario.</span><span class="sxs-lookup"><span data-stu-id="13509-264">To put your control to use, you will need to host it on a form.</span></span> <span data-ttu-id="13509-265">Al igual que con los controles compuestos estándar, los controles compuestos heredados no son independientes y deben hospedarse en un formulario o en otro contenedor.</span><span class="sxs-lookup"><span data-stu-id="13509-265">As with a standard composite control, an inherited composite control cannot stand alone and must be hosted in a form or other container.</span></span> <span data-ttu-id="13509-266">Puesto que `ctlAlarmClock` tiene un mayor grado de funcionalidad, se necesita código adicional para probarlo.</span><span class="sxs-lookup"><span data-stu-id="13509-266">Since `ctlAlarmClock` has a greater depth of functionality, additional code is required to test it.</span></span> <span data-ttu-id="13509-267">En este procedimiento, escribirá un programa sencillo para probar la funcionalidad de `ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-267">In this procedure, you will write a simple program to test the functionality of `ctlAlarmClock`.</span></span> <span data-ttu-id="13509-268">Escribirá código para establecer y mostrar la propiedad `AlarmTime` de `ctlAlarmClock` y probar sus funciones inherentes.</span><span class="sxs-lookup"><span data-stu-id="13509-268">You will write code to set and display the `AlarmTime` property of `ctlAlarmClock`, and will test its inherent functions.</span></span>  
   
-##### Para compilar y agregar el control a un formulario de prueba  
+##### <a name="to-build-and-add-your-control-to-a-test-form"></a><span data-ttu-id="13509-269">Para compilar y agregar el control a un formulario de prueba</span><span class="sxs-lookup"><span data-stu-id="13509-269">To build and add your control to a test form</span></span>  
   
-1.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **ctlClockLib** y haga clic en **Compilar**.  
+1.  <span data-ttu-id="13509-270">En el Explorador de soluciones, haga clic con el botón derecho en **ctlClockLib** y haga clic en **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="13509-270">In Solution Explorer, right-click **ctlClockLib**, and then click **Build**.</span></span>  
   
-2.  En el menú **Archivo**, elija **Agregar** y, después, haga clic en **Nuevo proyecto**.  
+2.  <span data-ttu-id="13509-271">En el menú **Archivo** , apunte a **Agregar**y haga clic en **Nuevo proyecto**.</span><span class="sxs-lookup"><span data-stu-id="13509-271">On the **File** menu, point to **Add**, and then click **New Project**.</span></span>  
   
-3.  Agregue un nuevo proyecto de **Aplicación para Windows** a la solución y denomínelo `Test`.  
+3.  <span data-ttu-id="13509-272">Agregue un nuevo proyecto **Aplicación Windows** a la solución y asígnele el nombre `Test`.</span><span class="sxs-lookup"><span data-stu-id="13509-272">Add a new **Windows Application** project to the solution, and name it `Test`.</span></span>  
   
-     El proyecto **Test** se agrega al Explorador de soluciones.  
+     <span data-ttu-id="13509-273">Se crea el proyecto **Test** y se agrega al Explorador de soluciones.</span><span class="sxs-lookup"><span data-stu-id="13509-273">The **Test** project is added to Solution Explorer.</span></span>  
   
-4.  En Explorador de soluciones, haga clic con el botón secundario del mouse en el nodo de proyecto `Test` y, a continuación, haga clic en **Agregar referencia** para mostrar el cuadro de diálogo **Agregar referencia**.  
+4.  <span data-ttu-id="13509-274">En el Explorador de soluciones, haga clic con el botón derecho en el nodo de proyecto `Test` y, después, haga clic en **Agregar referencia** para mostrar el cuadro de diálogo **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="13509-274">In Solution Explorer, right-click the `Test` project node, and then click **Add Reference** to display the **Add Reference** dialog box.</span></span>  
   
-5.  Haga clic en la ficha **Proyectos**.  Aparecerá **ctlClockLib** en la lista **Nombre de proyecto**.  Haga doble clic en **ctlClockLib** para agregar la referencia al proyecto de prueba.  
+5.  <span data-ttu-id="13509-275">Haga clic en la pestaña etiquetada como **Proyectos**.</span><span class="sxs-lookup"><span data-stu-id="13509-275">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="13509-276">El proyecto **ctlClockLib** aparecerá en **Nombre de proyecto**.</span><span class="sxs-lookup"><span data-stu-id="13509-276">The project **ctlClockLib** will be listed under **Project Name**.</span></span> <span data-ttu-id="13509-277">Haga doble clic en **ctlClockLib** para agregar la referencia al proyecto de prueba.</span><span class="sxs-lookup"><span data-stu-id="13509-277">Double-click **ctlClockLib** to add the reference to the test project.</span></span>  
   
-6.  En el Explorador de soluciones, haga clic con el botón secundario del mouse en **Test** y haga clic en **Compilar**.  
+6.  <span data-ttu-id="13509-278">En el Explorador de soluciones, haga clic con el botón derecho en **Probar** y haga clic en **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="13509-278">In Solution Explorer, right-click **Test**, and then click **Build**.</span></span>  
   
-7.  En el **Cuadro de herramientas**, expanda el nodo **Componentes de ctlClockLib**.  
+7.  <span data-ttu-id="13509-279">En el **cuadro de herramientas**, expanda el nodo **Componentes de ctlClockLib**.</span><span class="sxs-lookup"><span data-stu-id="13509-279">In the **Toolbox**, expand the **ctlClockLib Components** node.</span></span>  
   
-8.  Haga doble clic en **ctlAlarmClock** para agregar una instancia de `ctlAlarmClock` al formulario.  
+8.  <span data-ttu-id="13509-280">Haga doble clic en **ctlAlarmClock** para agregar una instancia de `ctlAlarmClock` al formulario.</span><span class="sxs-lookup"><span data-stu-id="13509-280">Double-click **ctlAlarmClock** to add an instance of `ctlAlarmClock` to your form.</span></span>  
   
-9. En el **Cuadro de herramientas**, busque y haga doble clic en **DateTimePicker** para agregar un control <xref:System.Windows.Forms.DateTimePicker> al formulario; a continuación, haga doble clic en **Label** para agregar un control <xref:System.Windows.Forms.Label>.  
+9. <span data-ttu-id="13509-281">En el **cuadro de herramientas**, busque y haga doble clic en **DateTimePicker** para agregar una <xref:System.Windows.Forms.DateTimePicker> control al formulario y, a continuación, agregue un <xref:System.Windows.Forms.Label> control haciendo doble clic en **etiqueta**.</span><span class="sxs-lookup"><span data-stu-id="13509-281">In the **Toolbox**, locate and double-click **DateTimePicker** to add a <xref:System.Windows.Forms.DateTimePicker> control to your form, and then add a <xref:System.Windows.Forms.Label> control by double-clicking **Label**.</span></span>  
   
-10. Utilice el mouse para colocar los controles en un lugar apropiado del formulario.  
+10. <span data-ttu-id="13509-282">Use el mouse para colocar los controles en un lugar adecuado en el formulario.</span><span class="sxs-lookup"><span data-stu-id="13509-282">Use the mouse to position the controls in a convenient place on the form.</span></span>  
   
-11. Establezca las propiedades de estos controles de la manera siguiente.  
+11. <span data-ttu-id="13509-283">Establezca las propiedades de estos controles de la manera siguiente.</span><span class="sxs-lookup"><span data-stu-id="13509-283">Set the properties of these controls in the following manner.</span></span>  
   
-    |Control|Propiedad.|Valor|  
-    |-------------|----------------|-----------|  
-    |`label1`|**Text**|`(espacio en blanco)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat>|  
+    |<span data-ttu-id="13509-284">Control</span><span class="sxs-lookup"><span data-stu-id="13509-284">Control</span></span>|<span data-ttu-id="13509-285">Propiedad</span><span class="sxs-lookup"><span data-stu-id="13509-285">Property</span></span>|<span data-ttu-id="13509-286">Valor</span><span class="sxs-lookup"><span data-stu-id="13509-286">Value</span></span>|  
+    |-------------|--------------|-----------|  
+    |`label1`|<span data-ttu-id="13509-287">**Text**</span><span class="sxs-lookup"><span data-stu-id="13509-287">**Text**</span></span>|`(blank space)`|  
+    ||<span data-ttu-id="13509-288">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="13509-288">**Name**</span></span>|`lblTest`|  
+    |`dateTimePicker1`|<span data-ttu-id="13509-289">**Nombre**</span><span class="sxs-lookup"><span data-stu-id="13509-289">**Name**</span></span>|`dtpTest`|  
+    ||<span data-ttu-id="13509-290">**Format**</span><span class="sxs-lookup"><span data-stu-id="13509-290">**Format**</span></span>|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
-12. En el diseñador, haga doble clic en **dtpTest**.  
+12. <span data-ttu-id="13509-291">En el diseñador, haga doble clic en **dtpTest**.</span><span class="sxs-lookup"><span data-stu-id="13509-291">In the designer, double-click **dtpTest**.</span></span>  
   
-     El **Editor de código** se abrirá en `Private Sub dtpTest_ValueChanged`.  
+     <span data-ttu-id="13509-292">Se abre el **Editor de código** en `Private Sub dtpTest_ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="13509-292">The **Code Editor** opens to `Private Sub dtpTest_ValueChanged`.</span></span>  
   
-13. Modifique el código de modo que se asemeje a lo siguiente.  
+13. <span data-ttu-id="13509-293">Modifique el código para que se parezca al siguiente.</span><span class="sxs-lookup"><span data-stu-id="13509-293">Modify the code so that it resembles the following.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub dtpTest_ValueChanged(ByVal sender As Object, ByVal e As _  
         System.EventArgs) Handles dtpTest.ValueChanged  
         ctlAlarmClock1.AlarmTime = dtpTest.Value  
@@ -403,24 +389,24 @@ Los controles compuestos proporcionan un medio para crear y reutilizar interface
     End Sub  
     ```  
   
-14. En el Explorador de soluciones, haga clic con el botón secundario del mouse en **Test** y, a continuación, en **Establecer como proyecto de inicio**.  
+14. <span data-ttu-id="13509-294">En el Explorador de soluciones, haga clic con el botón derecho en **Probar** y haga clic en **Establecer como proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="13509-294">In Solution Explorer, right-click **Test**, and then click **Set as StartUp Project**.</span></span>  
   
-15. En el menú **Depurar**, haga clic en **Iniciar depuración**.  
+15. <span data-ttu-id="13509-295">En el menú **Depurar**, haga clic en **Iniciar depuración**.</span><span class="sxs-lookup"><span data-stu-id="13509-295">On the **Debug** menu, click **Start Debugging**.</span></span>  
   
-     Se iniciará el programa de prueba.  Observe que la hora actual se actualiza en el control `ctlAlarmClock` y que la hora de inicio se muestra en el control <xref:System.Windows.Forms.DateTimePicker>.  
+     <span data-ttu-id="13509-296">Se inicia el programa de prueba.</span><span class="sxs-lookup"><span data-stu-id="13509-296">The test program starts.</span></span> <span data-ttu-id="13509-297">Tenga en cuenta que la hora actual se actualiza en la `ctlAlarmClock` control y que la hora de inicio se muestra en el <xref:System.Windows.Forms.DateTimePicker> control.</span><span class="sxs-lookup"><span data-stu-id="13509-297">Note that the current time is updated in the `ctlAlarmClock` control, and that the starting time is shown in the <xref:System.Windows.Forms.DateTimePicker> control.</span></span>  
   
-16. Haga clic en <xref:System.Windows.Forms.DateTimePicker> donde se muestran los minutos.  
+16. <span data-ttu-id="13509-298">Haga clic en el <xref:System.Windows.Forms.DateTimePicker> donde se muestran los minutos de la hora.</span><span class="sxs-lookup"><span data-stu-id="13509-298">Click the <xref:System.Windows.Forms.DateTimePicker> where the minutes of the hour are displayed.</span></span>  
   
-17. Con el uso del teclado, defina un valor para los minutos que sea un minuto más que la hora actual que muestra `ctlAlarmClock`.  
+17. <span data-ttu-id="13509-299">Use el teclado para establecer el valor de los minutos en un minuto más tarde que la hora actual mostrada por `ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="13509-299">Using the keyboard, set a value for minutes that is one minute greater than the current time shown by `ctlAlarmClock`.</span></span>  
   
-     La hora de la configuración de la alarma se muestra en `lblTest`.  Espere a que la hora que se muestra alcance la hora establecida para la alarma.  Cuando la hora que se muestra alcance la hora establecida para la alarma, sonará el tono y parpadeará `lblAlarm`.  
+     <span data-ttu-id="13509-300">La hora para la configuración de alarma se muestra en `lblTest`.</span><span class="sxs-lookup"><span data-stu-id="13509-300">The time for the alarm setting is shown in `lblTest`.</span></span> <span data-ttu-id="13509-301">Espere a que la hora mostrada llegue a la hora de la alarma configurada.</span><span class="sxs-lookup"><span data-stu-id="13509-301">Wait for the displayed time to reach the alarm setting time.</span></span> <span data-ttu-id="13509-302">Cuando la hora que se muestra llegue a la hora en que está puesta la alarma, se oirá un pitido y `lblAlarm` parpadeará.</span><span class="sxs-lookup"><span data-stu-id="13509-302">When the displayed time reaches the time to which the alarm is set, the beep will sound and `lblAlarm` will flash.</span></span>  
   
-18. Para desactivar la alarma, haga clic en `lblAlarm`.  Ahora puede reiniciar la alarma.  
+18. <span data-ttu-id="13509-303">Para desactivar la alarma, haga clic en `lblAlarm`.</span><span class="sxs-lookup"><span data-stu-id="13509-303">Turn off the alarm by clicking `lblAlarm`.</span></span> <span data-ttu-id="13509-304">Ahora puede restablecer la alarma.</span><span class="sxs-lookup"><span data-stu-id="13509-304">You may now reset the alarm.</span></span>  
   
-     Este tutorial trataba varios conceptos clave.  Aprendió a crear un control compuesto mediante la combinación de controles y componentes en un contenedor de control compuesto.  Aprendió a agregar propiedades al control y a escribir código para implementar funcionalidades personalizadas.  En la última sección aprendió a extender la funcionalidad de un control compuesto mediante herencia, y a modificar la funcionalidad de los métodos hospedados reemplazando estos últimos.  
+     <span data-ttu-id="13509-305">En este tutorial se han tratado varios conceptos clave.</span><span class="sxs-lookup"><span data-stu-id="13509-305">This walkthrough has covered a number of key concepts.</span></span> <span data-ttu-id="13509-306">Ha aprendido a crear un control compuesto mediante la combinación de controles y componentes en un contenedor de control compuesto.</span><span class="sxs-lookup"><span data-stu-id="13509-306">You have learned to create a composite control by combining controls and components into a composite control container.</span></span> <span data-ttu-id="13509-307">Ha aprendido a agregar propiedades al control y a escribir código para implementar funcionalidad personalizada.</span><span class="sxs-lookup"><span data-stu-id="13509-307">You have learned to add properties to your control, and to write code to implement custom functionality.</span></span> <span data-ttu-id="13509-308">En la última sección, ha aprendido a extender la funcionalidad de un control compuesto determinado mediante herencia y a modificar la funcionalidad de los métodos de host reemplazando estos últimos.</span><span class="sxs-lookup"><span data-stu-id="13509-308">In the last section, you learned to extend the functionality of a given composite control through inheritance, and to alter the functionality of host methods by overriding those methods.</span></span>  
   
-## Vea también  
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)   
- [Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos de cuadro de herramientas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)   
- [Component Authoring Walkthroughs](../Topic/Component%20Authoring%20Walkthroughs.md)
+## <a name="see-also"></a><span data-ttu-id="13509-309">Vea también</span><span class="sxs-lookup"><span data-stu-id="13509-309">See Also</span></span>  
+ [<span data-ttu-id="13509-310">Variedades de controles personalizados</span><span class="sxs-lookup"><span data-stu-id="13509-310">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [<span data-ttu-id="13509-311">Cómo: Crear controles compuestos</span><span class="sxs-lookup"><span data-stu-id="13509-311">How to: Author Composite Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ [<span data-ttu-id="13509-312">Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas</span><span class="sxs-lookup"><span data-stu-id="13509-312">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [<span data-ttu-id="13509-313">Tutoriales sobre la creación de componentes</span><span class="sxs-lookup"><span data-stu-id="13509-313">Component Authoring Walkthroughs</span></span>](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

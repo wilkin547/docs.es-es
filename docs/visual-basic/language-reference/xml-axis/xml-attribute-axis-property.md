@@ -1,16 +1,12 @@
 ---
-title: Propiedad Axis para atributo XML (Visual Basic) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Propiedad de eje para atributos XML (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.XmlPropertyAttributeAxis
-dev_langs:
-- VB
+f1_keywords: vb.XmlPropertyAttributeAxis
 helpviewer_keywords:
 - attribute axis property [Visual Basic]
 - Visual Basic code, accessing XML
@@ -18,81 +14,66 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 94211f7c951976426ba17e73df214444a6c227b4
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a286c70f57128d0406b3a300610fea5e1c44b32d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="xml-attribute-axis-property-visual-basic"></a>Propiedad de eje para atributos XML (Visual Basic)
-Proporciona acceso al valor de un atributo para un <xref:System.Xml.Linq.XElement>objeto o en el primer elemento de una colección de <xref:System.Xml.Linq.XElement>objetos.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement>  
+# <a name="xml-attribute-axis-property-visual-basic"></a><span data-ttu-id="e98ec-102">Propiedad de eje para atributos XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e98ec-102">XML Attribute Axis Property (Visual Basic)</span></span>
+<span data-ttu-id="e98ec-103">Proporciona acceso al valor de un atributo para un <xref:System.Xml.Linq.XElement> objeto o hasta el primer elemento de una colección de <xref:System.Xml.Linq.XElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="e98ec-103">Provides access to the value of an attribute for an <xref:System.Xml.Linq.XElement> object or to the first element in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="e98ec-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e98ec-104">Syntax</span></span>  
   
 ```  
-  
       object.@attribute  
 -or-  
 object.@<attribute>  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a><span data-ttu-id="e98ec-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="e98ec-105">Parts</span></span>  
  `object`  
- Obligatorio. Un <xref:System.Xml.Linq.XElement>objeto o una colección de <xref:System.Xml.Linq.XElement>objetos.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="e98ec-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="e98ec-106">Required.</span></span> <span data-ttu-id="e98ec-107">Un <xref:System.Xml.Linq.XElement> objeto o una colección de <xref:System.Xml.Linq.XElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="e98ec-107">An <xref:System.Xml.Linq.XElement> object or a collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
- .@  
- Requerido. Denota el inicio de una propiedad de eje de atributo.  
+ <span data-ttu-id="e98ec-108">.@</span><span class="sxs-lookup"><span data-stu-id="e98ec-108">.@</span></span>  
+ <span data-ttu-id="e98ec-109">Requerido.</span><span class="sxs-lookup"><span data-stu-id="e98ec-109">Required.</span></span> <span data-ttu-id="e98ec-110">Denota el inicio de una propiedad de eje de atributo.</span><span class="sxs-lookup"><span data-stu-id="e98ec-110">Denotes the start of an attribute axis property.</span></span>  
   
  <  
- Opcional. Denota el principio del nombre del atributo cuando `attribute` no es un identificador válido en [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ <span data-ttu-id="e98ec-111">Opcional.</span><span class="sxs-lookup"><span data-stu-id="e98ec-111">Optional.</span></span> <span data-ttu-id="e98ec-112">Indica el principio del nombre del atributo cuando `attribute` no es un identificador válido en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e98ec-112">Denotes the beginning of the name of the attribute when `attribute` is not a valid identifier in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
  `attribute`  
- Obligatorio. Nombre del atributo para obtener acceso a la forma [`prefix`:]`name`.  
+ <span data-ttu-id="e98ec-113">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="e98ec-113">Required.</span></span> <span data-ttu-id="e98ec-114">Nombre del atributo para tener acceso a la forma [`prefix`:]`name`.</span><span class="sxs-lookup"><span data-stu-id="e98ec-114">Name of the attribute to access, of the form [`prefix`:]`name`.</span></span>  
   
-|Parte|Descripción|  
+|<span data-ttu-id="e98ec-115">Parte</span><span class="sxs-lookup"><span data-stu-id="e98ec-115">Part</span></span>|<span data-ttu-id="e98ec-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="e98ec-116">Description</span></span>|  
 |----------|-----------------|  
-|`prefix`|Opcional. Prefijo de espacio de nombres XML para el atributo. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.|  
-|`name`|Obligatorio. Nombre local del atributo. Consulte [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|<span data-ttu-id="e98ec-117">Opcional.</span><span class="sxs-lookup"><span data-stu-id="e98ec-117">Optional.</span></span> <span data-ttu-id="e98ec-118">Prefijo de espacio de nombres XML para el atributo.</span><span class="sxs-lookup"><span data-stu-id="e98ec-118">XML namespace prefix for the attribute.</span></span> <span data-ttu-id="e98ec-119">Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.</span><span class="sxs-lookup"><span data-stu-id="e98ec-119">Must be a global XML namespace defined with an `Imports` statement.</span></span>|  
+|`name`|<span data-ttu-id="e98ec-120">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="e98ec-120">Required.</span></span> <span data-ttu-id="e98ec-121">Nombre del atributo local.</span><span class="sxs-lookup"><span data-stu-id="e98ec-121">Local attribute name.</span></span> <span data-ttu-id="e98ec-122">Vea [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="e98ec-122">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
   
  \>  
- Opcional. Denota el final del nombre del atributo cuando `attribute` no es un identificador válido en [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ <span data-ttu-id="e98ec-123">Opcional.</span><span class="sxs-lookup"><span data-stu-id="e98ec-123">Optional.</span></span> <span data-ttu-id="e98ec-124">Denota el final del nombre del atributo cuando `attribute` no es un identificador válido en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e98ec-124">Denotes the end of the name of the attribute when `attribute` is not a valid identifier in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="return-value"></a>Valor devuelto  
- Una cadena que contiene el valor de `attribute`. Si no existe el nombre del atributo, `Nothing` se devuelve.  
+## <a name="return-value"></a><span data-ttu-id="e98ec-125">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="e98ec-125">Return Value</span></span>  
+ <span data-ttu-id="e98ec-126">Una cadena que contiene el valor de `attribute`.</span><span class="sxs-lookup"><span data-stu-id="e98ec-126">A string that contains the value of `attribute`.</span></span> <span data-ttu-id="e98ec-127">Si no existe el nombre del atributo, `Nothing` se devuelve.</span><span class="sxs-lookup"><span data-stu-id="e98ec-127">If the attribute name does not exist, `Nothing` is returned.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Puede usar una propiedad de eje de atributo XML para tener acceso al valor de un atributo por nombre desde un <xref:System.Xml.Linq.XElement>objeto o desde el primer elemento de una colección de <xref:System.Xml.Linq.XElement>objetos.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement> Puede recuperar un valor de atributo por nombre o agregar un nuevo atributo a un elemento especificando un nombre nuevo precedido por el identificador @.  
+## <a name="remarks"></a><span data-ttu-id="e98ec-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e98ec-128">Remarks</span></span>  
+ <span data-ttu-id="e98ec-129">Puede usar una propiedad de eje de atributo XML para tener acceso al valor de un atributo por nombre desde un <xref:System.Xml.Linq.XElement> objeto o desde el primer elemento de una colección de <xref:System.Xml.Linq.XElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="e98ec-129">You can use an XML attribute axis property to access the value of an attribute by name from an <xref:System.Xml.Linq.XElement> object or from the first element in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="e98ec-130">Puede recuperar un valor de atributo por nombre o agregar un nuevo atributo a un elemento especificando un nombre nuevo precedido por el identificador @.</span><span class="sxs-lookup"><span data-stu-id="e98ec-130">You can retrieve an attribute value by name, or add a new attribute to an element by specifying a new name preceded by the @ identifier.</span></span>  
   
- Cuando haga referencia a un atributo XML mediante el identificador @, el valor del atributo se devuelve como una cadena y no es necesario especificar explícitamente el <xref:System.Xml.Linq.XAttribute.Value%2A>propiedad.</xref:System.Xml.Linq.XAttribute.Value%2A>  
+ <span data-ttu-id="e98ec-131">Cuando haga referencia a un atributo XML mediante el identificador @, se devuelve el valor de atributo como una cadena y no es necesario especificar explícitamente la <xref:System.Xml.Linq.XAttribute.Value%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="e98ec-131">When you refer to an XML attribute using the @ identifier, the attribute value is returned as a string and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.</span></span>  
   
- Las reglas de nomenclatura para los atributos XML difieren de las reglas de nomenclatura [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] identificadores. Para obtener acceso a un atributo XML que tiene un nombre que no es un identificador válido de Visual Basic, ponga el nombre entre corchetes angulares (\< y >).  
+ <span data-ttu-id="e98ec-132">Las reglas de nomenclatura para los atributos XML difieren de las reglas de nomenclatura [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] identificadores.</span><span class="sxs-lookup"><span data-stu-id="e98ec-132">The naming rules for XML attributes differ from the naming rules for [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] identifiers.</span></span> <span data-ttu-id="e98ec-133">Para obtener acceso a un atributo XML que tiene un nombre que no es un identificador válido de Visual Basic, ponga el nombre entre corchetes angulares (\< y >).</span><span class="sxs-lookup"><span data-stu-id="e98ec-133">To access an XML attribute that has a name that is not a valid Visual Basic identifier, enclose the name in angle brackets (\< and >).</span></span>  
   
-## <a name="xml-namespaces"></a>Espacios de nombres XML  
- El nombre de una propiedad de eje de atributo puede usar únicamente prefijos espacios de nombres XML declarados globalmente mediante la `Imports` instrucción. No puede utilizar prefijos de espacio de nombres XML declarados localmente dentro de literales de elemento XML. Para obtener más información, consulte [instrucción Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+## <a name="xml-namespaces"></a><span data-ttu-id="e98ec-134">Espacios de nombres XML</span><span class="sxs-lookup"><span data-stu-id="e98ec-134">XML Namespaces</span></span>  
+ <span data-ttu-id="e98ec-135">El nombre de una propiedad de eje de atributo puede usar únicamente prefijos espacios de nombres XML declarados globalmente mediante la `Imports` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e98ec-135">The name in an attribute axis property can use only XML namespace prefixes declared globally by using the `Imports` statement.</span></span> <span data-ttu-id="e98ec-136">No puede utilizar prefijos de espacio de nombres XML declarados localmente dentro de literales de elemento XML.</span><span class="sxs-lookup"><span data-stu-id="e98ec-136">It cannot use XML namespace prefixes declared locally within XML element literals.</span></span> <span data-ttu-id="e98ec-137">Para obtener más información, consulte [instrucción Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="e98ec-137">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo obtener los valores de los atributos XML denominados `type` de una colección de elementos XML que se denomina `phone`.  
+## <a name="example"></a><span data-ttu-id="e98ec-138">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e98ec-138">Example</span></span>  
+ <span data-ttu-id="e98ec-139">En el ejemplo siguiente se muestra cómo obtener los valores de los atributos XML denominados `type` de una colección de elementos XML que se denomina `phone`.</span><span class="sxs-lookup"><span data-stu-id="e98ec-139">The following example shows how to get the values of the XML attributes named `type` from a collection of XML elements that are named `phone`.</span></span>  
   
- [!code-vb[VbXMLSamples&#12;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
   
- Este código muestra el siguiente texto:  
+ <span data-ttu-id="e98ec-140">Este código muestra el siguiente texto:</span><span class="sxs-lookup"><span data-stu-id="e98ec-140">This code displays the following text:</span></span>  
   
  `<phoneTypes>`  
   
@@ -102,38 +83,38 @@ object.@<attribute>
   
  `</phoneTypes>`  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo crear atributos de un elemento XML tanto mediante declaración, como parte del XML y dinámicamente agregando un atributo a una instancia de un <xref:System.Xml.Linq.XElement>objeto.</xref:System.Xml.Linq.XElement> El `type` atributo se crea mediante declaración y la `owne`r atributo se crea dinámicamente.  
+## <a name="example"></a><span data-ttu-id="e98ec-141">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e98ec-141">Example</span></span>  
+ <span data-ttu-id="e98ec-142">En el ejemplo siguiente se muestra cómo crear atributos de un elemento XML tanto mediante declaración, como parte del código XML y dinámicamente mediante la adición de un atributo a una instancia de un <xref:System.Xml.Linq.XElement> objeto.</span><span class="sxs-lookup"><span data-stu-id="e98ec-142">The following example shows how to create attributes for an XML element both declaratively, as part of the XML, and dynamically by adding an attribute to an instance of an <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="e98ec-143">El `type` atributo se crea mediante declaración y la `owner` atributo se crea de forma dinámica.</span><span class="sxs-lookup"><span data-stu-id="e98ec-143">The `type` attribute is created declaratively and the `owner` attribute is created dynamically.</span></span>  
   
- [!code-vb[VbXMLSamples&#44;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
   
- Este código muestra el siguiente texto:  
+ <span data-ttu-id="e98ec-144">Este código muestra el siguiente texto:</span><span class="sxs-lookup"><span data-stu-id="e98ec-144">This code displays the following text:</span></span>  
   
-```  
+```xml  
 <phone type="home" owner="Harris, Phyllis">206-555-0144</phone>  
 ```  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza la sintaxis de corchetes angulares para obtener el valor del atributo XML denominado `number-type`, que no es un identificador válido en [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+## <a name="example"></a><span data-ttu-id="e98ec-145">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e98ec-145">Example</span></span>  
+ <span data-ttu-id="e98ec-146">En el ejemplo siguiente se utiliza la sintaxis de corchetes angulares para obtener el valor del atributo XML denominado `number-type`, que no es un identificador válido en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e98ec-146">The following example uses the angle bracket syntax to get the value of the XML attribute named `number-type`, which is not a valid identifier in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
- [!code-vb[VbXMLSamples&#13;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   
- Este código muestra el siguiente texto:  
+ <span data-ttu-id="e98ec-147">Este código muestra el siguiente texto:</span><span class="sxs-lookup"><span data-stu-id="e98ec-147">This code displays the following text:</span></span>  
   
  `Phone type: work`  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se declara `ns` como un prefijo de espacio de nombres XML. A continuación, usa el prefijo del espacio de nombres para crear un literal XML y obtener acceso al primer nodo secundario con el nombre completo "`ns:name`".  
+## <a name="example"></a><span data-ttu-id="e98ec-148">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e98ec-148">Example</span></span>  
+ <span data-ttu-id="e98ec-149">En el ejemplo siguiente se declara `ns` como un prefijo de espacio de nombres XML.</span><span class="sxs-lookup"><span data-stu-id="e98ec-149">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="e98ec-150">A continuación, utiliza el prefijo del espacio de nombres para crear un literal XML y obtener acceso al primer nodo secundario con el nombre completo "`ns:name`".</span><span class="sxs-lookup"><span data-stu-id="e98ec-150">It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name "`ns:name`".</span></span>  
   
- [!code-vb[VbXMLSamples&#14;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
+ [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
   
- Este código muestra el siguiente texto:  
+ <span data-ttu-id="e98ec-151">Este código muestra el siguiente texto:</span><span class="sxs-lookup"><span data-stu-id="e98ec-151">This code displays the following text:</span></span>  
   
  `Phone type: home`  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement>   
- [Propiedades de eje XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)   
- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a><span data-ttu-id="e98ec-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="e98ec-152">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement>  
+ [<span data-ttu-id="e98ec-153">Propiedades del eje XML</span><span class="sxs-lookup"><span data-stu-id="e98ec-153">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [<span data-ttu-id="e98ec-154">Literales XML</span><span class="sxs-lookup"><span data-stu-id="e98ec-154">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="e98ec-155">Crear XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e98ec-155">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="e98ec-156">Nombres de atributos y elementos XML declarados</span><span class="sxs-lookup"><span data-stu-id="e98ec-156">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

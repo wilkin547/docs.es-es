@@ -1,42 +1,42 @@
 ---
-title: "Informaci&#243;n general sobre el control FlowLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FlowLayoutPanel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "FlowLayoutPanel (control) [Windows Forms], acerca del control FlowLayoutPanel"
-  - "formularios, presentación dinámica"
-  - "diseño [Windows Forms], dinámico"
-  - "Windows Forms, presentación dinámica"
+title: "Información general sobre el control FlowLayoutPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FlowLayoutPanel
+helpviewer_keywords:
+- forms [Windows Forms], dynamic layout
+- layout [Windows Forms], dynamic
+- Windows Forms, dynamic layout
+- FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f19e53a2dfd2c659a3ba111a80a35cd0737fa163
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el control FlowLayoutPanel
-El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en una dirección de flujo horizontal o vertical.  Puede ajustar el contenido del control de una fila a la siguiente, o de una columna a la siguiente.  También puede recortar el contenido en lugar de ajustarlo.  
+# <a name="flowlayoutpanel-control-overview"></a><span data-ttu-id="385bb-102">Información general sobre el control FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="385bb-102">FlowLayoutPanel Control Overview</span></span>
+<span data-ttu-id="385bb-103">El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en una dirección de flujo horizontal o vertical.</span><span class="sxs-lookup"><span data-stu-id="385bb-103">The <xref:System.Windows.Forms.FlowLayoutPanel> control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="385bb-104">Puede ajustar el contenido del control de una fila a la siguiente, o de una columna a la siguiente.</span><span class="sxs-lookup"><span data-stu-id="385bb-104">You can wrap the control's contents from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="385bb-105">También puede recortar el contenido en lugar de ajustarlo.</span><span class="sxs-lookup"><span data-stu-id="385bb-105">Alternately, you can clip instead of wrap its contents.</span></span>  
   
- Puede especificar la dirección de flujo estableciendo el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  El control <xref:System.Windows.Forms.FlowLayoutPanel> invierte correctamente su dirección de flujo en diseños de derecha a izquierda \(RTL\).  También puede especificar si el contenido del control <xref:System.Windows.Forms.FlowLayoutPanel> se ajustará o se recortará estableciendo el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A>.  
+ <span data-ttu-id="385bb-106">Puede especificar la dirección de flujo estableciendo el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.</span><span class="sxs-lookup"><span data-stu-id="385bb-106">You can specify the flow direction by setting the value of the <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> property.</span></span> <span data-ttu-id="385bb-107">El control <xref:System.Windows.Forms.FlowLayoutPanel> invierte correctamente su dirección de flujo en diseños de derecha a izquierda (RTL).</span><span class="sxs-lookup"><span data-stu-id="385bb-107">The <xref:System.Windows.Forms.FlowLayoutPanel> control correctly reverses its flow direction in Right-to-Left (RTL) layouts.</span></span> <span data-ttu-id="385bb-108">También puede especificar si el contenido del control <xref:System.Windows.Forms.FlowLayoutPanel> se ajustará o se recortará estableciendo el valor de la propiedad <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A>.</span><span class="sxs-lookup"><span data-stu-id="385bb-108">You can also specify whether the <xref:System.Windows.Forms.FlowLayoutPanel> control's contents are wrapped or clipped by setting the value of the <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> property.</span></span>  
   
- El control <xref:System.Windows.Forms.FlowLayoutPanel> ajusta automáticamente su tamaño al contenido cuando la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A> se establece en `true`.  También proporciona una propiedad **FlowBreak** a sus controles secundarios.  Al establecer el valor de la propiedad FlowBreak en `true`, el control <xref:System.Windows.Forms.FlowLayoutPanel> deja de distribuir los controles en la dirección del flujo actual y ajusta a la siguiente fila o columna.  
+ <span data-ttu-id="385bb-109">El control <xref:System.Windows.Forms.FlowLayoutPanel> ajusta automáticamente su tamaño al contenido cuando la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A> se establece en `true`.</span><span class="sxs-lookup"><span data-stu-id="385bb-109">The <xref:System.Windows.Forms.FlowLayoutPanel> control automatically sizes to its contents when you set the <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="385bb-110">También proporciona un **FlowBreak** propiedad a sus controles secundarios.</span><span class="sxs-lookup"><span data-stu-id="385bb-110">It also provides a **FlowBreak** property to its child controls.</span></span> <span data-ttu-id="385bb-111">Al establecer el valor de la propiedad FlowBreak en `true` , el control <xref:System.Windows.Forms.FlowLayoutPanel> deja de distribuir los controles en la dirección del flujo actual y ajusta a la siguiente fila o columna.</span><span class="sxs-lookup"><span data-stu-id="385bb-111">Setting the value of the FlowBreak property to `true` causes the <xref:System.Windows.Forms.FlowLayoutPanel> control to stop laying out controls in the current flow direction and wrap to the next row or column.</span></span>  
   
- Cualquier control de Windows Forms puede ser un control secundario del control <xref:System.Windows.Forms.FlowLayoutPanel>, incluidas otras instancias de <xref:System.Windows.Forms.FlowLayoutPanel>.  Con esta funcionalidad, puede construir diseños sofisticados que se adapten a las dimensiones del formulario en tiempo de ejecución.  
+ <span data-ttu-id="385bb-112">Cualquier control de Windows Forms puede ser un control secundario del control <xref:System.Windows.Forms.FlowLayoutPanel>, incluidas otras instancias de <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="385bb-112">Any Windows Forms control can be a child of the <xref:System.Windows.Forms.FlowLayoutPanel> control, including other instances of <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span> <span data-ttu-id="385bb-113">Con esta funcionalidad, puede construir diseños sofisticados que se adapten a las dimensiones del formulario en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="385bb-113">With this capability, you can construct sophisticated layouts that adapt to your form's dimensions at run time.</span></span>  
   
- Consulte también [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ <span data-ttu-id="385bb-114">Consulte también [Tutorial: organizar controles en Windows Forms mediante FlowLayoutPanel](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="385bb-114">Also see [Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>   
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [FlowLayoutPanel \(Control\)](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="385bb-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="385bb-115">See Also</span></span>  
+ <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [<span data-ttu-id="385bb-116">FlowLayoutPanel (control)</span><span class="sxs-lookup"><span data-stu-id="385bb-116">FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)

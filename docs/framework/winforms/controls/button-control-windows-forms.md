@@ -1,53 +1,54 @@
 ---
-title: "Button (Control, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "control de botón [Windows Forms]"
-  - "botones"
+title: Button (Control, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- buttons
+- Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1dd584896dd8698dc881eb00186c6a550f36c75f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Button (Control, formularios Windows Forms)
-El control `Button` de Windows Forms permite al usuario hacer clic en él para llevar a cabo una acción.  El control `Button` puede mostrar texto e imágenes.  Al hacer clic en el botón, parece como si se hubiera presionado y soltado.  
+# <a name="button-control-windows-forms"></a><span data-ttu-id="c38b9-102">Button (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c38b9-102">Button Control (Windows Forms)</span></span>
+<span data-ttu-id="c38b9-103">El control `Button` de Windows Forms permite al usuario hacer clic en él para llevar a cabo una acción.</span><span class="sxs-lookup"><span data-stu-id="c38b9-103">The Windows Forms `Button` control allows the user to click it to perform an action.</span></span> <span data-ttu-id="c38b9-104">El control `Button` puede mostrar texto e imágenes.</span><span class="sxs-lookup"><span data-stu-id="c38b9-104">The `Button` control can display both text and images.</span></span> <span data-ttu-id="c38b9-105">Al hacer clic en el botón, parece como si se hubiera presionado y soltado.</span><span class="sxs-lookup"><span data-stu-id="c38b9-105">When the button is clicked, it looks as if it is being pushed in and released.</span></span>  
   
-## En esta sección  
- [Información general sobre el control Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- Explica qué es este control y sus propiedades y características clave.  
+## <a name="in-this-section"></a><span data-ttu-id="c38b9-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c38b9-106">In This Section</span></span>  
+ [<span data-ttu-id="c38b9-107">Información general sobre el control Button</span><span class="sxs-lookup"><span data-stu-id="c38b9-107">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ <span data-ttu-id="c38b9-108">Explica qué es este control y sus propiedades y características clave.</span><span class="sxs-lookup"><span data-stu-id="c38b9-108">Explains what this control is and its key features and properties.</span></span>  
   
- [Cómo: Responder a clics de botones en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- Explica el uso más básico de un botón en un Windows Form.  
+ [<span data-ttu-id="c38b9-109">Responder a clics de botones en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c38b9-109">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ <span data-ttu-id="c38b9-110">Explica el uso más básico de un botón en un Windows Form.</span><span class="sxs-lookup"><span data-stu-id="c38b9-110">Explains the most basic use of a button on a Windows Form.</span></span>  
   
- [Cómo: Designar un botón de formularios Windows Forms como botón para aceptar](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
- Explica cómo designar un control `Button` para que sea el botón Aceptar, también conocido como el botón predeterminado.  
+ [<span data-ttu-id="c38b9-111">Designar un botón de Windows Forms como botón para aceptar</span><span class="sxs-lookup"><span data-stu-id="c38b9-111">How to: Designate a Windows Forms Button as the Accept Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
+ <span data-ttu-id="c38b9-112">Explica cómo designar un control `Button` para que sea el botón Aceptar, también conocido como el botón predeterminado.</span><span class="sxs-lookup"><span data-stu-id="c38b9-112">Explains how to designate a `Button` control to be the accept button, also known as the default button.</span></span>  
   
- [Cómo: Definir un botón de formularios Windows Forms como el botón Cancelar](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
- Explica cómo designar un control `Button` para que sea el botón Cancelar, que se activa cuando el usuario presiona la tecla ESC.  
+ [<span data-ttu-id="c38b9-113">Designar un botón de Windows Forms como botón para cancelar</span><span class="sxs-lookup"><span data-stu-id="c38b9-113">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
+ <span data-ttu-id="c38b9-114">Explica cómo designar un control `Button` para que sea el botón Cancelar, que se activa cuando el usuario presiona la tecla ESC.</span><span class="sxs-lookup"><span data-stu-id="c38b9-114">Explains how to designate a `Button` control to be the cancel button, which is clicked whenever the user presses the ESC key.</span></span>  
   
- [Maneras de seleccionar un control Button de formularios Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- Enumera los métodos de selección de un botón.  
+ [<span data-ttu-id="c38b9-115">Maneras de seleccionar un control Button de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c38b9-115">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ <span data-ttu-id="c38b9-116">Enumera los métodos de selección de un botón.</span><span class="sxs-lookup"><span data-stu-id="c38b9-116">Lists methods of selecting a button.</span></span>  
   
- Consulte también [Cómo: Designar un botón de formularios Windows Forms como botón para aceptar mediante el Diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) y [Cómo: Designar un botón de formularios Windows Forms como botón para cancelar mediante el Diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ <span data-ttu-id="c38b9-117">Consulte también [Cómo: designar un botón de Windows Forms como mediante el botón Aceptar en el diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) y [Cómo: designar un botón de Windows Forms como el botón Cancelar mediante el diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).</span><span class="sxs-lookup"><span data-stu-id="c38b9-117">Also see [How to: Designate a Windows Forms Button as the Accept Button Using the Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) and [How to: Designate a Windows Forms Button as the Cancel Button Using the Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).</span></span>  
   
-## Referencia  
- Clase <xref:System.Windows.Forms.Button>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+## <a name="reference"></a><span data-ttu-id="c38b9-118">Referencia</span><span class="sxs-lookup"><span data-stu-id="c38b9-118">Reference</span></span>  
+ <span data-ttu-id="c38b9-119">Clase <xref:System.Windows.Forms.Button></span><span class="sxs-lookup"><span data-stu-id="c38b9-119"><xref:System.Windows.Forms.Button> class</span></span>  
+ <span data-ttu-id="c38b9-120">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="c38b9-120">Describes this class and has links to all its members.</span></span>  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de Windows Forms, con vínculos a información sobre su uso.  
+## <a name="related-sections"></a><span data-ttu-id="c38b9-121">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c38b9-121">Related Sections</span></span>  
+ [<span data-ttu-id="c38b9-122">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c38b9-122">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="c38b9-123">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="c38b9-123">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- Consulte también [Introducción de datos por el usuario en los cuadros de diálogo](http://msdn.microsoft.com/es-es/63ad8645-6842-45e8-b215-73f778e29a55) y [Cómo: Cerrar cuadros de diálogo y conservar los datos introducidos por el usuario](http://msdn.microsoft.com/es-es/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ <span data-ttu-id="c38b9-124">Consulte también [proporcionados por el usuario a los cuadros de diálogo](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) y [Cómo: cerrar cuadros de diálogo y conservar proporcionados por el usuario](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).</span><span class="sxs-lookup"><span data-stu-id="c38b9-124">Also see [User Input to Dialog Boxes](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) and [How to: Close Dialog Boxes and Retain User Input](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).</span></span>

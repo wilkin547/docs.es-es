@@ -8,45 +8,43 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: fe68a521b8a27f4dd6e5ca9a190a0d37c0ff6410
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 16032a7df2df374d6201f8da18d563deceeeb5bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="custom-serialization-order-with-xmlserializer"></a>Orden de serialización personalizada con XmlSerializer
-[Descargar ejemplo](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
+# <a name="custom-serialization-order-with-xmlserializer"></a><span data-ttu-id="6137d-102">Orden de serialización personalizada con XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="6137d-102">Custom Serialization Order With XmlSerializer</span></span>
+[<span data-ttu-id="6137d-103">Descargar ejemplo</span><span class="sxs-lookup"><span data-stu-id="6137d-103">Download Sample</span></span>](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
   
- En este ejemplo se muestra cómo controlar el orden de elementos serializados y deserializados para la serialización XML.  
+ <span data-ttu-id="6137d-104">En este ejemplo se muestra cómo controlar el orden de elementos serializados y deserializados para la serialización XML.</span><span class="sxs-lookup"><span data-stu-id="6137d-104">This sample shows how to control the order of serialized and deserialized elements for XML serialization.</span></span>  
   
- Para obtener más información sobre la serialización, revise los comentarios de los archivos de código fuente y de build.proj.  
+ <span data-ttu-id="6137d-105">Para obtener más información sobre la serialización, revise los comentarios de los archivos de código fuente y de build.proj.</span><span class="sxs-lookup"><span data-stu-id="6137d-105">Review comments in the source code and build.proj files for more information on serialization.</span></span>  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a>Para generar el ejemplo desde el símbolo del sistema  
+### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="6137d-106">Para generar el ejemplo desde el símbolo del sistema</span><span class="sxs-lookup"><span data-stu-id="6137d-106">To build the sample using the Command Prompt</span></span>  
   
-1.  Abra la ventana del símbolo del sistema y navegue hasta uno de los subdirectorios específicos del lenguaje del ejemplo.  
+1.  <span data-ttu-id="6137d-107">Abra la ventana del símbolo del sistema y navegue hasta uno de los subdirectorios específicos del lenguaje del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="6137d-107">Open the Command Prompt window and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  Escriba **msbuild CustomOrder.sln** en la línea de comandos.  
+2.  <span data-ttu-id="6137d-108">Escriba **msbuild CustomOrder.sln** en la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="6137d-108">Type **msbuild CustomOrder.sln** at the command line.</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a>Para compilar el ejemplo con Visual Studio  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="6137d-109">Para compilar el ejemplo con Visual Studio</span><span class="sxs-lookup"><span data-stu-id="6137d-109">To build the sample using Visual Studio</span></span>  
   
-1.  Abra [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] y navegue hasta uno de los subdirectorios específicos del lenguaje del ejemplo.  
+1.  <span data-ttu-id="6137d-110">Abra [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] y navegue hasta uno de los subdirectorios específicos del lenguaje del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="6137d-110">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2.  Haga doble clic en el icono CustomOrder.sln para abrir el archivo en Visual Studio.  
+2.  <span data-ttu-id="6137d-111">Haga doble clic en el icono CustomOrder.sln para abrir el archivo en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6137d-111">Double-click the icon for the CustomOrder.sln to open the file in Visual Studio.</span></span>  
   
-3.  En el menú **Compilar**, seleccione **Compilar solución**.  
+3.  <span data-ttu-id="6137d-112">En el menú **Compilar**, seleccione **Compilar solución**.</span><span class="sxs-lookup"><span data-stu-id="6137d-112">In the **Build** menu, select **Build Solution**.</span></span>  
   
-4.  La aplicación de ejemplo se generará en el subdirectorio predeterminado \bin o \bin\Debug.  
+4.  <span data-ttu-id="6137d-113">La aplicación de ejemplo se generará en el subdirectorio predeterminado \bin o \bin\Debug.</span><span class="sxs-lookup"><span data-stu-id="6137d-113">The sample application is built in the default \bin or \bin\Debug subdirectory.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)   
- [Serialización binaria](../../../docs/standard/serialization/binary-serialization.md)   
- [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Serialización](../../../docs/standard/serialization/index.md)   
- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-
+## <a name="see-also"></a><span data-ttu-id="6137d-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="6137d-114">See Also</span></span>  
+ [<span data-ttu-id="6137d-115">Serialización básica</span><span class="sxs-lookup"><span data-stu-id="6137d-115">Basic Serialization</span></span>](../../../docs/standard/serialization/basic-serialization.md)  
+ [<span data-ttu-id="6137d-116">Serialización binaria</span><span class="sxs-lookup"><span data-stu-id="6137d-116">Binary Serialization</span></span>](../../../docs/standard/serialization/binary-serialization.md)  
+ [<span data-ttu-id="6137d-117">Controlar la serialización XML mediante atributos</span><span class="sxs-lookup"><span data-stu-id="6137d-117">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [<span data-ttu-id="6137d-118">Introducción a la serialización XML</span><span class="sxs-lookup"><span data-stu-id="6137d-118">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [<span data-ttu-id="6137d-119">Serialización</span><span class="sxs-lookup"><span data-stu-id="6137d-119">Serialization</span></span>](../../../docs/standard/serialization/index.md)  
+ [<span data-ttu-id="6137d-120">Serialización SOAP y XML</span><span class="sxs-lookup"><span data-stu-id="6137d-120">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)

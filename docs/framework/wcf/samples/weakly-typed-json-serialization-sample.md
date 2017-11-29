@@ -1,36 +1,39 @@
 ---
-title: "Ejemplo de serializaci&#243;n JSON d&#233;bilmente tipada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ejemplo de serialización JSON débilmente tipada"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 694beb74a521c7aa898a0ef7e390accaa8b4ced9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de serializaci&#243;n JSON d&#233;bilmente tipada
-Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente. Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros. Este mecanismo también se aplica al trabajar con los objetos JSON \(JavaScript Object Notation\), tal y como se describe en el tema [Cómo serializar y deserializar datos JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+# <a name="weakly-typed-json-serialization-sample"></a><span data-ttu-id="b0100-102">Ejemplo de serialización JSON débilmente tipada</span><span class="sxs-lookup"><span data-stu-id="b0100-102">Weakly-typed JSON Serialization Sample</span></span>
+<span data-ttu-id="b0100-103">Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente.</span><span class="sxs-lookup"><span data-stu-id="b0100-103">When serializing a user-defined type to a given wire format, or deserializing a wire format back into a user-defined type, the given user-defined type must be available on both the service and the client.</span></span> <span data-ttu-id="b0100-104">Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros.</span><span class="sxs-lookup"><span data-stu-id="b0100-104">Usually to accomplish this, the <xref:System.Runtime.Serialization.DataContractAttribute> attribute is applied to these user-defined types and the <xref:System.Runtime.Serialization.DataMemberAttribute> attribute is applied to their members.</span></span> <span data-ttu-id="b0100-105">Este mecanismo también se aplica al trabajar con los objetos JSON (JavaScript Object Notation), tal y como se describe en el tema [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).</span><span class="sxs-lookup"><span data-stu-id="b0100-105">This mechanism also applies when working with JavaScript Object Notation (JSON) objects, as described in the topic [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).</span></span>  
   
- En algunos escenarios, un servicio o cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] debe tener acceso a los objetos JSON generados por un servicio o cliente que está fuera del control del desarrollador. Ya que cada vez hay más servicios Web que exponen públicamente las API de JSON, se puede volver muy poco práctico para el desarrollador de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] construir los tipos locales definidos por el usuario en los que deserializar los objetos JSON arbitrarios. Este ejemplo proporciona un mecanismo que permite a los desarrolladores de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trabajar con objetos JSON deserializados y arbitrarios sin crear tipos definidos por el usuario. Esto se conoce como *serialización débilmente tipada* de objetos JSON, porque no se conoce el tipo en el que un objeto JSON se deserializa en el momento de la compilación.  
+ <span data-ttu-id="b0100-106">En algunos escenarios, un servicio o cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] debe tener acceso a los objetos JSON generados por un servicio o cliente que está fuera del control del desarrollador.</span><span class="sxs-lookup"><span data-stu-id="b0100-106">In some scenarios, a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service or client must access JSON objects generated by a service or client that is outside of the control of the developer.</span></span> <span data-ttu-id="b0100-107">Ya que cada vez hay más servicios Web que exponen públicamente las API de JSON, se puede volver muy poco práctico para el desarrollador de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] construir los tipos locales definidos por el usuario en los que deserializar los objetos JSON arbitrarios.</span><span class="sxs-lookup"><span data-stu-id="b0100-107">As more Web services publicly expose JSON APIs, it can become impractical for the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] developer to construct local user-defined types into which to deserialize arbitrary JSON objects.</span></span> <span data-ttu-id="b0100-108">Este ejemplo proporciona un mecanismo que permite a los desarrolladores de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] trabajar con objetos JSON deserializados y arbitrarios sin crear tipos definidos por el usuario.</span><span class="sxs-lookup"><span data-stu-id="b0100-108">This sample provides a mechanism that enables [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] developers to work with deserialized, arbitrary JSON objects, without creating user-defined types.</span></span> <span data-ttu-id="b0100-109">Esto se conoce como *serialización débilmente tipada* de objetos JSON, porque no se conoce el tipo en el que un objeto JSON se deserializa en el momento de la compilación.</span><span class="sxs-lookup"><span data-stu-id="b0100-109">This is known as *weakly-typed serialization* of JSON objects, because the type into which a JSON object deserializes is not known at compile time.</span></span>  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  <span data-ttu-id="b0100-110">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="b0100-110">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Por ejemplo, una API pública de servicio Web devuelve el siguiente objeto JSON, que describe información sobre un usuario del servicio.  
+ <span data-ttu-id="b0100-111">Por ejemplo, una API pública de servicio Web devuelve el siguiente objeto JSON, que describe información sobre un usuario del servicio.</span><span class="sxs-lookup"><span data-stu-id="b0100-111">For example, a public Web service API returns the following JSON object, which describes some information about a user of the service.</span></span>  
   
-```  
+```json  
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- Para deserializar este objeto, un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe implementar los tipos siguientes definidos por el usuario.  
+ <span data-ttu-id="b0100-112">Para deserializar este objeto, un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe implementar los tipos siguientes definidos por el usuario.</span><span class="sxs-lookup"><span data-stu-id="b0100-112">To deserialize this object, a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client must implement the following user-defined types.</span></span>  
   
 ```  
 [DataContract]  
@@ -61,12 +64,11 @@ Al serializar un tipo definido por el usuario en un formato de conexión determi
      [DataMember]  
      public int[] luckyNumbers;  
  }  
-  
 ```  
   
- Esto puede ser embarazoso, sobre todo si el cliente tiene que administrar más de un tipo de objeto JSON.  
+ <span data-ttu-id="b0100-113">Esto puede ser embarazoso, sobre todo si el cliente tiene que administrar más de un tipo de objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="b0100-113">This can be cumbersome, especially if the client has to handle more than one type of JSON object.</span></span>  
   
- El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado.`JsonObject` confía en la asignación natural entre los objetos JSON y diccionarios [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], y la asignación entre las matrices JSON y matrices de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. En el código siguiente se muestra el tipo `JsonObject`:  
+ <span data-ttu-id="b0100-114">El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado.</span><span class="sxs-lookup"><span data-stu-id="b0100-114">The `JsonObject` type provided by this sample introduces a weakly-typed representation of the deserialized JSON object.</span></span> <span data-ttu-id="b0100-115">`JsonObject` confía en la asignación natural entre los objetos JSON y diccionarios [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , y la asignación entre las matrices JSON y matrices de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b0100-115">`JsonObject` relies on the natural mapping between JSON objects and [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dictionaries, and the mapping between JSON arrays and [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] arrays.</span></span> <span data-ttu-id="b0100-116">En el código siguiente se muestra el tipo `JsonObject` :</span><span class="sxs-lookup"><span data-stu-id="b0100-116">The following code shows the `JsonObject` type.</span></span>  
   
 ```  
 // Instantiation of JsonObject json omitted  
@@ -86,12 +88,12 @@ string[] favoriteBands = {
                                     };  
 ```  
   
- Observe que puede examinar los objetos y matrices JSON sin necesidad de declarar el tipo en el momento de la compilación. Para acceder a una explicación del requisito del objeto `["root"]` de nivel superior, consulte el tema [Asignación entre JSON y XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
+ <span data-ttu-id="b0100-117">Observe que puede examinar los objetos y matrices JSON sin necesidad de declarar el tipo en el momento de la compilación.</span><span class="sxs-lookup"><span data-stu-id="b0100-117">Note that you can "browse" JSON objects and arrays without the need to declare their type at compile time.</span></span> <span data-ttu-id="b0100-118">Para acceder a una explicación del requisito del objeto `["root"]` de nivel superior, consulte el tema [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b0100-118">For an explanation of the requirement for the top-level `["root"]` object, see the topic [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).</span></span>  
   
 > [!NOTE]
->  La clase `JsonObject` solo se proporciona como un ejemplo. No se ha probado en profundidad y no debería usarse en entornos de producción. Una implicación obvia de serialización de JSON débilmente tipada es la falta de seguridad de tipos al trabajar con `JsonObject`.  
+>  <span data-ttu-id="b0100-119">La clase `JsonObject` solo se proporciona como un ejemplo.</span><span class="sxs-lookup"><span data-stu-id="b0100-119">The `JsonObject` class is provided as an example only.</span></span> <span data-ttu-id="b0100-120">No se ha probado en profundidad y no debería usarse en entornos de producción.</span><span class="sxs-lookup"><span data-stu-id="b0100-120">It has not been thoroughly tested, and should not be used in production environments.</span></span> <span data-ttu-id="b0100-121">Una implicación obvia de serialización de JSON débilmente tipada es la falta de seguridad de tipos al trabajar con `JsonObject`.</span><span class="sxs-lookup"><span data-stu-id="b0100-121">An obvious implication of weakly-typed JSON serialization is the lack of type-safety when working with `JsonObject`.</span></span>  
   
- Para utilizar el tipo `JsonObject`, el contrato de operación del cliente debe utilizar <xref:System.ServiceModel.Channels.Message> como su tipo de valor devuelto.  
+ <span data-ttu-id="b0100-122">Para utilizar el tipo `JsonObject` , el contrato de operación del cliente debe utilizar <xref:System.ServiceModel.Channels.Message> como su tipo de valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="b0100-122">To use the `JsonObject` type, the client operation contract must use <xref:System.ServiceModel.Channels.Message> as its return type.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -104,10 +106,9 @@ string[] favoriteBands = {
         [WebGet(ResponseFormat = WebMessageFormat.Json)]  
         Message GetMemberProfile();  
     }  
-  
 ```  
   
- Se crean instancias de `JsonObject` a continuación tal y como se muestran en el código siguiente.  
+ <span data-ttu-id="b0100-123">Se crean instancias de `JsonObject` a continuación tal y como se muestran en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="b0100-123">The `JsonObject` is then instantiated as shown in the following code.</span></span>  
   
 ```  
 // Code to instantiate IClientSideProfileService channel omitted…  
@@ -117,12 +118,11 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
   
 // Go through the Json as though it is a dictionary. There is no need to map it to a .NET CLR type.  
 JsonObject json = new JsonObject(reader);  
-  
 ```  
   
- El constructor `JsonObject` toma un <xref:System.Xml.XmlDictionaryReader>, que se obtiene a través del método <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. El lector contiene una representación XML del mensaje de JSON recibida por el cliente.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] el tema [Asignación entre JSON y XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
+ <span data-ttu-id="b0100-124">El constructor `JsonObject` toma un <xref:System.Xml.XmlDictionaryReader>, que se obtiene a través del método <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> .</span><span class="sxs-lookup"><span data-stu-id="b0100-124">The `JsonObject` constructor takes a <xref:System.Xml.XmlDictionaryReader>, which is obtained through the <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> method.</span></span> <span data-ttu-id="b0100-125">El lector contiene una representación XML del mensaje de JSON recibida por el cliente.</span><span class="sxs-lookup"><span data-stu-id="b0100-125">The reader contains an XML representation of the JSON message received by the client.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b0100-126"> el tema [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b0100-126"> the topic [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).</span></span>  
   
- El programa produce el siguiente resultado:  
+ <span data-ttu-id="b0100-127">El programa produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="b0100-127">The program produces the following output:</span></span>  
   
 ```  
 Service listening at http://localhost:8000/.  
@@ -133,21 +133,21 @@ My lucky numbers are 5, 17, and 21.
 My favorite bands are Band ABC and Band XYZ.  
 ```  
   
-### Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b0100-128">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="b0100-128">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="b0100-129">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b0100-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Compile la solución WeaklyTypedJson.sln tal y como se describe en [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="b0100-130">Compile la solución WeaklyTypedJson.sln tal y como se describe en [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b0100-130">Build the solution WeaklyTypedJson.sln as described in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Ejecute la solución.  
+3.  <span data-ttu-id="b0100-131">Ejecute la solución.</span><span class="sxs-lookup"><span data-stu-id="b0100-131">Run the solution.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="b0100-132">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="b0100-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b0100-133">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="b0100-133">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) \[Ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4\] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="b0100-134">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b0100-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b0100-135">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="b0100-135">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="b0100-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="b0100-136">See Also</span></span>

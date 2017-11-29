@@ -1,48 +1,49 @@
 ---
-title: "Application Settings for Custom Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "custom controls [Windows Forms], application settings"
-  - "application settings [Windows Forms], custom controls"
+title: "Configuración de la aplicación para controles personalizados"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], application settings
+- application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3f8292ac459a2943376229ef62466b0a772430dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Application Settings for Custom Controls
-Debe finalizar determinadas tareas para dar a los controles personalizados la capacidad de conservar la configuración cuando se hospedan en aplicaciones de terceros.  
+# <a name="application-settings-for-custom-controls"></a><span data-ttu-id="68404-102">Configuración de la aplicación para controles personalizados</span><span class="sxs-lookup"><span data-stu-id="68404-102">Application Settings for Custom Controls</span></span>
+<span data-ttu-id="68404-103">Debe finalizar determinadas tareas para proporcionar a los controles personalizados la capacidad para conservar la configuración de la aplicación cuando se hospedan los controles en aplicaciones de otros fabricantes.</span><span class="sxs-lookup"><span data-stu-id="68404-103">You must complete certain tasks to give your custom controls the ability to persist application settings when the controls are hosted in third-party applications.</span></span>  
   
- La mayoría de la documentación sobre la característica Configuración de la aplicación se escribe suponiendo que se está creando una aplicación independiente.  Sin embargo, si está creando un control que otros desarrolladores van a hospedar en sus aplicaciones, entonces necesita realizar algunos pasos adicionales para que el control conserve la configuración correctamente.  
+ <span data-ttu-id="68404-104">La mayor parte de la documentación sobre la característica de configuración de la aplicación se escribe en la suposición de que está creando una aplicación independiente.</span><span class="sxs-lookup"><span data-stu-id="68404-104">Most of the documentation about the Application Settings feature is written under the assumption that you are creating a standalone application.</span></span> <span data-ttu-id="68404-105">Sin embargo, si está creando un control que otros desarrolladores van a hospedar en sus aplicaciones, debe realizar algunos pasos adicionales para el control conserve la configuración correctamente.</span><span class="sxs-lookup"><span data-stu-id="68404-105">However, if you are creating a control that other developers will host in their applications, you need to take a few additional steps for your control to persist its settings properly.</span></span>  
   
-## Configuración de la aplicación y controles personalizados  
- Para que el control conserve la configuración correctamente, debe encapsular el proceso creando su propia clase contenedora específica de los valores de configuración de la aplicación, derivada de <xref:System.Configuration.ApplicationSettingsBase>.  Además, la clase de control principal debe implementar la interfaz <xref:System.Configuration.IPersistComponentSettings>.  La interfaz contiene varias propiedades así como dos métodos, <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> y <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>.  Si se agrega el control a un formulario utilizando el **Diseñador de Windows Forms** de Visual Studio, formularios Windows Forms llamará automáticamente a <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> cuando se inicializa el control, pero hay que llamar a <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> en el método  `Dispose` del control.  
+## <a name="application-settings-and-custom-controls"></a><span data-ttu-id="68404-106">Configuración de la aplicación y controles personalizados</span><span class="sxs-lookup"><span data-stu-id="68404-106">Application Settings and Custom Controls</span></span>  
+ <span data-ttu-id="68404-107">Para que el control conservar correctamente su configuración, debe encapsular el proceso mediante la creación de sus propias aplicaciones dedicadas clase contenedora de configuración, derivado de <xref:System.Configuration.ApplicationSettingsBase>.</span><span class="sxs-lookup"><span data-stu-id="68404-107">For your control to properly persist its settings, it must encapsulate the process by creating its own dedicated applications settings wrapper class, derived from <xref:System.Configuration.ApplicationSettingsBase>.</span></span> <span data-ttu-id="68404-108">Además, la clase de control principal debe implementar la <xref:System.Configuration.IPersistComponentSettings>.</span><span class="sxs-lookup"><span data-stu-id="68404-108">Additionally, the main control class must implement the <xref:System.Configuration.IPersistComponentSettings>.</span></span> <span data-ttu-id="68404-109">La interfaz contiene varias propiedades, así como dos métodos, <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> y <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>.</span><span class="sxs-lookup"><span data-stu-id="68404-109">The interface contains several properties as well as two methods, <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> and <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A>.</span></span> <span data-ttu-id="68404-110">Si agrega el control a un formulario mediante la **Diseñador de Windows Forms** en Visual Studio, formularios Windows Forms llamará <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> automáticamente cuando se inicializa el control; debe llamar a <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> usted mismo en el `Dispose` método del control.</span><span class="sxs-lookup"><span data-stu-id="68404-110">If you add your control to a form using the **Windows Forms Designer** in Visual Studio, Windows Forms will call <xref:System.Configuration.IPersistComponentSettings.LoadComponentSettings%2A> automatically when the control is initialized; you must call <xref:System.Configuration.IPersistComponentSettings.SaveComponentSettings%2A> yourself in the `Dispose` method of your control.</span></span>  
   
- Además, debe implementar lo siguiente para que la configuración de la aplicación para los controles personalizados funcione correctamente en tiempo de diseño en entornos como Visual Studio:  
+ <span data-ttu-id="68404-111">Además, debe implementar lo siguiente en orden para la configuración de la aplicación para controles personalizados para que funcione correctamente en entornos de tiempo de diseño como Visual Studio:</span><span class="sxs-lookup"><span data-stu-id="68404-111">In addition, you should implement the following in order for application settings for custom controls to work properly in design-time environments such as Visual Studio:</span></span>  
   
-1.  Una clase de configuración de aplicación personalizada con un constructor que recibe un <xref:System.ComponentModel.IComponent> como parámetro único.  En esta clase, guarde y cargue toda la configuración de la aplicación.  Cuando cree una instancia nueva de esta clase, pase su control personalizado usando el constructor.  
+1.  <span data-ttu-id="68404-112">Una clase de configuración de aplicación personalizada con un constructor que toma un <xref:System.ComponentModel.IComponent> como un solo parámetro.</span><span class="sxs-lookup"><span data-stu-id="68404-112">A custom application settings class with a constructor that takes an <xref:System.ComponentModel.IComponent> as a single parameter.</span></span> <span data-ttu-id="68404-113">Utilice esta clase para guardar y cargar toda la configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="68404-113">Use this class to save and load all of your application settings.</span></span> <span data-ttu-id="68404-114">Cuando se crea una nueva instancia de esta clase, pase su control personalizado usando el constructor.</span><span class="sxs-lookup"><span data-stu-id="68404-114">When you create a new instance of this class, pass your custom control using the constructor.</span></span>  
   
-2.  Cree esta clase de configuración personalizada después de crear y colocar el control en un formulario, por ejemplo, en el controlador de eventos <xref:System.Windows.Forms.Form.Load> del formulario.  
+2.  <span data-ttu-id="68404-115">Crear esta clase de configuración personalizada después de haber creado y colocado en un formulario, como en el formulario el control <xref:System.Windows.Forms.Form.Load> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="68404-115">Create this custom settings class after the control has been created and placed on a form, such as in the form's <xref:System.Windows.Forms.Form.Load> event handler.</span></span>  
   
- Para obtener instrucciones acerca de cómo crear una clase de configuración personalizada, vea [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ <span data-ttu-id="68404-116">Para obtener instrucciones sobre cómo crear una clase de configuración personalizada, consulte [Cómo: crear una configuración de aplicación](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).</span><span class="sxs-lookup"><span data-stu-id="68404-116">For instructions on creating a custom settings class, see [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).</span></span>  
   
-## Claves de configuración y valores de configuración compartidos  
- Algunos controles se pueden utilizar varias veces dentro del mismo formulario.  En la mayoría de las ocasiones, deseará que estos controles conserven su propia configuración individual.  Con la propiedad <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> de <xref:System.Configuration.IPersistComponentSettings> puede proporcionar una cadena única que se utiliza para eliminar la ambigüedad entre varias versiones de un control en un formulario.  
+## <a name="settings-keys-and-shared-settings"></a><span data-ttu-id="68404-117">Claves de configuración y la configuración compartida</span><span class="sxs-lookup"><span data-stu-id="68404-117">Settings Keys and Shared Settings</span></span>  
+ <span data-ttu-id="68404-118">Algunos controles pueden utilizarse varias veces dentro del mismo formulario.</span><span class="sxs-lookup"><span data-stu-id="68404-118">Some controls can be used multiple times within the same form.</span></span> <span data-ttu-id="68404-119">La mayoría de los casos, le interesará estos controles para conservar su propia configuración individual.</span><span class="sxs-lookup"><span data-stu-id="68404-119">Most of the time, you will want these controls to persist their own individual settings.</span></span> <span data-ttu-id="68404-120">Con el <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> propiedad <xref:System.Configuration.IPersistComponentSettings>, puede proporcionar una cadena única que actúa para eliminar la ambigüedad de varias versiones de un control en un formulario.</span><span class="sxs-lookup"><span data-stu-id="68404-120">With the <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> property on <xref:System.Configuration.IPersistComponentSettings>, you can supply a unique string that acts to disambiguate multiple versions of a control on a form.</span></span>  
   
- La manera más simple de implementar <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> es utilizar la propiedad <xref:System.Windows.Forms.Control.Name%2A> del control para <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>.  Cuando carga o guarda la configuración de un control, pasa el valor de <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> a la propiedad <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> de la clase <xref:System.Configuration.ApplicationSettingsBase>.  La Configuración de la aplicación utiliza esta clave única cuando conserva los valores de configuración del usuario en XML.  El ejemplo de código siguiente muestra cómo una sección `<userSettings>` puede buscar una instancia de un control personalizado denominado `CustomControl1` que guarda una configuración para su propiedad `Text` .  
+ <span data-ttu-id="68404-121">La manera más sencilla de implementar <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> consiste en utilizar el <xref:System.Windows.Forms.Control.Name%2A> propiedad del control para el <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>.</span><span class="sxs-lookup"><span data-stu-id="68404-121">The simplest way to implement <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> is to use the <xref:System.Windows.Forms.Control.Name%2A> property of the control for the <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>.</span></span> <span data-ttu-id="68404-122">Al cargar o guardar la configuración del control, pase el valor de <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> en el <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> propiedad de la <xref:System.Configuration.ApplicationSettingsBase> clase.</span><span class="sxs-lookup"><span data-stu-id="68404-122">When you load or save the control's settings, you pass the value of <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> on to the <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> property of the <xref:System.Configuration.ApplicationSettingsBase> class.</span></span> <span data-ttu-id="68404-123">Configuración de la aplicación utiliza esta clave única cuando conserva la configuración del usuario a XML.</span><span class="sxs-lookup"><span data-stu-id="68404-123">Application Settings uses this unique key when it persists the user's settings to XML.</span></span> <span data-ttu-id="68404-124">El siguiente ejemplo de código muestra cómo un `<userSettings>` sección podría tener el aspecto de una instancia de un control personalizado denominado `CustomControl1` que guarda una configuración para su `Text` propiedad.</span><span class="sxs-lookup"><span data-stu-id="68404-124">The following code example shows how a `<userSettings>` section may look for an instance of a custom control named `CustomControl1` that saves a setting for its `Text` property.</span></span>  
   
-```  
+```xml  
 <userSettings>  
     <CustomControl1>  
         <setting name="Text" serializedAs="string">  
@@ -52,9 +53,9 @@ Debe finalizar determinadas tareas para dar a los controles personalizados la ca
 </userSettings>  
 ```  
   
- Cualquier instancia de un control que no proporciona un valor para <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> compartirá la misma configuración.  
+ <span data-ttu-id="68404-125">Todas las instancias de un control que no proporciona un valor para <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> compartirán la misma configuración.</span><span class="sxs-lookup"><span data-stu-id="68404-125">Any instances of a control that do not supply a value for <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> will share the same settings.</span></span>  
   
-## Vea también  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.IPersistComponentSettings>   
- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+## <a name="see-also"></a><span data-ttu-id="68404-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="68404-126">See Also</span></span>  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.IPersistComponentSettings>  
+ [<span data-ttu-id="68404-127">Arquitectura de configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="68404-127">Application Settings Architecture</span></span>](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

@@ -1,54 +1,55 @@
 ---
-title: "Acceso a marcos en el Modelo de objetos de documento HTML administrado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DOM, obtener acceso a marcos de HTML administrado"
-  - "marcos, obtener acceso"
-  - "DOM HTML, administradas"
-  - "HTML, DOM"
-  - "HTML, administradas"
-  - "DOM HTML administrado"
+title: Acceso a marcos en el Modelo de objetos de documento HTML administrado
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HTML [Windows Forms], dOM
+- managed HTML DOM
+- HTML [Windows Forms], managed
+- HTML DOM [Windows Forms], managed
+- frames [Windows Forms], accessing
+- DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8766e33f0fb253d532ff7161ed0a1e7842d0c50
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Acceso a marcos en el Modelo de objetos de documento HTML administrado
-Algunos documentos HTML están compuestos de *marcos* o ventanas que pueden contener sus propios documentos HTML distintos.  Los marcos facilitan la creación de páginas HTML porque permiten que una o más partes de la página permanezcan estáticas, como una barra de navegación, mientras que otros marcos cambian su contenido constantemente.  
+# <a name="accessing-frames-in-the-managed-html-document-object-model"></a><span data-ttu-id="d5404-102">Acceso a marcos en el Modelo de objetos de documento HTML administrado</span><span class="sxs-lookup"><span data-stu-id="d5404-102">Accessing Frames in the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="d5404-103">Algunos documentos HTML están compuestos de *fotogramas*, o ventanas que pueden contener sus propios documentos HTML distintos.</span><span class="sxs-lookup"><span data-stu-id="d5404-103">Some HTML documents are composed out of *frames*, or windows that can hold their own distinct HTML documents.</span></span> <span data-ttu-id="d5404-104">Los marcos facilitan la creación de páginas HTML porque permiten que una o más partes de la página permanezcan estáticas, como una barra de navegación, mientras que otros marcos cambian su contenido constantemente.</span><span class="sxs-lookup"><span data-stu-id="d5404-104">Using frames makes it easy to create HTML pages in which one or more pieces of the page remain static, such as a navigation bar, while other frames constantly change their content.</span></span>  
   
- Los autores de HTML pueden crear los marcos de una de dos maneras:  
+ <span data-ttu-id="d5404-105">Los autores de HTML pueden crear los marcos de una de dos maneras:</span><span class="sxs-lookup"><span data-stu-id="d5404-105">HTML authors can create frames in one of two ways:</span></span>  
   
--   Con etiquetas `FRAMESET` y `FRAME`, que crea ventanas fijas.  
+-   <span data-ttu-id="d5404-106">Con etiquetas `FRAMESET` y `FRAME`, que crea ventanas fijas.</span><span class="sxs-lookup"><span data-stu-id="d5404-106">Using the `FRAMESET` and `FRAME` tags, which create fixed windows.</span></span>  
   
- O bien  
+ <span data-ttu-id="d5404-107">O bien</span><span class="sxs-lookup"><span data-stu-id="d5404-107">-or-</span></span>  
   
--   Con la etiqueta `IFRAME`, que crea una ventana flotante que puede cambiar de posición en tiempo de ejecución.  
+-   <span data-ttu-id="d5404-108">Con la etiqueta `IFRAME`, que crea una ventana flotante que puede cambiar de posición en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="d5404-108">Using the `IFRAME` tag, which creates a floating window that can be repositioned at run time.</span></span>  
   
-1.  Como los marcos contienen documentos HTML, se representan en el modelo de objetos de documento \(DOM\) como elementos de ventana y elementos de marco.  
+1.  <span data-ttu-id="d5404-109">Como los marcos contienen documentos HTML, se representan en el modelo de objetos de documento (DOM) como elementos de ventana y elementos de marco.</span><span class="sxs-lookup"><span data-stu-id="d5404-109">Because frames contain HTML documents, they are represented in the Document Object Model (DOM) as both window elements and frame elements.</span></span>  
   
-2.  Al acceder a una etiqueta `FRAME` o `IFRAME` mediante la colección Frames de <xref:System.Windows.Forms.HtmlWindow>, se recupera el elemento de ventana correspondiente al marco.  Esto representa todas las propiedades dinámicas del marco, como su dirección URL, documento y tamaño actual.  
+2.  <span data-ttu-id="d5404-110">Al acceder a una etiqueta `FRAME` o `IFRAME` mediante la colección Frames de <xref:System.Windows.Forms.HtmlWindow>, se recupera el elemento de ventana correspondiente al marco.</span><span class="sxs-lookup"><span data-stu-id="d5404-110">When you access a `FRAME` or `IFRAME` tag by using the Frames collection of <xref:System.Windows.Forms.HtmlWindow>, you are retrieving the window element corresponding to the frame.</span></span> <span data-ttu-id="d5404-111">Esto representa todas las propiedades dinámicas del marco, como su dirección URL, documento y tamaño actual.</span><span class="sxs-lookup"><span data-stu-id="d5404-111">This represents all of the frame's dynamic properties, such as its current URL, document, and size.</span></span>  
   
-3.  Al acceder a una etiqueta `FRAME` o `IFRAME` mediante la propiedad <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> de <xref:System.Windows.Forms.HtmlWindow>, la colección <xref:System.Windows.Forms.HtmlElement.Children%2A> o métodos como <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> o <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, se recupera el elemento de marco.  Esto representa las propiedades estáticas del marco, incluida la dirección URL especificada en el archivo HTML original.  
+3.  <span data-ttu-id="d5404-112">Al acceder a una etiqueta `FRAME` o `IFRAME` mediante la propiedad <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> de <xref:System.Windows.Forms.HtmlWindow>, la colección <xref:System.Windows.Forms.HtmlElement.Children%2A> o métodos como <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> o <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, se recupera el elemento de marco.</span><span class="sxs-lookup"><span data-stu-id="d5404-112">When you access a `FRAME` or `IFRAME` tag by using the <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> property of <xref:System.Windows.Forms.HtmlWindow>, the <xref:System.Windows.Forms.HtmlElement.Children%2A> collection, or methods such as <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> or <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, you are retrieving the frame element.</span></span> <span data-ttu-id="d5404-113">Esto representa las propiedades estáticas del marco, incluida la dirección URL especificada en el archivo HTML original.</span><span class="sxs-lookup"><span data-stu-id="d5404-113">This represents the static properties of the frame, including the URL specified in the original HTML file.</span></span>  
   
-## Marcos y seguridad  
- Acceder a los marcos es complicado porque el DOM HTML administrado implementa una medida de seguridad conocida como *seguridad de scripting entre marcos*.  Si un documento contiene un `FRAMESET` con dos o más `FRAME` en dominios diferentes, estos `FRAME` no pueden interactuar entre sí.  En otras palabras, un `FRAME` que muestra el contenido del sitio web no puede acceder a la información de un `FRAME` que hospeda un sitio de terceros, como http:\/\/www.adatum.com\/.  Esta seguridad se implementa en el nivel de la clase <xref:System.Windows.Forms.HtmlWindow>.  Puede obtener información general sobre un `FRAME` que hospeda otro sitio web, como su dirección URL, pero no podrá acceder a su <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni cambiar el tamaño o la ubicación de su `FRAME` o `IFRAME` host.  
+## <a name="frames-and-security"></a><span data-ttu-id="d5404-114">Marcos y seguridad</span><span class="sxs-lookup"><span data-stu-id="d5404-114">Frames and Security</span></span>  
+ <span data-ttu-id="d5404-115">Obtener acceso a los marcos es complicado por el hecho de que el DOM HTML administrado implementa una medida de seguridad que se conoce como *seguridad scripting entre marcos*.</span><span class="sxs-lookup"><span data-stu-id="d5404-115">Access to frames is complicated by the fact that the managed HTML DOM implements a security measure known as *cross-frame scripting security*.</span></span> <span data-ttu-id="d5404-116">Si un documento contiene un `FRAMESET` con dos o más `FRAME` en dominios diferentes, estos `FRAME` no pueden interactuar entre sí.</span><span class="sxs-lookup"><span data-stu-id="d5404-116">If a document contains a `FRAMESET` with two or more `FRAME`s in different domains, these `FRAME`s cannot interact with one another.</span></span> <span data-ttu-id="d5404-117">En otras palabras, un `FRAME` que muestra el contenido del sitio web no puede acceder a la información de un `FRAME` que hospeda un sitio de terceros, como http://www.adatum.com/.</span><span class="sxs-lookup"><span data-stu-id="d5404-117">In other words, a `FRAME` that displays content from your Web site cannot access information in a `FRAME` that hosts a third-party site such as http://www.adatum.com/.</span></span> <span data-ttu-id="d5404-118">Esta seguridad se implementa en el nivel de la clase <xref:System.Windows.Forms.HtmlWindow>.</span><span class="sxs-lookup"><span data-stu-id="d5404-118">This security is implemented at the level of the <xref:System.Windows.Forms.HtmlWindow> class.</span></span> <span data-ttu-id="d5404-119">Puede obtener información general sobre un `FRAME` que hospeda otro sitio web, como su dirección URL, pero no podrá acceder a su <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni cambiar el tamaño o la ubicación de su `FRAME` o `IFRAME` host.</span><span class="sxs-lookup"><span data-stu-id="d5404-119">You can obtain general information about a `FRAME` hosting another Web site, such as its URL, but you will be unable to access its <xref:System.Windows.Forms.HtmlWindow.Document%2A> or change the size or location of its hosting `FRAME` or `IFRAME`.</span></span>  
   
- Esta regla también se aplica a las ventanas que se abren con los métodos <xref:System.Windows.Forms.HtmlWindow.Open%2A> y <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>.  Si la ventana que abre está en un dominio distinto de la página hospedada en el control <xref:System.Windows.Forms.WebBrowser>, no podrá mover esa ventana ni examinar su contenido.  Estas restricciones también se aplican si usa el control <xref:System.Windows.Forms.WebBrowser> para mostrar un sitio web distinto del sitio web usado para implementar su aplicación de Windows Forms.  Si usa la tecnología de implementación de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] para instalar la aplicación desde el sitio web A y usar el <xref:System.Windows.Forms.WebBrowser> para mostrar el sitio web B, no podrá acceder a los datos del sitio web B.  
+ <span data-ttu-id="d5404-120">Esta regla también se aplica a las ventanas que se abren con los métodos <xref:System.Windows.Forms.HtmlWindow.Open%2A> y <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>.</span><span class="sxs-lookup"><span data-stu-id="d5404-120">This rule also applies to windows that you open using the <xref:System.Windows.Forms.HtmlWindow.Open%2A> and <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> methods.</span></span> <span data-ttu-id="d5404-121">Si la ventana que abre está en un dominio distinto de la página hospedada en el control <xref:System.Windows.Forms.WebBrowser>, no podrá mover esa ventana ni examinar su contenido.</span><span class="sxs-lookup"><span data-stu-id="d5404-121">If the window you open is in a different domain from the page hosted in the <xref:System.Windows.Forms.WebBrowser> control, you will not be able to move that window or examine its contents.</span></span> <span data-ttu-id="d5404-122">Estas restricciones también se aplican si usa el control <xref:System.Windows.Forms.WebBrowser> para mostrar un sitio web distinto del sitio web usado para implementar su aplicación de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="d5404-122">These restrictions are also enforced if you use the <xref:System.Windows.Forms.WebBrowser> control to display a Web site that is different from the Web site used to deploy your Windows Forms-based application.</span></span> <span data-ttu-id="d5404-123">Si usa la tecnología de implementación de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] para instalar la aplicación desde el sitio web A y usar el <xref:System.Windows.Forms.WebBrowser> para mostrar el sitio web B, no podrá acceder a los datos del sitio web B.</span><span class="sxs-lookup"><span data-stu-id="d5404-123">If you use [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] deployment technology to install your application from Web site A, and you use the <xref:System.Windows.Forms.WebBrowser> to display Web site B, you will not be able to access Web site B's data.</span></span>  
   
- Para obtener más información acerca del scripting entre sitios, consulte [Seguridad y scripting entre marcos](http://msdn.microsoft.com/library/ms533028.aspx).  
+ <span data-ttu-id="d5404-124">Para obtener más información acerca del scripting entre sitios, consulte[sobre Scripting entre marcos y seguridad](http://msdn.microsoft.com/library/ms533028.aspx).</span><span class="sxs-lookup"><span data-stu-id="d5404-124">For more information about cross-site scripting, see[About Cross-Frame Scripting and Security](http://msdn.microsoft.com/library/ms533028.aspx).</span></span>  
   
-## Vea también  
- [Elemento FRAME &#124; objeto frame](http://msdn.microsoft.com/library/ms535250.aspx)   
- [Utilizar el Modelo de objetos de documento HTML administrado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="d5404-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="d5404-125">See Also</span></span>  
+ [<span data-ttu-id="d5404-126">Elemento de marco &#124; Objeto Frame</span><span class="sxs-lookup"><span data-stu-id="d5404-126">FRAME Element &#124; frame Object</span></span>](http://msdn.microsoft.com/library/ms535250.aspx)  
+ [<span data-ttu-id="d5404-127">Utilizar el Modelo de objetos de documento HTML administrado</span><span class="sxs-lookup"><span data-stu-id="d5404-127">Using the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

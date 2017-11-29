@@ -1,192 +1,202 @@
 ---
-title: "Informaci&#243;n general sobre las aplicaciones de explorador XAML de WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aplicaciones hospedadas en explorador [WPF]"
-  - "aplicaciones de explorador XAML de WPF (XBAP)"
-  - "aplicaciones de explorador XAML (XBAP)"
-  - "XBAP, aplicación de explorador XAML"
+title: "Información general sobre las aplicaciones de explorador XAML de WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- XBAP [WPF], XAML browser application
+- WPF XAML browser applications (XBAP)
+- XAML browser applications (XBAP)
+- browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: 47
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 47
+caps.latest.revision: "47"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 58ed9a97d9a1eb09ccbcf832c62bbdfb990c7838
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre las aplicaciones de explorador XAML de WPF
-<a name="introduction"></a> Las [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] combinan las características de aplicaciones web y aplicaciones cliente enriquecidas.  Al igual que las aplicaciones web, las aplicaciones XBAP se pueden implementar en un servidor web e iniciarse desde Internet Explorer o Firefox.  Al igual que las aplicaciones cliente enriquecidas, las aplicaciones XBAP pueden aprovechar las capacidades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  El desarrollo de aplicaciones XBAP también es similar al desarrollo de aplicaciones cliente enriquecidas.  En este tema se proporciona una introducción simple, de alto nivel, al desarrollo de aplicaciones XBAP y se describen las diferencias entre el desarrollo de aplicaciones XBAP y el desarrollo de aplicaciones cliente enriquecidas estándar.  
+# <a name="wpf-xaml-browser-applications-overview"></a><span data-ttu-id="0dbd4-102">Información general sobre las aplicaciones de explorador XAML de WPF</span><span class="sxs-lookup"><span data-stu-id="0dbd4-102">WPF XAML Browser Applications Overview</span></span>
+<span data-ttu-id="0dbd4-103"><a name="introduction"></a>
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]combina las características de aplicaciones Web y aplicaciones cliente enriquecidas.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-103"><a name="introduction"></a>
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] combines features of both Web applications and rich-client applications.</span></span> <span data-ttu-id="0dbd4-104">Al igual que las aplicaciones web, las aplicaciones XBAP se pueden implementar en un servidor web e iniciar desde Internet Explorer o Firefox.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-104">Like Web applications, XBAPs can be deployed to a Web server and started from Internet Explorer or Firefox.</span></span> <span data-ttu-id="0dbd4-105">Al igual que las aplicaciones cliente enriquecidas, las aplicaciones XBAP pueden aprovechar las funcionalidades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0dbd4-105">Like rich-client applications, XBAPs can take advantage of the capabilities of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="0dbd4-106">El desarrollo de aplicaciones XBAP también se parece al desarrollo de clientes enriquecidos.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-106">Developing XBAPs is also similar to rich-client development.</span></span> <span data-ttu-id="0dbd4-107">En este tema se proporciona una sencilla introducción de alto nivel al desarrollo de aplicaciones XBAP y se describe en qué se diferencia este del desarrollo estándar de clientes enriquecidos.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-107">This topic provides a simple, high-level introduction to XBAP development and describes where XBAP development differs from standard rich-client development.</span></span>  
   
- Este tema contiene las siguientes secciones:  
+ <span data-ttu-id="0dbd4-108">Este tema contiene las siguientes secciones:</span><span class="sxs-lookup"><span data-stu-id="0dbd4-108">This topic contains the following sections:</span></span>  
   
--   [Crear una nueva aplicación de explorador XAML \(XBAP\)](#creating_a_new_xaml_browser_application_xbap)  
+-   [<span data-ttu-id="0dbd4-109">Creación de una aplicación de explorador XAML (XBAP)</span><span class="sxs-lookup"><span data-stu-id="0dbd4-109">Creating a New XAML Browser Application (XBAP)</span></span>](#creating_a_new_xaml_browser_application_xbap)  
   
--   [Implementar una aplicación XBAP](#deploying_a_xbap)  
+-   [<span data-ttu-id="0dbd4-110">Implementación de una aplicación XBAP</span><span class="sxs-lookup"><span data-stu-id="0dbd4-110">Deploying an XBAP</span></span>](#deploying_a_xbap)  
   
--   [Comunicar con la página web del host](#communicating_with_the_host_web_page)  
+-   [<span data-ttu-id="0dbd4-111">Comunicación con la página web host</span><span class="sxs-lookup"><span data-stu-id="0dbd4-111">Communicating with the Host Web Page</span></span>](#communicating_with_the_host_web_page)  
   
--   [Consideraciones de seguridad sobre XBAP](#xbap_security_considerations)  
+-   [<span data-ttu-id="0dbd4-112">Consideraciones de seguridad para XBAP</span><span class="sxs-lookup"><span data-stu-id="0dbd4-112">XBAP Security Considerations</span></span>](#xbap_security_considerations)  
   
--   [Consideraciones sobre el rendimiento del tiempo de inicio de una XBAP](#xbap_start_time_performance_considerations)  
+-   [<span data-ttu-id="0dbd4-113">Consideraciones sobre el rendimiento de tiempo de inicio de XBAP</span><span class="sxs-lookup"><span data-stu-id="0dbd4-113">XBAP Start Time Performance Considerations</span></span>](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
-## Crear una nueva aplicación de explorador XAML \(XBAP\)  
- La manera más sencilla de crear un nuevo proyecto de XBAP es con [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  Al crear un nuevo proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas.  Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](http://msdn.microsoft.com/es-es/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+## <a name="creating-a-new-xaml-browser-application-xbap"></a><span data-ttu-id="0dbd4-114">Creación de una aplicación de explorador XAML (XBAP)</span><span class="sxs-lookup"><span data-stu-id="0dbd4-114">Creating a New XAML Browser Application (XBAP)</span></span>  
+ <span data-ttu-id="0dbd4-115">La manera más sencilla de crear un proyecto de XBAP es con [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0dbd4-115">The simplest way to create a new XBAP project is with [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].</span></span> <span data-ttu-id="0dbd4-116">Al crear un proyecto, seleccione **Aplicación de explorador WPF** en la lista de plantillas.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-116">When creating a new project, select **WPF Browser Application** from the list of templates.</span></span> <span data-ttu-id="0dbd4-117">Para más información, consulte [Cómo: Crear un nuevo proyecto de aplicación de explorador de WPF](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-117">For more information, see [How to: Create a New WPF Browser Application Project](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).</span></span>  
   
- Al ejecutar el proyecto de XBAP, se abre en una ventana del explorador en lugar de en una ventana independiente.  Cuando depura la aplicación XBAP desde [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], la aplicación se ejecuta con permisos de zona de Internet y, por tanto, inicia excepciones de seguridad si se superan esos permisos.  Para obtener más información, vea [Seguridad](../../../../docs/framework/wpf/security-wpf.md) y [Seguridad de confianza parcial de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ <span data-ttu-id="0dbd4-118">Cuando se ejecuta el proyecto de XBAP, se abre en una ventana del explorador en lugar de en una independiente.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-118">When you run the XBAP project, it opens in a browser window instead of a stand-alone window.</span></span> <span data-ttu-id="0dbd4-119">Cuando se depura la aplicación XBAP desde [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], la aplicación se ejecuta con permisos de zona de Internet y, por tanto, genera excepciones de seguridad si se superan esos permisos.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-119">When you debug the XBAP from [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], the application runs with Internet zone permission and will therefore throw security exceptions if those permissions are exceeded.</span></span> <span data-ttu-id="0dbd4-120">Para más información, consulte [Seguridad](../../../../docs/framework/wpf/security-wpf.md) y [Seguridad de confianza parcial de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-120">For more information, see [Security](../../../../docs/framework/wpf/security-wpf.md) and [WPF Partial Trust Security](../../../../docs/framework/wpf/wpf-partial-trust-security.md).</span></span>  
   
 > [!NOTE]
->  Si no está desarrollando con [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] o desea obtener más información sobre los archivos de proyecto, vea [Compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+>  <span data-ttu-id="0dbd4-121">Si no va a usar [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] para el desarrollo o quiere aprender más sobre los archivos de proyecto, consulte [Compilar una aplicación WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-121">If you are not developing with [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] or want to learn more about the project files, see [Building a WPF Application](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).</span></span>  
   
 <a name="deploying_a_xbap"></a>   
-## Implementar una aplicación XBAP  
- Al compilar una aplicación XBAP, el resultado incluye los tres archivos siguientes:  
+## <a name="deploying-an-xbap"></a><span data-ttu-id="0dbd4-122">Implementación de una aplicación XBAP</span><span class="sxs-lookup"><span data-stu-id="0dbd4-122">Deploying an XBAP</span></span>  
+ <span data-ttu-id="0dbd4-123">Cuando se compila una aplicación XBAP, en la salida se incluyen los tres archivos siguientes:</span><span class="sxs-lookup"><span data-stu-id="0dbd4-123">When you build an XBAP, the output includes the following three files:</span></span>  
   
-|Archivo|Descripción|  
-|-------------|-----------------|  
-|Ejecutable \(.exe\)|Contiene el código compilado y tiene la extensión .exe.|  
-|Manifiesto de aplicación \(.manifest\)|Contiene los metadatos asociados a la aplicación y tiene la extensión .manifest.|  
-|Manifiesto de implementación \(.xbap\)|Este archivo contiene la información que [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] emplea para implementar la aplicación y tiene la extensión .xbap.|  
+|<span data-ttu-id="0dbd4-124">Archivo</span><span class="sxs-lookup"><span data-stu-id="0dbd4-124">File</span></span>|<span data-ttu-id="0dbd4-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="0dbd4-125">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="0dbd4-126">Ejecutable (.exe)</span><span class="sxs-lookup"><span data-stu-id="0dbd4-126">Executable (.exe)</span></span>|<span data-ttu-id="0dbd4-127">Contiene el código compilado y tiene la extensión .exe.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-127">This contains the compiled code and has an .exe extension.</span></span>|  
+|<span data-ttu-id="0dbd4-128">Manifiesto de aplicación (.manifest)</span><span class="sxs-lookup"><span data-stu-id="0dbd4-128">Application manifest (.manifest)</span></span>|<span data-ttu-id="0dbd4-129">Contiene metadatos asociados con la aplicación y tiene la extensión .manifest.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-129">This contains metadata associated with the application and has a .manifest extension.</span></span>|  
+|<span data-ttu-id="0dbd4-130">Manifiesto de implementación (.xbap)</span><span class="sxs-lookup"><span data-stu-id="0dbd4-130">Deployment manifest (.xbap)</span></span>|<span data-ttu-id="0dbd4-131">Este archivo contiene la información que [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] utiliza para implementar la aplicación y tiene la extensión .xbap.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-131">This file contains the information that [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] uses to deploy the application and has the .xbap extension.</span></span>|  
   
- La implementación de aplicaciones XBAP se realiza en un servidor web, por ejemplo [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]o versiones posteriores.  No es necesario instalar [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] en el servidor web, pero sí tiene que registrar las extensiones de nombre de archivo y los tipos [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Para obtener más información, vea [Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ <span data-ttu-id="0dbd4-132">Las aplicaciones XBAP se implementan en un servidor web, por ejemplo [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] o versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-132">You deploy XBAPs to a Web server, for example [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] or later versions.</span></span> <span data-ttu-id="0dbd4-133">No es necesario instalar [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] en el servidor web, pero sí debe registrar los tipos [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y las extensiones de nombre de archivo.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-133">You do not have to install the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] on the Web server, but you do have to register the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] types and file name extensions.</span></span> <span data-ttu-id="0dbd4-134">Para más información, consulte [Cómo: Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-134">For more information, see [Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).</span></span>  
   
- Para preparar la aplicación XBAP para la implementación, copie el archivo .exe y los manifiestos asociados al servidor web.  Cree una página HTML que contenga un hipervínculo para abrir el manifiesto de implementación, que es el archivo que tiene la extensión .xbap.  Cuando el usuario haga clic en el vínculo al archivo .xbap, [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] administrará automáticamente los mecanismos de descarga e inicio de la aplicación.  En el código de ejemplo siguiente se muestra una página HTML que contiene un hipervínculo que señala a una aplicación XBAP.  
+ <span data-ttu-id="0dbd4-135">Para preparar la aplicación XBAP para la implementación, copie el archivo .exe y los manifiestos asociados al servidor web.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-135">To prepare your XBAP for deployment, copy the .exe and the associated manifests to the Web server.</span></span> <span data-ttu-id="0dbd4-136">Cree una página HTML que contenga un hipervínculo para abrir el manifiesto de implementación, que es el archivo con la extensión .xbap.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-136">Create an HTML page that contains a hyperlink to open the deployment manifest, which is the file that has the .xbap extension.</span></span> <span data-ttu-id="0dbd4-137">Cuando el usuario hace clic en el vínculo al archivo .xbap, [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] controla automáticamente el mecanismo de descarga e inicio de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-137">When the user clicks the link to the .xbap file, [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] automatically handles the mechanics of downloading and starting the application.</span></span> <span data-ttu-id="0dbd4-138">En el ejemplo de código siguiente, se muestra una página HTML que contiene un hipervínculo que apunta a una aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-138">The following example code shows an HTML page that contains a hyperlink that points to an XBAP.</span></span>  
   
-```  
+```html
 <html>   
-  <head></head>  
-  <body>   
-    <a href="XbapEx.xbap">Click this link to launch the application</a>  
-  </body>   
+    <head></head>  
+    <body>   
+        <a href="XbapEx.xbap">Click this link to launch the application</a>  
+    </body>   
 </html>  
-  
 ```  
   
- También puede hospedar una aplicación XBAP en el marco de una página web.  Cree una página web con uno o más marcos.  Establezca la propiedad de origen de un marco en el archivo de manifiesto de implementación.  Si desea usar el mecanismo integrado para la comunicación entre la página web de hospedaje y la aplicación XBAP, debe hospedar la aplicación en un marco.  En el código de ejemplo siguiente se muestra una página HTML con dos marcos; el origen del segundo marco está establecido en una aplicación XBAP.  
+ <span data-ttu-id="0dbd4-139">También puede hospedar una aplicación XBAP en el marco de una página web.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-139">You can also host an XBAP in the frame of a Web page.</span></span> <span data-ttu-id="0dbd4-140">Cree una página web con uno o varios marcos.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-140">Create a Web page with one or more frames.</span></span> <span data-ttu-id="0dbd4-141">Establezca la propiedad de origen de un marco en el archivo de manifiesto de implementación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-141">Set the source property of a frame to the deployment manifest file.</span></span> <span data-ttu-id="0dbd4-142">Si desea usar el mecanismo integrado para la comunicación entre la página web que hospeda y la aplicación XBAP, debe hospedar la aplicación en un marco.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-142">If you want to use the built-in mechanism to communicate between the hosting Web page and the XBAP, you must host the application in a frame.</span></span> <span data-ttu-id="0dbd4-143">En el ejemplo de código siguiente, se muestra una página HTML con dos marcos, donde el origen del segundo marco está establecido en una aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-143">The following example code shows an HTML page with two frames, the source for the second frame is set to an XBAP.</span></span>  
   
-```  
+```html
 <html>   
-  <head>A page with frames.</head>  
+    <head>
+        <title>A page with frames</title>
+    </head>  
     <frameset cols="50%,50%">   
-      <frame src="introduction.htm" >   
-      <frame src="XbapEx.xbap" >   
-  </frameset>   
+        <frame src="introduction.htm">   
+        <frame src="XbapEx.xbap">   
+    </frameset>   
 </html>  
 ```  
   
-### Borrar aplicaciones XBAP almacenadas en memoria caché  
- En algunas situaciones, después de recompilar e iniciar una aplicación XBAP, puede descubrir que se abre una versión anterior de dicha aplicación XBAP.  Por ejemplo, este comportamiento puede producirse cuando el número de versión del ensamblado de la aplicación XBAP es estático e inicia dicha aplicación desde la línea de comandos.  En este caso, puesto que el número de versión entre la versión almacenada en memoria caché \(la versión que se inició previamente\) y la nueva versión sigue siendo el mismo, no se descarga la nueva versión de la aplicación XBAP.  En su lugar, se carga la versión almacenada en memoria caché.  
+### <a name="clearing-cached-xbaps"></a><span data-ttu-id="0dbd4-144">Borrado de las aplicaciones XBAP en caché</span><span class="sxs-lookup"><span data-stu-id="0dbd4-144">Clearing Cached XBAPs</span></span>  
+ <span data-ttu-id="0dbd4-145">En algunas situaciones, después de volver a compilar e iniciar la aplicación XBAP, es posible que se abra una versión anterior de ella.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-145">In some situations after rebuilding and starting your XBAP, you may find that an earlier version of the XBAP is opened.</span></span> <span data-ttu-id="0dbd4-146">Por ejemplo, este comportamiento puede producirse cuando el número de versión del ensamblado XBAP es estático y se inicia la aplicación XBAP desde la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-146">For example, this behavior may occur when your XBAP assembly version number is static and you start the XBAP from the command line.</span></span> <span data-ttu-id="0dbd4-147">En este caso, como no ha cambiado el número de versión entre la versión almacenada en caché (la que se inició previamente) y la nueva versión, no se descarga la nueva versión de la aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-147">In this case, because the version number between the cached version (the version that was previously started) and the new version remains the same, the new version of the XBAP is not downloaded.</span></span> <span data-ttu-id="0dbd4-148">En su lugar, se carga la versión almacenada en caché.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-148">Instead, the cached version is loaded.</span></span>  
   
- En estas situaciones, puede quitar la versión almacenada en memoria caché usando el comando **Mage** \(se instala con Visual Studio o [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]\) desde el símbolo del sistema.  El siguiente comando borra la memoria caché de la aplicación.  
+ <span data-ttu-id="0dbd4-149">En estas situaciones, puede quitar la versión almacenada en caché mediante el comando **Mage** (instalado con Visual Studio o [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]) en el símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-149">In these situations, you can remove the cached version by using the **Mage** command (installed with Visual Studio or the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]) at the command prompt.</span></span> <span data-ttu-id="0dbd4-150">Con el siguiente comando se borra la memoria caché de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-150">The following command clears the application cache.</span></span>  
   
- `Mage.exe -cc`  
+ ```console
+ Mage.exe -cc
+ ```
   
- Este comando garantiza que se iniciará la versión más reciente de la aplicación XBAP.  Al depurar la aplicación en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], se debe iniciar la versión más reciente de la aplicación XBAP. En general, se recomienda actualizar el número de versión de implementación con cada compilación.  Para obtener más información sobre Mage, vea [Mage.exe \(Herramienta de generación y edición de manifiestos\)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+ <span data-ttu-id="0dbd4-151">Este comando garantiza que se inicie la versión más reciente de la aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-151">This command guarantees that the latest version of your XBAP is started.</span></span> <span data-ttu-id="0dbd4-152">Al depurar la aplicación en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], se debería iniciar la versión más reciente de la aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-152">When you debug your application in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], the latest version of your XBAP should be started.</span></span> <span data-ttu-id="0dbd4-153">Por lo general, debería actualizar el número de versión de implementación con cada compilación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-153">In general, you should update your deployment version number with each build.</span></span> <span data-ttu-id="0dbd4-154">Para más información sobre Mage, consulte [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-154">For more information about Mage, see [Mage.exe (Manifest Generation and Editing Tool)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).</span></span>  
   
 <a name="communicating_with_the_host_web_page"></a>   
-## Comunicar con la página web del host  
- Cuando la aplicación está hospedada en un marco HTML, puede comunicarse con la página web que contiene la aplicación XBAP.  Para ello, debe recuperar la propiedad <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> del objeto <xref:System.Windows.Interop.BrowserInteropHelper>.  Esta propiedad devuelve un objeto de script que representa la ventana HTML.  A continuación, puede tener acceso a las propiedades, métodos y eventos del [objeto de ventana](http://go.microsoft.com/fwlink/?LinkId=160274) usando la sintaxis de punto normal.  También puede tener acceso a métodos de script y a variables globales.  En el ejemplo siguiente se muestra cómo recuperar el objeto de script y cerrar el explorador.  
+## <a name="communicating-with-the-host-web-page"></a><span data-ttu-id="0dbd4-155">Comunicación con la página web host</span><span class="sxs-lookup"><span data-stu-id="0dbd4-155">Communicating with the Host Web Page</span></span>  
+ <span data-ttu-id="0dbd4-156">Cuando la aplicación se hospeda en un marco HTML, se puede comunicar con la página web que contiene la aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-156">When the application is hosted in an HTML frame, you can communicate with the Web page that contains the XBAP.</span></span> <span data-ttu-id="0dbd4-157">Para ello, recuperar el <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> propiedad de <xref:System.Windows.Interop.BrowserInteropHelper>.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-157">You do this by retrieving the <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> property of <xref:System.Windows.Interop.BrowserInteropHelper>.</span></span> <span data-ttu-id="0dbd4-158">Esta propiedad devuelve un objeto de script que representa la ventana HTML.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-158">This property returns a script object that represents the HTML window.</span></span> <span data-ttu-id="0dbd4-159">Después, puede acceder a las propiedades, los métodos y los eventos en el [objeto window](http://go.microsoft.com/fwlink/?LinkId=160274) mediante la sintaxis con punto normal.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-159">You can then access the properties, methods, and events on the [window object](http://go.microsoft.com/fwlink/?LinkId=160274) by using regular dot syntax.</span></span> <span data-ttu-id="0dbd4-160">También puede acceder a los métodos de script y a las variables globales.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-160">You can also access script methods and global variables.</span></span> <span data-ttu-id="0dbd4-161">En el ejemplo siguiente se muestra cómo recuperar el objeto de script y cerrar el explorador.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-161">The following example shows how to retrieve the script object and close the browser.</span></span>  
   
  [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
-### Depurar aplicaciones XBAP que usan HostScript  
- Si la aplicación XBAP usa el objeto <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> para comunicarse con la ventana HTML, debe especificar dos configuraciones para ejecutar y depurar la aplicación en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  La aplicación debe tener acceso a su sitio de origen y debe iniciar la aplicación con la página HTML que contiene la aplicación XBAP.  En los pasos siguientes se describe cómo comprobar estos dos valores:  
+### <a name="debugging-xbaps-that-use-hostscript"></a><span data-ttu-id="0dbd4-162">Depuración de aplicaciones XBAP que usan HostScript</span><span class="sxs-lookup"><span data-stu-id="0dbd4-162">Debugging XBAPs that Use HostScript</span></span>  
+ <span data-ttu-id="0dbd4-163">Si la aplicación XBAP usa el <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> objeto para comunicarse con la ventana HTML, hay dos opciones de configuración que debe especificar para ejecutar y depurar la aplicación en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0dbd4-163">If your XBAP uses the <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> object to communicate with the HTML window, there are two settings that you must specify to run and debug the application in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].</span></span> <span data-ttu-id="0dbd4-164">La aplicación debe tener acceso a su sitio de origen y se debe iniciar la aplicación con la página HTML que contiene la aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-164">The application must have access to its site of origin and you must start the application with the HTML page that contains the XBAP.</span></span> <span data-ttu-id="0dbd4-165">En los pasos siguientes se describe cómo comprobar estas dos configuraciones:</span><span class="sxs-lookup"><span data-stu-id="0dbd4-165">The following steps describe how to check these two settings:</span></span>  
   
-1.  En Visual Studio, abra las propiedades del proyecto.  
+1.  <span data-ttu-id="0dbd4-166">En Visual Studio, abra las propiedades del proyecto.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-166">In Visual Studio, open the project properties.</span></span>  
   
-2.  En la pestaña **Seguridad**, haga clic en **Opciones avanzadas**.  
+2.  <span data-ttu-id="0dbd4-167">En la pestaña **Seguridad**, haga clic en **Opciones avanzadas**.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-167">On the **Security** tab, click **Advanced**.</span></span>  
   
-     Aparecerá el cuadro de diálogo Configuración de seguridad avanzada.  
+     <span data-ttu-id="0dbd4-168">Se abre el cuadro de diálogo Configuración de seguridad avanzada.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-168">The Advanced Security Settings dialog box appears.</span></span>  
   
-3.  Asegúrese de que la casilla **Conceder acceso a la aplicación al sitio de origen** esté activada y haga clic en **Aceptar**.  
+3.  <span data-ttu-id="0dbd4-169">Asegúrese de que la casilla **Conceder a la aplicación acceso al sitio de origen** esté activada y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-169">Make sure that the **Grant the application access to its site of origin** check box is checked and then click **OK**.</span></span>  
   
-4.  En la pestaña **Depurar**, seleccione la opción **Iniciar explorador con la dirección URL** y especifique la dirección URL para la página HTML que contiene la aplicación XBAP.  
+4.  <span data-ttu-id="0dbd4-170">En la pestaña **Depurar**, seleccione la opción **Iniciar explorador con la dirección URL** y especifique la dirección URL de la página HTML que contiene la aplicación XBAP.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-170">On the **Debug** tab, select the **Start browser with URL** option and specify the URL for the HTML page that contains the XBAP.</span></span>  
   
-5.  En Internet Explorer, haga clic en el botón **Herramientas** y seleccione **Opciones de Internet**.  
+5.  <span data-ttu-id="0dbd4-171">En Internet Explorer, haga clic en el botón **Herramientas** y seleccione **Opciones de Internet**.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-171">In Internet Explorer, click the **Tools** button and then select **Internet Options**.</span></span>  
   
-     Aparecerá el cuadro de diálogo Opciones de Internet.  
+     <span data-ttu-id="0dbd4-172">Aparecerá el cuadro de diálogo Opciones de Internet.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-172">The Internet Options dialog box appears.</span></span>  
   
-6.  Haga clic en la ficha **Opciones avanzadas**.  
+6.  <span data-ttu-id="0dbd4-173">Haga clic en la pestaña **Opciones avanzadas**.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-173">Click the **Advanced** tab.</span></span>  
   
-7.  En la lista **Configuración** de **Seguridad**, active la casilla **Permitir que el contenido activo se ejecute en los archivos de Mi PC**.  
+7.  <span data-ttu-id="0dbd4-174">En la lista **Configuración**, bajo **Seguridad**, active la casilla **Permitir que el contenido activo se ejecute en los archivos de mi equipo**.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-174">In the **Settings** list under **Security**, check the **Allow active content to run in files on My Computer** check box.</span></span>  
   
-8.  Haga clic en **Aceptar**.  
+8.  <span data-ttu-id="0dbd4-175">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-175">Click **OK**.</span></span>  
   
-     Los cambios surtirán efecto cuando reinicie Internet Explorer.  
+     <span data-ttu-id="0dbd4-176">Los cambios surtirán efecto una vez que reinicie Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-176">The changes will take effect after you restart Internet Explorer.</span></span>  
   
 > [!CAUTION]
->  Al habilitar el contenido activo en Internet Explorer, se puede poner en riesgo el equipo.  Para obtener más información, vea [Características de seguridad y privacidad de Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179286).  Si no desea cambiar la configuración de seguridad de Internet Explorer, puede iniciar la página HTML desde un servidor y adjuntar el depurador de [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] al proceso.  
+>  <span data-ttu-id="0dbd4-177">La habilitación del contenido activo en Internet Explorer puede poner en peligro su equipo.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-177">Enabling active content in Internet Explorer may put your computer at risk.</span></span> <span data-ttu-id="0dbd4-178">Para más información, consulte las [características de seguridad y privacidad en Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179286).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-178">For more information, see [Security and privacy features in Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179286).</span></span> <span data-ttu-id="0dbd4-179">Si no desea cambiar la configuración de seguridad de Internet Explorer, puede iniciar la página HTML desde un servidor y conectar el depurador de [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] al proceso.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-179">If you do not want to change your Internet Explorer security settings, you can launch the HTML page from a server and attach the [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] debugger to the process.</span></span>  
   
 <a name="xbap_security_considerations"></a>   
-## Consideraciones de seguridad sobre XBAP  
- Las aplicaciones XBAP suelen ejecutarse en un recinto de seguridad de confianza parcial que esté restringido al conjunto de permisos de la zona de Internet.  Por tanto, la implementación debe admitir el subconjunto de elementos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que se admiten en la zona de Internet o debe elevar los permisos de la aplicación.  Para obtener más información, vea [Seguridad](../../../../docs/framework/wpf/security-wpf.md).  
+## <a name="xbap-security-considerations"></a><span data-ttu-id="0dbd4-180">Consideraciones de seguridad para XBAP</span><span class="sxs-lookup"><span data-stu-id="0dbd4-180">XBAP Security Considerations</span></span>  
+ <span data-ttu-id="0dbd4-181">Las aplicaciones XBAP suelen ejecutarse en un espacio aislado con seguridad de confianza parcial que se restringe al conjunto de permisos de zona de Internet.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-181">XBAPs typically execute in a partial-trust security sandbox that is restricted to the Internet zone permission set.</span></span> <span data-ttu-id="0dbd4-182">Por consiguiente, la implementación debe ser compatible con el subconjunto de elementos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que se admiten en la zona de Internet o debe elevar los permisos de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-182">Consequently, your implementation must support the subset of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements that are supported in the Internet zone or you must elevate the permissions of your application.</span></span> <span data-ttu-id="0dbd4-183">Para más información, consulte [Seguridad](../../../../docs/framework/wpf/security-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-183">For more information, see [Security](../../../../docs/framework/wpf/security-wpf.md).</span></span>  
   
- Cuando usa un control <xref:System.Windows.Controls.WebBrowser> en la aplicación, WPF crea internamente instancias del control ActiveX WebBrowser nativo.  Cuando se trata de una aplicación XBAP de confianza parcial que se ejecuta en Internet Explorer, el control ActiveX se ejecuta en un subproceso dedicado del proceso de Internet Explorer.  Por tanto, se aplican las limitaciones siguientes:  
+ <span data-ttu-id="0dbd4-184">Cuando se usa un <xref:System.Windows.Controls.WebBrowser> control en la aplicación, WPF crea internamente instancias del control WebBrowser ActiveX nativo.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-184">When you use a <xref:System.Windows.Controls.WebBrowser> control in your application, WPF internally instantiates the native WebBrowser ActiveX control.</span></span> <span data-ttu-id="0dbd4-185">Cuando se trata de una aplicación XBAP de confianza parcial que se ejecuta en Internet Explorer, el control ActiveX se ejecuta en un subproceso dedicado del proceso de Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-185">When your application is a partial-trust XBAP running in Internet Explorer, the ActiveX control runs in a dedicated thread of the Internet Explorer process.</span></span> <span data-ttu-id="0dbd4-186">Por tanto, se aplican las siguientes limitaciones:</span><span class="sxs-lookup"><span data-stu-id="0dbd4-186">Therefore, the following limitations apply:</span></span>  
   
--   El control <xref:System.Windows.Controls.WebBrowser> debe proporcionar un comportamiento similar al del explorador del host, incluyendo las restricciones de seguridad.  Algunas de estas restricciones de seguridad se pueden controlar mediante la configuración de seguridad de Internet Explorer.  Para obtener más información, vea [Seguridad](../../../../docs/framework/wpf/security-wpf.md).  
+-   <span data-ttu-id="0dbd4-187">El <xref:System.Windows.Controls.WebBrowser> control debe proporcionar un comportamiento similar del explorador del host, incluidas las restricciones de seguridad.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-187">The <xref:System.Windows.Controls.WebBrowser> control should provide behavior similar to the host browser, including security restrictions.</span></span> <span data-ttu-id="0dbd4-188">Algunas de estas restricciones de seguridad se pueden controlar mediante la configuración de seguridad de Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-188">Some of these security restrictions can be controlled through the Internet Explorer security settings.</span></span> <span data-ttu-id="0dbd4-189">Para más información, consulte [Seguridad](../../../../docs/framework/wpf/security-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-189">For more information, see [Security](../../../../docs/framework/wpf/security-wpf.md).</span></span>  
   
--   Se produce una excepción cuando una aplicación XBAP se carga entre dominios en una página HTML.  
+-   <span data-ttu-id="0dbd4-190">Se genera una excepción cuando se carga una aplicación XBAP entre dominios en una página HTML.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-190">An exception is thrown when an XBAP is loaded cross-domain in an HTML page.</span></span>  
   
--   La entrada está en un subproceso independiente del <xref:System.Windows.Controls.WebBrowser> de WPF, por lo que no se pueden interceptar las acciones del teclado y no se comparte el estado del IME.  
+-   <span data-ttu-id="0dbd4-191">La entrada está en un subproceso independiente de WPF <xref:System.Windows.Controls.WebBrowser>, por lo que no se puede interceptar la entrada de teclado y no se comparte el estado IME.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-191">Input is on a separate thread from the WPF <xref:System.Windows.Controls.WebBrowser>, so keyboard input cannot be intercepted and the IME state is not shared.</span></span>  
   
--   El control de tiempo o el orden de navegación pueden ser diferentes porque el control ActiveX se ejecuta en otro subproceso.  Por ejemplo, la navegación hasta una página no siempre se cancela iniciando otra solicitud de navegación.  
+-   <span data-ttu-id="0dbd4-192">La sincronización o el orden de navegación pueden variar como consecuencia del control ActiveX que se ejecuta en otro subproceso.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-192">The timing or order of navigation may be different due to the ActiveX control running on another thread.</span></span> <span data-ttu-id="0dbd4-193">Por ejemplo, no siempre se cancela la navegación a una página cuando se inicia otra solicitud de navegación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-193">For example, navigating to a page is not always cancelled by starting another navigation request.</span></span>  
   
--   Un control ActiveX personalizado puede tener dificultades con la comunicación porque la aplicación WPF se está ejecutando en un subproceso independiente.  
+-   <span data-ttu-id="0dbd4-194">Es posible que un control ActiveX personalizado experimente problemas de comunicación porque la aplicación WPF se esté ejecutando en un subproceso independiente.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-194">A custom ActiveX control may have trouble with communication since the WPF application is running in a separate thread.</span></span>  
   
--   No se genera el evento <xref:System.Windows.Interop.HwndHost.MessageHook> porque <xref:System.Windows.Interop.HwndHost> no puede crear subclases de ninguna ventana que se ejecuta en otro subproceso o proceso.  
+-   <span data-ttu-id="0dbd4-195"><xref:System.Windows.Interop.HwndHost.MessageHook>no se produzca porque <xref:System.Windows.Interop.HwndHost> no puede crear subclases de una ventana que se ejecuta en otro proceso o subproceso.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-195"><xref:System.Windows.Interop.HwndHost.MessageHook> does not get raised because <xref:System.Windows.Interop.HwndHost> cannot subclass a window running in another thread or process.</span></span>  
   
-### Crear una aplicación XBAP de plena confianza  
- Si la aplicación XBAP necesita plena confianza, puede cambiar el proyecto para habilitar este permiso.  En los pasos siguientes se describe cómo habilitar la plena confianza:  
+### <a name="creating-a-full-trust-xbap"></a><span data-ttu-id="0dbd4-196">Creación de una aplicación XBAP de plena confianza</span><span class="sxs-lookup"><span data-stu-id="0dbd4-196">Creating a Full-Trust XBAP</span></span>  
+ <span data-ttu-id="0dbd4-197">Si la aplicación XBAP necesita plena confianza, puede cambiar el proyecto para habilitar este permiso.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-197">If your XBAP requires full trust, you can change your project to enable this permission.</span></span> <span data-ttu-id="0dbd4-198">En los pasos siguientes se describe cómo habilitar la plena confianza:</span><span class="sxs-lookup"><span data-stu-id="0dbd4-198">The following steps describe how to enable full trust:</span></span>  
   
-1.  En Visual Studio, abra las propiedades del proyecto.  
+1.  <span data-ttu-id="0dbd4-199">En Visual Studio, abra las propiedades del proyecto.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-199">In Visual Studio, open the project properties.</span></span>  
   
-2.  En la pestaña **Seguridad**, seleccione la opción **Aplicación de plena confianza**.  
+2.  <span data-ttu-id="0dbd4-200">En la pestaña **Seguridad**, seleccione la opción **Aplicación de plena confianza**.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-200">On the **Security** tab, select the **This is a full trust application** option.</span></span>  
   
- Este valor realiza las modificaciones siguientes:  
+ <span data-ttu-id="0dbd4-201">Esta configuración realiza los cambios siguientes:</span><span class="sxs-lookup"><span data-stu-id="0dbd4-201">This setting makes the following changes:</span></span>  
   
--   En el archivo del proyecto, el valor del elemento `<TargetZone>` se cambia a `Custom`.  
+-   <span data-ttu-id="0dbd4-202">En el archivo de proyecto, el valor del elemento `<TargetZone>` se cambia a `Custom`.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-202">In the project file, the `<TargetZone>` element value is changed to `Custom`.</span></span>  
   
--   En el manifiesto de aplicación \(app.manifest\), se agrega un atributo `Unrestricted="true"` al elemento `PermissionSet`.  
+-   <span data-ttu-id="0dbd4-203">En el manifiesto de aplicación (app.manifest), se agrega un atributo `Unrestricted="true"` al elemento `PermissionSet`.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-203">In the application manifest (app.manifest), an `Unrestricted="true"` attribute is added to the `PermissionSet` element.</span></span>  
   
-    ```  
+    ```xml
     <PermissionSet class="System.Security.PermissionSet"   
-        version="1"   
-        ID="Custom"   
-        SameSite="site"   
-        Unrestricted="true"   
-    />  
+                   version="1"   
+                   ID="Custom"   
+                   SameSite="site"   
+                   Unrestricted="true" />  
     ```  
   
-### Implementar una aplicación XBAP de plena confianza  
- Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad.  En algunos casos, el usuario recibirá una advertencia cuando intente instalarla.  El usuario puede continuar o cancelar la instalación.  En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y lo que tiene que hacer para que la aplicación reciba plena confianza.  
+### <a name="deploying-a-full-trust-xbap"></a><span data-ttu-id="0dbd4-204">Implementación de una aplicación XBAP de plena confianza</span><span class="sxs-lookup"><span data-stu-id="0dbd4-204">Deploying a Full-Trust XBAP</span></span>  
+ <span data-ttu-id="0dbd4-205">Al implementar una aplicación XBAP de plena confianza que no sigue el modelo de implementación de confianza de ClickOnce, el comportamiento cuando el usuario ejecute la aplicación dependerá de la zona de seguridad.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-205">When you deploy a full-trust XBAP that does not follow the ClickOnce Trusted Deployment model, the behavior when the user runs the application will depend on the security zone.</span></span> <span data-ttu-id="0dbd4-206">En algunos casos, el usuario recibirá una advertencia al intentar instalarla.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-206">In some cases, the user will receive a warning when they attempt to install it.</span></span> <span data-ttu-id="0dbd4-207">El usuario puede elegir continuar o cancelar la instalación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-207">The user can choose to continue or cancel the installation.</span></span> <span data-ttu-id="0dbd4-208">En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-208">The following table describes the behavior of the application for each security zone and what you have to do for the application to receive full trust.</span></span>  
   
-|Zona de seguridad|Comportamiento|Obtener plena confianza|  
-|-----------------------|--------------------|-----------------------------|  
-|Equipo local|Plena confianza automática|No se requiere ninguna acción.|  
-|Intranet y sitios de confianza|Solicitar plena confianza|Firmar la aplicación XBAP con un certificado para que el usuario vea el origen en el indicador.|  
-|Internet|Se produce un error "Confianza no concedida"|Firmar la aplicación XBAP con un certificado.|  
+|<span data-ttu-id="0dbd4-209">Zona de seguridad</span><span class="sxs-lookup"><span data-stu-id="0dbd4-209">Security Zone</span></span>|<span data-ttu-id="0dbd4-210">Comportamiento</span><span class="sxs-lookup"><span data-stu-id="0dbd4-210">Behavior</span></span>|<span data-ttu-id="0dbd4-211">Obtener plena confianza</span><span class="sxs-lookup"><span data-stu-id="0dbd4-211">Getting Full Trust</span></span>|  
+|-------------------|--------------|------------------------|  
+|<span data-ttu-id="0dbd4-212">Equipo local</span><span class="sxs-lookup"><span data-stu-id="0dbd4-212">Local computer</span></span>|<span data-ttu-id="0dbd4-213">Plena confianza automática</span><span class="sxs-lookup"><span data-stu-id="0dbd4-213">Automatic full trust</span></span>|<span data-ttu-id="0dbd4-214">No es necesario realizar ninguna acción.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-214">No action is needed.</span></span>|  
+|<span data-ttu-id="0dbd4-215">Intranet y sitios de confianza</span><span class="sxs-lookup"><span data-stu-id="0dbd4-215">Intranet and trusted sites</span></span>|<span data-ttu-id="0dbd4-216">Pedir plena confianza</span><span class="sxs-lookup"><span data-stu-id="0dbd4-216">Prompt for full trust</span></span>|<span data-ttu-id="0dbd4-217">Firme la aplicación XBAP con un certificado para que el usuario vea el origen en la petición.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-217">Sign the XBAP with a certificate so that the user sees the source in the prompt.</span></span>|  
+|<span data-ttu-id="0dbd4-218">Internet</span><span class="sxs-lookup"><span data-stu-id="0dbd4-218">Internet</span></span>|<span data-ttu-id="0dbd4-219">Error: "Confianza no concedida"</span><span class="sxs-lookup"><span data-stu-id="0dbd4-219">Fails with "Trust Not Granted"</span></span>|<span data-ttu-id="0dbd4-220">Firme la aplicación XBAP con un certificado.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-220">Sign the XBAP with a certificate.</span></span>|  
   
 > [!NOTE]
->  El comportamiento descrito en la tabla anterior es para las aplicaciones XBAP de plena confianza que no siguen el modelo de implementación de confianza de ClickOnce.  
+>  <span data-ttu-id="0dbd4-221">El comportamiento descrito en la tabla anterior es para las aplicaciones XBAP de plena confianza que no sigan el modelo de implementación de confianza de ClickOnce.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-221">The behavior described in the previous table is for full-trust XBAPs that do not follow the ClickOnce Trusted Deployment model.</span></span>  
   
- Se recomienda emplear el modelo de implementación de confianza de ClickOnce para implementar una aplicación XBAP de plena confianza.  Este modelo le permite conceder automáticamente plena confianza a la aplicación XBAP, cualquiera que sea la zona de seguridad, por lo que no se pregunta al usuario.  Como parte de este modelo, debe firmar la aplicación con un certificado de un publicador de confianza.  Para obtener más información, vea [Información general sobre la implementación de aplicaciones de confianza](../Topic/Trusted%20Application%20Deployment%20Overview.md) e [Introducción a la firma de código](http://go.microsoft.com/fwlink/?LinkId=166327).  
+ <span data-ttu-id="0dbd4-222">Se recomienda que utilice el modelo de implementación de confianza de ClickOnce para implementar una aplicación XBAP de plena confianza.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-222">It is recommended that you use the ClickOnce Trusted Deployment model for deploying a full-trust XBAP.</span></span> <span data-ttu-id="0dbd4-223">Este modelo permite que se conceda a la aplicación XBAP plena confianza automáticamente, independientemente de la zona de seguridad, por lo que no hay que pedirla al usuario.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-223">This model allows your XBAP to be granted full trust automatically, regardless of the security zone, so that the user is not prompted.</span></span> <span data-ttu-id="0dbd4-224">Como parte de este modelo, debe firmar la aplicación con un certificado de un editor de confianza.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-224">As part of this model, you must sign your application with a certificate from a trusted publisher.</span></span> <span data-ttu-id="0dbd4-225">Para más información, consulte [Información general sobre la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview) y [Seguridad](http://go.microsoft.com/fwlink/?LinkId=166327).</span><span class="sxs-lookup"><span data-stu-id="0dbd4-225">For more information, see [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) and [Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=166327).</span></span>  
   
 <a name="xbap_start_time_performance_considerations"></a>   
-## Consideraciones sobre el rendimiento del tiempo de inicio de una XBAP  
- Un aspecto importante del rendimiento de una aplicación XBAP es su tiempo de inicio.  Si una aplicación XBAP es la primera aplicación de WPF que se carga, el tiempo de *inicio en frío* puede ser de diez segundos o más.  Esto se debe a que WPF representa la página de progreso, y es preciso iniciar en frío tanto CLR como WPF para mostrar la aplicación.  
+## <a name="xbap-start-time-performance-considerations"></a><span data-ttu-id="0dbd4-226">Consideraciones sobre el rendimiento de tiempo de inicio de XBAP</span><span class="sxs-lookup"><span data-stu-id="0dbd4-226">XBAP Start Time Performance Considerations</span></span>  
+ <span data-ttu-id="0dbd4-227">Un aspecto importante del rendimiento de la aplicación XBAP es el tiempo de inicio.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-227">An important aspect of XBAP performance is its start time.</span></span> <span data-ttu-id="0dbd4-228">Si una aplicación XBAP es la primera aplicación WPF en cargarse, el tiempo de *inicio en frío* puede ser de diez segundos o más.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-228">If an XBAP is the first WPF application to load, the *cold start* time can be ten seconds or more.</span></span> <span data-ttu-id="0dbd4-229">Esto se debe a que WPF representa la página de progreso, y tanto CLR como WPF se deben iniciar en frío para mostrar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-229">This is because the progress page is rendered by WPF, and both the CLR and WPF must be cold-started to display the application.</span></span>  
   
- A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], el tiempo de inicio en frío de una aplicación XBAP se reduce mostrando una página de progreso no administrada al principio del ciclo de implementación. La página de progreso se muestra casi en el momento de iniciar la aplicación, porque la muestra el código de hospedaje nativo y se representa en HTML.  
+ <span data-ttu-id="0dbd4-230">A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], se reduce el tiempo de inicio en frío de XBAP al mostrar una página de progreso no administrada en una fase temprana del ciclo de implementación.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-230">Starting in [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], XBAP cold-start time is mitigated by displaying an unmanaged progress page early in the deployment cycle.</span></span> <span data-ttu-id="0dbd4-231">La página de progreso aparece casi inmediatamente después de iniciarse la aplicación, porque se muestra con código hospedado de forma nativa y se representa en HTML.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-231">The progress page appears almost immediately after the application is started, because it is displayed by native hosting code and rendered in HTML.</span></span>  
   
- Además, la simultaneidad mejorada de la secuencia de descarga de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] reduce el tiempo de inicio en hasta un diez por ciento.  Una vez que se ha efectuado la descarga y validación de manifiestos de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], se inicia la descarga de la aplicación y la barra de progreso empieza a actualizarse.  
+ <span data-ttu-id="0dbd4-232">Además, la mejora en la simultaneidad de la secuencia de descarga de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] reduce el tiempo de inicio en un 10 %.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-232">In addition, improved concurrency of the [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] download sequence improves the start time by up to ten percent.</span></span> <span data-ttu-id="0dbd4-233">Una que [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] se descarga y valida los manifiestos, comienza la descarga de la aplicación y la barra de progreso se empieza a actualizar.</span><span class="sxs-lookup"><span data-stu-id="0dbd4-233">After [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] downloads and validates manifests, the application download starts, and the progress bar starts to update.</span></span>  
   
-## Vea también  
- [Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio Web](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)   
- [Implementar una aplicación de WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="0dbd4-234">Vea también</span><span class="sxs-lookup"><span data-stu-id="0dbd4-234">See Also</span></span>  
+ [<span data-ttu-id="0dbd4-235">Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web</span><span class="sxs-lookup"><span data-stu-id="0dbd4-235">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [<span data-ttu-id="0dbd4-236">Implementar una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="0dbd4-236">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

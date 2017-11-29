@@ -1,116 +1,96 @@
 ---
-title: / (Operador, Visual Basic) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: / (Operador, Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb./
-dev_langs:
-- VB
+f1_keywords: vb./
 helpviewer_keywords:
-- division operator, floating point
-- floating-point numbers, division operator
+- division operator [Visual Basic], floating point
+- floating-point numbers [Visual Basic], division operator
 - slash (/) operator
 - zero, division by zero
 - operators [Visual Basic], arithmetic
-- arithmetic operators, division
-- division, by zero
+- arithmetic operators [Visual Basic], division
+- division [Visual Basic], by zero
 - operators [Visual Basic], division
-- division operator, syntax
+- division operator [Visual Basic], syntax
 - / operator [Visual Basic]
-- math operators
+- math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 71b4f64f6deeb334412c87131ccd9480620f284f
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-visual-basic"></a>/ (Operador, Visual Basic)
-Divide dos números y devuelve un resultado de coma flotante.  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="b47bb-102">/ (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b47bb-102">/ Operator (Visual Basic)</span></span>
+<span data-ttu-id="b47bb-103">Divide dos números y devuelve un resultado de punto flotante.</span><span class="sxs-lookup"><span data-stu-id="b47bb-103">Divides two numbers and returns a floating-point result.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="b47bb-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b47bb-104">Syntax</span></span>  
   
 ```  
 expression1 / expression2  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a><span data-ttu-id="b47bb-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="b47bb-105">Parts</span></span>  
  `expression1`  
- Obligatorio. Cualquier expresión numérica.  
+ <span data-ttu-id="b47bb-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="b47bb-106">Required.</span></span> <span data-ttu-id="b47bb-107">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="b47bb-107">Any numeric expression.</span></span>  
   
  `expression2`  
- Obligatorio. Cualquier expresión numérica.  
+ <span data-ttu-id="b47bb-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="b47bb-108">Required.</span></span> <span data-ttu-id="b47bb-109">Cualquier expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="b47bb-109">Any numeric expression.</span></span>  
   
-## <a name="supported-types"></a>Tipos admitidos  
- Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo y `Decimal`.  
+## <a name="supported-types"></a><span data-ttu-id="b47bb-110">Tipos admitidos</span><span class="sxs-lookup"><span data-stu-id="b47bb-110">Supported Types</span></span>  
+ <span data-ttu-id="b47bb-111">Todos los tipos numéricos, incluidos los tipos sin signo y de punto flotante y `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="b47bb-111">All numeric types, including the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## <a name="result"></a>Resultado  
- El resultado es el cociente completo de `expression1` dividido por `expression2`, incluido cualquier resto.  
+## <a name="result"></a><span data-ttu-id="b47bb-112">Resultado</span><span class="sxs-lookup"><span data-stu-id="b47bb-112">Result</span></span>  
+ <span data-ttu-id="b47bb-113">El resultado es el cociente completo de `expression1` dividido por `expression2`, incluido cualquier resto.</span><span class="sxs-lookup"><span data-stu-id="b47bb-113">The result is the full quotient of `expression1` divided by `expression2`, including any remainder.</span></span>  
   
- El [\ (operador, Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) devuelve el cociente entero, que omite el resto.  
+ <span data-ttu-id="b47bb-114">El [\ (operador) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) devuelve el cociente entero, que omite el resto.</span><span class="sxs-lookup"><span data-stu-id="b47bb-114">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient, which drops the remainder.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- El tipo de datos del resultado depende de los tipos de los operandos. En la tabla siguiente se muestra cómo se determina el tipo de datos del resultado.  
+## <a name="remarks"></a><span data-ttu-id="b47bb-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b47bb-115">Remarks</span></span>  
+ <span data-ttu-id="b47bb-116">El tipo de datos del resultado depende de los tipos de los operandos.</span><span class="sxs-lookup"><span data-stu-id="b47bb-116">The data type of the result depends on the types of the operands.</span></span> <span data-ttu-id="b47bb-117">En la tabla siguiente se muestra cómo se determina el tipo de datos del resultado.</span><span class="sxs-lookup"><span data-stu-id="b47bb-117">The following table shows how the data type of the result is determined.</span></span>  
   
-|Tipos de datos de operando|Tipo de datos de resultado|  
+|<span data-ttu-id="b47bb-118">Tipos de datos de operando</span><span class="sxs-lookup"><span data-stu-id="b47bb-118">Operand data types</span></span>|<span data-ttu-id="b47bb-119">Tipo de datos de resultado</span><span class="sxs-lookup"><span data-stu-id="b47bb-119">Result data type</span></span>|  
 |------------------------|----------------------|  
-|Ambas expresiones son tipos de datos enteros ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bytes](../../../visual-basic/language-reference/data-types/byte-data-type.md), [corto](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [entero](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [largo](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|`Double`|  
-|Una expresión es un [único](../../../visual-basic/language-reference/data-types/single-data-type.md) tipo de datos y el otro no es un [dobles](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Single`|  
-|Una expresión es un [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) tipo de datos y el otro no es un [único](../../../visual-basic/language-reference/data-types/single-data-type.md) o un [dobles](../../../visual-basic/language-reference/data-types/double-data-type.md)|`Decimal`|  
-|Cualquier expresión es un [doble](../../../visual-basic/language-reference/data-types/double-data-type.md) tipo de datos|`Double`|  
+|<span data-ttu-id="b47bb-120">Ambas expresiones son tipos de datos integrales ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bytes](../../../visual-basic/language-reference/data-types/byte-data-type.md), [corto](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [entero](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [largo](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))</span><span class="sxs-lookup"><span data-stu-id="b47bb-120">Both expressions are integral data types ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))</span></span>|`Double`|  
+|<span data-ttu-id="b47bb-121">Una expresión es un [único](../../../visual-basic/language-reference/data-types/single-data-type.md) tipo de datos y el otro no es un [dobles](../../../visual-basic/language-reference/data-types/double-data-type.md)</span><span class="sxs-lookup"><span data-stu-id="b47bb-121">One expression is a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) data type and the other is not a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)</span></span>|`Single`|  
+|<span data-ttu-id="b47bb-122">Una expresión es un [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) tipo de datos y el otro no es un [único](../../../visual-basic/language-reference/data-types/single-data-type.md) o un [dobles](../../../visual-basic/language-reference/data-types/double-data-type.md)</span><span class="sxs-lookup"><span data-stu-id="b47bb-122">One expression is a [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) data type and the other is not a [Single](../../../visual-basic/language-reference/data-types/single-data-type.md) or a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)</span></span>|`Decimal`|  
+|<span data-ttu-id="b47bb-123">Cualquier expresión es un [doble](../../../visual-basic/language-reference/data-types/double-data-type.md) tipo de datos</span><span class="sxs-lookup"><span data-stu-id="b47bb-123">Either expression is a [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) data type</span></span>|`Double`|  
   
- Antes de realiza la división, cualquier expresión numérica entera se amplía a `Double`. Si asigna el resultado a un tipo de datos entero, Visual Basic intenta convertir el resultado de `Double` a ese tipo. Esto puede producir una excepción si el resultado no se ajusta a ese tipo. En concreto, vea "División por cero intentada" en esta página de ayuda.  
+ <span data-ttu-id="b47bb-124">Antes de realiza la división, cualquier expresión numérica entera se amplía a `Double`.</span><span class="sxs-lookup"><span data-stu-id="b47bb-124">Before division is performed, any integral numeric expressions are widened to `Double`.</span></span> <span data-ttu-id="b47bb-125">Si asigna el resultado a un tipo de datos entero, Visual Basic intenta convertir el resultado de `Double` a ese tipo.</span><span class="sxs-lookup"><span data-stu-id="b47bb-125">If you assign the result to an integral data type, Visual Basic attempts to convert the result from `Double` to that type.</span></span> <span data-ttu-id="b47bb-126">Esto puede producir una excepción si el resultado no se ajusta a ese tipo.</span><span class="sxs-lookup"><span data-stu-id="b47bb-126">This can throw an exception if the result does not fit in that type.</span></span> <span data-ttu-id="b47bb-127">En concreto, vea "División por cero intentada" en esta página de ayuda.</span><span class="sxs-lookup"><span data-stu-id="b47bb-127">In particular, see "Attempted Division by Zero" on this Help page.</span></span>  
   
- Si `expression1` o `expression2` se evalúa como [nada](../../../visual-basic/language-reference/nothing.md), se trata como cero.  
+ <span data-ttu-id="b47bb-128">Si `expression1` o `expression2` se evalúa como [nada](../../../visual-basic/language-reference/nothing.md), se trata como cero.</span><span class="sxs-lookup"><span data-stu-id="b47bb-128">If `expression1` or `expression2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>  
   
-## <a name="attempted-division-by-zero"></a>División por cero intentada  
- Si `expression2` se evalúa como cero, el `/` operador se comporta de forma diferente para tipos de datos de operando diferentes. La siguiente tabla muestra los posibles comportamientos.  
+## <a name="attempted-division-by-zero"></a><span data-ttu-id="b47bb-129">División por cero intentada</span><span class="sxs-lookup"><span data-stu-id="b47bb-129">Attempted Division by Zero</span></span>  
+ <span data-ttu-id="b47bb-130">Si `expression2` se evalúa como cero, el `/` operador tiene un comportamiento diferente para los tipos de datos de operando diferentes.</span><span class="sxs-lookup"><span data-stu-id="b47bb-130">If `expression2` evaluates to zero, the `/` operator behaves differently for different operand data types.</span></span> <span data-ttu-id="b47bb-131">La siguiente tabla muestra los comportamientos posibles.</span><span class="sxs-lookup"><span data-stu-id="b47bb-131">The following table shows the possible behaviors.</span></span>  
   
-|Tipos de datos de operando|Comportamiento si `expression2` es cero|  
+|<span data-ttu-id="b47bb-132">Tipos de datos de operando</span><span class="sxs-lookup"><span data-stu-id="b47bb-132">Operand data types</span></span>|<span data-ttu-id="b47bb-133">Comportamiento si `expression2` es cero</span><span class="sxs-lookup"><span data-stu-id="b47bb-133">Behavior if `expression2` is zero</span></span>|  
 |------------------------|---------------------------------------|  
-|Punto flotante (`Single` o `Double`)|Devuelve infinito (<xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>), o <xref:System.Double.NaN>(no un número) si `expression1` también es cero</xref:System.Double.NaN> </xref:System.Double.NegativeInfinity> </xref:System.Double.PositiveInfinity>|  
-|`Decimal`|Se produce<xref:System.DivideByZeroException></xref:System.DivideByZeroException>|  
-|Entero (con o sin signo)|Intenta realizar la conversión a un tipo integral produce <xref:System.OverflowException>porque no pueden aceptar tipos integrales <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, o <xref:System.Double.NaN></xref:System.Double.NaN> </xref:System.Double.NegativeInfinity> </xref:System.Double.PositiveInfinity> </xref:System.OverflowException>|  
+|<span data-ttu-id="b47bb-134">Punto flotante (`Single` o `Double`)</span><span class="sxs-lookup"><span data-stu-id="b47bb-134">Floating-point (`Single` or `Double`)</span></span>|<span data-ttu-id="b47bb-135">Devuelve infinito (<xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>), o <xref:System.Double.NaN> (no un número) si `expression1` también es cero</span><span class="sxs-lookup"><span data-stu-id="b47bb-135">Returns infinity (<xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>), or <xref:System.Double.NaN> (not a number) if `expression1` is also zero</span></span>|  
+|`Decimal`|<span data-ttu-id="b47bb-136">Produce<xref:System.DivideByZeroException></span><span class="sxs-lookup"><span data-stu-id="b47bb-136">Throws <xref:System.DivideByZeroException></span></span>|  
+|<span data-ttu-id="b47bb-137">Entero (con o sin signo)</span><span class="sxs-lookup"><span data-stu-id="b47bb-137">Integral (signed or unsigned)</span></span>|<span data-ttu-id="b47bb-138">Intenta realizar la conversión al tipo integral produce <xref:System.OverflowException> porque no pueden aceptar tipos integrales <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, o<xref:System.Double.NaN></span><span class="sxs-lookup"><span data-stu-id="b47bb-138">Attempted conversion back to integral type throws <xref:System.OverflowException> because integral types cannot accept <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, or <xref:System.Double.NaN></span></span>|  
   
 > [!NOTE]
->  El `/` operador puede *sobrecargados*, lo que significa que una clase o estructura puede definir de nuevo su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido. Para obtener más información, consulte [procedimientos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  <span data-ttu-id="b47bb-139">El `/` puede ser *sobrecargados*, lo que significa que una clase o estructura puede definir de nuevo su comportamiento cuando un operando tiene el tipo de esa clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="b47bb-139">The `/` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="b47bb-140">Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido.</span><span class="sxs-lookup"><span data-stu-id="b47bb-140">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="b47bb-141">Para obtener más información, consulte [procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="b47bb-141">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la `/` operador para realizar la división de punto flotante. El resultado es el cociente de los dos operandos.  
+## <a name="example"></a><span data-ttu-id="b47bb-142">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b47bb-142">Example</span></span>  
+ <span data-ttu-id="b47bb-143">Este ejemplo se utiliza la `/` operador que se va a realizar la división de coma flotante.</span><span class="sxs-lookup"><span data-stu-id="b47bb-143">This example uses the `/` operator to perform floating-point division.</span></span> <span data-ttu-id="b47bb-144">El resultado es el cociente de los dos operandos.</span><span class="sxs-lookup"><span data-stu-id="b47bb-144">The result is the quotient of the two operands.</span></span>  
   
- [!code-vb[VbVbalrOperators Nº&16;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
   
- Las expresiones en el ejemplo anterior devuelven valores de 2,5 y 3,333333. Tenga en cuenta que el resultado es siempre de punto flotante (`Double`), aunque ambos operandos son constantes de tipo entero.  
+ <span data-ttu-id="b47bb-145">Las expresiones en el ejemplo anterior devuelven valores de 2,5 y 3,333333.</span><span class="sxs-lookup"><span data-stu-id="b47bb-145">The expressions in the preceding example return values of 2.5 and 3.333333.</span></span> <span data-ttu-id="b47bb-146">Tenga en cuenta que el resultado es siempre de punto flotante (`Double`), aunque ambos operandos son constantes de tipo entero.</span><span class="sxs-lookup"><span data-stu-id="b47bb-146">Note that the result is always floating-point (`Double`), even though both operands are integer constants.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [/ = (Operador, Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)   
- [\ (Operador, Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)   
- [Tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)   
- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Precedencia de operadores en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-
+## <a name="see-also"></a><span data-ttu-id="b47bb-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="b47bb-147">See Also</span></span>  
+ [<span data-ttu-id="b47bb-148">/ = (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b47bb-148">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [<span data-ttu-id="b47bb-149">\ (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b47bb-149">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+ [<span data-ttu-id="b47bb-150">Tipos de datos de resultados de operador</span><span class="sxs-lookup"><span data-stu-id="b47bb-150">Data Types of Operator Results</span></span>](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  
+ [<span data-ttu-id="b47bb-151">Operadores aritméticos</span><span class="sxs-lookup"><span data-stu-id="b47bb-151">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="b47bb-152">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b47bb-152">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="b47bb-153">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="b47bb-153">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="b47bb-154">Operadores aritméticos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b47bb-154">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

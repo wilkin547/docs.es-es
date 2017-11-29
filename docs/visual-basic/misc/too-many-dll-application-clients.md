@@ -1,43 +1,26 @@
 ---
-title: "Demasiados clientes de aplicación DLL | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Demasiados clientes de aplicación DLL"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID47
+f1_keywords: vbrID47
 ms.assetid: 4b87780b-67ad-4c96-9253-db954a751dad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1abc9ce574de00db42a33cde478ca80be74e61ff
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d4b9278134e937ac8bf4626237954432d727ac0d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="too-many-dll-application-clients"></a>Demasiados clientes de aplicación DLL
-La biblioteca de vínculos dinámicos (DLL) de [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] sólo se puede adaptar el acceso mediante un número limitado de aplicaciones host. La aplicación y otras aplicaciones que son [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] hosts (algunos de los cuales pueden tener acceso a la aplicación) están intentando tener acceso el [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] DLL al mismo tiempo.  
+# <a name="too-many-dll-application-clients"></a><span data-ttu-id="b8254-102">Demasiados clientes de aplicación DLL</span><span class="sxs-lookup"><span data-stu-id="b8254-102">Too many DLL application clients</span></span>
+<span data-ttu-id="b8254-103">La biblioteca de vínculos dinámicos (DLL) de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] solo puede admitir el acceso de un número limitado de aplicaciones host.</span><span class="sxs-lookup"><span data-stu-id="b8254-103">The dynamic-link library (DLL) for [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] can only accommodate access by a limited number of host applications.</span></span> <span data-ttu-id="b8254-104">La aplicación y otras aplicaciones que son hosts de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] (es posible que su aplicación acceda a algunos de estos) están intentando acceder a la DLL de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="b8254-104">Your application and other applications that are [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] hosts (some of which may be accessed by your application) are all attempting to access the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] DLL at the same time.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b8254-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="b8254-105">To correct this error</span></span>  
   
--   Reducir el número de acceso a las aplicaciones [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+-   <span data-ttu-id="b8254-106">Reduzca el número de aplicaciones abiertas que acceden a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8254-106">Reduce the number of open applications accessing [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de error](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="b8254-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8254-107">See Also</span></span>  
+ [<span data-ttu-id="b8254-108">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="b8254-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

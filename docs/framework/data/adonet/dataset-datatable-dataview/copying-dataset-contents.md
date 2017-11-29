@@ -1,42 +1,47 @@
 ---
-title: "Copiar contenido de DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Copiar el contenido de DataSet
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 69709fea628e6cb1d10a23f29b60911ab07e1111
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Copiar contenido de DataSet
-Se puede crear una copia de <xref:System.Data.DataSet> de forma que se pueda trabajar con datos sin afectar a los datos originales o bien se puede trabajar con un subconjunto de los datos desde un **DataSet**.  Al copiar un **DataSet** es posible:  
+# <a name="copying-dataset-contents"></a><span data-ttu-id="38908-102">Copiar el contenido de DataSet</span><span class="sxs-lookup"><span data-stu-id="38908-102">Copying DataSet Contents</span></span>
+<span data-ttu-id="38908-103">Puede crear una copia de un <xref:System.Data.DataSet> para que puedan trabajar con datos sin afectar a los datos originales, o trabajar con un subconjunto de los datos de un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="38908-103">You can create a copy of a <xref:System.Data.DataSet> so that you can work with data without affecting the original data, or work with a subset of the data from a **DataSet**.</span></span> <span data-ttu-id="38908-104">Al copiar un **conjunto de datos**, puede:</span><span class="sxs-lookup"><span data-stu-id="38908-104">When copying a **DataSet**, you can:</span></span>  
   
--   Crear una copia exacta del **DataSet**, incluyendo el esquema, los datos, la información de estado de fila y las versiones de fila.  
+-   <span data-ttu-id="38908-105">Crear una copia exacta de la **conjunto de datos**, incluido el esquema, datos, información de estado de fila y las versiones de fila.</span><span class="sxs-lookup"><span data-stu-id="38908-105">Create an exact copy of the **DataSet**, including the schema, data, row state information, and row versions.</span></span>  
   
--   Crear un **DataSet** que contenga el esquema de un **DataSet** existente, pero sólo las filas modificadas.  Se pueden devolver todas las filas modificadas o especificar un **DataRowState** determinado.  Para obtener más información sobre estados de fila, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+-   <span data-ttu-id="38908-106">Crear un **conjunto de datos** que contiene el esquema de un miembro de **conjunto de datos**, pero sólo las filas que se han modificado.</span><span class="sxs-lookup"><span data-stu-id="38908-106">Create a **DataSet** that contains the schema of an existing **DataSet**, but only rows that have been modified.</span></span> <span data-ttu-id="38908-107">Puede devolver todas las filas que se han modificado, o especificar un determinado **DataRowState**.</span><span class="sxs-lookup"><span data-stu-id="38908-107">You can return all rows that have been modified, or specify a specific **DataRowState**.</span></span> <span data-ttu-id="38908-108">Para obtener más información acerca de los Estados de fila, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="38908-108">For more information about row states, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
--   Copiar el esquema, o estructura relacional, del **DataSet** únicamente, sin copiar ninguna fila.  Las filas se pueden importar en un objeto <xref:System.Data.DataTable> existente mediante <xref:System.Data.DataTable.ImportRow%2A>.  
+-   <span data-ttu-id="38908-109">Copiar el esquema, o estructura relacional, de la **conjunto de datos** únicamente, sin copiar ninguna fila.</span><span class="sxs-lookup"><span data-stu-id="38908-109">Copy the schema, or relational structure, of the **DataSet** only, without copying any rows.</span></span> <span data-ttu-id="38908-110">Las filas se pueden importar en un objeto <xref:System.Data.DataTable> existente mediante <xref:System.Data.DataTable.ImportRow%2A>.</span><span class="sxs-lookup"><span data-stu-id="38908-110">Rows can be imported into an existing <xref:System.Data.DataTable> using <xref:System.Data.DataTable.ImportRow%2A>.</span></span>  
   
- Para crear una copia exacta del **DataSet** que incluya tanto el esquema como los datos, utilice el método <xref:System.Data.DataSet.Copy%2A> del **DataSet**.  En el ejemplo siguiente se muestra cómo se crea una copia exacta del **DataSet**.  
+ <span data-ttu-id="38908-111">Para crear una copia exacta de la **conjunto de datos** que incluya el esquema y los datos, utilice la <xref:System.Data.DataSet.Copy%2A> método de la **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="38908-111">To create an exact copy of the **DataSet** that includes both schema and data, use the <xref:System.Data.DataSet.Copy%2A> method of the **DataSet**.</span></span> <span data-ttu-id="38908-112">En el ejemplo de código siguiente se muestra cómo crear una copia exacta de la **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="38908-112">The following code example shows how to create an exact copy of the **DataSet**.</span></span>  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
-  
 ```  
   
 ```csharp  
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Para crear una copia del **DataSet** que incluya el esquema y sólo los datos que representen filas **Added**, **Modified** o **Deleted**, utilice el método <xref:System.Data.DataSet.GetChanges%2A> del **DataSet**.  También es posible utilizar **GetChanges** para devolver únicamente las filas que tengan un estado de fila determinado si se pasa el valor **DataRowState** al llamar a **GetChanges**.  En el siguiente ejemplo de código se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.  
+ <span data-ttu-id="38908-113">Para crear una copia de un **conjunto de datos** que incluye el esquema y sólo los datos que representen **Added**, **Modified**, o **Deleted** filas, use el <xref:System.Data.DataSet.GetChanges%2A> método de la **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="38908-113">To create a copy of a **DataSet** that includes schema and only the data representing **Added**, **Modified**, or **Deleted** rows, use the <xref:System.Data.DataSet.GetChanges%2A> method of the **DataSet**.</span></span> <span data-ttu-id="38908-114">También puede usar **GetChanges** para devolver sólo las filas con un estado de fila determinado si se pasa un **DataRowState** valor cuando se llama a **GetChanges**.</span><span class="sxs-lookup"><span data-stu-id="38908-114">You can also use **GetChanges** to return only rows with a specified row state by passing a **DataRowState** value when calling **GetChanges**.</span></span> <span data-ttu-id="38908-115">En el ejemplo de código siguiente se muestra cómo pasar un **DataRowState** al llamar a **GetChanges**.</span><span class="sxs-lookup"><span data-stu-id="38908-115">The following code example shows how to pass a **DataRowState** when calling **GetChanges**.</span></span>  
   
 ```vb  
 ' Copy all changes.  
@@ -44,7 +49,6 @@ Dim changeDataSet As DataSet = customerDataSet.GetChanges()
 ' Copy only new rows.  
 Dim addedDataSetAs DataSet = _  
     customerDataSet.GetChanges(DataRowState.Added)  
-  
 ```  
   
 ```csharp  
@@ -54,19 +58,18 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Para crear una copia de un **DataSet** que sólo incluya el esquema, utilice el método<xref:System.Data.DataSet.Clone%2A> del **DataSet**.  También es posible agregar filas existentes al **DataSet** clonado mediante el método **ImportRow** de **DataTable**.  **ImportRow** agrega datos, el estado de fila e información de versión de fila a la tabla especificada.  Los valores de columna sólo se agregan cuando los nombres de columna coinciden y el tipo de datos es compatible.  
+ <span data-ttu-id="38908-116">Para crear una copia de un **conjunto de datos** que sólo incluya el esquema, utilice la <xref:System.Data.DataSet.Clone%2A> método de la **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="38908-116">To create a copy of a **DataSet** that only includes schema, use the <xref:System.Data.DataSet.Clone%2A> method of the **DataSet**.</span></span> <span data-ttu-id="38908-117">También puede agregar filas existentes al clonado **conjunto de datos** mediante la **ImportRow** método de la **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="38908-117">You can also add existing rows to the cloned **DataSet** using the **ImportRow** method of the **DataTable**.</span></span> <span data-ttu-id="38908-118">**ImportRow** agrega datos, estado de fila e información de versión de fila a la tabla especificada.</span><span class="sxs-lookup"><span data-stu-id="38908-118">**ImportRow** adds data, row state, and row version information to the specified table.</span></span> <span data-ttu-id="38908-119">Los valores de columna sólo se agregan cuando los nombres de columna coinciden y el tipo de datos es compatible.</span><span class="sxs-lookup"><span data-stu-id="38908-119">Column values are added only where the column name matches and the data type is compatible.</span></span>  
   
- En el siguiente ejemplo de código se crea un clon de un **DataSet** y se agregan la filas del **DataSet** original a la tabla **Customers** del **DataSet** clonado para aquellos clientes cuya columna **CountryRegion** tenga el valor "Germany".  
+ <span data-ttu-id="38908-120">En el ejemplo de código siguiente se crea un clon de un **conjunto de datos** y, a continuación, agrega las filas de la versión original **conjunto de datos** a la **clientes** tabla el **conjunto de datos**  clonado para aquellos clientes donde la **CountryRegion** columna tiene el valor "Germany".</span><span class="sxs-lookup"><span data-stu-id="38908-120">The following code example creates a clone of a **DataSet** and then adds the rows from the original **DataSet** to the **Customers** table in the **DataSet** clone for customers where the **CountryRegion** column has the value "Germany".</span></span>  
   
 ```vb  
-  
 Dim customerDataSet As New DataSet  
-        customerDataSet.Tables.Add(New DataTable("Customers"))  
-        customerDataSet.Tables("Customers").Columns.Add("Name", GetType(String))  
-        customerDataSet.Tables("Customers").Columns.Add("CountryRegion", GetType(String))  
-        customerDataSet.Tables("Customers").Rows.Add("Juan", "Spain")  
-        customerDataSet.Tables("Customers").Rows.Add("Johann", "Germany")  
-        customerDataSet.Tables("Customers").Rows.Add("John", "UK")  
+        customerDataSet.Tables.Add(New DataTable("Customers"))  
+        customerDataSet.Tables("Customers").Columns.Add("Name", GetType(String))  
+        customerDataSet.Tables("Customers").Columns.Add("CountryRegion", GetType(String))  
+        customerDataSet.Tables("Customers").Rows.Add("Juan", "Spain")  
+        customerDataSet.Tables("Customers").Rows.Add("Johann", "Germany")  
+        customerDataSet.Tables("Customers").Rows.Add("John", "UK")  
   
 Dim germanyCustomers As DataSet = customerDataSet.Clone()  
   
@@ -79,7 +82,6 @@ Dim copyRow As DataRow
 For Each copyRow In copyRows  
   customerTable.ImportRow(copyRow)  
 Next  
-  
 ```  
   
 ```csharp  
@@ -102,8 +104,8 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## Vea también  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="38908-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="38908-121">See Also</span></span>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="38908-122">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="38908-122">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="38908-123">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="38908-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

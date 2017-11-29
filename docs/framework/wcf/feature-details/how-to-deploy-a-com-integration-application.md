@@ -1,51 +1,54 @@
 ---
-title: "C&#243;mo: Implementar una aplicaci&#243;n de integraci&#243;n de COM+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Implementar una aplicación de integración de COM+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d6d9103c2d36de81392858fedc249be9f7ae94f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar una aplicaci&#243;n de integraci&#243;n de COM+
-Cuando ha escrito una aplicación de integración de COM\+, puede que desee implementarla en otro equipo.En este tema se describe cómo mover una aplicación de integración de COM\+ de un equipo a otro.  
+# <a name="how-to-deploy-a-com-integration-application"></a><span data-ttu-id="c3fae-102">Cómo: Implementar una aplicación de integración de COM+</span><span class="sxs-lookup"><span data-stu-id="c3fae-102">How to: Deploy a COM+ Integration Application</span></span>
+<span data-ttu-id="c3fae-103">Cuando ha escrito una aplicación de integración de COM+, puede que desee implementarla en otro equipo.</span><span class="sxs-lookup"><span data-stu-id="c3fae-103">Once you have written a COM+ integration application, you may want to deploy it on another machine.</span></span> <span data-ttu-id="c3fae-104">En este tema se describe cómo mover una aplicación de integración de COM+ de un equipo a otro.</span><span class="sxs-lookup"><span data-stu-id="c3fae-104">This topic describes how to move a COM+ integration application from one machine to another.</span></span>  
   
-### Mover una aplicación de integración alojada por COM\+  
+### <a name="moving-a-com-hosted-integration-app"></a><span data-ttu-id="c3fae-105">Mover una aplicación de integración alojada por COM+</span><span class="sxs-lookup"><span data-stu-id="c3fae-105">Moving a COM+ hosted Integration App</span></span>  
   
-1.  Asegúrese de que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se instala en ambos equipos.  
+1.  <span data-ttu-id="c3fae-106">Asegúrese de que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se instala en ambos equipos.</span><span class="sxs-lookup"><span data-stu-id="c3fae-106">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  Exportar la aplicación desde el equipo A.  
+2.  <span data-ttu-id="c3fae-107">Exportar la aplicación desde el equipo A.</span><span class="sxs-lookup"><span data-stu-id="c3fae-107">Export the application from machine A.</span></span>  
   
-3.  Importar la aplicación en el equipo B.  
+3.  <span data-ttu-id="c3fae-108">Importar la aplicación en el equipo B.</span><span class="sxs-lookup"><span data-stu-id="c3fae-108">Import the application on machine B.</span></span>  
   
-4.  Establezca el directorio raíz de la aplicación.Por convención, éste es %PROGRAMFILES%\/ComPlus Applications\/{AppGUID}.  
+4.  <span data-ttu-id="c3fae-109">Establezca el directorio raíz de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="c3fae-109">Set the Application Root Directory.</span></span> <span data-ttu-id="c3fae-110">Por convención, éste es %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span><span class="sxs-lookup"><span data-stu-id="c3fae-110">By convention, this is %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span></span>  
   
-5.  Copie los archivos Application.config y Application.manifest del directorio raíz de la aplicación en el equipo A en el directorio raíz de la aplicación en el equipo B.  
+5.  <span data-ttu-id="c3fae-111">Copie los archivos Application.config y Application.manifest del directorio raíz de la aplicación en el equipo A en el directorio raíz de la aplicación en el equipo B.</span><span class="sxs-lookup"><span data-stu-id="c3fae-111">Copy the Application.config and Application.manifest files from the application root directory on machine A to the application root directory on machine B.</span></span>  
   
-6.  Modifique las direcciones del extremo de servicio en el archivo Application.config en el equipo B para identificar el equipo adecuado.Por ejemplo, cambie http:\/\/machineA\/MyService a http:\/\/machineB\/MyService.  
+6.  <span data-ttu-id="c3fae-112">Modifique las direcciones del extremo de servicio en el archivo Application.config en el equipo B para identificar el equipo adecuado.</span><span class="sxs-lookup"><span data-stu-id="c3fae-112">Edit the service endpoint addresses in the Application.config file on machine B to identify the appropriate machine.</span></span> <span data-ttu-id="c3fae-113">Por ejemplo, cambie http://machineA/MyService a http://machineB/MyService.</span><span class="sxs-lookup"><span data-stu-id="c3fae-113">For example, change http://machineA/MyService to http://machineB/MyService.</span></span>  
   
-### Mover una aplicación de integración alojada en Web  
+### <a name="moving-a-web-hosted-integration-application"></a><span data-ttu-id="c3fae-114">Mover una aplicación de integración alojada en Web</span><span class="sxs-lookup"><span data-stu-id="c3fae-114">Moving a Web-hosted integration application</span></span>  
   
-1.  Asegúrese de que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se instala en ambos equipos.  
+1.  <span data-ttu-id="c3fae-115">Asegúrese de que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se instala en ambos equipos.</span><span class="sxs-lookup"><span data-stu-id="c3fae-115">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  Exportar la aplicación desde el equipo A.  
+2.  <span data-ttu-id="c3fae-116">Exportar la aplicación desde el equipo A.</span><span class="sxs-lookup"><span data-stu-id="c3fae-116">Export the application from machine A.</span></span>  
   
-3.  Importar la aplicación en el equipo B.  
+3.  <span data-ttu-id="c3fae-117">Importar la aplicación en el equipo B.</span><span class="sxs-lookup"><span data-stu-id="c3fae-117">Import the application on machine B.</span></span>  
   
-4.  Cree un vroot de IIS en el equipo B.  
+4.  <span data-ttu-id="c3fae-118">Cree un vroot de IIS en el equipo B.</span><span class="sxs-lookup"><span data-stu-id="c3fae-118">Create an IIS vroot on machine B.</span></span>  
   
-5.  Copie el archivo .svc \(componentName.svc\) y el archivo Web.config de vroot en el equipo A al vroot recientemente creado en el equipo B.  
+5.  <span data-ttu-id="c3fae-119">Copie el archivo .svc (componentName.svc) y el archivo Web.config de vroot en el equipo A al vroot recientemente creado en el equipo B.</span><span class="sxs-lookup"><span data-stu-id="c3fae-119">Copy the .svc file (componentName.svc) and the Web.config file from the vroot on machine A to the newly created vroot on machine B.</span></span>  
   
-## Vea también  
- [Integración en la información general de las aplicaciones COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)   
- [Cómo configurar los parámetros de los servicios COM\+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)   
- [Cómo: Utilizar la herramienta configuración de modelos de servicio COM\+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a><span data-ttu-id="c3fae-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="c3fae-120">See Also</span></span>  
+ [<span data-ttu-id="c3fae-121">Integración con la introducción a las aplicaciones COM +</span><span class="sxs-lookup"><span data-stu-id="c3fae-121">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [<span data-ttu-id="c3fae-122">Cómo: configurar el servicio COM +</span><span class="sxs-lookup"><span data-stu-id="c3fae-122">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [<span data-ttu-id="c3fae-123">Cómo: utilizar la herramienta de configuración del modelo de servicio COM +</span><span class="sxs-lookup"><span data-stu-id="c3fae-123">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

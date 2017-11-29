@@ -1,79 +1,80 @@
 ---
-title: "Controles y componentes de cuadros de di&#225;logo (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CommonDialog (control)"
-  - "cuadros de diálogo, Windows Forms"
-  - "cuadros de diálogo de Windows Forms, predefinidos"
-  - "Windows Forms, cuadros de diálogo"
+title: "Controles y componentes de cuadros de diálogo (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CommonDialog control
+- Windows Forms dialog boxes [Windows Forms], predefined
+- dialog boxes [Windows Forms], Windows Forms
+- Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Controles y componentes de cuadros de di&#225;logo (formularios Windows Forms)
-Los siguientes controles y componentes de Windows Forms presentan cuadros de diálogo estándar.  Siga los vínculos para obtener más información acerca de las funciones disponibles en cada cuadro de diálogo.  
+# <a name="dialog-box-controls-and-components-windows-forms"></a><span data-ttu-id="2d1d3-102">Controles y componentes de cuadros de diálogo (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2d1d3-102">Dialog-Box Controls and Components (Windows Forms)</span></span>
+<span data-ttu-id="2d1d3-103">Los siguientes controles y componentes de Windows Forms presentan cuadros de diálogo estándar.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-103">The following Windows Forms controls and components present standard dialog boxes.</span></span> <span data-ttu-id="2d1d3-104">Siga los vínculos para obtener más información acerca de las funciones disponibles en cada cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-104">Follow the links for more information about the functions available in each dialog box.</span></span>  
   
-## Referencia  
- [ColorDialog \(Clase\)](frlrfSystemWindowsFormsColorDialogClassTopic)  
- Contiene información de referencia sobre la clase <xref:System.Windows.Forms.ColorDialog> y sus miembros.  
+## <a name="reference"></a><span data-ttu-id="2d1d3-105">Referencia</span><span class="sxs-lookup"><span data-stu-id="2d1d3-105">Reference</span></span>  
+ <xref:System.Windows.Forms.ColorDialog>  
+ <span data-ttu-id="2d1d3-106">Contiene información de referencia sobre la clase <xref:System.Windows.Forms.ColorDialog> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-106">Provides reference information about the <xref:System.Windows.Forms.ColorDialog> class and its members.</span></span>  
   
- [FontDialog \(Clase\)](frlrfSystemWindowsFormsFontDialogClassTopic)  
- Contiene información de referencia sobre la clase <xref:System.Windows.Forms.FontDialog> y sus miembros.  
+ <xref:System.Windows.Forms.FontDialog>  
+ <span data-ttu-id="2d1d3-107">Contiene información de referencia sobre la clase <xref:System.Windows.Forms.FontDialog> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-107">Provides reference information about the <xref:System.Windows.Forms.FontDialog> class and its members.</span></span>  
   
- [OpenFileDialog \(Clase\)](frlrfSystemWindowsFormsOpenFileDialogClassTopic)  
- Contiene información de referencia sobre la clase <xref:System.Windows.Forms.OpenFileDialog> y sus miembros.  
+ <xref:System.Windows.Forms.OpenFileDialog>  
+ <span data-ttu-id="2d1d3-108">Contiene información de referencia sobre la clase <xref:System.Windows.Forms.OpenFileDialog> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-108">Provides reference information about the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
   
- [PageSetupDialog \(Clase\)](frlrfSystemWindowsFormsPageSetupDialogClassTopic)  
- Contiene información de referencia sobre la clase <xref:System.Windows.Forms.PageSetupDialog> y sus miembros.  
+ <xref:System.Windows.Forms.PageSetupDialog>  
+ <span data-ttu-id="2d1d3-109">Contiene información de referencia sobre la clase <xref:System.Windows.Forms.PageSetupDialog> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-109">Provides reference information about the <xref:System.Windows.Forms.PageSetupDialog> class and its members.</span></span>  
   
- [PrintDialog \(Clase\)](frlrfSystemWindowsFormsPrintDialogClassTopic)  
- Contiene información de referencia sobre la clase <xref:System.Windows.Forms.PrintDialog> y sus miembros.  
+ <xref:System.Windows.Forms.PrintDialog>  
+ <span data-ttu-id="2d1d3-110">Contiene información de referencia sobre la clase <xref:System.Windows.Forms.PrintDialog> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-110">Provides reference information about the <xref:System.Windows.Forms.PrintDialog> class and its members.</span></span>  
   
- [PrintPreviewDialog \(Clase\)](frlrfSystemWindowsFormsPrintPreviewDialogClassTopic)  
- Contiene información de referencia sobre la clase <xref:System.Windows.Forms.PrintPreviewDialog> y sus miembros.  
+ <xref:System.Windows.Forms.PrintPreviewDialog>  
+ <span data-ttu-id="2d1d3-111">Contiene información de referencia sobre la clase <xref:System.Windows.Forms.PrintPreviewDialog> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-111">Provides reference information about the <xref:System.Windows.Forms.PrintPreviewDialog> class and its members.</span></span>  
   
- [SaveFileDialog \(Clase\)](frlrfSystemWindowsFormsSaveFileDialogClassTopic)  
- Contiene información de referencia sobre la clase <xref:System.Windows.Forms.SaveFileDialog> y sus miembros.  
+ <xref:System.Windows.Forms.SaveFileDialog>  
+ <span data-ttu-id="2d1d3-112">Contiene información de referencia sobre la clase <xref:System.Windows.Forms.SaveFileDialog> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-112">Provides reference information about the <xref:System.Windows.Forms.SaveFileDialog> class and its members.</span></span>  
   
-## Secciones relacionadas  
- [Cuadros de diálogo en Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
- Describe cómo crear un cuadro de diálogo para un Windows Form.  
+## <a name="related-sections"></a><span data-ttu-id="2d1d3-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="2d1d3-113">Related Sections</span></span>  
+ [<span data-ttu-id="2d1d3-114">Cuadros de diálogo en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2d1d3-114">Dialog Boxes in Windows Forms</span></span>](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ <span data-ttu-id="2d1d3-115">Describe cómo crear un cuadro de diálogo para un Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-115">Describes how to create a dialog box for a Windows Form.</span></span>  
   
- [Información general sobre el componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
- Permite al usuario seleccionar un color de una paleta en un cuadro de diálogo preconfigurado y agregar colores personalizados a la paleta.  
+ [<span data-ttu-id="2d1d3-116">Información general del componente ColorDialog</span><span class="sxs-lookup"><span data-stu-id="2d1d3-116">ColorDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-117">Permite al usuario seleccionar un color de una paleta en un cuadro de diálogo preconfigurado y agregar colores personalizados a la paleta.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-117">Enables the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
   
- [Información general del componente FolderBrowserDialog \(formularios Windows Forms\)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
- Permite a los usuarios buscar y seleccionar carpetas.  
+ [<span data-ttu-id="2d1d3-118">Información general del componente FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2d1d3-118">FolderBrowserDialog Component Overview (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-119">Permite a los usuarios buscar y seleccionar carpetas.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-119">Enables users to browse and select folders.</span></span>  
   
- [Información general sobre el componente FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
- Expone las fuentes que están instaladas actualmente en el sistema.  
+ [<span data-ttu-id="2d1d3-120">Información general del componente FontDialog</span><span class="sxs-lookup"><span data-stu-id="2d1d3-120">FontDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-121">Expone las fuentes que están instaladas actualmente en el sistema.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-121">Exposes the fonts that are currently installed on the system.</span></span>  
   
- [Información general sobre el componente OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
- Permite a los usuarios abrir archivos mediante un cuadro de diálogo preconfigurado.  
+ [<span data-ttu-id="2d1d3-122">Información general del componente OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="2d1d3-122">OpenFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-123">Permite a los usuarios abrir archivos mediante un cuadro de diálogo preconfigurado.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-123">Allows users to open files via a pre-configured dialog box.</span></span>  
   
- [Información general sobre el componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
- Establece la página de detalles de impresión mediante un cuadro de diálogo preconfigurado.  
+ [<span data-ttu-id="2d1d3-124">Información general del componente PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="2d1d3-124">PageSetupDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-125">Establece la página de detalles de impresión mediante un cuadro de diálogo preconfigurado.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-125">Sets page details for printing via a pre-configured dialog box.</span></span>  
   
- [Información general sobre el componente PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
- Selecciona una impresora, elige las páginas que se van a imprimir y determina otros valores de configuración relacionados con la impresión.  
+ [<span data-ttu-id="2d1d3-126">Información general del componente PrintDialog</span><span class="sxs-lookup"><span data-stu-id="2d1d3-126">PrintDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-127">Selecciona una impresora, elige las páginas que se van a imprimir y determina otros valores de configuración relacionados con la impresión.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-127">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
   
- [Información general sobre el control PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
- Muestra un documento tal y como aparecerá cuando se imprima.  
+ [<span data-ttu-id="2d1d3-128">Información general del control PrintPreviewDialog</span><span class="sxs-lookup"><span data-stu-id="2d1d3-128">PrintPreviewDialog Control Overview</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-129">Muestra un documento tal y como aparecerá cuando se imprima.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-129">Displays a document as it will appear when it is printed.</span></span>  
   
- [Información general sobre el componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
- Selecciona archivos para guardar y dónde guardarlos.  
+ [<span data-ttu-id="2d1d3-130">Información general del componente SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="2d1d3-130">SaveFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="2d1d3-131">Selecciona archivos para guardar y dónde guardarlos.</span><span class="sxs-lookup"><span data-stu-id="2d1d3-131">Selects files to save and where to save them.</span></span>  
   
- Consulte también [Cuadros de diálogo en Windows Forms](http://msdn.microsoft.com/library/2chz8edb%20\(v=vs.110\)).
+ <span data-ttu-id="2d1d3-132">Consulte también [Cuadros de diálogo en Windows Forms](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="2d1d3-132">Also see [Dialog Boxes in Windows Forms](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).</span></span>

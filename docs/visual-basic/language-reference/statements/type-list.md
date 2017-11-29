@@ -1,116 +1,111 @@
 ---
-title: "Lista de tipos (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "StructureConstraint"
-  - "vb.StructureConstraint"
-  - "ClassConstraint"
-  - "vb.ClassConstraint"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "restricción de clase"
-  - "restricciones, Class (palabra clave)"
-  - "restricciones, en parámetros de tipo"
-  - "restricciones, Structure (palabra clave)"
-  - "restricciones, tipos genéricos de Visual Basic"
-  - "parámetros genéricos"
-  - "genéricos [Visual Basic], restricciones"
-  - "genéricos [Visual Basic], tipos genéricos"
-  - "genéricos [Visual Basic], lista de tipos"
-  - "genéricos [Visual Basic], parámetros de tipo"
-  - "parámetros, genéricos"
-  - "parámetros, tipo"
-  - "Structure (restricción)"
-  - "parámetros de tipo"
-  - "parámetros de tipo, restricciones"
-  - "tipos [Visual Basic], genéricos"
+title: Lista de tipos (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- StructureConstraint
+- vb.StructureConstraint
+- ClassConstraint
+- vb.ClassConstraint
+helpviewer_keywords:
+- class constraint
+- constraints, Visual Basic generic types
+- generic parameters
+- generics [Visual Basic], constraints
+- generics [Visual Basic], type list
+- structure constraint
+- constraints, in type parameters
+- generics [Visual Basic], generic types
+- parameters [Visual Basic], type
+- constraints, Structure keyword
+- type parameters [Visual Basic], constraints
+- types [Visual Basic], generic
+- parameters [Visual Basic], generic
+- generics [Visual Basic], type parameters
+- type parameters
+- constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: 33
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Lista de tipos (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica los *parámetros de tipo* para un elemento de programación *genérico*.  Los parámetros múltiples se separan por comas.  A continuación, aparece la sintaxis para un parámetro de tipo.  
+# <a name="type-list-visual-basic"></a><span data-ttu-id="1aeae-102">Lista de tipos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1aeae-102">Type List (Visual Basic)</span></span>
+<span data-ttu-id="1aeae-103">Especifica la *parámetros de tipo* para un *genérico* elemento de programación.</span><span class="sxs-lookup"><span data-stu-id="1aeae-103">Specifies the *type parameters* for a *generic* programming element.</span></span> <span data-ttu-id="1aeae-104">Varios parámetros se separan mediante comas.</span><span class="sxs-lookup"><span data-stu-id="1aeae-104">Multiple parameters are separated by commas.</span></span> <span data-ttu-id="1aeae-105">A continuación se muestra la sintaxis para un parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="1aeae-105">Following is the syntax for one type parameter.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="1aeae-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1aeae-106">Syntax</span></span>  
   
 ```  
-  
-[genericmodifier] typename [ As constraintlist ]  
+[genericmodifier] typename [ As constraintlist ]  
 ```  
   
-## Elementos  
+## <a name="parts"></a><span data-ttu-id="1aeae-107">Elementos</span><span class="sxs-lookup"><span data-stu-id="1aeae-107">Parts</span></span>  
   
-|||  
-|-|-|  
-|Término|Definición|  
-|`genericmodifier`|Opcional.  Solo se puede utilizar en interfaces y delegados genéricos.  Puede declarar una covariante de tipo utilizando la palabra clave [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) o una contravariante utilizando la palabra clave [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md).  Vea [Covarianza y contravarianza](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md).|  
-|`typename`|Obligatorio.  Nombre del parámetro de tipo.  Éste es un marcador de posición, que debe ser reemplazado por un tipo definido proporcionado por el argumento de tipo correspondiente.|  
-|`constraintlist`|Opcional.  Lista de requisitos que restringe el tipo de datos que se puede proporcionar para `typename`.  Si tiene varias restricciones, inclúyalas entre llaves \(`{ }`\) y sepárelas por comas.  Debe introducir la lista de restricciones con la palabra clave [As](../../../visual-basic/language-reference/statements/as-clause.md).  Sólo se utiliza `As` una vez, al principio de la lista.|  
+|<span data-ttu-id="1aeae-108">Término</span><span class="sxs-lookup"><span data-stu-id="1aeae-108">Term</span></span>|<span data-ttu-id="1aeae-109">Definición</span><span class="sxs-lookup"><span data-stu-id="1aeae-109">Definition</span></span>|  
+|---|---|  
+|`genericmodifier`|<span data-ttu-id="1aeae-110">Opcional.</span><span class="sxs-lookup"><span data-stu-id="1aeae-110">Optional.</span></span> <span data-ttu-id="1aeae-111">Puede usarse solo en interfaces y delegados genéricos.</span><span class="sxs-lookup"><span data-stu-id="1aeae-111">Can be used only in generic interfaces and delegates.</span></span> <span data-ttu-id="1aeae-112">Puede declarar un tipo covariante mediante la [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) palabra clave o contravariante utilizando la [en](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) (palabra clave).</span><span class="sxs-lookup"><span data-stu-id="1aeae-112">You can declare a type covariant by using the [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) keyword or contravariant by using the [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) keyword.</span></span> <span data-ttu-id="1aeae-113">Vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).</span><span class="sxs-lookup"><span data-stu-id="1aeae-113">See [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).</span></span>|  
+|`typename`|<span data-ttu-id="1aeae-114">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="1aeae-114">Required.</span></span> <span data-ttu-id="1aeae-115">Nombre del parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="1aeae-115">Name of the type parameter.</span></span> <span data-ttu-id="1aeae-116">Se trata de un marcador de posición, que será sustituido por un tipo definido proporcionado por el argumento de tipo correspondiente.</span><span class="sxs-lookup"><span data-stu-id="1aeae-116">This is a placeholder, to be replaced by a defined type supplied by the corresponding type argument.</span></span>|  
+|`constraintlist`|<span data-ttu-id="1aeae-117">Opcional.</span><span class="sxs-lookup"><span data-stu-id="1aeae-117">Optional.</span></span> <span data-ttu-id="1aeae-118">Lista de requisitos que restringe el tipo de datos que se pueden proporcionar para `typename`.</span><span class="sxs-lookup"><span data-stu-id="1aeae-118">List of requirements that constrain the data type that can be supplied for `typename`.</span></span> <span data-ttu-id="1aeae-119">Si tiene varias restricciones, encierre entre llaves (`{ }`) y sepárelas con comas.</span><span class="sxs-lookup"><span data-stu-id="1aeae-119">If you have multiple constraints, enclose them in curly braces (`{ }`) and separate them with commas.</span></span> <span data-ttu-id="1aeae-120">Debe introducir la lista de restricciones con la [como](../../../visual-basic/language-reference/statements/as-clause.md) (palabra clave).</span><span class="sxs-lookup"><span data-stu-id="1aeae-120">You must introduce the constraint list with the [As](../../../visual-basic/language-reference/statements/as-clause.md) keyword.</span></span> <span data-ttu-id="1aeae-121">Usa `As` una sola vez, al principio de la lista.</span><span class="sxs-lookup"><span data-stu-id="1aeae-121">You use `As` only once, at the beginning of the list.</span></span>|  
   
-## Comentarios  
- Cada elemento de programación genérico debe aceptar por lo menos un parámetro de tipo.  Un parámetro de tipo es un marcador de posición para un tipo específico \(un *elemento construido*\) que el código de cliente especifica cuando crea una instancia del tipo genérico.  Puede definir una clase, estructura, interfaz, procedimiento o delegado de tipo genérico.  
+## <a name="remarks"></a><span data-ttu-id="1aeae-122">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1aeae-122">Remarks</span></span>  
+ <span data-ttu-id="1aeae-123">Cada elemento de programación genérico debe tomar al menos un parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="1aeae-123">Every generic programming element must take at least one type parameter.</span></span> <span data-ttu-id="1aeae-124">Un parámetro de tipo es un marcador de posición para un tipo específico (un *elemento construido*) que el código de cliente especifica cuando crea una instancia del tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="1aeae-124">A type parameter is a placeholder for a specific type (a *constructed element*) that client code specifies when it creates an instance of the generic type.</span></span> <span data-ttu-id="1aeae-125">Puede definir una clase genérica, estructura, interfaz, procedimiento o delegado.</span><span class="sxs-lookup"><span data-stu-id="1aeae-125">You can define a generic class, structure, interface, procedure, or delegate.</span></span>  
   
- Para obtener más información sobre cuándo definir un tipo genérico, vea [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  Para obtener más información sobre nombres de parámetros de tipo, vea [Nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ <span data-ttu-id="1aeae-126">Para obtener más información sobre cuándo se debe definir un tipo genérico, vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span><span class="sxs-lookup"><span data-stu-id="1aeae-126">For more information on when to define a generic type, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span> <span data-ttu-id="1aeae-127">Para obtener más información sobre nombres de parámetros de tipo, consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="1aeae-127">For more information on type parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
   
-## Reglas  
+## <a name="rules"></a><span data-ttu-id="1aeae-128">Reglas</span><span class="sxs-lookup"><span data-stu-id="1aeae-128">Rules</span></span>  
   
--   **Paréntesis.** Si proporciona una lista de parámetros de tipo, debe incluirla entre paréntesis e introducir la lista con la palabra clave [Of](../../../visual-basic/language-reference/statements/of-clause.md).  Sólo se utiliza `Of` una vez, al principio de la lista.  
+-   <span data-ttu-id="1aeae-129">**Paréntesis.**</span><span class="sxs-lookup"><span data-stu-id="1aeae-129">**Parentheses.**</span></span> <span data-ttu-id="1aeae-130">Si se proporciona una lista de parámetros de tipo, debe encerrarlo entre paréntesis y debe introducir la lista con el [de](../../../visual-basic/language-reference/statements/of-clause.md) palabra clave.</span><span class="sxs-lookup"><span data-stu-id="1aeae-130">If you supply a type parameter list, you must enclose it in parentheses, and you must introduce the list with the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword.</span></span> <span data-ttu-id="1aeae-131">Usa `Of` una sola vez, al principio de la lista.</span><span class="sxs-lookup"><span data-stu-id="1aeae-131">You use `Of` only once, at the beginning of the list.</span></span>  
   
--   **Restricciones.** Una lista de *restricciones* de un parámetro de tipo puede incluir los elementos siguientes en cualquier combinación:  
+-   <span data-ttu-id="1aeae-132">**Restricciones.**</span><span class="sxs-lookup"><span data-stu-id="1aeae-132">**Constraints.**</span></span> <span data-ttu-id="1aeae-133">Una lista de *restricciones* en un tipo de parámetro puede incluir los elementos siguientes en cualquier combinación:</span><span class="sxs-lookup"><span data-stu-id="1aeae-133">A list of *constraints* on a type parameter can include the following items in any combination:</span></span>  
   
-    -   Cualquier número de interfaces.  El tipo proporcionado debe implementar todas las interfaces en esta lista.  
+    -   <span data-ttu-id="1aeae-134">Cualquier número de interfaces.</span><span class="sxs-lookup"><span data-stu-id="1aeae-134">Any number of interfaces.</span></span> <span data-ttu-id="1aeae-135">El tipo proporcionado debe implementar cada interfaz en esta lista.</span><span class="sxs-lookup"><span data-stu-id="1aeae-135">The supplied type must implement every interface in this list.</span></span>  
   
-    -   A lo sumo una clase.  El tipo proporcionado debe heredar de esa clase.  
+    -   <span data-ttu-id="1aeae-136">Al menos una clase.</span><span class="sxs-lookup"><span data-stu-id="1aeae-136">At most one class.</span></span> <span data-ttu-id="1aeae-137">El tipo proporcionado debe heredar de esa clase.</span><span class="sxs-lookup"><span data-stu-id="1aeae-137">The supplied type must inherit from that class.</span></span>  
   
-    -   Palabra clave `New`.  El tipo proporcionado debe exponer un constructor sin parámetros al que el tipo genérico pueda tener acceso.  Esto es útil si restringe un parámetro de tipo a una o varias interfaces.  Un tipo que implementa interfaces no expone necesariamente un constructor, y en función del nivel de acceso de un constructor, es posible que el código dentro del tipo genérico no pueda tener acceso a él.  
+    -   <span data-ttu-id="1aeae-138">Palabra clave `New`.</span><span class="sxs-lookup"><span data-stu-id="1aeae-138">The `New` keyword.</span></span> <span data-ttu-id="1aeae-139">El tipo proporcionado debe exponer un constructor sin parámetros al que puede tener acceso su tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="1aeae-139">The supplied type must expose a parameterless constructor that your generic type can access.</span></span> <span data-ttu-id="1aeae-140">Esto es útil si restringe un parámetro de tipo por una o varias interfaces.</span><span class="sxs-lookup"><span data-stu-id="1aeae-140">This is useful if you constrain a type parameter by one or more interfaces.</span></span> <span data-ttu-id="1aeae-141">Un tipo que implementa las interfaces no expone necesariamente un constructor, y según el nivel de acceso de un constructor, el código dentro del tipo genérico no pueda tener acceso a él.</span><span class="sxs-lookup"><span data-stu-id="1aeae-141">A type that implements interfaces does not necessarily expose a constructor, and depending on the access level of a constructor, the code within the generic type might not be able to access it.</span></span>  
   
-    -   Palabra clave `Class` o `Structure`.  La palabra clave `Class` restringe un parámetro de tipo genérico para exigir que cualquier argumento de tipo que se le pase sea un tipo de referencia, por ejemplo una cadena, una matriz, un delegado o un objeto creado a partir de una clase.  La palabra clave `Structure` restringe un parámetro de tipo genérico para exigir que cualquier argumento de tipo que se le pase sea un tipo de valor, por ejemplo una estructura, una enumeración o un tipo de datos básico.  No es posible incluir `Class` y `Structure` en la misma `constraintlist`.  
+    -   <span data-ttu-id="1aeae-142">Ya sea la `Class` palabra clave o el `Structure` (palabra clave).</span><span class="sxs-lookup"><span data-stu-id="1aeae-142">Either the `Class` keyword or the `Structure` keyword.</span></span> <span data-ttu-id="1aeae-143">El `Class` palabra clave restringe un parámetro de tipo genérico para exigir que cualquier argumento de tipo pasado a la sea un tipo de referencia, por ejemplo una cadena, matriz o delegado, o un objeto creado a partir de una clase.</span><span class="sxs-lookup"><span data-stu-id="1aeae-143">The `Class` keyword constrains a generic type parameter to require that any type argument passed to it be a reference type, for example a string, array, or delegate, or an object created from a class.</span></span> <span data-ttu-id="1aeae-144">El `Structure` palabra clave restringe un parámetro de tipo genérico para exigir que cualquier argumento de tipo pasado a la sea un tipo de valor, por ejemplo una estructura, enumeración o datos elementales escriba.</span><span class="sxs-lookup"><span data-stu-id="1aeae-144">The `Structure` keyword constrains a generic type parameter to require that any type argument passed to it be a value type, for example a structure, enumeration, or elementary data type.</span></span> <span data-ttu-id="1aeae-145">No se puede incluir tanto `Class` y `Structure` en el mismo `constraintlist`.</span><span class="sxs-lookup"><span data-stu-id="1aeae-145">You cannot include both `Class` and `Structure` in the same `constraintlist`.</span></span>  
   
-     El tipo proporcionado debe satisfacer cada requisito que se incluya en `constraintlist`.  
+     <span data-ttu-id="1aeae-146">El tipo proporcionado debe satisfacer cada requisito que se incluya en `constraintlist`.</span><span class="sxs-lookup"><span data-stu-id="1aeae-146">The supplied type must satisfy every requirement you include in `constraintlist`.</span></span>  
   
-     Las restricciones de cada parámetro de tipo son independientes de las restricciones de otros parámetros de tipo.  
+     <span data-ttu-id="1aeae-147">Restricciones de cada parámetro de tipo son independientes de las restricciones de otros tipos de parámetros.</span><span class="sxs-lookup"><span data-stu-id="1aeae-147">Constraints on each type parameter are independent of constraints on other type parameters.</span></span>  
   
-## Comportamiento  
+## <a name="behavior"></a><span data-ttu-id="1aeae-148">Comportamiento</span><span class="sxs-lookup"><span data-stu-id="1aeae-148">Behavior</span></span>  
   
--   **Sustitución en tiempo de compilación** Cuando crea un tipo construido a partir de un elemento de programación genérico, proporciona un tipo definido para cada parámetro de tipo.  El compilador de Visual Basic sustituye cada aparición de `typename` por el tipo proporcionado dentro del elemento genérico.  
+-   <span data-ttu-id="1aeae-149">**Sustitución de tiempo de compilación.**</span><span class="sxs-lookup"><span data-stu-id="1aeae-149">**Compile-Time Substitution.**</span></span> <span data-ttu-id="1aeae-150">Cuando se crea un tipo construido de un elemento de programación genérico, proporciona un tipo definido para cada parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="1aeae-150">When you create a constructed type from a generic programming element, you supply a defined type for each type parameter.</span></span> <span data-ttu-id="1aeae-151">El compilador de Visual Basic sustituye el tipo proporcionado para todas las apariciones de `typename` dentro del elemento genérico.</span><span class="sxs-lookup"><span data-stu-id="1aeae-151">The Visual Basic compiler substitutes that supplied type for every occurrence of `typename` within the generic element.</span></span>  
   
--   **Ausencia de restricciones.** Si no especifica ninguna restricción en un parámetro de tipo, el código está limitado a las operaciones y los miembros admitidos por [Object \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/object-data-type.md) para este parámetro de tipo.  
+-   <span data-ttu-id="1aeae-152">**Si no existen restricciones.**</span><span class="sxs-lookup"><span data-stu-id="1aeae-152">**Absence of Constraints.**</span></span> <span data-ttu-id="1aeae-153">Si no especifica ninguna restricción en un parámetro de tipo, el código se limita a las operaciones y los miembros admitidos por el [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md) para ese parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="1aeae-153">If you do not specify any constraints on a type parameter, your code is limited to the operations and members supported by the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md) for that type parameter.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra un esquema de definición de una clase de diccionario genérico, incluido un esquema de función para agregar una nueva entrada al diccionario.  
+## <a name="example"></a><span data-ttu-id="1aeae-154">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1aeae-154">Example</span></span>  
+ <span data-ttu-id="1aeae-155">En el ejemplo siguiente se muestra un esquema de definición de una clase de diccionario genérico, incluida una función esquemática para agregar una nueva entrada al diccionario.</span><span class="sxs-lookup"><span data-stu-id="1aeae-155">The following example shows a skeleton definition of a generic dictionary class, including a skeleton function to add a new entry to the dictionary.</span></span>  
   
  [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
   
-## Ejemplo  
- Como `dictionary` es genérico, el código que lo utiliza puede crear una variedad de objetos a partir de él, cada uno de los cuales tiene la misma funcionalidad pero que actúa en un tipo de datos diferente.  En el ejemplo siguiente se muestra una línea de código que crea un objeto `dictionary` con entradas `String` y claves `Integer`.  
+## <a name="example"></a><span data-ttu-id="1aeae-156">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1aeae-156">Example</span></span>  
+ <span data-ttu-id="1aeae-157">Dado que `dictionary` es genérico, el código que lo usa puede crear una variedad de objetos del mismo, cada uno tiene la misma funcionalidad pero que actúa en un tipo de datos diferente.</span><span class="sxs-lookup"><span data-stu-id="1aeae-157">Because `dictionary` is generic, the code that uses it can create a variety of objects from it, each having the same functionality but acting on a different data type.</span></span> <span data-ttu-id="1aeae-158">En el ejemplo siguiente se muestra una línea de código que crea un `dictionary` objeto con `String` entradas y `Integer` claves.</span><span class="sxs-lookup"><span data-stu-id="1aeae-158">The following example shows a line of code that creates a `dictionary` object with `String` entries and `Integer` keys.</span></span>  
   
  [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra el esquema de definición equivalente generado por el ejemplo anterior.  
+## <a name="example"></a><span data-ttu-id="1aeae-159">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1aeae-159">Example</span></span>  
+ <span data-ttu-id="1aeae-160">En el ejemplo siguiente se muestra el esquema de definición equivalente generado por el ejemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="1aeae-160">The following example shows the equivalent skeleton definition generated by the preceding example.</span></span>  
   
  [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
-## Vea también  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)   
- [New \(Operador\)](../../../visual-basic/language-reference/operators/new-operator.md)   
- [Niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Object \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/object-data-type.md)   
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Structure \(Instrucción\)](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Cómo: Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)   
- [Covarianza y contravarianza](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md)   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)   
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a><span data-ttu-id="1aeae-161">Vea también</span><span class="sxs-lookup"><span data-stu-id="1aeae-161">See Also</span></span>  
+ [<span data-ttu-id="1aeae-162">Of</span><span class="sxs-lookup"><span data-stu-id="1aeae-162">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="1aeae-163">New (operador)</span><span class="sxs-lookup"><span data-stu-id="1aeae-163">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)  
+ [<span data-ttu-id="1aeae-164">Niveles de acceso en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1aeae-164">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="1aeae-165">Tipo de objeto de datos</span><span class="sxs-lookup"><span data-stu-id="1aeae-165">Object Data Type</span></span>](../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [<span data-ttu-id="1aeae-166">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="1aeae-166">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="1aeae-167">Structure (instrucción)</span><span class="sxs-lookup"><span data-stu-id="1aeae-167">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="1aeae-168">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="1aeae-168">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="1aeae-169">Utilizar una clase genérica</span><span class="sxs-lookup"><span data-stu-id="1aeae-169">How to: Use a Generic Class</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [<span data-ttu-id="1aeae-170">Covarianza y contravarianza</span><span class="sxs-lookup"><span data-stu-id="1aeae-170">Covariance and Contravariance</span></span>](../../programming-guide/concepts/covariance-contravariance/index.md)  
+ [<span data-ttu-id="1aeae-171">In</span><span class="sxs-lookup"><span data-stu-id="1aeae-171">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [<span data-ttu-id="1aeae-172">Out</span><span class="sxs-lookup"><span data-stu-id="1aeae-172">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

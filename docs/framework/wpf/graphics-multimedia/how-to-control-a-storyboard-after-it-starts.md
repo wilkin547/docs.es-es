@@ -1,51 +1,56 @@
 ---
-title: "C&#243;mo: Controlar un gui&#243;n gr&#225;fico una vez iniciado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Guiones gráficos, controlar después del inicio"
+title: "Cómo: Controlar un guión gráfico una vez iniciado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b28cdf3b653925a5856c0bc9def5aebb9fdc6c14
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Controlar un gui&#243;n gr&#225;fico una vez iniciado
-En este ejemplo se muestra cómo utilizar el código para controlar un objeto <xref:System.Windows.Media.Animation.Storyboard> después de iniciarse.  Para controlar un guión gráfico en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilice los objetos <xref:System.Windows.Trigger> y <xref:System.Windows.TriggerAction>; para obtener un ejemplo, vea [Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+# <a name="how-to-control-a-storyboard-after-it-starts"></a><span data-ttu-id="0aed0-102">Cómo: Controlar un guión gráfico una vez iniciado</span><span class="sxs-lookup"><span data-stu-id="0aed0-102">How to: Control a Storyboard After It Starts</span></span>
+<span data-ttu-id="0aed0-103">Este ejemplo muestra cómo utilizar código para controlar un <xref:System.Windows.Media.Animation.Storyboard> después de haberse iniciado.</span><span class="sxs-lookup"><span data-stu-id="0aed0-103">This example shows how to use code to control a <xref:System.Windows.Media.Animation.Storyboard> after it has started.</span></span> <span data-ttu-id="0aed0-104">Para controlar un guión gráfico en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Trigger> y <xref:System.Windows.TriggerAction> objetos; para obtener un ejemplo, vea [usar desencadenadores de eventos para controlar un guión gráfico después de que se inicia](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).</span><span class="sxs-lookup"><span data-stu-id="0aed0-104">To control a storyboard in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Trigger> and <xref:System.Windows.TriggerAction> objects; for an example, see [Use Event Triggers to Control a Storyboard After It Starts](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).</span></span>  
   
- Para iniciar un guión gráfico, se utiliza su método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>, que distribuye las animaciones del guión gráfico a las propiedades animadas por ellas, e inicia el guión gráfico.  
+ <span data-ttu-id="0aed0-105">Para iniciar un guión gráfico, utilice su <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método, que distribuye las animaciones del guión gráfico para las propiedades que se animan y se inicia el guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="0aed0-105">To start a storyboard, you use its <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method, which distributes the storyboard's animations to the properties they animate and starts the storyboard.</span></span>  
   
- Para poder controlar un guión gráfico, se utiliza el método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> y se especifica **true** como segundo parámetro.  A continuación, puede utilizar los métodos interactivos del guión gráfico para pausar, reanudar, buscar, detener, acelerar o ralentizar el guión gráfico, o avanzarlo hasta su período del relleno.  A continuación, se muestra una lista de los métodos interactivos del guión gráfico:  
+ <span data-ttu-id="0aed0-106">Para poder controlar un guión gráfico, use la <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> método y especifique **true** como segundo parámetro.</span><span class="sxs-lookup"><span data-stu-id="0aed0-106">To make a storyboard controllable, you use the <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> method and specify **true** as the second parameter.</span></span> <span data-ttu-id="0aed0-107">A continuación, puede usar métodos interactivos del guión gráfico para pausar, reanudar, buscar, detener, acelerar el tiempo de espera, o ralentizar el guión gráfico o avanzar a su período de relleno.</span><span class="sxs-lookup"><span data-stu-id="0aed0-107">You can then use the storyboard's interactive methods to pause, resume, seek, stop, speed up, or slow down the storyboard, or advance it to its fill period.</span></span> <span data-ttu-id="0aed0-108">La siguiente es una lista de métodos interactivos del guión gráfico:</span><span class="sxs-lookup"><span data-stu-id="0aed0-108">The following is a list of the storyboard's interactive methods:</span></span>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: pone en pausa el guión gráfico.  
+-   <span data-ttu-id="0aed0-109"><xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Se detiene el guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="0aed0-109"><xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Pauses the storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: reanuda un guión gráfico que se ha puesto en pausa.  
+-   <span data-ttu-id="0aed0-110"><xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Se reanuda un guión gráfico en pausa.</span><span class="sxs-lookup"><span data-stu-id="0aed0-110"><xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Resumes a paused storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: establece la velocidad interactiva del guión gráfico.  
+-   <span data-ttu-id="0aed0-111"><xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Establece la velocidad interactiva del guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="0aed0-111"><xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Sets the storyboard's interactive speed.</span></span>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: busca en el guión gráfico la ubicación especificada.  
+-   <span data-ttu-id="0aed0-112"><xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Busca el guión gráfico la ubicación especificada.</span><span class="sxs-lookup"><span data-stu-id="0aed0-112"><xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Seeks the storyboard the specified location.</span></span>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: busca en el guión gráfico hasta la ubicación especificada.  A diferencia del método <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>, esta operación se procesa antes del paso siguiente.  
+-   <span data-ttu-id="0aed0-113"><xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Busca en el guión gráfico a la ubicación especificada.</span><span class="sxs-lookup"><span data-stu-id="0aed0-113"><xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Seeks the storyboard to the specified location.</span></span> <span data-ttu-id="0aed0-114">A diferencia de la <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> (método), esta operación se procesa antes del paso siguiente.</span><span class="sxs-lookup"><span data-stu-id="0aed0-114">Unlike the <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> method, this operation is processed before the next tick.</span></span>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: avanza un guión gráfico hasta su período de relleno, si lo tiene.  
+-   <span data-ttu-id="0aed0-115"><xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Hace avanzar el guión gráfico hasta su período de relleno, si lo tiene.</span><span class="sxs-lookup"><span data-stu-id="0aed0-115"><xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Advances the storyboard to its fill period, if it has one.</span></span>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: detiene el guión gráfico.  
+-   <span data-ttu-id="0aed0-116"><xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Detiene el guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="0aed0-116"><xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Stops the storyboard.</span></span>  
   
- En el ejemplo siguiente, se utilizan varios métodos de guión gráfico para controlar interactivamente un guión gráfico.  
+ <span data-ttu-id="0aed0-117">En el ejemplo siguiente, se usan varios métodos de guión gráfico para controlar interactivamente un guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="0aed0-117">In the following example, several storyboard methods are used to interactively control a storyboard.</span></span>  
   
- **Nota:** para ver un ejemplo de control de un guión gráfico mediante desencadenadores con [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vea [Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ <span data-ttu-id="0aed0-118">**Nota:** para ver un ejemplo de control de un guión gráfico mediante desencadenadores con [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [utilizar desencadenadores de eventos para controlar un guión gráfico después de que se inicia](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).</span><span class="sxs-lookup"><span data-stu-id="0aed0-118">**Note:** To see an example of controlling a storyboard using triggers with [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], see [Use Event Triggers to Control a Storyboard After It Starts](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="0aed0-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0aed0-119">Example</span></span>  
  [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
-## Vea también  
- [Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+## <a name="see-also"></a><span data-ttu-id="0aed0-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="0aed0-120">See Also</span></span>  
+ [<span data-ttu-id="0aed0-121">Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio</span><span class="sxs-lookup"><span data-stu-id="0aed0-121">Use Event Triggers to Control a Storyboard After It Starts</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

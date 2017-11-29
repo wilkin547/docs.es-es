@@ -1,63 +1,63 @@
 ---
-title: "Dibujo y representaci&#243;n personalizados de controles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles personalizados [Windows Forms], dibujar"
-  - "controles personalizados [Windows Forms], representar"
-  - "OnPaint (método)"
-  - "controles de usuario [Windows Forms], dibujar"
+title: "Dibujo y representación personalizados de controles"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], rendering
+- custom controls [Windows Forms], painting
+- user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: babf3d235f4cca61ad6d0e5fdc4e6b6146c7d060
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Dibujo y representaci&#243;n personalizados de controles
-La representación personalizada de controles es una de las muchas tareas complicadas que facilita .NET Framework.  Cuando cree un control personalizado, dispondrá de muchas opciones relacionadas con la apariencia gráfica del control.  Si crea un control que hereda de `Control`, deberá proporcionar código que permita al control crear su representación gráfica.  Si crea un control de usuario mediante la herencia de `UserControl` o hereda de uno de los controles de formularios Windows Forms, puede reemplazar la representación gráfica estándar y proporcionar un código de gráficos propio.  Si desea proporcionar una representación gráfica para los controles constituyentes del `UserControl` que está creando, las opciones estarán mas limitadas, aunque dispondrá aún de una amplia gama de posibilidades para controles y aplicaciones.  
+# <a name="custom-control-painting-and-rendering"></a><span data-ttu-id="494c2-102">Dibujo y representación personalizados de controles</span><span class="sxs-lookup"><span data-stu-id="494c2-102">Custom Control Painting and Rendering</span></span>
+<span data-ttu-id="494c2-103">Dibujo personalizado de controles es una de las muchas tareas complicadas facilitan por .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="494c2-103">Custom painting of controls is one of the many complicated tasks made easy by the .NET Framework.</span></span> <span data-ttu-id="494c2-104">Al crear un control personalizado, se tienen muchas opciones con respecto a la apariencia del control gráfica.</span><span class="sxs-lookup"><span data-stu-id="494c2-104">When authoring a custom control, you have many options regarding your control's graphical appearance.</span></span> <span data-ttu-id="494c2-105">Si va a crear un control que hereda de la `Control`, deberá proporcionar código que permita al control crear su representación gráfica.</span><span class="sxs-lookup"><span data-stu-id="494c2-105">If you are authoring a control that inherits from the `Control`, you must provide code that allows your control to render its graphical representation.</span></span> <span data-ttu-id="494c2-106">Si está creando un control de usuario mediante la herencia de la `UserControl`, o está heredando de uno de los controles de formularios Windows Forms, puede reemplazar la representación gráfica estándar y proporcionar su propio código de gráficos.</span><span class="sxs-lookup"><span data-stu-id="494c2-106">If you are creating a user control by inheriting from the `UserControl`, or are inheriting from one of the Windows Forms controls, you may override the standard graphical representation and provide your own graphics code.</span></span> <span data-ttu-id="494c2-107">Si desea proporcionar una representación personalizada para los controles constituyentes de una `UserControl` está creando, las opciones estarán mas limitadas, pero seguirá permitan a una amplia gama de posibilidades gráficas para los controles y aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="494c2-107">If you want to provide custom rendering for the constituent controls of a `UserControl` you are authoring, your options become more limited, but still allow a wide range of graphical possibilities for your controls and applications.</span></span>  
   
-## En esta sección  
- [Representar un control de formularios Windows Forms](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- Muestra cómo programar la lógica que muestra un control.  
+## <a name="in-this-section"></a><span data-ttu-id="494c2-108">En esta sección</span><span class="sxs-lookup"><span data-stu-id="494c2-108">In This Section</span></span>  
+ [<span data-ttu-id="494c2-109">Representar un control de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="494c2-109">Rendering a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
+ <span data-ttu-id="494c2-110">Muestra cómo programar la lógica que muestra un control.</span><span class="sxs-lookup"><span data-stu-id="494c2-110">Shows how to program the logic that displays a control.</span></span>  
   
- [Controles dibujados por el usuario](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
- Proporciona información general acerca de los pasos necesarios para escribir y reemplazar código de representación para el control.  
+ [<span data-ttu-id="494c2-111">Controles dibujados por el usuario</span><span class="sxs-lookup"><span data-stu-id="494c2-111">User-Drawn Controls</span></span>](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
+ <span data-ttu-id="494c2-112">Ofrezca una visión general de los pasos necesarios para escribir y reemplazar código de representación para el control.</span><span class="sxs-lookup"><span data-stu-id="494c2-112">Gives an overview of the steps involved in writing and overriding rendering code for your control.</span></span>  
   
- [Controles constituyentes](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- Describe cómo implementar código de representación personalizado para los controles constituyentes de los controles de usuario y los formularios.  
+ [<span data-ttu-id="494c2-113">Controles constituyentes</span><span class="sxs-lookup"><span data-stu-id="494c2-113">Constituent Controls</span></span>](../../../../docs/framework/winforms/controls/constituent-controls.md)  
+ <span data-ttu-id="494c2-114">Describe cómo implementar código de representación personalizadas para los controles constituyentes en los formularios y los controles de usuario.</span><span class="sxs-lookup"><span data-stu-id="494c2-114">Describes how to implement custom rendering code for constituent controls in your user controls and forms.</span></span>  
   
- [Cómo: Hacer un control no visible en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
- Muestra cómo utilizar la propiedad <xref:System.Windows.Forms.Control.Visible%2A> para ocultar y mostrar un control.  
+ [<span data-ttu-id="494c2-115">Hacer un control no visible en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="494c2-115">How to: Make Your Control Invisible at Run Time</span></span>](../../../../docs/framework/winforms/controls/how-to-make-your-control-invisible-at-run-time.md)  
+ <span data-ttu-id="494c2-116">Muestra cómo utilizar el <xref:System.Windows.Forms.Control.Visible%2A> propiedad para ocultar y mostrar un control.</span><span class="sxs-lookup"><span data-stu-id="494c2-116">Shows how to use the <xref:System.Windows.Forms.Control.Visible%2A> property to hide and show a control.</span></span>  
   
- [Cómo: Proporcionar un fondo transparente a un control](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
- Muestra cómo utilizar el método <xref:System.Windows.Forms.Control.SetStyle%2A> para crear un color de fondo que sea opaco, transparente o parcialmente transparente.  
+ [<span data-ttu-id="494c2-117">Proporcionar un fondo transparente a un control</span><span class="sxs-lookup"><span data-stu-id="494c2-117">How to: Give Your Control a Transparent Background</span></span>](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)  
+ <span data-ttu-id="494c2-118">Muestra cómo utilizar el <xref:System.Windows.Forms.Control.SetStyle%2A> método para crear un color de fondo opaco, transparente o parcialmente transparente.</span><span class="sxs-lookup"><span data-stu-id="494c2-118">Shows how to use the <xref:System.Windows.Forms.Control.SetStyle%2A> method to create a background color that is opaque, transparent, or partially transparent.</span></span>  
   
- [Representar controles con estilos visuales](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
- Muestra cómo representar controles utilizando los estilos visuales en sistemas operativos que los admiten.  
+ [<span data-ttu-id="494c2-119">Representar controles con estilos visuales</span><span class="sxs-lookup"><span data-stu-id="494c2-119">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
+ <span data-ttu-id="494c2-120">Muestra cómo representar controles con estilos visuales en los sistemas operativos que las admiten.</span><span class="sxs-lookup"><span data-stu-id="494c2-120">Shows how to render controls using visual styles in operating systems that support them.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="494c2-121">Referencia</span><span class="sxs-lookup"><span data-stu-id="494c2-121">Reference</span></span>  
  <xref:System.Windows.Forms.Control>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+ <span data-ttu-id="494c2-122">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="494c2-122">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.UserControl>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+ <span data-ttu-id="494c2-123">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="494c2-123">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
- Describe este método.  
+ <span data-ttu-id="494c2-124">Describe este método.</span><span class="sxs-lookup"><span data-stu-id="494c2-124">Describes this method.</span></span>  
   
-## Secciones relacionadas  
- [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Presenta la funcionalidad de gráficos [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] desde la perspectiva de Visual Studio y proporciona vínculos a información adicional.  
+## <a name="related-sections"></a><span data-ttu-id="494c2-125">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="494c2-125">Related Sections</span></span>  
+ [<span data-ttu-id="494c2-126">Crear objetos Graphics para dibujar</span><span class="sxs-lookup"><span data-stu-id="494c2-126">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ <span data-ttu-id="494c2-127">Presenta [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funcionalidad de gráficos de una perspectiva y proporciona vínculos a Visual Studio para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="494c2-127">Introduces [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] graphics functionality from a Visual Studio perspective and gives links to more information.</span></span>  
   
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- Describe los tipos de controles personalizados que puede crear.
+ [<span data-ttu-id="494c2-128">Variedades de controles personalizados</span><span class="sxs-lookup"><span data-stu-id="494c2-128">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ <span data-ttu-id="494c2-129">Describe los tipos de controles personalizados que puede crear.</span><span class="sxs-lookup"><span data-stu-id="494c2-129">Describes the kinds of custom controls you can author.</span></span>

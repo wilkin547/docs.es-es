@@ -1,63 +1,66 @@
 ---
-title: "Seguridad del flujo de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "programar [WF], seguridad del flujo de trabajo"
+title: Seguridad del flujo de trabajo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b9afd82e90aa8a951f8d78535958723f8c632dd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
-# Seguridad del flujo de trabajo
-[!INCLUDE[wf](../../../includes/wf-md.md)] se integra con varias tecnologías diferentes, como Microsoft SQL Server e [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  Al interactuar con estas tecnologías, se pueden introducir problemas de seguridad en su flujo de trabajo si no se hace de manera correcta.  
+# <a name="workflow-security"></a><span data-ttu-id="c9c81-102">Seguridad del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="c9c81-102">Workflow Security</span></span>
+[!INCLUDE[wf](../../../includes/wf-md.md)]<span data-ttu-id="c9c81-103"> se integra con varias tecnologías diferentes, como Microsoft SQL Server e [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c9c81-103"> is integrated with several different technologies, such as Microsoft SQL Server and [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="c9c81-104">Al interactuar con estas tecnologías, se pueden introducir problemas de seguridad en su flujo de trabajo si no se hace de manera correcta.</span><span class="sxs-lookup"><span data-stu-id="c9c81-104">Interacting with these technologies may introduce security issues into your workflow if done improperly.</span></span>  
   
-## Problemas de seguridad de persistencia  
+## <a name="persistence-security-concerns"></a><span data-ttu-id="c9c81-105">Problemas de seguridad de persistencia</span><span class="sxs-lookup"><span data-stu-id="c9c81-105">Persistence Security Concerns</span></span>  
   
-1.  Los flujos de trabajo que usan una actividad <xref:System.Activities.Statements.Delay> y persistencia se deben reactivar mediante un servicio.  Windows AppFabric usa el Servicio de administración de flujos de trabajo \(WMS\) para reactivar flujos de trabajo con temporizadores expirados.  WMS crea un <xref:System.ServiceModel.WorkflowServiceHost> para hospedar el flujo de trabajo reactivado.  Si se detiene el servicio de WMS, los flujos de trabajo conservados no se reactivarán cuando sus temporizadores expiren.  
+1.  <span data-ttu-id="c9c81-106">Los flujos de trabajo que usan una actividad <xref:System.Activities.Statements.Delay> y persistencia se deben reactivar mediante un servicio.</span><span class="sxs-lookup"><span data-stu-id="c9c81-106">Workflows that use a <xref:System.Activities.Statements.Delay> activity and persistence need to be reactivated by a service.</span></span> <span data-ttu-id="c9c81-107">Windows AppFabric usa el Servicio de administración de flujos de trabajo (WMS) para reactivar flujos de trabajo con temporizadores expirados.</span><span class="sxs-lookup"><span data-stu-id="c9c81-107">Windows AppFabric uses the Workflow Management Service (WMS) to reactivate workflows with expired timers.</span></span> <span data-ttu-id="c9c81-108">WMS crea un <xref:System.ServiceModel.WorkflowServiceHost> para hospedar el flujo de trabajo reactivado.</span><span class="sxs-lookup"><span data-stu-id="c9c81-108">WMS creates a <xref:System.ServiceModel.WorkflowServiceHost> to host the reactivated workflow.</span></span> <span data-ttu-id="c9c81-109">Si se detiene el servicio de WMS, los flujos de trabajo conservados no se reactivarán cuando sus temporizadores expiren.</span><span class="sxs-lookup"><span data-stu-id="c9c81-109">If the WMS service is stopped, persisted workflows will not be reactivated when their timers expire.</span></span>  
   
-2.  El acceso a la creación de instancias duraderas debe protegerse contra entidades malintencionadas externas al dominio de aplicación.  Además, los desarrolladores deben asegurarse de que el código malintencionado no se pueda ejecutar en el mismo dominio de aplicación que el código de creación de instancias duraderas.  
+2.  <span data-ttu-id="c9c81-110">El acceso a la creación de instancias duraderas debe protegerse contra entidades malintencionadas externas al dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="c9c81-110">Access to durable instancing should be protected against malicious entities external to the application domain.</span></span> <span data-ttu-id="c9c81-111">Además, los desarrolladores deben asegurarse de que el código malintencionado no se pueda ejecutar en el mismo dominio de aplicación que el código de creación de instancias duraderas.</span><span class="sxs-lookup"><span data-stu-id="c9c81-111">In addition, developers should ensure that malicious code can't be executed in the same application domain as the durable instancing code.</span></span>  
   
-3.  La creación de instancias duraderas no se debe ejecutar con permisos elevados \(administrador\).  
+3.  <span data-ttu-id="c9c81-112">La creación de instancias duraderas no se debe ejecutar con permisos elevados (administrador).</span><span class="sxs-lookup"><span data-stu-id="c9c81-112">Durable instancing should not be run with elevated (Administrator) permissions.</span></span>  
   
-4.  Los datos que se procesan fuera del dominio de aplicación deben ser protegidos.  
+4.  <span data-ttu-id="c9c81-113">Los datos que se procesan fuera del dominio de aplicación deben ser protegidos.</span><span class="sxs-lookup"><span data-stu-id="c9c81-113">Data being processed outside the application domain should be protected.</span></span>  
   
-5.  Las aplicaciones que necesitan aislamiento de seguridad no deben compartir la misma instancia de abstracción de esquema.  Dichas aplicaciones deben usar proveedores de almacén diferentes o proveedores de almacén configurados usar diferentes instancias de almacén.  
+5.  <span data-ttu-id="c9c81-114">Las aplicaciones que necesitan aislamiento de seguridad no deben compartir la misma instancia de abstracción de esquema.</span><span class="sxs-lookup"><span data-stu-id="c9c81-114">Applications that require security isolation should not share the same instance of the schema abstraction.</span></span> <span data-ttu-id="c9c81-115">Dichas aplicaciones deben usar proveedores de almacén diferentes o proveedores de almacén configurados usar diferentes instancias de almacén.</span><span class="sxs-lookup"><span data-stu-id="c9c81-115">Such applications should use different store providers, or store providers configured to use different store instantiations.</span></span>  
   
-## Problemas de seguridad de SQL Server  
+## <a name="sql-server-security-concerns"></a><span data-ttu-id="c9c81-116">Problemas de seguridad de SQL Server</span><span class="sxs-lookup"><span data-stu-id="c9c81-116">SQL Server Security Concerns</span></span>  
   
--   Cuando se usan numerosas actividades secundarias, ubicaciones, marcadores, extensiones de host o ámbitos, o cuando se usan marcadores con grandes cantidades de carga, puede ocurrir que la memoria se acabe o que se asignen cantidades indebidas de espacio a la base de datos durante la persistencia.  Este hecho se puede reducir usando la seguridad del nivel de objeto o de la base de datos.  
+-   <span data-ttu-id="c9c81-117">Cuando se usan numerosas actividades secundarias, ubicaciones, marcadores, extensiones de host o ámbitos, o cuando se usan marcadores con grandes cantidades de carga, puede ocurrir que la memoria se acabe o que se asignen cantidades indebidas de espacio a la base de datos durante la persistencia.</span><span class="sxs-lookup"><span data-stu-id="c9c81-117">When large numbers of child activities, locations, bookmarks, host extensions, or scopes are used, or when bookmarks with very large payloads are used, memory can be exhausted, or undue amounts of database space can be allocated during persistence.</span></span> <span data-ttu-id="c9c81-118">Este hecho se puede reducir usando la seguridad del nivel de objeto o de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="c9c81-118">This can be mitigated by using object-level and database-level security.</span></span>  
   
--   Al usar <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, se debe proteger el almacén de instancias.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Procedimientos recomendados de SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   <span data-ttu-id="c9c81-119">Al usar <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, se debe proteger el almacén de instancias.</span><span class="sxs-lookup"><span data-stu-id="c9c81-119">When using <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, the instance store must be secured.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="c9c81-120">[Prácticas recomendadas de SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).</span><span class="sxs-lookup"><span data-stu-id="c9c81-120"> [SQL Server Best Practices](http://go.microsoft.com/fwlink/?LinkId=164972).</span></span>  
   
--   Se deberían cifrar los datos confidenciales del almacén de instancias.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Cifrado de seguridad de SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   <span data-ttu-id="c9c81-121">Se deberían cifrar los datos confidenciales del almacén de instancias.</span><span class="sxs-lookup"><span data-stu-id="c9c81-121">Sensitive data in the instance store should be encrypted.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="c9c81-122">[Cifrado de seguridad SQL](http://go.microsoft.com/fwlink/?LinkId=164976).</span><span class="sxs-lookup"><span data-stu-id="c9c81-122"> [SQL Security Encryption](http://go.microsoft.com/fwlink/?LinkId=164976).</span></span>  
   
--   Puesto que la cadena de conexión a bases de datos se suele incluir en un archivo de configuración, la seguridad de nivel de Windows \(ACL\) se debe usar para asegurarse de que el archivo de configuración \(Web.Config normalmente\) es seguro, y que la información de inicio de sesión y contraseña no se incluyen en la cadena de conexión.  La autenticación de Windows se debe usar entre la base de datos y el servidor web en su lugar.  
+-   <span data-ttu-id="c9c81-123">Puesto que la cadena de conexión a bases de datos se suele incluir en un archivo de configuración, la seguridad de nivel de Windows (ACL) se debe usar para asegurarse de que el archivo de configuración (Web.Config normalmente) es seguro, y que la información de inicio de sesión y contraseña no se incluyen en la cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="c9c81-123">Since the database connection string is often included in a configuration file, windows-level security (ACL) should be used to ensure that the configuration file (Web.Config usually) is secure, and that login and password information are not included in the connection string.</span></span> <span data-ttu-id="c9c81-124">La autenticación de Windows se debe usar entre la base de datos y el servidor web en su lugar.</span><span class="sxs-lookup"><span data-stu-id="c9c81-124">Windows authentication should be used between the database and the web server instead.</span></span>  
   
-## Consideraciones para WorkflowServiceHost  
+## <a name="considerations-for-workflowservicehost"></a><span data-ttu-id="c9c81-125">Consideraciones para WorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="c9c81-125">Considerations for WorkflowServiceHost</span></span>  
   
--   Se deben proteger los extremos de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usados en flujos de trabajo.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Información general sobre seguridad de WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   <span data-ttu-id="c9c81-126">Se deben proteger los extremos de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usados en flujos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="c9c81-126">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] endpoints used in workflows should be secured.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="c9c81-127">[Información general sobre la seguridad WCF](http://go.microsoft.com/fwlink/?LinkID=164975).</span><span class="sxs-lookup"><span data-stu-id="c9c81-127"> [WCF Security Overview](http://go.microsoft.com/fwlink/?LinkID=164975).</span></span>  
   
--   La autorización en el nivel de host puede implementarse mediante <xref:System.ServiceModel.ServiceAuthorizationManager>.  Vea [Cómo crear un administrador de autorización personalizado para un servicio](http://go.microsoft.com/fwlink/?LinkId=192228) para obtener detalles.  Esto también se muestra en el ejemplo siguiente: [Proteger servicios de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
+-   <span data-ttu-id="c9c81-128">La autorización en el nivel de host puede implementarse mediante <xref:System.ServiceModel.ServiceAuthorizationManager>.</span><span class="sxs-lookup"><span data-stu-id="c9c81-128">Host-level authorization can be implemented by using <xref:System.ServiceModel.ServiceAuthorizationManager>.</span></span> <span data-ttu-id="c9c81-129">Vea [Cómo: crear un administrador de autorización personalizado para un servicio](http://go.microsoft.com/fwlink/?LinkId=192228) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="c9c81-129">See [How To: Create a Custom Authorization Manager for a Service](http://go.microsoft.com/fwlink/?LinkId=192228) for details.</span></span> <span data-ttu-id="c9c81-130">Esto también se muestra en el ejemplo siguiente: [proteger servicios de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).</span><span class="sxs-lookup"><span data-stu-id="c9c81-130">This is also demonstrated in the following sample: [Securing Workflow Services](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).</span></span>  
   
--   El ServiceSecurityContext para el mensaje entrante también está disponible desde el flujo de trabajo mediante el acceso a OperationContext.  Consulte [Acceso a OperationContext desde un servicio de flujo de trabajo](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md) para obtener detalles.  
+-   <span data-ttu-id="c9c81-131">El ServiceSecurityContext para el mensaje entrante también está disponible desde el flujo de trabajo mediante el acceso a OperationContext.</span><span class="sxs-lookup"><span data-stu-id="c9c81-131">The ServiceSecurityContext for the incoming message is also available from within workflow by accessing OperationContext.</span></span>  <span data-ttu-id="c9c81-132">Vea [acceso a OperationContext desde un servicio de flujo de trabajo](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="c9c81-132">See [Accessing OperationContext from a Workflow Service](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md) for details.</span></span>  
   
-## CTP del paquete de seguridad de WF  
- El CTP 1 del paquete de seguridad de Microsoft WF es la primera versión de Community Technology Preview \(CTP\) de un conjunto de actividades y su implementación basada en [Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx) en [.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) \(WF 4\) y [Windows Identity Foundation \(WIF\)](http://msdn.microsoft.com/security/aa570351.aspx).  El CTP 1 del paquete de seguridad de Microsoft WF contiene ambas actividades y sus diseñadores que muestran cómo habilitar fácilmente diferentes escenarios relacionados con la seguridad usando el flujo de trabajo, incluidas:  
+## <a name="wf-security-pack-ctp"></a><span data-ttu-id="c9c81-133">CTP del paquete de seguridad de WF</span><span class="sxs-lookup"><span data-stu-id="c9c81-133">WF Security Pack CTP</span></span>  
+ <span data-ttu-id="c9c81-134">El CTP 1 del paquete de seguridad de Microsoft WF es la primera versión de community technology preview (CTP) de un conjunto de actividades y su implementación en función de [Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx)en [.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) (WF (4) y la [Windows Identity Foundation (WIF)](http://msdn.microsoft.com/security/aa570351.aspx).</span><span class="sxs-lookup"><span data-stu-id="c9c81-134">The Microsoft WF Security Pack CTP 1 is the first community technology preview (CTP) release of a set of activities and their implementation based on [Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx)in [.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) (WF 4) and the [Windows Identity Foundation (WIF)](http://msdn.microsoft.com/security/aa570351.aspx).</span></span>  <span data-ttu-id="c9c81-135">El CTP 1 del paquete de seguridad de Microsoft WF contiene ambas actividades y sus diseñadores que muestran cómo habilitar fácilmente diferentes escenarios relacionados con la seguridad usando el flujo de trabajo, incluidas:</span><span class="sxs-lookup"><span data-stu-id="c9c81-135">The Microsoft WF Security Pack CTP 1 contains both activities and their designers which illustrate how to easily enable various security-related scenarios using workflow, including:</span></span>  
   
-1.  Suplantar una identidad del cliente en el flujo de trabajo  
+1.  <span data-ttu-id="c9c81-136">Suplantar una identidad del cliente en el flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="c9c81-136">Impersonating a client identity in the workflow</span></span>  
   
-2.  Autorización en el flujo de trabajo, como PrincipalPermission y validación de notificaciones  
+2.  <span data-ttu-id="c9c81-137">Autorización en el flujo de trabajo, como PrincipalPermission y validación de notificaciones</span><span class="sxs-lookup"><span data-stu-id="c9c81-137">In-workflow authorization, such as PrincipalPermission and validation of Claims</span></span>  
   
-3.  Mensajería autenticada mediante ClientCredentials especificadas en el flujo de trabajo, como nombre de usuario\/contraseña o un token recuperado de un Servicio de token de seguridad \(STS\)  
+3.  <span data-ttu-id="c9c81-138">Mensajería autenticada mediante ClientCredentials especificadas en el flujo de trabajo, como nombre de usuario/contraseña o un token recuperado de un Servicio de token de seguridad (STS)</span><span class="sxs-lookup"><span data-stu-id="c9c81-138">Authenticated messaging using ClientCredentials specified in the workflow, such as username/password or a token retrieved from a Security Token Service (STS)</span></span>  
   
-4.  Llevar un token de seguridad de cliente a un servicio de fondo \(delegación basada en notificaciones\) mediante ActAs de WS\-Trust  
+4.  <span data-ttu-id="c9c81-139">Llevar un token de seguridad de cliente a un servicio de fondo (delegación basada en notificaciones) mediante ActAs de WS-Trust</span><span class="sxs-lookup"><span data-stu-id="c9c81-139">Flowing a client security token to a back-end service (claims-based delegation) using WS-Trust ActAs</span></span>  
   
- Para más información y descargar el CTP del paquete de seguridad de WF, vea [CTP del paquete de seguridad de WF](http://wf.codeplex.com/releases/view/48114)
+<span data-ttu-id="c9c81-140">Para obtener más información y descargar el CTP del paquete de seguridad de WF, vea: [CTP del paquete de seguridad de WF](http://wf.codeplex.com/releases/view/48114)</span><span class="sxs-lookup"><span data-stu-id="c9c81-140">For more information and to download the WF Security Pack CTP, see: [WF Security Pack CTP](http://wf.codeplex.com/releases/view/48114)</span></span>

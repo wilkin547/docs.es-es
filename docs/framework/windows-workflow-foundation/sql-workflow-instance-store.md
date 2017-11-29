@@ -1,45 +1,49 @@
 ---
-title: "Almac&#233;n de instancias de flujo de trabajo de SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Almacén de instancias de flujo de trabajo de SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5bf78f3b966b006d002771414551412ea0208e30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Almac&#233;n de instancias de flujo de trabajo de SQL
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] se distribuye con el almacén de instancias de flujo de trabajo de SQL, que permite a los flujos de trabajo conservar información de estado sobre las instancias de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008.Esta característica se implementa principalmente en el formulario de la clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, que deriva de la clase <xref:System.Runtime.Persistence.InstanceStore> abstracta del marco de persistencia.La característica Almacén de instancias de flujo de trabajo de SQL constituye un proveedor de persistencia de SQL, que es una implementación concreta de la API de persistencia que un host usa para enviar los comandos de persistencia al almacén.  
+# <a name="sql-workflow-instance-store"></a><span data-ttu-id="6addc-102">Almacén de instancias de flujo de trabajo de SQL</span><span class="sxs-lookup"><span data-stu-id="6addc-102">SQL Workflow Instance Store</span></span>
+<span data-ttu-id="6addc-103">[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] se distribuye con el almacén de instancias de flujo de trabajo de SQL, que permite a los flujos de trabajo conservar información de estado sobre las instancias de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="6addc-103">The [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ships with the SQL Workflow Instance Store, which allows workflows to persist state information about workflow instances in a SQL Server 2005 or SQL Server 2008 database.</span></span> <span data-ttu-id="6addc-104">Esta característica se implementa principalmente en el formulario de la clase <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, que deriva de la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta del marco de persistencia.</span><span class="sxs-lookup"><span data-stu-id="6addc-104">This feature is primarily implemented in the form of the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> class, which derives from the abstract <xref:System.Runtime.DurableInstancing.InstanceStore> class of the persistence framework.</span></span> <span data-ttu-id="6addc-105">La característica Almacén de instancias de flujo de trabajo de SQL constituye un proveedor de persistencia de SQL, que es una implementación concreta de la API de persistencia que un host usa para enviar los comandos de persistencia al almacén.</span><span class="sxs-lookup"><span data-stu-id="6addc-105">The SQL Workflow Instance Store feature constitutes a SQL persistence provider, which is a concrete implementation of the persistence API that a host uses to send persistence commands to the store.</span></span>  
   
- El Almacén de instancias de flujo de trabajo de SQL admite ambos flujos de trabajo auto\-hospedados o servicios de flujo de trabajo que usan <xref:System.Activities.WorkflowApplication> o <xref:System.ServiceModel.WorkflowServiceHost>, así como los servicios hospedados en WAS que usen <xref:System.ServiceModel.WorkflowServiceHost>.Puede configurar la característica Almacén de instancias de flujo de trabajo de SQL para servicos auto\-hospedados mediante programación usando para ello el modelo de objeto expuesto por la característica.Puede configurar esta característica para los servicios hospedados por <xref:System.ServiceModel.WorkflowServiceHost> mediante programación al usar el modelo de objetos y también un archivo de configuración XML.  
+ <span data-ttu-id="6addc-106">El Almacén de instancias de flujo de trabajo de SQL admite ambos flujos de trabajo auto-hospedados o servicios de flujo de trabajo que usan <xref:System.Activities.WorkflowApplication> o <xref:System.ServiceModel.WorkflowServiceHost>, así como los servicios hospedados en WAS que usen <xref:System.ServiceModel.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="6addc-106">The SQL Workflow Instance Store supports both self-hosted workflows or workflow services that use <xref:System.Activities.WorkflowApplication> or <xref:System.ServiceModel.WorkflowServiceHost> as well as services hosted in WAS using <xref:System.ServiceModel.WorkflowServiceHost>.</span></span> <span data-ttu-id="6addc-107">Puede configurar la característica Almacén de instancias de flujo de trabajo de SQL para servicios auto-hospedados mediante programación usando para ello el modelo de objeto expuesto por la característica.</span><span class="sxs-lookup"><span data-stu-id="6addc-107">You can configure the SQL Workflow Instance Store feature for self-hosted services programmatically by using the object model exposed by the feature.</span></span> <span data-ttu-id="6addc-108">Puede configurar esta característica para los servicios hospedados por <xref:System.ServiceModel.WorkflowServiceHost> mediante programación al usar el modelo de objetos y también un archivo de configuración XML.</span><span class="sxs-lookup"><span data-stu-id="6addc-108">You can configure this feature for services hosted by <xref:System.ServiceModel.WorkflowServiceHost> both programmatically by using the object model and also by using an XML configuration file.</span></span>  
   
- La característica Almacén de instancias de flujo de trabajo de SQL \(**SqlWorkflowInstanceStore**\) no implementa <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> y, por tanto, no proporciona el soporte técnico de persistencia para los servicios WCF duraderos que no sean del flujo de trabajo.Tampoco implementa <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> y, por tanto, tampoco ofrece soporte técnico de persistencia para flujos de trabajo 3.x.La característica admite la persistencia únicamente para los flujos de trabajo de WF 4.0 \(y posterior\) y servicios de flujo de trabajo.La característica admite también cualquier base de datos distinta de SQL Server 2005 y SQL Server 2008.  
+ <span data-ttu-id="6addc-109">La característica almacén de instancias de flujo de trabajo de SQL (**SqlWorkflowInstanceStore** clase) no implementa <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> y, por tanto, no ofrece soporte técnico de persistencia para servicios WCF duraderos que sin flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="6addc-109">The SQL Workflow Instance Store feature (**SqlWorkflowInstanceStore** class) does not implement <xref:System.ServiceModel.Persistence.PersistenceProviderFactory> and hence does not offer persistence support for durable non-workflow WCF services.</span></span> <span data-ttu-id="6addc-110">Tampoco implementa <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> y, por tanto, tampoco ofrece soporte técnico de persistencia para flujos de trabajo 3.x.</span><span class="sxs-lookup"><span data-stu-id="6addc-110">It also does not implement <xref:System.Workflow.Runtime.Hosting.WorkflowPersistenceService> and hence does not offer persistence support for 3.x workflows.</span></span> <span data-ttu-id="6addc-111">La característica admite la persistencia únicamente para los flujos de trabajo de WF 4.0 (y posteriores) y servicios de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="6addc-111">The feature supports persistence for only WF 4.0 (and later) workflows and workflow services.</span></span> <span data-ttu-id="6addc-112">La característica admite también cualquier base de datos distinta de SQL Server 2005 y SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="6addc-112">The feature also does not support any databases other than SQL Server 2005 and SQL Server 2008.</span></span>  
   
- Los temas en esta sección describen las propiedades y características del almacén de instancias de flujo de trabajo de SQL y le proporcionan los detalles sobre cómo configurar el almacén.  
+ <span data-ttu-id="6addc-113">Los temas en esta sección describen las propiedades y características del almacén de instancias de flujo de trabajo de SQL y le proporcionan los detalles sobre cómo configurar el almacén.</span><span class="sxs-lookup"><span data-stu-id="6addc-113">The topics in this section describe properties and features of the SQL Workflow Instance Store and provide you with details on configuring the store.</span></span>  
   
- Windows Server App Fabric proporciona su propio almacén y herramientas de instancia para simplificar la configuración y el uso del almacén de instancias.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] vea [Proveedores de almacenes de instancias, consultas y control](http://go.microsoft.com/fwlink/?LinkId=201201).[!INCLUDE[crabout](../../../includes/crabout-md.md)] la base de datos de persistencia de App Fabric SQL Server, vea [Base de datos de persistencia de SQL Server](http://go.microsoft.com/fwlink/?LinkId=201202).  
+ <span data-ttu-id="6addc-114">Windows Server App Fabric proporciona su propio almacén y herramientas de instancia para simplificar la configuración y el uso del almacén de instancias.</span><span class="sxs-lookup"><span data-stu-id="6addc-114">Windows Server App Fabric provides its own instance store and tooling to simplify the configuration and use of the instance store.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="6addc-115">vea [almacén de instancias de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201201).</span><span class="sxs-lookup"><span data-stu-id="6addc-115"> see [Windows Server App Fabric Instance Store](http://go.microsoft.com/fwlink/?LinkId=201201).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="6addc-116">el Vea base de datos de App Fabric SQL Server persistencia [base de datos de App Fabric SQL Server persistencia](http://go.microsoft.com/fwlink/?LinkId=201202)</span><span class="sxs-lookup"><span data-stu-id="6addc-116"> the App Fabric SQL Server Persistence Database see [App Fabric SQL Server Persistence Database](http://go.microsoft.com/fwlink/?LinkId=201202)</span></span>  
   
-## En esta sección  
+## <a name="in-this-section"></a><span data-ttu-id="6addc-117">En esta sección</span><span class="sxs-lookup"><span data-stu-id="6addc-117">In This Section</span></span>  
   
--   [Propiedades del almacén de instancias de flujo de trabajo de SQL](../../../docs/framework/windows-workflow-foundation//properties-of-sql-workflow-instance-store.md)  
+-   [<span data-ttu-id="6addc-118">Propiedades del almacén de instancias de flujo de trabajo de SQL</span><span class="sxs-lookup"><span data-stu-id="6addc-118">Properties of SQL Workflow Instance Store</span></span>](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo](../../../docs/framework/windows-workflow-foundation//how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [<span data-ttu-id="6addc-119">Cómo habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="6addc-119">How to: Enable SQL Persistence for Workflows and Workflow Services</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Activación de instancias](../../../docs/framework/windows-workflow-foundation//instance-activation.md)  
+-   [<span data-ttu-id="6addc-120">Activación de instancias</span><span class="sxs-lookup"><span data-stu-id="6addc-120">Instance Activation</span></span>](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
--   [Soporte técnico para consultas](../../../docs/framework/windows-workflow-foundation//support-for-queries.md)  
+-   [<span data-ttu-id="6addc-121">Soporte técnico para consultas</span><span class="sxs-lookup"><span data-stu-id="6addc-121">Support for Queries</span></span>](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
   
--   [Extensibilidad de almacén](../../../docs/framework/windows-workflow-foundation//store-extensibility.md)  
+-   [<span data-ttu-id="6addc-122">Extensibilidad de almacén</span><span class="sxs-lookup"><span data-stu-id="6addc-122">Store Extensibility</span></span>](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
   
--   [Seguridad](../../../docs/framework/windows-workflow-foundation//security.md)  
+-   [<span data-ttu-id="6addc-123">Seguridad</span><span class="sxs-lookup"><span data-stu-id="6addc-123">Security</span></span>](../../../docs/framework/windows-workflow-foundation/security.md)  
   
--   [Base de datos de persistencia de SQL Server](../../../docs/framework/windows-workflow-foundation//sql-server-persistence-database.md)  
+-   [<span data-ttu-id="6addc-124">Base de datos de persistencia de SQL Server</span><span class="sxs-lookup"><span data-stu-id="6addc-124">SQL Server Persistence Database</span></span>](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## Vea también  
- [Ejemplos de persistencia](http://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a><span data-ttu-id="6addc-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="6addc-125">See Also</span></span>  
+ [<span data-ttu-id="6addc-126">Ejemplos de persistencia</span><span class="sxs-lookup"><span data-stu-id="6addc-126">Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkID=177735)

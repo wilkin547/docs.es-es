@@ -1,39 +1,41 @@
 ---
-title: "Utilizaci&#243;n de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comportamiento [WCF], el rendimiento del servicio"
+title: "Utilización de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 01f3815c095012d10fdfd56893125135c35f8009
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizaci&#243;n de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF
-El <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> clase expone propiedades que puede usar para limitar cuántas instancias o sesiones se crean en el nivel de aplicación. Con este comportamiento, se precisa el rendimiento de su aplicación [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a><span data-ttu-id="771f4-102">Utilización de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF</span><span class="sxs-lookup"><span data-stu-id="771f4-102">Using ServiceThrottlingBehavior to Control WCF Service Performance</span></span>
+<span data-ttu-id="771f4-103">La clase <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> expone las propiedades que pueden utilizarse para limitar cuántas instancias o sesiones se crean en el nivel de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="771f4-103">The <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> class exposes properties that you can use to limit how many instances or sessions are created at the application level.</span></span> <span data-ttu-id="771f4-104">Con este comportamiento, se precisa el rendimiento de su aplicación [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="771f4-104">Using this behavior, you can fine-tune the performance of your [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application.</span></span>  
   
-## <a name="controlling-service-instances-and-concurrent-calls"></a>Control de las instancias del servicio y las llamadas simultáneas  
- Utilice la <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> propiedad para especificar el número máximo de mensajes que se procesan activamente en un <xref:System.ServiceModel.ServiceHost> (clase) y el <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> propiedad para especificar el número máximo de <xref:System.ServiceModel.InstanceContext> objetos en el servicio.  
+## <a name="controlling-service-instances-and-concurrent-calls"></a><span data-ttu-id="771f4-105">Control de las instancias del servicio y las llamadas simultáneas</span><span class="sxs-lookup"><span data-stu-id="771f4-105">Controlling Service Instances and Concurrent Calls</span></span>  
+ <span data-ttu-id="771f4-106">Utilice la propiedad <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> para especificar el número máximo de mensajes que se procesan activamente en una clase <xref:System.ServiceModel.ServiceHost>, y la propiedad <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> para especificar el número máximo de objetos <xref:System.ServiceModel.InstanceContext> del servicio.</span><span class="sxs-lookup"><span data-stu-id="771f4-106">Use the <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> property to specify the maximum number of messages actively processing across a <xref:System.ServiceModel.ServiceHost> class, and the <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> property to specify the maximum number of <xref:System.ServiceModel.InstanceContext> objects in the service.</span></span>  
   
- Dado que determinar la configuración de estas propiedades normalmente se produce después de ejecutar la aplicación con la experiencia real se carga, la configuración de la <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> propiedades normalmente se especifica en un archivo de configuración de aplicación mediante el [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) elemento.  
+ <span data-ttu-id="771f4-107">Carga debido a determinar los valores de estas propiedades normalmente tiene lugar después de ejecutar la aplicación con la experiencia real, la configuración para el <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> propiedades normalmente se especifica en un archivo de configuración de aplicación mediante el [ \<serviceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="771f4-107">Because determining the settings for these properties usually takes place after real-world experience running the application against loads, the settings for the <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> properties is typically specified in an application configuration file using the [\<serviceThrottling>](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) element.</span></span>  
   
- En el ejemplo de código siguiente se muestra el uso de la <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> clase a partir de un archivo de configuración de aplicación que establece el <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, y <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> propiedades como 1 como un ejemplo. La experiencia real determina los valores óptimos para cualquier aplicación determinada.  
+ <span data-ttu-id="771f4-108">El siguiente ejemplo de código muestra el uso de la clase <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> de un archivo de configuración de la aplicación que establece el valor 1 en <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, y las propiedades <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>, como ejemplo banal.</span><span class="sxs-lookup"><span data-stu-id="771f4-108">The following code example shows the use of the <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> class from an application configuration file that sets the <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, and <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> properties to 1 as a trivial example.</span></span> <span data-ttu-id="771f4-109">La experiencia real determina los valores óptimos para cualquier aplicación determinada.</span><span class="sxs-lookup"><span data-stu-id="771f4-109">Real-world experience determines the optimal settings for any particular application.</span></span>  
   
- <!-- TODO: review snippet reference [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  -->  
+ [!code-xml[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  
   
- El comportamiento de tiempo de ejecución exacto depende de los valores de la <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> y <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> propiedades que controlan la cantidad de mensajes puede ejecutarse dentro de una operación a la vez y las duraciones del servicio <xref:System.ServiceModel.InstanceContext> en relación con la entrada de las sesiones del canal, respectivamente.  
+ <span data-ttu-id="771f4-110">El comportamiento de tiempo de ejecución exacto depende en los valores de <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> y las propiedades <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>, que controlan cuántos mensajes pueden ejecutarse al mismo tiempo en una operación, y las duraciones del servicio <xref:System.ServiceModel.InstanceContext> en relación a las sesiones del canal de entrada, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="771f4-110">The exact run-time behavior depends upon the values of the <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> and <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> properties, which control how many messages can execute inside an operation at once and the lifetimes of the service <xref:System.ServiceModel.InstanceContext> relative to incoming channel sessions, respectively.</span></span>  
   
- Para obtener más información, consulte <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, y <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>.  
+ <span data-ttu-id="771f4-111">Para obtener información detallada, vea <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, y <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>.</span><span class="sxs-lookup"><span data-stu-id="771f4-111">For details, see <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, and <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>   
+## <a name="see-also"></a><span data-ttu-id="771f4-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="771f4-112">See Also</span></span>  
+ <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
  <xref:System.ServiceModel.NetTcpBinding.MaxConnections%2A>

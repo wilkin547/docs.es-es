@@ -1,81 +1,80 @@
 ---
-title: "Argumentos y par&#225;metros de procedimiento (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "listas de argumentos"
-  - "argumentos [Visual Basic], pasar"
-  - "argumentos [Visual Basic], procedimientos"
-  - "argumentos [Visual Basic], procedimientos en Visual Basic"
-  - "listas de parámetros"
-  - "parámetros, listas"
-  - "parámetros, procedimientos en Visual Basic"
-  - "procedimientos, listas de argumentos"
-  - "procedimientos, argumentos"
-  - "procedimientos, listas de parámetros"
-  - "procedimientos, parámetros"
-  - "valores, pasar a procedimientos"
-  - "código de Visual Basic, listas de argumentos"
-  - "código de Visual Basic, listas de parámetros"
-  - "código de Visual Basic, procedimientos"
+title: "Argumentos y parámetros de procedimiento (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], argument lists
+- values [Visual Basic], passing to procedures
+- arguments [Visual Basic], passing
+- procedures [Visual Basic], parameters
+- Visual Basic code, argument lists
+- Visual Basic code, procedures
+- parameters [Visual Basic], Visual Basic procedures
+- parameters [Visual Basic], lists
+- arguments [Visual Basic], Visual Basic procedures
+- arguments [Visual Basic], procedures
+- parameter lists [Visual Basic]
+- Visual Basic code, parameter lists
+- argument lists [Visual Basic]
+- procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Argumentos y par&#225;metros de procedimiento (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-En la mayoría de los casos, un procedimiento necesita cierta información sobre las circunstancias en las que se le ha llamado.  Un procedimiento que ejecuta tareas repetidas o compartidas utiliza datos distintos en cada llamada.  Estos datos se componen de variables, constantes y expresiones que se transfieren al procedimiento cada vez que se le llama.  
+# <a name="procedure-parameters-and-arguments-visual-basic"></a><span data-ttu-id="87271-102">Argumentos y parámetros de procedimiento (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="87271-102">Procedure Parameters and Arguments (Visual Basic)</span></span>
+<span data-ttu-id="87271-103">En la mayoría de los casos, un procedimiento necesita cierta información sobre las circunstancias en que se ha llamado.</span><span class="sxs-lookup"><span data-stu-id="87271-103">In most cases, a procedure needs some information about the circumstances in which it has been called.</span></span> <span data-ttu-id="87271-104">Un procedimiento que realiza las tareas repetitivas o compartidas utiliza información diferente para cada llamada.</span><span class="sxs-lookup"><span data-stu-id="87271-104">A procedure that performs repeated or shared tasks uses different information for each call.</span></span> <span data-ttu-id="87271-105">Esta información está formada por las variables, constantes y expresiones que se pasan al procedimiento cuando se llama al método.</span><span class="sxs-lookup"><span data-stu-id="87271-105">This information consists of variables, constants, and expressions that you pass to the procedure when you call it.</span></span>  
   
- Un *parámetro* representa un valor que el procedimiento espera que se proporcione cuando es llamado.  La declaración del procedimiento define sus parámetros.  
+ <span data-ttu-id="87271-106">A *parámetro* representa un valor que el procedimiento espera que se proporciona cuando se llama.</span><span class="sxs-lookup"><span data-stu-id="87271-106">A *parameter* represents a value that the procedure expects you to supply when you call it.</span></span> <span data-ttu-id="87271-107">La declaración del procedimiento define sus parámetros.</span><span class="sxs-lookup"><span data-stu-id="87271-107">The procedure's declaration defines its parameters.</span></span>  
   
- Puede definir un procedimiento sin parámetros, con un parámetro o con varios.  La parte de la definición del procedimiento que especifica los parámetros se denomina *lista de parámetros*.  
+ <span data-ttu-id="87271-108">Puede definir un procedimiento sin parámetros, un parámetro o más de uno.</span><span class="sxs-lookup"><span data-stu-id="87271-108">You can define a procedure with no parameters, one parameter, or more than one.</span></span> <span data-ttu-id="87271-109">La parte de la definición del procedimiento que especifica los parámetros se denomina la *lista de parámetros*.</span><span class="sxs-lookup"><span data-stu-id="87271-109">The part of the procedure definition that specifies the parameters is called the *parameter list*.</span></span>  
   
- Un *argumento* representa el valor que se proporciona a un parámetro del procedimiento cuando se llama al procedimiento.  El código de llamada proporciona los argumentos cuando llama al procedimiento.  La parte de la llamada del procedimiento que especifica los argumentos se denomina *lista de argumentos*.  
+ <span data-ttu-id="87271-110">Un *argumento* representa el valor que se proporciona a un parámetro de procedimiento cuando se llama al procedimiento.</span><span class="sxs-lookup"><span data-stu-id="87271-110">An *argument* represents the value you supply to a procedure parameter when you call the procedure.</span></span> <span data-ttu-id="87271-111">El código de llamada proporciona los argumentos cuando llama al procedimiento.</span><span class="sxs-lookup"><span data-stu-id="87271-111">The calling code supplies the arguments when it calls the procedure.</span></span> <span data-ttu-id="87271-112">La parte de la llamada del procedimiento que especifica los argumentos se denomina la *lista de argumentos*.</span><span class="sxs-lookup"><span data-stu-id="87271-112">The part of the procedure call that specifies the arguments is called the *argument list*.</span></span>  
   
- En la siguiente ilustración se muestra un código que llama al procedimiento `safeSquareRoot` desde dos lugares diferentes.  La primera llamada transfiere el valor de la variable `x` \(4.0\) al parámetro `number` y el valor devuelto en `root` \(2.0\) se asigna a la variable `y`.  La segunda llamada transfiere el valor literal 9.0 a `number` y asigna el valor devuelto \(3.0\) a la variable `z`.  
+ <span data-ttu-id="87271-113">En la siguiente ilustración se muestra código que llama al procedimiento `safeSquareRoot` desde dos lugares diferentes.</span><span class="sxs-lookup"><span data-stu-id="87271-113">The following illustration shows code calling the procedure `safeSquareRoot` from two different places.</span></span> <span data-ttu-id="87271-114">La primera llamada pasa el valor de la variable `x` (4.0) al parámetro `number`y el valor devuelto en `root` (2.0) se asigna a la variable `y`.</span><span class="sxs-lookup"><span data-stu-id="87271-114">The first call passes the value of the variable `x` (4.0) to the parameter `number`, and the return value in `root` (2.0) is assigned to the variable `y`.</span></span> <span data-ttu-id="87271-115">La segunda llamada transfiere el valor literal 9.0 a `number`y asigna el valor devuelto (3.0) a la variable `z`.</span><span class="sxs-lookup"><span data-stu-id="87271-115">The second call passes the literal value 9.0 to `number`, and assigns the return value (3.0) to variable `z`.</span></span>  
   
- ![Diagrama gráfico de paso de argumentos a parámetros](../../../../visual-basic/programming-guide/language-features/procedures/media/parametersargue.gif "ParametersArgue")  
-Pasar un argumento a un parámetro  
+ <span data-ttu-id="87271-116">![Diagrama gráfico de paso de argumentos al parámetro](./media/parametersargue.gif "ParametersArgue")</span><span class="sxs-lookup"><span data-stu-id="87271-116">![Graphic diagram of passing argument to parameter](./media/parametersargue.gif "ParametersArgue")</span></span>  
+<span data-ttu-id="87271-117">Pasar un argumento a un parámetro</span><span class="sxs-lookup"><span data-stu-id="87271-117">Passing an argument to a parameter</span></span>  
   
- Para obtener más información, vea [Diferencias entre parámetros y argumentos](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
+ <span data-ttu-id="87271-118">Para obtener más información, consulte [diferencias entre parámetros y argumentos](./differences-between-parameters-and-arguments.md).</span><span class="sxs-lookup"><span data-stu-id="87271-118">For more information, see [Differences Between Parameters and Arguments](./differences-between-parameters-and-arguments.md).</span></span>  
   
-## Tipo de datos de parámetro  
- El tipo de datos de un parámetro se define utilizando la cláusula `As` en su declaración.  Por ejemplo, la siguiente función acepta una cadena y un entero.  
+## <a name="parameter-data-type"></a><span data-ttu-id="87271-119">Tipo de datos de parámetro</span><span class="sxs-lookup"><span data-stu-id="87271-119">Parameter Data Type</span></span>  
+ <span data-ttu-id="87271-120">Definir un tipo de datos para un parámetro mediante el `As` cláusula en su declaración.</span><span class="sxs-lookup"><span data-stu-id="87271-120">You define a data type for a parameter by using the `As` clause in its declaration.</span></span> <span data-ttu-id="87271-121">Por ejemplo, la siguiente función acepta una cadena y un entero.</span><span class="sxs-lookup"><span data-stu-id="87271-121">For example, the following function accepts a string and an integer.</span></span>  
   
  [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
- Si el modificador de comprobación de tipos \([Option Strict \(Instrucción\)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) es `Off,` la cláusula `As` es opcional, pero si la utiliza un parámetro, deben utilizarla todos.  Si la comprobación de tipos es `On`, la cláusula `As` será obligatoria para todos los parámetros del procedimiento.  
+ <span data-ttu-id="87271-122">Si la comprobación de tipos cambia ([Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) es `Off,` el `As` cláusula es opcional, salvo que si usa un parámetro, todos los parámetros deben utilizarlo.</span><span class="sxs-lookup"><span data-stu-id="87271-122">If the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `Off,` the `As` clause is optional, except that if any one parameter uses it, all parameters must use it.</span></span> <span data-ttu-id="87271-123">Si la comprobación de tipos es `On`, el `As` cláusula es obligatoria para todos los parámetros de procedimiento.</span><span class="sxs-lookup"><span data-stu-id="87271-123">If type checking is `On`, the `As` clause is required for all procedure parameters.</span></span>  
   
- Si el código de llamada espera que se proporcione un argumento con un tipo de datos diferente al del parámetro correspondiente, por ejemplo `Byte` a un parámetro `String`, debe llevar a cabo una de las operaciones siguientes:  
+ <span data-ttu-id="87271-124">Si el código que realiza la llamada espera que proporcionar un argumento con un tipo de datos diferente del parámetro correspondiente, como `Byte` para un `String` parámetro, debe realizar una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="87271-124">If the calling code expects to supply an argument with a data type different from that of its corresponding parameter, such as `Byte` to a `String` parameter, it must do one of the following:</span></span>  
   
--   Proporcionar sólo argumentos con tipos de datos que se amplíen al tipo de datos del parámetro;  
+-   <span data-ttu-id="87271-125">Proporcionar sólo argumentos con tipos de datos que se amplían al tipo de datos del parámetro;</span><span class="sxs-lookup"><span data-stu-id="87271-125">Supply only arguments with data types that widen to the parameter data type;</span></span>  
   
--   Establecer `Option Strict Off` para que permita conversiones de restricción implícitas; o  
+-   <span data-ttu-id="87271-126">Establecer `Option Strict Off` para permitir que las conversiones de restricción implícitas; o</span><span class="sxs-lookup"><span data-stu-id="87271-126">Set `Option Strict Off` to allow implicit narrowing conversions; or</span></span>  
   
--   Utilizar una palabra clave de conversión para convertir explícitamente el tipo de datos.  
+-   <span data-ttu-id="87271-127">Utilizar una palabra clave de conversión para convertir explícitamente el tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="87271-127">Use a conversion keyword to explicitly convert the data type.</span></span>  
   
-### Parámetros de tipo  
- Un *procedimiento genérico* también define uno o más *parámetros de tipo*, además de sus parámetros normales.  Un procedimiento genérico permite que el código que llama pase tipos de datos distintos cada vez que llame al procedimiento; por tanto, puede personalizar los tipos de datos para los requisitos de cada llamada individual.  Vea [Procedimientos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+### <a name="type-parameters"></a><span data-ttu-id="87271-128">Parámetros de tipo</span><span class="sxs-lookup"><span data-stu-id="87271-128">Type Parameters</span></span>  
+ <span data-ttu-id="87271-129">A *procedimiento genérico* también define uno o más *parámetros de tipo* además de sus parámetros normales.</span><span class="sxs-lookup"><span data-stu-id="87271-129">A *generic procedure* also defines one or more *type parameters* in addition to its normal parameters.</span></span> <span data-ttu-id="87271-130">Un procedimiento genérico permite que el código que realiza la llamada para pasar tipos de datos diferentes cada vez que llama al procedimiento, por lo que pueden personalizar los tipos de datos a los requisitos de cada llamada individual.</span><span class="sxs-lookup"><span data-stu-id="87271-130">A generic procedure allows the calling code to pass different data types each time it calls the procedure, so it can tailor the data types to the requirements of each individual call.</span></span> <span data-ttu-id="87271-131">Vea [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="87271-131">See [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).</span></span>  
   
-## Vea también  
- [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedimientos Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Procedimientos Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedimientos de operador](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Cómo: Definir un parámetro para un procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [Cómo: Pasar argumentos a un procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Pasar argumentos por valor y por referencia](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Sobrecarga de procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="87271-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="87271-132">See Also</span></span>  
+ [<span data-ttu-id="87271-133">Procedimientos</span><span class="sxs-lookup"><span data-stu-id="87271-133">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="87271-134">Subprocedimientos</span><span class="sxs-lookup"><span data-stu-id="87271-134">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="87271-135">Procedimientos de función</span><span class="sxs-lookup"><span data-stu-id="87271-135">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="87271-136">Procedimientos de propiedades</span><span class="sxs-lookup"><span data-stu-id="87271-136">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="87271-137">Procedimientos de operadores</span><span class="sxs-lookup"><span data-stu-id="87271-137">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="87271-138">Definir un parámetro para un procedimiento</span><span class="sxs-lookup"><span data-stu-id="87271-138">How to: Define a Parameter for a Procedure</span></span>](./how-to-define-a-parameter-for-a-procedure.md)  
+ [<span data-ttu-id="87271-139">Pasar argumentos a un procedimiento</span><span class="sxs-lookup"><span data-stu-id="87271-139">How to: Pass Arguments to a Procedure</span></span>](./how-to-pass-arguments-to-a-procedure.md)  
+ [<span data-ttu-id="87271-140">Paso de argumentos por valor y por referencia</span><span class="sxs-lookup"><span data-stu-id="87271-140">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="87271-141">Sobrecarga de procedimientos</span><span class="sxs-lookup"><span data-stu-id="87271-141">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="87271-142">Conversiones de tipos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="87271-142">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

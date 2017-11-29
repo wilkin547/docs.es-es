@@ -11,170 +11,169 @@ helpviewer_keywords:
 - binary serialization, .net core serialization
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
+ms.openlocfilehash: 74ee4e21934c1e4f3fd008664b1315429dc47b37
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 995430b2426cb124ee889ed49cc7260c68138151
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="binary-serialization"></a>Serialización binaria
+# <a name="binary-serialization"></a><span data-ttu-id="98d87-102">Serialización binaria</span><span class="sxs-lookup"><span data-stu-id="98d87-102">Binary serialization</span></span>
 
-La serialización se puede definir como el proceso de almacenar el estado de un objeto a los medios de almacenamiento. Durante este proceso, los campos públicos y privados del objeto y el nombre de la clase, incluso el ensamblado que contiene la clase, se convierten en una secuencia de bytes, que se escribe a continuación en un flujo de datos. Cuando se deserializa el objeto como consecuencia, se crea un clon exacto del objeto original.
+<span data-ttu-id="98d87-103">La serialización se puede definir como el proceso de almacenar el estado de un objeto a los medios de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="98d87-103">Serialization can be defined as the process of storing the state of an object to a storage medium.</span></span> <span data-ttu-id="98d87-104">Durante este proceso, los campos públicos y privados del objeto y el nombre de la clase, incluso el ensamblado que contiene la clase, se convierten en una secuencia de bytes, que se escribe a continuación en un flujo de datos.</span><span class="sxs-lookup"><span data-stu-id="98d87-104">During this process, the public and private fields of the object and the name of the class, including the assembly containing the class, are converted to a stream of bytes, which is then written to a data stream.</span></span> <span data-ttu-id="98d87-105">Cuando se deserializa el objeto como consecuencia, se crea un clon exacto del objeto original.</span><span class="sxs-lookup"><span data-stu-id="98d87-105">When the object is subsequently deserialized, an exact clone of the original object is created.</span></span>
 
-Al implementar un mecanismo de la serialización en un entorno orientado a objetos, tiene que realizar varios intercambios entre la facilidad de uso y la flexibilidad. El proceso se puede automatizar en gran medida, con tal de que sea proporcionado el control suficiente sobre el proceso. Por ejemplo, las situaciones se pueden presentar donde la serialización binaria simple no es suficiente, o podría haber una razón concreta para decidir qué campos en una clase necesitan ser serializados. Las secciones siguientes examinan el sólido mecanismo de serialización proporcionado con .NET y resaltan varias características importantes que permiten personalizar el proceso para satisfacer las necesidades.
+<span data-ttu-id="98d87-106">Al implementar un mecanismo de la serialización en un entorno orientado a objetos, tiene que realizar varios intercambios entre la facilidad de uso y la flexibilidad.</span><span class="sxs-lookup"><span data-stu-id="98d87-106">When implementing a serialization mechanism in an object-oriented environment, you have to make a number of tradeoffs between ease of use and flexibility.</span></span> <span data-ttu-id="98d87-107">El proceso se puede automatizar en gran medida, con tal de que sea proporcionado el control suficiente sobre el proceso.</span><span class="sxs-lookup"><span data-stu-id="98d87-107">The process can be automated to a large extent, provided you are given sufficient control over the process.</span></span> <span data-ttu-id="98d87-108">Por ejemplo, las situaciones se pueden presentar donde la serialización binaria simple no es suficiente, o podría haber una razón concreta para decidir qué campos en una clase necesitan ser serializados.</span><span class="sxs-lookup"><span data-stu-id="98d87-108">For example, situations may arise where simple binary serialization is not sufficient, or there might be a specific reason to decide which fields in a class need to be serialized.</span></span> <span data-ttu-id="98d87-109">Las secciones siguientes examinan el sólido mecanismo de serialización proporcionado con .NET y resaltan varias características importantes que permiten personalizar el proceso para satisfacer las necesidades.</span><span class="sxs-lookup"><span data-stu-id="98d87-109">The following sections examine the robust serialization mechanism provided with .NET and highlight a number of important features that allow you to customize the process to meet your needs.</span></span>
 
 > [!NOTE]
-> El estado de un objeto UTF-8 o UTF-7 codificado no se conserva si el objeto se serializa y se deserializa utilizando distintas versiones de .NET Framework.
+> <span data-ttu-id="98d87-110">El estado de un objeto UTF-8 o UTF-7 codificado no se conserva si el objeto se serializa y se deserializa utilizando distintas versiones de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="98d87-110">The state of a UTF-8 or UTF-7 encoded object is not preserved if the object is serialized and deserialized using different .NET Framework versions.</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Al igual que la naturaleza de la serialización binaria permite la modificación de los miembros privados de un objeto y, por tanto, cambiar el estado del mismo, se recomiendan otros marcos de trabajo de serialización como JSON.NET que operan en la superficie de la API pública.
+<span data-ttu-id="98d87-111">Al igual que la naturaleza de la serialización binaria permite la modificación de los miembros privados de un objeto y, por tanto, cambiar el estado del mismo, se recomiendan otros marcos de trabajo de serialización como JSON.NET que operan en la superficie de la API pública.</span><span class="sxs-lookup"><span data-stu-id="98d87-111">As the nature of binary serialization allows the modification of private members inside an object and therefore changing the state of it, other serialization frameworks like JSON.NET which operate on the public API surface are recommended.</span></span>
 
-## <a name="binary-serialization-in-net-core"></a>Serialización binaria en .NET Core
+## <a name="binary-serialization-in-net-core"></a><span data-ttu-id="98d87-112">Serialización binaria en .NET Core</span><span class="sxs-lookup"><span data-stu-id="98d87-112">Binary serialization in .NET Core</span></span>
 
-.NET Core es compatible con la serialización binaria con un subconjunto de tipos. Puede ver la lista de tipos compatibles en la sección [Tipos serializables](#serializable-types). Se garantiza que el conjunto definido de tipos es serializable entre .NET Framework 4.5.1 y versiones posteriores y .NET Core 2.0 y versiones posteriores. Otras implementaciones de .NET, como Mono, no son oficialmente compatibles, pero también deberían funcionar.
+<span data-ttu-id="98d87-113">.NET Core es compatible con la serialización binaria con un subconjunto de tipos.</span><span class="sxs-lookup"><span data-stu-id="98d87-113">.NET Core supports binary serialization with a subset of types.</span></span> <span data-ttu-id="98d87-114">Puede ver la lista de tipos compatibles en la sección [Tipos serializables](#serializable-types).</span><span class="sxs-lookup"><span data-stu-id="98d87-114">You can see the list of supported types in the [Serializable types section](#serializable-types).</span></span> <span data-ttu-id="98d87-115">Se garantiza que el conjunto definido de tipos es serializable entre .NET Framework 4.5.1 y versiones posteriores y .NET Core 2.0 y versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="98d87-115">The defined set of types are guaranteed to be serializable between .NET Framework 4.5.1 and later versions and .NET Core 2.0 and later versions.</span></span> <span data-ttu-id="98d87-116">Otras implementaciones de .NET, como Mono, no son oficialmente compatibles, pero también deberían funcionar.</span><span class="sxs-lookup"><span data-stu-id="98d87-116">Other .NET implementations, such as Mono, aren't officially supported but should also be working.</span></span>
 
-### <a name="serializable-types"></a>Tipos serializables
+### <a name="serializable-types"></a><span data-ttu-id="98d87-117">Tipos serializables</span><span class="sxs-lookup"><span data-stu-id="98d87-117">Serializable types</span></span>
 
-- <xref:System.AggregateException?displayProperty=fullName>   
-- <xref:System.Array?displayProperty=fullName>   
-- <xref:System.ArraySegment%601?displayProperty=fullName>   
-- <xref:System.Attribute?displayProperty=fullName>   
-- <xref:System.Boolean?displayProperty=fullName>   
-- <xref:System.Byte?displayProperty=fullName>   
-- <xref:System.Char?displayProperty=fullName>   
-- <xref:System.Collections.ArrayList?displayProperty=fullName>   
-- <xref:System.Collections.BitArray?displayProperty=fullName>   
-- <xref:System.Collections.Comparer?displayProperty=fullName>   
-- <xref:System.Collections.DictionaryEntry?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Comparer%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.HashSet%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.LinkedList%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.List%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>   
-- <xref:System.Collections.Generic.SortedSet%601?displayProperty=fullName>   
-- <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>   
-- <xref:System.Collections.Hashtable?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=fullName>   
-- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=fullName>   
-- <xref:System.Collections.Queue?displayProperty=fullName>   
-- <xref:System.Collections.SortedList?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.ListDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.StringCollection?displayProperty=fullName>   
-- <xref:System.Collections.Specialized.StringDictionary?displayProperty=fullName>   
-- <xref:System.Collections.Stack?displayProperty=fullName>   
-- <xref:System.ComponentModel.BindingList%601?displayProperty=fullName>   
-- <xref:System.Data.DataSet?displayProperty=fullName>   
-- <xref:System.Data.DataTable?displayProperty=fullName>   
-- <xref:System.Data.PropertyCollection?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlByte?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=fullName>   
-- <xref:System.Data.SqlTypes.SqlString?displayProperty=fullName>   
-- <xref:System.DateTime?displayProperty=fullName>   
-- <xref:System.DateTimeOffset?displayProperty=fullName>   
-- <xref:System.Decimal?displayProperty=fullName>   
-- <xref:System.Double?displayProperty=fullName>   
-- <xref:System.Drawing.Color?displayProperty=fullName>   
-- <xref:System.Drawing.Point?displayProperty=fullName>   
-- <xref:System.Drawing.PointF?displayProperty=fullName>   
-- <xref:System.Drawing.Rectangle?displayProperty=fullName>   
-- <xref:System.Drawing.RectangleF?displayProperty=fullName>   
-- <xref:System.Drawing.Size?displayProperty=fullName>   
-- <xref:System.Drawing.SizeF?displayProperty=fullName>   
-- <xref:System.Enum?displayProperty=fullName>   
-- <xref:System.Exception?displayProperty=fullName>   
-- <xref:System.Globalization.CompareInfo?displayProperty=fullName>   
-- <xref:System.Globalization.SortVersion?displayProperty=fullName>   
-- <xref:System.Guid?displayProperty=fullName>   
-- <xref:System.Int16?displayProperty=fullName>   
-- <xref:System.Int32?displayProperty=fullName>   
-- <xref:System.Int64?displayProperty=fullName>   
-- <xref:System.IntPtr?displayProperty=fullName>   
-- <xref:System.Net.Cookie?displayProperty=fullName>   
-- <xref:System.Net.CookieCollection?displayProperty=fullName>   
-- <xref:System.Net.CookieContainer?displayProperty=fullName>   
-- <xref:System.Nullable%601?displayProperty=fullName>   
-- <xref:System.Numerics.BigInteger?displayProperty=fullName>   
-- <xref:System.Numerics.Complex?displayProperty=fullName>   
-- <xref:System.Object?displayProperty=fullName>   
-- <xref:System.SByte?displayProperty=fullName>   
-- <xref:System.Single?displayProperty=fullName>   
-- <xref:System.String?displayProperty=fullName>   
-- <xref:System.StringComparer?displayProperty=fullName>   
-- <xref:System.Text.StringBuilder?displayProperty=fullName>   
-- <xref:System.TimeSpan?displayProperty=fullName>   
-- <xref:System.TimeZoneInfo?displayProperty=fullName>   
-- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=fullName>   
-- <xref:System.Tuple?displayProperty=fullName>   
-- <xref:System.UInt16?displayProperty=fullName>   
-- <xref:System.UInt32?displayProperty=fullName>   
-- <xref:System.UInt64?displayProperty=fullName>   
-- <xref:System.UIntPtr?displayProperty=fullName>   
-- <xref:System.Uri?displayProperty=fullName>   
-- <xref:System.ValueTuple?displayProperty=fullName>   
-- <xref:System.ValueType?displayProperty=fullName>   
-- <xref:System.Version?displayProperty=fullName>   
-- <xref:System.WeakReference?displayProperty=fullName>   
-- <xref:System.WeakReference%601?displayProperty=fullName>   
+- <xref:System.AggregateException?displayProperty=nameWithType>   
+- <xref:System.Array?displayProperty=nameWithType>   
+- <xref:System.ArraySegment%601?displayProperty=nameWithType>   
+- <xref:System.Attribute?displayProperty=nameWithType>   
+- <xref:System.Boolean?displayProperty=nameWithType>   
+- <xref:System.Byte?displayProperty=nameWithType>   
+- <xref:System.Char?displayProperty=nameWithType>   
+- <xref:System.Collections.ArrayList?displayProperty=nameWithType>   
+- <xref:System.Collections.BitArray?displayProperty=nameWithType>   
+- <xref:System.Collections.Comparer?displayProperty=nameWithType>   
+- <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Comparer%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Hashtable?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType>   
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Queue?displayProperty=nameWithType>   
+- <xref:System.Collections.SortedList?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.ListDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>   
+- <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>   
+- <xref:System.Collections.Stack?displayProperty=nameWithType>   
+- <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>   
+- <span data-ttu-id="98d87-118"><xref:System.DBNull?displayProperty=nameWithType>(disponible en .NET Core 2.0.2 y versiones posteriores)</span><span class="sxs-lookup"><span data-stu-id="98d87-118"><xref:System.DBNull?displayProperty=nameWithType> (available in .NET Core 2.0.2 and later versions)</span></span>   
+- <xref:System.Data.DataSet?displayProperty=nameWithType>   
+- <xref:System.Data.DataTable?displayProperty=nameWithType>   
+- <xref:System.Data.PropertyCollection?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType>   
+- <xref:System.DateTime?displayProperty=nameWithType>   
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>   
+- <xref:System.Decimal?displayProperty=nameWithType>   
+- <xref:System.Double?displayProperty=nameWithType>   
+- <xref:System.Drawing.Color?displayProperty=nameWithType>   
+- <xref:System.Drawing.Point?displayProperty=nameWithType>   
+- <xref:System.Drawing.PointF?displayProperty=nameWithType>   
+- <xref:System.Drawing.Rectangle?displayProperty=nameWithType>   
+- <xref:System.Drawing.RectangleF?displayProperty=nameWithType>   
+- <xref:System.Drawing.Size?displayProperty=nameWithType>   
+- <xref:System.Drawing.SizeF?displayProperty=nameWithType>   
+- <xref:System.Enum?displayProperty=nameWithType>   
+- <xref:System.Exception?displayProperty=nameWithType>   
+- <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>   
+- <xref:System.Globalization.SortVersion?displayProperty=nameWithType>   
+- <xref:System.Guid?displayProperty=nameWithType>   
+- <xref:System.Int16?displayProperty=nameWithType>   
+- <xref:System.Int32?displayProperty=nameWithType>   
+- <xref:System.Int64?displayProperty=nameWithType>   
+- <xref:System.IntPtr?displayProperty=nameWithType>   
+- <xref:System.Net.Cookie?displayProperty=nameWithType>   
+- <xref:System.Net.CookieCollection?displayProperty=nameWithType>   
+- <xref:System.Net.CookieContainer?displayProperty=nameWithType>   
+- <xref:System.Nullable%601?displayProperty=nameWithType>   
+- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>   
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>   
+- <xref:System.Object?displayProperty=nameWithType>   
+- <xref:System.SByte?displayProperty=nameWithType>   
+- <xref:System.Single?displayProperty=nameWithType>   
+- <xref:System.String?displayProperty=nameWithType>   
+- <xref:System.StringComparer?displayProperty=nameWithType>   
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>   
+- <xref:System.TimeSpan?displayProperty=nameWithType>   
+- <xref:System.TimeZoneInfo?displayProperty=nameWithType>   
+- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType>   
+- <xref:System.Tuple?displayProperty=nameWithType>   
+- <xref:System.UInt16?displayProperty=nameWithType>   
+- <xref:System.UInt32?displayProperty=nameWithType>   
+- <xref:System.UInt64?displayProperty=nameWithType>   
+- <xref:System.UIntPtr?displayProperty=nameWithType>   
+- <xref:System.Uri?displayProperty=nameWithType>   
+- <span data-ttu-id="98d87-119"><xref:System.ValueTuple?displayProperty=nameWithType>(no es serializable en .NET Framework 4.7 y versiones anteriores)</span><span class="sxs-lookup"><span data-stu-id="98d87-119"><xref:System.ValueTuple?displayProperty=nameWithType> (not serializable in .NET Framework 4.7 and earlier versions)</span></span>  
+- <xref:System.ValueType?displayProperty=nameWithType>   
+- <xref:System.Version?displayProperty=nameWithType>   
+- <xref:System.WeakReference?displayProperty=nameWithType>   
+- <xref:System.WeakReference%601?displayProperty=nameWithType>   
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a><span data-ttu-id="98d87-120">En esta sección</span><span class="sxs-lookup"><span data-stu-id="98d87-120">In this section</span></span>
 
- [Conceptos de serialización](../../../docs/standard/serialization/serialization-concepts.md)  
- Describe dos escenarios en los que la serialización resulta útil: al almacenar datos persistentes y al pasar objetos a través de dominios de aplicaciones.  
+ [<span data-ttu-id="98d87-121">Conceptos de serialización</span><span class="sxs-lookup"><span data-stu-id="98d87-121">Serialization Concepts</span></span>](../../../docs/standard/serialization/serialization-concepts.md)  
+ <span data-ttu-id="98d87-122">Describe dos escenarios en los que la serialización resulta útil: al almacenar datos persistentes y al pasar objetos a través de dominios de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="98d87-122">Discusses two scenarios where serialization is useful: when persisting data to storage and when passing objects across application domains.</span></span>  
   
- [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)  
- Describe cómo utilizar los formateadores SOAP y binario para serializar los objetos.  
+ [<span data-ttu-id="98d87-123">Serialización básica</span><span class="sxs-lookup"><span data-stu-id="98d87-123">Basic Serialization</span></span>](../../../docs/standard/serialization/basic-serialization.md)  
+ <span data-ttu-id="98d87-124">Describe cómo utilizar los formateadores SOAP y binario para serializar los objetos.</span><span class="sxs-lookup"><span data-stu-id="98d87-124">Describes how to use the binary and SOAP formatters to serialize objects.</span></span>  
   
- [Serialización selectiva](../../../docs/standard/serialization/selective-serialization.md)  
- Describe cómo evitar que se serialicen algunos miembros de una clase.  
+ [<span data-ttu-id="98d87-125">Serialización selectiva</span><span class="sxs-lookup"><span data-stu-id="98d87-125">Selective Serialization</span></span>](../../../docs/standard/serialization/selective-serialization.md)  
+ <span data-ttu-id="98d87-126">Describe cómo evitar que se serialicen algunos miembros de una clase.</span><span class="sxs-lookup"><span data-stu-id="98d87-126">Describes how to prevent some members of a class from being serialized.</span></span>  
   
- [Serialización personalizada](../../../docs/standard/serialization/custom-serialization.md)  
- Describe cómo personalizar la serialización de una clase mediante la interfaz <xref:System.Runtime.Serialization.ISerializable>.  
+ [<span data-ttu-id="98d87-127">Serialización personalizada</span><span class="sxs-lookup"><span data-stu-id="98d87-127">Custom Serialization</span></span>](../../../docs/standard/serialization/custom-serialization.md)  
+ <span data-ttu-id="98d87-128">Describe cómo personalizar la serialización de una clase mediante la interfaz <xref:System.Runtime.Serialization.ISerializable>.</span><span class="sxs-lookup"><span data-stu-id="98d87-128">Describes how to customize serialization for a class by using the <xref:System.Runtime.Serialization.ISerializable> interface.</span></span>  
   
- [Pasos del proceso de serialización](../../../docs/standard/serialization/steps-in-the-serialization-process.md)  
- Describe la medida que toma la serialización cuando se llama al método <xref:System.Runtime.Serialization.Formatter.Serialize%2A> en un formateador.  
+ [<span data-ttu-id="98d87-129">Pasos del proceso de serialización</span><span class="sxs-lookup"><span data-stu-id="98d87-129">Steps in the Serialization Process</span></span>](../../../docs/standard/serialization/steps-in-the-serialization-process.md)  
+ <span data-ttu-id="98d87-130">Describe la medida que toma la serialización cuando se llama al método <xref:System.Runtime.Serialization.Formatter.Serialize%2A> en un formateador.</span><span class="sxs-lookup"><span data-stu-id="98d87-130">Describes the course of action serialization takes when the <xref:System.Runtime.Serialization.Formatter.Serialize%2A> method is called on a formatter.</span></span>  
   
- [Serialización tolerante a versiones](../../../docs/standard/serialization/version-tolerant-serialization.md)  
- Explica cómo crear tipos serializables que se pueden modificar con el tiempo sin hacer que las aplicaciones produzcan las excepciones.  
+ [<span data-ttu-id="98d87-131">Serialización tolerante a versiones</span><span class="sxs-lookup"><span data-stu-id="98d87-131">Version Tolerant Serialization</span></span>](../../../docs/standard/serialization/version-tolerant-serialization.md)  
+ <span data-ttu-id="98d87-132">Explica cómo crear tipos serializables que se pueden modificar con el tiempo sin hacer que las aplicaciones produzcan las excepciones.</span><span class="sxs-lookup"><span data-stu-id="98d87-132">Explains how to create serializable types that can be modified over time without causing applications to throw exceptions.</span></span>  
   
- [Directrices de serialización](../../../docs/standard/serialization/serialization-guidelines.md)  
- Proporciona algunas directrices general para decidir cuándo serializar un objeto.  
+ [<span data-ttu-id="98d87-133">Directrices de serialización</span><span class="sxs-lookup"><span data-stu-id="98d87-133">Serialization Guidelines</span></span>](../../../docs/standard/serialization/serialization-guidelines.md)  
+ <span data-ttu-id="98d87-134">Proporciona algunas directrices general para decidir cuándo serializar un objeto.</span><span class="sxs-lookup"><span data-stu-id="98d87-134">Provides some general guidelines for deciding when to serialize an object.</span></span>  
   
-## <a name="reference"></a>Referencia  
+## <a name="reference"></a><span data-ttu-id="98d87-135">Referencia</span><span class="sxs-lookup"><span data-stu-id="98d87-135">Reference</span></span>  
  <xref:System.Runtime.Serialization>  
- Contiene clases que se pueden usar para serializar y deserializar objetos.  
+ <span data-ttu-id="98d87-136">Contiene clases que se pueden usar para serializar y deserializar objetos.</span><span class="sxs-lookup"><span data-stu-id="98d87-136">Contains classes that can be used for serializing and deserializing objects.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- Describe el mecanismo de la serialización XML que está incluido con Common Language Runtime.  
+## <a name="related-sections"></a><span data-ttu-id="98d87-137">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="98d87-137">Related sections</span></span>  
+ [<span data-ttu-id="98d87-138">Serialización SOAP y XML</span><span class="sxs-lookup"><span data-stu-id="98d87-138">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ <span data-ttu-id="98d87-139">Describe el mecanismo de la serialización XML que está incluido con Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="98d87-139">Describes the XML serialization mechanism that is included with the common language runtime.</span></span>  
   
- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)  
- Describe las instrucciones de la codificación seguras que hay que seguir al escribir el código que realiza la serialización.  
+ [<span data-ttu-id="98d87-140">Seguridad y serialización</span><span class="sxs-lookup"><span data-stu-id="98d87-140">Security and Serialization</span></span>](../../../docs/framework/misc/security-and-serialization.md)  
+ <span data-ttu-id="98d87-141">Describe las instrucciones de la codificación seguras que hay que seguir al escribir el código que realiza la serialización.</span><span class="sxs-lookup"><span data-stu-id="98d87-141">Describes the secure coding guidelines to follow when writing code that performs serialization.</span></span>  
   
- [Objetos remotos](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
- Describe los diversos métodos de comunicaciones disponibles en .NET Framework para las comunicaciones remotas.  
+ [<span data-ttu-id="98d87-142">Objetos remotos</span><span class="sxs-lookup"><span data-stu-id="98d87-142">Remote Objects</span></span>](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ <span data-ttu-id="98d87-143">Describe los diversos métodos de comunicaciones disponibles en .NET Framework para las comunicaciones remotas.</span><span class="sxs-lookup"><span data-stu-id="98d87-143">Describes the various communications methods available in the .NET Framework for remote communications.</span></span>  
   
- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
- Proporciona los temas que describen y explican cómo programar los servicios Web XML creados utilizando ASP.NET.
-
+ [<span data-ttu-id="98d87-144">Servicios Web XML creados con ASP.NET y clientes de servicio Web XML</span><span class="sxs-lookup"><span data-stu-id="98d87-144">XML Web Services Created Using ASP.NET and XML Web Service Clients</span></span>](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ <span data-ttu-id="98d87-145">Proporciona los temas que describen y explican cómo programar los servicios Web XML creados utilizando ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="98d87-145">Provides topics that describe and explain how to program XML Web services created using ASP.NET.</span></span>

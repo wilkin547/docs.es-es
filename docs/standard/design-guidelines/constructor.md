@@ -1,93 +1,91 @@
 ---
-title: "Dise&#241;o de constructores | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "instrucciones de diseño de miembro, constructores"
-  - "constructores, instrucciones de diseño"
-  - "constructores de instancias"
-  - "constructores de tipos"
-  - "miembros virtuales"
-  - "constructores de tipos"
-  - "constructores predeterminados"
-  - "Static (constructores)"
+title: "Diseño de constructores"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- member design guidelines, constructors
+- constructors, design guidelines
+- instance constructors
+- type constructors
+- virtual members
+- constructors, types
+- default constructors
+- static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a46bf111b76ef6d07fa99cc3b19684a0726b7062
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Dise&#241;o de constructores
-Hay dos tipos de constructores: escriba constructores y los constructores de instancia.  
+# <a name="constructor-design"></a><span data-ttu-id="1c335-102">Diseño de constructores</span><span class="sxs-lookup"><span data-stu-id="1c335-102">Constructor Design</span></span>
+<span data-ttu-id="1c335-103">Hay dos tipos de constructores: escriba constructores y los constructores de instancia.</span><span class="sxs-lookup"><span data-stu-id="1c335-103">There are two kinds of constructors: type constructors and instance constructors.</span></span>  
   
- Constructores de tipos son estáticos y se ejecutan en el CLR antes de utilizar el tipo. Los constructores de instancia se ejecutan cuando se crea una instancia de un tipo.  
+ <span data-ttu-id="1c335-104">Constructores de tipos son estáticos y se ejecutan mediante CLR antes de que se utiliza el tipo.</span><span class="sxs-lookup"><span data-stu-id="1c335-104">Type constructors are static and are run by the CLR before the type is used.</span></span> <span data-ttu-id="1c335-105">Constructores de instancias se ejecutan cuando se crea una instancia de un tipo.</span><span class="sxs-lookup"><span data-stu-id="1c335-105">Instance constructors run when an instance of a type is created.</span></span>  
   
- Constructores de tipos no toman ningún parámetro. Constructores de instancias pueden. Constructores de instancias que no toman ningún parámetro suelen denominarse constructores predeterminados.  
+ <span data-ttu-id="1c335-106">Constructores de tipo no toman ningún parámetro.</span><span class="sxs-lookup"><span data-stu-id="1c335-106">Type constructors cannot take any parameters.</span></span> <span data-ttu-id="1c335-107">Constructores de instancias pueden.</span><span class="sxs-lookup"><span data-stu-id="1c335-107">Instance constructors can.</span></span> <span data-ttu-id="1c335-108">Constructores de instancias que no toman ningún parámetro a menudo se denominan constructores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="1c335-108">Instance constructors that don’t take any parameters are often called default constructors.</span></span>  
   
- Los constructores son la forma más natural para crear instancias de un tipo. La mayoría de los desarrolladores buscará y pruebe a utilizar un constructor antes de que consideren formas alternativas de creación de instancias \(por ejemplo, los métodos de fábrica\).  
+ <span data-ttu-id="1c335-109">Los constructores son la forma más natural para crear instancias de un tipo.</span><span class="sxs-lookup"><span data-stu-id="1c335-109">Constructors are the most natural way to create instances of a type.</span></span> <span data-ttu-id="1c335-110">Mayoría de los desarrolladores buscará y pruebe a utilizar un constructor antes de que consideren formas alternativas de creación de instancias (por ejemplo, los métodos de fábrica).</span><span class="sxs-lookup"><span data-stu-id="1c335-110">Most developers will search and try to use a constructor before they consider alternative ways of creating instances (such as factory methods).</span></span>  
   
- **✓ considere** proporcionar simple, idealmente predeterminados, los constructores.  
+ <span data-ttu-id="1c335-111">**✓ Considere la posibilidad de** proporcionar simple, lo ideal es que el valor predeterminado, constructores.</span><span class="sxs-lookup"><span data-stu-id="1c335-111">**✓ CONSIDER** providing simple, ideally default, constructors.</span></span>  
   
- Un constructor sencillo tiene un número muy pequeño de parámetros y todos los parámetros son tipos primitivos o enumeraciones. Estos constructores simples aumentan la usabilidad de framework.  
+ <span data-ttu-id="1c335-112">Un constructor simple tiene un número muy pequeño de parámetros y todos los parámetros son tipos primitivos o enumeraciones.</span><span class="sxs-lookup"><span data-stu-id="1c335-112">A simple constructor has a very small number of parameters, and all parameters are primitives or enums.</span></span> <span data-ttu-id="1c335-113">Estos constructores simples aumentan la usabilidad de framework.</span><span class="sxs-lookup"><span data-stu-id="1c335-113">Such simple constructors increase usability of the framework.</span></span>  
   
- **✓, considere la posibilidad de** mediante un método de generador estático en lugar de un constructor si la semántica de la operación deseada no se asigna directamente a la construcción de una nueva instancia, o si no parece natural seguir las instrucciones de diseño de constructor.  
+ <span data-ttu-id="1c335-114">**✓ Considere la posibilidad de** mediante un método de generador estático en lugar de un constructor si la semántica de la operación deseada no se asigna directamente a la construcción de una nueva instancia, o si no parece natural siguiendo las directrices de diseño del constructor.</span><span class="sxs-lookup"><span data-stu-id="1c335-114">**✓ CONSIDER** using a static factory method instead of a constructor if the semantics of the desired operation do not map directly to the construction of a new instance, or if following the constructor design guidelines feels unnatural.</span></span>  
   
- **✓ hacer** utilizar parámetros de constructor como accesos directos para establecer las propiedades principales.  
+ <span data-ttu-id="1c335-115">**✓ HACER** usar los parámetros de constructor como accesos directos para establecer las propiedades principales.</span><span class="sxs-lookup"><span data-stu-id="1c335-115">**✓ DO** use constructor parameters as shortcuts for setting main properties.</span></span>  
   
- No debería haber ninguna diferencia semántica entre utilizando el constructor vacío seguido de algunos conjuntos de propiedades y utilizando un constructor con varios argumentos.  
+ <span data-ttu-id="1c335-116">No debería haber ninguna diferencia semántica entre usando el constructor vacío seguido por algunos conjuntos de propiedades y utilizando un constructor con varios argumentos.</span><span class="sxs-lookup"><span data-stu-id="1c335-116">There should be no difference in semantics between using the empty constructor followed by some property sets and using a constructor with multiple arguments.</span></span>  
   
- **✓ hacer** utilizar el mismo nombre para los parámetros de constructor y una propiedad si los parámetros de constructor se utilizan simplemente para establecer la propiedad.  
+ <span data-ttu-id="1c335-117">**✓ HACER** utilizar el mismo nombre para los parámetros de constructor y una propiedad si los parámetros del constructor se utilizan simplemente para establecer la propiedad.</span><span class="sxs-lookup"><span data-stu-id="1c335-117">**✓ DO** use the same name for constructor parameters and a property if the constructor parameters are used to simply set the property.</span></span>  
   
- La única diferencia entre estos parámetros y las propiedades debería ser la grafía.  
+ <span data-ttu-id="1c335-118">La única diferencia entre estos parámetros y las propiedades debe ser las mayúsculas y minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1c335-118">The only difference between such parameters and the properties should be casing.</span></span>  
   
- **✓ hacer** un trabajo mínimo en el constructor.  
+ <span data-ttu-id="1c335-119">**✓ HACER** un trabajo mínimo en el constructor.</span><span class="sxs-lookup"><span data-stu-id="1c335-119">**✓ DO** minimal work in the constructor.</span></span>  
   
- Constructores no deberían hacer mucho trabajo que no sea la captura de los parámetros del constructor. El costo de cualquier otro procesamiento se debería retrasar hasta que sean necesarios.  
+ <span data-ttu-id="1c335-120">Constructores no deberían hacer mucho trabajo que no sea de captura de los parámetros del constructor.</span><span class="sxs-lookup"><span data-stu-id="1c335-120">Constructors should not do much work other than capture the constructor parameters.</span></span> <span data-ttu-id="1c335-121">El costo de cualquier otro procesamiento se debería retrasar hasta que requiere.</span><span class="sxs-lookup"><span data-stu-id="1c335-121">The cost of any other processing should be delayed until required.</span></span>  
   
- **✓ hacer** iniciar excepciones desde los constructores de instancia, si procede.  
+ <span data-ttu-id="1c335-122">**✓ HACER** genere excepciones desde los constructores de instancia, si procede.</span><span class="sxs-lookup"><span data-stu-id="1c335-122">**✓ DO** throw exceptions from instance constructors, if appropriate.</span></span>  
   
- **✓ hacer** declarar explícitamente el constructor predeterminado público en clases, si se requiere un constructor de ese tipo.  
+ <span data-ttu-id="1c335-123">**✓ HACER** declarar explícitamente el constructor predeterminado público en clases, si se requiere un constructor de ese tipo.</span><span class="sxs-lookup"><span data-stu-id="1c335-123">**✓ DO** explicitly declare the public default constructor in classes, if such a constructor is required.</span></span>  
   
- Si no se declara explícitamente ningún constructor en un tipo, muchos lenguajes \(como C\#\) agregará automáticamente un constructor predeterminado público. \(Las clases abstractas obtener un constructor protegido\).  
+ <span data-ttu-id="1c335-124">Si no se declara explícitamente ningún constructor en un tipo, muchos lenguajes (por ejemplo, C#) agregará automáticamente un constructor predeterminado público.</span><span class="sxs-lookup"><span data-stu-id="1c335-124">If you don’t explicitly declare any constructors on a type, many languages (such as C#) will automatically add a public default constructor.</span></span> <span data-ttu-id="1c335-125">(Las clases abstractas obtener un constructor protegido).</span><span class="sxs-lookup"><span data-stu-id="1c335-125">(Abstract classes get a protected constructor.)</span></span>  
   
- Agregando un constructor con parámetros a una clase, evita que el compilador agregue el constructor predeterminado. A menudo, esto provoca cambios accidentales.  
+ <span data-ttu-id="1c335-126">Agregar un constructor con parámetros a una clase, impide que el compilador agregue el constructor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="1c335-126">Adding a parameterized constructor to a class prevents the compiler from adding the default constructor.</span></span> <span data-ttu-id="1c335-127">Esto hace que a menudo cambios accidentales.</span><span class="sxs-lookup"><span data-stu-id="1c335-127">This often causes accidental breaking changes.</span></span>  
   
- **Evitar X** define explícitamente los constructores predeterminados en estructuras.  
+ <span data-ttu-id="1c335-128">**X evitar** la definición explícita de constructores predeterminados en estructuras.</span><span class="sxs-lookup"><span data-stu-id="1c335-128">**X AVOID** explicitly defining default constructors on structs.</span></span>  
   
- Esto acelera la creación de una matriz, porque si no se define el constructor predeterminado, no tiene que ejecutarse en todas las ranuras de la matriz. Tenga en cuenta que muchos compiladores, incluido C\# no permite que las estructuras tienen constructores sin parámetros para ello.  
+ <span data-ttu-id="1c335-129">Esto acelera la creación de una matriz, porque si no se define el constructor predeterminado, no tiene que ejecutarse en todas las ranuras de la matriz.</span><span class="sxs-lookup"><span data-stu-id="1c335-129">This makes array creation faster, because if the default constructor is not defined, it does not have to be run on every slot in the array.</span></span> <span data-ttu-id="1c335-130">Tenga en cuenta que muchos compiladores, incluyendo C#, no permiten las estructuras que tienen constructores sin parámetros por esta razón.</span><span class="sxs-lookup"><span data-stu-id="1c335-130">Note that many compilers, including C#, don’t allow structs to have parameterless constructors for this reason.</span></span>  
   
- **Evitar X** al llamar a miembros virtuales en un objeto dentro de su constructor.  
+ <span data-ttu-id="1c335-131">**X evitar** al llamar a los miembros virtuales en un objeto dentro de su constructor.</span><span class="sxs-lookup"><span data-stu-id="1c335-131">**X AVOID** calling virtual members on an object inside its constructor.</span></span>  
   
- Llamar a un miembro virtual provocará el reemplazo más derivado que se llame, incluso si el constructor del tipo más derivado no ha sido totalmente ejecutado todavía.  
+ <span data-ttu-id="1c335-132">Llamar a un miembro virtual hará que la invalidación más derivada llamarlo, incluso si el constructor del tipo más derivado no ha sido totalmente ejecutado todavía.</span><span class="sxs-lookup"><span data-stu-id="1c335-132">Calling a virtual member will cause the most derived override to be called, even if the constructor of the most derived type has not been fully run yet.</span></span>  
   
-### Instrucciones de Constructor de tipos  
- **✓ hacer** hacer privado constructores estáticos.  
+### <a name="type-constructor-guidelines"></a><span data-ttu-id="1c335-133">Directrices de Constructor de tipo</span><span class="sxs-lookup"><span data-stu-id="1c335-133">Type Constructor Guidelines</span></span>  
+ <span data-ttu-id="1c335-134">**✓ HACER** hacer privado static (constructores).</span><span class="sxs-lookup"><span data-stu-id="1c335-134">**✓ DO** make static constructors private.</span></span>  
   
- Un constructor estático, también denominado constructor de clase, se utiliza para inicializar un tipo. CLR llama al constructor estático antes de crea la primera instancia del tipo o se llama a cualquier miembro estático en ese tipo. El usuario no tiene ningún control sobre cuándo se llama al constructor estático. Si un constructor estático no es privado, se puede llamar mediante código distinto de CLR. Dependiendo de las operaciones realizadas en el constructor, esto puede provocar un comportamiento inesperado. El compilador de C\# fuerza constructores estáticos sea privada.  
+ <span data-ttu-id="1c335-135">Un constructor estático, que también se denomina un constructor de clase, se utiliza para inicializar un tipo.</span><span class="sxs-lookup"><span data-stu-id="1c335-135">A static constructor, also called a class constructor, is used to initialize a type.</span></span> <span data-ttu-id="1c335-136">CLR llama al constructor estático antes de crear la primera instancia del tipo o se llama a cualquier miembro estático en ese tipo.</span><span class="sxs-lookup"><span data-stu-id="1c335-136">The CLR calls the static constructor before the first instance of the type is created or any static members on that type are called.</span></span> <span data-ttu-id="1c335-137">El usuario no tiene ningún control sobre cuándo se llama al constructor estático.</span><span class="sxs-lookup"><span data-stu-id="1c335-137">The user has no control over when the static constructor is called.</span></span> <span data-ttu-id="1c335-138">Si un constructor estático no es privado, se puede llamar mediante código que no sea de CLR.</span><span class="sxs-lookup"><span data-stu-id="1c335-138">If a static constructor is not private, it can be called by code other than the CLR.</span></span> <span data-ttu-id="1c335-139">Dependiendo de las operaciones realizadas en el constructor, esto puede provocar un comportamiento inesperado.</span><span class="sxs-lookup"><span data-stu-id="1c335-139">Depending on the operations performed in the constructor, this can cause unexpected behavior.</span></span> <span data-ttu-id="1c335-140">El compilador de C# fuerza constructores estáticos a ser privado.</span><span class="sxs-lookup"><span data-stu-id="1c335-140">The C# compiler forces static constructors to be private.</span></span>  
   
- **X no** iniciar excepciones desde los constructores estáticos.  
+ <span data-ttu-id="1c335-141">**X DO NOT** genere excepciones desde constructores estáticos.</span><span class="sxs-lookup"><span data-stu-id="1c335-141">**X DO NOT** throw exceptions from static constructors.</span></span>  
   
- Si se produce una excepción desde un constructor de tipo, el tipo no es utilizable en el dominio de aplicación actual.  
+ <span data-ttu-id="1c335-142">Si se produce una excepción desde un constructor de tipo, el tipo no es utilizable en el dominio de aplicación actual.</span><span class="sxs-lookup"><span data-stu-id="1c335-142">If an exception is thrown from a type constructor, the type is not usable in the current application domain.</span></span>  
   
- **✓ considere** inicializar campos estáticos en línea en lugar de utilizar explícitamente constructores estáticos, como el tiempo de ejecución se puede optimizar el rendimiento de los tipos que no tienen un constructor estático definido explícitamente.  
+ <span data-ttu-id="1c335-143">**Considere la posibilidad de ✓** inicializar campos estáticos en línea, en lugar de utilizar explícitamente constructores estáticos, como el tiempo de ejecución se puede optimizar el rendimiento de tipos que no tienen un constructor estático definido explícitamente.</span><span class="sxs-lookup"><span data-stu-id="1c335-143">**✓ CONSIDER** initializing static fields inline rather than explicitly using static constructors, because the runtime is able to optimize the performance of types that don’t have an explicitly defined static constructor.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="1c335-144">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="1c335-144">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="1c335-145">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="1c335-145">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="1c335-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="1c335-146">See Also</span></span>  
+ [<span data-ttu-id="1c335-147">Instrucciones de diseño de miembros</span><span class="sxs-lookup"><span data-stu-id="1c335-147">Member Design Guidelines</span></span>](../../../docs/standard/design-guidelines/member.md)  
+ [<span data-ttu-id="1c335-148">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1c335-148">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

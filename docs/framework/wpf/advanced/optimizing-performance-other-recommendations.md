@@ -1,88 +1,94 @@
 ---
-title: "Optimizar el rendimiento: Otras recomendaciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pinceles, rendimiento"
-  - "objetos de pruebas de posicionamiento [WPF]"
-  - "opacidad"
-  - "ScrollBarVisibility (enumeración)"
-  - "representar Terminal Services"
+title: 'Optimizar el rendimiento: Otras recomendaciones'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Terminal Services rendering [WPF]
+- opacity [WPF]
+- hit-test objects [WPF]
+- ScrollBarVisibility enumeration [WPF]
+- brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eda112db6dd977b6ef25a1b3a9ae40349d3a045f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Optimizar el rendimiento: Otras recomendaciones
-<a name="introduction"></a> En este tema se proporcionan recomendaciones de rendimiento además de las que se abordan en los temas de la sección [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).  
+# <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="67292-102">Optimizar el rendimiento: Otras recomendaciones</span><span class="sxs-lookup"><span data-stu-id="67292-102">Optimizing Performance: Other Recommendations</span></span>
+<span data-ttu-id="67292-103"><a name="introduction"></a> En este tema se proporcionan recomendaciones de rendimiento, además de las que se incluyen en los temas de la sección [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).</span><span class="sxs-lookup"><span data-stu-id="67292-103"><a name="introduction"></a> This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
   
- Este tema contiene las siguientes secciones:  
+ <span data-ttu-id="67292-104">Este tema contiene las siguientes secciones:</span><span class="sxs-lookup"><span data-stu-id="67292-104">This topic contains the following sections:</span></span>  
   
--   [Opacidad en los pinceles comparada con opacidad en los elementos](#Opacity)  
+-   [<span data-ttu-id="67292-105">Opacidad en pinceles frente a opacidad en elementos</span><span class="sxs-lookup"><span data-stu-id="67292-105">Opacity on Brushes Versus Opacity on Elements</span></span>](#Opacity)  
   
--   [Navegación hasta un objeto](#Navigation_Objects)  
+-   [<span data-ttu-id="67292-106">Navegación al objeto</span><span class="sxs-lookup"><span data-stu-id="67292-106">Navigation to Object</span></span>](#Navigation_Objects)  
   
--   [Pruebas de posicionamiento en superficies 3D de gran tamaño](#Hit_Testing)  
+-   [<span data-ttu-id="67292-107">Comprobación de visitas en superficies 3D de gran tamaño</span><span class="sxs-lookup"><span data-stu-id="67292-107">Hit Testing on Large 3D Surfaces</span></span>](#Hit_Testing)  
   
--   [Evento CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
+-   [<span data-ttu-id="67292-108">Evento CompositionTarget.Rendering</span><span class="sxs-lookup"><span data-stu-id="67292-108">CompositionTarget.Rendering Event</span></span>](#CompositionTarget_Rendering_Event)  
   
--   [Evitar el uso de ScrollBarVisibility\=Auto](#Avoid_Using_ScrollBarVisibility)  
+-   [<span data-ttu-id="67292-109">Evitar usar ScrollBarVisibility=Auto</span><span class="sxs-lookup"><span data-stu-id="67292-109">Avoid Using ScrollBarVisibility=Auto</span></span>](#Avoid_Using_ScrollBarVisibility)  
   
--   [Configurar el servicio de almacenamiento en memoria caché de las fuentes para reducir el tiempo de inicio](#FontCache)  
+-   [<span data-ttu-id="67292-110">Configurar el servicio de caché de fuente para reducir el tiempo de inicio</span><span class="sxs-lookup"><span data-stu-id="67292-110">Configure Font Cache Service to Reduce Start-up Time</span></span>](#FontCache)  
   
 <a name="Opacity"></a>   
-## Opacidad en los pinceles comparada con opacidad en los elementos  
- Cuando se utiliza un objeto <xref:System.Windows.Media.Brush> para establecer la propiedad <xref:System.Windows.Shapes.Shape.Fill%2A> o <xref:System.Windows.Shapes.Shape.Stroke%2A> de un elemento, es mejor establecer el valor de <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=fullName> en lugar de la propiedad <xref:System.Windows.UIElement.Opacity%2A> del elemento.  Modificar la propiedad <xref:System.Windows.UIElement.Opacity%2A> de un elemento puede hacer que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cree una superficie temporal.  
+## <a name="opacity-on-brushes-versus-opacity-on-elements"></a><span data-ttu-id="67292-111">Opacidad en pinceles frente a opacidad en elementos</span><span class="sxs-lookup"><span data-stu-id="67292-111">Opacity on Brushes Versus Opacity on Elements</span></span>  
+ <span data-ttu-id="67292-112">Cuando se usa un <xref:System.Windows.Media.Brush> para establecer el <xref:System.Windows.Shapes.Shape.Fill%2A> o <xref:System.Windows.Shapes.Shape.Stroke%2A> de un elemento, es mejor establecer el <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType> valor en lugar de la configuración del elemento <xref:System.Windows.UIElement.Opacity%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="67292-112">When you use a <xref:System.Windows.Media.Brush> to set the <xref:System.Windows.Shapes.Shape.Fill%2A> or <xref:System.Windows.Shapes.Shape.Stroke%2A> of an element, it is better to set the <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType> value rather than the setting the element's <xref:System.Windows.UIElement.Opacity%2A> property.</span></span> <span data-ttu-id="67292-113">Modificar un elemento <xref:System.Windows.UIElement.Opacity%2A> propiedad puede provocar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para crear una superficie temporal.</span><span class="sxs-lookup"><span data-stu-id="67292-113">Modifying an element's <xref:System.Windows.UIElement.Opacity%2A> property can cause [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to create a temporary surface.</span></span>  
   
 <a name="Navigation_Objects"></a>   
-## Navegación hasta un objeto  
- El objeto <xref:System.Windows.Navigation.NavigationWindow> se deriva de la clase <xref:System.Windows.Window> y la extiende aportando compatibilidad de navegación de contenido, gracias, principalmente, a la adición de <xref:System.Windows.Navigation.NavigationService> y del diario.  Puede actualizar el área cliente de <xref:System.Windows.Navigation.NavigationWindow> especificando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] o un objeto.  En el ejemplo siguiente se muestran ambos métodos:  
+## <a name="navigation-to-object"></a><span data-ttu-id="67292-114">Navegación al objeto</span><span class="sxs-lookup"><span data-stu-id="67292-114">Navigation to Object</span></span>  
+ <span data-ttu-id="67292-115">El <xref:System.Windows.Navigation.NavigationWindow> objeto deriva de <xref:System.Windows.Window> y lo extiende con compatibilidad de navegación de contenido, principalmente agregando <xref:System.Windows.Navigation.NavigationService> y el diario.</span><span class="sxs-lookup"><span data-stu-id="67292-115">The <xref:System.Windows.Navigation.NavigationWindow> object derives from <xref:System.Windows.Window> and extends it with content navigation support, primarily by aggregating <xref:System.Windows.Navigation.NavigationService> and the journal.</span></span> <span data-ttu-id="67292-116">Puede actualizar el área de cliente de <xref:System.Windows.Navigation.NavigationWindow> especificando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] o un objeto.</span><span class="sxs-lookup"><span data-stu-id="67292-116">You can update the client area of <xref:System.Windows.Navigation.NavigationWindow> by specifying either a [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] or an object.</span></span> <span data-ttu-id="67292-117">En el ejemplo siguiente se muestran ambos métodos:</span><span class="sxs-lookup"><span data-stu-id="67292-117">The following sample shows both methods:</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
  [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
- Cada objeto <xref:System.Windows.Navigation.NavigationWindow> tiene un diario que graba el historial de navegación del usuario en esa ventana.  Uno de los propósitos del diario es permitir a los usuarios desandar sus pasos.  
+ <span data-ttu-id="67292-118">Cada <xref:System.Windows.Navigation.NavigationWindow> objeto tiene un diario que registra el historial de navegación del usuario en esa ventana.</span><span class="sxs-lookup"><span data-stu-id="67292-118">Each <xref:System.Windows.Navigation.NavigationWindow> object has a journal that records the user's navigation history in that window.</span></span> <span data-ttu-id="67292-119">Uno de los propósitos del diario es permitir que los usuarios vuelvan sobre sus pasos.</span><span class="sxs-lookup"><span data-stu-id="67292-119">One of the purposes of the journal is to allow users to retrace their steps.</span></span>  
   
- Cuando se navega mediante [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], el diario almacena sólo la referencia al [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  Esto significa que cada vez que se vuelve a visitar la página, se reconstruye dinámicamente, lo que puede tardar tiempo según complejidad de la página.  En este caso, el costo de almacenamiento en el diario es bajo, pero el tiempo de reconstitución de la página es potencialmente alto.  
+ <span data-ttu-id="67292-120">Cuando se navega mediante un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], el diario solo almacena la referencia [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].</span><span class="sxs-lookup"><span data-stu-id="67292-120">When you navigate using a [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], the journal stores only the [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] reference.</span></span> <span data-ttu-id="67292-121">Esto significa que, cada vez que vuelve a visitar la página, se reconstruye dinámicamente, lo que puede llevar mucho tiempo según la complejidad de la página.</span><span class="sxs-lookup"><span data-stu-id="67292-121">This means that each time you revisit the page, it is dynamically reconstructed, which may be time consuming depending on the complexity of the page.</span></span> <span data-ttu-id="67292-122">En este caso, el costo de almacenamiento del diario es bajo, pero el tiempo para reconstituir la página es potencialmente alto.</span><span class="sxs-lookup"><span data-stu-id="67292-122">In this case, the journal storage cost is low, but the time to reconstitute the page is potentially high.</span></span>  
   
- Cuando se navega mediante un objeto, el diario almacena el árbol visual completo del objeto.  Esto significa que cada vez que vuelve a visitar la página, se representa inmediatamente sin tener que reconstruirla.  En este caso, el costo de almacenamiento en el diario es alto, pero el tiempo de reconstitución de la página es bajo.  
+ <span data-ttu-id="67292-123">Al navegar con un objeto, el diario almacena todo el árbol visual del objeto.</span><span class="sxs-lookup"><span data-stu-id="67292-123">When you navigate using an object, the journal stores the entire visual tree of the object.</span></span> <span data-ttu-id="67292-124">Esto significa que, cada vez que vuelve a la página, se representa inmediatamente sin tener que reconstruirla.</span><span class="sxs-lookup"><span data-stu-id="67292-124">This means that each time you revisit the page, it renders immediately without having to be reconstructed.</span></span> <span data-ttu-id="67292-125">En este caso, el costo de almacenamiento del diario es alto, pero el tiempo para reconstituir la página es bajo.</span><span class="sxs-lookup"><span data-stu-id="67292-125">In this case, the journal storage cost is high, but the time to reconstitute the page is low.</span></span>  
   
- Cuando se utiliza el objeto <xref:System.Windows.Navigation.NavigationWindow>, es preciso tener presente cómo afecta la compatibilidad con el diario al rendimiento de la aplicación.  Para obtener más información, consulte [Información general sobre navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ <span data-ttu-id="67292-126">Cuando se usa el <xref:System.Windows.Navigation.NavigationWindow> de objeto, debe tener en cuenta cómo la compatibilidad de registro en diario afecta al rendimiento de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="67292-126">When you use the <xref:System.Windows.Navigation.NavigationWindow> object, you will need to keep in mind how the journaling support impacts your application's performance.</span></span> <span data-ttu-id="67292-127">Para obtener más información, consulte [Información general sobre navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="67292-127">For more information, see [Navigation Overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>  
   
 <a name="Hit_Testing"></a>   
-## Pruebas de posicionamiento en superficies 3D de gran tamaño  
- Las pruebas de posicionamiento en superficies 3D de gran tamaño es una operación que afecta intensamente al rendimiento por lo que se refiere al consumo de CPU.  Esto se cumple especialmente cuando la superficie 3D se anima.  Deshabilite las pruebas de posicionamiento en estas superficies si no las necesita.  Los objetos que se derivan de <xref:System.Windows.UIElement> pueden deshabilitar las pruebas de posicionamiento estableciendo la propiedad <xref:System.Windows.UIElement.IsHitTestVisible%2A> en `false`.  
+## <a name="hit-testing-on-large-3d-surfaces"></a><span data-ttu-id="67292-128">Comprobación de visitas en superficies 3D de gran tamaño</span><span class="sxs-lookup"><span data-stu-id="67292-128">Hit Testing on Large 3D Surfaces</span></span>  
+ <span data-ttu-id="67292-129">La comprobación de visitas en superficies 3D de gran tamaño es una operación muy intensiva de rendimiento en términos de consumo de CPU.</span><span class="sxs-lookup"><span data-stu-id="67292-129">Hit testing on large 3D surfaces is a very performance intensive operation in terms of CPU consumption.</span></span> <span data-ttu-id="67292-130">Esto es especialmente cierto cuando se anima la superficie 3D.</span><span class="sxs-lookup"><span data-stu-id="67292-130">This is especially true when the 3D surface is animating.</span></span> <span data-ttu-id="67292-131">Si no es necesario comprobar visitas en estas superficies, deshabilite la comprobación de visitas.</span><span class="sxs-lookup"><span data-stu-id="67292-131">If you do not require hit testing on these surfaces, then disable hit testing.</span></span> <span data-ttu-id="67292-132">Objetos que se derivan de <xref:System.Windows.UIElement> puede deshabilitar las pruebas de posicionamiento estableciendo la <xref:System.Windows.UIElement.IsHitTestVisible%2A> propiedad `false`.</span><span class="sxs-lookup"><span data-stu-id="67292-132">Objects that are derived from <xref:System.Windows.UIElement> can disable hit testing by setting the <xref:System.Windows.UIElement.IsHitTestVisible%2A> property to `false`.</span></span>  
   
 <a name="CompositionTarget_Rendering_Event"></a>   
-## Evento CompositionTarget.Rendering  
- El evento <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=fullName> hace que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se anime de manera continua.  Si utiliza este evento, desasócielo en cada oportunidad que se presente.  
+## <a name="compositiontargetrendering-event"></a><span data-ttu-id="67292-133">Evento CompositionTarget.Rendering</span><span class="sxs-lookup"><span data-stu-id="67292-133">CompositionTarget.Rendering Event</span></span>  
+ <span data-ttu-id="67292-134">El <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> provoca eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anime de manera continua.</span><span class="sxs-lookup"><span data-stu-id="67292-134">The <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> event causes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to continuously animate.</span></span> <span data-ttu-id="67292-135">Si usa este evento, desasócielo en cada oportunidad.</span><span class="sxs-lookup"><span data-stu-id="67292-135">If you use this event, detach it at every opportunity.</span></span>  
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
-## Evitar el uso de ScrollBarVisibility\=Auto  
- Siempre que sea posible, evite utilizar el valor <xref:System.Windows.Controls.ScrollBarVisibility?displayProperty=fullName> para las propiedades `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility`.  Estas propiedades se definen para los objetos <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer> y <xref:System.Windows.Controls.TextBox>, además de cómo propiedad adjunta del objeto <xref:System.Windows.Controls.ListBox>.  En su lugar, establezca <xref:System.Windows.Controls.ScrollBarVisibility> en <xref:System.Windows.Controls.ScrollBarVisibility>, <xref:System.Windows.Controls.ScrollBarVisibility> o <xref:System.Windows.Controls.ScrollBarVisibility>.  
+## <a name="avoid-using-scrollbarvisibilityauto"></a><span data-ttu-id="67292-136">Evitar usar ScrollBarVisibility=Auto</span><span class="sxs-lookup"><span data-stu-id="67292-136">Avoid Using ScrollBarVisibility=Auto</span></span>  
+ <span data-ttu-id="67292-137">Siempre que sea posible, evite utilizar el <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> valor para el `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility` propiedades.</span><span class="sxs-lookup"><span data-stu-id="67292-137">Whenever possible, avoid using the <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> value for the `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties.</span></span> <span data-ttu-id="67292-138">Estas propiedades se definen para <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>, y <xref:System.Windows.Controls.TextBox> objetos y como una propiedad adjunta para la <xref:System.Windows.Controls.ListBox> objeto.</span><span class="sxs-lookup"><span data-stu-id="67292-138">These properties are defined for <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>, and <xref:System.Windows.Controls.TextBox> objects, and as an attached property for the <xref:System.Windows.Controls.ListBox> object.</span></span> <span data-ttu-id="67292-139">En su lugar, establezca <xref:System.Windows.Controls.ScrollBarVisibility> a <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>, o <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.</span><span class="sxs-lookup"><span data-stu-id="67292-139">Instead, set <xref:System.Windows.Controls.ScrollBarVisibility> to <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>, or <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.</span></span>  
   
- El valor <xref:System.Windows.Controls.ScrollBarVisibility> es para casos de espacio limitado, en que las barras de desplazamiento sólo deben mostrarse cuando se necesiten.  Por ejemplo, puede ser útil utilizar este valor de <xref:System.Windows.Controls.ScrollBarVisibility> con un control <xref:System.Windows.Controls.ListBox> de 30 elementos, en oposición a un control <xref:System.Windows.Controls.TextBox> con centenares de líneas de texto.  
+ <span data-ttu-id="67292-140">El <xref:System.Windows.Controls.ScrollBarVisibility.Auto> valor está pensado para casos al espacio es limitado y solo se deben mostrar las barras de desplazamiento cuando sea necesario.</span><span class="sxs-lookup"><span data-stu-id="67292-140">The <xref:System.Windows.Controls.ScrollBarVisibility.Auto> value is intended for cases when space is limited and scrollbars should only be displayed when necessary.</span></span> <span data-ttu-id="67292-141">Por ejemplo, puede ser útil usar esto <xref:System.Windows.Controls.ScrollBarVisibility> valor con un <xref:System.Windows.Controls.ListBox> de 30 elementos en contraposición a un <xref:System.Windows.Controls.TextBox> con cientos de líneas de texto.</span><span class="sxs-lookup"><span data-stu-id="67292-141">For example, it may be useful to use this <xref:System.Windows.Controls.ScrollBarVisibility> value with a <xref:System.Windows.Controls.ListBox> of 30 items as opposed to a <xref:System.Windows.Controls.TextBox> with hundreds of lines of text.</span></span>  
   
 <a name="FontCache"></a>   
-## Configurar el servicio de almacenamiento en memoria caché de las fuentes para reducir el tiempo de inicio  
- El servicio [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Font Cache comparte los datos de fuentes entre las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  La primera aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que se ejecuta inicia este servicio aún no está en ejecución.  Si utiliza [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], puede establecer el servicio "[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Font Cache 3.0.0.0" de "Manual" \(el valor predeterminado\) a "Automático \(inicio retrasado\)" para reducir el tiempo de inicio de las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+## <a name="configure-font-cache-service-to-reduce-start-up-time"></a><span data-ttu-id="67292-142">Configurar el servicio de caché de fuente para reducir el tiempo de inicio</span><span class="sxs-lookup"><span data-stu-id="67292-142">Configure Font Cache Service to Reduce Start-up Time</span></span>  
+ <span data-ttu-id="67292-143">El servicio de caché de fuente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] comparte los datos de fuente entre aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="67292-143">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Font Cache service shares font data between [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.</span></span> <span data-ttu-id="67292-144">La primera aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que ejecuta inicia este servicio, si este no se está ejecutando.</span><span class="sxs-lookup"><span data-stu-id="67292-144">The first [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application you run starts this service if the service is not already running.</span></span> <span data-ttu-id="67292-145">Si está usando [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], puede establecer el servicio "[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Font Cache 3.0.0.0" de "Manual" (predeterminado) a "Automático (inicio retrasado)" para reducir el tiempo de arranque inicial de las aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="67292-145">If you are using [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], you can set the "[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Font Cache 3.0.0.0" service from "Manual" (the default) to "Automatic (Delayed Start)" to reduce the initial start-up time of [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.</span></span>  
   
-## Vea también  
- [Planear para mejorar el rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Aprovechar el hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [Imágenes y gráficos GDI\+](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Comportamiento de objetos](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Recursos de aplicación](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Sugerencias y trucos para animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a><span data-ttu-id="67292-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="67292-146">See Also</span></span>  
+ [<span data-ttu-id="67292-147">Planear para mejorar el rendimiento de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="67292-147">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="67292-148">Aprovechar el hardware</span><span class="sxs-lookup"><span data-stu-id="67292-148">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="67292-149">Presentación y diseño</span><span class="sxs-lookup"><span data-stu-id="67292-149">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="67292-150">Imágenes y gráficos 2D</span><span class="sxs-lookup"><span data-stu-id="67292-150">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="67292-151">Comportamiento de objetos</span><span class="sxs-lookup"><span data-stu-id="67292-151">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="67292-152">Recursos de la aplicación</span><span class="sxs-lookup"><span data-stu-id="67292-152">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="67292-153">Text</span><span class="sxs-lookup"><span data-stu-id="67292-153">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="67292-154">Enlace de datos</span><span class="sxs-lookup"><span data-stu-id="67292-154">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="67292-155">Sugerencias y trucos para animaciones</span><span class="sxs-lookup"><span data-stu-id="67292-155">Animation Tips and Tricks</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

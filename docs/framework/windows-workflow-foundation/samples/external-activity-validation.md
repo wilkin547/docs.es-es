@@ -1,43 +1,47 @@
 ---
-title: "Validar actividades externas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Validar actividades externas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e3fdc37e22bf06cdfdad3141af5657a1b20911a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Validar actividades externas
-Este ejemplo muestra cómo agregar la lógica de validación a una actividad integrada cuyo autor no es usted.La lógica de validación consiste en exigir que todas las actividades <xref:System.Activities.Statements.If> presentes en el flujo de trabajo tengan su propiedad <xref:System.Activities.Statements.If.Then%2A> establecida o su propiedad <xref:System.Activities.Statements.If.Else%2A> establecida.Además, la lógica de validación incluye la comprobación de que todas las actividades <xref:System.Activities.Statements.Pick> presentes en el flujo de trabajo tienen más de una bifurcación; si no es así, se genera una advertencia.  
+# <a name="external-activity-validation"></a><span data-ttu-id="b495c-102">Validar actividades externas</span><span class="sxs-lookup"><span data-stu-id="b495c-102">External Activity Validation</span></span>
+<span data-ttu-id="b495c-103">Este ejemplo muestra cómo agregar la lógica de validación a una actividad integrada cuyo autor no es usted.</span><span class="sxs-lookup"><span data-stu-id="b495c-103">This sample shows how to add validation logic to a built-in activity that you are not the author of.</span></span> <span data-ttu-id="b495c-104">La lógica de validación consiste en exigir que todas las actividades <xref:System.Activities.Statements.If> presentes en el flujo de trabajo tengan su propiedad <xref:System.Activities.Statements.If.Then%2A> establecida o su propiedad <xref:System.Activities.Statements.If.Else%2A> establecida.</span><span class="sxs-lookup"><span data-stu-id="b495c-104">The validation logic consists of enforcing that all <xref:System.Activities.Statements.If> activities present in the workflow either have their <xref:System.Activities.Statements.If.Then%2A> property set or their <xref:System.Activities.Statements.If.Else%2A> property set.</span></span> <span data-ttu-id="b495c-105">Además, la lógica de validación incluye la comprobación de que todas las actividades <xref:System.Activities.Statements.Pick> presentes en el flujo de trabajo tienen más de una bifurcación; si no es así, se genera una advertencia.</span><span class="sxs-lookup"><span data-stu-id="b495c-105">Also, the validation logic includes checking that all <xref:System.Activities.Statements.Pick> activities present in the workflow have more than one branch, and if that is not the case, a warning is generated.</span></span>  
   
-## Detalles del ejemplo  
- En este ejemplo se crea un flujo de trabajo con una instancia de cada actividad que se va a validar: la actividad <xref:System.Activities.Statements.If> y la actividad <xref:System.Activities.Statements.Pick>.Se crea un nuevo objeto <xref:System.Activities.Validation.Constraint> para cada comportamiento de validación.Las restricciones creadas en este ejemplo son `ConstraintError_IfShouldHaveThenOrElse` y `ConstraintWarning_PickHasOneBranch`.A continuación, estas restricciones se agregan a la colección `AdditionalConstraints` de una instancia <xref:System.Activities.Validation.ValidationSettings>.Por último, se llama al método `static`<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> de <xref:System.Activities.Validation.ActivityValidationServices> para validar las actividades del flujo de trabajo y el resultado de la validación se imprime en la consola.  
+## <a name="sample-details"></a><span data-ttu-id="b495c-106">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="b495c-106">Sample details</span></span>  
+ <span data-ttu-id="b495c-107">En este ejemplo se crea un flujo de trabajo con una instancia de cada actividad que se va a validar: la actividad <xref:System.Activities.Statements.If> y la actividad <xref:System.Activities.Statements.Pick>.</span><span class="sxs-lookup"><span data-stu-id="b495c-107">This sample creates a workflow with an instance of each activity to validate: the <xref:System.Activities.Statements.If> activity and the <xref:System.Activities.Statements.Pick> activity.</span></span> <span data-ttu-id="b495c-108">Se crea un nuevo objeto <xref:System.Activities.Validation.Constraint> para cada comportamiento de validación.</span><span class="sxs-lookup"><span data-stu-id="b495c-108">A <xref:System.Activities.Validation.Constraint> is created for each validation behavior.</span></span> <span data-ttu-id="b495c-109">Las restricciones creadas en este ejemplo son `ConstraintError_IfShouldHaveThenOrElse` y `ConstraintWarning_PickHasOneBranch`.</span><span class="sxs-lookup"><span data-stu-id="b495c-109">The constraints created in this sample are `ConstraintError_IfShouldHaveThenOrElse` and `ConstraintWarning_PickHasOneBranch`.</span></span> <span data-ttu-id="b495c-110">A continuación, estas restricciones se agregan a la colección `AdditionalConstraints` de una instancia <xref:System.Activities.Validation.ValidationSettings>.</span><span class="sxs-lookup"><span data-stu-id="b495c-110">Next, these constraints are added to the `AdditionalConstraints` collection of a <xref:System.Activities.Validation.ValidationSettings> instance.</span></span> <span data-ttu-id="b495c-111">Por último, se llama al método `static`<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> de <xref:System.Activities.Validation.ActivityValidationServices> para validar las actividades del flujo de trabajo y el resultado de la validación se imprime en la consola.</span><span class="sxs-lookup"><span data-stu-id="b495c-111">Finally, the `static`<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> method of <xref:System.Activities.Validation.ActivityValidationServices> is called to validate the activities in the workflow and the validation results are printed out to the console.</span></span>  
   
 > [!NOTE]
->  Puede agregar restricciones de directiva a cualquier actividad.Por ejemplo, puede agregar una restricción de directiva a una actividad <xref:System.Activities.Statements.Sequence> o <xref:System.Activities.Statements.Parallel>.  
+>  <span data-ttu-id="b495c-112">Puede agregar restricciones de directiva a cualquier actividad.</span><span class="sxs-lookup"><span data-stu-id="b495c-112">You can add policy constraints to any activity.</span></span> <span data-ttu-id="b495c-113">Por ejemplo, puede agregar una restricción de directiva a una actividad <xref:System.Activities.Statements.Sequence> o <xref:System.Activities.Statements.Parallel>.</span><span class="sxs-lookup"><span data-stu-id="b495c-113">For example, you can add a policy constraint to a <xref:System.Activities.Statements.Sequence> or <xref:System.Activities.Statements.Parallel> activity.</span></span>  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="b495c-114">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="b495c-114">To use this sample</span></span>  
   
-1.  Abra el archivo ExternalActivityValidation.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="b495c-115">Abra el archivo ExternalActivityValidation.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b495c-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ExternalActivityValidation.sln file.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="b495c-116">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="b495c-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Presione Ctrl \+ F5 para ejecutar la solución.  
+3.  <span data-ttu-id="b495c-117">Presione Ctrl + F5 para ejecutar la solución.</span><span class="sxs-lookup"><span data-stu-id="b495c-117">To run the solution, press Ctrl+F5.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="b495c-118">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="b495c-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b495c-119">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="b495c-119">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="b495c-120">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b495c-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b495c-121">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="b495c-121">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Validation\ExternalActivityValidation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ExternalActivityValidation`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="b495c-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="b495c-122">See Also</span></span>

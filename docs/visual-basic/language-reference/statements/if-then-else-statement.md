@@ -1,45 +1,44 @@
 ---
-title: "Instrucci&#243;n If...Then...Else (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ElseIf"
-  - "vb.Then"
-  - "vb.If"
-  - "vb.EndIf"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "bifurcación, condicional"
-  - "flujo de control, bifurcación"
-  - "Else (instrucción) [Visual Basic]"
-  - "ElseIf (instrucción), If...Then...Else"
-  - "ejecución, condicional"
-  - "If (operador) [Visual Basic]"
-  - "If (instrucción)"
-  - "If (instrucción), If...Then...Else"
-  - "If...Then...Else (instrucciones)"
-  - "IIf (función), e instrucciones If...Then...Else"
-  - "Is (operador) [Visual Basic], en instrucciones If...Then...Else"
-  - "Then (instrucción), If...Then...Else"
-  - "TypeOf...Is (expresión), e instrucciones If...Then...Else"
+title: "Instrucción If...Then...Else (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ElseIf
+- vb.Then
+- vb.If
+- vb.EndIf
+helpviewer_keywords:
+- ElseIf statement [Visual Basic], If...Then...Else
+- Then statement [Visual Basic], If...Then...Else
+- control flow [Visual Basic], branching
+- execution [Visual Basic], conditional
+- TypeOf...Is expression, and If...Then...Else statements
+- If...Then...Else statements
+- If statement [Visual Basic], If...Then...Else
+- If statement [Visual Basic]
+- Is operator [Visual Basic], in If...Then...Else statements
+- If Operator [Visual Basic]
+- branching [Visual Basic], conditional
+- If function [Visual Basic], and If...Then...Else statements
+- Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-caps.latest.revision: 29
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 898b72055345e88ca35f805de211c0c57cd74200
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Instrucci&#243;n If...Then...Else (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Ejecuta condicionalmente un grupo de instrucciones en función del valor de una expresión.  
+# <a name="ifthenelse-statement-visual-basic"></a><span data-ttu-id="5300b-102">Instrucción If...Then...Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5300b-102">If...Then...Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="5300b-103">Ejecuta condicionalmente un grupo de instrucciones en función del valor de una expresión.</span><span class="sxs-lookup"><span data-stu-id="5300b-103">Conditionally executes a group of statements, depending on the value of an expression.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="5300b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5300b-104">Syntax</span></span>  
   
 ```  
 ' Multiple-line syntax:  
@@ -55,70 +54,70 @@ End If
 If condition Then [ statements ] [ Else [ elsestatements ] ]  
 ```  
   
-## Elementos  
+## <a name="parts"></a><span data-ttu-id="5300b-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="5300b-105">Parts</span></span>  
  `condition`  
- Requerido.  Expresión.  Debe evaluarse en `True` o `False`, o en un tipo de datos que sea implícitamente convertible a `Boolean`.  
+ <span data-ttu-id="5300b-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="5300b-106">Required.</span></span> <span data-ttu-id="5300b-107">Expresión.</span><span class="sxs-lookup"><span data-stu-id="5300b-107">Expression.</span></span> <span data-ttu-id="5300b-108">Se debe evaluar como `True` o `False`, o a un tipo de datos que es implícitamente convertible a `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="5300b-108">Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.</span></span>  
   
- Si la expresión es una variable [Valores NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` que evalúa [Nada](../../../visual-basic/language-reference/nothing.md), se trata la condición como si la expresión no es `True`, y ejecuta el bloque `Else` .  
+ <span data-ttu-id="5300b-109">Si la expresión es un [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` variable que se evalúa como [nada](../../../visual-basic/language-reference/nothing.md), la condición se trata como si la expresión no es `True`y el `Else` bloque es ejecutar.</span><span class="sxs-lookup"><span data-stu-id="5300b-109">If the expression is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the condition is treated as if the expression is not `True`, and the `Else` block is executed.</span></span>  
   
  `Then`  
- Obligatorio en la sintaxis de una línea, opcional en la sintaxis de varias líneas.  
+ <span data-ttu-id="5300b-110">Requerido en la sintaxis de línea; opcional en la sintaxis de varias líneas.</span><span class="sxs-lookup"><span data-stu-id="5300b-110">Required in the single-line syntax; optional in the multiple-line syntax.</span></span>  
   
  `statements`  
- Opcional.  Se ejecutan una o más instrucciones que siguen a `If`...`Then` que se ejecutan si `condition` se evalúa como `True`.  
+ <span data-ttu-id="5300b-111">Opcional.</span><span class="sxs-lookup"><span data-stu-id="5300b-111">Optional.</span></span> <span data-ttu-id="5300b-112">Uno o más instrucciones que siguen `If`... `Then` que se ejecutan si `condition` se evalúa como `True`.</span><span class="sxs-lookup"><span data-stu-id="5300b-112">One or more statements following `If`...`Then` that are executed if `condition` evaluates to `True`.</span></span>  
   
  `elseifcondition`  
- Obligatorio si `ElseIf` está presente.  Expresión.  Debe evaluarse en `True` o `False`, o en un tipo de datos que sea implícitamente convertible a `Boolean`.  
+ <span data-ttu-id="5300b-113">Obligatorio si `ElseIf` está presente.</span><span class="sxs-lookup"><span data-stu-id="5300b-113">Required if `ElseIf` is present.</span></span> <span data-ttu-id="5300b-114">Expresión.</span><span class="sxs-lookup"><span data-stu-id="5300b-114">Expression.</span></span> <span data-ttu-id="5300b-115">Se debe evaluar como `True` o `False`, o a un tipo de datos que es implícitamente convertible a `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="5300b-115">Must evaluate to `True` or `False`, or to a data type that is implicitly convertible to `Boolean`.</span></span>  
   
  `elseifstatements`  
- Opcional.  Se ejecutan una o más instrucciones que siguen a `ElseIf`...`Then` que se ejecutan si `elseifcondition` se evalúa como `True`.  
+ <span data-ttu-id="5300b-116">Opcional.</span><span class="sxs-lookup"><span data-stu-id="5300b-116">Optional.</span></span> <span data-ttu-id="5300b-117">Uno o más instrucciones que siguen `ElseIf`... `Then` que se ejecutan si `elseifcondition` se evalúa como `True`.</span><span class="sxs-lookup"><span data-stu-id="5300b-117">One or more statements following `ElseIf`...`Then` that are executed if `elseifcondition` evaluates to `True`.</span></span>  
   
  `elsestatements`  
- Opcional.  Una o más instrucciones que se ejecutan si ninguna expresión `condition` o `elseifcondition` anterior se evalúa como `True`.  
+ <span data-ttu-id="5300b-118">Opcional.</span><span class="sxs-lookup"><span data-stu-id="5300b-118">Optional.</span></span> <span data-ttu-id="5300b-119">Una o más instrucciones que se ejecutan si anterior ya no `condition` o `elseifcondition` expresión se evalúa como `True`.</span><span class="sxs-lookup"><span data-stu-id="5300b-119">One or more statements that are executed if no previous `condition` or `elseifcondition` expression evaluates to `True`.</span></span>  
   
  `End If`  
- Termina el bloque `If`...`Then`...`Else`.  
+ <span data-ttu-id="5300b-120">Finaliza el `If`... `Then`... `Else` bloque.</span><span class="sxs-lookup"><span data-stu-id="5300b-120">Terminates the `If`...`Then`...`Else` block.</span></span>  
   
-## Comentarios  
+## <a name="remarks"></a><span data-ttu-id="5300b-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5300b-121">Remarks</span></span>  
   
-## Sintaxis de varias líneas  
- Cuando se encuentra una instrucción `If`...`Then`...`Else`, se prueba `condition`.  Si `condition` es `True`, se ejecutan las instrucciones que están a continuación de `Then`.  Si `condition` es `False`, cada instrucción `ElseIf` \(si hay alguna\) se evalúa en orden.  Cuando se encuentra una `elseifcondition` que sea `True`, se ejecutan las instrucciones que siguen inmediatamente a la instrucción `ElseIf` asociada.  Si `elseifcondition` se evalúa como `True`, o si no hay ninguna instrucción `ElseIf`, se ejecutan las instrucciones situadas después de `Else`.  Después de la ejecución de las instrucciones que siguen a `Then`, `ElseIf` o `Else`, la ejecución continúa con la instrucción que sigue a `End If`.  
+## <a name="multiple-line-syntax"></a><span data-ttu-id="5300b-122">Sintaxis de varias líneas</span><span class="sxs-lookup"><span data-stu-id="5300b-122">Multiple-Line Syntax</span></span>  
+ <span data-ttu-id="5300b-123">Cuando un `If`... `Then`... `Else` se encuentra la instrucción, `condition` se ha probado.</span><span class="sxs-lookup"><span data-stu-id="5300b-123">When an `If`...`Then`...`Else` statement is encountered, `condition` is tested.</span></span> <span data-ttu-id="5300b-124">Si `condition` es `True`, las instrucciones que siguen `Then` se ejecutan.</span><span class="sxs-lookup"><span data-stu-id="5300b-124">If `condition` is `True`, the statements following `Then` are executed.</span></span> <span data-ttu-id="5300b-125">Si `condition` es `False`, cada `ElseIf` instrucción (si hay alguno) se evalúa en orden.</span><span class="sxs-lookup"><span data-stu-id="5300b-125">If `condition` is `False`, each `ElseIf` statement (if there are any) is evaluated in order.</span></span> <span data-ttu-id="5300b-126">Cuando un `True``elseifcondition` se encuentra, las instrucciones que siguen inmediatamente asociado `ElseIf` se ejecutan.</span><span class="sxs-lookup"><span data-stu-id="5300b-126">When a `True``elseifcondition` is found, the statements immediately following the associated `ElseIf` are executed.</span></span> <span data-ttu-id="5300b-127">Si no hay ningún `elseifcondition` se evalúa como `True`, o si no hay ningún `ElseIf` las instrucciones que siguen, instrucciones `Else` se ejecutan.</span><span class="sxs-lookup"><span data-stu-id="5300b-127">If no `elseifcondition` evaluates to `True`, or if there are no `ElseIf` statements, the statements following `Else` are executed.</span></span> <span data-ttu-id="5300b-128">Después de ejecutar las instrucciones que siguen `Then`, `ElseIf`, o `Else`, la ejecución continúa con la siguiente instrucción `End If`.</span><span class="sxs-lookup"><span data-stu-id="5300b-128">After executing the statements following `Then`, `ElseIf`, or `Else`, execution continues with the statement following `End If`.</span></span>  
   
- Las cláusulas `ElseIf` y `Else` son opcionales.  Puede tener tantas cláusulas `ElseIf` como desee en una instrucción `If`...`Then`...`Else`, pero no puede aparecer ninguna cláusula `ElseIf` después de una cláusula `Else`.  `If`...`Then`...`Else` las instrucciones se pueden anidar una dentro de otra.  
+ <span data-ttu-id="5300b-129">El `ElseIf` y `Else` cláusulas son opcionales.</span><span class="sxs-lookup"><span data-stu-id="5300b-129">The `ElseIf` and `Else` clauses are both optional.</span></span> <span data-ttu-id="5300b-130">Puede tener tantos `ElseIf` cláusulas como desee en un `If`... `Then`... `Else` instrucción, pero no `ElseIf` cláusula puede aparecer después de un `Else` cláusula.</span><span class="sxs-lookup"><span data-stu-id="5300b-130">You can have as many `ElseIf` clauses as you want in an `If`...`Then`...`Else` statement, but no `ElseIf` clause can appear after an `Else` clause.</span></span> <span data-ttu-id="5300b-131">`If`... `Then`... `Else` instrucciones pueden anidarse dentro de otros.</span><span class="sxs-lookup"><span data-stu-id="5300b-131">`If`...`Then`...`Else` statements can be nested within each other.</span></span>  
   
- Con la sintaxis de varias líneas, la instrucción `If` debe ser la única instrucción incluida en la primera línea.  Las instrucciones `ElseIf`, `Else` y `End If` pueden ir precedidas solamente por una etiqueta de línea.  El bloque `If`...`Then`...`Else` debe terminar con una instrucción `End If`.  
+ <span data-ttu-id="5300b-132">En la sintaxis de varias líneas, el `If` instrucción debe ser la única instrucción en la primera línea.</span><span class="sxs-lookup"><span data-stu-id="5300b-132">In the multiple-line syntax, the `If` statement must be the only statement on the first line.</span></span> <span data-ttu-id="5300b-133">El `ElseIf`, `Else`, y `End If` instrucciones pueden ir precedidas solamente por una etiqueta de línea.</span><span class="sxs-lookup"><span data-stu-id="5300b-133">The `ElseIf`, `Else`, and `End If` statements can be preceded only by a line label.</span></span> <span data-ttu-id="5300b-134">El `If`... `Then`... `Else` bloque debe terminar con un `End If` instrucción.</span><span class="sxs-lookup"><span data-stu-id="5300b-134">The `If`...`Then`...`Else` block must end with an `End If` statement.</span></span>  
   
 > [!TIP]
->  La [Select...Case \(Instrucción\)](../../../visual-basic/language-reference/statements/select-case-statement.md) puede ser más útil al evaluar una única expresión que tiene varios valores posibles.  
+>  <span data-ttu-id="5300b-135">El [seleccione... Caso instrucción](../../../visual-basic/language-reference/statements/select-case-statement.md) podrían ser más útiles cuando se evalúa una expresión única que tiene varios valores posibles.</span><span class="sxs-lookup"><span data-stu-id="5300b-135">The [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) might be more useful when you evaluate a single expression that has several possible values.</span></span>  
   
-## Sintaxis de una única línea  
- Puede utilizar la sintaxis de una sola línea para pruebas cortas y sencillas.  Sin embargo, la sintaxis de varias líneas proporciona más estructura y flexibilidad y, generalmente, es más fácil de leer, mantener y depurar.  
+## <a name="single-line-syntax"></a><span data-ttu-id="5300b-136">Sintaxis de línea</span><span class="sxs-lookup"><span data-stu-id="5300b-136">Single-Line Syntax</span></span>  
+ <span data-ttu-id="5300b-137">Puede utilizar la sintaxis de línea para pruebas cortas y sencillas.</span><span class="sxs-lookup"><span data-stu-id="5300b-137">You can use the single-line syntax for short, simple tests.</span></span> <span data-ttu-id="5300b-138">Sin embargo, la sintaxis de varias líneas proporciona más estructura y flexibilidad y normalmente es más fácil leer, mantener y depurar.</span><span class="sxs-lookup"><span data-stu-id="5300b-138">However, the multiple-line syntax provides more structure and flexibility and is usually easier to read, maintain, and debug.</span></span>  
   
- Lo que sigue a la palabra clave `Then` se examina para determinar si una declaración es un `If` de una sola línea.  Si aparece cualquier otra cosa que no sea un comentario después de `Then` en la misma línea, ésta se trata como una instrucción `If` de una sola línea.  Si no está presente `Then`, debe ser el comienzo de una instrucción `If`...`Then`...`Else` de varias líneas.  
+ <span data-ttu-id="5300b-139">A continuación el `Then` palabra clave se examina para determinar si la instrucción es una sola línea `If`.</span><span class="sxs-lookup"><span data-stu-id="5300b-139">What follows the `Then` keyword is examined to determine whether a statement is a single-line `If`.</span></span> <span data-ttu-id="5300b-140">Si algo distinto de un comentario aparece después de `Then` en la misma línea, la instrucción se trata como una sola línea `If` instrucción.</span><span class="sxs-lookup"><span data-stu-id="5300b-140">If anything other than a comment appears after `Then` on the same line, the statement is treated as a single-line `If` statement.</span></span> <span data-ttu-id="5300b-141">Si `Then` no está presente, debe ser el inicio de varias líneas `If`... `Then`... `Else`.</span><span class="sxs-lookup"><span data-stu-id="5300b-141">If `Then` is absent, it must be the start of a multiple-line `If`...`Then`...`Else`.</span></span>  
   
- En la sintaxis de una línea, puede que se ejecuten varias instrucciones como resultado de una decisión `If`...`Then`.  Todas las instrucciones deben estar en la misma línea y separarse con dos puntos.  
+ <span data-ttu-id="5300b-142">En la sintaxis de línea, puede tener varias instrucciones que se ejecuta como resultado de un `If`... `Then` decisión.</span><span class="sxs-lookup"><span data-stu-id="5300b-142">In the single-line syntax, you can have multiple statements executed as the result of an `If`...`Then` decision.</span></span> <span data-ttu-id="5300b-143">Todas las instrucciones deben estar en la misma línea y estar separadas por signos de dos puntos.</span><span class="sxs-lookup"><span data-stu-id="5300b-143">All statements must be on the same line and be separated by colons.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra el uso de la sintaxis de varias líneas de la instrucción `If`...`Then`...`Else`.  
+## <a name="example"></a><span data-ttu-id="5300b-144">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5300b-144">Example</span></span>  
+ <span data-ttu-id="5300b-145">En el ejemplo siguiente se muestra el uso de la sintaxis de varias líneas de la `If`... `Then`... `Else` instrucción.</span><span class="sxs-lookup"><span data-stu-id="5300b-145">The following example illustrates the use of the multiple-line syntax of the `If`...`Then`...`Else` statement.</span></span>  
   
  [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb)]  
   
-## Ejemplo  
- El ejemplo siguiente contiene instrucciones `If`...`Then`...`Else` anidadas.  
+## <a name="example"></a><span data-ttu-id="5300b-146">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5300b-146">Example</span></span>  
+ <span data-ttu-id="5300b-147">El ejemplo siguiente contiene anidada `If`... `Then`... `Else` instrucciones.</span><span class="sxs-lookup"><span data-stu-id="5300b-147">The following example contains nested `If`...`Then`...`Else` statements.</span></span>  
   
  [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb)]  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra el uso de la sintaxis de una única línea.  
+## <a name="example"></a><span data-ttu-id="5300b-148">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5300b-148">Example</span></span>  
+ <span data-ttu-id="5300b-149">En el ejemplo siguiente se muestra el uso de la sintaxis de línea.</span><span class="sxs-lookup"><span data-stu-id="5300b-149">The following example illustrates the use of the single-line syntax.</span></span>  
   
  [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb)]  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   
- <xref:Microsoft.VisualBasic.Interaction.Switch%2A>   
- [\#If...Then...\#Else \(Directivas\)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)   
- [Select...Case \(Instrucción\)](../../../visual-basic/language-reference/statements/select-case-statement.md)   
- [Estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Estructuras de decisión](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Operadores lógicos y bit a bit en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)   
- [If \(operador\)](../../../visual-basic/language-reference/operators/if-operator.md)
+## <a name="see-also"></a><span data-ttu-id="5300b-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="5300b-150">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
+ <xref:Microsoft.VisualBasic.Interaction.Switch%2A>  
+ [<span data-ttu-id="5300b-151">#If...Then...#Else (directivas)</span><span class="sxs-lookup"><span data-stu-id="5300b-151">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="5300b-152">Select...Case (instrucción)</span><span class="sxs-lookup"><span data-stu-id="5300b-152">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="5300b-153">Estructuras de control anidadas</span><span class="sxs-lookup"><span data-stu-id="5300b-153">Nested Control Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [<span data-ttu-id="5300b-154">Estructuras de decisión</span><span class="sxs-lookup"><span data-stu-id="5300b-154">Decision Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [<span data-ttu-id="5300b-155">Operadores lógicos y bit a bit en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5300b-155">Logical and Bitwise Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
+ [<span data-ttu-id="5300b-156">If (operador)</span><span class="sxs-lookup"><span data-stu-id="5300b-156">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)

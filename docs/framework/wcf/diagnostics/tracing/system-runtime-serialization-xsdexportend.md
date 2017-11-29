@@ -1,28 +1,31 @@
 ---
-title: "System.Runtime.Serialization.XsdExportEnd | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.Runtime.Serialization.XsdExportEnd
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 406169f7-dc69-4e02-8a22-b38049dab995
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5f175d2f2b211fd1d72074324241425c10ea3dc7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# System.Runtime.Serialization.XsdExportEnd
-System.Runtime.Serialization.XsdExportEnd  
+# <a name="systemruntimeserializationxsdexportend"></a><span data-ttu-id="72a54-102">System.Runtime.Serialization.XsdExportEnd</span><span class="sxs-lookup"><span data-stu-id="72a54-102">System.Runtime.Serialization.XsdExportEnd</span></span>
+<span data-ttu-id="72a54-103">System.Runtime.Serialization.XsdExportEnd</span><span class="sxs-lookup"><span data-stu-id="72a54-103">System.Runtime.Serialization.XsdExportEnd</span></span>  
   
-## Descripción  
- Exportación del esquema acabada.  
+## <a name="description"></a><span data-ttu-id="72a54-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="72a54-104">Description</span></span>  
+ <span data-ttu-id="72a54-105">Exportación del esquema acabada.</span><span class="sxs-lookup"><span data-stu-id="72a54-105">Finished schema export.</span></span>  
   
-## Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="72a54-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="72a54-106">See Also</span></span>  
+ [<span data-ttu-id="72a54-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="72a54-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="72a54-108">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="72a54-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="72a54-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="72a54-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

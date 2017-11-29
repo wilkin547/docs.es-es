@@ -1,60 +1,58 @@
 ---
-title: "Tipos anidados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "tipos anidados"
-  - "tipos anidados públicos"
-  - "instrucciones de diseño de tipo, los tipos anidados"
-  - "tipos anidados"
-  - "tipo de miembros [.NET Framework]"
-  - "tipos de instrucciones [.NET Framework], anidadas de diseño de biblioteca de clase"
+title: Tipos anidados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- types, nested
+- public nested types
+- type design guidelines, nested types
+- nested types
+- members [.NET Framework], type
+- class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tipos anidados
-Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se denomina el tipo envolvente. Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente. Por ejemplo, tiene acceso a campos privados definidos en el tipo envolvente y proteger los campos definidos en todos los antecesores del tipo envolvente.  
+# <a name="nested-types"></a><span data-ttu-id="ce497-102">Tipos anidados</span><span class="sxs-lookup"><span data-stu-id="ce497-102">Nested Types</span></span>
+<span data-ttu-id="ce497-103">Un tipo anidado es un tipo definido en el ámbito de otro tipo, que se denomina el tipo envolvente.</span><span class="sxs-lookup"><span data-stu-id="ce497-103">A nested type is a type defined within the scope of another type, which is called the enclosing type.</span></span> <span data-ttu-id="ce497-104">Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente.</span><span class="sxs-lookup"><span data-stu-id="ce497-104">A nested type has access to all members of its enclosing type.</span></span> <span data-ttu-id="ce497-105">Por ejemplo, tiene acceso a los campos privados definidos en el tipo envolvente y proteger los campos definidos en todos los antecesores del tipo envolvente.</span><span class="sxs-lookup"><span data-stu-id="ce497-105">For example, it has access to private fields defined in the enclosing type and to protected fields defined in all ascendants of the enclosing type.</span></span>  
   
- En general, los tipos anidados deben usarse con moderación. Hay varias razones para ello. Algunos desarrolladores no están completamente familiarizados con el concepto. Estos desarrolladores por ejemplo, podrían tener problemas con la sintaxis de declaración de variables de tipos anidados. Los tipos anidados son también muy estrechamente con sus tipos envolventes y como tal no son adecuados para los tipos de uso general.  
+ <span data-ttu-id="ce497-106">En general, los tipos anidados deben usarse con moderación.</span><span class="sxs-lookup"><span data-stu-id="ce497-106">In general, nested types should be used sparingly.</span></span> <span data-ttu-id="ce497-107">Hay varias razones para ello.</span><span class="sxs-lookup"><span data-stu-id="ce497-107">There are several reasons for this.</span></span> <span data-ttu-id="ce497-108">Algunos desarrolladores no están totalmente familiarizados con el concepto.</span><span class="sxs-lookup"><span data-stu-id="ce497-108">Some developers are not fully familiar with the concept.</span></span> <span data-ttu-id="ce497-109">Por ejemplo, estos desarrolladores tenga problemas con la sintaxis de la declaración de variables de tipos anidados.</span><span class="sxs-lookup"><span data-stu-id="ce497-109">These developers might, for example, have problems with the syntax of declaring variables of nested types.</span></span> <span data-ttu-id="ce497-110">Los tipos anidados son también muy estrechamente con sus tipos envolventes y como tal no son adecuados para ser tipos de uso generales.</span><span class="sxs-lookup"><span data-stu-id="ce497-110">Nested types are also very tightly coupled with their enclosing types, and as such are not suited to be general-purpose types.</span></span>  
   
- Los tipos anidados son más adecuados para el modelado de los detalles de implementación de sus tipos envolventes. El usuario final rara vez deberían tener que declarar las variables de un tipo anidado y casi nunca es necesario crear explícitamente instancias de tipos anidados. Por ejemplo, el enumerador de una colección puede ser un tipo anidado de esa colección. Normalmente se crean instancias de los enumeradores por su tipo envolvente, y dado que muchos lenguajes admiten la instrucción foreach, variables de enumerador rara vez tienen que declararse el usuario final.  
+ <span data-ttu-id="ce497-111">Los tipos anidados son más adecuados para modelar los detalles de implementación de sus tipos envolventes.</span><span class="sxs-lookup"><span data-stu-id="ce497-111">Nested types are best suited for modeling implementation details of their enclosing types.</span></span> <span data-ttu-id="ce497-112">El usuario final rara vez deberían tener que declarar las variables de un tipo anidado y casi nunca debería tener que crear explícitamente instancias de tipos anidados.</span><span class="sxs-lookup"><span data-stu-id="ce497-112">The end user should rarely have to declare variables of a nested type and almost never should have to explicitly instantiate nested types.</span></span> <span data-ttu-id="ce497-113">Por ejemplo, el enumerador de una colección puede ser un tipo anidado de dicha recopilación.</span><span class="sxs-lookup"><span data-stu-id="ce497-113">For example, the enumerator of a collection can be a nested type of that collection.</span></span> <span data-ttu-id="ce497-114">Normalmente se crean instancias de los enumeradores por su tipo envolvente, y dado que muchos lenguajes admiten la instrucción foreach, variables de enumerador rara vez tienen que ser declarada por el usuario final.</span><span class="sxs-lookup"><span data-stu-id="ce497-114">Enumerators are usually instantiated by their enclosing type, and because many languages support the foreach statement, enumerator variables rarely have to be declared by the end user.</span></span>  
   
- **✓ hacer** utilizar tipos anidados cuando la relación entre el tipo anidado y su tipo exterior es tal que es deseable la semántica de accesibilidad de miembros.  
+ <span data-ttu-id="ce497-115">**✓ HACER** utilice tipos anidados cuando la relación entre el tipo anidado y su tipo exterior es tal que es deseable la semántica de accesibilidad de miembros.</span><span class="sxs-lookup"><span data-stu-id="ce497-115">**✓ DO** use nested types when the relationship between the nested type and its outer type is such that member-accessibility semantics are desirable.</span></span>  
   
- **X no** uso de tipos anidados públicos como una agrupación lógica construir; usar espacios de nombres para este.  
+ <span data-ttu-id="ce497-116">**X DO NOT** use los tipos anidados públicos como una agrupación lógica construir; usar espacios de nombres para este.</span><span class="sxs-lookup"><span data-stu-id="ce497-116">**X DO NOT** use public nested types as a logical grouping construct; use namespaces for this.</span></span>  
   
- **Evitar X** exponer públicamente los tipos anidados. La única excepción a esto es si necesitan declararse sólo en escenarios poco habituales, como el uso de subclases u otros escenarios de personalización avanzada variables del tipo anidado.  
+ <span data-ttu-id="ce497-117">**X evitar** exponer públicamente los tipos anidados.</span><span class="sxs-lookup"><span data-stu-id="ce497-117">**X AVOID** publicly exposed nested types.</span></span> <span data-ttu-id="ce497-118">La única excepción a esto es si las variables del tipo anidado deben declararse sólo en escenarios poco habituales, como el uso de subclases u otros escenarios de personalización avanzada.</span><span class="sxs-lookup"><span data-stu-id="ce497-118">The only exception to this is if variables of the nested type need to be declared only in rare scenarios such as subclassing or other advanced customization scenarios.</span></span>  
   
- **X no** utilice tipos anidados si el tipo es probable que se hace referencia fuera del tipo contenedor.  
+ <span data-ttu-id="ce497-119">**X DO NOT** utilice tipos anidados si el tipo es probable que se hace referencia fuera del tipo contenedor.</span><span class="sxs-lookup"><span data-stu-id="ce497-119">**X DO NOT** use nested types if the type is likely to be referenced outside of the containing type.</span></span>  
   
- Por ejemplo, una enumeración que se pasa a un método definido en una clase no se debe definir como un tipo anidado en la clase.  
+ <span data-ttu-id="ce497-120">Por ejemplo, una enumeración que se pasa a un método definido en una clase no debe definirse como un tipo anidado en la clase.</span><span class="sxs-lookup"><span data-stu-id="ce497-120">For example, an enum passed to a method defined on a class should not be defined as a nested type in the class.</span></span>  
   
- **X no** utilice tipos anidados si es necesario crear una instancia por código de cliente.  Si un tipo tiene un constructor público, probablemente no debería anidarse.  
+ <span data-ttu-id="ce497-121">**X DO NOT** utilice tipos anidados si necesitan que se creará una instancia de un código de cliente.</span><span class="sxs-lookup"><span data-stu-id="ce497-121">**X DO NOT** use nested types if they need to be instantiated by client code.</span></span>  <span data-ttu-id="ce497-122">Si un tipo tiene un constructor público, probablemente no debería anidarse.</span><span class="sxs-lookup"><span data-stu-id="ce497-122">If a type has a public constructor, it should probably not be nested.</span></span>  
   
- Si un tipo se puede crear instancias, que parece indicar que el tipo tiene un lugar en el marco de trabajo en su propio \(puede crearlo, trabajar con él y destruir sin necesidad de utilizar el tipo exterior\) y, por tanto, no pueden anidarse. Tipos internos no deberían reutilizar ampliamente fuera del tipo externo sin ninguna relación con el tipo externo.  
+ <span data-ttu-id="ce497-123">Si un tipo se puede crear instancias, que parece indicar el tipo tiene un lugar en el marco de trabajo por sí misma (puede crearla, trabajar con ellos y destruir sin necesidad de utilizar el tipo exterior) y, por tanto, no se pueden anidar.</span><span class="sxs-lookup"><span data-stu-id="ce497-123">If a type can be instantiated, that seems to indicate the type has a place in the framework on its own (you can create it, work with it, and destroy it without ever using the outer type), and thus should not be nested.</span></span> <span data-ttu-id="ce497-124">Tipos internos no se deberían reutilizar ampliamente fuera del tipo externo sin ninguna relación con el tipo exterior.</span><span class="sxs-lookup"><span data-stu-id="ce497-124">Inner types should not be widely reused outside of the outer type without any relationship whatsoever to the outer type.</span></span>  
   
- **X no** define un tipo anidado como un miembro de una interfaz. Muchos lenguajes no admiten este tipo de construcción.  
+ <span data-ttu-id="ce497-125">**X DO NOT** definir un tipo anidado como un miembro de una interfaz.</span><span class="sxs-lookup"><span data-stu-id="ce497-125">**X DO NOT** define a nested type as a member of an interface.</span></span> <span data-ttu-id="ce497-126">Muchos lenguajes no admiten este tipo de construcción.</span><span class="sxs-lookup"><span data-stu-id="ce497-126">Many languages do not support such a construct.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="ce497-127">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="ce497-127">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="ce497-128">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="ce497-128">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="ce497-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="ce497-129">See Also</span></span>  
+ [<span data-ttu-id="ce497-130">Instrucciones de diseño de tipos</span><span class="sxs-lookup"><span data-stu-id="ce497-130">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="ce497-131">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ce497-131">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

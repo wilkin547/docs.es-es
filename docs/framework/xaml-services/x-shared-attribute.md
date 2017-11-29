@@ -1,62 +1,65 @@
 ---
-title: "x:Shared Attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:Shared attribute"
-  - "x:Shared attribute [XAML Services]"
-  - "Shared attribute in XAML [XAML Services]"
+title: Atributo x:Shared
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [XAML Services], x:Shared attribute
+- x:Shared attribute [XAML Services]
+- Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-caps.latest.revision: 16
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: d6a9333b2267e82fc25b2a0ec4bf5dd14f644078
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# x:Shared Attribute
-Cuando se establece en `false`, modifica el comportamiento de recuperación de recursos de WPF, de forma que las solicitudes para un recurso de atributos crearán una nueva instancia por cada solicitud, en lugar de compartir la misma instancia para todas las solicitudes.  
+# <a name="xshared-attribute"></a><span data-ttu-id="2ad1d-102">Atributo x:Shared</span><span class="sxs-lookup"><span data-stu-id="2ad1d-102">x:Shared Attribute</span></span>
+<span data-ttu-id="2ad1d-103">Cuando se establece en `false`, modifica el comportamiento de recuperación de los recursos WPF para que las solicitudes para el recurso con atributos crear una nueva instancia para cada solicitud en lugar de compartir la misma instancia para todas las solicitudes.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-103">When set to `false`, modifies WPF resource-retrieval behavior so that requests for the attributed resource create a new instance for each request instead of sharing the same instance for all requests.</span></span>  
   
-## Uso de atributos XAML  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="2ad1d-104">Uso de atributos XAML</span><span class="sxs-lookup"><span data-stu-id="2ad1d-104">XAML Attribute Usage</span></span>  
   
-```  
+```xaml  
 <ResourceDictionary>  
-  <object x:Shared="false".../>  
+  <object x:Shared="false".../>  
 </ResourceDictionary>  
 ```  
   
-## Comentarios  
- `x:Shared` está asignado en el espacio de nombres XAML de lenguaje XAML y se reconoce como un elemento de lenguaje XAML válido por servicios XAML de .NET Framework y sus lectores XAML.  Sin embargo, las capacidades comentadas de `x:Shared` únicamente son pertinentes en aplicaciones WPF y para el analizador XAML de WPF.  En WPF, `x:Shared` es útil únicamente como un atributo cuando se aplicó a un objeto que existe dentro de un WPF <xref:System.Windows.ResourceDictionary>.  Otros usos no producen excepciones de análisis ni otros errores, pero no tienen ningún efecto.  
+## <a name="remarks"></a><span data-ttu-id="2ad1d-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2ad1d-105">Remarks</span></span>  
+ <span data-ttu-id="2ad1d-106">`x:Shared`se asigna al espacio de nombres de XAML de lenguaje XAML y se reconoce como un elemento de lenguaje XAML válido por servicios XAML de .NET Framework y sus lectores XAML.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-106">`x:Shared` is mapped to the XAML language XAML namespace and is recognized as a valid XAML language element by .NET Framework XAML Services and its XAML readers.</span></span> <span data-ttu-id="2ad1d-107">Sin embargo, las capacidades comentadas de `x:Shared` solo son relevantes para las aplicaciones WPF y para el analizador de XAML de WPF.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-107">However, the stated capabilities of `x:Shared` are only relevant for WPF applications and for the WPF XAML parser.</span></span> <span data-ttu-id="2ad1d-108">En WPF, `x:Shared` sólo es útil como un atributo cuando se aplica a un objeto que se encuentra un WPF <xref:System.Windows.ResourceDictionary>.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-108">In WPF, `x:Shared` is only useful as an attribute when it is applied to an object that exists within a WPF <xref:System.Windows.ResourceDictionary>.</span></span> <span data-ttu-id="2ad1d-109">Otros usos no producen excepciones de análisis u otros errores, pero no tienen ningún efecto.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-109">Other usages do not throw parse exceptions or other errors, but they have no effect.</span></span>  
   
- El significado de `x:Shared` no se especifica en la especificación de lenguaje XAML.  Otras implementaciones XAML, como aquellas que se compilan en servicios XAML de .NET Framework, no ofrecen necesariamente la compatibilidad de uso compartido de recursos.  Estas implementaciones XAML podrían proporcionar un comportamiento similar en el marco de apoyo que también utilizó los valores `x:Shared`.  
+ <span data-ttu-id="2ad1d-110">El significado de `x:Shared` no se especifica en la especificación del lenguaje XAML.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-110">The meaning of `x:Shared` is not specified in the XAML language specification.</span></span> <span data-ttu-id="2ad1d-111">Otras implementaciones de XAML, como los que se basan en los servicios XAML de .NET Framework, no proporcionan necesariamente la compatibilidad de uso compartido de recursos.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-111">Other XAML implementations, such as those that build on .NET Framework XAML Services, do not necessarily provide resource-sharing support.</span></span> <span data-ttu-id="2ad1d-112">Estas implementaciones XAML pudieron proporcionar un comportamiento similar en el marco de apoyo que también usa `x:Shared` valores.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-112">Such XAML implementations could provide similar behavior in the supporting framework that also used `x:Shared` values.</span></span>  
   
- En WPF, la condición de `x:Shared` predeterminada para los recursos es `true`.  Esta condición significa que cualquier solicitud de recurso devolverá siempre la misma instancia.  
+ <span data-ttu-id="2ad1d-113">En WPF, el valor predeterminado `x:Shared` condición de recursos es `true`.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-113">In WPF, the default `x:Shared` condition for resources is `true`.</span></span> <span data-ttu-id="2ad1d-114">Esta condición significa que cualquier solicitud de recurso determinado siempre devuelve la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-114">This condition means that any given resource request always returns the same instance.</span></span>  
   
- Al modificar un objeto devuelto a través de una API de recursos como <xref:System.Windows.FrameworkElement.FindResource%2A>, o al modificarlo directamente dentro de un <xref:System.Windows.ResourceDictionary>, se cambia el recurso original.  Si las referencias a ese recurso eran dinámicas, los consumidores de ese recurso obtienen el recurso modificado.  
+ <span data-ttu-id="2ad1d-115">Modificar un objeto que se devuelve a través de un recurso de API, como <xref:System.Windows.FrameworkElement.FindResource%2A>, o modificar directamente un objeto dentro de un <xref:System.Windows.ResourceDictionary>, cambia el recurso original.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-115">Modifying an object that is returned through a resource API, such as <xref:System.Windows.FrameworkElement.FindResource%2A>, or modifying an object directly within a <xref:System.Windows.ResourceDictionary>, changes the original resource.</span></span> <span data-ttu-id="2ad1d-116">Si las referencias a ese recurso eran dinámica de los recursos, los consumidores de ese recurso obtienen el recurso modificado.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-116">If references to that resource were dynamic resource references, the consumers of that resource get the changed resource.</span></span>  
   
- Si las referencias al recurso eran estáticas, los cambios que se produzcan en el recurso después del tiempo de procesamiento de [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] serán irrelevantes.  Para obtener más información sobre las diferencias entre las referencias de recursos estáticas y dinámicas, consulte [Recursos XAML](../../../ocs/framework/wpf/advanced/xaml-resources.md).  
+ <span data-ttu-id="2ad1d-117">Si las referencias al recurso eran recurso estático, cambios en el recurso después [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] tiempo de procesamiento no son relevantes.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-117">If references to the resource were static resource references, changes to the resource after [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processing time are irrelevant.</span></span> <span data-ttu-id="2ad1d-118">Para obtener más información acerca de estático frente a las referencias de recursos dinámicos, consulte [recursos XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="2ad1d-118">For more information about static versus dynamic resource references, see [XAML Resources](../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
- No se suele especificar explícitamente `x:Shared="true"`, porque ya es el valor predeterminado.  No hay ningún código equivalente directo para `x:Shared` en el modelo de objeto de WPF; sólo se puede especificar en una utilización XAML y se debe procesar por el comportamiento de WPF predeterminado, o bien en una secuencia del nodo XAML intermedia de la ruta de acceso de carga si se procesa mediante los servicios XAML de .NET Framework y sus lectores XAML.  
+ <span data-ttu-id="2ad1d-119">Especificar explícitamente `x:Shared="true"` es muy poco habitual, dado que ya es el predeterminado.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-119">Explicitly specifying `x:Shared="true"` is rarely done, because that is already the default.</span></span> <span data-ttu-id="2ad1d-120">No hay ningún código directo equivalente para `x:Shared` en WPF el modelo de objetos; solo se puede especificar un uso de XAML y debe procesarse por el comportamiento WPF predeterminado o en un flujo de nodo XAML intermedio en la ruta de acceso de carga si se procesa mediante SAR de XAML de .NET Framework servicios y sus lectores XAML.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-120">There is no direct code equivalent for `x:Shared` in the WPF object model; it can only be specified in a XAML usage and must be processed either by the default WPF behavior or in an intermediate XAML node stream on the load path if processed using .NET Framework XAML Services and its XAML readers.</span></span>  
   
- Un escenario para `x:Shared="false"` es aquel en que se define una clase derivada de <xref:System.Windows.FrameworkElement> o de <xref:System.Windows.FrameworkContentElement> como recurso y, a continuación, se introduce el recurso de elemento en un modelo de contenido.  `x:Shared="false"` permite introducir un recurso de elemento varias veces en la misma colección \(como <xref:System.Windows.Controls.UIElementCollection>, por ejemplo\).  Sin `x:Shared="false"` esto no es válido porque la colección exige la unicidad de su contenido.  Sin embargo, el comportamiento de `x:Shared="false"` crea otra instancia idéntica de recursos en lugar de devolver la misma instancia.  
+ <span data-ttu-id="2ad1d-121">Un escenario para `x:Shared="false"` es si se define un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> deriva la clase como un recurso y, a continuación, introduce el recurso de elemento en un modelo de contenido.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-121">A scenario for `x:Shared="false"` is if you define a <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement> derived class as a resource and then you introduce the element resource into a content model.</span></span> <span data-ttu-id="2ad1d-122">`x:Shared="false"`permite que un recurso de elemento que se introducen varias veces en la misma colección (como un <xref:System.Windows.Controls.UIElementCollection>).</span><span class="sxs-lookup"><span data-stu-id="2ad1d-122">`x:Shared="false"` enables an element resource to be introduced multiple times in the same collection (such as a <xref:System.Windows.Controls.UIElementCollection>).</span></span> <span data-ttu-id="2ad1d-123">Sin `x:Shared="false"` esto no es válido porque la colección exige la unicidad de su contenido.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-123">Without `x:Shared="false"` this is invalid because the collection enforces uniqueness of its contents.</span></span> <span data-ttu-id="2ad1d-124">Sin embargo, la `x:Shared="false"` comportamiento crea otra instancia idéntica del recurso en lugar de devolver la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-124">However, the `x:Shared="false"` behavior creates another identical instance of the resource instead of returning the same instance.</span></span>  
   
- Otro escenario para `x:Shared="false"` es el uso de un recurso <xref:System.Windows.Freezable> para valores de animación, pero desea modificarlo para cada animación.  
+ <span data-ttu-id="2ad1d-125">Otro escenario para `x:Shared="false"` es si se usa un <xref:System.Windows.Freezable> recursos para los valores de animación pero desea modificar el recurso en cada animación.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-125">Another scenario for `x:Shared="false"` is if you use a <xref:System.Windows.Freezable> resource for animation values but want to modify the resource on a per animation basis.</span></span>  
   
- La administración de cadena de `false` no distingue mayúsculas de minúsculas.  
+ <span data-ttu-id="2ad1d-126">El control de cadenas de `false` no distingue mayúsculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-126">The string handling of `false` is not case sensitive.</span></span>  
   
- En WPF, `x:Shared` únicamente es válido en las condiciones siguientes:  
+ <span data-ttu-id="2ad1d-127">En WPF, `x:Shared` solo es válida en las siguientes condiciones:</span><span class="sxs-lookup"><span data-stu-id="2ad1d-127">In WPF, `x:Shared` is only valid under the following conditions:</span></span>  
   
--   El objeto <xref:System.Windows.ResourceDictionary> que contiene los elementos con `x:Shared` se debe compilar.  <xref:System.Windows.ResourceDictionary> no puede estar dentro de XAML dinámico ni se puede utilizar para temas.  
+-   <span data-ttu-id="2ad1d-128">El <xref:System.Windows.ResourceDictionary> que contiene los elementos con `x:Shared` debe compilarse.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-128">The <xref:System.Windows.ResourceDictionary> that contains the items with `x:Shared` must be compiled.</span></span> <span data-ttu-id="2ad1d-129">El <xref:System.Windows.ResourceDictionary> no puede estar dentro de XAML dinámico o utilizar para temas.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-129">The <xref:System.Windows.ResourceDictionary> cannot be within loose XAML or used for themes.</span></span>  
   
--   El objeto <xref:System.Windows.ResourceDictionary> que contiene los elementos no se puede anidar en otro <xref:System.Windows.ResourceDictionary>.  Por ejemplo, no puede utilizar `x:Shared` para los elementos de un objeto <xref:System.Windows.ResourceDictionary> que está dentro de un <xref:System.Windows.Style> que ya es un elemento de un <xref:System.Windows.ResourceDictionary>.  
+-   <span data-ttu-id="2ad1d-130">El <xref:System.Windows.ResourceDictionary> que contiene los elementos no debe estar anidado dentro de otra <xref:System.Windows.ResourceDictionary>.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-130">The <xref:System.Windows.ResourceDictionary> that contains the items must not be nested within another <xref:System.Windows.ResourceDictionary>.</span></span> <span data-ttu-id="2ad1d-131">Por ejemplo, no se puede usar `x:Shared` para los elementos de un <xref:System.Windows.ResourceDictionary> que está dentro de un <xref:System.Windows.Style> ya que está un <xref:System.Windows.ResourceDictionary> elemento.</span><span class="sxs-lookup"><span data-stu-id="2ad1d-131">For example, you cannot use `x:Shared` for items in a <xref:System.Windows.ResourceDictionary> that is within a <xref:System.Windows.Style> that is already a <xref:System.Windows.ResourceDictionary> item.</span></span>  
   
-## Vea también  
- <xref:System.Windows.ResourceDictionary>   
- [Recursos XAML](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
- [Elementos base](../../../ocs/framework/wpf/advanced/base-elements.md)
+## <a name="see-also"></a><span data-ttu-id="2ad1d-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ad1d-132">See Also</span></span>  
+ <xref:System.Windows.ResourceDictionary>  
+ [<span data-ttu-id="2ad1d-133">Recursos XAML</span><span class="sxs-lookup"><span data-stu-id="2ad1d-133">XAML Resources</span></span>](../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="2ad1d-134">Elementos base</span><span class="sxs-lookup"><span data-stu-id="2ad1d-134">Base Elements</span></span>](../../../docs/framework/wpf/advanced/base-elements.md)

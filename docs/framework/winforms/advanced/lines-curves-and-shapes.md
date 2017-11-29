@@ -1,65 +1,66 @@
 ---
-title: "L&#237;neas, curvas y formas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "curvas, dibujar"
-  - "líneas, dibujar"
-  - "formas, rellenar"
-  - "dibujar formas"
-  - "curvas spline, dibujar"
+title: "Líneas, curvas y formas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- shapes [Windows Forms], filling
+- splines [Windows Forms], drawing
+- shapes. drawing
+- lines [Windows Forms], drawing
+- curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2caa77285ebe327adc690b26baeb58aa800627fb
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# L&#237;neas, curvas y formas
-La sección de gráficos vectoriales de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se utiliza para dibujar líneas, curvas y dibujar y rellenar formas.  
+# <a name="lines-curves-and-shapes"></a><span data-ttu-id="43473-102">Líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="43473-102">Lines, Curves, and Shapes</span></span>
+<span data-ttu-id="43473-103">La parte de gráficos vectoriales [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se utiliza para dibujar líneas, curvas y para dibujar y rellenar formas.</span><span class="sxs-lookup"><span data-stu-id="43473-103">The vector graphics portion of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is used to draw lines, draw curves, and to draw and fill shapes.</span></span>  
   
-## En esta sección  
- [Información general acerca de gráficos vectoriales](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
- Explica los gráficos vectoriales.  
+## <a name="in-this-section"></a><span data-ttu-id="43473-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="43473-104">In This Section</span></span>  
+ [<span data-ttu-id="43473-105">Información general acerca de gráficos vectoriales</span><span class="sxs-lookup"><span data-stu-id="43473-105">Vector Graphics Overview</span></span>](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
+ <span data-ttu-id="43473-106">Describe los gráficos vectoriales.</span><span class="sxs-lookup"><span data-stu-id="43473-106">Discusses vector graphics.</span></span>  
   
- [Lápices, líneas y rectángulos en GDI\+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
- Explica las líneas de dibujo y los rectángulos.  
+ [<span data-ttu-id="43473-107">Lápices, líneas y rectángulos en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-107">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
+ <span data-ttu-id="43473-108">Describe el dibujo de líneas y rectángulos.</span><span class="sxs-lookup"><span data-stu-id="43473-108">Discusses drawing lines and rectangles.</span></span>  
   
- [Elipses y arcos en GDI\+](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
- Define arcos y elipses e identifica las clases necesarias para dibujarlos.  
+ [<span data-ttu-id="43473-109">Elipses y arcos en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-109">Ellipses and Arcs in GDI+</span></span>](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
+ <span data-ttu-id="43473-110">Define arcos y elipses e identifica las clases necesarias para obtenerlas.</span><span class="sxs-lookup"><span data-stu-id="43473-110">Defines arcs and ellipses and identifies the classes needed to draw them.</span></span>  
   
- [Polígonos en GDI\+](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
- Define polígonos e identifica las clases necesarias para dibujarlos.  
+ [<span data-ttu-id="43473-111">Polígonos en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-111">Polygons in GDI+</span></span>](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
+ <span data-ttu-id="43473-112">Define polígonos e identifica las clases necesarias para obtenerlas.</span><span class="sxs-lookup"><span data-stu-id="43473-112">Defines polygons and identifies the classes needed to draw them.</span></span>  
   
- [Curvas spline cardinales en GDI\+](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
- Define curvas spline cardinales e identifica las clases necesarias para dibujarlas.  
+ [<span data-ttu-id="43473-113">Curvas spline cardinales en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-113">Cardinal Splines in GDI+</span></span>](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
+ <span data-ttu-id="43473-114">Define curvas spline cardinales e identifica las clases necesarias para obtenerlas.</span><span class="sxs-lookup"><span data-stu-id="43473-114">Defines cardinal splines and identifies the classes needed to draw them.</span></span>  
   
- [Curvas spline de Bézier en GDI\+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
- Define las curvas spline de Bézier e identifica las clases necesarias para dibujarlas.  
+ [<span data-ttu-id="43473-115">Curvas spline de Bézier en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-115">Bézier Splines in GDI+</span></span>](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ <span data-ttu-id="43473-116">Define curvas spline de Bézier e identifica las clases necesarias para obtenerlas.</span><span class="sxs-lookup"><span data-stu-id="43473-116">Defines Bezier splines and identifies the classes needed to draw them.</span></span>  
   
- [Trazados de gráficos en GDI\+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
- Describe los trazados y cómo crearlos y dibujarlos.  
+ [<span data-ttu-id="43473-117">Trazados de gráficos en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-117">Graphics Paths in GDI+</span></span>](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
+ <span data-ttu-id="43473-118">Describe las rutas de acceso y cómo crear y obtenerlas.</span><span class="sxs-lookup"><span data-stu-id="43473-118">Describes paths and how to create and draw them.</span></span>  
   
- [Pinceles y formas rellenas en GDI\+](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
- Describe los tipos de pincel y cómo utilizarlos.  
+ [<span data-ttu-id="43473-119">Pinceles y formas rellenas en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-119">Brushes and Filled Shapes in GDI+</span></span>](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
+ <span data-ttu-id="43473-120">Describe los tipos de pincel y cómo utilizarlos.</span><span class="sxs-lookup"><span data-stu-id="43473-120">Describes brush types and how to use them.</span></span>  
   
- [Curvas abiertas y cerradas en GDI\+](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
- Define las curvas abiertas y cerradas y cómo dibujarlas y rellenarlas.  
+ [<span data-ttu-id="43473-121">Curvas abiertas y cerradas en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-121">Open and Closed Curves in GDI+</span></span>](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
+ <span data-ttu-id="43473-122">Define las curvas abiertas y cerradas y cómo dibujar y rellenarlo.</span><span class="sxs-lookup"><span data-stu-id="43473-122">Defines open and closed curves and how to draw and fill them.</span></span>  
   
- [Regiones de GDI\+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
- Describe los métodos asociados a regiones.  
+ [<span data-ttu-id="43473-123">Regiones de GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-123">Regions in GDI+</span></span>](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
+ <span data-ttu-id="43473-124">Describe los métodos asociados a regiones.</span><span class="sxs-lookup"><span data-stu-id="43473-124">Describes the methods associated with regions.</span></span>  
   
- [Limitar la superficie de dibujo en GDI\+](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
- Describe el recorte y cómo utilizarlo.  
+ [<span data-ttu-id="43473-125">Limitar la superficie de dibujo en GDI+</span><span class="sxs-lookup"><span data-stu-id="43473-125">Restricting the Drawing Surface in GDI+</span></span>](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
+ <span data-ttu-id="43473-126">Describe el recorte y cómo utilizarlo.</span><span class="sxs-lookup"><span data-stu-id="43473-126">Describes clipping and how to use it.</span></span>  
   
- [Suavizado de contorno con líneas y curvas](../../../../docs/framework/winforms/advanced/antialiasing-with-lines-and-curves.md)  
- Define el suavizado de contorno y cómo utilizarlo al dibujar líneas y curvas.
+ [<span data-ttu-id="43473-127">Suavizado de contorno con líneas y curvas</span><span class="sxs-lookup"><span data-stu-id="43473-127">Antialiasing with Lines and Curves</span></span>](../../../../docs/framework/winforms/advanced/antialiasing-with-lines-and-curves.md)  
+ <span data-ttu-id="43473-128">Define el suavizado de contorno y cómo usar el suavizado de contorno al dibujar líneas y curvas.</span><span class="sxs-lookup"><span data-stu-id="43473-128">Defines antialiasing and how use antialiasing when drawing lines and curves.</span></span>

@@ -1,80 +1,84 @@
 ---
-title: "Trazados de gr&#225;ficos en GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "dibujar, rutas de acceso"
-  - "GDI+, dibujar trazados"
-  - "gráficos, rutas de acceso"
-  - "rutas de acceso, dibujar"
+title: "Trazados de gráficos en GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], paths
+- GDI+, drawing paths
+- paths [Windows Forms], drawing
+- drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e027228ea1cc047f213c28ac3a4984c2f0227c5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Trazados de gr&#225;ficos en GDI+
-Los trazados se forman mediante la combinación de líneas, rectángulos y curvas simples.  Recuerde que, tal y como se muestra en [Información general acerca de gráficos vectoriales](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md), los siguientes bloques de creación han resultado ser los más útiles para dibujar imágenes:  
+# <a name="graphics-paths-in-gdi"></a><span data-ttu-id="0a64f-102">Trazados de gráficos en GDI+</span><span class="sxs-lookup"><span data-stu-id="0a64f-102">Graphics Paths in GDI+</span></span>
+<span data-ttu-id="0a64f-103">Las rutas de acceso se crean mediante la combinación de líneas, rectángulos y curvas simples.</span><span class="sxs-lookup"><span data-stu-id="0a64f-103">Paths are formed by combining lines, rectangles, and simple curves.</span></span> <span data-ttu-id="0a64f-104">Recuerde de la [información general de gráficos vectoriales](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) que los bloques de creación básicos siguientes han resultado para ser las más útiles para dibujar imágenes:</span><span class="sxs-lookup"><span data-stu-id="0a64f-104">Recall from the [Vector Graphics Overview](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) that the following basic building blocks have proven to be the most useful for drawing pictures:</span></span>  
   
--   Líneas  
+-   <span data-ttu-id="0a64f-105">Líneas</span><span class="sxs-lookup"><span data-stu-id="0a64f-105">Lines</span></span>  
   
--   Rectángulos  
+-   <span data-ttu-id="0a64f-106">Rectángulos</span><span class="sxs-lookup"><span data-stu-id="0a64f-106">Rectangles</span></span>  
   
--   Elipses  
+-   <span data-ttu-id="0a64f-107">Botón de puntos suspensivos</span><span class="sxs-lookup"><span data-stu-id="0a64f-107">Ellipses</span></span>  
   
--   Arcos  
+-   <span data-ttu-id="0a64f-108">Arcos</span><span class="sxs-lookup"><span data-stu-id="0a64f-108">Arcs</span></span>  
   
--   Polígonos  
+-   <span data-ttu-id="0a64f-109">Polígonos</span><span class="sxs-lookup"><span data-stu-id="0a64f-109">Polygons</span></span>  
   
--   Curvas spline cardinales  
+-   <span data-ttu-id="0a64f-110">Curvas spline cardinales</span><span class="sxs-lookup"><span data-stu-id="0a64f-110">Cardinal splines</span></span>  
   
--   Curvas spline de Bézier  
+-   <span data-ttu-id="0a64f-111">Curvas spline de Bézier</span><span class="sxs-lookup"><span data-stu-id="0a64f-111">Bézier splines</span></span>  
   
- En GDI\+, el objeto <xref:System.Drawing.Drawing2D.GraphicsPath> permite recopilar una secuencia de estos bloques de creación en una unidad.  La secuencia completa de líneas, rectángulos, polígonos y curvas puede dibujarse con una llamada al método <xref:System.Drawing.Graphics.DrawPath%2A> de la clase <xref:System.Drawing.Graphics> En la siguiente ilustración se muestra un trazado creado mediante la combinación de una línea, un arco, una curva spline de Bézier y una curva spline cardinal.  
+ <span data-ttu-id="0a64f-112">En GDI +, la <xref:System.Drawing.Drawing2D.GraphicsPath> objeto le permite recopilar una secuencia de estos bloques de creación en una sola unidad.</span><span class="sxs-lookup"><span data-stu-id="0a64f-112">In GDI+, the <xref:System.Drawing.Drawing2D.GraphicsPath> object allows you to collect a sequence of these building blocks into a single unit.</span></span> <span data-ttu-id="0a64f-113">La secuencia completa de líneas, rectángulos, polígonos y curvas, a continuación, se puede dibujar con una llamada a la <xref:System.Drawing.Graphics.DrawPath%2A> método de la <xref:System.Drawing.Graphics> clase.</span><span class="sxs-lookup"><span data-stu-id="0a64f-113">The entire sequence of lines, rectangles, polygons, and curves can then be drawn with one call to the <xref:System.Drawing.Graphics.DrawPath%2A> method of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="0a64f-114">En la siguiente ilustración muestra una ruta de acceso que se crea mediante la combinación de una línea, un arco, una curva spline de Bézier y una curva spline cardinal.</span><span class="sxs-lookup"><span data-stu-id="0a64f-114">The following illustration shows a path created by combining a line, an arc, a Bézier spline, and a cardinal spline.</span></span>  
   
- ![Ruta de acceso](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.png "Aboutgdip02\_art14")  
+ <span data-ttu-id="0a64f-115">![Ruta de acceso](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.gif "Aboutgdip02_art14")</span><span class="sxs-lookup"><span data-stu-id="0a64f-115">![Path](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.gif "Aboutgdip02_art14")</span></span>  
   
-## Utilizar un trazado  
- La clase <xref:System.Drawing.Drawing2D.GraphicsPath> proporciona los métodos siguientes para crear una secuencia de elementos que se va a dibujar: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> \(para las curvas spline cardinales\) y <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>.  Cada uno de estos métodos está sobrecargado, es decir, cada método admite varias listas de parámetros distintas.  Por ejemplo, una variación del método <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> recibe cuatro enteros y otra variación del método <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> recibe dos objetos <xref:System.Drawing.Point>.  
+## <a name="using-a-path"></a><span data-ttu-id="0a64f-116">Uso de una ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="0a64f-116">Using a Path</span></span>  
+ <span data-ttu-id="0a64f-117">El <xref:System.Drawing.Drawing2D.GraphicsPath> clase proporciona los métodos siguientes para crear una secuencia de elementos que se va a dibujar: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> (para curvas spline cardinales), y <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>.</span><span class="sxs-lookup"><span data-stu-id="0a64f-117">The <xref:System.Drawing.Drawing2D.GraphicsPath> class provides the following methods for creating a sequence of items to be drawn: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> (for cardinal splines), and <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>.</span></span> <span data-ttu-id="0a64f-118">Cada uno de estos métodos está sobrecargado; es decir, cada método es compatible con varias listas de parámetros diferentes.</span><span class="sxs-lookup"><span data-stu-id="0a64f-118">Each of these methods is overloaded; that is, each method supports several different parameter lists.</span></span> <span data-ttu-id="0a64f-119">Por ejemplo, una variación de la <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> método recibe cuatro enteros y otra variación de la <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> método recibe dos <xref:System.Drawing.Point> objetos.</span><span class="sxs-lookup"><span data-stu-id="0a64f-119">For example, one variation of the <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> method receives four integers, and another variation of the <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> method receives two <xref:System.Drawing.Point> objects.</span></span>  
   
- Los métodos para agregar líneas, rectángulos y curvas spline de Bézier tienen métodos asociados plurales que agregan varios elementos al trazado en una única llamada: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>.  Además, los métodos <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A> tienen métodos asociados, <xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A> que agregan una curva cerrada o sector al trazado.  
+ <span data-ttu-id="0a64f-120">Los métodos para agregar líneas, rectángulos y curvas spline de Bézier a una ruta de acceso tienen varios métodos asociados que agregan varios elementos a la ruta de acceso en una sola llamada: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A>, y <xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>.</span><span class="sxs-lookup"><span data-stu-id="0a64f-120">The methods for adding lines, rectangles, and Bézier splines to a path have plural companion methods that add several items to the path in a single call: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLines%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangles%2A>, and <xref:System.Drawing.Drawing2D.GraphicsPath.AddBeziers%2A>.</span></span> <span data-ttu-id="0a64f-121">Además, el <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A> disponen de métodos, <xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A>, que agregan una curva cerrada o un gráfico circular a la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="0a64f-121">Also, the <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> and <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A> methods have companion methods, <xref:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve%2A> and <xref:System.Drawing.Drawing2D.GraphicsPath.AddPie%2A>, that add a closed curve or pie to the path.</span></span>  
   
- Para dibujar un trazado son necesarios los objetos <xref:System.Drawing.Graphics>,  <xref:System.Drawing.Pen> y <xref:System.Drawing.Drawing2D.GraphicsPath>.  El objeto <xref:System.Drawing.Graphics> proporciona el método <xref:System.Drawing.Graphics.DrawPath%2A>, y el objeto <xref:System.Drawing.Pen> almacena atributos como el ancho y el color de la línea que se utiliza para representar el trazado.  El objeto <xref:System.Drawing.Drawing2D.GraphicsPath> almacena la secuencia de líneas y curvas que componen el trazado.  El objeto <xref:System.Drawing.Pen> y el objeto <xref:System.Drawing.Drawing2D.GraphicsPath> se pasan como argumentos al método <xref:System.Drawing.Graphics.DrawPath%2A>.  En el siguiente ejemplo se dibuja un trazado que consta de una línea, una elipse y una curva spline de Bézier:  
+ <span data-ttu-id="0a64f-122">Para dibujar un trazado, necesita un <xref:System.Drawing.Graphics> objeto, un <xref:System.Drawing.Pen> objeto y un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto.</span><span class="sxs-lookup"><span data-stu-id="0a64f-122">To draw a path, you need a <xref:System.Drawing.Graphics> object, a <xref:System.Drawing.Pen> object, and a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="0a64f-123">El <xref:System.Drawing.Graphics> objeto proporciona el <xref:System.Drawing.Graphics.DrawPath%2A> método y el <xref:System.Drawing.Pen> objeto almacena atributos, como el ancho y color de la línea que se usa para representar la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="0a64f-123">The <xref:System.Drawing.Graphics> object provides the <xref:System.Drawing.Graphics.DrawPath%2A> method, and the <xref:System.Drawing.Pen> object stores attributes, such as width and color, of the line used to render the path.</span></span> <span data-ttu-id="0a64f-124">La <xref:System.Drawing.Drawing2D.GraphicsPath> objeto almacena la secuencia de líneas y curvas conectadas que constituyen la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="0a64f-124">The <xref:System.Drawing.Drawing2D.GraphicsPath> object stores the sequence of lines and curves that make up the path.</span></span> <span data-ttu-id="0a64f-125">El <xref:System.Drawing.Pen> objeto y el <xref:System.Drawing.Drawing2D.GraphicsPath> objeto se pasan como argumentos a la <xref:System.Drawing.Graphics.DrawPath%2A> método.</span><span class="sxs-lookup"><span data-stu-id="0a64f-125">The <xref:System.Drawing.Pen> object and the <xref:System.Drawing.Drawing2D.GraphicsPath> object are passed as arguments to the <xref:System.Drawing.Graphics.DrawPath%2A> method.</span></span> <span data-ttu-id="0a64f-126">En el ejemplo siguiente se dibuja una ruta de acceso que consta de una línea, una elipse y una curva spline de Bézier:</span><span class="sxs-lookup"><span data-stu-id="0a64f-126">The following example draws a path that consists of a line, an ellipse, and a Bézier spline:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#101](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#101)]
  [!code-vb[LinesCurvesAndShapes#101](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#101)]  
   
- En la siguiente ilustración se muestra el trazado.  
+ <span data-ttu-id="0a64f-127">La ilustración siguiente muestra la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="0a64f-127">The following illustration shows the path.</span></span>  
   
- ![Ruta de acceso](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.png "Aboutgdip02\_art15")  
+ <span data-ttu-id="0a64f-128">![Ruta de acceso](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.gif "Aboutgdip02_art15")</span><span class="sxs-lookup"><span data-stu-id="0a64f-128">![Path](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.gif "Aboutgdip02_art15")</span></span>  
   
- Además de agregar líneas, rectángulos y curvas a un trazado, se pueden agregar trazados a un trazado.  Esto permite combinar los trazados existentes para formar trazados enormes y complejos.  
+ <span data-ttu-id="0a64f-129">Además de agregar líneas, rectángulos y curvas a una ruta de acceso, puede agregar las rutas de acceso a una ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="0a64f-129">In addition to adding lines, rectangles, and curves to a path, you can add paths to a path.</span></span> <span data-ttu-id="0a64f-130">Esto le permite combinar trazados existentes para formar las rutas de acceso de grandes y complejas.</span><span class="sxs-lookup"><span data-stu-id="0a64f-130">This allows you to combine existing paths to form large, complex paths.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#102](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#102)]
  [!code-vb[LinesCurvesAndShapes#102](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#102)]  
   
- Existen otros dos elementos que se pueden agregar a un trazado: cadenas y sectores.  Un sector es una parte del interior de una elipse.  En el siguiente ejemplo se crea un trazado a partir de un arco, un curva spline cardinal, una cadena y un sector:  
+ <span data-ttu-id="0a64f-131">Existen otros dos elementos que puede agregar a una ruta de acceso: cadenas y sectores.</span><span class="sxs-lookup"><span data-stu-id="0a64f-131">There are two other items you can add to a path: strings and pies.</span></span> <span data-ttu-id="0a64f-132">Un gráfico circular es una parte del interior de una elipse.</span><span class="sxs-lookup"><span data-stu-id="0a64f-132">A pie is a portion of the interior of an ellipse.</span></span> <span data-ttu-id="0a64f-133">En el ejemplo siguiente se crea una ruta de acceso de un archivo, una curva spline cardinal, una cadena y un gráfico circular:</span><span class="sxs-lookup"><span data-stu-id="0a64f-133">The following example creates a path from an arc, a cardinal spline, a string, and a pie:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#103](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#103)]
  [!code-vb[LinesCurvesAndShapes#103](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#103)]  
   
- En la siguiente ilustración se muestra el trazado.  Tenga en cuenta que un trazado no tiene por qué estar conectado; el arco, la curva spline cardinal, la cadena y el sector están separados.  
+ <span data-ttu-id="0a64f-134">La ilustración siguiente muestra la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="0a64f-134">The following illustration shows the path.</span></span> <span data-ttu-id="0a64f-135">Tenga en cuenta que una ruta de acceso no tiene que estar conectado; el arco, la curva spline cardinal, la cadena y la circular se separan.</span><span class="sxs-lookup"><span data-stu-id="0a64f-135">Note that a path does not have to be connected; the arc, cardinal spline, string, and pie are separated.</span></span>  
   
- ![Rutas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.png "Aboutgdip02\_Art16")  
+ <span data-ttu-id="0a64f-136">![Las rutas de acceso](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")</span><span class="sxs-lookup"><span data-stu-id="0a64f-136">![Paths](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")</span></span>  
   
-## Vea también  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=fullName>   
- <xref:System.Drawing.Point?displayProperty=fullName>   
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Crear y dibujar trazados](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+## <a name="see-also"></a><span data-ttu-id="0a64f-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="0a64f-137">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
+ <xref:System.Drawing.Point?displayProperty=nameWithType>  
+ [<span data-ttu-id="0a64f-138">Líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="0a64f-138">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="0a64f-139">Crear objetos Graphics para dibujar</span><span class="sxs-lookup"><span data-stu-id="0a64f-139">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="0a64f-140">Crear y dibujar trazados</span><span class="sxs-lookup"><span data-stu-id="0a64f-140">Constructing and Drawing Paths</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

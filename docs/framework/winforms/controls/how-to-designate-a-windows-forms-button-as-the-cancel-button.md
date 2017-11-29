@@ -1,32 +1,37 @@
 ---
-title: "C&#243;mo: Definir un bot&#243;n de formularios Windows Forms como el bot&#243;n Cancelar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "control de botón [Windows Forms], designar como botón para cancelar"
-  - "botones, botones para cancelar"
+title: "Cómo: Definir un botón de formularios Windows Forms como el botón Cancelar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- buttons [Windows Forms], cancel buttons
+- Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bbdf2ec4f2353662f1077b9d95966e0a2ebd316
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Definir un bot&#243;n de formularios Windows Forms como el bot&#243;n Cancelar
-En cualquier Windows Form, se puede designar un control <xref:System.Windows.Forms.Button> como el botón que se utiliza para cancelar.  Siempre que el usuario presione la tecla ESC hará clic en el botón para cancelar, independientemente del control del formulario que tenga el foco.  Habitualmente, este botón se programa para permitir que el usuario salga rápidamente de una operación sin confirmar ninguna acción.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a><span data-ttu-id="a4bb5-102">Cómo: Definir un botón de formularios Windows Forms como el botón Cancelar</span><span class="sxs-lookup"><span data-stu-id="a4bb5-102">How to: Designate a Windows Forms Button as the Cancel Button</span></span>
+<span data-ttu-id="a4bb5-103">En cualquier formulario Windows Forms, puede designar un <xref:System.Windows.Forms.Button> que sea el botón Cancelar del control.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the cancel button.</span></span> <span data-ttu-id="a4bb5-104">Cada vez que el usuario presiona la tecla ESC, sin tener en cuenta que otro control en el formulario tiene el foco, se hace clic en un botón de cancelación.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-104">A cancel button is clicked whenever the user presses the ESC key, regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="a4bb5-105">Habitualmente, este botón se programa para permitir que el usuario salga rápidamente de una operación sin confirmar ninguna acción.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-105">Such a button is usually programmed to enable the user to quickly exit an operation without committing to any action.</span></span>  
   
-### Para designar el botón para cancelar  
+### <a name="to-designate-the-cancel-button"></a><span data-ttu-id="a4bb5-106">Para designar el botón Cancelar</span><span class="sxs-lookup"><span data-stu-id="a4bb5-106">To designate the cancel button</span></span>  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.Form.CancelButton%2A> en el control <xref:System.Windows.Forms.Button> apropiado.  
+1.  <span data-ttu-id="a4bb5-107">Establezca el formulario <xref:System.Windows.Forms.Form.CancelButton%2A> propiedad correspondientes <xref:System.Windows.Forms.Button> control.</span><span class="sxs-lookup"><span data-stu-id="a4bb5-107">Set the form's <xref:System.Windows.Forms.Form.CancelButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetCancelButton(ByVal myCancelBtn As Button)  
@@ -49,10 +54,10 @@ En cualquier Windows Form, se puede designar un control <xref:System.Windows.For
        }  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.Form.CancelButton%2A>   
- [Información general sobre el control Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Maneras de seleccionar un control Button de formularios Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Cómo: Responder a clics de botones en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Cómo: Designar un botón de formularios Windows Forms como botón para aceptar](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)   
- [Button \(Control\)](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a4bb5-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="a4bb5-108">See Also</span></span>  
+ <xref:System.Windows.Forms.Form.CancelButton%2A>  
+ [<span data-ttu-id="a4bb5-109">Información general sobre el control Button</span><span class="sxs-lookup"><span data-stu-id="a4bb5-109">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="a4bb5-110">Maneras de seleccionar un control Button de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a4bb5-110">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="a4bb5-111">Responder a clics de botones en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a4bb5-111">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="a4bb5-112">Designar un botón de Windows Forms como botón para aceptar</span><span class="sxs-lookup"><span data-stu-id="a4bb5-112">How to: Designate a Windows Forms Button as the Accept Button</span></span>](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
+ [<span data-ttu-id="a4bb5-113">Botón (control)</span><span class="sxs-lookup"><span data-stu-id="a4bb5-113">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

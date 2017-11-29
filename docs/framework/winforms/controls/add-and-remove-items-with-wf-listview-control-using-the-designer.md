@@ -1,50 +1,51 @@
 ---
-title: "C&#243;mo: Agregar y quitar elementos de un control ListView de formularios Windows Forms mediante el Dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ListView (control) [Windows Forms], agregar elementos de lista"
-  - "ListView (control) [Windows Forms], llenar"
+title: "Cómo: Agregar y quitar elementos de un control ListView de formularios Windows Forms mediante el Diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ListView control [Windows Forms], populating
+- ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1fe301f4c504d43fd83eb52e3b32f78af2ca78a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Agregar y quitar elementos de un control ListView de formularios Windows Forms mediante el Dise&#241;ador
-El proceso de agregar un elemento a un control <xref:System.Windows.Forms.ListView> de formularios Windows Forms consiste básicamente en especificar el elemento y asignarle propiedades.  Puede agregar o quitar elementos de la lista en cualquier momento.  
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a><span data-ttu-id="df9cf-102">Cómo: Agregar y quitar elementos de un control ListView de formularios Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="df9cf-102">How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer</span></span>
+<span data-ttu-id="df9cf-103">El proceso de agregar un elemento a un formulario Windows Forms <xref:System.Windows.Forms.ListView> control está compuesto principalmente de especificar el elemento y asignarle propiedades.</span><span class="sxs-lookup"><span data-stu-id="df9cf-103">The process of adding an item to a Windows Forms <xref:System.Windows.Forms.ListView> control consists primarily of specifying the item and assigning properties to it.</span></span> <span data-ttu-id="df9cf-104">Es posible agregar o quitar elementos de lista en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="df9cf-104">Adding or removing list items can be done at any time.</span></span>  
   
- El procedimiento siguiente requiere un proyecto de **Aplicación para Windows** con un formulario que contiene un control <xref:System.Windows.Forms.ListView>.  Para obtener información sobre cómo configurar tal proyecto, vea [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="df9cf-105">El procedimiento siguiente requiere un **aplicación de Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.ListView> control.</span><span class="sxs-lookup"><span data-stu-id="df9cf-105">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="df9cf-106">Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="df9cf-106">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="df9cf-107">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="df9cf-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="df9cf-108">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="df9cf-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="df9cf-109">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="df9cf-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Para agregar o quitar elementos con el diseñador  
+### <a name="to-add-or-remove-items-using-the-designer"></a><span data-ttu-id="df9cf-110">Para agregar o quitar elementos mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="df9cf-110">To add or remove items using the designer</span></span>  
   
-1.  Seleccione el control <xref:System.Windows.Forms.ListView>.  
+1.  <span data-ttu-id="df9cf-111">Seleccione el control <xref:System.Windows.Forms.ListView>.</span><span class="sxs-lookup"><span data-stu-id="df9cf-111">Select the <xref:System.Windows.Forms.ListView> control.</span></span>  
   
-2.  En la ventana **Propiedades**, haga clic en el botón de **puntos suspensivos** \(![Captura de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) que se encuentra junto a la propiedad <xref:System.Windows.Forms.ListView.Items%2A>.  
+2.  <span data-ttu-id="df9cf-112">En el **propiedades** ventana, haga clic en el **puntos suspensivos** (![de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) situado junto a el <xref:System.Windows.Forms.ListView.Items%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="df9cf-112">In the **Properties** window, click the **Ellipsis** (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button next to the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span>  
   
-     Aparecerá el **Editor de la colección de ListViewItem**.  
+     <span data-ttu-id="df9cf-113">El **Editor de la colección de ListViewItem** aparece.</span><span class="sxs-lookup"><span data-stu-id="df9cf-113">The **ListViewItem Collection Editor** appears.</span></span>  
   
-3.  Para agregar un elemento, haga clic en el botón **Agregar**.  A continuación puede establecer las propiedades del nuevo elemento, como las propiedades <xref:System.Windows.Forms.ListView.Text%2A> y <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>.  
+3.  <span data-ttu-id="df9cf-114">Para agregar un elemento, haga clic en el **agregar** botón.</span><span class="sxs-lookup"><span data-stu-id="df9cf-114">To add an item, click the **Add** button.</span></span> <span data-ttu-id="df9cf-115">A continuación, puede establecer propiedades del nuevo elemento, como el <xref:System.Windows.Forms.ListView.Text%2A> y <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> propiedades.</span><span class="sxs-lookup"><span data-stu-id="df9cf-115">You can then set properties of the new item, such as the <xref:System.Windows.Forms.ListView.Text%2A> and <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> properties.</span></span>  
   
-4.  Para quitar un elemento, selecciónelo y haga clic en el botón **Quitar**.  
+4.  <span data-ttu-id="df9cf-116">Para quitar un elemento, selecciónelo y haga clic en el **quitar** botón.</span><span class="sxs-lookup"><span data-stu-id="df9cf-116">To remove an item, select it and click the **Remove** button.</span></span>  
   
-## Vea también  
- [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)   
- [Cómo: Agregar columnas al control ListView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)   
- [Cómo: Mostrar subelementos en columnas con el control ListView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)   
- [Cómo: Mostrar iconos del control ListView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)   
- [Cómo: Agregar información personalizada a los controles TreeView o ListView \(formularios Windows Forms\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)   
- [Cómo: Agrupar elementos en un control ListView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)
+## <a name="see-also"></a><span data-ttu-id="df9cf-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="df9cf-117">See Also</span></span>  
+ [<span data-ttu-id="df9cf-118">Información general del control ListView</span><span class="sxs-lookup"><span data-stu-id="df9cf-118">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="df9cf-119">Agregar columnas al control ListView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df9cf-119">How to: Add Columns to the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="df9cf-120">Mostrar subelementos en columnas con el control ListView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df9cf-120">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="df9cf-121">Mostrar iconos del control ListView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df9cf-121">How to: Display Icons for the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="df9cf-122">Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="df9cf-122">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ [<span data-ttu-id="df9cf-123">Agrupar elementos en un control ListView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df9cf-123">How to: Group Items in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)

@@ -1,51 +1,50 @@
 ---
-title: "&lt;typeparam&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<typeparam> (etiqueta XML)"
-  - "typeparam (etiqueta XML)"
+title: '&lt;typeparam&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- typeparam XML tag
+- <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b654fe6fc93642693730256b523fee999aa55937
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;typeparam&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Define un nombre y descripción de parámetro de tipo.  
+# <a name="lttypeparamgt-visual-basic"></a><span data-ttu-id="e01e1-102">&lt;typeparam&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e01e1-102">&lt;typeparam&gt; (Visual Basic)</span></span>
+<span data-ttu-id="e01e1-103">Define un nombre de parámetro de tipo y una descripción.</span><span class="sxs-lookup"><span data-stu-id="e01e1-103">Defines a type parameter name and description.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="e01e1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e01e1-104">Syntax</span></span>  
   
-```  
+```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="e01e1-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e01e1-105">Parameters</span></span>  
  `name`  
- Nombre del parámetro de tipo.  Ponga el nombre entre comillas dobles \(" "\).  
+ <span data-ttu-id="e01e1-106">El nombre del parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="e01e1-106">The name of the type parameter.</span></span> <span data-ttu-id="e01e1-107">Ponga el nombre entre comillas dobles (" ").</span><span class="sxs-lookup"><span data-stu-id="e01e1-107">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- Una descripción del parámetro de tipo.  
+ <span data-ttu-id="e01e1-108">Una descripción del parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="e01e1-108">A description of the type parameter.</span></span>  
   
-## Comentarios  
- Utilice la etiqueta `<typeparam>` en el comentario para que una declaración de tipo genérico o de miembro genérico describa uno de los parámetros de tipo.  
+## <a name="remarks"></a><span data-ttu-id="e01e1-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e01e1-109">Remarks</span></span>  
+ <span data-ttu-id="e01e1-110">Use la `<typeparam>` etiqueta en el comentario de un tipo genérico o declaración de miembro genérico para describir uno de los parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="e01e1-110">Use the `<typeparam>` tag in the comment for a generic type or generic member declaration to describe one of the type parameters.</span></span>  
   
- Compile con [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
+ <span data-ttu-id="e01e1-111">Compile con el parámetro [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación y generar un archivo con ellos.</span><span class="sxs-lookup"><span data-stu-id="e01e1-111">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## Ejemplo  
- Este ejemplo utiliza la etiqueta `<typeparam>` para describir el parámetro `id`.  
+## <a name="example"></a><span data-ttu-id="e01e1-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e01e1-112">Example</span></span>  
+ <span data-ttu-id="e01e1-113">Este ejemplo se utiliza la `<typeparam>` etiquetas para describir el `id` parámetro.</span><span class="sxs-lookup"><span data-stu-id="e01e1-113">This example uses the `<typeparam>` tag to describe the `id` parameter.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
   
-## Vea también  
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="e01e1-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="e01e1-114">See Also</span></span>  
+ [<span data-ttu-id="e01e1-115">Etiquetas XML para comentarios</span><span class="sxs-lookup"><span data-stu-id="e01e1-115">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

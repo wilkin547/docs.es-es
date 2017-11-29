@@ -1,40 +1,45 @@
 ---
-title: "C&#243;mo: Crear un enlace personalizado mediante SecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguridad [WCF], creación de enlaces personalizados"
+title: "Cómo: Crear un enlace personalizado mediante SecurityBindingElement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear un enlace personalizado mediante SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluye varios enlaces proporcionados por el sistema que se pueden configurar pero que no proporcionan completa flexibilidad cuando se configuran todas las opciones de seguridad que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite. Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]creación de enlaces personalizados, vea [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a><span data-ttu-id="64b18-102">Cómo: Crear un enlace personalizado mediante SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-102">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="64b18-103"> incluye varios enlaces proporcionados por el sistema que se pueden configurar pero que no proporcionan completa flexibilidad cuando se configuran todas las opciones de seguridad que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite.</span><span class="sxs-lookup"><span data-stu-id="64b18-103"> includes several system-provided bindings that can be configured but do not provide full flexibility when configuring all the security options that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports.</span></span> <span data-ttu-id="64b18-104">Este tema muestra cómo crear un enlace personalizado directamente a partir de elementos de enlace individuales y resalta algunos de los ajustes de seguridad que pueden especificarse al crear este tipo de enlaces.</span><span class="sxs-lookup"><span data-stu-id="64b18-104">This topic demonstrates how to create a custom binding directly from individual binding elements and highlights some of the security settings that can be specified when creating such a binding.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="64b18-105">cómo crear enlaces personalizados, consulte [extender enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="64b18-105"> creating custom bindings, see [Extending Bindings](../../../../docs/framework/wcf/extending/extending-bindings.md).</span></span>  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> no es compatible con la <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forma, que es el uso de forma de canal predeterminada mediante TCP de canal de transporte cuando <xref:System.ServiceModel.TransferMode> está establecido en <xref:System.ServiceModel.TransferMode.Buffered>. Debe establecer <xref:System.ServiceModel.TransferMode> a <xref:System.ServiceModel.TransferMode.Streamed> para poder utilizar <xref:System.ServiceModel.Channels.SecurityBindingElement> en este escenario.  
+>  <span data-ttu-id="64b18-106"><xref:System.ServiceModel.Channels.SecurityBindingElement> no admite la forma de canal de <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, que es el uso predeterminado de la forma de canal por el transporte TCP cuando <xref:System.ServiceModel.TransferMode> se establece en <xref:System.ServiceModel.TransferMode.Buffered>.</span><span class="sxs-lookup"><span data-stu-id="64b18-106"><xref:System.ServiceModel.Channels.SecurityBindingElement> does not support the <xref:System.ServiceModel.Channels.IDuplexSessionChannel> channel shape, which is the default channel shape use by the TCP transport when <xref:System.ServiceModel.TransferMode> is set to <xref:System.ServiceModel.TransferMode.Buffered>.</span></span> <span data-ttu-id="64b18-107">Debe establecer <xref:System.ServiceModel.TransferMode> en <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> en este escenario.</span><span class="sxs-lookup"><span data-stu-id="64b18-107">You must set <xref:System.ServiceModel.TransferMode> to <xref:System.ServiceModel.TransferMode.Streamed> in order to use <xref:System.ServiceModel.Channels.SecurityBindingElement> in this scenario.</span></span>  
   
-## <a name="creating-a-custom-binding"></a>Creación de un enlace personalizado  
- En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] todos los enlaces se componen de *elementos de enlace*. Cada elemento de enlace se deriva de la <xref:System.ServiceModel.Channels.BindingElement> clase. En el caso de los enlaces estándar proporcionados por el sistema, los elementos de enlace se crean y se configuran automáticamente, pero se pueden personalizar algunos de los valores de las propiedades.  
+## <a name="creating-a-custom-binding"></a><span data-ttu-id="64b18-108">Creación de un enlace personalizado</span><span class="sxs-lookup"><span data-stu-id="64b18-108">Creating a Custom Binding</span></span>  
+ <span data-ttu-id="64b18-109">En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] todos los enlaces se componen de *elementos de enlace*.</span><span class="sxs-lookup"><span data-stu-id="64b18-109">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] all bindings are made up of *binding elements*.</span></span> <span data-ttu-id="64b18-110">Cada elemento de enlace deriva de la clase <xref:System.ServiceModel.Channels.BindingElement>.</span><span class="sxs-lookup"><span data-stu-id="64b18-110">Each binding element derives from the <xref:System.ServiceModel.Channels.BindingElement> class.</span></span> <span data-ttu-id="64b18-111">En el caso de los enlaces estándar proporcionados por el sistema, los elementos de enlace se crean y se configuran automáticamente, pero se pueden personalizar algunos de los valores de las propiedades.</span><span class="sxs-lookup"><span data-stu-id="64b18-111">For the standard system-provided bindings, the binding elements are created and configured for you, although you can customize some of the property settings.</span></span>  
   
- En cambio, para crear un enlace personalizado, elementos de enlace se crean y configuran y un <xref:System.ServiceModel.Channels.CustomBinding> creada a partir de los elementos de enlace.  
+ <span data-ttu-id="64b18-112">Por el contrario, para crear un enlace personalizado, se crean y configuran los elementos de enlace y se crea un objeto <xref:System.ServiceModel.Channels.CustomBinding> a partir de los elementos de enlace.</span><span class="sxs-lookup"><span data-stu-id="64b18-112">In contrast, to create a custom binding, binding elements are created and configured and a <xref:System.ServiceModel.Channels.CustomBinding> is created from the binding elements.</span></span>  
   
- Para ello, se agregan los elementos de enlace individuales a una colección representada por una instancia de la <xref:System.ServiceModel.Channels.BindingElementCollection> de clase y, a continuación, establezca el `Elements` propiedad de la `CustomBinding` igual a ese objeto. Debe agregar los elementos de enlace en el orden siguiente: flujo de transacciones, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de secuencia, codificación de mensajes y transporte. Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace.  
+ <span data-ttu-id="64b18-113">Para ello, se agregan los elementos de enlace individuales a una colección representada por una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> y, a continuación, se establece la propiedad `Elements` de `CustomBinding` en ese objeto.</span><span class="sxs-lookup"><span data-stu-id="64b18-113">To do this, you add the individual binding elements to a collection represented by an instance of the <xref:System.ServiceModel.Channels.BindingElementCollection> class, and then set the `Elements` property of the `CustomBinding` equal to that object.</span></span> <span data-ttu-id="64b18-114">Debe agregar los elementos de enlace en el orden siguiente: flujo de transacciones, sesión confiable, seguridad, dúplex compuesto, unidireccional, seguridad de secuencia, codificación de mensajes y transporte.</span><span class="sxs-lookup"><span data-stu-id="64b18-114">You must add the binding elements in the following order: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding, and Transport.</span></span> <span data-ttu-id="64b18-115">Tenga en cuenta que no todos los elementos de enlace enumerados se necesitan en cada enlace.</span><span class="sxs-lookup"><span data-stu-id="64b18-115">Note that not all the binding elements listed are required in every binding.</span></span>  
   
-## <a name="securitybindingelement"></a>SecurityBindingElement  
- Tres elementos de enlace relacionadas con la seguridad de nivel de mensaje, que derivan de la <xref:System.ServiceModel.Channels.SecurityBindingElement> clase. Los tres elementos son <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, y <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. El <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> se utiliza para proporcionar seguridad de modo mixto. Se utilizan los otros dos elementos cuando la capa del mensaje proporciona seguridad.  
+## <a name="securitybindingelement"></a><span data-ttu-id="64b18-116">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-116">SecurityBindingElement</span></span>  
+ <span data-ttu-id="64b18-117">Tres elementos de enlace guardan relación con la seguridad, y todos se derivan de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="64b18-117">Three binding elements relate to message level security, all of which derive from the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> <span data-ttu-id="64b18-118">Los tres elementos son <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> y <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="64b18-118">The three are <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, and <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.</span></span> <span data-ttu-id="64b18-119"><xref:System.ServiceModel.Channels.TransportSecurityBindingElement> se utiliza para proporcionar seguridad de modo mixto.</span><span class="sxs-lookup"><span data-stu-id="64b18-119">The <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> is used to provide Mixed mode security.</span></span> <span data-ttu-id="64b18-120">Se utilizan los otros dos elementos cuando la capa del mensaje proporciona seguridad.</span><span class="sxs-lookup"><span data-stu-id="64b18-120">The other two elements are used when the message layer provides security.</span></span>  
   
- Se utilizan clases adicionales cuando se proporciona seguridad de nivel de transporte:  
+ <span data-ttu-id="64b18-121">Se utilizan clases adicionales cuando se proporciona seguridad de nivel de transporte:</span><span class="sxs-lookup"><span data-stu-id="64b18-121">Additional classes are used when transport level security is provided:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
@@ -42,78 +47,78 @@ caps.handback.revision: 19
   
 -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-## <a name="required-binding-elements"></a>Elementos de enlace necesarios  
- Hay un gran número de posibles elementos de enlace que se pueden combinar en un enlace. No todas estas combinaciones son válidas. En esta sección se describen los elementos necesarios que se deben encontrar en un enlace de seguridad.  
+## <a name="required-binding-elements"></a><span data-ttu-id="64b18-122">Elementos de enlace necesarios</span><span class="sxs-lookup"><span data-stu-id="64b18-122">Required Binding Elements</span></span>  
+ <span data-ttu-id="64b18-123">Hay un gran número de posibles elementos de enlace que se pueden combinar en un enlace.</span><span class="sxs-lookup"><span data-stu-id="64b18-123">There are a large number of possible binding elements that can be combined into a binding.</span></span> <span data-ttu-id="64b18-124">No todas estas combinaciones son válidas.</span><span class="sxs-lookup"><span data-stu-id="64b18-124">Not all of these combinations are valid.</span></span> <span data-ttu-id="64b18-125">En esta sección se describen los elementos necesarios que se deben encontrar en un enlace de seguridad.</span><span class="sxs-lookup"><span data-stu-id="64b18-125">This section describes the required elements that must be present in a security binding.</span></span>  
   
- La validez de los enlaces de seguridad depende de muchos factores, como los siguientes:  
+ <span data-ttu-id="64b18-126">La validez de los enlaces de seguridad depende de muchos factores, como los siguientes:</span><span class="sxs-lookup"><span data-stu-id="64b18-126">Valid security bindings depend on many factors, including the following:</span></span>  
   
--   Modo de seguridad.  
+-   <span data-ttu-id="64b18-127">Modo de seguridad.</span><span class="sxs-lookup"><span data-stu-id="64b18-127">Security mode.</span></span>  
   
--   Protocolo de transporte.  
+-   <span data-ttu-id="64b18-128">Protocolo de transporte.</span><span class="sxs-lookup"><span data-stu-id="64b18-128">Transport protocol.</span></span>  
   
--   El patrón de intercambio de mensajes (MEP) especificado en el contrato.  
+-   <span data-ttu-id="64b18-129">El patrón de intercambio de mensajes (MEP) especificado en el contrato.</span><span class="sxs-lookup"><span data-stu-id="64b18-129">The message exchange pattern (MEP) specified in the contract.</span></span>  
   
- En la tabla siguiente se muestran las configuraciones de pila de los elementos de enlace válidos para cada combinación de los factores mencionados. Tenga en cuenta que éstos son los requisitos mínimos. Puede agregar otros elementos de enlace al enlace, como elementos de enlace de codificación de mensajes y elementos de enlace de transacción.  
+ <span data-ttu-id="64b18-130">En la tabla siguiente se muestran las configuraciones de pila de los elementos de enlace válidos para cada combinación de los factores mencionados.</span><span class="sxs-lookup"><span data-stu-id="64b18-130">The following table shows the valid binding element stack configurations for each combination of the preceding factors.</span></span> <span data-ttu-id="64b18-131">Tenga en cuenta que éstos son los requisitos mínimos.</span><span class="sxs-lookup"><span data-stu-id="64b18-131">Note that these are minimal requirements.</span></span> <span data-ttu-id="64b18-132">Puede agregar otros elementos de enlace al enlace, como elementos de enlace de codificación de mensajes y elementos de enlace de transacción.</span><span class="sxs-lookup"><span data-stu-id="64b18-132">You can add additional binding elements to the binding, such as message encoding binding elements, transaction binding elements, and other binding elements.</span></span>  
   
-|Modo de seguridad|Transporte|Patrón de intercambio de mensajes de contrato|Patrón de intercambio de mensajes de contrato|Patrón de intercambio de mensajes de contrato|  
+|<span data-ttu-id="64b18-133">Modo de seguridad</span><span class="sxs-lookup"><span data-stu-id="64b18-133">Security Mode</span></span>|<span data-ttu-id="64b18-134">Transporte</span><span class="sxs-lookup"><span data-stu-id="64b18-134">Transport</span></span>|<span data-ttu-id="64b18-135">Patrón de intercambio de mensajes de contrato</span><span class="sxs-lookup"><span data-stu-id="64b18-135">Contract Message Exchange Pattern</span></span>|<span data-ttu-id="64b18-136">Patrón de intercambio de mensajes de contrato</span><span class="sxs-lookup"><span data-stu-id="64b18-136">Contract Message Exchange Pattern</span></span>|<span data-ttu-id="64b18-137">Patrón de intercambio de mensajes de contrato</span><span class="sxs-lookup"><span data-stu-id="64b18-137">Contract Message Exchange Pattern</span></span>|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
 |||`Datagram`|`Request Reply`|`Duplex`|  
-|Transporte|Https||||  
-|||OneWayBindingElement|||  
-|||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP||||  
-|||OneWayBindingElement|||  
-|||SSL o StreamSecurityBindingElement de Windows|SSL o StreamSecurityBindingElement de Windows|SSL o StreamSecurityBindingElement de Windows|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Mensaje|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)|  
-|||||CompositeDuplexBindingElement|  
-|||OneWayBindingElement||OneWayBindingElement|  
-|||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||Tcp|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Mixto (transporte con credenciales de mensaje)|Https|TransportSecurityBindingElement|TransportSecurityBindingElement||  
-|||OneWayBindingElement|||  
-|||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)|SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)|  
-|||OneWayBindingElement|||  
-|||SSL o StreamSecurityBindingElement de Windows|SSL o StreamSecurityBindingElement de Windows|SSL o StreamSecurityBindingElement de Windows|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
+|<span data-ttu-id="64b18-138">Transporte</span><span class="sxs-lookup"><span data-stu-id="64b18-138">Transport</span></span>|<span data-ttu-id="64b18-139">Https</span><span class="sxs-lookup"><span data-stu-id="64b18-139">Https</span></span>||||  
+|||<span data-ttu-id="64b18-140">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-140">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="64b18-141">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-141">HttpsTransportBindingElement</span></span>|<span data-ttu-id="64b18-142">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-142">HttpsTransportBindingElement</span></span>||  
+||<span data-ttu-id="64b18-143">TCP</span><span class="sxs-lookup"><span data-stu-id="64b18-143">TCP</span></span>||||  
+|||<span data-ttu-id="64b18-144">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-144">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="64b18-145">SSL o StreamSecurityBindingElement de Windows</span><span class="sxs-lookup"><span data-stu-id="64b18-145">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="64b18-146">SSL o StreamSecurityBindingElement de Windows</span><span class="sxs-lookup"><span data-stu-id="64b18-146">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="64b18-147">SSL o StreamSecurityBindingElement de Windows</span><span class="sxs-lookup"><span data-stu-id="64b18-147">SSL or Windows StreamSecurityBindingElement</span></span>|  
+|||<span data-ttu-id="64b18-148">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-148">TcpTransportBindingElement</span></span>|<span data-ttu-id="64b18-149">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-149">TcpTransportBindingElement</span></span>|<span data-ttu-id="64b18-150">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-150">TcpTransportBindingElement</span></span>|  
+|<span data-ttu-id="64b18-151">Mensaje</span><span class="sxs-lookup"><span data-stu-id="64b18-151">Message</span></span>|<span data-ttu-id="64b18-152">Http</span><span class="sxs-lookup"><span data-stu-id="64b18-152">Http</span></span>|<span data-ttu-id="64b18-153">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-153">SymmetricSecurityBindingElement</span></span>|<span data-ttu-id="64b18-154">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-154">SymmetricSecurityBindingElement</span></span>|<span data-ttu-id="64b18-155">SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="64b18-155">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||||<span data-ttu-id="64b18-156">CompositeDuplexBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-156">CompositeDuplexBindingElement</span></span>|  
+|||<span data-ttu-id="64b18-157">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-157">OneWayBindingElement</span></span>||<span data-ttu-id="64b18-158">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-158">OneWayBindingElement</span></span>|  
+|||<span data-ttu-id="64b18-159">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-159">HttpTransportBindingElement</span></span>|<span data-ttu-id="64b18-160">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-160">HttpTransportBindingElement</span></span>|<span data-ttu-id="64b18-161">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-161">HttpTransportBindingElement</span></span>|  
+||<span data-ttu-id="64b18-162">Tcp</span><span class="sxs-lookup"><span data-stu-id="64b18-162">Tcp</span></span>|<span data-ttu-id="64b18-163">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-163">SecurityBindingElement</span></span>|<span data-ttu-id="64b18-164">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-164">SecurityBindingElement</span></span>|<span data-ttu-id="64b18-165">SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="64b18-165">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||<span data-ttu-id="64b18-166">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-166">TcpTransportBindingElement</span></span>|<span data-ttu-id="64b18-167">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-167">TcpTransportBindingElement</span></span>|<span data-ttu-id="64b18-168">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-168">TcpTransportBindingElement</span></span>|  
+|<span data-ttu-id="64b18-169">Mixto (transporte con credenciales de mensaje)</span><span class="sxs-lookup"><span data-stu-id="64b18-169">Mixed (transport with message credentials)</span></span>|<span data-ttu-id="64b18-170">Https</span><span class="sxs-lookup"><span data-stu-id="64b18-170">Https</span></span>|<span data-ttu-id="64b18-171">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-171">TransportSecurityBindingElement</span></span>|<span data-ttu-id="64b18-172">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-172">TransportSecurityBindingElement</span></span>||  
+|||<span data-ttu-id="64b18-173">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-173">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="64b18-174">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-174">HttpsTransportBindingElement</span></span>|<span data-ttu-id="64b18-175">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-175">HttpsTransportBindingElement</span></span>||  
+||<span data-ttu-id="64b18-176">TCP</span><span class="sxs-lookup"><span data-stu-id="64b18-176">TCP</span></span>|<span data-ttu-id="64b18-177">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-177">TransportSecurityBindingElement</span></span>|<span data-ttu-id="64b18-178">SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="64b18-178">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|<span data-ttu-id="64b18-179">SymmetricSecurityBindingElement (modo de autenticación = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="64b18-179">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||<span data-ttu-id="64b18-180">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-180">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="64b18-181">SSL o StreamSecurityBindingElement de Windows</span><span class="sxs-lookup"><span data-stu-id="64b18-181">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="64b18-182">SSL o StreamSecurityBindingElement de Windows</span><span class="sxs-lookup"><span data-stu-id="64b18-182">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="64b18-183">SSL o StreamSecurityBindingElement de Windows</span><span class="sxs-lookup"><span data-stu-id="64b18-183">SSL or Windows StreamSecurityBindingElement</span></span>|  
+|||<span data-ttu-id="64b18-184">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-184">TcpTransportBindingElement</span></span>|<span data-ttu-id="64b18-185">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-185">TcpTransportBindingElement</span></span>|<span data-ttu-id="64b18-186">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-186">TcpTransportBindingElement</span></span>|  
   
- Observe que hay muchos valores de configuración que se pueden definir en SecurityBindingElements. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ <span data-ttu-id="64b18-187">Observe que hay muchos valores de configuración que se pueden definir en SecurityBindingElements.</span><span class="sxs-lookup"><span data-stu-id="64b18-187">Note that there are many configurable settings on the SecurityBindingElements.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="64b18-188">[Modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).</span><span class="sxs-lookup"><span data-stu-id="64b18-188"> [SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Conversaciones y sesiones seguras](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="64b18-189">[Proteja las conversaciones y sesiones](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).</span><span class="sxs-lookup"><span data-stu-id="64b18-189"> [Secure Conversations and Secure Sessions](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).</span></span>  
   
-## <a name="procedures"></a>Procedimientos  
+## <a name="procedures"></a><span data-ttu-id="64b18-190">Procedimientos</span><span class="sxs-lookup"><span data-stu-id="64b18-190">Procedures</span></span>  
   
-#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Para crear un enlace personalizado que utilice un SymmetricSecurityBindingElement  
+#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a><span data-ttu-id="64b18-191">Para crear un enlace personalizado que utilice un SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="64b18-191">To create a custom binding that uses a SymmetricSecurityBindingElement</span></span>  
   
-1.  Cree una instancia de la <xref:System.ServiceModel.Channels.BindingElementCollection> clase con el nombre `outputBec`.  
+1.  <span data-ttu-id="64b18-192">Cree una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection> con el nombre `outputBec`.</span><span class="sxs-lookup"><span data-stu-id="64b18-192">Create an instance of the <xref:System.ServiceModel.Channels.BindingElementCollection> class with the name `outputBec`.</span></span>  
   
-2.  Llame al método estático `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, que devuelve una instancia de la <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> clase.  
+2.  <span data-ttu-id="64b18-193">Llame al método estático `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, que devuelve una instancia de la clase <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="64b18-193">Call the static method `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, which returns an instance of the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> class.</span></span>  
   
-3.  Agregue el <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> a la colección (`outputBec`) llamando a la `Add` método de la <xref:System.Collections.ObjectModel.Collection%601> de <xref:System.ServiceModel.Channels.BindingElement> clase.  
+3.  <span data-ttu-id="64b18-194">Agregue el <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> a la colección (`outputBec`) llamando a `Add` del método de la <xref:System.Collections.ObjectModel.Collection%601> de la clase <xref:System.ServiceModel.Channels.BindingElement>.</span><span class="sxs-lookup"><span data-stu-id="64b18-194">Add the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> to the collection (`outputBec`) by calling the `Add` method of the <xref:System.Collections.ObjectModel.Collection%601> of <xref:System.ServiceModel.Channels.BindingElement> class.</span></span>  
   
-4.  Cree una instancia de la <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> clase y agregarla a la colección (`outputBec`). Esto especifica la codificación utilizada por el enlace.  
+4.  <span data-ttu-id="64b18-195">Cree una instancia de la clase <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> y agréguela a la colección (`outputBec`).</span><span class="sxs-lookup"><span data-stu-id="64b18-195">Create an instance of the <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> class and add it to the collection (`outputBec`).</span></span> <span data-ttu-id="64b18-196">Esto especifica la codificación utilizada por el enlace.</span><span class="sxs-lookup"><span data-stu-id="64b18-196">This specifies the encoding used by the binding.</span></span>  
   
-5.  Crear un <xref:System.ServiceModel.Channels.HttpTransportBindingElement> y agréguelo a la colección (`outputBec`). Esto especifica que el enlace utiliza el transporte HTTP.  
+5.  <span data-ttu-id="64b18-197">Cree un <xref:System.ServiceModel.Channels.HttpTransportBindingElement> y agréguelo a la colección (`outputBec`).</span><span class="sxs-lookup"><span data-stu-id="64b18-197">Create a <xref:System.ServiceModel.Channels.HttpTransportBindingElement> and add it to the collection (`outputBec`).</span></span> <span data-ttu-id="64b18-198">Esto especifica que el enlace utiliza el transporte HTTP.</span><span class="sxs-lookup"><span data-stu-id="64b18-198">This specifies that the binding uses the HTTP transport.</span></span>  
   
-6.  Crear un nuevo enlace personalizado creando una instancia de la <xref:System.ServiceModel.Channels.CustomBinding> (clase) y pasando la colección `outputBec` al constructor.  
+6.  <span data-ttu-id="64b18-199">Cree un nuevo enlace personalizado creando una instancia de la clase <xref:System.ServiceModel.Channels.CustomBinding> y pasando la colección `outputBec` al constructor.</span><span class="sxs-lookup"><span data-stu-id="64b18-199">Create a new custom binding by creating an instance of the <xref:System.ServiceModel.Channels.CustomBinding> class and passing the collection `outputBec` to the constructor.</span></span>  
   
-7.  El enlace personalizado resultante comparte muchas de las mismas características que el estándar <xref:System.ServiceModel.WSHttpBinding>. Especifica seguridad del nivel de mensaje y credenciales de Windows pero deshabilita las sesiones seguras, requiere que la credencial del servicio se especifique fuera de banda, y no cifra las firmas. Se puede controlar la última sólo estableciendo la <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> propiedad tal como se muestra en el paso 4. Los otros dos se pueden controlar usando los valores del enlace estándar.  
+7.  <span data-ttu-id="64b18-200">El enlace personalizado resultante comparte muchas de las mismas características que el <xref:System.ServiceModel.WSHttpBinding> estándar.</span><span class="sxs-lookup"><span data-stu-id="64b18-200">The resulting custom binding shares many of the same characteristics as the standard <xref:System.ServiceModel.WSHttpBinding>.</span></span> <span data-ttu-id="64b18-201">Especifica seguridad del nivel de mensaje y credenciales de Windows pero deshabilita las sesiones seguras, requiere que la credencial del servicio se especifique fuera de banda, y no cifra las firmas.</span><span class="sxs-lookup"><span data-stu-id="64b18-201">It specifies message-level security and Windows credentials but disables secure sessions, requires that the service credential be specified out-of-band, and does not encrypt signatures.</span></span> <span data-ttu-id="64b18-202">Lo último solo puede controlarse estableciendo la propiedad <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> como se muestra en el paso 4.</span><span class="sxs-lookup"><span data-stu-id="64b18-202">The last can be controlled only by setting the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> property as shown in step 4.</span></span> <span data-ttu-id="64b18-203">Los otros dos se pueden controlar usando los valores del enlace estándar.</span><span class="sxs-lookup"><span data-stu-id="64b18-203">The other two can be controlled using settings on the standard binding.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="64b18-204">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="64b18-204">Example</span></span>  
   
-### <a name="description"></a>Descripción  
- En el ejemplo siguiente se proporciona una función completa para crear un enlace personalizado que utiliza un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+### <a name="description"></a><span data-ttu-id="64b18-205">Descripción</span><span class="sxs-lookup"><span data-stu-id="64b18-205">Description</span></span>  
+ <span data-ttu-id="64b18-206">El ejemplo siguiente proporciona una función completa para crear un enlace personalizado que utilice <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="64b18-206">The following example provides a complete function to create a custom binding that uses a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span></span>  
   
-### <a name="code"></a>Código  
+### <a name="code"></a><span data-ttu-id="64b18-207">Código</span><span class="sxs-lookup"><span data-stu-id="64b18-207">Code</span></span>  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>   
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Extensión de enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="64b18-208">Vea también</span><span class="sxs-lookup"><span data-stu-id="64b18-208">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="64b18-209">Extensión de enlaces</span><span class="sxs-lookup"><span data-stu-id="64b18-209">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="64b18-210">Enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="64b18-210">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)

@@ -1,34 +1,30 @@
 ---
-title: Ejemplo que genera partes de documento de Office Open XML (Visual Basic) | Documentos de Microsoft
+title: Ejemplo que muestra los elementos de documento XML abierto de Office (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72e8cd6126cd049cafff6e18e1ef609f600cf7c9
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 96596c86674f5df2b9949a07adab2f313a07633d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Ejemplo que genera partes de documento de Office Open XML (Visual Basic)
-Este tema muestra cómo abrir un documento XML abierto de Office y obtener acceso a sus partes.  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="8d1a4-102">Ejemplo que muestra los elementos de documento XML abierto de Office (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d1a4-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
+<span data-ttu-id="8d1a4-103">Este tema muestra cómo abrir un documento XML abierto de Office y obtener acceso a sus partes.</span><span class="sxs-lookup"><span data-stu-id="8d1a4-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- El siguiente ejemplo abre un documento XML abierto de Office e imprime las partes de documento y estilo de la consola.  
+## <a name="example"></a><span data-ttu-id="8d1a4-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8d1a4-104">Example</span></span>  
+ <span data-ttu-id="8d1a4-105">El siguiente ejemplo abre un documento XML abierto de Office e imprime las partes de documento y estilo de la consola.</span><span class="sxs-lookup"><span data-stu-id="8d1a4-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos en el <xref:System.IO.Packaging?displayProperty=fullName>espacio de nombres.</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="8d1a4-106">Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="8d1a4-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="8d1a4-107">Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8d1a4-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -77,5 +73,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="8d1a4-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="8d1a4-108">See Also</span></span>  
+ [<span data-ttu-id="8d1a4-109">Detalles de Office documentos WordprocessingML XML abierto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d1a4-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

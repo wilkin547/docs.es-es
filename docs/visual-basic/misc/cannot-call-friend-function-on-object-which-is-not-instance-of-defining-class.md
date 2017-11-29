@@ -1,24 +1,26 @@
 ---
-title: "No se puede llamar a una funci&#243;n friend de un objeto que no sea una instancia de una clase | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID97"
+title: "No se puede llamar a una función friend de un objeto que no sea una instancia de una clase"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID97
 ms.assetid: b9d821f0-8565-4f15-bb35-184789c69662
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2f1ac1ea14efb0cdf0d8ca03257e4da33d35e368
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# No se puede llamar a una funci&#243;n friend de un objeto que no sea una instancia de una clase
-Intentó llamar al procedimiento `Friend` de una clase, o bien acceder a una propiedad o un método `Friend` entre procesos o a través de subprocesos. Un procedimiento `Friend` se puede llamar desde un módulo fuera de la clase, pero forma parte del proyecto en el que está definida la clase.  
+# <a name="cannot-call-friend-function-on-object-which-is-not-an-instance-of-defining-class"></a><span data-ttu-id="b8010-102">No se puede llamar a una función friend de un objeto que no sea una instancia de una clase</span><span class="sxs-lookup"><span data-stu-id="b8010-102">Cannot call friend function on object which is not an instance of defining class</span></span>
+<span data-ttu-id="b8010-103">Intentó llamar al procedimiento `Friend` de una clase, o bien acceder a una propiedad o un método `Friend` entre procesos o a través de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="b8010-103">Either you tried to call the `Friend` procedure of a class, or you tried to access a `Friend` property or method either cross-process or cross-thread.</span></span> <span data-ttu-id="b8010-104">Un procedimiento `Friend` se puede llamar desde un módulo fuera de la clase, pero forma parte del proyecto en el que está definida la clase.</span><span class="sxs-lookup"><span data-stu-id="b8010-104">A `Friend` procedure is callable from a module outside the class, but is part of the project in which the class is defined.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b8010-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="b8010-105">To correct this error</span></span>  
   
--   Asegúrese de que llama o accede al procedimiento desde un módulo que forma parte del proyecto en el que está definida la clase.  
+-   <span data-ttu-id="b8010-106">Asegúrese de que llama o accede al procedimiento desde un módulo que forma parte del proyecto en el que está definida la clase.</span><span class="sxs-lookup"><span data-stu-id="b8010-106">Ensure that you are calling or accessing the procedure from a module that is part of the project in which the class is defined.</span></span>  
   
-## Vea también  
- [Friend](../../visual-basic/language-reference/modifiers/friend.md)
+## <a name="see-also"></a><span data-ttu-id="b8010-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8010-107">See Also</span></span>  
+ [<span data-ttu-id="b8010-108">Friend</span><span class="sxs-lookup"><span data-stu-id="b8010-108">Friend</span></span>](../../visual-basic/language-reference/modifiers/friend.md)

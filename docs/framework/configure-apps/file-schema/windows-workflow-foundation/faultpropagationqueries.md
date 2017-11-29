@@ -1,61 +1,69 @@
 ---
-title: "&lt;faultPropagationQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;faultPropagationQueries&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 00ff90ae-ebe0-4c85-a93f-61557288d0a3
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 58196baafe92cd34986acbfae9e44ade3212cb33
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;faultPropagationQueries&gt;
-Representa una recopilación de consultas que se utilizan para realizar el seguimiento del control de errores que se producen dentro de una actividad.  Este evento se produce cada vez que un FaultHandler procesa un error.  Debería usar tal consulta para realizar el seguimiento del control de errores que se producen dentro de una actividad.  La consulta es necesaria que un participante del seguimiento se suscriba a los registros de propagación de errores.  
+# <a name="ltfaultpropagationqueriesgt"></a><span data-ttu-id="2c4f0-102">&lt;faultPropagationQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="2c4f0-102">&lt;faultPropagationQueries&gt;</span></span>
+<span data-ttu-id="2c4f0-103">Representa una colección de consultas que se utilizan para realizar el seguimiento del control de errores que se producen dentro de una actividad.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-103">Represents a collection of queries that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="2c4f0-104">Este evento se produce cada vez que un FaultHandler procesa un error.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="2c4f0-105">Debería usar tal consulta para realizar el seguimiento del control de errores que se producen dentro de una actividad.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="2c4f0-106">La consulta es necesaria que un participante del seguimiento se suscriba a los registros de propagación de errores.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  
   
- Para obtener más información sobre las consultas de los perfiles de seguimiento, consulte [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+ <span data-ttu-id="2c4f0-107">Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="2c4f0-107">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-## Sintaxis  
+<span data-ttu-id="2c4f0-108">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="2c4f0-108">\<system.serviceModel></span></span>  
+<span data-ttu-id="2c4f0-109">\<seguimiento ></span><span class="sxs-lookup"><span data-stu-id="2c4f0-109">\<tracking></span></span>  
+<span data-ttu-id="2c4f0-110">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="2c4f0-110">\<trackingProfile></span></span>  
+<span data-ttu-id="2c4f0-111">\<flujo de trabajo ></span><span class="sxs-lookup"><span data-stu-id="2c4f0-111">\<workflow></span></span>  
+<span data-ttu-id="2c4f0-112">\<faultPropagationQueries ></span><span class="sxs-lookup"><span data-stu-id="2c4f0-112">\<faultPropagationQueries></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="2c4f0-113">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2c4f0-113">Syntax</span></span>  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <faultPropagationQueries>  
-             <faultPropagationQuery activityName="String"  
-                 faultHandlerActivityName="String"/>  
-          </faultPropagationQueries>  
-       </workflow>  
-   </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <faultPropagationQueries>
+        <faultPropagationQuery activityName="String" 
+                               faultHandlerActivityName="String" />
+      </faultPropagationQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2c4f0-114">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="2c4f0-114">Attributes and Elements</span></span>  
+ <span data-ttu-id="2c4f0-115">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- Ninguno.  
+### <a name="attributes"></a><span data-ttu-id="2c4f0-116">Atributos</span><span class="sxs-lookup"><span data-stu-id="2c4f0-116">Attributes</span></span>  
+ <span data-ttu-id="2c4f0-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-117">None.</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="2c4f0-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="2c4f0-118">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<faultPropagationQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Una consulta que se utiliza para realizar el seguimiento del control de errores que se producen dentro de una actividad.  Este evento se produce cada vez que un FaultHandler procesa un error.|  
+|<span data-ttu-id="2c4f0-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="2c4f0-119">Element</span></span>|<span data-ttu-id="2c4f0-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="2c4f0-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="2c4f0-121">\<faultPropagationQuery ></span><span class="sxs-lookup"><span data-stu-id="2c4f0-121">\<faultPropagationQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|<span data-ttu-id="2c4f0-122">Una consulta que se utiliza para realizar el seguimiento del control de errores que se producen dentro de una actividad.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-122">A query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="2c4f0-123">Este evento se produce cada vez que un FaultHandler procesa un error.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-123">This event occurs each time a FaultHandler processes a fault.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="2c4f0-124">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="2c4f0-124">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad **activityDefinitionId**.|  
+|<span data-ttu-id="2c4f0-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="2c4f0-125">Element</span></span>|<span data-ttu-id="2c4f0-126">Descripción</span><span class="sxs-lookup"><span data-stu-id="2c4f0-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="2c4f0-127">\<flujo de trabajo ></span><span class="sxs-lookup"><span data-stu-id="2c4f0-127">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="2c4f0-128">Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la **activityDefinitionId** propiedad.</span><span class="sxs-lookup"><span data-stu-id="2c4f0-128">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## Vea también  
- [System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.FaultPropagationQuery](assetId:///System.Activities.Tracking.FaultPropagationQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="2c4f0-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="2c4f0-129">See Also</span></span>  
+ <span data-ttu-id="2c4f0-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="2c4f0-130"><xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="2c4f0-131"><xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="2c4f0-131"><xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="2c4f0-132">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="2c4f0-132">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="2c4f0-133">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="2c4f0-133">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

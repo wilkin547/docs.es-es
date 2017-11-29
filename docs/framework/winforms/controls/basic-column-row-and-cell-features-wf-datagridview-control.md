@@ -1,67 +1,68 @@
 ---
-title: "Caracter&#237;sticas b&#225;sicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "columnas [Windows Forms], DataGridView (control)"
-  - "cuadrículas de datos, ejemplos"
-  - "DataGridView (control) [Windows Forms], características básicas"
-  - "DataGridView (control) [Windows Forms], ejemplos"
+title: "Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], basic features
+- columns [Windows Forms], DataGridView control
+- data grids [Windows Forms], examples
+- DataGridView control [Windows Forms], examples
 ms.assetid: 78085f26-d5d2-4b75-813e-e932b72fd06f
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eebd0f36fbf1bf3bfc37b8fa836d318a9b8ac007
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Caracter&#237;sticas b&#225;sicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms
-Muchos comportamientos básicos de celdas, filas y columnas de `DataGridView` se pueden modificar estableciendo propiedades únicas.  En los temas de esta sección se describen varias de las funciones más utilizadas de estas características.  
+# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="577b6-102">Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-102">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="577b6-103">Muchos comportamientos básicos de `DataGridView` celdas, filas y columnas se pueden modificar estableciendo propiedades únicas.</span><span class="sxs-lookup"><span data-stu-id="577b6-103">Many basic behaviors of `DataGridView` cells, rows, and columns can be modified by setting single properties.</span></span> <span data-ttu-id="577b6-104">Los temas de esta sección describen algunas de las más utilizadas de estas características.</span><span class="sxs-lookup"><span data-stu-id="577b6-104">The topics in this section describe several of the most commonly used of these features.</span></span>  
   
-## En esta sección  
- [Cómo: Ocultar columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
- Describe cómo impedir que columnas concretas aparezcan en el control.  
+## <a name="in-this-section"></a><span data-ttu-id="577b6-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="577b6-105">In This Section</span></span>  
+ [<span data-ttu-id="577b6-106">Ocultar columnas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-106">How to: Hide Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="577b6-107">Describe cómo impedir que columnas específicas que aparecen en el control.</span><span class="sxs-lookup"><span data-stu-id="577b6-107">Describes how to prevent specific columns from appearing in the control.</span></span>  
   
- [Cómo: Ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
- Describe cómo impedir que los encabezados de columna aparezcan en el control.  
+ [<span data-ttu-id="577b6-108">Ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-108">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="577b6-109">Describe cómo impedir que los encabezados de columna que aparecen en el control.</span><span class="sxs-lookup"><span data-stu-id="577b6-109">Describes how to prevent the column headers from appearing in the control.</span></span>  
   
- [Cómo: Habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
- Describe cómo permitir que los usuarios reorganicen las columnas del control.  
+ [<span data-ttu-id="577b6-110">Habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-110">How to: Enable Column Reordering in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="577b6-111">Describe cómo permitir a los usuarios para volver a organizar las columnas en el control.</span><span class="sxs-lookup"><span data-stu-id="577b6-111">Describes how to enable users to rearrange columns in the control.</span></span>  
   
- [Cómo: Inmovilizar columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
- Describe cómo impedir que una o más columnas adyacentes se desplacen.  
+ [<span data-ttu-id="577b6-112">Inmovilizar columnas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-112">How to: Freeze Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="577b6-113">Describe cómo evitar que una o varias columnas adyacentes de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="577b6-113">Describes how prevent one or more adjacent columns from scrolling.</span></span>  
   
- [Cómo: Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
- Describe cómo evitar que los usuarios editen columnas concretas del control.  
+ [<span data-ttu-id="577b6-114">Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-114">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="577b6-115">Describe cómo impedir que los usuarios editen columnas concretas en el control.</span><span class="sxs-lookup"><span data-stu-id="577b6-115">Describes how to prevent users from editing specific columns in the control.</span></span>  
   
- [Cómo: Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
- Describe cómo quitar la fila para los nuevos registros en la parte inferior del control para evitar que los usuarios agreguen filas.  También describe cómo impedir que los usuarios eliminen filas.  
+ [<span data-ttu-id="577b6-116">Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-116">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
+ <span data-ttu-id="577b6-117">Describe cómo quitar la fila de nuevos registros en la parte inferior del control para impedir que los usuarios agreguen filas.</span><span class="sxs-lookup"><span data-stu-id="577b6-117">Describes how to remove the row for new records at the bottom of the control to prevent users from adding rows.</span></span> <span data-ttu-id="577b6-118">También describe cómo impedir que los usuarios eliminen filas.</span><span class="sxs-lookup"><span data-stu-id="577b6-118">Also describes how to prevent users from deleting rows.</span></span>  
   
- [Cómo: Obtener y establecer la celda actual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
- Describe cómo tener acceso a la celda que actualmente tiene el foco en el control.  
+ [<span data-ttu-id="577b6-119">Obtener y establecer la celda actual en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-119">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
+ <span data-ttu-id="577b6-120">Describe cómo obtener acceso a la celda que tiene actualmente el foco en el control.</span><span class="sxs-lookup"><span data-stu-id="577b6-120">Describes how to access the cell that currently has focus in the control.</span></span>  
   
- [Cómo: Mostrar imágenes en celdas del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
- Describe cómo crear una columna de imagen que muestre un icono en cada celda.  
+ [<span data-ttu-id="577b6-121">Cómo: Mostrar imágenes en celdas del control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-121">How to: Display Images in Cells of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="577b6-122">Describe cómo crear una columna de imagen que muestra un icono en cada celda.</span><span class="sxs-lookup"><span data-stu-id="577b6-122">Describes how to create an image column that displays an icon in every cell.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="577b6-123">Referencia</span><span class="sxs-lookup"><span data-stu-id="577b6-123">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- Proporciona documentación de referencia para el control.  
+ <span data-ttu-id="577b6-124">Proporciona documentación de referencia para el control.</span><span class="sxs-lookup"><span data-stu-id="577b6-124">Provides reference documentation for the control.</span></span>  
   
-## Secciones relacionadas  
- [Estilo y formato básicos del control DataGridView en formularios Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- Proporciona temas en los que se describe cómo modificar la apariencia básica del control y el formato de presentación de los datos de las celdas.  
+## <a name="related-sections"></a><span data-ttu-id="577b6-125">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="577b6-125">Related Sections</span></span>  
+ [<span data-ttu-id="577b6-126">Estilo y formato básicos del control DataGridView en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-126">Basic Formatting and Styling in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="577b6-127">Proporciona temas que describen cómo modificar la apariencia básica del control y el formato de presentación de los datos de celda.</span><span class="sxs-lookup"><span data-stu-id="577b6-127">Provides topics that describe how to modify the basic appearance of the control and the display formatting of cell data.</span></span>  
   
- [Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- Proporciona temas que describen cómo programar con objetos de celda, fila y columna.  
+ [<span data-ttu-id="577b6-128">Programar con celdas, filas y columnas en el control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-128">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ <span data-ttu-id="577b6-129">Proporciona temas que describen cómo programar con objetos de columna, fila y celda.</span><span class="sxs-lookup"><span data-stu-id="577b6-129">Provides topics that describe how to program with cell, row, and column objects.</span></span>  
   
-## Vea también  
- [Control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Tipos de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="577b6-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="577b6-130">See Also</span></span>  
+ [<span data-ttu-id="577b6-131">DataGridView (control)</span><span class="sxs-lookup"><span data-stu-id="577b6-131">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="577b6-132">Tipos de columnas en el control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="577b6-132">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

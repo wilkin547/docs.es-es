@@ -1,46 +1,50 @@
 ---
-title: "C&#243;mo: Controlar el punto de inserci&#243;n en un control TextBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "puntos de inserción, TextBox (controles)"
-  - "cuadros de texto, controlar punto de inserción"
-  - "TextBox (control) [Windows Forms], punto de inserción"
+title: "Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- TextBox control [Windows Forms], insertion point
+- insertion points [Windows Forms], TextBox controls
+- text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5cc3dab3acafdb151cf14f81145ef47e5a6ff689
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Controlar el punto de inserci&#243;n en un control TextBox de formularios Windows Forms
-Cuando un control <xref:System.Windows.Forms.TextBox> de formularios Windows Forms recibe el foco por primera vez, el punto de inserción predeterminado dentro del cuadro de texto se encuentra a la izquierda de cualquier texto existente.  El usuario puede mover el punto de inserción con el teclado o el mouse.  Si el cuadro de texto pierde el foco y luego lo vuelve a obtener, el punto de inserción se encontrará donde lo dejó el usuario.  
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a><span data-ttu-id="93873-102">Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="93873-102">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>
+<span data-ttu-id="93873-103">Cuando un formulario Windows Forms <xref:System.Windows.Forms.TextBox> control recibe el foco por primera vez, es el punto de inserción predeterminado dentro del cuadro de texto a la izquierda de cualquier texto existente.</span><span class="sxs-lookup"><span data-stu-id="93873-103">When a Windows Forms <xref:System.Windows.Forms.TextBox> control first receives the focus, the default insertion within the text box is to the left of any existing text.</span></span> <span data-ttu-id="93873-104">El usuario puede mover el punto de inserción con el teclado o el mouse.</span><span class="sxs-lookup"><span data-stu-id="93873-104">The user can move the insertion point with the keyboard or the mouse.</span></span> <span data-ttu-id="93873-105">Si el cuadro de texto pierde y, a continuación, recupere el foco, será el punto de inserción, donde el usuario realizó el último.</span><span class="sxs-lookup"><span data-stu-id="93873-105">If the text box loses and then regains the focus, the insertion point will be wherever the user last placed it.</span></span>  
   
- En algunos casos, este comportamiento puede resultar desconcertante para el usuario.  En una aplicación de procesamiento de textos, es posible que el usuario espere que los caracteres nuevos aparezcan después del texto existente.  En una aplicación de entrada de datos, el usuario podría esperar que los caracteres reemplazaran la entrada existente.  Las propiedades <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> y <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> permiten modificar el comportamiento de modo que se ajuste a las necesidades.  
+ <span data-ttu-id="93873-106">En algunos casos, este comportamiento puede resultar desconcertante para el usuario.</span><span class="sxs-lookup"><span data-stu-id="93873-106">In some cases, this behavior can be disconcerting to the user.</span></span> <span data-ttu-id="93873-107">Aplicación de procesamiento de una palabra, el usuario podría esperar que los caracteres que aparecen después del texto existente.</span><span class="sxs-lookup"><span data-stu-id="93873-107">In a word processing application, the user might expect new characters to appear after any existing text.</span></span> <span data-ttu-id="93873-108">En una aplicación de entrada de datos, el usuario podría esperar que los caracteres para reemplazar cualquier entrada existente.</span><span class="sxs-lookup"><span data-stu-id="93873-108">In a data entry application, the user might expect new characters to replace any existing entry.</span></span> <span data-ttu-id="93873-109">El <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> y <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedades le permiten modificar el comportamiento para adaptarlas a su propósito.</span><span class="sxs-lookup"><span data-stu-id="93873-109">The <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> and <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> properties enable you to modify the behavior to suit your purpose.</span></span>  
   
-### Para controlar el punto de inserción en un control TextBox  
+### <a name="to-control-the-insertion-point-in-a-textbox-control"></a><span data-ttu-id="93873-110">Para controlar el punto de inserción en un control de cuadro de texto</span><span class="sxs-lookup"><span data-stu-id="93873-110">To control the insertion point in a TextBox control</span></span>  
   
-1.  Establezca un valor adecuado en la propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>.  El cero sitúa el punto de inserción inmediatamente a la izquierda del primer carácter.  
+1.  <span data-ttu-id="93873-111">Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> en un valor apropiado.</span><span class="sxs-lookup"><span data-stu-id="93873-111">Set the <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> property to an appropriate value.</span></span> <span data-ttu-id="93873-112">Cero, coloca el punto de inserción inmediatamente a la izquierda del primer carácter.</span><span class="sxs-lookup"><span data-stu-id="93873-112">Zero places the insertion point immediately to the left of the first character.</span></span>  
   
-2.  \(Opcional\) Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> en la longitud del texto que desea seleccionar.  
+2.  <span data-ttu-id="93873-113">(Opcional) Establecer el <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> propiedad a la longitud del texto que desea seleccionar.</span><span class="sxs-lookup"><span data-stu-id="93873-113">(Optional) Set the <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> property to the length of the text you want to select.</span></span>  
   
-     El código siguiente siempre devuelve el punto de inserción a 0.  El controlador de eventos `TextBox1_Enter` se debe enlazar al control. Para obtener más información, vea [Creating Event Handlers in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).  
+     <span data-ttu-id="93873-114">El código siguiente siempre devuelve el punto de inserción a 0.</span><span class="sxs-lookup"><span data-stu-id="93873-114">The code below always returns the insertion point to 0.</span></span> <span data-ttu-id="93873-115">El `TextBox1_Enter` controlador de eventos debe estar enlazado al control; para obtener más información, consulte [crear controladores de eventos en formularios Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="93873-115">The `TextBox1_Enter` event handler must be bound to the control; for more information, see [Creating Event Handlers in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).</span></span>  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
        TextBox1.SelectionStart = 0  
        TextBox1.SelectionLength = 0  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -48,7 +52,6 @@ Cuando un control <xref:System.Windows.Forms.TextBox> de formularios Windows For
        textBox1.SelectionStart = 0;  
        textBox1.SelectionLength = 0;  
     }  
-  
     ```  
   
     ```cpp  
@@ -61,19 +64,19 @@ Cuando un control <xref:System.Windows.Forms.TextBox> de formularios Windows For
        }  
     ```  
   
-## Hacer que el punto de inserción esté visible de manera predeterminada  
- El punto de inserción de <xref:System.Windows.Forms.TextBox> sólo está visible de manera predeterminada en un nuevo formulario si el control <xref:System.Windows.Forms.TextBox> es el primero en el orden de tabulación.  De lo contrario, el punto de inserción sólo aparece si asigna el foco a <xref:System.Windows.Forms.TextBox> con el teclado o el mouse.  
+## <a name="making-the-insertion-point-visible-by-default"></a><span data-ttu-id="93873-116">Hacer Visible de forma predeterminada el punto de inserción</span><span class="sxs-lookup"><span data-stu-id="93873-116">Making the Insertion Point Visible by Default</span></span>  
+ <span data-ttu-id="93873-117">El <xref:System.Windows.Forms.TextBox> punto de inserción está visible de forma predeterminada en un solo si formulario nuevo el <xref:System.Windows.Forms.TextBox> control es el primero en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="93873-117">The <xref:System.Windows.Forms.TextBox> insertion point is visible by default in a new form only if the <xref:System.Windows.Forms.TextBox> control is first in the tab order.</span></span> <span data-ttu-id="93873-118">En caso contrario, el punto de inserción aparece sólo si da el <xref:System.Windows.Forms.TextBox> el foco con el teclado o el mouse.</span><span class="sxs-lookup"><span data-stu-id="93873-118">Otherwise, the insertion point appears only if you give the <xref:System.Windows.Forms.TextBox> the focus with either the keyboard or the mouse.</span></span>  
   
-#### Para hacer que el punto de inserción del cuadro de texto sea visible en un nuevo formulario de manera predeterminada  
+#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a><span data-ttu-id="93873-119">Para que la inserción de cuadro de texto apunten visible de forma predeterminada en un nuevo formulario</span><span class="sxs-lookup"><span data-stu-id="93873-119">To make the text box insertion point visible by default on a new form</span></span>  
   
--   Establezca la propiedad <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.Control.TabIndex%2A> en `0`.  
+-   <span data-ttu-id="93873-120">Establecer el <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad `0`.</span><span class="sxs-lookup"><span data-stu-id="93873-120">Set the <xref:System.Windows.Forms.TextBox> control's <xref:System.Windows.Forms.Control.TabIndex%2A> property to `0`.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.TextBox>   
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Cómo: Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
- [TextBox \(Control\)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="93873-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="93873-121">See Also</span></span>  
+ <xref:System.Windows.Forms.TextBox>  
+ [<span data-ttu-id="93873-122">Información general sobre el control TextBox</span><span class="sxs-lookup"><span data-stu-id="93873-122">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="93873-123">Crear un cuadro de texto de contraseña con el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="93873-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="93873-124">Crear un cuadro de texto de sólo lectura</span><span class="sxs-lookup"><span data-stu-id="93873-124">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [<span data-ttu-id="93873-125">Insertar comillas en una cadena</span><span class="sxs-lookup"><span data-stu-id="93873-125">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [<span data-ttu-id="93873-126">Seleccionar texto en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="93873-126">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="93873-127">Ver múltiples líneas en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="93873-127">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="93873-128">Control TextBox</span><span class="sxs-lookup"><span data-stu-id="93873-128">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

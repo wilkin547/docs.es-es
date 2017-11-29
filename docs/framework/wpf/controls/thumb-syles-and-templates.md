@@ -1,65 +1,67 @@
 ---
-title: "Estilos y plantillas de Thumb | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], Thumb"
-  - "partes [WPF], Thumb"
-  - "estados [WPF], Thumb"
-  - "estilos [WPF], Thumb"
-  - "plantillas [WPF], Thumb"
-  - "Thumb [WPF], estilos y plantillas"
+title: Estilos y plantillas de Thumb
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], Thumb
+- styles [WPF], Thumb
+- templates [WPF], Thumb
+- Thumb [WPF], styles and templates
+- ControlTemplate [WPF], Thumb
+- parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d9f0b8559497939737b97568a679953d392d5be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Estilos y plantillas de Thumb
-En este tema, se describen los estilos y plantillas del control <xref:System.Windows.Controls.Primitives.Thumb>.  Puede modificar la plantilla <xref:System.Windows.Controls.ControlTemplate> predeterminada para dar un aspecto único al control.  Para obtener más información, vea [Personalizar la apariencia de un control existente creando una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="thumb-syles-and-templates"></a><span data-ttu-id="e3b89-102">Estilos y plantillas de Thumb</span><span class="sxs-lookup"><span data-stu-id="e3b89-102">Thumb Syles and Templates</span></span>
+<span data-ttu-id="e3b89-103">En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Primitives.Thumb> control.</span><span class="sxs-lookup"><span data-stu-id="e3b89-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Primitives.Thumb> control.</span></span> <span data-ttu-id="e3b89-104">Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para dar al control una apariencia única.</span><span class="sxs-lookup"><span data-stu-id="e3b89-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="e3b89-105">Para más información, consulte [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md) (Personalizar la apariencia de un control existente mediante la creación de una clase ControlTemplate).</span><span class="sxs-lookup"><span data-stu-id="e3b89-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Elementos de Thumb  
- El control <xref:System.Windows.Controls.Primitives.Thumb> no tiene ningún elemento con nombre.  
+## <a name="thumb-parts"></a><span data-ttu-id="e3b89-106">Elementos de control</span><span class="sxs-lookup"><span data-stu-id="e3b89-106">Thumb Parts</span></span>  
+ <span data-ttu-id="e3b89-107">El <xref:System.Windows.Controls.Primitives.Thumb> control no tiene los elementos con nombre.</span><span class="sxs-lookup"><span data-stu-id="e3b89-107">The <xref:System.Windows.Controls.Primitives.Thumb> control does not have any named parts.</span></span>  
   
-## Estados de Thumb  
- En la siguiente tabla, se muestran los estados visuales del control <xref:System.Windows.Controls.Primitives.Thumb>.  
+## <a name="thumb-states"></a><span data-ttu-id="e3b89-108">Estados de posición</span><span class="sxs-lookup"><span data-stu-id="e3b89-108">Thumb States</span></span>  
+ <span data-ttu-id="e3b89-109">La tabla siguiente enumera los estados visuales para el <xref:System.Windows.Controls.Primitives.Thumb> control.</span><span class="sxs-lookup"><span data-stu-id="e3b89-109">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.Thumb> control.</span></span>  
   
-||||  
+|<span data-ttu-id="e3b89-110">Nombre de VisualState</span><span class="sxs-lookup"><span data-stu-id="e3b89-110">VisualState Name</span></span>|<span data-ttu-id="e3b89-111">Nombre de VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="e3b89-111">VisualStateGroup Name</span></span>|<span data-ttu-id="e3b89-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="e3b89-112">Description</span></span>|  
 |-|-|-|  
-|Nombre de VisualState|Nombre de VisualStateGroup|Descripción|  
-|Normal|CommonStates|Estado predeterminado.|  
-|MouseOver|CommonStates|El puntero del mouse está situado sobre el control.|  
-|Pressed|CommonStates|El control está presionado.|  
-|Disabled|CommonStates|El control está deshabilitado.|  
-|Focused|FocusStates|El control tiene el foco.|  
-|Unfocused|FocusStates|El control no tiene el foco.|  
-|Valid|ValidationStates|El control utiliza la clase <xref:System.Windows.Controls.Validation> y la propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `false`.|  
-|InvalidFocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `true`, tiene el control y tiene el foco.|  
-|InvalidUnfocused|ValidationStates|La propiedad adjunta <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> es `true`, tiene el control pero no tiene el foco.|  
+|<span data-ttu-id="e3b89-113">Normal</span><span class="sxs-lookup"><span data-stu-id="e3b89-113">Normal</span></span>|<span data-ttu-id="e3b89-114">CommonStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-114">CommonStates</span></span>|<span data-ttu-id="e3b89-115">El estado predeterminado.</span><span class="sxs-lookup"><span data-stu-id="e3b89-115">The default state.</span></span>|  
+|<span data-ttu-id="e3b89-116">MouseOver</span><span class="sxs-lookup"><span data-stu-id="e3b89-116">MouseOver</span></span>|<span data-ttu-id="e3b89-117">CommonStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-117">CommonStates</span></span>|<span data-ttu-id="e3b89-118">El puntero del mouse se coloca sobre el control.</span><span class="sxs-lookup"><span data-stu-id="e3b89-118">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="e3b89-119">Presionado</span><span class="sxs-lookup"><span data-stu-id="e3b89-119">Pressed</span></span>|<span data-ttu-id="e3b89-120">CommonStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-120">CommonStates</span></span>|<span data-ttu-id="e3b89-121">El control está presionado.</span><span class="sxs-lookup"><span data-stu-id="e3b89-121">The control is pressed.</span></span>|  
+|<span data-ttu-id="e3b89-122">Deshabilitado</span><span class="sxs-lookup"><span data-stu-id="e3b89-122">Disabled</span></span>|<span data-ttu-id="e3b89-123">CommonStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-123">CommonStates</span></span>|<span data-ttu-id="e3b89-124">El control está deshabilitado.</span><span class="sxs-lookup"><span data-stu-id="e3b89-124">The control is disabled.</span></span>|  
+|<span data-ttu-id="e3b89-125">Con foco</span><span class="sxs-lookup"><span data-stu-id="e3b89-125">Focused</span></span>|<span data-ttu-id="e3b89-126">FocusStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-126">FocusStates</span></span>|<span data-ttu-id="e3b89-127">El control tiene el foco.</span><span class="sxs-lookup"><span data-stu-id="e3b89-127">The control has focus.</span></span>|  
+|<span data-ttu-id="e3b89-128">Sin foco</span><span class="sxs-lookup"><span data-stu-id="e3b89-128">Unfocused</span></span>|<span data-ttu-id="e3b89-129">FocusStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-129">FocusStates</span></span>|<span data-ttu-id="e3b89-130">El control no tiene el foco.</span><span class="sxs-lookup"><span data-stu-id="e3b89-130">The control does not have focus.</span></span>|  
+|<span data-ttu-id="e3b89-131">Válido</span><span class="sxs-lookup"><span data-stu-id="e3b89-131">Valid</span></span>|<span data-ttu-id="e3b89-132">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-132">ValidationStates</span></span>|<span data-ttu-id="e3b89-133">El control usa la <xref:System.Windows.Controls.Validation> clase y la <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `false`.</span><span class="sxs-lookup"><span data-stu-id="e3b89-133">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="e3b89-134">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="e3b89-134">InvalidFocused</span></span>|<span data-ttu-id="e3b89-135">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-135">ValidationStates</span></span>|<span data-ttu-id="e3b89-136">El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control tiene el foco.</span><span class="sxs-lookup"><span data-stu-id="e3b89-136">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="e3b89-137">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="e3b89-137">InvalidUnfocused</span></span>|<span data-ttu-id="e3b89-138">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="e3b89-138">ValidationStates</span></span>|<span data-ttu-id="e3b89-139">El <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propiedad adjunta es `true` tiene el control no tiene el foco.</span><span class="sxs-lookup"><span data-stu-id="e3b89-139">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Ejemplo Thumb ControlTemplate  
- En el ejemplo siguiente, se muestra cómo definir un objeto <xref:System.Windows.Controls.ControlTemplate> para el control <xref:System.Windows.Controls.Primitives.Thumb>.  
+## <a name="thumb-controltemplate-example"></a><span data-ttu-id="e3b89-140">Ejemplo de ControlTemplate de Thumb</span><span class="sxs-lookup"><span data-stu-id="e3b89-140">Thumb ControlTemplate Example</span></span>  
+ <span data-ttu-id="e3b89-141">En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Primitives.Thumb> control.</span><span class="sxs-lookup"><span data-stu-id="e3b89-141">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Primitives.Thumb> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#thumb)]  
+ [!code-xaml[ControlTemplateExamples#Thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#thumb)]  
   
- El ejemplo anterior utiliza uno o más de los siguientes recursos.  
+ <span data-ttu-id="e3b89-142">En el ejemplo anterior se usa uno o varios de los recursos siguientes.</span><span class="sxs-lookup"><span data-stu-id="e3b89-142">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Para obtener el ejemplo completo, vea          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="e3b89-143">Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="e3b89-143">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Vea también  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalización de controles](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="e3b89-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="e3b89-144">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="e3b89-145">Estilos y plantillas de controles</span><span class="sxs-lookup"><span data-stu-id="e3b89-145">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ <span data-ttu-id="e3b89-146">[Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)</span><span class="sxs-lookup"><span data-stu-id="e3b89-146">[Control Customization](../../../../docs/framework/wpf/controls/control-customization.md)</span></span>  
+ [<span data-ttu-id="e3b89-147">Aplicar estilos y plantillas</span><span class="sxs-lookup"><span data-stu-id="e3b89-147">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="e3b89-148">Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="e3b89-148">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

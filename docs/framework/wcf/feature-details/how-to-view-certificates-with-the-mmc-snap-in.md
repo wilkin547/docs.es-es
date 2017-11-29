@@ -1,68 +1,70 @@
 ---
-title: "C&#243;mo: Ver certificados con el complemento de MMC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "certificados [WCF], visualización con el complemento de MMC"
+title: "Cómo: Ver certificados con el complemento de MMC"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 43925a301d4f0d2ca1a852912255be49dd330ae5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ver certificados con el complemento de MMC
-Un tipo común de credencial es el certificado X.509.Al crear servicios o clientes seguros, puede especificar que un certificado se utilice como la credencial del cliente o servicio utilizando métodos como el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>.El método requiere varios parámetros, como el almacén donde se guarda el certificado y un valor que utilizar al buscar el certificado.El siguiente procedimiento muestra cómo examinar los almacenes de un equipo para encontrar un certificado adecuado.Para obtener un ejemplo de cómo encontrar la huella digital del certificado, vea [Cómo recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+# <a name="how-to-view-certificates-with-the-mmc-snap-in"></a><span data-ttu-id="9e05c-102">Cómo: Ver certificados con el complemento de MMC</span><span class="sxs-lookup"><span data-stu-id="9e05c-102">How to: View Certificates with the MMC Snap-in</span></span>
+<span data-ttu-id="9e05c-103">Un tipo común de credencial es el certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="9e05c-103">A common type of credential is the X.509 certificate.</span></span> <span data-ttu-id="9e05c-104">Al crear servicios o clientes seguros, puede especificar que un certificado se utilice como la credencial del cliente o servicio utilizando métodos como el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>.</span><span class="sxs-lookup"><span data-stu-id="9e05c-104">When creating secure services or clients, you can specify a certificate be used as the client or service credential by using methods such as the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method.</span></span> <span data-ttu-id="9e05c-105">El método requiere varios parámetros, como el almacén donde se guarda el certificado y un valor que utilizar al buscar el certificado.</span><span class="sxs-lookup"><span data-stu-id="9e05c-105">The method requires various parameters, such as the store where the certificate is stored and a value to use when searching for the certificate.</span></span> <span data-ttu-id="9e05c-106">El siguiente procedimiento muestra cómo examinar los almacenes de un equipo para encontrar un certificado adecuado.</span><span class="sxs-lookup"><span data-stu-id="9e05c-106">The following procedure demonstrates how to examine the stores on a computer to find an appropriate certificate.</span></span> <span data-ttu-id="9e05c-107">Para obtener un ejemplo de encontrar la huella digital del certificado, consulte [Cómo: recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="9e05c-107">For an example of finding the certificate thumbprint, see [How to: Retrieve the Thumbprint of a Certificate](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).</span></span>  
   
-### Para ver los certificados en el complemento de MMC  
+### <a name="to-view-certificates-in-the-mmc-snap-in"></a><span data-ttu-id="9e05c-108">Para ver los certificados en el complemento de MMC</span><span class="sxs-lookup"><span data-stu-id="9e05c-108">To view certificates in the MMC snap-in</span></span>  
   
-1.  Abra una ventana de símbolo del sistema.  
+1.  <span data-ttu-id="9e05c-109">Abra una ventana de símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="9e05c-109">Open a Command Prompt window.</span></span>  
   
-2.  Escriba `mmc` y, a continuación, pulse la tecla ENTER.Tenga en cuenta que para ver los certificados en el almacén del equipo local, debe estar en la función del Administrador.  
+2.  <span data-ttu-id="9e05c-110">Tipo `mmc` y presione la tecla ENTRAR.</span><span class="sxs-lookup"><span data-stu-id="9e05c-110">Type `mmc` and press the ENTER key.</span></span> <span data-ttu-id="9e05c-111">Tenga en cuenta que para ver los certificados en el almacén del equipo local, debe estar en la función del Administrador.</span><span class="sxs-lookup"><span data-stu-id="9e05c-111">Note that to view certificates in the local machine store, you must be in the Administrator role.</span></span>  
   
-3.  En el menú **Archivo**, haga clic en **Agregar o quitar complemento**.  
+3.  <span data-ttu-id="9e05c-112">En el **archivo** menú, haga clic en **agregar/quitar complemento**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-112">On the **File** menu, click **Add/Remove Snap In**.</span></span>  
   
-4.  Haga clic en **Agregar**.  
+4.  <span data-ttu-id="9e05c-113">Haga clic en **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-113">Click **Add**.</span></span>  
   
-5.  En el cuadro de diálogo **Agregar un complemento independiente**, seleccione **Certificados**.  
+5.  <span data-ttu-id="9e05c-114">En el **Add Standalone Snap-in** cuadro de diálogo, seleccione **certificados**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-114">In the **Add Standalone Snap-in** dialog box, select **Certificates**.</span></span>  
   
-6.  Haga clic en **Agregar**.  
+6.  <span data-ttu-id="9e05c-115">Haga clic en **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-115">Click **Add**.</span></span>  
   
-7.  En el cuadro de diálogo **Complemento Certificados**, seleccione **Cuenta de equipo** y haga clic en **Siguiente**.Opcionalmente, puede seleccionar **Mi cuenta de usuario** o **Cuenta de servicio**.Si no es ningún administrador del equipo, solo puede administrar los certificados para su cuenta de usuario.  
+7.  <span data-ttu-id="9e05c-116">En el **complemento certificados** cuadro de diálogo, seleccione **cuenta de equipo** y haga clic en **siguiente**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-116">In the **Certificates snap-in** dialog box, select **Computer account** and click **Next**.</span></span> <span data-ttu-id="9e05c-117">Si lo desea, puede seleccionar **mi cuenta de usuario** o **cuenta de servicio**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-117">Optionally, you can select **My User account** or **Service account**.</span></span> <span data-ttu-id="9e05c-118">Si no es ningún administrador del equipo, solo puede administrar los certificados para su cuenta de usuario.</span><span class="sxs-lookup"><span data-stu-id="9e05c-118">If you are not an administrator of the computer, you can manage certificates only for your user account.</span></span>  
   
-8.  En el cuadro de diálogo **Seleccionar equipo**, haga clic en **Finalizar**.  
+8.  <span data-ttu-id="9e05c-119">En el **Seleccionar equipo** cuadro de diálogo, haga clic en **finalizar**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-119">In the **Select Computer** dialog box, click **Finish**.</span></span>  
   
-9. En el cuadro de diálogo **Agregar un complemento independiente**, haga clic en **Cerrar**.  
+9. <span data-ttu-id="9e05c-120">En el **Add Standalone Snap-in** cuadro de diálogo, haga clic en **cerrar**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-120">In the **Add Standalone Snap-in** dialog box, click **Close**.</span></span>  
   
-10. En el cuadro de diálogo **Agregar o quitar complemento**, haga clic en **Aceptar**.  
+10. <span data-ttu-id="9e05c-121">En el **agregar o quitar complemento** cuadro de diálogo, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-121">On the **Add/Remove Snap-in** dialog box, click **OK**.</span></span>  
   
-11. En la ventana **Raíz de consola**, haga clic en **Certificados \(Equipo local\)** para ver los almacenes de certificados para el equipo.  
+11. <span data-ttu-id="9e05c-122">En el **raíz de consola** ventana, haga clic en **certificados (equipo Local)** para ver el certificado se almacena en el equipo.</span><span class="sxs-lookup"><span data-stu-id="9e05c-122">In the **Console Root** window, click **Certificates (Local Computer)** to view the certificate stores for the computer.</span></span>  
   
-12. Opcional.Para ver los certificados para su cuenta, repita los pasos 3 a 6.En el paso 7, en lugar de seleccionar **Cuenta de equipo**, haga clic en **Mi cuenta de usuario** y repita los pasos del 8 al 10.  
+12. <span data-ttu-id="9e05c-123">Opcional.</span><span class="sxs-lookup"><span data-stu-id="9e05c-123">Optional.</span></span> <span data-ttu-id="9e05c-124">Para ver los certificados para su cuenta, repita los pasos 3 a 6.</span><span class="sxs-lookup"><span data-stu-id="9e05c-124">To view certificates for your account, repeat steps 3 to 6.</span></span> <span data-ttu-id="9e05c-125">En el paso 7, en lugar de seleccionar **cuenta de equipo**, haga clic en **mi cuenta de usuario** y repita los pasos 8 a 10.</span><span class="sxs-lookup"><span data-stu-id="9e05c-125">In step 7, instead of selecting **Computer account**, click **My User account** and repeat steps 8 to 10.</span></span>  
   
-13. Opcional.En el menú **Archivo**, haga clic en **Guardar** o **Guardar como**.Guarde el archivo de consola para utilizarlo más adelante.  
+13. <span data-ttu-id="9e05c-126">Opcional.</span><span class="sxs-lookup"><span data-stu-id="9e05c-126">Optional.</span></span> <span data-ttu-id="9e05c-127">En el **archivo** menú, haga clic en **guardar** o **Guardar como**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-127">On the **File** menu, click **Save** or **Save As**.</span></span> <span data-ttu-id="9e05c-128">Guarde el archivo de consola para utilizarlo más adelante.</span><span class="sxs-lookup"><span data-stu-id="9e05c-128">Save the console file for later reuse.</span></span>  
   
-## Ver certificados con Internet Explorer  
- También puede ver, exportar, importar y eliminar certificados utilizando Internet Explorer.  
+## <a name="viewing-certificates-with-internet-explorer"></a><span data-ttu-id="9e05c-129">Ver certificados con Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="9e05c-129">Viewing Certificates with Internet Explorer</span></span>  
+ <span data-ttu-id="9e05c-130">También puede ver, exportar, importar y eliminar certificados utilizando Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="9e05c-130">You can also view, export, import, and delete certificates by using Internet Explorer.</span></span>  
   
-#### Para ver certificados con Internet Explorer  
+#### <a name="to-view-certificates-with-internet-explorer"></a><span data-ttu-id="9e05c-131">Para ver certificados con Internet Explorer</span><span class="sxs-lookup"><span data-stu-id="9e05c-131">To view certificates with Internet Explorer</span></span>  
   
-1.  En Internet Explorer, haga clic en **Herramientas** y, a continuación, haga clic en **Opciones de Internet** para mostrar el cuadro de diálogo **Opciones de Internet**.  
+1.  <span data-ttu-id="9e05c-132">En Internet Explorer, haga clic en **herramientas**, a continuación, haga clic en **opciones de Internet** para mostrar la **opciones de Internet** cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="9e05c-132">In Internet Explorer, click **Tools**, then click **Internet Options** to display the **Internet Options** dialog box.</span></span>  
   
-2.  Haga clic en la pestaña **Contenido**.  
+2.  <span data-ttu-id="9e05c-133">Haga clic en el **contenido** ficha.</span><span class="sxs-lookup"><span data-stu-id="9e05c-133">Click the **Content** tab.</span></span>  
   
-3.  En **Certificados**, haga clic en **Certificados**.  
+3.  <span data-ttu-id="9e05c-134">En **certificados**, haga clic en **certificados**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-134">Under **Certificates**, click **Certificates**.</span></span>  
   
-4.  Para ver detalles de cualquier certificado, seleccione el certificado y haga clic en **Ver**.  
+4.  <span data-ttu-id="9e05c-135">Para ver los detalles de un certificado, seleccione el certificado y haga clic en **vista**.</span><span class="sxs-lookup"><span data-stu-id="9e05c-135">To view details of any certificate, select the certificate and click **View**.</span></span>  
   
-## Vea también  
- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)   
- [Cómo recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+## <a name="see-also"></a><span data-ttu-id="9e05c-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="9e05c-136">See Also</span></span>  
+ [<span data-ttu-id="9e05c-137">Trabajar con certificados</span><span class="sxs-lookup"><span data-stu-id="9e05c-137">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="9e05c-138">Cómo: crear certificados temporales para su uso durante el desarrollo</span><span class="sxs-lookup"><span data-stu-id="9e05c-138">How to: Create Temporary Certificates for Use During Development</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
+ [<span data-ttu-id="9e05c-139">Cómo: recuperar la huella digital de un certificado</span><span class="sxs-lookup"><span data-stu-id="9e05c-139">How to: Retrieve the Thumbprint of a Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

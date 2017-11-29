@@ -1,55 +1,57 @@
 ---
-title: "Ejemplo de introducci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "ejemplos básicos [WCF], introducción"
+title: "Ejemplo de introducción"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 60
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 60
+caps.latest.revision: "60"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dda172904f55330700d1cf3e6e5e2c3462118c91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Ejemplo de introducci&#243;n
-El ejemplo de la Introducción muestra cómo implementar un servicio típico y un cliente típico utilizando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
+# <a name="getting-started-sample"></a><span data-ttu-id="73b00-102">Ejemplo de introducción</span><span class="sxs-lookup"><span data-stu-id="73b00-102">Getting Started Sample</span></span>
+<span data-ttu-id="73b00-103">El ejemplo de la Introducción muestra cómo implementar un servicio típico y un cliente típico utilizando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="73b00-103">The Getting Started sample demonstrates how to implement a typical service and a typical client using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="73b00-104">Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.</span><span class="sxs-lookup"><span data-stu-id="73b00-104">This sample is the basis for all other basic technology samples.</span></span>  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  <span data-ttu-id="73b00-105">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="73b00-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="73b00-106">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="73b00-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="73b00-107">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="73b00-107">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="73b00-108">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="73b00-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="73b00-109">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="73b00-109">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
- El servicio describe las operaciones que realiza en un contrato de servicios que expone públicamente como metadatos.El servicio también contiene el código para implementar las operaciones.  
+ <span data-ttu-id="73b00-110">El servicio describe las operaciones que realiza en un contrato de servicios que expone públicamente como metadatos.</span><span class="sxs-lookup"><span data-stu-id="73b00-110">The service describes the operations it performs in a service contract that it exposes publicly as metadata.</span></span> <span data-ttu-id="73b00-111">El servicio también contiene el código para implementar las operaciones.</span><span class="sxs-lookup"><span data-stu-id="73b00-111">The service also contains the code to implement the operations.</span></span>  
   
- El cliente contiene una definición del contrato de servicios y una clase de proxy para tener acceso al servicio.El código proxy se genera desde los metadatos del servicio utilizando [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ <span data-ttu-id="73b00-112">El cliente contiene una definición del contrato de servicios y una clase de proxy para tener acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="73b00-112">The client contains a definition of the service contract and a proxy class for accessing the service.</span></span> <span data-ttu-id="73b00-113">El código de proxy se genera a partir de los metadatos de servicio mediante el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="73b00-113">The proxy code is generated from the service metadata using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>  
   
- En [!INCLUDE[wv](../../../../includes/wv-md.md)], el servicio se hospeda en el Servicio de Activación de Windows \(WAS\).Internet Information Services \(IIS\) y ASP.NET hospedan [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].Hospedar un servicio en IIS o WAS permite activar el servicio automáticamente cuando se tiene acceso por primera vez.  
+ <span data-ttu-id="73b00-114">En [!INCLUDE[wv](../../../../includes/wv-md.md)], el servicio se hospeda en el Servicio de Activación de Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="73b00-114">On [!INCLUDE[wv](../../../../includes/wv-md.md)], the service is hosted in the Windows Activation Service (WAS).</span></span> <span data-ttu-id="73b00-115">Internet Information Services (IIS) y ASP.NET hospedan [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].</span><span class="sxs-lookup"><span data-stu-id="73b00-115">On [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], it is hosted by Internet Information Services (IIS) and ASP.NET.</span></span> <span data-ttu-id="73b00-116">Hospedar un servicio en IIS o WAS permite activar el servicio automáticamente cuando se tiene acceso por primera vez.</span><span class="sxs-lookup"><span data-stu-id="73b00-116">Hosting a service in IIS or WAS allows the service to be activated automatically when it is accessed for the first time.</span></span>  
   
 > [!NOTE]
->  Si prefiere iniciarse con un ejemplo que hospeda el servicio en una aplicación de consola en lugar de IIS, vea el ejemplo [Autohospedaje](../../../../docs/framework/wcf/samples/self-host.md).  
+>  <span data-ttu-id="73b00-117">Si prefiere empezar a trabajar con un ejemplo que hospeda el servicio en una aplicación de consola en lugar de IIS, consulte la [autohospedaje](../../../../docs/framework/wcf/samples/self-host.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="73b00-117">If you would prefer to get started with a sample that hosts the service in a console application instead of IIS, see the [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) sample.</span></span>  
   
- El servicio y cliente especifican los detalles de acceso en valores de archivo de configuración, los cuales proporciona la flexibilidad en el momento de la implementación.Esto incluye una definición de extremo que especifica una dirección, un enlace y un contrato.El enlace especifica el transporte y los detalles de seguridad sobre cómo se tiene acceso al servicio.  
+ <span data-ttu-id="73b00-118">El servicio y cliente especifican los detalles de acceso en valores de archivo de configuración, los cuales proporciona la flexibilidad en el momento de la implementación.</span><span class="sxs-lookup"><span data-stu-id="73b00-118">The service and client specify access details in configuration file settings, which provide flexibility at the time of deployment.</span></span> <span data-ttu-id="73b00-119">Esto incluye una definición de extremo que especifica una dirección, un enlace y un contrato.</span><span class="sxs-lookup"><span data-stu-id="73b00-119">This includes an endpoint definition that specifies an address, binding, and contract.</span></span> <span data-ttu-id="73b00-120">El enlace especifica el transporte y los detalles de seguridad sobre cómo se tiene acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="73b00-120">The binding specifies transport and security details for how the service is to be accessed.</span></span>  
   
- El servicio configura un comportamiento de tiempo de ejecución para publicar sus metadatos.  
+ <span data-ttu-id="73b00-121">El servicio configura un comportamiento de tiempo de ejecución para publicar sus metadatos.</span><span class="sxs-lookup"><span data-stu-id="73b00-121">The service configures a run-time behavior to publish its metadata.</span></span>  
   
- El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.La interfaz `ICalculator`, que expone las operaciones matemáticas \(sumar, restar, multiplicar y dividir\), define el contrato.El cliente realiza solicitudes a una operación matemática concreta y el servicio responde con el resultado.El servicio implementa un contrato `ICalculator` que se define en el código siguiente.  
+ <span data-ttu-id="73b00-122">El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.</span><span class="sxs-lookup"><span data-stu-id="73b00-122">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="73b00-123">La interfaz `ICalculator`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato.</span><span class="sxs-lookup"><span data-stu-id="73b00-123">The contract is defined by the `ICalculator` interface, which exposes math operations (add, subtract, multiply, and divide).</span></span> <span data-ttu-id="73b00-124">El cliente realiza solicitudes a una operación matemática concreta y el servicio responde con el resultado.</span><span class="sxs-lookup"><span data-stu-id="73b00-124">The client makes requests to a given math operation and the service replies with the result.</span></span> <span data-ttu-id="73b00-125">El servicio implementa un contrato `ICalculator` que se define en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="73b00-125">The service implements an `ICalculator` contract that is defined in the following code.</span></span>  
   
 ```vb  
 ' Define a service contract.  
@@ -64,7 +66,6 @@ El ejemplo de la Introducción muestra cómo implementar un servicio típico y u
         <OperationContract()>  
         Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
     End Interface  
-  
 ```  
   
 ```csharp  
@@ -81,10 +82,9 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);  
 }  
-  
 ```  
   
- La implementación del servicio calcula y devuelve el resultado adecuado, tal y como se muestra en el siguiente ejemplo de código.  
+ <span data-ttu-id="73b00-126">La implementación del servicio calcula y devuelve el resultado adecuado, tal y como se muestra en el siguiente ejemplo de código.</span><span class="sxs-lookup"><span data-stu-id="73b00-126">The service implementation calculates and returns the appropriate result, as shown in the following example code.</span></span>  
   
 ```vb  
 ' Service class which implements the service contract.  
@@ -106,7 +106,6 @@ Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Impleme
 Return n1 / n2  
 End Function  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -130,10 +129,9 @@ public class CalculatorService : ICalculator
         return n1 / n2;  
     }  
 }  
-  
 ```  
   
- El servicio expone un extremo para comunicarse con el servicio, que se define utilizando un archivo de configuración \(Web.config\), como se muestra en la configuración de ejemplo siguiente.  
+ <span data-ttu-id="73b00-127">El servicio expone un extremo para comunicarse con el servicio, que se define utilizando un archivo de configuración (Web.config), como se muestra en la configuración de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="73b00-127">The service exposes an endpoint for communicating with the service, defined using a configuration file (Web.config), as shown in the following sample configuration.</span></span>  
   
 ```xaml  
 <services>  
@@ -148,14 +146,13 @@ public class CalculatorService : ICalculator
        ...  
     </service>  
 </services>  
-  
 ```  
   
- El servicio expone el extremo en la dirección base proporcionada por el host IIS o WAS.El enlace se configura con un <xref:System.ServiceModel.WSHttpBinding>estándar, que proporciona comunicación del HTTP y protocolos estándar del servicio Web para direccionar y seguridad.El contrato es el `ICalculator` implementado por el servicio.  
+ <span data-ttu-id="73b00-128">El servicio expone el extremo en la dirección base proporcionada por el host IIS o WAS.</span><span class="sxs-lookup"><span data-stu-id="73b00-128">The service exposes the endpoint at the base address provided by the IIS or WAS host.</span></span> <span data-ttu-id="73b00-129">El enlace se configura con un <xref:System.ServiceModel.WSHttpBinding>estándar, que proporciona comunicación del HTTP y protocolos estándar del servicio Web para direccionar y seguridad.</span><span class="sxs-lookup"><span data-stu-id="73b00-129">The binding is configured with a standard <xref:System.ServiceModel.WSHttpBinding>, which provides HTTP communication and standard Web service protocols for addressing and security.</span></span> <span data-ttu-id="73b00-130">El contrato es el `ICalculator` implementado por el servicio.</span><span class="sxs-lookup"><span data-stu-id="73b00-130">The contract is the `ICalculator` implemented by the service.</span></span>  
   
- Tal y como se ha configurado, un cliente puede tener acceso al servicio en http:\/\/localhost\/servicemodelsamples\/service.svc en el mismo equipo.Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.  
+ <span data-ttu-id="73b00-131">Tal y como se ha configurado, un cliente puede tener acceso al servicio en http://localhost/servicemodelsamples/service.svc en el mismo equipo.</span><span class="sxs-lookup"><span data-stu-id="73b00-131">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.svc by a client on the same computer.</span></span> <span data-ttu-id="73b00-132">Para que los clientes en equipos remotos tengan acceso al servicio, se debe especificar un nombre de dominio completo en lugar del host local.</span><span class="sxs-lookup"><span data-stu-id="73b00-132">For clients on remote computersto access the service, a fully-qualified domain name must be specified instead of localhost.</span></span>  
   
- El marco no expone ningún metadato de forma predeterminada.Como tal, el servicio se inicia en <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y expone un extremo de intercambio \(MEX\) de metadatos en http:\/\/localhost\/servicemodelsamples\/service.svc\/mex.La siguiente configuración lo muestra.  
+ <span data-ttu-id="73b00-133">El marco no expone ningún metadato de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="73b00-133">The framework does not expose metadata by default.</span></span> <span data-ttu-id="73b00-134">Como tal, el servicio se inicia en <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y expone un extremo de intercambio (MEX) de metadatos en http://localhost/servicemodelsamples/service.svc/mex.</span><span class="sxs-lookup"><span data-stu-id="73b00-134">As such, the service turns on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> and exposes a metadata exchange (MEX) endpoint at http://localhost/servicemodelsamples/service.svc/mex.</span></span> <span data-ttu-id="73b00-135">La siguiente configuración lo muestra.</span><span class="sxs-lookup"><span data-stu-id="73b00-135">The following configuration demonstrates this.</span></span>  
   
 ```xaml  
 <system.serviceModel>  
@@ -185,19 +182,19 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- El cliente se comunica utilizando un tipo de contrato determinado que utiliza una clase de cliente que es generada por [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).Este cliente generado se encuentra en el archivo generatedClient.cs o generatedClient.vb.Esta utilidad recupera los metadatos para un servicio determinado y genera un cliente para el uso por la aplicación del cliente para comunicarse, utilizando un tipo de contrato determinado.El servicio hospedado debe estar disponible para generar el código de cliente, porque el servicio se utiliza para recuperar los metadatos actualizados.  
+ <span data-ttu-id="73b00-136">El cliente se comunica con un tipo de contrato determinado mediante el uso de una clase de cliente generado por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="73b00-136">The client communicates using a given contract type by using a client class that is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="73b00-137">Este cliente generado se encuentra en el archivo generatedClient.cs o generatedClient.vb.</span><span class="sxs-lookup"><span data-stu-id="73b00-137">This generated client is contained in the file generatedClient.cs or generatedClient.vb.</span></span> <span data-ttu-id="73b00-138">Esta utilidad recupera los metadatos para un servicio determinado y genera un cliente para el uso por la aplicación del cliente para comunicarse, utilizando un tipo de contrato determinado.</span><span class="sxs-lookup"><span data-stu-id="73b00-138">This utility retrieves metadata for a given service and generates a client for use by the client application to communicate using a given contract type.</span></span> <span data-ttu-id="73b00-139">El servicio hospedado debe estar disponible para generar el código de cliente, porque el servicio se utiliza para recuperar los metadatos actualizados.</span><span class="sxs-lookup"><span data-stu-id="73b00-139">The hosted service must be available to generate the client code, because the service is used to retrieve the updated metadata.</span></span>  
   
- Ejecute el comando siguiente desde un símbolo del sistema SDK en el directorio cliente para generar el proxy especificado:  
+ <span data-ttu-id="73b00-140">Ejecute el comando siguiente desde un símbolo del sistema SDK en el directorio cliente para generar el proxy especificado:</span><span class="sxs-lookup"><span data-stu-id="73b00-140">Run the following command from the SDK command prompt in the client directory to generate the typed proxy:</span></span>  
   
 ```  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
 ```  
   
- Para generar el cliente en el tipo Visual Basic el siguiente símbolo del sistema de SDK:  
+ <span data-ttu-id="73b00-141">Para generar el cliente en el tipo Visual Basic el siguiente símbolo del sistema de SDK:</span><span class="sxs-lookup"><span data-stu-id="73b00-141">To generate client in Visual Basic type the following from the SDK command prompt:</span></span>  
   
  `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`  
   
- Al utilizar el cliente generado, el cliente puede tener acceso a un extremo de servicio determinado configurando la dirección adecuada y el enlace.Como el servicio, el cliente utiliza un archivo de configuración \(App.config\) para especificar el extremo con el que desea comunicarse.La configuración del extremo del cliente está compuesta por una dirección absoluta para el extremo del servicio, el enlace y el contrato, tal y como se muestra en el siguiente ejemplo.  
+ <span data-ttu-id="73b00-142">Al utilizar el cliente generado, el cliente puede tener acceso a un punto de conexión de servicio determinado configurando la dirección adecuada y el enlace.</span><span class="sxs-lookup"><span data-stu-id="73b00-142">By using the generated client, the client can access a given service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="73b00-143">Como el servicio, el cliente utiliza un archivo de configuración (App.config) para especificar el extremo con el que desea comunicarse.</span><span class="sxs-lookup"><span data-stu-id="73b00-143">Like the service, the client uses a configuration file (App.config) to specify the endpoint with which it wants to communicate.</span></span> <span data-ttu-id="73b00-144">La configuración del extremo del cliente está compuesta por una dirección absoluta para el extremo del servicio, el enlace y el contrato, tal y como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="73b00-144">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following example.</span></span>  
   
 ```xaml  
 <client>  
@@ -206,10 +203,9 @@ svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Sam
          binding="wsHttpBinding"   
          contract=" Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
-  
 ```  
   
- La implementación del cliente crea instancias de cliente y utiliza la interfaz especificada para empezar a comunicarse con el servicio, como se muestra en el código de ejemplo siguiente.  
+ <span data-ttu-id="73b00-145">La implementación del cliente crea instancias de cliente y utiliza la interfaz especificada para empezar a comunicarse con el servicio, como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="73b00-145">The client implementation instantiates the client and uses the typed interface to begin communicating with the service, as shown in the following example code.</span></span>  
   
 ```vb  
 ' Create a client  
@@ -240,7 +236,6 @@ result = client.Divide(value1, value2)
 Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)  
   
 'Closing the client gracefully closes the connection and cleans up resources  
-  
 ```  
   
 ```csharp  
@@ -273,10 +268,9 @@ Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
   
 //Closing the client releases all communication resources.  
 client.Close();  
-  
 ```  
   
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ <span data-ttu-id="73b00-146">Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="73b00-146">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="73b00-147">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="73b00-147">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -285,19 +279,18 @@ Multiply(9,81.25) = 731.25
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
- El ejemplo de la Introducción muestra la manera estándar de crear un servicio y un cliente.Los otros [Básico](../../../../docs/framework/wcf/samples/basic-sample.md) se basan en este ejemplo para mostrar características concretas del producto.  
+ <span data-ttu-id="73b00-148">El ejemplo de la Introducción muestra la manera estándar de crear un servicio y un cliente.</span><span class="sxs-lookup"><span data-stu-id="73b00-148">The Getting Started sample shows the standard way to create a service and client.</span></span> <span data-ttu-id="73b00-149">El otro [básica](../../../../docs/framework/wcf/samples/basic-sample.md) basarse en este ejemplo para mostrar las características de producto específico.</span><span class="sxs-lookup"><span data-stu-id="73b00-149">The other [Basic](../../../../docs/framework/wcf/samples/basic-sample.md) build on this sample to demonstrate specific product features.</span></span>  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="73b00-150">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="73b00-150">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de que ha realizado el [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="73b00-151">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="73b00-151">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Para compilar el código de la edición .NET de C\# o Visual Basic de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="73b00-152">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="73b00-152">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="73b00-153">Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="73b00-153">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## Vea también  
- [Hospedaje de un servicio WCF en una aplicación administrada](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
- [Procedimiento para hospedar un servicio WCF en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+## <a name="see-also"></a><span data-ttu-id="73b00-154">Vea también</span><span class="sxs-lookup"><span data-stu-id="73b00-154">See Also</span></span>  
+ [<span data-ttu-id="73b00-155">Cómo hospedar un servicio WCF en una aplicación administrada</span><span class="sxs-lookup"><span data-stu-id="73b00-155">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [<span data-ttu-id="73b00-156">Cómo: hospedar un servicio WCF en IIS</span><span class="sxs-lookup"><span data-stu-id="73b00-156">How to: Host a WCF Service in IIS</span></span>](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

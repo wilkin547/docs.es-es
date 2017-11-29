@@ -1,42 +1,45 @@
 ---
-title: "C&#243;mo especificar las credenciales de seguridad de los canales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo especificar las credenciales de seguridad de los canales"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo especificar las credenciales de seguridad de los canales
-El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite a las aplicaciones COM llamar a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La mayoría de los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exigen al cliente que especifique las credenciales para la autenticación y autorización. Al llamar a un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], pueden especificarse estas credenciales en código administrado o en un archivo de configuración de la aplicación. Cuando se llama a un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio desde una aplicación COM, puede utilizar el <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz.  
+# <a name="how-to-specify-channel-security-credentials"></a><span data-ttu-id="80b85-102">Cómo especificar las credenciales de seguridad de los canales</span><span class="sxs-lookup"><span data-stu-id="80b85-102">How to: Specify Channel Security Credentials</span></span>
+<span data-ttu-id="80b85-103">El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permite a las aplicaciones COM llamar a los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="80b85-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Service Moniker allows COM applications to call [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="80b85-104">La mayoría de los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exigen al cliente que especifique las credenciales para la autenticación y autorización.</span><span class="sxs-lookup"><span data-stu-id="80b85-104">Most [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services require the client to specify credentials for authentication and authorization.</span></span> <span data-ttu-id="80b85-105">Al llamar a un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], pueden especificarse estas credenciales en código administrado o en un archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="80b85-105">When calling a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service from a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, you can specify these credentials in managed code or in an application configuration file.</span></span> <span data-ttu-id="80b85-106">Al llamar a un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde una aplicación COM, puede utilizarse la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> para especificar las credenciales.</span><span class="sxs-lookup"><span data-stu-id="80b85-106">When calling a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service from a COM application, you can use the <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface to specify credentials.</span></span> <span data-ttu-id="80b85-107">Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.</span><span class="sxs-lookup"><span data-stu-id="80b85-107">This topic will illustrate various ways to specify credentials using the <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.</span></span>  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> es una interfaz basada en IDispatch y no se obtiene la funcionalidad de IntelliSense en el entorno de Visual Studio.  
+>  <span data-ttu-id="80b85-108"><xref:System.ServiceModel.ComIntegration.IChannelCredentials> es una interfaz basada en IDispatch y no se obtiene la funcionalidad IntelliSense en el entorno de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="80b85-108"><xref:System.ServiceModel.ComIntegration.IChannelCredentials> is an IDispatch-based interface and you will not get IntelliSense functionality in the Visual Studio environment.</span></span>  
   
- Este artículo se utiliza la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio definido en el [ejemplo de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ <span data-ttu-id="80b85-109">Este artículo se utiliza la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio definido en el [ejemplo de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-sample.md).</span><span class="sxs-lookup"><span data-stu-id="80b85-109">This article will use the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service defined in the [Message Security Sample](../../../../docs/framework/wcf/samples/message-security-sample.md).</span></span>  
   
-### <a name="to-specify-a-client-certificate"></a>Para especificar un certificado de cliente  
+### <a name="to-specify-a-client-certificate"></a><span data-ttu-id="80b85-110">Para especificar un certificado de cliente</span><span class="sxs-lookup"><span data-stu-id="80b85-110">To specify a client certificate</span></span>  
   
-1.  Ejecute el archivo Setup.bat en el directorio de seguridad del mensaje para crear e instalar los certificados de prueba necesarios.  
+1.  <span data-ttu-id="80b85-111">Ejecute el archivo Setup.bat en el directorio de seguridad del mensaje para crear e instalar los certificados de prueba necesarios.</span><span class="sxs-lookup"><span data-stu-id="80b85-111">Run the Setup.bat file in the Message Security directory to create and install the required test certificates.</span></span>  
   
-2.  Abra el proyecto de seguridad del mensaje.  
+2.  <span data-ttu-id="80b85-112">Abra el proyecto de seguridad del mensaje.</span><span class="sxs-lookup"><span data-stu-id="80b85-112">Open the Message Security project.</span></span>  
   
-3.  Agregar `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` a la `ICalculator` definición de interfaz.  
+3.  <span data-ttu-id="80b85-113">Agregar `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` a la `ICalculator` definición de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="80b85-113">Add `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` to the `ICalculator` interface definition.</span></span>  
   
-4.  Agregar `bindingNamespace=``http://Microsoft.ServiceModel.Samples` a la etiqueta del extremo en el archivo App.config para el servicio.  
+4.  <span data-ttu-id="80b85-114">Agregar `bindingNamespace=``http://Microsoft.ServiceModel.Samples` a la etiqueta de punto de conexión en el archivo App.config para el servicio.</span><span class="sxs-lookup"><span data-stu-id="80b85-114">Add `bindingNamespace=``http://Microsoft.ServiceModel.Samples` to the endpoint tag in the App.config for the service.</span></span>  
   
-5.  Compile el ejemplo de seguridad del mensaje y ejecute Service.exe. Utilice Internet Explorer y vaya a la dirección URI del servicio (http://localhost:8000/ServiceModelSamples/Service) para asegurarse de que el servicio está funcionando.  
+5.  <span data-ttu-id="80b85-115">Compile el ejemplo de seguridad del mensaje y ejecute Service.exe.</span><span class="sxs-lookup"><span data-stu-id="80b85-115">Build the Message Security Sample and run Service.exe.</span></span> <span data-ttu-id="80b85-116">Utilice Internet Explorer y vaya a la dirección URI del servicio (http://localhost:8000/ServiceModelSamples/Service) para asegurarse de que el servicio está funcionando.</span><span class="sxs-lookup"><span data-stu-id="80b85-116">Use Internet Explorer and browse to the service's URI (http://localhost:8000/ServiceModelSamples/Service) to ensure that the service is working.</span></span>  
   
-6.  Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar. Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:  
+6.  <span data-ttu-id="80b85-117">Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar.</span><span class="sxs-lookup"><span data-stu-id="80b85-117">Open Visual Basic 6.0 and create a new Standard .exe file.</span></span> <span data-ttu-id="80b85-118">Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:</span><span class="sxs-lookup"><span data-stu-id="80b85-118">Add a button to the form and double-click the button to add the following code to the Click handler:</span></span>  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -55,31 +58,31 @@ El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] p
         MsgBox monikerProxy.Add(3, 4)  
     ```  
   
-7.  Ejecute la aplicación Visual Basic y compruebe los resultados.  
+7.  <span data-ttu-id="80b85-119">Ejecute la aplicación Visual Basic y compruebe los resultados.</span><span class="sxs-lookup"><span data-stu-id="80b85-119">Run the Visual Basic application and verify the results.</span></span>  
   
-     La aplicación Visual Basic mostrará un cuadro de mensaje con el resultado de la llamada a Add(3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> también puede usarse en lugar de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> para establecer el certificado de cliente:  
+     <span data-ttu-id="80b85-120">La aplicación Visual Basic mostrará un cuadro de mensaje con el resultado de la llamada a Add(3, 4).</span><span class="sxs-lookup"><span data-stu-id="80b85-120">The Visual Basic application will display a message box with the result from calling Add(3, 4).</span></span> <span data-ttu-id="80b85-121"><xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> también se puede usar en lugar de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> para establecer el certificado de cliente:</span><span class="sxs-lookup"><span data-stu-id="80b85-121"><xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> or <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> can also be used in place of <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> to set the Client Certificate:</span></span>  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
     ```  
   
 > [!NOTE]
->  Para que esta llamada funcione, es necesario que el equipo en el que se ejecuta el cliente confíe en el certificado del cliente.  
+>  <span data-ttu-id="80b85-122">Para que esta llamada funcione, es necesario que el equipo en el que se ejecuta el cliente confíe en el certificado del cliente.</span><span class="sxs-lookup"><span data-stu-id="80b85-122">For this call to work, the client certificate needs to be trusted on the machine the client is running on.</span></span>  
   
 > [!NOTE]
->  Si el moniker es incorrecto o si el servicio no está disponible, la llamada a `GetObject` devolverá un error que dirá "Sintaxis no válida." Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.  
+>  <span data-ttu-id="80b85-123">Si el moniker es incorrecto o si el servicio no está disponible, la llamada a `GetObject` devolverá un error que dirá "Sintaxis no válida."</span><span class="sxs-lookup"><span data-stu-id="80b85-123">If the moniker is malformed or if the service is unavailable, the call to `GetObject` will return an error saying "Invalid Syntax."</span></span> <span data-ttu-id="80b85-124">Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.</span><span class="sxs-lookup"><span data-stu-id="80b85-124">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>  
   
-### <a name="to-specify-user-name-and-password"></a>Para especificar un nombre de usuario y una contraseña.  
+### <a name="to-specify-user-name-and-password"></a><span data-ttu-id="80b85-125">Para especificar un nombre de usuario y una contraseña.</span><span class="sxs-lookup"><span data-stu-id="80b85-125">To specify user name and password</span></span>  
   
-1.  Modifique el archivo de servicio App.config para utilizar `wsHttpBinding`. Este paso es necesario para la validación del nombre de usuario y la contraseña:  
-  
-  
-  
-2.  Establezca `clientCredentialType` en UserName:  
+1.  <span data-ttu-id="80b85-126">Modifique el archivo de servicio App.config para utilizar `wsHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="80b85-126">Modify the Service App.config file to use the `wsHttpBinding`.</span></span> <span data-ttu-id="80b85-127">Este paso es necesario para la validación del nombre de usuario y la contraseña:</span><span class="sxs-lookup"><span data-stu-id="80b85-127">This is required for user name and password validation:</span></span>  
   
   
   
-3.  Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar. Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:  
+2.  <span data-ttu-id="80b85-128">Establezca `clientCredentialType` en UserName:</span><span class="sxs-lookup"><span data-stu-id="80b85-128">Set the `clientCredentialType` to UserName:</span></span>  
+  
+  
+  
+3.  <span data-ttu-id="80b85-129">Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar.</span><span class="sxs-lookup"><span data-stu-id="80b85-129">Open Visual Basic 6.0 and create a new Standard .exe file.</span></span> <span data-ttu-id="80b85-130">Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:</span><span class="sxs-lookup"><span data-stu-id="80b85-130">Add a button to the form and double-click the button to add the following code to the Click handler:</span></span>  
   
     ```  
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -95,18 +98,18 @@ El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] p
     MsgBox monikerProxy.Add(3, 4)  
     ```  
   
-4.  Ejecute la aplicación Visual Basic y compruebe los resultados. La aplicación Visual Basic mostrará un cuadro de mensaje con el resultado de la llamada a Add(3, 4).  
+4.  <span data-ttu-id="80b85-131">Ejecute la aplicación Visual Basic y compruebe los resultados.</span><span class="sxs-lookup"><span data-stu-id="80b85-131">Run the Visual Basic application and verify the results.</span></span> <span data-ttu-id="80b85-132">La aplicación Visual Basic mostrará un cuadro de mensaje con el resultado de la llamada a Add(3, 4).</span><span class="sxs-lookup"><span data-stu-id="80b85-132">The Visual Basic application will display a message box with the result from calling Add(3, 4).</span></span>  
   
     > [!NOTE]
-    >  El enlace especificado en el moniker de servicio de este ejemplo se ha cambiado a WSHttpBinding_ICalculator. Tenga en cuenta también que debe proporcionar un nombre de usuario válido y una contraseña en la llamada a <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
+    >  <span data-ttu-id="80b85-133">El enlace especificado en el moniker de servicio de este ejemplo se ha cambiado a WSHttpBinding_ICalculator.</span><span class="sxs-lookup"><span data-stu-id="80b85-133">The binding specified in the service moniker in this sample has been changed to WSHttpBinding_ICalculator.</span></span> <span data-ttu-id="80b85-134">Tenga en cuenta también que debe proporcionar un nombre de usuario y contraseña validos en la llamada a <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.</span><span class="sxs-lookup"><span data-stu-id="80b85-134">Also note that you must supply a valid user name and password in the call to <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.</span></span>  
   
-### <a name="to-specify-windows-credentials"></a>Para especificar las credenciales de Windows  
+### <a name="to-specify-windows-credentials"></a><span data-ttu-id="80b85-135">Para especificar las credenciales de Windows</span><span class="sxs-lookup"><span data-stu-id="80b85-135">To specify Windows Credentials</span></span>  
   
-1.  Establezca `clientCredentialType` en Windows en el archivo de servicio App.config:  
+1.  <span data-ttu-id="80b85-136">Establezca `clientCredentialType` en Windows en el archivo de servicio App.config:</span><span class="sxs-lookup"><span data-stu-id="80b85-136">Set `clientCredentialType` to Windows in the Service App.config file:</span></span>  
   
   
   
-2.  Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar. Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:  
+2.  <span data-ttu-id="80b85-137">Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar.</span><span class="sxs-lookup"><span data-stu-id="80b85-137">Open Visual Basic 6.0 and create a new Standard .exe file.</span></span> <span data-ttu-id="80b85-138">Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:</span><span class="sxs-lookup"><span data-stu-id="80b85-138">Add a button to the form and double-click the button to add the following code to the Click handler:</span></span>  
   
     ```  
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -121,16 +124,16 @@ El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] p
     MsgBox monikerProxy.Add(3, 4)  
     ```  
   
-3.  Ejecute la aplicación Visual Basic y compruebe los resultados. La aplicación Visual Basic mostrará un cuadro de mensaje con el resultado de la llamada a Add(3, 4).  
+3.  <span data-ttu-id="80b85-139">Ejecute la aplicación Visual Basic y compruebe los resultados.</span><span class="sxs-lookup"><span data-stu-id="80b85-139">Run the Visual Basic application and verify the results.</span></span> <span data-ttu-id="80b85-140">La aplicación Visual Basic mostrará un cuadro de mensaje con el resultado de la llamada a Add(3, 4).</span><span class="sxs-lookup"><span data-stu-id="80b85-140">The Visual Basic application will display a message box with the result from calling Add(3, 4).</span></span>  
   
     > [!NOTE]
-    >  Reemplazar "dominio", "identificación de usuario" y "contraseña" con valores válidos.  
+    >  <span data-ttu-id="80b85-141">Reemplazar "dominio", "identificación de usuario" y "contraseña" con valores válidos.</span><span class="sxs-lookup"><span data-stu-id="80b85-141">You must replace "domain", "userID", and "password" with valid values.</span></span>  
   
-### <a name="to-specify-an-issue-token"></a>Especificar la emisión de un token  
+### <a name="to-specify-an-issue-token"></a><span data-ttu-id="80b85-142">Especificar la emisión de un token</span><span class="sxs-lookup"><span data-stu-id="80b85-142">To specify an issue token</span></span>  
   
-1.  Los tokens de problema solo se usan en aplicaciones que utilizan la seguridad federada. Para obtener más información acerca de la seguridad federada, vea [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) y [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1.  <span data-ttu-id="80b85-143">Los tokens de problema solo se usan en aplicaciones que utilizan la seguridad federada.</span><span class="sxs-lookup"><span data-stu-id="80b85-143">Issue tokens are used only for applications using federated security.</span></span> <span data-ttu-id="80b85-144">Para obtener más información acerca de la seguridad federada, vea [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) y [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).</span><span class="sxs-lookup"><span data-stu-id="80b85-144">For more information about federated security, see [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) and [Federation Sample](../../../../docs/framework/wcf/samples/federation-sample.md).</span></span>  
   
-     El siguiente ejemplo de código de Visual Basic muestra cómo llamar a la <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> método:  
+     <span data-ttu-id="80b85-145">El siguiente ejemplo de código de Visual Basic ilustra cómo llamar al método <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.</span><span class="sxs-lookup"><span data-stu-id="80b85-145">The following Visual Basic code example illustrates how to call the <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> method:</span></span>  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -142,11 +145,11 @@ El moniker de servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] p
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     Para obtener más información acerca de los parámetros de este método, consulte <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
+     <span data-ttu-id="80b85-146">Para obtener información acerca de los parámetros de este método, vea <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.</span><span class="sxs-lookup"><span data-stu-id="80b85-146">For more information about the parameters for this method, see <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Federación](../../../../docs/framework/wcf/feature-details/federation.md)   
- [Cómo: configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
- [Cómo: crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [Seguridad de mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
- [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+## <a name="see-also"></a><span data-ttu-id="80b85-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="80b85-147">See Also</span></span>  
+ [<span data-ttu-id="80b85-148">Federación</span><span class="sxs-lookup"><span data-stu-id="80b85-148">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [<span data-ttu-id="80b85-149">Cómo: configurar las credenciales en un servicio de federación</span><span class="sxs-lookup"><span data-stu-id="80b85-149">How to: Configure Credentials on a Federation Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [<span data-ttu-id="80b85-150">Cómo: crear un cliente federado</span><span class="sxs-lookup"><span data-stu-id="80b85-150">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="80b85-151">Seguridad de mensajes</span><span class="sxs-lookup"><span data-stu-id="80b85-151">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [<span data-ttu-id="80b85-152">Enlaces y seguridad</span><span class="sxs-lookup"><span data-stu-id="80b85-152">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

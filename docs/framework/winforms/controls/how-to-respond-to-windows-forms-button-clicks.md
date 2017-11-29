@@ -1,42 +1,47 @@
 ---
-title: "C&#243;mo: Responder a clics de botones en formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "control de botón [Windows Forms], respuesta a un clic de botón"
-  - "botones, responder a eventos Click"
-  - "Click (evento), Button (control)"
-  - "Click (evento), responder a"
-  - "hacer doble clic"
-  - "eventos [Windows Forms], Click (eventos)"
-  - "ejemplos [Windows Forms], controles"
-  - "MouseDown (evento)"
+title: "Cómo: Responder a clics de botones en formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- buttons [Windows Forms], responding to Click events
+- events [Windows Forms], Click events
+- Click event [Windows Forms], Button control
+- MouseDown event
+- Button control [Windows Forms], click response
+- double-clicks
+- examples [Windows Forms], controls
+- Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 923eb7d1b1b5b442ce897619253a958019b239a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Responder a clics de botones en formularios Windows Forms
-El uso más básico de un control <xref:System.Windows.Forms.Button> de formularios Windows Forms consiste en ejecutar código cuando se hace clic en el botón.  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="3de16-102">Cómo: Responder a clics de botones en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3de16-102">How to: Respond to Windows Forms Button Clicks</span></span>
+<span data-ttu-id="3de16-103">El uso más básico de Windows Forms <xref:System.Windows.Forms.Button> control consiste en ejecutar código cuando se hace clic en el botón.</span><span class="sxs-lookup"><span data-stu-id="3de16-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
   
- Al hacer clic en un control <xref:System.Windows.Forms.Button> se generan también otros eventos, como <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown> y <xref:System.Windows.Forms.Control.MouseUp>.  Si desea asociar controladores de eventos a estos eventos relacionados, asegúrese de que sus correspondientes acciones no entren en conflicto.  Por ejemplo, si al hacer clic en el botón se borra la información escrita por el usuario en un cuadro de texto, al situar el puntero del mouse sobre el botón no debería aparecer una información sobre herramientas con ese texto ahora inexistente.  
+ <span data-ttu-id="3de16-104">Al hacer clic en un <xref:System.Windows.Forms.Button> control también genera un número de otros eventos, como el <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, y <xref:System.Windows.Forms.Control.MouseUp> eventos.</span><span class="sxs-lookup"><span data-stu-id="3de16-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="3de16-105">Si desea adjuntar controladores de eventos para estos eventos relacionados, asegúrese de que sus acciones no entren en conflicto.</span><span class="sxs-lookup"><span data-stu-id="3de16-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="3de16-106">Por ejemplo, si hace clic en el botón se borra la información escrita por el usuario en un cuadro de texto, el al situar el puntero del mouse sobre el botón debería mostrar no una información sobre herramientas con esa información ahora inexistente.</span><span class="sxs-lookup"><span data-stu-id="3de16-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
   
- Si el usuario intenta hacer doble clic en el control <xref:System.Windows.Forms.Button>, cada clic se procesará por separado; es decir, el control no admite el evento doble clic.  
+ <span data-ttu-id="3de16-107">Si el usuario intenta hacer doble clic en el <xref:System.Windows.Forms.Button> control, cada clic se procesará por separado; es decir, el control no admite el evento doble clic.</span><span class="sxs-lookup"><span data-stu-id="3de16-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
   
-### Para responder a un clic en el botón  
+### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="3de16-108">Para responder a un clic del botón</span><span class="sxs-lookup"><span data-stu-id="3de16-108">To respond to a button click</span></span>  
   
--   En el control <xref:System.EventHandler> de `Click` , escriba el código que se va a ejecutar.  `Button1_Click` se debe enlazar al control.  Para obtener más información, vea [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+-   <span data-ttu-id="3de16-109">En el botón `Click` <xref:System.EventHandler> escribir el código que se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="3de16-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> <span data-ttu-id="3de16-110">`Button1_Click`se debe enlazar al control.</span><span class="sxs-lookup"><span data-stu-id="3de16-110">`Button1_Click` must be bound to the control.</span></span> <span data-ttu-id="3de16-111">Para obtener más información, consulte [Cómo: crear controladores de eventos en tiempo de ejecución para formularios Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="3de16-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -51,7 +56,7 @@ El uso más básico de un control <xref:System.Windows.Forms.Button> de formular
     }  
     ```  
   
-    ```cpp#  
+    ```cpp  
     private:  
        void button1_Click(System::Object ^ sender,  
           System::EventArgs ^ e)  
@@ -60,7 +65,7 @@ El uso más básico de un control <xref:System.Windows.Forms.Button> de formular
        }  
     ```  
   
-## Vea también  
- [Información general sobre el control Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Maneras de seleccionar un control Button de formularios Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Button \(Control\)](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3de16-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="3de16-112">See Also</span></span>  
+ [<span data-ttu-id="3de16-113">Información general sobre el control Button</span><span class="sxs-lookup"><span data-stu-id="3de16-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="3de16-114">Maneras de seleccionar un control Button de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3de16-114">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="3de16-115">Botón (control)</span><span class="sxs-lookup"><span data-stu-id="3de16-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

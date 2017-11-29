@@ -1,51 +1,55 @@
 ---
-title: "C&#243;mo: Mejorar el rendimiento evitando el ajuste de tama&#241;o autom&#225;tico | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ajustar escala automáticamente"
-  - "imágenes [Windows Forms], mejorar el rendimiento"
-  - "imágenes [Windows Forms], sin ajuste de escala automático"
-  - "rendimiento, mejorar imagen"
+title: "Cómo: Mejorar el rendimiento evitando el ajuste de tamaño automático"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- automatic scaling
+- images [Windows Forms], improving performance
+- images [Windows Forms], using without automatic scaling
+- performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Mejorar el rendimiento evitando el ajuste de tama&#241;o autom&#225;tico
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede ajustar automáticamente la escala de una imagen a medida que se dibuja pero disminuye el rendimiento.  Como alternativa, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino al método <xref:System.Drawing.Graphics.DrawImage%2A>.  
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a><span data-ttu-id="1f988-102">Cómo: Mejorar el rendimiento evitando el ajuste de tamaño automático</span><span class="sxs-lookup"><span data-stu-id="1f988-102">How to: Improve Performance by Avoiding Automatic Scaling</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="1f988-103">puede escalar automáticamente una imagen como dibujarlo, por lo que reduciría el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="1f988-103"> may automatically scale an image as you draw it, which would decrease performance.</span></span> <span data-ttu-id="1f988-104">O bien, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino para la <xref:System.Drawing.Graphics.DrawImage%2A> método.</span><span class="sxs-lookup"><span data-stu-id="1f988-104">Alternatively, you can control the scaling of the image by passing the dimensions of the destination rectangle to the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  
   
- Por ejemplo, en la siguiente llamada al método <xref:System.Drawing.Graphics.DrawImage%2A> se especifica una esquina superior izquierda de \(50, 30\) pero no se especifica un rectángulo de destino.  
+ <span data-ttu-id="1f988-105">Por ejemplo, la siguiente llamada a la <xref:System.Drawing.Graphics.DrawImage%2A> método especifica una esquina superior izquierda de (50, 30) pero no especifica un rectángulo de destino.</span><span class="sxs-lookup"><span data-stu-id="1f988-105">For example, the following call to the <xref:System.Drawing.Graphics.DrawImage%2A> method specifies an upper-left corner of (50, 30) but does not specify a destination rectangle.</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
- Aunque ésta es la versión más fácil del método <xref:System.Drawing.Graphics.DrawImage%2A> en lo que se refiere al número de argumentos requeridos, puede que no sea la más eficaz.  Si la resolución utilizada por [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] \(normalmente 96 puntos por pulgada\) es distinta a la almacenada en el objeto <xref:System.Drawing.Image>, el método <xref:System.Drawing.Graphics.DrawImage%2A> ajustará la escala de la imagen.  Por ejemplo, supongamos un objeto <xref:System.Drawing.Image> con un ancho de 216 píxeles y un valor de resolución horizontal almacenado de 72 puntos por pulgada.  Como 216\/72 es 3, <xref:System.Drawing.Graphics.DrawImage%2A> ajustará la escala de la imagen de forma que tenga un ancho de 3 pulgadas con una resolución de 96 puntos por pulgada.  Es decir, <xref:System.Drawing.Graphics.DrawImage%2A> mostrará una imagen con un ancho de 96x3 \= 288 píxeles.  
+ <span data-ttu-id="1f988-106">Aunque esta es la versión más sencilla de la <xref:System.Drawing.Graphics.DrawImage%2A> método en cuanto al número de argumentos necesarios, no es necesariamente el más eficaz.</span><span class="sxs-lookup"><span data-stu-id="1f988-106">Although this is the easiest version of the <xref:System.Drawing.Graphics.DrawImage%2A> method in terms of the number of required arguments, it is not necessarily the most efficient.</span></span> <span data-ttu-id="1f988-107">Si usa la resolución [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (normalmente 96 puntos por pulgada) es diferente de la resolución que se almacenan en la <xref:System.Drawing.Image> objeto, la <xref:System.Drawing.Graphics.DrawImage%2A> método escalará la imagen.</span><span class="sxs-lookup"><span data-stu-id="1f988-107">If the resolution used by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (usually 96 dots per inch) is different from the resolution stored in the <xref:System.Drawing.Image> object, then the <xref:System.Drawing.Graphics.DrawImage%2A> method will scale the image.</span></span> <span data-ttu-id="1f988-108">Por ejemplo, suponga que un <xref:System.Drawing.Image> objeto tiene un ancho de 216 píxeles y un valor de resolución horizontal almacenado de 72 puntos por pulgada.</span><span class="sxs-lookup"><span data-stu-id="1f988-108">For example, suppose an <xref:System.Drawing.Image> object has a width of 216 pixels and a stored horizontal resolution value of 72 dots per inch.</span></span> <span data-ttu-id="1f988-109">Como 216/72 es 3, <xref:System.Drawing.Graphics.DrawImage%2A> escalará la imagen para que tenga un ancho de 3 pulgadas con una resolución de 96 puntos por pulgada.</span><span class="sxs-lookup"><span data-stu-id="1f988-109">Because 216/72 is 3, <xref:System.Drawing.Graphics.DrawImage%2A> will scale the image so that it has a width of 3 inches at a resolution of 96 dots per inch.</span></span> <span data-ttu-id="1f988-110">Es decir, <xref:System.Drawing.Graphics.DrawImage%2A> mostrará una imagen que tiene un ancho de 96 x 3 = 288 píxeles.</span><span class="sxs-lookup"><span data-stu-id="1f988-110">That is, <xref:System.Drawing.Graphics.DrawImage%2A> will display an image that has a width of 96x3 = 288 pixels.</span></span>  
   
- Aunque la resolución de pantalla sea distinta de 96 puntos por pulgada, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ajustará probablemente la imagen como si la resolución de pantalla fuera 96 puntos por pulgada.  Esto es debido a que un objeto <xref:System.Drawing.Graphics> de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se asocia con un contexto de dispositivo, y cuando [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] consulta a dicho contexto para averiguar la resolución de pantalla, el resultado suele ser 96, sea cual sea la resolución de pantalla real.  Puede evitar el ajuste de escala automático especificando el rectángulo de destino en el método <xref:System.Drawing.Graphics.DrawImage%2A>.  
+ <span data-ttu-id="1f988-111">Aunque la resolución de pantalla sea distinta de 96 puntos por pulgada, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] probablemente escala la imagen como si la resolución de pantalla fuera 96 puntos por pulgada.</span><span class="sxs-lookup"><span data-stu-id="1f988-111">Even if your screen resolution is different from 96 dots per inch, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] will probably scale the image as if the screen resolution were 96 dots per inch.</span></span> <span data-ttu-id="1f988-112">Eso es porque una [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> objeto está asociado a un contexto de dispositivo y cuándo [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] consultas el contexto de dispositivo para la resolución de pantalla, el resultado suele ser 96, sea cual sea la resolución de pantalla real.</span><span class="sxs-lookup"><span data-stu-id="1f988-112">That is because a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> object is associated with a device context, and when [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] queries the device context for the screen resolution, the result is usually 96, regardless of the actual screen resolution.</span></span> <span data-ttu-id="1f988-113">Puede evitar el escalado automático especificando el rectángulo de destino en la <xref:System.Drawing.Graphics.DrawImage%2A> método.</span><span class="sxs-lookup"><span data-stu-id="1f988-113">You can avoid automatic scaling by specifying the destination rectangle in the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se dibuja la misma imagen dos veces.  En el primer caso, el ancho y el alto del rectángulo de destino no se especifican y se ajusta automáticamente el tamaño de la imagen.  En el segundo caso, se especifica que el ancho y el alto \(medidos en píxeles\) del rectángulo de destino sean iguales que el ancho y el alto de la imagen original.  En la siguiente ilustración se muestra la imagen dos veces representada.  
+## <a name="example"></a><span data-ttu-id="1f988-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1f988-114">Example</span></span>  
+ <span data-ttu-id="1f988-115">En el ejemplo siguiente se dibuja la misma imagen dos veces.</span><span class="sxs-lookup"><span data-stu-id="1f988-115">The following example draws the same image twice.</span></span> <span data-ttu-id="1f988-116">En el primer caso, el ancho y alto del rectángulo de destino no se especifican, y la imagen se escala automáticamente.</span><span class="sxs-lookup"><span data-stu-id="1f988-116">In the first case, the width and height of the destination rectangle are not specified, and the image is automatically scaled.</span></span> <span data-ttu-id="1f988-117">En el segundo caso, el ancho y alto (expresado en píxeles) del rectángulo de destino se especifican para ser igual que el ancho y alto de la imagen original.</span><span class="sxs-lookup"><span data-stu-id="1f988-117">In the second case, the width and height (measured in pixels) of the destination rectangle are specified to be the same as the width and height of the original image.</span></span> <span data-ttu-id="1f988-118">En la siguiente ilustración muestra la imagen representada dos veces.</span><span class="sxs-lookup"><span data-stu-id="1f988-118">The following illustration shows the image rendered twice.</span></span>  
   
- ![Textura ajustada](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ <span data-ttu-id="1f988-119">![Escala de textura](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")</span><span class="sxs-lookup"><span data-stu-id="1f988-119">![Scaled Texture](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
-## Compilar el código  
- El ejemplo anterior está diseñado para formularios Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  Reemplace Texture.jpg por un nombre de imagen y una ruta de acceso que sean válidos en su sistema.  
+## <a name="compiling-the-code"></a><span data-ttu-id="1f988-120">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="1f988-120">Compiling the Code</span></span>  
+ <span data-ttu-id="1f988-121">El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="1f988-121">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="1f988-122">Reemplace Texture.jpg por un nombre de la imagen y la ruta de acceso que son válidos en el sistema.</span><span class="sxs-lookup"><span data-stu-id="1f988-122">Replace Texture.jpg with an image name and path that are valid on your system.</span></span>  
   
-## Vea también  
- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="1f988-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="1f988-123">See Also</span></span>  
+ [<span data-ttu-id="1f988-124">Imágenes, mapas de bits y metarchivos</span><span class="sxs-lookup"><span data-stu-id="1f988-124">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="1f988-125">Trabajar con imágenes, mapas de bits, iconos y metarchivos</span><span class="sxs-lookup"><span data-stu-id="1f988-125">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

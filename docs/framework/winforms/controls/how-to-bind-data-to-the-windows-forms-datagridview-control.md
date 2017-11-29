@@ -1,68 +1,73 @@
 ---
-title: "C&#243;mo: Enlazar datos al control DataGridView de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "enlace de datos, DataGridView (control)"
-  - "enlace de datos, cuadrículas"
-  - "DataGridView (control) [Windows Forms], enlace de datos"
+title: "Cómo: Enlazar datos al control DataGridView de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- data binding [Windows Forms], grids
+- data binding [Windows Forms], DataGridView control
+- DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-caps.latest.revision: 30
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63194d01d5de1eab9d71376e472a70613f83d1ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Enlazar datos al control DataGridView de formularios Windows Forms
-El control <xref:System.Windows.Forms.DataGridView> admite el modelo de enlace de datos de Windows Forms estándar, por lo que se enlazará a distintos orígenes de datos.  Sin embargo, en la mayoría de los casos se enlazará a un componente <xref:System.Windows.Forms.BindingSource> que administrará los detalles de la interacción con el origen de datos.  El componente <xref:System.Windows.Forms.BindingSource> puede representar cualquier origen de datos de Windows Forms y proporciona gran flexibilidad a la hora de elegir o modificar la ubicación de los datos.  Para obtener más información acerca de los orígenes de datos admitidos por el control <xref:System.Windows.Forms.DataGridView>, consulte [Información general del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a><span data-ttu-id="a1812-102">Cómo: Enlazar datos al control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1812-102">How to: Bind Data to the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="a1812-103">El control <xref:System.Windows.Forms.DataGridView> admite el modelo de enlace de datos de Windows Forms estándar, por lo que se enlazará a distintos orígenes de datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-103">The <xref:System.Windows.Forms.DataGridView> control supports the standard Windows Forms data binding model, so it will bind to a variety of data sources.</span></span> <span data-ttu-id="a1812-104">Sin embargo, en la mayoría de los casos se enlazará a un componente <xref:System.Windows.Forms.BindingSource> que administrará los detalles de la interacción con el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-104">In most circumstances, however, you will bind to a <xref:System.Windows.Forms.BindingSource> component which will manage the details of interacting with the data source.</span></span> <span data-ttu-id="a1812-105">El componente <xref:System.Windows.Forms.BindingSource> puede representar cualquier origen de datos de Windows Forms y proporciona gran flexibilidad a la hora de elegir o modificar la ubicación de los datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-105">The <xref:System.Windows.Forms.BindingSource> component can represent any Windows Forms data source and gives you great flexibility when choosing or modifying the location of your data.</span></span> <span data-ttu-id="a1812-106">Para obtener más información acerca de los orígenes de datos admitidos por la <xref:System.Windows.Forms.DataGridView> control, vea [información general del Control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="a1812-106">For more information about the data sources supported by the <xref:System.Windows.Forms.DataGridView> control, see [DataGridView Control Overview](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).</span></span>  
   
- Visual Studio es altamente compatible con esta tarea.  Consulte también [Cómo: Enlazar datos al control DataGridView de Windows Forms mediante el Diseñador](http://msdn.microsoft.com/library/33w255ac%20\(v=vs.110\)).  
+ <span data-ttu-id="a1812-107">Visual Studio es altamente compatible con esta tarea.</span><span class="sxs-lookup"><span data-stu-id="a1812-107">There is extensive support for this task in Visual Studio.</span></span>  <span data-ttu-id="a1812-108">Vea también [Cómo: Enlazar datos al control DataGridView de Windows Forms mediante el diseñador](http://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="a1812-108">Also see [How to: Bind Data to the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).</span></span>  
   
-## Procedimiento  
+## <a name="procedure"></a><span data-ttu-id="a1812-109">Procedimiento</span><span class="sxs-lookup"><span data-stu-id="a1812-109">Procedure</span></span>  
   
-#### Para conectar un control DataGridView a datos  
+#### <a name="to-connect-a-datagridview-control-to-data"></a><span data-ttu-id="a1812-110">Para conectar un control DataGridView a datos</span><span class="sxs-lookup"><span data-stu-id="a1812-110">To connect a DataGridView control to data</span></span>  
   
-1.  Implemente un método que controle los detalles de recuperación de datos desde una base de datos.  En el ejemplo de código siguiente se implementa un método `GetData` que inicializa un componente <xref:System.Data.SqlClient.SqlDataAdapter> y lo usa para rellenar una <xref:System.Data.DataTable>.  Después, la <xref:System.Data.DataTable> se enlaza al componente <xref:System.Windows.Forms.BindingSource>.  Asegúrese de establecer la variable `connectionString` en un valor que sea adecuado para la base de datos.  Necesitará acceso a un servidor que tenga instalada la base de datos de ejemplo SQL Server Northwind.  
+1.  <span data-ttu-id="a1812-111">Implemente un método que controle los detalles de recuperación de datos desde una base de datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-111">Implement a method to handle the details of retrieving data from a database.</span></span> <span data-ttu-id="a1812-112">En el ejemplo de código siguiente se implementa un método `GetData` que inicializa un componente <xref:System.Data.SqlClient.SqlDataAdapter> y lo usa para rellenar una <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="a1812-112">The following code example implements a `GetData` method that initializes a <xref:System.Data.SqlClient.SqlDataAdapter> component and uses it to populate a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="a1812-113">Después, la <xref:System.Data.DataTable> se enlaza al componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="a1812-113">The <xref:System.Data.DataTable> is then bound to the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="a1812-114">Asegúrese de establecer la variable `connectionString` en un valor que sea adecuado para la base de datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-114">Be sure to set the `connectionString` variable to a value that is appropriate for your database.</span></span> <span data-ttu-id="a1812-115">Necesitará acceso a un servidor que tenga instalada la base de datos de ejemplo SQL Server Northwind.</span><span class="sxs-lookup"><span data-stu-id="a1812-115">You will need access to a server with the Northwind SQL Server sample database installed.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#20)]
      [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#20)]  
   
-2.  En el controlador de eventos <xref:System.Windows.Forms.Form.Load> del formulario, enlace el control <xref:System.Windows.Forms.DataGridView> al componente <xref:System.Windows.Forms.BindingSource> y llame al método `GetData` para recuperar los datos de la base de datos.  
+2.  <span data-ttu-id="a1812-116">En el controlador de eventos <xref:System.Windows.Forms.Form.Load> del formulario, enlace el control <xref:System.Windows.Forms.DataGridView> al componente <xref:System.Windows.Forms.BindingSource> y llame al método `GetData` para recuperar los datos de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-116">In your form's <xref:System.Windows.Forms.Form.Load> event handler, bind the <xref:System.Windows.Forms.DataGridView> control to the <xref:System.Windows.Forms.BindingSource> component and call the `GetData` method to retrieve the data from the database.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#10)]
      [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#10)]  
   
-## Ejemplo  
- El siguiente ejemplo de código completo proporciona botones para volver a cargar los datos de la base de datos y enviar los cambios a la base de datos.  
+## <a name="example"></a><span data-ttu-id="a1812-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a1812-117">Example</span></span>  
+ <span data-ttu-id="a1812-118">El siguiente ejemplo de código completo proporciona botones para volver a cargar los datos de la base de datos y enviar los cambios a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-118">The following complete code example provides buttons for reloading data from the database and submitting changes to the database.</span></span>  
   
  [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#00)]
  [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#00)]  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="a1812-119">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="a1812-119">Compiling the Code</span></span>  
+ <span data-ttu-id="a1812-120">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="a1812-120">This example requires:</span></span>  
   
--   Referencias a los ensamblados System, System.Windows.Forms, System.Data y System.XML.  
+-   <span data-ttu-id="a1812-121">Referencias a los ensamblados System, System.Windows.Forms, System.Data y System.XML.</span><span class="sxs-lookup"><span data-stu-id="a1812-121">References to the System, System.Windows.Forms, System.Data, and System.XML assemblies.</span></span>  
   
- Para obtener información acerca de cómo compilar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilar desde la línea de comandos](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilar la línea de comandos con csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228%20\(v=vs.110\)).  
+ <span data-ttu-id="a1812-122">Para información sobre cómo compilar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilación desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilar desde la línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="a1812-122">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="a1812-123">También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.</span><span class="sxs-lookup"><span data-stu-id="a1812-123">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="a1812-124">Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="a1812-124">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Seguridad de .NET Framework  
- Almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación.  El uso de la autenticación de Windows \(también conocida como seguridad integrada\) es un modo más seguro de controlar el acceso a una base de datos.  Para obtener más información, consulte [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+## <a name="net-framework-security"></a><span data-ttu-id="a1812-125">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a1812-125">.NET Framework Security</span></span>  
+ <span data-ttu-id="a1812-126">Almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a1812-126">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="a1812-127">El uso de la autenticación de Windows (también conocida como seguridad integrada) es un modo más seguro de controlar el acceso a una base de datos.</span><span class="sxs-lookup"><span data-stu-id="a1812-127">Using Windows Authentication (also known as integrated security) is a more secure way to control access to a database.</span></span> <span data-ttu-id="a1812-128">Para más información, consulte [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span><span class="sxs-lookup"><span data-stu-id="a1812-128">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.BindingSource>   
- [Mostrar datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a><span data-ttu-id="a1812-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1812-129">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [<span data-ttu-id="a1812-130">Mostrar datos en el control DataGridView de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1812-130">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="a1812-131">Proteger la información de conexión</span><span class="sxs-lookup"><span data-stu-id="a1812-131">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)

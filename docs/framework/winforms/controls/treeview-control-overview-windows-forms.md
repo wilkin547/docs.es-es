@@ -1,38 +1,37 @@
 ---
-title: "Informaci&#243;n general del control TreeView (Formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TreeView"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "TreeView (control) [Windows Forms], acerca del control TreeView"
+title: "Información general del control TreeView (Formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TreeView
+helpviewer_keywords: TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee285a7db058cd88843eb3addf207fb5c446dfa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general del control TreeView (Formularios Windows Forms)
-Con el control <xref:System.Windows.Forms.TreeView> de Windows Forms puede mostrar una jerarquía de nodos a los usuarios, por ejemplo, la forma en que los archivos y las carpetas se muestran en el panel izquierdo de la característica Explorador de Windows del sistema operativo Windows.  Cada nodo de la vista de árbol puede contener otros nodos, llamados *nodos secundarios*.  Los nodos primarios, o nodos que contienen nodos secundarios, se pueden mostrar expandidos o contraídos.  También puede mostrar una vista de árbol con casillas junto a los nodos estableciendo la propiedad <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> de la vista de árbol en `true`.  Después, puede activar o desactivar nodos configurando mediante programación la propiedad <xref:System.Windows.Forms.TreeNode.Checked%2A> del nodo en `true` o `false`.  
+# <a name="treeview-control-overview-windows-forms"></a><span data-ttu-id="c7f54-102">Información general del control TreeView (Formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c7f54-102">TreeView Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="c7f54-103">Con el control <xref:System.Windows.Forms.TreeView> de Windows Forms puede mostrar una jerarquía de nodos a los usuarios, por ejemplo, la forma en que los archivos y las carpetas se muestran en el panel izquierdo de la característica Explorador de Windows del sistema operativo Windows.</span><span class="sxs-lookup"><span data-stu-id="c7f54-103">With the Windows Forms <xref:System.Windows.Forms.TreeView> control, you can display a hierarchy of nodes to users, like the way files and folders are displayed in the left pane of the Windows Explorer feature of the Windows operating system.</span></span> <span data-ttu-id="c7f54-104">Cada nodo en la vista de árbol puede contener otros nodos, llamados *nodos secundarios*.</span><span class="sxs-lookup"><span data-stu-id="c7f54-104">Each node in the tree view might contain other nodes, called *child nodes*.</span></span> <span data-ttu-id="c7f54-105">Los nodos primarios, o nodos que contienen nodos secundarios, se pueden mostrar expandidos o contraídos.</span><span class="sxs-lookup"><span data-stu-id="c7f54-105">You can display parent nodes, or nodes that contain child nodes, as expanded or collapsed.</span></span> <span data-ttu-id="c7f54-106">También puede mostrar una vista de árbol con casillas junto a los nodos estableciendo la propiedad <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> de la vista de árbol en `true`.</span><span class="sxs-lookup"><span data-stu-id="c7f54-106">You can also display a tree view with check boxes next to the nodes by setting the tree view's <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> property to `true`.</span></span> <span data-ttu-id="c7f54-107">Después, puede activar o desactivar nodos configurando mediante programación la propiedad <xref:System.Windows.Forms.TreeNode.Checked%2A> del nodo en `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="c7f54-107">You can then programmatically select or clear nodes by setting the node's <xref:System.Windows.Forms.TreeNode.Checked%2A> property to `true` or `false`.</span></span>  
   
-## Propiedades clave  
- Las propiedades clave del control <xref:System.Windows.Forms.TreeView> son <xref:System.Windows.Forms.TreeView.Nodes%2A> y <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.  La propiedad <xref:System.Windows.Forms.TreeView.Nodes%2A> contiene la lista de nodos de nivel superior de la vista de árbol.  La propiedad <xref:System.Windows.Forms.TreeView.SelectedNode%2A> establece el nodo actualmente seleccionado.  Puede mostrar iconos junto a los nodos.  El control usa las imágenes de la <xref:System.Windows.Forms.ImageList> con nombre en la propiedad <xref:System.Windows.Forms.TreeView.ImageList%2A> de la vista de árbol.  La propiedad <xref:System.Windows.Forms.TreeView.ImageIndex%2A> establece la imagen predeterminada de los nodos en la vista de árbol.  Para obtener más información acerca de cómo mostrar imágenes, consulte [Cómo: Establecer iconos del control TreeView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).  Si está usando [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], tiene acceso a una gran biblioteca de imágenes estándar que puede usar con el control <xref:System.Windows.Forms.TreeView>.  
+## <a name="key-properties"></a><span data-ttu-id="c7f54-108">Propiedades clave</span><span class="sxs-lookup"><span data-stu-id="c7f54-108">Key Properties</span></span>  
+ <span data-ttu-id="c7f54-109">Las propiedades clave del control <xref:System.Windows.Forms.TreeView> son <xref:System.Windows.Forms.TreeView.Nodes%2A> y <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.</span><span class="sxs-lookup"><span data-stu-id="c7f54-109">The key properties of the <xref:System.Windows.Forms.TreeView> control are <xref:System.Windows.Forms.TreeView.Nodes%2A> and <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.</span></span> <span data-ttu-id="c7f54-110">La propiedad <xref:System.Windows.Forms.TreeView.Nodes%2A> contiene la lista de nodos de nivel superior de la vista de árbol.</span><span class="sxs-lookup"><span data-stu-id="c7f54-110">The <xref:System.Windows.Forms.TreeView.Nodes%2A> property contains the list of top-level nodes in the tree view.</span></span> <span data-ttu-id="c7f54-111">La propiedad <xref:System.Windows.Forms.TreeView.SelectedNode%2A> establece el nodo actualmente seleccionado.</span><span class="sxs-lookup"><span data-stu-id="c7f54-111">The <xref:System.Windows.Forms.TreeView.SelectedNode%2A> property sets the currently selected node.</span></span> <span data-ttu-id="c7f54-112">Puede mostrar iconos junto a los nodos.</span><span class="sxs-lookup"><span data-stu-id="c7f54-112">You can display icons next to the nodes.</span></span> <span data-ttu-id="c7f54-113">El control usa las imágenes de la <xref:System.Windows.Forms.ImageList> con nombre en la propiedad <xref:System.Windows.Forms.TreeView.ImageList%2A> de la vista de árbol.</span><span class="sxs-lookup"><span data-stu-id="c7f54-113">The control uses images from the <xref:System.Windows.Forms.ImageList> named in the tree view's <xref:System.Windows.Forms.TreeView.ImageList%2A> property.</span></span> <span data-ttu-id="c7f54-114">La propiedad <xref:System.Windows.Forms.TreeView.ImageIndex%2A> establece la imagen predeterminada de los nodos en la vista de árbol.</span><span class="sxs-lookup"><span data-stu-id="c7f54-114">The <xref:System.Windows.Forms.TreeView.ImageIndex%2A> property sets the default image for nodes in the tree view.</span></span> <span data-ttu-id="c7f54-115">Para obtener más información acerca de cómo mostrar imágenes, vea [Cómo: establecer iconos para el TreeView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).</span><span class="sxs-lookup"><span data-stu-id="c7f54-115">For more information about displaying images, see [How to: Set Icons for the Windows Forms TreeView Control](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).</span></span> <span data-ttu-id="c7f54-116">Si usa [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], tiene acceso a una gran biblioteca de imágenes estándar que puede usar con el control <xref:System.Windows.Forms.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="c7f54-116">If you are using [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use with the <xref:System.Windows.Forms.TreeView> control.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.TreeView>   
- [TreeView \(Control\)](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Cómo: Establecer iconos del control TreeView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)   
- [Cómo: Agregar y quitar nodos con el control TreeView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)   
- [Cómo: Recorrer en iteración todos los nodos del control TreeView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)   
- [Cómo: Determinar en qué nodo de TreeView se hizo clic](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)   
- [Cómo: Agregar información personalizada a los controles TreeView o ListView \(formularios Windows Forms\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+## <a name="see-also"></a><span data-ttu-id="c7f54-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="c7f54-117">See Also</span></span>  
+ <xref:System.Windows.Forms.TreeView>  
+ [<span data-ttu-id="c7f54-118">TreeView (control)</span><span class="sxs-lookup"><span data-stu-id="c7f54-118">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="c7f54-119">Establecer iconos del control TreeView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f54-119">How to: Set Icons for the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="c7f54-120">Agregar y quitar nodos con el control TreeView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f54-120">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="c7f54-121">Recorrer en iteración todos los nodos del control TreeView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7f54-121">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="c7f54-122">Determinar en qué nodo de TreeView se hizo clic</span><span class="sxs-lookup"><span data-stu-id="c7f54-122">How to: Determine Which TreeView Node Was Clicked</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
+ [<span data-ttu-id="c7f54-123">Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c7f54-123">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)

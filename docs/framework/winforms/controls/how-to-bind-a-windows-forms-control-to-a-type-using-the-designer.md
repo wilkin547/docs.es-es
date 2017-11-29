@@ -1,68 +1,69 @@
 ---
-title: "C&#243;mo: Enlazar un control de formularios Windows Forms a un tipo mediante el Dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource (componente) [Windows Forms], enlazar a un tipo"
-  - "controles [Windows Forms], enlazar a un tipo"
-  - "tipos [formularios Windows Forms], enlazar controles"
+title: "Cómo: Enlazar un control de formularios Windows Forms a un tipo mediante el Diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], binding to a type
+- BindingSource component [Windows Forms], binding to a type
+- types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 215a69a47b0588e45fcc28202dce4c6210b1dfe6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Enlazar un control de formularios Windows Forms a un tipo mediante el Dise&#241;ador
-Al crear controles que interactúan con datos, a veces necesitará enlazar un control a un tipo mejor que a un objeto.  Normalmente tendrá que enlazar un control a un tipo en tiempo de diseño, cuando quizá no estén disponibles los datos, pero aún desea que los controles enlazados a datos muestren datos de una interfaz pública del tipo.  En los procedimientos siguientes se muestra cómo crear un nuevo <xref:System.Windows.Forms.BindingSource> que está enlazado a un tipo y a continuación cómo enlazar una de las propiedades del tipo a la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> del control  <xref:System.Windows.Forms.TextBox>.  
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a><span data-ttu-id="a7465-102">Cómo: Enlazar un control de formularios Windows Forms a un tipo mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="a7465-102">How to: Bind a Windows Forms Control to a Type Using the Designer</span></span>
+<span data-ttu-id="a7465-103">Al crear controles que interactúan con datos, a veces necesita enlazar un control a un tipo, en lugar de a un objeto.</span><span class="sxs-lookup"><span data-stu-id="a7465-103">When you are building controls that interact with data, you sometimes need to bind a control to a type, rather than an object.</span></span> <span data-ttu-id="a7465-104">Normalmente necesita enlazar un control a un tipo en tiempo de diseño, cuando quizá no estén disponibles los datos, pero aún desea que los controles enlazados a datos muestren datos de una interfaz pública del tipo.</span><span class="sxs-lookup"><span data-stu-id="a7465-104">You typically need to bind a control to a type at design time, when data may not be available, but you still want your data-bound controls to display data from a type's public interface.</span></span> <span data-ttu-id="a7465-105">Los procedimientos siguientes muestran cómo crear un nuevo <xref:System.Windows.Forms.BindingSource> decir enlazado a un tipo y, a continuación, cómo enlazar una de las propiedades del tipo para el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad de un <xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="a7465-105">The following procedures demonstrate how to create a new <xref:System.Windows.Forms.BindingSource> that is bound to a type, and then how to bind one of the type's properties to the <xref:System.Windows.Forms.TextBox.Text%2A> property of a <xref:System.Windows.Forms.TextBox>.</span></span>  
   
-### Para enlazar BindingSource a un tipo  
+### <a name="to-bind-the-bindingsource-to-a-type"></a><span data-ttu-id="a7465-106">Para enlazar BindingSource a un tipo</span><span class="sxs-lookup"><span data-stu-id="a7465-106">To bind the BindingSource to a type</span></span>  
   
-1.  Cree un proyecto de formularios Windows Forms.  
+1.  <span data-ttu-id="a7465-107">Cree un proyecto de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a7465-107">Create a Windows Forms project.</span></span>  
   
-     Para obtener más información, consulte [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     <span data-ttu-id="a7465-108">Para obtener más información, consulta [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="a7465-108">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  En la vista **Diseño**, arrastre un componente <xref:System.Windows.Forms.BindingSource> al formulario.  
+2.  <span data-ttu-id="a7465-109">En **diseño** ver, arrastre un <xref:System.Windows.Forms.BindingSource> componente al formulario.</span><span class="sxs-lookup"><span data-stu-id="a7465-109">In **Design** view, drag a <xref:System.Windows.Forms.BindingSource> component onto the form.</span></span>  
   
-3.  En la ventana **Propiedades**, haga clic en la flecha correspondiente a la propiedad <xref:System.Windows.Forms.BindingSource.DataSource%2A>.  
+3.  <span data-ttu-id="a7465-110">En el **propiedades** ventana, haga clic en la flecha de la <xref:System.Windows.Forms.BindingSource.DataSource%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="a7465-110">In the **Properties** window, click the arrow for the <xref:System.Windows.Forms.BindingSource.DataSource%2A> property.</span></span>  
   
-4.  En el **Editor de tipos de la interfaz de usuario de orígenes de datos**, haga clic en **Agregar origen de datos de proyecto**.  
+4.  <span data-ttu-id="a7465-111">En el **Editor de tipos de la interfaz de usuario de orígenes de datos**, haga clic en **Agregar origen de datos del proyecto**.</span><span class="sxs-lookup"><span data-stu-id="a7465-111">In the **DataSource UI Type Editor**, click **Add Project Data Source**.</span></span>  
   
-5.  En la página **Elegir un tipo de origen de datos**, seleccione **Objeto** y, a continuación, haga clic en **Siguiente**.  
+5.  <span data-ttu-id="a7465-112">En la página **Elegir un tipo de origen de datos**, seleccione **Objeto** y haga clic en **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="a7465-112">On the **Choose a Data Source Type** page, select **Object** and click **Next**.</span></span>  
   
-6.  Seleccione el tipo al que desea enlazarlo:  
+6.  <span data-ttu-id="a7465-113">Seleccione el tipo al que desea enlazarlo:</span><span class="sxs-lookup"><span data-stu-id="a7465-113">Select the type to bind to:</span></span>  
   
-    -   Si el tipo al que desea enlazarlo se encuentra en el proyecto actual o el ensamblado que contiene el tipo ya se ha agregado de referencia, expanda los nodos para encontrar el tipo que desee y a continuación selecciónelo.  
+    -   <span data-ttu-id="a7465-114">Si el tipo al que desea enlazarlo se encuentra en el proyecto actual o el ensamblado que contiene el tipo ya se ha agregado como una referencia, expanda los nodos para encontrar el tipo que desee y a continuación selecciónelo.</span><span class="sxs-lookup"><span data-stu-id="a7465-114">If the type you want to bind to is in the current project, or the assembly that contains the type is already added as a reference, expand the nodes to find the type you want, and then select it.</span></span>  
   
-         O bien  
+         <span data-ttu-id="a7465-115">O bien</span><span class="sxs-lookup"><span data-stu-id="a7465-115">-or-</span></span>  
   
-    -   Si el tipo al que desea enlazarlo se encuentra en otro ensamblado, no actualmente en la lista de referencias, haga clic en **Agregar referencia** y, a continuación, haga clic en la ficha **Proyectos**.  Seleccione el proyecto que contiene el objeto comercial que desea y haga clic en **Aceptar**.  Aparecerá el proyecto en la lista de ensamblados, de manera que puede expandir los nodos para encontrar el tipo que desee y, a continuación, seleccionarlo.  
+    -   <span data-ttu-id="a7465-116">Si el tipo al que desea enlazarlo se encuentra en otro ensamblado, no actualmente en la lista de referencias, haga clic en **Agregar referencia** y después haga clic en la pestaña **Proyectos**. Seleccione el proyecto que contiene el objeto comercial que desea y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="a7465-116">If the type you want to bind to is in another assembly, not currently in the list of references, click **Add Reference**, and then click the **Projects** tab. Select the project that contains the business object you want and click **OK**.</span></span> <span data-ttu-id="a7465-117">Este proyecto aparecerá en la lista de ensamblados, por lo que puede expandir los nodos para encontrar el tipo desee y, a continuación, seleccionarlo.</span><span class="sxs-lookup"><span data-stu-id="a7465-117">This project will appear in the list of assemblies, so you can expand the nodes to find the type you want, and then select it.</span></span>  
   
         > [!NOTE]
-        >  Si desea enlazarlo a un tipo de un Framework o un ensamblado de Microsoft, desactive la casilla **Ocultar los ensamblados que empiecen por Microsoft o sistema**.  
+        >  <span data-ttu-id="a7465-118">Si desea enlazar a un tipo de un marco o un ensamblado de Microsoft, desactive la casilla **Ocultar los ensamblados que empiecen por Microsoft o sistema**.</span><span class="sxs-lookup"><span data-stu-id="a7465-118">If you want to bind to a type in a framework or Microsoft assembly, clear the **Hide assemblies that begin with Microsoft or System** check box.</span></span>  
   
-7.  Haga clic en **Siguiente** y, a continuación, en **Finalizar**.  
+7.  <span data-ttu-id="a7465-119">Haga clic en **Siguiente** y después haga clic en **Finalizar**.</span><span class="sxs-lookup"><span data-stu-id="a7465-119">Click **Next**, and then click **Finish**.</span></span>  
   
-### Para enlazar el control al BindingSource  
+### <a name="to-bind-the-control-to-the-bindingsource"></a><span data-ttu-id="a7465-120">Para enlazar el control a BindingSource</span><span class="sxs-lookup"><span data-stu-id="a7465-120">To bind the control to the BindingSource</span></span>  
   
-1.  Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.  
+1.  <span data-ttu-id="a7465-121">Agregue un control <xref:System.Windows.Forms.TextBox> al formulario.</span><span class="sxs-lookup"><span data-stu-id="a7465-121">Add a <xref:System.Windows.Forms.TextBox> to the form.</span></span>  
   
-2.  En la ventana **Propiedades**, expanda el nodo **\(DataBindings\)**.  
+2.  <span data-ttu-id="a7465-122">En la ventana **Propiedades**, expanda el nodo **(DataBindings)**.</span><span class="sxs-lookup"><span data-stu-id="a7465-122">In the **Properties** window, expand the **(DataBindings)** node.</span></span>  
   
-3.  Haga clic en la flecha que se encuentra junto a la propiedad <xref:System.Windows.Forms.TextBox.Text%2A>.  
+3.  <span data-ttu-id="a7465-123">Haga clic en la flecha situada junto a la <xref:System.Windows.Forms.TextBox.Text%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="a7465-123">Click the arrow next to the <xref:System.Windows.Forms.TextBox.Text%2A> property.</span></span>  
   
-4.  En el **Editor de tipos de la interfaz de usuario de orígenes de datos** expanda el nodo del <xref:System.Windows.Forms.BindingSource> agregado previamente y seleccione la propiedad del tipo enlazado que desea enlazar a la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> del control <xref:System.Windows.Forms.TextBox>.  
+4.  <span data-ttu-id="a7465-124">En el **Editor de tipos de interfaz de usuario de origen de datos**, expanda el nodo de la <xref:System.Windows.Forms.BindingSource> agregó anteriormente y seleccione la propiedad del tipo enlazado que desea enlazar el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad de la <xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="a7465-124">In the **DataSource UI Type Editor**, expand the node for the <xref:System.Windows.Forms.BindingSource> added previously, and select the property of the bound type you want to bind to the <xref:System.Windows.Forms.TextBox.Text%2A> property of the <xref:System.Windows.Forms.TextBox>.</span></span>  
   
-## Vea también  
- [BindingSource \(Componente\)](../../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [Cómo: Enlazar un control de Windows Forms a un tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)   
- [Enlazar controles a los datos en Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a><span data-ttu-id="a7465-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="a7465-125">See Also</span></span>  
+ [<span data-ttu-id="a7465-126">Componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="a7465-126">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="a7465-127">Cómo: Enlazar un control de Windows Forms a un tipo</span><span class="sxs-lookup"><span data-stu-id="a7465-127">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [<span data-ttu-id="a7465-128">Enlazar controles a los datos en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a7465-128">Bind controls to data in Visual Studio</span></span>](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

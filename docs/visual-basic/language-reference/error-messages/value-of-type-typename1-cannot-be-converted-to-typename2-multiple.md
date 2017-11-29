@@ -1,61 +1,43 @@
 ---
-title: Valor de tipo &quot;&lt;NombreTipo1&gt;&quot;no se puede convertir a&quot;&lt;en NombreTipo2&gt;&quot; (varias referencias de archivo) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Valor de tipo &#39; &lt;typename1&gt;&#39; no se puede convertir a &#39;&lt; nombredetipo2&gt;&#39; (Varias referencias de archivo)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30961
 - bc30961
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30961
+helpviewer_keywords: BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 732291ce9c4b83bb9fc7e83fbbc2a8da9748db59
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: cc6138c7a7ca7d50a56fdd1f536e8d2dc3462a08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Valor de tipo '&lt;NombreTipo1&gt;'no se puede convertir a'&lt;en NombreTipo2&gt;' (varias referencias de archivo)
-Valor de tipo '\<NombreTipo1 >' no se puede convertir a '\<en NombreTipo2 >'. Discrepancia de tipo podría ser debido a la combinación de una referencia a '\<filepath1 >' proyecto '\<projectname1 >' con una referencia a '\<ruta_archivo2 >' proyecto '\<projectname2 >'. Si ambos ensamblados son idénticos, intente reemplazar estas referencias para que ambas procedan de la misma ubicación.  
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a><span data-ttu-id="9438a-102">Valor de tipo &#39; &lt;typename1&gt;&#39; no se puede convertir a &#39;&lt; nombredetipo2&gt;&#39; (Varias referencias de archivo)</span><span class="sxs-lookup"><span data-stu-id="9438a-102">Value of type &#39;&lt;typename1&gt;&#39; cannot be converted to &#39;&lt;typename2&gt;&#39; (Multiple file references)</span></span>
+<span data-ttu-id="9438a-103">Valor de tipo '\<NombreTipo1 >' no se puede convertir a '\<nombredetipo2 >'.</span><span class="sxs-lookup"><span data-stu-id="9438a-103">Value of type '\<typename1>' cannot be converted to '\<typename2>'.</span></span> <span data-ttu-id="9438a-104">Discordancia de tipos puede deberse a la combinación de una referencia de archivo a '\<rutaaccesoarchivo1 >' en el proyecto '\<projectname1 >' con una referencia de archivo a '\<rutaaccesoarchivo2 >' en el proyecto '\<projectname2 >'.</span><span class="sxs-lookup"><span data-stu-id="9438a-104">Type mismatch could be due to mixing a file reference to '\<filepath1>' in project '\<projectname1>' with a file reference to '\<filepath2>' in project '\<projectname2>'.</span></span> <span data-ttu-id="9438a-105">Si ambos ensamblados son idénticos, intente reemplazar estas referencias para que ambas procedan de la misma ubicación.</span><span class="sxs-lookup"><span data-stu-id="9438a-105">If both assemblies are identical, try replacing these references so both references are from the same location.</span></span>  
   
- En una situación donde un proyecto realiza más de una referencia de archivo a un ensamblado, el compilador no puede garantizar que se puede convertir un tipo a otro.  
+ <span data-ttu-id="9438a-106">En una situación donde un proyecto hace más de una referencia de archivo a un ensamblado, el compilador no puede garantizar que se puede convertir un tipo a otro.</span><span class="sxs-lookup"><span data-stu-id="9438a-106">In a situation where a project makes more than one file reference to an assembly, the compiler cannot guarantee that one type can be converted to another.</span></span>  
   
- Cada referencia de archivo especifica una ruta de acceso y el nombre del archivo de salida de un proyecto (normalmente un archivo DLL). El compilador no puede garantizar que los archivos de salida procedan del mismo origen, ni que representen la misma versión del mismo ensamblado. Por lo tanto, no puede garantizar que los tipos de las distintas referencias son del mismo tipo, o incluso que uno puede convertirse a otro.  
+ <span data-ttu-id="9438a-107">Cada referencia de archivo especifica una ruta de acceso y nombre del archivo de salida de un proyecto (normalmente un archivo DLL).</span><span class="sxs-lookup"><span data-stu-id="9438a-107">Each file reference specifies a file path and name for the output file of a project (typically a DLL file).</span></span> <span data-ttu-id="9438a-108">El compilador no puede garantizar que los archivos de salida procedan del mismo origen, ni que representen la misma versión del mismo ensamblado.</span><span class="sxs-lookup"><span data-stu-id="9438a-108">The compiler cannot guarantee that the output files come from the same source, or that they represent the same version of the same assembly.</span></span> <span data-ttu-id="9438a-109">Por lo tanto, no puede garantizar que los tipos de las distintas referencias son del mismo tipo, o incluso que uno puede convertirse a otro.</span><span class="sxs-lookup"><span data-stu-id="9438a-109">Therefore, it cannot guarantee that the types in the different references are the same type, or even that one can be converted to the other.</span></span>  
   
- Puede utilizar una referencia de archivo si sabe que los ensamblados de referencia tienen la misma identidad de ensamblado. La *identidad del ensamblado* incluye el nombre, la versión, la clave pública, si existe, y la referencia cultural del ensamblado. Esta información identifica de forma exclusiva el ensamblado.  
+ <span data-ttu-id="9438a-110">Puede usar una referencia de archivo si sabe que los ensamblados de referencia tienen la misma identidad de ensamblado.</span><span class="sxs-lookup"><span data-stu-id="9438a-110">You can use a single file reference if you know that the referenced assemblies have the same assembly identity.</span></span> <span data-ttu-id="9438a-111">La *identidad del ensamblado* incluye el nombre, la versión, la clave pública, si existe, y la referencia cultural del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="9438a-111">The *assembly identity* includes the assembly's name, version, public key if any, and culture.</span></span> <span data-ttu-id="9438a-112">Esta información identifica de forma exclusiva el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="9438a-112">This information uniquely identifies the assembly.</span></span>  
   
- **Id. de error:** BC30961  
+ <span data-ttu-id="9438a-113">**Id. de error:** BC30961</span><span class="sxs-lookup"><span data-stu-id="9438a-113">**Error ID:** BC30961</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9438a-114">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="9438a-114">To correct this error</span></span>  
   
--   Si los ensamblados de referencia tienen la misma identidad de ensamblado, quite o reemplace una de las referencias de archivo de manera que hay sólo una referencia de archivo.  
+-   <span data-ttu-id="9438a-115">Si los ensamblados de referencia tienen la misma identidad de ensamblado, quite o reemplace una de las referencias de archivo para que hay solo una única referencia de archivo.</span><span class="sxs-lookup"><span data-stu-id="9438a-115">If the referenced assemblies have the same assembly identity, then remove or replace one of the file references so that there is only a single file reference.</span></span>  
   
--   Si los ensamblados de referencia no tienen la misma identidad de ensamblado, cambie su código para que no intente convertir el tipo de uno a un tipo en otro.  
+-   <span data-ttu-id="9438a-116">Si los ensamblados de referencia no tienen la misma identidad de ensamblado, a continuación, cambie el código para que no intente convertir el tipo de uno a un tipo en otro.</span><span class="sxs-lookup"><span data-stu-id="9438a-116">If the referenced assemblies do not have the same assembly identity, then change your code so that it does not attempt to convert a type in one to a type in the other.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Conversiones de tipos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Administrar referencias en un proyecto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
- [Cómo: Agregar o quitar referencias con el cuadro de diálogo Agregar referencia](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+## <a name="see-also"></a><span data-ttu-id="9438a-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="9438a-117">See Also</span></span>  
+ [<span data-ttu-id="9438a-118">Conversiones de tipos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9438a-118">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="9438a-119">Administrar referencias en un proyecto</span><span class="sxs-lookup"><span data-stu-id="9438a-119">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)  
+ [<span data-ttu-id="9438a-120">NO ESTÁ EN LA COMPILACIÓN: Cómo: agregar o quitar referencias mediante el cuadro de diálogo Agregar referencia</span><span class="sxs-lookup"><span data-stu-id="9438a-120">NIB How to: Add or Remove References By Using the Add Reference Dialog Box</span></span>](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

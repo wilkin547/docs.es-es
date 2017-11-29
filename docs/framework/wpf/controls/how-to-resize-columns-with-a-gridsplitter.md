@@ -1,46 +1,49 @@
 ---
-title: "C&#243;mo: Cambiar el tama&#241;o de columnas con un GridSplitter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "columnas de cuadrícula, cambiar el tamaño"
-  - "GridSplitter (control), cambiar el tamaño de las columnas de la cuadrícula"
-  - "cambiar el tamaño de las columnas de la cuadrícula"
+title: "Cómo: Cambiar el tamaño de columnas con un GridSplitter"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- grid columns [WPF], resizing
+- GridSplitter control [WPF], resizing grid columns
+- resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c8299a3f4885618601c8087a61c21dc5d989813
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Cambiar el tama&#241;o de columnas con un GridSplitter
-En este ejemplo se muestra cómo crear un <xref:System.Windows.Controls.GridSplitter> vertical para redistribuir el espacio entre dos columnas en un control <xref:System.Windows.Controls.Grid> sin cambiar las dimensiones de <xref:System.Windows.Controls.Grid>.  
+# <a name="how-to-resize-columns-with-a-gridsplitter"></a><span data-ttu-id="cea54-102">Cómo: Cambiar el tamaño de columnas con un GridSplitter</span><span class="sxs-lookup"><span data-stu-id="cea54-102">How to: Resize Columns with a GridSplitter</span></span>
+<span data-ttu-id="cea54-103">Este ejemplo muestra cómo crear una vertical <xref:System.Windows.Controls.GridSplitter> para redistribuir el espacio entre las dos columnas de una <xref:System.Windows.Controls.Grid> sin cambiar las dimensiones de la <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="cea54-103">This example shows how to create a vertical <xref:System.Windows.Controls.GridSplitter> in order to redistribute the space between two columns in a <xref:System.Windows.Controls.Grid> without changing the dimensions of the <xref:System.Windows.Controls.Grid>.</span></span>  
   
-## Ejemplo  
- **Cómo crear un GridSplitter que se superponga al borde de una columna**  
+## <a name="example"></a><span data-ttu-id="cea54-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cea54-104">Example</span></span>  
+ <span data-ttu-id="cea54-105">**Cómo crear un control GridSplitter que se superponga al borde de una columna**</span><span class="sxs-lookup"><span data-stu-id="cea54-105">**How to create a GridSplitter that overlays the edge of a column**</span></span>  
   
- Para especificar un control <xref:System.Windows.Controls.GridSplitter> que cambia el tamaño de las columnas adyacentes en un control <xref:System.Windows.Controls.Grid>, establezca la [propiedad adjunta](GTMT) <xref:System.Windows.Controls.Grid.Column%2A> en una de las columnas cuyo tamaño desea cambiar.  Si <xref:System.Windows.Controls.Grid> tiene más de una fila, establezca la propiedad adjunta <xref:System.Windows.Controls.Grid.RowSpan%2A> en el número de filas.  A continuación, establezca la propiedad <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> en <xref:System.Windows.HorizontalAlignment> o <xref:System.Windows.HorizontalAlignment> \(la alineación que se establezca dependerá de cuáles sean las dos columnas cuyo tamaño desea cambiar\).  Por último, establezca la propiedad <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> en <xref:System.Windows.VerticalAlignment>.  
+ <span data-ttu-id="cea54-106">Para especificar un <xref:System.Windows.Controls.GridSplitter> que cambia el tamaño de las columnas adyacentes en un <xref:System.Windows.Controls.Grid>, establezca el <xref:System.Windows.Controls.Grid.Column%2A> propiedad adjunta a una de las columnas que desee cambiar.</span><span class="sxs-lookup"><span data-stu-id="cea54-106">To specify a <xref:System.Windows.Controls.GridSplitter> that resizes adjacent columns in a <xref:System.Windows.Controls.Grid>, set the <xref:System.Windows.Controls.Grid.Column%2A> attached property to one of the columns that you want to resize.</span></span> <span data-ttu-id="cea54-107">Si su <xref:System.Windows.Controls.Grid> tiene más de una fila, establezca el <xref:System.Windows.Controls.Grid.RowSpan%2A> propiedad adjunta en el número de filas.</span><span class="sxs-lookup"><span data-stu-id="cea54-107">If your <xref:System.Windows.Controls.Grid> has more than one row, set the <xref:System.Windows.Controls.Grid.RowSpan%2A> attached property to the number of rows.</span></span> <span data-ttu-id="cea54-108">A continuación, establezca el <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propiedad <xref:System.Windows.HorizontalAlignment.Left> o <xref:System.Windows.HorizontalAlignment.Right> (la alineación establezca dependerá en las dos columnas que desea cambiar el tamaño).</span><span class="sxs-lookup"><span data-stu-id="cea54-108">Then set the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property to <xref:System.Windows.HorizontalAlignment.Left> or <xref:System.Windows.HorizontalAlignment.Right> (which alignment you set depends on which two columns you want to resize).</span></span> <span data-ttu-id="cea54-109">Por último, establezca el <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propiedad <xref:System.Windows.VerticalAlignment.Stretch>.</span><span class="sxs-lookup"><span data-stu-id="cea54-109">Finally, set the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> property to <xref:System.Windows.VerticalAlignment.Stretch>.</span></span>  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
   
- Un <xref:System.Windows.Controls.GridSplitter> que no tenga su propia columna puede quedar oculto tras otros controles de <xref:System.Windows.Controls.Grid>.  Para obtener más información sobre cómo evitar el problema, consulte [Asegurarse de que un GridSplitter es visible](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ <span data-ttu-id="cea54-110">A <xref:System.Windows.Controls.GridSplitter> que no tiene su propia columna pueden estar ocultos por otros controles en la <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="cea54-110">A <xref:System.Windows.Controls.GridSplitter> that does not have its own column may be obscured by other controls in the <xref:System.Windows.Controls.Grid>.</span></span> <span data-ttu-id="cea54-111">Para más información sobre cómo evitar este problema, vea [Asegurarse de que un GridSplitter es visible](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).</span><span class="sxs-lookup"><span data-stu-id="cea54-111">For more information about how to prevent this issue, see [Make Sure That a GridSplitter Is Visible](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).</span></span>  
   
- **Cómo crear un GridSplitter que ocupa una columna**  
+ <span data-ttu-id="cea54-112">**Cómo crear un control GridSplitter que ocupa una columna**</span><span class="sxs-lookup"><span data-stu-id="cea54-112">**How to create a GridSplitter that occupies a column**</span></span>  
   
- Para especificar un control <xref:System.Windows.Controls.GridSplitter> que ocupa una columna de un control <xref:System.Windows.Controls.Grid>, establezca la [propiedad adjunta](GTMT) <xref:System.Windows.Controls.Grid.Column%2A> en una de las columnas cuyo tamaño desea cambiar.  Si la cuadrícula tiene más de una fila, establezca la propiedad adjunta <xref:System.Windows.Controls.Grid.RowSpan%2A> en el número de filas.  A continuación, establezca <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> en <xref:System.Windows.HorizontalAlignment>, establezca la propiedad <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> en <xref:System.Windows.VerticalAlignment> y establezca <xref:System.Windows.Controls.ColumnDefinition.Width%2A> de la columna que contiene el <xref:System.Windows.Controls.GridSplitter> en <xref:System.Windows.GridLength.Auto%2A>.  
+ <span data-ttu-id="cea54-113">Para especificar un <xref:System.Windows.Controls.GridSplitter> que ocupa una columna en una <xref:System.Windows.Controls.Grid>, establezca el <xref:System.Windows.Controls.Grid.Column%2A> propiedad adjunta a una de las columnas que desee cambiar.</span><span class="sxs-lookup"><span data-stu-id="cea54-113">To specify a <xref:System.Windows.Controls.GridSplitter> that occupies a column in a <xref:System.Windows.Controls.Grid>, set the <xref:System.Windows.Controls.Grid.Column%2A> attached property to one of the columns that you want to resize.</span></span> <span data-ttu-id="cea54-114">Si la cuadrícula tiene más de una fila, establezca el <xref:System.Windows.Controls.Grid.RowSpan%2A> propiedad adjunta en el número de filas.</span><span class="sxs-lookup"><span data-stu-id="cea54-114">If your Grid has more than one row, set the <xref:System.Windows.Controls.Grid.RowSpan%2A> attached property to the number of rows.</span></span> <span data-ttu-id="cea54-115">A continuación, establezca el <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> a <xref:System.Windows.HorizontalAlignment.Center>, establezca el <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propiedad a <xref:System.Windows.VerticalAlignment.Stretch>y establezca el <xref:System.Windows.Controls.ColumnDefinition.Width%2A> de la columna que contiene el <xref:System.Windows.Controls.GridSplitter> a <xref:System.Windows.GridLength.Auto%2A>.</span><span class="sxs-lookup"><span data-stu-id="cea54-115">Then set the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> to <xref:System.Windows.HorizontalAlignment.Center>, set the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> property to <xref:System.Windows.VerticalAlignment.Stretch>, and set the <xref:System.Windows.Controls.ColumnDefinition.Width%2A> of the column that contains the <xref:System.Windows.Controls.GridSplitter> to <xref:System.Windows.GridLength.Auto%2A>.</span></span>  
   
- En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.GridSplitter> vertical que ocupa una columna y cambia el tamaño de las columnas situadas a ambos lados de él.  
+ <span data-ttu-id="cea54-116">En el ejemplo siguiente se muestra cómo definir una vertical <xref:System.Windows.Controls.GridSplitter> que ocupa una columna y cambia el tamaño de las columnas en cada lado del mismo.</span><span class="sxs-lookup"><span data-stu-id="cea54-116">The following example shows how to define a vertical <xref:System.Windows.Controls.GridSplitter> that occupies a column and resizes the columns on either side of it.</span></span>  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
-[!code-xml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
-## Vea también  
- <xref:System.Windows.Controls.GridSplitter>   
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="cea54-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="cea54-117">See Also</span></span>  
+ <xref:System.Windows.Controls.GridSplitter>  
+ [<span data-ttu-id="cea54-118">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="cea54-118">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

@@ -1,27 +1,30 @@
 ---
-title: "&lt;exposedMethods&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;exposedMethods&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f21d7ed-b268-498a-9b08-76c38361fd1e
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d44179674154ff603412c1c385c0ff49560b2b1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;exposedMethods&gt;
-Esta sección contiene una colección de elementos `exposedMethod`.  
+# <a name="ltexposedmethodsgt"></a><span data-ttu-id="c0ccf-102">&lt;exposedMethods&gt;</span><span class="sxs-lookup"><span data-stu-id="c0ccf-102">&lt;exposedMethods&gt;</span></span>
+<span data-ttu-id="c0ccf-103">Esta sección contiene una colección de elementos `exposedMethod`.</span><span class="sxs-lookup"><span data-stu-id="c0ccf-103">This section contains a collection of `exposedMethod` elements.</span></span>  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.ComMethodElementCollection>   
- <xref:System.ServiceModel.Configuration.ComMethodElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [Integración en aplicaciones COM\+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Cómo configurar los parámetros de los servicios COM\+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a><span data-ttu-id="c0ccf-104">Vea también</span><span class="sxs-lookup"><span data-stu-id="c0ccf-104">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ComMethodElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComMethodElement>  
+ [<span data-ttu-id="c0ccf-105">\<comContracts ></span><span class="sxs-lookup"><span data-stu-id="c0ccf-105">\<comContracts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [<span data-ttu-id="c0ccf-106">Integración con aplicaciones COM +</span><span class="sxs-lookup"><span data-stu-id="c0ccf-106">Integrating with COM+ Applications</span></span>](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="c0ccf-107">Cómo: configurar el servicio COM +</span><span class="sxs-lookup"><span data-stu-id="c0ccf-107">How to: Configure COM+ Service Settings</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

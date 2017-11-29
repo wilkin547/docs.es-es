@@ -1,25 +1,28 @@
 ---
-title: "La clave no se puede eliminar porque tiene subclaves | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: La clave no se puede eliminar porque tiene subclaves
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 29d98e3e34c0f41a22bff47b268dc63ca45cfc85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# La clave no se puede eliminar porque tiene subclaves
-La clave no se puede eliminar porque tiene subclaves.  
+# <a name="key-cannot-be-deleted-because-it-has-subkeys"></a><span data-ttu-id="71a53-102">La clave no se puede eliminar porque tiene subclaves</span><span class="sxs-lookup"><span data-stu-id="71a53-102">Key cannot be deleted because it has subkeys</span></span>
+<span data-ttu-id="71a53-103">La clave no se puede eliminar porque tiene subclaves.</span><span class="sxs-lookup"><span data-stu-id="71a53-103">The key cannot be deleted because it has subkeys.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="71a53-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="71a53-104">To correct this error</span></span>  
   
--   Determine y elimine las subclaves de la clave especificada antes de intentar esta operación.  
+-   <span data-ttu-id="71a53-105">Determine y elimine las subclaves de la clave especificada antes de intentar esta operación.</span><span class="sxs-lookup"><span data-stu-id="71a53-105">Determine and delete the specified key's subkeys before attempting this operation.</span></span>  
   
-## Vea también  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
- [Cómo: Eliminar una clave del Registro](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)   
- [Leer y escribir en el Registro mediante Mi \(Visual Basic\)](http://msdn.microsoft.com/es-es/1309ad05-5bef-401f-970a-2f6455873b79)   
- [Solución de problemas: Manipular el Registro \(Visual Basic\)](http://msdn.microsoft.com/es-es/6ca24f55-3697-4017-b687-9de45858af4c)
+## <a name="see-also"></a><span data-ttu-id="71a53-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="71a53-106">See Also</span></span>  
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
+ [<span data-ttu-id="71a53-107">Eliminar una clave del Registro</span><span class="sxs-lookup"><span data-stu-id="71a53-107">How to: Delete a Registry Key</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [<span data-ttu-id="71a53-108">Leer y escribir en el registro mediante Mi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71a53-108">Reading from and Writing to the Registry Using My (Visual Basic)</span></span>](http://msdn.microsoft.com/en-us/1309ad05-5bef-401f-970a-2f6455873b79)  
+ [<span data-ttu-id="71a53-109">Solución de problemas: Manipular el registro (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71a53-109">Troubleshooting: Manipulating the Registry (Visual Basic)</span></span>](http://msdn.microsoft.com/en-us/6ca24f55-3697-4017-b687-9de45858af4c)

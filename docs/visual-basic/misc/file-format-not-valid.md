@@ -1,26 +1,28 @@
 ---
-title: "Formato de archivo no v&#225;lido | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID321"
+title: "Formato de archivo no válido"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID321
 ms.assetid: d41e6286-6e4a-463b-87fa-e140723e5c7e
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d27729ee0f27046a79c3b062e4ef58b031bfc9fd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Formato de archivo no v&#225;lido
-Ha intentado cargar un archivo en un componente, pero el formato de los datos del archivo no es compatible con el componente, o bien ha intentado guardar datos del componente en un archivo, pero el formato de los datos no es compatible con el formato del archivo.  
+# <a name="file-format-not-valid"></a><span data-ttu-id="61f59-102">Formato de archivo no válido</span><span class="sxs-lookup"><span data-stu-id="61f59-102">File format not valid</span></span>
+<span data-ttu-id="61f59-103">Ha intentado cargar un archivo en un componente, pero el formato de los datos del archivo no es compatible con el componente, o bien ha intentado guardar datos del componente en un archivo, pero el formato de los datos no es compatible con el formato del archivo.</span><span class="sxs-lookup"><span data-stu-id="61f59-103">Either you tried to load a file into a component, but the format of the data in the file was incompatible with the component, or you tried to save component data to a file, but the format of the data was incompatible with the format of the file.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="61f59-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="61f59-104">To correct this error</span></span>  
   
-1.  Consulte la documentación del componente para determinar el formato correcto para los datos del archivo de disco.  
+1.  <span data-ttu-id="61f59-105">Consulte la documentación del componente para determinar el formato correcto para los datos del archivo de disco.</span><span class="sxs-lookup"><span data-stu-id="61f59-105">Consult the documentation for the component to determine the proper format for disk file data.</span></span>  
   
-2.  Consulte la documentación del componente para determinar si es compatible con la conversión de un formato a otro.  
+2.  <span data-ttu-id="61f59-106">Consulte la documentación del componente para determinar si es compatible con la conversión de un formato a otro.</span><span class="sxs-lookup"><span data-stu-id="61f59-106">Consult the documentation for the component to determine whether it provides support for converting from one format to another.</span></span>  
   
-## Vea también  
- [Tipos de error](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="61f59-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="61f59-107">See Also</span></span>  
+ [<span data-ttu-id="61f59-108">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="61f59-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

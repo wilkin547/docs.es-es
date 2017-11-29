@@ -1,79 +1,85 @@
 ---
-title: "C&#243;mo: Comparar notificaciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "notificaciones [WCF]"
-  - "notificaciones [WCF], comparar"
+title: "Cómo: Comparar notificaciones"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- claims [WCF], comparing
+- claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fd23edd9e390b1f2018419c3c43be8091500c929
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Comparar notificaciones
-La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para realizar la comprobación de autorización.Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado.En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] la infraestructura del modelo de identidad, vea [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+# <a name="how-to-compare-claims"></a><span data-ttu-id="59015-102">Cómo: Comparar notificaciones</span><span class="sxs-lookup"><span data-stu-id="59015-102">How to: Compare Claims</span></span>
+<span data-ttu-id="59015-103">La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para realizar la comprobación de autorización.</span><span class="sxs-lookup"><span data-stu-id="59015-103">The Identity Model infrastructure in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used to perform authorization checking.</span></span> <span data-ttu-id="59015-104">Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado.</span><span class="sxs-lookup"><span data-stu-id="59015-104">As such, a common task is to compare claims in the authorization context to the claims required to perform the requested action or access the requested resource.</span></span> <span data-ttu-id="59015-105">En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados.</span><span class="sxs-lookup"><span data-stu-id="59015-105">This topic describes how to compare claims, including built-in and custom claim types.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="59015-106">la infraestructura del modelo de identidad, vea [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span><span class="sxs-lookup"><span data-stu-id="59015-106"> the Identity Model infrastructure, see [Managing Claims and Authorization with the Identity Model](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).</span></span>  
   
- La comparación de notificaciones implica la comparación de las tres partes de una notificación \(tipo, derecho y recurso\) con las mismas partes de otra notificación para ver si son iguales.Vea el ejemplo siguiente.  
+ <span data-ttu-id="59015-107">La comparación de notificaciones implica la comparación de tres partes de una notificación (tipo, derecho y recurso) con las mismas partes en otra notificación para ver si son iguales.</span><span class="sxs-lookup"><span data-stu-id="59015-107">Claim comparison involves comparing the three parts of a claim (type, right, and resource) against the same parts in another claim to see if they are equal.</span></span> <span data-ttu-id="59015-108">Vea el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="59015-108">See the following example.</span></span>  
   
  [!code-csharp[c_CustomClaimComparison#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#9)]
  [!code-vb[c_CustomClaimComparison#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#9)]  
   
- Ambas notificaciones tienen un tipo de notificación <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, un derecho <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> y un recurso con la cadena "someone".Como las tres partes de la notificación son iguales, las notificaciones en sí mismas también lo son.  
+ <span data-ttu-id="59015-109">Ambas notificaciones tienen un tipo de notificación <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, un derecho <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> y un recurso con la cadena "someone".</span><span class="sxs-lookup"><span data-stu-id="59015-109">Both claims have a claim type of <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, a right of <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>, and a resource of the string "someone".</span></span> <span data-ttu-id="59015-110">Como las tres partes de la notificación son iguales, las notificaciones en sí mismas también lo son.</span><span class="sxs-lookup"><span data-stu-id="59015-110">As all three parts of the claim are equal, the claims themselves are equal.</span></span>  
   
- Los tipos de notificación integrados se comparan mediante el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.Se utiliza el código de la comparación específico de la notificación allí donde sea necesario.Por ejemplo, dadas las siguientes dos notificaciones del nombre principal del usuario \(UPN\):  
+ <span data-ttu-id="59015-111">Los tipos de notificación integrados se comparan mediante el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.</span><span class="sxs-lookup"><span data-stu-id="59015-111">The built-in claim types are compared using the <xref:System.IdentityModel.Claims.Claim.Equals%2A> method.</span></span> <span data-ttu-id="59015-112">Se utiliza el código de la comparación específico de la notificación allí donde sea necesario.</span><span class="sxs-lookup"><span data-stu-id="59015-112">Claim-specific comparison code is used where necessary.</span></span> <span data-ttu-id="59015-113">Por ejemplo, dadas las siguientes dos notificaciones del nombre principal del usuario (UPN):</span><span class="sxs-lookup"><span data-stu-id="59015-113">For example, given the following two user principal name (UPN) claims:</span></span>  
   
  [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
  [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]  
   
- el código de la comparación en el método <xref:System.IdentityModel.Claims.Claim.Equals%2A> devuelve `true`, al suponer que `example\someone` identifica el mismo usuario de dominio que "someone@example.com."  
+ <span data-ttu-id="59015-114">el código de la comparación en el <xref:System.IdentityModel.Claims.Claim.Equals%2A> método `true`, suponiendo que `example\someone` identifica el mismo usuario de dominio que "someone@example.com".</span><span class="sxs-lookup"><span data-stu-id="59015-114">the comparison code in the <xref:System.IdentityModel.Claims.Claim.Equals%2A> method returns `true`, assuming `example\someone` identifies the same domain user as "someone@example.com".</span></span>  
   
- Los tipos de notificación personalizados también se pueden comparar con el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.Sin embargo, en los casos en que el tipo devuelto por la propiedad <xref:System.IdentityModel.Claims.Claim.Resource%2A> de la notificación es distinto a un tipo primitivo, <xref:System.IdentityModel.Claims.Claim.Equals%2A> solo devuelve `true` si los valores devueltos por las propiedades `Resource` son iguales de acuerdo con el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.En los casos en que esto no sea adecuado, el tipo personalizado devuelto por la propiedad `Resource` debería invalidar los métodos <xref:System.IdentityModel.Claims.Claim.Equals%2A> y <xref:System.Object.GetHashCode%2A> para realizar el procesamiento personalizado que sea necesario.  
+ <span data-ttu-id="59015-115">Los tipos de notificación personalizados también se pueden comparar con el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.</span><span class="sxs-lookup"><span data-stu-id="59015-115">Custom claim types can also be compared using the <xref:System.IdentityModel.Claims.Claim.Equals%2A> method.</span></span> <span data-ttu-id="59015-116">Sin embargo, en los casos en que el tipo devuelto por la propiedad <xref:System.IdentityModel.Claims.Claim.Resource%2A> de la notificación es distinto a un tipo primitivo, <xref:System.IdentityModel.Claims.Claim.Equals%2A> solo devuelve `true` si los valores devueltos por las propiedades `Resource` son iguales de acuerdo con el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.</span><span class="sxs-lookup"><span data-stu-id="59015-116">However, in cases where the type returned by the <xref:System.IdentityModel.Claims.Claim.Resource%2A> property of the claim is something other than a primitive type, the <xref:System.IdentityModel.Claims.Claim.Equals%2A> returns `true` only if the values returned by the `Resource` properties are equal according to the <xref:System.IdentityModel.Claims.Claim.Equals%2A> method.</span></span> <span data-ttu-id="59015-117">En los casos en que esto no sea adecuado, el tipo personalizado devuelto por la propiedad `Resource` debería invalidar los métodos <xref:System.IdentityModel.Claims.Claim.Equals%2A> y <xref:System.Object.GetHashCode%2A> para realizar el procesamiento personalizado que sea necesario.</span><span class="sxs-lookup"><span data-stu-id="59015-117">In cases where this is not appropriate, the custom type returned by the `Resource` property should override the <xref:System.IdentityModel.Claims.Claim.Equals%2A> and <xref:System.Object.GetHashCode%2A> methods to perform whatever custom processing is necessary.</span></span>  
   
-### Comparación de notificaciones integradas  
+### <a name="comparing-built-in-claims"></a><span data-ttu-id="59015-118">Comparación de notificaciones integradas</span><span class="sxs-lookup"><span data-stu-id="59015-118">Comparing built-in claims</span></span>  
   
-1.  Dadas dos instancias de la clase <xref:System.IdentityModel.Claims.Claim>, utilice <xref:System.IdentityModel.Claims.Claim.Equals%2A> para realizar la comparación, tal y como se muestra en el código siguiente.  
+1.  <span data-ttu-id="59015-119">Dadas dos instancias de la clase <xref:System.IdentityModel.Claims.Claim>, utilice <xref:System.IdentityModel.Claims.Claim.Equals%2A> para realizar la comparación, tal y como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="59015-119">Given two instances of the <xref:System.IdentityModel.Claims.Claim> class, use the <xref:System.IdentityModel.Claims.Claim.Equals%2A> to make the comparison, as shown in the following code.</span></span>  
   
      [!code-csharp[c_CustomClaimComparison#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#5)]
      [!code-vb[c_CustomClaimComparison#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#5)]  
   
-### Comparación de las notificaciones personalizadas con los tipos de recursos primitivos  
+### <a name="comparing-custom-claims-with-primitive-resource-types"></a><span data-ttu-id="59015-120">Comparación de las notificaciones personalizadas con los tipos de recursos primitivos</span><span class="sxs-lookup"><span data-stu-id="59015-120">Comparing custom claims with primitive resource types</span></span>  
   
-1.  En el caso de las notificaciones personalizadas con tipos de recursos primitivos, se puede realizar la comparación para las notificaciones integradas, tal y como se muestra en el código siguiente.  
+1.  <span data-ttu-id="59015-121">En el caso de las notificaciones personalizadas con tipos de recursos primitivos, se puede realizar la comparación para las notificaciones integradas, tal y como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="59015-121">For custom claims with primitive resource types, comparison can be performed as for built-in claims, as shown in the following code.</span></span>  
   
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  En el caso de las notificaciones con tipos de recursos basados en la estructura o la clase, el tipo de recurso debería invalidar el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.  
+2.  <span data-ttu-id="59015-122">En el caso de las notificaciones con tipos de recursos basados en la estructura o la clase, el tipo de recurso debería invalidar el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>.</span><span class="sxs-lookup"><span data-stu-id="59015-122">For custom claims with structure or class based resource types, the resource type should override the <xref:System.IdentityModel.Claims.Claim.Equals%2A> method.</span></span>  
   
-3.  Primero compruebe si el parámetro `obj` es `null` y, en ese caso, devuelva `false`.  
+3.  <span data-ttu-id="59015-123">Primero compruebe si el parámetro `obj` es `null` y, en ese caso, devuelva `false`.</span><span class="sxs-lookup"><span data-stu-id="59015-123">First check whether the `obj` parameter is `null`, and if so, return `false`.</span></span>  
   
      [!code-csharp[c_CustomClaimComparison#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#7)]
      [!code-vb[c_CustomClaimComparison#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#7)]  
   
-4.  A continuación, llame a <xref:System.Object.ReferenceEquals%2A> y pase `this` y `obj` como parámetros.Si devuelve `true`, devuelva `true`.  
+4.  <span data-ttu-id="59015-124">A continuación, llame a <xref:System.Object.ReferenceEquals%2A> y pase `this` y `obj` como parámetros.</span><span class="sxs-lookup"><span data-stu-id="59015-124">Next call <xref:System.Object.ReferenceEquals%2A> and pass `this` and `obj` as parameters.</span></span> <span data-ttu-id="59015-125">Si devuelve `true`, devuelva `true`.</span><span class="sxs-lookup"><span data-stu-id="59015-125">If it returns `true`, then return `true`.</span></span>  
   
      [!code-csharp[c_CustomClaimComparison#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#8)]
      [!code-vb[c_CustomClaimComparison#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#8)]  
   
-5.  Luego intente asignar `obj` a una variable local del tipo de clase.Si se produce un error, la referencia será `null`.En tales casos, devuelva `false`.  
+5.  <span data-ttu-id="59015-126">Luego intente asignar `obj` a una variable local del tipo de clase.</span><span class="sxs-lookup"><span data-stu-id="59015-126">Next attempt to assign `obj` to a local variable of the class type.</span></span> <span data-ttu-id="59015-127">Si se produce un error, la referencia será `null`.</span><span class="sxs-lookup"><span data-stu-id="59015-127">If this fails, the reference is `null`.</span></span> <span data-ttu-id="59015-128">En tales casos, devuelva `false`.</span><span class="sxs-lookup"><span data-stu-id="59015-128">In such cases, return `false`.</span></span>  
   
-6.  Realice la comparación personalizada necesaria para comparar correctamente la notificación actual con la notificación proporcionada.  
+6.  <span data-ttu-id="59015-129">Realice la comparación personalizada necesaria para comparar correctamente la notificación actual con la notificación proporcionada.</span><span class="sxs-lookup"><span data-stu-id="59015-129">Perform the custom comparison necessary to correctly compare the current claim to the provided claim.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra una comparación de notificaciones personalizadas donde el recurso de la notificación es un tipo no primitivo.  
+## <a name="example"></a><span data-ttu-id="59015-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="59015-130">Example</span></span>  
+ <span data-ttu-id="59015-131">El ejemplo siguiente muestra una comparación de notificaciones personalizadas donde el recurso de la notificación es un tipo no primitivo.</span><span class="sxs-lookup"><span data-stu-id="59015-131">The following example shows a comparison of custom claims where the claim resource is a non-primitive type.</span></span>  
   
  [!code-csharp[c_CustomClaimComparison#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#0)]
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
-## Vea también  
- [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)   
- [Cómo crear una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a><span data-ttu-id="59015-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="59015-132">See Also</span></span>  
+ [<span data-ttu-id="59015-133">Administración de notificaciones y autorización con el modelo de identidad</span><span class="sxs-lookup"><span data-stu-id="59015-133">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [<span data-ttu-id="59015-134">Cómo: crear una demanda personalizada</span><span class="sxs-lookup"><span data-stu-id="59015-134">How to: Create a Custom Claim</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

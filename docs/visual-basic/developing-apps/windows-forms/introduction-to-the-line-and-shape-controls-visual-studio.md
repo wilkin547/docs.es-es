@@ -1,61 +1,60 @@
 ---
-title: "Introducci&#243;n a los controles de l&#237;neas y formas (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Line (control), información general"
-  - "líneas, dibujar"
-  - "Shape (control), información general"
-  - "formas, dibujar"
+title: "Introducción a los controles de líneas y formas (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Line control [Visual Basic], overview
+- Shape control [Visual Basic], overview
+- lines, drawing
+- shapes, drawing
 ms.assetid: 5c4e8b1a-0733-4020-af6c-f582f4026728
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e691d57c6de640c83556937eeddedf89e79b6846
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Introducci&#243;n a los controles de l&#237;neas y formas (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Los controles Visual Basic Power Packs Line y Shape constituyen un conjunto de tres controles gráficos que permiten dibujar líneas y formas en formularios y contenedores.  El control <xref:Microsoft.VisualBasic.PowerPacks.LineShape> se utiliza para dibujar líneas horizontales, verticales y diagonales.  El control <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> se utiliza para dibujar círculos y óvalos, y el control <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> se usa para dibujar rectángulos y cuadrados.  
+# <a name="introduction-to-the-line-and-shape-controls-visual-studio"></a><span data-ttu-id="0fb76-102">Introducción a los controles de líneas y formas (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="0fb76-102">Introduction to the Line and Shape Controls (Visual Studio)</span></span>
+<span data-ttu-id="0fb76-103">Los controles de Visual Basic PowerPacks líneas y formas son un conjunto de tres controles gráficos que le permiten dibujar líneas y formas en formularios y contenedores.</span><span class="sxs-lookup"><span data-stu-id="0fb76-103">The Visual Basic Power Packs Line and Shape controls are a set of three graphical controls that enable you to draw lines and shapes on forms and containers.</span></span> <span data-ttu-id="0fb76-104">El <xref:Microsoft.VisualBasic.PowerPacks.LineShape> control se utiliza para dibujar líneas horizontales, verticales y diagonales.</span><span class="sxs-lookup"><span data-stu-id="0fb76-104">The <xref:Microsoft.VisualBasic.PowerPacks.LineShape> control is used to draw horizontal, vertical, and diagonal lines.</span></span> <span data-ttu-id="0fb76-105">El <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> control se utiliza para dibujar círculos y óvalos y el <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> control se utiliza para dibujar rectángulos y cuadrados.</span><span class="sxs-lookup"><span data-stu-id="0fb76-105">The <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> control is used to draw circles and ovals, and the <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> control is used to draw rectangles and squares.</span></span>  
   
-## Controles de líneas y formas  
- Los controles de líneas y formas encapsulan muchos de los métodos gráficos contenidos en el espacio de nombres <xref:System.Drawing>.  Esto permite dibujar líneas y formas en un solo paso, sin tener que crear objetos gráficos, lápices ni pinceles.  Las técnicas de gráficos complejas, como rellenos de degradado, se pueden ejecutar fácilmente estableciendo algunas propiedades.  
+## <a name="line-and-shape-controls"></a><span data-ttu-id="0fb76-106">Controles de líneas y formas</span><span class="sxs-lookup"><span data-stu-id="0fb76-106">Line and Shape Controls</span></span>  
+ <span data-ttu-id="0fb76-107">Controles Line y Shape encapsulan muchos de los métodos de gráficos que se encuentran en el <xref:System.Drawing> espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="0fb76-107">Line and Shape controls encapsulate many of the graphics methods that are contained in the <xref:System.Drawing> namespace.</span></span> <span data-ttu-id="0fb76-108">Esto le permite dibujar líneas y formas en un solo paso sin tener que crear pinceles, lápices y objetos de gráficos.</span><span class="sxs-lookup"><span data-stu-id="0fb76-108">This enables you to draw lines and shapes in a single step without having to create graphics objects, pens, and brushes.</span></span> <span data-ttu-id="0fb76-109">Técnicas de gráficos complejos, como los degradados pueden realizarse con solo establecer algunas propiedades.</span><span class="sxs-lookup"><span data-stu-id="0fb76-109">Complex graphics techniques such as gradient fills can be accomplished by just setting some properties.</span></span>  
   
- Aunque también es posible dibujar líneas y formas utilizando métodos gráficos, el uso de controles de líneas y formas presenta varias ventajas:  
+ <span data-ttu-id="0fb76-110">Aunque también es posible dibujar líneas y formas utilizando métodos gráficos, hay varias ventajas con respecto al uso de los controles Line y Shape:</span><span class="sxs-lookup"><span data-stu-id="0fb76-110">Although it is also possible to draw lines and shapes by using graphics methods, there are several advantages to using the Line and Shape controls:</span></span>  
   
--   Solo se puede llamar a los métodos gráficos en tiempo de ejecución.  Los controles de líneas y formas se pueden agregar en un formulario en tiempo de diseño.  Esto permite ver el aspecto que tienen y colocarlos con precisión; se pueden agregar asimismo en tiempo de ejecución.  
+-   <span data-ttu-id="0fb76-111">Pueden llamar a métodos de gráficos en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0fb76-111">Graphics methods can be called only at run time.</span></span> <span data-ttu-id="0fb76-112">Controles Line y Shape pueden agregarse a un formulario en tiempo de diseño.</span><span class="sxs-lookup"><span data-stu-id="0fb76-112">Line and Shape controls can be added to a form at design time.</span></span> <span data-ttu-id="0fb76-113">Esto le permite ver su apariencia y colóquelos exactamente; También se pueden agregar en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0fb76-113">This enables you to see what they look like and to position them exactly; they can also be added at run time.</span></span>  
   
--   Los controles de líneas y formas se pueden seleccionar en tiempo de ejecución, y proporcionan eventos como <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> y <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>.  Los resultados de los métodos gráficos no se pueden seleccionar y no proporcionan eventos.  
+-   <span data-ttu-id="0fb76-114">Controles Line y Shape son seleccionables en tiempo de ejecución proporcionar eventos como <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> y <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>.</span><span class="sxs-lookup"><span data-stu-id="0fb76-114">Line and Shape controls are selectable at run time, providing events such as <xref:Microsoft.VisualBasic.PowerPacks.Shape.Click> and <xref:Microsoft.VisualBasic.PowerPacks.Shape.OnDoubleClick%2A>.</span></span> <span data-ttu-id="0fb76-115">Las salidas de los métodos de gráficos no se pueden seleccionables y no proporcionan eventos.</span><span class="sxs-lookup"><span data-stu-id="0fb76-115">The outputs of graphics methods are not selectable and do not provide events.</span></span>  
   
--   Los controles de líneas y formas proporcionan métodos <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> y <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> que permiten controlar su orden z en tiempo de diseño y en tiempo de ejecución.  El orden z de los métodos gráficos únicamente se puede controlar cambiando su orden de ejecución en tiempo de ejecución.  
+-   <span data-ttu-id="0fb76-116">Proporcionan controles Line y Shape <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> y <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> métodos que le permiten controlar el orden z en tiempo de diseño y en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0fb76-116">Line and Shape controls provide <xref:Microsoft.VisualBasic.PowerPacks.Shape.BringToFront%2A> and <xref:Microsoft.VisualBasic.PowerPacks.Shape.SendToBack%2A> methods that enable you to control their z-order at design time and at run time.</span></span> <span data-ttu-id="0fb76-117">El orden z de los métodos de gráficos puede controlarse cambiando su orden de ejecución en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0fb76-117">The z-order of graphics methods can be controlled only by changing their order of execution at run time.</span></span>  
   
--   Los controles de líneas y formas son controles sin ventana; no tienen ningún identificador de ventana y, por consiguiente, utilizan menos recursos del sistema.  
+-   <span data-ttu-id="0fb76-118">Controles Line y Shape son controles sin ventana; no tienen ningún identificador de ventana y, por tanto, utiliza menos recursos del sistema.</span><span class="sxs-lookup"><span data-stu-id="0fb76-118">Line and Shape controls are windowless controls; they have no window handles and therefore use less system resources.</span></span>  
   
-### Modelo de objetos  
- Los controles de líneas y formas se derivan de una clase <xref:Microsoft.VisualBasic.PowerPacks.Shape> base que define sus propiedades, métodos y eventos compartidos.  
+### <a name="object-model"></a><span data-ttu-id="0fb76-119">Modelo de objetos</span><span class="sxs-lookup"><span data-stu-id="0fb76-119">Object Model</span></span>  
+ <span data-ttu-id="0fb76-120">Controles Line y Shape se derivan de una base de <xref:Microsoft.VisualBasic.PowerPacks.Shape> clase que define sus propiedades compartidas, métodos y eventos.</span><span class="sxs-lookup"><span data-stu-id="0fb76-120">Line and Shape controls derive from a base <xref:Microsoft.VisualBasic.PowerPacks.Shape> class that defines their shared properties, methods, and events.</span></span>  
   
- La ilustración siguiente muestra la jerarquía de objetos de líneas y formas.  
+ <span data-ttu-id="0fb76-121">En la siguiente ilustración muestra la jerarquía de objetos de líneas y formas.</span><span class="sxs-lookup"><span data-stu-id="0fb76-121">The following illustration shows the Line and Shape object hierarchy.</span></span>  
   
- ![Diagrama de la jerarquía de objetos de línea y forma](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")  
-Jerarquía de objetos de líneas y formas  
+ <span data-ttu-id="0fb76-122">![Un diagrama de la jerarquía de objetos de línea y forma](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")</span><span class="sxs-lookup"><span data-stu-id="0fb76-122">![A diagram of the Line and Shape object hierarchy](../../../visual-basic/developing-apps/windows-forms/media/lineshapeobject.png "LineShapeObject")</span></span>  
+<span data-ttu-id="0fb76-123">Jerarquía de objetos de línea y forma</span><span class="sxs-lookup"><span data-stu-id="0fb76-123">Line and Shape object hierarchy</span></span>  
   
- La clase <xref:Microsoft.VisualBasic.PowerPacks.LineShape> derivada contiene propiedades, métodos y eventos que son exclusivos de las líneas.  La clase <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> derivada es la clase base de <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> y <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; contiene propiedades, métodos y eventos comunes para todas las formas.  También puede derivar de <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> para crear sus propios controles `Shape`.  
+ <span data-ttu-id="0fb76-124">La clase derivada <xref:Microsoft.VisualBasic.PowerPacks.LineShape> clase contiene propiedades, métodos y eventos que son exclusivos de las líneas.</span><span class="sxs-lookup"><span data-stu-id="0fb76-124">The derived <xref:Microsoft.VisualBasic.PowerPacks.LineShape> class contains properties, methods, and events that are unique to lines.</span></span> <span data-ttu-id="0fb76-125">La clase derivada <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> clase es la clase base para <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> y <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; contiene propiedades, métodos y eventos comunes a todas las formas.</span><span class="sxs-lookup"><span data-stu-id="0fb76-125">The derived <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> class is the base class for <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>; it contains properties, methods, and events common to all shapes.</span></span> <span data-ttu-id="0fb76-126">También puede derivar de <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> para crear sus propios `Shape` controles.</span><span class="sxs-lookup"><span data-stu-id="0fb76-126">You can also derive from <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape> to create your own `Shape` controls.</span></span>  
   
- Las clases <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> y <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> se pueden utilizar para dibujar círculos, óvalos, rectángulos y rectángulos con esquinas redondeadas.  
+ <span data-ttu-id="0fb76-127">El <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> y <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> clases se pueden utilizar para dibujar círculos, elipses, rectángulos y rectángulos con esquinas redondeadas.</span><span class="sxs-lookup"><span data-stu-id="0fb76-127">The <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> classes can be used to draw circles, ovals, rectangles, and rectangles with rounded corners.</span></span>  
   
- Cuando se agrega un control de línea o forma a un formulario o contenedor, se crea un objeto <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> invisible.  <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> actúa como un lienzo para las formas incluidas en cada control contenedor; cada <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> tiene un <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> correspondiente que le permite recorrer en iteración los controles de líneas y formas.  Puede mover las formas de un contenedor a otro cortándolas y pegándolas, o arrastrándolas y colocándolas.  Al quitar la última forma de un contenedor, también se quita el objeto <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer>.  
+ <span data-ttu-id="0fb76-128">Cuando un control de línea o forma se agrega a un formulario o contenedor, un invisible <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> se crea el objeto.</span><span class="sxs-lookup"><span data-stu-id="0fb76-128">When a Line or Shape control is added to a form or container, an invisible <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> object is created.</span></span> <span data-ttu-id="0fb76-129">El <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> actúa como un lienzo para las formas dentro de cada control contenedor; cada <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> le corresponde una <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> que le permite recorrer en iteración los controles Line y Shape.</span><span class="sxs-lookup"><span data-stu-id="0fb76-129">The <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> acts as a canvas for the shapes within each container control; each <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> has a corresponding <xref:Microsoft.VisualBasic.PowerPacks.ShapeCollection> that enables you to iterate through the Line and Shape controls.</span></span> <span data-ttu-id="0fb76-130">Puede mover formas de un contenedor a otro mediante cortar y pegar o arrastrar y colocar.</span><span class="sxs-lookup"><span data-stu-id="0fb76-130">You can move shapes from one container to another by using cut and paste or by dragging and dropping.</span></span> <span data-ttu-id="0fb76-131">Cuando se quita la última forma de un contenedor, el <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> también se quita.</span><span class="sxs-lookup"><span data-stu-id="0fb76-131">When the last shape is removed from a container, the <xref:Microsoft.VisualBasic.PowerPacks.ShapeContainer> is removed also.</span></span>  
   
 > [!NOTE]
->  No todos los controles contenedor admiten controles de líneas y formas.  No puede hospedar controles de líneas o formas en un <xref:System.Windows.Forms.TableLayoutPanel> o un <xref:System.Windows.Forms.FlowLayoutPanel>.  
+>  <span data-ttu-id="0fb76-132">No todos los controles de contenedor admiten los controles Line y Shape.</span><span class="sxs-lookup"><span data-stu-id="0fb76-132">Not all container controls support the Line and Shape controls.</span></span> <span data-ttu-id="0fb76-133">No se puede hospedar un control de línea o forma en una <xref:System.Windows.Forms.TableLayoutPanel> o <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="0fb76-133">You cannot host a Line or Shape control on a <xref:System.Windows.Forms.TableLayoutPanel> or a <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span>  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.PowerPacks>   
- [Cómo: Dibujar líneas con el control LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)   
- [Cómo: Dibujar formas con los controles OvalShape y RectangleShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)   
- [Cómo: Habilitar la tabulación entre las formas](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="0fb76-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="0fb76-134">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks>  
+ [<span data-ttu-id="0fb76-135">Dibujar líneas con el control LineShape</span><span class="sxs-lookup"><span data-stu-id="0fb76-135">How to: Draw Lines with the LineShape Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
+ [<span data-ttu-id="0fb76-136">Dibujar formas con los controles OvalShape y RectangleShape</span><span class="sxs-lookup"><span data-stu-id="0fb76-136">How to: Draw Shapes with the OvalShape and RectangleShape Controls</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
+ [<span data-ttu-id="0fb76-137">Habilitar la tabulación entre las formas</span><span class="sxs-lookup"><span data-stu-id="0fb76-137">How to: Enable Tabbing Between Shapes</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)

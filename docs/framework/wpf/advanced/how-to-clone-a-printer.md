@@ -1,69 +1,75 @@
 ---
-title: "C&#243;mo: Clonar una impresora | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clonar colas de impresión"
-  - "clonar impresoras"
-  - "colas de impresión"
-  - "colas de impresión, clonar"
-  - "impresoras, clonar"
+title: "Cómo: Clonar una impresora"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- print queues [WPF]
+- cloning printers [WPF]
+- printers [WPF], cloning
+- print queues [WPF], cloning
+- cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 303cb9c1c5b6521839987a56cdc008eac0559cf1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Clonar una impresora
-En la mayoría de las empresas, en algún punto se adquieren varias impresoras del mismo modelo.  Normalmente, todas ellas se instalan configuraciones casi idénticas.  Instalar cada impresora puede exigir mucho tiempo y dar lugar a errores.  El espacio de nombres <xref:System.Printing.IndexedProperties?displayProperty=fullName> y la clase <xref:System.Printing.PrintServer.InstallPrintQueue%2A> que se exponen con [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] permiten instalar al instante cualquier número de colas de impresión adicionales que se clonan a partir de una existente.  
+# <a name="how-to-clone-a-printer"></a><span data-ttu-id="d2550-102">Cómo: Clonar una impresora</span><span class="sxs-lookup"><span data-stu-id="d2550-102">How to: Clone a Printer</span></span>
+<span data-ttu-id="d2550-103">En algún momento, la mayoría de las empresas comprará varias impresoras del mismo modelo.</span><span class="sxs-lookup"><span data-stu-id="d2550-103">Most businesses will, at some point, buy multiple printers of the same model.</span></span> <span data-ttu-id="d2550-104">Normalmente, todas ellas se instalan con valores de configuración prácticamente idénticos.</span><span class="sxs-lookup"><span data-stu-id="d2550-104">Typically, these are all installed with virtually identical configuration settings.</span></span> <span data-ttu-id="d2550-105">Instalar cada impresora puede llevar mucho tiempo y es proclive a errores.</span><span class="sxs-lookup"><span data-stu-id="d2550-105">Installing each printer can be time-consuming and error prone.</span></span> <span data-ttu-id="d2550-106">El <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> espacio de nombres y el <xref:System.Printing.PrintServer.InstallPrintQueue%2A> clase que se exponen a través [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] hace posible instalar al instante cualquier número de colas de impresión adicionales que se clonan desde una cola de impresión existente.</span><span class="sxs-lookup"><span data-stu-id="d2550-106">The <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> namespace and the <xref:System.Printing.PrintServer.InstallPrintQueue%2A> class that are exposed with [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] makes it possible to instantly install any number of additional print queues that are cloned from an existing print queue.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente, se clona una segunda cola de impresión a partir de otra existente.  La segunda se diferencia de la primera únicamente en su nombre, ubicación, puerto y estado compartido.  Los pasos principales para hacerlo son los siguientes.  
+## <a name="example"></a><span data-ttu-id="d2550-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d2550-107">Example</span></span>  
+ <span data-ttu-id="d2550-108">En el ejemplo siguiente, se clona una segunda cola de impresión de una cola de impresión existente.</span><span class="sxs-lookup"><span data-stu-id="d2550-108">In the example below, a second print queue is cloned from an existing print queue.</span></span> <span data-ttu-id="d2550-109">El segundo es distinto del primero solo en su nombre, la ubicación, el puerto y el estado compartido.</span><span class="sxs-lookup"><span data-stu-id="d2550-109">The second differs from the first only in its name, location, port, and shared status.</span></span> <span data-ttu-id="d2550-110">Los pasos principales para esto son los siguientes.</span><span class="sxs-lookup"><span data-stu-id="d2550-110">The major steps for doing this are as follows.</span></span>  
   
-1.  Cree un objeto <xref:System.Printing.PrintQueue> para la impresora existente que va a clonar.  
+1.  <span data-ttu-id="d2550-111">Crear un <xref:System.Printing.PrintQueue> objeto para la impresora existente que se va a clonar.</span><span class="sxs-lookup"><span data-stu-id="d2550-111">Create a <xref:System.Printing.PrintQueue> object for the existing printer that is going to be cloned.</span></span>  
   
-2.  Cree un objeto <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> a partir de la propiedad <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> del objeto <xref:System.Printing.PrintQueue>.  La propiedad <xref:System.Collections.DictionaryEntry.Value%2A> de cada entrada de este diccionario es un objeto de uno de los tipos derivados de <xref:System.Printing.IndexedProperties.PrintProperty>.  Hay dos maneras de establecer el valor de una entrada en este diccionario.  
+2.  <span data-ttu-id="d2550-112">Crear un <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> desde el <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> de la <xref:System.Printing.PrintQueue>.</span><span class="sxs-lookup"><span data-stu-id="d2550-112">Create a <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> from the <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> of the <xref:System.Printing.PrintQueue>.</span></span> <span data-ttu-id="d2550-113">El <xref:System.Collections.DictionaryEntry.Value%2A> propiedad de cada entrada de este diccionario es un objeto de uno de los tipos derivados de <xref:System.Printing.IndexedProperties.PrintProperty>.</span><span class="sxs-lookup"><span data-stu-id="d2550-113">The <xref:System.Collections.DictionaryEntry.Value%2A> property of each entry in this dictionary is an object of one of the types derived from <xref:System.Printing.IndexedProperties.PrintProperty>.</span></span> <span data-ttu-id="d2550-114">Hay dos maneras de establecer el valor de una entrada en este diccionario.</span><span class="sxs-lookup"><span data-stu-id="d2550-114">There are two ways to set the value of an entry in this dictionary.</span></span>  
   
-    -   Utilizar los métodos **Remove** y <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> del diccionario para quitar la entrada y, a continuación, volver a agregarla con el valor deseado.  
+    -   <span data-ttu-id="d2550-115">Usar el diccionario **quitar** y <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> métodos para quitar la entrada y, a continuación, vuelva a agregarlo con el valor deseado.</span><span class="sxs-lookup"><span data-stu-id="d2550-115">Use the dictionary's **Remove** and <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> methods to remove the entry and then re-add it with the desired value.</span></span>  
   
-    -   Utilizar el método <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> del diccionario.  
+    -   <span data-ttu-id="d2550-116">Usar el diccionario <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> método.</span><span class="sxs-lookup"><span data-stu-id="d2550-116">Use the dictionary's <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> method.</span></span>  
   
-     En el ejemplo siguiente se muestran ambas maneras.  
+     <span data-ttu-id="d2550-117">En el ejemplo siguiente se muestra ambas maneras.</span><span class="sxs-lookup"><span data-stu-id="d2550-117">The example below illustrates both ways.</span></span>  
   
-3.  Cree un objeto <xref:System.Printing.IndexedProperties.PrintBooleanProperty> y establezca su propiedad <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> en "IsShared" y su propiedad <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> en `true`.  
+3.  <span data-ttu-id="d2550-118">Crear un <xref:System.Printing.IndexedProperties.PrintBooleanProperty> de objeto y establecer su <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> en "IsShared" y su <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> a `true`.</span><span class="sxs-lookup"><span data-stu-id="d2550-118">Create a <xref:System.Printing.IndexedProperties.PrintBooleanProperty> object and set its <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> to "IsShared" and its <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> to `true`.</span></span>  
   
-4.  Utilice el objeto <xref:System.Printing.IndexedProperties.PrintBooleanProperty> como valor de la entrada "IsShared" del objeto <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+4.  <span data-ttu-id="d2550-119">Use la <xref:System.Printing.IndexedProperties.PrintBooleanProperty> objeto que se va a ser el valor de la <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>de entrada "IsShared".</span><span class="sxs-lookup"><span data-stu-id="d2550-119">Use the <xref:System.Printing.IndexedProperties.PrintBooleanProperty> object to be the value of the <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>'s "IsShared" entry.</span></span>  
   
-5.  Cree un objeto <xref:System.Printing.IndexedProperties.PrintStringProperty> y establezca su propiedad <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> en "ShareName" y su propiedad <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> en un valor de tipo <xref:System.String> apropiado.  
+5.  <span data-ttu-id="d2550-120">Crear un <xref:System.Printing.IndexedProperties.PrintStringProperty> de objeto y establecer su <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> "ShareName" y su <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> a un correspondiente <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d2550-120">Create a <xref:System.Printing.IndexedProperties.PrintStringProperty> object and set its <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> to "ShareName" and its <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> to an appropriate <xref:System.String>.</span></span>  
   
-6.  Utilice el objeto <xref:System.Printing.IndexedProperties.PrintStringProperty> como valor de la entrada "ShareName" del objeto <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+6.  <span data-ttu-id="d2550-121">Use la <xref:System.Printing.IndexedProperties.PrintStringProperty> objeto que se va a ser el valor de la <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>de entrada "ShareName".</span><span class="sxs-lookup"><span data-stu-id="d2550-121">Use the <xref:System.Printing.IndexedProperties.PrintStringProperty> object to be the value of the <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>'s "ShareName" entry.</span></span>  
   
-7.  Cree otro objeto <xref:System.Printing.IndexedProperties.PrintStringProperty> y establezca su propiedad <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> en "Location" y su propiedad <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> en un valor de tipo <xref:System.String> apropiado.  
+7.  <span data-ttu-id="d2550-122">Crear otra <xref:System.Printing.IndexedProperties.PrintStringProperty> de objeto y establecer su <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> "Location" y su <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> a un correspondiente <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d2550-122">Create another <xref:System.Printing.IndexedProperties.PrintStringProperty> object and set its <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> to "Location" and its <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> to an appropriate <xref:System.String>.</span></span>  
   
-8.  Utilice el segundo objeto <xref:System.Printing.IndexedProperties.PrintStringProperty> como valor de la entrada "Location" del objeto <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>.  
+8.  <span data-ttu-id="d2550-123">Use la segunda <xref:System.Printing.IndexedProperties.PrintStringProperty> objeto que se va a ser el valor de la <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>de entrada "Location".</span><span class="sxs-lookup"><span data-stu-id="d2550-123">Use the second <xref:System.Printing.IndexedProperties.PrintStringProperty> object to be the value of the <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>'s "Location" entry.</span></span>  
   
-9. Cree una matriz de objetos <xref:System.String>.  Cada elemento es el nombre de un puerto del servidor.  
+9. <span data-ttu-id="d2550-124">Crear una matriz de <xref:System.String>s.</span><span class="sxs-lookup"><span data-stu-id="d2550-124">Create an array of <xref:System.String>s.</span></span> <span data-ttu-id="d2550-125">Cada elemento es el nombre de un puerto en el servidor.</span><span class="sxs-lookup"><span data-stu-id="d2550-125">Each item is the name of a port on the server.</span></span>  
   
-10. Utilice <xref:System.Printing.PrintServer.InstallPrintQueue%2A> para instalar la nueva impresora con los nuevos valores.  
+10. <span data-ttu-id="d2550-126">Utilice <xref:System.Printing.PrintServer.InstallPrintQueue%2A> para instalar la nueva impresora con los nuevos valores.</span><span class="sxs-lookup"><span data-stu-id="d2550-126">Use <xref:System.Printing.PrintServer.InstallPrintQueue%2A> to install the new printer with the new values.</span></span>  
   
- A continuación se muestra un ejemplo.  
+ <span data-ttu-id="d2550-127">Un ejemplo es menor que.</span><span class="sxs-lookup"><span data-stu-id="d2550-127">An example is below.</span></span>  
   
  [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
  [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
-## Vea también  
- <xref:System.Printing.IndexedProperties>   
- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>   
- <xref:System.Printing.LocalPrintServer>   
- <xref:System.Printing.PrintQueue>   
- <xref:System.Collections.DictionaryEntry>   
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="d2550-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="d2550-128">See Also</span></span>  
+ <xref:System.Printing.IndexedProperties>  
+ <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
+ <xref:System.Printing.LocalPrintServer>  
+ <xref:System.Printing.PrintQueue>  
+ <xref:System.Collections.DictionaryEntry>  
+ [<span data-ttu-id="d2550-129">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="d2550-129">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="d2550-130">Información general sobre impresión</span><span class="sxs-lookup"><span data-stu-id="d2550-130">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)

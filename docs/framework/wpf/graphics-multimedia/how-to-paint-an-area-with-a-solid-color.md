@@ -1,60 +1,63 @@
 ---
-title: "C&#243;mo: Pintar un &#225;rea con un color s&#243;lido | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pinceles, pintar colores sólidos"
-  - "dibujar, con colores sólidos"
-  - "colores sólidos, pintar con"
+title: "Cómo: Pintar un área con un color sólido"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- solid colors [WPF], painting with
+- brushes [WPF], painting with solid colors
+- painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cde7f7df5089806ffb3235393eacc855d137ee51
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Pintar un &#225;rea con un color s&#243;lido
-Para pintar una área con un color sólido, puede utilizar un pincel predefinido del sistema, como <xref:System.Windows.Media.Brushes.Red%2A> o <xref:System.Windows.Media.Brushes.Blue%2A>o puede crear un nuevo <xref:System.Windows.Media.SolidColorBrush> y describir su propiedad <xref:System.Windows.Media.SolidColorBrush.Color%2A> mediante sus valores de alfa, rojo, verde y azul.  En XAML, puede pintar también una área con un color sólido utilizando la notación hexadecimal.  
+# <a name="how-to-paint-an-area-with-a-solid-color"></a><span data-ttu-id="4f1c3-102">Cómo: Pintar un área con un color sólido</span><span class="sxs-lookup"><span data-stu-id="4f1c3-102">How to: Paint an Area with a Solid Color</span></span>
+<span data-ttu-id="4f1c3-103">Para pintar un área con un color sólido, puede usar un pincel del sistema predefinidas, como <xref:System.Windows.Media.Brushes.Red%2A> o <xref:System.Windows.Media.Brushes.Blue%2A>, o puede crear un nuevo <xref:System.Windows.Media.SolidColorBrush> y describir su <xref:System.Windows.Media.SolidColorBrush.Color%2A> con los valores alfabéticos, rojos, verde y azules.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-103">To paint an area with a solid color, you can use a predefined system brush, such as <xref:System.Windows.Media.Brushes.Red%2A> or <xref:System.Windows.Media.Brushes.Blue%2A>, or you can create a new <xref:System.Windows.Media.SolidColorBrush> and describe its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using alpha, red, green, and blue values.</span></span> <span data-ttu-id="4f1c3-104">En XAML, también puede pintar un área con un color sólido utilizando la notación hexadecimal.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-104">In XAML, you may also paint an area with a solid color by using hexidecimal notation.</span></span>  
   
- En los ejemplos siguientes se utilizan cada una de estas técnicas para pintar un objeto <xref:System.Windows.Shapes.Rectangle> de azul.  
+ <span data-ttu-id="4f1c3-105">Los ejemplos siguientes se usa cada una de estas técnicas para pintar un <xref:System.Windows.Shapes.Rectangle> azul.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-105">The following examples uses each of these techniques to paint a <xref:System.Windows.Shapes.Rectangle> blue.</span></span>  
   
-## Ejemplo  
- **Utilizar un pincel predefinido**  
+## <a name="example"></a><span data-ttu-id="4f1c3-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4f1c3-106">Example</span></span>  
+ <span data-ttu-id="4f1c3-107">**Utilizar un pincel predefinido**</span><span class="sxs-lookup"><span data-stu-id="4f1c3-107">**Using a Predefined Brush**</span></span>  
   
- En el ejemplo siguiente se utiliza la propiedad <xref:System.Windows.Media.Brushes.Blue%2A> del pincel predefinido para pintar un rectángulo de azul.  
+ <span data-ttu-id="4f1c3-108">En el ejemplo siguiente se utiliza el pincel predefinido <xref:System.Windows.Media.Brushes.Blue%2A> para dibujar un rectángulo azul.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-108">In the following example uses the predefined brush <xref:System.Windows.Media.Brushes.Blue%2A> to paint a rectangle blue.</span></span>  
   
- [!code-xml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
- **Utilizar la notación hexadecimal**  
+ <span data-ttu-id="4f1c3-109">**Utilizar la notación hexadecimal**</span><span class="sxs-lookup"><span data-stu-id="4f1c3-109">**Using Hexadecimal Notation**</span></span>  
   
- En el ejemplo siguiente se utiliza la notación hexadecimal de 8 dígitos para pintar un rectángulo de azul.  
+ <span data-ttu-id="4f1c3-110">En el ejemplo siguiente se utiliza la notación hexadecimal de 8 dígitos para pintar un rectángulo azul.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-110">The next example uses 8-digit hexadecimal notation to paint a rectangle blue.</span></span>  
   
- [!code-xml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
   
- **Utilizar los valores ARGB**  
+ <span data-ttu-id="4f1c3-111">**Utilizar los valores ARGB**</span><span class="sxs-lookup"><span data-stu-id="4f1c3-111">**Using ARGB Values**</span></span>  
   
- En el ejemplo siguiente se crea un objeto <xref:System.Windows.Media.SolidColorBrush> y se describe su propiedad <xref:System.Windows.Media.SolidColorBrush.Color%2A> utilizando los valores ARGB para el color azul.  
+ <span data-ttu-id="4f1c3-112">En el ejemplo siguiente se crea un <xref:System.Windows.Media.SolidColorBrush> y se describe su <xref:System.Windows.Media.SolidColorBrush.Color%2A> utilizando el ARGB valores de color azul.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-112">The next example creates a <xref:System.Windows.Media.SolidColorBrush> and describes its <xref:System.Windows.Media.SolidColorBrush.Color%2A> using the ARGB values for the color blue.</span></span>  
   
- [!code-xml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_rgbnotation1)]  
   
- Para obtener otras maneras de describir colores, vea la estructura <xref:System.Windows.Media.Color>.  
+ <span data-ttu-id="4f1c3-113">Para conocer otras maneras de describir colores, vea la <xref:System.Windows.Media.Color> estructura.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-113">For other ways of describing color, see the <xref:System.Windows.Media.Color> structure.</span></span>  
   
- **Temas relacionados**  
+ <span data-ttu-id="4f1c3-114">**Temas relacionados**</span><span class="sxs-lookup"><span data-stu-id="4f1c3-114">**Related Topics**</span></span>  
   
- Para obtener más información acerca de <xref:System.Windows.Media.SolidColorBrush> y más ejemplos, vea [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ <span data-ttu-id="4f1c3-115">Para obtener más información acerca de <xref:System.Windows.Media.SolidColorBrush> y ejemplos adicionales, consulte la [pintar con colores sólidos y degradados Introducción](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) información general.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-115">For more information about <xref:System.Windows.Media.SolidColorBrush> and additional examples, see the [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) overview.</span></span>  
   
- Este ejemplo de código forma parte de un ejemplo más extenso referente a la clase <xref:System.Windows.Media.SolidColorBrush>.  Para obtener el ejemplo completo, vea [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973).  
+ <span data-ttu-id="4f1c3-116">Este ejemplo de código forma parte de un ejemplo mayor proporcionado para el <xref:System.Windows.Media.SolidColorBrush> clase.</span><span class="sxs-lookup"><span data-stu-id="4f1c3-116">This code example is part of a larger example provided for the <xref:System.Windows.Media.SolidColorBrush> class.</span></span> <span data-ttu-id="4f1c3-117">Para ver el ejemplo completo, consulte el [ejemplo de pinceles](http://go.microsoft.com/fwlink/?LinkID=159973).</span><span class="sxs-lookup"><span data-stu-id="4f1c3-117">For the complete sample, see the [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973).</span></span>  
   
-## Vea también  
+## <a name="see-also"></a><span data-ttu-id="4f1c3-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="4f1c3-118">See Also</span></span>  
  <xref:System.Windows.Media.Brushes>

@@ -1,91 +1,74 @@
 ---
-title: "Cómo: llamar a un procedimiento de operador (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: Llamar a un procedimiento de operador (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- operator procedures, calling
-- procedures, operator
-- procedure calls, operator overloading
-- syntax, Operator procedures
+- operator procedures [Visual Basic], calling
+- procedures [Visual Basic], operator
+- procedure calls [Visual Basic], operator overloading
+- syntax [Visual Basic], Operator procedures
 - operators [Visual Basic], overloading
-- return values, Operator procedures
-- overloaded operators, calling
+- return values [Visual Basic], Operator procedures
+- overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2403e7a8270c17a8db5417cd8394fd47c373d493
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de operador (Visual Basic)
-Puede llamar a un procedimiento de operador utilizando el símbolo de operador en una expresión. En el caso de un operador de conversión, se llama a la [CType (función)](../../../../visual-basic/language-reference/functions/ctype-function.md) para convertir un valor de un tipo de datos a otro.  
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a><span data-ttu-id="9996e-102">Cómo: Llamar a un procedimiento de operador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9996e-102">How to: Call an Operator Procedure (Visual Basic)</span></span>
+<span data-ttu-id="9996e-103">Llame a un procedimiento de operador mediante el símbolo del operador en una expresión.</span><span class="sxs-lookup"><span data-stu-id="9996e-103">You call an operator procedure by using the operator symbol in an expression.</span></span> <span data-ttu-id="9996e-104">En el caso de un operador de conversión, se llama a la [CType (función)](../../../../visual-basic/language-reference/functions/ctype-function.md) para convertir un valor de un tipo de datos a otro.</span><span class="sxs-lookup"><span data-stu-id="9996e-104">In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.</span></span>  
   
- No se llama explícitamente procedimientos de operador. Simplemente utiliza el operador o la `CType` función, en una instrucción de asignación o una expresión, del mismo modo que se usa habitualmente un operador. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]realiza la llamada al procedimiento de operador.  
+ <span data-ttu-id="9996e-105">No se llama explícitamente procedimientos de operadores.</span><span class="sxs-lookup"><span data-stu-id="9996e-105">You do not call operator procedures explicitly.</span></span> <span data-ttu-id="9996e-106">Solo se usa el operador, o la `CType` función, en una instrucción de asignación o una expresión, del mismo modo que se usa habitualmente un operador.</span><span class="sxs-lookup"><span data-stu-id="9996e-106">You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="9996e-107">realiza la llamada al procedimiento de operador.</span><span class="sxs-lookup"><span data-stu-id="9996e-107"> makes the call to the operator procedure.</span></span>  
   
- Definir un operador en una clase o estructura también se denomina *sobrecarga* el operador.  
+ <span data-ttu-id="9996e-108">Definir un operador en una clase o estructura también se denomina *sobrecarga* el operador.</span><span class="sxs-lookup"><span data-stu-id="9996e-108">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-### <a name="to-call-an-operator-procedure"></a>Para llamar a un procedimiento de operador  
+### <a name="to-call-an-operator-procedure"></a><span data-ttu-id="9996e-109">Para llamar a un procedimiento de operador</span><span class="sxs-lookup"><span data-stu-id="9996e-109">To call an operator procedure</span></span>  
   
-1.  Utilice el símbolo de operador en una expresión de la manera normal.  
+1.  <span data-ttu-id="9996e-110">Utilice el símbolo del operador en una expresión de la forma normal.</span><span class="sxs-lookup"><span data-stu-id="9996e-110">Use the operator symbol in an expression in the ordinary way.</span></span>  
   
-2.  Asegúrese de que los tipos de datos de los operandos son adecuados para el operador y en el orden correcto.  
+2.  <span data-ttu-id="9996e-111">Asegúrese de que los tipos de datos de los operandos son adecuados para el operador y en el orden correcto.</span><span class="sxs-lookup"><span data-stu-id="9996e-111">Be sure the data types of the operands are appropriate for the operator, and in the correct order.</span></span>  
   
-3.  El operador contribuye al valor de la expresión como se esperaba.  
+3.  <span data-ttu-id="9996e-112">El operador contribuye al valor de la expresión tal y como se esperaba.</span><span class="sxs-lookup"><span data-stu-id="9996e-112">The operator contributes to the value of the expression as expected.</span></span>  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>Llamar a un procedimiento de operador de conversión  
+### <a name="to-call-a-conversion-operator-procedure"></a><span data-ttu-id="9996e-113">Llamar a un procedimiento de operador de conversión</span><span class="sxs-lookup"><span data-stu-id="9996e-113">To call a conversion operator procedure</span></span>  
   
-1.  Use `CType` dentro de una expresión.  
+1.  <span data-ttu-id="9996e-114">Use `CType` dentro de una expresión.</span><span class="sxs-lookup"><span data-stu-id="9996e-114">Use `CType` inside an expression.</span></span>  
   
-2.  Asegúrese de que los tipos de datos de los operandos son adecuados para la conversión y, en el orden correcto.  
+2.  <span data-ttu-id="9996e-115">Asegúrese de que los tipos de datos de los operandos son adecuados para la conversión y, en el orden correcto.</span><span class="sxs-lookup"><span data-stu-id="9996e-115">Be sure the data types of the operands are appropriate for the conversion, and in the correct order.</span></span>  
   
-3.  `CType`llama al procedimiento de operador de conversión y devuelve el valor convertido.  
+3.  <span data-ttu-id="9996e-116">`CType`llama al procedimiento de operador de conversión y devuelve el valor convertido.</span><span class="sxs-lookup"><span data-stu-id="9996e-116">`CType` calls the conversion operator procedure and returns the converted value.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crean dos <xref:System.TimeSpan>estructuras, suma y almacena el resultado en una tercera <xref:System.TimeSpan>estructura.</xref:System.TimeSpan> </xref:System.TimeSpan> El <xref:System.TimeSpan>estructura define los procedimientos de operador para sobrecargar varios operadores estándar.</xref:System.TimeSpan>  
+## <a name="example"></a><span data-ttu-id="9996e-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9996e-117">Example</span></span>  
+ <span data-ttu-id="9996e-118">En el ejemplo siguiente se crea dos <xref:System.TimeSpan> las estructuras y los agrega juntos y almacena el resultado en una tercera <xref:System.TimeSpan> estructura.</span><span class="sxs-lookup"><span data-stu-id="9996e-118">The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure.</span></span> <span data-ttu-id="9996e-119">El <xref:System.TimeSpan> estructura define los procedimientos de operador para sobrecargar varios operadores estándares.</span><span class="sxs-lookup"><span data-stu-id="9996e-119">The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#29;](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
- Porque <xref:System.TimeSpan>sobrecargas estándar `+` operador, en el ejemplo anterior, se llama a un procedimiento de operador cuando calcula el valor de `combinedSpan`.</xref:System.TimeSpan>  
+ <span data-ttu-id="9996e-120">Dado que <xref:System.TimeSpan> sobrecargas el estándar `+` (operador), en el ejemplo anterior, se llama a un procedimiento de operador cuando calcula el valor de `combinedSpan`.</span><span class="sxs-lookup"><span data-stu-id="9996e-120">Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.</span></span>  
   
- Para obtener un ejemplo de una llamada a un procedimiento de operador de conversación, vea [Cómo: utilizar una clase que define los operadores](./how-to-use-a-class-that-defines-operators.md).  
+ <span data-ttu-id="9996e-121">Para obtener un ejemplo de una llamada a un procedimiento de operador de conversación, vea [Cómo: utilizar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md).</span><span class="sxs-lookup"><span data-stu-id="9996e-121">For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).</span></span>  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Asegúrese de que la clase o estructura que está utilizando define el operador que desea utilizar.  
+## <a name="compiling-the-code"></a><span data-ttu-id="9996e-122">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="9996e-122">Compiling the Code</span></span>  
+ <span data-ttu-id="9996e-123">Asegúrese de que la clase o estructura que está utilizando define el operador que desea utilizar.</span><span class="sxs-lookup"><span data-stu-id="9996e-123">Be sure the class or structure you are using defines the operator you want to use.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos de operadores](./operator-procedures.md)   
- [Cómo: definir un operador](./how-to-define-an-operator.md)   
- [Cómo: definir un operador de conversión](./how-to-define-a-conversion-operator.md)   
- [Operator (instrucción)](../../../../visual-basic/language-reference/statements/operator-statement.md)   
- [De ampliación](../../../../visual-basic/language-reference/modifiers/widening.md)   
- [De restricción](../../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Cómo: declarar una estructura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Conversiones implícitas y explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="9996e-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="9996e-124">See Also</span></span>  
+ [<span data-ttu-id="9996e-125">Procedimientos de operadores</span><span class="sxs-lookup"><span data-stu-id="9996e-125">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="9996e-126">Definir un operador</span><span class="sxs-lookup"><span data-stu-id="9996e-126">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
+ [<span data-ttu-id="9996e-127">Definir un operador de conversión</span><span class="sxs-lookup"><span data-stu-id="9996e-127">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="9996e-128">Operator (instrucción)</span><span class="sxs-lookup"><span data-stu-id="9996e-128">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="9996e-129">Widening</span><span class="sxs-lookup"><span data-stu-id="9996e-129">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="9996e-130">Narrowing</span><span class="sxs-lookup"><span data-stu-id="9996e-130">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="9996e-131">Structure (instrucción)</span><span class="sxs-lookup"><span data-stu-id="9996e-131">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="9996e-132">Declarar una estructura</span><span class="sxs-lookup"><span data-stu-id="9996e-132">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="9996e-133">Conversiones implícitas y explícitas</span><span class="sxs-lookup"><span data-stu-id="9996e-133">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="9996e-134">Conversiones de ampliación y de restricción</span><span class="sxs-lookup"><span data-stu-id="9996e-134">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

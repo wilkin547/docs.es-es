@@ -1,66 +1,70 @@
 ---
-title: "C&#243;mo: Crear objetos Graphics para dibujar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, crear imágenes"
-  - "gráficos [formularios Windows Forms], crear"
-  - "Graphics (clase)"
-  - "imágenes [Windows Forms], crear"
+title: "Cómo: Crear objetos Graphics para dibujar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- graphics [Windows Forms], creating
+- images [Windows Forms], creating
+- GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72f1af49a5c64395e018707d1f71cc0feaa2d22c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear objetos Graphics para dibujar
-Antes de dibujar líneas y formas, representar texto o mostrar y manipular imágenes con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es preciso crear un objeto <xref:System.Drawing.Graphics>.  El objeto <xref:System.Drawing.Graphics> representa una superficie de dibujo de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] y se usa para crear imágenes gráficas.  
+# <a name="how-to-create-graphics-objects-for-drawing"></a><span data-ttu-id="d3064-102">Cómo: Crear objetos Graphics para dibujar</span><span class="sxs-lookup"><span data-stu-id="d3064-102">How to: Create Graphics Objects for Drawing</span></span>
+<span data-ttu-id="d3064-103">Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular imágenes con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], deberá crear un <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="d3064-103">Before you can draw lines and shapes, render text, or display and manipulate images with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to create a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="d3064-104">El <xref:System.Drawing.Graphics> objeto representa un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie de dibujo, y es el objeto que se utiliza para crear imágenes gráficas.</span><span class="sxs-lookup"><span data-stu-id="d3064-104">The <xref:System.Drawing.Graphics> object represents a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] drawing surface, and is the object that is used to create graphical images.</span></span>  
   
- Para trabajar con gráficos existen los dos pasos siguientes:  
+ <span data-ttu-id="d3064-105">Hay dos pasos para trabajar con gráficos:</span><span class="sxs-lookup"><span data-stu-id="d3064-105">There are two steps in working with graphics:</span></span>  
   
-1.  Crear un objeto <xref:System.Drawing.Graphics>.  
+1.  <span data-ttu-id="d3064-106">Crear un <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="d3064-106">Creating a <xref:System.Drawing.Graphics> object.</span></span>  
   
-2.  Usar el objeto <xref:System.Drawing.Graphics> para dibujar líneas y formas, representar texto o mostrar y manipular imágenes.  
+2.  <span data-ttu-id="d3064-107">Mediante la <xref:System.Drawing.Graphics> objeto para dibujar líneas y formas, representar texto o mostrar y manipular imágenes.</span><span class="sxs-lookup"><span data-stu-id="d3064-107">Using the <xref:System.Drawing.Graphics> object to draw lines and shapes, render text, or display and manipulate images.</span></span>  
   
-## Crear un objeto Graphics  
- El objeto Graphics se puede crear de diversas formas.  
+## <a name="creating-a-graphics-object"></a><span data-ttu-id="d3064-108">Crear un objeto Graphics</span><span class="sxs-lookup"><span data-stu-id="d3064-108">Creating a Graphics Object</span></span>  
+ <span data-ttu-id="d3064-109">Un objeto graphics puede crearse en una variedad de formas.</span><span class="sxs-lookup"><span data-stu-id="d3064-109">A graphics object can be created in a variety of ways.</span></span>  
   
-#### Para crear un objeto Graphics  
+#### <a name="to-create-a-graphics-object"></a><span data-ttu-id="d3064-110">Para crear un objeto graphics</span><span class="sxs-lookup"><span data-stu-id="d3064-110">To create a graphics object</span></span>  
   
--   Reciba una referencia a un objeto Graphics como parte de <xref:System.Windows.Forms.PaintEventArgs> del evento <xref:System.Windows.Forms.Control.Paint> de un formulario o un control.  Este es el modo en que normalmente se obtiene una referencia a un objeto Graphics cuando se crea código de dibujo para un control.  De forma similar, también se puede obtener un objeto gráfico como una propiedad de <xref:System.Drawing.Printing.PrintPageEventArgs> al controlar el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> de un objeto <xref:System.Drawing.Printing.PrintDocument>.  
+-   <span data-ttu-id="d3064-111">Recibe una referencia a un objeto graphics como parte de la <xref:System.Windows.Forms.PaintEventArgs> en el <xref:System.Windows.Forms.Control.Paint> eventos de un formulario o control.</span><span class="sxs-lookup"><span data-stu-id="d3064-111">Receive a reference to a graphics object as part of the <xref:System.Windows.Forms.PaintEventArgs> in the <xref:System.Windows.Forms.Control.Paint> event of a form or control.</span></span> <span data-ttu-id="d3064-112">Esto suele ser cómo obtener una referencia a un objeto gráfico al crear el código de dibujo de un control.</span><span class="sxs-lookup"><span data-stu-id="d3064-112">This is usually how you obtain a reference to a graphics object when creating painting code for a control.</span></span> <span data-ttu-id="d3064-113">Del mismo modo, también puede obtener un objeto gráfico como una propiedad de la <xref:System.Drawing.Printing.PrintPageEventArgs> al controlar la <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos para un <xref:System.Drawing.Printing.PrintDocument>.</span><span class="sxs-lookup"><span data-stu-id="d3064-113">Similarly, you can also obtain a graphics object as a property of the <xref:System.Drawing.Printing.PrintPageEventArgs> when handling the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event for a <xref:System.Drawing.Printing.PrintDocument>.</span></span>  
   
-     O bien  
+     <span data-ttu-id="d3064-114">O bien</span><span class="sxs-lookup"><span data-stu-id="d3064-114">-or-</span></span>  
   
--   Llame al método <xref:System.Windows.Forms.Control.CreateGraphics%2A> de un control o un formulario para obtener una referencia a un objeto <xref:System.Drawing.Graphics> que represente la superficie de dibujo de dicho control o formulario.  Utilice este método si desea dibujar en un formulario o en un control que ya existía con anterioridad.  
+-   <span data-ttu-id="d3064-115">Llame a la <xref:System.Windows.Forms.Control.CreateGraphics%2A> método de un control o formulario para obtener una referencia a un <xref:System.Drawing.Graphics> objeto que representa la superficie de dibujo de dicho control o formulario.</span><span class="sxs-lookup"><span data-stu-id="d3064-115">Call the <xref:System.Windows.Forms.Control.CreateGraphics%2A> method of a control or form to obtain a reference to a <xref:System.Drawing.Graphics> object that represents the drawing surface of that control or form.</span></span> <span data-ttu-id="d3064-116">Utilice este método si desea dibujar en un formulario o control que ya existe.</span><span class="sxs-lookup"><span data-stu-id="d3064-116">Use this method if you want to draw on a form or control that already exists.</span></span>  
   
-     O bien  
+     <span data-ttu-id="d3064-117">O bien</span><span class="sxs-lookup"><span data-stu-id="d3064-117">-or-</span></span>  
   
--   Cree un objeto <xref:System.Drawing.Graphics> a partir de cualquier objeto que herede de <xref:System.Drawing.Image>.  Este método resulta útil cuando se desea alterar una imagen que ya existe.  
+-   <span data-ttu-id="d3064-118">Crear un <xref:System.Drawing.Graphics> objeto de cualquier objeto que hereda de <xref:System.Drawing.Image>.</span><span class="sxs-lookup"><span data-stu-id="d3064-118">Create a <xref:System.Drawing.Graphics> object from any object that inherits from <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="d3064-119">Este enfoque es útil cuando desea modificar una imagen ya existente.</span><span class="sxs-lookup"><span data-stu-id="d3064-119">This approach is useful when you want to alter an already existing image.</span></span>  
   
-     Las secciones siguientes proporcionan detalles sobre cada uno de estos procesos.  
+     <span data-ttu-id="d3064-120">En las secciones siguientes proporcionan detalles sobre cada uno de estos procesos.</span><span class="sxs-lookup"><span data-stu-id="d3064-120">The following sections give details about each of these processes.</span></span>  
   
-## PaintEventArgs en el controlador de eventos Paint  
- Al programar <xref:System.Windows.Forms.PaintEventHandler> para controles o el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> de un objeto <xref:System.Drawing.Printing.PrintDocument>, se proporciona un objeto gráfico como una de las propiedades de <xref:System.Windows.Forms.PaintEventArgs> o <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+## <a name="painteventargs-in-the-paint-event-handler"></a><span data-ttu-id="d3064-121">Objeto PaintEventArgs en el controlador de eventos de Paint</span><span class="sxs-lookup"><span data-stu-id="d3064-121">PaintEventArgs in the Paint Event Handler</span></span>  
+ <span data-ttu-id="d3064-122">Al programar la <xref:System.Windows.Forms.PaintEventHandler> para los controles o el <xref:System.Drawing.Printing.PrintDocument.PrintPage> para un <xref:System.Drawing.Printing.PrintDocument>, se proporciona un objeto gráfico como una de las propiedades de <xref:System.Windows.Forms.PaintEventArgs> o <xref:System.Drawing.Printing.PrintPageEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="d3064-122">When programming the <xref:System.Windows.Forms.PaintEventHandler> for controls or the <xref:System.Drawing.Printing.PrintDocument.PrintPage> for a <xref:System.Drawing.Printing.PrintDocument>, a graphics object is provided as one of the properties of <xref:System.Windows.Forms.PaintEventArgs> or <xref:System.Drawing.Printing.PrintPageEventArgs>.</span></span>  
   
-#### Para obtener una referencia a un objeto Graphics a partir de PaintEventArgs en el evento Paint  
+#### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a><span data-ttu-id="d3064-123">Para obtener una referencia a un objeto Graphics desde el objeto PaintEventArgs en el evento Paint</span><span class="sxs-lookup"><span data-stu-id="d3064-123">To obtain a reference to a Graphics object from the PaintEventArgs in the Paint event</span></span>  
   
-1.  Declare el objeto <xref:System.Drawing.Graphics>.  
+1.  <span data-ttu-id="d3064-124">Declare el <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="d3064-124">Declare the <xref:System.Drawing.Graphics> object.</span></span>  
   
-2.  Asigne la variable que hará referencia al objeto <xref:System.Drawing.Graphics> pasado como parte de <xref:System.Windows.Forms.PaintEventArgs>.  
+2.  <span data-ttu-id="d3064-125">Asigne la variable para hacer referencia a la <xref:System.Drawing.Graphics> objeto pasado como parte de la <xref:System.Windows.Forms.PaintEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="d3064-125">Assign the variable to refer to the <xref:System.Drawing.Graphics> object passed as part of the <xref:System.Windows.Forms.PaintEventArgs>.</span></span>  
   
-3.  Inserte código para dibujar en el formulario o control.  
+3.  <span data-ttu-id="d3064-126">Inserte el código para pintar el formulario o control.</span><span class="sxs-lookup"><span data-stu-id="d3064-126">Insert code to paint the form or control.</span></span>  
   
-     En el ejemplo siguiente se muestra cómo hacer referencia a un objeto <xref:System.Drawing.Graphics> desde <xref:System.Windows.Forms.PaintEventArgs> en el evento <xref:System.Windows.Forms.Control.Paint>:  
+     <span data-ttu-id="d3064-127">En el ejemplo siguiente se muestra cómo hacer referencia a un <xref:System.Drawing.Graphics> objeto desde el <xref:System.Windows.Forms.PaintEventArgs> en el <xref:System.Windows.Forms.Control.Paint> eventos:</span><span class="sxs-lookup"><span data-stu-id="d3064-127">The following example shows how to reference a <xref:System.Drawing.Graphics> object from the <xref:System.Windows.Forms.PaintEventArgs> in the <xref:System.Windows.Forms.Control.Paint> event:</span></span>  
   
     ```vb  
     Private Sub Form1_Paint(sender As Object, pe As PaintEventArgs) Handles _  
@@ -70,7 +74,6 @@ Antes de dibujar líneas y formas, representar texto o mostrar y manipular imág
        Dim g As Graphics = pe.Graphics  
        ' Insert code to paint the form here.  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -82,7 +85,6 @@ Antes de dibujar líneas y formas, representar texto o mostrar y manipular imág
        Graphics g = pe.Graphics;  
        // Insert code to paint the form here.  
     }  
-  
     ```  
   
     ```cpp  
@@ -97,19 +99,18 @@ Antes de dibujar líneas y formas, representar texto o mostrar y manipular imág
        }  
     ```  
   
-## CreateGraphics \(Método\)  
- También puede utilizar el método <xref:System.Windows.Forms.Control.CreateGraphics%2A> de un control o un formulario para obtener una referencia a un objeto <xref:System.Drawing.Graphics> que represente la superficie de dibujo de dicho control o formulario.  
+## <a name="creategraphics-method"></a><span data-ttu-id="d3064-128">Método CreateGraphics</span><span class="sxs-lookup"><span data-stu-id="d3064-128">CreateGraphics Method</span></span>  
+ <span data-ttu-id="d3064-129">También puede usar el <xref:System.Windows.Forms.Control.CreateGraphics%2A> método de un control o formulario para obtener una referencia a un <xref:System.Drawing.Graphics> objeto que representa la superficie de dibujo de dicho control o formulario.</span><span class="sxs-lookup"><span data-stu-id="d3064-129">You can also use the <xref:System.Windows.Forms.Control.CreateGraphics%2A> method of a control or form to obtain a reference to a <xref:System.Drawing.Graphics> object that represents the drawing surface of that control or form.</span></span>  
   
-#### Para crear un objeto Graphics con el método CreateGraphics  
+#### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a><span data-ttu-id="d3064-130">Para crear un objeto de gráficos con el método CreateGraphics</span><span class="sxs-lookup"><span data-stu-id="d3064-130">To create a Graphics object with the CreateGraphics method</span></span>  
   
--   Llame al método <xref:System.Windows.Forms.Control.CreateGraphics%2A> del formulario o del control en el que desee representar gráficos.  
+-   <span data-ttu-id="d3064-131">Llame a la <xref:System.Windows.Forms.Control.CreateGraphics%2A> método del formulario o control en el que desea representar gráficos.</span><span class="sxs-lookup"><span data-stu-id="d3064-131">Call the <xref:System.Windows.Forms.Control.CreateGraphics%2A> method of the form or control upon which you want to render graphics.</span></span>  
   
     ```vb  
     Dim g as Graphics  
     ' Sets g to a Graphics object representing the drawing surface of the  
     ' control or form g is a member of.  
     g = Me.CreateGraphics  
-  
     ```  
   
     ```csharp  
@@ -117,7 +118,6 @@ Antes de dibujar líneas y formas, representar texto o mostrar y manipular imág
     // Sets g to a graphics object representing the drawing surface of the  
     // control or form g is a member of.  
     g = this.CreateGraphics();  
-  
     ```  
   
     ```cpp  
@@ -127,26 +127,24 @@ Antes de dibujar líneas y formas, representar texto o mostrar y manipular imág
     g = this->CreateGraphics();  
     ```  
   
-## Crear un objeto Graphics a partir de un objeto Image  
- También se puede crear un objeto Graphics a partir de cualquier objeto que se derive de la clase <xref:System.Drawing.Image>.  
+## <a name="create-from-an-image-object"></a><span data-ttu-id="d3064-132">Crear a partir de un objeto de imagen</span><span class="sxs-lookup"><span data-stu-id="d3064-132">Create from an Image Object</span></span>  
+ <span data-ttu-id="d3064-133">Además, puede crear un objeto graphics de cualquier objeto que se deriva de la <xref:System.Drawing.Image> clase.</span><span class="sxs-lookup"><span data-stu-id="d3064-133">Additionally, you can create a graphics object from any object that derives from the <xref:System.Drawing.Image> class.</span></span>  
   
-#### Para crear un objeto Graphics a partir de un objeto Image  
+#### <a name="to-create-a-graphics-object-from-an-image"></a><span data-ttu-id="d3064-134">Para crear un objeto Graphics desde una imagen</span><span class="sxs-lookup"><span data-stu-id="d3064-134">To create a Graphics object from an Image</span></span>  
   
--   Llame al método <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=fullName>, suministrando el nombre de la variable Image a partir de la cual desea crear un objeto <xref:System.Drawing.Graphics>.  
+-   <span data-ttu-id="d3064-135">Llame a la <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> método, proporcionando el nombre de la variable de imagen desde el que desea crear un <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="d3064-135">Call the <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> method, supplying the name of the Image variable from which you want to create a <xref:System.Drawing.Graphics> object.</span></span>  
   
-     En el ejemplo siguiente se muestra cómo usar un objeto <xref:System.Drawing.Bitmap>:  
+     <span data-ttu-id="d3064-136">En el ejemplo siguiente se muestra cómo utilizar un <xref:System.Drawing.Bitmap> objeto:</span><span class="sxs-lookup"><span data-stu-id="d3064-136">The following example shows how to use a <xref:System.Drawing.Bitmap> object:</span></span>  
   
     ```vb  
     Dim myBitmap as New Bitmap("C:\Documents and Settings\Joe\Pics\myPic.bmp")  
     Dim g as Graphics = Graphics.FromImage(myBitmap)  
-  
     ```  
   
     ```csharp  
     Bitmap myBitmap = new Bitmap(@"C:\Documents and   
        Settings\Joe\Pics\myPic.bmp");  
     Graphics g = Graphics.FromImage(myBitmap);  
-  
     ```  
   
     ```cpp  
@@ -156,34 +154,36 @@ Antes de dibujar líneas y formas, representar texto o mostrar y manipular imág
     ```  
   
 > [!NOTE]
->  Sólo puede crear objetos <xref:System.Drawing.Graphics> a partir de archivos .bmp no indizados, como archivos .bmp de 16 bits, 24 bits y 32 bits.  Cada píxel de archivos .bmp no indizados alberga un color, a diferencia de los píxeles de los archivos .bmp indizados, que albergan un índice que hace referencia a una tabla de colores.  
+>  <span data-ttu-id="d3064-137">Solo se puede crear <xref:System.Drawing.Graphics> objetos desde archivos .bmp no indizados, como archivos .bmp de 16, 24 y 32 bits.</span><span class="sxs-lookup"><span data-stu-id="d3064-137">You can only create <xref:System.Drawing.Graphics> objects from nonindexed .bmp files, such as 16-bit, 24-bit, and 32-bit .bmp files.</span></span> <span data-ttu-id="d3064-138">Cada píxel de archivos .bmp no indizados alberga un color, a diferencia de los píxeles de los archivos .bmp indizados, que contiene un índice en una tabla de colores.</span><span class="sxs-lookup"><span data-stu-id="d3064-138">Each pixel of nonindexed .bmp files holds a color, in contrast to pixels of indexed .bmp files, which hold an index to a color table.</span></span>  
   
-## Dibujar y manipular formas e imágenes  
- Una vez creado el objeto <xref:System.Drawing.Graphics>, éste se puede usar para dibujar líneas y formas, representar texto o mostrar y manipular imágenes.  Los objetos de entidad de seguridad que se usan con el objeto <xref:System.Drawing.Graphics> son:  
+-  
   
--   La clase <xref:System.Drawing.Pen>: se utiliza para dibujar líneas y contornos de formas o para representar otros elementos geométricos.  
+## <a name="drawing-and-manipulating-shapes-and-images"></a><span data-ttu-id="d3064-139">Dibujar y manipular formas e imágenes</span><span class="sxs-lookup"><span data-stu-id="d3064-139">Drawing and Manipulating Shapes and Images</span></span>  
+ <span data-ttu-id="d3064-140">Una vez creado, un <xref:System.Drawing.Graphics> objeto puede utilizarse para dibujar líneas y formas, representar texto o mostrar y manipular imágenes.</span><span class="sxs-lookup"><span data-stu-id="d3064-140">After it is created, a <xref:System.Drawing.Graphics> object may be used to draw lines and shapes, render text, or display and manipulate images.</span></span> <span data-ttu-id="d3064-141">Los objetos principales que se usan con la <xref:System.Drawing.Graphics> objeto son:</span><span class="sxs-lookup"><span data-stu-id="d3064-141">The principal objects that are used with the <xref:System.Drawing.Graphics> object are:</span></span>  
   
--   La clase <xref:System.Drawing.Brush>: se utiliza para rellenar áreas de gráficos, como formas rellenas, imágenes o texto.  
+-   <span data-ttu-id="d3064-142">La <xref:System.Drawing.Pen> clase: utilizado para dibujar líneas, formas de esquematización o representar otros elementos geométricos.</span><span class="sxs-lookup"><span data-stu-id="d3064-142">The <xref:System.Drawing.Pen> class—Used for drawing lines, outlining shapes, or rendering other geometric representations.</span></span>  
   
--   La clase <xref:System.Drawing.Font>: proporciona una descripción de las formas que se utilizarán al representar texto.  
+-   <span data-ttu-id="d3064-143">La <xref:System.Drawing.Brush> clase: utiliza para rellenar áreas de gráficos, como formas rellenas, imágenes o texto.</span><span class="sxs-lookup"><span data-stu-id="d3064-143">The <xref:System.Drawing.Brush> class—Used for filling areas of graphics, such as filled shapes, images, or text.</span></span>  
   
--   La estructura <xref:System.Drawing.Color>: representa los distintos colores para mostrar.  
+-   <span data-ttu-id="d3064-144">La <xref:System.Drawing.Font> clase: proporciona una descripción de las formas que se utilizarán al representar texto.</span><span class="sxs-lookup"><span data-stu-id="d3064-144">The <xref:System.Drawing.Font> class—Provides a description of what shapes to use when rendering text.</span></span>  
   
-#### Para utilizar el objeto Graphics que ha creado  
+-   <span data-ttu-id="d3064-145">El <xref:System.Drawing.Color> estructura: representa los distintos colores para mostrar.</span><span class="sxs-lookup"><span data-stu-id="d3064-145">The <xref:System.Drawing.Color> structure—Represents the different colors to display.</span></span>  
   
--   Trabaje con el objeto correspondiente enumerado anteriormente para dibujar lo que necesite.  
+#### <a name="to-use-the-graphics-object-you-have-created"></a><span data-ttu-id="d3064-146">Para utilizar el objeto de gráficos que ha creado</span><span class="sxs-lookup"><span data-stu-id="d3064-146">To use the Graphics object you have created</span></span>  
   
-     Para obtener más información, vea los temas siguientes:  
+-   <span data-ttu-id="d3064-147">Trabajar con el objeto apropiado enumerado anteriormente para dibujar lo que necesita.</span><span class="sxs-lookup"><span data-stu-id="d3064-147">Work with the appropriate object listed above to draw what you need.</span></span>  
   
-    |Para representar|Vea|  
-    |----------------------|---------|  
-    |Líneas|[Cómo: Dibujar una línea en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |formas|[Cómo: Dibujar una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |Text|[Cómo: Dibujar texto en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |Imágenes|[Cómo: Representar imágenes con GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+     <span data-ttu-id="d3064-148">Para obtener más información, vea los temas siguientes:</span><span class="sxs-lookup"><span data-stu-id="d3064-148">For more information, see the following topics:</span></span>  
   
-## Vea también  
- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Cómo: Representar imágenes con GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+    |<span data-ttu-id="d3064-149">Para representar</span><span class="sxs-lookup"><span data-stu-id="d3064-149">To render</span></span>|<span data-ttu-id="d3064-150">Vea</span><span class="sxs-lookup"><span data-stu-id="d3064-150">See</span></span>|  
+    |---------------|---------|  
+    |<span data-ttu-id="d3064-151">Líneas</span><span class="sxs-lookup"><span data-stu-id="d3064-151">Lines</span></span>|[<span data-ttu-id="d3064-152">Dibujar una línea en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d3064-152">How to: Draw a Line on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
+    |<span data-ttu-id="d3064-153">Formas</span><span class="sxs-lookup"><span data-stu-id="d3064-153">Shapes</span></span>|[<span data-ttu-id="d3064-154">Dibujar una forma con contorno</span><span class="sxs-lookup"><span data-stu-id="d3064-154">How to: Draw an Outlined Shape</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
+    |<span data-ttu-id="d3064-155">Texto</span><span class="sxs-lookup"><span data-stu-id="d3064-155">Text</span></span>|[<span data-ttu-id="d3064-156">Dibujar texto en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d3064-156">How to: Draw Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
+    |<span data-ttu-id="d3064-157">Imágenes</span><span class="sxs-lookup"><span data-stu-id="d3064-157">Images</span></span>|[<span data-ttu-id="d3064-158">Representar imágenes con GDI+</span><span class="sxs-lookup"><span data-stu-id="d3064-158">How to: Render Images with GDI+</span></span>](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+  
+## <a name="see-also"></a><span data-ttu-id="d3064-159">Vea también</span><span class="sxs-lookup"><span data-stu-id="d3064-159">See Also</span></span>  
+ [<span data-ttu-id="d3064-160">Introducción a la programación de gráficos</span><span class="sxs-lookup"><span data-stu-id="d3064-160">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="d3064-161">Gráficos y dibujos en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d3064-161">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="d3064-162">Líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="d3064-162">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="d3064-163">Representar imágenes con GDI+</span><span class="sxs-lookup"><span data-stu-id="d3064-163">How to: Render Images with GDI+</span></span>](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)

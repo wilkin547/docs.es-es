@@ -1,49 +1,53 @@
 ---
-title: "Usar el &#225;mbito de edici&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Usar el ámbito de edición"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6aec54cef13bcd99fb65a6305e086fe577b6bc13
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Usar el &#225;mbito de edici&#243;n
-Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se puedan deshacer en una unidad atómica única.De forma predeterminada, las acciones realizadas por un autor del diseñador de actividades se integran automáticamente en el sistema Deshacer\/rehacer.  
+# <a name="using-editing-scope"></a><span data-ttu-id="e5d77-102">Usar el ámbito de edición</span><span class="sxs-lookup"><span data-stu-id="e5d77-102">Using Editing Scope</span></span>
+<span data-ttu-id="e5d77-103">Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se puedan deshacer en una unidad atómica única.</span><span class="sxs-lookup"><span data-stu-id="e5d77-103">This sample demonstrates how to batch a set of changes so that they can be undone in a single atomic unit.</span></span> <span data-ttu-id="e5d77-104">De forma predeterminada, las acciones realizadas por un autor del diseñador de actividades se integran automáticamente en el sistema Deshacer/rehacer.</span><span class="sxs-lookup"><span data-stu-id="e5d77-104">By default, the actions taken by an activity designer author are automatically integrated into the Undo/Redo system.</span></span>  
   
-## Demostraciones  
- Editar el ámbito y Deshacer\/Rehacer.  
+## <a name="demonstrates"></a><span data-ttu-id="e5d77-105">Demostraciones</span><span class="sxs-lookup"><span data-stu-id="e5d77-105">Demonstrates</span></span>  
+ <span data-ttu-id="e5d77-106">Editar el ámbito y Deshacer/Rehacer.</span><span class="sxs-lookup"><span data-stu-id="e5d77-106">Editing scope and Undo and Redo.</span></span>  
   
-## Análisis  
- En este ejemplo se muestra cómo procesar por lotes un conjunto de cambios en el árbol de <xref:System.Activities.Presentation.Model.ModelItem> dentro de una unidad única de trabajo.Tenga en cuenta que al enlazar directamente con los valores <xref:System.Activities.Presentation.Model.ModelItem> desde un diseñador de WPF, los cambios se aplican automáticamente.En este ejemplo se muestra lo que se debe hacer cuando se realizan mediante código imperativo varias modificaciones que se van a procesar por lotes, en lugar de un único cambio.  
+## <a name="discussion"></a><span data-ttu-id="e5d77-107">Explicación</span><span class="sxs-lookup"><span data-stu-id="e5d77-107">Discussion</span></span>  
+ <span data-ttu-id="e5d77-108">En este ejemplo se muestra cómo procesar por lotes un conjunto de cambios en el árbol de <xref:System.Activities.Presentation.Model.ModelItem> dentro de una unidad única de trabajo.</span><span class="sxs-lookup"><span data-stu-id="e5d77-108">This sample demonstrates how to batch a set of changes to the <xref:System.Activities.Presentation.Model.ModelItem> tree within a single unit of work.</span></span> <span data-ttu-id="e5d77-109">Tenga en cuenta que al enlazar directamente con los valores <xref:System.Activities.Presentation.Model.ModelItem> desde un diseñador de WPF, los cambios se aplican automáticamente.</span><span class="sxs-lookup"><span data-stu-id="e5d77-109">Note that when binding to <xref:System.Activities.Presentation.Model.ModelItem> values directly from a WPF designer, changes are applied automatically.</span></span> <span data-ttu-id="e5d77-110">En este ejemplo se muestra lo que se debe hacer cuando se realizan mediante código imperativo varias modificaciones que se van a procesar por lotes, en lugar de un único cambio.</span><span class="sxs-lookup"><span data-stu-id="e5d77-110">This sample demonstrates what must be done when multiple changes to be batched are being made through imperative code, rather than a single change.</span></span>  
   
- En este ejemplo, se agregan tres actividades.Cuando comienza la edición, se llama a <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> en una instancia de <xref:System.Activities.Presentation.Model.ModelItem>.Los cambios realizados en el árbol de <xref:System.Activities.Presentation.Model.ModelItem> dentro de este ámbito de edición se procesan por lotes.El comando <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> devuelve una clase <xref:System.Activities.Presentation.Model.EditingScope>, que se puede utilizar para controlar esta instancia.Se puede llamar a los métodos <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> o <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> para confirmar o revertir el ámbito de edición.  
+ <span data-ttu-id="e5d77-111">En este ejemplo, se agregan tres actividades.</span><span class="sxs-lookup"><span data-stu-id="e5d77-111">In this sample, three activities are added.</span></span> <span data-ttu-id="e5d77-112">Cuando comienza la edición, se llama a <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> en una instancia de <xref:System.Activities.Presentation.Model.ModelItem>.</span><span class="sxs-lookup"><span data-stu-id="e5d77-112">When editing begins, <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> is called on an instance of <xref:System.Activities.Presentation.Model.ModelItem>.</span></span> <span data-ttu-id="e5d77-113">Los cambios realizados en el árbol de <xref:System.Activities.Presentation.Model.ModelItem> dentro de este ámbito de edición se procesan por lotes.</span><span class="sxs-lookup"><span data-stu-id="e5d77-113">Changes made to the <xref:System.Activities.Presentation.Model.ModelItem> tree within this editing scope are batched.</span></span> <span data-ttu-id="e5d77-114">El comando <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> devuelve una clase <xref:System.Activities.Presentation.Model.EditingScope>, que se puede utilizar para controlar esta instancia.</span><span class="sxs-lookup"><span data-stu-id="e5d77-114">The <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> command returns an <xref:System.Activities.Presentation.Model.EditingScope>, which can be used to control this instance.</span></span> <span data-ttu-id="e5d77-115">Se puede llamar a los métodos <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> o <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> para confirmar o revertir el ámbito de edición.</span><span class="sxs-lookup"><span data-stu-id="e5d77-115">Either <xref:System.Activities.Presentation.Model.EditingScope.OnComplete%2A> or <xref:System.Activities.Presentation.Model.EditingScope.OnRevert%2A> can be called to either commit or revert the editing scope.</span></span>  
   
- También puede anidar objetos <xref:System.Activities.Presentation.Model.EditingScope>, lo que permite realizar el seguimiento de varios conjuntos de cambios como parte de un ámbito de edición mayor y se pueden controlar individualmente.Por ejemplo, esta característica se podría utiliza cuando se deben confirmar o revertir por separado cambios de varios cuadros de diálogo y todos los cambios se tratan como una única operación atómica.En este ejemplo, los ámbitos de edición se apilan mediante una clase <xref:System.Collections.ObjectModel.ObservableCollection%601> de tipo <xref:System.Activities.Presentation.Model.ModelEditingScope>.Se utiliza <xref:System.Collections.ObjectModel.ObservableCollection%601> para que la profundidad del anidamiento se pueda observar en la superficie del diseñador.  
+ <span data-ttu-id="e5d77-116">También puede anidar objetos <xref:System.Activities.Presentation.Model.EditingScope>, lo que permite realizar el seguimiento de varios conjuntos de cambios como parte de un ámbito de edición mayor y se pueden controlar individualmente.</span><span class="sxs-lookup"><span data-stu-id="e5d77-116">You can also nest <xref:System.Activities.Presentation.Model.EditingScope> objects, which allows for multiple sets of changes to be tracked as part of a larger editing scope and can be controlled individually.</span></span> <span data-ttu-id="e5d77-117">Por ejemplo, esta característica se podría utiliza cuando se deben confirmar o revertir por separado cambios de varios cuadros de diálogo y todos los cambios se tratan como una única operación atómica.</span><span class="sxs-lookup"><span data-stu-id="e5d77-117">A scenario that may use this feature would be when changes from multiple dialogs must be committed or reverted separately, with all changes being treated as a single atomic operation.</span></span> <span data-ttu-id="e5d77-118">En este ejemplo, los ámbitos de edición se apilan mediante una clase <xref:System.Collections.ObjectModel.ObservableCollection%601> de tipo <xref:System.Activities.Presentation.Model.ModelEditingScope>.</span><span class="sxs-lookup"><span data-stu-id="e5d77-118">In this sample, the editing scopes are stacked using an <xref:System.Collections.ObjectModel.ObservableCollection%601> of type <xref:System.Activities.Presentation.Model.ModelEditingScope>.</span></span> <span data-ttu-id="e5d77-119">Se utiliza <xref:System.Collections.ObjectModel.ObservableCollection%601> para que la profundidad del anidamiento se pueda observar en la superficie del diseñador.</span><span class="sxs-lookup"><span data-stu-id="e5d77-119">The <xref:System.Collections.ObjectModel.ObservableCollection%601> is used so that the depth of the nesting can be observed on the designer surface.</span></span>  
   
-## Para configurar, compilar y ejecutar el ejemplo  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e5d77-120">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="e5d77-120">To set up, build, and run the sample</span></span>  
   
-1.  Compile y ejecute el ejemplo y, a continuación, utilice los botones de la izquierda para modificar el flujo de trabajo.  
+1.  <span data-ttu-id="e5d77-121">Compile y ejecute el ejemplo y, a continuación, utilice los botones de la izquierda para modificar el flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="e5d77-121">Build and run the sample, and then use the buttons on the left to modify the workflow.</span></span>  
   
-2.  Haga clic en **Open Editing Scope**.  
+2.  <span data-ttu-id="e5d77-122">Haga clic en **abrir Editar ámbito**.</span><span class="sxs-lookup"><span data-stu-id="e5d77-122">Click **Open Editing Scope**.</span></span>  
   
-    1.  Este comando llama al método <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, que crea un ámbito de edición y lo inserta en la pila de edición.  
+    1.  <span data-ttu-id="e5d77-123">Este comando llama al método <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, que crea un ámbito de edición y lo inserta en la pila de edición.</span><span class="sxs-lookup"><span data-stu-id="e5d77-123">This command calls <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> that creates an editing scope and pushes it onto the editing stack.</span></span>  
   
-    2.  A continuación, se agregan tres actividades a la clase <xref:System.Activities.Presentation.Model.ModelItem> seleccionada.Tenga en cuenta que si el ámbito de edición no se hubiera abierto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, las tres actividades aparecerían en el lienzo del diseñador.Dado que esta operación todavía está pendiente dentro de la clase <xref:System.Activities.Presentation.Model.EditingScope>, el diseñador todavía no se actualiza.  
+    2.  <span data-ttu-id="e5d77-124">A continuación, se agregan tres actividades a la clase <xref:System.Activities.Presentation.Model.ModelItem> seleccionada.</span><span class="sxs-lookup"><span data-stu-id="e5d77-124">Three activities are then added to the selected <xref:System.Activities.Presentation.Model.ModelItem>.</span></span> <span data-ttu-id="e5d77-125">Tenga en cuenta que si el ámbito de edición no se hubiera abierto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, las tres actividades aparecerían en el lienzo del diseñador.</span><span class="sxs-lookup"><span data-stu-id="e5d77-125">Note that if the editing scope had not been opened with <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, three new activities would appear on the designer canvas.</span></span> <span data-ttu-id="e5d77-126">Dado que esta operación todavía está pendiente dentro de la clase <xref:System.Activities.Presentation.Model.EditingScope>, el diseñador todavía no se actualiza.</span><span class="sxs-lookup"><span data-stu-id="e5d77-126">Because this operation is still pending within the <xref:System.Activities.Presentation.Model.EditingScope>, the designer is not yet updated.</span></span>  
   
-3.  Presione **Close Editing Scope** para confirmar el ámbito de edición.Las tres actividades aparecen en el diseñador.  
+3.  <span data-ttu-id="e5d77-127">Presione **Close Editing Scope** para confirmar el ámbito de edición.</span><span class="sxs-lookup"><span data-stu-id="e5d77-127">Press **Close Editing Scope** to commit the editing scope.</span></span> <span data-ttu-id="e5d77-128">Las tres actividades aparecen en el diseñador.</span><span class="sxs-lookup"><span data-stu-id="e5d77-128">Three activities appear in the designer.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="e5d77-129">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="e5d77-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e5d77-130">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="e5d77-130">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="e5d77-131">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e5d77-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e5d77-132">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="e5d77-132">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

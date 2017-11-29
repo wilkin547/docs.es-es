@@ -1,42 +1,45 @@
 ---
-title: "C&#243;mo: Determinar los par&#225;metros admitidos por un codificador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "parámetros de codificador, determinación compatible"
+title: "Cómo: Determinar los parámetros admitidos por un codificador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e041434e9ace24618dbdc45341a0e8468721c3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Determinar los par&#225;metros admitidos por un codificador
-Puede ajustar parámetros de imagen como la calidad y el nivel de compresión, pero debe conocer qué parámetros admite un codificador de imágenes determinado.  La clase <xref:System.Drawing.Image> proporciona el método <xref:System.Drawing.Image.GetEncoderParameterList%2A> para que pueda determinar qué parámetros de imagen se admiten para un codificador determinado.  El codificador se especifica con un GUID.  El método <xref:System.Drawing.Image.GetEncoderParameterList%2A> devuelve una matriz de objetos <xref:System.Drawing.Imaging.EncoderParameter>.  
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a><span data-ttu-id="ba201-102">Cómo: Determinar los parámetros admitidos por un codificador</span><span class="sxs-lookup"><span data-stu-id="ba201-102">How to: Determine the Parameters Supported by an Encoder</span></span>
+<span data-ttu-id="ba201-103">Puede ajustar los parámetros de imagen, como el nivel de calidad y la compresión, pero debe saber qué parámetros son compatibles con un codificador de imágenes especificado.</span><span class="sxs-lookup"><span data-stu-id="ba201-103">You can adjust image parameters, such as quality and compression level, but you must know which parameters are supported by a given image encoder.</span></span> <span data-ttu-id="ba201-104">El <xref:System.Drawing.Image> clase proporciona el <xref:System.Drawing.Image.GetEncoderParameterList%2A> método para que pueda determinar qué parámetros de imagen se admiten para un codificador determinado.</span><span class="sxs-lookup"><span data-stu-id="ba201-104">The <xref:System.Drawing.Image> class provides the <xref:System.Drawing.Image.GetEncoderParameterList%2A> method so that you can determine which image parameters are supported for a particular encoder.</span></span> <span data-ttu-id="ba201-105">El codificador se especifica con un GUID.</span><span class="sxs-lookup"><span data-stu-id="ba201-105">You specify the encoder with a GUID.</span></span> <span data-ttu-id="ba201-106">El <xref:System.Drawing.Image.GetEncoderParameterList%2A> método devuelve una matriz de <xref:System.Drawing.Imaging.EncoderParameter> objetos.</span><span class="sxs-lookup"><span data-stu-id="ba201-106">The <xref:System.Drawing.Image.GetEncoderParameterList%2A> method returns an array of <xref:System.Drawing.Imaging.EncoderParameter> objects.</span></span>  
   
-## Ejemplo  
- El siguiente código de ejemplo genera los parámetros compatibles para el codificador de JPEG.  Utilice la lista de categorías de parámetro y GUID asociados en la información general de la clase <xref:System.Drawing.Imaging.Encoder> para determinar la categoría de cada parámetro.  
+## <a name="example"></a><span data-ttu-id="ba201-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ba201-107">Example</span></span>  
+ <span data-ttu-id="ba201-108">El código de ejemplo siguiente genera los parámetros compatibles para el codificador JPEG.</span><span class="sxs-lookup"><span data-stu-id="ba201-108">The following example code outputs the supported parameters for the JPEG encoder.</span></span> <span data-ttu-id="ba201-109">Utilice la lista de categorías de parámetro y los GUID asociados en la <xref:System.Drawing.Imaging.Encoder> general sobre la clase para determinar la categoría para cada parámetro.</span><span class="sxs-lookup"><span data-stu-id="ba201-109">Use the list of parameter categories and associated GUIDs in the <xref:System.Drawing.Imaging.Encoder> class overview to determine the category for each parameter.</span></span>  
   
  [!code-csharp[UsingImageEncodersDecoders#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#3)]
  [!code-vb[UsingImageEncodersDecoders#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#3)]  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="ba201-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="ba201-110">Compiling the Code</span></span>  
+ <span data-ttu-id="ba201-111">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="ba201-111">This example requires:</span></span>  
   
--   Una aplicación de formularios Windows Forms.  
+-   <span data-ttu-id="ba201-112">Una aplicación de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ba201-112">A Windows Forms application.</span></span>  
   
--   Un argumento <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+-   <span data-ttu-id="ba201-113">A <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="ba201-113">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## Vea también  
- [Cómo: Enumerar los codificadores instalados](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)   
- [Tipos de mapas de bits](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)   
- [Usar codificadores y descodificadores de imagen en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="ba201-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="ba201-114">See Also</span></span>  
+ [<span data-ttu-id="ba201-115">Enumerar los codificadores instalados</span><span class="sxs-lookup"><span data-stu-id="ba201-115">How to: List Installed Encoders</span></span>](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [<span data-ttu-id="ba201-116">Tipos de mapas de bits</span><span class="sxs-lookup"><span data-stu-id="ba201-116">Types of Bitmaps</span></span>](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [<span data-ttu-id="ba201-117">Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="ba201-117">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

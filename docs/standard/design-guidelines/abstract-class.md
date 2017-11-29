@@ -1,52 +1,50 @@
 ---
-title: "Dise&#241;o de clases abstractas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Escriba instrucciones de diseño, clases abstractas"
-  - "clases abstractas, instrucciones de diseño"
-  - "instrucciones de diseño clases biblioteca [.NET Framework], clases"
-  - "Resumen de clases [.NET Framework]"
-  - "clases [.NET Framework], instrucciones de diseño"
-  - "Escriba las instrucciones de diseño de clases"
+title: "Diseño de clases abstractas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type design guidelines, abstract classes
+- abstract classes, design guidelines
+- class library design guidelines [.NET Framework], classes
+- classes [.NET Framework], abstract
+- classes [.NET Framework], design guidelines
+- type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d7b680c3377cbfa40734a57f9408d9487dbf3769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Dise&#241;o de clases abstractas
-**X no** definir constructores internos públicos o protegidos en tipos abstractos.  
+# <a name="abstract-class-design"></a><span data-ttu-id="8bb8a-102">Diseño de clases abstractas</span><span class="sxs-lookup"><span data-stu-id="8bb8a-102">Abstract Class Design</span></span>
+<span data-ttu-id="8bb8a-103">**X DO NOT** definir constructores internos públicos o protegidos en tipos abstractos.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-103">**X DO NOT** define public or protected internal constructors in abstract types.</span></span>  
   
- Los constructores deben ser públicos sólo si los usuarios necesitan crear instancias del tipo. Porque no se puede crear instancias de un tipo abstracto, un tipo abstracto con un constructor público está correctamente diseñado y confuso para los usuarios.  
+ <span data-ttu-id="8bb8a-104">Los constructores deberían ser públicos sólo si los usuarios deberán crear instancias del tipo.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-104">Constructors should be public only if users will need to create instances of the type.</span></span> <span data-ttu-id="8bb8a-105">Dado que no se puede crear instancias de un tipo abstracto, un tipo abstracto con un constructor público es incorrectamente se ha diseñado y puede inducir a error a los usuarios.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-105">Because you cannot create instances of an abstract type, an abstract type with a public constructor is incorrectly designed and misleading to the users.</span></span>  
   
- **✓ hacer** definir un constructor interno o protegidos en clases abstractas.  
+ <span data-ttu-id="8bb8a-106">**✓ HACER** definir un constructor interno o protegidos en las clases abstractas.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-106">**✓ DO** define a protected or an internal constructor in abstract classes.</span></span>  
   
- Un constructor protegido es más común y permite la clase base para realizar su propia inicialización cuando se crean subtipos.  
+ <span data-ttu-id="8bb8a-107">Un constructor protegido es más común y simplemente permite que la clase base para realizar su propia inicialización cuando se crean subtipos.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-107">A protected constructor is more common and simply allows the base class to do its own initialization when subtypes are created.</span></span>  
   
- Un constructor interno puede utilizarse para limitar las implementaciones concretas de la clase abstracta para el ensamblado que define la clase.  
+ <span data-ttu-id="8bb8a-108">Un constructor interno puede utilizarse para limitar las implementaciones concretas de la clase abstracta para el ensamblado que define la clase.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-108">An internal constructor can be used to limit concrete implementations of the abstract class to the assembly defining the class.</span></span>  
   
- **✓ hacer** proporcionar al menos un tipo concreto que herede de cada clase abstracta que realiza el envío.  
+ <span data-ttu-id="8bb8a-109">**✓ HACER** proporcionar al menos un tipo concreto que herede de cada clase abstracta que realiza el envío.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-109">**✓ DO** provide at least one concrete type that inherits from each abstract class that you ship.</span></span>  
   
- Haciendo esto ayuda a validar el diseño de la clase abstracta. Por ejemplo,  <xref:System.IO.FileStream?displayProperty=fullName> es una implementación de la <xref:System.IO.Stream?displayProperty=fullName> clase abstracta.  
+ <span data-ttu-id="8bb8a-110">Haciendo esto ayuda a validar el diseño de la clase abstracta.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-110">Doing this helps to validate the design of the abstract class.</span></span> <span data-ttu-id="8bb8a-111">Por ejemplo, <xref:System.IO.FileStream?displayProperty=nameWithType> es una implementación de la <xref:System.IO.Stream?displayProperty=nameWithType> clase abstracta.</span><span class="sxs-lookup"><span data-stu-id="8bb8a-111">For example,  <xref:System.IO.FileStream?displayProperty=nameWithType> is an implementation of the <xref:System.IO.Stream?displayProperty=nameWithType> abstract class.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="8bb8a-112">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="8bb8a-112">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="8bb8a-113">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="8bb8a-113">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="8bb8a-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="8bb8a-114">See Also</span></span>  
+ [<span data-ttu-id="8bb8a-115">Instrucciones de diseño de tipos</span><span class="sxs-lookup"><span data-stu-id="8bb8a-115">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="8bb8a-116">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8bb8a-116">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

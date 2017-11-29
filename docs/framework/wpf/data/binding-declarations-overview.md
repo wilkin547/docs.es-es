@@ -1,138 +1,144 @@
 ---
-title: "Informaci&#243;n general sobre declaraciones de enlaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enlazar datos, declaraciones"
-  - "declaraciones de enlaces"
-  - "enlace de datos, declaraciones"
-  - "extensiones de marcado"
-  - "sintaxis de elementos de objeto"
-  - "sintaxis, elementos de objeto"
+title: "Información general sobre declaraciones de enlaces"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- markup extensions [WPF]
+- data binding [WPF], declarations
+- object element syntax [WPF]
+- binding data [WPF], declarations
+- syntax [WPF], object elements
+- binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 34
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28b139f6ea2aad41e4d733e8c622699f2474b3e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre declaraciones de enlaces
-En este tema se describen las distintas maneras de declarar un enlace.  
+# <a name="binding-declarations-overview"></a><span data-ttu-id="ca686-102">Información general sobre declaraciones de enlaces</span><span class="sxs-lookup"><span data-stu-id="ca686-102">Binding Declarations Overview</span></span>
+<span data-ttu-id="ca686-103">En este tema se describen las distintas formas de declarar un enlace.</span><span class="sxs-lookup"><span data-stu-id="ca686-103">This topic discusses the different ways you can declare a binding.</span></span>  
   
-   
+ 
   
 <a name="Prereq"></a>   
-## Requisitos previos  
- Antes de leer este tema, es importante estar familiarizado con el concepto y el uso de las extensiones de marcado.  Para obtener más información sobre las extensiones de marcado, vea [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+## <a name="prerequisites"></a><span data-ttu-id="ca686-104">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="ca686-104">Prerequisites</span></span>  
+ <span data-ttu-id="ca686-105">Antes de leer este tema, es importante que esté familiarizado con el concepto y el uso de las extensiones de marcado.</span><span class="sxs-lookup"><span data-stu-id="ca686-105">Before reading this topic, it is important that you are familiar with the concept and usage of markup extensions.</span></span> <span data-ttu-id="ca686-106">Para más información sobre las extensiones de marcado, consulte [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="ca686-106">For more information about markup extensions, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
- En este tema no se abordan los conceptos de enlace de datos.  Para obtener una explicación de los conceptos de enlace de datos, vea [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ <span data-ttu-id="ca686-107">En este tema no se tratan los conceptos de enlace de datos.</span><span class="sxs-lookup"><span data-stu-id="ca686-107">This topic does not cover data binding concepts.</span></span> <span data-ttu-id="ca686-108">Para obtener una explicación de los conceptos de enlace de datos, consulte [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="ca686-108">For a discussion of data binding concepts, see [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
 <a name="BindinginXAML"></a>   
-## Declarar un enlace en XAML  
- En esta sección se explica cómo declarar un enlace en XAML.  
+## <a name="declaring-a-binding-in-xaml"></a><span data-ttu-id="ca686-109">Declarar un enlace en XAML</span><span class="sxs-lookup"><span data-stu-id="ca686-109">Declaring a Binding in XAML</span></span>  
+ <span data-ttu-id="ca686-110">En esta sección se describe cómo declarar en XAML.</span><span class="sxs-lookup"><span data-stu-id="ca686-110">This section discusses how to declare a binding in XAML.</span></span>  
   
 <a name="MarkupExtensionSyntax"></a>   
-### Uso de extensiones de marcado  
- <xref:System.Windows.Data.Binding> es una extensión de marcado.  Cuando se utiliza la extensión de enlace para declarar un enlace, la declaración consiste en una serie de cláusulas que se sitúan tras la palabra clave `Binding` y están separadas por comas \(,\).  Las cláusulas de la declaración de enlace pueden estar en cualquier orden y hay muchas combinaciones posibles.  Las cláusulas son pares de valores *Nombre*\=*Valor*, donde *Nombre* es el nombre de la propiedad <xref:System.Windows.Data.Binding> y *Valor* es el valor que se establece para la propiedad.  
+### <a name="markup-extension-usage"></a><span data-ttu-id="ca686-111">Uso de la extensión de marcado</span><span class="sxs-lookup"><span data-stu-id="ca686-111">Markup Extension Usage</span></span>  
+ <span data-ttu-id="ca686-112"><xref:System.Windows.Data.Binding> es una extensión de marcado.</span><span class="sxs-lookup"><span data-stu-id="ca686-112"><xref:System.Windows.Data.Binding> is a markup extension.</span></span> <span data-ttu-id="ca686-113">Cuando se utiliza la extensión de enlace para declarar un enlace, la declaración consta de una serie de cláusulas después de la palabra clave `Binding` y separadas por comas (,).</span><span class="sxs-lookup"><span data-stu-id="ca686-113">When you use the binding extension to declare a binding, the declaration consists of a series of clauses following the `Binding` keyword and separated by commas (,).</span></span> <span data-ttu-id="ca686-114">Las cláusulas de la declaración de enlace pueden estar en cualquier orden y hay muchas combinaciones posibles.</span><span class="sxs-lookup"><span data-stu-id="ca686-114">The clauses in the binding declaration can be in any order and there are many possible combinations.</span></span> <span data-ttu-id="ca686-115">Las cláusulas son *nombre*=*valor* pares where *nombre* es el nombre de la <xref:System.Windows.Data.Binding> propiedad y *valor* es el valor que se establece para la propiedad.</span><span class="sxs-lookup"><span data-stu-id="ca686-115">The clauses are *Name*=*Value* pairs where *Name* is the name of the <xref:System.Windows.Data.Binding> property and *Value* is the value you are setting for the property.</span></span>  
   
- Al crear cadenas de declaración de enlace en el marcado, deben asociarse a la [propiedad de dependencia](GTMT) concreta de un objeto de destino.  En el ejemplo siguiente se muestra cómo enlazar la propiedad <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> mediante la extensión de enlace, especificando las propiedades <xref:System.Windows.Data.Binding.Source%2A> y <xref:System.Windows.Data.Binding.Path%2A>.  
+ <span data-ttu-id="ca686-116">Al crear cadenas de declaración de enlace en el marcado, se adjuntará a la propiedad de dependencia concreta de un objeto de destino.</span><span class="sxs-lookup"><span data-stu-id="ca686-116">When creating binding declaration strings in markup, they must be attached to the specific dependency property of a target object.</span></span> <span data-ttu-id="ca686-117">En el ejemplo siguiente se muestra cómo enlazar la <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propiedad mediante la extensión de enlace, especificando el <xref:System.Windows.Data.Binding.Source%2A> y <xref:System.Windows.Data.Binding.Path%2A> propiedades.</span><span class="sxs-lookup"><span data-stu-id="ca686-117">The following example shows how to bind the <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> property using the binding extension, specifying the <xref:System.Windows.Data.Binding.Source%2A> and <xref:System.Windows.Data.Binding.Path%2A> properties.</span></span>  
   
- [!code-xml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
   
- Puede especificar la mayoría de las propiedades de la clase <xref:System.Windows.Data.Binding> de este modo.  Para obtener más información sobre la extensión de enlace y una lista de propiedades de <xref:System.Windows.Data.Binding> que no se pueden establecer por medio de ella, vea la información general [Enlazar extensión de marcado](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
+ <span data-ttu-id="ca686-118">Puede especificar la mayoría de las propiedades de la <xref:System.Windows.Data.Binding> clase de esta manera.</span><span class="sxs-lookup"><span data-stu-id="ca686-118">You can specify most of the properties of the <xref:System.Windows.Data.Binding> class this way.</span></span> <span data-ttu-id="ca686-119">Para obtener más información acerca de la extensión de enlace, así como una lista de <xref:System.Windows.Data.Binding> propiedades que no se puede establecer mediante la extensión de enlace, vea la [extensión de marcado de enlace](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) información general.</span><span class="sxs-lookup"><span data-stu-id="ca686-119">For more information about the binding extension as well as for a list of <xref:System.Windows.Data.Binding> properties that cannot be set using the binding extension, see the [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) overview.</span></span>  
   
 <a name="ObjectElementSyntax"></a>   
-### Sintaxis de elementos de objeto  
- La sintaxis de elementos de objeto es una alternativa a la creación de la declaración de enlace.  En la mayoría de los casos, utilizar la extensión de marcado o la sintaxis de elementos de objeto no aporta ninguna ventaja concreta.  Sin embargo, en aquellos casos en que la extensión de marcado no admite el escenario, como cuando el tipo del valor de propiedad no es de cadena y no existe ninguna conversión de tipos para él, es preciso utilizar la sintaxis de elementos de objeto.  
+### <a name="object-element-syntax"></a><span data-ttu-id="ca686-120">Sintaxis de elemento de objeto</span><span class="sxs-lookup"><span data-stu-id="ca686-120">Object Element Syntax</span></span>  
+ <span data-ttu-id="ca686-121">La sintaxis de elemento de objeto es una alternativa a la creación de la declaración de enlace.</span><span class="sxs-lookup"><span data-stu-id="ca686-121">Object element syntax is an alternative to creating the binding declaration.</span></span> <span data-ttu-id="ca686-122">En la mayoría de los casos, no hay ninguna ventaja particular para usar la extensión de marcado o la sintaxis de elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="ca686-122">In most cases, there is no particular advantage to using either the markup extension or the object element syntax.</span></span> <span data-ttu-id="ca686-123">Sin embargo, en aquellos casos en los que la extensión de marcado no admite el escenario, como cuando el valor de la propiedad es de un tipo que no es una cadena para la que no existe conversión de tipo, debe utilizar la sintaxis de elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="ca686-123">However, in cases which the markup extension does not support your scenario, such as when your property value is of a non-string type for which no type conversion exists, you need to use the object element syntax.</span></span>  
   
- A continuación, se muestra un ejemplo de sintaxis de elementos de objeto y de uso de la extensión de marcado:  
+ <span data-ttu-id="ca686-124">El siguiente es un ejemplo de la sintaxis de elemento de objeto y el uso de la extensión de marcado:</span><span class="sxs-lookup"><span data-stu-id="ca686-124">The following is an example of both the object element syntax and the markup extension usage:</span></span>  
   
- [!code-xml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
- En el ejemplo se enlaza la propiedad <xref:System.Windows.Controls.TextBlock.Foreground%2A> declarando un enlace mediante la sintaxis de extensiones.  La declaración de enlace de la propiedad <xref:System.Windows.Controls.TextBlock.Text%2A> utiliza la sintaxis de elementos de objeto.  
+ <span data-ttu-id="ca686-125">El ejemplo se enlaza la <xref:System.Windows.Controls.TextBlock.Foreground%2A> propiedad declarando un enlace mediante la sintaxis de extensión.</span><span class="sxs-lookup"><span data-stu-id="ca686-125">The example binds the <xref:System.Windows.Controls.TextBlock.Foreground%2A> property by declaring a binding using the extension syntax.</span></span> <span data-ttu-id="ca686-126">La declaración de enlace para el <xref:System.Windows.Controls.TextBlock.Text%2A> propiedad utiliza la sintaxis de elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="ca686-126">The binding declaration for the <xref:System.Windows.Controls.TextBlock.Text%2A> property uses the object element syntax.</span></span>  
   
- Para obtener información acerca de los distintos términos utilizados, vea [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ <span data-ttu-id="ca686-127">Para más información sobre los distintos términos, consulte [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span><span class="sxs-lookup"><span data-stu-id="ca686-127">For more information about the different terms, see [XAML Syntax In Detail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span></span>  
   
 <a name="MBandPB"></a>   
-### MultiBinding y PriorityBinding  
- <xref:System.Windows.Data.MultiBinding> y <xref:System.Windows.Data.PriorityBinding> no admiten la sintaxis de extensión XAML.  Por consiguiente, debe utilizar la sintaxis de elementos de objeto para declarar <xref:System.Windows.Data.MultiBinding> o <xref:System.Windows.Data.PriorityBinding> en XAML.  
+### <a name="multibinding-and-prioritybinding"></a><span data-ttu-id="ca686-128">MultiBinding y PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="ca686-128">MultiBinding and PriorityBinding</span></span>  
+ <span data-ttu-id="ca686-129"><xref:System.Windows.Data.MultiBinding>y <xref:System.Windows.Data.PriorityBinding> no admiten la sintaxis de extensión XAML.</span><span class="sxs-lookup"><span data-stu-id="ca686-129"><xref:System.Windows.Data.MultiBinding> and <xref:System.Windows.Data.PriorityBinding> do not support the XAML extension syntax.</span></span> <span data-ttu-id="ca686-130">Por lo tanto, debe utilizar la sintaxis de elemento de objeto si declara un <xref:System.Windows.Data.MultiBinding> o <xref:System.Windows.Data.PriorityBinding> en XAML.</span><span class="sxs-lookup"><span data-stu-id="ca686-130">Therefore, you must use the object element syntax if you are declaring a <xref:System.Windows.Data.MultiBinding> or a <xref:System.Windows.Data.PriorityBinding> in XAML.</span></span>  
   
 <a name="BindinginCode"></a>   
-## Crear un enlace mediante código  
- Otra manera de especificar un enlace consiste en establecer directamente las propiedades de un objeto <xref:System.Windows.Data.Binding> mediante código.  En el ejemplo siguiente, se muestra cómo crear un objeto <xref:System.Windows.Data.Binding> y especificar las propiedades mediante código.  En este ejemplo, `TheConverter` es un objeto que implementa la interfaz <xref:System.Windows.Data.IValueConverter>.  
+## <a name="creating-a-binding-in-code"></a><span data-ttu-id="ca686-131">Crear un enlace mediante código</span><span class="sxs-lookup"><span data-stu-id="ca686-131">Creating a Binding in Code</span></span>  
+ <span data-ttu-id="ca686-132">Otra manera de especificar un enlace consiste en establecer las propiedades directamente en un <xref:System.Windows.Data.Binding> objeto en el código.</span><span class="sxs-lookup"><span data-stu-id="ca686-132">Another way to specify a binding is to set properties directly on a <xref:System.Windows.Data.Binding> object in code.</span></span> <span data-ttu-id="ca686-133">En el ejemplo siguiente se muestra cómo crear un <xref:System.Windows.Data.Binding> de objetos y especificar las propiedades en el código.</span><span class="sxs-lookup"><span data-stu-id="ca686-133">The following example shows how to create a <xref:System.Windows.Data.Binding> object and specify the properties in code.</span></span>  <span data-ttu-id="ca686-134">En este ejemplo, `TheConverter` es un objeto que implementa el <xref:System.Windows.Data.IValueConverter> interfaz.</span><span class="sxs-lookup"><span data-stu-id="ca686-134">In this example, `TheConverter` is an object that implements the <xref:System.Windows.Data.IValueConverter> interface.</span></span>  
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
 [!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
 [!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
- Si el objeto que se enlaza es <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, puede llamar directamente al método `SetBinding` del objeto en lugar de utilizar <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=fullName>.  Para obtener un ejemplo, vea [Crear un enlace mediante código](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ <span data-ttu-id="ca686-135">Si el objeto que se va a enlazar es un <xref:System.Windows.FrameworkElement> o un <xref:System.Windows.FrameworkContentElement> puede llamar a la `SetBinding` método en el objeto directamente, en lugar de usar <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ca686-135">If the object you are binding is a <xref:System.Windows.FrameworkElement> or a <xref:System.Windows.FrameworkContentElement> you can call the `SetBinding` method on your object directly instead of using <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="ca686-136">Para obtener un ejemplo, consulte [Crear un enlace mediante código](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).</span><span class="sxs-lookup"><span data-stu-id="ca686-136">For an example, see [Create a Binding in Code](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).</span></span>  
   
 <a name="Path_Syntax"></a>   
-## Sintaxis de ruta de acceso enlace  
- Utilice la propiedad <xref:System.Windows.Data.Binding.Path%2A> para especificar el valor del origen al que desea enlazar:  
+## <a name="binding-path-syntax"></a><span data-ttu-id="ca686-137">Sintaxis de la ruta de enlace</span><span class="sxs-lookup"><span data-stu-id="ca686-137">Binding Path Syntax</span></span>  
+ <span data-ttu-id="ca686-138">Use la <xref:System.Windows.Data.Binding.Path%2A> propiedad para especificar el valor de origen que desea enlazar:</span><span class="sxs-lookup"><span data-stu-id="ca686-138">Use the <xref:System.Windows.Data.Binding.Path%2A> property to specify the source value you want to bind to:</span></span>  
   
--   En el caso más simple, el valor de propiedad <xref:System.Windows.Data.Binding.Path%2A> es el nombre de la propiedad del objeto de origen que se usará para el enlace, como `Path=PropertyName`.  
+-   <span data-ttu-id="ca686-139">En el caso más simple, el <xref:System.Windows.Data.Binding.Path%2A> valor de la propiedad es el nombre de la propiedad del objeto de origen que se usará para el enlace, como `Path=PropertyName`.</span><span class="sxs-lookup"><span data-stu-id="ca686-139">In the simplest case, the <xref:System.Windows.Data.Binding.Path%2A> property value is the name of the property of the source object to use for the binding, such as `Path=PropertyName`.</span></span>  
   
--   Las subpropiedades de una propiedad se pueden especificar mediante una sintaxis parecida, como en [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)].  Por ejemplo, la cláusula `Path=ShoppingCart.Order` establece el enlace a la subpropiedad `Order` del objeto o la propiedad `ShoppingCart`.  
+-   <span data-ttu-id="ca686-140">Se pueden especificar subpropiedades de una propiedad mediante una sintaxis similar a la de [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ca686-140">Subproperties of a property can be specified by a similar syntax as in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)].</span></span> <span data-ttu-id="ca686-141">Por ejemplo, la cláusula `Path=ShoppingCart.Order` define el enlace a la subpropiedad `Order` del objeto o la propiedad `ShoppingCart`.</span><span class="sxs-lookup"><span data-stu-id="ca686-141">For instance, the clause `Path=ShoppingCart.Order` sets the binding to the subproperty `Order` of the object or property `ShoppingCart`.</span></span>  
   
--   Para enlazar a una [propiedad adjunta](GTMT), coloque la [propiedad adjunta](GTMT) entre paréntesis.  Por ejemplo, para enlazar a la [propiedad adjunta](GTMT) <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=fullName>, la sintaxis es `Path=(DockPanel.Dock)`.  
+-   <span data-ttu-id="ca686-142">Para enlazar a una propiedad adjunta, coloque paréntesis alrededor de esta propiedad.</span><span class="sxs-lookup"><span data-stu-id="ca686-142">To bind to an attached property, place parentheses around the attached property.</span></span> <span data-ttu-id="ca686-143">Por ejemplo, para enlazar a la propiedad adjunta <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, la sintaxis es `Path=(DockPanel.Dock)`.</span><span class="sxs-lookup"><span data-stu-id="ca686-143">For example, to bind to the attached property <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, the syntax is `Path=(DockPanel.Dock)`.</span></span>  
   
--   Los indizadores de una propiedad se pueden especificar entre corchetes después del nombre de la propiedad donde se aplica el indizador.  Por ejemplo, la cláusula `Path=ShoppingCart[0]` establece el enlace al índice que corresponde a cómo se administra la cadena literal "0" en la indización interna de la propiedad.  También se admiten indizadores anidados.  
+-   <span data-ttu-id="ca686-144">Los indizadores de una propiedad pueden especificarse entre corchetes después del nombre de la propiedad donde se aplica el indizador.</span><span class="sxs-lookup"><span data-stu-id="ca686-144">Indexers of a property can be specified within square brackets following the property name where the indexer is applied.</span></span> <span data-ttu-id="ca686-145">Por ejemplo, la cláusula `Path=ShoppingCart[0]` establece el enlace al índice que se corresponde a cómo la indización interna de la propiedad administra la cadena literal "0".</span><span class="sxs-lookup"><span data-stu-id="ca686-145">For instance, the clause `Path=ShoppingCart[0]` sets the binding to the index that corresponds to how your property's internal indexing handles the literal string "0".</span></span> <span data-ttu-id="ca686-146">También se admiten indizadores anidados.</span><span class="sxs-lookup"><span data-stu-id="ca686-146">Nested indexers are also supported.</span></span>  
   
--   Los indizadores y las subpropiedades se pueden mezclar en una cláusula `Path`; por ejemplo, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   <span data-ttu-id="ca686-147">Los indizadores y las subpropiedades se pueden combinar en una cláusula `Path`; por ejemplo, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`.</span><span class="sxs-lookup"><span data-stu-id="ca686-147">Indexers and subproperties can be mixed in a `Path` clause; for example, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`</span></span>  
   
--   Dentro de los indizadores puede tener varios parámetros de indizador separados por comas \(,\).  El tipo de cada parámetro se puede especificar con paréntesis.  Por ejemplo, puede tener `Path="[(sys:Int32)42,(sys:Int32)24]"`, donde `sys` se asigna al espacio de nombres `System`.  
+-   <span data-ttu-id="ca686-148">Dentro de los indizadores puede tener varios parámetros de indizador separados por comas (,).</span><span class="sxs-lookup"><span data-stu-id="ca686-148">Inside indexers you can have multiple indexer parameters separated by commas (,).</span></span> <span data-ttu-id="ca686-149">El tipo de cada parámetro se puede especificar con paréntesis.</span><span class="sxs-lookup"><span data-stu-id="ca686-149">The type of each parameter can be specified with parentheses.</span></span> <span data-ttu-id="ca686-150">Por ejemplo, puede tener `Path="[(sys:Int32)42,(sys:Int32)24]"`, donde `sys` se asigna a la `System` espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="ca686-150">For example, you can have `Path="[(sys:Int32)42,(sys:Int32)24]"`, where `sys` is mapped to the `System` namespace.</span></span>  
   
--   Cuando el origen es una vista de colección, el elemento actual puede especificarse con una barra diagonal \(\/\).  Por ejemplo, la cláusula `Path=/` establece el enlace en el elemento actual de la vista.  Cuando el origen es una colección, esta sintaxis especifica el elemento actual de la vista de colección predeterminada.  
+-   <span data-ttu-id="ca686-151">Cuando el origen es una vista de colección, el elemento actual puede especificarse con una barra diagonal (/).</span><span class="sxs-lookup"><span data-stu-id="ca686-151">When the source is a collection view, the current item can be specified with a slash (/).</span></span> <span data-ttu-id="ca686-152">Por ejemplo, la cláusula `Path=/` establece el enlace al elemento actual en la vista.</span><span class="sxs-lookup"><span data-stu-id="ca686-152">For example, the clause `Path=/` sets the binding to the current item in the view.</span></span> <span data-ttu-id="ca686-153">Si el origen es una colección, esta sintaxis especifica el elemento actual de la vista de colección predeterminada.</span><span class="sxs-lookup"><span data-stu-id="ca686-153">When the source is a collection, this syntax specifies the current item of the default collection view.</span></span>  
   
--   Se pueden combinar nombres de propiedad y barras diagonales para recorrer las propiedades que son colecciones.  Por ejemplo, `Path=/Offices/ManagerName` especifica el elemento actual de la colección de origen, que contiene una propiedad `Offices` que también es una colección.  Su elemento actual es un objeto que contiene una propiedad `ManagerName`.  
+-   <span data-ttu-id="ca686-154">Barras diagonales y nombres de propiedad se pueden combinar para recorrer las propiedades que son colecciones.</span><span class="sxs-lookup"><span data-stu-id="ca686-154">Property names and slashes can be combined to traverse properties that are collections.</span></span> <span data-ttu-id="ca686-155">Por ejemplo, `Path=/Offices/ManagerName` especifica el elemento actual de la colección de origen, que contiene un `Offices` propiedad que también es una colección.</span><span class="sxs-lookup"><span data-stu-id="ca686-155">For example, `Path=/Offices/ManagerName` specifies the current item of the source collection, which contains an `Offices` property that is also a collection.</span></span> <span data-ttu-id="ca686-156">Su elemento actual es un objeto que contiene un `ManagerName` propiedad.</span><span class="sxs-lookup"><span data-stu-id="ca686-156">Its current item is an object that contains a `ManagerName` property.</span></span>  
   
--   Opcionalmente, se puede usar una ruta de acceso con punto \(.\) para enlazar al origen actual.  Por ejemplo, `Text="{Binding}"` es equivalente a `Text="{Binding Path=.}"`.  
+-   <span data-ttu-id="ca686-157">Opcionalmente, puede usar una ruta de acceso de punto (.) para enlazar al origen actual.</span><span class="sxs-lookup"><span data-stu-id="ca686-157">Optionally, a period (.) path can be used to bind to the current source.</span></span> <span data-ttu-id="ca686-158">Por ejemplo, `Text="{Binding}"` es equivalente a `Text="{Binding Path=.}"`.</span><span class="sxs-lookup"><span data-stu-id="ca686-158">For example, `Text="{Binding}"` is equivalent to `Text="{Binding Path=.}"`.</span></span>  
   
-### Mecanismo de escape  
+### <a name="escaping-mechanism"></a><span data-ttu-id="ca686-159">Mecanismo de escape</span><span class="sxs-lookup"><span data-stu-id="ca686-159">Escaping Mechanism</span></span>  
   
--   Dentro de los indizadores \(\[ \]\), el carácter de intercalación \(^\) es el carácter de escape para el carácter siguiente.  
+-   <span data-ttu-id="ca686-160">Dentro de los indizadores ([ ]), el carácter de intercalación (^) realiza el escape del carácter siguiente.</span><span class="sxs-lookup"><span data-stu-id="ca686-160">Inside indexers ([ ]), the caret character (^) escapes the next character.</span></span>  
   
--   Si establece <xref:System.Windows.Data.Binding.Path%2A> en XAML, también deberá marcar con caracteres de escape \(mediante entidades XML\) algunos caracteres especiales de la definición del lenguaje XML:  
+-   <span data-ttu-id="ca686-161">Si establece <xref:System.Windows.Data.Binding.Path%2A> en XAML, también necesita secuencias de escape (mediante entidades XML) ciertos caracteres que son específicos de la definición del lenguaje XML:</span><span class="sxs-lookup"><span data-stu-id="ca686-161">If you set <xref:System.Windows.Data.Binding.Path%2A> in XAML, you also need to escape (using XML entities) certain characters that are special to the XML language definition:</span></span>  
   
-    -   Utilice `&` como secuencia de escape para el carácter "&".  
+    -   <span data-ttu-id="ca686-162">Use `&` para realizar el escape del carácter "&".</span><span class="sxs-lookup"><span data-stu-id="ca686-162">Use `&` to escape the character "&".</span></span>  
   
-    -   Utilice `>` como secuencia de escape de la etiqueta de cierre"\>".  
+    -   <span data-ttu-id="ca686-163">Use `>` para realizar el escape de la etiqueta final ">".</span><span class="sxs-lookup"><span data-stu-id="ca686-163">Use `>` to escape the end tag ">".</span></span>  
   
--   Además, si describe el enlace completo en un atributo utilizando la sintaxis de extensión de marcado, deberá utilizar un mecanismo de escape \(usando la barra diagonal inversa \\\) para los caracteres especiales del analizador de extensión de marcado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+-   <span data-ttu-id="ca686-164">Además, si describe el enlace completo en un atributo mediante la sintaxis de extensión de marcado, deberá realizar el escape (con la barra diagonal inversa \\) de los caracteres que son especiales para el analizador de extensión de marcado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="ca686-164">Additionally, if you describe the entire binding in an attribute using the markup extension syntax, you need to escape (using backslash \\) characters that are special to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] markup extension parser:</span></span>  
   
-    -   La barra diagonal inversa \(\\\) es el propio carácter de escape.  
+    -   <span data-ttu-id="ca686-165">La barra diagonal inversa (\\) es el mismo carácter de escape.</span><span class="sxs-lookup"><span data-stu-id="ca686-165">Backslash (\\) is the escape character itself.</span></span>  
   
-    -   El signo igual \(\=\) separa el nombre de propiedad del valor de propiedad.  
+    -   <span data-ttu-id="ca686-166">El signo igual (=) separa el nombre de propiedad del valor de propiedad.</span><span class="sxs-lookup"><span data-stu-id="ca686-166">The equal sign (=) separates property name from property value.</span></span>  
   
-    -   La coma \(,\) separa las propiedades.  
+    -   <span data-ttu-id="ca686-167">La coma (,) separa las propiedades.</span><span class="sxs-lookup"><span data-stu-id="ca686-167">Comma (,) separates properties.</span></span>  
   
-    -   La llave de cierre \(}\) es el fin de una extensión de marcado.  
+    -   <span data-ttu-id="ca686-168">La llave de cierre (}) es el final de una extensión de marcado.</span><span class="sxs-lookup"><span data-stu-id="ca686-168">The right curly brace (}) is the end of a markup extension.</span></span>  
   
 <a name="Default"></a>   
-## Comportamientos predeterminados  
- El comportamiento predeterminado el siguiente si no se especifica en la declaración.  
+## <a name="default-behaviors"></a><span data-ttu-id="ca686-169">Comportamientos predeterminados</span><span class="sxs-lookup"><span data-stu-id="ca686-169">Default Behaviors</span></span>  
+ <span data-ttu-id="ca686-170">El comportamiento predeterminado es el siguiente si no se especifica en la declaración.</span><span class="sxs-lookup"><span data-stu-id="ca686-170">The default behavior is as follows if not specified in the declaration.</span></span>  
   
--   Se crea un convertidor predeterminado que intenta hacer una conversión de tipos entre el valor del [origen de enlace](GTMT) y el valor del [destino de enlace](GTMT).  Si no se puede realizar una conversión, el convertidor predeterminado devuelve `null`.  
+-   <span data-ttu-id="ca686-171">Se crea un convertidor predeterminado que intenta realizar una conversión de tipos entre el valor de origen de enlace y el valor de destino del enlace.</span><span class="sxs-lookup"><span data-stu-id="ca686-171">A default converter is created that tries to do a type conversion between the binding source value and the binding target value.</span></span> <span data-ttu-id="ca686-172">Si no se puede realizar una conversión, el convertidor predeterminado devuelve `null`.</span><span class="sxs-lookup"><span data-stu-id="ca686-172">If a conversion cannot be made, the default converter returns `null`.</span></span>  
   
--   Si no se establece <xref:System.Windows.Data.Binding.ConverterCulture%2A>, el motor de enlace utiliza la propiedad `Language` del objeto de [destino de enlace](GTMT).  En XAML, el valor predeterminado se establece en "en\-US" o se hereda del elemento raíz \(o de cualquier elemento\) de la página, si se ha establecido explícitamente.  
+-   <span data-ttu-id="ca686-173">Si no establece <xref:System.Windows.Data.Binding.ConverterCulture%2A>, el motor de enlace utiliza la `Language` propiedad del objeto de destino de enlace.</span><span class="sxs-lookup"><span data-stu-id="ca686-173">If you do not set <xref:System.Windows.Data.Binding.ConverterCulture%2A>, the binding engine uses the `Language` property of the binding target object.</span></span> <span data-ttu-id="ca686-174">En XAML, tiene como valor predeterminado "en-US" o hereda el valor de elemento raíz (o cualquier elemento) de la página, si se ha establecido explícitamente.</span><span class="sxs-lookup"><span data-stu-id="ca686-174">In XAML, this defaults to "en-US" or inherits the value from the root element (or any element) of the page, if one has been explicitly set.</span></span>  
   
--   Siempre que el enlace tenga ya un contexto de datos \(por ejemplo, el contexto de datos heredado procedente de un elemento primario\), y que el elemento o la colección que ese contexto devuelva sea adecuado para el enlace sin requerir ninguna modificación ulterior de la ruta, una declaración de enlace puede no tener ninguna cláusula: `{Binding}`. Con frecuencia, los enlaces para estilos de datos se especifican de este modo, donde el enlace actúa en una colección.  Para obtener más información, vea la sección "Utilizar objetos completos como origen de enlace" en [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   <span data-ttu-id="ca686-175">Siempre que el enlace ya tenga un contexto de datos (por ejemplo, el contexto de datos heredado procedente de un elemento primario) y con independencia de que el elemento o la colección que se devuelve en ese contexto sea apropiado para el enlace sin necesitar una modificación adicional de la ruta, una declaración de enlace no puede tener ninguna cláusula: `{Binding}` suele ser la manera en que se especifica un enlace para los estilos de datos, donde el enlace se actúa sobre una colección.</span><span class="sxs-lookup"><span data-stu-id="ca686-175">As long as the binding already has a data context (for instance, the inherited data context coming from a parent element), and whatever item or collection being returned by that context is appropriate for binding without requiring further path modification, a binding declaration can have no clauses at all: `{Binding}` This is often the way a binding is specified for data styling, where the binding acts upon a collection.</span></span> <span data-ttu-id="ca686-176">Para más información, consulte la sección "Utilizar objetos completos como origen de enlace" en [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span><span class="sxs-lookup"><span data-stu-id="ca686-176">For more information, see the "Entire Objects Used as a Binding Source" section in the [Binding Sources Overview](../../../../docs/framework/wpf/data/binding-sources-overview.md).</span></span>  
   
--   El valor predeterminado de la propiedad <xref:System.Windows.Data.Binding.Mode%2A> puede ser unidireccional y bidireccional, según la [propiedad de dependencia](GTMT) que se enlace.  Siempre puede declarar explícitamente el modo de enlace, para asegurarse de que su comportamiento sea el deseado.  En general, las propiedades de control que puede modificar el usuario, como <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> y <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=fullName>, tienen como valor predeterminado enlaces bidireccionales, mientras que la mayoría de las demás propiedades tienen como valor predeterminado enlaces unidireccionales.  
+-   <span data-ttu-id="ca686-177">El valor predeterminado <xref:System.Windows.Data.Binding.Mode%2A> varía entre unidireccionales y bidireccionales dependiendo de la propiedad de dependencia que se va a enlazar.</span><span class="sxs-lookup"><span data-stu-id="ca686-177">The default <xref:System.Windows.Data.Binding.Mode%2A> varies between one-way and two-way depending on the dependency property that is being bound.</span></span> <span data-ttu-id="ca686-178">Siempre puede declarar explícitamente el modo de enlace para asegurarse de que el enlace tiene el comportamiento deseado.</span><span class="sxs-lookup"><span data-stu-id="ca686-178">You can always declare the binding mode explicitly to ensure that your binding has the desired behavior.</span></span> <span data-ttu-id="ca686-179">En Propiedades de control general, puede modificar el usuario, como <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, valor predeterminado enlaces bidireccionales, mientras que la mayoría de las otra propiedades valor predeterminado enlaces unidireccionales.</span><span class="sxs-lookup"><span data-stu-id="ca686-179">In general, user-editable control properties, such as <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> and <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, default to two-way bindings, whereas most other properties default to one-way bindings.</span></span>  
   
--   El valor predeterminado de <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> varía entre <xref:System.Windows.Data.UpdateSourceTrigger> y <xref:System.Windows.Data.UpdateSourceTrigger>, también según la [propiedad de dependencia](GTMT) enlazada.  El valor predeterminado de la mayoría de las [propiedades de dependencia](GTMT) es <xref:System.Windows.Data.UpdateSourceTrigger>, mientras que la propiedad <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=fullName> tiene un valor predeterminado de <xref:System.Windows.Data.UpdateSourceTrigger>.  
+-   <span data-ttu-id="ca686-180">El valor predeterminado <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor varía entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> y <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> dependiendo de la propiedad de dependencia enlazadas así.</span><span class="sxs-lookup"><span data-stu-id="ca686-180">The default <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> value varies between <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> and <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> depending on the bound dependency property as well.</span></span> <span data-ttu-id="ca686-181">El valor predeterminado de la mayoría de las propiedades de dependencia es <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, mientras que la propiedad <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> tiene un valor predeterminado de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.</span><span class="sxs-lookup"><span data-stu-id="ca686-181">The default value for most dependency properties is <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, while the <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> property has a default value of <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.</span></span>  
   
-## Vea también  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)   
- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Sintaxis de PropertyPath de XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+## <a name="see-also"></a><span data-ttu-id="ca686-182">Vea también</span><span class="sxs-lookup"><span data-stu-id="ca686-182">See Also</span></span>  
+ [<span data-ttu-id="ca686-183">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="ca686-183">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="ca686-184">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="ca686-184">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [<span data-ttu-id="ca686-185">Enlace de datos</span><span class="sxs-lookup"><span data-stu-id="ca686-185">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="ca686-186">Sintaxis de PropertyPath de XAML</span><span class="sxs-lookup"><span data-stu-id="ca686-186">PropertyPath XAML Syntax</span></span>](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

@@ -1,100 +1,98 @@
 ---
-title: "Instrucci&#243;n While...End While (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.While"
-  - "vb.While...EndWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "While (instrucción)"
-  - "While (instrucción), While...End While"
-  - "While...End While (instrucciones)"
+title: "Instrucción While...End While (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.While
+- vb.While...EndWhile
+helpviewer_keywords:
+- While statement [Visual Basic], While...End While
+- While statement [Visual Basic]
+- While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Instrucci&#243;n While...End While (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Ejecuta una serie de instrucciones siempre que una condición dada sea `True`.  
+# <a name="whileend-while-statement-visual-basic"></a><span data-ttu-id="a0e82-102">Instrucción While...End While (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0e82-102">While...End While Statement (Visual Basic)</span></span>
+<span data-ttu-id="a0e82-103">Ejecuta una serie de instrucciones mientras una condición determinada es `True`.</span><span class="sxs-lookup"><span data-stu-id="a0e82-103">Runs a series of statements as long as a given condition is `True`.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="a0e82-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a0e82-104">Syntax</span></span>  
   
 ```  
 While condition  
-    [ statements ]  
+    [ statements ]  
     [ Continue While ]  
     [ statements ]  
-    [ Exit While ]  
-    [ statements ]  
+    [ Exit While ]  
+    [ statements ]  
 End While  
 ```  
   
-## Elementos  
+## <a name="parts"></a><span data-ttu-id="a0e82-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="a0e82-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Término|Definición|  
-|`condition`|Requerido.  Expresión `Boolean`.  Si `condition` es `Nothing`, Visual Basic la trata como `False`.|  
-|`statements`|Opcional.  Una o más instrucciones a continuación de `While`, que se ejecutan cada vez que `condition` es `True`.|  
-|`Continue While`|Opcional.  Transfiere el control a la siguiente iteración del bloque de `While` .|  
-|`Exit While`|Opcional.  Transfiere el control fuera del bloque `While`.|  
-|`End While`|Requerido.  Termina la definición del bloque `While`.|  
+|<span data-ttu-id="a0e82-106">Término</span><span class="sxs-lookup"><span data-stu-id="a0e82-106">Term</span></span>|<span data-ttu-id="a0e82-107">Definición</span><span class="sxs-lookup"><span data-stu-id="a0e82-107">Definition</span></span>|  
+|---|---|  
+|`condition`|<span data-ttu-id="a0e82-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="a0e82-108">Required.</span></span> <span data-ttu-id="a0e82-109">`Boolean`expresión.</span><span class="sxs-lookup"><span data-stu-id="a0e82-109">`Boolean` expression.</span></span> <span data-ttu-id="a0e82-110">Si `condition` es `Nothing`, Visual Basic lo trata como `False`.</span><span class="sxs-lookup"><span data-stu-id="a0e82-110">If `condition` is `Nothing`, Visual Basic treats it as `False`.</span></span>|  
+|`statements`|<span data-ttu-id="a0e82-111">Opcional.</span><span class="sxs-lookup"><span data-stu-id="a0e82-111">Optional.</span></span> <span data-ttu-id="a0e82-112">Uno o más instrucciones que siguen `While`, que ejecutará cada vez `condition` es `True`.</span><span class="sxs-lookup"><span data-stu-id="a0e82-112">One or more statements following `While`, which run every time `condition` is `True`.</span></span>|  
+|`Continue While`|<span data-ttu-id="a0e82-113">Opcional.</span><span class="sxs-lookup"><span data-stu-id="a0e82-113">Optional.</span></span> <span data-ttu-id="a0e82-114">Transfiere el control a la siguiente iteración de la `While` bloque.</span><span class="sxs-lookup"><span data-stu-id="a0e82-114">Transfers control to the next iteration of the `While` block.</span></span>|  
+|`Exit While`|<span data-ttu-id="a0e82-115">Opcional.</span><span class="sxs-lookup"><span data-stu-id="a0e82-115">Optional.</span></span> <span data-ttu-id="a0e82-116">Transfiere el control fuera de la `While` bloque.</span><span class="sxs-lookup"><span data-stu-id="a0e82-116">Transfers control out of the `While` block.</span></span>|  
+|`End While`|<span data-ttu-id="a0e82-117">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="a0e82-117">Required.</span></span> <span data-ttu-id="a0e82-118">Termina la definición del bloque `While`.</span><span class="sxs-lookup"><span data-stu-id="a0e82-118">Terminates the definition of the `While` block.</span></span>|  
   
-## Comentarios  
- Utilice una estructura `While...End While` si desea repetir un conjunto de instrucciones un número indefinido de veces, siempre que una condición sea `True`.  Si desea más flexibilidad con respecto a la ubicación donde prueba la condición o al resultado para el que la prueba, quizá prefiera [Do...Loop \(Instrucción\)](../../../visual-basic/language-reference/statements/do-loop-statement.md).  Si desea repetir las instrucciones un número fijo de veces, [For...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-next-statement.md) suele ser mejor opción.  
+## <a name="remarks"></a><span data-ttu-id="a0e82-119">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a0e82-119">Remarks</span></span>  
+ <span data-ttu-id="a0e82-120">Use un `While...End While` cuando desea repetir un conjunto de instrucciones un número indefinido de veces, siempre que una condición de la estructura `True`.</span><span class="sxs-lookup"><span data-stu-id="a0e82-120">Use a `While...End While` structure when you want to repeat a set of statements an indefinite number of times, as long as a condition remains `True`.</span></span> <span data-ttu-id="a0e82-121">Si desea más flexibilidad con en el que probar la condición o resultado para el que la prueba, es preferible el [hacer... Instrucción de bucle](../../../visual-basic/language-reference/statements/do-loop-statement.md).</span><span class="sxs-lookup"><span data-stu-id="a0e82-121">If you want more flexibility with where you test the condition or what result you test it for, you might prefer the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).</span></span> <span data-ttu-id="a0e82-122">Si desea repetir las instrucciones un número determinado de veces, el [para... Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md) suele ser una opción mejor.</span><span class="sxs-lookup"><span data-stu-id="a0e82-122">If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.</span></span>  
   
 > [!NOTE]
->  La palabra clave `While` también se utiliza en [Do...Loop \(Instrucción\)](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While \(Cláusula\)](../../../visual-basic/language-reference/queries/skip-while-clause.md) y [Take While \(Cláusula\)](../../../visual-basic/language-reference/queries/take-while-clause.md).  
+>  <span data-ttu-id="a0e82-123">El `While` también se utiliza la palabra clave en el [hacer... Instrucción de bucle](../../../visual-basic/language-reference/statements/do-loop-statement.md), el [omitir While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md) y [Take While cláusula](../../../visual-basic/language-reference/queries/take-while-clause.md).</span><span class="sxs-lookup"><span data-stu-id="a0e82-123">The `While` keyword is also used in the [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md), the [Skip While Clause](../../../visual-basic/language-reference/queries/skip-while-clause.md) and the [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md).</span></span>  
   
- Si `condition` es `True`, se ejecutan todas las `statements` hasta que se encuentra la instrucción `End While` El Control se devuelve a `While` el fragmento, y `condition` se comprueba de nuevo.  Si `condition` aún es `True`, se repite el proceso.  Si es `False`, el control que se va a extraer que sigue el fragmento de `End While` .  
+ <span data-ttu-id="a0e82-124">Si `condition` es `True`, todos los de la `statements` ejecución hasta que el `End While` se encuentra la instrucción.</span><span class="sxs-lookup"><span data-stu-id="a0e82-124">If `condition` is `True`, all of the `statements` run until the `End While` statement is encountered.</span></span> <span data-ttu-id="a0e82-125">Controlar, a continuación, vuelve a la `While` (instrucción), y `condition` se comprueba de nuevo.</span><span class="sxs-lookup"><span data-stu-id="a0e82-125">Control then returns to the `While` statement, and `condition` is again checked.</span></span> <span data-ttu-id="a0e82-126">Si `condition` sigue siendo `True`, el proceso se repite.</span><span class="sxs-lookup"><span data-stu-id="a0e82-126">If `condition` is still `True`, the process is repeated.</span></span> <span data-ttu-id="a0e82-127">Si tiene `False`, control pasa a la instrucción que sigue a la `End While` instrucción.</span><span class="sxs-lookup"><span data-stu-id="a0e82-127">If it’s `False`, control passes to the statement that follows the `End While` statement.</span></span>  
   
- El fragmento de `While` comprueba siempre la condición antes de iniciar el bucle.  La ejecución en bucle continúa mientras el resultado de la condición sea `True`.  Si `condition` es `False` cuando primero entra en el bucle, no ejecuta incluso una vez.  
+ <span data-ttu-id="a0e82-128">El `While` instrucción siempre comprueba la condición antes de iniciar el bucle.</span><span class="sxs-lookup"><span data-stu-id="a0e82-128">The `While` statement always checks the condition before it starts the loop.</span></span> <span data-ttu-id="a0e82-129">Ejecución en bucle continúa mientras la condición siga siendo `True`.</span><span class="sxs-lookup"><span data-stu-id="a0e82-129">Looping continues while the condition remains `True`.</span></span> <span data-ttu-id="a0e82-130">Si `condition` es `False` cuando se escriben por primera vez el bucle, no ejecute ni siquiera una vez.</span><span class="sxs-lookup"><span data-stu-id="a0e82-130">If `condition` is `False` when you first enter the loop, it doesn’t run even once.</span></span>  
   
- `condition` resultados general de una comparación de dos valores, pero puede ser cualquier expresión que se evalúa como [Boolean \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) un valor \(`True` o `False`\).  Esta expresión puede incluir un valor de otro tipo de datos, como un tipo numérico, convertido en `Boolean`.  
+ <span data-ttu-id="a0e82-131">El `condition` normalmente los resultados de una comparación de dos valores, pero pueden ser cualquier expresión que se evalúa como un [tipo de datos Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) valor (`True` o `False`).</span><span class="sxs-lookup"><span data-stu-id="a0e82-131">The `condition` usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`).</span></span> <span data-ttu-id="a0e82-132">Esta expresión puede incluir un valor de otro tipo de datos, como un tipo numérico, que se ha convertido en `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="a0e82-132">This expression can include a value of another data type, such as a numeric type, that has been converted to `Boolean`.</span></span>  
   
- Se pueden anidar bucles `While` colocando un bucle dentro de otro.  También puede anidar distintos tipos de estructuras de control dentro de otras.  Para obtener más información, vea [Estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ <span data-ttu-id="a0e82-133">Puede anidar `While` bucles, colocando un bucle dentro de otra.</span><span class="sxs-lookup"><span data-stu-id="a0e82-133">You can nest `While` loops by placing one loop within another.</span></span> <span data-ttu-id="a0e82-134">También puede anidar diferentes tipos de estructuras de control entre sí.</span><span class="sxs-lookup"><span data-stu-id="a0e82-134">You can also nest different kinds of control structures within one another.</span></span> <span data-ttu-id="a0e82-135">Para obtener más información, consulte [estructuras de Control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).</span><span class="sxs-lookup"><span data-stu-id="a0e82-135">For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).</span></span>  
   
-## Salida mientras  
- El fragmento de [Salida mientras](../../../visual-basic/language-reference/statements/exit-statement.md) puede proporcionar otra forma de salir de un bucle de `While` .  De`Exit While` transfiere el control inmediatamente al extraer que sigue el fragmento de `End While` .  
+## <a name="exit-while"></a><span data-ttu-id="a0e82-136">Salida al</span><span class="sxs-lookup"><span data-stu-id="a0e82-136">Exit While</span></span>  
+ <span data-ttu-id="a0e82-137">El [salir mientras](../../../visual-basic/language-reference/statements/exit-statement.md) instrucción puede proporcionan otra forma de salir de un `While` bucle.</span><span class="sxs-lookup"><span data-stu-id="a0e82-137">The [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide another way to exit a `While` loop.</span></span> <span data-ttu-id="a0e82-138">`Exit While`transfiere el control a la instrucción que sigue inmediatamente el `End While` instrucción.</span><span class="sxs-lookup"><span data-stu-id="a0e82-138">`Exit While` immediately transfers control to the statement that follows the `End While` statement.</span></span>  
   
- Normalmente se utiliza `Exit While` después de que se evalúe alguna condición \(por ejemplo, en una estructura de `If...Then...Else` \).  Por ejemplo, puede ser conveniente salir de un bucle si se detecta una condición que hace que sea innecesario o imposible continuar la iteración, como puede ser un valor erróneo o una solicitud de finalización.  Puede utilizar `Exit While` cuando se prueba para una condición que podría provocar *un bucle infinito*, que es un bucle que puede ejecutar un número muy grande o incluso infinito de veces.  Puede utilizar `Exit While` para que el bucle.  
+ <span data-ttu-id="a0e82-139">Se suele usar `Exit While` después de evaluar alguna condición (por ejemplo, en un `If...Then...Else` estructura).</span><span class="sxs-lookup"><span data-stu-id="a0e82-139">You typically use `Exit While` after some condition is evaluated (for example, in an `If...Then...Else` structure).</span></span> <span data-ttu-id="a0e82-140">Puede salir de un bucle si detecta una condición que hace innecesario o imposible continuar la iteración, como puede ser un valor erróneo o una solicitud de finalización.</span><span class="sxs-lookup"><span data-stu-id="a0e82-140">You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request.</span></span> <span data-ttu-id="a0e82-141">Puede usar `Exit While` cuando se prueba una condición que podría provocar un *bucle sin fin*, que es un bucle que pueda ejecutar un número muy grande o incluso infinito de veces.</span><span class="sxs-lookup"><span data-stu-id="a0e82-141">You can use `Exit While` when you test for a condition that could cause an *endless loop*, which is a loop that could run an extremely large or even infinite number of times.</span></span> <span data-ttu-id="a0e82-142">A continuación, puede usar `Exit While` para salir del bucle.</span><span class="sxs-lookup"><span data-stu-id="a0e82-142">You can then use `Exit While` to escape the loop.</span></span>  
   
- Puede poner cualquier número de instrucciones `Exit While` en cualquier lugar del bucle `While`.  
+ <span data-ttu-id="a0e82-143">Puede colocar cualquier número de `Exit While` instrucciones en cualquier lugar en el `While` bucle.</span><span class="sxs-lookup"><span data-stu-id="a0e82-143">You can place any number of `Exit While` statements anywhere in the `While` loop.</span></span>  
   
- Cuando se utiliza dentro de bucles `While` anidados, `Exit While` transfiere el control fuera del bucle más profundo y al siguiente nivel de anidamiento.  
+ <span data-ttu-id="a0e82-144">Cuando se usa en anidados `While` bucles, `Exit While` transfiere el control fuera del bucle más interno y en el siguiente nivel más alto de anidamiento.</span><span class="sxs-lookup"><span data-stu-id="a0e82-144">When used within nested `While` loops, `Exit While` transfers control out of the innermost loop and into the next higher level of nesting.</span></span>  
   
- De `Continue While` de extraer transfiere el control inmediatamente a la siguiente iteración del bucle.  Para obtener más información, vea [Continue \(Instrucción\)](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ <span data-ttu-id="a0e82-145">El `Continue While` instrucción transfiere el control inmediatamente a la siguiente iteración del bucle.</span><span class="sxs-lookup"><span data-stu-id="a0e82-145">The `Continue While` statement immediately transfers control to the next iteration of the loop.</span></span> <span data-ttu-id="a0e82-146">Para obtener más información, consulte [instrucción Continue](../../../visual-basic/language-reference/statements/continue-statement.md).</span><span class="sxs-lookup"><span data-stu-id="a0e82-146">For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente, las instrucciones del bucle continúan ejecutándose hasta que la variable `index` es superior a 10.  
+## <a name="example"></a><span data-ttu-id="a0e82-147">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a0e82-147">Example</span></span>  
+ <span data-ttu-id="a0e82-148">En el ejemplo siguiente, las instrucciones en el bucle continúen ejecutándose hasta el `index` variable es mayor que 10.</span><span class="sxs-lookup"><span data-stu-id="a0e82-148">In the following example, the statements in the loop continue to run until the `index` variable is greater than 10.</span></span>  
   
  [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra el uso de las instrucciones `Continue While` y `Exit While`.  
+## <a name="example"></a><span data-ttu-id="a0e82-149">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a0e82-149">Example</span></span>  
+ <span data-ttu-id="a0e82-150">En el ejemplo siguiente se muestra el uso de la `Continue While` y `Exit While` las instrucciones.</span><span class="sxs-lookup"><span data-stu-id="a0e82-150">The following example illustrates the use of the `Continue While` and `Exit While` statements.</span></span>  
   
  [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
   
-## Ejemplo  
- En el ejemplo siguiente se leen todas las líneas de un archivo de texto.  El método <xref:System.IO.File.OpenText%2A> abre el archivo y devuelve un <xref:System.IO.StreamReader> que lee los caracteres.  En la condición de `While` , el método de <xref:System.IO.StreamReader.Peek%2A> de `StreamReader` determina si contiene caracteres adicionales.  
+## <a name="example"></a><span data-ttu-id="a0e82-151">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a0e82-151">Example</span></span>  
+ <span data-ttu-id="a0e82-152">En el ejemplo siguiente se lee todas sus líneas en un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="a0e82-152">The following example reads all lines in a text file.</span></span> <span data-ttu-id="a0e82-153">El <xref:System.IO.File.OpenText%2A> método abre el archivo y devuelve un <xref:System.IO.StreamReader> que lee los caracteres.</span><span class="sxs-lookup"><span data-stu-id="a0e82-153">The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters.</span></span> <span data-ttu-id="a0e82-154">En el `While` condición, el <xref:System.IO.StreamReader.Peek%2A> método de la `StreamReader` determina si el archivo contiene caracteres adicionales.</span><span class="sxs-lookup"><span data-stu-id="a0e82-154">In the `While` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether the file contains additional characters.</span></span>  
   
  [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
-## Vea también  
- [Estructuras de bucles](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Do...Loop \(Instrucción\)](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Boolean \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)   
- [Estructuras de control anidadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Exit \(Instrucción\)](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Continue \(Instrucción\)](../../../visual-basic/language-reference/statements/continue-statement.md)
+## <a name="see-also"></a><span data-ttu-id="a0e82-155">Vea también</span><span class="sxs-lookup"><span data-stu-id="a0e82-155">See Also</span></span>  
+ [<span data-ttu-id="a0e82-156">Estructuras de bucle</span><span class="sxs-lookup"><span data-stu-id="a0e82-156">Loop Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [<span data-ttu-id="a0e82-157">Do...Loop (instrucción)</span><span class="sxs-lookup"><span data-stu-id="a0e82-157">Do...Loop Statement</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [<span data-ttu-id="a0e82-158">For...Next (instrucción)</span><span class="sxs-lookup"><span data-stu-id="a0e82-158">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [<span data-ttu-id="a0e82-159">Boolean (tipo de datos)</span><span class="sxs-lookup"><span data-stu-id="a0e82-159">Boolean Data Type</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [<span data-ttu-id="a0e82-160">Estructuras de control anidadas</span><span class="sxs-lookup"><span data-stu-id="a0e82-160">Nested Control Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [<span data-ttu-id="a0e82-161">Exit (instrucción)</span><span class="sxs-lookup"><span data-stu-id="a0e82-161">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="a0e82-162">Continue (instrucción)</span><span class="sxs-lookup"><span data-stu-id="a0e82-162">Continue Statement</span></span>](../../../visual-basic/language-reference/statements/continue-statement.md)

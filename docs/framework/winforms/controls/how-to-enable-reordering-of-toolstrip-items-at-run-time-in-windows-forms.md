@@ -1,51 +1,52 @@
 ---
-title: "C&#243;mo: Habilitar la reordenaci&#243;n de elementos ToolStrip en tiempo de ejecuci&#243;n en un formulario Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "AllowItemReorder (propiedad)"
-  - "ejemplos [Windows Forms], barras de herramientas"
-  - "barras de herramientas [Windows Forms], volver a organizar controles"
-  - "ToolStrip (control) [Windows Forms], ejemplos"
-  - "ToolStrip (control) [Windows Forms], volver a ordenar elementos"
+title: "Cómo: Habilitar la reordenación de elementos ToolStrip en tiempo de ejecución en un formulario Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], examples
+- examples [Windows Forms], toolbars
+- toolbars [Windows Forms], rearranging controls
+- ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 73ea6d3615780c8def31b7dbdcf870020a106e80
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Habilitar la reordenaci&#243;n de elementos ToolStrip en tiempo de ejecuci&#243;n en un formulario Windows Forms
-Se puede permitir al usuario reorganizar los controles <xref:System.Windows.Forms.ToolStripItem> en <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a><span data-ttu-id="b38d1-102">Cómo: Habilitar la reordenación de elementos ToolStrip en tiempo de ejecución en un formulario Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b38d1-102">How to: Enable Reordering of ToolStrip Items at Run Time in Windows Forms</span></span>
+<span data-ttu-id="b38d1-103">Puede permitir al usuario para volver a organizar <xref:System.Windows.Forms.ToolStripItem> a los controles de la <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="b38d1-103">You can enable the user to rearrange <xref:System.Windows.Forms.ToolStripItem> controls on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### Para habilitar la reorganización de ToolStripItem en tiempo de ejecución  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a><span data-ttu-id="b38d1-104">Para habilitar la reorganización de ToolStripItem en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="b38d1-104">To enable ToolStripItem rearrangement at run time</span></span>  
   
--   Establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> en `true`.  De manera predeterminada, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> es `false`.  
+-   <span data-ttu-id="b38d1-105">Establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> en `true`.</span><span class="sxs-lookup"><span data-stu-id="b38d1-105">Set the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property to `true`.</span></span> <span data-ttu-id="b38d1-106">De forma predeterminada, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> es `false`.</span><span class="sxs-lookup"><span data-stu-id="b38d1-106">By default, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> is `false`.</span></span>  
   
-     En tiempo de ejecución, el usuario mantiene presionada la tecla ALT y el botón primario del mouse para arrastrar <xref:System.Windows.Forms.ToolStripItem> hacia una ubicación diferente en <xref:System.Windows.Forms.ToolStrip>.  
+     <span data-ttu-id="b38d1-107">En tiempo de ejecución, el usuario mantiene presionada la tecla ALT y el botón primario del mouse para arrastrar un <xref:System.Windows.Forms.ToolStripItem> a una ubicación diferente en el <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="b38d1-107">At run time, the user holds down the ALT key and the left mouse button to drag a <xref:System.Windows.Forms.ToolStripItem> to a different location on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  
-  
     ```  
   
     ```csharp  
     toolStrip1.AllowItemReorder = true;  
-  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>   
- [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
- [Resumen de la tecnología ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a><span data-ttu-id="b38d1-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="b38d1-108">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>  
+ [<span data-ttu-id="b38d1-109">Información sobre el control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="b38d1-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="b38d1-110">Arquitectura del control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="b38d1-110">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [<span data-ttu-id="b38d1-111">Resumen de la tecnología ToolStrip</span><span class="sxs-lookup"><span data-stu-id="b38d1-111">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

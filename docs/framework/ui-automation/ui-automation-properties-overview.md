@@ -1,96 +1,99 @@
 ---
-title: "UI Automation Properties Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, properties"
-  - "properties, UI Automation"
+title: "Información general acerca de las propiedades de UI Automation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, properties
+- properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-caps.latest.revision: 17
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: a6fec422e235413bd76d86cdcb5a72a351bb3f97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Properties Overview
+# <a name="ui-automation-properties-overview"></a><span data-ttu-id="f664a-102">Información general acerca de las propiedades de UI Automation</span><span class="sxs-lookup"><span data-stu-id="f664a-102">UI Automation Properties Overview</span></span>
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="f664a-103">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="f664a-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="f664a-104">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="f664a-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Los proveedores de Automatización de la interfaz de usuario exponen propiedades en los elementos [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Estas propiedades permiten que las aplicaciones de cliente de Automatización de la interfaz de usuario detecten información sobre partes de la [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], especialmente los controles, e incluidos los datos estáticos y dinámicos.  
+ <span data-ttu-id="f664a-105">Los proveedores de Automatización de la interfaz de usuario exponen propiedades en los elementos [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f664a-105">UI Automation providers expose properties on [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elements.</span></span> <span data-ttu-id="f664a-106">Estas propiedades permiten que las aplicaciones de cliente de Automatización de la interfaz de usuario detecten información sobre partes de la [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], especialmente los controles, e incluidos los datos estáticos y dinámicos.</span><span class="sxs-lookup"><span data-stu-id="f664a-106">These properties enable UI Automation client applications to discover information about pieces of the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], especially controls, including both static and dynamic data.</span></span>  
   
- En esta sección se ofrece información general sobre las propiedades de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. En los temas siguientes se proporciona información más específica:  
+ <span data-ttu-id="f664a-107">En esta sección se ofrece información general sobre las propiedades de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f664a-107">This section gives a broad overview of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] properties.</span></span> <span data-ttu-id="f664a-108">En los temas siguientes se proporciona información más específica:</span><span class="sxs-lookup"><span data-stu-id="f664a-108">More specific information is given in the following topics:</span></span>  
   
--   [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+-   [<span data-ttu-id="f664a-109">UI Automation Properties for Clients</span><span class="sxs-lookup"><span data-stu-id="f664a-109">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
--   [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+-   [<span data-ttu-id="f664a-110">Implementación del proveedor de automatización de la interfaz de usuario en el servidor</span><span class="sxs-lookup"><span data-stu-id="f664a-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
-## Identificadores de propiedad  
- Cada propiedad se identifica mediante un número y un nombre. Los nombres de las propiedades se utilizan únicamente para la depuración y el diagnóstico. Los proveedores usan los valores numéricos de [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] para identificar las solicitudes de propiedad entrantes. Las aplicaciones cliente, sin embargo, solo utilizan <xref:System.Windows.Automation.AutomationProperty>, que encapsula el número y el nombre, para identificar las propiedades que quieren recuperar.  
+## <a name="property-identifiers"></a><span data-ttu-id="f664a-111">Identificadores de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-111">Property Identifiers</span></span>  
+ <span data-ttu-id="f664a-112">Cada propiedad se identifica mediante un número y un nombre.</span><span class="sxs-lookup"><span data-stu-id="f664a-112">Every property is identified by a number and a name.</span></span> <span data-ttu-id="f664a-113">Los nombres de las propiedades se utilizan únicamente para la depuración y el diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="f664a-113">The names of properties are used only for debugging and diagnosis.</span></span> <span data-ttu-id="f664a-114">Los proveedores usan los valores numéricos de [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] para identificar las solicitudes de propiedad entrantes.</span><span class="sxs-lookup"><span data-stu-id="f664a-114">Providers use the numeric [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] to identify incoming property requests.</span></span> <span data-ttu-id="f664a-115">Las aplicaciones cliente, sin embargo, solo utilizan <xref:System.Windows.Automation.AutomationProperty>, que encapsula el número y el nombre, para identificar las propiedades que quieren recuperar.</span><span class="sxs-lookup"><span data-stu-id="f664a-115">Client applications, however, only use <xref:System.Windows.Automation.AutomationProperty>, which encapsulates the number and name, to identify properties they wish to retrieve.</span></span>  
   
- Los objetos <xref:System.Windows.Automation.AutomationProperty> que representan propiedades determinadas están disponibles como campos en diversas clases. Por motivos de seguridad, los proveedores de Automatización de la interfaz de usuario obtienen estos objetos de un conjunto independiente de clases que están incluidas en Uiautomationtypes.dll.  
+ <span data-ttu-id="f664a-116">Los objetos<xref:System.Windows.Automation.AutomationProperty> que representan propiedades determinadas están disponibles como campos en diversas clases.</span><span class="sxs-lookup"><span data-stu-id="f664a-116"><xref:System.Windows.Automation.AutomationProperty> objects representing particular properties are available as fields in various classes.</span></span> <span data-ttu-id="f664a-117">Por motivos de seguridad, los proveedores de Automatización de la interfaz de usuario obtienen estos objetos de un conjunto independiente de clases que están incluidas en Uiautomationtypes.dll.</span><span class="sxs-lookup"><span data-stu-id="f664a-117">For security reasons, UI Automation providers obtain these objects from a separate set of classes that are contained in Uiautomationtypes.dll.</span></span>  
   
- En la tabla siguiente se clasifican las propiedades por las clases que contienen los elementos <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
+ <span data-ttu-id="f664a-118">En la tabla siguiente se clasifican las propiedades por las clases que contienen los elementos <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f664a-118">The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].</span></span>  
   
-|Tipos de propiedades|Los clientes obtienen los identificadores de|Los proveedores obtienen los identificadores de|  
-|--------------------------|--------------------------------------------------|-----------------------------------------------------|  
-|Propiedades comunes a todos los elementos \(consulte las tablas siguientes\)|<xref:System.Windows.Automation.AutomationElement>|<xref:System.Windows.Automation.AutomationElementIdentifiers>|  
-|Posición de una ventana de acoplamiento|<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.DockPatternIdentifiers>|  
-|Estado de un elemento que se puede expandir y contraer|<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>|  
-|Propiedades de un elemento en una cuadrícula|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.GridItemPatternIdentifiers>|  
-|Propiedades de una cuadrícula|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.GridPatternIdentifiers>|  
-|Vista actual y admitida de un elemento que tiene varias vistas|<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers>|  
-|Propiedades de un elemento que se desplaza en un intervalo de valores, como un control deslizante|<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.RangeValuePatternIdentifiers>|  
-|Propiedades de una ventana desplazable|<xref:System.Windows.Automation.ScrollPattern>|<xref:System.Windows.Automation.ScrollPatternIdentifiers>|  
-|Estado y contenedor de un elemento que se puede seleccionar, como en una lista|<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers>|  
-|Propiedades de un control que contiene elementos de selección|<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.SelectionPatternIdentifiers>|  
-|Encabezados de fila y columna de un elemento en una tabla|<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.TableItemPatternIdentifiers>|  
-|Encabezados de fila y columna, y orientación, de una tabla|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.TablePatternIdentifiers>|  
-|Estado de un control de alternancia|<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.TogglePatternIdentifiers>|  
-|Capacidades de un elemento que se pueden mover, girar o cambiar de tamaño|<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.TransformPatternIdentifiers>|  
-|Capacidades de lectura y escritura y valor de un elemento que tiene un valor|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
-|Capacidades y estado de una ventana|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
+|<span data-ttu-id="f664a-119">Tipos de propiedades</span><span class="sxs-lookup"><span data-stu-id="f664a-119">Kinds of properties</span></span>|<span data-ttu-id="f664a-120">Los clientes obtienen los identificadores de</span><span class="sxs-lookup"><span data-stu-id="f664a-120">Clients get IDs from</span></span>|<span data-ttu-id="f664a-121">Los proveedores obtienen los identificadores de</span><span class="sxs-lookup"><span data-stu-id="f664a-121">Providers get IDs from</span></span>|  
+|-------------------------|--------------------------|----------------------------|  
+|<span data-ttu-id="f664a-122">Propiedades comunes a todos los elementos (consulte las tablas siguientes)</span><span class="sxs-lookup"><span data-stu-id="f664a-122">Properties common to all elements (see following tables)</span></span>|<xref:System.Windows.Automation.AutomationElement>|<xref:System.Windows.Automation.AutomationElementIdentifiers>|  
+|<span data-ttu-id="f664a-123">Posición de una ventana de acoplamiento</span><span class="sxs-lookup"><span data-stu-id="f664a-123">Position of a docking window</span></span>|<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.DockPatternIdentifiers>|  
+|<span data-ttu-id="f664a-124">Estado de un elemento que se puede expandir y contraer</span><span class="sxs-lookup"><span data-stu-id="f664a-124">State of an element that can expand and collapse</span></span>|<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>|  
+|<span data-ttu-id="f664a-125">Propiedades de un elemento en una cuadrícula</span><span class="sxs-lookup"><span data-stu-id="f664a-125">Properties of an item in a grid</span></span>|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.GridItemPatternIdentifiers>|  
+|<span data-ttu-id="f664a-126">Propiedades de una cuadrícula</span><span class="sxs-lookup"><span data-stu-id="f664a-126">Properties of a grid</span></span>|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.GridPatternIdentifiers>|  
+|<span data-ttu-id="f664a-127">Vista actual y admitida de un elemento que tiene varias vistas</span><span class="sxs-lookup"><span data-stu-id="f664a-127">Current and supported view of an element that has multiple views</span></span>|<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers>|  
+|<span data-ttu-id="f664a-128">Propiedades de un elemento que se desplaza en un intervalo de valores, como un control deslizante</span><span class="sxs-lookup"><span data-stu-id="f664a-128">Properties of an element that moves over a range of values, such as a slider</span></span>|<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.RangeValuePatternIdentifiers>|  
+|<span data-ttu-id="f664a-129">Propiedades de una ventana desplazable</span><span class="sxs-lookup"><span data-stu-id="f664a-129">Properties of a scrolling window</span></span>|<xref:System.Windows.Automation.ScrollPattern>|<xref:System.Windows.Automation.ScrollPatternIdentifiers>|  
+|<span data-ttu-id="f664a-130">Estado y contenedor de un elemento que se puede seleccionar, como en una lista</span><span class="sxs-lookup"><span data-stu-id="f664a-130">Status and container of an item that can be selected, as in a list</span></span>|<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers>|  
+|<span data-ttu-id="f664a-131">Propiedades de un control que contiene elementos de selección</span><span class="sxs-lookup"><span data-stu-id="f664a-131">Properties of a control that contains selection items</span></span>|<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.SelectionPatternIdentifiers>|  
+|<span data-ttu-id="f664a-132">Encabezados de fila y columna de un elemento en una tabla</span><span class="sxs-lookup"><span data-stu-id="f664a-132">Column and row headers of an item in a table</span></span>|<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.TableItemPatternIdentifiers>|  
+|<span data-ttu-id="f664a-133">Encabezados de fila y columna, y orientación, de una tabla</span><span class="sxs-lookup"><span data-stu-id="f664a-133">Column and row headers, and orientation, of a table</span></span>|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.TablePatternIdentifiers>|  
+|<span data-ttu-id="f664a-134">Estado de un control de alternancia</span><span class="sxs-lookup"><span data-stu-id="f664a-134">State of a toggle control</span></span>|<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.TogglePatternIdentifiers>|  
+|<span data-ttu-id="f664a-135">Capacidades de un elemento que se pueden mover, girar o cambiar de tamaño</span><span class="sxs-lookup"><span data-stu-id="f664a-135">Capabilities of an element that can be moved, rotated, or resized</span></span>|<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.TransformPatternIdentifiers>|  
+|<span data-ttu-id="f664a-136">Capacidades de lectura y escritura y valor de un elemento que tiene un valor</span><span class="sxs-lookup"><span data-stu-id="f664a-136">Value and read/write capabilities of an element that has a value</span></span>|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
+|<span data-ttu-id="f664a-137">Capacidades y estado de una ventana</span><span class="sxs-lookup"><span data-stu-id="f664a-137">Capabilities and state of a window</span></span>|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
 <a name="Properties_by_Category"></a>   
-## Propiedades por categoría  
- En las siguientes tablas se clasifican las propiedades cuyo elemento [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] se encuentran en <xref:System.Windows.Automation.AutomationElement> y <xref:System.Windows.Automation.AutomationElementIdentifiers>. Estas propiedades son comunes para todos los controles. Salvo algunas de ellas, todas suelen ser estáticas a lo largo de la duración de la aplicación de proveedor; la mayoría de propiedades dinámicas están asociadas con patrones de control.  
+## <a name="properties-by-category"></a><span data-ttu-id="f664a-138">Propiedades por categoría</span><span class="sxs-lookup"><span data-stu-id="f664a-138">Properties by Category</span></span>  
+ <span data-ttu-id="f664a-139">En las siguientes tablas se clasifican las propiedades cuyo elemento [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] se encuentran en <xref:System.Windows.Automation.AutomationElement> y <xref:System.Windows.Automation.AutomationElementIdentifiers>.</span><span class="sxs-lookup"><span data-stu-id="f664a-139">The following tables categorize the properties whose [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>.</span></span> <span data-ttu-id="f664a-140">Estas propiedades son comunes para todos los controles.</span><span class="sxs-lookup"><span data-stu-id="f664a-140">These properties are common to all controls.</span></span> <span data-ttu-id="f664a-141">Salvo algunas de ellas, todas suelen ser estáticas a lo largo de la duración de la aplicación de proveedor; la mayoría de propiedades dinámicas están asociadas con patrones de control.</span><span class="sxs-lookup"><span data-stu-id="f664a-141">All but a few of them are likely to be static over the lifetime of the provider application; most dynamic properties are associated with control patterns.</span></span>  
   
- En la columna **Property Access** se enumeran los otros descriptores de acceso de cada propiedad, además de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> y <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Para más información sobre la obtención de propiedades en una aplicación cliente, consulte [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ <span data-ttu-id="f664a-142">En la columna **Property Access** se enumeran los otros descriptores de acceso de cada propiedad, además de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> y <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="f664a-142">The **Property Access** column lists any other accessors for each property, in addition to <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> and <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.</span></span> <span data-ttu-id="f664a-143">Para más información sobre la obtención de propiedades en una aplicación cliente, consulte [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span><span class="sxs-lookup"><span data-stu-id="f664a-143">For more information on getting properties in a client application, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
 > [!NOTE]
->  Para obtener información específica sobre cada propiedad, siga el vínculo de la columna **Property Access**.  
+>  <span data-ttu-id="f664a-144">Para obtener información específica sobre cada propiedad, siga el vínculo de la columna **Property Access** .</span><span class="sxs-lookup"><span data-stu-id="f664a-144">For specific information about each property, follow the link in the **Property Access** column.</span></span>  
   
-### Características de presentación  
+### <a name="display-characteristics"></a><span data-ttu-id="f664a-145">Características de presentación</span><span class="sxs-lookup"><span data-stu-id="f664a-145">Display Characteristics</span></span>  
   
-|Identificador de propiedad|Acceso de propiedad|  
-|--------------------------------|-------------------------|  
+|<span data-ttu-id="f664a-146">Identificador de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-146">Property identifier</span></span>|<span data-ttu-id="f664a-147">Property Access</span><span class="sxs-lookup"><span data-stu-id="f664a-147">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|no disponible|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|<span data-ttu-id="f664a-148">no disponible</span><span class="sxs-lookup"><span data-stu-id="f664a-148">n/a</span></span>|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### Tipo de elemento  
+### <a name="element-type"></a><span data-ttu-id="f664a-149">Tipo de elemento</span><span class="sxs-lookup"><span data-stu-id="f664a-149">Element Type</span></span>  
   
-|Identificador de propiedad|Acceso de propiedad|  
-|--------------------------------|-------------------------|  
+|<span data-ttu-id="f664a-150">Identificador de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-150">Property identifier</span></span>|<span data-ttu-id="f664a-151">Property Access</span><span class="sxs-lookup"><span data-stu-id="f664a-151">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsControlElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType%2A>|  
   
-### Identificación  
+### <a name="identification"></a><span data-ttu-id="f664a-152">Identificación</span><span class="sxs-lookup"><span data-stu-id="f664a-152">Identification</span></span>  
   
-|Identificador de propiedad|Acceso de propiedad|  
-|--------------------------------|-------------------------|  
+|<span data-ttu-id="f664a-153">Identificador de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-153">Property identifier</span></span>|<span data-ttu-id="f664a-154">Property Access</span><span class="sxs-lookup"><span data-stu-id="f664a-154">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClassNameProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ClassName%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.FrameworkIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.FrameworkId%2A>|  
@@ -100,10 +103,10 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty>|<xref:System.Windows.Automation.AutomationElement.GetRuntimeId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.NativeWindowHandleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.NativeWindowHandle%2A>|  
   
-### Interacción  
+### <a name="interaction"></a><span data-ttu-id="f664a-155">Interacción</span><span class="sxs-lookup"><span data-stu-id="f664a-155">Interaction</span></span>  
   
-|Identificador de propiedad|Acceso de propiedad|  
-|--------------------------------|-------------------------|  
+|<span data-ttu-id="f664a-156">Identificador de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-156">Property identifier</span></span>|<span data-ttu-id="f664a-157">Property Access</span><span class="sxs-lookup"><span data-stu-id="f664a-157">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AccessKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>|<xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>|  
@@ -111,10 +114,10 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsKeyboardFocusable%2A>|  
   
-### Compatibilidad con patrones  
+### <a name="support-for-patterns"></a><span data-ttu-id="f664a-158">Compatibilidad con patrones</span><span class="sxs-lookup"><span data-stu-id="f664a-158">Support for Patterns</span></span>  
   
-|Identificador de propiedad|Acceso de propiedad|  
-|--------------------------------|-------------------------|  
+|<span data-ttu-id="f664a-159">Identificador de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-159">Property identifier</span></span>|<span data-ttu-id="f664a-160">Property Access</span><span class="sxs-lookup"><span data-stu-id="f664a-160">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsExpandCollapsePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsGridItemPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
@@ -134,17 +137,17 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.IsValuePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsWindowPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
   
-### Varios  
+### <a name="miscellaneous"></a><span data-ttu-id="f664a-161">Varios</span><span class="sxs-lookup"><span data-stu-id="f664a-161">Miscellaneous</span></span>  
   
-|Identificador de propiedad|Acceso de propiedad|  
-|--------------------------------|-------------------------|  
+|<span data-ttu-id="f664a-162">Identificador de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-162">Property identifier</span></span>|<span data-ttu-id="f664a-163">Property Access</span><span class="sxs-lookup"><span data-stu-id="f664a-163">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsRequiredForFormProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
 <a name="Localization"></a>   
-## Localización  
- Los proveedores [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben presentar las siguientes propiedades en el idioma del sistema operativo:  
+## <a name="localization"></a><span data-ttu-id="f664a-164">Localización</span><span class="sxs-lookup"><span data-stu-id="f664a-164">Localization</span></span>  
+ <span data-ttu-id="f664a-165">Los proveedores[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben presentar las siguientes propiedades en el idioma del sistema operativo:</span><span class="sxs-lookup"><span data-stu-id="f664a-165">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers should present the following properties in the language of the operating system:</span></span>  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
@@ -157,19 +160,19 @@ caps.handback.revision: 17
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>   
-## Propiedades y eventos  
- El concepto de eventos de cambio de propiedad está estrechamente relacionado con las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Para las propiedades dinámicas, la aplicación cliente necesita una manera de saber que un valor de propiedad ha cambiado, por lo que puede actualizar su caché de información o reaccionar a la nueva información de alguna otra manera.  
+## <a name="properties-and-events"></a><span data-ttu-id="f664a-166">Propiedades y eventos</span><span class="sxs-lookup"><span data-stu-id="f664a-166">Properties and Events</span></span>  
+ <span data-ttu-id="f664a-167">El concepto de eventos de cambio de propiedad está estrechamente relacionado con las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f664a-167">Closely tied in with the properties in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] is the concept of property-changed events.</span></span> <span data-ttu-id="f664a-168">Para las propiedades dinámicas, la aplicación cliente necesita una manera de saber que un valor de propiedad ha cambiado, por lo que puede actualizar su caché de información o reaccionar a la nueva información de alguna otra manera.</span><span class="sxs-lookup"><span data-stu-id="f664a-168">For dynamic properties, the client application needs a way to know that a property value has changed, so that it can update its cache of information or react to the new information in some other way.</span></span>  
   
- Los proveedores generan eventos cuando cambia algo en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Por ejemplo, si se selecciona o se desactiva una casilla, la implementación del proveedor del patrón Toggle genera un evento de cambio de propiedad. Los proveedores pueden generar eventos de forma selectiva, dependiendo de si hay clientes en escucha de eventos o en escucha de eventos específicos.  
+ <span data-ttu-id="f664a-169">Los proveedores generan eventos cuando cambia algo en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f664a-169">Providers raise events when something in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] changes.</span></span> <span data-ttu-id="f664a-170">Por ejemplo, si se selecciona o se desactiva una casilla, la implementación del proveedor del patrón Toggle genera un evento de cambio de propiedad.</span><span class="sxs-lookup"><span data-stu-id="f664a-170">For example, if a check box is selected or cleared, a property-changed event is raised by the provider's implementation of the Toggle pattern.</span></span> <span data-ttu-id="f664a-171">Los proveedores pueden generar eventos de forma selectiva, dependiendo de si hay clientes en escucha de eventos o en escucha de eventos específicos.</span><span class="sxs-lookup"><span data-stu-id="f664a-171">Providers can raise events selectively, depending on whether any clients are listening for events, or listening for specific events.</span></span>  
   
- No todos los cambios de propiedades generan eventos; esto depende totalmente de la implementación del proveedor de Automatización de la interfaz de usuario del elemento. Por ejemplo, los proveedores de proxy estándares para cuadros de lista no generan un evento cuando el elemento <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> cambia. En este caso, la aplicación debe estar en su lugar a la escucha de un elemento <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.  
+ <span data-ttu-id="f664a-172">No todos los cambios de propiedades generan eventos; esto depende totalmente de la implementación del proveedor de Automatización de la interfaz de usuario del elemento.</span><span class="sxs-lookup"><span data-stu-id="f664a-172">Not all property changes raise events; that is entirely up to the implementation of the UI Automation provider for the element.</span></span> <span data-ttu-id="f664a-173">Por ejemplo, los proveedores de proxy estándares para cuadros de lista no generan un evento cuando el elemento <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> cambia.</span><span class="sxs-lookup"><span data-stu-id="f664a-173">For example, the standard proxy providers for list boxes do not raise an event when the <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> changes.</span></span> <span data-ttu-id="f664a-174">En este caso, la aplicación debe estar en su lugar a la escucha de un elemento <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.</span><span class="sxs-lookup"><span data-stu-id="f664a-174">In this case, the application instead must listen for an <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.</span></span>  
   
- Los clientes se ponen a la escucha de eventos suscribiéndose a ellos. La suscripción a eventos supone la creación de métodos delegados que pueden controlar los eventos y, después, pasan los métodos a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] junto con los eventos específicos que se tratarán en esos métodos. Para los eventos de cambio de propiedad en concreto, los clientes deben implementar <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
+ <span data-ttu-id="f664a-175">Los clientes se ponen a la escucha de eventos suscribiéndose a ellos.</span><span class="sxs-lookup"><span data-stu-id="f664a-175">Clients listen for events by subscribing to them.</span></span> <span data-ttu-id="f664a-176">La suscripción a eventos supone la creación de métodos delegados que pueden controlar los eventos y, después, pasan los métodos a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] junto con los eventos específicos que se tratarán en esos métodos.</span><span class="sxs-lookup"><span data-stu-id="f664a-176">Subscribing to events means creating delegate methods that can handle the events, and then passing the methods to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] along with the specific events that will be dealt with in those methods.</span></span> <span data-ttu-id="f664a-177">Para los eventos de cambio de propiedad en concreto, los clientes deben implementar <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="f664a-177">For property-changed events in particular, clients must implement <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.</span></span>  
   
-## Vea también  
- [Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)   
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)   
- [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)   
- [Find a UI Automation Element Based on a Property Condition](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)   
- [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)   
- [Raise Events from a UI Automation Provider](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+## <a name="see-also"></a><span data-ttu-id="f664a-178">Vea también</span><span class="sxs-lookup"><span data-stu-id="f664a-178">See Also</span></span>  
+ [<span data-ttu-id="f664a-179">Almacenamiento en caché en clientes de UI Automation</span><span class="sxs-lookup"><span data-stu-id="f664a-179">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [<span data-ttu-id="f664a-180">UI Automation Properties for Clients</span><span class="sxs-lookup"><span data-stu-id="f664a-180">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [<span data-ttu-id="f664a-181">Implementación del proveedor de automatización de la interfaz de usuario en el servidor</span><span class="sxs-lookup"><span data-stu-id="f664a-181">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="f664a-182">Buscar un elemento de UI Automation basándose en una condición de propiedad</span><span class="sxs-lookup"><span data-stu-id="f664a-182">Find a UI Automation Element Based on a Property Condition</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [<span data-ttu-id="f664a-183">Devolver propiedades de un proveedor de UI Automation</span><span class="sxs-lookup"><span data-stu-id="f664a-183">Return Properties from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
+ [<span data-ttu-id="f664a-184">Provocar eventos desde un proveedor de UI Automation</span><span class="sxs-lookup"><span data-stu-id="f664a-184">Raise Events from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

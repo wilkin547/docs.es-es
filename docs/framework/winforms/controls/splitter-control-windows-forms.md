@@ -1,41 +1,42 @@
 ---
-title: "Splitter (Control, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "varias vistas"
-  - "Splitter (control) [Windows Forms]"
-  - "vistas, varias por marco"
+title: Splitter (Control, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple views
+- Splitter control [Windows Forms]
+- views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1b6a1438a48cd6cd21532a977dcf9cee69fd2cea
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Splitter (Control, formularios Windows Forms)
-Los controles `Splitter` de Windows Forms se utilizan para cambiar en tiempo de ejecución el tamaño de los controles acoplados.  El control `Splitter` suele utilizarse en formularios con controles que contienen datos de longitud variable, como el Explorador de Windows, cuyos paneles de datos contienen información cuyo ancho cambia en función de las acciones del usuario.  
+# <a name="splitter-control-windows-forms"></a><span data-ttu-id="031aa-102">Splitter (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="031aa-102">Splitter Control (Windows Forms)</span></span>
+<span data-ttu-id="031aa-103">Formularios Windows Forms `Splitter` controles se usan para cambiar el tamaño de los controles acoplados en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="031aa-103">Windows Forms `Splitter` controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="031aa-104">El `Splitter` control suele utilizarse en formularios con controles que tienen diversas longitudes de datos que se va a presentar, como el Explorador de Windows, cuyos paneles de datos contienen información de diversos anchos en momentos diferentes.</span><span class="sxs-lookup"><span data-stu-id="031aa-104">The `Splitter` control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  
   
 > [!NOTE]
->  Aunque el control <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad al control `Splitter` de las versiones anteriores, `Splitter` se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
+>  <span data-ttu-id="031aa-105">Aunque <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad a la `Splitter` control de versiones anteriores, `Splitter` se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="031aa-105">Although <xref:System.Windows.Forms.SplitContainer> replaces and adds functionality to the `Splitter` control of previous versions, `Splitter` is retained for both backward compatibility and future use if you choose.</span></span>  
   
-## En esta sección  
- [Información general sobre Splitter \(Control\)](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
- Explica qué es este control y describe sus características y propiedades más importantes.  
+## <a name="in-this-section"></a><span data-ttu-id="031aa-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="031aa-106">In This Section</span></span>  
+ [<span data-ttu-id="031aa-107">Información general sobre Splitter (Control)</span><span class="sxs-lookup"><span data-stu-id="031aa-107">Splitter Control Overview</span></span>](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
+ <span data-ttu-id="031aa-108">Explica qué es este control y sus propiedades y características clave.</span><span class="sxs-lookup"><span data-stu-id="031aa-108">Explains what this control is and its key features and properties.</span></span>  
   
-## Referencia  
- <xref:System.Windows.Forms.Splitter> \(clase\)  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+## <a name="reference"></a><span data-ttu-id="031aa-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="031aa-109">Reference</span></span>  
+ <span data-ttu-id="031aa-110">Clase <xref:System.Windows.Forms.Splitter></span><span class="sxs-lookup"><span data-stu-id="031aa-110"><xref:System.Windows.Forms.Splitter> class</span></span>  
+ <span data-ttu-id="031aa-111">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="031aa-111">Describes this class and has links to all its members.</span></span>  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+## <a name="related-sections"></a><span data-ttu-id="031aa-112">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="031aa-112">Related Sections</span></span>  
+ [<span data-ttu-id="031aa-113">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="031aa-113">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="031aa-114">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="031aa-114">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

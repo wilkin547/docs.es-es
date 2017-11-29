@@ -1,64 +1,47 @@
 ---
-title: Tipos de datos variados (Visual Basic) | Documentos de Microsoft
+title: Tipos de datos variados (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- Object data type, data types
+- Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2de377fa9dfd7ec13cdbb9b700f8485b0c0e2106
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="miscellaneous-data-types-visual-basic"></a>Tipos de datos variados (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]proporciona varios tipos de datos que no están orientados a números o caracteres. En su lugar, tratan con datos especializados como Sí o no valores, valores de fecha y hora y direcciones de objetos.  
+# <a name="miscellaneous-data-types-visual-basic"></a><span data-ttu-id="6706d-102">Tipos de datos variados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6706d-102">Miscellaneous Data Types (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="6706d-103">proporciona varios tipos de datos que no están orientados a caracteres o números.</span><span class="sxs-lookup"><span data-stu-id="6706d-103"> supplies several data types that are not oriented toward numbers or characters.</span></span> <span data-ttu-id="6706d-104">En su lugar, tratan con datos especializado, como sí/no valores, valores de fecha/hora y direcciones de objetos.</span><span class="sxs-lookup"><span data-stu-id="6706d-104">Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.</span></span>  
   
- Para una tabla que muestra una comparación en paralelo de la [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] tipos de datos, vea [tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ <span data-ttu-id="6706d-105">Para una tabla que muestra una comparación en paralelo de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tipos de datos, consulte [tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span><span class="sxs-lookup"><span data-stu-id="6706d-105">For a table showing a side-by-side comparison of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] data types, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
-## <a name="boolean-type"></a>Tipo booleano  
- El [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) es un valor sin signo que se interpreta como `True` o `False`. Ancho de sus datos depende de la plataforma de implementación. Si una variable puede contener sólo valores de dos estados como verdadero/falso, sí/no o activado/desactivado, declárela como `Boolean`.  
+## <a name="boolean-type"></a><span data-ttu-id="6706d-106">Tipo booleano</span><span class="sxs-lookup"><span data-stu-id="6706d-106">Boolean Type</span></span>  
+ <span data-ttu-id="6706d-107">El [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) es un valor sin signo que se interpreta como `True` o `False`.</span><span class="sxs-lookup"><span data-stu-id="6706d-107">The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`.</span></span> <span data-ttu-id="6706d-108">Su ancho de datos depende de la plataforma de implementación.</span><span class="sxs-lookup"><span data-stu-id="6706d-108">Its data width depends on the implementing platform.</span></span> <span data-ttu-id="6706d-109">Si una variable puede contener sólo valores de dos estados como verdadero/falso, sí/no, o activado/desactivado, declárela como `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="6706d-109">If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.</span></span>  
   
-## <a name="date-type"></a>Date (tipo)  
- El [tipo de datos Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) es un valor de 64 bits que contiene la información de fecha y hora. Cada incremento representa 100 nanosegundos de tiempo transcurrido desde el principio (12:00 A.M.) del 1 de enero del año 1 del calendario gregoriano. Si una variable puede contener un valor de fecha, un valor de hora o ambos, declárela como `Date`.  
+## <a name="date-type"></a><span data-ttu-id="6706d-110">Date (tipo)</span><span class="sxs-lookup"><span data-stu-id="6706d-110">Date Type</span></span>  
+ <span data-ttu-id="6706d-111">El [tipo de datos Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) es un valor de 64 bits que contiene información de fecha y hora.</span><span class="sxs-lookup"><span data-stu-id="6706d-111">The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information.</span></span> <span data-ttu-id="6706d-112">Cada incremento representa 100 nanosegundos de tiempo transcurrido desde el principio (12:00 A.M.) del 1 de enero del año 1 del calendario gregoriano.</span><span class="sxs-lookup"><span data-stu-id="6706d-112">Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar.</span></span> <span data-ttu-id="6706d-113">Si una variable puede contener un valor de fecha, un valor de hora o ambas, declárelo como `Date`.</span><span class="sxs-lookup"><span data-stu-id="6706d-113">If a variable can contain a date value, a time value, or both, declare it as `Date`.</span></span>  
   
-## <a name="object-type"></a>Tipo de objeto  
- El [tipo de datos de objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md) es una dirección de 32 bits que señala a una instancia de objeto dentro de la aplicación o en alguna otra aplicación. Un `Object` variable puede hacer referencia a cualquier objeto de la aplicación reconoce o a datos de cualquier tipo de datos. Esto incluye tanto *los tipos de valor*, como `Integer`, `Boolean`e instancias de estructura, y *tipos de referencia*, que son instancias de objetos creados a partir de clases como `String` y <xref:System.Windows.Forms.Form>y las instancias de matriz.</xref:System.Windows.Forms.Form>  
+## <a name="object-type"></a><span data-ttu-id="6706d-114">Tipo de objeto</span><span class="sxs-lookup"><span data-stu-id="6706d-114">Object Type</span></span>  
+ <span data-ttu-id="6706d-115">El [tipo de datos de objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md) es una dirección de 32 bits que señala a una instancia de objeto dentro de la aplicación o en otra aplicación.</span><span class="sxs-lookup"><span data-stu-id="6706d-115">The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application.</span></span> <span data-ttu-id="6706d-116">Un `Object` variable puede hacer referencia a cualquier objeto de la aplicación reconoce o a datos de cualquier tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="6706d-116">An `Object` variable can refer to any object your application recognizes, or to data of any data type.</span></span> <span data-ttu-id="6706d-117">Esto incluye tanto *los tipos de valor*, como `Integer`, `Boolean`y las instancias de la estructura, y *hacen referencia a tipos*, que son instancias de objetos creados a partir de clases como `String`y <xref:System.Windows.Forms.Form>y la matriz de instancias.</span><span class="sxs-lookup"><span data-stu-id="6706d-117">This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.</span></span>  
   
- Si una variable almacena un puntero a una instancia de una clase que no se conocen en tiempo de compilación, o si puede señalar a datos de varios tipos de datos, se declara como `Object`.  
+ <span data-ttu-id="6706d-118">Si una variable almacena un puntero a una instancia de una clase que no se conocen en tiempo de compilación, o si puede señalar a los datos de diversos tipos de datos, se declara como `Object`.</span><span class="sxs-lookup"><span data-stu-id="6706d-118">If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.</span></span>  
   
- La ventaja de la `Object` es de tipo de datos que puede utilizar para almacenar datos de cualquier tipo de datos. El inconveniente es que provoca operaciones adicionales que toman más tiempo de ejecución y que la aplicación se ejecute más lentamente. Si utiliza un `Object` variables con tipos de valor, se incurre en *boxing* y *unboxing*. Si utiliza tipos de referencia, se incurre en *enlace más tarde*.  
+ <span data-ttu-id="6706d-119">La ventaja de la `Object` es de tipo de datos que puede usar para almacenar datos de cualquier tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="6706d-119">The advantage of the `Object` data type is that you can use it to store data of any data type.</span></span> <span data-ttu-id="6706d-120">La desventaja es que se incurre en operaciones adicionales que tardan más tiempo de ejecución y que la aplicación se ejecute más lentamente.</span><span class="sxs-lookup"><span data-stu-id="6706d-120">The disadvantage is that you incur extra operations that take more execution time and make your application perform slower.</span></span> <span data-ttu-id="6706d-121">Si utiliza un `Object` variables para tipos de valor, se incurre en *conversión boxing* y *unboxing*.</span><span class="sxs-lookup"><span data-stu-id="6706d-121">If you use an `Object` variable for value types, you incur *boxing* and *unboxing*.</span></span> <span data-ttu-id="6706d-122">Si utiliza tipos de referencia, se incurre en *enlace más tarde*.</span><span class="sxs-lookup"><span data-stu-id="6706d-122">If you use it for reference types, you incur *late binding*.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Tipos de datos elementales](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Tipos de datos numéricos](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)   
- [Tipos de datos de caracteres](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)   
- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Enlace en tiempo de compilación y en tiempo de ejecución](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+## <a name="see-also"></a><span data-ttu-id="6706d-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="6706d-123">See Also</span></span>  
+ [<span data-ttu-id="6706d-124">Caracteres de tipo</span><span class="sxs-lookup"><span data-stu-id="6706d-124">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="6706d-125">Tipos de datos básicos</span><span class="sxs-lookup"><span data-stu-id="6706d-125">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="6706d-126">Tipos de datos numéricos</span><span class="sxs-lookup"><span data-stu-id="6706d-126">Numeric Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
+ [<span data-ttu-id="6706d-127">Tipos de datos de caracteres</span><span class="sxs-lookup"><span data-stu-id="6706d-127">Character Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
+ [<span data-ttu-id="6706d-128">Solución de problemas de tipos de datos</span><span class="sxs-lookup"><span data-stu-id="6706d-128">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="6706d-129">Enlace en tiempo de compilación y en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="6706d-129">Early and Late Binding</span></span>](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

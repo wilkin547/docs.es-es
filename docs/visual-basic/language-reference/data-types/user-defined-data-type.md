@@ -1,74 +1,73 @@
 ---
-title: "Tipo de datos definido por el usuario | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "UserDefined"
-  - "UDT"
-  - "vb.UDT"
-  - "User-Defined"
-  - "vb.UserDefined"
-  - "vb.User-Defined"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "tipos de datos [Visual Basic], asignar"
-  - "tipos de datos [Visual Basic], definidos por el usuario"
-  - "Structure (instrucción)"
-  - "estructuras, como tipos de datos definidos por el usuario"
-  - "tipos [Visual Basic], definidos por el usuario"
-  - "tipos de datos definidos por el usuario"
-  - "tipos de datos definidos por el usuario, declaración de estructura"
-  - "tipos de datos definidos por el usuario, estructuras en Visual Basic"
-  - "tipos de datos definidos por el usuario, Visual Basic"
-  - "tipos definidos por el usuario"
-  - "tipos definidos por el usuario, declaración de estructura"
-  - "tipos definidos por el usuario, estructuras en Visual Basic"
-  - "tipos definidos por el usuario, Visual Basic"
+title: Tipo de datos definido por el usuario
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- UserDefined
+- UDT
+- vb.UDT
+- User-Defined
+- vb.UserDefined
+- vb.User-Defined
+helpviewer_keywords:
+- user-defined data types [Visual Basic], Visual Basic
+- user-defined types
+- structures [Visual Basic], as user-defined data types
+- user-defined types [Visual Basic], Visual Basic
+- user-defined types [Visual Basic], structure declaration
+- user-defined types [Visual Basic], structures in Visual Basic
+- user-defined data types [Visual Basic], structure declaration
+- data types [Visual Basic], assigning
+- Structure statement [Visual Basic]
+- data types [Visual Basic], user-defined
+- user-defined data types [Visual Basic], structures in Visual Basic
+- user-defined data types
+- types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tipo de datos definido por el usuario
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Contiene los datos en el formato que defina el usuario.  La instrucción `Structure` define el formato.  
+# <a name="user-defined-data-type"></a><span data-ttu-id="0326d-102">Tipo de datos definido por el usuario</span><span class="sxs-lookup"><span data-stu-id="0326d-102">User-Defined Data Type</span></span>
+<span data-ttu-id="0326d-103">Contiene los datos en un formato que defina.</span><span class="sxs-lookup"><span data-stu-id="0326d-103">Holds data in a format you define.</span></span> <span data-ttu-id="0326d-104">El `Structure` instrucción define el formato.</span><span class="sxs-lookup"><span data-stu-id="0326d-104">The `Structure` statement defines the format.</span></span>  
   
- Las versiones anteriores de Visual Basic admitían el tipo definido por el usuario \(UDT\).  La versión actual amplía el tipo definido por el usuario a una *estructura*.  Una estructura es una concatenación de uno o varios *miembros* de diversos tipos de datos.  Visual Basic trata una estructura como una unidad única, aunque también puede tener acceso individualmente a sus miembros.  
+ <span data-ttu-id="0326d-105">Las versiones anteriores de Visual Basic admiten el tipo definido por el usuario (UDT).</span><span class="sxs-lookup"><span data-stu-id="0326d-105">Previous versions of Visual Basic support the user-defined type (UDT).</span></span> <span data-ttu-id="0326d-106">La versión actual expande el UDT un *estructura*.</span><span class="sxs-lookup"><span data-stu-id="0326d-106">The current version expands the UDT to a *structure*.</span></span> <span data-ttu-id="0326d-107">Una estructura es una concatenación de uno o varios *miembros* de distintos tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="0326d-107">A structure is a concatenation of one or more *members* of various data types.</span></span> <span data-ttu-id="0326d-108">Visual Basic trata una estructura como una sola unidad, aunque también puede tener acceso a sus miembros individualmente.</span><span class="sxs-lookup"><span data-stu-id="0326d-108">Visual Basic treats a structure as a single unit, although you can also access its members individually.</span></span>  
   
-## Comentarios  
- Defina y utilice un tipo de datos de estructura cuando necesite combinar varios tipos de datos en una única unidad o cuando ninguno de los tipos de datos básicos satisfaga sus necesidades.  
+## <a name="remarks"></a><span data-ttu-id="0326d-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0326d-109">Remarks</span></span>  
+ <span data-ttu-id="0326d-110">Definir y usar un tipo de datos de estructura cuando necesite combinar varios tipos de datos en una sola unidad, o cuando ninguno de los tipos de datos básicos satisfaga sus necesidades.</span><span class="sxs-lookup"><span data-stu-id="0326d-110">Define and use a structure data type when you need to combine various data types into a single unit, or when none of the elementary data types serve your needs.</span></span>  
   
- El valor predeterminado de un tipo de datos de estructura se compone de la combinación de valores predeterminados de cada uno de sus miembros.  
+ <span data-ttu-id="0326d-111">El valor predeterminado de un tipo de datos de estructura se compone de la combinación de los valores predeterminados de cada uno de sus miembros.</span><span class="sxs-lookup"><span data-stu-id="0326d-111">The default value of a structure data type consists of the combination of the default values of each of its members.</span></span>  
   
-## Formato de declaración  
- Una declaración de estructura se inicia con la instrucción [Structure \(Instrucción\)](../../../visual-basic/language-reference/statements/structure-statement.md) y finaliza con la instrucción `End` `Structure`.  La instrucción `Structure` proporciona el nombre de la estructura, que también actúa como identificador del tipo de datos que está definiendo la estructura.  Otras partes del código pueden utilizar este identificador para declarar variables, parámetros y valores devueltos de la función para que pertenezca al tipo de datos de esta estructura.  
+## <a name="declaration-format"></a><span data-ttu-id="0326d-112">Formato de declaración</span><span class="sxs-lookup"><span data-stu-id="0326d-112">Declaration Format</span></span>  
+ <span data-ttu-id="0326d-113">Una declaración de estructura se inicia con la [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md) y termina con el `End``Structure` instrucción.</span><span class="sxs-lookup"><span data-stu-id="0326d-113">A structure declaration starts with the [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) and ends with the `End``Structure` statement.</span></span> <span data-ttu-id="0326d-114">El `Structure` instrucción proporcione el nombre de la estructura, que también es el identificador del tipo de datos es la definición de la estructura.</span><span class="sxs-lookup"><span data-stu-id="0326d-114">The `Structure` statement supplies the name of the structure, which is also the identifier of the data type the structure is defining.</span></span> <span data-ttu-id="0326d-115">Otras partes del código pueden utilizar este identificador para declarar variables, parámetros y función devuelven valores para que sea del tipo de datos de la estructura.</span><span class="sxs-lookup"><span data-stu-id="0326d-115">Other parts of the code can use this identifier to declare variables, parameters, and function return values to be of this structure's data type.</span></span>  
   
- Las declaraciones comprendidas entre las instrucciones `Structure` y `End``Structure` definen los miembros de la estructura.  
+ <span data-ttu-id="0326d-116">Las declaraciones comprendidas entre la `Structure` y `End``Structure` instrucciones definen los miembros de la estructura.</span><span class="sxs-lookup"><span data-stu-id="0326d-116">The declarations between the `Structure` and `End``Structure` statements define the members of the structure.</span></span>  
   
-## Niveles de acceso a miembros  
- Debe declarar cada miembro utilizando una instrucción [Dim \(Instrucción\)](../../../visual-basic/language-reference/statements/dim-statement.md) o una instrucción que especifique el nivel de acceso, como [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md) o [Private](../../../visual-basic/language-reference/modifiers/private.md).  Si utiliza una instrucción `Dim`, el nivel de acceso es público de manera predeterminada.  
+## <a name="member-access-levels"></a><span data-ttu-id="0326d-117">Niveles de acceso de miembro</span><span class="sxs-lookup"><span data-stu-id="0326d-117">Member Access Levels</span></span>  
+ <span data-ttu-id="0326d-118">Debe declarar cada miembro utilizando una [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md) o una instrucción que especifica el nivel de acceso, como [público](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), o [privada](../../../visual-basic/language-reference/modifiers/private.md).</span><span class="sxs-lookup"><span data-stu-id="0326d-118">You must declare every member using a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md) or a statement that specifies access level, such as [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span> <span data-ttu-id="0326d-119">Si utiliza un `Dim` instrucción, el acceso a nivel predeterminado es público.</span><span class="sxs-lookup"><span data-stu-id="0326d-119">If you use a `Dim` statement, the access level defaults to public.</span></span>  
   
-## Sugerencias de programación  
+## <a name="programming-tips"></a><span data-ttu-id="0326d-120">Sugerencias de programación</span><span class="sxs-lookup"><span data-stu-id="0326d-120">Programming Tips</span></span>  
   
--   **Consumo de memoria.** Como en los demás tipos de datos compuestos, no puede calcularse de forma precisa el consumo total de memoria de una estructura sumando las asignaciones de almacenamiento nominal de sus miembros.  Es más, no puede suponerse que el orden de almacenamiento en la memoria sea el mismo que el orden de la declaración.  Si necesita controlar el diseño de almacenamiento de una estructura, puede aplicar el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> a la instrucción `Structure`.  
+-   <span data-ttu-id="0326d-121">**Consumo de memoria.**</span><span class="sxs-lookup"><span data-stu-id="0326d-121">**Memory Consumption.**</span></span> <span data-ttu-id="0326d-122">Al igual que sucede con los demás tipos de datos compuestos, no puede calcularse de forma precisa el consumo total de memoria de una estructura sumando las asignaciones de almacenamiento nominal de sus miembros.</span><span class="sxs-lookup"><span data-stu-id="0326d-122">As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members.</span></span> <span data-ttu-id="0326d-123">Es más, no puede suponerse que el orden de almacenamiento en memoria sea el mismo que el orden de la declaración.</span><span class="sxs-lookup"><span data-stu-id="0326d-123">Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="0326d-124">Si necesita controlar el diseño de almacenamiento de una estructura, puede aplicar el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> a la instrucción `Structure`.</span><span class="sxs-lookup"><span data-stu-id="0326d-124">If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.</span></span>  
   
--   **Consideraciones de interoperabilidad.** Si está interactuando con componentes que no se han escrito para .NET Framework, por ejemplo objetos de automatización u objetos COM, tenga presente que los tipos de datos definidos por el usuario en otros entornos no son compatibles con los tipos de estructuras de Visual Basic.  
+-   <span data-ttu-id="0326d-125">**Consideraciones de interoperabilidad.**</span><span class="sxs-lookup"><span data-stu-id="0326d-125">**Interop Considerations.**</span></span> <span data-ttu-id="0326d-126">Si interactúa con componentes que no se han escrito para .NET Framework, por ejemplo objetos de automatización o COM, tenga en cuenta que los tipos definidos por el usuario en otros entornos no son compatibles con Visual Basic los tipos de estructuras.</span><span class="sxs-lookup"><span data-stu-id="0326d-126">If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that user-defined types in other environments are not compatible with Visual Basic structure types.</span></span>  
   
--   **Ampliación.** No existen conversiones automáticas a un tipo de datos de estructuras o desde un tipo de datos de estructuras.  Puede definir operadores de conversión en la estructura utilizando [Operator \(Instrucción\)](../../../visual-basic/language-reference/statements/operator-statement.md) y puede declarar cada operador de conversión para que sea `Widening` o `Narrowing`.  
+-   <span data-ttu-id="0326d-127">**De ampliación.**</span><span class="sxs-lookup"><span data-stu-id="0326d-127">**Widening.**</span></span> <span data-ttu-id="0326d-128">No hay ninguna conversión automática a o desde cualquier tipo de datos de estructura.</span><span class="sxs-lookup"><span data-stu-id="0326d-128">There is no automatic conversion to or from any structure data type.</span></span> <span data-ttu-id="0326d-129">Puede definir operadores de conversión en la estructura utilizando el [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md), y se puede declarar cada operador de conversión sea `Widening` o `Narrowing`.</span><span class="sxs-lookup"><span data-stu-id="0326d-129">You can define conversion operators on your structure using the [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), and you can declare each conversion operator to be `Widening` or `Narrowing`.</span></span>  
   
--   **Caracteres de tipo.** Los tipos de datos de estructura no tienen ningún carácter de tipo literal ni ningún carácter de tipo identificador.  
+-   <span data-ttu-id="0326d-130">**Caracteres de tipo.**</span><span class="sxs-lookup"><span data-stu-id="0326d-130">**Type Characters.**</span></span> <span data-ttu-id="0326d-131">Tipos de datos de estructura no tienen ningún carácter de tipo literal ni caracteres de tipo identificador.</span><span class="sxs-lookup"><span data-stu-id="0326d-131">Structure data types have no literal type character or identifier type character.</span></span>  
   
--   **Tipo en Framework.** No hay ningún tipo correspondiente en .NET Framework.  Todas las estructuras se heredan de la clase de .NET Framework <xref:System.ValueType?displayProperty=fullName>, pero ninguna estructura individual se corresponde con <xref:System.ValueType?displayProperty=fullName>.  
+-   <span data-ttu-id="0326d-132">**Tipo de Framework.**</span><span class="sxs-lookup"><span data-stu-id="0326d-132">**Framework Type.**</span></span> <span data-ttu-id="0326d-133">No hay ningún tipo correspondiente en .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0326d-133">There is no corresponding type in the .NET Framework.</span></span> <span data-ttu-id="0326d-134">Todas las estructuras heredan de la clase de .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, pero ninguna estructura individual corresponde a <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0326d-134">All structures inherit from the .NET Framework class <xref:System.ValueType?displayProperty=nameWithType>, but no individual structure corresponds to <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
-## Ejemplo  
- En el siguiente modelo se muestra el esquema de declaración de una estructura.  
+## <a name="example"></a><span data-ttu-id="0326d-135">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0326d-135">Example</span></span>  
+ <span data-ttu-id="0326d-136">El paradigma siguiente muestra el esquema de la declaración de una estructura.</span><span class="sxs-lookup"><span data-stu-id="0326d-136">The following paradigm shows the outline of the declaration of a structure.</span></span>  
   
 ```  
 [Public | Protected | Friend | Protected Friend | Private] Structure structname  
@@ -78,14 +77,14 @@ Contiene los datos en el formato que defina el usuario.  La instrucción `Struct
 End Structure  
 ```  
   
-## Vea también  
- <xref:System.ValueType>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Structure \(Instrucción\)](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="0326d-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="0326d-137">See Also</span></span>  
+ <xref:System.ValueType>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [<span data-ttu-id="0326d-138">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="0326d-138">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="0326d-139">Funciones de conversión de tipos</span><span class="sxs-lookup"><span data-stu-id="0326d-139">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="0326d-140">Resumen de conversión</span><span class="sxs-lookup"><span data-stu-id="0326d-140">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="0326d-141">Structure (instrucción)</span><span class="sxs-lookup"><span data-stu-id="0326d-141">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="0326d-142">Widening</span><span class="sxs-lookup"><span data-stu-id="0326d-142">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="0326d-143">Narrowing</span><span class="sxs-lookup"><span data-stu-id="0326d-143">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="0326d-144">Estructuras</span><span class="sxs-lookup"><span data-stu-id="0326d-144">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="0326d-145">Uso eficiente de tipos de datos</span><span class="sxs-lookup"><span data-stu-id="0326d-145">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

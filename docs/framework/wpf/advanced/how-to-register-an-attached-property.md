@@ -1,37 +1,43 @@
 ---
-title: "C&#243;mo: Registrar una propiedad asociada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propiedades asociadas, registrar"
-  - "registrar propiedades adjuntas"
+title: "Cómo: Registrar una propiedad asociada"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- attached properties [WPF], registering
+- registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aecb5d2f35b8532ad2ae7558af1a93243b0fd6df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Registrar una propiedad asociada
-En este ejemplo se muestra cómo registrar una [propiedad adjunta](GTMT) y proporcionar descriptores de acceso públicos para que se pueda utilizar la propiedad en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y en código.  Las propiedades adjuntas son un concepto de sintaxis definido por [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  La mayoría de las propiedades adjuntas para los tipos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también se implementan como [propiedades de dependencia](GTMT).  Puede utilizar las [propiedades de dependencia](GTMT) en cualquier tipo <xref:System.Windows.DependencyObject>.  
+# <a name="how-to-register-an-attached-property"></a><span data-ttu-id="ecaac-102">Cómo: Registrar una propiedad asociada</span><span class="sxs-lookup"><span data-stu-id="ecaac-102">How to: Register an Attached Property</span></span>
+<span data-ttu-id="ecaac-103">En este ejemplo se muestra cómo registrar una propiedad adjunta y se proporcionan descriptores de acceso públicos para que pueda usar la propiedad en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y en el código.</span><span class="sxs-lookup"><span data-stu-id="ecaac-103">This example shows how to register an attached property and provide public accessors so that you can use the property in both [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] and code.</span></span> <span data-ttu-id="ecaac-104">Las propiedades adjuntas son un concepto de sintaxis que define [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ecaac-104">Attached properties are a syntax concept defined by [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="ecaac-105">La mayoría de propiedades adjuntas para los tipos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también se implementan como propiedades de dependencia.</span><span class="sxs-lookup"><span data-stu-id="ecaac-105">Most attached properties for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are also implemented as dependency properties.</span></span> <span data-ttu-id="ecaac-106">Puede usar las propiedades de dependencia en cualquier <xref:System.Windows.DependencyObject> tipos.</span><span class="sxs-lookup"><span data-stu-id="ecaac-106">You can use dependency properties on any <xref:System.Windows.DependencyObject> types.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo registrar una propiedad adjunta como una propiedad de dependencia, utilizando el método <xref:System.Windows.DependencyProperty.RegisterAttached%2A>.  La clase de proveedor tiene la opción de proporcionar los metadatos predeterminados para la propiedad que son aplicables cuando la propiedad se utiliza en otra clase, a menos que esa clase invalide los metadatos.  En este ejemplo, el valor predeterminado de la propiedad `IsBubbleSource` se establece en `false`.  
+## <a name="example"></a><span data-ttu-id="ecaac-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ecaac-107">Example</span></span>  
+ <span data-ttu-id="ecaac-108">En el ejemplo siguiente se muestra cómo registrar una propiedad adjunta como una propiedad de dependencia, utilizando el <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método.</span><span class="sxs-lookup"><span data-stu-id="ecaac-108">The following example shows how to register an attached property as a dependency property, by using the <xref:System.Windows.DependencyProperty.RegisterAttached%2A> method.</span></span> <span data-ttu-id="ecaac-109">La clase de proveedor tiene la opción de proporcionar metadatos predeterminados para la propiedad que se aplica cuando la propiedad se usa en otra clase, a menos que esa clase invalide los metadatos.</span><span class="sxs-lookup"><span data-stu-id="ecaac-109">The provider class has the option of providing default metadata for the property that is applicable when the property is used on another class, unless that class overrides the metadata.</span></span> <span data-ttu-id="ecaac-110">En este ejemplo, el valor predeterminado de la propiedad `IsBubbleSource` está establecida en `false`.</span><span class="sxs-lookup"><span data-stu-id="ecaac-110">In this example, the default value of the `IsBubbleSource` property is set to `false`.</span></span>  
   
- La clase de proveedor para una propiedad adjunta \(incluso si no se registra como una propiedad de dependencia\) debe proporcionar descriptores de acceso get y set estáticos que sigan la convención de nomenclatura `Set`*\[NombreDePropiedadAdjunta\]* y `Get`*\[NombreDePropiedadAdjunta\]*. Se requieren estos descriptores de acceso para que el lector activo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pueda reconocer la propiedad como atributo en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y resolver los tipos adecuados.  
+ <span data-ttu-id="ecaac-111">La clase de proveedor para una propiedad adjunta (incluso si no está registrada como una propiedad de dependencia) debe proporcionar descriptores de acceso get y set estáticos que siguen la convención de nomenclatura `Set`*[AttachedPropertyName]* y `Get`*[AttachedPropertyName]*.</span><span class="sxs-lookup"><span data-stu-id="ecaac-111">The provider class for an attached property (even if it is not registered as a dependency property) must provide static get and set accessors that follow the naming convention `Set`*[AttachedPropertyName]* and `Get`*[AttachedPropertyName]*.</span></span> <span data-ttu-id="ecaac-112">Estos descriptores de acceso son necesarios para que el lector [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pueda reconocer la propiedad como un atributo en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y resolver los tipos pertinentes.</span><span class="sxs-lookup"><span data-stu-id="ecaac-112">These accessors are required so that the acting [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reader can recognize the property as an attribute in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and resolve the appropriate types.</span></span>  
   
  [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
  [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]  
   
-## Vea también  
- <xref:System.Windows.DependencyProperty>   
- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="ecaac-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="ecaac-113">See Also</span></span>  
+ <xref:System.Windows.DependencyProperty>  
+ [<span data-ttu-id="ecaac-114">Información general sobre las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="ecaac-114">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="ecaac-115">Propiedades de dependencia personalizadas</span><span class="sxs-lookup"><span data-stu-id="ecaac-115">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="ecaac-116">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="ecaac-116">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

@@ -1,82 +1,84 @@
 ---
-title: "Consultas compiladas (LINQ to Entities) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Consultas compiladas (LINQ to Entities)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: de490bac737520ffef5899c8515322c72b2a1144
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Consultas compiladas (LINQ to Entities)
-Cuando una aplicación ejecuta muchas veces consultas que tienen una estructura similar en Entity Framework, se suele mejorar el rendimiento si se compila la consulta una vez y se ejecuta varias veces con parámetros diferentes.  Por ejemplo, una aplicación puede tener que recuperar todos los clientes de una ciudad determinada; el usuario especifica en un formulario la ciudad en tiempo de ejecución.  LINQ to Entities admite el uso de consultas compiladas para este fin.  
+# <a name="compiled-queries--linq-to-entities"></a><span data-ttu-id="173c6-102">Consultas compiladas (LINQ to Entities)</span><span class="sxs-lookup"><span data-stu-id="173c6-102">Compiled Queries  (LINQ to Entities)</span></span>
+<span data-ttu-id="173c6-103">Cuando una aplicación ejecuta muchas veces consultas que tienen una estructura similar en Entity Framework, se suele mejorar el rendimiento si se compila la consulta una vez y se ejecuta varias veces con parámetros diferentes.</span><span class="sxs-lookup"><span data-stu-id="173c6-103">When you have an application that executes structurally similar queries many times in the Entity Framework, you can frequently increase performance by compiling the query one time and executing it several times with different parameters.</span></span> <span data-ttu-id="173c6-104">Por ejemplo, una aplicación puede tener que recuperar todos los clientes de una ciudad determinada; el usuario especifica en un formulario la ciudad en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="173c6-104">For example, an application might have to retrieve all the customers in a particular city; the city is specified at runtime by the user in a form.</span></span> <span data-ttu-id="173c6-105">LINQ to Entities admite el uso de consultas compiladas para este fin.</span><span class="sxs-lookup"><span data-stu-id="173c6-105">LINQ to Entities supports using compiled queries for this purpose.</span></span>  
   
- A partir de .NET Framework 4.0.5, las consultas LINQ se almacenan en memoria caché automáticamente.  Sin embargo, todavía puede usar consultas LINQ compiladas para reducir este costo en ejecuciones posteriores y las consultas compiladas pueden ser más eficaces que las consultas LINQ que se almacenan en memoria caché automáticamente.  Tenga en cuenta que las consultas LINQ to Entities que aplican el operador `Enumerable.Contains` a colecciones en memoria no se almacenan en memoria caché automáticamente.  Tampoco se permite parametrizar colecciones en memoria en consultas LINQ compiladas.  
+ <span data-ttu-id="173c6-106">A partir de .NET Framework 4.0.5, las consultas LINQ se almacenan en memoria caché automáticamente.</span><span class="sxs-lookup"><span data-stu-id="173c6-106">Starting with the .NET Framework 4.5, LINQ queries are cached automatically.</span></span> <span data-ttu-id="173c6-107">Sin embargo, todavía puede usar consultas LINQ compiladas para reducir este costo en ejecuciones posteriores y las consultas compiladas pueden ser más eficaces que las consultas LINQ que se almacenan en memoria caché automáticamente.</span><span class="sxs-lookup"><span data-stu-id="173c6-107">However, you can still use compiled LINQ queries to reduce this cost in later executions and compiled queries can be more efficient than LINQ queries that are automatically cached.</span></span> <span data-ttu-id="173c6-108">Tenga en cuenta que las consultas LINQ to Entities que aplican el operador `Enumerable.Contains` a colecciones en memoria no se almacenan en memoria caché automáticamente.</span><span class="sxs-lookup"><span data-stu-id="173c6-108">Note that LINQ to Entities queries that apply the `Enumerable.Contains` operator to in-memory collections are not automatically cached.</span></span> <span data-ttu-id="173c6-109">Tampoco se permite parametrizar colecciones en memoria en consultas LINQ compiladas.</span><span class="sxs-lookup"><span data-stu-id="173c6-109">Also parameterizing in-memory collections in compiled LINQ queries is not allowed.</span></span>  
   
- La clase <xref:System.Data.Objects.CompiledQuery> permite la compilación y el almacenamiento en memoria caché de las consultas para volverlas a utilizar.  Desde un punto de vista conceptual, esta clase contiene un método `Compile` de <xref:System.Data.Objects.CompiledQuery> con varias sobrecargas.  Llame al método `Compile` para crear un delegado nuevo que represente la consulta compilada.  Los métodos `Compile`, con <xref:System.Data.Objects.ObjectContext> y valores de parámetros, devuelven un delegado que produce algún resultado \(por ejemplo, una instancia de <xref:System.Linq.IQueryable%601>\).  La consulta compila una vez solo durante la primera ejecución.  El conjunto de opciones de combinación de la consulta en el momento de la compilación no se puede cambiar posteriormente.  Una vez compilada la consulta, solo se pueden proporcionar parámetros de tipo primitivo, pero no reemplazar las partes de la consulta que cambiarían el SQL generado.  Para obtener más información, vea [Opciones de combinación de Entity Framework y consultas compiladas](http://go.microsoft.com/fwlink/?LinkId=199591)  
+ <span data-ttu-id="173c6-110">La clase <xref:System.Data.Objects.CompiledQuery> permite la compilación y el almacenamiento en memoria caché de las consultas para volverlas a utilizar.</span><span class="sxs-lookup"><span data-stu-id="173c6-110">The <xref:System.Data.Objects.CompiledQuery> class provides compilation and caching of queries for reuse.</span></span> <span data-ttu-id="173c6-111">Desde un punto de vista conceptual, esta clase contiene un método <xref:System.Data.Objects.CompiledQuery> de `Compile` con varias sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="173c6-111">Conceptually, this class contains a <xref:System.Data.Objects.CompiledQuery>'s `Compile` method with several overloads.</span></span> <span data-ttu-id="173c6-112">Llame al método `Compile` para crear un delegado nuevo que represente la consulta compilada.</span><span class="sxs-lookup"><span data-stu-id="173c6-112">Call the `Compile` method to create a new delegate to represent the compiled query.</span></span> <span data-ttu-id="173c6-113">Los métodos `Compile`, con <xref:System.Data.Objects.ObjectContext> y valores de parámetros, devuelven un delegado que produce algún resultado (por ejemplo, una instancia de <xref:System.Linq.IQueryable%601>).</span><span class="sxs-lookup"><span data-stu-id="173c6-113">The `Compile` methods, provided with a <xref:System.Data.Objects.ObjectContext> and parameter values, return a delegate that produces some result (such as an <xref:System.Linq.IQueryable%601> instance).</span></span> <span data-ttu-id="173c6-114">La consulta compila una vez solo durante la primera ejecución.</span><span class="sxs-lookup"><span data-stu-id="173c6-114">The query compiles once during only the first execution.</span></span> <span data-ttu-id="173c6-115">El conjunto de opciones de combinación de la consulta en el momento de la compilación no se puede cambiar posteriormente.</span><span class="sxs-lookup"><span data-stu-id="173c6-115">The merge options set for the query at the time of the compilation cannot be changed later.</span></span> <span data-ttu-id="173c6-116">Una vez compilada la consulta, solo se pueden proporcionar parámetros de tipo primitivo, pero no reemplazar las partes de la consulta que cambiarían el SQL generado.</span><span class="sxs-lookup"><span data-stu-id="173c6-116">Once the query is compiled you can only supply parameters of primitive type but you cannot replace parts of the query that would change the generated SQL.</span></span> <span data-ttu-id="173c6-117">Para obtener más información, vea [opciones de combinación de Entity Framework y consultas compiladas](http://go.microsoft.com/fwlink/?LinkId=199591)</span><span class="sxs-lookup"><span data-stu-id="173c6-117">For more information, see [Entity Framework Merge Options and Compiled Queries](http://go.microsoft.com/fwlink/?LinkId=199591)</span></span>  
   
- La expresión de consulta [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] compilada por el método `Compile` de <xref:System.Data.Objects.CompiledQuery> se representa mediante uno de los delegados `Func` genéricos, como <xref:System.Func%605>.  A lo sumo, la expresión de consulta puede encapsular un parámetro `ObjectContext`, un parámetro de retorno y 16 parámetros de consulta.  Si se requieren más de 16 parámetros de consulta, puede crear una estructura cuyas propiedades representan los parámetros de consulta.  A continuación, puede utilizar las propiedades de la estructura de la expresión de consulta después de establecerlas.  
+ <span data-ttu-id="173c6-118">El [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] expresión de consulta que la <xref:System.Data.Objects.CompiledQuery>del `Compile` método compila se representa mediante una de la clase genérica `Func` delega, como <xref:System.Func%605>.</span><span class="sxs-lookup"><span data-stu-id="173c6-118">The [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] query expression that the <xref:System.Data.Objects.CompiledQuery>'s `Compile` method compiles is represented by one of the generic `Func` delegates, such as <xref:System.Func%605>.</span></span> <span data-ttu-id="173c6-119">A lo sumo, la expresión de consulta puede encapsular un parámetro `ObjectContext`, un parámetro de retorno y 16 parámetros de consulta.</span><span class="sxs-lookup"><span data-stu-id="173c6-119">At most, the query expression can encapsulate an `ObjectContext` parameter, a return parameter, and 16 query parameters.</span></span> <span data-ttu-id="173c6-120">Si se requieren más de 16 parámetros de consulta, puede crear una estructura cuyas propiedades representan los parámetros de consulta.</span><span class="sxs-lookup"><span data-stu-id="173c6-120">If more than 16 query parameters are required, you can create a structure whose properties represent query parameters.</span></span> <span data-ttu-id="173c6-121">A continuación, puede utilizar las propiedades de la estructura de la expresión de consulta después de establecerlas.</span><span class="sxs-lookup"><span data-stu-id="173c6-121">You can then use the properties on the structure in the query expression after you set the properties.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se compila y, a continuación, se llama a una consulta que acepta un parámetro de entrada <xref:System.Decimal> y devuelve una secuencia de pedidos cuyo importe total a pagar es mayor o igual que 200 $:  
+## <a name="example"></a><span data-ttu-id="173c6-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="173c6-122">Example</span></span>  
+ <span data-ttu-id="173c6-123">En el ejemplo siguiente se compila y, a continuación, se llama a una consulta que acepta un parámetro de entrada <xref:System.Decimal> y devuelve una secuencia de pedidos cuyo importe total a pagar es mayor o igual que 200 $:</span><span class="sxs-lookup"><span data-stu-id="173c6-123">The following example compiles and then invokes a query that accepts a <xref:System.Decimal> input parameter and returns a sequence of orders where the total due is greater than or equal to $200.00:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
   
-## Ejemplo  
- En el ejemplo siguiente se compila y, a continuación, se llama a una consulta que devuelve una instancia de <xref:System.Data.Objects.ObjectQuery%601>:  
+## <a name="example"></a><span data-ttu-id="173c6-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="173c6-124">Example</span></span>  
+ <span data-ttu-id="173c6-125">En el ejemplo siguiente se compila y, a continuación, se llama a una consulta que devuelve una instancia de <xref:System.Data.Objects.ObjectQuery%601>:</span><span class="sxs-lookup"><span data-stu-id="173c6-125">The following example compiles and then invokes a query that returns an <xref:System.Data.Objects.ObjectQuery%601> instance:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery1_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery1_mq)]  
   
-## Ejemplo  
- En el ejemplo siguiente se compila y, a continuación, se llama a una consulta que devuelve el promedio de los precios de venta de productos en forma de valor <xref:System.Decimal>:  
+## <a name="example"></a><span data-ttu-id="173c6-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="173c6-126">Example</span></span>  
+ <span data-ttu-id="173c6-127">En el ejemplo siguiente se compila y, a continuación, se llama a una consulta que devuelve el promedio de los precios de venta de productos en forma de valor <xref:System.Decimal>:</span><span class="sxs-lookup"><span data-stu-id="173c6-127">The following example compiles and then invokes a query that returns the average of the product list prices as a <xref:System.Decimal> value:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery3_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
-## Ejemplo  
- En el ejemplo siguiente se compila y luego se llama a una consulta que acepta un parámetro de entrada <xref:System.String> y, a continuación, devuelve un elemento `Contact` cuya dirección de correo electrónico comienza con la cadena especificada:  
+## <a name="example"></a><span data-ttu-id="173c6-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="173c6-128">Example</span></span>  
+ <span data-ttu-id="173c6-129">En el ejemplo siguiente se compila y luego se llama a una consulta que acepta un parámetro de entrada <xref:System.String> y, a continuación, devuelve un elemento `Contact` cuya dirección de correo electrónico comienza con la cadena especificada:</span><span class="sxs-lookup"><span data-stu-id="173c6-129">The following example compiles and then invokes a query that accepts a <xref:System.String> input parameter and then returns a `Contact` whose e-mail address starts with the specified string:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
   
-## Ejemplo  
- En el ejemplo siguiente se compila y luego se llama a una consulta que acepta los parámetros de entrada <xref:System.DateTime> y <xref:System.Decimal> y, a continuación, devuelve una secuencia de pedidos cuya fecha es posterior al 8 de marzo de 2003 y cuyo importe total que pagar es inferior a 300 $:  
+## <a name="example"></a><span data-ttu-id="173c6-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="173c6-130">Example</span></span>  
+ <span data-ttu-id="173c6-131">En el ejemplo siguiente se compila y luego se llama a una consulta que acepta los parámetros de entrada <xref:System.DateTime> y <xref:System.Decimal> y, a continuación, devuelve una secuencia de pedidos cuya fecha es posterior al 8 de marzo de 2003 y cuyo importe total que pagar es inferior a 300 $:</span><span class="sxs-lookup"><span data-stu-id="173c6-131">The following example compiles and then invokes a query that accepts <xref:System.DateTime> and <xref:System.Decimal> input parameters and returns a sequence of orders where the order date is later than March 8, 2003, and the total due is less than $300.00:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
   
-## Ejemplo  
- En el ejemplo siguiente se compila y luego se llama a una consulta que acepta un parámetro de entrada <xref:System.DateTime> y, a continuación, devuelve una secuencia de pedidos cuya fecha es posterior al 8 de marzo de 2004.  Esta consulta devuelve la información del pedido como una secuencia de tipos anónimos.  El compilador deduce los tipos anónimos, de modo que no se pueden especificar parámetros de tipo en el método `Compile` de <xref:System.Data.Objects.CompiledQuery> y el tipo se define en la propia consulta.  
+## <a name="example"></a><span data-ttu-id="173c6-132">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="173c6-132">Example</span></span>  
+ <span data-ttu-id="173c6-133">En el ejemplo siguiente se compila y luego se llama a una consulta que acepta un parámetro de entrada <xref:System.DateTime> y, a continuación, devuelve una secuencia de pedidos cuya fecha es posterior al 8 de marzo de 2004.</span><span class="sxs-lookup"><span data-stu-id="173c6-133">The following example compiles and then invokes a query that accepts a <xref:System.DateTime> input parameter and returns a sequence of orders where the order date is later than March 8, 2004.</span></span> <span data-ttu-id="173c6-134">Esta consulta devuelve la información del pedido como una secuencia de tipos anónimos.</span><span class="sxs-lookup"><span data-stu-id="173c6-134">This query returns the order information as a sequence of anonymous types.</span></span> <span data-ttu-id="173c6-135">El compilador deduce los tipos anónimos, de modo que no se pueden especificar parámetros de tipo en el método <xref:System.Data.Objects.CompiledQuery> de `Compile` y el tipo se define en la propia consulta.</span><span class="sxs-lookup"><span data-stu-id="173c6-135">Anonymous types are inferred by the compiler, so you cannot specify type parameters in the <xref:System.Data.Objects.CompiledQuery>'s `Compile` method and the type is defined in the query itself.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery6)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery6)]  
   
-## Ejemplo  
- En el ejemplo siguiente se compila y luego se llama a una consulta que acepta un parámetro de entrada con una estructura definida por el usuario y, a continuación, devuelve una secuencia de pedidos.  La estructura define los parámetros de la consulta correspondientes a la fecha de inicio, la fecha de fin y la deuda total, y la consulta devuelve los pedidos distribuidos entre el 3 de marzo y el 8 de marzo de 2003 con un importe total mayor que 700,00$.  
+## <a name="example"></a><span data-ttu-id="173c6-136">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="173c6-136">Example</span></span>  
+ <span data-ttu-id="173c6-137">En el ejemplo siguiente se compila y luego se llama a una consulta que acepta un parámetro de entrada con una estructura definida por el usuario y, a continuación, devuelve una secuencia de pedidos.</span><span class="sxs-lookup"><span data-stu-id="173c6-137">The following example compiles and then invokes a query that accepts a user-defined structure input parameter and returns a sequence of orders.</span></span> <span data-ttu-id="173c6-138">La estructura define los parámetros de la consulta correspondientes a la fecha de inicio, la fecha de fin y la deuda total, y la consulta devuelve los pedidos distribuidos entre el 3 de marzo y el 8 de marzo de 2003 con un importe total mayor que 700,00$.</span><span class="sxs-lookup"><span data-stu-id="173c6-138">The structure defines start date, end date, and total due query parameters, and the query returns orders shipped between March 3 and March 8, 2003 with a total due greater than $700.00.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery7)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery7)]  
   
- La estructura que define los parámetros de la consulta:  
+ <span data-ttu-id="173c6-139">La estructura que define los parámetros de la consulta:</span><span class="sxs-lookup"><span data-stu-id="173c6-139">The structure that defines the query parameters:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## Vea también  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)   
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)   
- [Opciones de combinación de Entity Framework y consultas compiladas](http://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a><span data-ttu-id="173c6-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="173c6-140">See Also</span></span>  
+ [<span data-ttu-id="173c6-141">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="173c6-141">ADO.NET Entity Framework</span></span>](../../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="173c6-142">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="173c6-142">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [<span data-ttu-id="173c6-143">Opciones de combinación de Entity Framework y consultas compiladas</span><span class="sxs-lookup"><span data-stu-id="173c6-143">Entity Framework Merge Options and Compiled Queries</span></span>](http://go.microsoft.com/fwlink/?LinkId=199591)

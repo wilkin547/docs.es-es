@@ -1,63 +1,61 @@
 ---
-title: "Dise&#241;o de la interfaz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interfaces [.NET Framework], instrucciones de diseño"
-  - "instrucciones de diseño de tipos, interfaces"
-  - "instrucciones de diseño clases biblioteca [.NET Framework], interfaces"
+title: "Diseño de interfaces"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interfaces [.NET Framework], design guidelines
+- type design guidelines, interfaces
+- class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d04011622321638e1f3b0c5f4d270f840c7070e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Dise&#241;o de la interfaz
-Aunque la mayoría de las API se modela mejor mediante las clases y structs, hay casos en los que interfaces son más adecuadas o son la única opción.  
+# <a name="interface-design"></a><span data-ttu-id="d8035-102">Diseño de interfaces</span><span class="sxs-lookup"><span data-stu-id="d8035-102">Interface Design</span></span>
+<span data-ttu-id="d8035-103">Aunque la mayoría de las API se modela mejor mediante las clases y structs, hay casos en los que interfaces son más adecuadas o son la única opción.</span><span class="sxs-lookup"><span data-stu-id="d8035-103">Although most APIs are best modeled using classes and structs, there are cases in which interfaces are more appropriate or are the only option.</span></span>  
   
- El CLR no admite herencia múltiple \(es decir, las clases CLR no pueden heredar de más de una clase base\), pero permite tipos para implementar una o más interfaces además de heredar de una clase base. Por lo tanto, las interfaces se utilizan a menudo para lograr el efecto de herencia múltiple. Por ejemplo, <xref:System.IDisposable> es una interfaz que permite que los tipos admitir disposability independiente de cualquier otra jerarquía de herencia en el que desea participar.  
+ <span data-ttu-id="d8035-104">El CLR no admite la herencia múltiple (es decir, las clases CLR no pueden heredar de más de una clase base), pero permite tipos para implementar una o más interfaces además de heredar de una clase base.</span><span class="sxs-lookup"><span data-stu-id="d8035-104">The CLR does not support multiple inheritance (i.e., CLR classes cannot inherit from more than one base class), but it does allow types to implement one or more interfaces in addition to inheriting from a base class.</span></span> <span data-ttu-id="d8035-105">Por lo tanto, las interfaces se utilizan a menudo para lograr el efecto de herencia múltiple.</span><span class="sxs-lookup"><span data-stu-id="d8035-105">Therefore, interfaces are often used to achieve the effect of multiple inheritance.</span></span> <span data-ttu-id="d8035-106">Por ejemplo, <xref:System.IDisposable> es una interfaz que permite que los tipos admitir disposability independiente de cualquier otra jerarquía de herencia en el que desean participar.</span><span class="sxs-lookup"><span data-stu-id="d8035-106">For example, <xref:System.IDisposable> is an interface that allows types to support disposability independent of any other inheritance hierarchy in which they want to participate.</span></span>  
   
- Es la situación en que definir una interfaz es adecuada en la creación de una interfaz común que puede ser compatible con varios tipos, incluidos algunos tipos de valor. Tipos de valor no pueden heredar de tipos distintos de <xref:System.ValueType>, pero pueden implementar interfaces, por lo que usar una interfaz es la única opción para proporcionar un tipo base común.  
+ <span data-ttu-id="d8035-107">Es la situación en que definir una interfaz es adecuada en la creación de una interfaz común que puede ser compatible con varios tipos, incluidos algunos tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="d8035-107">The other situation in which defining an interface is appropriate is in creating a common interface that can be supported by several types, including some value types.</span></span> <span data-ttu-id="d8035-108">Tipos de valor no pueden heredar de tipos distintos de <xref:System.ValueType>, pero pueden implementar interfaces, por lo que usar una interfaz es la única opción para proporcionar un tipo base común.</span><span class="sxs-lookup"><span data-stu-id="d8035-108">Value types cannot inherit from types other than <xref:System.ValueType>, but they can implement interfaces, so using an interface is the only option in order to provide a common base type.</span></span>  
   
- **✓ hacer** defina una interfaz si necesita algunas API común para ser compatible con un conjunto de tipos que incluye los tipos de valor.  
+ <span data-ttu-id="d8035-109">**✓ HACER** defina una interfaz si necesita algunas API comunes que deben admitir un conjunto de tipos que incluye los tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="d8035-109">**✓ DO** define an interface if you need some common API to be supported by a set of types that includes value types.</span></span>  
   
- **✓ considere** define una interfaz si necesita admitir su funcionalidad en tipos que ya heredan de algún otro tipo.  
+ <span data-ttu-id="d8035-110">**✓ Considere la posibilidad de** define una interfaz si necesita admitir su funcionalidad en tipos que ya heredan de algún otro tipo.</span><span class="sxs-lookup"><span data-stu-id="d8035-110">**✓ CONSIDER** defining an interface if you need to support its functionality on types that already inherit from some other type.</span></span>  
   
- **Evitar X** mediante las interfaces de marcador \(interfaces sin miembros\).  
+ <span data-ttu-id="d8035-111">**X evitar** mediante las interfaces de marcador (interfaces sin miembros).</span><span class="sxs-lookup"><span data-stu-id="d8035-111">**X AVOID** using marker interfaces (interfaces with no members).</span></span>  
   
- Si necesita marcar una clase como si tuviera una característica específica \(marcador\), en general, utilice un atributo personalizado en lugar de una interfaz.  
+ <span data-ttu-id="d8035-112">Si necesita marcar una clase como si tuviera una característica específica (marcador), por lo general, utilice un atributo personalizado en lugar de una interfaz.</span><span class="sxs-lookup"><span data-stu-id="d8035-112">If you need to mark a class as having a specific characteristic (marker), in general, use a custom attribute rather than an interface.</span></span>  
   
- **✓ hacer** proporcionar al menos un tipo que es una implementación de una interfaz.  
+ <span data-ttu-id="d8035-113">**✓ HACER** proporcionar al menos un tipo que es una implementación de una interfaz.</span><span class="sxs-lookup"><span data-stu-id="d8035-113">**✓ DO** provide at least one type that is an implementation of an interface.</span></span>  
   
- Haciendo esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601> es una implementación de la <xref:System.Collections.Generic.IList%601> interfaz.  
+ <span data-ttu-id="d8035-114">Haciendo esto ayuda a validar el diseño de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="d8035-114">Doing this helps to validate the design of the interface.</span></span> <span data-ttu-id="d8035-115">Por ejemplo, <xref:System.Collections.Generic.List%601> es una implementación de la <xref:System.Collections.Generic.IList%601> interfaz.</span><span class="sxs-lookup"><span data-stu-id="d8035-115">For example, <xref:System.Collections.Generic.List%601> is an implementation of the <xref:System.Collections.Generic.IList%601> interface.</span></span>  
   
- **✓ hacer** proporcionan al menos una API que consume cada interfaz definida \(un método que recibe la interfaz como un parámetro o una propiedad de tipo que la interfaz\).  
+ <span data-ttu-id="d8035-116">**✓ HACER** proporcionan al menos una API que consuma cada interfaz definida (un método que toma la interfaz como un parámetro o una propiedad con tipo como la interfaz).</span><span class="sxs-lookup"><span data-stu-id="d8035-116">**✓ DO** provide at least one API that consumes each interface you define (a method taking the interface as a parameter or a property typed as the interface).</span></span>  
   
- Haciendo esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> consume el <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> interfaz.  
+ <span data-ttu-id="d8035-117">Haciendo esto ayuda a validar el diseño de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="d8035-117">Doing this helps to validate the interface design.</span></span> <span data-ttu-id="d8035-118">Por ejemplo, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consume el <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfaz.</span><span class="sxs-lookup"><span data-stu-id="d8035-118">For example, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consumes the <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interface.</span></span>  
   
- **X no** agregar miembros a una interfaz que ya se envió.  
+ <span data-ttu-id="d8035-119">**X DO NOT** agregar miembros a una interfaz que se haya distribuido previamente.</span><span class="sxs-lookup"><span data-stu-id="d8035-119">**X DO NOT** add members to an interface that has previously shipped.</span></span>  
   
- Al hacerlo, se interrumpiría implementaciones de la interfaz. Debe crear una nueva interfaz con el fin de evitar problemas de versiones.  
+ <span data-ttu-id="d8035-120">Si lo hace, se interrumpiría las implementaciones de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="d8035-120">Doing so would break implementations of the interface.</span></span> <span data-ttu-id="d8035-121">Debe crear una nueva interfaz con el fin de evitar problemas de control de versiones.</span><span class="sxs-lookup"><span data-stu-id="d8035-121">You should create a new interface in order to avoid versioning problems.</span></span>  
   
- Excepto en los casos descritos en estas instrucciones, en general, debería, elija clases en lugar de interfaces para diseñar bibliotecas reutilizables de código administrado.  
+ <span data-ttu-id="d8035-122">Excepto en los casos descritos en estas instrucciones, por lo general, debe, elegir las clases en lugar de interfaces diseñar bibliotecas reutilizables de código administrado.</span><span class="sxs-lookup"><span data-stu-id="d8035-122">Except for the situations described in these guidelines, you should, in general, choose classes rather than interfaces in designing managed code reusable libraries.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="d8035-123">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="d8035-123">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="d8035-124">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="d8035-124">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="d8035-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="d8035-125">See Also</span></span>  
+ [<span data-ttu-id="d8035-126">Instrucciones de diseño de tipos</span><span class="sxs-lookup"><span data-stu-id="d8035-126">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="d8035-127">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="d8035-127">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

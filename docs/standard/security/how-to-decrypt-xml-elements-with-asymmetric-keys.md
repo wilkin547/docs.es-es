@@ -1,92 +1,93 @@
 ---
-title: "How to: Decrypt XML Elements with Asymmetric Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "System.Security.Cryptography.RSACryptoServiceProvider class"
-  - "asymmetric keys"
-  - "System.Security.Cryptography.EncryptedXml class"
-  - "XML encryption"
-  - "decryption"
+title: "Cómo: Descifrar elementos XML con claves asimétricas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- System.Security.Cryptography.RSACryptoServiceProvider class
+- asymmetric keys
+- System.Security.Cryptography.EncryptedXml class
+- XML encryption
+- decryption
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
-caps.latest.revision: 14
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: af0159f20ed8a8b4c174ab07ebccfedd5a8e7f8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Decrypt XML Elements with Asymmetric Keys
-Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.  El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.  Para obtener más información sobre el estándar de cifrado XML, consulte la recomendación de World Wide Web Consortium \(W3C\) [XML Signature Syntax and Processing](http://go.microsoft.com/fwlink/?LinkID=136777).  
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a><span data-ttu-id="74e9d-102">Cómo: Descifrar elementos XML con claves asimétricas</span><span class="sxs-lookup"><span data-stu-id="74e9d-102">How to: Decrypt XML Elements with Asymmetric Keys</span></span>
+<span data-ttu-id="74e9d-103">Puede usar las clases en el espacio de nombres <xref:System.Security.Cryptography.Xml> para cifrar y descifrar un elemento dentro de un documento XML.</span><span class="sxs-lookup"><span data-stu-id="74e9d-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to encrypt and decrypt an element within an XML document.</span></span>  <span data-ttu-id="74e9d-104">El cifrado XML es un método estándar para intercambiar o almacenar datos XML cifrados sin preocuparse de que los datos puedan leerse con facilidad.</span><span class="sxs-lookup"><span data-stu-id="74e9d-104">XML Encryption is a standard way to exchange or store encrypted XML data, without worrying about the data being easily read.</span></span>  <span data-ttu-id="74e9d-105">Para obtener más información acerca del estándar de cifrado XML, vea la recomendación de World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](http://go.microsoft.com/fwlink/?LinkID=136777).</span><span class="sxs-lookup"><span data-stu-id="74e9d-105">For more information about the XML Encryption standard, see the World Wide Web Consortium (W3C) recommendation [XML Signature Syntax and Processing](http://go.microsoft.com/fwlink/?LinkID=136777).</span></span>  
   
- En el ejemplo de este procedimiento se descifra un elemento XML cifrado mediante los métodos descritos en [How to: Encrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  Busca un elemento \<`EncryptedData`\>, lo descifra y lo reemplaza por el elemento XML de texto sin formato original.  
+ <span data-ttu-id="74e9d-106">El ejemplo de este procedimiento descifra un elemento XML que se cifró mediante los métodos descritos en [Cómo: cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).</span><span class="sxs-lookup"><span data-stu-id="74e9d-106">The example in this procedure decrypts an XML element that was encrypted using the methods described in [How to: Encrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).</span></span>  <span data-ttu-id="74e9d-107">Busca un elemento <`EncryptedData`>, lo descifra y lo reemplaza por el elemento XML de texto sin formato original.</span><span class="sxs-lookup"><span data-stu-id="74e9d-107">It finds an <`EncryptedData`> element, decrypts the element, and then replaces the element with the original plaintext XML element.</span></span>  
   
- En este ejemplo se descifra un elemento XML mediante dos claves.  Recupera de un contenedor de claves una clave privada RSA generada previamente y la usa para descifrar una clave de sesión almacenada en el elemento \<`EncryptedKey`\> del elemento \<`EncryptedData`\>.  Luego, el ejemplo usa la clave de sesión para descifrar el elemento XML.  
+ <span data-ttu-id="74e9d-108">En este ejemplo se descifra un elemento XML mediante dos claves.</span><span class="sxs-lookup"><span data-stu-id="74e9d-108">This example decrypts an XML element using two keys.</span></span>  <span data-ttu-id="74e9d-109">Recupera de un contenedor de claves una clave privada RSA generada previamente y la usa para descifrar una clave de sesión almacenada en el elemento <`EncryptedKey`> del elemento <`EncryptedData`>.</span><span class="sxs-lookup"><span data-stu-id="74e9d-109">It retrieves a previously generated RSA private key from a key container, and then uses the RSA key to decrypt a session key stored in the <`EncryptedKey`> element of the <`EncryptedData`> element.</span></span>  <span data-ttu-id="74e9d-110">Luego, el ejemplo usa la clave de sesión para descifrar el elemento XML.</span><span class="sxs-lookup"><span data-stu-id="74e9d-110">The example then uses the session key to decrypt the XML element.</span></span>  
   
- Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.  
+ <span data-ttu-id="74e9d-111">Este ejemplo resulta adecuado en aquellas situaciones en las que varias aplicaciones tienen que compartir datos cifrados o en las que una aplicación tiene que guardar datos cifrados entre los intervalos en los que se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="74e9d-111">This example is appropriate for situations where multiple applications have to share encrypted data or where an application has to save encrypted data between the times that it runs.</span></span>  
   
-### Para descifrar un elemento XML con una clave asimétrica  
+### <a name="to-decrypt-an-xml-element-with-an-asymmetric-key"></a><span data-ttu-id="74e9d-112">Para descifrar un elemento XML con una clave asimétrica</span><span class="sxs-lookup"><span data-stu-id="74e9d-112">To decrypt an XML element with an asymmetric key</span></span>  
   
-1.  Cree un objeto <xref:System.Security.Cryptography.CspParameters> y especifique el nombre del contenedor de claves.  
+1.  <span data-ttu-id="74e9d-113">Cree un objeto <xref:System.Security.Cryptography.CspParameters> y especifique el nombre del contenedor de claves.</span><span class="sxs-lookup"><span data-stu-id="74e9d-113">Create a <xref:System.Security.Cryptography.CspParameters> object and specify the name of the key container.</span></span>  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#2)]  
   
-2.  Recupere una clave asimétrica previamente generada desde el contenedor mediante el objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La clave se recupera automáticamente del contenedor de claves al pasar el objeto <xref:System.Security.Cryptography.CspParameters> al constructor <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  
+2.  <span data-ttu-id="74e9d-114">Recupere una clave asimétrica previamente generada desde el contenedor mediante el objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider>.</span><span class="sxs-lookup"><span data-stu-id="74e9d-114">Retrieve a previously generated asymmetric key from the container using the <xref:System.Security.Cryptography.RSACryptoServiceProvider> object.</span></span>  <span data-ttu-id="74e9d-115">La clave se recupera automáticamente del contenedor de claves al pasar el objeto <xref:System.Security.Cryptography.CspParameters> al constructor <xref:System.Security.Cryptography.RSACryptoServiceProvider>.</span><span class="sxs-lookup"><span data-stu-id="74e9d-115">The key is automatically retrieved from the key container when you pass the <xref:System.Security.Cryptography.CspParameters> object to the <xref:System.Security.Cryptography.RSACryptoServiceProvider> constructor.</span></span>  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#3)]  
   
-3.  Cree un objeto <xref:System.Security.Cryptography.Xml.EncryptedXml> nuevo para descifrar el documento.  
+3.  <span data-ttu-id="74e9d-116">Cree un objeto <xref:System.Security.Cryptography.Xml.EncryptedXml> nuevo para descifrar el documento.</span><span class="sxs-lookup"><span data-stu-id="74e9d-116">Create a new <xref:System.Security.Cryptography.Xml.EncryptedXml> object to decrypt the document.</span></span>  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-4.  Agregue una asignación de clave\/nombre para asociar la clave RSA al elemento del documento que se debe descifrar.  Debe usar el mismo nombre para la clave que usó al cifrar el documento.  Tenga en cuenta que este nombre es independiente del que haya usado para identificar la clave en el contenedor de claves especificado en el paso 1.  
+4.  <span data-ttu-id="74e9d-117">Agregue una asignación de clave/nombre para asociar la clave RSA al elemento del documento que se debe descifrar.</span><span class="sxs-lookup"><span data-stu-id="74e9d-117">Add a key/name mapping to associate the RSA key with the element within the document that should be decrypted.</span></span>  <span data-ttu-id="74e9d-118">Debe usar el mismo nombre para la clave que usó al cifrar el documento.</span><span class="sxs-lookup"><span data-stu-id="74e9d-118">You must use the same name for the key that you used when you encrypted the document.</span></span>  <span data-ttu-id="74e9d-119">Tenga en cuenta que este nombre es independiente del que haya usado para identificar la clave en el contenedor de claves especificado en el paso 1.</span><span class="sxs-lookup"><span data-stu-id="74e9d-119">Note that this name is separate from the name used to identify the key in the key container specified in step 1.</span></span>  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#6)]  
   
-5.  Llame al método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> para descifrar el elemento \<`EncryptedData`\>.  Este método usa la clave RSA para descifrar la clave de sesión y la usa automáticamente para descifrar el elemento XML.  También reemplaza automáticamente el elemento \<`EncryptedData`\> por el texto sin formato original.  
+5.  <span data-ttu-id="74e9d-120">Llame al método <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> para descifrar el elemento <`EncryptedData`>.</span><span class="sxs-lookup"><span data-stu-id="74e9d-120">Call the <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> method to decrypt the <`EncryptedData`> element.</span></span>  <span data-ttu-id="74e9d-121">Este método usa la clave RSA para descifrar la clave de sesión y la usa automáticamente para descifrar el elemento XML.</span><span class="sxs-lookup"><span data-stu-id="74e9d-121">This method uses the RSA key to decrypt the session key and automatically uses the session key to decrypt the XML element.</span></span>  <span data-ttu-id="74e9d-122">También reemplaza automáticamente el elemento <`EncryptedData`> por el texto sin formato original.</span><span class="sxs-lookup"><span data-stu-id="74e9d-122">It also automatically replaces the <`EncryptedData`> element with the original plaintext.</span></span>  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-6.  Guarde el documento XML.  
+6.  <span data-ttu-id="74e9d-123">Guarde el documento XML.</span><span class="sxs-lookup"><span data-stu-id="74e9d-123">Save the XML document.</span></span>  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
-## Ejemplo  
- En este ejemplo se supone que un archivo llamado `test.xml` se encuentra en el mismo directorio que el programa compilado.  También se supone que `test.xml` contiene un elemento XML que se cifró mediante las técnicas descritas en [How to: Encrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).  
+## <a name="example"></a><span data-ttu-id="74e9d-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="74e9d-124">Example</span></span>  
+ <span data-ttu-id="74e9d-125">En este ejemplo se supone que un archivo llamado `test.xml` se encuentra en el mismo directorio que el programa compilado.</span><span class="sxs-lookup"><span data-stu-id="74e9d-125">This example assumes that a file named `test.xml` exists in the same directory as the compiled program.</span></span>  <span data-ttu-id="74e9d-126">También se supone que `test.xml` contiene un elemento XML que se cifró mediante las técnicas descritas en [Cómo: cifrar elementos XML con claves asimétricas](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).</span><span class="sxs-lookup"><span data-stu-id="74e9d-126">It also assumes that `test.xml` contains an XML element that was encrypted using the techniques described in [How to: Encrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md).</span></span>  
   
  [!code-csharp[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#1)]
  [!code-vb[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#1)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a><span data-ttu-id="74e9d-127">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="74e9d-127">Compiling the Code</span></span>  
   
--   Para compilar este ejemplo, debe incluir una referencia a `System.Security.dll`.  
+-   <span data-ttu-id="74e9d-128">Para compilar este ejemplo, debe incluir una referencia a `System.Security.dll`.</span><span class="sxs-lookup"><span data-stu-id="74e9d-128">To compile this example, you need to include a reference to `System.Security.dll`.</span></span>  
   
--   Incluya los siguientes espacios de nombres: <xref:System.Xml>, <xref:System.Security.Cryptography> y <xref:System.Security.Cryptography.Xml>.  
+-   <span data-ttu-id="74e9d-129">Incluya los siguientes espacios de nombres: <xref:System.Xml>, <xref:System.Security.Cryptography> y <xref:System.Security.Cryptography.Xml>.</span><span class="sxs-lookup"><span data-stu-id="74e9d-129">Include the following namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, and <xref:System.Security.Cryptography.Xml>.</span></span>  
   
-## Seguridad de .NET Framework  
- No almacene nunca una clave criptográfica simétrica en texto sin formato ni transfiera una clave simétrica entre equipos en texto sin formato.  Tampoco debe almacenar ni transferir nunca la clave privada de un par de claves asimétricas en texto sin formato.  Para obtener más información acerca de las claves criptográficas simétricas y asimétricas, consulte [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+## <a name="net-framework-security"></a><span data-ttu-id="74e9d-130">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="74e9d-130">.NET Framework Security</span></span>  
+ <span data-ttu-id="74e9d-131">No almacene nunca una clave criptográfica simétrica en texto sin formato ni transfiera una clave simétrica entre equipos en texto sin formato.</span><span class="sxs-lookup"><span data-stu-id="74e9d-131">Never store a symmetric cryptographic key in plaintext or transfer a symmetric key between machines in plaintext.</span></span>  <span data-ttu-id="74e9d-132">Tampoco debe almacenar ni transferir nunca la clave privada de un par de claves asimétricas en texto sin formato.</span><span class="sxs-lookup"><span data-stu-id="74e9d-132">Additionally, never store or transfer the private key of an asymmetric key pair in plaintext.</span></span>  <span data-ttu-id="74e9d-133">Para obtener más información acerca de las claves criptográficas simétricas y asimétricas, vea [generar claves para cifrado y descifrado](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span><span class="sxs-lookup"><span data-stu-id="74e9d-133">For more information about symmetric and asymmetric cryptographic keys, see [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span></span>  
   
- No inserte nunca una clave directamente en el código fuente.  Las claves insertadas se pueden leer fácilmente desde un ensamblado mediante el [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto, como el Bloc de notas.  
+ <span data-ttu-id="74e9d-134">No inserte nunca una clave directamente en el código fuente.</span><span class="sxs-lookup"><span data-stu-id="74e9d-134">Never embed a key directly into your source code.</span></span>  <span data-ttu-id="74e9d-135">Las claves insertadas se pueden leer fácilmente desde un ensamblado mediante el uso de [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como Bloc de notas.</span><span class="sxs-lookup"><span data-stu-id="74e9d-135">Embedded keys can be easily read from an assembly by using [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) or by opening the assembly in a text editor such as Notepad.</span></span>  
   
- Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  A veces, las claves criptográficas se pueden leer desde la memoria con un depurador o desde un disco duro si la ubicación de memoria se pagina en el disco.  
+ <span data-ttu-id="74e9d-136">Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.</span><span class="sxs-lookup"><span data-stu-id="74e9d-136">When you are done using a cryptographic key, clear it from memory by setting each byte to zero or by calling the <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> method of the managed cryptography class.</span></span>  <span data-ttu-id="74e9d-137">A veces, las claves criptográficas se pueden leer desde la memoria con un depurador o desde un disco duro si la ubicación de memoria se pagina en el disco.</span><span class="sxs-lookup"><span data-stu-id="74e9d-137">Cryptographic keys can sometimes be read from memory by a debugger or read from a hard drive if the memory location is paged to disk.</span></span>  
   
-## Vea también  
- <xref:System.Security.Cryptography.Xml>   
- [How to: Encrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+## <a name="see-also"></a><span data-ttu-id="74e9d-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="74e9d-138">See Also</span></span>  
+ <xref:System.Security.Cryptography.Xml>  
+ [<span data-ttu-id="74e9d-139">Cifrar elementos XML con claves asimétricas</span><span class="sxs-lookup"><span data-stu-id="74e9d-139">How to: Encrypt XML Elements with Asymmetric Keys</span></span>](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

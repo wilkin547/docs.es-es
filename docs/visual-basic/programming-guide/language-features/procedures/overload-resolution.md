@@ -1,98 +1,81 @@
 ---
-title: "Resolución de sobrecarga (Visual Basic) | Documentos de Microsoft"
+title: "Resolución de sobrecarga (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, procedures
 - overload resolution
-- procedures, overloading
-- procedures, calling
-- procedure overloading, overload resolution
-- signatures, procedure
-- overloads, resolution
+- procedures [Visual Basic], overloading
+- procedures [Visual Basic], calling
+- procedure overloading [Visual Basic], overload resolution
+- signatures [Visual Basic], procedure
+- overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0de3a603fa84a72018a566f6e7182b45e53ec89e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="overload-resolution-visual-basic"></a>Resolución de sobrecarga (Visual Basic)
-Cuando el [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador encuentra una llamada a un procedimiento que está definido en varias versiones sobrecargadas, el compilador debe decidir a qué sobrecarga tiene que llamar. Para ello, realice los siguientes pasos:  
+# <a name="overload-resolution-visual-basic"></a><span data-ttu-id="79ca5-102">Resolución de sobrecarga (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79ca5-102">Overload Resolution (Visual Basic)</span></span>
+<span data-ttu-id="79ca5-103">Cuando el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador encuentra una llamada a un procedimiento que está definido en varias versiones sobrecargadas, el compilador debe decidir cuál de las sobrecargas para llamar a.</span><span class="sxs-lookup"><span data-stu-id="79ca5-103">When the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call.</span></span> <span data-ttu-id="79ca5-104">Para ello, ejecute los pasos siguientes:</span><span class="sxs-lookup"><span data-stu-id="79ca5-104">It does this by performing the following steps:</span></span>  
   
-1.  **Accesibilidad.** Elimina cualquier sobrecarga con un nivel de acceso que impide que el código de llamada de llamarlo.  
+1.  <span data-ttu-id="79ca5-105">**Accesibilidad.**</span><span class="sxs-lookup"><span data-stu-id="79ca5-105">**Accessibility.**</span></span> <span data-ttu-id="79ca5-106">Elimina cualquier sobrecarga con un nivel de acceso que impide que el código de llamada llamarlo.</span><span class="sxs-lookup"><span data-stu-id="79ca5-106">It eliminates any overload with an access level that prevents the calling code from calling it.</span></span>  
   
-2.  **Número de parámetros.** Elimina cualquier sobrecarga que defina un número de parámetros que se suministran en la llamada.  
+2.  <span data-ttu-id="79ca5-107">**Número de parámetros.**</span><span class="sxs-lookup"><span data-stu-id="79ca5-107">**Number of Parameters.**</span></span> <span data-ttu-id="79ca5-108">Elimina cualquier sobrecarga que define un número diferente de parámetros que se suministran en la llamada.</span><span class="sxs-lookup"><span data-stu-id="79ca5-108">It eliminates any overload that defines a different number of parameters than are supplied in the call.</span></span>  
   
-3.  **Tipos de datos de parámetro.** El compilador da preferencia de métodos de instancia con respecto a los métodos de extensión. Si se encuentra cualquier método de instancia que requiere sólo conversiones de ampliación que coincida con la llamada de procedimiento, se quitan todos los métodos de extensión y el compilador sigue con sólo los candidatos del método de instancia. Si este método de instancia no se encuentra, continúa con la instancia y los métodos de extensión.  
+3.  <span data-ttu-id="79ca5-109">**Tipos de datos de parámetro.**</span><span class="sxs-lookup"><span data-stu-id="79ca5-109">**Parameter Data Types.**</span></span> <span data-ttu-id="79ca5-110">El compilador da preferencia de métodos de instancia a través de métodos de extensión.</span><span class="sxs-lookup"><span data-stu-id="79ca5-110">The compiler gives instance methods preference over extension methods.</span></span> <span data-ttu-id="79ca5-111">Si se encuentra cualquier método de instancia que requiere solo conversiones de ampliación que coincida con la llamada de procedimiento, se quitan todos los métodos de extensión y el compilador sigue con solo los candidatos de método de instancia.</span><span class="sxs-lookup"><span data-stu-id="79ca5-111">If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates.</span></span> <span data-ttu-id="79ca5-112">Si no se encuentra ningún método de instancia de este tipo, continúa con la instancia y los métodos de extensión.</span><span class="sxs-lookup"><span data-stu-id="79ca5-112">If no such instance method is found, it continues with both instance and extension methods.</span></span>  
   
-     En este paso elimina cualquier sobrecarga para que los tipos de datos de los argumentos de llamada no se puede convertir a los tipos definidos en la sobrecarga.  
+     <span data-ttu-id="79ca5-113">En este paso, elimina cualquier sobrecarga para que los tipos de datos de los argumentos de llamada no se puede convertir a los tipos de parámetro definidos en la sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="79ca5-113">In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.</span></span>  
   
-4.  **Conversiones de restricción.** Elimina cualquier sobrecarga que requiera una conversión de restricción de los tipos de argumento de llamada a los tipos de parámetros. Esto es cierto si el tipo modificador de comprobación ([Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) es `On` o `Off`.  
+4.  <span data-ttu-id="79ca5-114">**Conversiones de restricción.**</span><span class="sxs-lookup"><span data-stu-id="79ca5-114">**Narrowing Conversions.**</span></span> <span data-ttu-id="79ca5-115">Elimina cualquier sobrecarga que requiera una conversión de restricción de los tipos de argumento que realiza la llamada a los tipos de parámetro definidos.</span><span class="sxs-lookup"><span data-stu-id="79ca5-115">It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types.</span></span> <span data-ttu-id="79ca5-116">Esto es cierto si la comprobación de tipo modificador ([Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) es `On` o `Off`.</span><span class="sxs-lookup"><span data-stu-id="79ca5-116">This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.</span></span>  
   
-5.  **Ampliación mínima.** El compilador considera las sobrecargas restantes en parejas. Para cada pareja, compara los tipos de datos de los parámetros definidos. Si los tipos en una de las sobrecargas se amplían a los tipos correspondientes en el otro, el compilador elimina la última. Es decir, conserva la sobrecarga que requiere la menor cantidad de ampliación.  
+5.  <span data-ttu-id="79ca5-117">**Ampliación mínima.**</span><span class="sxs-lookup"><span data-stu-id="79ca5-117">**Least Widening.**</span></span> <span data-ttu-id="79ca5-118">El compilador considera que las sobrecargas restantes en parejas.</span><span class="sxs-lookup"><span data-stu-id="79ca5-118">The compiler considers the remaining overloads in pairs.</span></span> <span data-ttu-id="79ca5-119">Para cada pareja, compara los tipos de datos de los parámetros definidos.</span><span class="sxs-lookup"><span data-stu-id="79ca5-119">For each pair, it compares the data types of the defined parameters.</span></span> <span data-ttu-id="79ca5-120">Si los tipos en una de las sobrecargas todos los amplían los tipos correspondientes en la otra, el compilador elimina la última.</span><span class="sxs-lookup"><span data-stu-id="79ca5-120">If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter.</span></span> <span data-ttu-id="79ca5-121">Es decir, conserva la sobrecarga que requiere la menor cantidad de ampliación.</span><span class="sxs-lookup"><span data-stu-id="79ca5-121">That is, it retains the overload that requires the least amount of widening.</span></span>  
   
-6.  **Candidata única.** Continúa Considerando las sobrecargas por partes hasta que sólo una sobrecarga permanece y resuelve la llamada a esa sobrecarga. Si el compilador no puede reducir las sobrecargas a una sola candidata, genera un error.  
+6.  <span data-ttu-id="79ca5-122">**Candidata única.**</span><span class="sxs-lookup"><span data-stu-id="79ca5-122">**Single Candidate.**</span></span> <span data-ttu-id="79ca5-123">Continúa Considerando las sobrecargas por partes hasta que solo una sobrecarga permanece y resuelve la llamada a esa sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="79ca5-123">It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload.</span></span> <span data-ttu-id="79ca5-124">Si el compilador no puede reducir las sobrecargas a una sola candidata, genera un error.</span><span class="sxs-lookup"><span data-stu-id="79ca5-124">If the compiler cannot reduce the overloads to a single candidate, it generates an error.</span></span>  
   
- La siguiente ilustración muestra el proceso que determina qué conjunto de versiones sobrecargadas llamar.  
+ <span data-ttu-id="79ca5-125">En la siguiente ilustración muestra el proceso que determina qué conjunto de versiones sobrecargadas para llamar a.</span><span class="sxs-lookup"><span data-stu-id="79ca5-125">The following illustration shows the process that determines which of a set of overloaded versions to call.</span></span>  
   
- ![Diagrama de flujo del proceso de resolución de sobrecarga](./media/overloadres.gif "OverloadRes")  
-Resolver entre versiones sobrecargadas  
+ <span data-ttu-id="79ca5-126">![Diagrama de flujo del proceso de resolución de sobrecarga](./media/overloadres.gif "OverloadRes")</span><span class="sxs-lookup"><span data-stu-id="79ca5-126">![Flow diagram of overload resolution process](./media/overloadres.gif "OverloadRes")</span></span>  
+<span data-ttu-id="79ca5-127">Resolver entre versiones sobrecargadas</span><span class="sxs-lookup"><span data-stu-id="79ca5-127">Resolving among overloaded versions</span></span>  
   
- En el ejemplo siguiente se muestra este proceso de resolución de sobrecarga.  
+ <span data-ttu-id="79ca5-128">En el ejemplo siguiente se muestra este proceso de resolución de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="79ca5-128">The following example illustrates this overload resolution process.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#62;](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
   
- [!code-vb[VbVbcnProcedures&#63;](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
   
- En la primera llamada, el compilador elimina la primera sobrecarga porque el tipo del primer argumento (`Short`) se restringe al tipo del parámetro correspondiente (`Byte`). A continuación, elimina la tercera sobrecarga porque cada argumento de tipo en la segunda sobrecarga (`Short` y `Single`) se amplía al tipo correspondiente en la tercera sobrecarga (`Integer` y `Single`). La segunda sobrecarga requiere una ampliación menor, por lo que el compilador utiliza para la llamada.  
+ <span data-ttu-id="79ca5-129">En la primera llamada, el compilador elimina la primera sobrecarga porque el tipo del primer argumento (`Short`) se restringe al tipo del parámetro correspondiente (`Byte`).</span><span class="sxs-lookup"><span data-stu-id="79ca5-129">In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`).</span></span> <span data-ttu-id="79ca5-130">A continuación, elimina la tercera sobrecarga porque cada argumento de tipo en la segunda sobrecarga (`Short` y `Single`) se amplía al tipo correspondiente en la tercera sobrecarga (`Integer` y `Single`).</span><span class="sxs-lookup"><span data-stu-id="79ca5-130">It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`).</span></span> <span data-ttu-id="79ca5-131">La segunda sobrecarga requiere una ampliación menor, por lo que el compilador lo utiliza para la llamada.</span><span class="sxs-lookup"><span data-stu-id="79ca5-131">The second overload requires less widening, so the compiler uses it for the call.</span></span>  
   
- En la segunda llamada, el compilador no puede eliminar ninguna de las sobrecargas sobre la base de restricción. Elimina la tercera sobrecarga por la misma razón que en la primera llamada, porque se puede llamar a la segunda sobrecarga con menos ampliación de los tipos de argumento. Sin embargo, el compilador no puede resolver entre la primera y la segunda sobrecarga. Cada uno tiene un tipo de parámetro definido que se amplía al tipo correspondiente en el otro (`Byte` a `Short`, pero `Single` a `Double`). Por lo tanto, el compilador genera un error de resolución de sobrecarga.  
+ <span data-ttu-id="79ca5-132">En la segunda llamada, el compilador no puede eliminar cualquiera de las sobrecargas sobre la base de restricción.</span><span class="sxs-lookup"><span data-stu-id="79ca5-132">In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing.</span></span> <span data-ttu-id="79ca5-133">Elimina la tercera sobrecarga por la misma razón que en la primera llamada, porque puede llamar a la segunda sobrecarga con una ampliación menor de los tipos de argumentos.</span><span class="sxs-lookup"><span data-stu-id="79ca5-133">It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types.</span></span> <span data-ttu-id="79ca5-134">Sin embargo, el compilador no puede resolver entre la primera y la segunda sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="79ca5-134">However, the compiler cannot resolve between the first and second overloads.</span></span> <span data-ttu-id="79ca5-135">Cada uno tiene un tipo de parámetro definido que se amplía al tipo correspondiente en el otro (`Byte` a `Short`, pero `Single` a `Double`).</span><span class="sxs-lookup"><span data-stu-id="79ca5-135">Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`).</span></span> <span data-ttu-id="79ca5-136">Por lo tanto, el compilador genera un error de resolución de sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="79ca5-136">The compiler therefore generates an overload resolution error.</span></span>  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>Opcionales sobrecargados y ParamArray (argumentos)  
- Si dos sobrecargas de un procedimiento tienen firmas idénticas, salvo que se declara el último parámetro [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) en uno y [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) en la otra, el compilador resuelve una llamada a ese procedimiento como sigue:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a><span data-ttu-id="79ca5-137">Opcionales sobrecargados y ParamArray (argumentos)</span><span class="sxs-lookup"><span data-stu-id="79ca5-137">Overloaded Optional and ParamArray Arguments</span></span>  
+ <span data-ttu-id="79ca5-138">Si dos sobrecargas de un procedimiento tienen firmas idénticas, salvo que se declara el último parámetro [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) en uno y [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) en la otra, el compilador resuelve una llamada a ese procedimiento como se indica a continuación:</span><span class="sxs-lookup"><span data-stu-id="79ca5-138">If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:</span></span>  
   
-|Si la llamada suministra el último argumento como|El compilador resuelve la llamada a la sobrecarga declarando el último argumento como|  
+|<span data-ttu-id="79ca5-139">Si la llamada suministra el último argumento como</span><span class="sxs-lookup"><span data-stu-id="79ca5-139">If the call supplies the last argument as</span></span>|<span data-ttu-id="79ca5-140">El compilador resuelve la llamada a la sobrecarga declarando el último argumento como</span><span class="sxs-lookup"><span data-stu-id="79ca5-140">The compiler resolves the call to the overload declaring the last argument as</span></span>|  
 |---|---|  
-|Ningún valor (argumento omitido)|`Optional`|  
-|Un valor único|`Optional`|  
-|Dos o más valores en una lista separada por comas|`ParamArray`|  
-|Una matriz de cualquier longitud (incluida una matriz vacía)|`ParamArray`|  
+|<span data-ttu-id="79ca5-141">Ningún valor (argumento omitido)</span><span class="sxs-lookup"><span data-stu-id="79ca5-141">No value (argument omitted)</span></span>|`Optional`|  
+|<span data-ttu-id="79ca5-142">un valor único</span><span class="sxs-lookup"><span data-stu-id="79ca5-142">A single value</span></span>|`Optional`|  
+|<span data-ttu-id="79ca5-143">Dos o más valores en una lista separada por comas</span><span class="sxs-lookup"><span data-stu-id="79ca5-143">Two or more values in a comma-separated list</span></span>|`ParamArray`|  
+|<span data-ttu-id="79ca5-144">Una matriz de cualquier longitud (incluida una matriz vacía)</span><span class="sxs-lookup"><span data-stu-id="79ca5-144">An array of any length (including an empty array)</span></span>|`ParamArray`|  
   
-## <a name="see-also"></a>Vea también  
- [Parámetros opcionales](./optional-parameters.md)   
- [Matrices de parámetros](./parameter-arrays.md)   
- [Sobrecarga de procedimientos](./procedure-overloading.md)   
- [Procedimientos de solución de problemas](./troubleshooting-procedures.md)   
- [Cómo: definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)   
- [Cómo: llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)   
- [Cómo: sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [Cómo: sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md)   
- [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)   
- [Métodos de extensión](./extension-methods.md)
+## <a name="see-also"></a><span data-ttu-id="79ca5-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="79ca5-145">See Also</span></span>  
+ [<span data-ttu-id="79ca5-146">Parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="79ca5-146">Optional Parameters</span></span>](./optional-parameters.md)  
+ [<span data-ttu-id="79ca5-147">Matrices de parámetros</span><span class="sxs-lookup"><span data-stu-id="79ca5-147">Parameter Arrays</span></span>](./parameter-arrays.md)  
+ [<span data-ttu-id="79ca5-148">Sobrecarga de procedimientos</span><span class="sxs-lookup"><span data-stu-id="79ca5-148">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="79ca5-149">Solución de problemas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="79ca5-149">Troubleshooting Procedures</span></span>](./troubleshooting-procedures.md)  
+ [<span data-ttu-id="79ca5-150">Definir varias versiones de un procedimiento</span><span class="sxs-lookup"><span data-stu-id="79ca5-150">How to: Define Multiple Versions of a Procedure</span></span>](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [<span data-ttu-id="79ca5-151">Llamar a un procedimiento sobrecargado</span><span class="sxs-lookup"><span data-stu-id="79ca5-151">How to: Call an Overloaded Procedure</span></span>](./how-to-call-an-overloaded-procedure.md)  
+ [<span data-ttu-id="79ca5-152">Sobrecargar un procedimiento que toma parámetros opcionales</span><span class="sxs-lookup"><span data-stu-id="79ca5-152">How to: Overload a Procedure that Takes Optional Parameters</span></span>](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [<span data-ttu-id="79ca5-153">Sobrecargar un procedimiento que toma un número indefinido de parámetros</span><span class="sxs-lookup"><span data-stu-id="79ca5-153">How to: Overload a Procedure that Takes an Indefinite Number of Parameters</span></span>](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [<span data-ttu-id="79ca5-154">Consideraciones sobre la sobrecarga de procedimientos</span><span class="sxs-lookup"><span data-stu-id="79ca5-154">Considerations in Overloading Procedures</span></span>](./considerations-in-overloading-procedures.md)  
+ [<span data-ttu-id="79ca5-155">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="79ca5-155">Overloads</span></span>](../../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [<span data-ttu-id="79ca5-156">Métodos de extensión</span><span class="sxs-lookup"><span data-stu-id="79ca5-156">Extension Methods</span></span>](./extension-methods.md)

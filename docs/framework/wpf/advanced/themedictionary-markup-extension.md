@@ -1,77 +1,80 @@
 ---
-title: "Extensi&#243;n de marcado ThemeDictionary | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ThemeDictionaryExtension"
-  - "ThemeDictionary"
-helpviewer_keywords: 
-  - "ThemeDictionary (extensión de marcado)"
-  - "XAML, ThemeDictionary (extensión de marcado)"
+title: "Extensión de marcado ThemeDictionary"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ThemeDictionaryExtension
+- ThemeDictionary
+helpviewer_keywords:
+- ThemeDictionary markup extension [WPF]
+- XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 45f878ce89dcf76ae800ade10a0e67f019741f65
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Extensi&#243;n de marcado ThemeDictionary
-Proporciona a los autores de controles personalizados o a las aplicaciones que integran controles de otros fabricantes una manera de cargar los diccionarios de recursos específicos del tema para utilizarlos en la aplicación de estilos al control.  
+# <a name="themedictionary-markup-extension"></a><span data-ttu-id="7b3e0-102">Extensión de marcado ThemeDictionary</span><span class="sxs-lookup"><span data-stu-id="7b3e0-102">ThemeDictionary Markup Extension</span></span>
+<span data-ttu-id="7b3e0-103">Proporciona a los autores de controles personalizados o a las aplicaciones que integran controles de otros fabricantes una manera de cargar los diccionarios de recursos específicos del tema para usarlos en la aplicación de estilos al control.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-103">Provides a way for custom control authors or applications that integrate third-party controls to load theme-specific resource dictionaries to use in styling the control.</span></span>  
   
-## Uso de atributos XAML  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="7b3e0-104">Uso de atributos XAML</span><span class="sxs-lookup"><span data-stu-id="7b3e0-104">XAML Attribute Usage</span></span>  
   
+```xml  
+<object property="{ThemeDictionary assemblyUri}" .../>  
 ```  
-<object property="{ThemeDictionary assemblyUri}" .../>  
-```  
   
-## Uso de elementos de objeto XAML  
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="7b3e0-105">Uso de elementos de objeto XAML</span><span class="sxs-lookup"><span data-stu-id="7b3e0-105">XAML Object Element Usage</span></span>  
   
-```  
+```xml  
 <object>  
   <object.property>  
-    <ThemeDictionary AssemblyName="assemblyUri"/>  
+    <ThemeDictionary AssemblyName="assemblyUri"/>  
   <object.property>  
 <object>  
 ```  
   
-## Valores XAML  
+## <a name="xaml-values"></a><span data-ttu-id="7b3e0-106">Valores XAML</span><span class="sxs-lookup"><span data-stu-id="7b3e0-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`assemblyUri`|[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] del ensamblado que contiene información del tema.  Normalmente, se trata de un pack URI que hace referencia a un ensamblado en el paquete mayor.  Los recursos de ensamblado y los pack URI simplifican los problemas de implementación.  Para obtener más información, vea [Empaquetar URI en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).|  
+|`assemblyUri`|<span data-ttu-id="7b3e0-107">El [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] del ensamblado que contiene información del tema.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-107">The [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] of the assembly that contains theme information.</span></span> <span data-ttu-id="7b3e0-108">Normalmente, se trata de un Pack URI que hace referencia a un ensamblado en el paquete mayor.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-108">Typically, this is a pack URI that references an assembly in the larger package.</span></span> <span data-ttu-id="7b3e0-109">Los recursos de ensamblado y los Pack URI simplifican los problemas de implementación.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-109">Assembly resources and pack URIs simplify deployment issues.</span></span> <span data-ttu-id="7b3e0-110">Para más información, vea [Empaquetar URI en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="7b3e0-110">For more information see [Pack URIs in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).</span></span>|  
   
-## Comentarios  
- Extensión está pensada para rellenar un solo valor de propiedad concreto: un valor para <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=fullName>.  
+## <a name="remarks"></a><span data-ttu-id="7b3e0-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7b3e0-111">Remarks</span></span>  
+ <span data-ttu-id="7b3e0-112">Esta extensión está pensada para rellenar un único valor de propiedad concreto: un valor para <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-112">This extension is intended to fill only one specific property value: a value for <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.</span></span>  
   
- Utilizando esta extensión, puede especificar un único ensamblado sólo de recursos que contenga algunos estilos para utilizarlos solamente cuando se aplique el tema [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] al sistema del usuario, otros estilos cuando esté activo el tema Luna, y así sucesivamente.  Utilizando esta extensión, se puede invalidar automáticamente y volver a cargar el contenido de un diccionario de recursos específico del control de modo que sea específico de otro tema cuando se necesite.  
+ <span data-ttu-id="7b3e0-113">Mediante esta extensión, puede especificar un único ensamblado solo de recursos que contenga algunos estilos para usarlos solamente cuando se aplique el tema [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] al sistema del usuario, otros estilos cuando esté activo el tema Luna, y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-113">By using this extension, you can specify a single resources-only assembly that contains some styles to use only when the [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] theme is applied to the user's system, other styles when Luna theme is active, and so on.</span></span> <span data-ttu-id="7b3e0-114">Al usar esta extensión, se puede invalidar automáticamente y volver a cargar el contenido de un diccionario de recursos específico del control de modo que sea específico de otro tema cuando se necesite.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-114">By using this extension, the contents of a control-specific resource dictionary can be automatically invalidated and reloaded to be specific for another theme when required.</span></span>  
   
- La cadena `assemblyUri` \(valor de propiedad <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>\) constituye la base de una convención de nomenclatura que identifica qué diccionario se aplica para un tema concreto.  La lógica de <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> para `ThemeDictionary` completa la convención generando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que señala a una variante concreta del diccionario del tema, contenida dentro de un ensamblado de recursos precompilado.  En este artículo no se aborda plenamente la descripción de esta convención ni el concepto de las interacciones de los temas con la aplicación general de estilos, a controles o en el nivel de aplicación o página.  El escenario básico para utilizar `ThemeDictionary` es especificar la propiedad <xref:System.Windows.ResourceDictionary.Source%2A> de un objeto `ResourceDictionary` declarado en el nivel de la aplicación.  Cuando se proporciona un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para el ensamblado mediante una extensión de `ThemeDictionary` en lugar de utilizar un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] directo, la lógica de la extensión proporciona la lógica de invalidación que se aplica cada vez que cambia el tema del sistema.  
+ <span data-ttu-id="7b3e0-115">El `assemblyUri` cadena (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> valor de propiedad) constituye la base de una convención de nomenclatura que identifica qué diccionario se aplica a un tema determinado.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-115">The `assemblyUri` string (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> property value) forms the basis of a naming convention that identifies which dictionary applies for a particular theme.</span></span> <span data-ttu-id="7b3e0-116">El <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> lógica para `ThemeDictionary` completa la convención generando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que apunta a una variante de diccionario de tema en particular, como dentro de un ensamblado de recursos precompilado.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-116">The <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> logic for `ThemeDictionary` completes the convention by generating a [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] that points to a particular theme dictionary variant, as contained within a precompiled resource assembly.</span></span> <span data-ttu-id="7b3e0-117">En este artículo no se aborda plenamente la descripción de esta convención, ni el concepto de las interacciones de los temas con la aplicación general de estilos a controles o en el nivel de aplicación o de página.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-117">Describing this convention, or theme interactions with general control styling and page/application level styling as a concept, is not covered fully here.</span></span> <span data-ttu-id="7b3e0-118">El escenario básico para utilizar `ThemeDictionary` consiste en especificar el <xref:System.Windows.ResourceDictionary.Source%2A> propiedad de un `ResourceDictionary` declarados en el nivel de aplicación.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-118">The basic scenario for using `ThemeDictionary` is to specify the <xref:System.Windows.ResourceDictionary.Source%2A> property of a `ResourceDictionary` declared at the application level.</span></span> <span data-ttu-id="7b3e0-119">Cuando se proporciona un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para el ensamblado mediante una extensión de `ThemeDictionary` en lugar de usar un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] directo, la lógica de la extensión proporciona la lógica de invalidación que se aplica cada vez que cambia el tema del sistema.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-119">When you provide a [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] for the assembly through a `ThemeDictionary` extension rather than as a direct [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], the extension logic will provide invalidation logic that applies whenever the system theme changes.</span></span>  
   
- La sintaxis de atributo es la que se usa más a menudo con esta extensión de marcado.  El token de cadena que se proporciona después de la cadena de identificador `ThemeDictionary` se asigna como valor de <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> de la clase de extensión <xref:System.Windows.ThemeDictionaryExtension> subyacente.  
+ <span data-ttu-id="7b3e0-120">La sintaxis de atributo es la que se usa normalmente con esta extensión de marcado.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-120">Attribute syntax is the most common syntax used with this markup extension.</span></span> <span data-ttu-id="7b3e0-121">El token de cadena que se proporciona después de la cadena de identificador `ThemeDictionary` se asigna como valor de <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> de la clase de extensión <xref:System.Windows.ThemeDictionaryExtension> subyacente.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-121">The string token provided after the `ThemeDictionary` identifier string is assigned as the <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> value of the underlying <xref:System.Windows.ThemeDictionaryExtension> extension class.</span></span>  
   
- `ThemeDictionary` también se puede utilizar en la sintaxis de elementos de objeto.  En este caso, es preciso especificar el valor de la propiedad <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>.  
+ <span data-ttu-id="7b3e0-122">`ThemeDictionary` también se puede usar en la sintaxis de elementos de objeto.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-122">`ThemeDictionary` may also be used in object element syntax.</span></span> <span data-ttu-id="7b3e0-123">En este caso, especificando el valor de la <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> propiedad es obligatoria.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-123">In this case, specifying the value of the <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> property is required.</span></span>  
   
- `ThemeDictionary` también se puede utilizar en un uso de atributos detallado que especifica la propiedad <xref:System.Windows.Markup.StaticExtension.Member%2A> como un par propiedad\=valor:  
+ <span data-ttu-id="7b3e0-124">`ThemeDictionary` también se puede utilizar en el uso de atributos detallado que especifica la propiedad <xref:System.Windows.Markup.StaticExtension.Member%2A> como un par de propiedad=valor:</span><span class="sxs-lookup"><span data-stu-id="7b3e0-124">`ThemeDictionary` can also be used in a verbose attribute usage that specifies the <xref:System.Windows.Markup.StaticExtension.Member%2A> property as a property=value pair:</span></span>  
   
+```xml  
+<object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
 ```  
-<object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
-```  
   
- El uso detallado suele ser útil para las extensiones que tienen más de una propiedad que se puede configurar, o en aquellos casos en que algunas propiedades son opcionales.  Dado que `ThemeDictionary` tiene una sola propiedad configurable, que es obligatoria, este uso detallado no es habitual.  
+ <span data-ttu-id="7b3e0-125">El uso detallado suele ser útil para las extensiones que tienen más de una propiedad que se puede configurar, o en aquellos casos en que algunas propiedades son opcionales.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-125">The verbose usage is often useful for extensions that have more than one settable property, or if some properties are optional.</span></span> <span data-ttu-id="7b3e0-126">Dado que `ThemeDictionary` tiene una sola propiedad configurable, que es obligatoria, este uso detallado no es habitual.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-126">Because `ThemeDictionary` has only one settable property, which is required, this verbose usage is not typical.</span></span>  
   
- En la implementación del procesador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], el control para esta extensión de marcado se define mediante la clase <xref:System.Windows.ThemeDictionaryExtension>.  
+ <span data-ttu-id="7b3e0-127">En el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementación del procesador, el control para esta extensión de marcado se define por la <xref:System.Windows.ThemeDictionaryExtension> clase.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-127">In the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor implementation, the handling for this markup extension is defined by the <xref:System.Windows.ThemeDictionaryExtension> class.</span></span>  
   
- `ThemeDictionary` es una extensión de marcado.  Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades.  Todas las extensiones de marcado de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilizan los caracteres { y } en su sintaxis de atributo, que es la convención que permite que un procesador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconozca que el atributo se debe procesar mediante una extensión de marcado.  Para obtener más información, vea [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="7b3e0-128">`ThemeDictionary` es una extensión de marcado.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-128">`ThemeDictionary` is a markup extension.</span></span> <span data-ttu-id="7b3e0-129">Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-129">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="7b3e0-130">Todas las extensiones de marcado de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan los caracteres { y } en su sintaxis de atributo, que es la convención que permite que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconozca que el atributo se debe procesar mediante una extensión de marcado.</span><span class="sxs-lookup"><span data-stu-id="7b3e0-130">All markup extensions in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] use the { and } characters in their attribute syntax, which is the convention by which a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="7b3e0-131">Para más información, vea [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="7b3e0-131">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## Vea también  
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Información general sobre XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a><span data-ttu-id="7b3e0-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="7b3e0-132">See Also</span></span>  
+ [<span data-ttu-id="7b3e0-133">Aplicar estilos y plantillas</span><span class="sxs-lookup"><span data-stu-id="7b3e0-133">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="7b3e0-134">Información general sobre XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="7b3e0-134">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="7b3e0-135">Extensiones de marcado y XAML de WPF</span><span class="sxs-lookup"><span data-stu-id="7b3e0-135">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="7b3e0-136">Archivos de recursos, contenido y datos de aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="7b3e0-136">WPF Application Resource, Content, and Data Files</span></span>](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

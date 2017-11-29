@@ -1,53 +1,54 @@
 ---
-title: "Application Settings Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "application settings [Windows Forms], attributes"
-  - "attributes [Windows Forms], application settings"
-  - "wrapper classes, application settings"
+title: "Atributos de configuración de la aplicación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], attributes
+- attributes [Windows Forms], application settings
+- wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Application Settings Attributes
-La arquitectura de la configuración de la aplicación proporciona atributos que se pueden aplicar a la clase contenedora de la configuración de las aplicaciones o a sus propiedades individuales.  La arquitectura de la configuración de la aplicación examina estos atributos en tiempo de ejecución, a menudo específicamente el proveedor de configuración, para ajustar su funcionamiento a las necesidades definidas de la clase contenedora personalizada.  
+# <a name="application-settings-attributes"></a><span data-ttu-id="0597d-102">Atributos de configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="0597d-102">Application Settings Attributes</span></span>
+<span data-ttu-id="0597d-103">La arquitectura de configuración de la aplicación proporciona muchos de los atributos que se pueden aplicar a la clase de contenedor de configuración de aplicaciones o a sus propiedades individuales.</span><span class="sxs-lookup"><span data-stu-id="0597d-103">The Application Settings architecture provides many attributes that can be applied either to the applications settings wrapper class or its individual properties.</span></span> <span data-ttu-id="0597d-104">Estos atributos se examinan en tiempo de ejecución por la infraestructura de configuración de aplicación, a menudo específicamente el proveedor de configuración para ajustar su funcionamiento a las necesidades definidas del contenedor personalizado.</span><span class="sxs-lookup"><span data-stu-id="0597d-104">These attributes are examined at run time by the application settings infrastructure, often specifically the settings provider, in order to tailor its functioning to the stated needs of the custom wrapper.</span></span>  
   
- La tabla siguiente muestra los atributos que se pueden aplicar a la clase contenedora de la configuración de la aplicación, a las propiedades individuales de esta clase o a ambas.  Por definición, sólo un atributo de ámbito único, **UserScopedSettingAttribute** o **ApplicationScopedSettingAttribute**, se debe aplicar a cada una de las propiedades de configuración.  
+ <span data-ttu-id="0597d-105">En la tabla siguiente se enumera los atributos que se pueden aplicar a la clase de contenedor de configuración de aplicación, las propiedades individuales de la clase o ambos.</span><span class="sxs-lookup"><span data-stu-id="0597d-105">The following table lists the attributes that can be applied to the application settings wrapper class, this class's individual properties, or both.</span></span> <span data-ttu-id="0597d-106">Por definición, un atributo de ámbito único:**UserScopedSettingAttribute** o **ApplicationScopedSettingAttribute**: se debe aplicar a cada propiedad de configuración.</span><span class="sxs-lookup"><span data-stu-id="0597d-106">By definition, only a single scope attribute—**UserScopedSettingAttribute** or **ApplicationScopedSettingAttribute**—must be applied to each and every settings property.</span></span>  
   
 > [!NOTE]
->  Un proveedor de configuración personalizado, derivado de la clase <xref:System.Configuration.SettingsProvider>, sólo se necesita para reconocer los tres atributos siguientes: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute** y **DefaultSettingValueAttribute**.  
+>  <span data-ttu-id="0597d-107">Un proveedor de configuración personalizado, derivado de la <xref:System.Configuration.SettingsProvider> clase, solo es necesaria para reconocer los tres atributos siguientes: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, y **DefaultSettingValueAttribute**.</span><span class="sxs-lookup"><span data-stu-id="0597d-107">A custom settings provider, derived from the <xref:System.Configuration.SettingsProvider> class, is only required to recognize the following three attributes: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, and **DefaultSettingValueAttribute**.</span></span>  
   
-|Atributo|Destino|Descripción|  
-|--------------|-------------|-----------------|  
-|<xref:System.Configuration.SettingsProviderAttribute>|Ambos|Especifica el nombre corto del proveedor de configuración que se va a utilizar para persistencia.<br /><br /> Si no se proporciona este atributo, el proveedor predeterminado se supone que es <xref:System.Configuration.LocalFileSettingsProvider>.|  
-|<xref:System.Configuration.UserScopedSettingAttribute>|Ambos|Define una propiedad como configuración de la aplicación de ámbito de usuario.|  
-|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Ambos|Define una propiedad como configuración de la aplicación de ámbito de aplicación.|  
-|<xref:System.Configuration.DefaultSettingValueAttribute>|Propiedad.|Especifica una cadena que se puede deserializar por el proveedor en el valor predeterminado asignado para esta propiedad.<br /><br /> <xref:System.Configuration.LocalFileSettingsProvider> no necesita este atributo y reemplazará cualquier valor proporcionado por este atributo si ya existe un valor guardado.|  
-|<xref:System.Configuration.SettingsDescriptionAttribute>|Propiedad.|Proporciona la comprobación descriptiva para una configuración individual, utilizada principalmente por herramientas en tiempo de ejecución y en tiempo de diseño.|  
-|<xref:System.Configuration.SettingsGroupNameAttribute>|Clase|Proporciona un nombre explícito para un grupo de valores de configuración.  Si falta este atributo, <xref:System.Configuration.ApplicationSettingsBase> utiliza el nombre de la clase contenedora.|  
-|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|Clase|Proporciona la comprobación descriptiva para una configuración de grupo, utilizada principalmente por herramientas en tiempo de ejecución y en tiempo de diseño.|  
-|<xref:System.Configuration.SettingsManageabilityAttribute>|Ambos|Especifica cero o más servicios de facilidad de administración que se deberían proporcionar a la propiedad o al grupo de valores de configuración.  La enumeración <xref:System.Configuration.SettingsManageability> describe los servicios disponibles.|  
-|<xref:System.Configuration.SpecialSettingAttribute>|Propiedad.|Indica que una configuración pertenece a una categoría especial predefinida, como una cadena de conexión que sugiere que el proveedor de configuración aplique un procesamiento especial.  La enumeración <xref:System.Configuration.SpecialSetting> define las categorías predefinidas para este atributo.|  
-|<xref:System.Configuration.SettingsSerializeAsAttribute>|Ambos|Especifica un mecanismo de serialización preferido para una propiedad o un grupo de valores de configuración.  La enumeración <xref:System.Configuration.SettingsSerializeAs> define los mecanismos de serialización disponibles.|  
-|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|Propiedad.|Especifica que un proveedor de valores de configuración debería deshabilitar la funcionalidad de actualización de la aplicación para la propiedad marcada.|  
+|<span data-ttu-id="0597d-108">Atributo</span><span class="sxs-lookup"><span data-stu-id="0597d-108">Attribute</span></span>|<span data-ttu-id="0597d-109">Destino</span><span class="sxs-lookup"><span data-stu-id="0597d-109">Target</span></span>|<span data-ttu-id="0597d-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="0597d-110">Description</span></span>|  
+|---------------|------------|-----------------|  
+|<xref:System.Configuration.SettingsProviderAttribute>|<span data-ttu-id="0597d-111">Ambos</span><span class="sxs-lookup"><span data-stu-id="0597d-111">Both</span></span>|<span data-ttu-id="0597d-112">Especifica el nombre corto del proveedor de configuración que se usará para la persistencia.</span><span class="sxs-lookup"><span data-stu-id="0597d-112">Specifies the short name of the settings provider to use for persistence.</span></span><br /><br /> <span data-ttu-id="0597d-113">Si no se proporciona este atributo, el proveedor predeterminado, <xref:System.Configuration.LocalFileSettingsProvider>, se da por hecho.</span><span class="sxs-lookup"><span data-stu-id="0597d-113">If this attribute is not supplied, the default provider, <xref:System.Configuration.LocalFileSettingsProvider>, is assumed.</span></span>|  
+|<xref:System.Configuration.UserScopedSettingAttribute>|<span data-ttu-id="0597d-114">Ambos</span><span class="sxs-lookup"><span data-stu-id="0597d-114">Both</span></span>|<span data-ttu-id="0597d-115">Define una propiedad como una configuración de aplicación de ámbito de usuario.</span><span class="sxs-lookup"><span data-stu-id="0597d-115">Defines a property as a user-scoped application setting.</span></span>|  
+|<xref:System.Configuration.ApplicationScopedSettingAttribute>|<span data-ttu-id="0597d-116">Ambos</span><span class="sxs-lookup"><span data-stu-id="0597d-116">Both</span></span>|<span data-ttu-id="0597d-117">Define una propiedad como una configuración de aplicación de ámbito de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0597d-117">Defines a property as an application-scoped application setting.</span></span>|  
+|<xref:System.Configuration.DefaultSettingValueAttribute>|<span data-ttu-id="0597d-118">Propiedad</span><span class="sxs-lookup"><span data-stu-id="0597d-118">Property</span></span>|<span data-ttu-id="0597d-119">Especifica una cadena que se puede deserializar por el proveedor en el valor predeterminado codificado de forma rígida para esta propiedad.</span><span class="sxs-lookup"><span data-stu-id="0597d-119">Specifies a string that can be deserialized by the provider into the hard-coded default value for this property.</span></span><br /><br /> <span data-ttu-id="0597d-120">El <xref:System.Configuration.LocalFileSettingsProvider> no requiere este atributo y reemplazará cualquier valor proporcionado por este atributo si hay un valor ya guardado.</span><span class="sxs-lookup"><span data-stu-id="0597d-120">The <xref:System.Configuration.LocalFileSettingsProvider> does not require this attribute, and will override any value provided by this attribute if there is a value already persisted.</span></span>|  
+|<xref:System.Configuration.SettingsDescriptionAttribute>|<span data-ttu-id="0597d-121">Propiedad</span><span class="sxs-lookup"><span data-stu-id="0597d-121">Property</span></span>|<span data-ttu-id="0597d-122">Proporciona la comprobación descriptiva para una configuración individual, utilizada principalmente por herramientas en tiempo de diseño y tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0597d-122">Provides the descriptive test for an individual setting, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsGroupNameAttribute>|<span data-ttu-id="0597d-123">Clase</span><span class="sxs-lookup"><span data-stu-id="0597d-123">Class</span></span>|<span data-ttu-id="0597d-124">Proporciona un nombre explícito para un grupo de configuración.</span><span class="sxs-lookup"><span data-stu-id="0597d-124">Provides an explicit name for a settings group.</span></span> <span data-ttu-id="0597d-125">Si este atributo no se encuentra, <xref:System.Configuration.ApplicationSettingsBase> utiliza el nombre de clase de contenedor.</span><span class="sxs-lookup"><span data-stu-id="0597d-125">If this attribute is missing, <xref:System.Configuration.ApplicationSettingsBase> uses the wrapper class name.</span></span>|  
+|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|<span data-ttu-id="0597d-126">Clase</span><span class="sxs-lookup"><span data-stu-id="0597d-126">Class</span></span>|<span data-ttu-id="0597d-127">Proporciona la comprobación descriptiva para un grupo de configuración, que se usa principalmente por herramientas en tiempo de diseño y tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0597d-127">Provides the descriptive test for a settings group, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsManageabilityAttribute>|<span data-ttu-id="0597d-128">Ambos</span><span class="sxs-lookup"><span data-stu-id="0597d-128">Both</span></span>|<span data-ttu-id="0597d-129">Especifica cero o más servicios de facilidad de uso que se deben proporcionar para la propiedad o un grupo de configuración.</span><span class="sxs-lookup"><span data-stu-id="0597d-129">Specifies zero or more manageability services that should be provided to the settings group or property.</span></span> <span data-ttu-id="0597d-130">Los servicios disponibles se describen en la <xref:System.Configuration.SettingsManageability> enumeración.</span><span class="sxs-lookup"><span data-stu-id="0597d-130">The available services are described by the <xref:System.Configuration.SettingsManageability> enumeration.</span></span>|  
+|<xref:System.Configuration.SpecialSettingAttribute>|<span data-ttu-id="0597d-131">Propiedad</span><span class="sxs-lookup"><span data-stu-id="0597d-131">Property</span></span>|<span data-ttu-id="0597d-132">Indica que una configuración pertenece a una categoría especial predefinida, como una cadena de conexión, que se sugiere un procesamiento especial por el proveedor de configuración.</span><span class="sxs-lookup"><span data-stu-id="0597d-132">Indicates that a setting belongs to a special, predefined category, such as a connection string, that suggests special processing by the settings provider.</span></span> <span data-ttu-id="0597d-133">Las categorías predefinidas para este atributo se definen mediante el <xref:System.Configuration.SpecialSetting> enumeración.</span><span class="sxs-lookup"><span data-stu-id="0597d-133">The predefined categories for this attribute are defined by the <xref:System.Configuration.SpecialSetting> enumeration.</span></span>|  
+|<xref:System.Configuration.SettingsSerializeAsAttribute>|<span data-ttu-id="0597d-134">Ambos</span><span class="sxs-lookup"><span data-stu-id="0597d-134">Both</span></span>|<span data-ttu-id="0597d-135">Especifica un mecanismo de serialización preferido para una propiedad o un grupo de configuración.</span><span class="sxs-lookup"><span data-stu-id="0597d-135">Specifies a preferred serialization mechanism for a settings group or property.</span></span> <span data-ttu-id="0597d-136">Los mecanismos de serialización disponibles se definen mediante el <xref:System.Configuration.SettingsSerializeAs> enumeración.</span><span class="sxs-lookup"><span data-stu-id="0597d-136">The available serialization mechanisms are defined by the <xref:System.Configuration.SettingsSerializeAs> enumeration.</span></span>|  
+|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|<span data-ttu-id="0597d-137">Propiedad</span><span class="sxs-lookup"><span data-stu-id="0597d-137">Property</span></span>|<span data-ttu-id="0597d-138">Especifica que un proveedor de configuración debe deshabilitar todas las funciones de actualización de aplicación para la propiedad marcada.</span><span class="sxs-lookup"><span data-stu-id="0597d-138">Specifies that a settings provider should disable all application upgrade functionality for the marked property.</span></span>|  
   
- *Clase* indica que el atributo sólo se puede aplicar a una clase contenedora de la configuración de la aplicación.  *Propiedad* indica que el atributo se puede aplicar sólo a propiedades de configuración.  *Ambos* indica que el atributo se puede aplicar en cualquier nivel.  
+ <span data-ttu-id="0597d-139">*Clase* indica que el atributo se puede aplicar únicamente a una clase contenedora de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="0597d-139">*Class* indicates that the attribute can be applied only to an application settings wrapper class.</span></span> <span data-ttu-id="0597d-140">*Propiedad* indica que el atributo puede ser aplicada únicas propiedades de configuración.</span><span class="sxs-lookup"><span data-stu-id="0597d-140">*Property* indicates that the attribute can be applied only settings properties.</span></span> <span data-ttu-id="0597d-141">*Ambos* indica que el atributo se puede aplicar en cualquier nivel.</span><span class="sxs-lookup"><span data-stu-id="0597d-141">*Both* indicates that the attribute can be applied at either level.</span></span>  
   
-## Vea también  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.SettingsProvider>   
- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
- [How to: Create Application Settings](http://msdn.microsoft.com/es-es/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a><span data-ttu-id="0597d-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="0597d-142">See Also</span></span>  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.SettingsProvider>  
+ [<span data-ttu-id="0597d-143">Arquitectura de configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="0597d-143">Application Settings Architecture</span></span>](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [<span data-ttu-id="0597d-144">Cómo: Crear la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="0597d-144">How to: Create Application Settings</span></span>](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)

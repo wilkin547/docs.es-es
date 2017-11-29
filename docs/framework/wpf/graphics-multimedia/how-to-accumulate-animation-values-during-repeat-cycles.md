@@ -1,47 +1,50 @@
 ---
-title: "C&#243;mo: Acumular valores de animaciones durante la repetici&#243;n de ciclos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "acumular valores de animaciones entre ciclos que se repiten"
-  - "animación, acumular valores entre ciclos que se repiten"
+title: "Cómo: Acumular valores de animaciones durante la repetición de ciclos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- accumulating animation values across repeating cycles [WPF]
+- animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4abe19f4548ed41eb19ae4dffb37b832a7df71d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Acumular valores de animaciones durante la repetici&#243;n de ciclos
-En este ejemplo se muestra cómo usar la propiedad <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> para acumular valores de animación entre ciclos que se repiten.  
+# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a><span data-ttu-id="d1664-102">Cómo: Acumular valores de animaciones durante la repetición de ciclos</span><span class="sxs-lookup"><span data-stu-id="d1664-102">How to: Accumulate Animation Values During Repeat Cycles</span></span>
+<span data-ttu-id="d1664-103">Este ejemplo muestra cómo utilizar el <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad que se va a acumular valores de animaciones entre ciclos que se repiten.</span><span class="sxs-lookup"><span data-stu-id="d1664-103">This example shows how to use the <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> property to accumulate animation values across repeating cycles.</span></span>  
   
-## Ejemplo  
- Use la propiedad <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> para acumular los valores base de una animación entre ciclos que se repiten.  Por ejemplo, si establece una animación para que se repita 9 veces \(<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> \= "9x"\) y establece la propiedad que se va a animar entre 10 y 15 \(From \= 10 To \= 15\), la propiedad se anima de 10 a 15 durante el primer ciclo, de 15 a 20 durante el segundo ciclo, de 20 a 25 durante el tercer ciclo, y así sucesivamente.  Por lo tanto, cada ciclo de animación usa el valor de animación final del ciclo de animación anterior como su valor base.  
+## <a name="example"></a><span data-ttu-id="d1664-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d1664-104">Example</span></span>  
+ <span data-ttu-id="d1664-105">Use la <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad que se va a acumular los valores base de una animación entre ciclos que se repiten.</span><span class="sxs-lookup"><span data-stu-id="d1664-105">Use the <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> property to accumulate base values of an animation across repeating cycles.</span></span> <span data-ttu-id="d1664-106">Por ejemplo, si establece una animación se repita 9 veces (<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> = "9 x") y establezca la propiedad que se va a animar entre 10 y 15 (From = 10 To = 15), la propiedad se anima de 10 a 15 durante el primer ciclo, de 15 a 20 durante el segundo ciclo , de 20 a 25 durante el tercer ciclo y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="d1664-106">For example, if you set an animation to repeat 9 times (<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> = "9x") and you set the property to animate between 10 and 15 (From = 10 To = 15), the property animates from 10 to 15 during the first cycle, from 15 to 20 during the second cycle, from 20 to 25 during the third cycle, and so on.</span></span> <span data-ttu-id="d1664-107">Por lo tanto, cada ciclo de animación usa el valor de animación final del ciclo de animación anterior como su valor base.</span><span class="sxs-lookup"><span data-stu-id="d1664-107">Hence, each animation cycle uses the ending animation value from the previous animation cycle as its base value.</span></span>  
   
- Puede usar la propiedad `IsCumulative` con la mayoría de las animaciones básicas y la mayoría de las animaciones de fotogramas clave.  Para obtener más información, consulte [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) y [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+ <span data-ttu-id="d1664-108">Puede usar el `IsCumulative` propiedad con animaciones más básicas y la mayoría de las animaciones de fotograma clave.</span><span class="sxs-lookup"><span data-stu-id="d1664-108">You can use the `IsCumulative` property with most basic animations and most key frame animations.</span></span> <span data-ttu-id="d1664-109">Para obtener más información, consulte [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) y [información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).</span><span class="sxs-lookup"><span data-stu-id="d1664-109">For more information, see [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) and [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).</span></span>  
   
- En el ejemplo siguiente se muestra este comportamiento al animar el ancho de cuatro rectángulos.  En el ejemplo:  
+ <span data-ttu-id="d1664-110">En el ejemplo siguiente se muestra este comportamiento al animar el ancho de cuatro rectángulos.</span><span class="sxs-lookup"><span data-stu-id="d1664-110">The following example shows this behavior by animating the width of four rectangles.</span></span> <span data-ttu-id="d1664-111">En el ejemplo:</span><span class="sxs-lookup"><span data-stu-id="d1664-111">The example:</span></span>  
   
--   Se anima el primer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y se establece la propiedad <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> en `true`.  
+-   <span data-ttu-id="d1664-112">Anima el primer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y establece la <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="d1664-112">Animates the first rectangle with <xref:System.Windows.Media.Animation.DoubleAnimation> and sets the <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> property to `true`.</span></span>  
   
--   Se anima el segundo rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y se establece la propiedad <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> en el valor predeterminado `false`.  
+-   <span data-ttu-id="d1664-113">Anima el segundo rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimation> y establece la <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propiedad en el valor predeterminado de `false`.</span><span class="sxs-lookup"><span data-stu-id="d1664-113">Animates the second rectangle with <xref:System.Windows.Media.Animation.DoubleAnimation> and sets the <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> property to the default value of `false`.</span></span>  
   
--   Se anima el tercer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y se establece la propiedad <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> en `true`.  
+-   <span data-ttu-id="d1664-114">Anima el tercer rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y establece la <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="d1664-114">Animates the third rectangle with <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> and sets the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> property to `true`.</span></span>  
   
--   Se anima el último rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y se establece la propiedad <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> en `false`.  
+-   <span data-ttu-id="d1664-115">Anima el último rectángulo con <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> y establece la <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> propiedad `false`.</span><span class="sxs-lookup"><span data-stu-id="d1664-115">Animates the last rectangle with <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> and sets the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> property to `false`.</span></span>  
   
- [!code-xml[timingbehaviors_snip#IsCumulativeWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
+ [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
-## Vea también  
- [Agregar un valor de salida de animación a un valor inicial de animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)   
- [Repetir una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)   
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="d1664-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="d1664-116">See Also</span></span>  
+ [<span data-ttu-id="d1664-117">Agregar un valor de salida de animación a un valor inicial de animación</span><span class="sxs-lookup"><span data-stu-id="d1664-117">Add an Animation Output Value to an Animation Starting Value</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [<span data-ttu-id="d1664-118">Repetir una animación</span><span class="sxs-lookup"><span data-stu-id="d1664-118">Repeat an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
+ [<span data-ttu-id="d1664-119">Información general sobre animaciones</span><span class="sxs-lookup"><span data-stu-id="d1664-119">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="d1664-120">Información general sobre animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="d1664-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="d1664-121">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="d1664-121">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

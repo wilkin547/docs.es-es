@@ -1,76 +1,59 @@
 ---
-title: "Documentar el código con XML (Visual Basic) | Documentos de Microsoft"
+title: "Documentar el código con XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- XML, documenting code
+- XML [Visual Basic], documenting code
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2ec4907ff96a0861f97de21bdf45662c558d0a95
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ddb1f366002c4f0c675c591d83aab1b31ef8f602
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="documenting-your-code-with-xml-visual-basic"></a>Documentar el código con XML (Visual Basic)
-En [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], puede documentar el código utilizando XML  
+# <a name="documenting-your-code-with-xml-visual-basic"></a><span data-ttu-id="89b5c-102">Documentar el código con XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89b5c-102">Documenting Your Code with XML (Visual Basic)</span></span>
+<span data-ttu-id="89b5c-103">En [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], puede documentar el código con XML</span><span class="sxs-lookup"><span data-stu-id="89b5c-103">In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], you can document your code using XML</span></span>  
   
-## <a name="xml-documentation-comments"></a>Comentarios de la documentación XML  
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Proporciona una manera fácil de crear automáticamente documentación XML para los proyectos. Puede generar automáticamente un esquema XML para los tipos y miembros y, a continuación, proporcionar resúmenes, documentación descriptiva para cada parámetro y otros comentarios. Con la configuración apropiada, la documentación XML se emite automáticamente en un archivo XML con el mismo nombre que el proyecto y la extensión .xml. Para obtener más información, consulte [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+## <a name="xml-documentation-comments"></a><span data-ttu-id="89b5c-104">Comentarios de la documentación XML</span><span class="sxs-lookup"><span data-stu-id="89b5c-104">XML Documentation Comments</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="89b5c-105">Proporciona una manera sencilla para crear automáticamente documentación XML para los proyectos.</span><span class="sxs-lookup"><span data-stu-id="89b5c-105"> provides an easy way to automatically create XML documentation for projects.</span></span> <span data-ttu-id="89b5c-106">Puede generar automáticamente un esquema XML para los tipos y miembros y, a continuación, proporcionar resúmenes, documentación descriptiva para cada parámetro y otros comentarios.</span><span class="sxs-lookup"><span data-stu-id="89b5c-106">You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks.</span></span> <span data-ttu-id="89b5c-107">Con la configuración apropiada, la documentación XML se emite automáticamente en un archivo XML con el mismo nombre que el proyecto y la extensión .xml.</span><span class="sxs-lookup"><span data-stu-id="89b5c-107">With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension.</span></span> <span data-ttu-id="89b5c-108">Para obtener más información, vea [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="89b5c-108">For more information, see [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span></span>  
   
- El archivo XML se puede utilizar o manipularse como XML. Este archivo se encuentra en el mismo directorio que el archivo de salida .exe o .dll del proyecto.  
+ <span data-ttu-id="89b5c-109">El archivo XML puede ser consumido o manipularse como XML.</span><span class="sxs-lookup"><span data-stu-id="89b5c-109">The XML file can be consumed or otherwise manipulated as XML.</span></span> <span data-ttu-id="89b5c-110">Este archivo se encuentra en el mismo directorio que el archivo de salida .exe o .dll del proyecto.</span><span class="sxs-lookup"><span data-stu-id="89b5c-110">This file is located in the same directory as the output .exe or .dll file of your project.</span></span>  
   
- Documentación XML empieza con `'''`. El procesamiento de estos comentarios presenta algunas restricciones:  
+ <span data-ttu-id="89b5c-111">Documentación XML empieza con `'''`.</span><span class="sxs-lookup"><span data-stu-id="89b5c-111">XML documentation starts with `'''`.</span></span> <span data-ttu-id="89b5c-112">El procesamiento de estos comentarios tiene algunas restricciones:</span><span class="sxs-lookup"><span data-stu-id="89b5c-112">The processing of these comments has some restrictions:</span></span>  
   
--   La documentación debe ser correcto XML. Si el XML no está bien formado, se genera una advertencia y el archivo de documentación contiene un comentario que indica que se detectó un error.  
+-   <span data-ttu-id="89b5c-113">La documentación debe ser XML con formato correcto.</span><span class="sxs-lookup"><span data-stu-id="89b5c-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="89b5c-114">Si el código XML no está bien formado, se genera una advertencia y el archivo de documentación contiene un comentario que indica que se detectó un error.</span><span class="sxs-lookup"><span data-stu-id="89b5c-114">If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.</span></span>  
   
--   Los desarrolladores pueden crear su propio conjunto de etiquetas. Hay un conjunto recomendado de etiquetas (vea "Secciones relacionadas" en este tema). Algunas de las etiquetas recomendadas tienen significados especiales:  
+-   <span data-ttu-id="89b5c-115">Los desarrolladores pueden crear su propio conjunto de etiquetas,</span><span class="sxs-lookup"><span data-stu-id="89b5c-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="89b5c-116">Hay un conjunto recomendado de etiquetas (vea "Secciones relacionadas" en este tema).</span><span class="sxs-lookup"><span data-stu-id="89b5c-116">There is a recommended set of tags (see "Related Sections" in this topic).</span></span> <span data-ttu-id="89b5c-117">Algunas de las etiquetas recomendadas tienen significados especiales:</span><span class="sxs-lookup"><span data-stu-id="89b5c-117">Some of the recommended tags have special meanings:</span></span>  
   
-    -   El \<param > etiqueta se utiliza para describir los parámetros. Si utiliza esta opción, el compilador comprobará que el parámetro existe y que todos los parámetros se describen en la documentación. Si se produce un error en la comprobación, el compilador emite una advertencia.  
+    -   <span data-ttu-id="89b5c-118">La etiqueta \<param> se usa para describir parámetros.</span><span class="sxs-lookup"><span data-stu-id="89b5c-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="89b5c-119">Si se usa, el compilador comprobará que el parámetro existe y que todos los parámetros se describen en la documentación.</span><span class="sxs-lookup"><span data-stu-id="89b5c-119">If used, the compiler will verify that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="89b5c-120">Si se produce un error en la comprobación, el compilador emite una advertencia.</span><span class="sxs-lookup"><span data-stu-id="89b5c-120">If the verification fails, the compiler issues a warning.</span></span>  
   
-    -   El `cref` atributo se puede asociar a cualquier etiqueta para proporcionar una referencia a un elemento de código. El compilador comprueba si existe ese elemento de código. Si se produce un error en la comprobación, el compilador emite una advertencia. El compilador también respeta cualquier `Imports` instrucciones cuando busca un tipo descrito en el `cref` atributo.  
+    -   <span data-ttu-id="89b5c-121">El atributo `cref` se puede asociar a cualquier etiqueta para proporcionar una referencia a un elemento de código.</span><span class="sxs-lookup"><span data-stu-id="89b5c-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="89b5c-122">El compilador comprueba que existe este elemento de código.</span><span class="sxs-lookup"><span data-stu-id="89b5c-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="89b5c-123">Si se produce un error en la comprobación, el compilador emite una advertencia.</span><span class="sxs-lookup"><span data-stu-id="89b5c-123">If the verification fails, the compiler issues a warning.</span></span> <span data-ttu-id="89b5c-124">El compilador también respeta cualquier `Imports` instrucciones cuando se busca un tipo descrito en el `cref` atributo.</span><span class="sxs-lookup"><span data-stu-id="89b5c-124">The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.</span></span>  
   
-    -   El \<resumen > etiqueta utiliza IntelliSense en [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] para mostrar información adicional sobre un tipo o miembro.  
+    -   <span data-ttu-id="89b5c-125">El \<resumen > etiqueta se utiliza por IntelliSense en [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] para mostrar información adicional sobre un tipo o miembro.</span><span class="sxs-lookup"><span data-stu-id="89b5c-125">The \<summary> tag is used by IntelliSense in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] to display additional information about a type or member.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- Para obtener más información sobre la creación de un archivo XML con comentarios de documentación, vea los temas siguientes:  
+## <a name="related-sections"></a><span data-ttu-id="89b5c-126">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="89b5c-126">Related Sections</span></span>  
+ <span data-ttu-id="89b5c-127">Para obtener más información sobre cómo crear un archivo XML con los comentarios de documentación, vea los temas siguientes:</span><span class="sxs-lookup"><span data-stu-id="89b5c-127">For details on creating an XML file with documentation comments, see the following topics:</span></span>  
   
--   [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)  
+-   [<span data-ttu-id="89b5c-128">/doc</span><span class="sxs-lookup"><span data-stu-id="89b5c-128">/doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)  
   
--   [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+-   [<span data-ttu-id="89b5c-129">Etiquetas XML para comentarios</span><span class="sxs-lookup"><span data-stu-id="89b5c-129">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
   
--   [Procesamiento del archivo XML](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)  
+-   [<span data-ttu-id="89b5c-130">Procesamiento del archivo XML</span><span class="sxs-lookup"><span data-stu-id="89b5c-130">Processing the XML File</span></span>](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)  
   
--   [Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
+-   [<span data-ttu-id="89b5c-131">Crear documentación XML</span><span class="sxs-lookup"><span data-stu-id="89b5c-131">How to: Create XML Documentation</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
   
--   [Herramientas XML en Visual Studio](https://docs.microsoft.com/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+-   [<span data-ttu-id="89b5c-132">Herramientas XML en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="89b5c-132">XML Tools in Visual Studio</span></span>](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
   
-## <a name="see-also"></a>Vea también  
- [Desarrollar aplicaciones con Visual Basic](../../../visual-basic/developing-apps/index.md)   
- [Guía de programación de Visual Basic](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="89b5c-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="89b5c-133">See Also</span></span>  
+ [<span data-ttu-id="89b5c-134">Desarrollo de aplicaciones con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="89b5c-134">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)  
+ [<span data-ttu-id="89b5c-135">Guía de programación en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="89b5c-135">Visual Basic Programming Guide</span></span>](../../../visual-basic/programming-guide/index.md)

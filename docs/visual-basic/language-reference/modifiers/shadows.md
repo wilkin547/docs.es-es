@@ -1,89 +1,88 @@
 ---
-title: "Shadows (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Shadows"
-  - "shadows"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "nombres duplicados"
-  - "nombres, sombrear"
-  - "ámbito, sombrear"
-  - "sombrear"
-  - "Shadows (palabra clave)"
+title: Shadows (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Shadows
+- shadows
+helpviewer_keywords:
+- shadowing
+- duplicate names [Visual Basic]
+- scope [Visual Basic], shadowing
+- Shadows keyword [Visual Basic]
+- names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bb767c372cc05d61d569227af8eef0dc3c67489b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Shadows (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica que un elemento de programación declarado vuelve a declarar y oculta un elemento denominado de forma idéntica o un conjunto de elementos sobrecargados, en una clase base.  
+# <a name="shadows-visual-basic"></a><span data-ttu-id="2bdbd-102">Shadows (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-102">Shadows (Visual Basic)</span></span>
+<span data-ttu-id="2bdbd-103">Especifica que un elemento de programación declarado vuelve a declarar y oculta un elemento con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-103">Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.</span></span>  
   
-## Comentarios  
- El propósito principal del sombreado \(que también se conoce como *ocultar por nombre*\) es conservar la definición de los miembros de clase.  La clase base puede sufrir un cambio que cree un elemento con el mismo nombre que otro ya definido.  Si sucede esto, el modificador `Shadows` fuerza a referencias a través de la clase para que se resuelvan en el miembro definido en lugar de hacerlo en el nuevo elemento de la clase base.  
+## <a name="remarks"></a><span data-ttu-id="2bdbd-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2bdbd-104">Remarks</span></span>  
+ <span data-ttu-id="2bdbd-105">El propósito principal de sombreado (también conocido como *ocultar por nombre*) consiste en conservar la definición de los miembros de clase.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-105">The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members.</span></span> <span data-ttu-id="2bdbd-106">La clase base puede sufrir un cambio que se crea un elemento con el mismo nombre que ya se ha definido.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-106">The base class might undergo a change that creates an element with the same name as one you have already defined.</span></span> <span data-ttu-id="2bdbd-107">Si esto ocurre, el `Shadows` modificador fuerza referencias a través de la clase para que se resuelvan en el miembro definido, en lugar de en el nuevo elemento de clase base.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-107">If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.</span></span>  
   
- El sombreado y el reemplazo definen de nuevo un elemento heredado, pero existen diferencias significativas entre los dos enfoques.  Para obtener más información, vea [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ <span data-ttu-id="2bdbd-108">Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-108">Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="2bdbd-109">Para obtener más información, consulte [sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span><span class="sxs-lookup"><span data-stu-id="2bdbd-109">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
-## Reglas  
+## <a name="rules"></a><span data-ttu-id="2bdbd-110">Reglas</span><span class="sxs-lookup"><span data-stu-id="2bdbd-110">Rules</span></span>  
   
--   **Contexto de la declaración.** Sólo puede utilizar `Shadows` en el nivel de clase.  Esto significa que el contexto de la declaración para un elemento `Shadows` debe ser una clase, y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.  
+-   <span data-ttu-id="2bdbd-111">**Contexto de la declaración.**</span><span class="sxs-lookup"><span data-stu-id="2bdbd-111">**Declaration Context.**</span></span> <span data-ttu-id="2bdbd-112">Puede usar `Shadows` en el nivel de clase.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-112">You can use `Shadows` only at class level.</span></span> <span data-ttu-id="2bdbd-113">Esto significa que el contexto de la declaración de un `Shadows` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-113">This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.</span></span>  
   
-     Se puede declarar sólo un elemento de sombreado en una única instrucción de declaración.  
+     <span data-ttu-id="2bdbd-114">Puede declarar un único elemento sombreado en una única instrucción de declaración.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-114">You can declare only one shadowing element in a single declaration statement.</span></span>  
   
--   **Modificadores combinados.** No se puede especificar `Shadows` junto con `Overloads`, `Overrides` o `Static` en la misma declaración.  
+-   <span data-ttu-id="2bdbd-115">**Modificadores combinados.**</span><span class="sxs-lookup"><span data-stu-id="2bdbd-115">**Combined Modifiers.**</span></span> <span data-ttu-id="2bdbd-116">No se puede especificar `Shadows` junto con `Overloads`, `Overrides`, o `Static` en la misma declaración.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-116">You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.</span></span>  
   
--   **Tipos de elementos.** Puede hacer que cualquier tipo de elemento declarado prevalezca sobre cualquier otro tipo.  Si sombrea una propiedad o procedimiento con otra propiedad o procedimiento, los parámetros y el tipo de valor devuelto no tienen que coincidir con los de la propiedad o procedimiento de la clase base.  
+-   <span data-ttu-id="2bdbd-117">**Tipos de elemento.**</span><span class="sxs-lookup"><span data-stu-id="2bdbd-117">**Element Types.**</span></span> <span data-ttu-id="2bdbd-118">Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-118">You can shadow any kind of declared element with any other kind.</span></span> <span data-ttu-id="2bdbd-119">Si sombrea una propiedad o procedimiento con otra propiedad o procedimiento, los parámetros y el tipo de valor devuelto no es necesario para que coincida con los de la propiedad de clase base o procedimiento.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-119">If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.</span></span>  
   
--   **Acceso.** El elemento sombreado en la clase base no está disponible normalmente desde la clase derivada que lo sombrea.  No obstante, se aplican las siguientes consideraciones.  
+-   <span data-ttu-id="2bdbd-120">**Obtener acceso a.**</span><span class="sxs-lookup"><span data-stu-id="2bdbd-120">**Accessing.**</span></span> <span data-ttu-id="2bdbd-121">El elemento sombreado en la clase base está disponible normalmente desde la clase derivada que lo reemplaza.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-121">The shadowed element in the base class is normally unavailable from within the derived class that shadows it.</span></span> <span data-ttu-id="2bdbd-122">Sin embargo, se aplican las consideraciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-122">However, the following considerations apply.</span></span>  
   
-    -   Si el elemento de sombreado no es accesible desde el código que hace referencia a él, la referencia se resuelve como el elemento sombreado.  Por ejemplo, si un elemento `Private` sombrea un elemento de clase base, el código que no tiene el permiso para obtener acceso al elemento `Private` obtiene acceso al elemento de clase base.  
+    -   <span data-ttu-id="2bdbd-123">Si el elemento reemplazado no es accesible desde el código que hace referencia a él, la referencia se resuelve como el elemento reemplazado.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-123">If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element.</span></span> <span data-ttu-id="2bdbd-124">Por ejemplo, si un `Private` elemento sombrea un elemento de clase base, el código que no tiene permiso para tener acceso a la `Private` elemento accede al elemento de clase base en su lugar.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-124">For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.</span></span>  
   
-    -   Si se sombrea un elemento, aún se podrá tener acceso al mismo mediante un objeto declarado con el tipo de la clase base.  También puede tener acceso a él a través de `MyBase`.  
+    -   <span data-ttu-id="2bdbd-125">Si sombrea un elemento, es posible tener acceso el elemento sombreado a través de un objeto declarado con el tipo de la clase base.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-125">If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class.</span></span> <span data-ttu-id="2bdbd-126">También puede acceder a él a través de `MyBase`.</span><span class="sxs-lookup"><span data-stu-id="2bdbd-126">You can also access it through `MyBase`.</span></span>  
   
- El modificador `Shadows` se puede utilizar en estos contextos:  
+ <span data-ttu-id="2bdbd-127">El modificador `Shadows` se puede utilizar en los contextos siguientes:</span><span class="sxs-lookup"><span data-stu-id="2bdbd-127">The `Shadows` modifier can be used in these contexts:</span></span>  
   
- [Class \(Instrucción\)](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="2bdbd-128">Class (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-128">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Const \(Instrucción\)](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="2bdbd-129">Const (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-129">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare \(Instrucción\)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="2bdbd-130">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-130">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Delegate \(Instrucción\)](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="2bdbd-131">Delegate (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-131">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Dim \(Instrucción\)](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="2bdbd-132">Dim (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-132">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Enum \(Instrucción\)](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="2bdbd-133">Enum (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-133">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Event \(Instrucción\)](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="2bdbd-134">Event (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-134">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="2bdbd-135">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-135">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface \(Instrucción\)](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="2bdbd-136">Interface (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-136">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Property \(Instrucción\)](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="2bdbd-137">Property (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-137">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure \(Instrucción\)](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="2bdbd-138">Structure (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-138">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="2bdbd-139">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="2bdbd-139">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vea también  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Static](../../../visual-basic/language-reference/modifiers/static.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a><span data-ttu-id="2bdbd-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="2bdbd-140">See Also</span></span>  
+ [<span data-ttu-id="2bdbd-141">Shared</span><span class="sxs-lookup"><span data-stu-id="2bdbd-141">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="2bdbd-142">Static</span><span class="sxs-lookup"><span data-stu-id="2bdbd-142">Static</span></span>](../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="2bdbd-143">Private</span><span class="sxs-lookup"><span data-stu-id="2bdbd-143">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="2bdbd-144">Me, My, MyBase y MyClass</span><span class="sxs-lookup"><span data-stu-id="2bdbd-144">Me, My, MyBase, and MyClass</span></span>](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [<span data-ttu-id="2bdbd-145">Fundamentos de la herencia</span><span class="sxs-lookup"><span data-stu-id="2bdbd-145">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [<span data-ttu-id="2bdbd-146">MustOverride</span><span class="sxs-lookup"><span data-stu-id="2bdbd-146">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [<span data-ttu-id="2bdbd-147">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="2bdbd-147">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [<span data-ttu-id="2bdbd-148">Sobrecargas</span><span class="sxs-lookup"><span data-stu-id="2bdbd-148">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [<span data-ttu-id="2bdbd-149">Overridable</span><span class="sxs-lookup"><span data-stu-id="2bdbd-149">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [<span data-ttu-id="2bdbd-150">Overrides</span><span class="sxs-lookup"><span data-stu-id="2bdbd-150">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="2bdbd-151">Sombrear en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2bdbd-151">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

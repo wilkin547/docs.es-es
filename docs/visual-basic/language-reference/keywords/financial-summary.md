@@ -1,53 +1,36 @@
 ---
-title: Resumen financiero (Visual Basic) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Resumen financiero (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - financial functions
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2686aa3c62e2cf4b87f8be0bb86e096e6abf113c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1783ec09ee044f6a26487cf6d90db6612f1c4d64
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="financial-summary-visual-basic"></a>Resumen financiero (Visual Basic)
-Las palabras clave del lenguaje [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
+# <a name="financial-summary-visual-basic"></a><span data-ttu-id="2ea2c-102">Resumen financiero (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ea2c-102">Financial Summary (Visual Basic)</span></span>
+<span data-ttu-id="2ea2c-103">Las palabras clave del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-103">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|Acción|Elemento del lenguaje|  
+|<span data-ttu-id="2ea2c-104">Acción</span><span class="sxs-lookup"><span data-stu-id="2ea2c-104">Action</span></span>|<span data-ttu-id="2ea2c-105">Elemento del lenguaje</span><span class="sxs-lookup"><span data-stu-id="2ea2c-105">Language element</span></span>|  
 |------------|----------------------|  
-|Calcular la amortización.|<xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A></xref:Microsoft.VisualBasic.Financial.SYD%2A></xref:Microsoft.VisualBasic.Financial.SLN%2A></xref:Microsoft.VisualBasic.Financial.DDB%2A>|  
-|Calcular el valor futuro.|<xref:Microsoft.VisualBasic.Financial.FV%2A></xref:Microsoft.VisualBasic.Financial.FV%2A>|  
-|Calcular el tipo de interés.|<xref:Microsoft.VisualBasic.Financial.Rate%2A></xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
-|Calcular la tasa interna de retorno.|<xref:Microsoft.VisualBasic.Financial.IRR%2A>,<xref:Microsoft.VisualBasic.Financial.MIRR%2A></xref:Microsoft.VisualBasic.Financial.MIRR%2A></xref:Microsoft.VisualBasic.Financial.IRR%2A>|  
-|Calcular el número de períodos.|<xref:Microsoft.VisualBasic.Financial.NPer%2A></xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
-|Calcular los pagos.|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A></xref:Microsoft.VisualBasic.Financial.PPmt%2A></xref:Microsoft.VisualBasic.Financial.Pmt%2A></xref:Microsoft.VisualBasic.Financial.IPmt%2A>|  
-|Calcular el valor actual.|<xref:Microsoft.VisualBasic.Financial.NPV%2A>,<xref:Microsoft.VisualBasic.Financial.PV%2A></xref:Microsoft.VisualBasic.Financial.PV%2A></xref:Microsoft.VisualBasic.Financial.NPV%2A>|  
+|<span data-ttu-id="2ea2c-106">Calcular la amortización.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-106">Calculate depreciation.</span></span>|<span data-ttu-id="2ea2c-107"><xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A></span><span class="sxs-lookup"><span data-stu-id="2ea2c-107"><xref:Microsoft.VisualBasic.Financial.DDB%2A>, <xref:Microsoft.VisualBasic.Financial.SLN%2A>, <xref:Microsoft.VisualBasic.Financial.SYD%2A></span></span>|  
+|<span data-ttu-id="2ea2c-108">Calcular el valor futuro.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-108">Calculate future value.</span></span>|<xref:Microsoft.VisualBasic.Financial.FV%2A>|  
+|<span data-ttu-id="2ea2c-109">Calcular el tipo de interés.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-109">Calculate interest rate.</span></span>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|  
+|<span data-ttu-id="2ea2c-110">Calcular la tasa interna de retorno.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-110">Calculate internal rate of return.</span></span>|<span data-ttu-id="2ea2c-111"><xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A></span><span class="sxs-lookup"><span data-stu-id="2ea2c-111"><xref:Microsoft.VisualBasic.Financial.IRR%2A>, <xref:Microsoft.VisualBasic.Financial.MIRR%2A></span></span>|  
+|<span data-ttu-id="2ea2c-112">Calcular el número de períodos.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-112">Calculate number of periods.</span></span>|<xref:Microsoft.VisualBasic.Financial.NPer%2A>|  
+|<span data-ttu-id="2ea2c-113">Calcular los pagos.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-113">Calculate payments.</span></span>|<span data-ttu-id="2ea2c-114"><xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A></span><span class="sxs-lookup"><span data-stu-id="2ea2c-114"><xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A></span></span>|  
+|<span data-ttu-id="2ea2c-115">Calcular el valor actual.</span><span class="sxs-lookup"><span data-stu-id="2ea2c-115">Calculate present value.</span></span>|<span data-ttu-id="2ea2c-116"><xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A></span><span class="sxs-lookup"><span data-stu-id="2ea2c-116"><xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A></span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)   
- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="2ea2c-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ea2c-117">See Also</span></span>  
+ [<span data-ttu-id="2ea2c-118">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="2ea2c-118">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="2ea2c-119">Miembros de la biblioteca en tiempo de ejecución de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2ea2c-119">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

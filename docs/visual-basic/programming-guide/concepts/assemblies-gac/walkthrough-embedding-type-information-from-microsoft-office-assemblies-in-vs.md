@@ -1,62 +1,53 @@
 ---
-title: "Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic) | Documentos de Microsoft"
+title: "Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4347ba0e740419b53a1aa662c43933dead107e9c
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 26e6fee5147e8477c64f7eaf0dc2aeb928c13e15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic)
-Si incrusta la información de tipo en una aplicación que hace referencia a objetos COM, puede eliminar la necesidad de un ensamblado de interoperabilidad primario (PIA). Además, la información de tipo incrustada permite conseguir la independencia de la versión de la aplicación. Es decir, el programa puede escribirse usar tipos de varias versiones de una biblioteca COM sin necesidad de un PIA específico para cada versión. Se trata de un escenario común para las aplicaciones que usan objetos de las bibliotecas de Microsoft Office. Incrustar información de tipos permite la misma versión de un programa para trabajar con distintas versiones de Microsoft Office en equipos diferentes sin necesidad de volver a implementar el programa o el PIA para cada versión de Microsoft Office.  
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a><span data-ttu-id="fbc99-102">Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbc99-102">Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (Visual Basic)</span></span>
+<span data-ttu-id="fbc99-103">Si inserta la de tipos en una aplicación que hace referencia a objetos COM, puede eliminar la necesidad de un ensamblado de interoperabilidad primario (PIA).</span><span class="sxs-lookup"><span data-stu-id="fbc99-103">If you embed type information in an application that references COM objects, you can eliminate the need for a primary interop assembly (PIA).</span></span> <span data-ttu-id="fbc99-104">Además, la información de tipo incrustada permite que la versión de la aplicación gane en independencia.</span><span class="sxs-lookup"><span data-stu-id="fbc99-104">Additionally, the embedded type information enables you to achieve version independence for your application.</span></span> <span data-ttu-id="fbc99-105">Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca COM sin necesidad de requerir un PIA específico para cada versión.</span><span class="sxs-lookup"><span data-stu-id="fbc99-105">That is, your program can be written to use types from multiple versions of a COM library without requiring a specific PIA for each version.</span></span> <span data-ttu-id="fbc99-106">Se trata de un escenario común para las aplicaciones que usan objetos de las bibliotecas de Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="fbc99-106">This is a common scenario for applications that use objects from Microsoft Office libraries.</span></span> <span data-ttu-id="fbc99-107">La inserción de la información de tipos permite que la misma compilación de un programa funcione con distintas versiones de Microsoft Office en equipos diferentes sin necesidad de volver a implementar el programa o el PIA para cada versión de Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="fbc99-107">Embedding type information enables the same build of a program to work with different versions of Microsoft Office on different computers without the need to redeploy either the program or the PIA for each version of Microsoft Office.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Requisitos previos  
- En este tutorial se requiere lo siguiente:  
+## <a name="prerequisites"></a><span data-ttu-id="fbc99-108">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="fbc99-108">Prerequisites</span></span>  
+ <span data-ttu-id="fbc99-109">En este tutorial se requiere lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="fbc99-109">This walkthrough requires the following:</span></span>  
   
--   Un equipo en el que están instalado Visual Studio y Microsoft Excel.  
+-   <span data-ttu-id="fbc99-110">Un equipo en el que estén instalados Visual Studio y Microsoft Excel.</span><span class="sxs-lookup"><span data-stu-id="fbc99-110">A computer on which Visual Studio and Microsoft Excel are installed.</span></span>  
   
--   Un segundo equipo en el que están instalados .NET Framework 4 o superior y una versión diferente de Excel.  
+-   <span data-ttu-id="fbc99-111">Un segundo equipo en el que estén instalados .NET Framework 4 o superior y una versión diferente de Excel.</span><span class="sxs-lookup"><span data-stu-id="fbc99-111">A second computer on which the .NET Framework 4 or higher and a different version of Excel are installed.</span></span>  
   
-##  <a name="BKMK_createapp"></a>Para crear una aplicación que funcione con varias versiones de Microsoft Office  
+##  <span data-ttu-id="fbc99-112"><a name="BKMK_createapp"></a> Para crear una aplicación que funcione con varias versiones de Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="fbc99-112"><a name="BKMK_createapp"></a> To create an application that works with multiple versions of Microsoft Office</span></span>  
   
-1.  Inicie Visual Studio en un equipo donde esté instalado Excel.  
+1.  <span data-ttu-id="fbc99-113">Inicie Visual Studio en un equipo en el que esté instalado Excel.</span><span class="sxs-lookup"><span data-stu-id="fbc99-113">Start Visual Studio on a computer on which Excel is installed.</span></span>  
   
-2.  En el menú **Archivo** , elija **Nuevo**, **Proyecto**.  
+2.  <span data-ttu-id="fbc99-114">En el menú **Archivo** , elija **Nuevo**, **Proyecto**.</span><span class="sxs-lookup"><span data-stu-id="fbc99-114">On the **File** menu, choose **New**, **Project**.</span></span>  
   
-3.  En el **nuevo proyecto** cuadro de diálogo el **tipos de proyecto** panel, asegúrese de que **Windows** está seleccionada. Seleccione **aplicación de consola** en el **plantillas** panel. En el **nombre** , escriba `CreateExcelWorkbook`y, a continuación, elija la **Aceptar** botón. Se crea el nuevo proyecto.  
+3.  <span data-ttu-id="fbc99-115">En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto**, asegúrese de que esté seleccionado **Windows**.</span><span class="sxs-lookup"><span data-stu-id="fbc99-115">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="fbc99-116">Seleccione **Aplicación de consola** en el panel **Plantillas**.</span><span class="sxs-lookup"><span data-stu-id="fbc99-116">Select **Console Application** in the **Templates** pane.</span></span> <span data-ttu-id="fbc99-117">En el cuadro **Nombre**, escriba `CreateExcelWorkbook` y seleccione el botón **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="fbc99-117">In the **Name** box, enter `CreateExcelWorkbook`, and then choose the **OK** button.</span></span> <span data-ttu-id="fbc99-118">Se crea el proyecto.</span><span class="sxs-lookup"><span data-stu-id="fbc99-118">The new project is created.</span></span>  
   
-4.  Abra el menú contextual para el proyecto CreateExcelWorkbook y, a continuación, elija **propiedades**. Elija la **referencias** ficha. Elija el botón de **Agregar** .  
+4.  <span data-ttu-id="fbc99-119">Abra el menú contextual para el proyecto CreateExcelWorkbook y, a continuación, elija **propiedades**.</span><span class="sxs-lookup"><span data-stu-id="fbc99-119">Open the shortcut menu for the CreateExcelWorkbook project and then choose **Properties**.</span></span> <span data-ttu-id="fbc99-120">Elija la **referencias** ficha. Elija el botón de **Agregar** .</span><span class="sxs-lookup"><span data-stu-id="fbc99-120">Choose the **References** tab. Choose the **Add** button.</span></span>  
   
-5.  En el **.NET** ficha, elija la versión más reciente de `Microsoft.Office.Interop.Excel`. Por ejemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**. Elija el botón **Aceptar** .  
+5.  <span data-ttu-id="fbc99-121">En la pestaña **.NET**, elija la versión más reciente de `Microsoft.Office.Interop.Excel`.</span><span class="sxs-lookup"><span data-stu-id="fbc99-121">On the **.NET** tab, choose the most recent version of `Microsoft.Office.Interop.Excel`.</span></span> <span data-ttu-id="fbc99-122">Por ejemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**.</span><span class="sxs-lookup"><span data-stu-id="fbc99-122">For example, **Microsoft.Office.Interop.Excel 14.0.0.0**.</span></span> <span data-ttu-id="fbc99-123">Elija el botón **Aceptar** .</span><span class="sxs-lookup"><span data-stu-id="fbc99-123">Choose the **OK** button.</span></span>  
   
-6.  En la lista de referencias para el **CreateExcelWorkbook** de proyectos, seleccione la referencia para `Microsoft.Office.Interop.Excel` que agregó en el paso anterior. En el **propiedades** ventana, asegúrese de que el `Embed Interop Types` propiedad está establecida en `True`.  
+6.  <span data-ttu-id="fbc99-124">En la lista de referencias para el proyecto **CreateExcelWorkbook**, seleccione la referencia para `Microsoft.Office.Interop.Excel` que agregó en el paso anterior.</span><span class="sxs-lookup"><span data-stu-id="fbc99-124">In the list of references for the **CreateExcelWorkbook** project, select the reference for `Microsoft.Office.Interop.Excel` that you added in the previous step.</span></span> <span data-ttu-id="fbc99-125">En la ventana **Propiedades**, asegúrese de que la propiedad `Embed Interop Types` esté establecida en `True`.</span><span class="sxs-lookup"><span data-stu-id="fbc99-125">In the **Properties** window, make sure that the `Embed Interop Types` property is set to `True`.</span></span>  
   
     > [!NOTE]
-    >  La aplicación creada en este tutorial se ejecuta con distintas versiones de Microsoft Office debido a la información de tipo de interoperabilidad incrustado. Si el `Embed Interop Types` propiedad se establece en `False`, debe incluir un PIA para cada versión de Microsoft Office que la aplicación se ejecutará con.  
+    >  <span data-ttu-id="fbc99-126">La aplicación creada en este tutorial se ejecuta con distintas versiones de Microsoft Office debido a la información de tipo de interoperabilidad insertada.</span><span class="sxs-lookup"><span data-stu-id="fbc99-126">The application created in this walkthrough runs with different versions of Microsoft Office because of the embedded interop type information.</span></span> <span data-ttu-id="fbc99-127">Si la propiedad `Embed Interop Types` está establecida en `False`, debe incluir un PIA para cada versión de Microsoft Office con la que se ejecute la aplicación.</span><span class="sxs-lookup"><span data-stu-id="fbc99-127">If the `Embed Interop Types` property is set to `False`, you must include a PIA for each version of Microsoft Office that the application will run with.</span></span>  
   
-7.  Abra el archivo Module1.vb. Reemplace el código en el archivo con el código siguiente:  
+7.  <span data-ttu-id="fbc99-128">Abra el archivo Module1.vb.</span><span class="sxs-lookup"><span data-stu-id="fbc99-128">Open the Module1.vb file.</span></span> <span data-ttu-id="fbc99-129">Reemplace el código de este archivo por el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="fbc99-129">Replace the code in the file with the following code:</span></span>  
   
     ```vb  
     Imports Excel = Microsoft.Office.Interop.Excel  
@@ -111,23 +102,22 @@ Si incrusta la información de tipo en una aplicación que hace referencia a obj
     End Module  
     ```  
   
-8.  Guarde el proyecto.  
+8.  <span data-ttu-id="fbc99-130">Guarde el proyecto.</span><span class="sxs-lookup"><span data-stu-id="fbc99-130">Save the project.</span></span>  
   
-9. Presione CTRL + F5 para compilar y ejecutar el proyecto. Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.  
+9. <span data-ttu-id="fbc99-131">Pulse CTRL+F5 para compilar y ejecutar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="fbc99-131">Press CTRL+F5 to build and run the project.</span></span> <span data-ttu-id="fbc99-132">Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.</span><span class="sxs-lookup"><span data-stu-id="fbc99-132">Verify that an Excel workbook has been created at the location specified in the example code: C:\SampleFolder\SampleWorkbook.xls.</span></span>  
   
-##  <a name="BKMK_publishapp"></a>Para publicar la aplicación en un equipo en el que se instala una versión diferente de Microsoft Office  
+##  <span data-ttu-id="fbc99-133"><a name="BKMK_publishapp"></a> Para publicar la aplicación en un equipo en el que está instalada una versión diferente de Microsoft Office</span><span class="sxs-lookup"><span data-stu-id="fbc99-133"><a name="BKMK_publishapp"></a> To publish the application to a computer on which a different version of Microsoft Office is installed</span></span>  
   
-1.  Abra el proyecto creado por este tutorial en Visual Studio.  
+1.  <span data-ttu-id="fbc99-134">Abra el proyecto creado mediante este tutorial en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fbc99-134">Open the project created by this walkthrough in Visual Studio.</span></span>  
   
-2.  En el **crear** menú, elija **publicar CreateExcelWorkbook**. Siga los pasos del Asistente para publicación para crear una versión instalable de la aplicación. Para obtener más información, consulte [Asistente para publicación (desarrollo de Office en Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
+2.  <span data-ttu-id="fbc99-135">En el menú **Compilar**, elija **Publicar CreateExcelWorkbook**.</span><span class="sxs-lookup"><span data-stu-id="fbc99-135">On the **Build** menu, choose **Publish CreateExcelWorkbook**.</span></span> <span data-ttu-id="fbc99-136">Siga los pasos del Asistente para publicación para crear una versión instalable de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="fbc99-136">Follow the steps of the Publish Wizard to create an installable version of the application.</span></span> <span data-ttu-id="fbc99-137">Para obtener más información, vea [Asistente para publicación (Desarrollo de Office en Visual Studio)](https://msdn.microsoft.com/library/bb625071).</span><span class="sxs-lookup"><span data-stu-id="fbc99-137">For more information, see [Publish Wizard (Office Development in Visual Studio)](https://msdn.microsoft.com/library/bb625071).</span></span>  
   
-3.  Instalar la aplicación en un equipo en el que estén instalados .NET Framework 4 o superior y una versión diferente de Excel.  
+3.  <span data-ttu-id="fbc99-138">Instale la aplicación en un equipo en el que estén instalados .NET Framework 4 o superior y una versión diferente de Excel.</span><span class="sxs-lookup"><span data-stu-id="fbc99-138">Install the application on a computer on which the .NET Framework 4 or higher and a different version of Excel are installed.</span></span>  
   
-4.  Cuando finalice la instalación, ejecute el programa de instalación.  
+4.  <span data-ttu-id="fbc99-139">Cuando finalice la instalación, ejecute el programa instalado.</span><span class="sxs-lookup"><span data-stu-id="fbc99-139">When the installation is finished, run the installed program.</span></span>  
   
-5.  Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.  
+5.  <span data-ttu-id="fbc99-140">Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.</span><span class="sxs-lookup"><span data-stu-id="fbc99-140">Verify that an Excel workbook has been created at the location specified in the sample code: C:\SampleFolder\SampleWorkbook.xls.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
- [/Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
-
+## <a name="see-also"></a><span data-ttu-id="fbc99-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="fbc99-141">See Also</span></span>  
+ [<span data-ttu-id="fbc99-142">Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbc99-142">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+ [<span data-ttu-id="fbc99-143">/link (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbc99-143">/link (Visual Basic)</span></span>](../../../../visual-basic/reference/command-line-compiler/link.md)

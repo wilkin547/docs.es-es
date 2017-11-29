@@ -1,67 +1,71 @@
 ---
-title: "Tutorial: Actualizar la informaci&#243;n de la barra de estado en tiempo de ejecuci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "paneles, actualizar la barra de estado"
-  - "barras de estado, actualizar paneles"
-  - "barras de estado, actualizar en tiempo de ejecución"
-  - "StatusBar (control) [Windows Forms], actualizar paneles"
+title: "Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- status bars [Windows Forms], updating at run time
+- status bars [Windows Forms], refreshing panels
+- StatusBar control [Windows Forms], refreshing panels
+- panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6c67aa303f375734408201ce15d1c3db3dc32c8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Actualizar la informaci&#243;n de la barra de estado en tiempo de ejecuci&#243;n
+# <a name="walkthrough-updating-status-bar-information-at-run-time"></a><span data-ttu-id="8e38e-102">Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="8e38e-102">Walkthrough: Updating Status Bar Information at Run Time</span></span>
 > [!IMPORTANT]
->  Los controles <xref:System.Windows.Forms.StatusStrip> y <xref:System.Windows.Forms.ToolStripStatusLabel> reemplazan a los controles <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel>, y les agregan funcionalidad; sin embargo, los controles <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> se conservan para obtener la compatibilidad con versiones anteriores y para su uso futuro, si se desea.  
+>  <span data-ttu-id="8e38e-103">El <xref:System.Windows.Forms.StatusStrip> y <xref:System.Windows.Forms.ToolStripStatusLabel> controles reemplazan y agregan funcionalidad a la <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> controla; sin embargo, el <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> controles se conservan por compatibilidad con versiones anteriores y uso futuro, si se Elija esta opción.</span><span class="sxs-lookup"><span data-stu-id="8e38e-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
   
- Con frecuencia, el programa le solicitará que actualice el contenido de los paneles de la barra de estado dinámicamente en tiempo de ejecución, basándose en cambios en el estado de la aplicación u otra interacción del usuario.  Esta es una manera común de indicar a los usuarios que las teclas como BLOQ MAYÚS, BLOQ NUM o BLOQ DESPL están habilitadas o para proporcionar la fecha o un reloj como una referencia adecuada.  
+ <span data-ttu-id="8e38e-104">Con frecuencia, un programa llamará para que actualice el contenido de los paneles de la barra de estado dinámicamente en tiempo de ejecución, en función de los cambios de estado de la aplicación u otra interacción del usuario.</span><span class="sxs-lookup"><span data-stu-id="8e38e-104">Often, a program will call for you to update the contents of status bar panels dynamically at run time, based on changes to application state or other user interaction.</span></span> <span data-ttu-id="8e38e-105">Se trata de una manera habitual de indicar a los usuarios que teclas tales como Bloq Mayús, Bloq Num o BLOQ DESPL están habilitadas o para proporcionar la fecha o un reloj como referencia cómoda.</span><span class="sxs-lookup"><span data-stu-id="8e38e-105">This is a common way to signal users that keys such as the CAPS LOCK, NUM LOCK, or SCROLL LOCK are enabled, or to provide the date or a clock as a convenient reference.</span></span>  
   
- En el ejemplo siguiente, se utiliza una instancia de la clase <xref:System.Windows.Forms.StatusBarPanel> para hospedar un reloj.  
+ <span data-ttu-id="8e38e-106">En el ejemplo siguiente, utilizará una instancia de la <xref:System.Windows.Forms.StatusBarPanel> clase para hospedar un reloj.</span><span class="sxs-lookup"><span data-stu-id="8e38e-106">In the following example, you will use an instance of the <xref:System.Windows.Forms.StatusBarPanel> class to host a clock.</span></span>  
   
-### Para obtener la barra de estado lista para la actualización  
+### <a name="to-get-the-status-bar-ready-for-updating"></a><span data-ttu-id="8e38e-107">Para preparar la barra de estado para la actualización</span><span class="sxs-lookup"><span data-stu-id="8e38e-107">To get the status bar ready for updating</span></span>  
   
-1.  Cree un nuevo formulario Windows Forms.  
+1.  <span data-ttu-id="8e38e-108">Cree un nuevo formulario Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="8e38e-108">Create a new Windows form.</span></span>  
   
-2.  Agregue el control <xref:System.Windows.Forms.StatusBar> al formulario.  Para obtener información detallada, vea [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+2.  <span data-ttu-id="8e38e-109">Agregue un control <xref:System.Windows.Forms.StatusBar> al formulario.</span><span class="sxs-lookup"><span data-stu-id="8e38e-109">Add a <xref:System.Windows.Forms.StatusBar> control to your form.</span></span> <span data-ttu-id="8e38e-110">Para ver detalles, consulte [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="8e38e-110">For details, see [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
-3.  Agregue un panel de barra de estado al control <xref:System.Windows.Forms.StatusBar>.  Para obtener información detallada, vea [Cómo: Agregar paneles a un control StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  <span data-ttu-id="8e38e-111">Agregue un panel de barra de estado para su <xref:System.Windows.Forms.StatusBar> control.</span><span class="sxs-lookup"><span data-stu-id="8e38e-111">Add a status bar panel to your <xref:System.Windows.Forms.StatusBar> control.</span></span> <span data-ttu-id="8e38e-112">Para ver detalles, consulte [Cómo: Agregar paneles a un control StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).</span><span class="sxs-lookup"><span data-stu-id="8e38e-112">For details, see [How to: Add Panels to a StatusBar Control](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).</span></span>  
   
-4.  Para el control <xref:System.Windows.Forms.StatusBar> que ha agregado a su formulario, establezca la propiedad <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> en `true`.  
+4.  <span data-ttu-id="8e38e-113">Para el <xref:System.Windows.Forms.StatusBar> control agregado al formulario, establezca la <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="8e38e-113">For the <xref:System.Windows.Forms.StatusBar> control you added to your form, set the <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> property to `true`.</span></span>  
   
-5.  Agregue al formulario un componente <xref:System.Windows.Forms.Timer> de formularios Windows Forms.  
-  
-    > [!NOTE]
-    >  El componente <xref:System.Windows.Forms.Timer?displayProperty=fullName> de formularios Windows Forms está diseñado para el entorno de formularios Windows Forms.  Si necesita un temporizador que sea adecuado para un entorno de servidor, vea [Introduction to Server\-Based Timers](http://msdn.microsoft.com/es-es/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
-  
-6.  Establezca la propiedad <xref:System.Windows.Forms.Timer.Enabled%2A> en `true`.  
-  
-7.  Establezca la propiedad <xref:System.Windows.Forms.Timer.Interval%2A> del control <xref:System.Windows.Forms.Timer> en 30000.  
+5.  <span data-ttu-id="8e38e-114">Agregar un formulario Windows Forms <xref:System.Windows.Forms.Timer> componente al formulario.</span><span class="sxs-lookup"><span data-stu-id="8e38e-114">Add a Windows Forms <xref:System.Windows.Forms.Timer> component to the form.</span></span>  
   
     > [!NOTE]
-    >  La propiedad <xref:System.Windows.Forms.Timer.Interval%2A> del componente <xref:System.Windows.Forms.Timer> se establece en 30 segundos \(30.000 milisegundos\) para asegurarse de que la hora mostrada sea exacta.  
+    >  <span data-ttu-id="8e38e-115">Los formularios de Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> componente está diseñado para un entorno de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="8e38e-115">The Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> component is designed for a Windows Forms environment.</span></span> <span data-ttu-id="8e38e-116">Si necesita un temporizador que sea adecuado para un entorno de servidor, consulte [Introducción a los temporizadores basados en servidor](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span><span class="sxs-lookup"><span data-stu-id="8e38e-116">If you need a timer that is suitable for a server environment, see [Introduction to Server-Based Timers](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span></span>  
   
-### Para implementar el temporizador para actualizar la barra de estado  
+6.  <span data-ttu-id="8e38e-117">Establezca la propiedad <xref:System.Windows.Forms.Timer.Enabled%2A> en `true`.</span><span class="sxs-lookup"><span data-stu-id="8e38e-117">Set the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `true`.</span></span>  
   
-1.  Inserte el código siguiente en el controlador de eventos del componente <xref:System.Windows.Forms.Timer> para actualizar el panel del control <xref:System.Windows.Forms.StatusBar>.  
+7.  <span data-ttu-id="8e38e-118">Establecer el <xref:System.Windows.Forms.Timer.Interval%2A> propiedad de la <xref:System.Windows.Forms.Timer> en 30000.</span><span class="sxs-lookup"><span data-stu-id="8e38e-118">Set the <xref:System.Windows.Forms.Timer.Interval%2A> property of the <xref:System.Windows.Forms.Timer> to 30000.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="8e38e-119">El <xref:System.Windows.Forms.Timer.Interval%2A> propiedad de la <xref:System.Windows.Forms.Timer> componente se establece en 30 segundos (30.000 milisegundos) para asegurarse de que se refleja una hora precisa en el tiempo que se muestra.</span><span class="sxs-lookup"><span data-stu-id="8e38e-119">The <xref:System.Windows.Forms.Timer.Interval%2A> property of the <xref:System.Windows.Forms.Timer> component is set to 30 seconds (30,000 milliseconds) to ensure that an accurate time is reflected in the time displayed.</span></span>  
+  
+### <a name="to-implement-the-timer-to-update-the-status-bar"></a><span data-ttu-id="8e38e-120">Para implementar el temporizador para que se actualice la barra de estado</span><span class="sxs-lookup"><span data-stu-id="8e38e-120">To implement the timer to update the status bar</span></span>  
+  
+1.  <span data-ttu-id="8e38e-121">Inserte el código siguiente en el controlador de eventos de la <xref:System.Windows.Forms.Timer> componente que desea actualizar el panel de la <xref:System.Windows.Forms.StatusBar> control.</span><span class="sxs-lookup"><span data-stu-id="8e38e-121">Insert the following code into the event handler of the <xref:System.Windows.Forms.Timer> component to update the panel of the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
   
     ```vb  
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick  
        StatusBar1.Panels(0).Text = Now.ToShortTimeString  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -69,7 +73,6 @@ caps.handback.revision: 18
     {  
        statusBar1.Panels[0].Text = DateTime.Now.ToShortTimeString();  
     }  
-  
     ```  
   
     ```cpp  
@@ -82,18 +85,18 @@ caps.handback.revision: 18
       }  
     ```  
   
-     En este punto, puede ejecutar la aplicación; observará el reloj en ejecución en el panel de barra de estado.  
+     <span data-ttu-id="8e38e-122">Ahora está listo para ejecutar la aplicación y observar el reloj en ejecución en el panel de la barra de estado.</span><span class="sxs-lookup"><span data-stu-id="8e38e-122">At this point, you are ready to run the application and observe the clock running in the status bar panel.</span></span>  
   
-### Para probar la aplicación  
+### <a name="to-test-the-application"></a><span data-ttu-id="8e38e-123">Para probar la aplicación</span><span class="sxs-lookup"><span data-stu-id="8e38e-123">To test the application</span></span>  
   
-1.  Depure la aplicación y presione F5 para ejecutarla.  Para obtener información sobre la depuración, vea [Depurar en Visual Studio](../Topic/Debugging%20in%20Visual%20Studio.md).  
+1.  <span data-ttu-id="8e38e-124">Depure la aplicación y presione F5 para ejecutarla.</span><span class="sxs-lookup"><span data-stu-id="8e38e-124">Debug the application and press F5 to run it.</span></span> <span data-ttu-id="8e38e-125">Para más detalles sobre la depuración, consulte [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="8e38e-125">For details about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).</span></span>  
   
     > [!NOTE]
-    >  El reloj tardará aproximadamente 30 segundos en aparecer en la barra de estado.  Esto es así para obtener la hora más precisa posible.  Por otro lado, para que el reloj aparezca antes, puede reducir el valor de la propiedad <xref:System.Windows.Forms.Timer.Interval%2A> que ha establecido en el paso 7 del procedimiento anterior.  
+    >  <span data-ttu-id="8e38e-126">El reloj tardará aproximadamente 30 segundos en aparecer en la barra de estado.</span><span class="sxs-lookup"><span data-stu-id="8e38e-126">It will take approximately 30 seconds for the clock to appear in the status bar.</span></span> <span data-ttu-id="8e38e-127">El objetivo es obtener la hora más precisa posible.</span><span class="sxs-lookup"><span data-stu-id="8e38e-127">This is to get the most accurate time possible.</span></span> <span data-ttu-id="8e38e-128">Por el contrario, para que el reloj aparezca antes, puede reducir el valor de la <xref:System.Windows.Forms.Timer.Interval%2A> propiedad establecida en el paso 7 del procedimiento anterior.</span><span class="sxs-lookup"><span data-stu-id="8e38e-128">Conversely, to make the clock appear sooner, you can reduce the value of the <xref:System.Windows.Forms.Timer.Interval%2A> property you set in step 7 in the previous procedure.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Cómo: Agregar paneles a un control StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)   
- [Cómo: Determinar en qué panel del control StatusBar de formularios Windows Forms se hizo clic](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)   
- [Información general sobre StatusBar \(Control\)](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8e38e-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="8e38e-129">See Also</span></span>  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [<span data-ttu-id="8e38e-130">Agregar paneles a un control StatusBar</span><span class="sxs-lookup"><span data-stu-id="8e38e-130">How to: Add Panels to a StatusBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
+ [<span data-ttu-id="8e38e-131">Determinar en qué panel del control StatusBar de Windows Forms se hizo clic</span><span class="sxs-lookup"><span data-stu-id="8e38e-131">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [<span data-ttu-id="8e38e-132">Información general sobre StatusBar (Control)</span><span class="sxs-lookup"><span data-stu-id="8e38e-132">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

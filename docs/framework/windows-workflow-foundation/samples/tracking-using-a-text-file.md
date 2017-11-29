@@ -1,35 +1,39 @@
 ---
-title: "Realizar el seguimiento del uso de un archivo de texto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Realizar el seguimiento del uso de un archivo de texto
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a2725c34b79b8c9dd05a9f9a071ef52e29527e02
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Realizar el seguimiento del uso de un archivo de texto
-En este ejemplo se muestra cómo ampliar el seguimiento en [!INCLUDE[wf](../../../../includes/wf-md.md)] creando un participante de seguimiento personalizado.Los participantes de seguimiento son clases de .NET Framework que reciben registros de seguimiento del motor en tiempo de ejecución a medida que se emiten.Puede crear un participante de seguimiento para transportar los eventos de seguimiento al destino necesario para su escenario.Por ejemplo, como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se proporciona el participante de seguimiento de ETW \(Seguimiento de eventos para Windows\).El participante de seguimiento de este ejemplo escribe los registros en formato XML en un archivo de texto.  
+# <a name="tracking-using-a-text-file"></a><span data-ttu-id="39408-102">Realizar el seguimiento del uso de un archivo de texto</span><span class="sxs-lookup"><span data-stu-id="39408-102">Tracking Using a Text File</span></span>
+<span data-ttu-id="39408-103">En este ejemplo se muestra cómo ampliar el seguimiento en [!INCLUDE[wf](../../../../includes/wf-md.md)] creando un participante de seguimiento personalizado.</span><span class="sxs-lookup"><span data-stu-id="39408-103">This sample demonstrates how to extend tracking in [!INCLUDE[wf](../../../../includes/wf-md.md)] by creating a custom tracking participant.</span></span> <span data-ttu-id="39408-104">Los participantes de seguimiento son clases de .NET Framework que reciben registros de seguimiento del motor en tiempo de ejecución a medida que se emiten.</span><span class="sxs-lookup"><span data-stu-id="39408-104">Tracking participants are .NET Framework classes that receive tracking records from the runtime as they are emitted.</span></span> <span data-ttu-id="39408-105">Puede crear un participante de seguimiento para transportar los eventos de seguimiento al destino necesario para su escenario.</span><span class="sxs-lookup"><span data-stu-id="39408-105">You can create a tracking participant to transport the tracking events to whichever destination is required for your scenario.</span></span> <span data-ttu-id="39408-106">Por ejemplo, como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se proporciona el participante de seguimiento de ETW (Seguimiento de eventos para Windows).</span><span class="sxs-lookup"><span data-stu-id="39408-106">For example, ETW (Event Tracing for Windows) Tracking Participant is provided as part of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="39408-107">El participante de seguimiento de este ejemplo escribe los registros en formato XML en un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="39408-107">The tracking participant in this sample writes the records in XML format to a text file.</span></span>  
   
-## Detalles del ejemplo  
- Para optimizar la utilidad y solidez del participante de seguimiento, deben completarse algunos pasos adicionales para conectar correctamente el participante de seguimiento al motor en tiempo de ejecución.En la siguiente tabla se describen las clases utilizadas en este ejemplo para crear un participante de seguimiento que obedece los procedimientos recomendados.  
+## <a name="sample-details"></a><span data-ttu-id="39408-108">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="39408-108">Sample details</span></span>  
+ <span data-ttu-id="39408-109">Para optimizar la utilidad y solidez del participante de seguimiento, deben completarse algunos pasos adicionales para conectar correctamente el participante de seguimiento al motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="39408-109">To optimize the usefulness and robustness of your tracking participant, some additional steps must be completed to properly wire the tracking participant to the runtime.</span></span> <span data-ttu-id="39408-110">En la siguiente tabla se describen las clases utilizadas en este ejemplo para crear un participante de seguimiento que obedece los procedimientos recomendados.</span><span class="sxs-lookup"><span data-stu-id="39408-110">The following table describes the classes used in this sample to create a tracking participant that complies with best practices.</span></span>  
   
-|Clase|Descripción|  
+|<span data-ttu-id="39408-111">Clase</span><span class="sxs-lookup"><span data-stu-id="39408-111">Class</span></span>|<span data-ttu-id="39408-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="39408-112">Description</span></span>|  
 |-----------|-----------------|  
-|`TextFileTrackingExtensionElement`|Se utiliza una clase <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> para definir la sección de configuración utilizada para configurar el participante de seguimiento de archivo de texto.Esto permite a los usuarios especificar el destino del archivo de registro utilizando archivos de configuración estándar de .NET Framework.|  
-|`TextFileTrackingBehavior`|Los comportamientos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permiten a los usuarios insertar extensiones en tiempo de ejecución.Este comportamiento agrega el participante de seguimiento al servicio cuando este se inicia.|  
-|`TextFileTrackingParticipant`|El participante de seguimiento que recibe los participantes de seguimiento en tiempo de ejecución y los almacena en un archivo de registro como XML.|  
+|`TextFileTrackingExtensionElement`|<span data-ttu-id="39408-113">Se utiliza una clase <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> para definir la sección de configuración utilizada para configurar el participante de seguimiento de archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="39408-113">A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> is used to define the configuration section used to configure the text file tracking participant.</span></span> <span data-ttu-id="39408-114">Esto permite a los usuarios especificar el destino del archivo de registro utilizando archivos de configuración estándar de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="39408-114">This allows users to specify the destination of the log file using standard .NET Framework configuration files.</span></span>|  
+|`TextFileTrackingBehavior`|<span data-ttu-id="39408-115">Los comportamientos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permiten a los usuarios insertar extensiones en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="39408-115">Behaviors in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] allow users to inject extensions into the runtime.</span></span> <span data-ttu-id="39408-116">Este comportamiento agrega el participante de seguimiento al servicio cuando este se inicia.</span><span class="sxs-lookup"><span data-stu-id="39408-116">This behavior adds the tracking participant to the service when the service starts.</span></span>|  
+|`TextFileTrackingParticipant`|<span data-ttu-id="39408-117">El participante de seguimiento que recibe los participantes de seguimiento en tiempo de ejecución y los almacena en un archivo de registro como XML.</span><span class="sxs-lookup"><span data-stu-id="39408-117">The tracking participant that receives tracking participants at runtime and stores them to a log file as XML.</span></span>|  
   
-## Configuración de elementos de extensión de comportamiento  
- Para usar mediante archivos de configuración de .NET Framework el elemento de extensión de comportamiento previamente descrito, se necesita un paso más.En los archivos de configuración donde se va a usar la extensión se debe incluir la siguiente configuración.  
+## <a name="behavior-extension-elements-configuration"></a><span data-ttu-id="39408-118">Configuración de elementos de extensión de comportamiento</span><span class="sxs-lookup"><span data-stu-id="39408-118">Behavior Extension Elements Configuration</span></span>  
+ <span data-ttu-id="39408-119">Para usar mediante archivos de configuración de .NET Framework el elemento de extensión de comportamiento previamente descrito, se necesita un paso más.</span><span class="sxs-lookup"><span data-stu-id="39408-119">One more step is required to make use of the behavior extension element previously described using .NET Framework configuration files.</span></span> <span data-ttu-id="39408-120">En los archivos de configuración donde se va a usar la extensión se debe incluir la siguiente configuración.</span><span class="sxs-lookup"><span data-stu-id="39408-120">The following configuration must be placed in configuration files where the extension is to be used.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <extensions>  
       <behaviorExtensions>  
@@ -38,64 +42,63 @@ En este ejemplo se muestra cómo ampliar el seguimiento en [!INCLUDE[wf](../../.
     </extensions>  
 …  
   </system.serviceModel>  
-  
 ```  
   
 > [!NOTE]
->  Vea el archivo Web.config del ejemplo para el uso del ejemplo completo de la configuración de elementos de extensión de comportamiento.  
+>  <span data-ttu-id="39408-121">Vea el archivo Web.config del ejemplo para el uso del ejemplo completo de la configuración de elementos de extensión de comportamiento.</span><span class="sxs-lookup"><span data-stu-id="39408-121">See the Web.config file in the sample for a complete example usage of behavior extension elements configuration.</span></span>  
   
-## Registros de seguimiento personalizados  
- El archivo GetStockPrices.cs muestra cómo crear registros de seguimiento personalizados desde una actividad <xref:System.Activities.CodeActivity>.Busque este registro al ejecutar el ejemplo.  
+## <a name="custom-tracking-records"></a><span data-ttu-id="39408-122">Registros de seguimiento personalizados</span><span class="sxs-lookup"><span data-stu-id="39408-122">Custom Tracking Records</span></span>  
+ <span data-ttu-id="39408-123">El archivo GetStockPrices.cs muestra cómo crear registros de seguimiento personalizados desde una actividad <xref:System.Activities.CodeActivity>.</span><span class="sxs-lookup"><span data-stu-id="39408-123">The GetStockPrices.cs file demonstrates how to create custom tracking records from within a <xref:System.Activities.CodeActivity>.</span></span> <span data-ttu-id="39408-124">Busque este registro al ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="39408-124">Look for this record when running the sample.</span></span>  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="39408-125">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="39408-125">To use this sample</span></span>  
   
-1.  Abra el archivo de solución de WFStockPriceApplication.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="39408-126">Abra el archivo de solución de WFStockPriceApplication.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39408-126">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the WFStockPriceApplication.sln solution file.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="39408-127">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="39408-127">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  <span data-ttu-id="39408-128">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="39408-128">To run the solution, press CTRL+F5.</span></span>  
   
-     La ventana del explorador se abre y muestra la lista de directorios de la aplicación.  
+     <span data-ttu-id="39408-129">La ventana del explorador se abre y muestra la lista de directorios de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="39408-129">The browser window opens and shows the directory listing for the application.</span></span>  
   
-4.  En el explorador, haga clic en StockPriceService.xamlx.  
+4.  <span data-ttu-id="39408-130">En el explorador, haga clic en StockPriceService.xamlx.</span><span class="sxs-lookup"><span data-stu-id="39408-130">In the browser, click StockPriceService.xamlx.</span></span>  
   
-5.  El explorador muestra la página **StockPriceService**, que contiene la dirección wsdl de servicio local.Copie esta dirección.  
+5.  <span data-ttu-id="39408-131">El explorador muestra la **StockPriceService** página, que contiene la dirección wsdl de servicio local.</span><span class="sxs-lookup"><span data-stu-id="39408-131">The browser displays the **StockPriceService** page, which contains the local service wsdl address.</span></span> <span data-ttu-id="39408-132">Copie esta dirección.</span><span class="sxs-lookup"><span data-stu-id="39408-132">Copy this address.</span></span>  
   
-     Un ejemplo de dirección wsdl de servicio local es http:\/\/localhost:53797\/StockPriceService.xamlx?wsdl.  
+     <span data-ttu-id="39408-133">Un ejemplo de dirección wsdl de servicio local es http://localhost:53797/StockPriceService.xamlx?wsdl.</span><span class="sxs-lookup"><span data-stu-id="39408-133">An example of the local service wsdl address is http://localhost:53797/StockPriceService.xamlx?wsdl.</span></span>  
   
-6.  Mediante el [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], vaya a la carpeta de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] \(la carpeta de instalación predeterminada es %SystemDrive%\\Archivos de programa\\Microsoft Visual Studio 10.0\).A continuación, busque la subcarpeta Common7\\IDE\\.  
+6.  <span data-ttu-id="39408-134">Mediante [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], vaya a la carpeta de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (la carpeta de instalación predeterminada es %SystemDrive%\Program Files\Microsoft Visual Studio 10.0).</span><span class="sxs-lookup"><span data-stu-id="39408-134">Using [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], go to your [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] folder (the default installation folder is %SystemDrive%\Program Files\Microsoft Visual Studio 10.0).</span></span> <span data-ttu-id="39408-135">A continuación, busque la subcarpeta Common7\IDE\.</span><span class="sxs-lookup"><span data-stu-id="39408-135">Then locate the Common7\IDE\ subfolder.</span></span>  
   
-7.  Haga doble clic en el archivo WcfTestClient.exe para iniciar el Cliente de prueba WCF.  
+7.  <span data-ttu-id="39408-136">Haga doble clic en el archivo WcfTestClient.exe para iniciar el Cliente de prueba WCF.</span><span class="sxs-lookup"><span data-stu-id="39408-136">Double-click the WcfTestClient.exe file to launch the WCF Test Client.</span></span>  
   
-8.  En el Cliente de prueba WCF, seleccione **Agregar servicio…** en el menú **Archivo**.  
+8.  <span data-ttu-id="39408-137">En el cliente de prueba WCF, seleccione **Agregar servicio...**</span><span class="sxs-lookup"><span data-stu-id="39408-137">In the WCF Test Client, select **Add Service…**</span></span> <span data-ttu-id="39408-138">desde el **archivo** menú.</span><span class="sxs-lookup"><span data-stu-id="39408-138">from the **File** menu.</span></span>  
   
-9. Pegue en el cuadro de texto la dirección URL que acaba de copiar.  
+9. <span data-ttu-id="39408-139">Pegue en el cuadro de texto la dirección URL que acaba de copiar.</span><span class="sxs-lookup"><span data-stu-id="39408-139">Paste the URL you just copied into the text box.</span></span>  
   
-10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+10. <span data-ttu-id="39408-140">Haga clic en **Aceptar** para cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="39408-140">Click **OK** to close the dialog.</span></span>  
   
-11. Pruebe el servicio con el Cliente de prueba WCF.  
+11. <span data-ttu-id="39408-141">Pruebe el servicio con el Cliente de prueba WCF.</span><span class="sxs-lookup"><span data-stu-id="39408-141">Test the service using the WCF Test Client.</span></span>  
   
-    1.  En el Cliente de prueba WCF, haga doble clic en **GetStockPrice\(\)** bajo el nodo **IStockPriceService**.  
+    1.  <span data-ttu-id="39408-142">En el cliente de prueba WCF, haga doble clic en **GetStockPrice()** en el **IStockPriceService** nodo.</span><span class="sxs-lookup"><span data-stu-id="39408-142">In the WCF Test Client, double-click **GetStockPrice()** under the **IStockPriceService** node.</span></span>  
   
-         En el panel derecho aparece el método **GetStockPrice\(\)**, con un parámetro.  
+         <span data-ttu-id="39408-143">El **GetStockPrice()** método aparece en el panel derecho, con un parámetro.</span><span class="sxs-lookup"><span data-stu-id="39408-143">The **GetStockPrice()** method appears in the right pane, with one parameter.</span></span>  
   
-    2.  Escriba Contoso como valor para el parámetro.  
+    2.  <span data-ttu-id="39408-144">Escriba Contoso como valor para el parámetro.</span><span class="sxs-lookup"><span data-stu-id="39408-144">Type in Contoso as the value for the parameter.</span></span>  
   
-    3.  Haga clic en **Invocar**.  
+    3.  <span data-ttu-id="39408-145">Haga clic en **invocar**.</span><span class="sxs-lookup"><span data-stu-id="39408-145">Click **Invoke**.</span></span>  
   
-12. Vea los eventos seguidos en el archivo de registro localizado en el directorio de datos de la aplicación en %APPDATA%\\trackingRecords.log.  
+12. <span data-ttu-id="39408-146">Vea los eventos seguidos en el archivo de registro localizado en el directorio de datos de la aplicación en %APPDATA%\trackingRecords.log.</span><span class="sxs-lookup"><span data-stu-id="39408-146">See the tracked events in the log file located in your application data directory at %APPDATA%\trackingRecords.log.</span></span>  
   
     > [!NOTE]
-    >  %APPDATA% es una variable de entorno que se resuelve como %SystemDrive%\\Users\\\<nombreDeUusuario\>\\AppData\\Roaming en [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] o Windows Server 2008.  
+    >  <span data-ttu-id="39408-147">% APPDATA % es una variable de entorno que se resuelve en %SystemDrive%\Users\\< nombre de usuario\>\AppData\Roaming en [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], o Windows Server 2008.</span><span class="sxs-lookup"><span data-stu-id="39408-147">The %APPDATA% is an environment variable that resolves to %SystemDrive%\Users\\<username\>\AppData\Roaming in [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], or Windows Server 2008.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="39408-148">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="39408-148">The samples may already be installed on your computer.</span></span> <span data-ttu-id="39408-149">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="39408-149">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="39408-150">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="39408-150">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="39408-151">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="39408-151">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
-## Vea también  
- [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="39408-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="39408-152">See Also</span></span>  
+ [<span data-ttu-id="39408-153">Ejemplos de supervisión de AppFabric</span><span class="sxs-lookup"><span data-stu-id="39408-153">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

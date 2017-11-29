@@ -1,37 +1,38 @@
 ---
-title: "How to: Create GenericPrincipal and GenericIdentity Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Creating Generic Identity Objects"
-  - "GenericPrincipal Objects"
-  - "Creating GenericPrincipal Objects"
-  - "GenericIdentity Objects"
+title: "Cómo: Crear objetos GenericPrincipal y GenericIdentity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Creating Generic Identity Objects
+- GenericPrincipal Objects
+- Creating GenericPrincipal Objects
+- GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 93cd88d0321133a8340864645954b450a8e530ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create GenericPrincipal and GenericIdentity Objects
-Se puede utilizar la clase <xref:System.Security.Principal.GenericIdentity> conjuntamente con la clase <xref:System.Security.Principal.GenericPrincipal> para crear un esquema de autorización que sea independiente del dominio de Windows NT o Windows 2000.  
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="6201a-102">Cómo: Crear objetos GenericPrincipal y GenericIdentity</span><span class="sxs-lookup"><span data-stu-id="6201a-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
+<span data-ttu-id="6201a-103">Puede usar el <xref:System.Security.Principal.GenericIdentity> clase junto con la <xref:System.Security.Principal.GenericPrincipal> clase para crear un esquema de autorización que sea independiente de un dominio de Windows.</span><span class="sxs-lookup"><span data-stu-id="6201a-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>  
   
-### Para crear un objeto GenericPrincipal  
+### <a name="to-create-a-genericprincipal-object"></a><span data-ttu-id="6201a-104">Para crear un objeto GenericPrincipal</span><span class="sxs-lookup"><span data-stu-id="6201a-104">To create a GenericPrincipal object</span></span>  
   
-1.  Cree una instancia nueva de la clase de identidad e inicialícela con el nombre que desee que contenga.  El código siguiente crea un objeto **GenericIdentity** nuevo y lo inicializa con el nombre `MyUser`.  
+1.  <span data-ttu-id="6201a-105">Cree una nueva instancia de la clase de identidad e inicialícela con el nombre que desee conservar.</span><span class="sxs-lookup"><span data-stu-id="6201a-105">Create a new instance of the identity class and initialize it with the name you want it to hold.</span></span> <span data-ttu-id="6201a-106">El código siguiente crea un nuevo objeto **GenericIdentity** y lo inicializa con el nombre `MyUser`.</span><span class="sxs-lookup"><span data-stu-id="6201a-106">The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.</span></span>  
   
     ```vb  
     Dim MyIdentity As New GenericIdentity("MyUser")  
@@ -41,7 +42,7 @@ Se puede utilizar la clase <xref:System.Security.Principal.GenericIdentity> conj
     GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
     ```  
   
-2.  Cree una instancia nueva de la clase **GenericPrincipal** e inicialícela con el objeto **GenericIdentity** creado anteriormente y una matriz de cadenas que representen los roles que desee asociar a esta entidad de seguridad.  En el siguiente ejemplo de código se especifica una matriz de cadenas que representan un rol de administrador y un rol de usuario.  A continuación, la clase **GenericPrincipal** se inicializa con el objeto **GenericIdentity** anterior y la matriz de cadenas.  
+2.  <span data-ttu-id="6201a-107">Cree una nueva instancia de la clase **GenericPrincipal** e inicialícela con el objeto **GenericIdentity** creado previamente y una matriz de cadenas que representan los roles que desee asociar a esta entidad de seguridad.</span><span class="sxs-lookup"><span data-stu-id="6201a-107">Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal.</span></span> <span data-ttu-id="6201a-108">En el ejemplo de código siguiente se especifica una matriz de cadenas que representa un rol de administrador y un rol de usuario.</span><span class="sxs-lookup"><span data-stu-id="6201a-108">The following code example specifies an array of strings that represent an administrator role and a user role.</span></span> <span data-ttu-id="6201a-109">**GenericPrincipal** se inicializa con el **GenericIdentity** anterior y la matriz de cadenas.</span><span class="sxs-lookup"><span data-stu-id="6201a-109">The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.</span></span>  
   
     ```vb  
     Dim MyStringArray As String() = {"Manager", "Teller"}  
@@ -53,7 +54,7 @@ Se puede utilizar la clase <xref:System.Security.Principal.GenericIdentity> conj
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  Utilice el código siguiente para asociar la entidad de seguridad al subproceso actual.  Este método es muy útil en situaciones en que la entidad de seguridad debe validarse varias veces, debe validarse en otro código que se ejecuta en la aplicación o debe validarse mediante un objeto <xref:System.Security.Permissions.PrincipalPermission>.  Se puede seguir realizando la validación basada en roles en el objeto de entidad de seguridad sin asociarlo al subproceso.  Para obtener más información, vea [Reemplazar un objeto de entidad de seguridad](../../../docs/standard/security/replacing-a-principal-object.md).  
+3.  <span data-ttu-id="6201a-110">Utilice el código siguiente para asociar la entidad de seguridad al subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="6201a-110">Use the following code to attach the principal to the current thread.</span></span> <span data-ttu-id="6201a-111">Esto es útil en situaciones donde la entidad de seguridad debe validarse varias veces, debe ser validado por otro código que se ejecuta en la aplicación o debe ser validado por un <xref:System.Security.Permissions.PrincipalPermission> objeto.</span><span class="sxs-lookup"><span data-stu-id="6201a-111">This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object.</span></span> <span data-ttu-id="6201a-112">Todavía puede realizar la validación basada en roles en el objeto principal sin asociarlo al subproceso.</span><span class="sxs-lookup"><span data-stu-id="6201a-112">You can still perform role-based validation on the principal object without attaching it to the thread.</span></span> <span data-ttu-id="6201a-113">Para más información, consulte [Reemplazar un objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md).</span><span class="sxs-lookup"><span data-stu-id="6201a-113">For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).</span></span>  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -63,8 +64,8 @@ Se puede utilizar la clase <xref:System.Security.Principal.GenericIdentity> conj
     Thread.CurrentPrincipal = MyPrincipal;  
     ```  
   
-## Ejemplo  
- El ejemplo de código siguiente muestra cómo se crea una instancia de una clase **GenericPrincipal** y una clase **GenericIdentity**.  Este código muestra los valores de estas clases en la consola.  
+## <a name="example"></a><span data-ttu-id="6201a-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6201a-114">Example</span></span>  
+ <span data-ttu-id="6201a-115">En el ejemplo de código siguiente se muestra cómo crear una instancia de **GenericPrincipal** y **GenericIdentity**.</span><span class="sxs-lookup"><span data-stu-id="6201a-115">The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**.</span></span> <span data-ttu-id="6201a-116">Este código muestra los valores de estos objetos en la consola.</span><span class="sxs-lookup"><span data-stu-id="6201a-116">This code displays the values of these objects to the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -138,7 +139,7 @@ public class Class1
 }  
 ```  
   
- Después de ejecutarse, la aplicación muestra un resultado similar al siguiente.  
+ <span data-ttu-id="6201a-117">Cuando se ejecuta, la aplicación muestra un resultado similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="6201a-117">When executed, the application displays output similar to the following.</span></span>  
   
 ```  
 The Name is: MyIdentity  
@@ -146,9 +147,9 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## Vea también  
- <xref:System.Security.Principal.GenericIdentity>   
- <xref:System.Security.Principal.GenericPrincipal>   
- <xref:System.Security.Permissions.PrincipalPermission>   
- [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md)   
- [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a><span data-ttu-id="6201a-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="6201a-118">See Also</span></span>  
+ <xref:System.Security.Principal.GenericIdentity>  
+ <xref:System.Security.Principal.GenericPrincipal>  
+ <xref:System.Security.Permissions.PrincipalPermission>  
+ [<span data-ttu-id="6201a-119">Reemplazar un objeto Principal</span><span class="sxs-lookup"><span data-stu-id="6201a-119">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [<span data-ttu-id="6201a-120">Objetos Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="6201a-120">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)

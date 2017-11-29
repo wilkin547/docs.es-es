@@ -1,51 +1,47 @@
 ---
-title: "Aplicabilidad de la transformación funcional (Visual Basic) | Documentos de Microsoft"
+title: "Aplicabilidad de la transformación funcional (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 20195c2bb528a5ca295b3bff6e9bb8401211e5b7
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 184f40aa5752a620a5a9af1f27efc598251a96c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="applicability-of-functional-transformation-visual-basic"></a>Aplicabilidad de la transformación funcional (Visual Basic)
-Las transformaciones funcionales puras se pueden aplicar en una amplia variedad de situaciones.  
+# <a name="applicability-of-functional-transformation-visual-basic"></a><span data-ttu-id="dc378-102">Aplicabilidad de la transformación funcional (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc378-102">Applicability of Functional Transformation (Visual Basic)</span></span>
+<span data-ttu-id="dc378-103">Las transformaciones funcionales puras se pueden aplicar en una amplia variedad de situaciones.</span><span class="sxs-lookup"><span data-stu-id="dc378-103">Pure functional transformations are applicable in a wide variety of situations.</span></span>  
   
- El enfoque de transformación funcional es especialmente adecuado para consultar y manipular datos estructurados; por lo tanto encaja bien con las tecnologías LINQ. No obstante, la transformación funcional tiene una aplicabilidad mucho más amplia que el uso con LINQ. Cualquier proceso en el que el centro de atención principal sea la transformación de datos de un formato a otro probablemente debe considerarse un candidato para la transformación funcional.  
+ <span data-ttu-id="dc378-104">El enfoque de transformación funcional es especialmente adecuado para consultar y manipular datos estructurados; por lo tanto encaja bien con las tecnologías LINQ.</span><span class="sxs-lookup"><span data-stu-id="dc378-104">The functional transformation approach is ideally suited for querying and manipulating structured data; therefore it fits well with LINQ technologies.</span></span> <span data-ttu-id="dc378-105">No obstante, la transformación funcional tiene una aplicabilidad mucho más amplia que el uso con LINQ.</span><span class="sxs-lookup"><span data-stu-id="dc378-105">However, functional transformation has a much wider applicability than use with LINQ.</span></span> <span data-ttu-id="dc378-106">Cualquier proceso en el que el centro de atención principal sea la transformación de datos de un formato a otro probablemente debe considerarse un candidato para la transformación funcional.</span><span class="sxs-lookup"><span data-stu-id="dc378-106">Any process where the main focus is on transforming data from one form to another should probably be considered as a candidate for functional transformation.</span></span>  
   
- Este enfoque es aplicable a muchos problemas que a primera vista pueden no parecer candidatos. La transformación funcional, usada en conjunción con o de forma separada de LINQ, debe tenerse en cuenta para las siguientes áreas:  
+ <span data-ttu-id="dc378-107">Este enfoque es aplicable a muchos problemas que a primera vista pueden no parecer candidatos.</span><span class="sxs-lookup"><span data-stu-id="dc378-107">This approach is applicable to many problems that might not appear at first glance to be a candidate.</span></span> <span data-ttu-id="dc378-108">La transformación funcional, usada en conjunción con o de forma separada de LINQ, debe tenerse en cuenta para las siguientes áreas:</span><span class="sxs-lookup"><span data-stu-id="dc378-108">Used in conjunction with or separately from LINQ, functional transformation should be considered for the following areas:</span></span>  
   
--   Documentos basados en XML. Los datos bien formados de cualquier dialecto XML se pueden manipular fácilmente mediante la transformación funcional. Para obtener más información, consulte [transformación funcional en XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).  
+-   <span data-ttu-id="dc378-109">Documentos basados en XML.</span><span class="sxs-lookup"><span data-stu-id="dc378-109">XML-based documents.</span></span> <span data-ttu-id="dc378-110">Los datos bien formados de cualquier dialecto XML se pueden manipular fácilmente mediante la transformación funcional.</span><span class="sxs-lookup"><span data-stu-id="dc378-110">Well-formed data of any XML dialect can be easily manipulated through functional transformation.</span></span> <span data-ttu-id="dc378-111">Para obtener más información, consulte [transformación funcional en XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).</span><span class="sxs-lookup"><span data-stu-id="dc378-111">For more information, see [Functional Transformation of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md).</span></span>  
   
--   Otros formatos de archivo estructurados. Desde archivos Windows.ini a documentos de texto sin formato, la mayoría de archivos tienen alguna estructura que se presta a análisis y transformación.  
+-   <span data-ttu-id="dc378-112">Otros formatos de archivo estructurados.</span><span class="sxs-lookup"><span data-stu-id="dc378-112">Other structured file formats.</span></span> <span data-ttu-id="dc378-113">Desde archivos Windows.ini a documentos de texto sin formato, la mayoría de archivos tienen alguna estructura que se presta a análisis y transformación.</span><span class="sxs-lookup"><span data-stu-id="dc378-113">From Windows.ini files to plain text documents, most files have some structure that lends itself to analysis and transformation.</span></span>  
   
--   Protocolos de secuencia de datos. La codificación y decodificación de datos de protocolos de comunicación a menudo se puede representar con una sencilla transformación funcional.  
+-   <span data-ttu-id="dc378-114">Protocolos de secuencia de datos.</span><span class="sxs-lookup"><span data-stu-id="dc378-114">Data streaming protocols.</span></span> <span data-ttu-id="dc378-115">La codificación y decodificación de datos de protocolos de comunicación a menudo se puede representar con una sencilla transformación funcional.</span><span class="sxs-lookup"><span data-stu-id="dc378-115">Encoding data into and decoding data from communication protocols can often be represented by a simple functional transform.</span></span>  
   
--   Datos RDBMS y OODBMS. Las bases de datos relacionales y orientadas a objetos, como XML, son orígenes de datos estructurados muy utilizados.  
+-   <span data-ttu-id="dc378-116">Datos RDBMS y OODBMS.</span><span class="sxs-lookup"><span data-stu-id="dc378-116">RDBMS and OODBMS data.</span></span> <span data-ttu-id="dc378-117">Las bases de datos relacionales y orientadas a objetos, como XML, son orígenes de datos estructurados muy utilizados.</span><span class="sxs-lookup"><span data-stu-id="dc378-117">Relational and object-oriented databases, just like XML, are widely-used structured data sources.</span></span>  
   
--   Soluciones científicas, estadísticas y matemáticas. Estos campos suelen manipular grandes cantidades de datos para ayudar al usuario a visualizar, estimar o resolver problemas que no son triviales.  
+-   <span data-ttu-id="dc378-118">Soluciones científicas, estadísticas y matemáticas.</span><span class="sxs-lookup"><span data-stu-id="dc378-118">Mathematic, statistic, and science solutions.</span></span> <span data-ttu-id="dc378-119">Estos campos suelen manipular grandes cantidades de datos para ayudar al usuario a visualizar, estimar o resolver problemas que no son triviales.</span><span class="sxs-lookup"><span data-stu-id="dc378-119">These fields tend to manipulate large data sets to assist the user in visualizing, estimating, or actually solving non-trivial problems.</span></span>  
   
- Como se describe en [refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), usando funciones puras es un ejemplo de programación funcional. Además de sus ventajas inmediatas, el uso de funciones puras proporciona una valiosa experiencia para la resolución de problemas desde una perspectiva de transformación funcional. Este enfoque también puede tener un gran impacto en el diseño de clases y la programación. Éste es el caso cuando un problema se presta a una solución de transformación de datos tal como se ha escrito anteriormente.  
+ <span data-ttu-id="dc378-120">Como se describe en [refactorización en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), usando funciones puras es un ejemplo de programación funcional.</span><span class="sxs-lookup"><span data-stu-id="dc378-120">As described in [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), using pure functions is an example of functional programming.</span></span> <span data-ttu-id="dc378-121">Además de sus ventajas inmediatas, el uso de funciones puras proporciona una valiosa experiencia para la resolución de problemas desde una perspectiva de transformación funcional.</span><span class="sxs-lookup"><span data-stu-id="dc378-121">In additional to their immediate benefits, using pure functions provides valuable experience in thinking about problems from a functional transformation perspective.</span></span> <span data-ttu-id="dc378-122">Este enfoque también puede tener un gran impacto en el diseño de clases y la programación.</span><span class="sxs-lookup"><span data-stu-id="dc378-122">This approach can also have major impact on program and class design.</span></span> <span data-ttu-id="dc378-123">Éste es el caso cuando un problema se presta a una solución de transformación de datos tal como se ha escrito anteriormente.</span><span class="sxs-lookup"><span data-stu-id="dc378-123">This is especially true when a problem lends itself to a data transformation solution as described above.</span></span>  
   
- Aunque quedan fuera del ámbito de este tutorial, los diseños que tienen la influencia de la perspectiva de transformación funcional tienden a centrarse en procesos más que en objetos como actores y la solución resultante tiende a implementarse como una serie de transformaciones a gran escala en lugar de cambios de estado de objeto individuales.  
+ <span data-ttu-id="dc378-124">Aunque quedan fuera del ámbito de este tutorial, los diseños que tienen la influencia de la perspectiva de transformación funcional tienden a centrarse en procesos más que en objetos como actores y la solución resultante tiende a implementarse como una serie de transformaciones a gran escala en lugar de cambios de estado de objeto individuales.</span><span class="sxs-lookup"><span data-stu-id="dc378-124">Although they are beyond the scope of this tutorial, designs that are influenced by the functional transformation perspective tend to center on processes more than on objects as actors, and the resulting solution tends to be implemented as series of large-scale transformations, rather than individual object state changes.</span></span>  
   
- Una vez más, recuerde que Visual Basic admite los enfoques imperativo y funcionales, por lo que el mejor diseño para su aplicación podría incorporar elementos de ambos.  
+ <span data-ttu-id="dc378-125">Una vez más, recuerde que Visual Basic admite enfoques imperativos y funcionales, por lo que el mejor diseño para su aplicación podría incorporar elementos de ambos.</span><span class="sxs-lookup"><span data-stu-id="dc378-125">Again, remember that Visual Basic supports both imperative and functional approaches, so the best design for your application might incorporate elements of both.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [Transformación funcional de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)   
- [Refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="dc378-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="dc378-126">See Also</span></span>  
+ [<span data-ttu-id="dc378-127">Introducción a las transformaciones funcionales puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc378-127">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [<span data-ttu-id="dc378-128">Transformación funcional de XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc378-128">Functional Transformation of XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+ [<span data-ttu-id="dc378-129">Refactorizar en funciones puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc378-129">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

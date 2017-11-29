@@ -7,44 +7,37 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Xsd.exe
 - XML serialization, XML Schema Definition tool
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: c72269708526479d0e98cdfd694db57fe0d9e35e
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6b943251ff426d5557c4715a856ffdadd3013b9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Herramienta de definición de esquema XML y serialización XML
-La herramienta de definición de esquema XML ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) se instala junto con las herramientas de .NET Framework como parte del kit de desarrollo de software (SDK) de Windows®. La herramienta está diseñada para cumplir principalmente dos propósitos:  
+# <a name="the-xml-schema-definition-tool-and-xml-serialization"></a><span data-ttu-id="f256e-102">Herramienta de definición de esquema XML y serialización XML</span><span class="sxs-lookup"><span data-stu-id="f256e-102">The XML Schema Definition Tool and XML Serialization</span></span>
+<span data-ttu-id="f256e-103">La herramienta de definición de esquema XML ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) se instala junto con las herramientas de .NET Framework como parte del kit de desarrollo de software (SDK) de Windows®.</span><span class="sxs-lookup"><span data-stu-id="f256e-103">The XML Schema Definition tool ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) is installed along with the .NET Framework tools as part of the Windows® Software Development Kit (SDK).</span></span> <span data-ttu-id="f256e-104">La herramienta está diseñada para cumplir principalmente dos propósitos:</span><span class="sxs-lookup"><span data-stu-id="f256e-104">The tool is designed primarily for two purposes:</span></span>  
   
--   Para generar C# o archivos de clase de Visual Basic que cumplen con un esquema del lenguaje de definición de esquemas XML (XSD) concreto. La herramienta toma un Esquema XML como un argumento y genera un archivo que contiene varias clases que cuando se serializa con <xref:System.Xml.Serialization.XmlSerializer>, cumpla al esquema. Para obtener más información sobre cómo usar la herramienta para generar clases que cumplan con un esquema en concreto, consulte [Cómo: Utilizar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
+-   <span data-ttu-id="f256e-105">Para generar C# o archivos de clase de Visual Basic que cumplen con un esquema del lenguaje de definición de esquemas XML (XSD) concreto.</span><span class="sxs-lookup"><span data-stu-id="f256e-105">To generate either C# or Visual Basic class files that conform to a specific XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="f256e-106">La herramienta toma un Esquema XML como un argumento y genera un archivo que contiene varias clases que cuando se serializa con <xref:System.Xml.Serialization.XmlSerializer>, cumpla al esquema.</span><span class="sxs-lookup"><span data-stu-id="f256e-106">The tool takes an XML Schema as an argument and outputs a file that contains a number of classes that, when serialized with the <xref:System.Xml.Serialization.XmlSerializer>, conform to the schema.</span></span> <span data-ttu-id="f256e-107">Para obtener más información sobre cómo usar la herramienta para generar clases que cumplan con un esquema en concreto, consulte [Cómo: Utilizar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).</span><span class="sxs-lookup"><span data-stu-id="f256e-107">For information about how to use the tool to generate classes that conform to a specific schema, see [How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).</span></span>  
   
--   Generar un documento de esquema XML de un archivo .dll o .exe. Para ver el esquema de un conjunto de archivos que ha creado, o uno que se ha modificado con atributos, pase la DLL o el EXE como un argumento de la herramienta para generar el esquema XML. Para obtener más información sobre cómo usar la herramienta para generar un documento de esquema XML a partir de un conjunto de clases, consulte [Cómo: Utilizar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
+-   <span data-ttu-id="f256e-108">Generar un documento de esquema XML de un archivo .dll o .exe.</span><span class="sxs-lookup"><span data-stu-id="f256e-108">To generate an XML Schema document from a .dll file or .exe file.</span></span> <span data-ttu-id="f256e-109">Para ver el esquema de un conjunto de archivos que ha creado, o uno que se ha modificado con atributos, pase la DLL o el EXE como un argumento de la herramienta para generar el esquema XML.</span><span class="sxs-lookup"><span data-stu-id="f256e-109">To see the schema of a set of files that you have either created or one that has been modified with attributes, pass the DLL or EXE as an argument to the tool to generate the XML schema.</span></span> <span data-ttu-id="f256e-110">Para obtener más información sobre cómo usar la herramienta para generar un documento de esquema XML a partir de un conjunto de clases, consulte [Cómo: Utilizar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).</span><span class="sxs-lookup"><span data-stu-id="f256e-110">For information about how to use the tool to generate an XML Schema Document from a set of classes, see [How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).</span></span>  
   
- Para obtener más información sobre esta y otras herramientas, vea [Herramientas de .NET Framework](../../../docs/framework/tools/index.md). Para obtener más información sobre las opciones de las herramientas, consulte [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) (Herramienta Definición de esquemas XML (Xsd.exe)).  
+ <span data-ttu-id="f256e-111">Para obtener más información sobre esta y otras herramientas, vea [Herramientas de .NET Framework](../../../docs/framework/tools/index.md).</span><span class="sxs-lookup"><span data-stu-id="f256e-111">For more information about this tool and others, see [Tools](../../../docs/framework/tools/index.md).</span></span> <span data-ttu-id="f256e-112">Para obtener más información sobre las opciones de las herramientas, consulte [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) (Herramienta Definición de esquemas XML (Xsd.exe)).</span><span class="sxs-lookup"><span data-stu-id="f256e-112">For information about the tool's options, see [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Data.DataSet>   
- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Herramienta Definición de esquemas XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
- [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)   
- [Cómo: Utilizar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)   
- [Compatibilidad con enlaces del esquema XML en .NET Framework](http://msdn.microsoft.com/en-us/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)
-
+## <a name="see-also"></a><span data-ttu-id="f256e-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="f256e-113">See Also</span></span>  
+ <xref:System.Data.DataSet>  
+ [<span data-ttu-id="f256e-114">Introducción a la serialización XML</span><span class="sxs-lookup"><span data-stu-id="f256e-114">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [<span data-ttu-id="f256e-115">Herramienta de definición de esquema XML (Xsd.exe)</span><span class="sxs-lookup"><span data-stu-id="f256e-115">XML Schema Definition Tool (Xsd.exe)</span></span>](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [<span data-ttu-id="f256e-116">Cómo: Serializar un objeto</span><span class="sxs-lookup"><span data-stu-id="f256e-116">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="f256e-117">Cómo: Deserializar un objeto</span><span class="sxs-lookup"><span data-stu-id="f256e-117">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [<span data-ttu-id="f256e-118">Cómo: Usar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML</span><span class="sxs-lookup"><span data-stu-id="f256e-118">How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents</span></span>](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+ [<span data-ttu-id="f256e-119">Compatibilidad con enlaces del esquema XML en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f256e-119">XML Schema Binding Support in the .NET Framework</span></span>](http://msdn.microsoft.com/en-us/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)

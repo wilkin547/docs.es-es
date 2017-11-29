@@ -1,54 +1,36 @@
 ---
-title: Resumen de operadores (Visual Basic) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Resumen de operadores (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- operators [Visual Basic], about operators
+- operators [Visual Basic], about operators [Visual Basic]
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3000667c2e81a5569b91e28e2d344e45ab598d69
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 30f1204d3aff244725f5200d59c4da32a5530615
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operators-summary-visual-basic"></a>Resumen de operadores (Visual Basic)
-Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
+# <a name="operators-summary-visual-basic"></a><span data-ttu-id="823c9-102">Resumen de operadores (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="823c9-102">Operators Summary (Visual Basic)</span></span>
+<span data-ttu-id="823c9-103">Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.</span><span class="sxs-lookup"><span data-stu-id="823c9-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|Acción|Elemento del lenguaje|  
+|<span data-ttu-id="823c9-104">Acción</span><span class="sxs-lookup"><span data-stu-id="823c9-104">Action</span></span>|<span data-ttu-id="823c9-105">Elemento del lenguaje</span><span class="sxs-lookup"><span data-stu-id="823c9-105">Language element</span></span>|  
 |------------|----------------------|  
-|Operadores aritméticos|[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [*](../../../visual-basic/language-reference/operators/multiplication-operator.md), [/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [\\](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md),[=](../../../visual-basic/language-reference/operators/assignment-operator.md)|  
-|Asignación|[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)|  
-|Comparación|[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [>=](../../../visual-basic/language-reference/operators/comparison-operators.md), [Like](../../../visual-basic/language-reference/operators/like-operator.md), [Is](../../../visual-basic/language-reference/operators/is-operator.md)|  
-|Concatenación|[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|Operadores lógicos y bit a bit|[Not](../../../visual-basic/language-reference/operators/not-operator.md), [And](../../../visual-basic/language-reference/operators/and-operator.md), [Or](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md), [OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|Operaciones varias|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|  
+|<span data-ttu-id="823c9-106">Operadores aritméticos</span><span class="sxs-lookup"><span data-stu-id="823c9-106">Arithmetic</span></span>|<span data-ttu-id="823c9-107">[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [:](../../../visual-basic/language-reference/operators/subtraction-operator.md), [ * ](../../../visual-basic/language-reference/operators/multiplication-operator.md), [ / ](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [ \\ ](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [ +](../../../visual-basic/language-reference/operators/addition-operator.md),[=](../../../visual-basic/language-reference/operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="823c9-107">[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [*](../../../visual-basic/language-reference/operators/multiplication-operator.md), [/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [\\](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md), [=](../../../visual-basic/language-reference/operators/assignment-operator.md)</span></span>|  
+|<span data-ttu-id="823c9-108">Asignación</span><span class="sxs-lookup"><span data-stu-id="823c9-108">Assignment</span></span>|<span data-ttu-id="823c9-109">[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="823c9-109">[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)</span></span>|  
+|<span data-ttu-id="823c9-110">Comparación</span><span class="sxs-lookup"><span data-stu-id="823c9-110">Comparison</span></span>|<span data-ttu-id="823c9-111">[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [ >= ](../../../visual-basic/language-reference/operators/comparison-operators.md), [Como](../../../visual-basic/language-reference/operators/like-operator.md), [es](../../../visual-basic/language-reference/operators/is-operator.md)</span><span class="sxs-lookup"><span data-stu-id="823c9-111">[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [>=](../../../visual-basic/language-reference/operators/comparison-operators.md), [Like](../../../visual-basic/language-reference/operators/like-operator.md), [Is](../../../visual-basic/language-reference/operators/is-operator.md)</span></span>|  
+|<span data-ttu-id="823c9-112">Concatenación</span><span class="sxs-lookup"><span data-stu-id="823c9-112">Concatenation</span></span>|<span data-ttu-id="823c9-113">[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)</span><span class="sxs-lookup"><span data-stu-id="823c9-113">[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)</span></span>|  
+|<span data-ttu-id="823c9-114">Operadores lógicos y bit a bit</span><span class="sxs-lookup"><span data-stu-id="823c9-114">Logical/bitwise operations</span></span>|<span data-ttu-id="823c9-115">[No](../../../visual-basic/language-reference/operators/not-operator.md), [y](../../../visual-basic/language-reference/operators/and-operator.md), [o](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md), [OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)</span><span class="sxs-lookup"><span data-stu-id="823c9-115">[Not](../../../visual-basic/language-reference/operators/not-operator.md), [And](../../../visual-basic/language-reference/operators/and-operator.md), [Or](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md), [OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)</span></span>|  
+|<span data-ttu-id="823c9-116">Operaciones varias</span><span class="sxs-lookup"><span data-stu-id="823c9-116">Miscellaneous operations</span></span>|<span data-ttu-id="823c9-117">[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)</span><span class="sxs-lookup"><span data-stu-id="823c9-117">[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)   
- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
-
+## <a name="see-also"></a><span data-ttu-id="823c9-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="823c9-118">See Also</span></span>  
+ [<span data-ttu-id="823c9-119">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="823c9-119">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="823c9-120">Miembros de la biblioteca en tiempo de ejecución de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="823c9-120">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -1,79 +1,83 @@
 ---
-title: "How to: Modify Keyboard Input to a Standard Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "keyboard input, modifying"
-  - "modifying keyboard input"
-  - "Windows Forms, modifying keyboard input"
-  - "keyboards, keyboard input"
+title: "Cómo: Modificar las entradas mediante teclado en un control estándar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- keyboard input [Windows Forms], modifying
+- modifying keyboard input
+- Windows Forms, modifying keyboard input
+- keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2c95ba3ef1c590f5c7e5d5e89ed05cf28c7829d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Modify Keyboard Input to a Standard Control
-Windows Forms permite consumir y modificar la entrada de teclado.  Consumir una tecla es controlar una tecla dentro de un método o controlador de eventos para que otros métodos y eventos más abajo en la cola de mensajes no reciban el valor de la tecla.  Modificar una tecla es modificar el valor de una tecla para que los métodos y controladores de eventos más abajo en la cola de mensajes reciban un valor de tecla diferente.  En este tema se muestra cómo realizar estas tareas.  
+# <a name="how-to-modify-keyboard-input-to-a-standard-control"></a><span data-ttu-id="7f7cd-102">Cómo: Modificar las entradas mediante teclado en un control estándar</span><span class="sxs-lookup"><span data-stu-id="7f7cd-102">How to: Modify Keyboard Input to a Standard Control</span></span>
+<span data-ttu-id="7f7cd-103">Windows Forms permite consumir y modificar la entrada de teclado.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-103">Windows Forms provides the ability to consume and modify keyboard input.</span></span> <span data-ttu-id="7f7cd-104">Consumir una tecla es controlar una tecla dentro de un método o controlador de eventos para que otros métodos y eventos más abajo en la cola de mensajes no reciban el valor de la tecla.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-104">Consuming a key refers to handling a key within a method or event handler so that other methods and events further down the message queue do not receive the key value.</span></span> <span data-ttu-id="7f7cd-105">Modificar una tecla es modificar el valor de una tecla para que los métodos y controladores de eventos más abajo en la cola de mensajes reciban un valor de tecla diferente.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-105">Modifying a key refers to modifying the value of a key so that methods and event handlers further down the message queue receive a different key value.</span></span> <span data-ttu-id="7f7cd-106">En este tema se muestra cómo realizar estas tareas.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-106">This topic shows how to accomplish these tasks.</span></span>  
   
-### Para consumir una tecla  
+### <a name="to-consume-a-key"></a><span data-ttu-id="7f7cd-107">Para consumir una tecla</span><span class="sxs-lookup"><span data-stu-id="7f7cd-107">To consume a key</span></span>  
   
--   En un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>, establezca la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> de la clase <xref:System.Windows.Forms.KeyPressEventArgs> en `true`.  
+-   <span data-ttu-id="7f7cd-108">En un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>, establezca la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> de la clase <xref:System.Windows.Forms.KeyPressEventArgs> en `true`.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-108">In a <xref:System.Windows.Forms.Control.KeyPress> event handler, set the <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> property of the <xref:System.Windows.Forms.KeyPressEventArgs> class to `true`.</span></span>  
   
-     O bien  
+     <span data-ttu-id="7f7cd-109">O bien</span><span class="sxs-lookup"><span data-stu-id="7f7cd-109">-or-</span></span>  
   
-     En un controlador de eventos <xref:System.Windows.Forms.Control.KeyDown>, establezca la propiedad <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> de la clase <xref:System.Windows.Forms.KeyEventArgs> en `true`.  
+     <span data-ttu-id="7f7cd-110">En un controlador de eventos <xref:System.Windows.Forms.Control.KeyDown>, establezca la propiedad <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> de la clase <xref:System.Windows.Forms.KeyEventArgs> en `true`.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-110">In a <xref:System.Windows.Forms.Control.KeyDown> event handler, set the <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> property of the <xref:System.Windows.Forms.KeyEventArgs> class to `true`.</span></span>  
   
     > [!NOTE]
-    >  Establecer la propiedad <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> en el controlador de eventos <xref:System.Windows.Forms.Control.KeyDown> no impide que los eventos <xref:System.Windows.Forms.Control.KeyPress> y <xref:System.Windows.Forms.Control.KeyUp> se generen para la pulsación de tecla actual.  Use la propiedad <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> para este propósito.  
+    >  <span data-ttu-id="7f7cd-111">Establecer la propiedad <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> en el controlador de eventos <xref:System.Windows.Forms.Control.KeyDown> no impide que los eventos <xref:System.Windows.Forms.Control.KeyPress> y <xref:System.Windows.Forms.Control.KeyUp> se generen para la pulsación de tecla actual.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-111">Setting the <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> property in the <xref:System.Windows.Forms.Control.KeyDown> event handler does not prevent the <xref:System.Windows.Forms.Control.KeyPress> and <xref:System.Windows.Forms.Control.KeyUp> events from being raised for the current keystroke.</span></span> <span data-ttu-id="7f7cd-112">Use la propiedad <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> para este propósito.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-112">Use the <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> property for this purpose.</span></span>  
   
-     El ejemplo siguiente es un extracto de una instrucción `switch` que examina la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> de <xref:System.Windows.Forms.KeyPressEventArgs> recibido por un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>.  Este código consume las teclas de caracteres 'A' y 'a'.  
+     <span data-ttu-id="7f7cd-113">El ejemplo siguiente es un extracto de una instrucción `switch` que examina la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> de <xref:System.Windows.Forms.KeyPressEventArgs> recibido por un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-113">The following example is an excerpt from a `switch` statement that examines the <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> property of the <xref:System.Windows.Forms.KeyPressEventArgs> received by a <xref:System.Windows.Forms.Control.KeyPress> event handler.</span></span> <span data-ttu-id="7f7cd-114">Este código consume las teclas de caracteres 'A' y 'a'.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-114">This code consumes the 'A' and 'a' character keys.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyBoardInput#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#6)]
      [!code-vb[System.Windows.Forms.KeyBoardInput#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#6)]  
   
-### Para modificar una tecla de carácter estándar  
+### <a name="to-modify-a-standard-character-key"></a><span data-ttu-id="7f7cd-115">Para modificar una tecla de carácter estándar</span><span class="sxs-lookup"><span data-stu-id="7f7cd-115">To modify a standard character key</span></span>  
   
--   En un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>, establezca la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> de la clase <xref:System.Windows.Forms.KeyPressEventArgs> en el valor de la nueva tecla de carácter.  
+-   <span data-ttu-id="7f7cd-116">En un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>, establezca la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> de la clase <xref:System.Windows.Forms.KeyPressEventArgs> en el valor de la nueva tecla de carácter.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-116">In a <xref:System.Windows.Forms.Control.KeyPress> event handler, set the <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> property of the <xref:System.Windows.Forms.KeyPressEventArgs> class to the value of the new character key.</span></span>  
   
-     El ejemplo siguiente es un extracto de una instrucción `switch` que modifica 'B' por 'A' y 'b' por 'a'.  Tenga en cuenta que la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> del parámetro <xref:System.Windows.Forms.KeyPressEventArgs> está establecida en `false`, por lo que el nuevo valor de tecla se propaga a otros métodos y eventos de la cola de mensajes.  
+     <span data-ttu-id="7f7cd-117">El ejemplo siguiente es un extracto de una instrucción `switch` que modifica 'B' por 'A' y 'b' por 'a'.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-117">The following example is an excerpt from a `switch` statement that modifies 'B' to 'A' and 'b' to 'a'.</span></span> <span data-ttu-id="7f7cd-118">Tenga en cuenta que la propiedad <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> del parámetro <xref:System.Windows.Forms.KeyPressEventArgs> está establecida en `false`, por lo que el nuevo valor de tecla se propaga a otros métodos y eventos de la cola de mensajes.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-118">Note that the <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> property of the <xref:System.Windows.Forms.KeyPressEventArgs> parameter is set to `false`, so that the new key value is propagated to other methods and events in the message queue.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyBoardInput#7](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#7)]
      [!code-vb[System.Windows.Forms.KeyBoardInput#7](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#7)]  
   
-### Para modificar una tecla que no es de carácter  
+### <a name="to-modify-a-noncharacter-key"></a><span data-ttu-id="7f7cd-119">Para modificar una tecla que no es de carácter</span><span class="sxs-lookup"><span data-stu-id="7f7cd-119">To modify a noncharacter key</span></span>  
   
--   Invalide un método <xref:System.Windows.Forms.Control> que procesa los mensajes de Windows, detecte el mensaje WM\_KEYDOWN o WM\_SYSKEYDOWN y establezca la propiedad <xref:System.Windows.Forms.Message.WParam%2A> del parámetro <xref:System.Windows.Forms.Message> en el valor <xref:System.Windows.Forms.Keys> que representa la nueva tecla que no es de carácter.  
+-   <span data-ttu-id="7f7cd-120">Invalide un método <xref:System.Windows.Forms.Control> que procesa los mensajes de Windows, detecte el mensaje WM_KEYDOWN o WM_SYSKEYDOWN y establezca la propiedad <xref:System.Windows.Forms.Message.WParam%2A> del parámetro <xref:System.Windows.Forms.Message> en el valor <xref:System.Windows.Forms.Keys> que representa la nueva tecla que no es de carácter.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-120">Override a <xref:System.Windows.Forms.Control> method that processes Windows messages, detect the WM_KEYDOWN or WM_SYSKEYDOWN message, and set the <xref:System.Windows.Forms.Message.WParam%2A> property of the <xref:System.Windows.Forms.Message> parameter to the <xref:System.Windows.Forms.Keys> value that represents the new noncharacter key.</span></span>  
   
-     En el ejemplo de código siguiente se muestra cómo invalidar el método <xref:System.Windows.Forms.Control.PreProcessMessage%2A> de un control para detectar las teclas F1 a F9 y modificar cualquier pulsación de tecla de F3 por F1.  Para obtener más información sobre los métodos <xref:System.Windows.Forms.Control> que se pueden invalidar para interceptar los mensajes del teclado, consulte [User Input in a Windows Forms Application](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md) y [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+     <span data-ttu-id="7f7cd-121">En el ejemplo de código siguiente se muestra cómo invalidar el método <xref:System.Windows.Forms.Control.PreProcessMessage%2A> de un control para detectar las teclas F1 a F9 y modificar cualquier pulsación de tecla de F3 por F1.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-121">The following code example demonstrates how to override the <xref:System.Windows.Forms.Control.PreProcessMessage%2A> method of a control to detect keys F1 through F9 and modify any F3 key press to F1.</span></span> <span data-ttu-id="7f7cd-122">Para obtener más información sobre <xref:System.Windows.Forms.Control> métodos que se pueden invalidar para interceptar los mensajes de teclado, vea [proporcionados por el usuario en una aplicación de Windows Forms](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md) y [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).</span><span class="sxs-lookup"><span data-stu-id="7f7cd-122">For more information on <xref:System.Windows.Forms.Control> methods that you can override to intercept keyboard messages, see [User Input in a Windows Forms Application](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md) and [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#12)]  
   
-## Ejemplo  
- El ejemplo de código siguiente es la aplicación completa de los ejemplos de código de las secciones anteriores.  La aplicación usa un control personalizado derivado de la clase <xref:System.Windows.Forms.TextBox> para consumir y modificar la entrada de teclado.  
+## <a name="example"></a><span data-ttu-id="7f7cd-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7f7cd-123">Example</span></span>  
+ <span data-ttu-id="7f7cd-124">El ejemplo de código siguiente es la aplicación completa de los ejemplos de código de las secciones anteriores.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-124">The following code example is the complete application for the code examples in the previous sections.</span></span> <span data-ttu-id="7f7cd-125">La aplicación usa un control personalizado derivado de la clase <xref:System.Windows.Forms.TextBox> para consumir y modificar la entrada de teclado.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-125">The application uses a custom control derived from the <xref:System.Windows.Forms.TextBox> class to consume and modify keyboard input.</span></span>  
   
  [!code-csharp[System.Windows.Forms.KeyBoardInput#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.KeyBoardInput#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#0)]  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="7f7cd-126">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="7f7cd-126">Compiling the Code</span></span>  
+ <span data-ttu-id="7f7cd-127">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="7f7cd-127">This example requires:</span></span>  
   
--   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
+-   <span data-ttu-id="7f7cd-128">Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-128">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Para obtener información acerca de cómo compilar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], consulte [Compilar desde la línea de comandos](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilar la línea de comandos con csc.exe](../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228%20\(v=vs.110\)).  
+ <span data-ttu-id="7f7cd-129">Para información sobre cómo compilar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], consulte [Compilación desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilar desde la línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="7f7cd-129">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="7f7cd-130">También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.</span><span class="sxs-lookup"><span data-stu-id="7f7cd-130">You can also build this example in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="7f7cd-131">Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="7f7cd-131">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Vea también  
- [Keyboard Input in a Windows Forms Application](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [User Input in a Windows Forms Application](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)   
- [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md)
+## <a name="see-also"></a><span data-ttu-id="7f7cd-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="7f7cd-132">See Also</span></span>  
+ [<span data-ttu-id="7f7cd-133">Entradas mediante teclado en una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7f7cd-133">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="7f7cd-134">Datos introducidos por el usuario en una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7f7cd-134">User Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="7f7cd-135">Funcionamiento de las entradas mediante teclado</span><span class="sxs-lookup"><span data-stu-id="7f7cd-135">How Keyboard Input Works</span></span>](../../../docs/framework/winforms/how-keyboard-input-works.md)

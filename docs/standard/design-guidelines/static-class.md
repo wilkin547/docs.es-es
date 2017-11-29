@@ -1,52 +1,50 @@
 ---
-title: "Dise&#241;o de clases est&#225;ticas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Escriba las instrucciones de diseño de clases estáticas"
-  - "instrucciones de diseño clases biblioteca [.NET Framework], clases"
-  - "clases [.NET Framework], estáticas"
-  - "clases estáticas [.NET Framework]"
-  - "clases [.NET Framework], instrucciones de diseño"
-  - "Escriba las instrucciones de diseño de clases"
+title: "Diseño de clases estáticas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type design guidelines, static classes
+- class library design guidelines [.NET Framework], classes
+- classes [.NET Framework], static
+- static classes [.NET Framework]
+- classes [.NET Framework], design guidelines
+- type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 28fe3756a2881e8f746616f8275b505b1a01eada
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Dise&#241;o de clases est&#225;ticas
-Se define una clase estática como una clase que contiene sólo miembros estáticos \(por supuesto además de los miembros de instancia heredados de <xref:System.Object?displayProperty=fullName> y posiblemente un constructor privado\). Algunos lenguajes proporcionan compatibilidad integrada para las clases estáticas. En C\# 2.0 y versiones posteriores, cuando una clase se declara como estático, lo abstracto, está sellada y ningún miembro de instancia se puede invalidar o declarado.  
+# <a name="static-class-design"></a><span data-ttu-id="0e33d-102">Diseño de clases estáticas</span><span class="sxs-lookup"><span data-stu-id="0e33d-102">Static Class Design</span></span>
+<span data-ttu-id="0e33d-103">Una clase estática se define como una clase que contiene sólo miembros estáticos (evidentemente además de los miembros de instancia se hereda de <xref:System.Object?displayProperty=nameWithType> y posiblemente un constructor privado).</span><span class="sxs-lookup"><span data-stu-id="0e33d-103">A static class is defined as a class that contains only static members (of course besides the instance members inherited from <xref:System.Object?displayProperty=nameWithType> and possibly a private constructor).</span></span> <span data-ttu-id="0e33d-104">Algunos lenguajes proporcionan compatibilidad integrada para las clases estáticas.</span><span class="sxs-lookup"><span data-stu-id="0e33d-104">Some languages provide built-in support for static classes.</span></span> <span data-ttu-id="0e33d-105">En C# 2.0 y versiones posteriores, cuando una clase se declara como estático, lo abstracto, está sellada y ningún miembro de instancia se puede invalidar o declarado.</span><span class="sxs-lookup"><span data-stu-id="0e33d-105">In C# 2.0 and later, when a class is declared to be static, it is sealed, abstract, and no instance members can be overridden or declared.</span></span>  
   
- Las clases estáticas son un compromiso entre el diseño orientado a objetos puro y simplicidad. Se utilizan habitualmente para proporcionar accesos directos a otras operaciones \(como <xref:System.IO.File?displayProperty=fullName>\), titulares de métodos de extensión o funcionalidad que se no justificado un contenedor completa orientada a objetos \(como <xref:System.Environment?displayProperty=fullName>\).  
+ <span data-ttu-id="0e33d-106">Las clases estáticas son una solución intermedia entre puro diseño orientado a objetos y la simplicidad.</span><span class="sxs-lookup"><span data-stu-id="0e33d-106">Static classes are a compromise between pure object-oriented design and simplicity.</span></span> <span data-ttu-id="0e33d-107">Se suelen usar para proporcionar accesos directos a otras operaciones (como <xref:System.IO.File?displayProperty=nameWithType>), los propietarios de los métodos de extensión, o la funcionalidad para el que se no justificado un contenedor completa orientada a objetos (como <xref:System.Environment?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="0e33d-107">They are commonly used to provide shortcuts to other operations (such as <xref:System.IO.File?displayProperty=nameWithType>), holders of extension methods, or functionality for which a full object-oriented wrapper is unwarranted (such as <xref:System.Environment?displayProperty=nameWithType>).</span></span>  
   
- **✓ hacer** utilizar clases estáticas con moderación.  
+ <span data-ttu-id="0e33d-108">**✓ HACER** usan clases estáticas con moderación.</span><span class="sxs-lookup"><span data-stu-id="0e33d-108">**✓ DO** use static classes sparingly.</span></span>  
   
- Las clases estáticas deben usarse únicamente como clases auxiliares para el núcleo orientada a objetos de framework.  
+ <span data-ttu-id="0e33d-109">Las clases estáticas deben utilizarse únicamente como clases auxiliares para el núcleo orientada a objetos de framework.</span><span class="sxs-lookup"><span data-stu-id="0e33d-109">Static classes should be used only as supporting classes for the object-oriented core of the framework.</span></span>  
   
- **X no** tratar las clases estáticas como un depósito vario.  
+ <span data-ttu-id="0e33d-110">**X DO NOT** tratar las clases estáticas como un depósito varios.</span><span class="sxs-lookup"><span data-stu-id="0e33d-110">**X DO NOT** treat static classes as a miscellaneous bucket.</span></span>  
   
- **X no** declare ni reemplace miembros de instancia en clases estáticas.  
+ <span data-ttu-id="0e33d-111">**X DO NOT** declarar o invalidar los miembros de instancia en clases estáticas.</span><span class="sxs-lookup"><span data-stu-id="0e33d-111">**X DO NOT** declare or override instance members in static classes.</span></span>  
   
- **✓ hacer** declarar clases estáticas como selladas, abstract y agregue un constructor de instancia privada, si su lenguaje de programación no tiene compatibilidad integrada para las clases estáticas.  
+ <span data-ttu-id="0e33d-112">**✓ HACER** declarar las clases estáticas como sellada, abstract y agregue un constructor de instancia privada, si su lenguaje de programación no tiene compatibilidad integrada para las clases estáticas.</span><span class="sxs-lookup"><span data-stu-id="0e33d-112">**✓ DO** declare static classes as sealed, abstract, and add a private instance constructor if your programming language does not have built-in support for static classes.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="0e33d-113">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="0e33d-113">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="0e33d-114">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="0e33d-114">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="0e33d-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="0e33d-115">See Also</span></span>  
+ [<span data-ttu-id="0e33d-116">Instrucciones de diseño de tipos</span><span class="sxs-lookup"><span data-stu-id="0e33d-116">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="0e33d-117">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0e33d-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

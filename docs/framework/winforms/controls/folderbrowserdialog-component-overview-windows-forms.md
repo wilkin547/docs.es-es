@@ -1,40 +1,40 @@
 ---
-title: "Informaci&#243;n general del componente FolderBrowserDialog (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FolderBrowserDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "directorios [Windows Forms], habilitar examinar en aplicaciones"
-  - "FolderBrowserDialog (componente) [Windows Forms], acerca de FolderBrowserDialog"
-  - "carpetas [Windows Forms], habilitar examinar en aplicaciones"
+title: "Información general del componente FolderBrowserDialog (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FolderBrowserDialog
+helpviewer_keywords:
+- FolderBrowserDialog component [Windows Forms], about FolderBrowserDialog
+- directories [Windows Forms], enabling browsing in applications
+- folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d7fab1dbe01c5b21e510841b1541150f6152ab0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general del componente FolderBrowserDialog (formularios Windows Forms)
-El componente <xref:System.Windows.Forms.FolderBrowserDialog> de formularios Windows Forms es un cuadro de diálogo modal que se utiliza para examinar y seleccionar carpetas.  También se pueden crear carpetas nuevas desde el componente <xref:System.Windows.Forms.FolderBrowserDialog>.  
+# <a name="folderbrowserdialog-component-overview-windows-forms"></a><span data-ttu-id="8db5b-102">Información general del componente FolderBrowserDialog (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="8db5b-102">FolderBrowserDialog Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="8db5b-103">Los formularios de Windows <xref:System.Windows.Forms.FolderBrowserDialog> componente es un cuadro de diálogo modal que se utiliza para examinar y seleccionar carpetas.</span><span class="sxs-lookup"><span data-stu-id="8db5b-103">The Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> component is a modal dialog box that is used for browsing and selecting folders.</span></span> <span data-ttu-id="8db5b-104">También se pueden crear nuevas carpetas desde el <xref:System.Windows.Forms.FolderBrowserDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="8db5b-104">New folders can also be created from within the <xref:System.Windows.Forms.FolderBrowserDialog> component.</span></span>  
   
 > [!NOTE]
->  Para seleccionar archivos, en lugar de carpetas, utilice el componente [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md).  
+>  <span data-ttu-id="8db5b-105">Para seleccionar archivos, en lugar de las carpetas, use la [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) componente.</span><span class="sxs-lookup"><span data-stu-id="8db5b-105">To select files, instead of folders, use the [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) component.</span></span>  
   
- El componente <xref:System.Windows.Forms.FolderBrowserDialog> se muestra en tiempo de ejecución mediante el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  Establezca la propiedad <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> para determinar la carpeta de nivel superior y las subcarpetas que aparecerán en la vista árbol del cuadro de diálogo.  Una vez mostrado el cuadro de diálogo, puede utilizar la propiedad <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> para obtener la ruta de acceso de la carpeta seleccionada.  
+ <span data-ttu-id="8db5b-106">El <xref:System.Windows.Forms.FolderBrowserDialog> componente se muestra en tiempo de ejecución mediante el <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método.</span><span class="sxs-lookup"><span data-stu-id="8db5b-106">The <xref:System.Windows.Forms.FolderBrowserDialog> component is displayed at run time using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span> <span data-ttu-id="8db5b-107">Establecer el <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> propiedad para determinar la carpeta de nivel superior y todas las subcarpetas que aparecerán en la vista de árbol del cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="8db5b-107">Set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> property to determine the top-most folder and any subfolders that will appear within the tree view of the dialog box.</span></span> <span data-ttu-id="8db5b-108">Una vez que haya demostrado el cuadro de diálogo, puede usar el <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propiedad que se va a obtener la ruta de acceso de la carpeta que se ha seleccionado.</span><span class="sxs-lookup"><span data-stu-id="8db5b-108">Once the dialog box has been shown, you can use the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property to get the path of the folder that was selected.</span></span>  
   
- Cuando se agrega a un formulario, el componente <xref:System.Windows.Forms.FolderBrowserDialog> aparece en la bandeja de la parte inferior del Diseñador de Windows Forms.  
+ <span data-ttu-id="8db5b-109">Cuando se agrega a un formulario, el <xref:System.Windows.Forms.FolderBrowserDialog> componente aparece en la bandeja en la parte inferior del Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="8db5b-109">When it is added to a form, the <xref:System.Windows.Forms.FolderBrowserDialog> component appears in the tray at the bottom of the Windows Forms Designer.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.FolderBrowserDialog>   
- [Cómo: Elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)   
- [FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8db5b-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="8db5b-110">See Also</span></span>  
+ <xref:System.Windows.Forms.FolderBrowserDialog>  
+ [<span data-ttu-id="8db5b-111">Elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8db5b-111">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ [<span data-ttu-id="8db5b-112">FolderBrowserDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="8db5b-112">FolderBrowserDialog Component</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
