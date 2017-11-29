@@ -1,36 +1,40 @@
 ---
-title: "Aplicaciones para Windows mediante devoluciones de llamada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aplicaciones Windows que usan devoluciones de llamada
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Aplicaciones para Windows mediante devoluciones de llamada
-En la mayoría de las situaciones de procesamiento asincrónico, desea iniciar una operación de base de datos y seguir ejecutando otros procesos sin tener que esperar a que se complete dicha operación.  No obstante, en muchas situaciones es necesario hacer algo una vez que ha finalizado la operación de base de datos.  En las aplicaciones para Windows, por ejemplo, quizás podría delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano, al tiempo que permite que el subproceso de interfaz de usuario permanezca alerta.  Sin embargo, cuando la operación de base de datos se complete, deseará utilizar los resultados para rellenar el formulario.  Este tipo de situación se implementa mejor con una devolución de llamada.  
+# <a name="windows-applications-using-callbacks"></a>Aplicaciones Windows que usan devoluciones de llamada
+En la mayoría de las situaciones de procesamiento asincrónico, desea iniciar una operación de base de datos y seguir ejecutando otros procesos sin tener que esperar a que se complete dicha operación. No obstante, en muchas situaciones es necesario hacer algo una vez que ha finalizado la operación de base de datos. En las aplicaciones para Windows, por ejemplo, quizás podría delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano, al tiempo que permite que el subproceso de interfaz de usuario permanezca alerta. Sin embargo, cuando la operación de base de datos se complete, deseará utilizar los resultados para rellenar el formulario. Este tipo de situación se implementa mejor con una devolución de llamada.  
   
- Para definir una devolución de llamada, especifique un delegado <xref:System.AsyncCallback> en el método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>.  El delegado se llama cuando la operación se completa.  Puede pasar al delegado una referencia al propio <xref:System.Data.SqlClient.SqlCommand>, para que así sea más fácil tener acceso al objeto <xref:System.Data.SqlClient.SqlCommand> y llamar al método `End` adecuado sin tener que utilizar una variable global.  
+ Para definir una devolución de llamada, especifique un delegado <xref:System.AsyncCallback> en el método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. El delegado se llama cuando la operación se completa. Puede pasar al delegado una referencia al propio <xref:System.Data.SqlClient.SqlCommand>, para que así sea más fácil tener acceso al objeto <xref:System.Data.SqlClient.SqlCommand> y llamar al método `End` adecuado sin tener que utilizar una variable global.  
   
-## Ejemplo  
- La siguiente aplicación Windows muestra el uso del método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, mediante la ejecución de una instrucción Transact\-SQL que incluye un retraso de algunos segundos \(al emular un comando cuya ejecución tiene una larga duración\).  
+## <a name="example"></a>Ejemplo  
+ La siguiente aplicación Windows muestra el uso del método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, mediante la ejecución de una instrucción Transact-SQL que incluye un retraso de algunos segundos (al emular un comando cuya ejecución tiene una larga duración).  
   
- En este ejemplo se muestran varias técnicas importantes, como la llamada a un método que interactúa con el formulario desde un subproceso independiente.  Además, se muestra cómo debe impedir que los usuarios ejecuten varias veces un comando de forma simultánea y cómo debe asegurarse de que el formulario no se cierre antes de que se haya llamado al procedimiento de devolución de llamada.  
+ En este ejemplo se muestran varias técnicas importantes, como la llamada a un método que interactúa con el formulario desde un subproceso independiente. Además, se muestra cómo debe impedir que los usuarios ejecuten varias veces un comando de forma simultánea y cómo debe asegurarse de que el formulario no se cierre antes de que se haya llamado al procedimiento de devolución de llamada.  
   
- Para realizar este ejemplo, cree una nueva aplicación Windows.  Coloque un control <xref:System.Windows.Forms.Button> y dos controles <xref:System.Windows.Forms.Label> en el formulario, y acepte el nombre predeterminado de cada control.  Agregue el siguiente código a la clase del formulario, modificando la cadena de conexión según sea necesario para su entorno.  
+ Para realizar este ejemplo, cree una nueva aplicación Windows. Coloque un control <xref:System.Windows.Forms.Button> y dos controles <xref:System.Windows.Forms.Label> en el formulario, y acepte el nombre predeterminado de cada control. Agregue el siguiente código a la clase del formulario, modificando la cadena de conexión según sea necesario para su entorno.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class:  
 Imports System  
 Imports System.Data  
@@ -384,6 +388,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## Vea también  
- [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

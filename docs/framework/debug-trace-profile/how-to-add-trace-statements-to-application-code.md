@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework], conditional writes based on switches
 - trace statements
@@ -23,16 +20,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: adb4290b517230f26330cf3b4d94a7b3bc7fbf88
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5dd46da24c379a7900dff0dc482577195f5f4c23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Cómo: Agregar instrucciones de seguimiento al código de una aplicación
 Los métodos que se usan con mayor frecuencia para seguimiento son los métodos para escribir los resultados en agentes de escucha: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** y **Fail**. Estos métodos se pueden dividir en dos categorías: **Write**, **WriteLine** y **Fail** emiten resultados de forma incondicional, mientras que **WriteIf**, **WriteLineIf** y **Assert** prueban una condición booleana y escriben o no escriben en función del valor de la condición. **WriteIf** y **WriteLineIf** emiten resultados si la condición es `true` y **Assert** emite resultados si la condición es `false`.  
@@ -84,25 +80,24 @@ Los métodos que se usan con mayor frecuencia para seguimiento son los métodos 
 1.  Llame al método <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
-    Dim I As Integer = 4  
-    Trace.Assert(I = 5, "I is not equal to 5.")  
+    Dim i As Integer = 4  
+    Trace.Assert(i = 5, "i is not equal to 5.")  
     ```  
   
     ```csharp  
-    int I = 4;  
-    System.Diagnostics.Trace.Assert(I == 5, "I is not equal to 5.");  
+    int i = 4;  
+    System.Diagnostics.Trace.Assert(i == 5, "i is not equal to 5.");  
     ```  
   
     > [!NOTE]
-    >  Puede usar **Assert** con la depuración y el seguimiento. En este ejemplo se envía la pila de llamadas a cualquier agente de escucha de la colección **Listeners**. Para más información, vea [Aserciones en el código administrado](/visualstudio/debugger/assertions-in-managed-code) y <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
+    >  Puede usar **Assert** con la depuración y el seguimiento. En este ejemplo se envía la pila de llamadas a cualquier agente de escucha de la colección **Listeners**. Para más información, vea [Aserciones en el código administrado](/visualstudio/debugger/assertions-in-managed-code) y <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=fullName>   
- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>  
+ [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Cómo: crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-

@@ -1,36 +1,34 @@
 ---
-title: "Asignar identificadores de objeto a algoritmos de criptograf&#237;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "algoritmos criptográficos"
-  - "criptografía, asignar identificadores de objetos"
-  - "firmas digitales"
-  - "identificadores, asignar identificadores de objetos"
-  - "asignar identificadores de objetos"
+title: "Asignar identificadores de objeto a algoritmos de criptografía"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- digital signatures
+- identifiers, mapping object identifiers
+- cryptographic algorithms
+- mapping object identifiers
+- cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: dbfe394193925e38dad774d39d79ac813abef22a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignar identificadores de objeto a algoritmos de criptograf&#237;a
-Las firmas digitales garantizan que los datos no se han manipulado cuando se envían de un programa a otro.  Normalmente, la firma digital se calcula aplicando una función matemática al hash de los datos que se van a firmar.  Al dar formato a un valor hash que se va a firmar, algunos algoritmos de firma digital agregan un Identificador de objeto \(OID\) ASN.1 como parte de la operación de formato.  El OID identifica el algoritmo que se utilizó para calcular el hash.  Se puede asignar algoritmos a identificadores de objetos para extender el mecanismo de criptografía y que utilice algoritmos personalizados.  En el ejemplo siguiente se describe cómo se asigna un identificador de objeto a un nuevo algoritmo de hash.  
+# <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Asignar identificadores de objeto a algoritmos de criptografía
+Las firmas digitales garantizan que los datos no se manipulación con cuando se envía desde un programa a otro. Normalmente, la firma digital se calcula aplicando una función matemática al hash de los datos debe estar firmado. Al dar formato a un valor hash que se va a firmar, algunos algoritmos de firma digital anexar ASN.1 identificador del objeto (OID) como parte de la operación de formato. El OID identifica el algoritmo que se usó para calcular el hash. Puede asignar algoritmos a identificadores de objeto para extender el mecanismo de criptografía para usar algoritmos personalizados. En el ejemplo siguiente se muestra cómo asignar un identificador de objeto a un nuevo algoritmo de hash.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -50,8 +48,8 @@ Las firmas digitales garantizan que los datos no se han manipulado cuando se env
 </configuration>  
 ```  
   
- [\<oidEntry\> elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene dos atributos.  El atributo **OID** es el número del identificador de objeto.  El atributo de **name** es el valor del atributo de **name** de [\<nameEntry\> elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  Debe haber una asignación de un nombre de algoritmo a una clase para poder asignar un identificador de objeto a un nombre sencillo.  
+ El [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene dos atributos. El **OID** atributo es el número de identificador de objeto. El **nombre** atributo es el valor de la **nombre** de atributo de la [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Debe haber una asignación de un nombre de algoritmo a una clase antes de que se puede asignar un identificador de objeto a un nombre simple.  
   
-## Vea también  
- [Configurar clases de criptografía](../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
- [Servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vea también  
+ [Configurar clases de criptografía](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

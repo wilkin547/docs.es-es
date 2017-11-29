@@ -1,26 +1,29 @@
 ---
-title: "Ejemplo de anuncios | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ejemplo de anuncios
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 05e2c45b66f92229877ac3ec867da9b71cd4156a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de anuncios
-En este ejemplo se muestra cómo utilizar la funcionalidad de anuncio de la característica de detección.Los anuncios permiten a los servicios enviar mensajes de anuncio que contienen metadatos del servicio.De forma predeterminada, se envía un anuncio de saludo cuando el servicio se inicia y otro de despedida al cerrarse.Estos anuncios pueden ser de multidifusión o se pueden enviar de punto a punto.Este ejemplo está compuesto de dos proyectos: servicio y cliente.  
+# <a name="announcements-sample"></a>Ejemplo de anuncios
+En este ejemplo se muestra cómo utilizar la funcionalidad de anuncio de la característica de detección. Los anuncios permiten a los servicios enviar mensajes de anuncio que contienen metadatos del servicio. De forma predeterminada, se envía un anuncio de saludo cuando el servicio se inicia y otro de despedida al cerrarse. Estos anuncios pueden ser de multidifusión o se pueden enviar de punto a punto. Este ejemplo está compuesto de dos proyectos: servicio y cliente.  
   
-## Servicio  
- Este proyecto contiene un servicio de calculadora autohospedado.En el método `Main`, se crea un host de servicio y se le agrega un extremo de servicio.Después, se crea un <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.Para habilitar los anuncios, se debe agregar un extremo de anuncio a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.En este caso, se agrega como extremo del anuncio un extremo estándar que usa multidifusión UDP.De esta forma se difunden los anuncios a través de una dirección UDP conocida.  
+## <a name="service"></a>Servicio  
+ Este proyecto contiene un servicio de calculadora autohospedado. En el método `Main`, se crea un host de servicio y se le agrega un extremo de servicio. Después, se crea un <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Para habilitar los anuncios, se debe agregar un extremo de anuncio a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. En este caso, se agrega como extremo del anuncio un extremo estándar que usa multidifusión UDP. De esta forma se difunden los anuncios a través de una dirección UDP conocida.  
   
 ```  
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
@@ -43,8 +46,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }  
 ```  
   
-## Cliente  
- En este proyecto, observe que el cliente hospeda un <xref:System.ServiceModel.Discovery.AnnouncementService>.Además, se registran dos delegados con eventos.Estos eventos dictan lo que el cliente hace cuando se reciben anuncios en línea y sin conexión.  
+## <a name="client"></a>Cliente  
+ En este proyecto, observe que el cliente hospeda un <xref:System.ServiceModel.Discovery.AnnouncementService>. Además, se registran dos delegados con eventos. Estos eventos dictan lo que el cliente hace cuando se reciben anuncios en línea y sin conexión.  
   
 ```  
 // Create an AnnouncementService instance  
@@ -55,7 +58,7 @@ announcementService.OnlineAnnouncementReceived += OnOnlineEvent;
 announcementService.OfflineAnnouncementReceived += OnOfflineEvent;  
 ```  
   
- Los métodos `OnOfflineEvent` y `OnOnlineEvent` administran los mensajes de anuncio de saludo y despedida, respectivamente.  
+ Los métodos `OnOnlineEvent` y `OnOfflineEvent` administran los mensajes de anuncio de saludo y despedida, respectivamente.  
   
 ```  
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
@@ -73,25 +76,25 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 }  
 ```  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Este ejemplo utiliza los extremos HTTP y para ejecutarlo se deben agregar las ACL de dirección URL apropiadas; vea [Configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) para obtener detalles.Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas.Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería.`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Este ejemplo utiliza los extremos HTTP y para ejecutar este ejemplo, correcto ACL de dirección URL debe agregarse vea [configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Compile la solución.  
   
 3.  Ejecute la aplicación client.exe.  
   
-4.  Ejecute la aplicación service.exe.Observe que el cliente recibe un anuncio en línea.  
+4.  Ejecute la aplicación service.exe. Observe que el cliente recibe un anuncio en línea.  
   
-5.  Cierre la aplicación service.exe.Observe que el cliente recibe un anuncio sin conexión.  
+5.  Cierre la aplicación service.exe. Observe que el cliente recibe un anuncio sin conexión.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

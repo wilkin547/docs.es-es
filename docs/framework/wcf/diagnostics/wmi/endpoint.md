@@ -1,25 +1,28 @@
 ---
-title: "Extremo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "punto de conexión"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef4e27f6e7a45fe705aa09827702a64c960b6a16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Extremo
-Extremo  
+# <a name="endpoint"></a>punto de conexión
+punto de conexión  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class Endpoint  
@@ -39,102 +42,102 @@ class Endpoint
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase Endpoint define el método siguiente.  
   
 |Método|Descripción|  
 |------------|-----------------|  
 |[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Recupera el nombre de instancia del contador de rendimiento de la operación|  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase Endpoint posee las siguientes propiedades:  
   
-### Dirección  
+### <a name="address"></a>Dirección  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Un URI que contiene la dirección del extremo.  
   
-### AddressHeaders  
+### <a name="addressheaders"></a>AddressHeaders  
  Tipo de datos: matriz de cadenas  
   
  Tipo de acceso: solo lectura  
   
  La colección de encabezados de dirección adjunta a este extremo.  
   
-### AddressIdentity  
+### <a name="addressidentity"></a>AddressIdentity  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  La identidad del extremo.  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El id. del appdomain que hospeda al extremo.  
   
-### Controles de comportamiento  
+### <a name="behaviors"></a>Controles de comportamiento  
  Tipo de datos: matriz de comportamientos  
   
  Tipo de acceso: solo lectura  
   
  Colección de comportamientos implementada por este extremo.  
   
-### Enlaces  
+### <a name="binding"></a>Enlaces  
  Tipo de datos: enlace  
   
  Tipo de acceso: solo lectura  
   
  El enlace utilizado por este extremo.  
   
-### ContractName  
+### <a name="contractname"></a>ContractName  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Cadena que especifica qué contrato está exponiendo este extremo.  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Nombre de la instancia del contador de rendimiento del extremo.  
   
-### ListenUri  
+### <a name="listenuri"></a>ListenUri  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El URI en el que el extremo realiza escuchas.  
   
-### Name  
+### <a name="name"></a>Name  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El nombre único de este extremo.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El Id. del proceso que hospeda al extremo.  
   
-### ref  
+### <a name="ref"></a>ref  
  Tipo de datos: Contrato  
   
  Tipo de acceso: solo lectura  
   
  El contrato que este extremo está exponiendo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|

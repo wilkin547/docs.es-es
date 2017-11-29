@@ -1,25 +1,28 @@
 ---
-title: "NamedPipeConnectionPoolSettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: NamedPipeConnectionPoolSettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cf9c39334289cb30d1a01917c0be37da02fcdc5b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# NamedPipeConnectionPoolSettings
+# <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class NamedPipeConnectionPoolSettings  
@@ -30,38 +33,38 @@ class NamedPipeConnectionPoolSettings
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase NamedPipeConnectionPoolSettings no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase NamedPipeConnectionPoolSettings tiene las siguientes propiedades:  
   
-### GroupName  
+### <a name="groupname"></a>GroupName  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El nombre del grupo de conexiones utilizado por el elemento de enlace.  
   
-### IdleTimeout  
+### <a name="idletimeout"></a>IdleTimeout  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  El tiempo máximo que la conexión puede estar inactiva antes de desconectarse.  
   
-### MaxOutboundConnectionsPerEndpoint  
+### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de conexiones salientes para cada extremo en el cliente.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

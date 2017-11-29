@@ -1,64 +1,71 @@
 ---
-title: "C&#243;mo: Permitir que los usuarios resuelvan horas ambiguas | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "hora ambigua [.NET Framework]"
-  - "zonas horarias [.NET Framework], hora ambigua"
+title: "Cómo: permitir que los usuarios a resolver horas ambiguas"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time zones [.NET Framework], ambiguous time
+- ambiguous time [.NET Framework]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6409e676944f64931b197fda1a6a7b392c268c97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Permitir que los usuarios resuelvan horas ambiguas
-Una hora ambigua es aquella que se asigna a más de una hora universal coordinada \(UTC\).  Se produce al retrasar los relojes, como en el cambio de horario de verano a horario estándar.  Para tratar una hora ambigua, puede elegir una de las siguientes acciones:  
-  
--   Si la hora ambigua es un elemento de datos especificado por el usuario, puede dejar que el usuario resuelva la ambigüedad.  
-  
--   Haga una suposición sobre cómo se asigna la hora a la hora UTC.  Por ejemplo, puede suponer que una hora ambigua siempre se expresa en la hora estándar de la zona horaria.  
-  
- En este tema se muestra cómo permitir a un usuario resolver una hora ambigua.  
-  
-### Para permitir a un usuario resolver una hora ambigua  
-  
-1.  Obtenga la entrada de fecha y hora del usuario.  
-  
-2.  Llame al método <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> para determinar si la hora es ambigua.  
-  
-3.  Si la hora es ambigua, llame al método <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> para recuperar una matriz de objetos <xref:System.TimeSpan>.  Cada elemento de la matriz contiene una diferencia respecto a la hora UTC a la que puede ser asignada la hora ambigua.  
-  
-4.  Permita al usuario seleccionar la diferencia deseada.  
-  
-5.  Obtenga la fecha y hora UTC restando a la hora local la diferencia seleccionada por el usuario.  
-  
-6.  Llame al método <xref:System.DateTime.SpecifyKind%2A> `static` \(`Shared` en Visual Basic .NET\) para establecer la propiedad <xref:System.DateTime.Kind%2A> del valor de fecha y hora UTC en <xref:System.DateTimeKind?displayProperty=fullName>.  
-  
-## Ejemplo  
- En el ejemplo siguiente se pide al usuario que escriba un valor de fecha y hora y, si la hora es ambigua, le permite seleccionar la hora UTC a la que se asignará esta hora ambigua.  
-  
- [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
- [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]  
-  
- El núcleo del código de ejemplo utiliza una matriz de objetos <xref:System.TimeSpan> para indicar las posibles diferencias de la hora ambigua respecto a la hora UTC.  Sin embargo, probablemente estas diferencias no resultan significativas para el usuario.  Para aclarar el significado de las diferencias, el código también indica si una diferencia representa la hora estándar de la zona horaria local o del horario de verano.  El código determina qué hora es la estándar y cuál pertenece al horario de verano comparando la diferencia con el valor de la propiedad <xref:System.TimeZoneInfo.BaseUtcOffset%2A>.  Esta propiedad indica la diferencia entre la hora UTC y la hora estándar de la zona horaria.  
-  
- En este ejemplo, todas las referencias a la zona horaria local se realizan a través de la propiedad <xref:System.TimeZoneInfo.Local%2A?displayProperty=fullName>; la zona horaria local nunca se asigna a una variable de objeto.  Este es un procedimiento recomendado porque una llamada al método <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=fullName> invalida todos los objetos a los que la zona horaria local está asignada.  
-  
-## Compilar el código  
- Para este ejemplo se necesita:  
-  
--   Que se agregue al proyecto una referencia a System.Core.dll.  
-  
--   Que se importe el espacio de nombres <xref:System> con la instrucción `using` \(necesaria en código de C\#\).  
-  
-## Vea también  
- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)   
- [Cómo: Resolver horas ambiguas](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>Cómo: permitir que los usuarios a resolver horas ambiguas
+
+Una hora ambigua es aquella que se asigna a más de una hora universal coordinada (UTC). Esto sucede cuando la hora del reloj se atrasa, como durante la transición del horario de verano de una zona horaria al horario estándar. Cuando se enfrente a una hora ambigua, puede realizar una de las siguientes acciones:
+
+* Si la hora ambigua es un dato introducido por el usuario, puede dejar que el usuario resuelva la ambigüedad.
+
+* Piense cómo se corresponde esa hora con la hora UTC. Por ejemplo, puede dar por supuesto que una hora ambigua siempre se expresa en la hora estándar de la zona horaria.
+
+En este tema se muestra cómo permitir que los usuarios a resolver una hora ambigua.
+
+### <a name="to-let-a-user-resolve-an-ambiguous-time"></a>Para permitir que un usuario resuelva una hora ambigua
+
+1. Obtenga la entrada de fecha y hora del usuario.
+
+2. Llame a la <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> método para determinar si la hora es ambigua.
+
+3. Si la hora es ambigua, llame a la <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> método para recuperar una matriz de <xref:System.TimeSpan> objetos. Cada elemento de la matriz contiene un desplazamiento de UTC que asignar a la hora ambigua.
+
+4. Permita que el usuario seleccione la diferencia horaria que quiera.
+
+5. Para obtener la fecha y hora UTC, reste de la hora local la diferencia horaria que ha seleccionado el usuario.
+
+6. Llame a la `static` (`Shared` en Visual Basic. NET) <xref:System.DateTime.SpecifyKind%2A> método para establecer la fecha y hora valor UTC <xref:System.DateTime.Kind%2A> propiedad <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+
+## <a name="example"></a>Ejemplo
+
+En el ejemplo siguiente se le pide al usuario que escriba un valor de fecha y hora y, si es ambiguo, se permite que el usuario seleccione la hora UTC con la que se corresponde dicha hora ambigua.
+
+[!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
+[!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
+
+El núcleo del código de ejemplo utiliza una matriz de <xref:System.TimeSpan> objetos para indicar los desplazamientos posibles de la hora ambigua a la hora UTC. Pero es probable que estas diferencias horarias sean poco significativas para el usuario. Para aclarar el significado de las diferencias horarias, el código también indica si una diferencia horaria representa la hora estándar o el horario de verano de la zona horaria local. El código determina qué hora es estándar y qué hora es verano comparando el desplazamiento con el valor de la <xref:System.TimeZoneInfo.BaseUtcOffset%2A> propiedad. Esta propiedad indica la diferencia entre la hora UTC y la hora estándar de la zona horaria.
+
+En este ejemplo, todas las referencias a la zona horaria local se realizan a través del <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> propiedad; la hora local zona nunca se asigna a una variable de objeto. Esto es una práctica recomendada porque una llamada a la <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> método invalida cualquier objeto asignado a la zona horaria local.
+
+## <a name="compiling-the-code"></a>Compilación del código
+
+Para este ejemplo se necesita:
+
+* Que se agregará al proyecto una referencia a System.Core.dll.
+
+* Que el <xref:System> espacio de nombres se importan con el `using` instrucción (obligatorio en el código de C#).
+
+## <a name="see-also"></a>Vea también
+
+[Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+[Cómo: resolver horas ambiguas](../../../docs/standard/datetime/resolve-ambiguous-times.md)

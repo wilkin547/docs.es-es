@@ -1,36 +1,42 @@
 ---
-title: "Navegar por DataRelations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Navegar por objetos DataRelation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5b90b58595c86fc3c4dcaf7fd453c517d6f14904
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Navegar por DataRelations
-Una de las principales funciones de una <xref:System.Data.DataRelation> es permitir la navegación de una <xref:System.Data.DataTable> a otra dentro de un <xref:System.Data.DataSet>.  Esto permite recuperar todos los objetos <xref:System.Data.DataRow> relacionados de una **DataTable** cuando se da una única **DataRow** de una **DataTable** relacionada.  Por ejemplo, después de establecer una **DataRelation** entre una tabla de clientes y una tabla de pedidos, es posible recuperar todas las filas de pedidos de una fila de clientes determinada mediante **GetChildRows**.  
+# <a name="navigating-datarelations"></a>Navegar por objetos DataRelation
+Una de las principales funciones de una <xref:System.Data.DataRelation> es permitir la navegación de una <xref:System.Data.DataTable> a otra dentro de un <xref:System.Data.DataSet>. Esto le permite recuperar todos relacionado <xref:System.Data.DataRow> objetos en una **DataTable** cuando se especifica una sola **DataRow** desde un relacionados **DataTable**. Por ejemplo, después de establecer un **DataRelation** entre una tabla de clientes y una tabla de pedidos, puede recuperar todas las filas de pedidos de una fila de clientes determinada mediante **GetChildRows**.  
   
- En el siguiente ejemplo de código se crea una **DataRelation** entre la tabla **Customers** y la tabla **Orders** de un **DataSet**, y se devuelven todos los pedidos de cada cliente.  
+ En el ejemplo de código siguiente se crea un **DataRelation** entre el **clientes** tabla y la **pedidos** tabla de un **conjunto de datos** y devuelve todos los pedidos de cada cliente.  
   
  [!code-csharp[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/VB/source.vb#1)]  
   
- El ejemplo siguiente se basa en el anterior; se relacionan cuatro tablas y se navega por dichas relaciones.  Como en el ejemplo anterior, **CustomerID** relaciona la tabla **Customers** con la tabla **Orders**.  Para cada cliente de la tabla **Customers** se determinan todas las filas secundarias de la tabla **Orders** con el fin de devolver el número de pedidos que tiene un cliente concreto y sus valores de **OrderID**.  
+ El ejemplo siguiente se basa en el anterior; se relacionan cuatro tablas y se navega por dichas relaciones. Como se muestra en el ejemplo anterior, **CustomerID** está relacionada con la **clientes** la tabla a la **pedidos** tabla. Para cada cliente en el **clientes** de tabla, todas las filas secundarias en el **pedidos** se determinan la tabla, con el fin de devolver el número de pedidos que tiene un cliente concreto y sus **OrderID** valores.  
   
- El ejemplo ampliado también devuelve los valores de las tablas **OrderDetails** y **Products**.  La tabla **Orders** está relacionada con la tabla **OrderDetails** mediante **OrderID** con el fin de determinar, para cada pedido de cliente, qué productos y cantidades se pidieron.  Como la tabla **OrderDetails** sólo contiene el **ProductID** de un producto pedido, **OrderDetails** está relacionada con **Products** mediante **ProductID** para devolver el **ProductName**.  En esta relación, **Products** es la tabla primaria y **Order Details** es la secundaria.  Por lo tanto, al recorrer en iteración la tabla **OrderDetails**, se llama a **GetParentRow** para recuperar el valor de **ProductName** relacionado.  
+ El ejemplo ampliado también devuelve los valores de la **OrderDetails** y **productos** tablas. El **pedidos** tabla se relaciona con la **OrderDetails** tabla mediante **OrderID** para determinar, para cada pedido de cliente, qué productos y cantidades se pidieron. Dado que la **OrderDetails** tabla contiene solo el **ProductID** de un producto pedido, **OrderDetails** está relacionado con **productos** usar **ProductID** para devolver el **ProductName**. En esta relación, el **productos** es la tabla primaria y la **Order Details** tabla es el elemento secundario. Como resultado, al recorrer en iteración la **OrderDetails** tabla, **GetParentRow** se llama para recuperar el relacionados **ProductName** valor.  
   
- Hay que tener en cuenta que al crear la **DataRelation** para las tablas **Customers** y **Orders** no se especifica ningún valor para la marca **createConstraints** \(el valor predeterminado es **true**\).  Se supone que todas las filas de la tabla **Orders** tienen un valor **CustomerID** que existe en la tabla primaria **Customers**.  Si un **CustomerID** existe en la tabla **Orders** pero no existe en la tabla **Customers**, una <xref:System.Data.ForeignKeyConstraint> hará que se inicie una excepción.  
+ Tenga en cuenta que, cuando la **DataRelation** se crea para la **clientes** y **pedidos** tablas, no se especifica ningún valor para el **createConstraints**marca (el valor predeterminado es **true**). Se supone que todas las filas de la **pedidos** tabla tiene un **CustomerID** valor que existe en el elemento primario **clientes** tabla. Si un **CustomerID** existe en el **pedidos** tabla que no existe en el **clientes** tabla, un <xref:System.Data.ForeignKeyConstraint> hace que se produzca una excepción.  
   
- Cuando la columna secundaria pueda contener valores no incluidos en la columna primaria, hay que asignar el valor **false** a la marca **createConstraints** cuando se agregue la **DataRelation**.  En el ejemplo, la marca **createConstraints** tiene el valor **false** para la **DataRelation** entre las tablas **Orders** y **OrderDetails**.  Esto permite que la aplicación devuelva todos los registros de la tabla **OrderDetails** y sólo un subconjunto de registros de la tabla **Orders** sin generar una excepción en tiempo de ejecución.  El ejemplo ampliado genera el resultado con el siguiente formato.  
+ Cuando la columna secundaria pueda contener valores que no contienen la columna primaria, establezca la **createConstraints** indicador en **false** al agregar el **DataRelation**. En el ejemplo, el **createConstraints** marca se establece en **false** para el **DataRelation** entre el **pedidos** tabla y el  **OrderDetails** tabla. Esto permite que la aplicación devolver todos los registros de la **OrderDetails** tabla y solo un subconjunto de registros desde el **pedidos** tabla sin generar una excepción en tiempo de ejecución. El ejemplo ampliado genera el resultado con el siguiente formato.  
   
 ```  
 Customer ID: NORTS  
@@ -48,11 +54,11 @@ Customer ID: NORTS
           Quantity: 3  
 ```  
   
- El siguiente ejemplo de código es un ejemplo ampliado en el que se devuelven los valores de las tablas **OrderDetails** y **Products**, y sólo se devuelve un subconjunto de los registros de la tabla **Orders**.  
+ El ejemplo de código siguiente es un ejemplo ampliado donde los valores de la **OrderDetails** y **productos** tablas, y se devuelven solo un subconjunto de los registros de la **pedidos**tabla que se va a devolver.  
   
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
-## Vea también  
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

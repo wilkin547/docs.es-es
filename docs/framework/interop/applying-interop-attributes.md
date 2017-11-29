@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - design-time attributes
 - .NET Framework, exposing components to COM
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dffb4cc5408e78e794cae0d28ef54150d38b2c6c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 160a9597ff22ffc044cf3a35d345ba7d7e1606e4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="applying-interop-attributes"></a>Aplicar atributos de interoperabilidad
 El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres categorías de atributos específicos de interoperabilidad: los que se aplican por parte del usuario en tiempo de diseño, los que se aplican mediante herramientas de interoperabilidad COM y durante el proceso de conversión, y los que se aplican por parte del usuario o interoperabilidad COM.  
@@ -83,9 +76,8 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Contiene los **VARFLAGS** que se importaron originalmente para esta variable desde la biblioteca de tipos COM.|  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices>   
- [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Attributes](../../../docs/standard/attributes/index.md)  (Atributos)  
- [Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices>  
+ [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Atributos](../../../docs/standard/attributes/index.md)  
+ [Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-

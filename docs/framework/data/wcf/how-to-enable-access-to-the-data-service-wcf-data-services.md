@@ -1,30 +1,35 @@
 ---
-title: "C&#243;mo: Habilitar el acceso al servicio de datos (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servicios de datos de Microsoft WCF, configurar"
+title: "Cómo: Habilitar el acceso al servicio de datos (WCF Data Services)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 98584405b0c6a86f424f4bf82e29ea33197dfbeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Habilitar el acceso al servicio de datos (WCF Data Services)
-En [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], debe permitir explícitamente el acceso a los recursos expuestos por un servicio de datos.  Esto significa que después de crear un nuevo servicio de datos, debe proporcionar explícitamente acceso a los recursos individuales como conjuntos de entidades.  En este tema se muestra cómo permitir el acceso de lectura y escritura a cinco de los conjuntos de entidades en el servicio de datos Northwind que se crea al completar el [tutorial rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Como la enumeración <xref:System.Data.Services.EntitySetRights> se define usando <xref:System.FlagsAttribute>, puede usar un operador lógico OR para especificar varios permisos para un único conjunto de entidades.  
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Cómo: Habilitar el acceso al servicio de datos (WCF Data Services)
+En [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], debe permitir explícitamente el acceso a los recursos expuestos por un servicio de datos. Esto significa que después de crear un nuevo servicio de datos, debe proporcionar explícitamente acceso a los recursos individuales como conjuntos de entidades. Este tema muestra cómo habilitar la lectura y acceso de escritura a cinco de la entidad se establece en el servicio de datos de Northwind que se crea cuando completa la [inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Dado que la enumeración <xref:System.Data.Services.EntitySetRights> se define utilizando <xref:System.FlagsAttribute>, puede utilizar un operador OR lógico para especificar varios permisos para un único conjunto de entidades.  
   
 > [!NOTE]
->  Cualquier cliente que pueda tener acceso a la aplicación ASP.NET también puede tener acceso a los recursos expuestos por el servicio de datos.  En un servicio de datos de producción, para evitar el acceso no autorizado a los recursos, también debería proteger la aplicación.  Para obtener más información, consulta [NIB: ASP.NET Security](http://msdn.microsoft.com/es-es/04b37532-18d9-40b4-8e5f-ee09a70b311d).  
+>  Cualquier cliente que pueda tener acceso a la aplicación ASP.NET también puede tener acceso a los recursos expuestos por el servicio de datos. En un servicio de datos de producción, para evitar el acceso no autorizado a los recursos, también debería proteger la aplicación. Para obtener más información, consulte [NIB: seguridad de ASP.NET](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d).  
   
-### Para habilitar el acceso al servicio de datos  
+### <a name="to-enable-access-to-the-data-service"></a>Para habilitar el acceso al servicio de datos  
   
 -   En el código del servicio de datos, reemplace el código de marcador de posición de la función `InitializeService` por el siguiente:  
   
@@ -33,6 +38,6 @@ En [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], debe permitir ex
   
      De esta forma, los clientes pueden tener acceso de lectura y escritura a los conjuntos de entidades de `Orders` y `Order_Details`, y acceso de solo lectura a los conjuntos de entidades de `Customers`.  
   
-## Vea también  
- [Cómo: Desarrollar un servicio de datos WCF que se ejecuta en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo: desarrollar un servicio de datos WCF se ejecutan en IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)  
  [Configurar el servicio de datos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

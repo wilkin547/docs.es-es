@@ -1,55 +1,56 @@
 ---
-title: "Using Application Settings and User Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "user settings [Windows Forms]"
-  - "application settings [Windows Forms], how-to topics"
+title: "Utilizar valores de configuración de aplicación y de usuario"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user settings [Windows Forms]
+- application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Using Application Settings and User Settings
-A partir de .NET Framework 2.0, es posible crear y obtener acceso a valores que se conservan entre las sesiones de ejecución de la aplicación.  Estos valores se denominan *valores de configuración*.  Los valores de configuración pueden representar preferencias del usuario o información valiosa que la aplicación necesita utilizar.  Por ejemplo, podría crear una serie de valores de configuración que almacenen las preferencias del usuario para la combinación de colores de una aplicación.  O podría almacenar la cadena de conexión que especifique la base de datos que la aplicación utiliza.  Los valores de configuración permiten conservar la información esencial para la aplicación fuera del código y crear perfiles que almacenen las preferencias de usuarios individuales.  
+# <a name="using-application-settings-and-user-settings"></a>Utilizar valores de configuración de aplicación y de usuario
+A partir de .NET Framework 2.0, puede crear y obtener acceso a los valores que se conservan entre sesiones de ejecución de la aplicación. Estos valores se denominan *configuración*. Configuración puede representar las preferencias del usuario o información valiosa de la aplicación debe usar. Por ejemplo, podría crear una serie de valores que almacenan las preferencias del usuario para la combinación de colores de una aplicación. O bien, puede almacenar la cadena de conexión que especifica una base de datos que usa su aplicación. La configuración permite que conservar la información que es fundamental para la aplicación fuera del código así como crear perfiles que almacenen las preferencias de usuarios individuales.  
   
- En los temas de esta sección se describe cómo utilizar valores de configuración en tiempo de diseño y en tiempo de ejecución.  
+ Los temas de esta sección describen cómo utilizar la configuración en tiempo de diseño y tiempo de ejecución.  
   
-## En esta sección  
- [How To: Create a New Setting at Design Time](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Crear un nuevo valor de configuración en tiempo de diseño](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)  
   
- Explica cómo utilizar Visual Studio para crear un nuevo valor de configuración para una aplicación.  
+ Explica cómo utilizar Visual Studio para crear una nueva configuración para una aplicación.  
   
- [How To: Change the Value of an Existing Setting at Design Time](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
+ [Cambiar el valor de una opción de configuración existente en tiempo de diseño](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
- Describe cómo utilizar Visual Studio para cambiar el valor de una opción de configuración existente.  
+ Describe cómo utilizar Visual Studio para cambiar el valor de una configuración existente.  
   
- [How To: Change the Value of a Setting Between Application Sessions](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-a-setting-between-application-sessions.md)  
+ [Cambiar el valor de una opción de configuración entre sesiones de aplicación](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
- Describe cómo cambiar el valor de una opción de configuración en una aplicación compilada entre sesiones de la aplicación.  
+ Describe cómo cambiar el valor de una configuración en una aplicación compilada entre sesiones de aplicación.  
   
- [How To: Read Settings at Run Time With C\#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
+ [Leer valores de configuración en tiempo de ejecución con C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
   
- Describe cómo utilizar el código para leer valores de configuración con C\#.  
+ Describe cómo utilizar código para leer los valores con C#.  
   
- [How To: Write User Settings at Run Time with C\#](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Escribir valores de configuración de usuario en tiempo de ejecución con C#](../../../../docs/framework/winforms/advanced/how-to-write-user-settings-at-run-time-with-csharp.md)  
   
- Explica cómo utilizar el código para escribir y guardar los valores de las opciones de configuración de usuario con C\#.  
+ Explica cómo usar código para escribir y guardar los valores de configuración de usuario con C#.  
   
- [How To: Add Multiple Sets of Settings To Your Application in C\#](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Agregar varios conjuntos de valores de configuración a una aplicación en C#](../../../../docs/framework/winforms/advanced/how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
- Explica cómo agregar varios conjuntos de valores de configuración a una aplicación con C\#.  
+ Detalles sobre cómo agregar varios conjuntos de configuración a una aplicación con C#.  
   
-## Vea también  
- [Application Settings for Windows Forms](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ [Configuración de la aplicación en formularios Windows Forms](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)

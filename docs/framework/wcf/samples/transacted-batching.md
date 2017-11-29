@@ -1,61 +1,64 @@
 ---
-title: "Procesamiento por lotes con transacciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Procesamiento por lotes con transacciones
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dbd11f3dad60463a5650d7aa6e53f9e8f3f5021e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Procesamiento por lotes con transacciones
-Este ejemplo muestra cómo procesar por lotes transacciones leídas mediante Message Queuing \(MSMQ\).  El procesamiento por lotes con transacciones es una característica de optimización de rendimiento para las transacciones leídas en comunicación en cola.  
+# <a name="transacted-batching"></a>Procesamiento por lotes con transacciones
+Este ejemplo muestra cómo procesar por lotes transacciones leídas mediante Message Queuing (MSMQ). El procesamiento por lotes con transacciones es una característica de optimización de rendimiento para las transacciones leídas en comunicación en cola.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- En la comunicación con colas, el cliente se comunica con el servicio mediante una cola.  Más exactamente, el cliente envía los mensajes a una cola.  El servicio recibe los mensajes de la cola.  El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.  
+ En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.  
   
- Este ejemplo muestra el procesamiento por lotes con transacciones.  El procesamiento por lotes con transacciones es un comportamiento que habilita el uso de una transacción única cuando se leen y se procesan muchos mensajes en la cola.  
+ Este ejemplo muestra el procesamiento por lotes con transacciones. El procesamiento por lotes con transacciones es un comportamiento que habilita el uso de una transacción única cuando se leen y se procesan muchos mensajes en la cola.  
   
-### Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente.  Si la cola no está presente, el servicio creará una.  Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ.  Siga estos pasos para crear una cola en Windows 2008.  
+2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.  
   
     1.  Abra el Administrador del servidor en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Expanda la pestaña **Características**.  
+    2.  Expanda el **características** ficha.  
   
-    3.  Haga clic con el botón secundario en **Cola de mensajes privados** y seleccione **Nuevo**, **Cola privada**.  
+    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.  
   
-    4.  Active la casilla **Transaccional**.  
+    4.  Compruebe el **transaccional** cuadro.  
   
-    5.  Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.  
+    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.  
   
     > [!NOTE]
-    >  En este ejemplo, el cliente envía cientos de mensajes como parte del lote.  Es normal que la aplicación del servicio tarde algún tiempo en procesarlos.  
+    >  En este ejemplo, el cliente envía cientos de mensajes como parte del lote. Es normal que la aplicación del servicio tarde algún tiempo en procesarlos.  
   
-3.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo o sin integración con Active Directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo o sin integración con Active Directory  
   
-1.  De forma predeterminada con <xref:System.ServiceModel.NetMsmqBinding>, la seguridad de transporte está habilitada.  Hay dos propiedades relevantes para la seguridad de transporte de MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> y <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` De forma predeterminada, el modo de autenticación está establecido en `Windows` y el nivel de protección está definido en `Sign`.  Para que MSMQ proporcione la autenticación y la característica de firma, debe formar parte de un dominio y debe instalarse la opción de integración de directorio activo para MSMQ.  Si ejecuta este ejemplo en un equipo que no cumple estos criterios, recibirá un error.  
+1.  De forma predeterminada con <xref:System.ServiceModel.NetMsmqBinding>, la seguridad de transporte está habilitada. Hay dos propiedades relevantes para la seguridad de transporte MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> y <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` de forma predeterminada, el modo de autenticación se establece en `Windows` y el nivel de protección se establece en `Sign`. Para que MSMQ proporcione la autenticación y la característica de firma, debe formar parte de un dominio y debe instalarse la opción de integración de directorio activo para MSMQ. Si ejecuta este ejemplo en un equipo que no cumple estos criterios, recibirá un error.  
   
 2.  Si su equipo no es parte de un dominio o no tiene la integración del directorio activo instalada, desactive la seguridad de transporte, estableciendo el modo de autenticación y el nivel de protección en `None`, tal y como se muestra en la configuración de ejemplo siguiente:  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <behaviors>  
         <serviceBehaviors>  
@@ -101,30 +104,29 @@ Este ejemplo muestra cómo procesar por lotes transacciones leídas mediante Mes
       </bindings>  
   
     </system.serviceModel>  
-  
     ```  
   
 3.  Asegúrese de que cambia la configuración en el servidor y el cliente antes de ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  Establecer `security` `mode` en `None` es equivalente a establecer la seguridad de <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> y `Message` en `None`.  
+    >  Establecer `security``mode` en `None` es equivalente a definir la seguridad de <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> y `Message` en `None`.  
   
 4.  Para ejecutar la base de datos en un equipo remoto, cambie la cadena de conexión para que señale al equipo en el que reside la base de datos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Para ejecutar este ejemplo, MSMQ debe estar instalado, y se necesitan SQL o SQL Express.  
   
-## Demostraciones  
- El ejemplo muestra el comportamiento del procesamiento por lotes con transacciones.  El procesamiento por lotes con transacciones es una característica de optimización de rendimiento proporcionada con el transporte por colas de MSMQ.  
+## <a name="demonstrates"></a>Demostraciones  
+ El ejemplo muestra el comportamiento del procesamiento por lotes con transacciones. El procesamiento por lotes con transacciones es una característica de optimización de rendimiento proporcionada con el transporte por colas de MSMQ.  
   
- Cuando las transacciones se utilizan para enviar y recibir mensajes, hay en realidad 2 transacciones independientes.  Cuando el cliente envía los mensajes dentro del ámbito de una transacción, la transacción es local para el cliente y el administrador de cola del cliente.  Cuando el servicio recibe los mensajes dentro del ámbito de la transacción, la transacción es local para el servicio y el administrador de cola receptor.  Es muy importante recordar que el cliente y el servicio no están participando en la misma transacción; más bien, están utilizando distintas transacciones al realizar sus operaciones \(como enviar y recibir\) con la cola.  
+ Cuando las transacciones se utilizan para enviar y recibir mensajes, hay en realidad 2 transacciones independientes. Cuando el cliente envía los mensajes dentro del ámbito de una transacción, la transacción es local para el cliente y el administrador de cola del cliente. Cuando el servicio recibe los mensajes dentro del ámbito de la transacción, la transacción es local para el servicio y el administrador de cola receptor. Es muy importante recordar que el cliente y el servicio no están participando en la misma transacción; más bien, están utilizando distintas transacciones al realizar sus operaciones (como enviar y recibir) con la cola.  
   
- En el ejemplo utilizamos una transacción única para la ejecución de varias operaciones del servicio.  Esto se utiliza solo como una característica de optimización de rendimiento y no tiene afecta a la semántica de la aplicación.  El ejemplo se basa en [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ En el ejemplo utilizamos una transacción única para la ejecución de varias operaciones del servicio. Esto se utiliza solo como una característica de optimización de rendimiento y no tiene afecta a la semántica de la aplicación. El ejemplo se basa en [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
-## Comentarios  
- En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción.  Enviamos un número grande de mensajes que muestre la optimización de rendimiento; en este caso, hasta 2500 mensajes.  
+## <a name="comments"></a>Comentarios  
+ En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción. Enviamos un número grande de mensajes que muestre la optimización de rendimiento; en este caso, hasta 2500 mensajes.  
   
- El servicio recibe a continuación los mensajes enviados a la cola dentro del ámbito de la transacción definido por el servicio.  Sin el procesamiento por lotes, esto produce 2500 transacciones para cada invocación de la operación del servicio.  Esto afecta el rendimiento del sistema.  Dado que dos administradores de recursos están implicados, la cola de MSMQ y la base de datos `Orders`\- cada transacción de este tipo es una transacción de DTC.  Optimizamos esto utilizando un número mucho menor de transacciones asegurando que un lote de mensajes e invocaciones de operación de servicio pasan en una transacción única.  
+ El servicio recibe a continuación los mensajes enviados a la cola dentro del ámbito de la transacción definido por el servicio. Sin el procesamiento por lotes, esto produce 2500 transacciones para cada invocación de la operación del servicio. Esto afecta el rendimiento del sistema. Dado que dos administradores de recursos están implicados, la cola de MSMQ y la base de datos `Orders`- cada transacción de este tipo es una transacción de DTC. Optimizamos esto utilizando un número mucho menor de transacciones asegurando que un lote de mensajes e invocaciones de operación de servicio pasan en una transacción única.  
   
  Utilizamos la característica por lotes mediante:  
   
@@ -136,9 +138,9 @@ Este ejemplo muestra cómo procesar por lotes transacciones leídas mediante Mes
   
  En este ejemplo, mostramos ganancias en el rendimiento reduciendo el número de transacciones asegurando que 100 operaciones del servicio se invocan en una transacción única antes de confirmar la transacción.  
   
- El comportamiento del servicio define un comportamiento de la operación con `TransactionScopeRequired` definido en `true`.  Esto garantiza que los administradores de recursos a los que el método tiene acceso utilizan el mismo ámbito de la transacción usado para recuperar el mensaje de la cola.  En este ejemplo, utilizamos una base de datos básica para almacenar la información del pedido de compra contenida en el mensaje.  El ámbito de la transacción también garantiza que si el método produce una excepción, el mensaje se devuelva a la cola.  Sin establecer este comportamiento de operación, un canal en cola crea una transacción para leer el mensaje de la cola y lo confirma automáticamente antes de la expedición de tal manera que si se produce un error en la operación, el mensaje se pierde.  El escenario más común es que las operaciones de servicio se inscriban en la transacción que se utiliza para leer el mensaje de la cola, tal y como se muestra en el código siguiente.  
+ El comportamiento del servicio define un comportamiento de la operación con `TransactionScopeRequired` definido en `true`. Esto garantiza que los administradores de recursos a los que el método tiene acceso utilizan el mismo ámbito de la transacción usado para recuperar el mensaje de la cola. En este ejemplo, utilizamos una base de datos básica para almacenar la información del pedido de compra contenida en el mensaje. El ámbito de la transacción también garantiza que si el método produce una excepción, el mensaje se devuelva a la cola. Sin establecer este comportamiento de operación, un canal en cola crea una transacción para leer el mensaje de la cola y lo confirma automáticamente antes de la expedición de tal manera que si se produce un error en la operación, el mensaje se pierde. El escenario más común es que las operaciones de servicio se inscriban en la transacción que se utiliza para leer el mensaje de la cola, tal y como se muestra en el código siguiente.  
   
- Observe que `ReleaseServiceInstanceOnTransactionComplete` está establecido en `false`.  Éste es un requisito importante para el procesamiento por lotes.  La propiedad `ReleaseServiceInstanceOnTransactionComplete` en `ServiceBehaviorAttribute` indica qué hacer con la instancia del servicio una vez la transacción se completa.  De forma predeterminada, la instancia del servicio se lanza al completar la transacción.  El aspecto básico del procesamiento por lotes es el uso de una transacción única para leer y enviar muchos mensajes en la cola.  Por consiguiente, al lanzar la instancia del servicio, se acaba completando la transacción prematuramente, lo que niega el mismo uso del procesamiento por lotes.  Si esta propiedad está establecida en `true` y el comportamiento del procesamiento por lotes con transacciones se agrega al extremo, el comportamiento de la validación por lotes produce una excepción.  
+ Observe que `ReleaseServiceInstanceOnTransactionComplete` está establecido en `false`. Éste es un requisito importante para el procesamiento por lotes. La propiedad `ReleaseServiceInstanceOnTransactionComplete` en `ServiceBehaviorAttribute` indica qué hacer con la instancia del servicio una vez la transacción se completa. De forma predeterminada, la instancia del servicio se lanza al completar la transacción. El aspecto básico del procesamiento por lotes es el uso de una transacción única para leer y enviar muchos mensajes en la cola. Por consiguiente, al lanzar la instancia del servicio, se acaba completando la transacción prematuramente, lo que niega el mismo uso del procesamiento por lotes. Si esta propiedad está establecida en `true` y el comportamiento del procesamiento por lotes con transacciones se agrega al extremo, el comportamiento de la validación por lotes produce una excepción.  
   
 ```  
 // Service class that implements the service contract.  
@@ -157,10 +159,9 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-  
 ```  
   
- La clase `Orders` encapsula el procesamiento de la orden.  En el ejemplo, actualiza la base de datos con información del pedido de compra.  
+ La clase `Orders` encapsula el procesamiento de la orden. En el ejemplo, actualiza la base de datos con información del pedido de compra.  
   
 ```  
 // Order Processing Logic  
@@ -236,7 +237,7 @@ public class Orders
   
  El comportamiento del procesamiento por lotes y su configuración se especifican en la configuración de la aplicación del servicio.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -281,15 +282,15 @@ public class Orders
 ```  
   
 > [!NOTE]
->  El tamaño del lote es una pista para el sistema.  Por ejemplo, si especifica un tamaño del lote de 20, entonces se leerían y se enviarían 20 mensajes utilizando una transacción única y, a continuación, se confirmaría la transacción.  Pero hay casos donde la transacción puede confirmar el lote antes del tamaño del lote se alcanza.  
+>  El tamaño del lote es una pista para el sistema. Por ejemplo, si especifica un tamaño del lote de 20, entonces se leerían y se enviarían 20 mensajes utilizando una transacción única y, a continuación, se confirmaría la transacción. Pero hay casos donde la transacción puede confirmar el lote antes del tamaño del lote se alcanza.  
 >   
->  Se asocia a cada transacción un tiempo de espera, que se inicia una vez se crea la transacción.  Cuando este tiempo de espera expira se anula la transacción.  Es posible que este tiempo de espera incluso expire antes de que se alcance el tamaño del lote.  Para evitar tener que trabajar de nuevo sobre el lote debido a la interrupción, `TransactedBatchingBehavior` comprueba para ver cuánto tiempo queda en la transacción.  Si se agota el 80% del tiempo de espera de la transacción, entonces se confirma la transacción.  
+>  Se asocia a cada transacción un tiempo de espera, que se inicia una vez se crea la transacción. Cuando este tiempo de espera expira se anula la transacción. Es posible que este tiempo de espera incluso expire antes de que se alcance el tamaño del lote. Para evitar tener que trabajar de nuevo sobre el lote debido a la interrupción, `TransactedBatchingBehavior` comprueba para ver cuánto tiempo queda en la transacción. Si se agota el 80% del tiempo de espera de la transacción, entonces se confirma la transacción.  
 >   
 >  Si no hay ningún mensaje más en la cola, en lugar de esperar a que se alcance el tamaño del lote <xref:System.ServiceModel.Description.TransactedBatchingBehavior> confirma la transacción.  
 >   
->  La opción del tamaño del lote depende de su aplicación.  Si el tamaño del lote es demasiado pequeño, puede no obtener el rendimiento deseado.  Por otro lado si el tamaño del lote es demasiado grande, puede deteriorar el rendimiento.  Por ejemplo, su transacción podría durar mucho más tiempo y realizar bloqueos en su base de datos o su transacción se podría bloquear, lo que podría hacer que el lote se revierta y rehacer el trabajo.  
+>  La opción del tamaño del lote depende de su aplicación. Si el tamaño del lote es demasiado pequeño, puede no obtener el rendimiento deseado. Por otro lado si el tamaño del lote es demasiado grande, puede deteriorar el rendimiento. Por ejemplo, su transacción podría durar mucho más tiempo y realizar bloqueos en su base de datos o su transacción se podría bloquear, lo que podría hacer que el lote se revierta y rehacer el trabajo.  
   
- El cliente crea un ámbito de transacción.  La comunicación con la cola tiene lugar dentro del ámbito de la transacción, provocando que se trate como una unidad atómica donde se envían todos los mensajes a la cola o no se envía ninguno.  La transacción se confirma llamando a <xref:System.Transactions.TransactionScope.Complete%2A> en el ámbito de la transacción.  
+ El cliente crea un ámbito de transacción. La comunicación con la cola tiene lugar dentro del ámbito de la transacción, provocando que se trate como una unidad atómica donde se envían todos los mensajes a la cola o no se envía ninguno. La transacción se confirma llamando a <xref:System.Transactions.TransactionScope.Complete%2A> en el ámbito de la transacción.  
   
 ```  
 //Client implementation code.  
@@ -340,7 +341,7 @@ class Client
 }  
 ```  
   
- Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio.  Puede ver los mensajes recibidos por el servicio desde el cliente.  Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.  Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente.  Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.  Puede observar un gran resultado cuando los mensajes se leen en un lote y se procesan.  
+ Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Puede ver los mensajes recibidos por el servicio desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente. Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes. Puede observar un gran resultado cuando los mensajes se leen en un lote y se procesan.  
   
 ```  
 The service is ready.  
@@ -375,12 +376,12 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 ```  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

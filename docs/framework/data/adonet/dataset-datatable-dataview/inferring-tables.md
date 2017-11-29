@@ -1,23 +1,26 @@
 ---
-title: "Deducir tablas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Inferir tablas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ae6f7827b7206544ff7547cc04f44b7cda34bef8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Deducir tablas
-Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML, ADO.NET determina en primer lugar qué elementos XML representan tablas.  Las siguientes estructuras XML darán como resultado una tabla para el esquema de **DataSet**:  
+# <a name="inferring-tables"></a>Inferir tablas
+Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML, ADO.NET determina en primer lugar qué elementos XML representan tablas. Las siguientes estructuras XML como resultado una tabla para la **conjunto de datos** esquema:  
   
 -   Elementos con atributos  
   
@@ -25,10 +28,10 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
 -   Elementos que se repiten  
   
-## Elementos con atributos  
- Los elementos para los que se han especificado atributos se deducen como tablas.  Por ejemplo, tomemos el siguiente código XML:  
+## <a name="elements-with-attributes"></a>Elementos con atributos  
+ Los elementos para los que se han especificado atributos se deducen como tablas. Por ejemplo, tomemos el siguiente código XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1"/>  
   <Element1 attr1="value2">Text1</Element1>  
@@ -37,19 +40,19 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "Element1".  
   
- **DataSet:** DocumentElement  
+ **Conjunto de datos:** DocumentElement  
   
  **Tabla:** Element1  
   
-|attr1|Element1\_Text|  
+|attr1|Element1_Text|  
 |-----------|--------------------|  
 |value1||  
 |value2|Text1|  
   
-## Elementos con elementos secundarios  
- Los elementos que tienen elementos secundarios se deducen como tablas.  Por ejemplo, tomemos el siguiente código XML:  
+## <a name="elements-with-child-elements"></a>Elementos con elementos secundarios  
+ Los elementos que tienen elementos secundarios se deducen como tablas. Por ejemplo, tomemos el siguiente código XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1>Text1</ChildElement1>  
@@ -59,7 +62,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "Element1".  
   
- **DataSet:** DocumentElement  
+ **Conjunto de datos:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -67,9 +70,9 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
 |-------------------|  
 |Text1|  
   
- El elemento de documento, o raíz, se deduce como una tabla si tiene atributos o elementos secundarios que se deducen como columnas.  Si el elemento de documento no tiene atributos y ningún elemento secundario que se deduzca como una columna, el elemento se deduce como un **DataSet**.  Por ejemplo, tomemos el siguiente código XML:  
+ El elemento de documento, o raíz, se deduce como una tabla si tiene atributos o elementos secundarios que se deducen como columnas. Si el elemento de documento tiene ningún atributo y ningún elemento secundario que se deducen como columnas, el elemento se deduce como una **conjunto de datos**. Por ejemplo, tomemos el siguiente código XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element2>Text2</Element2>  
@@ -78,7 +81,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "DocumentElement".  
   
- **DataSet:** NewDataSet  
+ **Conjunto de datos:** NewDataSet  
   
  **Tabla:** DocumentElement  
   
@@ -88,15 +91,15 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  Por otra parte, considere el siguiente código XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1" attr2="value2"/>  
 </DocumentElement>  
 ```  
   
- El proceso de inferencia produce un **DataSet** denominado "DocumentElement" que contiene una tabla denominada "Element1”.  
+ El proceso de inferencia produce una **conjunto de datos** denominado "DocumentElement" que contiene una tabla denominada "Element1".  
   
- **DataSet:** DocumentElement  
+ **Conjunto de datos:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -104,10 +107,10 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
 |-----------|-----------|  
 |value1|value2|  
   
-## Elementos que se repiten  
- Los elementos que se repiten se deducen como una única tabla.  Por ejemplo, tomemos el siguiente código XML:  
+## <a name="repeating-elements"></a>Elementos que se repiten  
+ Los elementos que se repiten se deducen como una única tabla. Por ejemplo, tomemos el siguiente código XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element1>Text2</Element1>  
@@ -116,19 +119,19 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "Element1".  
   
- **DataSet:** DocumentElement  
+ **Conjunto de datos:** DocumentElement  
   
  **Tabla:** Element1  
   
-|Element1\_Text|  
+|Element1_Text|  
 |--------------------|  
 |Text1|  
 |Text2|  
   
-## Vea también  
- [Deducir la estructura relacional de DataSet de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Cargar DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Utilizar XML en un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Deducir la estructura relacional de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Cargar un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

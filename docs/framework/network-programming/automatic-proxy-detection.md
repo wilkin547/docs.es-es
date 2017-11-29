@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - automatic proxy detections
 - Web Proxy Auto-Discovery
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f0c1a0d462768229c730f06a6514d040a3e5c1c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8eec6ff84978cdbd31dd4be307d0eb9560edde19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="automatic-proxy-detection"></a>Detección automática de proxy
 La detección automática de proxy es un proceso por el que el sistema identifica un servidor proxy web que se usa para enviar solicitudes en nombre del cliente. Esta característica también se conoce como detección automática de proxy web (WPAD). Cuando la detección automática de proxy está habilitada, el sistema intenta localizar un script de configuración de proxy responsable de devolver el conjunto de servidores proxy que se puede usar para la solicitud. Si se localiza el script de configuración de proxy, se descarga, se compila y se ejecuta en el equipo local cuando se obtiene información del proxy, el flujo de la solicitud o la respuesta de una solicitud que usa una instancia <xref:System.Net.WebProxy>.  
@@ -80,7 +77,6 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  Las solicitudes que no tienen proxy usan el proxy predeterminado del dominio de aplicación, que está disponible en la propiedad <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.WebProxy>   
- <xref:System.Net.WebRequest>   
+ <xref:System.Net.WebProxy>  
+ <xref:System.Net.WebRequest>  
  [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
-

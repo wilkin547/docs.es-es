@@ -4,16 +4,15 @@ ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 82349611fe127da46bed8998ac883c10c5164cd3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-concepts"></a>Conceptos de serialización
 ¿Por qué desearía utilizar la serialización? Las dos razones más importantes son conservar así el estado de un objeto a los medios de almacenamiento, de manera que una copia exacta se puede recrear en una copia intermedia posterior y para enviar por valor el objeto de un dominio de aplicación a otro. Por ejemplo, la serialización se utiliza para guardar el estado de sesión en ASP.NET y copiar los objetos en el Portapapeles en Windows Forms. La comunicación remota se utiliza también para pasar por valor los objetos de un dominio de aplicación a otro.
@@ -41,4 +40,3 @@ Cuando un objeto deriva de `MarshalByRefObject`, se pasa una referencia al objet
   
  [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  Describe el mecanismo de la serialización XML y SOAP que está incluido con Common Language Runtime.
-

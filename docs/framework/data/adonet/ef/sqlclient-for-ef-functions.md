@@ -1,34 +1,33 @@
 ---
-title: "SqlClient para las funciones de Entity Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: SqlClient para las funciones de Entity Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 08526aeebd01196c064154a35df267b8040df796
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# SqlClient para las funciones de Entity Framework
-El Proveedor de datos .NET Framework para SQL Server \(SqlClient\) para el Entity Framework proporciona un conjunto de funciones que permiten realizar cálculos de agregación y matemáticos, así como funciones que efectúan operaciones `System.DateTime` y `string`.  Estas funciones están en el espacio de nombres `SQLServer`.  
+# <a name="sqlclient-for-entity-framework-functions"></a>SqlClient para las funciones de Entity Framework
+El Proveedor de datos .NET Framework para SQL Server (SqlClient) para el Entity Framework proporciona un conjunto de funciones que permiten realizar cálculos de agregación y matemáticos, así como funciones que efectúan operaciones `System.DateTime` y `string`. Estas funciones están en el espacio de nombres `SQLServer`.  
   
- Para obtener una lista de las funciones que deberían funcionar con cualquier proveedor, vea [Funciones canónicas](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+ Para obtener una lista de funciones que deberían funcionar con cualquier proveedor, consulte [funciones canónicas](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
   
- Para obtener más información acerca de cómo se asignan las funciones canónicas a SQL Server, vea [Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md).  
+ Para obtener información acerca de cómo canónico se asignan las funciones a las funciones de SQL Server, vea [modelo Conceptual canónico a la asignación de funciones de SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md).  
   
-## En esta sección  
- [Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Modelo conceptual canónico para la asignación de funciones de SQL Server](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
   
  [Funciones de agregado](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
@@ -40,6 +39,6 @@ El Proveedor de datos .NET Framework para SQL Server \(SqlClient\) para el Entit
   
  [Funciones del sistema](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
-## Vea también  
- [Referencia de Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [Información general de Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [Información general sobre de Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

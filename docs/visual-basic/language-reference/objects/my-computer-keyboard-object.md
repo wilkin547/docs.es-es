@@ -1,37 +1,35 @@
 ---
-title: "My.Computer.Keyboard (Objeto) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.Keyboard (objeto)"
+title: My.Computer.Keyboard (Objeto)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 56fd59d0048a680bdd476b05144dfdb66f641287
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# My.Computer.Keyboard (Objeto)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Proporciona las propiedades para obtener acceso al estado actual del teclado, como las teclas actualmente presionadas, y proporciona un método para enviar la información de que se han presionado teclas a la ventana activa.  
+# <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard (Objeto)
+Proporciona propiedades para obtener acceso al estado actual del teclado, como las teclas que se han presionado, y proporciona un método para enviar pulsaciones de teclas a la ventana activa.  
   
-## Comentarios  
- Para obtener información sobre los métodos y las propiedades del objeto de `My.Computer.Keyword` , vea <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
+## <a name="remarks"></a>Comentarios  
+ Para obtener información acerca de los métodos y propiedades de la `My.Computer.Keyword` de objetos, consulte <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
   
- Para obtener más información, vea [Acceso al teclado](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
+ Para más información, consulte [Acceso al teclado](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
-## Requisitos  
- **Espacio de nombres:** <xref:Microsoft.VisualBasic.Devices>  
+## <a name="requirements"></a>Requisitos  
+ **Namespace:**<xref:Microsoft.VisualBasic.Devices>  
   
- **Clase:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
+ **Clase:**<xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Ensamblado:** biblioteca en tiempo de ejecución de Visual Basic \(en Microsoft.VisualBasic.dll\)  
+ **Ensamblado:** biblioteca de tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## Vea también  
- [My.Computer \(Objeto\)](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Vea también  
+ [My.Computer (objeto)](../../../visual-basic/language-reference/objects/my-computer-object.md)

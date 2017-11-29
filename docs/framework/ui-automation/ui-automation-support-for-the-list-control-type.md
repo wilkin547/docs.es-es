@@ -1,47 +1,50 @@
 ---
-title: "UI Automation Support for the List Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, List"
-  - "List control type"
-  - "UI Automation, List control type"
+title: Compatibilidad de UI Automation para el tipo de control List
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, List
+- List control type
+- UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-caps.latest.revision: 20
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 63accfc3401bbfdd533f0fbbe8c17471182803cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the List Control Type
+# <a name="ui-automation-support-for-the-list-control-type"></a>Compatibilidad de UI Automation para el tipo de control List
 > [!NOTE]
 >  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] con el tipo de control List. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un tipo de control es un conjunto de condiciones que debe cumplir un control para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>. Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], los patrones de control y los valores de propiedad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] con el tipo de control List. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un tipo de control es un conjunto de condiciones que debe cumplir un control para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , los patrones de control y los valores de propiedad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
  El tipo de control List ofrece una manera de organizar uno o varios grupos planos de elementos y permite al usuario seleccionar uno o varios de esos elementos. El tipo de control List tiene una restricción flexible respecto a los tipos de elementos secundarios que puede contener. Esto permite que los proveedores de Automatización de la interfaz de usuario admitan un elemento conocido para los contenedores de selección.  
   
- Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de las siguientes secciones se aplican a todos los controles que implementan el tipo de control List, ya sea [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]. Los controles de contenedor de List son un ejemplo de controles que implementan el tipo de control List.  
+ Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de las siguientes secciones se aplican a todos los controles que implementan el tipo de control List, ya sea [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]. Los controles de contenedor de List son un ejemplo de controles que implementan el tipo de control List.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## Estructura de árbol de Automatización de la interfaz de usuario necesaria  
- En la tabla siguiente se describen las dos vistas del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenecen a los controles de lista y se describe lo que puede incluirse en cada vista. La vista de control solo contiene elementos que son controles y la vista de contenido quita información redundante del árbol. Por ejemplo, un control de texto utilizado para etiquetar un cuadro combinado se expondrá como el elemento `ComboBox NameProperty`. Como ya se expone el control de texto de esta manera a través de la vista de control, no es necesario que se exponga dos veces; por lo tanto, se quita de la vista de contenido. Para más información sobre el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  
+ En la tabla siguiente se describen las dos vistas del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenecen a los controles de lista y se describe lo que puede incluirse en cada vista. La vista de control solo contiene elementos que son controles y la vista de contenido quita información redundante del árbol. Por ejemplo, un control de texto utilizado para etiquetar un cuadro combinado se expondrá como el elemento `ComboBox NameProperty`. Como ya se expone el control de texto de esta manera a través de la vista de control, no es necesario que se exponga dos veces; por lo tanto, se quita de la vista de contenido. Para más información sobre el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
 |Vista de control|Vista de contenido|  
-|----------------------|------------------------|  
+|------------------|------------------|  
 |Contiene los elementos que corresponden a los controles.|Quita la información redundante del árbol para que las tecnologías de asistencia trabajen con el conjunto más pequeño de información significativa para el usuario final.|  
-|Lista<br /><br /> -   DataItem \(0 o más\)<br />-   ListItem \(0 o más\)<br />-   Group \(0 o más\)<br />-   ScrollBar \(0, 1 o 2\)|Lista<br /><br /> -   DataItem \(0 o más\)<br />-   ListItem \(0 o más\)<br />-   Group \(0 o más\)|  
+|Lista<br /><br /> -DataItem (0 o más)<br />-ListItem (0 o más)<br />-Group (0 o más)<br />-ScrollBar (0, 1 o 2)|Lista<br /><br /> -DataItem (0 o más)<br />-ListItem (0 o más)<br />-Group (0 o más)|  
   
- La vista de control de un control que implementa el tipo de control List \(por ejemplo, un control de lista\) consta de:  
+ La vista de control de un control que implementa el tipo de control List (por ejemplo, un control de lista) consta de:  
   
--   Cero o más elementos dentro del control de lista \(los elementos pueden basarse en los tipos de control List Item o Data Item\)  
+-   Cero o más elementos dentro del control de lista (los elementos pueden basarse en los tipos de control List Item o Data Item)  
   
 -   Cero o más controles de grupo dentro de un control de lista  
   
@@ -49,41 +52,41 @@ caps.handback.revision: 20
   
 -  
   
- La vista de contenido de un control que implementa el tipo de control List \(por ejemplo, un control de lista\) consta de:  
+ La vista de contenido de un control que implementa el tipo de control List (por ejemplo, un control de lista) consta de:  
   
--   Cero o más elementos dentro del control de lista \(los elementos pueden basarse en los tipos de control List Item o Data Item\)  
+-   Cero o más elementos dentro del control de lista (los elementos pueden basarse en los tipos de control List Item o Data Item)  
   
 -   Cero o más grupos dentro del control de lista  
   
- Un control de lista no debe disponer de elementos que tengan una relación jerárquica que no sea estar agrupados. Si los elementos tienen elementos secundarios en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], el contenedor de lista debe basarse en el tipo de control Tree.  
+ Un control de lista no debe disponer de elementos que tengan una relación jerárquica que no sea estar agrupados. Si los elementos tienen elementos secundarios en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , el contenedor de lista debe basarse en el tipo de control Tree.  
   
- Los elementos seleccionables dentro del control de lista estarán disponibles en los descendientes del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del control de lista. Todos los elementos dentro del control de lista deben pertenecer al mismo grupo de selección. Los elementos seleccionables de la lista se deben exponer como tipos de control ListItem \(en lugar de DataItem\).  
+ Los elementos seleccionables dentro del control de lista estarán disponibles en los descendientes del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del control de lista. Todos los elementos dentro del control de lista deben pertenecer al mismo grupo de selección. Los elementos seleccionables de la lista se deben exponer como tipos de control ListItem (en lugar de DataItem).  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## Propiedades de Automatización de la interfaz de usuario necesarias  
- En la tabla siguiente se muestran las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que tienen valor o una definición especialmente relevante para los controles de lista. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vea [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
+ En la tabla siguiente se muestran las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuyo valor o definición es especialmente relevante para los controles de lista. Para obtener más información sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propiedades, consulte [propiedades de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|Notas|  
-|-------------------------------------------------------------------------------------|-----------|-----------|  
+|Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Valor|Notas|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vea las notas.|El valor de esta propiedad debe ser único en todos los controles de una aplicación.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vea las notas.|El rectángulo exterior que contiene el control completo.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Vea las notas.|Si el control de lista tiene un punto interactivo \(un punto en el que puede hacer clic para que la lista reciba el foco\), dicho punto se debe exponer a través de esta propiedad.<br /><br /> Si el valor de la propiedad `IsOffScreen` es true, se generará la excepción <xref:System.Windows.Automation.NoClickablePointException>.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vea las notas.|Si el control puede recibir el foco del teclado, debe admitir esta propiedad.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Vea las notas.|Si el control de lista tiene un punto interactivo (un punto en el que puede hacer clic para que la lista reciba el foco), dicho punto se debe exponer a través de esta propiedad.<br /><br /> Si el valor de la `IsOffScreen` propiedad es true, el <xref:System.Windows.Automation.NoClickablePointException> se generará.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vea las notas.|Si el control puede recibir el enfoque del teclado, debe admitir esta propiedad.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vea las notas.|El valor de propiedad Name de un control de lista debe indicar la categoría de opciones de la que se solicita que el usuario seleccione. Esta propiedad suele recibir su nombre de una etiqueta de texto estático. Si no hay ninguna etiqueta de texto estático, el desarrollador de aplicaciones debe exponer un valor para la propiedad Name.<br /><br /> La única vez que esta propiedad no es necesaria para los controles de lista es si el control se utiliza dentro del subárbol de otro control.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Vea las notas.|Si hay una etiqueta de texto estático, esta propiedad debe exponer una referencia a ese control.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Lista|Este valor es el mismo para todos los marcos de trabajo de la interfaz de usuario.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"lista"|Cadena localizada que corresponde al tipo de control List.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|El control de lista siempre se incluye en la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|El control de lista siempre se incluye en la vista de control del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|El control de lista siempre se incluye en la vista de contenido del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|El control de lista siempre se incluye en la vista de control del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Si el contenedor puede aceptar la entrada de teclado, este valor de propiedad debe ser verdadero.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Vea las notas.|El texto de ayuda para los controles de lista debe explicar por qué se solicita al usuario que realice una selección de una lista de opciones. Por ejemplo, "Seleccione un elemento de esta lista para establecer la resolución de pantalla del monitor".|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## Propiedades y patrones de control de Automatización de la interfaz de usuario necesarios  
+## <a name="required-ui-automation-control-patterns-and-properties"></a>Propiedades y patrones de control de Automatización de la interfaz de usuario necesarios  
  En la tabla siguiente se muestran los patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir los controles de lista. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|Patrón de control\/propiedad de patrón|Compatibilidad\/valor|Notas|  
-|--------------------------------------------|---------------------------|-----------|  
+|Patrón de control/propiedad de patrón|Soporte técnico/valor|Notas|  
+|---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Requerido|Todos los controles que admiten el tipo de control List deben implementar `ISelectionProvider` cuando se mantiene el estado de la selección entre los elementos contenidos en el control. Si los elementos dentro del contenedor no son seleccionables, debe utilizarse el tipo de control Group.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Depende|Los controles List no siempre requieren que se seleccione un elemento.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Depende|Los controles List pueden ser contenedores de selección única o múltiple.|  
@@ -93,27 +96,27 @@ caps.handback.revision: 20
 |<xref:System.Windows.Automation.Provider.ITableProvider>|Nunca|`ITableProvider` nunca se admite para el tipo de control List. Si el control debe admitir este patrón de control, el control debe basarse en el tipo de control Data Grid.|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## Eventos de Automatización de la interfaz de usuario necesarios  
+## <a name="required-ui-automation-events"></a>Eventos de Automatización de la interfaz de usuario necesarios  
  En la tabla siguiente se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que todos los controles de edición deben admitir. Para más información sobre los eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|Evento [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Compatibilidad\/valor|Notas|  
-|----------------------------------------------------------------------------------|---------------------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|Ninguna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Depende|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.|Obligatorio|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>.|Obligatorio|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>.|Obligatorio|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty>.|Depende|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>.|Depende|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty>.|Depende|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty>.|Depende|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty>.|Depende|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>.|Depende|Ninguna|  
-|Evento de cambio de propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty>.|Depende|Ninguno|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Requerido|Ninguna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Requerido|Ninguna|  
+|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Soporte técnico/valor|Notas|  
+|---------------------------------------------------------------------------------|--------------------|-----------|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|Ninguno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Depende|Ninguno|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>evento cambiado por propiedad.|Obligatorio|Ninguna|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|Ninguna|  
+|Evento de cambio de propiedad<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|Depende|Ninguno|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Depende|Ninguno|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|Depende|Ninguno|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|Depende|Ninguno|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|Depende|Ninguno|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|Depende|Ninguno|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|Depende|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatorio|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|Ninguna|  
   
-## Vea también  
- <xref:System.Windows.Automation.ControlType.List>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Automation.ControlType.List>  
+ [Información general de tipos del Control de automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Información general sobre la automatización de interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
