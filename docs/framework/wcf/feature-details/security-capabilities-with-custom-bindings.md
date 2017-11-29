@@ -1,63 +1,66 @@
 ---
-title: "Capacidades de seguridad con enlaces personalizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Capacidades de seguridad con enlaces personalizados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-caps.latest.revision: 11
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9d252dca363c952dde44b499363e285d4bb7eb82
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Capacidades de seguridad con enlaces personalizados
-Puede realizar las tareas de seguridad más habituales utilizando uno de los enlaces proporcionados por el sistema.Si necesita más control, sin embargo, puede crear un enlace personalizado con <xref:System.ServiceModel.Channels.SecurityBindingElement>, como se explica en estos temas.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] los enlaces personalizados, vea [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+# <a name="security-capabilities-with-custom-bindings"></a><span data-ttu-id="afd83-102">Capacidades de seguridad con enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="afd83-102">Security Capabilities with Custom Bindings</span></span>
+<span data-ttu-id="afd83-103">Puede realizar las tareas de seguridad más habituales utilizando uno de los enlaces proporcionados por el sistema.</span><span class="sxs-lookup"><span data-stu-id="afd83-103">You can perform most common security tasks by using one of the system-provided bindings.</span></span> <span data-ttu-id="afd83-104">Si necesita más control, sin embargo, puede crear un enlace personalizado con <xref:System.ServiceModel.Channels.SecurityBindingElement>, como se explica en estos temas.</span><span class="sxs-lookup"><span data-stu-id="afd83-104">If you need more control, however, you can create a custom binding with a <xref:System.ServiceModel.Channels.SecurityBindingElement>, as explained in these topics.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="afd83-105">enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="afd83-105"> custom bindings, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## En esta sección  
- [Modos de autenticación de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
- Describe los modos de autenticación que son posibles con un enlace personalizado.  
+## <a name="in-this-section"></a><span data-ttu-id="afd83-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="afd83-106">In This Section</span></span>  
+ [<span data-ttu-id="afd83-107">Modos de autenticación de SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="afd83-107">SecurityBindingElement Authentication Modes</span></span>](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
+ <span data-ttu-id="afd83-108">Describe los modos de autenticación que son posibles con un enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="afd83-108">Describes the authentication modes that are possible with a custom binding.</span></span>  
   
- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- Describe los pasos básicos para crear un enlace personalizado con un elemento de seguridad.  
+ [<span data-ttu-id="afd83-109">Cómo: crear un enlace personalizado mediante SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="afd83-109">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ <span data-ttu-id="afd83-110">Describe los pasos básicos para crear un enlace personalizado con un elemento de seguridad.</span><span class="sxs-lookup"><span data-stu-id="afd83-110">Describes the basic steps for creating a custom binding with a security element.</span></span>  
   
- [Cómo: Crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
- Describe cómo crear un elemento de seguridad para un modo de autenticación especificado.  
+ [<span data-ttu-id="afd83-111">Cómo: crear un SecurityBindingElement para un modo de autenticación especificado</span><span class="sxs-lookup"><span data-stu-id="afd83-111">How to: Create a SecurityBindingElement for a Specified Authentication Mode</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ <span data-ttu-id="afd83-112">Describe cómo crear un elemento de seguridad para un modo de autenticación especificado.</span><span class="sxs-lookup"><span data-stu-id="afd83-112">Describes how to create a security element for a specified authentication mode.</span></span>  
   
- [Cómo deshabilitar sesiones seguras en WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- Describe cómo deshabilitar las sesiones seguras al crear un servicio de federación.  
+ [<span data-ttu-id="afd83-113">Cómo: deshabilitar sesiones seguras en un WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="afd83-113">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ <span data-ttu-id="afd83-114">Describe cómo deshabilitar las sesiones seguras al crear un servicio de federación.</span><span class="sxs-lookup"><span data-stu-id="afd83-114">Describes how to disable secure sessions when creating a federation service.</span></span>  
   
- [Cómo: Habilitar la detección de repetición de mensajes](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
- Describe cómo determinar cuándo se produce un ataque de reproducción.  
+ [<span data-ttu-id="afd83-115">Cómo: habilitar la detección de reproducción de mensaje</span><span class="sxs-lookup"><span data-stu-id="afd83-115">How to: Enable Message Replay Detection</span></span>](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
+ <span data-ttu-id="afd83-116">Describe cómo determinar cuándo se produce un ataque de reproducción.</span><span class="sxs-lookup"><span data-stu-id="afd83-116">Describes how to determine when a replay attack occurs.</span></span>  
   
- [Cómo: Crear una credencial de apoyo](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
- Describe cómo proporcionar una credencial de soporte a un servicio, si el servicio lo requiere.  
+ [<span data-ttu-id="afd83-117">Cómo: crear una credencial de apoyo</span><span class="sxs-lookup"><span data-stu-id="afd83-117">How to: Create a Supporting Credential</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
+ <span data-ttu-id="afd83-118">Describe cómo proporcionar una credencial de soporte a un servicio, si el servicio lo requiere.</span><span class="sxs-lookup"><span data-stu-id="afd83-118">Describes how to supply a supporting credential to a service, if the service requires it.</span></span>  
   
- [Cómo: Establecer una confirmación de firma](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
- Describe los pasos para confirmar las firmas al firmar digitalmente los mensajes.  
+ [<span data-ttu-id="afd83-119">Cómo: configurar una confirmación de firma</span><span class="sxs-lookup"><span data-stu-id="afd83-119">How to: Set Up a Signature Confirmation</span></span>](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
+ <span data-ttu-id="afd83-120">Describe los pasos para confirmar las firmas al firmar digitalmente los mensajes.</span><span class="sxs-lookup"><span data-stu-id="afd83-120">Describes the steps to confirm signatures when digitally signing messages.</span></span>  
   
- [Cómo: Establecer un sesgo de reloj máximo](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
- Describe cómo establecer la diferencia horaria máxima permitida entre un servicio y un cliente.  
+ [<span data-ttu-id="afd83-121">Cómo: conjunto un sesgo de reloj máximo</span><span class="sxs-lookup"><span data-stu-id="afd83-121">How to: Set a Max Clock Skew</span></span>](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
+ <span data-ttu-id="afd83-122">Describe cómo establecer la diferencia horaria máxima permitida entre un servicio y un cliente.</span><span class="sxs-lookup"><span data-stu-id="afd83-122">Describes how to set the maximum allowed time difference between a service and a client.</span></span>  
   
- [Cómo deshabilitar el cifrado de firmas digitales](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
- Describe cómo deshabilitar el cifrado de firmas digitales puede suponer una ventaja de rendimiento.  
+ [<span data-ttu-id="afd83-123">Cómo: deshabilitar el cifrado de firmas digitales</span><span class="sxs-lookup"><span data-stu-id="afd83-123">How to: Disable Encryption of Digital Signatures</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
+ <span data-ttu-id="afd83-124">Describe cómo deshabilitar el cifrado de firmas digitales puede suponer una ventaja de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="afd83-124">Describes how disabling encryption of digital signatures can have a performance benefit.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="afd83-125">Referencia</span><span class="sxs-lookup"><span data-stu-id="afd83-125">Reference</span></span>  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
- [\<seguridad\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
+ [<span data-ttu-id="afd83-126">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="afd83-126">\<security></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
-## Secciones relacionadas  
- [Descripción de los niveles de protección](../../../../docs/framework/wcf/understanding-protection-level.md)  
+## <a name="related-sections"></a><span data-ttu-id="afd83-127">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="afd83-127">Related Sections</span></span>  
+ [<span data-ttu-id="afd83-128">Descripción de los niveles de protección</span><span class="sxs-lookup"><span data-stu-id="afd83-128">Understanding Protection Level</span></span>](../../../../docs/framework/wcf/understanding-protection-level.md)  
   
- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="afd83-129">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="afd83-129">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## Vea también  
- [Enlaces y seguridad](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)   
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="afd83-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="afd83-130">See Also</span></span>  
+ [<span data-ttu-id="afd83-131">Enlaces y seguridad</span><span class="sxs-lookup"><span data-stu-id="afd83-131">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [<span data-ttu-id="afd83-132">Información general sobre seguridad</span><span class="sxs-lookup"><span data-stu-id="afd83-132">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="afd83-133">Enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="afd83-133">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)

@@ -1,48 +1,46 @@
 ---
-title: "La funci&#243;n anidada no tiene una signatura compatible con el delegado &#39;&lt;nombreDeDelegado&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc36532"
-  - "bc36532"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36532"
+title: "Función anidada no tiene una firma que es compatible con el delegado &#39; &lt;nombredelegado&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc36532
+- bc36532
+helpviewer_keywords: BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 60cf15343023110561da3e3fcf202bd00394127a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# La funci&#243;n anidada no tiene una signatura compatible con el delegado &#39;&lt;nombreDeDelegado&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Se ha asignado una expresión lambda a un delegado que tiene una firma incompatible.  Por ejemplo, en el código siguiente, el delegado `Del` tiene dos parámetros enteros.  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a><span data-ttu-id="ab03e-102">Función anidada no tiene una firma que es compatible con el delegado &#39; &lt;nombredelegado&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ab03e-102">Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;</span></span>
+<span data-ttu-id="ab03e-103">Se ha asignado una expresión lambda a un delegado que tiene una firma compatible.</span><span class="sxs-lookup"><span data-stu-id="ab03e-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="ab03e-104">Por ejemplo, en el código siguiente, el delegado `Del` tiene dos parámetros de entero.</span><span class="sxs-lookup"><span data-stu-id="ab03e-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  
   
-```vb#  
+```vb  
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
 ```  
   
- Si una expresión lambda con un argumento se declara como tipo `Del`, se producirá el error:  
+ <span data-ttu-id="ab03e-105">El error se produce si una expresión lambda con un argumento se declara como tipo `Del`:</span><span class="sxs-lookup"><span data-stu-id="ab03e-105">The error is raised if a lambda expression with one argument is declared as type `Del`:</span></span>  
   
-```vb#  
+```vb  
 ' Neither of these is valid.   
 ' Dim lambda1 As Del = Function(n As Integer) n + 1  
 ' Dim lambda2 As Del = Function(n) n + 1  
 ```  
   
- **Id. de error:** BC36532  
+ <span data-ttu-id="ab03e-106">**Id. de error:** BC36532</span><span class="sxs-lookup"><span data-stu-id="ab03e-106">**Error ID:** BC36532</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ab03e-107">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="ab03e-107">To correct this error</span></span>  
   
--   Ajuste la definición de delegado o la expresión lambda asignada para que las firmas sean compatibles.  
+-   <span data-ttu-id="ab03e-108">Ajuste la definición de delegado o la expresión lambda asignada para que las firmas son compatibles.</span><span class="sxs-lookup"><span data-stu-id="ab03e-108">Adjust either the delegate definition or the assigned lambda expression so that the signatures are compatible.</span></span>  
   
-## Vea también  
- [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="ab03e-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="ab03e-109">See Also</span></span>  
+ [<span data-ttu-id="ab03e-110">Conversión de delegado flexible</span><span class="sxs-lookup"><span data-stu-id="ab03e-110">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [<span data-ttu-id="ab03e-111">Expresiones lambda</span><span class="sxs-lookup"><span data-stu-id="ab03e-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

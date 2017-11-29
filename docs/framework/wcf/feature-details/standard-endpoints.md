@@ -1,203 +1,197 @@
 ---
-title: "Extremos est&#225;ndar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "puntos de conexión estándar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 755669b1305060efeb6af592867844b571b67020
+ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/28/2017
 ---
-# Extremos est&#225;ndar
-Los extremos se definen mediante la especificación de una dirección, un enlace y un contrato.Otros parámetros que se pueden establecer en un extremo incluyen la configuración del comportamiento, los encabezados y los URI de escucha.Para ciertos tipos de extremos, estos valores no cambian.Por ejemplo, los extremos de intercambio de metadatos siempre utilizan el contrato <xref:System.ServiceModel.Description.IMetadataExchange>.Otros extremos, como <xref:System.ServiceModel.Web.WebHttpEndpoint>, siempre requieren un comportamiento de extremo especificado.La utilidad de un extremo se puede mejorar teniendo extremos con valores predeterminado para las propiedades de extremo utilizadas normalmente.Los extremos estándar permiten a un desarrollador definir un extremo que tenga los valores predeterminados o en el que una o más propiedades del extremo no cambien.Estos extremos le permiten utilizar un extremo de este tipo sin tener que especificar información de tipo estático.Los extremos estándar se pueden usar para extremos de la aplicación y de la infraestructura.  
+# <a name="standard-endpoints"></a><span data-ttu-id="13a45-102">puntos de conexión estándar</span><span class="sxs-lookup"><span data-stu-id="13a45-102">Standard Endpoints</span></span>
+<span data-ttu-id="13a45-103">Los puntos de conexión se definen mediante la especificación de una dirección, un enlace y un contrato.</span><span class="sxs-lookup"><span data-stu-id="13a45-103">Endpoints are defined by specifying an address, a binding, and a contract.</span></span> <span data-ttu-id="13a45-104">Otros parámetros que se pueden establecer en un extremo incluyen la configuración del comportamiento, los encabezados y los URI de escucha.</span><span class="sxs-lookup"><span data-stu-id="13a45-104">Other parameters that may be set on an endpoint include behavior configuration, headers, and listen URIs.</span></span>  <span data-ttu-id="13a45-105">Para ciertos tipos de extremos, estos valores no cambian.</span><span class="sxs-lookup"><span data-stu-id="13a45-105">For certain types of endpoints these values do not change.</span></span> <span data-ttu-id="13a45-106">Por ejemplo, los extremos de intercambio de metadatos siempre utilizan el contrato <xref:System.ServiceModel.Description.IMetadataExchange>.</span><span class="sxs-lookup"><span data-stu-id="13a45-106">For example, metadata exchange endpoints always use the <xref:System.ServiceModel.Description.IMetadataExchange> contract.</span></span> <span data-ttu-id="13a45-107">Otros extremos, como <xref:System.ServiceModel.Description.WebHttpEndpoint>, siempre requieren un comportamiento de extremo especificado.</span><span class="sxs-lookup"><span data-stu-id="13a45-107">Other endpoints, such as <xref:System.ServiceModel.Description.WebHttpEndpoint> always require a specified endpoint behavior.</span></span> <span data-ttu-id="13a45-108">La utilidad de un extremo se puede mejorar teniendo extremos con valores predeterminado para las propiedades de extremo utilizadas normalmente.</span><span class="sxs-lookup"><span data-stu-id="13a45-108">The usability of an endpoint can be improved by having endpoints with default values for commonly used endpoint properties.</span></span> <span data-ttu-id="13a45-109">Los extremos estándar permiten a un desarrollador definir un extremo que tenga los valores predeterminados o en el que una o más propiedades del extremo no cambien.</span><span class="sxs-lookup"><span data-stu-id="13a45-109">Standard endpoints enable a developer to define an endpoint that has default values or where one or more endpoint’s properties does not change.</span></span>  <span data-ttu-id="13a45-110">Estos extremos le permiten utilizar un extremo de este tipo sin tener que especificar información de tipo estático.</span><span class="sxs-lookup"><span data-stu-id="13a45-110">These endpoints allow you to use such an endpoint without having to specify information of a static nature.</span></span> <span data-ttu-id="13a45-111">Los extremos estándar se pueden usar para extremos de la aplicación y de la infraestructura.</span><span class="sxs-lookup"><span data-stu-id="13a45-111">Standard endpoints can be used for infrastructure and application endpoints.</span></span>  
   
-## Extremos de infraestructura  
- Un servicio puede exponer extremos con algunas de las propiedades no implementadas de forma explícita por el autor del servicio.Por ejemplo, el extremo del intercambio de metadatos expone el contrato <xref:System.ServiceModel.Description.IMetadataExchange> pero, como autor del servicio, no implementa esa interfaz, pues la implementa WCF.Estos extremos de infraestructura tienen valores predeterminados para una o más propiedades de extremo, algunos de los cuales pueden ser inalterables.La propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> del extremo del intercambio de metadatos debe ser <xref:System.ServiceModel.Description.IMetadataExchange>, mientras que el desarrollador puede proporcionar otras propiedades, como el enlace.Los extremos de la infraestructura se identifican estableciendo la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> en `true`.  
+## <a name="infrastructure-endpoints"></a><span data-ttu-id="13a45-112">Extremos de infraestructura</span><span class="sxs-lookup"><span data-stu-id="13a45-112">Infrastructure Endpoints</span></span>  
+ <span data-ttu-id="13a45-113">Un servicio puede exponer extremos con algunas de las propiedades no implementadas de forma explícita por el autor del servicio.</span><span class="sxs-lookup"><span data-stu-id="13a45-113">A service may expose endpoints with some of the properties not explicitly implemented by the service author.</span></span> <span data-ttu-id="13a45-114">Por ejemplo, el extremo del intercambio de metadatos expone el contrato <xref:System.ServiceModel.Description.IMetadataExchange> pero, como autor del servicio, no implementa esa interfaz, pues la implementa WCF.</span><span class="sxs-lookup"><span data-stu-id="13a45-114">For example, the metadata exchange endpoint exposes the <xref:System.ServiceModel.Description.IMetadataExchange> contract but as a service author you do not implement that interface, it is implemented by WCF.</span></span> <span data-ttu-id="13a45-115">Estos extremos de infraestructura tienen valores predeterminados para una o más propiedades de extremo, algunos de los cuales pueden ser inalterables.</span><span class="sxs-lookup"><span data-stu-id="13a45-115">Such infrastructure endpoints have default values for one or more endpoint properties, some of which may be unalterable.</span></span> <span data-ttu-id="13a45-116">La propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> del extremo del intercambio de metadatos debe ser <xref:System.ServiceModel.Description.IMetadataExchange>, mientras que el desarrollador puede proporcionar otras propiedades, como el enlace.</span><span class="sxs-lookup"><span data-stu-id="13a45-116">The <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> property of the metadata exchange endpoint must be <xref:System.ServiceModel.Description.IMetadataExchange>, while other properties like binding can be supplied by the developer.</span></span> <span data-ttu-id="13a45-117">Los extremos de la infraestructura se identifican estableciendo la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> en `true`.</span><span class="sxs-lookup"><span data-stu-id="13a45-117">Infrastructure endpoints are identified by setting the <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> property to `true`.</span></span>  
   
-## Extremos de la aplicación  
- Los desarrolladores de la aplicación pueden definir sus propios extremos estándar que especifican los valores predeterminados para la dirección, el enlace o el contrato.Defina un extremo estándar derivando una clase de <xref:System.ServiceModel.Description.ServiceEndpoint> y estableciendo las propiedades de extremo adecuadas.Puede proporcionar valores predeterminados a propiedades que se pueden cambiar.Otras propiedades tendrán valores estáticos que no podrán cambiar.En el siguiente ejemplo, se muestra cómo implementar un extremo estándar.  
+## <a name="application-endpoints"></a><span data-ttu-id="13a45-118">Extremos de la aplicación</span><span class="sxs-lookup"><span data-stu-id="13a45-118">Application Endpoints</span></span>  
+ <span data-ttu-id="13a45-119">Los desarrolladores de la aplicación pueden definir sus propios extremos estándar que especifican los valores predeterminados para la dirección, el enlace o el contrato.</span><span class="sxs-lookup"><span data-stu-id="13a45-119">Application developers can define their own standard endpoints which specify default values for the address, binding, or contract.</span></span> <span data-ttu-id="13a45-120">Defina un extremo estándar derivando una clase de <xref:System.ServiceModel.Description.ServiceEndpoint> y estableciendo las propiedades de extremo adecuadas.</span><span class="sxs-lookup"><span data-stu-id="13a45-120">You define a standard endpoint by deriving a class from <xref:System.ServiceModel.Description.ServiceEndpoint> and setting the appropriate endpoint properties.</span></span> <span data-ttu-id="13a45-121">Puede proporcionar valores predeterminados a propiedades que se pueden cambiar.</span><span class="sxs-lookup"><span data-stu-id="13a45-121">You can provide default values for properties that can be changed.</span></span> <span data-ttu-id="13a45-122">Otras propiedades tendrán valores estáticos que no podrán cambiar.</span><span class="sxs-lookup"><span data-stu-id="13a45-122">Some other properties will have static values that cannot change.</span></span> <span data-ttu-id="13a45-123">En el siguiente ejemplo, se muestra cómo implementar un extremo estándar.</span><span class="sxs-lookup"><span data-stu-id="13a45-123">The following example shows how to implement a standard endpoint.</span></span>  
   
-```  
-public class CustomEndpoint : ServiceEndpoint  
-    {  
-        public CustomEndpoint()  
-            : this(string.Empty)  
-        {  
-        }  
+```csharp
+public class CustomEndpoint : ServiceEndpoint
+{
+    public CustomEndpoint()
+        : this(string.Empty)
+    { }  
+    
+    public CustomEndpoint(string address)
+        : this(address, ContractDescription.GetContract(typeof(ICalculator)))
+    { }  
+    
+    // Create the custom endpoint with a fixed binding
+    public CustomEndpoint(string address, ContractDescription contract)
+        : base(contract)
+    {
+        this.Binding = new BasicHttpBinding();
+        this.IsSystemEndpoint = false;
+    }
+    
+    // Definition of the additional property of this endpoint
+    public bool Property { get; set; }
+}
+```
   
-        public CustomEndpoint(string address)  
-            : this(address, ContractDescription.GetContract(typeof(ICalculator)))  
-        {  
-        }  
+ <span data-ttu-id="13a45-124">Para utilizar un extremo personalizado definido por el usuario en un archivo de configuración, debe derivar una clase de <xref:System.ServiceModel.Configuration.StandardEndpointElement>, derivar una clase de <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> y registrar el nuevo extremo estándar en la sección de extensiones en app.config o en machine.config.  La clase <xref:System.ServiceModel.Configuration.StandardEndpointElement> proporciona el soporte técnico de configuración para el extremo estándar, tal y como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="13a45-124">To use a user-defined custom endpoint in a configuration file you must derive a class from <xref:System.ServiceModel.Configuration.StandardEndpointElement>, derive a class from <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>, and register the new standard endpoint in the extensions section in app.config or machine.config.  The <xref:System.ServiceModel.Configuration.StandardEndpointElement> provides configuration support for the standard endpoint, as shown in the following example.</span></span>  
   
-        // Create the custom endpoint with a fixed binding  
-        public CustomEndpoint(string address, ContractDescription contract)  
-            : base(contract)  
-        {  
-            this.Binding = new BasicHttpBinding();  
-            this.IsSystemEndpoint = false;  
-        }  
-  
-        // Definition of the additional property of this endpoint  
-        public bool Property  
-        {  
-            get;  
-            set;  
-        }  
-    }  
-```  
-  
- Para utilizar un extremo personalizado definido por el usuario en un archivo de configuración, debe derivar una clase de <xref:System.ServiceModel.Configuration.StandardEndpointElement>, derivar una clase de <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement> y registrar el nuevo extremo estándar en la sección de extensiones en app.config o en machine.config.La clase <xref:System.ServiceModel.Configuration.StandardEndpointElement> proporciona el soporte técnico de configuración para el extremo estándar, tal y como se muestra en el siguiente ejemplo.  
-  
-```  
-public class CustomEndpointElement : StandardEndpointElement  
-    {  
-        // Definition of the additional property for the standard endpoint element  
-        public bool Property  
-        {  
-            get { return (bool)base["property"]; }  
-            set { base["property"] = value; }  
-        }  
-  
-        // The additional property needs to be added to the properties of the standard endpoint element  
-        protected override ConfigurationPropertyCollection Properties  
-        {  
-            get  
-            {  
-                ConfigurationPropertyCollection properties = base.Properties;  
-                properties.Add(new ConfigurationProperty("property", typeof(bool), false, ConfigurationPropertyOptions.None));  
-                return properties;  
-            }  
-        }  
-  
-        // Return the type of this standard endpoint  
-        protected override Type EndpointType  
-        {  
-            get { return typeof(CustomEndpoint); }  
-        }  
-  
-        // Create the custom service endpoint  
-        protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contract)  
-        {  
-            return new CustomEndpoint();  
-        }  
-  
-        // Read the value given to the property in config and save it  
-        protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ServiceEndpointElement serviceEndpointElement)  
-        {  
-            CustomEndpoint customEndpoint = (CustomEndpoint)endpoint;  
-            customEndpoint.Property = this.Property;  
-        }  
-  
-        // Read the value given to the property in config and save it  
-        protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
-        {  
-            CustomEndpoint customEndpoint = (CustomEndpoint)endpoint;  
-            customEndpoint.Property = this.Property;  
-        }  
-  
-        // No validation in this sample  
-        protected override void OnInitializeAndValidate(ServiceEndpointElement serviceEndpointElement)  
-        {  
-        }  
-  
-        // No validation in this sample  
-        protected override void OnInitializeAndValidate(ChannelEndpointElement channelEndpointElement)  
-        {  
-        }  
-    }  
-  
+```csharp
+public class CustomEndpointElement : StandardEndpointElement
+{
+    // Definition of the additional property for the standard endpoint element
+    public bool Property
+    {
+        get { return (bool)base["property"]; }
+        set { base["property"] = value; }
+    }
+
+    // The additional property needs to be added to the properties of the standard endpoint element
+    protected override ConfigurationPropertyCollection Properties
+    {
+        get
+        {
+            ConfigurationPropertyCollection properties = base.Properties;
+            properties.Add(new ConfigurationProperty("property", typeof(bool), false, ConfigurationPropertyOptions.None));
+            return properties;
+        }
+    }
+
+    // Return the type of this standard endpoint
+    protected override Type EndpointType
+    {
+        get { return typeof(CustomEndpoint); }
+    }
+
+    // Create the custom service endpoint
+    protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contract)
+    {
+        return new CustomEndpoint();
+    }
+
+    // Read the value given to the property in config and save it
+    protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ServiceEndpointElement serviceEndpointElement)
+    {
+        CustomEndpoint customEndpoint = (CustomEndpoint)endpoint;
+        customEndpoint.Property = this.Property;
+    }
+
+    // Read the value given to the property in config and save it
+    protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)
+    {
+        CustomEndpoint customEndpoint = (CustomEndpoint)endpoint;
+        customEndpoint.Property = this.Property;
+    }
+
+    // No validation in this sample
+    protected override void OnInitializeAndValidate(ServiceEndpointElement serviceEndpointElement)
+    {
+    }
+
+    // No validation in this sample
+    protected override void OnInitializeAndValidate(ChannelEndpointElement channelEndpointElement)
+    {
+    }
+}
 ```  
   
- La clase <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement> proporciona el tipo de apoyo para la recopilación que aparece en la sección \<`standardEndpoints`\> de la configuración correspondiente al extremo estándar.En el siguiente ejemplo, se muestra cómo implementar esta clase.  
+ <span data-ttu-id="13a45-125">El <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> proporciona el tipo de respaldo para la colección que aparece bajo el <`standardEndpoints`> sección en la configuración del punto de conexión estándar.</span><span class="sxs-lookup"><span data-stu-id="13a45-125">The <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> provides the backing type for the collection that appears under the <`standardEndpoints`> section in the configuration for the standard endpoint.</span></span>  <span data-ttu-id="13a45-126">En el siguiente ejemplo, se muestra cómo implementar esta clase.</span><span class="sxs-lookup"><span data-stu-id="13a45-126">The following example shows how to implement this class.</span></span>  
   
-```  
-public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>  
-    {  
-         // ...  
-  
-    }  
-```  
-  
- En el siguiente ejemplo, se muestra cómo registrar un extremo estándar en la sección de extensiones.  
-  
-```  
+```csharp
+public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
+{
+    // ...
+}
+```
+
+<span data-ttu-id="13a45-127">En el siguiente ejemplo, se muestra cómo registrar un extremo estándar en la sección de extensiones.</span><span class="sxs-lookup"><span data-stu-id="13a45-127">The following example shows how to register a standard endpoint in the extensions section.</span></span>
+
+```xml  
 <extensions>  
       <standardEndpointExtensions>  
         <add  
           name="customStandardEndpoint"  
           type="CustomEndpointCollectionElement, Example.dll,  
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
-  
 ```  
   
-## Configurar un extremo estándar  
- Los extremos estándar se pueden agregar en código o en configuración.Para agregar un extremo estándar en código, basta con crear instancias del tipo de extremo estándar adecuado y agregarlo al host del servicio, tal y como se muestra en el siguiente ejemplo:  
+## <a name="configuring-a-standard-endpoint"></a><span data-ttu-id="13a45-128">Configurar un extremo estándar</span><span class="sxs-lookup"><span data-stu-id="13a45-128">Configuring a Standard Endpoint</span></span>  
+ <span data-ttu-id="13a45-129">Los extremos estándar se pueden agregar en código o en configuración.</span><span class="sxs-lookup"><span data-stu-id="13a45-129">Standard endpoints can be added in code or in configuration.</span></span>  <span data-ttu-id="13a45-130">Para agregar un extremo estándar en código, basta con crear instancias del tipo de extremo estándar adecuado y agregarlo al host del servicio, tal y como se muestra en el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="13a45-130">To add a standard endpoint in code simply instantiate the appropriate standard endpoint type and add it to the service host as shown in the following example:</span></span>  
   
 ```csharp  
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- Para agregar un extremo estándar en configuración, agregue un elemento \<`endpoint`\> al elemento \<`service`\> y cualquier configuración necesitada en el elemento \<`standardEndpoints`\>.En el siguiente ejemplo, se muestra cómo agregar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, uno de los extremos estándar que se distribuye con [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ <span data-ttu-id="13a45-131">Para agregar un punto de conexión estándar en la configuración, agregue un <`endpoint`> elemento a la <`service`> elemento y cualquier necesita opciones de configuración en el <`standardEndpoints`> elemento.</span><span class="sxs-lookup"><span data-stu-id="13a45-131">To add a standard endpoint in configuration, add an <`endpoint`> element to the <`service`> element and any needed configuration settings in the <`standardEndpoints`> element.</span></span> <span data-ttu-id="13a45-132">En el siguiente ejemplo, se muestra cómo agregar <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, uno de los extremos estándar que se distribuye con [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="13a45-132">The following example shows how to add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, one of the standard endpoints that ships with [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span>  
   
 ```xml  
 <services>  
   <service>  
-    <endpoint isSystemEndpoint=”true” kind=”udpDiscoveryEndpoint” />  
+    <endpoint isSystemEndpoint="true" kind="udpDiscoveryEndpoint" />  
   </service>  
 </services>  
 <standardEndpoints>    
   <udpDiscoveryEndpoint>  
-     <standardEndpoint multicastAddress="soap.udp://239.255.255.250:3702" />   
-  </udpDiscoveryEndpoint>  
-</ standardEndpoints >  
+     <standardEndpoint multicastAddress="soap.udp://239.255.255.250:3702" />
+  </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
- El tipo de extremo estándar se especifica mediante el atributo de clase en el elemento \<`endpoint`\>.El extremo se configura dentro del elemento \<`standardEndpoints`\>.En el ejemplo anterior, se agrega y se configura un extremo de <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.El elemento \<`udpDiscoveryEndpoint`\> contiene un \<`standardEndpoint`\> que establece la propiedad <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> de <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+ <span data-ttu-id="13a45-133">El tipo de punto de conexión estándar se especifica utilizando el atributo de clase en el <`endpoint`> elemento.</span><span class="sxs-lookup"><span data-stu-id="13a45-133">The type of standard endpoint is specified using the kind attribute in the <`endpoint`> element.</span></span> <span data-ttu-id="13a45-134">El extremo se configura en el <`standardEndpoints`> elemento.</span><span class="sxs-lookup"><span data-stu-id="13a45-134">The endpoint is configured within the <`standardEndpoints`> element.</span></span> <span data-ttu-id="13a45-135">En el ejemplo anterior, se agrega y se configura un extremo de <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="13a45-135">In the example above, a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint is added and configured.</span></span> <span data-ttu-id="13a45-136">El <`udpDiscoveryEndpoint`> elemento contiene un <`standardEndpoint`> que establece el <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> propiedad de la <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="13a45-136">The <`udpDiscoveryEndpoint`> element contains a <`standardEndpoint`> that sets the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> property of the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
   
-## Extremos estándar distribuidos con .NET Framework  
- En la siguiente tabla, se muestra una lista de los extremos estándar distribuidos con [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+## <a name="standard-endpoints-shipped-with-the-net-framework"></a><span data-ttu-id="13a45-137">Extremos estándar distribuidos con .NET Framework</span><span class="sxs-lookup"><span data-stu-id="13a45-137">Standard Endpoints Shipped with the .NET Framework</span></span>  
+ <span data-ttu-id="13a45-138">En la siguiente tabla, se muestra una lista de los extremos estándar distribuidos con [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="13a45-138">The following table lists the standard endpoints shipped with [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span>  
   
  `Mex Endpoint`  
- Un extremo estándar que se usa para exponer metadatos del servicio.  
+ <span data-ttu-id="13a45-139">Un punto de conexión estándar que se usa para exponer metadatos del servicio.</span><span class="sxs-lookup"><span data-stu-id="13a45-139">A standard endpoint that is used to expose service metadata.</span></span>  
   
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
- Un extremo estándar que usan los servicios para enviar mensajes del anuncio.  
+ <span data-ttu-id="13a45-140">Un extremo estándar que usan los servicios para enviar mensajes del anuncio.</span><span class="sxs-lookup"><span data-stu-id="13a45-140">A standard endpoint that is used by services to send announcement messages.</span></span>  
   
  <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
- Un extremo estándar que usan los servicios para enviar mensajes de la detección.  
+ <span data-ttu-id="13a45-141">Un punto de conexión estándar que usan los servicios para enviar mensajes de la detección.</span><span class="sxs-lookup"><span data-stu-id="13a45-141">A standard endpoint that is used by services to send discovery messages.</span></span>  
   
  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
- Un extremo estándar que se pre\-configura para las operaciones de detección en un enlace de multidifusión de UDP.  
+ <span data-ttu-id="13a45-142">Un punto de conexión estándar que se pre-configura para las operaciones de detección en un enlace de multidifusión de UDP.</span><span class="sxs-lookup"><span data-stu-id="13a45-142">A standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span>  
   
  <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
- Un extremo estándar que usan los servicios para enviar mensajes de anuncio en un enlace de UDP.  
+ <span data-ttu-id="13a45-143">Un punto de conexión estándar que usan los servicios para enviar mensajes de anuncio en un enlace de UDP.</span><span class="sxs-lookup"><span data-stu-id="13a45-143">A standard endpoint that is used by services to send announcement messages over a UDP binding.</span></span>  
   
  <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
- Un extremo estándar que utiliza detección del WS\-Discovery para encontrar la dirección del extremo en el tiempo de ejecución de forma dinámica.  
+ <span data-ttu-id="13a45-144">Un punto de conexión estándar que utiliza detección del WS-Discovery para encontrar la dirección del punto de conexión en el tiempo de ejecución de forma dinámica.</span><span class="sxs-lookup"><span data-stu-id="13a45-144">A standard endpoint that uses WS-Discovery to find the endpoint address dynamically at runtime.</span></span>  
   
  <xref:System.ServiceModel.Description.ServiceMetadataEndpoint>  
- Un extremo estándar para el intercambio de metadatos.  
+ <span data-ttu-id="13a45-145">Un punto de conexión estándar para el intercambio de metadatos.</span><span class="sxs-lookup"><span data-stu-id="13a45-145">A standard endpoint for metadata exchange.</span></span>  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- Un extremo estándar con un enlace <xref:System.ServiceModel.WebHttpBinding> que agrega automáticamente el comportamiento <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+ <span data-ttu-id="13a45-146">Un extremo estándar con un enlace <xref:System.ServiceModel.WebHttpBinding> que agrega automáticamente el comportamiento <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="13a45-146">A standard endpoint with a <xref:System.ServiceModel.WebHttpBinding> binding that automatically adds the <xref:System.ServiceModel.Description.WebHttpBehavior> behavior</span></span>  
   
  <xref:System.ServiceModel.Description.WebScriptEndpoint>  
- Un extremo estándar con un enlace <xref:System.ServiceModel.WebHttpBinding> que agrega automáticamente el comportamiento <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
+ <span data-ttu-id="13a45-147">Un extremo estándar con un enlace <xref:System.ServiceModel.WebHttpBinding> que agrega automáticamente el comportamiento <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.</span><span class="sxs-lookup"><span data-stu-id="13a45-147">A standard endpoint with a <xref:System.ServiceModel.WebHttpBinding> binding that automatically adds the <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> behavior.</span></span>  
   
  <xref:System.ServiceModel.Description.WebServiceEndpoint>  
- Un extremo estándar con un enlace <xref:System.ServiceModel.WebHttpBinding>.  
+ <span data-ttu-id="13a45-148">Un extremo estándar con un enlace <xref:System.ServiceModel.WebHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="13a45-148">A standard endpoint with a <xref:System.ServiceModel.WebHttpBinding> binding.</span></span>  
   
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>  
- Un extremo estándar que le permite llamar a las operaciones de control en instancias de flujo de trabajo.  
+ <span data-ttu-id="13a45-149">Extremo estándar que le permite llamar a las operaciones de control en instancias de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="13a45-149">A standard endpoint that enables you to call control operations on workflow instances.</span></span>  
   
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>  
- Un extremo estándar que admite la creación de flujo de trabajo y la reanudación del marcador.
+ <span data-ttu-id="13a45-150">Un punto de conexión estándar que admite la creación de flujo de trabajo y la reanudación del marcador.</span><span class="sxs-lookup"><span data-stu-id="13a45-150">A standard endpoint that supports workflow creation and bookmark resumption.</span></span>

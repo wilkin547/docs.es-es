@@ -1,93 +1,92 @@
 ---
-title: "C&#243;mo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "argumentos de tipo de datos, usar"
-  - "parámetros de tipo, definir"
-  - "argumentos de tipo de datos, definir"
-  - "argumentos [Visual Basic], tipos de datos"
-  - "Of (palabra clave), usar"
-  - "restricciones, tipos genéricos de Visual Basic"
-  - "parámetros genéricos"
-  - "parámetros de tipo de datos"
-  - "parámetros de tipo de datos, usar"
-  - "genéricos [Visual Basic], definir clases con parámetros de tipo"
-  - "tipos de datos [Visual Basic], como parámetros"
-  - "tipos de datos [Visual Basic], como argumentos"
-  - "parámetros, tipo"
-  - "argumentos de tipo"
-  - "tipos [Visual Basic], genéricos"
-  - "parámetros, genéricos"
-  - "parámetros de tipo"
-  - "argumentos de tipo de datos"
-  - "parámetros, tipo de datos"
-  - "genéricos [Visual Basic], definir tipos genéricos"
-  - "parámetros de tipo de datos, definir"
-  - "argumentos de tipo, definir"
-  - "argumentos [Visual Basic], tipo"
+title: "Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- data type arguments [Visual Basic], using
+- type parameters [Visual Basic], defining
+- data type arguments [Visual Basic], defining
+- arguments [Visual Basic], data types
+- Of keyword [Visual Basic], using
+- constraints, Visual Basic generic types
+- generic parameters
+- data type parameters
+- data type parameters [Visual Basic], using
+- generics [Visual Basic], defining classes with type parameters
+- data types [Visual Basic], as parameters
+- data types [Visual Basic], as arguments
+- parameters [Visual Basic], type
+- type arguments
+- types [Visual Basic], generic
+- parameters [Visual Basic], generic
+- type parameters
+- data type arguments
+- parameters [Visual Basic], data type
+- generics [Visual Basic], defining generic types
+- data type parameters [Visual Basic], defining
+- type arguments [Visual Basic], defining
+- arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-caps.latest.revision: 29
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7cc2563f193fba9f9e30fcdfd5ea2766be16ba63
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Puede definir una clase desde la que se puedan crear objetos que proporcionen una funcionalidad idéntica en tipos de datos diferentes. Para ello, especifique uno o más *parámetros de tipo* en la definición. Posteriormente, la clase puede servir de plantilla para los objetos que usan distintos tipos de datos. Una clase definida de esta manera se denomina *clase genérica*.  
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a><span data-ttu-id="455d5-102">Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="455d5-102">How to: Define a Class That Can Provide Identical Functionality on Different Data Types (Visual Basic)</span></span>
+<span data-ttu-id="455d5-103">Puede definir una clase desde la que se puedan crear objetos que proporcionen una funcionalidad idéntica en tipos de datos diferentes.</span><span class="sxs-lookup"><span data-stu-id="455d5-103">You can define a class from which you can create objects that provide identical functionality on different data types.</span></span> <span data-ttu-id="455d5-104">Para ello, especifique uno o más *parámetros de tipo* en la definición.</span><span class="sxs-lookup"><span data-stu-id="455d5-104">To do this, you specify one or more *type parameters* in the definition.</span></span> <span data-ttu-id="455d5-105">Posteriormente, la clase puede servir de plantilla para los objetos que usan distintos tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="455d5-105">The class can then serve as a template for objects that use various data types.</span></span> <span data-ttu-id="455d5-106">Una clase definida de esta manera se denomina *clase genérica*.</span><span class="sxs-lookup"><span data-stu-id="455d5-106">A class defined in this way is called a *generic class*.</span></span>  
   
- La ventaja de definir una clase genérica es que se define una sola vez y, después, el código puede usarla para crear muchos objetos que emplean una gran variedad de tipos de datos. El resultado es rendimiento mayor que al definir la clase con el tipo `Object`.  
+ <span data-ttu-id="455d5-107">La ventaja de definir una clase genérica es que se define una sola vez y, después, el código puede usarla para crear muchos objetos que emplean una gran variedad de tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="455d5-107">The advantage of defining a generic class is that you define it just once, and your code can use it to create many objects that use a wide variety of data types.</span></span> <span data-ttu-id="455d5-108">El resultado es rendimiento mayor que al definir la clase con el tipo `Object` .</span><span class="sxs-lookup"><span data-stu-id="455d5-108">This results in better performance than defining the class with the `Object` type.</span></span>  
   
- Además de clases, también puede definir y usar estructuras genéricas, interfaces, procedimientos y delegados.  
+ <span data-ttu-id="455d5-109">Además de clases, también puede definir y usar estructuras genéricas, interfaces, procedimientos y delegados.</span><span class="sxs-lookup"><span data-stu-id="455d5-109">In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.</span></span>  
   
-### Para definir una clase con un parámetro de tipo  
+### <a name="to-define-a-class-with-a-type-parameter"></a><span data-ttu-id="455d5-110">Para definir una clase con un parámetro de tipo</span><span class="sxs-lookup"><span data-stu-id="455d5-110">To define a class with a type parameter</span></span>  
   
-1.  Defina la clase de la manera normal.  
+1.  <span data-ttu-id="455d5-111">Defina la clase de la manera normal.</span><span class="sxs-lookup"><span data-stu-id="455d5-111">Define the class in the normal way.</span></span>  
   
-2.  Agregue `(Of` *typeparameter*`)` inmediatamente después del nombre de clase para especificar un parámetro de tipo.  
+2.  <span data-ttu-id="455d5-112">Agregue `(Of` *typeparameter*`)` inmediatamente después del nombre de clase para especificar un parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="455d5-112">Add `(Of` *typeparameter*`)` immediately after the class name to specify a type parameter.</span></span>  
   
-3.  Si tiene más de un parámetro de tipo, realice una lista separada por comas entre paréntesis. No repita la palabra clave `Of`.  
+3.  <span data-ttu-id="455d5-113">Si tiene más de un parámetro de tipo, realice una lista separada por comas entre paréntesis.</span><span class="sxs-lookup"><span data-stu-id="455d5-113">If you have more than one type parameter, make a comma-separated list inside the parentheses.</span></span> <span data-ttu-id="455d5-114">No repita la palabra clave `Of` .</span><span class="sxs-lookup"><span data-stu-id="455d5-114">Do not repeat the `Of` keyword.</span></span>  
   
-4.  Si el código realiza operaciones en un parámetro de tipo distintas de la asignación simple, siga ese parámetro de tipo con una cláusula `As` para agregar una o más *restricciones*. Una restricción garantiza que el tipo proporcionado para ese parámetro de tipo satisfaga un requisito como el siguiente:  
+4.  <span data-ttu-id="455d5-115">Si el código realiza operaciones en un parámetro de tipo distintas de la asignación simple, siga ese parámetro de tipo con una cláusula `As` para agregar una o más *restricciones*.</span><span class="sxs-lookup"><span data-stu-id="455d5-115">If your code performs operations on a type parameter other than simple assignment, follow that type parameter with an `As` clause to add one or more *constraints*.</span></span> <span data-ttu-id="455d5-116">Una restricción garantiza que el tipo proporcionado para ese parámetro de tipo satisfaga un requisito como el siguiente:</span><span class="sxs-lookup"><span data-stu-id="455d5-116">A constraint guarantees that the type supplied for that type parameter satisfies a requirement such as the following:</span></span>  
   
-    -   Admitir una operación, como `>`, que realice el código.  
+    -   <span data-ttu-id="455d5-117">Admitir una operación, como `>`, que realice el código.</span><span class="sxs-lookup"><span data-stu-id="455d5-117">Supports an operation, such as `>`, that your code performs</span></span>  
   
-    -   Admita a un miembro, como un método, al que accede el código.  
+    -   <span data-ttu-id="455d5-118">Admita a un miembro, como un método, al que accede el código.</span><span class="sxs-lookup"><span data-stu-id="455d5-118">Supports a member, such as a method, that your code accesses</span></span>  
   
-    -   Exponer un constructor sin parámetros.  
+    -   <span data-ttu-id="455d5-119">Exponer un constructor sin parámetros.</span><span class="sxs-lookup"><span data-stu-id="455d5-119">Exposes a parameterless constructor</span></span>  
   
-     Si no especifica ninguna restricción, las únicas operaciones y miembros que el código podrá usar son las que admite el [Object \(Tipo de datos\)](../../../../visual-basic/language-reference/data-types/object-data-type.md). Para obtener más información, consulta [Lista de tipos](../../../../visual-basic/language-reference/statements/type-list.md).  
+     <span data-ttu-id="455d5-120">Si no especifica ninguna restricción, las únicas operaciones y miembros que el código podrá usar son las que admite el [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="455d5-120">If you do not specify any constraints, the only operations and members your code can use are those supported by the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md).</span></span> <span data-ttu-id="455d5-121">Para obtener más información, consulta [Type List](../../../../visual-basic/language-reference/statements/type-list.md).</span><span class="sxs-lookup"><span data-stu-id="455d5-121">For more information, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).</span></span>  
   
-5.  Identifique cada miembro de clase que deba declararse con un tipo suministrado y declárelo `As` `typeparameter`. Esto se aplica al almacenamiento interno, los parámetros de procedimiento y los valores devueltos.  
+5.  <span data-ttu-id="455d5-122">Identifique cada miembro de clase que deba declararse con un tipo suministrado y declárelo `As` `typeparameter`.</span><span class="sxs-lookup"><span data-stu-id="455d5-122">Identify every class member that is to be declared with a supplied type, and declare it `As` `typeparameter`.</span></span> <span data-ttu-id="455d5-123">Esto se aplica al almacenamiento interno, los parámetros de procedimiento y los valores devueltos.</span><span class="sxs-lookup"><span data-stu-id="455d5-123">This applies to internal storage, procedure parameters, and return values.</span></span>  
   
-6.  Asegúrese de que el código solo usa operaciones y métodos admitidos por cualquier tipo de datos que pueda proporcionar a `itemType`.  
+6.  <span data-ttu-id="455d5-124">Asegúrese de que el código solo usa operaciones y métodos admitidos por cualquier tipo de datos que pueda proporcionar a `itemType`.</span><span class="sxs-lookup"><span data-stu-id="455d5-124">Be sure your code uses only operations and methods that are supported by any data type it can supply to `itemType`.</span></span>  
   
-     En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items` y el código que la usa puede declarar el tipo de datos de los elementos de la lista. Un constructor con parámetros permite que el código que lo usa establezca el límite superior de `items`, y el constructor predeterminado lo establece en 9 \(para un total de 10 elementos\).  
+     <span data-ttu-id="455d5-125">En el ejemplo siguiente se define una clase que administra una lista muy simple.</span><span class="sxs-lookup"><span data-stu-id="455d5-125">The following example defines a class that manages a very simple list.</span></span> <span data-ttu-id="455d5-126">Contiene la lista de la matriz interna `items`y el código que la usa puede declarar el tipo de datos de los elementos de la lista.</span><span class="sxs-lookup"><span data-stu-id="455d5-126">It holds the list in the internal array `items`, and the using code can declare the data type of the list elements.</span></span> <span data-ttu-id="455d5-127">Un constructor con parámetros permite que el código que lo usa establezca el límite superior de `items`, y el constructor predeterminado lo establece en 9 (para un total de 10 elementos).</span><span class="sxs-lookup"><span data-stu-id="455d5-127">A parameterized constructor allows the using code to set the upper bound of `items`, and the default constructor sets this to 9 (for a total of 10 items).</span></span>  
   
      [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
   
-     Puede declarar una clase de `simpleList` para que contenga una lista de valores `Integer`, otra para que contenga una lista de valores `String` y otra para que contenga valores `Date`. Excepto para el tipo de datos de los miembros de la lista, los objetos creados a partir de todas estas clases se comportan exactamente igual.  
+     <span data-ttu-id="455d5-128">Puede declarar una clase de `simpleList` para que contenga una lista de valores `Integer` , otra para que contenga una lista de valores `String` y otra para que contenga valores `Date` .</span><span class="sxs-lookup"><span data-stu-id="455d5-128">You can declare a class from `simpleList` to hold a list of `Integer` values, another class to hold a list of `String` values, and another to hold `Date` values.</span></span> <span data-ttu-id="455d5-129">Excepto para el tipo de datos de los miembros de la lista, los objetos creados a partir de todas estas clases se comportan exactamente igual.</span><span class="sxs-lookup"><span data-stu-id="455d5-129">Except for the data type of the list members, objects created from all these classes behave identically.</span></span>  
   
-     El argumento de tipo que el código que lo usa proporciona a `itemType` puede ser un tipo intrínseco como `Boolean` o `Double`, una estructura, una enumeración o cualquier tipo de clase, incluida una que defina la aplicación.  
+     <span data-ttu-id="455d5-130">El argumento de tipo que el código que lo usa proporciona a `itemType` puede ser un tipo intrínseco como `Boolean` o `Double`, una estructura, una enumeración o cualquier tipo de clase, incluida una que defina la aplicación.</span><span class="sxs-lookup"><span data-stu-id="455d5-130">The type argument that the using code supplies to `itemType` can be an intrinsic type such as `Boolean` or `Double`, a structure, an enumeration, or any type of class, including one that your application defines.</span></span>  
   
-     Puede probar la clase `simpleList` con el siguiente código.  
+     <span data-ttu-id="455d5-131">Puede probar la clase `simpleList` con el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="455d5-131">You can test the class `simpleList` with the following code.</span></span>  
   
      [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
-## Vea también  
- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Tipos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Independencia del lenguaje y componentes independientes del lenguaje](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md)   
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)   
- [Lista de tipos](../../../../visual-basic/language-reference/statements/type-list.md)   
- [Cómo: Utilizar una clase genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)   
- [Object \(Tipo de datos\)](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a><span data-ttu-id="455d5-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="455d5-132">See Also</span></span>  
+ [<span data-ttu-id="455d5-133">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="455d5-133">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="455d5-134">Tipos genéricos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="455d5-134">Generic Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="455d5-135">Independencia del lenguaje y componentes independientes del lenguaje</span><span class="sxs-lookup"><span data-stu-id="455d5-135">Language Independence and Language-Independent Components</span></span>](https://msdn.microsoft.com/library/12a7a7h3)  
+ [<span data-ttu-id="455d5-136">Of</span><span class="sxs-lookup"><span data-stu-id="455d5-136">Of</span></span>](../../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="455d5-137">Lista de tipos</span><span class="sxs-lookup"><span data-stu-id="455d5-137">Type List</span></span>](../../../../visual-basic/language-reference/statements/type-list.md)  
+ [<span data-ttu-id="455d5-138">Utilizar una clase genérica</span><span class="sxs-lookup"><span data-stu-id="455d5-138">How to: Use a Generic Class</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [<span data-ttu-id="455d5-139">Tipo de objeto de datos</span><span class="sxs-lookup"><span data-stu-id="455d5-139">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)

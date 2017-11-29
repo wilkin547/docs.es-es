@@ -1,46 +1,49 @@
 ---
-title: "Complementos de Firefox para la implementaci&#243;n de aplicaciones .NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "implementación de aplicaciones .NET, implementar con complementos Firefox"
-  - "Asistente de .NET Framework para Firefox"
-  - "Complementos de Firefox para la implementación de aplicaciones .NET"
-  - "complemento de WPF para Firefox"
+title: "Complementos de Firefox para la implementación de aplicaciones .NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Firefox add-ons for .NET application deployment
+- WPF plug-in for Firefox
+- .NET application deployment [WPF], deploying with Firefox add-ons
+- .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f16fc118ccfef6cfcb9ab0dc1356cb0c732ae229
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Complementos de Firefox para la implementaci&#243;n de aplicaciones .NET
-El complemento [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] para Firefox y el asistente de .NET Framework para Firefox permiten a [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], al [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dinámico y a las aplicaciones ClickOnce trabajar con el explorador Mozilla Firefox.  
+# <a name="firefox-add-ons-to-support-net-application-deployment"></a><span data-ttu-id="de579-102">Complementos de Firefox para la implementación de aplicaciones .NET</span><span class="sxs-lookup"><span data-stu-id="de579-102">Firefox Add-ons to Support .NET Application Deployment</span></span>
+<span data-ttu-id="de579-103">El [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] complemento para Firefox y .NET Framework Assistant para habilitar Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], malas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y las aplicaciones ClickOnce para que funcione con el explorador Mozilla Firefox.</span><span class="sxs-lookup"><span data-stu-id="de579-103">The [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] plug-in for Firefox and the .NET Framework Assistant for Firefox enable [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], and ClickOnce applications to work with the Mozilla Firefox browser.</span></span>  
   
-## Complemento WPF para Firefox  
- El complemento WPF para Firefox permite navegar a [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] y a los archivos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dinámico y ejecutarlos en el nivel superior o en un IFRAME HTML en el explorador de Firefox.  Una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] es una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que se puede publicar en un servidor web e iniciar dentro de los exploradores compatibles.  El [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dinámico es un archivo solo de XAML al que se puede navegar y mostrar en exploradores compatibles, como un archivo XML.  
+## <a name="wpf-plug-in-for-firefox"></a><span data-ttu-id="de579-104">Complemento de WPF para Firefox</span><span class="sxs-lookup"><span data-stu-id="de579-104">WPF Plug-in for Firefox</span></span>  
+ <span data-ttu-id="de579-105">Permite que el complemento WPF para Firefox [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] y malas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos para navegar y ejecutarse en el nivel superior o en un IFRAME de HTML en el explorador Firefox.</span><span class="sxs-lookup"><span data-stu-id="de579-105">The WPF plug-in for Firefox enables [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] and loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files to be navigated to and run at the top-level or in an HTML IFRAME in the Firefox browser.</span></span> <span data-ttu-id="de579-106">Un [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] es un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación que se pueden publicar en un servidor Web y han iniciado en exploradores compatibles.</span><span class="sxs-lookup"><span data-stu-id="de579-106">An [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application that can be published to a Web server and launched within supported browsers.</span></span> <span data-ttu-id="de579-107">Flexible [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] es un archivo de solo XAML que puede navegar y mostrar en exploradores compatibles, igual que un archivo XML.</span><span class="sxs-lookup"><span data-stu-id="de579-107">Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is a XAML-only file that can be navigated to and displayed in supported browsers, much like an XML file.</span></span>  
   
- El complemento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para Firefox se instala con [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].  Windows 7 incluye [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], pero no incluye el complemento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para Firefox. No puede instalar el complemento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para Firefox en Windows 7.  
+ <span data-ttu-id="de579-108">El [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] complemento para Firefox está instalado con el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de579-108">The [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox is installed with the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].</span></span> <span data-ttu-id="de579-109">Ventana 7 incluye la [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], pero no incluye el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] complemento para Firefox.</span><span class="sxs-lookup"><span data-stu-id="de579-109">Window 7 includes the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], but does not include the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox.</span></span> <span data-ttu-id="de579-110">No se puede instalar el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] complemento para Firefox en Windows 7.</span><span class="sxs-lookup"><span data-stu-id="de579-110">You cannot install the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox on Windows 7.</span></span>  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] no incluye el complemento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para Firefox. Sin embargo, si [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] están instalados, el complemento WPF para Firefox se instala con [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].  Por consiguiente, las aplicaciones de [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] todavía se ejecutarán porque el host de WPF cargará la versión correcta del marco.  Para obtener más información, vea [WPF Host \(PresentationHost.exe\)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md).  
+ <span data-ttu-id="de579-111">El [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] no incluye el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] complemento para Firefox.</span><span class="sxs-lookup"><span data-stu-id="de579-111">The [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] does not include the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plug-in for Firefox.</span></span> <span data-ttu-id="de579-112">Sin embargo, si tanto el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] están instalado, el complemento WPF para Firefox se instala con el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de579-112">However, if both the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] and [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] are installed, the WPF plug-in for Firefox is installed with the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)].</span></span> <span data-ttu-id="de579-113">Por lo tanto, [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] aplicaciones se ejecutarán igualmente porque el Host de WPF se cargará la versión correcta de framework.</span><span class="sxs-lookup"><span data-stu-id="de579-113">Therefore [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] applications will still run because the WPF Host will load the correct version of the framework.</span></span> <span data-ttu-id="de579-114">Para obtener más información, consulte [Host de WPF (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md).</span><span class="sxs-lookup"><span data-stu-id="de579-114">For more information, see [WPF Host (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md).</span></span>  
   
-## Asistente de .NET Framework para Firefox  
- El asistente de .NET Framework para Firefox permite a las aplicaciones ClickOnce independientes ejecutarse desde el explorador de Firefox.  El asistente de .NET Framework para Firefox funciona exactamente igual si se instala antes y después del explorador Firefox.  Cuando se inicia el explorador Firefox y se instala [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], Firefox encuentra e instala el asistente de .NET Framework para Firefox.  Los usuarios pueden configurar el asistente de .NET Framework para Firefox para hacer lo siguiente:  
+## <a name="net-framework-assistant-for-firefox"></a><span data-ttu-id="de579-115">Asistente de .NET Framework para Firefox</span><span class="sxs-lookup"><span data-stu-id="de579-115">.NET Framework Assistant for Firefox</span></span>  
+ <span data-ttu-id="de579-116">.NET Framework Assistant para Firefox permite a las aplicaciones independientes de ClickOnce para ejecutarse desde el explorador Firefox.</span><span class="sxs-lookup"><span data-stu-id="de579-116">The .NET Framework Assistant for Firefox enables stand-alone ClickOnce applications to run from the Firefox browser.</span></span> <span data-ttu-id="de579-117">.NET Framework Assistant para Firefox funciona de forma idéntica cuando se instala antes y después el explorador Firefox.</span><span class="sxs-lookup"><span data-stu-id="de579-117">The .NET Framework Assistant for Firefox functions identically when it is installed before and after the Firefox browser.</span></span> <span data-ttu-id="de579-118">Cuando se inicie el explorador Firefox y [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] está instalado, Firefox busca e instala el Asistente de .NET Framework para Firefox.</span><span class="sxs-lookup"><span data-stu-id="de579-118">When the Firefox browser is launched and the [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] is installed, Firefox finds and installs the .NET Framework Assistant for Firefox.</span></span> <span data-ttu-id="de579-119">Los usuarios pueden configurar .NET Framework Assistant para Firefox hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="de579-119">Users can configure the .NET Framework Assistant for Firefox to do the following:</span></span>  
   
--   Preguntar antes de ejecutar la aplicación ClickOnce.  
+-   <span data-ttu-id="de579-120">Preguntar antes de ejecutar la aplicación ClickOnce.</span><span class="sxs-lookup"><span data-stu-id="de579-120">Prompt before running the ClickOnce application.</span></span>  
   
--   Notificar todas las versiones instaladas de .NET Framework o solamente la última versión.  
+-   <span data-ttu-id="de579-121">Mostrar todas las versiones instaladas de .NET Framework o solo la versión más reciente.</span><span class="sxs-lookup"><span data-stu-id="de579-121">Report all installed versions of the .NET Framework or just the latest version.</span></span>  
   
- El asistente de .NET Framework para Firefox se incluye con [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)].  Para obtener información sobre cómo quitar el asistente de .NET Framework para Firefox, vea [How to remove the .NET Framework Assistant for Firefox](http://go.microsoft.com/fwlink/?LinkId=177944).  
+ <span data-ttu-id="de579-122">Se incluye con .NET Framework Assistant para Firefox el [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de579-122">The .NET Framework Assistant for Firefox is included with the [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)].</span></span> <span data-ttu-id="de579-123">Para obtener información acerca de cómo quitar el Asistente de .NET Framework para Firefox, consulte [cómo quitar el Asistente de .NET Framework para Firefox](http://go.microsoft.com/fwlink/?LinkId=177944).</span><span class="sxs-lookup"><span data-stu-id="de579-123">For information about removing the .NET Framework Assistant for Firefox, see [How to remove the .NET Framework Assistant for Firefox](http://go.microsoft.com/fwlink/?LinkId=177944).</span></span>  
   
-## Vea también  
- [Implementar una aplicación de WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)   
- [Información general sobre las aplicaciones de explorador XAML de WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)   
- [Detectar si está instalado el complemento WPF para Firefox](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+## <a name="see-also"></a><span data-ttu-id="de579-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="de579-124">See Also</span></span>  
+ [<span data-ttu-id="de579-125">Implementar una aplicación WPF</span><span class="sxs-lookup"><span data-stu-id="de579-125">Deploying a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="de579-126">Información general sobre las aplicaciones de explorador XAML de WPF</span><span class="sxs-lookup"><span data-stu-id="de579-126">WPF XAML Browser Applications Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
+ [<span data-ttu-id="de579-127">Detectar si está instalado el complemento WPF para Firefox</span><span class="sxs-lookup"><span data-stu-id="de579-127">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

@@ -1,134 +1,138 @@
 ---
-title: "Tutorial: Proporcionar elementos de men&#250; est&#225;ndar a un formulario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "elementos de menú, estándar"
-  - "StatusStrip (control) [Windows Forms]"
-  - "barras de herramientas [Windows Forms], tutoriales"
-  - "ToolStrip (control) [Windows Forms]"
+title: "Tutorial: Proporcionar elementos de menú estándar a un formulario"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], standard
+- toolbars [Windows Forms], walkthroughs
+- StatusStrip control [Windows Forms]
+- ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1eccb033dd07f634f3629fd6f314eaa3df56b422
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Proporcionar elementos de men&#250; est&#225;ndar a un formulario
-Puede proporcionar un menú estándar a los formularios con el control <xref:System.Windows.Forms.MenuStrip>.  
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a><span data-ttu-id="42b6c-102">Tutorial: Proporcionar elementos de menú estándar a un formulario</span><span class="sxs-lookup"><span data-stu-id="42b6c-102">Walkthrough: Providing Standard Menu Items to a Form</span></span>
+<span data-ttu-id="42b6c-103">Puede proporcionar un menú estándar para los formularios con el control <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="42b6c-103">You can provide a standard menu for your forms with the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
   
- Este tutorial muestra cómo utilizar un control <xref:System.Windows.Forms.MenuStrip> para crear un menú estándar.  El formulario también responde cuando un usuario selecciona un elemento de menú.  En este tutorial se muestran las tareas siguientes:  
+ <span data-ttu-id="42b6c-104">Este tutorial muestra cómo utilizar un <xref:System.Windows.Forms.MenuStrip> control para crear un menú estándar.</span><span class="sxs-lookup"><span data-stu-id="42b6c-104">This walkthrough demonstrates how to use a <xref:System.Windows.Forms.MenuStrip> control to create a standard menu.</span></span> <span data-ttu-id="42b6c-105">El formulario también responde cuando un usuario selecciona un elemento de menú.</span><span class="sxs-lookup"><span data-stu-id="42b6c-105">The form also responds when a user selects a menu item.</span></span> <span data-ttu-id="42b6c-106">En este tutorial se muestran las tareas siguientes:</span><span class="sxs-lookup"><span data-stu-id="42b6c-106">The following tasks are illustrated in this walkthrough:</span></span>  
   
--   Crear un proyecto de formularios Windows Forms.  
+-   <span data-ttu-id="42b6c-107">Crear un proyecto de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="42b6c-107">Creating a Windows Forms project.</span></span>  
   
--   Crear un menú estándar.  
+-   <span data-ttu-id="42b6c-108">Crear un menú estándar.</span><span class="sxs-lookup"><span data-stu-id="42b6c-108">Creating a standard menu.</span></span>  
   
--   Crear un control <xref:System.Windows.Forms.StatusStrip>.  
+-   <span data-ttu-id="42b6c-109">Crear un <xref:System.Windows.Forms.StatusStrip> control.</span><span class="sxs-lookup"><span data-stu-id="42b6c-109">Creating a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
--   Controlar la selección de elementos de menú.  
+-   <span data-ttu-id="42b6c-110">Control de selección de elementos de menú.</span><span class="sxs-lookup"><span data-stu-id="42b6c-110">Handling menu item selection.</span></span>  
   
- Cuando termine, tendrá un formulario con un menú estándar que muestra las selecciones de elementos de menú en un control <xref:System.Windows.Forms.StatusStrip>.  
+ <span data-ttu-id="42b6c-111">Cuando haya terminado, tendrá un formulario con un menú estándar que muestra las selecciones de elementos de menú en un <xref:System.Windows.Forms.StatusStrip> control.</span><span class="sxs-lookup"><span data-stu-id="42b6c-111">When you are finished, you will have a form with a standard menu that displays menu item selections in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
- Para copiar el código de este tema como un listado sencillo, vea [Cómo: Proporcionar elementos de menú estándar a un formulario](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
+ <span data-ttu-id="42b6c-112">Para copiar el código de este tema como una sola lista, vea [Cómo: proporcionar elementos de menú estándar a un formulario](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).</span><span class="sxs-lookup"><span data-stu-id="42b6c-112">To copy the code in this topic as a single listing, see [How to: Provide Standard Menu Items to a Form](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="42b6c-113">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="42b6c-113">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="42b6c-114">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="42b6c-114">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="42b6c-115">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="42b6c-115">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## Requisitos previos  
- Para poder completar este tutorial, necesitará:  
+## <a name="prerequisites"></a><span data-ttu-id="42b6c-116">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="42b6c-116">Prerequisites</span></span>  
+ <span data-ttu-id="42b6c-117">Para poder completar este tutorial, necesitará:</span><span class="sxs-lookup"><span data-stu-id="42b6c-117">In order to complete this walkthrough, you will need:</span></span>  
   
--   Permisos necesarios para poder crear y ejecutar proyectos de aplicación de Windows Forms en el equipo donde esté instalado [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+-   <span data-ttu-id="42b6c-118">Los permisos necesarios para poder crear y ejecutar proyectos de aplicación de Windows Forms en el equipo donde [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] está instalado.</span><span class="sxs-lookup"><span data-stu-id="42b6c-118">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.</span></span>  
   
-## Crear el proyecto  
- El primer paso es crear el proyecto y configurar el formulario.  
+## <a name="creating-the-project"></a><span data-ttu-id="42b6c-119">Crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="42b6c-119">Creating the Project</span></span>  
+ <span data-ttu-id="42b6c-120">El primer paso es crear el proyecto y configurar el formulario.</span><span class="sxs-lookup"><span data-stu-id="42b6c-120">The first step is to create the project and set up the form.</span></span>  
   
-#### Para crear el proyecto  
+#### <a name="to-create-the-project"></a><span data-ttu-id="42b6c-121">Para crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="42b6c-121">To create the project</span></span>  
   
-1.  Cree un proyecto de aplicación para Windows denominado StandardMenuForm.  
+1.  <span data-ttu-id="42b6c-122">Crear un proyecto de aplicación de Windows denominado **StandardMenuForm**.</span><span class="sxs-lookup"><span data-stu-id="42b6c-122">Create a Windows application project called **StandardMenuForm**.</span></span>  
   
-     Para obtener más información, consulte [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     <span data-ttu-id="42b6c-123">Para obtener más información, consulta [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="42b6c-123">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  En el Diseñador de Windows Forms, seleccione el formulario.  
+2.  <span data-ttu-id="42b6c-124">En el Diseñador de Windows Forms, seleccione el formulario.</span><span class="sxs-lookup"><span data-stu-id="42b6c-124">In the Windows Forms Designer, select the form.</span></span>  
   
-## Crear un menú estándar  
- El Diseñador de Windows Forms puede rellenar automáticamente un control <xref:System.Windows.Forms.MenuStrip> con elementos de menú estándar.  
+## <a name="creating-a-standard-menu"></a><span data-ttu-id="42b6c-125">Crear un menú estándar</span><span class="sxs-lookup"><span data-stu-id="42b6c-125">Creating a Standard Menu</span></span>  
+ <span data-ttu-id="42b6c-126">El Diseñador de Windows Forms puede rellenar automáticamente un <xref:System.Windows.Forms.MenuStrip> control con elementos de menú estándar.</span><span class="sxs-lookup"><span data-stu-id="42b6c-126">The Windows Forms Designer can automatically populate a <xref:System.Windows.Forms.MenuStrip> control with standard menu items.</span></span>  
   
-#### Para crear un menú estándar  
+#### <a name="to-create-a-standard-menu"></a><span data-ttu-id="42b6c-127">Para crear un menú estándar</span><span class="sxs-lookup"><span data-stu-id="42b6c-127">To create a standard menu</span></span>  
   
-1.  En el **Cuadro de herramientas**, arrastre un control <xref:System.Windows.Forms.MenuStrip> hasta el formulario.  
+1.  <span data-ttu-id="42b6c-128">Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.MenuStrip> control al formulario.</span><span class="sxs-lookup"><span data-stu-id="42b6c-128">From the **Toolbox**, drag a <xref:System.Windows.Forms.MenuStrip> control onto your form.</span></span>  
   
-2.  Haga clic en el glifo \(![Glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) de etiqueta inteligente del control <xref:System.Windows.Forms.MenuStrip> y seleccione **Insertar elementos estándar**.  
+2.  <span data-ttu-id="42b6c-129">Haga clic en el <xref:System.Windows.Forms.MenuStrip> glifo de etiqueta inteligente del control (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) y seleccione **insertar elementos estándar**.</span><span class="sxs-lookup"><span data-stu-id="42b6c-129">Click the <xref:System.Windows.Forms.MenuStrip> control's smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) and select **Insert Standard Items**.</span></span>  
   
-     Se rellenará el control <xref:System.Windows.Forms.MenuStrip> con los elementos de menú estándar.  
+     <span data-ttu-id="42b6c-130">El <xref:System.Windows.Forms.MenuStrip> se rellena con los elementos de menú estándar.</span><span class="sxs-lookup"><span data-stu-id="42b6c-130">The <xref:System.Windows.Forms.MenuStrip> control is populated with the standard menu items.</span></span>  
   
-3.  Haga clic en el elemento de menú **Archivo** para ver sus elementos de menú predeterminados y los iconos correspondientes.  
+3.  <span data-ttu-id="42b6c-131">Haga clic en el **archivo** elemento de menú para ver sus elementos de menú predeterminados y los iconos correspondientes.</span><span class="sxs-lookup"><span data-stu-id="42b6c-131">Click the **File** menu item to see its default menu items and corresponding icons.</span></span>  
   
-## Crear un control StatusStrip  
- Utilice el control <xref:System.Windows.Forms.StatusStrip> para mostrar el estado de las aplicaciones de Windows Forms.  En el ejemplo actual, los elementos de menú seleccionados por el usuario se muestran en un control <xref:System.Windows.Forms.StatusStrip>.  
+## <a name="creating-a-statusstrip-control"></a><span data-ttu-id="42b6c-132">Crear un Control StatusStrip</span><span class="sxs-lookup"><span data-stu-id="42b6c-132">Creating a StatusStrip Control</span></span>  
+ <span data-ttu-id="42b6c-133">Use el <xref:System.Windows.Forms.StatusStrip> control para mostrar el estado de las aplicaciones de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="42b6c-133">Use the <xref:System.Windows.Forms.StatusStrip> control to display status for your Windows Forms applications.</span></span> <span data-ttu-id="42b6c-134">En el ejemplo actual, se muestran los elementos de menú seleccionados por el usuario en un <xref:System.Windows.Forms.StatusStrip> control.</span><span class="sxs-lookup"><span data-stu-id="42b6c-134">In the current example, menu items selected by the user are displayed in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
-#### Para crear un control StatusStrip  
+#### <a name="to-create-a-statusstrip-control"></a><span data-ttu-id="42b6c-135">Para crear un control StatusStrip</span><span class="sxs-lookup"><span data-stu-id="42b6c-135">To create a StatusStrip control</span></span>  
   
-1.  En el **Cuadro de herramientas**, arrastre un control <xref:System.Windows.Forms.StatusStrip> hasta el formulario.  
+1.  <span data-ttu-id="42b6c-136">Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.StatusStrip> control al formulario.</span><span class="sxs-lookup"><span data-stu-id="42b6c-136">From the **Toolbox**, drag a <xref:System.Windows.Forms.StatusStrip> control onto your form.</span></span>  
   
-     Se acoplará automáticamente el control <xref:System.Windows.Forms.StatusStrip> a la parte inferior del formulario.  
+     <span data-ttu-id="42b6c-137">El <xref:System.Windows.Forms.StatusStrip> control automáticamente se acopla a la parte inferior del formulario.</span><span class="sxs-lookup"><span data-stu-id="42b6c-137">The <xref:System.Windows.Forms.StatusStrip> control automatically docks to the bottom of the form.</span></span>  
   
-2.  Haga clic en el botón de lista desplegable del control <xref:System.Windows.Forms.StatusStrip> y seleccione **StatusLabel** para agregar un control <xref:System.Windows.Forms.ToolStripStatusLabel> al control <xref:System.Windows.Forms.StatusStrip>.  
+2.  <span data-ttu-id="42b6c-138">Haga clic en el <xref:System.Windows.Forms.StatusStrip> del control de botón de lista desplegable y seleccione **StatusLabel como** para agregar una <xref:System.Windows.Forms.ToolStripStatusLabel> el control a la <xref:System.Windows.Forms.StatusStrip> control.</span><span class="sxs-lookup"><span data-stu-id="42b6c-138">Click the <xref:System.Windows.Forms.StatusStrip> control's drop-down button and select **StatusLabel** to add a <xref:System.Windows.Forms.ToolStripStatusLabel> control to the <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
-## Controlar la selección de elementos  
- Controle el evento <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> para que responda cuando el usuario seleccione un elemento de menú.  
+## <a name="handling-item-selection"></a><span data-ttu-id="42b6c-139">Selección de elementos de control</span><span class="sxs-lookup"><span data-stu-id="42b6c-139">Handling Item Selection</span></span>  
+ <span data-ttu-id="42b6c-140">Controlar la <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> evento para responder cuando el usuario selecciona un elemento de menú.</span><span class="sxs-lookup"><span data-stu-id="42b6c-140">Handle the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event to respond when the user selects a menu item.</span></span>  
   
-#### Para controlar la selección de elementos  
+#### <a name="to-handle-item-selection"></a><span data-ttu-id="42b6c-141">Para controlar la selección de elementos</span><span class="sxs-lookup"><span data-stu-id="42b6c-141">To handle item selection</span></span>  
   
-1.  Haga clic en el elemento de menú **Archivo** que creó en la sección Crear un menú estándar.  
+1.  <span data-ttu-id="42b6c-142">Haga clic en el **archivo** elemento de menú que creó en la creación una sección de menú estándar.</span><span class="sxs-lookup"><span data-stu-id="42b6c-142">Click the **File** menu item that you created in the Creating a Standard Menu section.</span></span>  
   
-2.  En la ventana **Propiedades**, haga clic en el botón **Eventos**.  
+2.  <span data-ttu-id="42b6c-143">En el **propiedades** ventana, haga clic en **eventos**.</span><span class="sxs-lookup"><span data-stu-id="42b6c-143">In the **Properties** window, click **Events**.</span></span>  
   
-3.  Haga doble clic en el evento <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.  
+3.  <span data-ttu-id="42b6c-144">Haga doble clic en el <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> eventos.</span><span class="sxs-lookup"><span data-stu-id="42b6c-144">Double-click the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.</span></span>  
   
-     El Diseñador de Windows Forms generará un controlador de eventos para el evento <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.  
+     <span data-ttu-id="42b6c-145">El Diseñador de Windows Forms genera un controlador de eventos para el <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> eventos.</span><span class="sxs-lookup"><span data-stu-id="42b6c-145">The Windows Forms Designer generates an event handler for the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.</span></span>  
   
-4.  Inserte el código siguiente en el controlador de eventos.  
+4.  <span data-ttu-id="42b6c-146">Inserte el código siguiente en el controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="42b6c-146">Insert the following code into the event handler.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Inserte la definición de método de utilidad `UpdateStatus` en el formulario.  
+5.  <span data-ttu-id="42b6c-147">Insertar el `UpdateStatus` definición de método de utilidad en el formulario.</span><span class="sxs-lookup"><span data-stu-id="42b6c-147">Insert the `UpdateStatus` utility method definition into the form.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
   
-## Punto de control  
+## <a name="checkpoint"></a><span data-ttu-id="42b6c-148">Punto de control</span><span class="sxs-lookup"><span data-stu-id="42b6c-148">Checkpoint</span></span>  
   
-#### Para probar el formulario  
+#### <a name="to-test-your-form"></a><span data-ttu-id="42b6c-149">Para comprobar el formulario</span><span class="sxs-lookup"><span data-stu-id="42b6c-149">To test your form</span></span>  
   
-1.  Presione F5 para compilar y ejecutar el formulario.  
+1.  <span data-ttu-id="42b6c-150">Presione F5 para compilar y ejecutar el formulario.</span><span class="sxs-lookup"><span data-stu-id="42b6c-150">Press F5 to compile and run your form.</span></span>  
   
-2.  Haga clic en el elemento de menú **Archivo** para abrir el menú.  
+2.  <span data-ttu-id="42b6c-151">Haga clic en el **archivo** elemento de menú para abrir el menú.</span><span class="sxs-lookup"><span data-stu-id="42b6c-151">Click the **File** menu item to open the menu.</span></span>  
   
-3.  En el menú **Archivo**, haga clic en uno de los elementos para seleccionarlo.  
+3.  <span data-ttu-id="42b6c-152">En el **archivo** menú, haga clic en uno de los elementos para seleccionarlo.</span><span class="sxs-lookup"><span data-stu-id="42b6c-152">On the **File** menu, click one of the items to select it.</span></span>  
   
-     Se mostrará en el control <xref:System.Windows.Forms.StatusStrip> el elemento seleccionado.  
+     <span data-ttu-id="42b6c-153">El <xref:System.Windows.Forms.StatusStrip> control muestra el elemento seleccionado.</span><span class="sxs-lookup"><span data-stu-id="42b6c-153">The <xref:System.Windows.Forms.StatusStrip> control displays the selected item.</span></span>  
   
-## Pasos siguientes  
- En este tutorial, ha creado un formulario con un menú estándar.  Puede utilizar la familia <xref:System.Windows.Forms.ToolStrip> de controles para muchos otros propósitos:  
+## <a name="next-steps"></a><span data-ttu-id="42b6c-154">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="42b6c-154">Next Steps</span></span>  
+ <span data-ttu-id="42b6c-155">En este tutorial, ha creado un formulario con un menú estándar.</span><span class="sxs-lookup"><span data-stu-id="42b6c-155">In this walkthrough, you have created a form with a standard menu.</span></span> <span data-ttu-id="42b6c-156">Puede usar el <xref:System.Windows.Forms.ToolStrip> familia de controles para muchos otros objetivos:</span><span class="sxs-lookup"><span data-stu-id="42b6c-156">You can use the <xref:System.Windows.Forms.ToolStrip> family of controls for many other purposes:</span></span>  
   
--   Crear menús contextual para los controles con <xref:System.Windows.Forms.ContextMenuStrip>.  Para obtener más información, vea [Información general sobre ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   <span data-ttu-id="42b6c-157">Crear menús contextuales para los controles con <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="42b6c-157">Create shortcut menus for your controls with <xref:System.Windows.Forms.ContextMenuStrip>.</span></span> <span data-ttu-id="42b6c-158">Para obtener más información, consulte [información general del componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="42b6c-158">For more information, see [ContextMenu Component Overview](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span></span>  
   
--   Crear un formulario de interfaz de múltiples documentos \(MDI\) con controles <xref:System.Windows.Forms.ToolStrip> acoplados.  Para obtener más información, vea [Tutorial: Crear un formulario MDI con combinación de menús y controles ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   <span data-ttu-id="42b6c-159">Crear un formulario de múltiples documentos (MDI) de la interfaz con acoplamiento <xref:System.Windows.Forms.ToolStrip> controles.</span><span class="sxs-lookup"><span data-stu-id="42b6c-159">Create a multiple document interface (MDI) form with docking <xref:System.Windows.Forms.ToolStrip> controls.</span></span> <span data-ttu-id="42b6c-160">Para obtener más información, consulte [Tutorial: crear un formulario MDI con combinación de menús y controles ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span><span class="sxs-lookup"><span data-stu-id="42b6c-160">For more information, see [Walkthrough: Creating an MDI Form with Menu Merging and ToolStrip Controls](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span></span>  
   
--   Proporcionar a los controles <xref:System.Windows.Forms.ToolStrip> un aspecto profesional.  Para obtener más información, vea [Cómo: Establecer la representación de ToolStrip para una aplicación](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   <span data-ttu-id="42b6c-161">Asigne el <xref:System.Windows.Forms.ToolStrip> controla un aspecto profesional.</span><span class="sxs-lookup"><span data-stu-id="42b6c-161">Give your <xref:System.Windows.Forms.ToolStrip> controls a professional appearance.</span></span> <span data-ttu-id="42b6c-162">Para obtener más información, consulte [Cómo: establecer la representación de ToolStrip para una aplicación](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).</span><span class="sxs-lookup"><span data-stu-id="42b6c-162">For more information, see [How to: Set the ToolStrip Renderer for an Application](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="42b6c-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="42b6c-163">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [<span data-ttu-id="42b6c-164">Control MenuStrip</span><span class="sxs-lookup"><span data-stu-id="42b6c-164">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

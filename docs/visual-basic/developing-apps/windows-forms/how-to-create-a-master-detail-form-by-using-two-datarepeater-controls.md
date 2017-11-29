@@ -1,74 +1,55 @@
 ---
-title: "Cómo: crear un formulario principal-detalle mediante dos controles DataRepeater (Visual Studio) | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Cómo: crear un formulario principal-detalle mediante dos controles DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- DataRepeater, master/detail tables
+helpviewer_keywords: DataRepeater, master/detail tables
 ms.assetid: eec43ae3-05d8-45a1-8d41-3803c6359dbe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23789bb11cab17b50928651e1dc00d5d59640c0f
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 02f98cce74f99d8a00bc916b38e5c290045926a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a>Cómo: Crear un formulario principal-detalle mediante dos controles DataRepeater (Visual Studio)
-Puede mostrar datos relacionados mediante dos o más <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>controles para crear un formulario principal-detalle.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Por ejemplo, desea mostrar una lista de clientes en una <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>y cuando el usuario selecciona un cliente, mostrar una lista de pedidos del cliente en un segundo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+# <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a><span data-ttu-id="d7c04-102">Cómo: Crear un formulario principal-detalle mediante dos controles DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="d7c04-102">How to: Create a Master/Detail Form by Using Two DataRepeater Controls (Visual Studio)</span></span>
+<span data-ttu-id="d7c04-103">Puede mostrar datos relacionados mediante dos o más <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controles para crear un formulario principal-detalle.</span><span class="sxs-lookup"><span data-stu-id="d7c04-103">You can display related data by using two or more <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controls to create a master/detail form.</span></span> <span data-ttu-id="d7c04-104">Por ejemplo, desea mostrar una lista de clientes en una <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>y cuando el usuario selecciona un cliente, mostrar una lista de los pedidos del cliente en un segundo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.</span><span class="sxs-lookup"><span data-stu-id="d7c04-104">For example, you might want to display a list of customers in one <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, and when the user selects a customer, display a list of that customer's orders in a second <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.</span></span>  
   
- Puede mostrar datos relacionados arrastrando elementos de detalle que comparten el mismo nodo de tabla principal desde la **orígenes de datos** ventana hasta un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Por ejemplo, si tiene un origen de datos que tiene una tabla clientes y una tabla relacionada Orders, vea ambas tablas como nodos de nivel superior en la vista de árbol en el **orígenes de datos** ventana. Expanda el nodo de los clientes para que pueda ver las columnas. Observe que la última columna de la lista es un nodo expansible que representa la tabla Orders. Este nodo representa los pedidos relacionados para un cliente.  
+ <span data-ttu-id="d7c04-105">Puede mostrar datos relacionados arrastrando elementos de detalle que comparten el mismo nodo de tabla principal desde la **orígenes de datos** ventana en un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span><span class="sxs-lookup"><span data-stu-id="d7c04-105">You can display related data by dragging detail items that share the same master table node from the **Data Sources** window onto a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="d7c04-106">Por ejemplo, si tiene un origen de datos que tiene una tabla Customers y una tabla de pedidos relacionada, vea ambas tablas como nodos de nivel superior en la vista de árbol en el **orígenes de datos** ventana.</span><span class="sxs-lookup"><span data-stu-id="d7c04-106">For example, if you have a data source that has a Customers table and a related Orders table, you see both tables as top-level nodes in the tree view in the **Data Sources** window.</span></span> <span data-ttu-id="d7c04-107">Expanda el nodo de los clientes para que pueda ver las columnas.</span><span class="sxs-lookup"><span data-stu-id="d7c04-107">Expand the Customers node so that you can see the columns.</span></span> <span data-ttu-id="d7c04-108">Tenga en cuenta que la última columna de la lista es un nodo expansible que representa la tabla Orders.</span><span class="sxs-lookup"><span data-stu-id="d7c04-108">Notice that the last column in the list is an expandable node that represents the Orders table.</span></span> <span data-ttu-id="d7c04-109">Este nodo representa los pedidos relacionados para un cliente.</span><span class="sxs-lookup"><span data-stu-id="d7c04-109">This node represents the related orders for a customer.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-display-related-data-in-two-datarepeater-controls"></a>Para mostrar datos relacionados en dos controles DataRepeater  
+### <a name="to-display-related-data-in-two-datarepeater-controls"></a><span data-ttu-id="d7c04-110">Para mostrar datos relacionados en dos controles DataRepeater</span><span class="sxs-lookup"><span data-stu-id="d7c04-110">To display related data in two DataRepeater controls</span></span>  
   
-1.  Arrastre dos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>controla desde el **Visual Basic PowerPacks** ficha en el **cuadro de herramientas** a un control de formulario o contenedor.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+1.  <span data-ttu-id="d7c04-111">Arrastre dos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controla desde el **Visual Basic PowerPacks** pestaña en el **cuadro de herramientas** a un control de formulario o contenedor.</span><span class="sxs-lookup"><span data-stu-id="d7c04-111">Drag two <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controls from the **Visual Basic PowerPacks** tab in the **Toolbox** to a form or container control.</span></span>  
   
-2.  Arrastre los controladores de tamaño y posición para cambiar el tamaño de los controles y colocarlos en paralelo.  
+2.  <span data-ttu-id="d7c04-112">Arrastre los controladores de tamaño y posición para cambiar el tamaño de los controles y colocarlos en paralelo.</span><span class="sxs-lookup"><span data-stu-id="d7c04-112">Drag the sizing and position handles to size the controls and position them side-by-side.</span></span>  
   
-3.  En el menú **Datos** , haga clic en **Mostrar orígenes de datos**.  
+3.  <span data-ttu-id="d7c04-113">En el menú **Datos** , haga clic en **Mostrar orígenes de datos**.</span><span class="sxs-lookup"><span data-stu-id="d7c04-113">On the **Data** menu, click **Show Data Sources**.</span></span>  
   
     > [!NOTE]
-    >  Si el **orígenes de datos** ventana está vacía, agregue un origen de datos a él. Para obtener más información, consulte [agregar nuevos orígenes de datos](https://docs.microsoft.com/visualstudio/data-tools/add-new-data-sources).  
+    >  <span data-ttu-id="d7c04-114">Si el **orígenes de datos** ventana está vacía, agregue un origen de datos a él.</span><span class="sxs-lookup"><span data-stu-id="d7c04-114">If the **Data Sources** window is empty, add a data source to it.</span></span> <span data-ttu-id="d7c04-115">Para obtener más información, vea [Agregar nuevos orígenes de datos](/visualstudio/data-tools/add-new-data-sources).</span><span class="sxs-lookup"><span data-stu-id="d7c04-115">For more information, see [Add new data sources](/visualstudio/data-tools/add-new-data-sources).</span></span>  
   
-4.  En el **orígenes de datos** ventana, seleccione el nodo de nivel superior de la tabla principal.  
+4.  <span data-ttu-id="d7c04-116">En el **orígenes de datos** ventana, seleccione el nodo de nivel superior de la tabla principal.</span><span class="sxs-lookup"><span data-stu-id="d7c04-116">In the **Data Sources** window, select the top-level node for the master table.</span></span>  
   
-5.  Cambie el tipo drop de la tabla principal a detalles haciendo clic en **detalles** en la lista desplegable en el nodo de tabla.  
+5.  <span data-ttu-id="d7c04-117">Cambie el tipo drop de la tabla principal a detalles haciendo clic en **detalles** en la lista desplegable en el nodo de tabla.</span><span class="sxs-lookup"><span data-stu-id="d7c04-117">Change the drop type of the master table to Details by clicking **Details** in the drop-down list on the table node.</span></span>  
   
-6.  Arrastre el nodo de tabla principal a la región de la plantilla de elementos de la primera <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+6.  <span data-ttu-id="d7c04-118">Arrastre el nodo de tabla principal a la región de la plantilla de elemento de la primera <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span><span class="sxs-lookup"><span data-stu-id="d7c04-118">Drag the master table node onto the item template region of the first <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  
   
-7.  Expanda el nodo de tabla principal y seleccione el nodo de detalle de la tabla relacionada.  
+7.  <span data-ttu-id="d7c04-119">Expanda el nodo de tabla principal y seleccione el nodo de detalle de la tabla relacionada.</span><span class="sxs-lookup"><span data-stu-id="d7c04-119">Expand the master table node and select the detail node for the related table.</span></span>  
   
-8.  Cambie el tipo drop de la tabla de detalle a detalles haciendo clic en **detalles** en la lista desplegable en el nodo de tabla.  
+8.  <span data-ttu-id="d7c04-120">Cambie el tipo de colocación de la tabla de detalle a detalles haciendo clic en **detalles** en la lista desplegable en el nodo de tabla.</span><span class="sxs-lookup"><span data-stu-id="d7c04-120">Change the drop type of the detail table to Details by clicking **Details** in the drop-down list on the table node.</span></span>  
   
-9. Seleccione este nodo de tabla y arrástrelo a la región de la plantilla de elementos del segundo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+9. <span data-ttu-id="d7c04-121">Seleccione este nodo de tabla y arrástrelo a la región de la plantilla de elemento del segundo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span><span class="sxs-lookup"><span data-stu-id="d7c04-121">Select this table node and drag it onto the item template region of the second <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Introducción al Control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Cómo: mostrar los datos enlazados en un Control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [Cómo: mostrar relacionados con la aplicación de datos en Windows Forms](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)   
- [Cómo: cambiar la apariencia de un Control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [Solución de problemas del control DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="d7c04-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="d7c04-122">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [<span data-ttu-id="d7c04-123">Introducción al control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="d7c04-123">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="d7c04-124">Mostrar los datos enlazados en un control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="d7c04-124">How to: Display Bound Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="d7c04-125">Cómo: Mostrar datos relacionados en una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d7c04-125">How to: Display Related Data in a Windows Forms Application</span></span>](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)  
+ [<span data-ttu-id="d7c04-126">Cambiar la apariencia de un control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="d7c04-126">How to: Change the Appearance of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="d7c04-127">Solución de problemas del control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="d7c04-127">Troubleshooting the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

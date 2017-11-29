@@ -1,33 +1,37 @@
 ---
-title: "C&#243;mo: Reproducir un sonido desde Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "sonidos, Bip"
-  - "Formularios Windows Forms, sonidos"
-  - "sonidos, reproducción"
-  - "formularios, sonidos"
-  - "ejemplos [Windows Forms], sonidos"
+title: "Cómo: Reproducir un sonido desde Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- sounds [Windows Forms], beep
+- Windows Forms, sounds
+- sounds [Windows Forms], playing
+- forms [Windows Forms], sounds
+- examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e214b368b65797100722cb41ad6a77ecd16424de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Reproducir un sonido desde Windows Forms
-En este ejemplo se reproduce un sonido en tiempo de ejecución.  
+# <a name="how-to-play-a-beep-from-a-windows-form"></a><span data-ttu-id="8d33e-102">Cómo: Reproducir un sonido desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8d33e-102">How to: Play a Beep from a Windows Form</span></span>
+<span data-ttu-id="8d33e-103">En este ejemplo se reproduce un sonido en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="8d33e-103">This example plays a beep at run time.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="8d33e-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8d33e-104">Example</span></span>  
   
 ```vb  
 Public Sub OnePing()  
@@ -43,13 +47,13 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  El sonido reproducido en el ejemplo de código de C# está determinado por la <xref:System.Media.SystemSounds.Beep%2A> configuración del sistema de sonido. Para obtener más información, consulte <xref:System.Media.SystemSounds>.  
+>  <span data-ttu-id="8d33e-105">El sonido que se reproducen en el ejemplo de código de C# está determinado por la <xref:System.Media.SystemSounds.Beep%2A> configuración del sistema de sonido.</span><span class="sxs-lookup"><span data-stu-id="8d33e-105">The sound played in the C# code sample is determined by the <xref:System.Media.SystemSounds.Beep%2A> system sound setting.</span></span> <span data-ttu-id="8d33e-106">Para obtener más información, consulta <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="8d33e-106">For more information, see <xref:System.Media.SystemSounds>.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Para C#, este ejemplo requiere una referencia a la <xref:System.Media?displayProperty=fullName> espacio de nombres.  
+## <a name="compiling-the-code"></a><span data-ttu-id="8d33e-107">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="8d33e-107">Compiling the Code</span></span>  
+ <span data-ttu-id="8d33e-108">En C#, este ejemplo necesita una referencia a la <xref:System.Media?displayProperty=nameWithType> espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="8d33e-108">For C#, this example requires  a reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Interaction.Beep%2A>   
- <xref:System.Media.SoundPlayer>   
- [Cómo: reproducir un sonido del sistema desde un formulario Windows Forms](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)   
- [Cómo: reproducir un sonido desde un formulario Windows Forms](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a><span data-ttu-id="8d33e-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="8d33e-109">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Interaction.Beep%2A>  
+ <xref:System.Media.SoundPlayer>  
+ [<span data-ttu-id="8d33e-110">Reproducir un sonido del sistema desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8d33e-110">How to: Play a System Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ [<span data-ttu-id="8d33e-111">Cómo: Reproducir un sonido desde Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8d33e-111">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

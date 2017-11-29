@@ -1,56 +1,62 @@
 ---
-title: "C&#243;mo suplantar a un cliente en un servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, suplantación"
-  - "representación"
-  - "WCF, seguridad"
+title: "Cómo suplantar a un cliente en un servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, impersonation
+- impersonation
+- WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-caps.latest.revision: 33
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e6140e7d66ecdd905c0595cb813752d4e0a870d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo suplantar a un cliente en un servicio
-Suplantar un cliente en un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permite al servicio realizar acciones en nombre del cliente. Para las acciones sujetas a las comprobaciones de la lista de control de acceso \(ACL\), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente. Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente. Para obtener un ejemplo ilustrativo, consulte [Suplantar el cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)] la suplantación de clientes, consulte [Delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+# <a name="how-to-impersonate-a-client-on-a-service"></a><span data-ttu-id="88289-102">Cómo suplantar a un cliente en un servicio</span><span class="sxs-lookup"><span data-stu-id="88289-102">How to: Impersonate a Client on a Service</span></span>
+<span data-ttu-id="88289-103">Suplantar un cliente en un servicio de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permite al servicio realizar acciones en nombre del cliente.</span><span class="sxs-lookup"><span data-stu-id="88289-103">Impersonating a client on a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service enables the service to perform actions on behalf of the client.</span></span> <span data-ttu-id="88289-104">Para las acciones sujetas a las comprobaciones de la lista de control de acceso (ACL), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente.</span><span class="sxs-lookup"><span data-stu-id="88289-104">For actions subject to access control list (ACL) checks, such as access to directories and files on a machine or access to a SQL Server database, the ACL check is against the client user account.</span></span> <span data-ttu-id="88289-105">Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente.</span><span class="sxs-lookup"><span data-stu-id="88289-105">This topic shows the basic steps required to enable a client in a Windows domain to set a client impersonation level.</span></span> <span data-ttu-id="88289-106">Para obtener un ejemplo ilustrativo, consulte [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md).</span><span class="sxs-lookup"><span data-stu-id="88289-106">For a working example of this, see [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="88289-107">suplantación de clientes, consulte [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="88289-107"> client impersonation, see [Delegation and Impersonation](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
 > [!NOTE]
->  Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema \(por ejemplo, `Local System` o `Network Service`\), no se puede suplantar el cliente cuando se establece una sesión segura con tokens de contexto de seguridad con estado. Un WinForms o una aplicación de consola se ejecuta normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada. No obstante, cuando el cliente es una página [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] que se hospeda en [!INCLUDE[iis601](../../../includes/iis601-md.md)] o ISS 7.0, el cliente se ejecuta, de manera predeterminada, en la cuenta `Network Service`. Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado. Sin embargo, si el cliente es una página de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] y se usan sesiones seguras con tokens de contexto de seguridad con estado, no se puede suplantar al cliente.[!INCLUDE[crabout](../../../includes/crabout-md.md)] el uso de tokens de contexto de seguridad con estado en una sesión segura, consulte [Cómo: Crear un token de contexto de seguridad para una sesión segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  <span data-ttu-id="88289-108">Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema (por ejemplo, `Local System` o `Network Service`), no se puede suplantar el cliente cuando se establece una sesión segura con tokens de contexto de seguridad con estado.</span><span class="sxs-lookup"><span data-stu-id="88289-108">When the client and service are running on the same computer and the client is running under a system account (that is, `Local System` or `Network Service`), the client cannot be impersonated when a secure session is established with stateful Security Context tokens.</span></span> <span data-ttu-id="88289-109">Un WinForms o una aplicación de consola se ejecuta normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada.</span><span class="sxs-lookup"><span data-stu-id="88289-109">A WinForms or console application typically is run under the currently logged in account, so that account can be impersonated by default.</span></span> <span data-ttu-id="88289-110">No obstante, cuando el cliente es una página [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] que se hospeda en [!INCLUDE[iis601](../../../includes/iis601-md.md)] o ISS 7.0, el cliente se ejecuta, de manera predeterminada, en la cuenta `Network Service` .</span><span class="sxs-lookup"><span data-stu-id="88289-110">However, when the client is an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page and that page is hosted in [!INCLUDE[iis601](../../../includes/iis601-md.md)] or IIS 7.0, then the client does run under the `Network Service` account by default.</span></span> <span data-ttu-id="88289-111">Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado.</span><span class="sxs-lookup"><span data-stu-id="88289-111">All of the system-provided bindings that support secure sessions use a stateless Security Context token by default.</span></span> <span data-ttu-id="88289-112">Sin embargo, si el cliente es una página de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] y se usan sesiones seguras con tokens de contexto de seguridad con estado, no se puede suplantar al cliente.</span><span class="sxs-lookup"><span data-stu-id="88289-112">However, if the client is an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page and secure sessions with stateful Security Context tokens are used, the client cannot be impersonated.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="88289-113">uso de tokens de contexto de seguridad con estado en una sesión segura, consulte [Cómo: crear un Token de contexto de seguridad para una sesión segura](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span><span class="sxs-lookup"><span data-stu-id="88289-113"> using stateful Security Context tokens in a secure session, see [How to: Create a Security Context Token for a Secure Session](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
   
-### Para habilitar la suplantación de un cliente desde un token de Windows almacenado en memoria caché en un servicio  
+### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a><span data-ttu-id="88289-114">Para habilitar la suplantación de un cliente desde un token de Windows almacenado en memoria caché en un servicio</span><span class="sxs-lookup"><span data-stu-id="88289-114">To enable impersonation of a client from a cached Windows token on a service</span></span>  
   
-1.  Cree el servicio. Para obtener un tutorial sobre este procedimiento básico, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
+1.  <span data-ttu-id="88289-115">Cree el servicio.</span><span class="sxs-lookup"><span data-stu-id="88289-115">Create the service.</span></span> <span data-ttu-id="88289-116">Para obtener un tutorial sobre este procedimiento básico, consulte [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="88289-116">For a tutorial of this basic procedure, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
   
-2.  Utilice un enlace que use autenticación de Windows y cree una sesión, como <xref:System.ServiceModel.NetTcpBinding> o <xref:System.ServiceModel.WSHttpBinding>.  
+2.  <span data-ttu-id="88289-117">Utilice un enlace que use autenticación de Windows y cree una sesión, como <xref:System.ServiceModel.NetTcpBinding> o <xref:System.ServiceModel.WSHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="88289-117">Use a binding that uses Windows authentication and creates a session, such as <xref:System.ServiceModel.NetTcpBinding> or <xref:System.ServiceModel.WSHttpBinding>.</span></span>  
   
-3.  Al crear la implementación de la interfaz del servicio, aplique la clase <xref:System.ServiceModel.OperationBehaviorAttribute> al método que requiere la suplantación del cliente. Establezca la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> en <xref:System.ServiceModel.ImpersonationOption>.  
+3.  <span data-ttu-id="88289-118">Al crear la implementación de la interfaz del servicio, aplique la clase <xref:System.ServiceModel.OperationBehaviorAttribute> al método que requiere la suplantación del cliente.</span><span class="sxs-lookup"><span data-stu-id="88289-118">When creating the implementation of the service's interface, apply the <xref:System.ServiceModel.OperationBehaviorAttribute> class to the method that requires client impersonation.</span></span> <span data-ttu-id="88289-119">Establezca la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> en <xref:System.ServiceModel.ImpersonationOption.Required>.</span><span class="sxs-lookup"><span data-stu-id="88289-119">Set the <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> property to <xref:System.ServiceModel.ImpersonationOption.Required>.</span></span>  
   
      [!code-csharp[c_SimpleImpersonation#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#2)]
      [!code-vb[c_SimpleImpersonation#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#2)]  
   
-### Para establecer el nivel de suplantación permitido en el cliente  
+### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a><span data-ttu-id="88289-120">Para establecer el nivel de suplantación permitido en el cliente</span><span class="sxs-lookup"><span data-stu-id="88289-120">To set the allowed impersonation level on the client</span></span>  
   
-1.  Cree el código de cliente del servicio mediante [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1.  <span data-ttu-id="88289-121">Cree el código de cliente del servicio mediante [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="88289-121">Create service client code by using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="88289-122">[Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="88289-122"> [Accessing Services Using a WCF Client](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).</span></span>  
   
-2.  Después de crear el cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], establezca la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la clase <xref:System.ServiceModel.Security.WindowsClientCredential> en uno de los valores de enumeración <xref:System.Security.Principal.TokenImpersonationLevel>.  
+2.  <span data-ttu-id="88289-123">Después de crear el cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , establezca la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la clase <xref:System.ServiceModel.Security.WindowsClientCredential> en uno de los valores de enumeración <xref:System.Security.Principal.TokenImpersonationLevel> .</span><span class="sxs-lookup"><span data-stu-id="88289-123">After creating the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client, set the <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> property of the <xref:System.ServiceModel.Security.WindowsClientCredential> class to one of the <xref:System.Security.Principal.TokenImpersonationLevel> enumeration values.</span></span>  
   
     > [!NOTE]
-    >  Para usar <xref:System.Security.Principal.TokenImpersonationLevel>, la autenticación de Kerberos negociada \(a veces conocida como Kerberos *multibifurcación* o *multipaso*\) se ha de usar. Para obtener una descripción sobre cómo realizar la implementación, consulte [Procedimientos recomendados de seguridad](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+    >  <span data-ttu-id="88289-124">Para usar <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, la autenticación de Kerberos negociada (a veces conocida como Kerberos *multibifurcación* o *multipaso* ) se ha de usar.</span><span class="sxs-lookup"><span data-stu-id="88289-124">To use <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, negotiated Kerberos authentication (sometimes called *multi-leg* or *multi-step* Kerberos) must be used.</span></span> <span data-ttu-id="88289-125">Para obtener una descripción de cómo hacerlo, consulte [prácticas recomendadas de seguridad](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="88289-125">For a description of how to implement this, see [Best Practices for Security](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span></span>  
   
      [!code-csharp[c_SimpleImpersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#1)]
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
-## Vea también  
- <xref:System.ServiceModel.OperationBehaviorAttribute>   
- <xref:System.Security.Principal.TokenImpersonationLevel>   
- [Suplantar el cliente](../../../docs/framework/wcf/samples/impersonating-the-client.md)   
- [Delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="88289-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="88289-126">See Also</span></span>  
+ <xref:System.ServiceModel.OperationBehaviorAttribute>  
+ <xref:System.Security.Principal.TokenImpersonationLevel>  
+ [<span data-ttu-id="88289-127">Suplanta al cliente</span><span class="sxs-lookup"><span data-stu-id="88289-127">Impersonating the Client</span></span>](../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [<span data-ttu-id="88289-128">Delegación y suplantación</span><span class="sxs-lookup"><span data-stu-id="88289-128">Delegation and Impersonation</span></span>](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

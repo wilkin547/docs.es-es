@@ -1,68 +1,69 @@
 ---
-title: "Errores en tiempo de dise&#241;o en el Dise&#241;ador de Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DTELErrorList"
-  - "WhyDTELPage"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "errores en tiempo de diseño [Diseñador de Windows Forms]"
-  - "errores [Diseñador de Windows Forms]"
+title: "Errores en tiempo de diseño en el Diseñador de Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DTELErrorList
+- WhyDTELPage
+helpviewer_keywords:
+- errors [Windows Forms Designer]
+- design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 819b624e2abac09aea804311d661f78e2a1f5a7c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Errores en tiempo de dise&#241;o en el Dise&#241;ador de Windows Forms
-En este tema se explica el significado y el uso de la lista de errores en tiempo de diseño que aparece en Microsoft Visual Studio cuando se produce un error al cargar el Diseñador de Windows Forms.  Si aparece esta lista de errores, no debe interpretarla como un error del diseñador, sino como una ayuda para corregir los errores del código.  
+# <a name="design-time-errors-in-the-windows-forms-designer"></a><span data-ttu-id="a52d2-102">Errores en tiempo de diseño en el Diseñador de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a52d2-102">Design-Time Errors in the Windows Forms Designer</span></span>
+<span data-ttu-id="a52d2-103">En este tema se explica el significado y el uso de la lista de errores en tiempo de diseño que aparece en Microsoft Visual Studio cuando no se puede cargar el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a52d2-103">This topic explains the meaning and use of the design-time error list that appears in Microsoft Visual Studio when the Windows Forms Designer fails to load.</span></span> <span data-ttu-id="a52d2-104">Si esta lista de errores aparece, no debe interpretarse como un error del diseñador, sino como una ayuda para corregir errores en el código.</span><span class="sxs-lookup"><span data-stu-id="a52d2-104">If this error list appears, you should not interpret it as a bug in the designer, but as an aid to correcting errors in your code.</span></span>  
   
- Un conocimiento básico de esta lista de errores le ayudará a depurar las aplicaciones, ya que proporciona información detallada sobre los errores y sugerencias sobre posibles soluciones.  
+ <span data-ttu-id="a52d2-105">Un conocimiento básico de esta lista de errores le ayudará a depurar las aplicaciones brindando información detallada sobre los errores y sugerir posibles soluciones.</span><span class="sxs-lookup"><span data-stu-id="a52d2-105">A basic understanding of this error list will help you debug your applications by providing detailed information about the errors and suggesting possible solutions.</span></span>  
   
-## La interfaz de lista de errores en tiempo de diseño  
- Si el Diseñador de Windows Forms no se carga, aparecerá una lista de errores en el diseñador.  Los errores están agrupados en categorías.  Por ejemplo, si tiene cuatro instancias de variables no declaradas, éstas se agruparán en la misma categoría de error.  Cada categoría de error incluye una breve descripción del error.  
+## <a name="the-design-time-error-list-interface"></a><span data-ttu-id="a52d2-106">Interfaz de la lista de errores en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="a52d2-106">The Design-Time Error List Interface</span></span>  
+ <span data-ttu-id="a52d2-107">Si el Diseñador de Windows Forms no se puede cargar, aparecerá una lista de errores en el diseñador.</span><span class="sxs-lookup"><span data-stu-id="a52d2-107">If the Windows Forms Designer fails to load, an error list will appear in the designer.</span></span> <span data-ttu-id="a52d2-108">Los errores se agrupan en categorías.</span><span class="sxs-lookup"><span data-stu-id="a52d2-108">The errors are grouped into categories.</span></span> <span data-ttu-id="a52d2-109">Por ejemplo, si tiene cuatro instancias de variables no declaradas, se agruparán en la misma categoría de error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-109">For example, if you have four instances of undeclared variables, these will be grouped into the same error category.</span></span> <span data-ttu-id="a52d2-110">Cada categoría de error incluye una breve descripción del error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-110">Each error category includes a brief description that summarizes the error.</span></span>  
   
- Puede expandir o contraer una categoría de error haciendo clic en su encabezado o en el botón de contenido adicional para expandir o contraer.  Al expandir una categoría de error, se muestra la ayuda adicional siguiente:  
+ <span data-ttu-id="a52d2-111">Puede expandir o contraer una categoría de error haciendo clic en el encabezado de la categoría de error o en el botón de contenido adicional de expandir o contraer.</span><span class="sxs-lookup"><span data-stu-id="a52d2-111">You can expand or collapse an error category by either clicking on the error category heading or by clicking the expand/collapse chevron.</span></span> <span data-ttu-id="a52d2-112">Al expandir una categoría de error, se muestra la ayuda adicional siguiente:</span><span class="sxs-lookup"><span data-stu-id="a52d2-112">When you expand an error category, the following additional help is displayed:</span></span>  
   
--   Instancias del error.  
+-   <span data-ttu-id="a52d2-113">Instancias del error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-113">Instances of this error.</span></span>  
   
--   Ayuda con el error.  
+-   <span data-ttu-id="a52d2-114">Ayuda con el error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-114">Help with this error.</span></span>  
   
--   Publicaciones en el foro sobre el error.  
+-   <span data-ttu-id="a52d2-115">Entradas del foro sobre el error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-115">Forum posts about this error.</span></span>  
   
-### Instancias del error  
- En la ayuda adicional se muestran todas las instancias del error de su proyecto actual.  Muchos errores incluyen una ubicación exacta en el formato siguiente: *\[Nombre del proyecto\]* *\[Nombre del formulario\]* Línea:*\[Número de línea\]* Columna:*\[Número de columna\]*.  El vínculo **Ir al código** lo llevará al lugar de su código donde se ha producido el error.  
+### <a name="instances-of-this-error"></a><span data-ttu-id="a52d2-116">Instancias del error</span><span class="sxs-lookup"><span data-stu-id="a52d2-116">Instances of This Error</span></span>  
+ <span data-ttu-id="a52d2-117">La lista de ayuda adicional muestra todas las instancias del error en el proyecto actual.</span><span class="sxs-lookup"><span data-stu-id="a52d2-117">The additional help list all instances of the error in your current project.</span></span> <span data-ttu-id="a52d2-118">Muchos errores incluyen una ubicación exacta en el formato siguiente: *[nombre de proyecto]* *[nombre del formulario]* línea:*[número de línea]* columna:*[número de columna]*.</span><span class="sxs-lookup"><span data-stu-id="a52d2-118">Many errors include an exact location in the following format: *[Project Name]* *[Form Name]* Line:*[Line Number]* Column:*[Column Number]*.</span></span> <span data-ttu-id="a52d2-119">El vínculo **Ir al código** le lleva a la ubicación del código donde se produce el error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-119">The **Go to code** link takes you to the location in your code where the error occurs.</span></span>  
   
- Si hay una pila de llamadas asociada al error, puede hacer clic en el vínculo **Mostrar pila de llamadas**, que expande aún más el error para mostrar la pila de llamadas.  La pila puede proporcionar información valiosa sobre depuración.  Por ejemplo, puede realizar el seguimiento de las funciones a las que se llamaron antes de que se produjera el error.  La pila de llamadas se puede seleccionar para copiarla y guardarla.  
+ <span data-ttu-id="a52d2-120">Si se asocia una pila de llamadas al error, puede hacer clic en el vínculo **Mostrar pila de llamadas**, lo que amplía aún más el error para mostrar la pila de llamadas.</span><span class="sxs-lookup"><span data-stu-id="a52d2-120">If a call stack is associated with the error, you can click the **Show Call Stack** link, which further expands the error to show the call stack.</span></span> <span data-ttu-id="a52d2-121">El examen de la pila puede ofrecer información valiosa sobre depuración.</span><span class="sxs-lookup"><span data-stu-id="a52d2-121">Examining the stack can provide valuable debugging information.</span></span> <span data-ttu-id="a52d2-122">Por ejemplo, puede realizar el seguimiento de las funciones que se llamaron antes de producirse el error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-122">For example, you can track the functions that were called before the error occurred.</span></span> <span data-ttu-id="a52d2-123">La pila de llamadas es seleccionable para que se pueda copiar y guardarla.</span><span class="sxs-lookup"><span data-stu-id="a52d2-123">The call stack is selectable so that you can copy and save it.</span></span>  
   
 > [!NOTE]
->  En Visual Basic, la lista de errores en tiempo de diseño sólo muestra un error, pero puede mostrar varias instancias del mismo error.  En Visual C\+\+, los errores no tienen vínculos de código goto ni vínculos de número de línea.  
+>  <span data-ttu-id="a52d2-124">En Visual Basic, la lista de errores en tiempo de diseño no muestra más que un error, pero puede mostrar varias instancias del mismo error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-124">In Visual Basic, the design-time error list does not display more than one error, but it may display multiple instances of the same error.</span></span> <span data-ttu-id="a52d2-125">En Visual C++, los errores no tienen vínculos para ir al código ni vínculos de números de línea.</span><span class="sxs-lookup"><span data-stu-id="a52d2-125">In Visual C++, the errors do not have goto code links/line number links.</span></span>  
   
-### Ayuda con el error  
- Si el error contiene un vínculo a un tema de la Ayuda de MSDN asociado, la ayuda adicional incluirá un vínculo al tema de Ayuda.  Al hacer clic en el vínculo, el tema de Ayuda asociado aparece en Visual Studio.  
+### <a name="help-with-this-error"></a><span data-ttu-id="a52d2-126">Ayuda con el error</span><span class="sxs-lookup"><span data-stu-id="a52d2-126">Help with This Error</span></span>  
+ <span data-ttu-id="a52d2-127">Si el error contiene un vínculo a un tema de Ayuda de MSDN asociado, la ayuda adicional incluirá un vínculo al tema de ayuda.</span><span class="sxs-lookup"><span data-stu-id="a52d2-127">If the error contains a link to an associated MSDN help topic, the additional help will include a link to the help topic.</span></span> <span data-ttu-id="a52d2-128">Al hacer clic en el vínculo, el tema de Ayuda asociado aparece en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a52d2-128">When you click the link, the associated help topic appears in Visual Studio.</span></span>  
   
-### Publicaciones en el foro sobre el error  
- La ayuda adicional incluirá un vínculo a las publicaciones en el foro de MSDN relacionadas con el error.  La búsqueda en los foros se realiza a partir de la cadena del mensaje de error.  También puede intentar buscar los foros siguientes:  
+### <a name="forum-posts-about-this-error"></a><span data-ttu-id="a52d2-129">Entradas del foro sobre este error</span><span class="sxs-lookup"><span data-stu-id="a52d2-129">Forum posts about this error</span></span>  
+ <span data-ttu-id="a52d2-130">La ayuda adicional incluirá un vínculo a los mensajes del foro de MSDN relacionados con el error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-130">The additional help will include a link to MSDN forum posts related to the error.</span></span> <span data-ttu-id="a52d2-131">Los foros se buscan por la cadena del mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="a52d2-131">The forums are searched based on the string of the error message.</span></span> <span data-ttu-id="a52d2-132">También puede intentar buscar en los foros siguientes:</span><span class="sxs-lookup"><span data-stu-id="a52d2-132">You can also try searching the following forums:</span></span>  
   
--   [Foro de Windows Forms Designer](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [<span data-ttu-id="a52d2-133">Foro Diseñador de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a52d2-133">Windows Forms Designer Forum</span></span>](http://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Foros de Windows Forms](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [<span data-ttu-id="a52d2-134">Foros de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a52d2-134">Windows Forms Forums</span></span>](http://go.microsoft.com/fwlink/?LinkId=203523)  
   
-### Omitir y continuar  
- Puede decidir omitir el estado de error y seguir cargando el diseñador.  En tal caso, se puede producir un comportamiento inesperado.  Por ejemplo, es posible que los controles no aparezcan en la superficie de diseño.  
+### <a name="ignore-and-continue"></a><span data-ttu-id="a52d2-135">Omitir y continuar</span><span class="sxs-lookup"><span data-stu-id="a52d2-135">Ignore and Continue</span></span>  
+ <span data-ttu-id="a52d2-136">Puede omitir la condición de error y seguir cargando el diseñador.</span><span class="sxs-lookup"><span data-stu-id="a52d2-136">You can choose to ignore the error condition and continue loading the designer.</span></span> <span data-ttu-id="a52d2-137">La elección de esta acción puede dar lugar a un comportamiento inesperado.</span><span class="sxs-lookup"><span data-stu-id="a52d2-137">Choosing this action may result in unexpected behavior.</span></span> <span data-ttu-id="a52d2-138">Por ejemplo, puede que no aparezcan controles en la superficie de diseño.</span><span class="sxs-lookup"><span data-stu-id="a52d2-138">For example, controls may not appear on the design surface.</span></span>  
   
-## Vea también  
- [Troubleshooting Design\-Time Development](../Topic/Troubleshooting%20Design-Time%20Development.md)   
- [Solución de problemas relacionados con la creación de controles y componentes](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)   
- [Desarrollar controles de formularios Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [Windows Forms Designer Error Messages](http://msdn.microsoft.com/es-es/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+## <a name="see-also"></a><span data-ttu-id="a52d2-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="a52d2-139">See Also</span></span>  
+ [<span data-ttu-id="a52d2-140">Solución de problemas de desarrollo en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="a52d2-140">Troubleshooting Design-Time Development</span></span>](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [<span data-ttu-id="a52d2-141">Solución de problemas relacionados con la creación de controles y componentes</span><span class="sxs-lookup"><span data-stu-id="a52d2-141">Troubleshooting Control and Component Authoring</span></span>](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ [<span data-ttu-id="a52d2-142">Desarrollar controles de Windows Forms en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="a52d2-142">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="a52d2-143">[Windows Forms Designer Error Messages](http://msdn.microsoft.com/en-us/cf610bf4-5fe4-471c-bce7-6a05ece07bd2) (Mensajes de error del Diseñador de Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="a52d2-143">[Windows Forms Designer Error Messages](http://msdn.microsoft.com/en-us/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)</span></span>

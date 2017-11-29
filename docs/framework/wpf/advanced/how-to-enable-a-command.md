@@ -1,47 +1,53 @@
 ---
-title: "C&#243;mo: Habilitar un comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CommandBindings"
-  - "comandos"
+title: "Cómo: Habilitar un comando"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- CommandBindings [WPF]
+- commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e90f7f69aebf48bbc27321d3808468a2df49f793
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Habilitar un comando
-En el siguiente ejemplo se muestra cómo utilizar comandos en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  En el ejemplo se muestra cómo asociar un comando <xref:System.Windows.Input.RoutedCommand> a un control <xref:System.Windows.Controls.Button>, crear un objeto <xref:System.Windows.Input.CommandBinding>y crear los controladores de eventos que implementan <xref:System.Windows.Input.RoutedCommand>.  Para obtener más información sobre los comandos, vea [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+# <a name="how-to-enable-a-command"></a><span data-ttu-id="90877-102">Cómo: Habilitar un comando</span><span class="sxs-lookup"><span data-stu-id="90877-102">How to: Enable a Command</span></span>
+<span data-ttu-id="90877-103">En el ejemplo siguiente se muestra cómo utilizar comandos en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="90877-103">The following example demonstrates how to use commanding in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  <span data-ttu-id="90877-104">En el ejemplo se muestra cómo asociar un <xref:System.Windows.Input.RoutedCommand> a una <xref:System.Windows.Controls.Button>, cree un <xref:System.Windows.Input.CommandBinding>y crear los controladores de eventos que implementan el <xref:System.Windows.Input.RoutedCommand>.</span><span class="sxs-lookup"><span data-stu-id="90877-104">The example shows how to associate a <xref:System.Windows.Input.RoutedCommand> to a <xref:System.Windows.Controls.Button>, create a <xref:System.Windows.Input.CommandBinding>, and create the event handlers which implement the <xref:System.Windows.Input.RoutedCommand>.</span></span>  <span data-ttu-id="90877-105">Para obtener más información sobre los comandos, consulte el [Introducción estableciendo](../../../../docs/framework/wpf/advanced/commanding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="90877-105">For more information on commanding, see the [Commanding Overview](../../../../docs/framework/wpf/advanced/commanding-overview.md).</span></span>  
   
-## Ejemplo  
- En la primera sección de código se crea la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], que está compuesta de un control <xref:System.Windows.Controls.Button> y un control <xref:System.Windows.Controls.StackPanel>, y se crea también un objeto <xref:System.Windows.Input.CommandBinding> que asocia los controladores de comando a un comando <xref:System.Windows.Input.RoutedCommand>.  
+## <a name="example"></a><span data-ttu-id="90877-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="90877-106">Example</span></span>  
+ <span data-ttu-id="90877-107">La primera sección de código crea el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], que consta de un <xref:System.Windows.Controls.Button> y un <xref:System.Windows.Controls.StackPanel>y crea un <xref:System.Windows.Input.CommandBinding> que asocia los controladores de comando con el <xref:System.Windows.Input.RoutedCommand>.</span><span class="sxs-lookup"><span data-stu-id="90877-107">The first section of code creates the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], which consists of a <xref:System.Windows.Controls.Button> and a <xref:System.Windows.Controls.StackPanel>, and creates a <xref:System.Windows.Input.CommandBinding> that associates the command handlers with the <xref:System.Windows.Input.RoutedCommand>.</span></span>  
   
- La propiedad <xref:System.Windows.Input.ICommandSource.Command%2A> de <xref:System.Windows.Controls.Button> se asocia al comando <xref:System.Windows.Input.ApplicationCommands.Close%2A>.  
+ <span data-ttu-id="90877-108">El <xref:System.Windows.Input.ICommandSource.Command%2A> propiedad de la <xref:System.Windows.Controls.Button> está asociado el <xref:System.Windows.Input.ApplicationCommands.Close%2A> comando.</span><span class="sxs-lookup"><span data-stu-id="90877-108">The <xref:System.Windows.Input.ICommandSource.Command%2A> property of the <xref:System.Windows.Controls.Button> is associated with the <xref:System.Windows.Input.ApplicationCommands.Close%2A> command.</span></span>  
   
- El objeto <xref:System.Windows.Input.CommandBinding> se agrega al objeto <xref:System.Windows.Input.CommandBindingCollection> del objeto <xref:System.Windows.Window> raíz.  Los controladores de eventos <xref:System.Windows.Input.CommandBinding.Executed> y <xref:System.Windows.Input.CommandBinding.CanExecute> se asocian a este enlace y al comando <xref:System.Windows.Input.ApplicationCommands.Close%2A>.  
+ <span data-ttu-id="90877-109">El <xref:System.Windows.Input.CommandBinding> se agrega a la <xref:System.Windows.Input.CommandBindingCollection> de la raíz <xref:System.Windows.Window>.</span><span class="sxs-lookup"><span data-stu-id="90877-109">The <xref:System.Windows.Input.CommandBinding> is added to the <xref:System.Windows.Input.CommandBindingCollection> of the root <xref:System.Windows.Window>.</span></span> <span data-ttu-id="90877-110">El <xref:System.Windows.Input.CommandBinding.Executed> y <xref:System.Windows.Input.CommandBinding.CanExecute> controladores de eventos se adjunta a este enlace y se asocian con la <xref:System.Windows.Input.ApplicationCommands.Close%2A> comando.</span><span class="sxs-lookup"><span data-stu-id="90877-110">The <xref:System.Windows.Input.CommandBinding.Executed> and <xref:System.Windows.Input.CommandBinding.CanExecute> event handlers are attached to this binding and associated with the <xref:System.Windows.Input.ApplicationCommands.Close%2A> command.</span></span>  
   
- Sin <xref:System.Windows.Input.CommandBinding> no hay ninguna lógica de comando, únicamente un mecanismo para invocar el comando.  Cuando se hace clic en <xref:System.Windows.Controls.Button>, se provoca el evento <xref:System.Windows.Input.CommandManager.PreviewExecuted> asociado al comando <xref:System.Windows.RoutedEvent> en el destino del comando, seguido por el evento <xref:System.Windows.Input.CommandManager.Executed> asociado al comando <xref:System.Windows.RoutedEvent>.  Estos eventos recorren el árbol de elementos en busca de un enlace <xref:System.Windows.Input.CommandBinding> para ese comando concreto.  Cabe destacar que, debido a que <xref:System.Windows.RoutedEvent> tuneliza y traspasa el árbol de elementos, se deben extremar las precauciones al elegir el lugar donde se coloca <xref:System.Windows.Input.CommandBinding>.  Si <xref:System.Windows.Input.CommandBinding> está en un nodo relacionado con el destino del comando o en otro nodo que no está en la ruta de <xref:System.Windows.RoutedEvent>, no se tendrá acceso a <xref:System.Windows.Input.CommandBinding>.  
+ <span data-ttu-id="90877-111">Sin el <xref:System.Windows.Input.CommandBinding> hay una lógica de comando, únicamente un mecanismo para invocar el comando.</span><span class="sxs-lookup"><span data-stu-id="90877-111">Without the <xref:System.Windows.Input.CommandBinding> there is no command logic, only a mechanism to invoke the command.</span></span>  <span data-ttu-id="90877-112">Cuando el <xref:System.Windows.Controls.Button> se hace clic, el <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent> se genera en el destino del comando seguido por el <xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent>.</span><span class="sxs-lookup"><span data-stu-id="90877-112">When the <xref:System.Windows.Controls.Button> is clicked, the <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent> is raised on the command target followed by the <xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent>.</span></span>  <span data-ttu-id="90877-113">Estos eventos recorren el árbol de elementos que se busca un <xref:System.Windows.Input.CommandBinding> para ese comando concreto.</span><span class="sxs-lookup"><span data-stu-id="90877-113">These events traverse the element tree looking for a <xref:System.Windows.Input.CommandBinding> for that particular command.</span></span>  <span data-ttu-id="90877-114">Merece la pena mencionar que porque <xref:System.Windows.RoutedEvent> túnel y propagarse a través del árbol de elementos, se debe tener cuidado en donde el <xref:System.Windows.Input.CommandBinding> se coloca.</span><span class="sxs-lookup"><span data-stu-id="90877-114">It is worth noting that because <xref:System.Windows.RoutedEvent> tunnel and bubble through the element tree, care must be taken in where the <xref:System.Windows.Input.CommandBinding> is put.</span></span>   <span data-ttu-id="90877-115">Si el <xref:System.Windows.Input.CommandBinding> se encuentra en el mismo nivel que el destino del comando o en otro nodo que no está en la ruta de la <xref:System.Windows.RoutedEvent>, el <xref:System.Windows.Input.CommandBinding> no tendrá acceso.</span><span class="sxs-lookup"><span data-stu-id="90877-115">If the <xref:System.Windows.Input.CommandBinding> is on a sibling of the command target or another node that is not on the route of the <xref:System.Windows.RoutedEvent>, the <xref:System.Windows.Input.CommandBinding> will not be accessed.</span></span>  
   
- [!code-xml[EnableCloseCommand#CloseCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
+ [!code-xaml[EnableCloseCommand#CloseCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
   
  [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
  [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
   
- En la sección de código siguiente se implementan los controladores de eventos <xref:System.Windows.Input.CommandManager.Executed> y <xref:System.Windows.Input.CommandBinding.CanExecute>.  
+ <span data-ttu-id="90877-116">La siguiente sección de código implementa la <xref:System.Windows.Input.CommandManager.Executed> y <xref:System.Windows.Input.CommandBinding.CanExecute> controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="90877-116">The next section of code implements the <xref:System.Windows.Input.CommandManager.Executed> and <xref:System.Windows.Input.CommandBinding.CanExecute> event handlers.</span></span>  
   
- El controlador <xref:System.Windows.Input.CommandManager.Executed> llama a un método para cerrar el archivo abierto.  El controlador <xref:System.Windows.Input.CommandBinding.CanExecute> llama a un método para determinar si un archivo está abierto.  Si hay un archivo abierto, la propiedad <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> se establece en `true`; de lo contrario, se establece en `false`.  
+ <span data-ttu-id="90877-117">El <xref:System.Windows.Input.CommandManager.Executed> controlador llama a un método para cerrar el archivo abierto.</span><span class="sxs-lookup"><span data-stu-id="90877-117">The <xref:System.Windows.Input.CommandManager.Executed> handler calls a method to close the open file.</span></span>  <span data-ttu-id="90877-118">El <xref:System.Windows.Input.CommandBinding.CanExecute> controlador llama a un método para determinar si un archivo está abierto.</span><span class="sxs-lookup"><span data-stu-id="90877-118">The <xref:System.Windows.Input.CommandBinding.CanExecute> handler calls a method to determine whether a file is open.</span></span>  <span data-ttu-id="90877-119">Si un archivo está abierto, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> está establecido en `true`; en caso contrario, se establece en `false`.</span><span class="sxs-lookup"><span data-stu-id="90877-119">If a file is open, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> is set to `true`; otherwise, it is set to `false`.</span></span>  
   
  [!code-csharp[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
  [!code-vb[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
-## Vea también  
- [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+## <a name="see-also"></a><span data-ttu-id="90877-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="90877-120">See Also</span></span>  
+ [<span data-ttu-id="90877-121">Información general sobre comandos</span><span class="sxs-lookup"><span data-stu-id="90877-121">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)

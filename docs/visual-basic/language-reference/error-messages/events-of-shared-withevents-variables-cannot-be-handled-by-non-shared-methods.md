@@ -1,36 +1,34 @@
 ---
-title: "Los m&#233;todos no compartidos no pueden controlar los eventos de variables WithEvents compartidas | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30594"
-  - "vbc30594"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30594"
+title: "Los métodos no compartidos no pueden controlar los eventos de variables WithEvents compartidas"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30594
+- vbc30594
+helpviewer_keywords: BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 53372927b88df3946583564492df42170f302739
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Los m&#233;todos no compartidos no pueden controlar los eventos de variables WithEvents compartidas
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una variable declarada con el modificador `Shared` es una variable compartida.  Una variable compartida identifica exactamente una ubicación de almacenamiento.  Una variable declarada con el modificador `WithEvents` afirma que el tipo al que pertenece la variable controla el conjunto de eventos que provoca.  Cuando se asigna un valor a la variable, la propiedad creada mediante la declaración `WithEvents` elimina el enlace de cualquier controlador de eventos existente y establece un enlace con el nuevo controlador de eventos a través del método `Add`.  
+# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a><span data-ttu-id="c86af-102">Los métodos no compartidos no pueden controlar los eventos de variables WithEvents compartidas</span><span class="sxs-lookup"><span data-stu-id="c86af-102">Events of shared WithEvents variables cannot be handled by non-shared methods</span></span>
+<span data-ttu-id="c86af-103">Una variable declarada con el `Shared` modificador es una variable compartida.</span><span class="sxs-lookup"><span data-stu-id="c86af-103">A variable declared with the `Shared` modifier is a shared variable.</span></span> <span data-ttu-id="c86af-104">Una variable compartida identifica exactamente una ubicación de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="c86af-104">A shared variable identifies exactly one storage location.</span></span> <span data-ttu-id="c86af-105">Una variable declarada con el `WithEvents` modificador afirma que el tipo al que pertenece la variable controla el conjunto de eventos que provoca la variable.</span><span class="sxs-lookup"><span data-stu-id="c86af-105">A variable declared with the `WithEvents` modifier asserts that the type to which the variable belongs handles the set of events the variable raises.</span></span> <span data-ttu-id="c86af-106">Cuando se asigna un valor a la variable, la propiedad creado por el `WithEvents` declaración modo se desenlaza cualquier controlador de eventos existente y enlaza el nuevo controlador de eventos a través de la `Add` método.</span><span class="sxs-lookup"><span data-stu-id="c86af-106">When a value is assigned to the variable, the property created by the `WithEvents` declaration unhooks any existing event handler and hooks up the new event handler via the `Add` method.</span></span>  
   
- **Identificador de error:** BC30594  
+ <span data-ttu-id="c86af-107">**Id. de error:** BC30594</span><span class="sxs-lookup"><span data-stu-id="c86af-107">**Error ID:** BC30594</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c86af-108">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="c86af-108">To correct this error</span></span>  
   
--   Declare el controlador de eventos como `Shared`.  
+-   <span data-ttu-id="c86af-109">Declare el controlador de eventos `Shared`.</span><span class="sxs-lookup"><span data-stu-id="c86af-109">Declare your event handler `Shared`.</span></span>  
   
-## Vea también  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+## <a name="see-also"></a><span data-ttu-id="c86af-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="c86af-110">See Also</span></span>  
+ [<span data-ttu-id="c86af-111">Shared</span><span class="sxs-lookup"><span data-stu-id="c86af-111">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="c86af-112">WithEvents</span><span class="sxs-lookup"><span data-stu-id="c86af-112">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)

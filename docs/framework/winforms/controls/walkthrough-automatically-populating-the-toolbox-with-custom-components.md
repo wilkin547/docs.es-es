@@ -1,111 +1,112 @@
 ---
-title: "Tutorial: Rellenar autom&#225;ticamente el cuadro de herramientas con componentes personalizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "componentes personalizados, agregar al cuadro de herramientas"
-  - "IToolboxService (interfaz)"
-  - "Cuadro de herramientas [formularios Windows Forms], llenar"
+title: "Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IToolboxService interface
+- Toolbox [Windows Forms], populating
+- custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Rellenar autom&#225;ticamente el cuadro de herramientas con componentes personalizados
-Si los componentes están definidos por un proyecto en la solución abierta actual, aparecerán automáticamente en el **Cuadro de herramientas**, sin que se requiera ninguna acción por parte del usuario.  También puede rellenar manualmente el **Cuadro de herramientas** con componentes personalizados mediante [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/es-es/bd07835f-18a8-433e-bccc-7141f65263bb), pero el **Cuadro de herramientas** tiene en cuenta los elementos en los resultados de la compilación de la solución, con todas las características siguientes:  
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a><span data-ttu-id="2c227-102">Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados</span><span class="sxs-lookup"><span data-stu-id="2c227-102">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>
+<span data-ttu-id="2c227-103">Si los componentes están definidos en un proyecto de la solución actualmente abierta, estas aparecerán automáticamente en el **cuadro de herramientas**, sin ninguna acción necesaria por parte del usuario.</span><span class="sxs-lookup"><span data-stu-id="2c227-103">If your components are defined by a project in the currently open solution, they will automatically appear in the **Toolbox**, with no action required by you.</span></span> <span data-ttu-id="2c227-104">Puede rellenar manualmente el **cuadro de herramientas** con componentes personalizados mediante el uso de la [elegir Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), pero la **cuadro de herramientas** tiene en cuenta de elementos de la solución generar resultados con todas las características siguientes:</span><span class="sxs-lookup"><span data-stu-id="2c227-104">You can also manually populate the **Toolbox** with your custom components by using the [Choose Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), but the **Toolbox** takes account of items in your solution's build outputs with all the following characteristics:</span></span>  
   
--   Implementa <xref:System.ComponentModel.IComponent>:  
+-   <span data-ttu-id="2c227-105">Implementa <xref:System.ComponentModel.IComponent>;</span><span class="sxs-lookup"><span data-stu-id="2c227-105">Implements <xref:System.ComponentModel.IComponent>;</span></span>  
   
--   No tiene <xref:System.ComponentModel.ToolboxItemAttribute> establecido en `false`;  
+-   <span data-ttu-id="2c227-106">No tiene <xref:System.ComponentModel.ToolboxItemAttribute> establecido en `false`;</span><span class="sxs-lookup"><span data-stu-id="2c227-106">Does not have <xref:System.ComponentModel.ToolboxItemAttribute> set to `false`;</span></span>  
   
--   No tiene <xref:System.ComponentModel.DesignTimeVisibleAttribute> establecido en `false`.  
-  
-> [!NOTE]
->  El **Cuadro de herramientas** no sigue las cadenas de referencia, por lo que no mostrará en la solución elementos que no estén creados por un proyecto.  
-  
- Este tutorial muestra cómo un componente personalizado aparece automáticamente en el **Cuadro de herramientas** cuando se ha compilado el componente.  Las tareas ilustradas en este tutorial incluyen:  
-  
--   Crear un proyecto de formularios Windows Forms.  
-  
--   Crear un componente personalizado.  
-  
--   Crear una instancia de un componente personalizado.  
-  
--   Descargar y volver a cargar un componente personalizado.  
-  
- Cuando finalice, verá que el **Cuadro de herramientas** se rellena con un componente que ha creado.  
+-   <span data-ttu-id="2c227-107">No tiene <xref:System.ComponentModel.DesignTimeVisibleAttribute> establecido en `false`.</span><span class="sxs-lookup"><span data-stu-id="2c227-107">Does not have <xref:System.ComponentModel.DesignTimeVisibleAttribute> set to `false`.</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="2c227-108">El **cuadro de herramientas** no sigue las cadenas de referencia, por lo que no se mostrarán los elementos que no se compilan en un proyecto de la solución.</span><span class="sxs-lookup"><span data-stu-id="2c227-108">The **Toolbox** does not follow reference chains, so it will not display items that are not built by a project in your solution.</span></span>  
   
-## Crear el proyecto  
- El primer paso es crear el proyecto y configurar el formulario.  
+ <span data-ttu-id="2c227-109">Este tutorial muestra cómo un componente personalizado aparece automáticamente en el **cuadro de herramientas** una vez que se basa el componente.</span><span class="sxs-lookup"><span data-stu-id="2c227-109">This walkthrough demonstrates how a custom component automatically appears in the **Toolbox** once the component is built.</span></span> <span data-ttu-id="2c227-110">Las tareas ilustradas en este tutorial incluyen:</span><span class="sxs-lookup"><span data-stu-id="2c227-110">Tasks illustrated in this walkthrough include:</span></span>  
   
-#### Para crear el proyecto  
+-   <span data-ttu-id="2c227-111">Crear un proyecto de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="2c227-111">Creating a Windows Forms project.</span></span>  
   
-1.  Cree un proyecto de aplicación basada en Windows denominado `ToolboxExample`.  
+-   <span data-ttu-id="2c227-112">Crear un componente personalizado.</span><span class="sxs-lookup"><span data-stu-id="2c227-112">Creating a custom component.</span></span>  
   
-     Para obtener más información, vea [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   <span data-ttu-id="2c227-113">Crear una instancia de un componente personalizado.</span><span class="sxs-lookup"><span data-stu-id="2c227-113">Creating an instance of a custom component.</span></span>  
   
-2.  Agregue un nuevo componente al proyecto.  Denomínelo `DemoComponent`.  
+-   <span data-ttu-id="2c227-114">Descargar y volver a cargar un componente personalizado.</span><span class="sxs-lookup"><span data-stu-id="2c227-114">Unloading and reloading a custom component.</span></span>  
   
-     Para obtener más información, vea [NIB:How to: Add New Project Items](http://msdn.microsoft.com/es-es/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+ <span data-ttu-id="2c227-115">Cuando haya terminado, verá que el **cuadro de herramientas** se rellena con un componente que ha creado.</span><span class="sxs-lookup"><span data-stu-id="2c227-115">When you are finished, you will see that the **Toolbox** is populated with a component that you have created.</span></span>  
   
-3.  Compile el proyecto.  
+> [!NOTE]
+>  <span data-ttu-id="2c227-116">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="2c227-116">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="2c227-117">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="2c227-117">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="2c227-118">Para obtener más información, consulte [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="2c227-118">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-4.  En el menú **Herramientas**, haga clic en el elemento **Opciones**.  Haga clic en **General** en el elemento **Diseñador de Windows Forms** y asegúrese de que la opción **AutoToolboxPopulate** está establecida en **True**.  
+## <a name="creating-the-project"></a><span data-ttu-id="2c227-119">Crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="2c227-119">Creating the Project</span></span>  
+ <span data-ttu-id="2c227-120">El primer paso es crear el proyecto y configurar el formulario.</span><span class="sxs-lookup"><span data-stu-id="2c227-120">The first step is to create the project and to set up the form.</span></span>  
   
-## Crear una instancia de un componente personalizado  
- El paso siguiente es crear una instancia del componente personalizado en el formulario.  Dado que el **Cuadro de herramientas** tiene en cuenta automáticamente el nuevo componente, este procedimiento es tan sencillo como crear cualquier otro componente o control.  
+#### <a name="to-create-the-project"></a><span data-ttu-id="2c227-121">Para crear el proyecto</span><span class="sxs-lookup"><span data-stu-id="2c227-121">To create the project</span></span>  
   
-#### Para crear una instancia de un componente personalizado  
+1.  <span data-ttu-id="2c227-122">Cree un proyecto de aplicación basada en Windows llamado `ToolboxExample`.</span><span class="sxs-lookup"><span data-stu-id="2c227-122">Create a Windows-based application project called `ToolboxExample`.</span></span>  
   
-1.  Abra el formulario del proyecto en el **Diseñador de formularios**.  
+     <span data-ttu-id="2c227-123">Para obtener más información, consulta [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="2c227-123">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  En el **Cuadro de herramientas**, haga clic en la nueva ficha denominada **Componentes de ToolboxExample**.  
+2.  <span data-ttu-id="2c227-124">Agregue un nuevo componente al proyecto.</span><span class="sxs-lookup"><span data-stu-id="2c227-124">Add a new component to the project.</span></span> <span data-ttu-id="2c227-125">Llámelo `DemoComponent`.</span><span class="sxs-lookup"><span data-stu-id="2c227-125">Call it `DemoComponent`.</span></span>  
   
-     Cuando hace clic en la ficha, verá **DemoComponent**.  
+     <span data-ttu-id="2c227-126">Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).</span><span class="sxs-lookup"><span data-stu-id="2c227-126">For more information, see [NIB:How to: Add New Project Items](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).</span></span>  
+  
+3.  <span data-ttu-id="2c227-127">Compile el proyecto.</span><span class="sxs-lookup"><span data-stu-id="2c227-127">Build the project.</span></span>  
+  
+4.  <span data-ttu-id="2c227-128">Desde el **herramientas** menú, haga clic en el **opciones** elemento.</span><span class="sxs-lookup"><span data-stu-id="2c227-128">From the **Tools** menu, click the **Options** item.</span></span> <span data-ttu-id="2c227-129">Haga clic en **General** en el **Diseñador de Windows Forms** de elemento y asegúrese de que el **AutoToolboxPopulate** opción está establecida en **True**.</span><span class="sxs-lookup"><span data-stu-id="2c227-129">Click **General** under the **Windows Forms Designer** item and ensure that the **AutoToolboxPopulate** option is set to **True**.</span></span>  
+  
+## <a name="creating-an-instance-of-a-custom-component"></a><span data-ttu-id="2c227-130">Crear una instancia de un componente personalizado</span><span class="sxs-lookup"><span data-stu-id="2c227-130">Creating an Instance of a Custom Component</span></span>  
+ <span data-ttu-id="2c227-131">El siguiente paso es crear una instancia del componente personalizado en el formulario.</span><span class="sxs-lookup"><span data-stu-id="2c227-131">The next step is to create an instance of the custom component on the form.</span></span> <span data-ttu-id="2c227-132">Dado que la **cuadro de herramientas** automáticamente las cuentas para el componente nuevo, esto es tan fácil como crear cualquier otro componente o control.</span><span class="sxs-lookup"><span data-stu-id="2c227-132">Because the **Toolbox** automatically accounts for the new component, this is as easy as creating any other component or control.</span></span>  
+  
+#### <a name="to-create-an-instance-of-a-custom-component"></a><span data-ttu-id="2c227-133">Para crear una instancia de un componente personalizado</span><span class="sxs-lookup"><span data-stu-id="2c227-133">To create an instance of a custom component</span></span>  
+  
+1.  <span data-ttu-id="2c227-134">Abra el formulario del proyecto en el **Diseñador de formularios**.</span><span class="sxs-lookup"><span data-stu-id="2c227-134">Open the project's form in the **Forms Designer**.</span></span>  
+  
+2.  <span data-ttu-id="2c227-135">En el **cuadro de herramientas**, haga clic en la nueva ficha denominada **Componentes ToolboxExample**.</span><span class="sxs-lookup"><span data-stu-id="2c227-135">In the **Toolbox**, click the new tab called **ToolboxExample Components**.</span></span>  
+  
+     <span data-ttu-id="2c227-136">Una vez que haga clic en la pestaña, verá **DemoComponent**.</span><span class="sxs-lookup"><span data-stu-id="2c227-136">Once you click the tab, you will see **DemoComponent**.</span></span>  
   
     > [!NOTE]
-    >  Por razones de rendimiento, los componentes del área rellenada automáticamente del **Cuadro de herramientas** no muestran mapas de bits personalizados y no se admite <xref:System.Drawing.ToolboxBitmapAttribute>.  Para mostrar un icono para un componente personalizado en el **Cuadro de herramientas**, use el cuadro de diálogo **Elegir elementos del cuadro de herramientas** para cargar ese componente.  
+    >  <span data-ttu-id="2c227-137">Por motivos de rendimiento, los componentes en el área rellena automáticamente de la **cuadro de herramientas** no se muestran los mapas de bits personalizados y el <xref:System.Drawing.ToolboxBitmapAttribute> no se admite.</span><span class="sxs-lookup"><span data-stu-id="2c227-137">For performance reasons, components in the auto-populated area of the **Toolbox** do not display custom bitmaps, and the <xref:System.Drawing.ToolboxBitmapAttribute> is not supported.</span></span> <span data-ttu-id="2c227-138">Para mostrar un icono para un componente personalizado en el **cuadro de herramientas**, use la **elegir elementos del cuadro de herramientas** cuadro de diálogo para cargar el componente.</span><span class="sxs-lookup"><span data-stu-id="2c227-138">To display an icon for a custom component in the **Toolbox**, use the **Choose Toolbox Items** dialog box to load your component.</span></span>  
   
-3.  Arrastre el componente al formulario.  
+3.  <span data-ttu-id="2c227-139">Arrastre el componente al formulario.</span><span class="sxs-lookup"><span data-stu-id="2c227-139">Drag your component onto your form.</span></span>  
   
-     Se crea una instancia del componente y se agrega a la **Bandeja de componentes**.  
+     <span data-ttu-id="2c227-140">Se crea una instancia del componente y se agrega a la **Bandeja de componentes**.</span><span class="sxs-lookup"><span data-stu-id="2c227-140">An instance of the component is created and added to the **Component Tray**.</span></span>  
   
-## Descargar y volver a cargar un componente personalizado  
- El **Cuadro de herramientas** tiene en cuenta los componentes de cada proyecto cargado y, cuando se descarga un proyecto, quita las referencias a los componentes del proyecto.  
+## <a name="unloading-and-reloading-a-custom-component"></a><span data-ttu-id="2c227-141">Descargar y volver a cargar un componente personalizado</span><span class="sxs-lookup"><span data-stu-id="2c227-141">Unloading and Reloading a Custom Component</span></span>  
+ <span data-ttu-id="2c227-142">El **cuadro de herramientas** tiene en cuenta los componentes en cada uno de ellos cargado el proyecto y, cuando se descarga un proyecto, quita las referencias a los componentes del proyecto.</span><span class="sxs-lookup"><span data-stu-id="2c227-142">The **Toolbox** takes account of the components in each loaded project, and when a project is unloaded, it removes references to the project's components.</span></span>  
   
-#### Para experimentar con el efecto de descargar y volver a cargar los componentes en el Cuadro de herramientas  
+#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a><span data-ttu-id="2c227-143">Para experimentar con el efecto en el cuadro de herramientas de descarga y carga de componentes</span><span class="sxs-lookup"><span data-stu-id="2c227-143">To experiment with the effect on the Toolbox of unloading and reloading components</span></span>  
   
-1.  Descargue el proyecto desde la solución.  
+1.  <span data-ttu-id="2c227-144">Descargue el proyecto de la solución.</span><span class="sxs-lookup"><span data-stu-id="2c227-144">Unload the project from the solution.</span></span>  
   
-     Para obtener más información sobre la descarga de proyectos, vea [NIB:How to: Unload and Reload Projects](http://msdn.microsoft.com/es-es/abc0155b-8fcb-4ffc-95b6-698518a7100b).  Si se le indica que lo guarde, elija **Sí**.  
+     <span data-ttu-id="2c227-145">Para obtener más información acerca de cómo descargar los proyectos, vea [NIB: Cómo: descargar y volver a cargar proyectos](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b).</span><span class="sxs-lookup"><span data-stu-id="2c227-145">For more information about unloading projects, see [NIB:How to: Unload and Reload Projects](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b).</span></span> <span data-ttu-id="2c227-146">Si se pide que guarde, elija **Sí**.</span><span class="sxs-lookup"><span data-stu-id="2c227-146">If you are prompted to save, choose **Yes**.</span></span>  
   
-2.  Agregue un nuevo proyecto de **Aplicación para Windows** a la solución.  Abra el formulario en el **Diseñador**.  
+2.  <span data-ttu-id="2c227-147">Agregue un nuevo **aplicación de Windows** proyecto a la solución.</span><span class="sxs-lookup"><span data-stu-id="2c227-147">Add a new **Windows Application** project to the solution.</span></span> <span data-ttu-id="2c227-148">Abra el formulario en el **diseñador**.</span><span class="sxs-lookup"><span data-stu-id="2c227-148">Open the form in the **Designer**.</span></span>  
   
-     Ya no está la ficha **Componentes ToolboxExample** del proyecto anterior.  
+     <span data-ttu-id="2c227-149">El **Componentes ToolboxExample** ficha desde el proyecto anterior es ahora desaparecido.</span><span class="sxs-lookup"><span data-stu-id="2c227-149">The **ToolboxExample Components** tab from the previous project is now gone.</span></span>  
   
-3.  Vuelva a cargar el proyecto `ToolboxExample`.  
+3.  <span data-ttu-id="2c227-150">Volver a cargar el `ToolboxExample` proyecto.</span><span class="sxs-lookup"><span data-stu-id="2c227-150">Reload the `ToolboxExample` project.</span></span>  
   
-     La ficha **Componentes ToolboxExample** reaparece.  
+     <span data-ttu-id="2c227-151">El **Componentes ToolboxExample** pestaña ahora vuelve a aparecer.</span><span class="sxs-lookup"><span data-stu-id="2c227-151">The **ToolboxExample Components** tab now reappears.</span></span>  
   
-## Pasos siguientes  
- Este tutorial muestra que el **Cuadro de herramientas** tiene en cuenta los componentes de un proyecto, pero el **Cuadro de herramientas** también tiene en cuenta los controles.  Experimente con sus propios controles personalizados agregando y quitando proyectos de control de la solución.  
+## <a name="next-steps"></a><span data-ttu-id="2c227-152">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="2c227-152">Next Steps</span></span>  
+ <span data-ttu-id="2c227-153">En este tutorial se muestra que la **cuadro de herramientas** tiene en cuenta los componentes de un proyecto, pero la **cuadro de herramientas** es también tiene en cuenta los controles.</span><span class="sxs-lookup"><span data-stu-id="2c227-153">This walkthrough demonstrates that the **Toolbox** takes account of a project's components, but the **Toolbox** is also takes account of controls.</span></span> <span data-ttu-id="2c227-154">Experimentar con sus propios controles personalizados agregando y quitando proyectos de control de la solución.</span><span class="sxs-lookup"><span data-stu-id="2c227-154">Experiment with your own custom controls by adding and removing control projects from your solution.</span></span>  
   
-## Vea también  
- [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/es-es/8dd170af-72f0-4212-b04b-034ceee92834)   
- [How to: Manipulate Toolbox Tabs](http://msdn.microsoft.com/es-es/21285050-cadd-455a-b1f5-a2289a89c4db)   
- [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/es-es/bd07835f-18a8-433e-bccc-7141f65263bb)   
- [Insertar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="2c227-155">Vea también</span><span class="sxs-lookup"><span data-stu-id="2c227-155">See Also</span></span>  
+ [<span data-ttu-id="2c227-156">General, Diseñador de Windows Forms, cuadro de diálogo Opciones</span><span class="sxs-lookup"><span data-stu-id="2c227-156">General, Windows Forms Designer, Options Dialog Box</span></span>](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [<span data-ttu-id="2c227-157">Cómo: Manipular las fichas del cuadro de herramientas</span><span class="sxs-lookup"><span data-stu-id="2c227-157">How to: Manipulate Toolbox Tabs</span></span>](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [<span data-ttu-id="2c227-158">Elegir elementos del cuadro de herramientas (Cuadro de diálogo): Visual Studio</span><span class="sxs-lookup"><span data-stu-id="2c227-158">Choose Toolbox Items Dialog Box (Visual Studio)</span></span>](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [<span data-ttu-id="2c227-159">Insertar controles en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2c227-159">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

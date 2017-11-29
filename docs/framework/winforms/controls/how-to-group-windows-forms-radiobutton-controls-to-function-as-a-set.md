@@ -1,43 +1,44 @@
 ---
-title: "C&#243;mo: Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms], agrupar"
-  - "botones de opción, agrupar"
-  - "RadioButton (control) [Windows Forms], agrupar"
-  - "controles de Windows Forms, agrupar"
+title: "Cómo: Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- radio buttons [Windows Forms], grouping
+- controls [Windows Forms], grouping
+- Windows Forms controls, grouping
+- RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 37d8571624272f62c6ce327b0ed25e082c5cf713
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto
-Los controles <xref:System.Windows.Forms.RadioButton> de formularios Windows Forms están diseñados para permitir que los usuarios elijan entre dos o más opciones, de las cuales sólo una puede asignarse a un procedimiento u objeto.  Por ejemplo, un grupo de controles <xref:System.Windows.Forms.RadioButton> puede mostrar una serie de servicios de transporte para un pedido, de los que sólo se utilizará uno.  Por lo tanto, sólo es posible seleccionar los controles <xref:System.Windows.Forms.RadioButton> uno por uno, aunque sean parte de un grupo funcional.  
+# <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a><span data-ttu-id="f33d5-102">Cómo: Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto</span><span class="sxs-lookup"><span data-stu-id="f33d5-102">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>
+<span data-ttu-id="f33d5-103">Formularios Windows Forms <xref:System.Windows.Forms.RadioButton> controles están diseñados para proporcionar a los usuarios una opción entre dos o más configuraciones, de los cuales solo una puede asignarse a un procedimiento u objeto.</span><span class="sxs-lookup"><span data-stu-id="f33d5-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls are designed to give users a choice among two or more settings, of which only one can be assigned to a procedure or object.</span></span> <span data-ttu-id="f33d5-104">Por ejemplo, un grupo de <xref:System.Windows.Forms.RadioButton> controles pueden mostrar una opción de transporte para un pedido, pero solo uno de los operadores se usará.</span><span class="sxs-lookup"><span data-stu-id="f33d5-104">For example, a group of <xref:System.Windows.Forms.RadioButton> controls may display a choice of package carriers for an order, but only one of the carriers will be used.</span></span> <span data-ttu-id="f33d5-105">Por lo tanto, solo una <xref:System.Windows.Forms.RadioButton> a la vez puede seleccionarse, incluso si forma parte de un grupo funcional.</span><span class="sxs-lookup"><span data-stu-id="f33d5-105">Therefore only one <xref:System.Windows.Forms.RadioButton> at a time can be selected, even if it is a part of a functional group.</span></span>  
   
- Para agrupar botones de radio, dibújelos dentro de un contenedor, por ejemplo, un control <xref:System.Windows.Forms.Panel>, un control <xref:System.Windows.Forms.GroupBox> o un formulario.  Todos los botones de radio que se agregan directamente a un formulario se convierten en un grupo.  Para agregar grupos independientes, deberá colocarlos dentro de paneles o cuadros de grupo.  Para obtener más información sobre paneles o cuadros de grupo, vea [Información general del control Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md) o [Información general sobre el control GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md).  
+ <span data-ttu-id="f33d5-106">Agrupar botones de radio debe dibujar en un contenedor, como un <xref:System.Windows.Forms.Panel> (control), un <xref:System.Windows.Forms.GroupBox> control o un formulario.</span><span class="sxs-lookup"><span data-stu-id="f33d5-106">You group radio buttons by drawing them inside a container such as a <xref:System.Windows.Forms.Panel> control, a <xref:System.Windows.Forms.GroupBox> control, or a form.</span></span> <span data-ttu-id="f33d5-107">Todos los botones de radio que se agregan directamente a un grupo de un formulario se convierten en.</span><span class="sxs-lookup"><span data-stu-id="f33d5-107">All radio buttons that are added directly to a form become one group.</span></span> <span data-ttu-id="f33d5-108">Para agregar grupos independientes, debe colocarlos dentro de paneles o cuadros de grupo.</span><span class="sxs-lookup"><span data-stu-id="f33d5-108">To add separate groups, you must place them inside panels or group boxes.</span></span> <span data-ttu-id="f33d5-109">Para obtener más información acerca de los paneles o cuadros de grupo, consulte [información general del Control Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md) o [información general del Control GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="f33d5-109">For more information about panels or group boxes, see [Panel Control Overview](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md) or [GroupBox Control Overview](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md).</span></span>  
   
-### Para agrupar controles RadioButton en un conjunto, de modo que funcionen de forma independiente  
+### <a name="to-group-radiobutton-controls-as-a-set-to-function-independently-of-other-sets"></a><span data-ttu-id="f33d5-110">Para agrupar controles RadioButton en un conjunto para que funcionen de forma independiente de otros conjuntos de</span><span class="sxs-lookup"><span data-stu-id="f33d5-110">To group RadioButton controls as a set to function independently of other sets</span></span>  
   
-1.  Arrastre un control <xref:System.Windows.Forms.GroupBox> o <xref:System.Windows.Forms.Panel> desde la ficha **Windows Forms** del **Cuadro de herramientas** hasta el formulario.  
+1.  <span data-ttu-id="f33d5-111">Arrastre un <xref:System.Windows.Forms.GroupBox> o <xref:System.Windows.Forms.Panel> controlar desde la **formularios Windows Forms** pestaña en el **cuadro de herramientas** hasta el formulario.</span><span class="sxs-lookup"><span data-stu-id="f33d5-111">Drag a <xref:System.Windows.Forms.GroupBox> or <xref:System.Windows.Forms.Panel> control from the **Windows Forms** tab on the **Toolbox** onto the form.</span></span>  
   
-2.  Dibuje los controles <xref:System.Windows.Forms.RadioButton> en el control <xref:System.Windows.Forms.GroupBox> o <xref:System.Windows.Forms.Panel>.  
+2.  <span data-ttu-id="f33d5-112">Dibujar <xref:System.Windows.Forms.RadioButton> a los controles de la <xref:System.Windows.Forms.GroupBox> o <xref:System.Windows.Forms.Panel> control.</span><span class="sxs-lookup"><span data-stu-id="f33d5-112">Draw <xref:System.Windows.Forms.RadioButton> controls on the <xref:System.Windows.Forms.GroupBox> or <xref:System.Windows.Forms.Panel> control.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.RadioButton>   
- [Información general sobre el control RadioButton](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)   
- [Información general del control Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [Información general sobre el control GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)   
- [Información general sobre el control CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [RadioButton \(Control\)](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f33d5-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="f33d5-113">See Also</span></span>  
+ <xref:System.Windows.Forms.RadioButton>  
+ [<span data-ttu-id="f33d5-114">Información general sobre el control RadioButton</span><span class="sxs-lookup"><span data-stu-id="f33d5-114">RadioButton Control Overview</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f33d5-115">Información general del control Panel</span><span class="sxs-lookup"><span data-stu-id="f33d5-115">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f33d5-116">Información general sobre el control GroupBox</span><span class="sxs-lookup"><span data-stu-id="f33d5-116">GroupBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f33d5-117">Información general sobre el control CheckBox</span><span class="sxs-lookup"><span data-stu-id="f33d5-117">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="f33d5-118">RadioButton (control)</span><span class="sxs-lookup"><span data-stu-id="f33d5-118">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

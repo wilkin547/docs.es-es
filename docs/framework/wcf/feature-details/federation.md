@@ -1,109 +1,115 @@
 ---
-title: "Federaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "federación [WCF]"
-  - "WCF, federación"
+title: "Federación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, federation
+- federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 71b685b372edc99ffa8ea00180cdf622c5e48632
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Federaci&#243;n
-En este tema se proporciona una información general breve sobre el concepto de seguridad federada.También describe la compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para la implementación de arquitecturas de seguridad federadas.Para ver una aplicación de ejemplo que demuestre la federación, vea [Ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
+# <a name="federation"></a><span data-ttu-id="c885f-102">Federación</span><span class="sxs-lookup"><span data-stu-id="c885f-102">Federation</span></span>
+<span data-ttu-id="c885f-103">En este tema se proporciona una información general breve sobre el concepto de seguridad federada.</span><span class="sxs-lookup"><span data-stu-id="c885f-103">This topic provides a brief overview of the concept of federated security.</span></span> <span data-ttu-id="c885f-104">También describe la compatibilidad de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para la implementación de arquitecturas de seguridad federadas.</span><span class="sxs-lookup"><span data-stu-id="c885f-104">It also describes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] support for deploying federated security architectures.</span></span> <span data-ttu-id="c885f-105">Para una aplicación de ejemplo que muestra la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).</span><span class="sxs-lookup"><span data-stu-id="c885f-105">For a sample application that demonstrates federation, see [Federation Sample](../../../../docs/framework/wcf/samples/federation-sample.md).</span></span>  
   
-## Definición de seguridad federada  
- La seguridad federada permite una separación limpia entre el servicio al que un cliente intenta obtener acceso y los procedimientos de autenticación y autorización asociados.La seguridad federada también habilita la colaboración en múltiples sistemas, redes y organizaciones en dominios de confianza diferentes.  
+## <a name="definition-of-federated-security"></a><span data-ttu-id="c885f-106">Definición de seguridad federada</span><span class="sxs-lookup"><span data-stu-id="c885f-106">Definition of Federated Security</span></span>  
+ <span data-ttu-id="c885f-107">La seguridad federada permite una separación limpia entre el servicio al que un cliente intenta obtener acceso y los procedimientos de autenticación y autorización asociados.</span><span class="sxs-lookup"><span data-stu-id="c885f-107">Federated security allows for clean separation between the service a client is accessing and the associated authentication and authorization procedures.</span></span> <span data-ttu-id="c885f-108">La seguridad federada también habilita la colaboración en múltiples sistemas, redes y organizaciones en dominios de confianza diferentes.</span><span class="sxs-lookup"><span data-stu-id="c885f-108">Federated security also enables collaboration across multiple systems, networks, and organizations in different trust realms.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona compatibilidad para crear e implementar sistemas distribuidos que emplean la seguridad federada.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c885f-109"> proporciona compatibilidad para crear e implementar sistemas distribuidos que emplean la seguridad federada.</span><span class="sxs-lookup"><span data-stu-id="c885f-109"> provides support for building and deploying distributed systems that employ federated security.</span></span>  
   
-### Elementos de una arquitectura de seguridad federada  
- La arquitectura de seguridad federada tiene tres elementos clave, tal y como se describe en la tabla siguiente.  
+### <a name="elements-of-a-federated-security-architecture"></a><span data-ttu-id="c885f-110">Elementos de una arquitectura de seguridad federada</span><span class="sxs-lookup"><span data-stu-id="c885f-110">Elements of a Federated Security Architecture</span></span>  
+ <span data-ttu-id="c885f-111">La arquitectura de seguridad federada tiene tres elementos clave, tal y como se describe en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c885f-111">The federated security architecture has three key elements, as described in the following table.</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|Dominio|Una unidad única de administración de seguridad o confianza.Un dominio típico podría incluir una organización única.|  
-|Federación|Una colección de dominios que han establecido confianza.El nivel de confianza puede variar, pero normalmente incluye la autenticación y casi siempre incluye la autorización.Una federación típica podría incluir varias organizaciones que han establecido la confianza para el acceso compartido a un conjunto de recursos.|  
-|Servicio de tokens de seguridad \(STS\)|Un servicio web que emite tokens de seguridad; es decir, realiza aserciones basadas en la prueba en la que confía, a quienquiera que confíe en ella.Esto forma la base de la negociación de confianza entre dominios.|  
+|<span data-ttu-id="c885f-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="c885f-112">Element</span></span>|<span data-ttu-id="c885f-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="c885f-113">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="c885f-114">Dominio</span><span class="sxs-lookup"><span data-stu-id="c885f-114">Domain/realm</span></span>|<span data-ttu-id="c885f-115">Una unidad única de administración de seguridad o confianza.</span><span class="sxs-lookup"><span data-stu-id="c885f-115">A single unit of security administration or trust.</span></span> <span data-ttu-id="c885f-116">Un dominio típico podría incluir una organización única.</span><span class="sxs-lookup"><span data-stu-id="c885f-116">A typical domain might include a single organization.</span></span>|  
+|<span data-ttu-id="c885f-117">Federación</span><span class="sxs-lookup"><span data-stu-id="c885f-117">Federation</span></span>|<span data-ttu-id="c885f-118">Una colección de dominios que han establecido confianza.</span><span class="sxs-lookup"><span data-stu-id="c885f-118">A collection of domains that have established trust.</span></span> <span data-ttu-id="c885f-119">El nivel de confianza puede variar, pero normalmente incluye la autenticación y casi siempre incluye la autorización.</span><span class="sxs-lookup"><span data-stu-id="c885f-119">The level of trust may vary, but typically includes authentication and almost always includes authorization.</span></span> <span data-ttu-id="c885f-120">Una federación típica podría incluir varias organizaciones que han establecido la confianza para el acceso compartido a un conjunto de recursos.</span><span class="sxs-lookup"><span data-stu-id="c885f-120">A typical federation might include a number of organizations that have established trust for shared access to a set of resources.</span></span>|  
+|<span data-ttu-id="c885f-121">Servicio de tokens de seguridad (STS)</span><span class="sxs-lookup"><span data-stu-id="c885f-121">Security Token Service (STS)</span></span>|<span data-ttu-id="c885f-122">Un servicio web que emite tokens de seguridad; es decir, realiza aserciones basadas en la prueba en la que confía, a quienquiera que confíe en ella.</span><span class="sxs-lookup"><span data-stu-id="c885f-122">A Web service that issues security tokens; that is, it makes assertions based on evidence that it trusts, to whomever trusts it.</span></span> <span data-ttu-id="c885f-123">Esto forma la base de la negociación de confianza entre dominios.</span><span class="sxs-lookup"><span data-stu-id="c885f-123">This forms the basis of trust brokering between domains.</span></span>|  
   
-### Escenarios de ejemplo  
- La siguiente ilustración muestra un ejemplo de seguridad federada.  
+### <a name="example-scenario"></a><span data-ttu-id="c885f-124">Escenarios de ejemplo</span><span class="sxs-lookup"><span data-stu-id="c885f-124">Example Scenario</span></span>  
+ <span data-ttu-id="c885f-125">La siguiente ilustración muestra un ejemplo de seguridad federada.</span><span class="sxs-lookup"><span data-stu-id="c885f-125">The following illustration shows an example of federated security.</span></span>  
   
- ![Federación](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ <span data-ttu-id="c885f-126">![Federación](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")</span><span class="sxs-lookup"><span data-stu-id="c885f-126">![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")</span></span>  
   
- Este escenario incluye dos organizaciones: A y B.La organización B tiene un recurso web \(un servicio web\) que algunos usuarios de la organización A encuentran valioso.  
+ <span data-ttu-id="c885f-127">Este escenario incluye dos organizaciones: A y B. La organización B tiene un recurso web (un servicio web) que algunos usuarios de la organización A encuentran valioso.</span><span class="sxs-lookup"><span data-stu-id="c885f-127">This scenario includes two organizations: A and B. Organization B has a Web resource (a Web service) that some users in organization A find valuable.</span></span>  
   
 > [!NOTE]
->  Esta sección utiliza de forma aleatoria los términos *recurso*, *servicio*y *servicio web*.  
+>  <span data-ttu-id="c885f-128">Esta sección utiliza los términos *recursos*, *servicio*, y *servicio Web* indistintamente.</span><span class="sxs-lookup"><span data-stu-id="c885f-128">This section uses the terms *resource*, *service*, and *Web service* interchangeably.</span></span>  
   
- Normalmente, la organización B requiere que un usuario de la organización A proporcione alguna forma válida de autenticación antes de obtener acceso al servicio.Además, la organización también puede requerir que el usuario esté autorizado para tener acceso al recurso concreto en cuestión.Una manera de resolver este problema y permitir a los usuarios de la organización A obtener acceso al recurso de la organización B es la siguiente:  
+ <span data-ttu-id="c885f-129">Normalmente, la organización B requiere que un usuario de la organización A proporcione alguna forma válida de autenticación antes de obtener acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-129">Typically, organization B requires that a user from organization A provide some valid form of authentication before accessing the service.</span></span> <span data-ttu-id="c885f-130">Además, la organización también puede requerir que el usuario esté autorizado para tener acceso al recurso concreto en cuestión.</span><span class="sxs-lookup"><span data-stu-id="c885f-130">In addition, the organization may also require that the user be authorized to access the specific resource in question.</span></span> <span data-ttu-id="c885f-131">Una manera de resolver este problema y permitir a los usuarios de la organización A obtener acceso al recurso de la organización B es la siguiente:</span><span class="sxs-lookup"><span data-stu-id="c885f-131">One way to address this problem and enable users in organization A to access the resource in organization B is as follows:</span></span>  
   
--   Los usuarios de la organización A registran sus credenciales \(un nombre de usuario y contraseña\) en la organización B.  
+-   <span data-ttu-id="c885f-132">Los usuarios de la organización A registran sus credenciales (un nombre de usuario y contraseña) en la organización B.</span><span class="sxs-lookup"><span data-stu-id="c885f-132">Users from organization A register their credentials (a user name and password) with organization B.</span></span>  
   
--   Durante el acceso al recurso, los usuarios de la organización A presentan sus credenciales a la organización B y se autentican antes de obtener acceso al recurso.  
+-   <span data-ttu-id="c885f-133">Durante el acceso al recurso, los usuarios de la organización A presentan sus credenciales a la organización B y se autentican antes de obtener acceso al recurso.</span><span class="sxs-lookup"><span data-stu-id="c885f-133">During the resource access, users from organization A present their credentials to organization B and are authenticated before accessing the resource.</span></span>  
   
- Este método tiene tres inconvenientes significativos:  
+ <span data-ttu-id="c885f-134">Este método tiene tres inconvenientes significativos:</span><span class="sxs-lookup"><span data-stu-id="c885f-134">This approach has three significant drawbacks:</span></span>  
   
--   La organización B tiene que administrar las credenciales de los usuarios de la organización A además de administrar las credenciales de sus usuarios locales.  
+-   <span data-ttu-id="c885f-135">La organización B tiene que administrar las credenciales de los usuarios de la organización A además de administrar las credenciales de sus usuarios locales.</span><span class="sxs-lookup"><span data-stu-id="c885f-135">Organization B has to manage the credentials for users from organization A in addition to managing the credentials of its local users.</span></span>  
   
--   Los usuarios de la organización A necesitan mantener un conjunto adicional de credenciales \(es decir, recordar un nombre de usuario y una contraseña adicionales\) aparte de las credenciales que usan normalmente para obtener acceso a los recursos de la organización A.Esto suele animar el uso del mismo nombre de usuario y contraseña en varios sitios de servicio, lo que es una medida de seguridad débil.  
+-   <span data-ttu-id="c885f-136">Los usuarios de la organización A han de mantener un conjunto adicional de credenciales (es decir, han de recordar un nombre de usuario y contraseña adicionales) aparte de las credenciales que utilizan normalmente para obtener acceso a los recursos de la organización A. Esto promueve el uso del mismo nombre de usuario y contraseña en varios sitios del servicio, lo que constituye una medida de seguridad débil.</span><span class="sxs-lookup"><span data-stu-id="c885f-136">Users in organization A need to maintain an additional set of credentials (that is, remember an additional user name and password) apart from the credentials they normally use to gain access to resources within organization A. This usually encourages the practice of using the same user name and password at multiple service sites, which is a weak security measure.</span></span>  
   
--   La arquitectura no escala a medida que más organizaciones perciben que el recurso de la organización B tiene algún valor.  
+-   <span data-ttu-id="c885f-137">La arquitectura no escala a medida que más organizaciones perciben que el recurso de la organización B tiene algún valor.</span><span class="sxs-lookup"><span data-stu-id="c885f-137">The architecture does not scale as more organizations perceive the resource at organization B as being of some value.</span></span>  
   
- Un método alternativo, que trata los inconvenientes mencionados anteriormente, consiste en emplear la seguridad federada.En este método, las organizaciones A y B establecen una relación de confianza y emplean el Servicio de tokens de seguridad \(STS\) para habilitar la negociación de la confianza establecida.  
+ <span data-ttu-id="c885f-138">Un método alternativo, que trata los inconvenientes mencionados anteriormente, consiste en emplear la seguridad federada.</span><span class="sxs-lookup"><span data-stu-id="c885f-138">An alternative approach, which addresses the previously mentioned drawbacks, is to employ federated security.</span></span> <span data-ttu-id="c885f-139">En este método, las organizaciones A y B establecen una relación de confianza y emplean el Servicio de tokens de seguridad (STS) para habilitar la negociación de la confianza establecida.</span><span class="sxs-lookup"><span data-stu-id="c885f-139">In this approach, organizations A and B establish a trust relationship and employ Security Token Service (STS) to enable brokering of the established trust.</span></span>  
   
- En una arquitectura de seguridad federada, los usuarios de la organización A saben que si desean tener acceso al servicio web de la organización B, deben presentar un token de seguridad válido desde el STS de la organización B, que autentica y autoriza su acceso al servicio específico.  
+ <span data-ttu-id="c885f-140">En una arquitectura de seguridad federada, los usuarios de la organización A saben que si desean tener acceso al servicio web de la organización B, deben presentar un token de seguridad válido desde el STS de la organización B, que autentica y autoriza su acceso al servicio específico.</span><span class="sxs-lookup"><span data-stu-id="c885f-140">In a federated security architecture, users from organization A know that if they want to access the Web service in organization B that they must present a valid security token from the STS at organization B, which authenticates and authorizes their access to the specific service.</span></span>  
   
- Al ponerse en contacto con el STS de B, los usuarios reciben otro nivel de direccionamiento indirecto desde la directiva asociada al STS.Deben presentar un token de seguridad válido del STS de A \(es decir, el dominio de confianza del cliente\) antes de que el STS de B pueda emitirles un token de seguridad.Esto es un corolario de la relación de confianza establecida entre las dos organizaciones e implica que la organización B no tiene que administrar las identidades de los usuarios de la organización A.En la práctica, STS B suele tener una `issuerAddress` null y `issuerMetadataAddress`.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: Configurar un emisor local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).En ese caso, el cliente consulta una directiva local para buscar STS A.Esta configuración se denomina *federación del dominio de inicio* y se escala mejor porque STS N no tiene que mantener información sobre STS A.  
+ <span data-ttu-id="c885f-141">Al ponerse en contacto con el STS de B, los usuarios reciben otro nivel de direccionamiento indirecto desde la directiva asociada al STS.</span><span class="sxs-lookup"><span data-stu-id="c885f-141">On contacting the STS B, the users receive another level of indirection from the policy associated with the STS.</span></span> <span data-ttu-id="c885f-142">Deben presentar un token de seguridad válido del STS de A (es decir, el dominio de confianza del cliente) antes de que el STS de B pueda emitirles un token de seguridad.</span><span class="sxs-lookup"><span data-stu-id="c885f-142">They must present a valid security token from the STS A (that is, the client trust realm) before the STS B can issue them a security token.</span></span> <span data-ttu-id="c885f-143">Esto es un corolario de la relación de confianza establecida entre las dos organizaciones e implica que la organización B no tiene que administrar las identidades de los usuarios de la organización A. En la práctica, el STS de B tiene normalmente una `issuerAddress` y `issuerMetadataAddress` nulas.</span><span class="sxs-lookup"><span data-stu-id="c885f-143">This is a corollary of the trust relationship established between the two organizations and implies that organization B does not have to manage identities for users from organization A. In practice, STS B typically has a null `issuerAddress` and `issuerMetadataAddress`.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c885f-144">[Cómo: configurar un emisor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span><span class="sxs-lookup"><span data-stu-id="c885f-144"> [How to: Configure a Local Issuer](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span></span> <span data-ttu-id="c885f-145">En ese caso, el cliente consulta una directiva local para buscar STS A. Esta configuración se denomina *federación del dominio de inicio* y se escala mejor porque STS de B no tiene que mantener información acerca de STS A.</span><span class="sxs-lookup"><span data-stu-id="c885f-145">In that case, the client consults a local policy to locate STS A. This configuration is called *home realm federation* and it scales better because STS B does not have to maintain information about STS A.</span></span>  
   
- Los usuarios después se ponen en contacto con el STS de la organización A y obtienen un token de seguridad presentando las credenciales de autenticación que usan normalmente para obtener acceso a cualquier otro recurso de la organización A.Esto también alivia el problema de que los usuarios tengan que mantener varios conjuntos de credenciales o usar el mismo conjunto de credenciales en varios sitios de servicio.  
+ <span data-ttu-id="c885f-146">Los usuarios se ponen en contacto a continuación con el STS de la organización A y obtienen un token de seguridad presentando las credenciales de autenticación que utilizan normalmente para obtener acceso a cualquier otro recurso de la organización A. Esto también palia el problema de que los usuarios tengan que mantener varios conjuntos de credenciales o que usen el mismo conjunto de credenciales en varios sitios de servicios.</span><span class="sxs-lookup"><span data-stu-id="c885f-146">The users then contact the STS at organization A and obtain a security token by presenting authentication credentials that they normally use to gain access to any other resource within organization A. This also alleviates the problem of users having to maintain multiple sets of credentials or using the same set of credentials at multiple service sites.</span></span>  
   
- Una vez que los usuarios obtienen un token de seguridad del STS A, muestran el token al STS B.La organización B continúa ejecutando la autorización de las solicitudes de los usuarios y emite un token de seguridad a los usuarios desde su propio conjunto de tokens de seguridad.Los usuarios pueden presentar a continuación su token al recurso de la organización B y obtener acceso al servicio.  
+ <span data-ttu-id="c885f-147">Una vez que los usuarios obtienen un token de seguridad del STS de A, presentan el token al STS de B. La organización B continúa con la autorización de las solicitudes de los usuarios y emite un token de seguridad a los usuarios desde su propio conjunto de tokens de seguridad.</span><span class="sxs-lookup"><span data-stu-id="c885f-147">Once the users obtain a security token from the STS A, they present the token to the STS B. Organization B proceeds to perform authorization of the users' requests and issues a security token to the users from its own set of security tokens.</span></span> <span data-ttu-id="c885f-148">Los usuarios pueden presentar a continuación su token al recurso de la organización B y obtener acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-148">The users can then present their token to the resource at organization B and access the service.</span></span>  
   
-## Compatibilidad para la seguridad federada en WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona compatibilidad inmediata para la implementación de arquitecturas de seguridad federadas a través del [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+## <a name="support-for-federated-security-in-wcf"></a><span data-ttu-id="c885f-149">Compatibilidad para la seguridad federada en WCF</span><span class="sxs-lookup"><span data-stu-id="c885f-149">Support for Federated Security in WCF</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c885f-150">proporciona compatibilidad inmediata para la implementación de arquitecturas de seguridad federadas a través de la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="c885f-150"> provides turnkey support for deploying federated security architectures through the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  
   
- El elemento [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) proporciona un enlace seguro, fiable e interoperable que conlleva el uso de HTTP como mecanismo de transporte subyacente para el estilo de comunicación de solicitud\-respuesta, empleando texto y XML como el formato de conexión para la codificación.  
+ <span data-ttu-id="c885f-151">El [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) elemento proporciona para un enlace seguro, confiable y interoperable que implica el uso de HTTP como mecanismo de transporte subyacente para el estilo de comunicación de solicitud y respuesta, uso de texto y XML como el formato de codificación.</span><span class="sxs-lookup"><span data-stu-id="c885f-151">The [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element provides for a secure, reliable, interoperable binding that entails the use of HTTP as the underlying transport mechanism for request-reply communication style, employing text and XML as the wire format for encoding.</span></span>  
   
- El uso de [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) en un escenario de seguridad federada se puede dividir en dos fases lógicamente independientes, tal y como se describe en las siguientes secciones.  
+ <span data-ttu-id="c885f-152">El uso de [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) en una seguridad federada escenario puede se separa en dos fases independientes lógicamente, tal como se describe en las secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="c885f-152">The use of [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) in a federated security scenario can be decoupled into two logically independent phases, as described in the following sections.</span></span>  
   
-### Fase 1: fase de diseño  
- Durante la fase de diseño, el cliente utiliza la [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para leer la directiva que expone el extremo de servicio y para reunir los requisitos de autorización y autenticación del servicio.Los proxys adecuados se construyen para crear el siguiente patrón de comunicación de seguridad federada en el cliente:  
+### <a name="phase-1-design-phase"></a><span data-ttu-id="c885f-153">Fase 1: fase de diseño</span><span class="sxs-lookup"><span data-stu-id="c885f-153">Phase 1: Design Phase</span></span>  
+ <span data-ttu-id="c885f-154">Durante la fase de diseño, el cliente utiliza la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para leer la directiva expone el extremo de servicio y para recopilar los requisitos de autenticación y autorización del servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-154">During the design phase, the client uses the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to read the policy the service endpoint exposes and to collect the service's authentication and authorization requirements.</span></span> <span data-ttu-id="c885f-155">Los proxys adecuados se construyen para crear el siguiente patrón de comunicación de seguridad federada en el cliente:</span><span class="sxs-lookup"><span data-stu-id="c885f-155">The appropriate proxies are constructed to create the following federated security communication pattern at the client:</span></span>  
   
--   Obtenga un token de seguridad de STS en el dominio de confianza del cliente.  
+-   <span data-ttu-id="c885f-156">Obtenga un token de seguridad de STS en el dominio de confianza del cliente.</span><span class="sxs-lookup"><span data-stu-id="c885f-156">Obtain a security token from the STS in the client trust realm.</span></span>  
   
--   Presente el token al STS en el dominio de confianza del servicio.  
+-   <span data-ttu-id="c885f-157">Presente el token al STS en el dominio de confianza del servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-157">Present the token to the STS in the service trust realm.</span></span>  
   
--   Obtenga un token de seguridad del STS en el dominio de confianza del servicio.  
+-   <span data-ttu-id="c885f-158">Obtenga un token de seguridad del STS en el dominio de confianza del servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-158">Obtain a security token from the STS in the service trust realm.</span></span>  
   
--   Presente el token al servicio para obtener acceso al servicio.  
+-   <span data-ttu-id="c885f-159">Presente el token al servicio para obtener acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-159">Present the token to the service to access the service.</span></span>  
   
-### Fase 2: fase en tiempo de ejecución  
- Durante la fase en tiempo de ejecución, el cliente crea instancias de un objeto de la clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y realiza una llamada mediante el cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].El marco subyacente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] administra los pasos mencionados con anterioridad en el patrón de comunicación de seguridad federada y permite al cliente utilizar el servicio a la perfección.  
+### <a name="phase-2-run-time-phase"></a><span data-ttu-id="c885f-160">Fase 2: fase en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="c885f-160">Phase 2: Run-Time Phase</span></span>  
+ <span data-ttu-id="c885f-161">Durante la fase en tiempo de ejecución, el cliente crea instancias de un objeto de la clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y realiza una llamada mediante el cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c885f-161">During the run-time phase, the client instantiates an object of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class and makes a call using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="c885f-162">El marco subyacente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] administra los pasos mencionados con anterioridad en el patrón de comunicación de seguridad federada y permite al cliente utilizar el servicio a la perfección.</span><span class="sxs-lookup"><span data-stu-id="c885f-162">The underlying framework of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] handles the previously mentioned steps in the federated security communication pattern and enables the client to seamlessly consume the service.</span></span>  
   
-## Ejemplo de implementación mediante WCF  
- La siguiente ilustración muestra una implementación de ejemplo para una arquitectura de seguridad federada utilizando la compatibilidad nativa de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="sample-implementation-using-wcf"></a><span data-ttu-id="c885f-163">Ejemplo de implementación mediante WCF</span><span class="sxs-lookup"><span data-stu-id="c885f-163">Sample Implementation Using WCF</span></span>  
+ <span data-ttu-id="c885f-164">La siguiente ilustración muestra una implementación de ejemplo para una arquitectura de seguridad federada utilizando la compatibilidad nativa de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c885f-164">The following illustration shows a sample implementation for a federated security architecture using native support from [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- ![Seguridad de federación en WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ <span data-ttu-id="c885f-165">![Seguridad de federación en WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")</span><span class="sxs-lookup"><span data-stu-id="c885f-165">![Federation security in WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")</span></span>  
   
-### Ejemplo de MyService  
- El servicio `MyService` expone un extremo único a través de `MyServiceEndpoint`.La siguiente ilustración muestra la dirección, enlace y contrato asociados al extremo.  
+### <a name="example-myservice"></a><span data-ttu-id="c885f-166">Ejemplo de MyService</span><span class="sxs-lookup"><span data-stu-id="c885f-166">Example MyService</span></span>  
+ <span data-ttu-id="c885f-167">El servicio `MyService` expone un extremo único a través de `MyServiceEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="c885f-167">The service `MyService` exposes a single endpoint through `MyServiceEndpoint`.</span></span> <span data-ttu-id="c885f-168">La siguiente ilustración muestra la dirección, enlace y contrato asociados al punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="c885f-168">The following illustration shows the address, binding, and contract associated with the endpoint.</span></span>  
   
- ![Federación](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ <span data-ttu-id="c885f-169">![Federación](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")</span><span class="sxs-lookup"><span data-stu-id="c885f-169">![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")</span></span>  
   
- El extremo `MyServiceEndpoint` del servicio usa [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) y necesita un token válido del Lenguaje de marcado de aserción de seguridad \(SAML\) con una notificación `accessAuthorized` emitida por STS B.Esto se especifica mediante declaración en la configuración del servicio.  
+ <span data-ttu-id="c885f-170">El extremo de servicio `MyServiceEndpoint` utiliza la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) y requiere un token de lenguaje de marcado de aserciones de seguridad (SAML) válido con un `accessAuthorized` notificación emitida por el STS de B. Esto se especifica mediante declaración en la configuración del servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-170">The service endpoint `MyServiceEndpoint` uses the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) and requires a valid Security Assertions Markup Language (SAML) token with an `accessAuthorized` claim issued by STS B. This is declaratively specified in the service configuration.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.MyService"      
@@ -152,23 +158,23 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Se debería tener en cuenta un pequeño punto sobre las demandas requeridas por `MyService`.La segunda figura indica que `MyService` requiere un token de SAML con la demanda `accessAuthorized`.Para ser más preciso, esto especifica el tipo de demanda que `MyService` requiere.El nombre completo de este tipo de demanda es http:\/\/tempuri.org:accessAuthorized \(junto con el espacio de nombres asociado\), que se utiliza en el archivo de configuración del servicio.El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de B lo ha establecido en `true`.  
+>  <span data-ttu-id="c885f-171">Se debería tener en cuenta un pequeño punto sobre las demandas requeridas por `MyService`.</span><span class="sxs-lookup"><span data-stu-id="c885f-171">A subtle point should be noted about the claims required by `MyService`.</span></span> <span data-ttu-id="c885f-172">La segunda figura indica que `MyService` requiere un token de SAML con la demanda `accessAuthorized`.</span><span class="sxs-lookup"><span data-stu-id="c885f-172">The second figure indicates that `MyService` requires a SAML token with the `accessAuthorized` claim.</span></span> <span data-ttu-id="c885f-173">Para ser más preciso, esto especifica el tipo de demanda que `MyService` requiere.</span><span class="sxs-lookup"><span data-stu-id="c885f-173">To be more precise, this specifies the claim type that `MyService` requires.</span></span> <span data-ttu-id="c885f-174">El nombre completo de este tipo de demanda es http://tempuri.org:accessAuthorized (junto con el espacio de nombres asociado), que se utiliza en el archivo de configuración del servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-174">The fully-qualified name of this claim type is http://tempuri.org:accessAuthorized (along with the associated namespace), which is used in the service configuration file.</span></span> <span data-ttu-id="c885f-175">El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de B lo ha establecido en `true`.</span><span class="sxs-lookup"><span data-stu-id="c885f-175">The value of this claim indicates the presence of this claim and is assumed to be set to `true` by STS B.</span></span>  
   
- En tiempo de ejecución, la clase `MyServiceOperationRequirement` que se implementa como parte de `MyService` obliga a cumplir esta directiva.  
+ <span data-ttu-id="c885f-176">En tiempo de ejecución, la clase `MyServiceOperationRequirement` que se implementa como parte de `MyService` obliga a cumplir esta directiva.</span><span class="sxs-lookup"><span data-stu-id="c885f-176">At runtime, this policy is enforced by the `MyServiceOperationRequirement` class that is implemented as part of the `MyService`.</span></span>  
   
  [!code-csharp[C_Federation#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#0)]
  [!code-vb[C_Federation#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#0)]  
 [!code-csharp[C_Federation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#1)]
 [!code-vb[C_Federation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
   
-#### STS de B  
- En la siguiente ilustración se muestra el STS de B.Como se mencionó anteriormente, un servicio de tokens de seguridad \(STS\) es también un servicio web y puede tener sus extremos asociados, directiva, etc.  
+#### <a name="sts-b"></a><span data-ttu-id="c885f-177">STS de B</span><span class="sxs-lookup"><span data-stu-id="c885f-177">STS B</span></span>  
+ <span data-ttu-id="c885f-178">La siguiente ilustración muestra el STS de B. Como se mencionó anteriormente, un servicio de tokens de seguridad (STS) es también un servicio web y puede tener sus extremos asociados, directiva, etc.</span><span class="sxs-lookup"><span data-stu-id="c885f-178">The following illustration shows the STS B. As stated earlier, a security token service (STS) is also a Web service and can have its associated endpoints, policy, and so on.</span></span>  
   
- ![Federación](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ <span data-ttu-id="c885f-179">![Federación](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")</span><span class="sxs-lookup"><span data-stu-id="c885f-179">![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")</span></span>  
   
- El STS de B expone un extremo único, denominado `STSEndpoint`, que puede ser de uso para solicitar tokens de seguridad.Específicamente, el STS de B emite tokens SAML con la demanda `accessAuthorized`, que puede presentarse en el sitio del servicio `MyService` para obtener acceso al servicio.Sin embargo, el STS de B requiere que los usuarios presenten un token SAML válido emitido por el STS de A que contiene la demanda `userAuthenticated`.Esto se especifica mediante declaración en la configuración del STS.  
+ <span data-ttu-id="c885f-180">El STS de B expone un extremo único, denominado `STSEndpoint`, que puede ser de uso para solicitar tokens de seguridad.</span><span class="sxs-lookup"><span data-stu-id="c885f-180">STS B exposes a single endpoint, called `STSEndpoint` that can be use to request security tokens.</span></span> <span data-ttu-id="c885f-181">Específicamente, el STS de B emite tokens SAML con la demanda `accessAuthorized`, que puede presentarse en el sitio del servicio `MyService` para obtener acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-181">Specifically, STS B issues SAML tokens with the `accessAuthorized` claim, which can be presented at the `MyService` service site for accessing the service.</span></span> <span data-ttu-id="c885f-182">Sin embargo, el STS de B requiere que los usuarios presenten un token SAML válido emitido por el STS de A que contiene la demanda `userAuthenticated`.</span><span class="sxs-lookup"><span data-stu-id="c885f-182">However, STS B requires users to present a valid SAML token issued by STS A that contains the `userAuthenticated` claim.</span></span> <span data-ttu-id="c885f-183">Esto se especifica mediante declaración en la configuración del STS.</span><span class="sxs-lookup"><span data-stu-id="c885f-183">This is declaratively specified in the STS configuration.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.STS_B" behaviorConfiguration=  
@@ -211,26 +217,26 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Una vez más, la notificación `userAuthenticated` es el tipo de notificación que STS B necesita.El nombre completo de este tipo de notificación es http:\/\/tempuri.org:userAuthenticated \(junto con el espacio de nombres asociado\), que se usa en el archivo de configuración del STS.El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de A lo ha establecido en `true`.  
+>  <span data-ttu-id="c885f-184">De nuevo, la demanda `userAuthenticated` es el tipo de demanda que el STS de B requiere. El nombre completo de este tipo de demanda es http://tempuri.org:userAuthenticated (junto con el espacio de nombres asociado), que se utiliza en el archivo de configuración del STS.</span><span class="sxs-lookup"><span data-stu-id="c885f-184">Again, the `userAuthenticated` claim is the claim type that is required by STS B. The fully-qualified name of this claim type is http://tempuri.org:userAuthenticated (along with the associated namespace), which is used in the STS configuration file.</span></span> <span data-ttu-id="c885f-185">El valor de esta demanda indica la presencia de esta demanda y se supone que el STS de A lo ha establecido en `true`.</span><span class="sxs-lookup"><span data-stu-id="c885f-185">The value of this claim indicates the presence of this claim and is assumed to be set to `true` by STS A.</span></span>  
   
- En tiempo de ejecución, la clase `STS_B_OperationRequirement` hace cumplir esta directiva, que se implementa como parte del STS de B.  
+ <span data-ttu-id="c885f-186">En tiempo de ejecución, la clase `STS_B_OperationRequirement` hace cumplir esta directiva, que se implementa como parte del STS de B.</span><span class="sxs-lookup"><span data-stu-id="c885f-186">At runtime, the `STS_B_OperationRequirement` class enforces this policy, which is implemented as part of STS B.</span></span>  
   
  [!code-csharp[C_Federation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#2)]
  [!code-vb[C_Federation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#2)]  
   
- Si la comprobación de acceso se ha superado, el STS de B emite un token SAML con la demanda `accessAuthorized`.  
+ <span data-ttu-id="c885f-187">Si la comprobación de acceso se ha superado, el STS de B emite un token SAML con la demanda `accessAuthorized`.</span><span class="sxs-lookup"><span data-stu-id="c885f-187">If the access check is clear, STS B issues a SAML token with the `accessAuthorized` claim.</span></span>  
   
  [!code-csharp[C_Federation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#3)]
  [!code-vb[C_Federation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#3)]  
   
-#### STS de A  
- En la siguiente ilustración se muestra el STS de A.  
+#### <a name="sts-a"></a><span data-ttu-id="c885f-188">STS de A</span><span class="sxs-lookup"><span data-stu-id="c885f-188">STS A</span></span>  
+ <span data-ttu-id="c885f-189">En la siguiente ilustración se muestra el STS de A.</span><span class="sxs-lookup"><span data-stu-id="c885f-189">The following illustration shows the STS A.</span></span>  
   
- ![Federación](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS\_B")  
+ <span data-ttu-id="c885f-190">![Federación](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")</span><span class="sxs-lookup"><span data-stu-id="c885f-190">![Federation](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")</span></span>  
   
- Similar al STS de B, el STS de A también es un servicio web que emite tokens de seguridad y expone un extremo único con este fin.Sin embargo, utiliza un enlace diferente \(`wsHttpBinding`\) y requiere que los usuarios presenten un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] válido con una demanda `emailAddress`.En respuesta, emite tokens SAML con la demanda `userAuthenticated`.Esto se especifica mediante declaración en la configuración del servicio.  
+ <span data-ttu-id="c885f-191">Similar al STS de B, el STS de A también es un servicio web que emite tokens de seguridad y expone un punto de conexión único con este fin.</span><span class="sxs-lookup"><span data-stu-id="c885f-191">Similar to the STS B, the STS A is also a Web service that issues security tokens and exposes a single endpoint for this purpose.</span></span> <span data-ttu-id="c885f-192">Sin embargo, utiliza un enlace diferente (`wsHttpBinding`) y requiere que los usuarios presenten un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] válido con una demanda `emailAddress`.</span><span class="sxs-lookup"><span data-stu-id="c885f-192">However, it uses a different binding (`wsHttpBinding`) and requires users to present a valid [!INCLUDE[infocard](../../../../includes/infocard-md.md)] with an `emailAddress` claim.</span></span> <span data-ttu-id="c885f-193">En respuesta, emite tokens SAML con la demanda `userAuthenticated`.</span><span class="sxs-lookup"><span data-stu-id="c885f-193">In response, it issues SAML tokens with the `userAuthenticated` claim.</span></span> <span data-ttu-id="c885f-194">Esto se especifica mediante declaración en la configuración del servicio.</span><span class="sxs-lookup"><span data-stu-id="c885f-194">This is declaratively specified in the service configuration.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.STS_A" behaviorConfiguration="STS-A_Behavior">  
@@ -275,23 +281,23 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 </system.serviceModel>  
 ```  
   
- En tiempo de ejecución, la clase `STS_A_OperationRequirement` hace cumplir esta directiva, que se implementa como parte del STS de A.  
+ <span data-ttu-id="c885f-195">En tiempo de ejecución, la clase `STS_A_OperationRequirement` hace cumplir esta directiva, que se implementa como parte del STS de A.</span><span class="sxs-lookup"><span data-stu-id="c885f-195">At runtime, the `STS_A_OperationRequirement` class enforces this policy, which is implemented as part of STS A.</span></span>  
   
  [!code-csharp[C_Federation#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#4)]
  [!code-vb[C_Federation#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#4)]  
   
- Si el acceso es `true`, el STS de A emite un token SAML con demanda `userAuthenticated`.  
+ <span data-ttu-id="c885f-196">Si el acceso es `true`, el STS de A emite un token SAML con demanda `userAuthenticated`.</span><span class="sxs-lookup"><span data-stu-id="c885f-196">If the access is `true`, STS A issues a SAML token with `userAuthenticated` claim.</span></span>  
   
  [!code-csharp[C_Federation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#5)]
  [!code-vb[C_Federation#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#5)]  
   
-### Cliente en la organización A  
- La siguiente ilustración muestra el cliente en la organización A, junto con los pasos implicados para realizar una llamada de servicio `MyService`.Los otros componentes funcionales también se incluyen para ofrecer totalidad.  
+### <a name="client-at-organization-a"></a><span data-ttu-id="c885f-197">Cliente en la organización A</span><span class="sxs-lookup"><span data-stu-id="c885f-197">Client at Organization A</span></span>  
+ <span data-ttu-id="c885f-198">La siguiente ilustración muestra el cliente en la organización A, junto con los pasos implicados para realizar una llamada de servicio `MyService`.</span><span class="sxs-lookup"><span data-stu-id="c885f-198">The following illustration shows the client at organization A, along with the steps involved in making a `MyService` service call.</span></span> <span data-ttu-id="c885f-199">Los otros componentes funcionales también se incluyen para ofrecer totalidad.</span><span class="sxs-lookup"><span data-stu-id="c885f-199">The other functional components are also included for completeness.</span></span>  
   
- ![Federación](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ <span data-ttu-id="c885f-200">![Federación](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")</span><span class="sxs-lookup"><span data-stu-id="c885f-200">![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")</span></span>  
   
-## Resumen  
- La seguridad federada proporciona una división limpia de responsabilidad y ayuda a crear arquitecturas de servicios seguras y escalables.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como plataforma para crear e implementar aplicaciones distribuidas, proporciona compatibilidad nativa para la implementación de seguridad federada.  
+## <a name="summary"></a><span data-ttu-id="c885f-201">Resumen</span><span class="sxs-lookup"><span data-stu-id="c885f-201">Summary</span></span>  
+ <span data-ttu-id="c885f-202">La seguridad federada proporciona una división limpia de responsabilidad y ayuda a crear arquitecturas de servicios seguras y escalables.</span><span class="sxs-lookup"><span data-stu-id="c885f-202">Federated security provides a clean division of responsibility and helps to build secure, scalable service architectures.</span></span> <span data-ttu-id="c885f-203">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como plataforma para crear e implementar aplicaciones distribuidas, proporciona compatibilidad nativa para la implementación de seguridad federada.</span><span class="sxs-lookup"><span data-stu-id="c885f-203">As a platform for building and deploying distributed applications, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides native support for implementing federated security.</span></span>  
   
-## Vea también  
- [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="c885f-204">Vea también</span><span class="sxs-lookup"><span data-stu-id="c885f-204">See Also</span></span>  
+ [<span data-ttu-id="c885f-205">Seguridad</span><span class="sxs-lookup"><span data-stu-id="c885f-205">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)

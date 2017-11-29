@@ -1,37 +1,32 @@
 ---
-title: "Cómo: buscar elementos con un atributo específico (XPath-LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar elementos con un atributo específico (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5f052084651fe96d2bdcb2a86f8c3d23ac246e1
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3c4904ef70b2c978d73514302e726aba8f14fc20
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos con un atributo específico (XPath-LINQ to XML) (Visual Basic)
-En ocasiones, deseará buscar todos los elementos que tengan un atributo en particular. Pero no le preocupa cuáles es el contenido del atributo. En vez de ello, desea realizar la selección en función de si existe o no el atributo.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="b3e25-102">Cómo: buscar elementos con un atributo específico (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3e25-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="b3e25-103">En ocasiones, deseará buscar todos los elementos que tengan un atributo en particular.</span><span class="sxs-lookup"><span data-stu-id="b3e25-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="b3e25-104">Pero no le preocupa cuáles es el contenido del atributo.</span><span class="sxs-lookup"><span data-stu-id="b3e25-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="b3e25-105">En vez de ello, desea realizar la selección en función de si existe o no el atributo.</span><span class="sxs-lookup"><span data-stu-id="b3e25-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- La expresión XPath es:  
+ <span data-ttu-id="b3e25-106">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="b3e25-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a>Ejemplo  
- El siguiente código selecciona únicamente los elementos que tengan el atributo `Select`.  
+## <a name="example"></a><span data-ttu-id="b3e25-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b3e25-107">Example</span></span>  
+ <span data-ttu-id="b3e25-108">El siguiente código selecciona únicamente los elementos que tengan el atributo `Select`.</span><span class="sxs-lookup"><span data-stu-id="b3e25-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```vb  
 Dim doc As XElement = _   
@@ -65,7 +60,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="b3e25-109">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="b3e25-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -73,6 +68,5 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+## <a name="see-also"></a><span data-ttu-id="b3e25-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="b3e25-110">See Also</span></span>  
+ [<span data-ttu-id="b3e25-111">LINQ to XML para usuarios de XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3e25-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

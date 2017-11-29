@@ -1,15 +1,12 @@
 ---
-title: "Cómo: devolver el resultado de una consulta LINQ como tipo específico (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: Devolver el resultado de una consulta con LINQ como tipo específico (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
 - projection [LINQ in Visual Basic]
@@ -18,92 +15,76 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2031e24ca0fe5aa86ca6c0bcd0e0e4f27238c8ae
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4f206310be9fb00606ff351722eb1cf491b1c693
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Cómo: Devolver el resultado de una consulta con LINQ como tipo específico (Visual Basic)
-Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos y ejecutar consultas. De forma predeterminada, las consultas LINQ devuelven una lista de objetos como un tipo anónimo. También puede especificar que una consulta devuelve una lista de un tipo específico mediante el uso de la `Select` cláusula.  
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a><span data-ttu-id="a3b97-102">Cómo: Devolver el resultado de una consulta con LINQ como tipo específico (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a3b97-102">How to: Return a LINQ Query Result as a Specific Type (Visual Basic)</span></span>
+<span data-ttu-id="a3b97-103">Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos y ejecutar consultas.</span><span class="sxs-lookup"><span data-stu-id="a3b97-103">Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.</span></span> <span data-ttu-id="a3b97-104">De forma predeterminada, las consultas LINQ devuelven una lista de objetos como un tipo anónimo.</span><span class="sxs-lookup"><span data-stu-id="a3b97-104">By default, LINQ queries return a list of objects as an anonymous type.</span></span> <span data-ttu-id="a3b97-105">También puede especificar que una consulta devuelva una lista de un tipo específico mediante el uso de la `Select` cláusula.</span><span class="sxs-lookup"><span data-stu-id="a3b97-105">You can also specify that a query return a list of a specific type by using the `Select` clause.</span></span>  
   
- En el ejemplo siguiente se muestra cómo crear una nueva aplicación que realiza consultas en una base de datos de SQL Server y proyecta los resultados como un tipo con nombre específico. Para obtener más información, consulte [tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) y [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
+ <span data-ttu-id="a3b97-106">En el ejemplo siguiente se muestra cómo crear una nueva aplicación que realiza consultas en una base de datos de SQL Server y proyecta los resultados como un tipo con nombre específico.</span><span class="sxs-lookup"><span data-stu-id="a3b97-106">The following example shows how to create a new application that performs queries against a SQL Server database and projects the results as a specific named type.</span></span> <span data-ttu-id="a3b97-107">Para obtener más información, consulte [tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) y [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md).</span><span class="sxs-lookup"><span data-stu-id="a3b97-107">For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) and [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md).</span></span>  
   
- Los ejemplos de este tema utilizan la base de datos de ejemplo Northwind. Si no tiene la base de datos de ejemplo Northwind en el equipo de desarrollo, puede descargarla desde el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) sitio Web. Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](https://msdn.microsoft.com/library/bb399411).  
+ <span data-ttu-id="a3b97-108">Los ejemplos de este tema usan la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="a3b97-108">The examples in this topic use the Northwind sample database.</span></span> <span data-ttu-id="a3b97-109">Si no tiene la base de datos de ejemplo Northwind en el equipo de desarrollo, puede descargarlo desde el [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) sitio Web.</span><span class="sxs-lookup"><span data-stu-id="a3b97-109">If you do not have the Northwind sample database on your development computer, you can download it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web site.</span></span> <span data-ttu-id="a3b97-110">Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](https://msdn.microsoft.com/library/bb399411).</span><span class="sxs-lookup"><span data-stu-id="a3b97-110">For instructions, see [Downloading Sample Databases](https://msdn.microsoft.com/library/bb399411).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>Para crear una conexión a una base de datos  
+### <a name="to-create-a-connection-to-a-database"></a><span data-ttu-id="a3b97-111">Para crear una conexión a una base de datos</span><span class="sxs-lookup"><span data-stu-id="a3b97-111">To create a connection to a database</span></span>  
   
-1.  En Visual Studio, abra **Explorador de servidores**/**Database Explorer** haciendo clic en **Explorador de servidores**/**Database Explorer** en el **vista** menú.  
+1.  <span data-ttu-id="a3b97-112">En Visual Studio, abra **Explorador de servidores**/**el Explorador de base de datos** haciendo clic en **Explorador de servidores**/**base de datos El Explorador de** en el **vista** menú.</span><span class="sxs-lookup"><span data-stu-id="a3b97-112">In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.</span></span>  
   
-2.  Haga clic en **las conexiones de datos** en **Explorador de servidores**/**Database Explorer** y, a continuación, haga clic en **Agregar conexión**.  
+2.  <span data-ttu-id="a3b97-113">Haga clic en **las conexiones de datos** en **Explorador de servidores**/**el Explorador de base de datos** y, a continuación, haga clic en **Agregar conexión**.</span><span class="sxs-lookup"><span data-stu-id="a3b97-113">Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.</span></span>  
   
-3.  Especifique una conexión válida a la base de datos de ejemplo Northwind.  
+3.  <span data-ttu-id="a3b97-114">Especifique una conexión válida a la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="a3b97-114">Specify a valid connection to the Northwind sample database.</span></span>  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Para agregar un proyecto que contiene un archivo de LINQ to SQL  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a><span data-ttu-id="a3b97-115">Para agregar un proyecto que contiene un archivo LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="a3b97-115">To add a project that contains a LINQ to SQL file</span></span>  
   
-1.  En Visual Studio, en el **archivo** menú, seleccione **nueva** y, a continuación, haga clic en **proyecto**. Seleccione Visual Basic **aplicación de Windows Forms** como el tipo de proyecto.  
+1.  <span data-ttu-id="a3b97-116">En el menú **Archivo** de Visual Studio, apunte a **Nuevo** y haga clic en **Proyecto**.</span><span class="sxs-lookup"><span data-stu-id="a3b97-116">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span> <span data-ttu-id="a3b97-117">Seleccione Visual Basic **aplicación de Windows Forms** como el tipo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="a3b97-117">Select Visual Basic **Windows Forms Application** as the project type.</span></span>  
   
-2.  En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**. Seleccione el **clases LINQ to SQL** plantilla de elemento.  
+2.  <span data-ttu-id="a3b97-118">En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="a3b97-118">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="a3b97-119">Seleccione el **clases LINQ to SQL** plantilla de elemento.</span><span class="sxs-lookup"><span data-stu-id="a3b97-119">Select the **LINQ to SQL Classes** item template.</span></span>  
   
-3.  Nombre de archivo `northwind.dbml`. Haga clic en **Agregar**. Se abre el Object Relational Designer (Object Relational Designer) para el archivo northwind.dbml.  
+3.  <span data-ttu-id="a3b97-120">Asigne al archivo el nombre `northwind.dbml`.</span><span class="sxs-lookup"><span data-stu-id="a3b97-120">Name the file `northwind.dbml`.</span></span> <span data-ttu-id="a3b97-121">Haga clic en **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="a3b97-121">Click **Add**.</span></span> <span data-ttu-id="a3b97-122">Se abre el Object Relational Designer (Object Relational Designer) para el archivo northwind.dbml.</span><span class="sxs-lookup"><span data-stu-id="a3b97-122">The Object Relational Designer (O/R Designer) is opened for the northwind.dbml file.</span></span>  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>Para agregar tablas a la consulta para el Object Relational Designer  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a><span data-ttu-id="a3b97-123">Para agregar tablas a una consulta para el Object Relational Designer</span><span class="sxs-lookup"><span data-stu-id="a3b97-123">To add tables to query to the O/R Designer</span></span>  
   
-1.  En **Explorador de servidores**/**Database Explorer**, expanda la conexión de la base de datos Northwind. Expanda el **tablas** carpeta.  
+1.  <span data-ttu-id="a3b97-124">En **Explorador de servidores**/**el Explorador de base de datos**, expanda la conexión a la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="a3b97-124">In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database.</span></span> <span data-ttu-id="a3b97-125">Expanda el **tablas** carpeta.</span><span class="sxs-lookup"><span data-stu-id="a3b97-125">Expand the **Tables** folder.</span></span>  
   
-     Si ha cerrado el Object Relational Designer, puede volver a abrirlo haciendo doble clic en el archivo northwind.dbml que agregó anteriormente.  
+     <span data-ttu-id="a3b97-126">Si ha cerrado el Object Relational Designer, puede volver a abrirlo haciendo doble clic en el archivo northwind.dbml que agregó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="a3b97-126">If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.</span></span>  
   
-2.  Haga clic en la tabla Customers y arrástrela hasta el panel izquierdo del diseñador.  
+2.  <span data-ttu-id="a3b97-127">Haga clic en la tabla Customers y arrástrelo hasta el panel izquierdo del diseñador.</span><span class="sxs-lookup"><span data-stu-id="a3b97-127">Click the Customers table and drag it to the left pane of the designer.</span></span>  
   
-     El diseñador crea un nuevo `Customer` objeto para su proyecto. Se puede proyectar el resultado de una consulta como la `Customer` tipo o como un tipo que cree. En este ejemplo se crea un nuevo tipo en un procedimiento posterior y el resultado de una consulta como ese tipo de proyecto.  
+     <span data-ttu-id="a3b97-128">El diseñador crea un nuevo `Customer` objeto para el proyecto.</span><span class="sxs-lookup"><span data-stu-id="a3b97-128">The designer creates a new `Customer` object for your project.</span></span> <span data-ttu-id="a3b97-129">Puede proyectar el resultado de una consulta como la `Customer` tipo o como un tipo que cree.</span><span class="sxs-lookup"><span data-stu-id="a3b97-129">You can project a query result as the `Customer` type or as a type that you create.</span></span> <span data-ttu-id="a3b97-130">En este ejemplo se crea un nuevo tipo en un procedimiento posterior y un resultado de consulta como ese tipo de proyecto.</span><span class="sxs-lookup"><span data-stu-id="a3b97-130">This sample will create a new type in a later procedure and project a query result as that type.</span></span>  
   
-3.  Guarde los cambios y cierre el diseñador.  
+3.  <span data-ttu-id="a3b97-131">Guarde los cambios y cierre el diseñador.</span><span class="sxs-lookup"><span data-stu-id="a3b97-131">Save your changes and close the designer.</span></span>  
   
-4.  Guarde el proyecto.  
+4.  <span data-ttu-id="a3b97-132">Guarde el proyecto.</span><span class="sxs-lookup"><span data-stu-id="a3b97-132">Save your project.</span></span>  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Para agregar código para consultar la base de datos y mostrar los resultados  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a><span data-ttu-id="a3b97-133">Para agregar código para consultar la base de datos y mostrar los resultados</span><span class="sxs-lookup"><span data-stu-id="a3b97-133">To add code to query the database and display the results</span></span>  
   
-1.  Desde el **herramientas**, arrastre un <xref:System.Windows.Forms.DataGridView>control en el formulario Windows Forms predeterminado del proyecto, Form1.</xref:System.Windows.Forms.DataGridView>  
+1.  <span data-ttu-id="a3b97-134">Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.DataGridView> control en el formulario Windows Forms predeterminado para el proyecto, Form1.</span><span class="sxs-lookup"><span data-stu-id="a3b97-134">From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.</span></span>  
   
-2.  Haga doble clic en Form1 para modificar la clase Form1.  
+2.  <span data-ttu-id="a3b97-135">Haga doble clic en Form1 para modificar la clase Form1.</span><span class="sxs-lookup"><span data-stu-id="a3b97-135">Double-click Form1 to modify the Form1 class.</span></span>  
   
-3.  Después de la `End Class` instrucción de la clase Form1, agregue el código siguiente para crear un `CustomerInfo` tipo para contener los resultados de la consulta de este ejemplo.  
+3.  <span data-ttu-id="a3b97-136">Después de la `End Class` instrucción de la clase Form1, agregue el código siguiente para crear un `CustomerInfo` tipo para almacenar los resultados de consulta de este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="a3b97-136">After the `End Class` statement of the Form1 class, add the following code to create a `CustomerInfo` type to hold the query results for this sample.</span></span>  
   
-     [!code-vb[VbLINQToSQLHowTos Nº&16;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
   
-4.  Cuando agrega tablas a Object Relational Designer, el diseñador agrega un <xref:System.Data.Linq.DataContext>objeto a su proyecto.</xref:System.Data.Linq.DataContext> Este objeto contiene el código que debe tener acceso a esas tablas y tener acceso a objetos individuales y colecciones de cada tabla. La <xref:System.Data.Linq.DataContext>objeto para su proyecto se denomina según el nombre del archivo .dbml.</xref:System.Data.Linq.DataContext> Para este proyecto, el <xref:System.Data.Linq.DataContext>se denomina objeto `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
+4.  <span data-ttu-id="a3b97-137">Cuando agrega tablas a Object Relational Designer, el diseñador agrega un <xref:System.Data.Linq.DataContext> objeto a su proyecto.</span><span class="sxs-lookup"><span data-stu-id="a3b97-137">When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object to your project.</span></span> <span data-ttu-id="a3b97-138">Este objeto contiene el código que debe tener acceso a esas tablas y para tener acceso a objetos individuales y colecciones para cada tabla.</span><span class="sxs-lookup"><span data-stu-id="a3b97-138">This object contains the code that you must have to access those tables, and to access individual objects and collections for each table.</span></span> <span data-ttu-id="a3b97-139">La <xref:System.Data.Linq.DataContext> objeto para el proyecto se denomina según el nombre del archivo dbml.</span><span class="sxs-lookup"><span data-stu-id="a3b97-139">The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file.</span></span> <span data-ttu-id="a3b97-140">Para este proyecto, el <xref:System.Data.Linq.DataContext> se denomina objeto `northwindDataContext`.</span><span class="sxs-lookup"><span data-stu-id="a3b97-140">For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.</span></span>  
   
-     Puede crear una instancia de la <xref:System.Data.Linq.DataContext>en el código y consultar las tablas especifican por el Object Relational Designer.</xref:System.Data.Linq.DataContext>  
+     <span data-ttu-id="a3b97-141">Puede crear una instancia de la <xref:System.Data.Linq.DataContext> en el código y consultar las tablas especifican por el Object Relational Designer.</span><span class="sxs-lookup"><span data-stu-id="a3b97-141">You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.</span></span>  
   
-     En el `Load` eventos de la clase Form1, agregue el código siguiente para consultar las tablas que se exponen como propiedades del contexto de datos. El `Select` creará una nueva cláusula de la consulta `CustomerInfo` tipo en lugar de un tipo anónimo para cada elemento del resultado de la consulta.  
+     <span data-ttu-id="a3b97-142">En el `Load` eventos de la clase Form1, agregue el código siguiente para consultar las tablas que se exponen como propiedades de su contexto de datos.</span><span class="sxs-lookup"><span data-stu-id="a3b97-142">In the `Load` event of the Form1 class, add the following code to query the tables that are exposed as properties of your data context.</span></span> <span data-ttu-id="a3b97-143">El `Select` creará una nueva cláusula de la consulta `CustomerInfo` tipo en lugar de un tipo anónimo para cada elemento de resultado de la consulta.</span><span class="sxs-lookup"><span data-stu-id="a3b97-143">The `Select` clause of the query will create a new `CustomerInfo` type instead of an anonymous type for each item of the query result.</span></span>  
   
-     [!code-vb[VbLINQToSQLHowTos&#15;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
   
-5.  Presione F5 para ejecutar el proyecto y ver los resultados.  
+5.  <span data-ttu-id="a3b97-144">Presione F5 para ejecutar el proyecto y ver los resultados.</span><span class="sxs-lookup"><span data-stu-id="a3b97-144">Press F5 to run your project and view the results.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Consultas](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [Métodos de DataContext (Object Relational Designer)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)
-
+## <a name="see-also"></a><span data-ttu-id="a3b97-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="a3b97-145">See Also</span></span>  
+ [<span data-ttu-id="a3b97-146">LINQ</span><span class="sxs-lookup"><span data-stu-id="a3b97-146">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="a3b97-147">Consultas</span><span class="sxs-lookup"><span data-stu-id="a3b97-147">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="a3b97-148">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="a3b97-148">LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb386976)  
+ [<span data-ttu-id="a3b97-149">Métodos de DataContext (Object Relational Designer)</span><span class="sxs-lookup"><span data-stu-id="a3b97-149">DataContext Methods (O/R Designer)</span></span>](/visualstudio/data-tools/datacontext-methods-o-r-designer)

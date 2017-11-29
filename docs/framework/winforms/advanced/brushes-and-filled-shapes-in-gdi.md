@@ -1,92 +1,96 @@
 ---
-title: "Pinceles y formas rellenas en GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pinceles, GDI+"
-  - "pinceles, degradados"
-  - "formas rellenas, GDI+"
-  - "GDI+, pinceles"
-  - "GDI+, formas rellenas"
-  - "pinceles degradados"
-  - "formas, GDI+"
+title: Pinceles y formas rellenas en GDI+
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [Windows Forms], GDI+
+- filled shapes [Windows Forms], GDI+
+- shapes [Windows Forms], GDI+
+- GDI+, brushes
+- GDI+, filled shapes
+- gradient brushes
+- brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01d7359499c858ad7c4f1da2fa24f18e801bb324
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Pinceles y formas rellenas en GDI+
-Una figura cerrada, como un rectángulo o una elipse, está compuesta de un contorno y un interior.  El contorno se dibuja con un lápiz y el interior se rellena con un pincel.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona varias clases de pincel para rellenar el interior de formas cerradas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>y <xref:System.Drawing.Drawing2D.PathGradientBrush>.  Todas estas clases se heredan de la clase <xref:System.Drawing.Brush>.  En la siguiente ilustración se muestra un rectángulo relleno con un pincel sólido y una elipse rellena con un pincel tramado.  
+# <a name="brushes-and-filled-shapes-in-gdi"></a><span data-ttu-id="76d1b-102">Pinceles y formas rellenas en GDI+</span><span class="sxs-lookup"><span data-stu-id="76d1b-102">Brushes and Filled Shapes in GDI+</span></span>
+<span data-ttu-id="76d1b-103">Una forma cerrada, como un rectángulo o una elipse, consta de un esquema y un interior.</span><span class="sxs-lookup"><span data-stu-id="76d1b-103">A closed shape, such as a rectangle or an ellipse, consists of an outline and an interior.</span></span> <span data-ttu-id="76d1b-104">El contorno se dibuja con un lápiz y el interior se rellena con un pincel.</span><span class="sxs-lookup"><span data-stu-id="76d1b-104">The outline is drawn with a pen and the interior is filled with a brush.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="76d1b-105">proporciona varias clases de pincel para rellenar el interior de las formas cerradas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, y <xref:System.Drawing.Drawing2D.PathGradientBrush>.</span><span class="sxs-lookup"><span data-stu-id="76d1b-105"> provides several brush classes for filling the interiors of closed shapes: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, and <xref:System.Drawing.Drawing2D.PathGradientBrush>.</span></span> <span data-ttu-id="76d1b-106">Todas estas clases heredan de la <xref:System.Drawing.Brush> clase.</span><span class="sxs-lookup"><span data-stu-id="76d1b-106">All of these classes inherit from the <xref:System.Drawing.Brush> class.</span></span> <span data-ttu-id="76d1b-107">La ilustración siguiente muestra un rectángulo relleno con un pincel sólido y una elipse rellena con un pincel de trama.</span><span class="sxs-lookup"><span data-stu-id="76d1b-107">The following illustration shows a rectangle filled with a solid brush and an ellipse filled with a hatch brush.</span></span>  
   
- ![Formas rellenas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.png "Aboutgdip02\_art17")  
+ <span data-ttu-id="76d1b-108">![Formas con relleno](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")</span><span class="sxs-lookup"><span data-stu-id="76d1b-108">![Filled Shapes](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")</span></span>  
   
-## Pinceles sólidos  
- Para rellenar una forma cerrada, necesita una instancia de la clase <xref:System.Drawing.Graphics> y <xref:System.Drawing.Brush>.  La instancia de la clase <xref:System.Drawing.Graphics> proporciona métodos, como <xref:System.Drawing.Graphics.FillRectangle%2A> y <xref:System.Drawing.Graphics.FillEllipse%2A>, y <xref:System.Drawing.Brush> almacena los atributos del relleno, como color y modelo.  <xref:System.Drawing.Brush> se pasa como uno de los argumentos del método de relleno.  En el siguiente ejemplo de código se muestra cómo rellenar una elipse con un color rojo sólido.  
+## <a name="solid-brushes"></a><span data-ttu-id="76d1b-109">Pinceles sólidos</span><span class="sxs-lookup"><span data-stu-id="76d1b-109">Solid Brushes</span></span>  
+ <span data-ttu-id="76d1b-110">Para rellenar una forma cerrada, necesita una instancia de la <xref:System.Drawing.Graphics> clase y un <xref:System.Drawing.Brush>.</span><span class="sxs-lookup"><span data-stu-id="76d1b-110">To fill a closed shape, you need an instance of the <xref:System.Drawing.Graphics> class and a <xref:System.Drawing.Brush>.</span></span> <span data-ttu-id="76d1b-111">La instancia de la <xref:System.Drawing.Graphics> clase proporciona métodos, como <xref:System.Drawing.Graphics.FillRectangle%2A> y <xref:System.Drawing.Graphics.FillEllipse%2A>y <xref:System.Drawing.Brush> almacena los atributos de relleno, como el color y la trama.</span><span class="sxs-lookup"><span data-stu-id="76d1b-111">The instance of the <xref:System.Drawing.Graphics> class provides methods, such as <xref:System.Drawing.Graphics.FillRectangle%2A> and <xref:System.Drawing.Graphics.FillEllipse%2A>, and the <xref:System.Drawing.Brush> stores attributes of the fill, such as color and pattern.</span></span> <span data-ttu-id="76d1b-112">El <xref:System.Drawing.Brush> se pasa como uno de los argumentos para el método de relleno.</span><span class="sxs-lookup"><span data-stu-id="76d1b-112">The <xref:System.Drawing.Brush> is passed as one of the arguments to the fill method.</span></span> <span data-ttu-id="76d1b-113">En el ejemplo de código siguiente se muestra cómo rellenar una elipse con un color rojo sólido.</span><span class="sxs-lookup"><span data-stu-id="76d1b-113">The following code example shows how to fill an ellipse with a solid red color.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#121](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
   
 > [!NOTE]
->  En el ejemplo anterior, el pincel es de tipo <xref:System.Drawing.SolidBrush>, que hereda de <xref:System.Drawing.Brush>.  
+>  <span data-ttu-id="76d1b-114">En el ejemplo anterior, el pincel es de tipo <xref:System.Drawing.SolidBrush>, que hereda de <xref:System.Drawing.Brush>.</span><span class="sxs-lookup"><span data-stu-id="76d1b-114">In the preceding example, the brush is of type <xref:System.Drawing.SolidBrush>, which inherits from <xref:System.Drawing.Brush>.</span></span>  
   
-## Pincel tramado  
- Cuando se rellena una forma con un pincel tramado, hay que especificar un color de primer plano, un color de fondo y un estilo tramado.  El color de primer plano es el color del tramado.  
+## <a name="hatch-brushes"></a><span data-ttu-id="76d1b-115">Pinceles de trama</span><span class="sxs-lookup"><span data-stu-id="76d1b-115">Hatch Brushes</span></span>  
+ <span data-ttu-id="76d1b-116">Cuando se rellena una forma con un pincel de trama, especifica un color de primer plano, un color de fondo y un estilo de trama.</span><span class="sxs-lookup"><span data-stu-id="76d1b-116">When you fill a shape with a hatch brush, you specify a foreground color, a background color, and a hatch style.</span></span> <span data-ttu-id="76d1b-117">El color de primer plano es el color de la trama.</span><span class="sxs-lookup"><span data-stu-id="76d1b-117">The foreground color is the color of the hatching.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona más de 50 estilos tramados; los tres estilos que se muestran en la siguiente ilustración son <xref:System.Drawing.Drawing2D.HatchStyle>, <xref:System.Drawing.Drawing2D.HatchStyle> y <xref:System.Drawing.Drawing2D.HatchStyle>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="76d1b-118">proporciona más de 50 estilos de trama; los tres estilos que se muestra en la siguiente ilustración son <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, y <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.</span><span class="sxs-lookup"><span data-stu-id="76d1b-118"> provides more than 50 hatch styles; the three styles shown in the following illustration are <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, and <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.</span></span>  
   
- ![Formas rellenas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.png "Aboutgdip02\_art18")  
+ <span data-ttu-id="76d1b-119">![Formas con relleno](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")</span><span class="sxs-lookup"><span data-stu-id="76d1b-119">![Filled Shapes](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")</span></span>  
   
-## Pinceles de textura  
- Un pincel de textura permite rellenar una forma con un modelo almacenado en un mapa de bits.  Por ejemplo, supongamos que la siguiente imagen está almacenada en un archivo de disco denominado `MyTexture.bmp`.  
+## <a name="texture-brushes"></a><span data-ttu-id="76d1b-120">Pinceles de textura</span><span class="sxs-lookup"><span data-stu-id="76d1b-120">Texture Brushes</span></span>  
+ <span data-ttu-id="76d1b-121">Con un pincel de textura, puede rellenar una forma con un patrón almacenado en un mapa de bits.</span><span class="sxs-lookup"><span data-stu-id="76d1b-121">With a texture brush, you can fill a shape with a pattern stored in a bitmap.</span></span> <span data-ttu-id="76d1b-122">Por ejemplo, suponga que en la siguiente imagen se almacena en un archivo de disco denominado `MyTexture.bmp`.</span><span class="sxs-lookup"><span data-stu-id="76d1b-122">For example, suppose the following picture is stored in a disk file named `MyTexture.bmp`.</span></span>  
   
- ![Forma rellena](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.png "Aboutgdip02\_Art19")  
+ <span data-ttu-id="76d1b-123">![Rellenar formas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.gif "Aboutgdip02_Art19")</span><span class="sxs-lookup"><span data-stu-id="76d1b-123">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art19.gif "Aboutgdip02_Art19")</span></span>  
   
- En el ejemplo de código siguiente se muestra cómo rellenar una elipse repitiendo la imagen almacenada en `MyTexture.bmp`.  
+ <span data-ttu-id="76d1b-124">En el ejemplo de código siguiente se muestra cómo rellenar una elipse repitiendo la imagen almacenada en `MyTexture.bmp`.</span><span class="sxs-lookup"><span data-stu-id="76d1b-124">The following code example shows how to fill an ellipse by repeating the picture stored in `MyTexture.bmp`.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#123](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#123)]
  [!code-vb[LinesCurvesAndShapes#123](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#123)]  
   
- En la siguiente ilustración se muestra la elipse rellena.  
+ <span data-ttu-id="76d1b-125">En la siguiente ilustración se muestra la elipse rellena.</span><span class="sxs-lookup"><span data-stu-id="76d1b-125">The following illustration shows the filled ellipse.</span></span>  
   
- ![Forma rellena](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.png "AboutGdip02\_Art20")  
+ <span data-ttu-id="76d1b-126">![Rellenar formas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")</span><span class="sxs-lookup"><span data-stu-id="76d1b-126">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")</span></span>  
   
-## Pinceles degradados  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona dos tipos de pinceles degradados: lineal y de trazado.  Se puede utilizar un pincel degradado para rellenar una forma con un color que cambie gradualmente conforme se avanza por la forma horizontal, vertical o diagonalmente.  En el siguiente ejemplo de código se muestra cómo rellenar una elipse con un pincel degradado horizontal que cambia de azul a verde conforme se avanza del borde izquierdo de la elipse al borde derecho.  
+## <a name="gradient-brushes"></a><span data-ttu-id="76d1b-127">Pinceles degradados</span><span class="sxs-lookup"><span data-stu-id="76d1b-127">Gradient Brushes</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="76d1b-128">proporciona dos tipos de pinceles degradados: lineal y ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="76d1b-128"> provides two kinds of gradient brushes: linear and path.</span></span> <span data-ttu-id="76d1b-129">Puede utilizar un pincel de degradado lineal para rellenar una forma con colores que cambian gradualmente a medida que se desplaza a través de la forma horizontal, vertical o diagonalmente.</span><span class="sxs-lookup"><span data-stu-id="76d1b-129">You can use a linear gradient brush to fill a shape with color that changes gradually as you move across the shape horizontally, vertically, or diagonally.</span></span> <span data-ttu-id="76d1b-130">En el ejemplo de código siguiente se muestra cómo rellenar una elipse con un pincel degradado horizontal que cambia de azul a verde conforme mueve desde el borde izquierdo de la elipse al borde derecho.</span><span class="sxs-lookup"><span data-stu-id="76d1b-130">The following code example shows how to fill an ellipse with a horizontal gradient brush that changes from blue to green as you move from the left edge of the ellipse to the right edge.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
   
- En la siguiente ilustración se muestra la elipse rellena.  
+ <span data-ttu-id="76d1b-131">En la siguiente ilustración se muestra la elipse rellena.</span><span class="sxs-lookup"><span data-stu-id="76d1b-131">The following illustration shows the filled ellipse.</span></span>  
   
- ![Forma rellena](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.png "AboutGdip02\_Art21")  
+ <span data-ttu-id="76d1b-132">![Rellenar formas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.gif "AboutGdip02_Art21")</span><span class="sxs-lookup"><span data-stu-id="76d1b-132">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art21.gif "AboutGdip02_Art21")</span></span>  
   
- Un pincel degradado de trazado se puede configurar para que cambie de color conforme se avanza desde el centro de una forma hacia el borde de la misma.  
+ <span data-ttu-id="76d1b-133">Un pincel de degradado de trazado puede configurarse para cambiar color a medida que se desplaza desde el centro de una forma hacia el borde.</span><span class="sxs-lookup"><span data-stu-id="76d1b-133">A path gradient brush can be configured to change color as you move from the center of a shape toward the edge.</span></span>  
   
- ![Forma rellena](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.png "AboutGdip02\_Art22")  
+ <span data-ttu-id="76d1b-134">![Rellenar formas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.gif "AboutGdip02_Art22")</span><span class="sxs-lookup"><span data-stu-id="76d1b-134">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art22.gif "AboutGdip02_Art22")</span></span>  
   
- Los pinceles degradados de trazado son bastante flexibles.  El pincel degradado utilizado para rellenar el triángulo de la siguiente ilustración cambia gradualmente de rojo, en el centro, a cada uno de tres colores distintos de los vértices.  
+ <span data-ttu-id="76d1b-135">Pinceles degradados de ruta de acceso son bastante flexibles.</span><span class="sxs-lookup"><span data-stu-id="76d1b-135">Path gradient brushes are quite flexible.</span></span> <span data-ttu-id="76d1b-136">El pincel de degradado que se usa para rellenar el triángulo situado en la siguiente ilustración cambia gradualmente de rojo en el centro a cada uno de tres colores diferentes en los vértices.</span><span class="sxs-lookup"><span data-stu-id="76d1b-136">The gradient brush used to fill the triangle in the following illustration changes gradually from red at the center to each of three different colors at the vertices.</span></span>  
   
- ![Forma rellena](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.png "AboutGdip02\_Art23")  
+ <span data-ttu-id="76d1b-137">![Rellenar formas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")</span><span class="sxs-lookup"><span data-stu-id="76d1b-137">![Filled Shape](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")</span></span>  
   
-## Vea también  
- <xref:System.Drawing.SolidBrush?displayProperty=fullName>   
- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=fullName>   
- <xref:System.Drawing.TextureBrush?displayProperty=fullName>   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=fullName>   
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Cómo: Dibujar un rectángulo relleno en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)   
- [Cómo: Dibujar una elipse rellena en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+## <a name="see-also"></a><span data-ttu-id="76d1b-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="76d1b-138">See Also</span></span>  
+ <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
+ [<span data-ttu-id="76d1b-139">Líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="76d1b-139">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="76d1b-140">Dibujar un rectángulo relleno en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="76d1b-140">How to: Draw a Filled Rectangle on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ [<span data-ttu-id="76d1b-141">Dibujar una elipse rellena en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="76d1b-141">How to: Draw a Filled Ellipse on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)

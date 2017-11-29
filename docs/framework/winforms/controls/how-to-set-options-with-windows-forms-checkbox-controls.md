@@ -1,37 +1,41 @@
 ---
-title: "C&#243;mo: Establecer opciones con los controles CheckBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "checked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "casillas, utilizar para establecer opciones"
-  - "CheckBox (control) [Windows Forms], estado activado"
-  - "CheckBox (control) [Windows Forms], utilizar para establecer opciones"
+title: "Cómo: Establecer opciones con los controles CheckBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: checked
+helpviewer_keywords:
+- CheckBox control [Windows Forms], checked state
+- check boxes [Windows Forms], using to set options
+- CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b7d3ddb090488f6503c0765f6054308c28d4ab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer opciones con los controles CheckBox de formularios Windows Forms
-El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms se utiliza para ofrecer a los usuarios opciones de tipo Verdadero\/Falso o Sí\/No.  El control muestra una marca de verificación cuando está seleccionado.  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="79493-102">Cómo: Establecer opciones con los controles CheckBox de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="79493-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
+<span data-ttu-id="79493-103">Un formulario Windows Forms <xref:System.Windows.Forms.CheckBox> control se utiliza para proporcionar a los usuarios True/False o Sí/No (opciones).</span><span class="sxs-lookup"><span data-stu-id="79493-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="79493-104">El control muestra una marca de verificación cuando se selecciona.</span><span class="sxs-lookup"><span data-stu-id="79493-104">The control displays a check mark when it is selected.</span></span>  
   
-### Para establecer opciones con controles CheckBox  
+### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="79493-105">Para establecer opciones con controles CheckBox</span><span class="sxs-lookup"><span data-stu-id="79493-105">To set options with CheckBox controls</span></span>  
   
-1.  Examine el valor de la propiedad <xref:System.Windows.Forms.CheckBox.Checked%2A> para determinar su estado y utilice este valor para establecer una opción.  
+1.  <span data-ttu-id="79493-106">Examine el valor de la <xref:System.Windows.Forms.CheckBox.Checked%2A> propiedad para determinar su estado y usar ese valor para establecer una opción.</span><span class="sxs-lookup"><span data-stu-id="79493-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
   
-     En el ejemplo de código siguiente, cuando se produce el evento <xref:System.Windows.Forms.CheckBox.CheckedChanged> del control <xref:System.Windows.Forms.CheckBox>, la propiedad <xref:System.Windows.Forms.Control.AllowDrop%2A> del formulario se establece en `false` si se activa la casilla.  Esto es útil en situaciones en las que se desee limitar la interacción del usuario.  
+     <span data-ttu-id="79493-107">En el ejemplo de código siguiente, cuando la <xref:System.Windows.Forms.CheckBox> del control <xref:System.Windows.Forms.CheckBox.CheckedChanged> se genera el evento, el formulario <xref:System.Windows.Forms.Control.AllowDrop%2A> propiedad está establecida en `false` si está activada la casilla de verificación.</span><span class="sxs-lookup"><span data-stu-id="79493-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="79493-108">Esto es útil en situaciones donde desea restringir la interacción del usuario.</span><span class="sxs-lookup"><span data-stu-id="79493-108">This is useful for situations where you want to restrict user interaction.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -42,7 +46,6 @@ El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms
           Me.AllowDrop = False  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -55,7 +58,6 @@ El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms
           this.AllowDrop = false;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,8 +74,8 @@ El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms
        }  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.CheckBox>   
- [Información general sobre el control CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [Cómo: Responder a clics en casillas de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)   
- [CheckBox \(Control\)](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="79493-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="79493-109">See Also</span></span>  
+ <xref:System.Windows.Forms.CheckBox>  
+ [<span data-ttu-id="79493-110">Información general sobre el control CheckBox</span><span class="sxs-lookup"><span data-stu-id="79493-110">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="79493-111">Responder a clics en casillas de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="79493-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [<span data-ttu-id="79493-112">CheckBox (control)</span><span class="sxs-lookup"><span data-stu-id="79493-112">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

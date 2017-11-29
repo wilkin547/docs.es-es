@@ -1,38 +1,41 @@
 ---
-title: "Criterios de b&#250;squeda personalizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Criterios de búsqueda personalizados"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d49661ff91477f2f53d180a10ae1c9b3b632461f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Criterios de b&#250;squeda personalizados
-Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usando la lógica y cómo implementar un servicio de detección personalizado.Los clientes utilizan la funcionalidad de concordancia de ámbito personalizada para refinar y seguir usando la funcionalidad de búsqueda proporcionada por la detección WCF.El escenario que abarca este ejemplo es el siguiente:  
+# <a name="custom-find-criteria"></a><span data-ttu-id="bfbd5-102">Criterios de búsqueda personalizados</span><span class="sxs-lookup"><span data-stu-id="bfbd5-102">Custom Find Criteria</span></span>
+<span data-ttu-id="bfbd5-103">Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usando la lógica y cómo implementar un servicio de detección personalizado.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-103">This sample demonstrates how to create a custom scope match using logic and how to implement a custom discovery service.</span></span> <span data-ttu-id="bfbd5-104">Los clientes utilizan la funcionalidad de concordancia de ámbito personalizada para refinar y seguir usando la funcionalidad de búsqueda proporcionada por la detección WCF.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-104">Clients use custom scope matching functionality to refine and further build on top of the system-provided find functionality of WCF Discovery.</span></span> <span data-ttu-id="bfbd5-105">El escenario que abarca este ejemplo es el siguiente:</span><span class="sxs-lookup"><span data-stu-id="bfbd5-105">The scenario this sample covers is as follows:</span></span>  
   
-1.  Un cliente busca un servicio de calculadora.  
+1.  <span data-ttu-id="bfbd5-106">Un cliente busca un servicio de calculadora.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-106">A client is looking for a calculator service.</span></span>  
   
-2.  Para refinar su búsqueda, el cliente debe utilizar una regla de concordancia de ámbito personalizada.  
+2.  <span data-ttu-id="bfbd5-107">Para refinar su búsqueda, el cliente debe utilizar una regla de concordancia de ámbito personalizada.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-107">To refine its search, the client must use a custom scope matching rule.</span></span>  
   
-3.  Según esta regla, un servicio responde al cliente si su extremo coincide con cualquiera de los ámbitos especificados por el cliente.  
+3.  <span data-ttu-id="bfbd5-108">Según esta regla, un servicio responde al cliente si su punto de conexión coincide con cualquiera de los ámbitos especificados por el cliente.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-108">According to this rule, a service responds back to the client if its endpoint matches any of the scopes specified by the client.</span></span>  
   
-## Demostraciones  
+## <a name="demonstrates"></a><span data-ttu-id="bfbd5-109">Demostraciones</span><span class="sxs-lookup"><span data-stu-id="bfbd5-109">Demonstrates</span></span>  
   
--   Crear un servicio de descarga personalizado.  
+-   <span data-ttu-id="bfbd5-110">Crear un servicio de descarga personalizado.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-110">Creating a custom discovery service.</span></span>  
   
--   Implementar una coincidencia del ámbito personalizada por algoritmo.  
+-   <span data-ttu-id="bfbd5-111">Implementar una coincidencia del ámbito personalizada por algoritmo.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-111">Implementing a custom scope match by algorithm.</span></span>  
   
-## Análisis  
- El cliente busca los criterios de concordancia de tipos "O".Un servicio responde si los ámbitos de sus extremos coinciden con alguno de los ámbitos que proporciona el cliente.En este caso, el cliente busca un servicio de calculadora que tenga cualquiera de los ámbitos de la siguiente lista:  
+## <a name="discussion"></a><span data-ttu-id="bfbd5-112">Explicación</span><span class="sxs-lookup"><span data-stu-id="bfbd5-112">Discussion</span></span>  
+ <span data-ttu-id="bfbd5-113">El cliente busca tipos "O" criterios de coincidencia.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-113">The client is looking for "OR" type matching criteria.</span></span> <span data-ttu-id="bfbd5-114">Un servicio responde si los ámbitos de sus puntos de conexión coinciden con alguno de los ámbitos que proporciona el cliente.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-114">A service responds back if the scopes on its endpoints match any of the scopes provided by the client.</span></span> <span data-ttu-id="bfbd5-115">En este caso, el cliente busca un servicio de calculadora que tenga cualquiera de los ámbitos de la siguiente lista:</span><span class="sxs-lookup"><span data-stu-id="bfbd5-115">In this case, the client is looking for a calculator service that has any of the scopes in the following list:</span></span>  
   
 1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -40,39 +43,39 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
   
 3.  `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
   
- Para lograr esto, el cliente dirige los servicios para utilizar una regla de concordancia de ámbito personalizada pasando una coincidencia de ámbito personalizada a través de URI.Para facilitar la coincidencia de ámbito personalizada, el servicio debe utilizar un servicio de descarga personalizado que entiende la regla de coincidencia de ámbito personalizada e implemente la lógica de coincidencia asociada.  
+ <span data-ttu-id="bfbd5-116">Para lograr esto, el cliente dirige los servicios para utilizar una regla de concordancia de ámbito personalizada pasando una coincidencia de ámbito personalizada a través de URI.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-116">To accomplish this, the client directs services to use a custom scope matching rule by passing in a custom scope match by URI.</span></span> <span data-ttu-id="bfbd5-117">Para facilitar la coincidencia de ámbito personalizada, el servicio debe utilizar un servicio de descarga personalizado que entiende la regla de coincidencia de ámbito personalizada e implemente la lógica de coincidencia asociada.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-117">To facilitate the custom scope matching, the service must use a custom discovery service that understands the custom scope match rule and implements the associated matching logic.</span></span>  
   
- En el proyecto de cliente, abra el archivo Program.cs.Observe que el campo `ScopeMatchBy` del objeto `FindCriteria` está establecido en un URI concreto.Este identificador se envía al servicio.Si el servicio no entiende esta regla, omite la solicitud de la búsqueda del cliente.  
+ <span data-ttu-id="bfbd5-118">En el proyecto de cliente, abra el archivo Program.cs.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-118">In the client project, open the Program.cs file.</span></span> <span data-ttu-id="bfbd5-119">Observe que el campo `ScopeMatchBy` del objeto `FindCriteria` está establecido en un URI concreto.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-119">Note that the `ScopeMatchBy` field of the `FindCriteria` object is set to a specific URI.</span></span> <span data-ttu-id="bfbd5-120">Este identificador se envía al servicio.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-120">This identifier is sent to the service.</span></span> <span data-ttu-id="bfbd5-121">Si el servicio no entiende esta regla, omite la solicitud de la búsqueda del cliente.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-121">If the service does not understand this rule, it ignores the client’s find request.</span></span>  
   
- Abra el proyecto de servicio.Se utilizan tres archivos para implementar el Servicio de descarga personalizado:  
+ <span data-ttu-id="bfbd5-122">Abra el proyecto de servicio.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-122">Open the service project.</span></span> <span data-ttu-id="bfbd5-123">Se utilizan tres archivos para implementar el Servicio de descarga personalizado:</span><span class="sxs-lookup"><span data-stu-id="bfbd5-123">Three files are used to implement the Custom Discovery Service:</span></span>  
   
-1.  **AsyncResult.cs**: es la implementación del `AsyncResult` requerido por los métodos de detección.  
+1.  <span data-ttu-id="bfbd5-124">**AsyncResult.cs**: ésta es la implementación de la `AsyncResult` que requieren los métodos de detección.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-124">**AsyncResult.cs**: This is the implementation of the `AsyncResult` that is required by Discovery methods.</span></span>  
   
-2.  **CustomDiscoveryService.cs**: este archivo implementa el servicio de descarga personalizado.La implementación extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryService> e invalida los métodos necesarios.Observe la implementación del método <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>.El método comprueba si el cliente especificó la coincidencia de ámbito personalizada por regla.Se trata del mismo URI personalizado que el cliente especificó previamente.Si se especifica la regla personalizada, se sigue la ruta de acceso del código que implementa la lógica de coincidencia "OR".  
+2.  <span data-ttu-id="bfbd5-125">**CustomDiscoveryService.cs**: este archivo implementa el servicio de detección personalizado.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-125">**CustomDiscoveryService.cs**: This file implements the custom discovery service.</span></span> <span data-ttu-id="bfbd5-126">La implementación extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryService> e invalida los métodos necesarios.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-126">The implementation extends the <xref:System.ServiceModel.Discovery.DiscoveryService> class and overrides the necessary methods.</span></span> <span data-ttu-id="bfbd5-127">Observe la implementación del método <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-127">Note the implementation of the <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> method.</span></span> <span data-ttu-id="bfbd5-128">El método comprueba si el cliente especificó la coincidencia de ámbito personalizada por regla.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-128">The method checks to see whether the custom scope match by rule was specified by the client.</span></span> <span data-ttu-id="bfbd5-129">Se trata del mismo URI personalizado que el cliente especificó previamente.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-129">This is the same custom URI that the client specified previously.</span></span> <span data-ttu-id="bfbd5-130">Si se especifica la regla personalizada, se sigue la ruta de acceso de código que implementa la lógica de coincidencia "OR".</span><span class="sxs-lookup"><span data-stu-id="bfbd5-130">If the custom rule is specified, the code path that implements the "OR" match logic is followed.</span></span>  
   
-     Esta lógica personalizada pasa por todos los ámbitos de cada uno de los extremos que el servicio tiene.Si alguno de los ámbitos del extremo coincide con alguno de los ámbitos proporcionados por el cliente, el servicio de descarga agrega ese extremo a la respuesta que se devuelve al cliente.  
+     <span data-ttu-id="bfbd5-131">Esta lógica personalizada pasa por todos los ámbitos de cada uno de los puntos de conexión que el servicio tiene.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-131">This custom logic goes through all of the scopes on each of the endpoints that the service has.</span></span> <span data-ttu-id="bfbd5-132">Si alguno de los ámbitos del punto de conexión coincide con alguno de los ámbitos proporcionados por el cliente, el servicio de descarga agrega ese punto de conexión a la respuesta que se devuelve al cliente.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-132">If any of the endpoint's scopes match any of the scopes provided by the client, the discovery service adds that endpoint to the response that is sent back to the client.</span></span>  
   
-3.  **CustomDiscoveryExtension.cs**: el último paso para implementar el servicio de descarga es conectar esta implementación del servicio de detección personalizado al host de servicio.La clase de aplicación auxiliar que se utiliza aquí es la clase `CustomDiscoveryExtension`.Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>.El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>.En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes.`PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>.El servicio de detección personalizado lo utiliza para rellenar su lista interna.El usuario puede agregar también otros metadatos de extremo.  
+3.  <span data-ttu-id="bfbd5-133">**CustomDiscoveryExtension.cs**: el último paso para implementar el servicio de descarga es conectar esta implementación de la opción de instalación detectar el servicio al host de servicio.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-133">**CustomDiscoveryExtension.cs**: The last step in implementing the discovery service is to connect this implementation of the custom discover service to the service host.</span></span> <span data-ttu-id="bfbd5-134">La clase de aplicación auxiliar que se utiliza aquí es la clase `CustomDiscoveryExtension`.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-134">The helper class used here is the `CustomDiscoveryExtension` class.</span></span> <span data-ttu-id="bfbd5-135">Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-135">This class extends the <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> class.</span></span> <span data-ttu-id="bfbd5-136">El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-136">The user must override the <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> method.</span></span> <span data-ttu-id="bfbd5-137">En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-137">In this case, the method returns an instance of the custom discovery service that was created before.</span></span> <span data-ttu-id="bfbd5-138">`PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-138">`PublishedEndpoints` is a <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> that contains all of the application endpoints that are added to the <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="bfbd5-139">El servicio de detección personalizado lo utiliza para rellenar su lista interna.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-139">The custom discovery service uses this to populate its internal list.</span></span> <span data-ttu-id="bfbd5-140">El usuario puede agregar también otros metadatos de extremo.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-140">A user can to add other endpoint metadata as well.</span></span>  
   
- Por último, abra Program.cs.Observe que tanto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> como `CustomDiscoveryExtension` se agregan al host.Una vez hecho esto, si el host tiene un extremo sobre el que recibir los mensajes de detección, la aplicación puede utilizar el servicio de detección personalizado.  
+ <span data-ttu-id="bfbd5-141">Por último, abra Program.cs.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-141">Lastly, open Program.cs.</span></span> <span data-ttu-id="bfbd5-142">Observe que tanto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> como `CustomDiscoveryExtension` se agregan al host.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-142">Note that both the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> and `CustomDiscoveryExtension` are added to the host.</span></span> <span data-ttu-id="bfbd5-143">Una vez hecho esto, si el host tiene un extremo sobre el que recibir los mensajes de detección, la aplicación puede utilizar el servicio de detección personalizado.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-143">Once this is done and the host has an endpoint over which to receive discovery messages, the application can use the custom discovery service.</span></span>  
   
- Observe que el cliente puede encontrar el servicio sin conocer su dirección.  
+ <span data-ttu-id="bfbd5-144">Observe que el cliente puede encontrar el servicio sin conocer su dirección.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-144">Observe that the client is able to find the service without knowing its address.</span></span>  
   
-#### Para configurar, compilar y ejecutar el ejemplo  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="bfbd5-145">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="bfbd5-145">To set up, build, and run the sample</span></span>  
   
-1.  Abra la solución que contiene el proyecto.  
+1.  <span data-ttu-id="bfbd5-146">Abra la solución que contiene el proyecto.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-146">Open the solution that contains the project.</span></span>  
   
-2.  Compile el proyecto.  
+2.  <span data-ttu-id="bfbd5-147">Compile el proyecto.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-147">Build the project.</span></span>  
   
-3.  Ejecute la aplicación de servicio.  
+3.  <span data-ttu-id="bfbd5-148">Ejecute la aplicación de servicio.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-148">Run the service application.</span></span>  
   
-4.  Ejecute la aplicación cliente.  
+4.  <span data-ttu-id="bfbd5-149">Ejecute la aplicación cliente.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-149">Run the client application.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="bfbd5-150">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-150">The samples may already be installed on your machine.</span></span> <span data-ttu-id="bfbd5-151">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-151">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="bfbd5-152">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="bfbd5-152">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bfbd5-153">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="bfbd5-153">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

@@ -1,50 +1,42 @@
 ---
-title: Usar Async en acceso a archivos (Visual Basic) | Documentos de Microsoft
+title: Usar Async en acceso a archivos (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0e548989b1d2c32b9faf5ce0dd90ae371dfc028
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 329ae43f8752fbe8a7167b57cb710cc53c0ec247
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-async-for-file-access-visual-basic"></a>Usar Async en acceso a archivos (Visual Basic)
-Puede usar la característica Async para tener acceso a archivos. Mediante la característica Async, se puede llamar a métodos asincrónicos sin definir continuaciones ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, simplemente llame a un método asincrónico en lugar de un método sincrónico y agregar algunas palabras clave en el código.  
+# <a name="using-async-for-file-access-visual-basic"></a><span data-ttu-id="aca85-102">Usar Async en acceso a archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aca85-102">Using Async for File Access (Visual Basic)</span></span>
+<span data-ttu-id="aca85-103">Puede usar la característica asincrónica para tener acceso a archivos.</span><span class="sxs-lookup"><span data-stu-id="aca85-103">You can use the Async feature to access files.</span></span> <span data-ttu-id="aca85-104">Mediante la característica Async, se puede llamar a métodos asincrónicos sin definir continuaciones ni dividir el código en varios métodos o expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="aca85-104">By using the Async feature, you can call into asynchronous methods without using callbacks or splitting your code across multiple methods or lambda expressions.</span></span> <span data-ttu-id="aca85-105">Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.</span><span class="sxs-lookup"><span data-stu-id="aca85-105">To make synchronous code asynchronous, you just call an asynchronous method instead of a synchronous method and add a few keywords to the code.</span></span>  
   
- Podría agregar asincronía a las llamadas de acceso de archivo de los siguientes motivos:  
+ <span data-ttu-id="aca85-106">Podrían considerarse los siguientes motivos para agregar asincronía a las llamadas de acceso a archivos:</span><span class="sxs-lookup"><span data-stu-id="aca85-106">You might consider the following reasons for adding asynchrony to file access calls:</span></span>  
   
--   Asincronía hace que las aplicaciones de interfaz de usuario más capacidad de respuesta porque el subproceso de interfaz de usuario que inicia la operación puede realizar otro trabajo. Si el subproceso de interfaz de usuario debe ejecutar código que tarda mucho tiempo (por ejemplo, más de 50 milisegundos), puede inmovilizar la interfaz de usuario hasta que la E/S está completa y el subproceso de interfaz de usuario puede volver a procesar teclado entrados y otros eventos del mouse.  
+-   <span data-ttu-id="aca85-107">La asincronía hace que las aplicaciones de interfaz de usuario tengan mayor capacidad de respuesta porque el subproceso de interfaz de usuario que inicia la operación puede realizar otro trabajo.</span><span class="sxs-lookup"><span data-stu-id="aca85-107">Asynchrony makes UI applications more responsive because the UI thread that launches the operation can perform other work.</span></span> <span data-ttu-id="aca85-108">Si el subproceso de interfaz de usuario debe ejecutar código que tarda mucho tiempo (por ejemplo, más de 50 milisegundos), puede inmovilizar la interfaz de usuario hasta que la E/S se complete y el subproceso de interfaz de usuario pueda volver a procesar la entrada de teclado y de mouse y otros eventos.</span><span class="sxs-lookup"><span data-stu-id="aca85-108">If the UI thread must execute code that takes a long time (for example, more than 50 milliseconds), the UI may freeze until the I/O is complete and the UI thread can again process keyboard and mouse input and other events.</span></span>  
   
--   Asincronía mejora la escalabilidad de ASP.NET y otras aplicaciones basadas en servidor reduciendo la necesidad de subprocesos. Si la aplicación utiliza un subproceso dedicado por respuesta y controla las solicitudes de mil simultáneamente, son necesarios los subprocesos de miles. Operaciones asincrónicas a menudo no es necesario utilizar un subproceso durante la espera. Usan el subproceso existente de finalización de E/S brevemente al final.  
+-   <span data-ttu-id="aca85-109">La asincronía mejora la escalabilidad de ASP.NET y otras aplicaciones basadas en servidor reduciendo la necesidad de subproceso.</span><span class="sxs-lookup"><span data-stu-id="aca85-109">Asynchrony improves the scalability of ASP.NET and other server-based applications by reducing the need for threads.</span></span> <span data-ttu-id="aca85-110">Si la aplicación usa un subproceso dedicado por respuesta y se procesa un millar de solicitudes simultáneamente, se necesitan mil subprocesos.</span><span class="sxs-lookup"><span data-stu-id="aca85-110">If the application uses a dedicated thread per response and a thousand requests are being handled simultaneously, a thousand threads are needed.</span></span> <span data-ttu-id="aca85-111">Las operaciones asincrónicas no suelen necesitar un subproceso durante la espera.</span><span class="sxs-lookup"><span data-stu-id="aca85-111">Asynchronous operations often don’t need to use a thread during the wait.</span></span> <span data-ttu-id="aca85-112">Usan el subproceso existente de finalización de E/S brevemente al final.</span><span class="sxs-lookup"><span data-stu-id="aca85-112">They use the existing I/O completion thread briefly at the end.</span></span>  
   
--   La latencia de una operación de acceso de archivo puede ser muy baja en las condiciones actuales, pero la latencia puede aumentar en gran medida en el futuro. Por ejemplo, se puede mover un archivo a un servidor que está en todo el mundo.  
+-   <span data-ttu-id="aca85-113">Puede que la latencia de una operación de acceso a archivos sea muy baja en las condiciones actuales, pero puede aumentar mucho en el futuro.</span><span class="sxs-lookup"><span data-stu-id="aca85-113">The latency of a file access operation might be very low under current conditions, but the latency may greatly increase in the future.</span></span> <span data-ttu-id="aca85-114">Por ejemplo, se puede mover un archivo a un servidor que está a escala mundial.</span><span class="sxs-lookup"><span data-stu-id="aca85-114">For example, a file may be moved to a server that's across the world.</span></span>  
   
--   La sobrecarga resultante de usar la característica Async es pequeño.  
+-   <span data-ttu-id="aca85-115">La sobrecarga resultante de usar la característica Async es pequeña.</span><span class="sxs-lookup"><span data-stu-id="aca85-115">The added overhead of using the Async feature is small.</span></span>  
   
--   Las tareas asincrónicas fácilmente se pueden ejecutar en paralelo.  
+-   <span data-ttu-id="aca85-116">Las tareas asincrónicas se pueden ejecutar fácilmente en paralelo.</span><span class="sxs-lookup"><span data-stu-id="aca85-116">Asynchronous tasks can easily be run in parallel.</span></span>  
   
-## <a name="running-the-examples"></a>Ejecutar los ejemplos  
- Para ejecutar los ejemplos de este tema, puede crear un **aplicación WPF** o un **aplicación de Windows Forms** y, a continuación, agregue un **botón**. En el botón `Click` evento, agregue una llamada al primer método en cada ejemplo.  
+## <a name="running-the-examples"></a><span data-ttu-id="aca85-117">Ejecutar los ejemplos</span><span class="sxs-lookup"><span data-stu-id="aca85-117">Running the Examples</span></span>  
+ <span data-ttu-id="aca85-118">Para ejecutar los ejemplos de este tema, puede crear una **aplicación WPF** o una **aplicación de Windows Forms** y luego agregar un **botón**.</span><span class="sxs-lookup"><span data-stu-id="aca85-118">To run the examples in this topic, you can create a **WPF Application** or a **Windows Forms Application** and then add a **Button**.</span></span> <span data-ttu-id="aca85-119">En el evento `Click` del botón, agregue una llamada al primer método de cada ejemplo.</span><span class="sxs-lookup"><span data-stu-id="aca85-119">In the button's `Click` event, add a call to the first method in each example.</span></span>  
   
- En los ejemplos siguientes, se incluyen los siguientes `Imports` instrucciones.  
+ <span data-ttu-id="aca85-120">En los ejemplos siguientes, se incluyen las instrucciones `Imports` siguientes.</span><span class="sxs-lookup"><span data-stu-id="aca85-120">In the following examples, include the following `Imports` statements.</span></span>  
   
 ```vb  
 Imports System  
@@ -55,13 +47,13 @@ Imports System.Text
 Imports System.Threading.Tasks  
 ```  
   
-## <a name="use-of-the-filestream-class"></a>Uso de la clase FileStream  
- Los ejemplos de este tema usan la <xref:System.IO.FileStream>clase, que tiene una opción que ocasiona la E/S asincrónica que se produzca en el nivel de sistema operativo.</xref:System.IO.FileStream> Mediante esta opción, puede evitar bloquear un subproceso de ThreadPool en muchos casos. Para habilitar esta opción, especifique la `useAsync=true` o `options=FileOptions.Asynchronous` argumento en la llamada al constructor.  
+## <a name="use-of-the-filestream-class"></a><span data-ttu-id="aca85-121">Uso de la clase FileStream</span><span class="sxs-lookup"><span data-stu-id="aca85-121">Use of the FileStream Class</span></span>  
+ <span data-ttu-id="aca85-122">En los ejemplos de este tema se usa la clase <xref:System.IO.FileStream>, que tiene una opción que hace que la E/S asincrónica se produzca en el nivel del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="aca85-122">The examples in this topic use the <xref:System.IO.FileStream> class, which has an option that causes asynchronous I/O to occur at the operating system level.</span></span> <span data-ttu-id="aca85-123">Si usa esta opción, puede evitar bloquear un subproceso ThreadPool en muchos casos.</span><span class="sxs-lookup"><span data-stu-id="aca85-123">By using this option, you can avoid blocking a ThreadPool thread in many cases.</span></span> <span data-ttu-id="aca85-124">Para habilitar esta opción, especifique el argumento `useAsync=true` o `options=FileOptions.Asynchronous` en la llamada al constructor.</span><span class="sxs-lookup"><span data-stu-id="aca85-124">To enable this option, you specify the `useAsync=true` or `options=FileOptions.Asynchronous` argument in the constructor call.</span></span>  
   
- No puede utilizar esta opción con <xref:System.IO.StreamReader>y <xref:System.IO.StreamWriter>Si se abran especificando una ruta de acceso de archivo.</xref:System.IO.StreamWriter> </xref:System.IO.StreamReader> Sin embargo, puede utilizar esta opción si agregas un <xref:System.IO.Stream>que la <xref:System.IO.FileStream>clase abierto.</xref:System.IO.FileStream> </xref:System.IO.Stream> Tenga en cuenta que las llamadas asincrónicas son más rápidas en aplicaciones de interfaz de usuario incluso si se bloquea un subproceso ThreadPool, porque no se bloquea el subproceso de interfaz de usuario durante la espera.  
+ <span data-ttu-id="aca85-125">No puede usar esta opción con <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter> si los abre directamente al especificar una ruta de acceso de archivo.</span><span class="sxs-lookup"><span data-stu-id="aca85-125">You can’t use this option with <xref:System.IO.StreamReader> and <xref:System.IO.StreamWriter> if you open them directly by specifying a file path.</span></span> <span data-ttu-id="aca85-126">En cambio, puede usar esta opción si les proporciona un <xref:System.IO.Stream> que ha abierto la clase <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="aca85-126">However, you can use this option if you provide them a <xref:System.IO.Stream> that the <xref:System.IO.FileStream> class opened.</span></span> <span data-ttu-id="aca85-127">Tenga en cuenta que las llamadas asincrónicas son más rápidas en aplicaciones de interfaz de usuario aunque un subproceso ThreadPool se bloquee, porque el subproceso de interfaz de usuario no se bloquea durante la espera.</span><span class="sxs-lookup"><span data-stu-id="aca85-127">Note that asynchronous calls are faster in UI apps even if a ThreadPool thread is blocked, because the UI thread isn’t blocked during the wait.</span></span>  
   
-## <a name="writing-text"></a>Escribir texto  
- En el ejemplo siguiente se escribe texto en un archivo. En cada instrucción await, el método finaliza inmediatamente. Una vez completada la E/S de archivo, el método se reanuda en la instrucción que sigue a la instrucción await. Tenga en cuenta que el modificador async en la definición de métodos que utilizan la instrucción await.  
+## <a name="writing-text"></a><span data-ttu-id="aca85-128">Escribir texto</span><span class="sxs-lookup"><span data-stu-id="aca85-128">Writing Text</span></span>  
+ <span data-ttu-id="aca85-129">En el ejemplo siguiente se escribe texto en un archivo.</span><span class="sxs-lookup"><span data-stu-id="aca85-129">The following example writes text to a file.</span></span> <span data-ttu-id="aca85-130">En cada instrucción await, el método finaliza inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="aca85-130">At each await statement, the method immediately exits.</span></span> <span data-ttu-id="aca85-131">Cuando se complete la E/S de archivo, el método se reanuda en la instrucción que sigue a la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="aca85-131">When the file I/O is complete, the method resumes at the statement that follows the await statement.</span></span> <span data-ttu-id="aca85-132">Tenga en cuenta que el modificador async se encuentra en la definición de métodos que usan la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="aca85-132">Note that the async modifier is in the definition of methods that use the await statement.</span></span>  
   
 ```vb  
 Public Async Sub ProcessWrite()  
@@ -83,17 +75,17 @@ Private Async Function WriteTextAsync(filePath As String, text As String) As Tas
 End Function  
 ```  
   
- El ejemplo original tiene la instrucción `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, que es una contracción de las dos instrucciones siguientes:  
+ <span data-ttu-id="aca85-133">El ejemplo original incluye la instrucción `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, que es una contracción de las dos instrucciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="aca85-133">The original example has the statement `Await sourceStream.WriteAsync(encodedText, 0, encodedText.Length)`, which is a contraction of the following two statements:</span></span>  
   
 ```vb  
 Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length)  
 Await theTask  
 ```  
   
- La primera instrucción devuelve una tarea y hace que el procesamiento de archivos al iniciar. La segunda instrucción a la instrucción await hace que el método salir inmediatamente y devolver una tarea diferente. Cuando se completa el procesamiento posterior de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await. Para obtener más información, consulte [flujo de Control en programas Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
+ <span data-ttu-id="aca85-134">La primera instrucción devuelve una tarea e inicia el procesamiento de archivos.</span><span class="sxs-lookup"><span data-stu-id="aca85-134">The first statement returns a task and causes file processing to start.</span></span> <span data-ttu-id="aca85-135">La segunda instrucción con await finaliza el método inmediatamente y devuelve otra tarea.</span><span class="sxs-lookup"><span data-stu-id="aca85-135">The second statement with the await causes the method to immediately exit and return a different task.</span></span> <span data-ttu-id="aca85-136">Después, cuando se complete el procesamiento de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await.</span><span class="sxs-lookup"><span data-stu-id="aca85-136">When the file processing later completes, execution returns to the statement that follows the await.</span></span> <span data-ttu-id="aca85-137">Para obtener más información, consulte [flujo de Control en programas Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).</span><span class="sxs-lookup"><span data-stu-id="aca85-137">For more information, see  [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).</span></span>  
   
-## <a name="reading-text"></a>Leer texto  
- En el ejemplo siguiente se lee el texto de un archivo. El texto se almacena en búfer y, en este caso, se colocan en un <xref:System.Text.StringBuilder>.</xref:System.Text.StringBuilder> A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor. El <xref:System.IO.Stream.ReadAsync%2A>método devuelve un <xref:System.Threading.Tasks.Task> \< <xref:System.Int32>>, por lo que la evaluación de la espera se produce un `Int32` valor (`numRead`) una vez finalizada la operación.</xref:System.Int32> </xref:System.Threading.Tasks.Task> </xref:System.IO.Stream.ReadAsync%2A> Para obtener más información, consulte [Async devolver tipos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+## <a name="reading-text"></a><span data-ttu-id="aca85-138">Leer texto</span><span class="sxs-lookup"><span data-stu-id="aca85-138">Reading Text</span></span>  
+ <span data-ttu-id="aca85-139">En el ejemplo siguiente se lee texto de un archivo.</span><span class="sxs-lookup"><span data-stu-id="aca85-139">The following example reads text from a file.</span></span> <span data-ttu-id="aca85-140">El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="aca85-140">The text is buffered and, in this case, placed into a <xref:System.Text.StringBuilder>.</span></span> <span data-ttu-id="aca85-141">A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor.</span><span class="sxs-lookup"><span data-stu-id="aca85-141">Unlike in the previous example, the evaluation of the await produces a value.</span></span> <span data-ttu-id="aca85-142">El método <xref:System.IO.Stream.ReadAsync%2A> devuelve un <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de la espera genera un valor `Int32` (`numRead`) después de que se complete la operación.</span><span class="sxs-lookup"><span data-stu-id="aca85-142">The <xref:System.IO.Stream.ReadAsync%2A> method returns a <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, so the evaluation of the await produces an `Int32` value (`numRead`) after the operation completes.</span></span> <span data-ttu-id="aca85-143">Para obtener más información, consulte [tipos de valor devueltos de Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="aca85-143">For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -134,12 +126,12 @@ Private Async Function ReadTextAsync(filePath As String) As Task(Of String)
 End Function  
 ```  
   
-## <a name="parallel-asynchronous-io"></a>E/S asincrónica en paralelo  
- En el ejemplo siguiente se muestra el procesamiento paralelo escribiendo 10 archivos de texto. Para cada archivo, la <xref:System.IO.Stream.WriteAsync%2A>método devuelve una tarea que se agrega a una lista de tareas.</xref:System.IO.Stream.WriteAsync%2A> El `Await Task.WhenAll(tasks)` instrucción finaliza el método y se reanuda en el método cuando el procesamiento de archivos complete para todas las tareas.  
+## <a name="parallel-asynchronous-io"></a><span data-ttu-id="aca85-144">E/S asincrónica en paralelo</span><span class="sxs-lookup"><span data-stu-id="aca85-144">Parallel Asynchronous I/O</span></span>  
+ <span data-ttu-id="aca85-145">En el ejemplo siguiente se muestra el procesamiento paralelo escribiendo 10 archivos de texto.</span><span class="sxs-lookup"><span data-stu-id="aca85-145">The following example demonstrates parallel processing by writing 10 text files.</span></span> <span data-ttu-id="aca85-146">Para cada archivo, el método <xref:System.IO.Stream.WriteAsync%2A> devuelve una tarea que luego se agrega a una lista de tareas.</span><span class="sxs-lookup"><span data-stu-id="aca85-146">For each file, the <xref:System.IO.Stream.WriteAsync%2A> method returns a task that is then added to a list of tasks.</span></span> <span data-ttu-id="aca85-147">La instrucción `Await Task.WhenAll(tasks)` finaliza el método y se reanuda en el método cuando el procesamiento de archivos se completa para todas las tareas.</span><span class="sxs-lookup"><span data-stu-id="aca85-147">The `Await Task.WhenAll(tasks)` statement exits the method and resumes within the method when file processing is complete for all of the tasks.</span></span>  
   
- El ejemplo cierra todos <xref:System.IO.FileStream>instancias en un `Finally` bloquear una vez completadas las tareas.</xref:System.IO.FileStream> Si cada `FileStream` en su lugar se creó en un `Imports` instrucción, el `FileStream` podría eliminarse antes de completarse la tarea.  
+ <span data-ttu-id="aca85-148">Tras completar las tareas, el ejemplo cierra todas las instancias de <xref:System.IO.FileStream> de un bloque `Finally`.</span><span class="sxs-lookup"><span data-stu-id="aca85-148">The example closes all <xref:System.IO.FileStream> instances in a `Finally` block after the tasks are complete.</span></span> <span data-ttu-id="aca85-149">Si en lugar de ello, cada `FileStream` se ha creado en una instrucción `Imports`, la `FileStream` se podría desechar antes de completarse la tarea.</span><span class="sxs-lookup"><span data-stu-id="aca85-149">If each `FileStream` was instead created in a `Imports` statement, the `FileStream` might be disposed of before the task was complete.</span></span>  
   
- Tenga en cuenta que cualquier aumento del rendimiento es casi por completo en el procesamiento en paralelo y no el procesamiento asincrónico. Las ventajas de asincronía son no ocupar varios subprocesos y no ocupar el subproceso de interfaz de usuario.  
+ <span data-ttu-id="aca85-150">Tenga en cuenta que cualquier aumento del rendimiento se debe casi por completo al procesamiento en paralelo y no al procesamiento asincrónico.</span><span class="sxs-lookup"><span data-stu-id="aca85-150">Note that any performance boost is almost entirely from the parallel processing and not the asynchronous processing.</span></span> <span data-ttu-id="aca85-151">Las ventajas de la asincronía estriban en que no inmoviliza varios subprocesos ni el subproceso de interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="aca85-151">The advantages of asynchrony are that it doesn’t tie up multiple threads, and that it doesn’t tie up the user interface thread.</span></span>  
   
 ```vb  
 Public Async Sub ProcessWriteMult()  
@@ -175,9 +167,9 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Cuando se usa el <xref:System.IO.Stream.WriteAsync%2A>y <xref:System.IO.Stream.ReadAsync%2A>métodos, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar el flujo de la operación intermedia.</xref:System.Threading.CancellationToken> </xref:System.IO.Stream.ReadAsync%2A> </xref:System.IO.Stream.WriteAsync%2A> Para obtener más información, consulte [Fine su aplicación de Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) y [cancelación en subprocesos administrados](http://msdn.microsoft.com/library/eea11fe5-d8b0-4314-bb5d-8a58166fb1c3).  
+ <span data-ttu-id="aca85-152">Al usar los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar la operación en mitad de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="aca85-152">When using the <xref:System.IO.Stream.WriteAsync%2A> and <xref:System.IO.Stream.ReadAsync%2A> methods, you can specify a <xref:System.Threading.CancellationToken>, which you can use to cancel the operation mid-stream.</span></span> <span data-ttu-id="aca85-153">Para obtener más información, consulte [Fine la aplicación de Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) y [cancelación en subprocesos administrados](../../../../standard/threading/cancellation-in-managed-threads.md).</span><span class="sxs-lookup"><span data-stu-id="aca85-153">For more information, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) and [Cancellation in Managed Threads](../../../../standard/threading/cancellation-in-managed-threads.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Tipos de valor devueltos de Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)   
- [Flujo de control en programas Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+## <a name="see-also"></a><span data-ttu-id="aca85-154">Vea también</span><span class="sxs-lookup"><span data-stu-id="aca85-154">See Also</span></span>  
+ [<span data-ttu-id="aca85-155">Programación asincrónica con Async y Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aca85-155">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ <span data-ttu-id="aca85-156">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="aca85-156">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)</span></span>  
+ <span data-ttu-id="aca85-157">[Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="aca85-157">[Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)</span></span>

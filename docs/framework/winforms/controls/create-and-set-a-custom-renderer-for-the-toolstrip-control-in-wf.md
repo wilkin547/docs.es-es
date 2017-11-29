@@ -1,41 +1,45 @@
 ---
-title: "C&#243;mo: Crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ejemplos [Windows Forms], barras de herramientas"
-  - "barras de herramientas [Windows Forms], representar"
-  - "ToolStrip (control) [Windows Forms], representación personalizada"
-  - "ToolStrip (control) [Windows Forms], representar"
+title: "Cómo: Crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], custom rendering
+- toolbars [Windows Forms], rendering
+- examples [Windows Forms], toolbars
+- ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f63ff0a7336ae80ce5652cf3e4c6c7dd409882a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms
-Los controles <xref:System.Windows.Forms.ToolStrip> ofrecen una compatibilidad fácil para los temas y estilos.  Puede conseguir un aspecto y comportamiento personalizado completamente \(apariencia y percepción\) estableciendo tanto la propiedad <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> como <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=fullName> en un representador personalizado.  
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a><span data-ttu-id="5b34c-102">Cómo: Crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5b34c-102">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>
+<span data-ttu-id="5b34c-103"><xref:System.Windows.Forms.ToolStrip>controles ofrecen una compatibilidad fácil para los temas y estilos.</span><span class="sxs-lookup"><span data-stu-id="5b34c-103"><xref:System.Windows.Forms.ToolStrip> controls give easy support to themes and styles.</span></span> <span data-ttu-id="5b34c-104">Puede lograr completamente personalizada apariencia y el comportamiento (apariencia y funcionamiento) estableciendo el <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> propiedad o <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> propiedad a un representador personalizado.</span><span class="sxs-lookup"><span data-stu-id="5b34c-104">You can achieve completely custom appearance and behavior (look and feel) by setting either the <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> property or the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> property to a custom renderer.</span></span>  
   
- Puede asignar representadores a cada control <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip> o <xref:System.Windows.Forms.StatusStrip> particular, o utilizar la propiedad <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> que afecta a todos los objetos estableciendo la propiedad <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=fullName> en <xref:System.Windows.Forms.ToolStripRenderMode?displayProperty=fullName>.  
+ <span data-ttu-id="5b34c-105">Puede asignar representadores a cada persona <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, o <xref:System.Windows.Forms.StatusStrip> control, o bien puede usar el <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> propiedad que se va a afectar a todos los objetos estableciendo la <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> propiedad <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5b34c-105">You can assign renderers to each individual <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, or <xref:System.Windows.Forms.StatusStrip> control, or you can use the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> property to affect all objects by setting the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> property to <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> sólo devuelve <xref:System.Windows.Forms.ToolStripRenderMode> si el valor de <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> no es `null`.  
+>  <span data-ttu-id="5b34c-106"><xref:System.Windows.Forms.ToolStrip.RenderMode%2A>Devuelve <xref:System.Windows.Forms.ToolStripRenderMode.Custom> sólo si el valor de <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> no es `null`.</span><span class="sxs-lookup"><span data-stu-id="5b34c-106"><xref:System.Windows.Forms.ToolStrip.RenderMode%2A> returns <xref:System.Windows.Forms.ToolStripRenderMode.Custom> only if the value of <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> is not `null`.</span></span>  
   
-### Para crear un representador personalizado  
+### <a name="to-create-a-custom-renderer"></a><span data-ttu-id="5b34c-107">Para crear a un representador personalizado</span><span class="sxs-lookup"><span data-stu-id="5b34c-107">To create a custom renderer</span></span>  
   
-1.  Extienda la clase <xref:System.Windows.Forms.ToolStripRenderer>.  
+1.  <span data-ttu-id="5b34c-108">Ampliar la <xref:System.Windows.Forms.ToolStripRenderer> clase.</span><span class="sxs-lookup"><span data-stu-id="5b34c-108">Extend the <xref:System.Windows.Forms.ToolStripRenderer> class.</span></span>  
   
-2.  Implemente la representación personalizada deseada invalidando los miembros *En…* adecuados  
+2.  <span data-ttu-id="5b34c-109">Implemente la representación personalizada deseada invalidando adecuado *en...*</span><span class="sxs-lookup"><span data-stu-id="5b34c-109">Implement desired custom rendering by overriding appropriate *On…*</span></span> <span data-ttu-id="5b34c-110">miembros</span><span class="sxs-lookup"><span data-stu-id="5b34c-110">members</span></span>  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -47,12 +51,9 @@ Los controles <xref:System.Windows.Forms.ToolStrip> ofrecen una compatibilidad f
             MyBase.OnRenderItemText(e)  
         End Sub  
     End Class  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     public class RedTextRenderer : _  
         System.Windows.Forms.ToolStripRenderer  
     {  
@@ -64,45 +65,36 @@ Los controles <xref:System.Windows.Forms.ToolStrip> ofrecen una compatibilidad f
            base.OnRenderItemText(e);  
         }  
     }  
-  
     ```  
   
-### Para establecer el representador personalizado que va a ser el representador actual  
+### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a><span data-ttu-id="5b34c-111">Para establecer el representador personalizado a ser el representador actual</span><span class="sxs-lookup"><span data-stu-id="5b34c-111">To set the custom renderer to be the current renderer</span></span>  
   
-1.  Para establecer el representador personalizado para un <xref:System.Windows.Forms.ToolStrip>, establezca la propiedad <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> en el representador personalizado.  
+1.  <span data-ttu-id="5b34c-112">Para establecer el representador personalizado para una <xref:System.Windows.Forms.ToolStrip>, establezca el <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> propiedad en el representador personalizado.</span><span class="sxs-lookup"><span data-stu-id="5b34c-112">To set the custom renderer for one <xref:System.Windows.Forms.ToolStrip>, set the <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> property to the custom renderer.</span></span>  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     toolStrip1.Renderer = new RedTextRenderer();  
-  
     ```  
   
-2.  O establezca el representador personalizado para todas las clases <xref:System.Windows.Forms.ToolStrip> contenidas en su aplicación: Establezca la propiedad <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=fullName> en el representador personalizado y la propiedad <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> en <xref:System.Windows.Forms.ToolStripRenderMode>.  
+2.  <span data-ttu-id="5b34c-113">O bien para establecer el representador personalizado para todos los <xref:System.Windows.Forms.ToolStrip> clases contenidas en la aplicación: establecer el <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> propiedad al representador personalizado y establezca el <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> propiedad a <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span><span class="sxs-lookup"><span data-stu-id="5b34c-113">Or to set the custom renderer for all <xref:System.Windows.Forms.ToolStrip> classes contained in your application: Set the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> property to the custom renderer and set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  
     ToolStripManager.Renderer = New RedTextRenderer()  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode;  
     ToolStripManager.Renderer = new RedTextRenderer();  
-  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>   
- <xref:System.Windows.Forms.ToolStripRenderer>   
- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>   
- [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
- [Resumen de la tecnología ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a><span data-ttu-id="5b34c-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b34c-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>  
+ <xref:System.Windows.Forms.ToolStripRenderer>  
+ <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>  
+ [<span data-ttu-id="5b34c-115">Información sobre el control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="5b34c-115">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="5b34c-116">Arquitectura del control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="5b34c-116">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [<span data-ttu-id="5b34c-117">Resumen de la tecnología ToolStrip</span><span class="sxs-lookup"><span data-stu-id="5b34c-117">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

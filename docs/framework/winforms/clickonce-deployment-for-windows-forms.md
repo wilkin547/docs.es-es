@@ -1,80 +1,81 @@
 ---
-title: "ClickOnce Deployment for Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ClickOnce deployment [Windows Forms]"
-  - "Windows Forms, ClickOnce deployment"
-  - "walkthroughs [Windows Forms], ClickOnce deployment"
+title: "Implementación de ClickOnce para formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ClickOnce deployment [Windows Forms]
+- Windows Forms, ClickOnce deployment
+- walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 550ef4951cc7d5b0a9b25c5e7d038588b0a911f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# ClickOnce Deployment for Windows Forms
-Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnología que se usa para implementar fácilmente aplicaciones de Windows Forms en equipos cliente.  
+# <a name="clickonce-deployment-for-windows-forms"></a><span data-ttu-id="23f24-102">Implementación de ClickOnce para formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="23f24-102">ClickOnce Deployment for Windows Forms</span></span>
+<span data-ttu-id="23f24-103">Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnología que se usa para implementar fácilmente aplicaciones de Windows Forms en equipos cliente.</span><span class="sxs-lookup"><span data-stu-id="23f24-103">The following topics describe [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], a technology used for easily deploying Windows Forms applications to client computers.</span></span>  
   
-## Secciones relacionadas  
- [Elegir una estrategia de implementación de ClickOnce](../Topic/Choosing%20a%20ClickOnce%20Deployment%20Strategy.md)  
- Presenta varias opciones para implementar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
+## <a name="related-sections"></a><span data-ttu-id="23f24-104">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="23f24-104">Related Sections</span></span>  
+ [<span data-ttu-id="23f24-105">Elegir una estrategia de implementación ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-105">Choosing a ClickOnce Deployment Strategy</span></span>](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
+ <span data-ttu-id="23f24-106">Presenta varias opciones para implementar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23f24-106">Presents several options for deploying [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications.</span></span>  
   
- [Elegir una estrategia de actualización de ClickOnce](../Topic/Choosing%20a%20ClickOnce%20Update%20Strategy.md)  
- Presenta varias opciones para actualizar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
+ [<span data-ttu-id="23f24-107">Elegir una estrategia de actualización de ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-107">Choosing a ClickOnce Update Strategy</span></span>](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
+ <span data-ttu-id="23f24-108">Presenta varias opciones para actualizar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23f24-108">Presents several options for updating [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications.</span></span>  
   
- [Proteger las aplicaciones ClickOnce](../Topic/Securing%20ClickOnce%20Applications.md)  
- Explica las implicaciones de seguridad de las implementaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
+ [<span data-ttu-id="23f24-109">Proteger las aplicaciones ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-109">Securing ClickOnce Applications</span></span>](/visualstudio/deployment/securing-clickonce-applications)  
+ <span data-ttu-id="23f24-110">Explica las implicaciones de seguridad de las implementaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23f24-110">Explains the security implications of [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deployment.</span></span>  
   
- [Solucionar problemas en implementaciones ClickOnce](../Topic/Troubleshooting%20ClickOnce%20Deployments.md)  
- Describe distintos problemas que pueden producirse al implementar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y documenta los mensajes de error de nivel superior que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] podría generar.  
+ [<span data-ttu-id="23f24-111">Solucionar problemas en implementaciones ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-111">Troubleshooting ClickOnce Deployments</span></span>](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
+ <span data-ttu-id="23f24-112">Describe distintos problemas que pueden producirse al implementar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y documenta los mensajes de error de nivel superior que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] podría generar.</span><span class="sxs-lookup"><span data-stu-id="23f24-112">Describes various problems that can occur when deploying [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications, and documents the top-level error messages that [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] might generate.</span></span>  
   
- [ClickOnce y configuración de la aplicación](../Topic/ClickOnce%20and%20Application%20Settings.md)  
- Describe funciona la implementación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] con la configuración de la aplicación, que almacena la configuración de la aplicación y del usuario para su posterior recuperación.  
+ [<span data-ttu-id="23f24-113">ClickOnce y la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="23f24-113">ClickOnce and Application Settings</span></span>](/visualstudio/deployment/clickonce-and-application-settings)  
+ <span data-ttu-id="23f24-114">Describe funciona la implementación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] con la configuración de la aplicación, que almacena la configuración de la aplicación y del usuario para su posterior recuperación.</span><span class="sxs-lookup"><span data-stu-id="23f24-114">Describes how [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deployment works with application settings, which stores application and user settings for future retrieval.</span></span>  
   
- [Información general sobre la implementación de aplicaciones de confianza](../Topic/Trusted%20Application%20Deployment%20Overview.md)  
- Describe una característica de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] que permite a las aplicaciones de confianza ejecutarse con un nivel de permisos superior en equipos cliente.  
+ [<span data-ttu-id="23f24-115">Introducción a la implementación de aplicaciones de confianza</span><span class="sxs-lookup"><span data-stu-id="23f24-115">Trusted Application Deployment Overview</span></span>](/visualstudio/deployment/trusted-application-deployment-overview)  
+ <span data-ttu-id="23f24-116">Describe una característica de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] que permite a las aplicaciones de confianza ejecutarse con un nivel de permisos superior en equipos cliente.</span><span class="sxs-lookup"><span data-stu-id="23f24-116">Describes a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] feature that allows trusted applications to run with a higher level of permission on client computers.</span></span>  
   
- [ClickOnce y Authenticode](../Topic/ClickOnce%20and%20Authenticode.md)  
- Describe cómo se usa la tecnología Authenticode en la implementación de aplicaciones de confianza.  
+ [<span data-ttu-id="23f24-117">ClickOnce y Authenticode</span><span class="sxs-lookup"><span data-stu-id="23f24-117">ClickOnce and Authenticode</span></span>](/visualstudio/deployment/clickonce-and-authenticode)  
+ <span data-ttu-id="23f24-118">Describe cómo se usa la tecnología Authenticode en la implementación de aplicaciones de confianza.</span><span class="sxs-lookup"><span data-stu-id="23f24-118">Describes how Authenticode technology is used in trusted application deployment.</span></span>  
   
- [Tutorial: Implementar manualmente una aplicación ClickOnce](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md)  
- Muestra cómo usar la línea de comandos y las herramientas de SDK para implementar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] sin usar Visual Studio.  
+ [<span data-ttu-id="23f24-119">Tutorial: Implementar manualmente una aplicación ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-119">Walkthrough: Manually Deploying a ClickOnce Application</span></span>](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ <span data-ttu-id="23f24-120">Muestra cómo usar la línea de comandos y las herramientas de SDK para implementar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] sin usar Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="23f24-120">Demonstrates using command-line and SDK tools to deploy a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application without using Visual Studio.</span></span>  
   
- [Cómo: Agregar un publicador de confianza a un equipo cliente para aplicaciones ClickOnce](../Topic/How%20to:%20Add%20a%20Trusted%20Publisher%20to%20a%20Client%20Computer%20for%20ClickOnce%20Applications.md)  
- Muestra la configuración única de equipos cliente necesaria para la implementación de aplicaciones de confianza.  
+ [<span data-ttu-id="23f24-121">Cómo: Agregar un publicador de confianza a un equipo cliente para aplicaciones ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-121">How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications</span></span>](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ <span data-ttu-id="23f24-122">Muestra la configuración única de equipos cliente necesaria para la implementación de aplicaciones de confianza.</span><span class="sxs-lookup"><span data-stu-id="23f24-122">Demonstrates the one-time configuration of client computers required for trusted application deployment.</span></span>  
   
- [Cómo: Especificar una ubicación alternativa para las actualizaciones de la implementación](../Topic/How%20to:%20Specify%20an%20Alternate%20Location%20for%20Deployment%20Updates.md)  
- Muestra cómo configurar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] con herramientas de SDK para elegir una ubicación diferente para las nuevas versiones de una aplicación.  
+ [<span data-ttu-id="23f24-123">Cómo: Especificar una ubicación alternativa para las actualizaciones de la implementación</span><span class="sxs-lookup"><span data-stu-id="23f24-123">How to: Specify an Alternate Location for Deployment Updates</span></span>](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ <span data-ttu-id="23f24-124">Muestra cómo configurar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] con herramientas de SDK para elegir una ubicación diferente para las nuevas versiones de una aplicación.</span><span class="sxs-lookup"><span data-stu-id="23f24-124">Demonstrates configuring a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application, using SDK tools, to check a different location for new versions of an application.</span></span>  
   
- [Tutorial: Descargar ensamblados a petición con la API de implementación de ClickOnce](../Topic/Walkthrough:%20Downloading%20Assemblies%20on%20Demand%20with%20the%20ClickOnce%20Deployment%20API.md)  
- Muestra cómo usar llamadas a la API para recuperar un ensamblado la primera vez que la aplicación intenta cargarlo.  
+ [<span data-ttu-id="23f24-125">Tutorial: Descargar ensamblados a petición con la API de implementación ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-125">Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API</span></span>](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ <span data-ttu-id="23f24-126">Muestra cómo usar llamadas a la API para recuperar un ensamblado la primera vez que la aplicación intenta cargarlo.</span><span class="sxs-lookup"><span data-stu-id="23f24-126">Demonstrates using API calls to retrieve an assembly the first time your application attempts to load it.</span></span>  
   
- [Cómo: Recuperar información de la cadena de consulta de una aplicación ClickOnce en línea](../Topic/How%20to:%20Retrieve%20Query%20String%20Information%20in%20an%20Online%20ClickOnce%20Application.md)  
- Muestra cómo recuperar los parámetros de la dirección URL usada para ejecutar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
+ [<span data-ttu-id="23f24-127">Cómo: Recuperar información de la cadena de consulta de una aplicación ClickOnce en línea</span><span class="sxs-lookup"><span data-stu-id="23f24-127">How to: Retrieve Query String Information in an Online ClickOnce Application</span></span>](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
+ <span data-ttu-id="23f24-128">Muestra cómo recuperar los parámetros de la dirección URL usada para ejecutar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23f24-128">Demonstrates retrieving parameters from the URL used to run a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application.</span></span>  
   
- [Información general sobre la memoria caché de ClickOnce](../Topic/ClickOnce%20Cache%20Overview.md)  
- Describe la caché usada para almacenar las aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] en el equipo local.  
+ [<span data-ttu-id="23f24-129">Información general sobre la memoria caché de ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-129">ClickOnce Cache Overview</span></span>](/visualstudio/deployment/clickonce-cache-overview)  
+ <span data-ttu-id="23f24-130">Describe la caché usada para almacenar las aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="23f24-130">Describes the cache used to store [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications on the local computer.</span></span>  
   
- [Obtener acceso local o remoto a los datos en aplicaciones ClickOnce](../Topic/Accessing%20Local%20and%20Remote%20Data%20in%20ClickOnce%20Applications.md)  
- Describe cómo acceder acceso los archivos de datos locales y los orígenes de datos remotos desde una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
+ [<span data-ttu-id="23f24-131">Obtener acceso local o remoto a los datos en aplicaciones ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-131">Accessing Local and Remote Data in ClickOnce Applications</span></span>](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
+ <span data-ttu-id="23f24-132">Describe cómo acceder acceso los archivos de datos locales y los orígenes de datos remotos desde una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23f24-132">Describes how to access local data files and remote data sources from a [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] application.</span></span>  
   
- [Cómo: Incluir un archivo de datos en una aplicación ClickOnce](../Topic/How%20to:%20Include%20a%20Data%20File%20in%20a%20ClickOnce%20Application.md)  
- Muestra cómo marcar un archivo para que esté disponible en el directorio de datos de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
+ [<span data-ttu-id="23f24-133">Cómo: Incluir un archivo de datos en una aplicación ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-133">How to: Include a Data File in a ClickOnce Application</span></span>](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ <span data-ttu-id="23f24-134">Muestra cómo marcar un archivo para que esté disponible en el directorio de datos de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23f24-134">Demonstrates how to mark a file so that it is available in the [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] data directory.</span></span>  
   
-## Vea también  
- [Introducción a la configuración de la aplicación](../../../docs/framework/winforms/advanced/application-settings-overview.md)   
- [Publicar aplicaciones ClickOnce](../Topic/Publishing%20ClickOnce%20Applications.md)   
- [Compilar aplicaciones ClickOnce desde la línea de comandos](../Topic/Building%20ClickOnce%20Applications%20from%20the%20Command%20Line.md)   
- [Depurar aplicaciones ClickOnce que utilizan System.Deployment.Application](../Topic/Debugging%20ClickOnce%20Applications%20That%20Use%20System.Deployment.Application.md)   
- [Implementar componentes COM con ClickOnce](../Topic/Deploying%20COM%20Components%20with%20ClickOnce.md)   
- [Cómo: Publicar una aplicación ClickOnce sin usar el Asistente para publicación](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)
+## <a name="see-also"></a><span data-ttu-id="23f24-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="23f24-135">See Also</span></span>  
+ [<span data-ttu-id="23f24-136">Introducción a la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="23f24-136">Application Settings Overview</span></span>](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [<span data-ttu-id="23f24-137">Publicar aplicaciones ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-137">Publishing ClickOnce Applications</span></span>](/visualstudio/deployment/publishing-clickonce-applications)  
+ [<span data-ttu-id="23f24-138">Compilar aplicaciones ClickOnce desde la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="23f24-138">Building ClickOnce Applications from the Command Line</span></span>](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
+ [<span data-ttu-id="23f24-139">Depurar aplicaciones ClickOnce que usan System.Deployment.Application</span><span class="sxs-lookup"><span data-stu-id="23f24-139">Debugging ClickOnce Applications That Use System.Deployment.Application</span></span>](http://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
+ [<span data-ttu-id="23f24-140">Implementar componentes COM con ClickOnce</span><span class="sxs-lookup"><span data-stu-id="23f24-140">Deploying COM Components with ClickOnce</span></span>](/visualstudio/deployment/deploying-com-components-with-clickonce)  
+ [<span data-ttu-id="23f24-141">Cómo: Publicar una aplicación ClickOnce mediante el Asistente para publicación</span><span class="sxs-lookup"><span data-stu-id="23f24-141">How to: Publish a ClickOnce Application using the Publish Wizard</span></span>](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

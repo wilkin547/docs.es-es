@@ -1,91 +1,73 @@
 ---
-title: Tipos de valor que aceptan valores null (Visual Basic) | Documentos de Microsoft
+title: Tipos que admiten valores null (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Nullable
-dev_langs:
-- VB
+f1_keywords: vb.Nullable
 helpviewer_keywords:
 - nullable types [Visual Basic]
 - '? [Visual Basic]'
 - types [Visual Basic], nullable
-- nullable types
+- nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9cdf1864fe955a082936596821ee84c831b86444
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8734114b9d657066a0ef0b2d648f0290c03b1cbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nullable-value-types-visual-basic"></a>Tipos que admiten valores null (Visual Basic)
-A veces se trabaja con un tipo de valor que no tiene un valor definido en ciertas circunstancias. Por ejemplo, podría tener un campo en una base de datos distinguir entre tener un valor asignado que es significativo y no tener un valor asignado. Tipos de valor se pueden extender para tomar sus valores normales o un valor null. Este tipo de extensión se denomina un *tipo acepta valores NULL*.  
+# <a name="nullable-value-types-visual-basic"></a><span data-ttu-id="22311-102">Tipos que admiten valores null (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22311-102">Nullable Value Types (Visual Basic)</span></span>
+<span data-ttu-id="22311-103">A veces se trabaja con un tipo de valor que no tiene un valor definido en determinadas circunstancias.</span><span class="sxs-lookup"><span data-stu-id="22311-103">Sometimes you work with a value type that does not have a defined value in certain circumstances.</span></span> <span data-ttu-id="22311-104">Por ejemplo, podría tener un campo en una base de datos distinguir entre tener un valor asignado que es significativo y no tener un valor asignado.</span><span class="sxs-lookup"><span data-stu-id="22311-104">For example, a field in a database might have to distinguish between having an assigned value that is meaningful and not having an assigned value.</span></span> <span data-ttu-id="22311-105">Tipos de valor se pueden extender para tomar sus valores normales o un valor null.</span><span class="sxs-lookup"><span data-stu-id="22311-105">Value types can be extended to take either their normal values or a null value.</span></span> <span data-ttu-id="22311-106">Este tipo de extensión se llama un *tipo que acepta valores NULL*.</span><span class="sxs-lookup"><span data-stu-id="22311-106">Such an extension is called a *nullable type*.</span></span>  
   
- Cada tipo que acepta valores NULL se construye a partir de la interfaz genérica <xref:System.Nullable%601>estructura.</xref:System.Nullable%601> Considere la posibilidad de una base de datos que realiza el seguimiento de las actividades relacionadas con el trabajo. En el ejemplo siguiente se construye un nullable `Boolean` escriba y declara una variable de ese tipo. Puede escribir la declaración de tres maneras:  
+ <span data-ttu-id="22311-107">Cada tipo que acepta valores NULL se construye a partir de la interfaz genérica <xref:System.Nullable%601> estructura.</span><span class="sxs-lookup"><span data-stu-id="22311-107">Each nullable type is constructed from the generic <xref:System.Nullable%601> structure.</span></span> <span data-ttu-id="22311-108">Considere la posibilidad de una base de datos que realiza el seguimiento de las actividades relacionadas con el trabajo.</span><span class="sxs-lookup"><span data-stu-id="22311-108">Consider a database that tracks work-related activities.</span></span> <span data-ttu-id="22311-109">En el ejemplo siguiente se crea un que aceptan valores NULL `Boolean` escriba y declara una variable de ese tipo.</span><span class="sxs-lookup"><span data-stu-id="22311-109">The following example constructs a nullable `Boolean` type and declares a variable of that type.</span></span> <span data-ttu-id="22311-110">Puede escribir la declaración de tres maneras:</span><span class="sxs-lookup"><span data-stu-id="22311-110">You can write the declaration in three ways:</span></span>  
   
- [!code-vb[1 VbVbalrNullableValue](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_1.vb)]  
+ [!code-vb[VbVbalrNullableValue#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_1.vb)]  
   
- La variable `ridesBusToWork` puede contener un valor de `True`, un valor de `False`, o ningún valor en absoluto. Su valor predeterminado inicial no es ningún valor, lo que en este caso podría significar que la información no se ha obtenido aún para esta persona. En cambio, `False` puede significar que se ha obtenido la información y la persona no utiliza el autobús para trabajar.  
+ <span data-ttu-id="22311-111">La variable `ridesBusToWork` puede contener un valor de `True`, un valor de `False`, o ningún valor en absoluto.</span><span class="sxs-lookup"><span data-stu-id="22311-111">The variable `ridesBusToWork` can hold a value of `True`, a value of `False`, or no value at all.</span></span> <span data-ttu-id="22311-112">Su valor predeterminado inicial no es ningún valor en absoluto, que en este caso podría significar que la información no se ha obtenido para esta persona.</span><span class="sxs-lookup"><span data-stu-id="22311-112">Its initial default value is no value at all, which in this case could mean that the information has not yet been obtained for this person.</span></span> <span data-ttu-id="22311-113">En cambio, `False` puede significar que se ha obtenido la información y la persona que no utiliza el autobús para que funcione.</span><span class="sxs-lookup"><span data-stu-id="22311-113">In contrast, `False` could mean that the information has been obtained and the person does not ride the bus to work.</span></span>  
   
- Puede declarar variables y propiedades con tipos que aceptan valores NULL y puede declarar una matriz con elementos de un tipo que acepta valores NULL. Puede declarar procedimientos con tipos que aceptan valores NULL como parámetros y puede devolver un tipo que acepta valores NULL de un `Function` procedimiento.  
+ <span data-ttu-id="22311-114">Puede declarar variables y propiedades con tipos que aceptan valores NULL y puede declarar una matriz con elementos de un tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="22311-114">You can declare variables and properties with nullable types, and you can declare an array with elements of a nullable type.</span></span> <span data-ttu-id="22311-115">Puede declarar procedimientos con tipos que aceptan valores NULL como parámetros y puede devolver un tipo que acepta valores NULL de un `Function` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="22311-115">You can declare procedures with nullable types as parameters, and you can return a nullable type from a `Function` procedure.</span></span>  
   
- No se puede construir un tipo que acepta valores NULL en un tipo de referencia como una matriz, un `String`, o una clase. El tipo subyacente debe ser un tipo de valor. Para obtener más información, consulte [tipos de referencia y tipos de valor](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+ <span data-ttu-id="22311-116">No se puede construir un tipo que acepta valores NULL en un tipo de referencia como una matriz, un `String`, o una clase.</span><span class="sxs-lookup"><span data-stu-id="22311-116">You cannot construct a nullable type on a reference type such as an array, a `String`, or a class.</span></span> <span data-ttu-id="22311-117">El tipo subyacente debe ser un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="22311-117">The underlying type must be a value type.</span></span> <span data-ttu-id="22311-118">Para obtener más información, consulte [tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="22311-118">For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).</span></span>  
   
-## <a name="using-a-nullable-type-variable"></a>Uso de una Variable de tipo que acepta valores null  
- Los miembros más importantes de un tipo que acepta valores NULL son sus <xref:System.Nullable%601.HasValue%2A>y <xref:System.Nullable%601.Value%2A>Propiedades.</xref:System.Nullable%601.Value%2A> </xref:System.Nullable%601.HasValue%2A> Para una variable de un tipo que acepta valores NULL, <xref:System.Nullable%601.HasValue%2A>indica si la variable contiene un valor definido.</xref:System.Nullable%601.HasValue%2A> Si <xref:System.Nullable%601.HasValue%2A>es `True`, puede leer el valor de <xref:System.Nullable%601.Value%2A>.</xref:System.Nullable%601.Value%2A> </xref:System.Nullable%601.HasValue%2A> Tenga en cuenta que ambos <xref:System.Nullable%601.HasValue%2A>y <xref:System.Nullable%601.Value%2A>son `ReadOnly` propiedades.</xref:System.Nullable%601.Value%2A> </xref:System.Nullable%601.HasValue%2A>  
+## <a name="using-a-nullable-type-variable"></a><span data-ttu-id="22311-119">Uso de una Variable de tipo que acepta valores null</span><span class="sxs-lookup"><span data-stu-id="22311-119">Using a Nullable Type Variable</span></span>  
+ <span data-ttu-id="22311-120">Los miembros más importantes de un tipo que acepta valores NULL son sus <xref:System.Nullable%601.HasValue%2A> y <xref:System.Nullable%601.Value%2A> propiedades.</span><span class="sxs-lookup"><span data-stu-id="22311-120">The most important members of a nullable type are its <xref:System.Nullable%601.HasValue%2A> and <xref:System.Nullable%601.Value%2A> properties.</span></span> <span data-ttu-id="22311-121">Para una variable de un tipo que acepta valores NULL, <xref:System.Nullable%601.HasValue%2A> indica si la variable contiene un valor definido.</span><span class="sxs-lookup"><span data-stu-id="22311-121">For a variable of a nullable type, <xref:System.Nullable%601.HasValue%2A> tells you whether the variable contains a defined value.</span></span> <span data-ttu-id="22311-122">Si <xref:System.Nullable%601.HasValue%2A> es `True`, puede leer el valor de <xref:System.Nullable%601.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="22311-122">If <xref:System.Nullable%601.HasValue%2A> is `True`, you can read the value from <xref:System.Nullable%601.Value%2A>.</span></span> <span data-ttu-id="22311-123">Tenga en cuenta que ambos <xref:System.Nullable%601.HasValue%2A> y <xref:System.Nullable%601.Value%2A> son `ReadOnly` propiedades.</span><span class="sxs-lookup"><span data-stu-id="22311-123">Note that both <xref:System.Nullable%601.HasValue%2A> and <xref:System.Nullable%601.Value%2A> are `ReadOnly` properties.</span></span>  
   
-### <a name="default-values"></a>Valores predeterminados  
- Cuando se declara una variable con un tipo que acepta valores NULL, su <xref:System.Nullable%601.HasValue%2A>propiedad tiene un valor predeterminado de `False`.</xref:System.Nullable%601.HasValue%2A> Esto significa que, de forma predeterminada, la variable no tiene ningún valor definido, en lugar del valor predeterminado de su tipo de valor subyacente. En el ejemplo siguiente, la variable `numberOfChildren` tiene inicialmente ningún valor definido, aunque el valor predeterminado de la `Integer` type es 0.  
+### <a name="default-values"></a><span data-ttu-id="22311-124">Valores predeterminados</span><span class="sxs-lookup"><span data-stu-id="22311-124">Default Values</span></span>  
+ <span data-ttu-id="22311-125">Cuando se declara una variable con un tipo que acepta valores NULL, su <xref:System.Nullable%601.HasValue%2A> propiedad tiene un valor predeterminado de `False`.</span><span class="sxs-lookup"><span data-stu-id="22311-125">When you declare a variable with a nullable type, its <xref:System.Nullable%601.HasValue%2A> property has a default value of `False`.</span></span> <span data-ttu-id="22311-126">Esto significa que, de forma predeterminada, la variable no tiene ningún valor definido, en lugar del valor predeterminado de su tipo de valor subyacente.</span><span class="sxs-lookup"><span data-stu-id="22311-126">This means that by default the variable has no defined value, instead of the default value of its underlying value type.</span></span> <span data-ttu-id="22311-127">En el ejemplo siguiente, la variable `numberOfChildren` inicialmente no tiene ningún valor definido, aunque el valor predeterminado de la `Integer` tipo es 0.</span><span class="sxs-lookup"><span data-stu-id="22311-127">In the following example, the variable `numberOfChildren` initially has no defined value, even though the default value of the `Integer` type is 0.</span></span>  
   
- [!code-vb[VbVbalrNullableValue&#2;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_2.vb)]  
+ [!code-vb[VbVbalrNullableValue#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_2.vb)]  
   
- Un valor null es útil para indicar un valor indefinido o desconocido. Si `numberOfChildren` se ha declarado como `Integer`, no habría ningún valor que podría indicar que la información no está disponible actualmente.  
+ <span data-ttu-id="22311-128">Un valor null es útil para indicar un valor indefinido o desconocido.</span><span class="sxs-lookup"><span data-stu-id="22311-128">A null value is useful to indicate an undefined or unknown value.</span></span> <span data-ttu-id="22311-129">Si `numberOfChildren` se ha declarado como `Integer`, no habría ningún valor que podría indicar que la información no está disponible actualmente.</span><span class="sxs-lookup"><span data-stu-id="22311-129">If `numberOfChildren` had been declared as `Integer`, there would be no value that could indicate that the information is not currently available.</span></span>  
   
-### <a name="storing-values"></a>Almacenar valores  
- Almacenar un valor en una variable o propiedad de un tipo que acepta valores NULL de la manera habitual. En el ejemplo siguiente se asigna un valor a la variable `numberOfChildren` declarada en el ejemplo anterior.  
+### <a name="storing-values"></a><span data-ttu-id="22311-130">Almacenar valores</span><span class="sxs-lookup"><span data-stu-id="22311-130">Storing Values</span></span>  
+ <span data-ttu-id="22311-131">Almacenar un valor en una variable o propiedad de un tipo que acepta valores NULL de la manera habitual.</span><span class="sxs-lookup"><span data-stu-id="22311-131">You store a value in a variable or property of a nullable type in the typical way.</span></span> <span data-ttu-id="22311-132">En el ejemplo siguiente se asigna un valor a la variable `numberOfChildren` declarada en el ejemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="22311-132">The following example assigns a value to the variable `numberOfChildren` declared in the previous example.</span></span>  
   
- [!code-vb[VbVbalrNullableValue&3;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_3.vb)]  
+ [!code-vb[VbVbalrNullableValue#3](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_3.vb)]  
   
- Si una variable o propiedad de un tipo que acepta valores NULL contiene un valor definido, puede hacer que vuelva a su estado inicial de no tener un valor asignado. Para ello, Establece la variable o propiedad a `Nothing`, como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="22311-133">Si una variable o propiedad de un tipo que acepta valores NULL contiene un valor definido, puede provocar que se vuelve a su estado inicial de no tener un valor asignado.</span><span class="sxs-lookup"><span data-stu-id="22311-133">If a variable or property of a nullable type contains a defined value, you can cause it to revert to its initial state of not having a value assigned.</span></span> <span data-ttu-id="22311-134">Para ello, Establece la variable o propiedad para `Nothing`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="22311-134">You do this by setting the variable or property to `Nothing`, as the following example shows.</span></span>  
   
- [!code-vb[VbVbalrNullableValue Nº&4;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_4.vb)]  
+ [!code-vb[VbVbalrNullableValue#4](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_4.vb)]  
   
 > [!NOTE]
->  Aunque puede asignar `Nothing` a una variable de un tipo que acepta valores NULL, no se puede probar para `Nothing` utilizando el signo igual. Comparación que utiliza el signo igual, `someVar = Nothing`, siempre se evalúa como `Nothing`. Puede probar la variable <xref:System.Nullable%601.HasValue%2A>propiedad `False`, o probar mediante el `Is` o `IsNot` operador.</xref:System.Nullable%601.HasValue%2A>  
+>  <span data-ttu-id="22311-135">Aunque puede asignar `Nothing` a una variable de un tipo que acepta valores NULL, no puede probarlo para `Nothing` utilizando el signo igual.</span><span class="sxs-lookup"><span data-stu-id="22311-135">Although you can assign `Nothing` to a variable of a nullable type, you cannot test it for `Nothing` by using the equal sign.</span></span> <span data-ttu-id="22311-136">Comparación que utiliza el signo igual, `someVar = Nothing`, siempre se evalúa como `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="22311-136">Comparison that uses the equal sign, `someVar = Nothing`, always evaluates to `Nothing`.</span></span> <span data-ttu-id="22311-137">Puede probar la variable <xref:System.Nullable%601.HasValue%2A> propiedad `False`, o probar mediante el `Is` o `IsNot` operador.</span><span class="sxs-lookup"><span data-stu-id="22311-137">You can test the variable's <xref:System.Nullable%601.HasValue%2A> property for `False`, or test by using the `Is` or `IsNot` operator.</span></span>  
   
-### <a name="retrieving-values"></a>Recuperar valores  
- Para recuperar el valor de una variable de un tipo que acepta valores NULL, debe probar primero su <xref:System.Nullable%601.HasValue%2A>propiedad para confirmar que tiene un valor.</xref:System.Nullable%601.HasValue%2A> Si se intenta leer el valor cuando <xref:System.Nullable%601.HasValue%2A>es `False`, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] produce una <xref:System.InvalidOperationException>excepción.</xref:System.InvalidOperationException> </xref:System.Nullable%601.HasValue%2A> En el ejemplo siguiente se muestra la manera recomendada de leer la variable `numberOfChildren` de los ejemplos anteriores.  
+### <a name="retrieving-values"></a><span data-ttu-id="22311-138">Recuperar valores</span><span class="sxs-lookup"><span data-stu-id="22311-138">Retrieving Values</span></span>  
+ <span data-ttu-id="22311-139">Para recuperar el valor de una variable de un tipo que acepta valores NULL, debe probar su <xref:System.Nullable%601.HasValue%2A> propiedad para confirmar que tiene un valor.</span><span class="sxs-lookup"><span data-stu-id="22311-139">To retrieve the value of a variable of a nullable type, you should first test its <xref:System.Nullable%601.HasValue%2A> property to confirm that it has a value.</span></span> <span data-ttu-id="22311-140">Si se intenta leer el valor cuando <xref:System.Nullable%601.HasValue%2A> es `False`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] produce una <xref:System.InvalidOperationException> excepción.</span><span class="sxs-lookup"><span data-stu-id="22311-140">If you try to read the value when <xref:System.Nullable%601.HasValue%2A> is `False`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] throws an <xref:System.InvalidOperationException> exception.</span></span> <span data-ttu-id="22311-141">En el ejemplo siguiente se muestra la manera recomendada de leer la variable `numberOfChildren` de los ejemplos anteriores.</span><span class="sxs-lookup"><span data-stu-id="22311-141">The following example shows the recommended way to read the variable `numberOfChildren` of the previous examples.</span></span>  
   
- [!code-vb[VbVbalrNullableValue&#5;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_5.vb)]  
+ [!code-vb[VbVbalrNullableValue#5](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_5.vb)]  
   
-## <a name="comparing-nullable-types"></a>Comparar tipos que aceptan valores null  
- Cuando acepta valores NULL `Boolean` variables se utilizan en expresiones booleanas, el resultado puede ser `True`, `False`, o `Nothing`. La siguiente es la tabla de verdad para `And` y `Or`. Porque `b1` y `b2` ahora tiene tres posibles valores, hay nueve combinaciones para evaluar.  
+## <a name="comparing-nullable-types"></a><span data-ttu-id="22311-142">Compara los tipos que aceptan valores null</span><span class="sxs-lookup"><span data-stu-id="22311-142">Comparing Nullable Types</span></span>  
+ <span data-ttu-id="22311-143">Cuando acepta valores NULL `Boolean` se usan variables en expresiones booleanas, el resultado puede ser `True`, `False`, o `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="22311-143">When nullable `Boolean` variables are used in Boolean expressions, the result can be `True`, `False`, or `Nothing`.</span></span> <span data-ttu-id="22311-144">La siguiente es la tabla truth para `And` y `Or`.</span><span class="sxs-lookup"><span data-stu-id="22311-144">The following is the truth table for `And` and `Or`.</span></span> <span data-ttu-id="22311-145">Dado que `b1` y `b2` ahora tiene tres valores posibles, hay nueve combinaciones para evaluar.</span><span class="sxs-lookup"><span data-stu-id="22311-145">Because `b1` and `b2` now have three possible values, there are nine combinations to evaluate.</span></span>  
   
-|B1|B2|B1 y b2|B1 o b2|  
+|<span data-ttu-id="22311-146">B1</span><span class="sxs-lookup"><span data-stu-id="22311-146">b1</span></span>|<span data-ttu-id="22311-147">B2</span><span class="sxs-lookup"><span data-stu-id="22311-147">b2</span></span>|<span data-ttu-id="22311-148">B1 y b2</span><span class="sxs-lookup"><span data-stu-id="22311-148">b1 And b2</span></span>|<span data-ttu-id="22311-149">B1 o b2</span><span class="sxs-lookup"><span data-stu-id="22311-149">b1 Or b2</span></span>|  
 |--------|--------|---------------|--------------|  
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|  
 |`Nothing`|`True`|`Nothing`|`True`|  
@@ -97,40 +79,40 @@ A veces se trabaja con un tipo de valor que no tiene un valor definido en cierta
 |`False`|`True`|`False`|`True`|  
 |`False`|`False`|`False`|`False`|  
   
- Cuando el valor de una variable o expresión booleana es `Nothing`, ninguna de ellas es `true` ni `false`. Considere el ejemplo siguiente.  
+ <span data-ttu-id="22311-150">Cuando el valor de una variable o expresión booleana es `Nothing`, no es ni `true` ni `false`.</span><span class="sxs-lookup"><span data-stu-id="22311-150">When the value of a Boolean variable or expression is `Nothing`, it is neither `true` nor `false`.</span></span> <span data-ttu-id="22311-151">Considere el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="22311-151">Consider the following example.</span></span>  
   
- [!code-vb[VbVbalrNullableValue Nº&6;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_6.vb)]  
+ [!code-vb[VbVbalrNullableValue#6](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_6.vb)]  
   
- En este ejemplo, `b1 And b2` se evalúa como `Nothing`. Como resultado, el `Else` cláusula se ejecuta en cada `If` instrucción y el resultado es como sigue:  
+ <span data-ttu-id="22311-152">En este ejemplo, `b1 And b2` se evalúa como `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="22311-152">In this example, `b1 And b2` evaluates to `Nothing`.</span></span> <span data-ttu-id="22311-153">Como resultado, el `Else` cláusula se ejecuta en cada uno de ellos `If` instrucción y el resultado es el siguiente:</span><span class="sxs-lookup"><span data-stu-id="22311-153">As a result, the `Else` clause is executed in each `If` statement, and the output is as follows:</span></span>  
   
  `Expression is not true`  
   
  `Expression is not false`  
   
 > [!NOTE]
->  `AndAlso`y `OrElse`, evaluación, de cortocircuito que utilice deben evaluar sus segundos operandos cuando el primero se evalúa como `Nothing`.  
+>  <span data-ttu-id="22311-154">`AndAlso`y `OrElse`, evaluación de cortocircuito que usan debe evaluar sus segundos operandos cuando el primero se evalúa como `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="22311-154">`AndAlso` and `OrElse`, which use short-circuit evaluation, must evaluate their second operands when the first evaluates to `Nothing`.</span></span>  
   
-## <a name="propagation"></a>Propagación  
- Si uno o ambos operandos de una aritmética, comparación, MAYÚS o de operación de tipo admite valores NULL, el resultado de la operación también es que aceptan valores NULL. Si ambos operandos tienen valores que no son `Nothing`, la operación se realiza en los valores subyacentes de los operandos, como si ninguno fuera un tipo que acepta valores NULL. En el ejemplo siguiente, las variables `compare1` y `sum1` son con tipo implícito. Si sitúa el puntero del mouse sobre ellos, verá que el compilador deduce los tipos que aceptan valores NULL para ambos.  
+## <a name="propagation"></a><span data-ttu-id="22311-155">Propagación</span><span class="sxs-lookup"><span data-stu-id="22311-155">Propagation</span></span>  
+ <span data-ttu-id="22311-156">Si uno o ambos operandos de una aritmética, comparación, MAYÚS o de operación de tipo admite valores NULL, el resultado de la operación también es que aceptan valores NULL.</span><span class="sxs-lookup"><span data-stu-id="22311-156">If one or both of the operands of an arithmetic, comparison, shift, or type operation is nullable, the result of the operation is also nullable.</span></span> <span data-ttu-id="22311-157">Si ambos operandos tienen valores que no sean `Nothing`, la operación se realiza en los valores subyacentes de los operandos, como si ninguno fuera un tipo que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="22311-157">If both operands have values that are not `Nothing`, the operation is performed on the underlying values of the operands, as if neither were a nullable type.</span></span> <span data-ttu-id="22311-158">En el ejemplo siguiente, las variables `compare1` y `sum1` son con tipo implícito.</span><span class="sxs-lookup"><span data-stu-id="22311-158">In the following example, variables `compare1` and `sum1` are implicitly typed.</span></span> <span data-ttu-id="22311-159">Si sitúa el puntero del mouse sobre ellos, verá que el compilador deduce los tipos que aceptan valores NULL para ambos.</span><span class="sxs-lookup"><span data-stu-id="22311-159">If you rest the mouse pointer over them, you will see that the compiler infers nullable types for both of them.</span></span>  
   
- [!code-vb[VbVbalrNullableValue&#7;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_7.vb)]  
+ [!code-vb[VbVbalrNullableValue#7](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_7.vb)]  
   
- Si uno o ambos operandos tienen un valor de `Nothing`, el resultado será `Nothing`.  
+ <span data-ttu-id="22311-160">Si uno o ambos operandos tienen un valor de `Nothing`, el resultado será `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="22311-160">If one or both operands have a value of `Nothing`, the result will be `Nothing`.</span></span>  
   
- [!code-vb[VbVbalrNullableValue Nº&8;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_8.vb)]  
+ [!code-vb[VbVbalrNullableValue#8](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_8.vb)]  
   
-## <a name="using-nullable-types-with-data"></a>Utilizar tipos que aceptan valores NULL con datos  
- Una base de datos es uno de los lugares más importantes para utilizar tipos que aceptan valores NULL. No todos los objetos de base de datos admiten actualmente los tipos que aceptan valores NULL, pero hace de los adaptadores de tabla generado por el diseñador. Consulte "Compatibilidad de TableAdapter con tipos que aceptan valores null" en [información general sobre TableAdapter](https://docs.microsoft.com/visualstudio/data-tools/tableadapter-overview).  
+## <a name="using-nullable-types-with-data"></a><span data-ttu-id="22311-161">Utilizar tipos que aceptan valores NULL con datos</span><span class="sxs-lookup"><span data-stu-id="22311-161">Using Nullable Types with Data</span></span>  
+ <span data-ttu-id="22311-162">Una base de datos es uno de los lugares más importantes para utilizar tipos que aceptan valores NULL.</span><span class="sxs-lookup"><span data-stu-id="22311-162">A database is one of the most important places to use nullable types.</span></span> <span data-ttu-id="22311-163">Actualmente, no todos los objetos de base de datos admiten tipos que aceptan valores NULL, pero sí los adaptadores de tabla generado por el diseñador.</span><span class="sxs-lookup"><span data-stu-id="22311-163">Not all database objects currently support nullable types, but the designer-generated table adapters do.</span></span> <span data-ttu-id="22311-164">Vea "Compatibilidad de TableAdapter con tipos que aceptan valores null" en [información general sobre TableAdapter](/visualstudio/data-tools/tableadapter-overview).</span><span class="sxs-lookup"><span data-stu-id="22311-164">See "TableAdapter Support for Nullable Types" in [TableAdapter Overview](/visualstudio/data-tools/tableadapter-overview).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.InvalidOperationException></xref:System.InvalidOperationException>   
- <xref:System.Nullable%601.HasValue%2A></xref:System.Nullable%601.HasValue%2A>   
- [Utilizar tipos que aceptan valores NULL](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)   
- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Información general sobre TableAdapter](https://docs.microsoft.com/visualstudio/data-tools/tableadapter-overview)   
- [Si (operador)](../../../../visual-basic/language-reference/operators/if-operator.md)   
- [Inferencia de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Is (operador)](../../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot (operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md)
+## <a name="see-also"></a><span data-ttu-id="22311-165">Vea también</span><span class="sxs-lookup"><span data-stu-id="22311-165">See Also</span></span>  
+ <xref:System.InvalidOperationException>  
+ <xref:System.Nullable%601.HasValue%2A>  
+ [<span data-ttu-id="22311-166">Utilizar tipos que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="22311-166">Using Nullable Types</span></span>](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+ [<span data-ttu-id="22311-167">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="22311-167">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="22311-168">Tipos de valores y tipos de referencias</span><span class="sxs-lookup"><span data-stu-id="22311-168">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="22311-169">Solución de problemas de tipos de datos</span><span class="sxs-lookup"><span data-stu-id="22311-169">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="22311-170">Introducción a TableAdapter</span><span class="sxs-lookup"><span data-stu-id="22311-170">TableAdapter Overview</span></span>](/visualstudio/data-tools/tableadapter-overview)  
+ [<span data-ttu-id="22311-171">If (operador)</span><span class="sxs-lookup"><span data-stu-id="22311-171">If Operator</span></span>](../../../../visual-basic/language-reference/operators/if-operator.md)  
+ [<span data-ttu-id="22311-172">Inferencia de tipo de variable local</span><span class="sxs-lookup"><span data-stu-id="22311-172">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="22311-173">Is (operador)</span><span class="sxs-lookup"><span data-stu-id="22311-173">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)  
+ [<span data-ttu-id="22311-174">IsNot (operador)</span><span class="sxs-lookup"><span data-stu-id="22311-174">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)
