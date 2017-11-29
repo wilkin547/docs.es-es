@@ -1,211 +1,210 @@
 ---
-title: "Asignar m&#233;todo CLR a funci&#243;n can&#243;nica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Asignar un método CLR a una función canónica"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Asignar m&#233;todo CLR a funci&#243;n can&#243;nica
-Entity Framework proporciona un conjunto de funciones canónicas que implementan funcionalidad que es común en muchos sistemas de base de datos, como la manipulación de cadenas y las funciones matemáticas.  Esto permite a los programadores dirigir sus conocimientos a un amplio intervalo de sistemas de base de datos.  Cuando se invocan desde una tecnología de creación de consultas, como LINQ to Entities, estas funciones canónicas se convierten en la correspondiente función de almacenamiento correcta para ser utilizada por el proveedor.  Esto permite que las llamadas a funciones se expresen de forma común en los orígenes de datos, proporcionando una experiencia de consultas coherente en los citados orígenes de datos.  Los operadores bit a bit AND, OR, NOT y XOR también se asignan a funciones canónicas cuando el operando es un tipo numérico. En el caso de operandos booleanos, los operadores bit a bit AND, OR, NOT y XOR calculan las operaciones lógicas AND, OR, NOT y XOR de sus operandos.  Para obtener más información, consulta [Funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+# <a name="clr-method-to-canonical-function-mapping"></a><span data-ttu-id="c36dd-102">Asignar un método CLR a una función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-102">CLR Method to Canonical Function Mapping</span></span>
+<span data-ttu-id="c36dd-103">Entity Framework proporciona un conjunto de funciones canónicas que implementan funcionalidad que es común en muchos sistemas de base de datos, como la manipulación de cadenas y las funciones matemáticas.</span><span class="sxs-lookup"><span data-stu-id="c36dd-103">The Entity Framework provides a set of canonical functions that implement functionality that is common across many database systems, such as string manipulation and mathematical functions.</span></span> <span data-ttu-id="c36dd-104">Esto permite a los programadores dirigir sus conocimientos a un amplio intervalo de sistemas de base de datos.</span><span class="sxs-lookup"><span data-stu-id="c36dd-104">This enables developers to target a broad range of database systems.</span></span> <span data-ttu-id="c36dd-105">Cuando se invocan desde una tecnología de creación de consultas, como LINQ to Entities, estas funciones canónicas se convierten en la correspondiente función de almacenamiento correcta para ser utilizada por el proveedor.</span><span class="sxs-lookup"><span data-stu-id="c36dd-105">When called from a querying technology, such as LINQ to Entities, these canonical functions are translated to the correct corresponding store function for the provider being used.</span></span> <span data-ttu-id="c36dd-106">Esto permite que las llamadas a funciones se expresen de forma común en los orígenes de datos, proporcionando una experiencia de consultas coherente en los citados orígenes de datos.</span><span class="sxs-lookup"><span data-stu-id="c36dd-106">This allows function invocations to be expressed in a common form across data sources, providing a consistent query experience across data sources.</span></span> <span data-ttu-id="c36dd-107">Los operadores bit a bit AND, OR, NOT y XOR también se asignan a funciones canónicas cuando el operando es un tipo numérico.</span><span class="sxs-lookup"><span data-stu-id="c36dd-107">The bitwise AND, OR, NOT, and XOR operators are also mapped to canonical functions when the operand is a numeric type.</span></span> <span data-ttu-id="c36dd-108">En el caso de operandos booleanos, los operadores bit a bit AND, OR, NOT y XOR calculan las operaciones lógicas AND, OR, NOT y XOR de sus operandos.</span><span class="sxs-lookup"><span data-stu-id="c36dd-108">For Boolean operands, the bitwise AND, OR, NOT, and XOR operators compute the logical AND, OR, NOT, and XOR operations of their operands.</span></span> <span data-ttu-id="c36dd-109">Para obtener más información, consulte [funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).</span><span class="sxs-lookup"><span data-stu-id="c36dd-109">For more information, see [Canonical Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).</span></span>  
   
- En los escenarios LINQ, las consultas en Entity Framework implican la asignación de ciertos métodos de CLR a métodos en el origen de datos subyacente a través de funciones canónicas.  Las llamadas a métodos en una consulta en LINQ to Entities no asignadas explícitamente a una función canónica harán que se lance una excepción <xref:System.NotSupportedException> en tiempo de ejecución.  
+ <span data-ttu-id="c36dd-110">En los escenarios LINQ, las consultas en Entity Framework implican la asignación de ciertos métodos de CLR a métodos en el origen de datos subyacente a través de funciones canónicas.</span><span class="sxs-lookup"><span data-stu-id="c36dd-110">For LINQ scenarios, queries against the Entity Framework involve mapping certain CLR methods to methods on the underlying data source through canonical functions.</span></span> <span data-ttu-id="c36dd-111">Las llamadas a métodos en una consulta en LINQ to Entities no asignadas explícitamente a una función canónica harán que se lance una excepción <xref:System.NotSupportedException> en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="c36dd-111">Any method calls in a LINQ to Entities query that are not explicitly mapped to a canonical function will result in a runtime <xref:System.NotSupportedException> exception being thrown.</span></span>  
   
-## Asignación del método System.String \(estático\)  
+## <a name="systemstring-method-static-mapping"></a><span data-ttu-id="c36dd-112">Asignación del método System.String (estático)</span><span class="sxs-lookup"><span data-stu-id="c36dd-112">System.String Method (Static) Mapping</span></span>  
   
-|Método System.String \(estático\)|Función canónica|  
-|---------------------------------------|----------------------|  
-|System.String Concat\(String `str0`, String `str1`\)|Concat\(`str0`, `str1`\)|  
-|System.String Concat\(String `str0`, String `str1`, String `str2`\)|Concat\(Concat\(`str0`, `str1`\), `str2`\)|  
-|System.String Concat\(String `str0`, String `str1`, String `str2`, String `str03`\)|Concat\(Concat\(Concat\(`str0`, `str1`\), `str2`\), `str3`\)|  
-|Boolean Equals\(String `a`, String `b`\)|\= \(operador\)|  
-|Boolean IsNullOrEmpty\(String `value`\)|\(IsNull\(`value`\)\) OR Length\(`value`\) \= 0|  
-|Boolean op\_Equality\(String `a`, String `b`\)|\= \(operador\)|  
-|Boolean op\_Inequality\(String `a` , String `b`\)|\!\= \(operador\)|  
-|Microsoft.VisualBasic.Strings.Trim\(String `str`\)|Trim\(`str`\)|  
-|Microsoft.VisualBasic.Strings.LTrim\(String `str`\)|Ltrim\(`str`\)|  
-|Microsoft.VisualBasic.Strings.RTrim\(String `str`\)|Rtrim\(`str`\)|  
-|Microsoft.VisualBasic.Strings.Len\(String `expression`\)|Length\(`expression`\)|  
-|Microsoft.VisualBasic.Strings.Left\(String `str`, Int32 `Length`\)|Left\(`str`, `Length`\)|  
-|Microsoft.VisualBasic.Strings.Mid\(String `str`, Int32 `Start`, Int32 `Length`\)|Substring\(`str`, `Start`, `Length`\)|  
-|Microsoft.VisualBasic.Strings.Right\(String `str`, Int32 `Length`\)|Right\(`str`, `Length`\)|  
-|Microsoft.VisualBasic.Strings.UCase\(String `Value`\)|ToUpper\(`Value`\)|  
-|Microsoft.VisualBasic.Strings.LCase\(String Value\)|ToLower\(`Value`\)|  
+|<span data-ttu-id="c36dd-113">Método System.String (estático)</span><span class="sxs-lookup"><span data-stu-id="c36dd-113">System.String method (static)</span></span>|<span data-ttu-id="c36dd-114">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-114">Canonical function</span></span>|  
+|-------------------------------------|------------------------|  
+|<span data-ttu-id="c36dd-115">System.String Concat(String `str0`, String `str1`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-115">System.String Concat(String `str0`, String `str1`)</span></span>|<span data-ttu-id="c36dd-116">Concat(`str0`, `str1`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-116">Concat(`str0`, `str1`)</span></span>|  
+|<span data-ttu-id="c36dd-117">System.String Concat(String `str0`, String `str1`, String `str2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-117">System.String Concat(String `str0`, String `str1`, String `str2`)</span></span>|<span data-ttu-id="c36dd-118">Concat(Concat(`str0`, `str1`), `str2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-118">Concat(Concat(`str0`, `str1`), `str2`)</span></span>|  
+|<span data-ttu-id="c36dd-119">System.String Concat(String `str0`, String `str1`, String `str2`, String `str03`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-119">System.String Concat(String `str0`, String `str1`, String `str2`, String `str03`)</span></span>|<span data-ttu-id="c36dd-120">Concat(Concat(Concat(`str0`, `str1`), `str2`), `str3`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-120">Concat(Concat(Concat(`str0`, `str1`), `str2`), `str3`)</span></span>|  
+|<span data-ttu-id="c36dd-121">Boolean Equals(String `a`, String `b`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-121">Boolean Equals(String `a`, String `b`)</span></span>|<span data-ttu-id="c36dd-122">= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-122">= operator</span></span>|  
+|<span data-ttu-id="c36dd-123">Boolean IsNullOrEmpty(String `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-123">Boolean IsNullOrEmpty(String `value`)</span></span>|<span data-ttu-id="c36dd-124">(IsNull(`value`)) OR Length(`value`) = 0</span><span class="sxs-lookup"><span data-stu-id="c36dd-124">(IsNull(`value`)) OR Length(`value`) = 0</span></span>|  
+|<span data-ttu-id="c36dd-125">Boolean op_Equality(String `a`, String `b`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-125">Boolean op_Equality(String `a`, String `b`)</span></span>|<span data-ttu-id="c36dd-126">= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-126">= operator</span></span>|  
+|<span data-ttu-id="c36dd-127">Boolean op_Inequality(String `a` , String `b`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-127">Boolean op_Inequality(String `a` , String `b`)</span></span>|<span data-ttu-id="c36dd-128">!= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-128">!= operator</span></span>|  
+|<span data-ttu-id="c36dd-129">Microsoft.VisualBasic.Strings.Trim(String `str`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-129">Microsoft.VisualBasic.Strings.Trim(String `str`)</span></span>|<span data-ttu-id="c36dd-130">Trim(`str`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-130">Trim(`str`)</span></span>|  
+|<span data-ttu-id="c36dd-131">Microsoft.VisualBasic.Strings.LTrim(String `str`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-131">Microsoft.VisualBasic.Strings.LTrim(String `str`)</span></span>|<span data-ttu-id="c36dd-132">Ltrim(`str`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-132">Ltrim(`str`)</span></span>|  
+|<span data-ttu-id="c36dd-133">Microsoft.VisualBasic.Strings.RTrim(String `str`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-133">Microsoft.VisualBasic.Strings.RTrim(String `str`)</span></span>|<span data-ttu-id="c36dd-134">Rtrim(`str`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-134">Rtrim(`str`)</span></span>|  
+|<span data-ttu-id="c36dd-135">Microsoft.VisualBasic.Strings.Len(String `expression`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-135">Microsoft.VisualBasic.Strings.Len(String `expression`)</span></span>|<span data-ttu-id="c36dd-136">Length(`expression`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-136">Length(`expression`)</span></span>|  
+|<span data-ttu-id="c36dd-137">Microsoft.VisualBasic.Strings.Left(String `str`, Int32 `Length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-137">Microsoft.VisualBasic.Strings.Left(String `str`, Int32 `Length`)</span></span>|<span data-ttu-id="c36dd-138">Left(`str`, `Length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-138">Left(`str`, `Length`)</span></span>|  
+|<span data-ttu-id="c36dd-139">Microsoft.VisualBasic.Strings.Mid(String `str`, Int32 `Start`, Int32 `Length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-139">Microsoft.VisualBasic.Strings.Mid(String `str`, Int32 `Start`, Int32 `Length`)</span></span>|<span data-ttu-id="c36dd-140">Substring(`str`, `Start`, `Length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-140">Substring(`str`, `Start`, `Length`)</span></span>|  
+|<span data-ttu-id="c36dd-141">Microsoft.VisualBasic.Strings.Right(String `str`, Int32 `Length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-141">Microsoft.VisualBasic.Strings.Right(String `str`, Int32 `Length`)</span></span>|<span data-ttu-id="c36dd-142">Right(`str`, `Length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-142">Right(`str`, `Length`)</span></span>|  
+|<span data-ttu-id="c36dd-143">Microsoft.VisualBasic.Strings.UCase(String `Value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-143">Microsoft.VisualBasic.Strings.UCase(String `Value`)</span></span>|<span data-ttu-id="c36dd-144">ToUpper(`Value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-144">ToUpper(`Value`)</span></span>|  
+|<span data-ttu-id="c36dd-145">Microsoft.VisualBasic.Strings.LCase(String Value)</span><span class="sxs-lookup"><span data-stu-id="c36dd-145">Microsoft.VisualBasic.Strings.LCase(String Value)</span></span>|<span data-ttu-id="c36dd-146">ToLower(`Value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-146">ToLower(`Value`)</span></span>|  
   
-## Asignación del método System.String \(instancia\)  
+## <a name="systemstring-method-instance-mapping"></a><span data-ttu-id="c36dd-147">Asignación del método System.String (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-147">System.String Method (Instance) Mapping</span></span>  
   
-|Método System.String \(instancia\)|Función canónica|Notas|  
-|----------------------------------------|----------------------|-----------|  
-|Boolean Contains\(String `value`\)|`this` LIKE '%`value`%'|Si `value` no es una constante, asigna a IndexOf\(`this`, `value`\) \> 0.|  
-|Boolean EndsWith\(String `value`\)|`this` LIKE `'`%`value`'|Si `value` no es una constante, entonces asigna a Right\(`this`, length\(`value`\)\) \= `value`.|  
-|Boolean StartsWith\(String `value`\)|`this` LIKE '`value`%'|Si `value` no es una constante, entonces asigna a IndexOf\(`this`, `value`\) \= 1.|  
-|Longitud|Length\(`this`\)||  
-|Int32 IndexOf\(String `value`\)|IndexOf\(`this`, `value`\) \- 1||  
-|System.String Insert\(Int32 `startIndex`, String `value`\)|Concat\(Concat\(Substring\(`this`, 1, `startIndex`\), `value`\), Substring\(`this`, `startIndex`\+1, Length\(`this`\) \- `startIndex`\)\)||  
-|System.String Remove\(Int32 `startIndex`\)|Substring\(`this`, 1, `startIndex`\)||  
-|System.String Remove\(Int32 `startIndex`, Int32 `count`\)|Concat\(Substring\(`this`, 1, `startIndex`\) , Substring\(`this`, `startIndex` \+ `count` \+1, Length\(`this`\) \- \(`startIndex` \+ `count`\)\)\)|Remove\(`startIndex`, `count`\) solo es compatible si `count` es un número entero mayor o igual que 0.|  
-|System.String Replace\(String `oldValue`, String `newValue`\)|Replace\(`this`, `oldValue`, `newValue`\)||  
-|System.String Substring\(Int32 `startIndex`\)|Substring\(`this`, `startIndex` \+1, Length\(`this`\) \- `startIndex`\)||  
-|System.String Substring\(Int32 `startIndex`, Int32 `length`\)|Substring\(`this`, `startIndex` \+1, `length`\)||  
-|System.String ToLower\(\)|ToLower\(`this`\)||  
-|System.String ToUpper\(\)|ToUpper\(`this`\)||  
-|System.String Trim\(\)|Trim\(`this`\)||  
-|System.String TrimEnd\(Char\[\] `trimChars`\)|RTrim\(`this`\)||  
-|System.String TrimStart\(Char\[\]`trimChars`\)|LTrim\(`this`\)||  
-|Boolean Equals\(String `value`\)|\= \(operador\)||  
+|<span data-ttu-id="c36dd-148">Método System.String (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-148">System.String method (instance)</span></span>|<span data-ttu-id="c36dd-149">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-149">Canonical function</span></span>|<span data-ttu-id="c36dd-150">Notas</span><span class="sxs-lookup"><span data-stu-id="c36dd-150">Notes</span></span>|  
+|---------------------------------------|------------------------|-----------|  
+|<span data-ttu-id="c36dd-151">Boolean Contains(String `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-151">Boolean Contains(String `value`)</span></span>|<span data-ttu-id="c36dd-152">`this` LIKE '%`value`%'</span><span class="sxs-lookup"><span data-stu-id="c36dd-152">`this` LIKE '%`value`%'</span></span>|<span data-ttu-id="c36dd-153">Si `value` no es una constante, asigna a IndexOf(`this`, `value`) > 0.</span><span class="sxs-lookup"><span data-stu-id="c36dd-153">If `value` is not a constant, then this maps to IndexOf(`this`, `value`) > 0</span></span>|  
+|<span data-ttu-id="c36dd-154">Boolean EndsWith(String `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-154">Boolean EndsWith(String `value`)</span></span>|<span data-ttu-id="c36dd-155">`this`AL IGUAL QUE `'` % `value`'</span><span class="sxs-lookup"><span data-stu-id="c36dd-155">`this` LIKE `'`%`value`'</span></span>|<span data-ttu-id="c36dd-156">Si `value` no es una constante, entonces asigna a Right(`this`, length(`value`)) = `value`.</span><span class="sxs-lookup"><span data-stu-id="c36dd-156">If `value` is not a constant, then this maps to Right(`this`, length(`value`)) = `value`.</span></span>|  
+|<span data-ttu-id="c36dd-157">Boolean StartsWith(String `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-157">Boolean StartsWith(String `value`)</span></span>|<span data-ttu-id="c36dd-158">`this` LIKE '`value`%'</span><span class="sxs-lookup"><span data-stu-id="c36dd-158">`this` LIKE '`value`%'</span></span>|<span data-ttu-id="c36dd-159">Si `value` no es una constante, entonces asigna a IndexOf(`this`, `value`) = 1.</span><span class="sxs-lookup"><span data-stu-id="c36dd-159">If `value` is not a constant, then this maps to IndexOf(`this`, `value`) = 1.</span></span>|  
+|<span data-ttu-id="c36dd-160">Longitud</span><span class="sxs-lookup"><span data-stu-id="c36dd-160">Length</span></span>|<span data-ttu-id="c36dd-161">Length(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-161">Length(`this`)</span></span>||  
+|<span data-ttu-id="c36dd-162">Int32 IndexOf(String `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-162">Int32 IndexOf(String `value`)</span></span>|<span data-ttu-id="c36dd-163">IndexOf(`this`, `value`) - 1</span><span class="sxs-lookup"><span data-stu-id="c36dd-163">IndexOf(`this`, `value`) - 1</span></span>||  
+|<span data-ttu-id="c36dd-164">System.String Insert(Int32 `startIndex`, String `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-164">System.String Insert(Int32 `startIndex`, String `value`)</span></span>|<span data-ttu-id="c36dd-165">Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))</span><span class="sxs-lookup"><span data-stu-id="c36dd-165">Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))</span></span>||  
+|<span data-ttu-id="c36dd-166">System.String Remove(Int32 `startIndex`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-166">System.String Remove(Int32 `startIndex`)</span></span>|<span data-ttu-id="c36dd-167">Substring(`this`, 1, `startIndex`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-167">Substring(`this`, 1, `startIndex`)</span></span>||  
+|<span data-ttu-id="c36dd-168">System.String Remove(Int32 `startIndex`, Int32 `count`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-168">System.String Remove(Int32 `startIndex`, Int32 `count`)</span></span>|<span data-ttu-id="c36dd-169">Concat (subcadena (`this`, 1, `startIndex`), subcadena (`this`, `startIndex`  +  `count` + 1, longitud (`this`)-(`startIndex` + `count`)))</span><span class="sxs-lookup"><span data-stu-id="c36dd-169">Concat(Substring(`this`, 1, `startIndex`) , Substring(`this`, `startIndex` + `count` +1, Length(`this`) - (`startIndex` + `count`)))</span></span>|<span data-ttu-id="c36dd-170">Remove(`startIndex`, `count`) solo es compatible si `count` es un número entero mayor o igual que 0.</span><span class="sxs-lookup"><span data-stu-id="c36dd-170">Remove(`startIndex`, `count`) is only supported if `count` is an integer greater than or equal to 0.</span></span>|  
+<span data-ttu-id="c36dd-171">operativo. Reemplazo de cadena (String `oldValue`, cadena `newValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-171">ystem.String Replace(String `oldValue`, String `newValue`)</span></span>|<span data-ttu-id="c36dd-172">Replace(`this`, `oldValue`, `newValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-172">Replace(`this`, `oldValue`, `newValue`)</span></span>||  
+|<span data-ttu-id="c36dd-173">System.String Substring(Int32 `startIndex`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-173">System.String Substring(Int32 `startIndex`)</span></span>|<span data-ttu-id="c36dd-174">Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-174">Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)</span></span>||  
+|<span data-ttu-id="c36dd-175">System.String Substring(Int32 `startIndex`, Int32 `length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-175">System.String Substring(Int32 `startIndex`, Int32 `length`)</span></span>|<span data-ttu-id="c36dd-176">Substring (`this`, `startIndex` + 1, `length`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-176">Substring(`this`, `startIndex` +1, `length`)</span></span>||  
+|<span data-ttu-id="c36dd-177">System.String ToLower()</span><span class="sxs-lookup"><span data-stu-id="c36dd-177">System.String ToLower()</span></span>|<span data-ttu-id="c36dd-178">ToLower(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-178">ToLower(`this`)</span></span>||  
+|<span data-ttu-id="c36dd-179">System.String ToUpper()</span><span class="sxs-lookup"><span data-stu-id="c36dd-179">System.String ToUpper()</span></span>|<span data-ttu-id="c36dd-180">ToUpper(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-180">ToUpper(`this`)</span></span>||  
+|<span data-ttu-id="c36dd-181">System.String Trim()</span><span class="sxs-lookup"><span data-stu-id="c36dd-181">System.String Trim()</span></span>|<span data-ttu-id="c36dd-182">Trim(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-182">Trim(`this`)</span></span>||  
+|<span data-ttu-id="c36dd-183">System.String TrimEnd(Char[] `trimChars`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-183">System.String TrimEnd(Char[] `trimChars`)</span></span>|<span data-ttu-id="c36dd-184">RTrim(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-184">RTrim(`this`)</span></span>||  
+|<span data-ttu-id="c36dd-185">System.String TrimStart(Char[]`trimChars`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-185">System.String TrimStart(Char[]`trimChars`)</span></span>|<span data-ttu-id="c36dd-186">LTrim(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-186">LTrim(`this`)</span></span>||  
+|<span data-ttu-id="c36dd-187">Boolean Equals(String `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-187">Boolean Equals(String `value`)</span></span>|<span data-ttu-id="c36dd-188">= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-188">= operator</span></span>||  
   
-## Asignación del método System.DateTime \(estático\)  
+## <a name="systemdatetime-method-static-mapping"></a><span data-ttu-id="c36dd-189">Asignación del método System.DateTime (estático)</span><span class="sxs-lookup"><span data-stu-id="c36dd-189">System.DateTime Method (Static) Mapping</span></span>  
   
-|Método System.DateTime \(estático\)|Función canónica|Notas|  
-|-----------------------------------------|----------------------|-----------|  
-|Boolean Equals\(DateTime `t1`, DateTime `t2`\)|\= \(operador\)||  
-|System.DateTime.Now|CurrentDateTime\(\)||  
-|System.DateTime.UtcNow|CurrentUtcDateTime\(\)||  
-|Boolean op\_Equality\(DateTime `d1`, DateTime `d2`\)|\= \(operador\)||  
-|Boolean op\_GreaterThan\(DateTime `t1`, DateTime `t2`\)|\> \(operador\)||  
-|Boolean op\_GreaterThanOrEqual\(DateTime `t1`, DateTime `t2`\)|\>\= \(operador\)||  
-|Boolean op\_Inequality\(DateTime `t1`, DateTime `t2`\)|\!\= \(operador\)||  
-|Boolean op\_LessThan\(DateTime `t1`, DateTime `t2`\)|\< \(operador\)||  
-|Boolean op\_LessThanOrEqual\(DateTime `t1`, DateTime `t2`\)|\<\= \(operador\)||  
-|Microsoft.VisualBasic.DateAndTime.DatePart\( \_<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` As DateTime, \_<br /><br /> Optional ByVal `FirstDayOfWeekValue` As FirstDayOfWeek \= VbSunday, \_<br /><br /> Optional ByVal `FirstWeekOfYearValue` As FirstWeekOfYear \= VbFirstJan1 \_<br /><br /> \) As Integer||Para obtener más información, consulte la sección Función DatePart.|  
-|Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Year\(DateTime `TimeValue`\)|Year\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Month\(DateTime `TimeValue`\)|Month\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Day\(DateTime `TimeValue`\)|Day\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Hour\(DateTime `TimeValue`\)|Hour\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Minute\(DateTime `TimeValue`\)|Minute\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Second\(DateTime `TimeValue`\)|Second\(\)||  
+|<span data-ttu-id="c36dd-190">Método System.DateTime (estático)</span><span class="sxs-lookup"><span data-stu-id="c36dd-190">System.DateTime method (static)</span></span>|<span data-ttu-id="c36dd-191">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-191">Canonical function</span></span>|<span data-ttu-id="c36dd-192">Notas</span><span class="sxs-lookup"><span data-stu-id="c36dd-192">Notes</span></span>|  
+|---------------------------------------|------------------------|-----------|  
+|<span data-ttu-id="c36dd-193">Boolean Equals(DateTime `t1`, DateTime `t2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-193">Boolean Equals(DateTime `t1`, DateTime `t2`)</span></span>|<span data-ttu-id="c36dd-194">= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-194">= operator</span></span>||  
+|<span data-ttu-id="c36dd-195">System.DateTime.Now</span><span class="sxs-lookup"><span data-stu-id="c36dd-195">System.DateTime.Now</span></span>|<span data-ttu-id="c36dd-196">CurrentDateTime()</span><span class="sxs-lookup"><span data-stu-id="c36dd-196">CurrentDateTime()</span></span>||  
+|<span data-ttu-id="c36dd-197">System.DateTime.UtcNow</span><span class="sxs-lookup"><span data-stu-id="c36dd-197">System.DateTime.UtcNow</span></span>|<span data-ttu-id="c36dd-198">CurrentUtcDateTime()</span><span class="sxs-lookup"><span data-stu-id="c36dd-198">CurrentUtcDateTime()</span></span>||  
+|<span data-ttu-id="c36dd-199">Boolean op_Equality(DateTime `d1`, DateTime `d2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-199">Boolean op_Equality(DateTime `d1`, DateTime `d2`)</span></span>|<span data-ttu-id="c36dd-200">= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-200">= operator</span></span>||  
+|<span data-ttu-id="c36dd-201">Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-201">Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)</span></span>|<span data-ttu-id="c36dd-202">> (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-202">> operator</span></span>||  
+|<span data-ttu-id="c36dd-203">Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-203">Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)</span></span>|<span data-ttu-id="c36dd-204">>= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-204">>= operator</span></span>||  
+|<span data-ttu-id="c36dd-205">Boolean op_Inequality(DateTime `t1`, DateTime `t2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-205">Boolean op_Inequality(DateTime `t1`, DateTime `t2`)</span></span>|<span data-ttu-id="c36dd-206">!= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-206">!= operator</span></span>||  
+|<span data-ttu-id="c36dd-207">Op_LessThan booleano (fecha y hora `t1`, fecha y hora `t2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-207">Boolean op_LessThan(DateTime `t1`, DateTime `t2`)</span></span>|<span data-ttu-id="c36dd-208">< (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-208">< operator</span></span>||  
+|<span data-ttu-id="c36dd-209">Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-209">Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)</span></span>|<span data-ttu-id="c36dd-210"><= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-210"><= operator</span></span>||  
+|<span data-ttu-id="c36dd-211">Microsoft.VisualBasic.DateAndTime.DatePart( _</span><span class="sxs-lookup"><span data-stu-id="c36dd-211">Microsoft.VisualBasic.DateAndTime.DatePart( _</span></span><br /><br /> <span data-ttu-id="c36dd-212">ByVal `Interval` como DateInterval,\_</span><span class="sxs-lookup"><span data-stu-id="c36dd-212">ByVal `Interval` As DateInterval, \_</span></span><br /><br /> <span data-ttu-id="c36dd-213">ByVal `DateValue` como fecha y hora,\_</span><span class="sxs-lookup"><span data-stu-id="c36dd-213">ByVal `DateValue` As DateTime, \_</span></span><br /><br /> <span data-ttu-id="c36dd-214">ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday,\_</span><span class="sxs-lookup"><span data-stu-id="c36dd-214">Optional ByVal `FirstDayOfWeekValue` As FirstDayOfWeek = VbSunday, \_</span></span><br /><br /> <span data-ttu-id="c36dd-215">ByVal opcional `FirstWeekOfYearValue` como FirstWeekOfYear = VbFirstJan1\_</span><span class="sxs-lookup"><span data-stu-id="c36dd-215">Optional ByVal `FirstWeekOfYearValue` As FirstWeekOfYear = VbFirstJan1 \_</span></span><br /><br /> <span data-ttu-id="c36dd-216">) As Integer</span><span class="sxs-lookup"><span data-stu-id="c36dd-216">) As Integer</span></span>||<span data-ttu-id="c36dd-217">Para obtener más información, consulte la sección Función DatePart.</span><span class="sxs-lookup"><span data-stu-id="c36dd-217">See the DatePart Function section for more information.</span></span>|  
+|<span data-ttu-id="c36dd-218">Microsoft.VisualBasic.DateAndTime.Now</span><span class="sxs-lookup"><span data-stu-id="c36dd-218">Microsoft.VisualBasic.DateAndTime.Now</span></span>|<span data-ttu-id="c36dd-219">CurrentDateTime()</span><span class="sxs-lookup"><span data-stu-id="c36dd-219">CurrentDateTime()</span></span>||  
+|<span data-ttu-id="c36dd-220">Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-220">Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)</span></span>|<span data-ttu-id="c36dd-221">Year()</span><span class="sxs-lookup"><span data-stu-id="c36dd-221">Year()</span></span>||  
+|<span data-ttu-id="c36dd-222">Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-222">Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)</span></span>|<span data-ttu-id="c36dd-223">Month()</span><span class="sxs-lookup"><span data-stu-id="c36dd-223">Month()</span></span>||  
+<span data-ttu-id="c36dd-224">Microsoft. VisualBasic.DateAndTime.Day (fecha y hora `TimeValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-224">icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)</span></span>|<span data-ttu-id="c36dd-225">Day()</span><span class="sxs-lookup"><span data-stu-id="c36dd-225">Day()</span></span>||  
+|<span data-ttu-id="c36dd-226">Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-226">Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)</span></span>|<span data-ttu-id="c36dd-227">Hour()</span><span class="sxs-lookup"><span data-stu-id="c36dd-227">Hour()</span></span>||  
+|<span data-ttu-id="c36dd-228">Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-228">Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)</span></span>|<span data-ttu-id="c36dd-229">Minute()</span><span class="sxs-lookup"><span data-stu-id="c36dd-229">Minute()</span></span>||  
+|<span data-ttu-id="c36dd-230">Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-230">Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)</span></span>|<span data-ttu-id="c36dd-231">Second()</span><span class="sxs-lookup"><span data-stu-id="c36dd-231">Second()</span></span>||  
   
-## Asignación del método System.DateTime \(instancia\)  
+## <a name="systemdatetime-method-instance-mapping"></a><span data-ttu-id="c36dd-232">Asignación del método System.DateTime (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-232">System.DateTime Method (Instance) Mapping</span></span>  
   
-|Método System.DateTime \(instancia\)|Función canónica|  
-|------------------------------------------|----------------------|  
-|Boolean Equals\(DateTime `value`\)|\= \(operador\)|  
-|Day|Day\(`this`\)|  
-|Hour|Hour\(`this`\)|  
-|Millisecond|Millisecond\(`this`\)|  
-|Minute|Minute\(`this`\)|  
-|Mes|Month\(`this`\)|  
-|Second|Second\(`this`\)|  
-|Year|Year\(`this`\)|  
+|<span data-ttu-id="c36dd-233">Método System.DateTime (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-233">System.DateTime method (instance)</span></span>|<span data-ttu-id="c36dd-234">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-234">Canonical function</span></span>|  
+|-----------------------------------------|------------------------|  
+|<span data-ttu-id="c36dd-235">Boolean Equals(DateTime `value`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-235">Boolean Equals(DateTime `value`)</span></span>|<span data-ttu-id="c36dd-236">= (operador)</span><span class="sxs-lookup"><span data-stu-id="c36dd-236">= operator</span></span>|  
+|<span data-ttu-id="c36dd-237">Day</span><span class="sxs-lookup"><span data-stu-id="c36dd-237">Day</span></span>|<span data-ttu-id="c36dd-238">Day(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-238">Day(`this`)</span></span>|  
+|<span data-ttu-id="c36dd-239">Hour</span><span class="sxs-lookup"><span data-stu-id="c36dd-239">Hour</span></span>|<span data-ttu-id="c36dd-240">Hour(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-240">Hour(`this`)</span></span>|  
+|<span data-ttu-id="c36dd-241">Millisecond</span><span class="sxs-lookup"><span data-stu-id="c36dd-241">Millisecond</span></span>|<span data-ttu-id="c36dd-242">Millisecond(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-242">Millisecond(`this`)</span></span>|  
+|<span data-ttu-id="c36dd-243">Minute</span><span class="sxs-lookup"><span data-stu-id="c36dd-243">Minute</span></span>|<span data-ttu-id="c36dd-244">Minute(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-244">Minute(`this`)</span></span>|  
+|<span data-ttu-id="c36dd-245">Mes</span><span class="sxs-lookup"><span data-stu-id="c36dd-245">Month</span></span>|<span data-ttu-id="c36dd-246">Month(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-246">Month(`this`)</span></span>|  
+|<span data-ttu-id="c36dd-247">Second</span><span class="sxs-lookup"><span data-stu-id="c36dd-247">Second</span></span>|<span data-ttu-id="c36dd-248">Second(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-248">Second(`this`)</span></span>|  
+|<span data-ttu-id="c36dd-249">Year</span><span class="sxs-lookup"><span data-stu-id="c36dd-249">Year</span></span>|<span data-ttu-id="c36dd-250">Year(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-250">Year(`this`)</span></span>|  
   
-## Asignación del método System.DateTimeOffset \(instancia\)  
- La asignación mostrada para los métodos `get` sobre las propiedades enumeradas.  
+## <a name="systemdatetimeoffset-method-instance-mapping"></a><span data-ttu-id="c36dd-251">Asignación del método System.DateTimeOffset (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-251">System.DateTimeOffset Method (Instance) Mapping</span></span>  
+ <span data-ttu-id="c36dd-252">La asignación mostrada para los métodos `get` sobre las propiedades enumeradas.</span><span class="sxs-lookup"><span data-stu-id="c36dd-252">The mapping shown for the `get` methods on the listed properties.</span></span>  
   
-|Método System.DateTimeOffset \(instancia\)|Función canónica|Notas|  
-|------------------------------------------------|----------------------|-----------|  
-|Day|Day\(`this`\)|No se admite en SQL Server 2005.|  
-|Hour|Hour\(`this`\)|No se admite en SQL Server 2005.|  
-|Millisecond|Millisecond\(`this`\)|No se admite en SQL Server 2005.|  
-|Minute|Minute\(`this`\)|No se admite en SQL Server 2005.|  
-|Mes|Month\(`this`\)|No se admite en SQL Server 2005.|  
-|Second|Second\(`this`\)|No se admite en SQL Server 2005.|  
-|Year|Year\(`this`\)|No se admite en SQL Server 2005.|  
-  
-> [!NOTE]
->  El método <xref:System.DateTimeOffset.Equals%2A> devuelve `true` si los objetos <xref:System.DateTimeOffset> comparados son iguales; de lo contrario, devuelve `false`.  El método <xref:System.DateTimeOffset.CompareTo%2A> devuelve 0, 1 o \-1 dependiendo de si el objeto <xref:System.DateTimeOffset> comparado es igual, mayor que, o menor que, respectivamente.  
-  
-## Asignación del método System.DateTimeOffset \(estático\)  
- La asignación mostrada para los métodos `get` sobre las propiedades enumeradas.  
-  
-|Método System.DateTimeOffset \(estático\)|Función canónica|Notas|  
-|-----------------------------------------------|----------------------|-----------|  
-|System.DateTimeOffset.Now\(\)|CurrentDateTimeOffset\(\)|No se admite en SQL Server 2005.|  
-  
-## Asignación del método System.TimeSpan \(instancia\)  
- La asignación mostrada para los métodos `get` sobre las propiedades enumeradas.  
-  
-|Método System.TimeSpan \(instancia\)|Función canónica|Notas|  
-|------------------------------------------|----------------------|-----------|  
-|Horas|Hour\(`this`\)|No se admite en SQL Server 2005.|  
-|Milliseconds|Millisecond\(`this`\)|No se admite en SQL Server 2005.|  
-|Minutos|Minute\(`this`\)|No se admite en SQL Server 2005.|  
-|Seconds|Second\(`this`\)|No se admite en SQL Server 2005.|  
+|<span data-ttu-id="c36dd-253">Método System.DateTimeOffset (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-253">System.DateTimeOffset method (instance)</span></span>|<span data-ttu-id="c36dd-254">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-254">Canonical function</span></span>|<span data-ttu-id="c36dd-255">Notas</span><span class="sxs-lookup"><span data-stu-id="c36dd-255">Notes</span></span>|  
+|-----------------------------------------------|------------------------|-----------|  
+|<span data-ttu-id="c36dd-256">Day</span><span class="sxs-lookup"><span data-stu-id="c36dd-256">Day</span></span>|<span data-ttu-id="c36dd-257">Day(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-257">Day(`this`)</span></span>|<span data-ttu-id="c36dd-258">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-258">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-259">Hour</span><span class="sxs-lookup"><span data-stu-id="c36dd-259">Hour</span></span>|<span data-ttu-id="c36dd-260">Hour(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-260">Hour(`this`)</span></span>|<span data-ttu-id="c36dd-261">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-261">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-262">Millisecond</span><span class="sxs-lookup"><span data-stu-id="c36dd-262">Millisecond</span></span>|<span data-ttu-id="c36dd-263">Millisecond(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-263">Millisecond(`this`)</span></span>|<span data-ttu-id="c36dd-264">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-264">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-265">Minute</span><span class="sxs-lookup"><span data-stu-id="c36dd-265">Minute</span></span>|<span data-ttu-id="c36dd-266">Minute(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-266">Minute(`this`)</span></span>|<span data-ttu-id="c36dd-267">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-267">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-268">Mes</span><span class="sxs-lookup"><span data-stu-id="c36dd-268">Month</span></span>|<span data-ttu-id="c36dd-269">Month(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-269">Month(`this`)</span></span>|<span data-ttu-id="c36dd-270">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-270">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-271">Second</span><span class="sxs-lookup"><span data-stu-id="c36dd-271">Second</span></span>|<span data-ttu-id="c36dd-272">Second(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-272">Second(`this`)</span></span>|<span data-ttu-id="c36dd-273">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-273">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-274">Year</span><span class="sxs-lookup"><span data-stu-id="c36dd-274">Year</span></span>|<span data-ttu-id="c36dd-275">Year(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-275">Year(`this`)</span></span>|<span data-ttu-id="c36dd-276">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-276">Not supported against SQL Server 2005.</span></span>|  
   
 > [!NOTE]
->  El método <xref:System.TimeSpan.Equals%2A> devuelve `true` si los objetos <xref:System.TimeSpan> comparados son iguales; de lo contrario, devuelve `false`.  El método <xref:System.TimeSpan.CompareTo%2A> devuelve 0, 1 o \-1 dependiendo de si el objeto <xref:System.TimeSpan> comparado es igual, mayor que, o menor que, respectivamente.  
+>  <span data-ttu-id="c36dd-277">El método <xref:System.DateTimeOffset.Equals%2A> devuelve `true` si los objetos <xref:System.DateTimeOffset> comparados son iguales; de lo contrario, devuelve `false`.</span><span class="sxs-lookup"><span data-stu-id="c36dd-277">The <xref:System.DateTimeOffset.Equals%2A> method returns `true` if the compared <xref:System.DateTimeOffset> objects are equal; `false` otherwise.</span></span> <span data-ttu-id="c36dd-278">El método <xref:System.DateTimeOffset.CompareTo%2A> devuelve 0, 1 o -1 dependiendo de si el objeto <xref:System.DateTimeOffset> comparado es igual, mayor que, o menor que, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="c36dd-278">The <xref:System.DateTimeOffset.CompareTo%2A> method returns 0, 1, or -1 depending on whether the compared <xref:System.DateTimeOffset> object is equal, greater than, or less than, respectively.</span></span>  
   
-### Función DatePart  
- La función `DatePart` está asignada a una función canónica de entre un grupo, según el valor de `Interval`.  En la tabla siguiente, se muestra la asignación de la función canónica para los valores compatibles de `Interval`:  
+## <a name="systemdatetimeoffset-method-static-mapping"></a><span data-ttu-id="c36dd-279">Asignación del método System.DateTimeOffset (estático)</span><span class="sxs-lookup"><span data-stu-id="c36dd-279">System.DateTimeOffset Method (Static) Mapping</span></span>  
+ <span data-ttu-id="c36dd-280">La asignación mostrada para los métodos `get` sobre las propiedades enumeradas.</span><span class="sxs-lookup"><span data-stu-id="c36dd-280">The mapping shown for the `get` methods on the listed properties.</span></span>  
   
-|Valor del intervalo|Función canónica|  
-|-------------------------|----------------------|  
-|DateInterval.Year|Year\(\)|  
-|DateInterval.Month|Month\(\)|  
-|DateInterval.Day|Day\(\)|  
-|DateInterval.Hour|Hour\(\)|  
-|DateInterval.Minute|Minute\(\)|  
-|DateInterval.Second|Second\(\)|  
+|<span data-ttu-id="c36dd-281">Método System.DateTimeOffset (estático)</span><span class="sxs-lookup"><span data-stu-id="c36dd-281">System.DateTimeOffset method (static)</span></span>|<span data-ttu-id="c36dd-282">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-282">Canonical function</span></span>|<span data-ttu-id="c36dd-283">Notas</span><span class="sxs-lookup"><span data-stu-id="c36dd-283">Notes</span></span>|  
+|---------------------------------------------|------------------------|-----------|  
+|<span data-ttu-id="c36dd-284">System.DateTimeOffset.Now()</span><span class="sxs-lookup"><span data-stu-id="c36dd-284">System.DateTimeOffset.Now()</span></span>|<span data-ttu-id="c36dd-285">CurrentDateTimeOffset()</span><span class="sxs-lookup"><span data-stu-id="c36dd-285">CurrentDateTimeOffset()</span></span>|<span data-ttu-id="c36dd-286">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-286">Not supported against SQL Server 2005.</span></span>|  
   
-## Asignación de funciones matemáticas  
+## <a name="systemtimespan-method-instance-mapping"></a><span data-ttu-id="c36dd-287">Asignación del método System.TimeSpan (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-287">System.TimeSpan Method (Instance) Mapping</span></span>  
+ <span data-ttu-id="c36dd-288">La asignación mostrada para los métodos `get` sobre las propiedades enumeradas.</span><span class="sxs-lookup"><span data-stu-id="c36dd-288">The mapping shown for the `get` methods on the listed properties.</span></span>  
   
-|Método CLR|Función canónica|  
-|----------------|----------------------|  
-|System.Decimal.Ceiling\(Decimal `d`\)|Ceiling\(`d`\)|  
-|System.Decimal.Floor\(Decimal `d`\)|Floor\(`d`\)|  
-|System.Decimal.Round\(Decimal `d`\)|Round\(`d`\)|  
-|System.Math.Ceiling\(Decimal `d`\)|Ceiling\(`d`\)|  
-|System.Math.Floor\(Decimal `d`\)|Floor\(`d`\)|  
-|System.Math.Round\(Decimal `d`\)|Round\(`d`\)|  
-|System.Math.Ceiling\(Double `a`\)|Ceiling\(`a`\)|  
-|System.Math.Floor\(Double `a`\)|Floor\(`a`\)|  
-|System.Math.Round\(Double `a`\)|Round\(`a`\)|  
-|System.Math.Round\(valor Double, dígitos Int16\)|Round\(valor, dígitos\)|  
-|System.Math.Round\(valor Double, dígitos Int32\)|Round\(valor, dígitos\)|  
-|System.Math.Round\(valor decimal, dígitos Int16\)|Round\(valor, dígitos\)|  
-|System.Math.Round\(valor decimal, dígitos Int32\)|Round\(valor, dígitos\)|  
-|System.Math.Abs\(valor Int16\)|Abs\(valor\)|  
-|System.Math.Abs\(valor Int32\)|Abs\(valor\)|  
-|System.Math.Abs\(valor Int64\)|Abs\(valor\)|  
-|System.Math.Abs\(valor Byte\)|Abs\(valor\)|  
-|System.Math.Abs\(valor Single\)|Abs\(valor\)|  
-|System.Math.Abs\(valor Double\)|Abs\(valor\)|  
-|System.Math.Abs\(valor decimal\)|Abs\(valor\)|  
-|System.Math.Truncate\(valor Double, dígitos Int16\)|Truncate\(valor, dígitos\)|  
-|System.Math.Truncate\(valor Double, dígitos Int32\)|Truncate\(valor, dígitos\)|  
-|System.Math.Truncate\(valor Decimal, dígitos Int16\)|Truncate\(valor, dígitos\)|  
-|System.Math.Truncate\(valor Decimal, dígitos Int32\)|Truncate\(valor, dígitos\)|  
-|System.Math.Power\(valor Int32, exponente Int64\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Int32, exponente Double\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Int32, exponente Decimal\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Int64, exponente Int64\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Int64, exponente Double\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Int64, exponente Decimal\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Double, exponente Int64\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Double, exponente Double\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Double, exponente Decimal\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Decimal, exponente Int64\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Decimal, exponente Double\)|Power\(valor, exponente\)|  
-|System.Math.Power\(valor Decimal, exponente Decimal\)|Power\(valor, exponente\)|  
+|<span data-ttu-id="c36dd-289">Método System.TimeSpan (instancia)</span><span class="sxs-lookup"><span data-stu-id="c36dd-289">System.TimeSpan method (instance)</span></span>|<span data-ttu-id="c36dd-290">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-290">Canonical function</span></span>|<span data-ttu-id="c36dd-291">Notas</span><span class="sxs-lookup"><span data-stu-id="c36dd-291">Notes</span></span>|  
+|-----------------------------------------|------------------------|-----------|  
+|<span data-ttu-id="c36dd-292">Horas</span><span class="sxs-lookup"><span data-stu-id="c36dd-292">Hours</span></span>|<span data-ttu-id="c36dd-293">Hour(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-293">Hour(`this`)</span></span>|<span data-ttu-id="c36dd-294">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-294">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-295">Milliseconds</span><span class="sxs-lookup"><span data-stu-id="c36dd-295">Milliseconds</span></span>|<span data-ttu-id="c36dd-296">Millisecond(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-296">Millisecond(`this`)</span></span>|<span data-ttu-id="c36dd-297">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-297">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-298">Minutos</span><span class="sxs-lookup"><span data-stu-id="c36dd-298">Minutes</span></span>|<span data-ttu-id="c36dd-299">Minute(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-299">Minute(`this`)</span></span>|<span data-ttu-id="c36dd-300">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-300">Not supported against SQL Server 2005.</span></span>|  
+|<span data-ttu-id="c36dd-301">Seconds</span><span class="sxs-lookup"><span data-stu-id="c36dd-301">Seconds</span></span>|<span data-ttu-id="c36dd-302">Second(`this`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-302">Second(`this`)</span></span>|<span data-ttu-id="c36dd-303">No se admite en SQL Server 2005.</span><span class="sxs-lookup"><span data-stu-id="c36dd-303">Not supported against SQL Server 2005.</span></span>|  
   
-## Asignación de operadores bit a bit  
+> [!NOTE]
+>  <span data-ttu-id="c36dd-304">El método <xref:System.TimeSpan.Equals%2A> devuelve `true` si los objetos <xref:System.TimeSpan> comparados son iguales; de lo contrario, devuelve `false`.</span><span class="sxs-lookup"><span data-stu-id="c36dd-304">The <xref:System.TimeSpan.Equals%2A> method returns `true` if the compared <xref:System.TimeSpan> objects are equal; `false` otherwise.</span></span> <span data-ttu-id="c36dd-305">El método <xref:System.TimeSpan.CompareTo%2A> devuelve 0, 1 o -1 dependiendo de si el objeto <xref:System.TimeSpan> comparado es igual, mayor que, o menor que, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="c36dd-305">The <xref:System.TimeSpan.CompareTo%2A> method returns 0, 1, or -1 depending on whether the compared <xref:System.TimeSpan> object is equal, greater than, or less than, respectively.</span></span>  
   
-|Operador bit a bit|Función canónica para operandos no booleanos|Función canónica para operandos booleanos|  
-|------------------------|--------------------------------------------------|-----------------------------------------------|  
-|Operador AND bit a bit|BitWiseAnd|op1 AND op2|  
-|Operador OR bit a bit|BitWiseOr|op1 OR op2|  
-|Operador NOT bit a bit|BitWiseNot|NOT\(op\)|  
-|Operador XOR bit a bit|BitWiseXor|\(\(op1 AND NOT\(op2\)\) OR \(NOT\(op1\) AND op2\)\)|  
+### <a name="datepart-function"></a><span data-ttu-id="c36dd-306">Función DatePart</span><span class="sxs-lookup"><span data-stu-id="c36dd-306">DatePart Function</span></span>  
+ <span data-ttu-id="c36dd-307">La función `DatePart` está asignada a una función canónica de entre un grupo, según el valor de `Interval`.</span><span class="sxs-lookup"><span data-stu-id="c36dd-307">The `DatePart` Function is mapped to one of several different canonical functions, depending on the value of `Interval`.</span></span> <span data-ttu-id="c36dd-308">En la tabla siguiente, se muestra la asignación de la función canónica para los valores compatibles de `Interval`:</span><span class="sxs-lookup"><span data-stu-id="c36dd-308">The following table displays the canonical function mapping for the supported values of `Interval`:</span></span>  
   
-## Otra asignación  
+|<span data-ttu-id="c36dd-309">Valor del intervalo</span><span class="sxs-lookup"><span data-stu-id="c36dd-309">Interval value</span></span>|<span data-ttu-id="c36dd-310">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-310">Canonical function</span></span>|  
+|--------------------|------------------------|  
+|<span data-ttu-id="c36dd-311">DateInterval.Year</span><span class="sxs-lookup"><span data-stu-id="c36dd-311">DateInterval.Year</span></span>|<span data-ttu-id="c36dd-312">Year()</span><span class="sxs-lookup"><span data-stu-id="c36dd-312">Year()</span></span>|  
+|<span data-ttu-id="c36dd-313">DateInterval.Month</span><span class="sxs-lookup"><span data-stu-id="c36dd-313">DateInterval.Month</span></span>|<span data-ttu-id="c36dd-314">Month()</span><span class="sxs-lookup"><span data-stu-id="c36dd-314">Month()</span></span>|  
+|<span data-ttu-id="c36dd-315">DateInterval.Day</span><span class="sxs-lookup"><span data-stu-id="c36dd-315">DateInterval.Day</span></span>|<span data-ttu-id="c36dd-316">Day()</span><span class="sxs-lookup"><span data-stu-id="c36dd-316">Day()</span></span>|  
+|<span data-ttu-id="c36dd-317">DateInterval.Hour</span><span class="sxs-lookup"><span data-stu-id="c36dd-317">DateInterval.Hour</span></span>|<span data-ttu-id="c36dd-318">Hour()</span><span class="sxs-lookup"><span data-stu-id="c36dd-318">Hour()</span></span>|  
+|<span data-ttu-id="c36dd-319">DateInterval.Minute</span><span class="sxs-lookup"><span data-stu-id="c36dd-319">DateInterval.Minute</span></span>|<span data-ttu-id="c36dd-320">Minute()</span><span class="sxs-lookup"><span data-stu-id="c36dd-320">Minute()</span></span>|  
+|<span data-ttu-id="c36dd-321">DateInterval.Second</span><span class="sxs-lookup"><span data-stu-id="c36dd-321">DateInterval.Second</span></span>|<span data-ttu-id="c36dd-322">Second()</span><span class="sxs-lookup"><span data-stu-id="c36dd-322">Second()</span></span>|  
   
-|Método|Función canónica|  
-|------------|----------------------|  
-|Guid.NewGuid \(\)|NewGuid\(\)|  
+## <a name="mathematical-function-mapping"></a><span data-ttu-id="c36dd-323">Asignación de funciones matemáticas</span><span class="sxs-lookup"><span data-stu-id="c36dd-323">Mathematical Function Mapping</span></span>  
   
-## Vea también  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+|<span data-ttu-id="c36dd-324">Método CLR</span><span class="sxs-lookup"><span data-stu-id="c36dd-324">CLR method</span></span>|<span data-ttu-id="c36dd-325">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-325">Canonical function</span></span>|  
+|----------------|------------------------|  
+|<span data-ttu-id="c36dd-326">System.Decimal.Ceiling(Decimal `d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-326">System.Decimal.Ceiling(Decimal `d`)</span></span>|<span data-ttu-id="c36dd-327">Ceiling(`d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-327">Ceiling(`d`)</span></span>|  
+|<span data-ttu-id="c36dd-328">System.Decimal.Floor(Decimal `d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-328">System.Decimal.Floor(Decimal `d`)</span></span>|<span data-ttu-id="c36dd-329">Floor(`d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-329">Floor(`d`)</span></span>|  
+|<span data-ttu-id="c36dd-330">System.Decimal.Round(Decimal `d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-330">System.Decimal.Round(Decimal `d`)</span></span>|<span data-ttu-id="c36dd-331">Round(`d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-331">Round(`d`)</span></span>|  
+|<span data-ttu-id="c36dd-332">System.Math.Ceiling(Decimal `d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-332">System.Math.Ceiling(Decimal `d`)</span></span>|<span data-ttu-id="c36dd-333">Ceiling(`d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-333">Ceiling(`d`)</span></span>|  
+|<span data-ttu-id="c36dd-334">System.Math.Floor(Decimal `d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-334">System.Math.Floor(Decimal `d`)</span></span>|<span data-ttu-id="c36dd-335">Floor(`d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-335">Floor(`d`)</span></span>|  
+|<span data-ttu-id="c36dd-336">System.Math.Round(Decimal `d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-336">System.Math.Round(Decimal `d`)</span></span>|<span data-ttu-id="c36dd-337">Round(`d`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-337">Round(`d`)</span></span>|  
+|<span data-ttu-id="c36dd-338">System.Math.Ceiling(Double `a`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-338">System.Math.Ceiling(Double `a`)</span></span>|<span data-ttu-id="c36dd-339">Ceiling(`a`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-339">Ceiling(`a`)</span></span>|  
+|<span data-ttu-id="c36dd-340">System.Math.Floor(Double `a`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-340">System.Math.Floor(Double `a`)</span></span>|<span data-ttu-id="c36dd-341">Floor(`a`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-341">Floor(`a`)</span></span>|  
+|<span data-ttu-id="c36dd-342">System.Math.Round(Double `a`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-342">System.Math.Round(Double `a`)</span></span>|<span data-ttu-id="c36dd-343">Round(`a`)</span><span class="sxs-lookup"><span data-stu-id="c36dd-343">Round(`a`)</span></span>|  
+|<span data-ttu-id="c36dd-344">System.Math.Round(valor Double, dígitos Int16)</span><span class="sxs-lookup"><span data-stu-id="c36dd-344">System.Math.Round(Double value, Int16 digits)</span></span>|<span data-ttu-id="c36dd-345">Round(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-345">Round(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-346">System.Math.Round(valor Double, dígitos Int32)</span><span class="sxs-lookup"><span data-stu-id="c36dd-346">System.Math.Round(Double value, Int32 digits)</span></span>|<span data-ttu-id="c36dd-347">Round(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-347">Round(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-348">System.Math.Round(valor decimal, dígitos Int16)</span><span class="sxs-lookup"><span data-stu-id="c36dd-348">System.Math.Round(Decimal value, Int16 digits)</span></span>|<span data-ttu-id="c36dd-349">Round(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-349">Round(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-350">System.Math.Round(valor decimal, dígitos Int32)</span><span class="sxs-lookup"><span data-stu-id="c36dd-350">System.Math.Round(Decimal value, Int32, digits)</span></span>|<span data-ttu-id="c36dd-351">Round(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-351">Round(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-352">System.Math.Abs(valor Int16)</span><span class="sxs-lookup"><span data-stu-id="c36dd-352">System.Math.Abs(Int16 value)</span></span>|<span data-ttu-id="c36dd-353">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c36dd-353">Abs(value)</span></span>|  
+|<span data-ttu-id="c36dd-354">System.Math.Abs(valor Int32)</span><span class="sxs-lookup"><span data-stu-id="c36dd-354">System.Math.Abs(Int32 value)</span></span>|<span data-ttu-id="c36dd-355">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c36dd-355">Abs(value)</span></span>|  
+|<span data-ttu-id="c36dd-356">System.Math.Abs(valor Int64)</span><span class="sxs-lookup"><span data-stu-id="c36dd-356">System.Math.Abs(Int64 value)</span></span>|<span data-ttu-id="c36dd-357">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c36dd-357">Abs(value)</span></span>|  
+|<span data-ttu-id="c36dd-358">System.Math.Abs(valor Byte)</span><span class="sxs-lookup"><span data-stu-id="c36dd-358">System.Math.Abs(Byte value)</span></span>|<span data-ttu-id="c36dd-359">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c36dd-359">Abs(value)</span></span>|  
+|<span data-ttu-id="c36dd-360">System.Math.Abs(valor Single)</span><span class="sxs-lookup"><span data-stu-id="c36dd-360">System.Math.Abs(Single value)</span></span>|<span data-ttu-id="c36dd-361">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c36dd-361">Abs(value)</span></span>|  
+|<span data-ttu-id="c36dd-362">System.Math.Abs(valor Double)</span><span class="sxs-lookup"><span data-stu-id="c36dd-362">System.Math.Abs(Double value)</span></span>|<span data-ttu-id="c36dd-363">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c36dd-363">Abs(value)</span></span>|  
+|<span data-ttu-id="c36dd-364">System.Math.Abs(valor decimal)</span><span class="sxs-lookup"><span data-stu-id="c36dd-364">System.Math.Abs(Decimal value)</span></span>|<span data-ttu-id="c36dd-365">Abs(valor)</span><span class="sxs-lookup"><span data-stu-id="c36dd-365">Abs(value)</span></span>|  
+|<span data-ttu-id="c36dd-366">System.Math.Truncate(valor Double, dígitos Int16)</span><span class="sxs-lookup"><span data-stu-id="c36dd-366">System.Math.Truncate(Double value, Int16 digits)</span></span>|<span data-ttu-id="c36dd-367">Truncate(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-367">Truncate(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-368">System.Math.Truncate(valor Double, dígitos Int32)</span><span class="sxs-lookup"><span data-stu-id="c36dd-368">System.Math.Truncate(Double value, Int32 digits)</span></span>|<span data-ttu-id="c36dd-369">Truncate(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-369">Truncate(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-370">System.Math.Truncate(valor Decimal, dígitos Int16)</span><span class="sxs-lookup"><span data-stu-id="c36dd-370">System.Math.Truncate(Decimal value, Int16 digits)</span></span>|<span data-ttu-id="c36dd-371">Truncate(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-371">Truncate(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-372">System.Math.Truncate(valor Decimal, dígitos Int32)</span><span class="sxs-lookup"><span data-stu-id="c36dd-372">System.Math.Truncate(Decimal value, Int32 digits)</span></span>|<span data-ttu-id="c36dd-373">Truncate(valor, dígitos)</span><span class="sxs-lookup"><span data-stu-id="c36dd-373">Truncate(value, digits)</span></span>|  
+|<span data-ttu-id="c36dd-374">System.Math.Power(valor Int32, exponente Int64)</span><span class="sxs-lookup"><span data-stu-id="c36dd-374">System.Math.Power(Int32 value, Int64 exponent)</span></span>|<span data-ttu-id="c36dd-375">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-375">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-376">System.Math.Power(valor Int32, exponente Double)</span><span class="sxs-lookup"><span data-stu-id="c36dd-376">System.Math.Power(Int32 value, Double exponent)</span></span>|<span data-ttu-id="c36dd-377">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-377">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-378">System.Math.Power(valor Int32, exponente Decimal)</span><span class="sxs-lookup"><span data-stu-id="c36dd-378">System.Math.Power(Int32 value, Decimal exponent)</span></span>|<span data-ttu-id="c36dd-379">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-379">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-380">System.Math.Power(valor Int64, exponente Int64)</span><span class="sxs-lookup"><span data-stu-id="c36dd-380">System.Math.Power(Int64 value, Int64 exponent)</span></span>|<span data-ttu-id="c36dd-381">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-381">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-382">System.Math.Power(valor Int64, exponente Double)</span><span class="sxs-lookup"><span data-stu-id="c36dd-382">System.Math.Power(Int64 value, Double exponent)</span></span>|<span data-ttu-id="c36dd-383">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-383">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-384">System.Math.Power(valor Int64, exponente Decimal)</span><span class="sxs-lookup"><span data-stu-id="c36dd-384">System.Math.Power(Int64 value, Decimal exponent)</span></span>|<span data-ttu-id="c36dd-385">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-385">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-386">System.Math.Power(valor Double, exponente Int64)</span><span class="sxs-lookup"><span data-stu-id="c36dd-386">System.Math.Power(Double value, Int64 exponent)</span></span>|<span data-ttu-id="c36dd-387">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-387">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-388">System.Math.Power(valor Double, exponente Double)</span><span class="sxs-lookup"><span data-stu-id="c36dd-388">System.Math.Power(Double value, Double exponent)</span></span>|<span data-ttu-id="c36dd-389">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-389">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-390">System.Math.Power(valor Double, exponente Decimal)</span><span class="sxs-lookup"><span data-stu-id="c36dd-390">System.Math.Power(Double value, Decimal exponent)</span></span>|<span data-ttu-id="c36dd-391">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-391">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-392">System.Math.Power(valor Decimal, exponente Int64)</span><span class="sxs-lookup"><span data-stu-id="c36dd-392">System.Math.Power(Decimal value, Int64 exponent)</span></span>|<span data-ttu-id="c36dd-393">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-393">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-394">System.Math.Power(valor Decimal, exponente Double)</span><span class="sxs-lookup"><span data-stu-id="c36dd-394">System.Math.Power(Decimal value, Double exponent)</span></span>|<span data-ttu-id="c36dd-395">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-395">Power(value, exponent)</span></span>|  
+|<span data-ttu-id="c36dd-396">System.Math.Power(valor Decimal, exponente Decimal)</span><span class="sxs-lookup"><span data-stu-id="c36dd-396">System.Math.Power(Decimal value, Decimal exponent)</span></span>|<span data-ttu-id="c36dd-397">Power(valor, exponente)</span><span class="sxs-lookup"><span data-stu-id="c36dd-397">Power(value, exponent)</span></span>|  
+  
+## <a name="bitwise-operator-mapping"></a><span data-ttu-id="c36dd-398">Asignación de operadores bit a bit</span><span class="sxs-lookup"><span data-stu-id="c36dd-398">Bitwise Operator Mapping</span></span>  
+  
+|<span data-ttu-id="c36dd-399">Operador bit a bit</span><span class="sxs-lookup"><span data-stu-id="c36dd-399">Bitwise operator</span></span>|<span data-ttu-id="c36dd-400">Función canónica para operandos no booleanos</span><span class="sxs-lookup"><span data-stu-id="c36dd-400">Canonical function for non-Boolean operands</span></span>|<span data-ttu-id="c36dd-401">Función canónica para operandos booleanos</span><span class="sxs-lookup"><span data-stu-id="c36dd-401">Canonical function for Boolean operands</span></span>|  
+|----------------------|--------------------------------------------------|---------------------------------------------|  
+|<span data-ttu-id="c36dd-402">Operador AND bit a bit</span><span class="sxs-lookup"><span data-stu-id="c36dd-402">Bitwise AND operator</span></span>|<span data-ttu-id="c36dd-403">BitWiseAnd</span><span class="sxs-lookup"><span data-stu-id="c36dd-403">BitWiseAnd</span></span>|<span data-ttu-id="c36dd-404">op1 AND op2</span><span class="sxs-lookup"><span data-stu-id="c36dd-404">op1 AND op2</span></span>|  
+|<span data-ttu-id="c36dd-405">Operador OR bit a bit</span><span class="sxs-lookup"><span data-stu-id="c36dd-405">Bitwise OR operator</span></span>|<span data-ttu-id="c36dd-406">BitWiseOr</span><span class="sxs-lookup"><span data-stu-id="c36dd-406">BitWiseOr</span></span>|<span data-ttu-id="c36dd-407">op1 OR op2</span><span class="sxs-lookup"><span data-stu-id="c36dd-407">op1 OR op2</span></span>|  
+|<span data-ttu-id="c36dd-408">Operador NOT bit a bit</span><span class="sxs-lookup"><span data-stu-id="c36dd-408">Bitwise NOT operator</span></span>|<span data-ttu-id="c36dd-409">BitWiseNot</span><span class="sxs-lookup"><span data-stu-id="c36dd-409">BitWiseNot</span></span>|<span data-ttu-id="c36dd-410">NOT(op)</span><span class="sxs-lookup"><span data-stu-id="c36dd-410">NOT(op)</span></span>|  
+|<span data-ttu-id="c36dd-411">Operador XOR bit a bit</span><span class="sxs-lookup"><span data-stu-id="c36dd-411">Bitwise XOR operator</span></span>|<span data-ttu-id="c36dd-412">BitWiseXor</span><span class="sxs-lookup"><span data-stu-id="c36dd-412">BitWiseXor</span></span>|<span data-ttu-id="c36dd-413">((op1 AND NOT(op2)) OR (NOT(op1) AND op2))</span><span class="sxs-lookup"><span data-stu-id="c36dd-413">((op1 AND NOT(op2)) OR (NOT(op1) AND op2))</span></span>|  
+  
+## <a name="other-mapping"></a><span data-ttu-id="c36dd-414">Otra asignación</span><span class="sxs-lookup"><span data-stu-id="c36dd-414">Other Mapping</span></span>  
+  
+|<span data-ttu-id="c36dd-415">Método</span><span class="sxs-lookup"><span data-stu-id="c36dd-415">Method</span></span>|<span data-ttu-id="c36dd-416">Función canónica</span><span class="sxs-lookup"><span data-stu-id="c36dd-416">Canonical function</span></span>|  
+|------------|------------------------|  
+|<span data-ttu-id="c36dd-417">Guid.NewGuid ()</span><span class="sxs-lookup"><span data-stu-id="c36dd-417">Guid.NewGuid()</span></span>|<span data-ttu-id="c36dd-418">NewGuid()</span><span class="sxs-lookup"><span data-stu-id="c36dd-418">NewGuid()</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="c36dd-419">Vea también</span><span class="sxs-lookup"><span data-stu-id="c36dd-419">See Also</span></span>  
+ [<span data-ttu-id="c36dd-420">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="c36dd-420">LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

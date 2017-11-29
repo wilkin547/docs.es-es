@@ -1,63 +1,71 @@
 ---
-title: "&lt;caches&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;almacena en memoria caché&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f0c46532cb7716f4dc066f0e96c14534d7fa0b42
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;caches&gt;
-Registra las cachés de los símbolos de sesión y la detección de reproducción de símbolo \(token\).  
+# <a name="ltcachesgt"></a><span data-ttu-id="54448-102">&lt;almacena en memoria caché&gt;</span><span class="sxs-lookup"><span data-stu-id="54448-102">&lt;caches&gt;</span></span>
+<span data-ttu-id="54448-103">Registra las memorias caché que se utiliza para la detección de reproducción de tokens y símbolos de sesión.</span><span class="sxs-lookup"><span data-stu-id="54448-103">Registers the caches used for session tokens and token replay detection.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="54448-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="54448-104">\<system.identityModel></span></span>  
+<span data-ttu-id="54448-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="54448-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="54448-106">\<almacena en memoria caché ></span><span class="sxs-lookup"><span data-stu-id="54448-106">\<caches></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="54448-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="54448-107">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <caches>  
-    </caches>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <caches>  
+    </caches>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Atributos y elementos  
- En las próximas secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="54448-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="54448-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="54448-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="54448-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- None  
+### <a name="attributes"></a><span data-ttu-id="54448-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="54448-110">Attributes</span></span>  
+ <span data-ttu-id="54448-111">Ninguna</span><span class="sxs-lookup"><span data-stu-id="54448-111">None</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="54448-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="54448-112">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<sessionSecurityTokenCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|Registra una caché para símbolos de sesión con un servicio o una colección de controladores de token de seguridad.|  
-|[\<tokenReplayCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|Registra una caché de símbolo \(token\) de reproducción con un servicio o una colección de controladores de token de seguridad.|  
+|<span data-ttu-id="54448-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="54448-113">Element</span></span>|<span data-ttu-id="54448-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="54448-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="54448-115">\<sessionSecurityTokenCache ></span><span class="sxs-lookup"><span data-stu-id="54448-115">\<sessionSecurityTokenCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|<span data-ttu-id="54448-116">Registra una memoria caché de símbolos de sesión con un servicio o una colección de controlador de token de seguridad.</span><span class="sxs-lookup"><span data-stu-id="54448-116">Registers a cache for session tokens with a service or a security token handler collection.</span></span>|  
+|[<span data-ttu-id="54448-117">\<tokenReplayCache ></span><span class="sxs-lookup"><span data-stu-id="54448-117">\<tokenReplayCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|<span data-ttu-id="54448-118">Registra una caché de respuesta de token con un servicio o una colección de controlador de token de seguridad.</span><span class="sxs-lookup"><span data-stu-id="54448-118">Registers a token replay cache with a service or a security token handler collection.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="54448-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="54448-119">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica la configuración de la identidad de nivel de servicio.|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración de una colección de seguridad de los controladores de símbolo \(token\).|  
+|<span data-ttu-id="54448-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="54448-120">Element</span></span>|<span data-ttu-id="54448-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="54448-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="54448-122">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="54448-122">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="54448-123">Especifica los valores de identidad de nivel de servicio.</span><span class="sxs-lookup"><span data-stu-id="54448-123">Specifies service-level identity settings.</span></span>|  
+|[<span data-ttu-id="54448-124">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="54448-124">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="54448-125">Proporciona la configuración para una colección de seguridad controladores de tokens.</span><span class="sxs-lookup"><span data-stu-id="54448-125">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## Comentarios  
- A `<caches>` elemento se puede especificar el nivel de servicio en el `<identityConfiguration>` elemento o en el nivel de colección de controlador de símbolo \(token\) de seguridad en el `<securityTokenHandlerConfiguration>` elemento.  Configuración en una colección de controladores de símbolo \(token\) de reemplaza las especificadas en el servicio.  
+## <a name="remarks"></a><span data-ttu-id="54448-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="54448-126">Remarks</span></span>  
+ <span data-ttu-id="54448-127">A `<caches>` elemento puede especificarse en el nivel de servicio en la `<identityConfiguration>` elemento o en el nivel de colección de controlador de token de seguridad en el `<securityTokenHandlerConfiguration>` elemento.</span><span class="sxs-lookup"><span data-stu-id="54448-127">A `<caches>` element can be specified at the service level under the `<identityConfiguration>` element or on the security token handler collection level under the `<securityTokenHandlerConfiguration>` element.</span></span> <span data-ttu-id="54448-128">La configuración en una colección de controlador de token invalida las especificadas en el servicio.</span><span class="sxs-lookup"><span data-stu-id="54448-128">Settings on a token handler collection override those specified on the service.</span></span>  
   
- El `<caches>` elemento está representado por el <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> clase.  Las cachés configuradas están representadas por el <xref:System.IdentityModel.Configuration.IdentityModelCaches> clase.  
+ <span data-ttu-id="54448-129">El `<caches>` elemento representado por la <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> clase.</span><span class="sxs-lookup"><span data-stu-id="54448-129">The `<caches>` element is represented by the <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> class.</span></span> <span data-ttu-id="54448-130">Las memorias caché configuradas se representan mediante la <xref:System.IdentityModel.Configuration.IdentityModelCaches> clase.</span><span class="sxs-lookup"><span data-stu-id="54448-130">The configured caches are represented by the <xref:System.IdentityModel.Configuration.IdentityModelCaches> class.</span></span>  
   
-## Ejemplo  
- El XML siguiente muestra la configuración de una caché personalizada para la celebración de los tokens de seguridad de sesión \(<xref:System.IdentityModel.Tokens.SessionSecurityToken>\).  Se toma la configuración de la `ClaimsAwareWebFarm` ejemplo.  
+## <a name="example"></a><span data-ttu-id="54448-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="54448-131">Example</span></span>  
+ <span data-ttu-id="54448-132">El siguiente código XML muestra la configuración de una caché personalizado para almacenar los tokens de seguridad de sesión (<xref:System.IdentityModel.Tokens.SessionSecurityToken>).</span><span class="sxs-lookup"><span data-stu-id="54448-132">The following XML shows the configuration of a custom cache for holding session security tokens (<xref:System.IdentityModel.Tokens.SessionSecurityToken>).</span></span> <span data-ttu-id="54448-133">La configuración se toma de la `ClaimsAwareWebFarm` ejemplo.</span><span class="sxs-lookup"><span data-stu-id="54448-133">The configuration is taken from the `ClaimsAwareWebFarm` sample.</span></span>  
   
-```  
+```xml  
 <caches>  
   <sessionSecurityTokenCache type="CacheLibrary.SharedSessionSecurityTokenCache, CacheLibrary">  
     <!--cacheServiceAddress points to the centralized session security token cache service running in the web farm.-->  

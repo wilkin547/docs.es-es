@@ -1,28 +1,34 @@
 ---
-title: "&lt;mexHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;mexHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4e8e9a13553e8b7463f7bb7f66c1a38dc1d4ac36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;mexHttpBinding&gt;
-Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS\-MetadataExchange \(WS\-MEX\) sobre HTTP.  
+# <a name="ltmexhttpbindinggt"></a><span data-ttu-id="d1430-102">&lt;mexHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d1430-102">&lt;mexHttpBinding&gt;</span></span>
+<span data-ttu-id="d1430-103">Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS-MetadataExchange (WS-MEX) sobre HTTP.</span><span class="sxs-lookup"><span data-stu-id="d1430-103">Specifies the settings for a binding used for the WS-MetadataExchange (WS-MEX) message exchange over HTTP.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="d1430-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d1430-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d1430-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="d1430-105">\<bindings></span></span>  
+<span data-ttu-id="d1430-106">\<mexHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="d1430-106">\<mexHttpBinding></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d1430-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d1430-107">Syntax</span></span>  
   
+```xml  
 <mexHttpBinding>  
    <binding   
        closeTimeout="TimeSpan"   
@@ -34,38 +40,38 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 </mexHttpBinding>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d1430-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="d1430-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d1430-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="d1430-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="d1430-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="d1430-110">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`closeTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:01:00.|  
-|`name`|Cadena que contiene el nombre de configuración del enlace.  Este valor debe ser único porque se usa como identificación del enlace.  Cada enlace tiene los atributos `name` y `namespace` que, juntos, lo identifican de forma exclusiva en los metadatos del servicio.  Además, este nombre es único entre los enlaces del mismo tipo.  A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre.  Para obtener más información sobre la configuración predeterminada, así como sobre enlaces y comportamientos sin nombre, vea [Configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:01:00.|  
-|`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:10:00.|  
-|`sendTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:01:00.|  
+|<span data-ttu-id="d1430-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="d1430-111">Attribute</span></span>|<span data-ttu-id="d1430-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="d1430-112">Description</span></span>|  
+|---------------|-----------------|  
+|`closeTimeout`|<span data-ttu-id="d1430-113">Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse.</span><span class="sxs-lookup"><span data-stu-id="d1430-113">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="d1430-114">Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d1430-114">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d1430-115">El valor predeterminado es 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="d1430-115">The default is 00:01:00.</span></span>|  
+|`name`|<span data-ttu-id="d1430-116">Cadena que contiene el nombre de configuración del enlace.</span><span class="sxs-lookup"><span data-stu-id="d1430-116">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="d1430-117">Este valor debe ser único porque se usa como identificación del enlace.</span><span class="sxs-lookup"><span data-stu-id="d1430-117">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="d1430-118">Cada enlace tiene los atributos `name` y `namespace` que, juntos, lo identifican de forma exclusiva en los metadatos del servicio.</span><span class="sxs-lookup"><span data-stu-id="d1430-118">Each binding has a `name` and `namespace` attribute that together uniquely identify it in the metadata of the service.</span></span> <span data-ttu-id="d1430-119">Además, este nombre es único entre los enlaces del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="d1430-119">In addition, this name is unique among bindings of the same type.</span></span> <span data-ttu-id="d1430-120">A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre.</span><span class="sxs-lookup"><span data-stu-id="d1430-120">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="d1430-121">Para obtener más información acerca de la configuración predeterminada y enlaces anónimos y los comportamientos, consulte [configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="d1430-121">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|`openTimeout`|<span data-ttu-id="d1430-122">Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse.</span><span class="sxs-lookup"><span data-stu-id="d1430-122">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="d1430-123">Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d1430-123">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d1430-124">El valor predeterminado es 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="d1430-124">The default is 00:01:00.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="d1430-125">Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse.</span><span class="sxs-lookup"><span data-stu-id="d1430-125">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="d1430-126">Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d1430-126">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d1430-127">El valor predeterminado es 00:10:00.</span><span class="sxs-lookup"><span data-stu-id="d1430-127">The default is 00:10:00.</span></span>|  
+|`sendTimeout`|<span data-ttu-id="d1430-128">Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse.</span><span class="sxs-lookup"><span data-stu-id="d1430-128">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="d1430-129">Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d1430-129">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d1430-130">El valor predeterminado es 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="d1430-130">The default is 00:01:00.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="d1430-131">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="d1430-131">Child Elements</span></span>  
+ <span data-ttu-id="d1430-132">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="d1430-132">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="d1430-133">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d1430-133">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<enlaces\>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|<span data-ttu-id="d1430-134">Elemento</span><span class="sxs-lookup"><span data-stu-id="d1430-134">Element</span></span>|<span data-ttu-id="d1430-135">Descripción</span><span class="sxs-lookup"><span data-stu-id="d1430-135">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d1430-136">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="d1430-136">\<bindings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|<span data-ttu-id="d1430-137">Este elemento contiene una colección de enlaces estándar y personalizados.</span><span class="sxs-lookup"><span data-stu-id="d1430-137">This element holds a collection of standard and custom bindings.</span></span>|  
   
-## Comentarios  
- Este enlace es esencialmente un enlace `WSHttpBinding` con la seguridad deshabilitada.  Admite la mayoría de las solicitudes de metadatos.  
+## <a name="remarks"></a><span data-ttu-id="d1430-138">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d1430-138">Remarks</span></span>  
+ <span data-ttu-id="d1430-139">Este enlace es esencialmente un enlace `WSHttpBinding` con la seguridad deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="d1430-139">This binding is essentially a `WSHttpBinding` binding with security disabled.</span></span> <span data-ttu-id="d1430-140">Admite la mayoría de las solicitudes de metadatos.</span><span class="sxs-lookup"><span data-stu-id="d1430-140">It supports most metadata requests.</span></span>  
   
-## Vea también  
- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>   
- <xref:System.ServiceModel.Configuration.MexHttpBindingElement>   
- [Cómo publicar metadatos para un servicio mediante un archivo de configuración](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)   
- [Publicación y recuperación de metadatos a través de un enlace personalizado](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)   
- [Metadatos](../../../../../docs/framework/wcf/feature-details/metadata.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<enlace\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="d1430-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="d1430-141">See Also</span></span>  
+ <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>  
+ <xref:System.ServiceModel.Configuration.MexHttpBindingElement>  
+ [<span data-ttu-id="d1430-142">Cómo: publicar los metadatos para un servicio mediante un archivo de configuración</span><span class="sxs-lookup"><span data-stu-id="d1430-142">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [<span data-ttu-id="d1430-143">Publicación y recuperación de metadatos a través de un enlace personalizado</span><span class="sxs-lookup"><span data-stu-id="d1430-143">Publishing and Retrieving Metadata Over a Custom Binding</span></span>](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
+ [<span data-ttu-id="d1430-144">Metadatos</span><span class="sxs-lookup"><span data-stu-id="d1430-144">Metadata</span></span>](../../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [<span data-ttu-id="d1430-145">Enlaces</span><span class="sxs-lookup"><span data-stu-id="d1430-145">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="d1430-146">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="d1430-146">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="d1430-147">Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d1430-147">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="d1430-148">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="d1430-148">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

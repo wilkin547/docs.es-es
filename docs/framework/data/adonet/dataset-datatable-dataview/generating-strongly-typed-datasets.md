@@ -1,54 +1,59 @@
 ---
-title: "Generar DataSets fuertemente tipados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generar conjuntos de datos fuertemente tipados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 61836196d9e11d3c87c43d4faaaeff54125bf706
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Generar DataSets fuertemente tipados
-A partir de un esquema XML que cumple con el estándar del lenguaje de definición de esquemas XML \(XSD\), es posible generar un objeto <xref:System.Data.DataSet> fuertemente tipado mediante la herramienta XSD.exe incluida en [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
+# <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="62a26-102">Generar conjuntos de datos fuertemente tipados</span><span class="sxs-lookup"><span data-stu-id="62a26-102">Generating Strongly Typed DataSets</span></span>
+<span data-ttu-id="62a26-103">A partir de un esquema XML que cumple con el estándar del lenguaje de definición de esquemas XML (XSD), es posible generar un objeto <xref:System.Data.DataSet> fuertemente tipado mediante la herramienta XSD.exe incluida en [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="62a26-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span></span>  
   
- \(Para crear un xsd a partir de las tablas de base de datos, vea <xref:System.Data.DataSet.WriteXmlSchema%2A> o [Trabajar con los conjuntos de datos en Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)\).  
+ <span data-ttu-id="62a26-104">(Para crear un xsd a partir de tablas de base de datos, vea <xref:System.Data.DataSet.WriteXmlSchema%2A> o [trabajar con conjuntos de datos en Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span><span class="sxs-lookup"><span data-stu-id="62a26-104">(To create an xsd from database tables, see <xref:System.Data.DataSet.WriteXmlSchema%2A> or [Working with Datasets in Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span></span>  
   
- En el siguiente código se muestra la sintaxis para generar un **DataSet** con esta herramienta.  
+ <span data-ttu-id="62a26-105">El código siguiente muestra la sintaxis para generar un **conjunto de datos** con esta herramienta.</span><span class="sxs-lookup"><span data-stu-id="62a26-105">The following code shows the syntax for generating a **DataSet** using this tool.</span></span>  
   
 ```  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- En esta sintaxis, la directiva `/d` indica a la herramienta que genere un **DataSet** y `/l:` le indica el lenguaje que debe utilizar \(por ejemplo, C\# o Visual Basic .NET\).  La directiva `/eld` opcional especifica que puede usar [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] para realizar consultas en el objeto **DataSet.** generado. Esta opción se utiliza cuando también se especifica la opción `/d`.  Para obtener más información, consulta [Consultar DataSets con establecimiento de tipos](../../../../../docs/framework/data/adonet/querying-typed-datasets.md).  La directiva `/n:` opcional indica a la herramienta que genere también un espacio de nombres para el **DataSet** denominado **XSDSchema.Namespace**.  El resultado del comando es XSDSchemaFileName.cs, que se puede compilar y utilizar en una aplicación de ADO.NET.  El código generado puede compilarse como una biblioteca o un módulo.  
+ <span data-ttu-id="62a26-106">En esta sintaxis, la `/d` directiva indica a la herramienta que genere un **conjunto de datos**y el `/l:` indica a la herramienta lenguaje que debe utilizar (por ejemplo, C# o Visual Basic. NET).</span><span class="sxs-lookup"><span data-stu-id="62a26-106">In this syntax, the `/d` directive tells the tool to generate a **DataSet**, and the `/l:` tells the tool what language to use (for example, C# or Visual Basic .NET).</span></span> <span data-ttu-id="62a26-107">Opcional `/eld` directiva especifica que se puede utilizar [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] consultas en los botones generados **conjunto de datos.**</span><span class="sxs-lookup"><span data-stu-id="62a26-107">The optional `/eld` directive specifies that you can use [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] to query against the generated **DataSet.**</span></span> <span data-ttu-id="62a26-108">Esta opción se utiliza cuando también se especifica la opción `/d`.</span><span class="sxs-lookup"><span data-stu-id="62a26-108">This option is used when the `/d` option is also specified.</span></span> <span data-ttu-id="62a26-109">Para obtener más información, consulte [consultar conjuntos de datos con tipo](../../../../../docs/framework/data/adonet/querying-typed-datasets.md).</span><span class="sxs-lookup"><span data-stu-id="62a26-109">For more information, see [Querying Typed DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md).</span></span> <span data-ttu-id="62a26-110">Opcional `/n:` directiva indica a la herramienta que genere también un espacio de nombres para el **conjunto de datos** llama **XSDSchema.Namespace**.</span><span class="sxs-lookup"><span data-stu-id="62a26-110">The optional `/n:` directive tells the tool to also generate a namespace for the **DataSet** called **XSDSchema.Namespace**.</span></span> <span data-ttu-id="62a26-111">El resultado del comando es XSDSchemaFileName.cs, que se puede compilar y utilizar en una aplicación de ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="62a26-111">The output of the command is XSDSchemaFileName.cs, which can be compiled and used in an ADO.NET application.</span></span> <span data-ttu-id="62a26-112">El código generado puede compilarse como una biblioteca o un módulo.</span><span class="sxs-lookup"><span data-stu-id="62a26-112">The generated code can be compiled as a library or a module.</span></span>  
   
- En el siguiente código se muestra la sintaxis para compilar el código generado como una biblioteca mediante el compilador de C\# \(csc.exe\).  
+ <span data-ttu-id="62a26-113">En el siguiente código se muestra la sintaxis para compilar el código generado como una biblioteca mediante el compilador de C# (csc.exe).</span><span class="sxs-lookup"><span data-stu-id="62a26-113">The following code shows the syntax for compiling the generated code as a library using the C# compiler (csc.exe).</span></span>  
   
 ```  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- La directiva `/t:` indica a la herramienta que compile en una biblioteca mientras que las directivas `/r:` especifican bibliotecas dependientes necesarias para la compilación.  El resultado del comando es XSDSchemaFileName.dll, que se puede pasar al compilador al compilar una aplicación de ADO.NET con la directiva `/r:`.  
+ <span data-ttu-id="62a26-114">La directiva `/t:` indica a la herramienta que compile en una biblioteca mientras que las directivas `/r:` especifican bibliotecas dependientes necesarias para la compilación.</span><span class="sxs-lookup"><span data-stu-id="62a26-114">The `/t:` directive tells the tool to compile to a library, and the `/r:` directives specify dependent libraries required to compile.</span></span> <span data-ttu-id="62a26-115">El resultado del comando es XSDSchemaFileName.dll, que se puede pasar al compilador al compilar una aplicación de ADO.NET con la directiva `/r:`.</span><span class="sxs-lookup"><span data-stu-id="62a26-115">The output of the command is XSDSchemaFileName.dll, which can be passed to the compiler when compiling an ADO.NET application with the `/r:` directive.</span></span>  
   
- En el siguiente código se muestra la sintaxis para tener acceso al espacio de nombres pasado a XSD.exe en una aplicación de ADO.NET.  
+ <span data-ttu-id="62a26-116">En el siguiente código se muestra la sintaxis para tener acceso al espacio de nombres pasado a XSD.exe en una aplicación de ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="62a26-116">The following code shows the syntax for accessing the namespace passed to XSD.exe in an ADO.NET application.</span></span>  
   
 ```vb  
 Imports XSDSchema.Namespace  
-  
 ```  
   
 ```csharp  
 using XSDSchema.Namespace;  
 ```  
   
- En el siguiente ejemplo de código se utiliza un **DataSet** con información de tipos denominado **CustomerDataSet** para cargar una lista de clientes de la base de datos **Northwind**.  Una vez cargados los datos mediante el método **Fill** , el ejemplo recorre en bucle cada cliente de la tabla **Customers** utilizando el objeto **CustomersRow** \(**DataRow**\) con información de tipos.  Esto proporciona acceso directo a la columna **CustomerID**, en lugar de tener acceso a ella mediante **DataColumnCollection**.  
+ <span data-ttu-id="62a26-117">En el ejemplo de código siguiente se utiliza un **conjunto de datos** denominado **CustomerDataSet** para cargar una lista de los clientes de la **Northwind** base de datos.</span><span class="sxs-lookup"><span data-stu-id="62a26-117">The following code example uses a typed **DataSet** named **CustomerDataSet** to load a list of customers from the **Northwind** database.</span></span> <span data-ttu-id="62a26-118">Una vez que los datos se cargan con la **rellenar** método, el ejemplo recorre cada cliente de la **clientes** con el tipo de tabla **CustomersRow** ( **DataRow**) objeto.</span><span class="sxs-lookup"><span data-stu-id="62a26-118">Once the data is loaded using the **Fill** method, the example loops through each customer in the **Customers** table using the typed **CustomersRow** (**DataRow**) object.</span></span> <span data-ttu-id="62a26-119">Esto proporciona acceso directo a la **CustomerID** columna, en lugar de a través del **DataColumnCollection**.</span><span class="sxs-lookup"><span data-stu-id="62a26-119">This provides direct access to the **CustomerID** column, as opposed to through the **DataColumnCollection**.</span></span>  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -63,7 +68,6 @@ Dim customerRow As CustomerDataSet.CustomersRow
 For Each customerRow In customers.Customers  
   Console.WriteLine(customerRow.CustomerID)  
 Next  
-  
 ```  
   
 ```csharp  
@@ -79,9 +83,9 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- A continuación se muestra el esquema XML utilizado para el ejemplo.  
+ <span data-ttu-id="62a26-120">A continuación se muestra el esquema XML utilizado para el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="62a26-120">Following is the XML Schema used for the example.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema id="CustomerDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="CustomerDataSet" msdata:IsDataSet="true">  
@@ -100,9 +104,9 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## Vea también  
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataSet>   
- [DataSets con establecimiento de tipos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="62a26-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="62a26-121">See Also</span></span>  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataSet>  
+ [<span data-ttu-id="62a26-122">Objetos DataSet con tipo</span><span class="sxs-lookup"><span data-stu-id="62a26-122">Typed DataSets</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
+ [<span data-ttu-id="62a26-123">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="62a26-123">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="62a26-124">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="62a26-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

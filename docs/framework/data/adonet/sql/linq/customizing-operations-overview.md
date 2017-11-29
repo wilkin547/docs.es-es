@@ -1,34 +1,37 @@
 ---
-title: "Personalizar operaciones: Informaci&#243;n general | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Personalizar operaciones: Información general"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7653ca137c93da5174e0ddcd1ced8bdfceaa9edc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Personalizar operaciones: Informaci&#243;n general
-De forma predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera SQL dinámico para las operaciones de inserción, actualización y eliminación por asignación. Sin embargo, en la práctica, normalmente se agrega lógica de negocios propia para proporcionar seguridad, validación, etc.  
+# <a name="customizing-operations-overview"></a><span data-ttu-id="89609-102">Personalizar operaciones: Información general</span><span class="sxs-lookup"><span data-stu-id="89609-102">Customizing Operations: Overview</span></span>
+<span data-ttu-id="89609-103">De forma predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera SQL dinámico para las operaciones de inserción, actualización y eliminación por asignación.</span><span class="sxs-lookup"><span data-stu-id="89609-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL for insert, update, and delete operations based on mapping.</span></span> <span data-ttu-id="89609-104">Sin embargo, en la práctica, normalmente se agrega lógica empresarial propia para proporcionar seguridad, validación, etc.</span><span class="sxs-lookup"><span data-stu-id="89609-104">However, in practice you typically want to add your own business logic to provide for security, validation, and so forth.</span></span>  
   
- Entre las técnicas de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que están disponibles para personalizar estas operaciones se incluyen las siguientes.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="89609-105">las técnicas para personalizar estas operaciones incluyen lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="89609-105"> techniques for customizing these operations include the following.</span></span>  
   
-## Opciones de carga  
- En las consultas es posible controlar la cantidad de datos relacionados con el destino principal que se recuperan al establecer una conexión con la base de datos.  Esta funcionalidad se implementa en gran medida mediante el uso de <xref:System.Data.Linq.DataLoadOptions>.  Para obtener más información, consulta [Comparación entre carga aplazada y carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+## <a name="loading-options"></a><span data-ttu-id="89609-106">Opciones de carga</span><span class="sxs-lookup"><span data-stu-id="89609-106">Loading Options</span></span>  
+ <span data-ttu-id="89609-107">En las consultas es posible controlar la cantidad de datos relacionados con el destino principal que se recuperan al establecer una conexión con la base de datos.</span><span class="sxs-lookup"><span data-stu-id="89609-107">In your queries, you can control how much data related to your main target is retrieved when you connect to the database.</span></span> <span data-ttu-id="89609-108">Esta funcionalidad se implementa en gran medida mediante el uso de <xref:System.Data.Linq.DataLoadOptions>.</span><span class="sxs-lookup"><span data-stu-id="89609-108">This functionality is implemented largely by using <xref:System.Data.Linq.DataLoadOptions>.</span></span> <span data-ttu-id="89609-109">Para obtener más información, consulte [ejecución diferida frente a carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span><span class="sxs-lookup"><span data-stu-id="89609-109">For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span></span>  
   
-## Métodos Partial  
- En su asignación predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona métodos parciales para ayudar a implementar lógica empresarial propia.  Para obtener más información, consulta [Agregar lógica empresarial utilizando métodos Partial](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md).  
+## <a name="partial-methods"></a><span data-ttu-id="89609-110">Métodos Partial</span><span class="sxs-lookup"><span data-stu-id="89609-110">Partial Methods</span></span>  
+ <span data-ttu-id="89609-111">En su asignación predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona métodos parciales para ayudar a implementar lógica empresarial propia.</span><span class="sxs-lookup"><span data-stu-id="89609-111">In its default mapping, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides partial methods to help you implement your business logic.</span></span> <span data-ttu-id="89609-112">Para obtener más información, consulte [agregar Business lógica por utilizando métodos parciales](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md).</span><span class="sxs-lookup"><span data-stu-id="89609-112">For more information, see [Adding Business Logic By Using Partial Methods](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md).</span></span>  
   
-## Procedimientos almacenados y funciones definidas por el usuario  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite el uso de procedimientos almacenados y funciones definidas por el usuario.  Los procedimientos almacenados se utilizan con frecuencia para personalizar operaciones.  Para obtener más información, consulta [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+## <a name="stored-procedures-and-user-defined-functions"></a><span data-ttu-id="89609-113">Procedimientos almacenados y funciones definidas por el usuario</span><span class="sxs-lookup"><span data-stu-id="89609-113">Stored Procedures and User-Defined Functions</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="89609-114">admite el uso de procedimientos almacenados y funciones definidas por el usuario.</span><span class="sxs-lookup"><span data-stu-id="89609-114"> supports the use of stored procedures and user-defined functions.</span></span> <span data-ttu-id="89609-115">Los procedimientos almacenados se utilizan con frecuencia para personalizar operaciones.</span><span class="sxs-lookup"><span data-stu-id="89609-115">Stored procedures are frequently used to customize operations.</span></span> <span data-ttu-id="89609-116">Para obtener más información, vea [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="89609-116">For more information, see [Stored Procedures](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).</span></span>  
   
-## Vea también  
- [Personalizar operaciones de actualización, inserción y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+## <a name="see-also"></a><span data-ttu-id="89609-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="89609-117">See Also</span></span>  
+ [<span data-ttu-id="89609-118">Personalizar Insertar, actualizar y eliminar operaciones</span><span class="sxs-lookup"><span data-stu-id="89609-118">Customizing Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

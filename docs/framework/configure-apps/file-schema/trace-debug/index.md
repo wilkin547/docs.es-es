@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - tracing [.NET Framework], trace and debug settings schema
 - configuration schema [.NET Framework], trace and debug settings
@@ -24,49 +18,47 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c74874519d992985c49b49542c0c7fb63e8557b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 97c96fbb1abf969d902159709ca0e738f475fab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="trace-and-debug-settings-schema"></a>Esquema de la configuración de seguimiento y depuración
-La configuración de seguimiento y depuración especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.  
+# <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="6af78-102">Esquema de la configuración de seguimiento y depuración</span><span class="sxs-lookup"><span data-stu-id="6af78-102">Trace and Debug Settings Schema</span></span>
+<span data-ttu-id="6af78-103">La configuración de seguimiento y depuración especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  
   
- En la tabla siguiente se describe la función de cada elemento de configuración de seguimiento y depuración.  
+ <span data-ttu-id="6af78-104">En la tabla siguiente se describe la función de cada elemento de configuración de seguimiento y depuración.</span><span class="sxs-lookup"><span data-stu-id="6af78-104">The following table describes the function of each trace and debug settings element.</span></span>  
   
-|Elemento|Descripción|  
+|<span data-ttu-id="6af78-105">Elemento</span><span class="sxs-lookup"><span data-stu-id="6af78-105">Element</span></span>|<span data-ttu-id="6af78-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="6af78-106">Description</span></span>|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `Listeners`.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|Agrega un agente de escucha a la colección `sharedListeners`.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Especifica el nivel en el que está establecido un modificador de seguimiento.|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>; también indica el nombre del archivo para el que se van a escribir los mensajes.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` de un origen de seguimiento.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Borra la colección `Listeners` de un seguimiento.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|Agrega un filtro a un agente de escucha en la colección `Listeners` para el seguimiento.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Agrega un filtro a un agente de escucha en la colección `sharedListeners`.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Especifica agentes de escucha para la colección `Listeners` para un origen de seguimiento.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Especifica agentes de escucha para la colección `Listeners` para el seguimiento.|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Especifica el tamaño de la memoria global que comparten los contadores de rendimiento.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Quita un agente de escucha de la colección `Listeners` para el seguimiento.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la colección `Listeners` para un origen de seguimiento.|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contiene los agentes de escucha a los que puede hacer referencia cualquier origen o elemento de seguimiento.|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contiene modificadores de seguimiento y el nivel en el que están establecidos.|  
-|[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
+|[<span data-ttu-id="6af78-107">\<add></span><span class="sxs-lookup"><span data-stu-id="6af78-107">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="6af78-108">Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-108">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="6af78-109">\<add></span><span class="sxs-lookup"><span data-stu-id="6af78-109">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="6af78-110">Agrega un agente de escucha a la colección `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="6af78-110">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="6af78-111">\<add></span><span class="sxs-lookup"><span data-stu-id="6af78-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|<span data-ttu-id="6af78-112">Agrega un agente de escucha a la colección `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="6af78-112">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="6af78-113">\<add></span><span class="sxs-lookup"><span data-stu-id="6af78-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="6af78-114">Especifica el nivel en el que está establecido un modificador de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-114">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="6af78-115">\<assert></span><span class="sxs-lookup"><span data-stu-id="6af78-115">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="6af78-116">Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; también indica el nombre del archivo para el que se van a escribir los mensajes.</span><span class="sxs-lookup"><span data-stu-id="6af78-116">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="6af78-117">\<clear></span><span class="sxs-lookup"><span data-stu-id="6af78-117">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="6af78-118">Borra la colección `Listeners` de un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-118">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="6af78-119">\<clear></span><span class="sxs-lookup"><span data-stu-id="6af78-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="6af78-120">Borra la colección `Listeners` de un seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="6af78-121">\<filter></span><span class="sxs-lookup"><span data-stu-id="6af78-121">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|<span data-ttu-id="6af78-122">Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-122">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="6af78-123">\<filter></span><span class="sxs-lookup"><span data-stu-id="6af78-123">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="6af78-124">Agrega un filtro a un agente de escucha en la colección `Listeners` para el seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-124">Adds a filter to a listener in the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="6af78-125">\<filter></span><span class="sxs-lookup"><span data-stu-id="6af78-125">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|<span data-ttu-id="6af78-126">Agrega un filtro a un agente de escucha en la colección `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="6af78-126">Adds a filter to a listener in the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="6af78-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="6af78-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="6af78-128">Especifica agentes de escucha para la colección `Listeners` para un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-128">Specifies listeners for the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="6af78-129">\<listeners></span><span class="sxs-lookup"><span data-stu-id="6af78-129">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="6af78-130">Especifica agentes de escucha para la colección `Listeners` para el seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-130">Specifies listeners for the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="6af78-131">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="6af78-131">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="6af78-132">Especifica el tamaño de la memoria global que comparten los contadores de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-132">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="6af78-133">\<remove></span><span class="sxs-lookup"><span data-stu-id="6af78-133">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="6af78-134">Quita un agente de escucha de la colección `Listeners` para el seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-134">Removes a listener from the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="6af78-135">\<remove></span><span class="sxs-lookup"><span data-stu-id="6af78-135">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="6af78-136">Quita un agente de escucha de la colección `Listeners` para un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-136">Removes a listener from the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="6af78-137">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="6af78-137">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="6af78-138">Contiene los agentes de escucha a los que puede hacer referencia cualquier origen o elemento de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-138">Contains listeners that any source or trace element can reference.</span></span>|  
+|[<span data-ttu-id="6af78-139">\<sources></span><span class="sxs-lookup"><span data-stu-id="6af78-139">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="6af78-140">Contiene orígenes de seguimiento que inician mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-140">Contains trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="6af78-141">\<source></span><span class="sxs-lookup"><span data-stu-id="6af78-141">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="6af78-142">Contiene un origen de seguimiento que inicia mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-142">Specifies a trace source that initiates tracing messages.</span></span>|  
+|[<span data-ttu-id="6af78-143">\<switches></span><span class="sxs-lookup"><span data-stu-id="6af78-143">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="6af78-144">Contiene modificadores de seguimiento y el nivel en el que están establecidos.</span><span class="sxs-lookup"><span data-stu-id="6af78-144">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="6af78-145">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="6af78-145">\<system.diagnostics></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|<span data-ttu-id="6af78-146">Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-146">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="6af78-147">\<trace></span><span class="sxs-lookup"><span data-stu-id="6af78-147">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="6af78-148">Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6af78-148">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.Debug>   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="6af78-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="6af78-149">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="6af78-150">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="6af78-150">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

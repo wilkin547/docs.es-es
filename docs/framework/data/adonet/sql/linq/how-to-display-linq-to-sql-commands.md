@@ -1,42 +1,48 @@
 ---
-title: "C&#243;mo: Mostrar comandos de LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Mostrar comandos de LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e53566f1311fa969dcb9c44f31664bd34b422e46
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Mostrar comandos de LINQ to SQL
-Utilice <xref:System.Data.Linq.DataContext.GetCommand%2A> para mostrar comandos SQL y otra información.  
+# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="5e5b2-102">Cómo: Mostrar comandos de LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="5e5b2-102">How to: Display LINQ to SQL Commands</span></span>
+<span data-ttu-id="5e5b2-103">Utilice <xref:System.Data.Linq.DataContext.GetCommand%2A> para mostrar comandos SQL y otra información.</span><span class="sxs-lookup"><span data-stu-id="5e5b2-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente, la ventana de la consola muestra el resultado de la consulta, seguido de los comandos SQL que se generan, el tipo de los comandos y el tipo de la conexión.  
+## <a name="example"></a><span data-ttu-id="5e5b2-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5e5b2-104">Example</span></span>  
+ <span data-ttu-id="5e5b2-105">En el ejemplo siguiente, la ventana de la consola muestra el resultado de la consulta, seguido de los comandos SQL que se generan, el tipo de los comandos y el tipo de la conexión.</span><span class="sxs-lookup"><span data-stu-id="5e5b2-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- El resultado se muestra de la manera siguiente:  
+ <span data-ttu-id="5e5b2-106">El resultado se muestra de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="5e5b2-106">Output appears as follows:</span></span>  
   
 ```  
 Customers from London:  
-    Thomas Hardy  
-    Victoria Ashworth  
-    Elizabeth Brown  
-    Ann Devon  
-    Simon Crowther  
-    Marie Bertrand  
-    Hari Kumar  
-    Dominique Perrier  
+    Thomas Hardy  
+    Victoria Ashworth  
+    Elizabeth Brown  
+    Ann Devon  
+    Simon Crowther  
+    Marie Bertrand  
+    Hari Kumar  
+    Dominique Perrier  
 ```  
   
 ```  
@@ -52,5 +58,5 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## Vea también  
- [Compatibilidad con depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="5e5b2-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="5e5b2-107">See Also</span></span>  
+ [<span data-ttu-id="5e5b2-108">Compatibilidad con la depuración</span><span class="sxs-lookup"><span data-stu-id="5e5b2-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

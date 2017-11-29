@@ -1,59 +1,62 @@
 ---
-title: "Deducir columnas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Inferir columnas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ba06bce55db53de1da1c07d2a6451d5664fa23bf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Deducir columnas
-Una vez que ADO.NET determina a partir de un documento XML los elementos que se van a inferir como tablas para un <xref:System.Data.DataSet>, se deducen las columnas para dichas tablas.  ADO.NET 2.0 presenta un nuevo motor de inferencia de esquemas que deduce un tipo fuertemente tipado para cada elemento **simpleType**.  En versiones anteriores, el tipo de datos de un elemento **simpleType** deducido siempre era **xsd:string**.  
+# <a name="inferring-columns"></a><span data-ttu-id="a4e03-102">Inferir columnas</span><span class="sxs-lookup"><span data-stu-id="a4e03-102">Inferring Columns</span></span>
+<span data-ttu-id="a4e03-103">Una vez que ADO.NET determina a partir de un documento XML los elementos que se van a inferir como tablas para un <xref:System.Data.DataSet>, se deducen las columnas para dichas tablas.</span><span class="sxs-lookup"><span data-stu-id="a4e03-103">After ADO.NET has determined from an XML document which elements to infer as tables for a <xref:System.Data.DataSet>, it then infers the columns for those tables.</span></span> <span data-ttu-id="a4e03-104">ADO.NET 2.0 incorporó un nuevo motor de inferencia de esquemas que deduce un tipo de datos fuertemente tipados para cada **simpleType** elemento.</span><span class="sxs-lookup"><span data-stu-id="a4e03-104">ADO.NET 2.0 introduced a new schema inference engine that infers a strongly typed data type for each **simpleType** element.</span></span> <span data-ttu-id="a4e03-105">En versiones anteriores, el tipo de datos de un deducido **simpleType** elemento siempre era **xsd: String**.</span><span class="sxs-lookup"><span data-stu-id="a4e03-105">In previous versions, the data type of an inferred **simpleType** element was always **xsd:string**.</span></span>  
   
-## Migración y compatibilidad con versiones anteriores  
- El método **ReadXml** acepta argumentos del tipo **InferSchema**.  Este argumento le permite especificar un comportamiento de inferencia compatible con versiones anteriores.  En la siguiente tabla se muestran los valores disponibles para la enumeración **InferSchema**.  
+## <a name="migration-and-backward-compatibility"></a><span data-ttu-id="a4e03-106">Migración y compatibilidad con versiones anteriores</span><span class="sxs-lookup"><span data-stu-id="a4e03-106">Migration and Backward Compatibility</span></span>  
+ <span data-ttu-id="a4e03-107">El **ReadXml** método toma un argumento de tipo **InferSchema**.</span><span class="sxs-lookup"><span data-stu-id="a4e03-107">The **ReadXml** method takes an argument of type **InferSchema**.</span></span> <span data-ttu-id="a4e03-108">Este argumento le permite especificar un comportamiento de inferencia compatible con versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="a4e03-108">This argument allows you to specify inference behavior compatible with previous versions.</span></span> <span data-ttu-id="a4e03-109">Los valores disponibles para la **InferSchema** enumeración se muestran en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="a4e03-109">The available values for the **InferSchema** enumeration are shown in the following table.</span></span>  
   
- <xref:System.Data.XmlReadMode>  
- Proporciona compatibilidad con versiones anteriores al deducir siempre un tipo simple como <xref:System.String>.  
+ <xref:System.Data.XmlReadMode.InferSchema>  
+ <span data-ttu-id="a4e03-110">Proporciona compatibilidad con versiones anteriores al deducir siempre un tipo simple como <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="a4e03-110">Provides backward compatibility by always inferring a simple type as <xref:System.String>.</span></span>  
   
- <xref:System.Data.XmlReadMode>  
- Infiere un tipo de datos fuertemente tipado.  Inicia una excepción si se utiliza con una <xref:System.Data.DataTable>.  
+ <xref:System.Data.XmlReadMode.InferTypedSchema>  
+ <span data-ttu-id="a4e03-111">Infiere un tipo de datos fuertemente tipado.</span><span class="sxs-lookup"><span data-stu-id="a4e03-111">Infers a strongly typed data type.</span></span> <span data-ttu-id="a4e03-112">Inicia una excepción si se utiliza con una <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="a4e03-112">Throws an exception if used with a <xref:System.Data.DataTable>.</span></span>  
   
- <xref:System.Data.XmlReadMode>  
- Omite cualquier esquema alineado y lee los datos del esquema del <xref:System.Data.DataSet> existente.  
+ <xref:System.Data.XmlReadMode.IgnoreSchema>  
+ <span data-ttu-id="a4e03-113">Omite cualquier esquema alineado y lee los datos del esquema del <xref:System.Data.DataSet> existente.</span><span class="sxs-lookup"><span data-stu-id="a4e03-113">Ignores any inline schema and reads data into the existing <xref:System.Data.DataSet> schema.</span></span>  
   
-## Atributos  
- Como se ha definido en [Deducir tablas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), un elemento que tenga atributos se deducirá como una tabla.  Los atributos de dicho elemento se deducirán como columnas de la tabla.  La propiedad **ColumnMapping** de las columnas se establecerá como **MappingType.Attribute** para asegurarse de que los nombres de columna se escribirán como atributos si se vuelve a escribir el esquema en XML.  Los valores de los atributos se almacenan en una fila de la tabla.  Por ejemplo, tomemos el siguiente código XML:  
+## <a name="attributes"></a><span data-ttu-id="a4e03-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="a4e03-114">Attributes</span></span>  
+ <span data-ttu-id="a4e03-115">Tal como se define en [deducir tablas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), un elemento con atributos se deducirá como una tabla.</span><span class="sxs-lookup"><span data-stu-id="a4e03-115">As defined in [Inferring Tables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), an element with attributes will be inferred as a table.</span></span> <span data-ttu-id="a4e03-116">Los atributos de dicho elemento se deducirán como columnas de la tabla.</span><span class="sxs-lookup"><span data-stu-id="a4e03-116">The attributes of that element will then be inferred as columns for the table.</span></span> <span data-ttu-id="a4e03-117">El **ColumnMapping** propiedad de las columnas se establecerá en **MappingType.Attribute**para asegurarse de que los nombres de columna se escribirán como atributos si el esquema se vuelve a escribir XML.</span><span class="sxs-lookup"><span data-stu-id="a4e03-117">The **ColumnMapping** property of the columns will be set to **MappingType.Attribute**, to ensure that the column names will be written as attributes if the schema is written back to XML.</span></span> <span data-ttu-id="a4e03-118">Los valores de los atributos se almacenan en una fila de la tabla.</span><span class="sxs-lookup"><span data-stu-id="a4e03-118">The values of the attributes are stored in a row in the table.</span></span> <span data-ttu-id="a4e03-119">Por ejemplo, tomemos el siguiente código XML:</span><span class="sxs-lookup"><span data-stu-id="a4e03-119">For example, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1" attr2="value2"/>  
 </DocumentElement>  
 ```  
   
- El proceso de deducción crea la tabla **Element1** con dos columnas, **attr1** y **attr2**.  La propiedad **ColumnMapping** de ambas columnas se establecerá como **MappingType.Attribute**.  
+ <span data-ttu-id="a4e03-120">El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas, **attr1** y **attr2**.</span><span class="sxs-lookup"><span data-stu-id="a4e03-120">The inference process will produce a table named **Element1** with two columns, **attr1** and **attr2**.</span></span> <span data-ttu-id="a4e03-121">El **ColumnMapping** propiedad de ambas columnas se establecerá en **MappingType.Attribute**.</span><span class="sxs-lookup"><span data-stu-id="a4e03-121">The **ColumnMapping** property of both columns will be set to **MappingType.Attribute**.</span></span>  
   
- **DataSet:** DocumentElement  
+ <span data-ttu-id="a4e03-122">**Conjunto de datos:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="a4e03-122">**DataSet:** DocumentElement</span></span>  
   
- **Tabla:** Element1  
+ <span data-ttu-id="a4e03-123">**Tabla:** Element1</span><span class="sxs-lookup"><span data-stu-id="a4e03-123">**Table:** Element1</span></span>  
   
-|attr1|attr2|  
+|<span data-ttu-id="a4e03-124">attr1</span><span class="sxs-lookup"><span data-stu-id="a4e03-124">attr1</span></span>|<span data-ttu-id="a4e03-125">attr2</span><span class="sxs-lookup"><span data-stu-id="a4e03-125">attr2</span></span>|  
 |-----------|-----------|  
-|value1|value2|  
+|<span data-ttu-id="a4e03-126">value1</span><span class="sxs-lookup"><span data-stu-id="a4e03-126">value1</span></span>|<span data-ttu-id="a4e03-127">value2</span><span class="sxs-lookup"><span data-stu-id="a4e03-127">value2</span></span>|  
   
-## Elementos sin atributos o elementos secundarios  
- Si un elemento no tiene elementos secundarios o atributos, se deducirá como una columna.  La propiedad **ColumnMapping** de la columna se establecerá en **MappingType.Element**.  El texto de los elementos secundarios se almacena en una fila de la tabla.  Por ejemplo, tomemos el siguiente código XML:  
+## <a name="elements-without-attributes-or-child-elements"></a><span data-ttu-id="a4e03-128">Elementos sin atributos o elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="a4e03-128">Elements Without Attributes or Child Elements</span></span>  
+ <span data-ttu-id="a4e03-129">Si un elemento no tiene elementos secundarios o atributos, se deducirá como una columna.</span><span class="sxs-lookup"><span data-stu-id="a4e03-129">If an element has no child elements or attributes, it will be inferred as a column.</span></span> <span data-ttu-id="a4e03-130">El **ColumnMapping** propiedad de la columna se establecerá en **MappingType.Element**.</span><span class="sxs-lookup"><span data-stu-id="a4e03-130">The **ColumnMapping** property of the column will be set to **MappingType.Element**.</span></span> <span data-ttu-id="a4e03-131">El texto de los elementos secundarios se almacena en una fila de la tabla.</span><span class="sxs-lookup"><span data-stu-id="a4e03-131">The text for child elements is stored in a row in the table.</span></span> <span data-ttu-id="a4e03-132">Por ejemplo, tomemos el siguiente código XML:</span><span class="sxs-lookup"><span data-stu-id="a4e03-132">For example, consider the following XML:</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1>Text1</ChildElement1>  
@@ -62,20 +65,20 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
 </DocumentElement>  
 ```  
   
- El proceso de inferencia crea la tabla **Element1** con dos columnas, **ChildElement1** y **ChildElement2**.  La propiedad **ColumnMapping** de ambas columnas se establecerá como **MappingType.Element**.  
+ <span data-ttu-id="a4e03-133">El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas, **ChildElement1** y **ChildElement2**.</span><span class="sxs-lookup"><span data-stu-id="a4e03-133">The inference process will produce a table named **Element1** with two columns, **ChildElement1** and **ChildElement2**.</span></span> <span data-ttu-id="a4e03-134">El **ColumnMapping** propiedad de ambas columnas se establecerá en **MappingType.Element**.</span><span class="sxs-lookup"><span data-stu-id="a4e03-134">The **ColumnMapping** property of both columns will be set to **MappingType.Element**.</span></span>  
   
- **DataSet:** DocumentElement  
+ <span data-ttu-id="a4e03-135">**Conjunto de datos:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="a4e03-135">**DataSet:** DocumentElement</span></span>  
   
- **Tabla:** Element1  
+ <span data-ttu-id="a4e03-136">**Tabla:** Element1</span><span class="sxs-lookup"><span data-stu-id="a4e03-136">**Table:** Element1</span></span>  
   
-|ChildElement1|ChildElement2|  
+|<span data-ttu-id="a4e03-137">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="a4e03-137">ChildElement1</span></span>|<span data-ttu-id="a4e03-138">ChildElement2</span><span class="sxs-lookup"><span data-stu-id="a4e03-138">ChildElement2</span></span>|  
 |-------------------|-------------------|  
-|Text1|Text2|  
+|<span data-ttu-id="a4e03-139">Text1</span><span class="sxs-lookup"><span data-stu-id="a4e03-139">Text1</span></span>|<span data-ttu-id="a4e03-140">Text2</span><span class="sxs-lookup"><span data-stu-id="a4e03-140">Text2</span></span>|  
   
-## Vea también  
- [Deducir la estructura relacional de DataSet de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Cargar DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Utilizar XML en un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="a4e03-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="a4e03-141">See Also</span></span>  
+ [<span data-ttu-id="a4e03-142">Deducir la estructura relacional de DataSet desde XML</span><span class="sxs-lookup"><span data-stu-id="a4e03-142">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="a4e03-143">Cargar un conjunto de datos desde XML</span><span class="sxs-lookup"><span data-stu-id="a4e03-143">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="a4e03-144">Cargar la información de esquema de DataSet desde XML</span><span class="sxs-lookup"><span data-stu-id="a4e03-144">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="a4e03-145">Usar XML en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="a4e03-145">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="a4e03-146">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="a4e03-146">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="a4e03-147">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="a4e03-147">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

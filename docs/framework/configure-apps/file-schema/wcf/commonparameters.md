@@ -1,28 +1,37 @@
 ---
-title: "&lt;commonParameters&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;commonParameters&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 59d278ee00064c3b6b31150a2dea9f68dc47743f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;commonParameters&gt;
-Representa una colección de parámetros que se utilizan globalmente en varios servicios.  Esta colección incluirá, normalmente, la cadena de conexión de la base de datos que podrían compartir los servicios duraderos.  
+# <a name="ltcommonparametersgt"></a><span data-ttu-id="ddf55-102">&lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="ddf55-102">&lt;commonParameters&gt;</span></span>
+<span data-ttu-id="ddf55-103">Representa una colección de parámetros que se utilizan globalmente en varios servicios.</span><span class="sxs-lookup"><span data-stu-id="ddf55-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="ddf55-104">Esta colección incluirá, normalmente, la cadena de conexión de la base de datos que podrían compartir los servicios duraderos.</span><span class="sxs-lookup"><span data-stu-id="ddf55-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="ddf55-105">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="ddf55-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="ddf55-106">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="ddf55-106">\<behaviors></span></span>  
+<span data-ttu-id="ddf55-107">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="ddf55-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="ddf55-108">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="ddf55-108">\<behavior></span></span>  
+<span data-ttu-id="ddf55-109">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="ddf55-109">\<workflowRuntime></span></span>  
+<span data-ttu-id="ddf55-110">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="ddf55-110">\<commonParameters></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ddf55-111">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ddf55-111">Syntax</span></span>  
   
+```xml  
 <workflowRuntime>  
    <commonParameters>  
       <add name="String" value="String" />  
@@ -30,29 +39,29 @@ Representa una colección de parámetros que se utilizan globalmente en varios s
 </workflowRuntime>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ddf55-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="ddf55-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="ddf55-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="ddf55-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- Ninguno.  
+### <a name="attributes"></a><span data-ttu-id="ddf55-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="ddf55-114">Attributes</span></span>  
+ <span data-ttu-id="ddf55-115">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="ddf55-115">None.</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="ddf55-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ddf55-116">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<agregar\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|Agrega un par de nombre y valor de parámetros comunes utilizados por los servicios para la colección.|  
+|<span data-ttu-id="ddf55-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="ddf55-117">Element</span></span>|<span data-ttu-id="ddf55-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="ddf55-118">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ddf55-119">\<add></span><span class="sxs-lookup"><span data-stu-id="ddf55-119">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)|<span data-ttu-id="ddf55-120">Agrega un par de nombre y valor de parámetros comunes utilizados por los servicios para la colección.</span><span class="sxs-lookup"><span data-stu-id="ddf55-120">Adds a name-value pair of common parameters used by services to the collection.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="ddf55-121">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ddf55-121">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<workflowRuntime\>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|Especifica los valores de una instancia de <xref:System.Workflow.Runtime.WorkflowRuntime> para hospedar los servicios [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] basados en flujo de trabajo.|  
+|<span data-ttu-id="ddf55-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="ddf55-122">Element</span></span>|<span data-ttu-id="ddf55-123">Descripción</span><span class="sxs-lookup"><span data-stu-id="ddf55-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ddf55-124">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="ddf55-124">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="ddf55-125">Especifica los valores de una instancia de <xref:System.Workflow.Runtime.WorkflowRuntime> para hospedar los servicios [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] basados en flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ddf55-125">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services.</span></span>|  
   
-## Comentarios  
- El elemento `<commonParameters>` define cualquier parámetro que se usa globalmente en varios servicios, por ejemplo `ConnectionString` al usar <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
+## <a name="remarks"></a><span data-ttu-id="ddf55-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ddf55-126">Remarks</span></span>  
+ <span data-ttu-id="ddf55-127">El elemento `<commonParameters>` define cualquier parámetro que se usa globalmente en varios servicios, por ejemplo `ConnectionString` al usar <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span><span class="sxs-lookup"><span data-stu-id="ddf55-127">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
   
 > [!NOTE]
->  El servicio de seguimiento de SQL no utiliza de forma consistente el valor `ConnectionString` si se especifica en la sección `<commonParameters>`.  Es posible que se produzca un error en alguna de sus operaciones, como al recuperar la propiedad `StateMachineWorkflowInstance.StateHistory`.  Para solucionar este problema, especifique el atributo `ConnectionString` en la sección de configuración del proveedor de seguimiento, tal y como se indica en el ejemplo siguiente.  
+>  <span data-ttu-id="ddf55-128">El servicio de seguimiento de SQL no utiliza de forma consistente el valor `ConnectionString` si se especifica en la sección `<commonParameters>`.</span><span class="sxs-lookup"><span data-stu-id="ddf55-128">SQL Tracking service does not consistently use the `ConnectionString` value if it is specified in the `<commonParameters>` section.</span></span> <span data-ttu-id="ddf55-129">Es posible que se produzca un error en alguna de sus operaciones, como al recuperar la propiedad `StateMachineWorkflowInstance.StateHistory`.</span><span class="sxs-lookup"><span data-stu-id="ddf55-129">Some of its operations such as retrieving the `StateMachineWorkflowInstance.StateHistory` property may fail.</span></span> <span data-ttu-id="ddf55-130">Para solucionar este problema, especifique el atributo `ConnectionString` en la sección de configuración del proveedor de seguimiento, tal y como se indica en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="ddf55-130">To workaround this, specify the `ConnectionString` attribute in the configuration section for tracking provider, as indicated in the following example.</span></span>  
   
  `<add`  
   
@@ -60,9 +69,9 @@ Representa una colección de parámetros que se utilizan globalmente en varios s
   
  `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
   
- Puede habilitar los servicios que confirman los lotes de trabajo en los almacenes de persistencia, como <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> y <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, para reintentar su transacción utilizando el parámetro `EnableRetries` como se muestra en el ejemplo siguiente:  
+ <span data-ttu-id="ddf55-131">Puede habilitar los servicios que confirman los lotes de trabajo en los almacenes de persistencia, como <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> y <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, para reintentar su transacción utilizando el parámetro `EnableRetries` como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="ddf55-131">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
   
-```  
+```xml  
 <WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
     <commonParameters>  
         <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />  
@@ -74,9 +83,9 @@ Representa una colección de parámetros que se utilizan globalmente en varios s
 </WorkflowRuntime>  
 ```  
   
- Observe que el parámetro `EnableRetries` se puede establecer en un nivel global \(como se muestra en la sección *CommonParameters* \) o para servicios individuales que admiten `EnableRetries` \(como se muestra en la sección *Servicios* \).  
+ <span data-ttu-id="ddf55-132">Tenga en cuenta que la `EnableRetries` parámetro puede establecerse en el nivel global (como se muestra en el *CommonParameters* sección) o para servicios individuales que admiten `EnableRetries` (como se muestra en el *servicios*sección).</span><span class="sxs-lookup"><span data-stu-id="ddf55-132">Notice that the `EnableRetries` parameter can be set either at a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
   
- El siguiente código de ejemplo muestra cómo cambiar los parámetros comunes mediante programación.  
+ <span data-ttu-id="ddf55-133">El siguiente código de ejemplo muestra cómo cambiar los parámetros comunes mediante programación.</span><span class="sxs-lookup"><span data-stu-id="ddf55-133">The following sample code shows how to change the common parameters programmatically.</span></span>  
   
 ```  
 Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
@@ -86,22 +95,22 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- Para obtener más información sobre cómo usar un archivo de configuración para controlar el comportamiento de un objeto <xref:System.Workflow.Runtime.WorkflowRuntime> de una aplicación host de Windows Workflow Foundation, vea [Workflow Configuration Files](http://msdn.microsoft.com/es-es/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ <span data-ttu-id="ddf55-134">Para obtener más información sobre el uso de un archivo de configuración para controlar el comportamiento de un <xref:System.Workflow.Runtime.WorkflowRuntime> objeto de una aplicación de host de Windows Workflow Foundation, consulte [archivos de configuración de flujo de trabajo](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span><span class="sxs-lookup"><span data-stu-id="ddf55-134">For more information about using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="ddf55-135">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ddf55-135">Example</span></span>  
   
-```  
+```xml  
 <commonParameters>  
    <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;"/>  
    <add name="EnableRetries" value="true"/>  
 </commonParameters>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>   
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>   
- <xref:System.Workflow.Runtime.WorkflowRuntime>   
- <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>   
- <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>   
- [Workflow Configuration Files](http://msdn.microsoft.com/es-es/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)   
- [\<agregar\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)
+## <a name="see-also"></a><span data-ttu-id="ddf55-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="ddf55-136">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
+ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
+ <xref:System.Workflow.Runtime.WorkflowRuntime>  
+ <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
+ <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
+ [<span data-ttu-id="ddf55-137">Archivos de configuración de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="ddf55-137">Workflow Configuration Files</span></span>](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [<span data-ttu-id="ddf55-138">\<add></span><span class="sxs-lookup"><span data-stu-id="ddf55-138">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

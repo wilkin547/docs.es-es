@@ -1,72 +1,76 @@
 ---
-title: "&lt;add&gt; &lt;participants&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;agregar&gt; &lt;participantes&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d95c6d3768a26a8db92bf54bb454b350ced03d7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; &lt;participants&gt;
-Configure un participante del seguimiento que escucha los registros de seguimiento que se emiten del tiempo de ejecución directamente y los procesa del modo en que cada uno esté configurado.  Esto incluye la escritura en un resultado concreto \(p. ej., un archivo, la consola o ETW\), procesar o agregar los registros, o cualquier otra combinación que pueda resultar necesaria.  
+# <a name="ltaddgt-of-ltparticipantsgt"></a><span data-ttu-id="6f146-102">&lt;agregar&gt; &lt;participantes&gt;</span><span class="sxs-lookup"><span data-stu-id="6f146-102">&lt;add&gt; of &lt;participants&gt;</span></span>
+<span data-ttu-id="6f146-103">Configure un participante del seguimiento que escucha los registros de seguimiento que se emiten del tiempo de ejecución directamente y los procesa del modo en que cada uno esté configurado.</span><span class="sxs-lookup"><span data-stu-id="6f146-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="6f146-104">Esto incluye la escritura en un resultado concreto (p. ej., un archivo, la consola o ETW), procesar o agregar los registros, o cualquier otra combinación que pueda resultar necesaria.</span><span class="sxs-lookup"><span data-stu-id="6f146-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
   
- Para obtener más información acerca del seguimiento del flujo de trabajo y de los participantes, consulte [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md) y [Participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md).  
+ <span data-ttu-id="6f146-105">Para obtener más información de seguimiento de flujo de trabajo y los participantes de seguimiento, vea [seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span><span class="sxs-lookup"><span data-stu-id="6f146-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
   
-## Sintaxis  
+<span data-ttu-id="6f146-106">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="6f146-106">\<system.serviceModel></span></span>  
+<span data-ttu-id="6f146-107">\<seguimiento ></span><span class="sxs-lookup"><span data-stu-id="6f146-107">\<tracking></span></span>  
+<span data-ttu-id="6f146-108">\<los participantes ></span><span class="sxs-lookup"><span data-stu-id="6f146-108">\<participants></span></span>  
+<span data-ttu-id="6f146-109">\<add></span><span class="sxs-lookup"><span data-stu-id="6f146-109">\<add></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="6f146-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6f146-110">Syntax</span></span>  
   
-<tracking>   
-   <participants>   
-      <add name="String"   
-           profileName="String"  
-           type="String" />   
-   </participants>   
-</tracking>  
-  
+```xml
+<tracking>
+  <participants>
+    <add name="String" profileName="String" type="String" />
+  </participants>
+</tracking>   
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6f146-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="6f146-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="6f146-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="6f146-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="6f146-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="6f146-113">Attributes</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|name|Cadena que especifica el nombre de un participante de seguimiento.|  
-|profileName|Una cadena que especifica el nombre del perfil de seguimiento que define los registros de seguimiento a los que se ha suscrito el participante de seguimiento.|  
-|tipo|Una cadena que especifica el tipo de un participante de seguimiento.|  
+|<span data-ttu-id="6f146-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="6f146-114">Element</span></span>|<span data-ttu-id="6f146-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="6f146-115">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="6f146-116">name</span><span class="sxs-lookup"><span data-stu-id="6f146-116">name</span></span>|<span data-ttu-id="6f146-117">Cadena que especifica el nombre de un participante de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6f146-117">A string that specifies the name of a tracking participant.</span></span>|  
+|<span data-ttu-id="6f146-118">profileName</span><span class="sxs-lookup"><span data-stu-id="6f146-118">profileName</span></span>|<span data-ttu-id="6f146-119">Una cadena que especifica el nombre del perfil de seguimiento que define los registros de seguimiento a los que se ha suscrito el participante de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6f146-119">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
+|<span data-ttu-id="6f146-120">tipo</span><span class="sxs-lookup"><span data-stu-id="6f146-120">type</span></span>|<span data-ttu-id="6f146-121">Una cadena que especifica el tipo de un participante de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6f146-121">A string that specifies the type of a tracking participant.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="6f146-122">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="6f146-122">Child Elements</span></span>  
+ <span data-ttu-id="6f146-123">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="6f146-123">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="6f146-124">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="6f146-124">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<participants\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Una lista de los participantes de seguimiento|  
+|<span data-ttu-id="6f146-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="6f146-125">Element</span></span>|<span data-ttu-id="6f146-126">Descripción</span><span class="sxs-lookup"><span data-stu-id="6f146-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="6f146-127">\<los participantes ></span><span class="sxs-lookup"><span data-stu-id="6f146-127">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="6f146-128">Una lista de los participantes de seguimiento</span><span class="sxs-lookup"><span data-stu-id="6f146-128">A list of tracking participants</span></span>|  
   
-## Comentarios  
- Los participantes de seguimiento se usan para obtener los datos de seguimiento emitidos del flujo de trabajo y almacenarlos en los distintos medios.  Del mismo modo, cualquier procesamiento posterior en los Registros de seguimiento también puede realizarse dentro del participante de seguimiento.  
+## <a name="remarks"></a><span data-ttu-id="6f146-129">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6f146-129">Remarks</span></span>  
+ <span data-ttu-id="6f146-130">Los participantes de seguimiento se usan para obtener los datos de seguimiento emitidos del flujo de trabajo y almacenarlos en los distintos medios.</span><span class="sxs-lookup"><span data-stu-id="6f146-130">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="6f146-131">Del mismo modo, cualquier procesamiento posterior en los Registros de seguimiento también puede realizarse dentro del participante de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6f146-131">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
- Varios participantes de seguimiento pueden utilizar los eventos de seguimiento de forma simultánea.  Cada participante de seguimiento puede asociarse con un perfil de seguimiento distinto.  
+ <span data-ttu-id="6f146-132">Varios participantes de seguimiento pueden utilizar los eventos de seguimiento de forma simultánea.</span><span class="sxs-lookup"><span data-stu-id="6f146-132">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="6f146-133">Cada participante de seguimiento puede asociarse con un perfil de seguimiento distinto.</span><span class="sxs-lookup"><span data-stu-id="6f146-133">Each tracking participant can be associated with a different tracking profile.</span></span>  
   
- Se proporciona un participante de seguimiento estándar que escribe los registros de seguimiento en una sesión de ETW.  El participante se configura en un servicio de flujo de trabajo agregando un comportamiento específico del seguimiento en un archivo de configuración.  Habilitar un participante de seguimiento de ETW permite realizar un seguimiento de los registros que se van a ver en el visor de eventos.  Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.  
+ <span data-ttu-id="6f146-134">Se proporciona un participante de seguimiento estándar que escribe los registros de seguimiento en una sesión de ETW.</span><span class="sxs-lookup"><span data-stu-id="6f146-134">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="6f146-135">El participante se configura en un servicio de flujo de trabajo agregando un comportamiento específico del seguimiento en un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="6f146-135">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="6f146-136">Habilitar un participante de seguimiento de ETW permite realizar un seguimiento de los registros que se van a ver en el visor de eventos.</span><span class="sxs-lookup"><span data-stu-id="6f146-136">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="6f146-137">Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.</span><span class="sxs-lookup"><span data-stu-id="6f146-137">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
   
-## Ejemplo  
- El siguiente ejemplo de configuración muestra el participante de seguimiento de ETW estándar que se está configurando en el archivo Web.config.  
+## <a name="example"></a><span data-ttu-id="6f146-138">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6f146-138">Example</span></span>  
+ <span data-ttu-id="6f146-139">El siguiente ejemplo de configuración muestra el participante de seguimiento de ETW estándar que se está configurando en el archivo Web.config.</span><span class="sxs-lookup"><span data-stu-id="6f146-139">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- El Id. del proveedor que el participante de seguimiento de ETW usa para escribir los registros de seguimiento en ETW se definen en la sección **\<diagnostics\>**.  El participante de seguimiento tiene un perfil asociado para especificar los registros de seguimiento a los que se ha suscrito.  Esto viene definido por el atributo **profileName** del elemento **\<add\>**.  Una vez definidos, el participante de seguimiento se agrega al comportamiento del servicio **\<etwTracking\>**.  Esto agregará los participantes de seguimiento seleccionados a las extensiones de la instancia de flujo de trabajo para que puedan empezar a recibir los registros de seguimiento.  
+ <span data-ttu-id="6f146-140">La identificación del proveedor que el participante de seguimiento de ETW usa para escribir los registros de seguimiento en ETW se define en el  **\<diagnóstico >** sección.</span><span class="sxs-lookup"><span data-stu-id="6f146-140">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="6f146-141">El participante de seguimiento tiene un perfil asociado para especificar los registros de seguimiento a los que se ha suscrito.</span><span class="sxs-lookup"><span data-stu-id="6f146-141">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="6f146-142">Esto viene definido por el **profileName** atributo de la  **\<Agregar >** elemento.</span><span class="sxs-lookup"><span data-stu-id="6f146-142">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="6f146-143">Una vez que se definen, el participante de seguimiento se agrega a la  **\<etwTracking >** comportamiento del servicio.</span><span class="sxs-lookup"><span data-stu-id="6f146-143">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="6f146-144">Esto agregará los participantes de seguimiento seleccionados a las extensiones de la instancia de flujo de trabajo para que puedan empezar a recibir los registros de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="6f146-144">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
-```  
-  
+```xml  
 <configuration>   
   <system.web>   
     <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
@@ -91,9 +95,9 @@ Configure un participante del seguimiento que escucha los registros de seguimien
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>   
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>   
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehavior>   
- [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation//tracking-participants.md)
+## <a name="see-also"></a><span data-ttu-id="6f146-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="6f146-145">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
+ <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
+ <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
+ [<span data-ttu-id="6f146-146">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="6f146-146">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="6f146-147">Participantes de seguimiento</span><span class="sxs-lookup"><span data-stu-id="6f146-147">Tracking Participants</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

@@ -1,25 +1,31 @@
 ---
-title: "Realizar una consulta de XPath en DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Realizar una consulta XPath en un objeto DataSet
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Realizar una consulta de XPath en DataSet
-La relación entre un <xref:System.Data.DataSet> y un <xref:System.Xml.XmlDataDocument> sincronizados le permite utilizar servicios XML, como la consulta XPath \(XML Path Language\), que tiene acceso al **XmlDataDocument** y puede realizar ciertas funciones más cómodamente que si tuviera acceso directamente al **DataSet**.  Por ejemplo, en lugar de utilizar el método **Select** de una <xref:System.Data.DataTable> para navegar por relaciones con otras tablas de un **DataSet**, puede realizar una consulta de XPath en un **XmlDataDocument** sincronizado con el **DataSet** para obtener una lista de elementos XML en forma de una <xref:System.Xml.XmlNodeList>.  Los nodos de la **XmlNodeList**, convertidos en nodos <xref:System.Xml.XmlElement>, se pueden pasar entonces al método **GetRowFromElement** del **XmlDataDocument** para devolver referencias de <xref:System.Data.DataRow> coincidentes con las filas de la tabla del **DataSet** sincronizado.  
+# <a name="performing-an-xpath-query-on-a-dataset"></a><span data-ttu-id="5f9db-102">Realizar una consulta XPath en un objeto DataSet</span><span class="sxs-lookup"><span data-stu-id="5f9db-102">Performing an XPath Query on a DataSet</span></span>
+<span data-ttu-id="5f9db-103">La relación entre un sincronizada <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> le permite hacer uso de XML servicios, como las consultas XML Path Language (XPath), que tienen acceso a la **XmlDataDocument** y puede realizar ciertas funciones más cómodamente que si tuviera acceso la **conjunto de datos** directamente.</span><span class="sxs-lookup"><span data-stu-id="5f9db-103">The relationship between a synchronized <xref:System.Data.DataSet> and <xref:System.Xml.XmlDataDocument> allows you to make use of XML services, such as the XML Path Language (XPath) query, that access the **XmlDataDocument** and can perform certain functionality more conveniently than accessing the **DataSet** directly.</span></span> <span data-ttu-id="5f9db-104">Por ejemplo, en lugar de usar el **seleccione** método de un <xref:System.Data.DataTable> para navegar por relaciones con otras tablas de un **conjunto de datos**, puede realizar una consulta XPath en un **XmlDataDocument**  que está sincronizado con el **conjunto de datos**, para obtener una lista de elementos XML en forma de un <xref:System.Xml.XmlNodeList>.</span><span class="sxs-lookup"><span data-stu-id="5f9db-104">For example, rather than using the **Select** method of a <xref:System.Data.DataTable> to navigate relationships to other tables in a **DataSet**, you can perform an XPath query on an **XmlDataDocument** that is synchronized with the **DataSet**, to get a list of XML elements in the form of an <xref:System.Xml.XmlNodeList>.</span></span> <span data-ttu-id="5f9db-105">Los nodos de la **XmlNodeList**, convertidos en <xref:System.Xml.XmlElement> nodos, a continuación, puede pasarse a la **GetRowFromElement** método de la **XmlDataDocument**para devolver la búsqueda de coincidencias <xref:System.Data.DataRow> referencias a las filas de la tabla en sincronizada **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="5f9db-105">The nodes in the **XmlNodeList**, cast as <xref:System.Xml.XmlElement> nodes, can then be passed to the **GetRowFromElement** method of the **XmlDataDocument**, to return matching <xref:System.Data.DataRow> references to the rows of the table in the synchronized **DataSet**.</span></span>  
   
- Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath.  El **DataSet** se rellena con tres tablas: **Customers**, **Orders** y **OrderDetails**.  En el ejemplo se crea primero una relación primaria\-secundaria entre las tablas **Customers** y **Orders**, y entre las tablas **Orders** y **OrderDetails**.  Después se realiza una consulta XPath para devolver una **XmlNodeList** de nodos de **Customers** donde un secundario de **OrderDetails** tiene un nodo **ProductID** con el valor 43.  El ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto cuyo **ProductID** es 43.  
+ <span data-ttu-id="5f9db-106">Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath.</span><span class="sxs-lookup"><span data-stu-id="5f9db-106">For example, the following code sample performs a "grandchild" XPath query.</span></span> <span data-ttu-id="5f9db-107">El **conjunto de datos** se rellena con tres tablas: **clientes**, **pedidos**, y **OrderDetails**.</span><span class="sxs-lookup"><span data-stu-id="5f9db-107">The **DataSet** is filled with three tables: **Customers**, **Orders**, and **OrderDetails**.</span></span> <span data-ttu-id="5f9db-108">En el ejemplo, primero se crea una relación de elementos primarios y secundarios entre el **clientes** y **pedidos** tablas y entre el **pedidos** y **OrderDetails** tablas.</span><span class="sxs-lookup"><span data-stu-id="5f9db-108">In the sample, a parent-child relation is first created between the **Customers** and **Orders** tables, and between the **Orders** and **OrderDetails** tables.</span></span> <span data-ttu-id="5f9db-109">A continuación, se realiza una consulta XPath para devolver una **XmlNodeList** de **clientes** nodos donde un secundario **OrderDetails** nodo tiene un **ProductID**nodo con el valor 43.</span><span class="sxs-lookup"><span data-stu-id="5f9db-109">An XPath query is then performed to return an **XmlNodeList** of **Customers** nodes where a grandchild **OrderDetails** node has a **ProductID** node with the value of 43.</span></span> <span data-ttu-id="5f9db-110">En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** es 43.</span><span class="sxs-lookup"><span data-stu-id="5f9db-110">In essence, the sample is using the XPath query to determine which customers have ordered the product that has the **ProductID** of 43.</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -105,6 +111,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## Vea también  
- [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="5f9db-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="5f9db-111">See Also</span></span>  
+ [<span data-ttu-id="5f9db-112">Sincronización de DataSet y XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="5f9db-112">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="5f9db-113">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="5f9db-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

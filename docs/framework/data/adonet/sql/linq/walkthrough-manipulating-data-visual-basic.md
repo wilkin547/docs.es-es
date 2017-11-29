@@ -1,130 +1,134 @@
 ---
-title: "Tutorial: Manipular datos (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Tutorial: Manipular datos (Visual Basic)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 09b2c74673b0126865a7536de77f99e250b3afec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Tutorial: Manipular datos (Visual Basic)
-Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos.  Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.  
+# <a name="walkthrough-manipulating-data-visual-basic"></a><span data-ttu-id="bdebf-102">Tutorial: Manipular datos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bdebf-102">Walkthrough: Manipulating Data (Visual Basic)</span></span>
+<span data-ttu-id="bdebf-103">Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos.</span><span class="sxs-lookup"><span data-stu-id="bdebf-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span> <span data-ttu-id="bdebf-104">Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.</span><span class="sxs-lookup"><span data-stu-id="bdebf-104">You will use a copy of the sample Northwind database to add a customer, change the name of a customer, and delete an order.</span></span>  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- Este tutorial se escribió con la configuración de desarrollo de Visual Basic.  
+ <span data-ttu-id="bdebf-105">Este tutorial se escribió con la configuración de desarrollo de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bdebf-105">This walkthrough was written by using Visual Basic Development Settings.</span></span>  
   
-## Requisitos previos  
- En este tutorial se requiere lo siguiente:  
+## <a name="prerequisites"></a><span data-ttu-id="bdebf-106">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="bdebf-106">Prerequisites</span></span>  
+ <span data-ttu-id="bdebf-107">En este tutorial se requiere lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="bdebf-107">This walkthrough requires the following:</span></span>  
   
--   Este tutorial utiliza una carpeta dedicada \("c:\\linqtest2"\) que contiene los archivos.  Cree esta carpeta antes de empezar el tutorial.  
+-   <span data-ttu-id="bdebf-108">Este tutorial utiliza una carpeta dedicada ("c:\linqtest2") que contiene los archivos.</span><span class="sxs-lookup"><span data-stu-id="bdebf-108">This walkthrough uses a dedicated folder ("c:\linqtest2") to hold files.</span></span> <span data-ttu-id="bdebf-109">Cree esta carpeta antes de empezar el tutorial.</span><span class="sxs-lookup"><span data-stu-id="bdebf-109">Create this folder before you begin the walkthrough.</span></span>  
   
--   Base de datos de ejemplo Northwind.  
+-   <span data-ttu-id="bdebf-110">Base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="bdebf-110">The Northwind sample database.</span></span>  
   
-     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft.  Para obtener instrucciones, vea [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\\linqtest2.  
+     <span data-ttu-id="bdebf-111">Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="bdebf-111">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="bdebf-112">Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="bdebf-112">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="bdebf-113">Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest2.</span><span class="sxs-lookup"><span data-stu-id="bdebf-113">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest2 folder.</span></span>  
   
--   Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
+-   <span data-ttu-id="bdebf-114">Archivo de código de Visual Basic generado a partir de la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="bdebf-114">A Visual Basic code file generated from the Northwind database.</span></span>  
   
-     Puede generar este archivo mediante el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta SQLMetal.  Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
+     <span data-ttu-id="bdebf-115">Puede generar este archivo mediante el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="bdebf-115">You can generate this file by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal tool.</span></span> <span data-ttu-id="bdebf-116">Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:</span><span class="sxs-lookup"><span data-stu-id="bdebf-116">This walkthrough was written by using the SQLMetal tool with the following command line:</span></span>  
   
-     **sqlmetal \/code:"c:\\linqtest2\\northwind.vb" \/language:vb "C:\\linqtest2\\northwnd.mdf" \/pluralize**  
+     <span data-ttu-id="bdebf-117">**SqlMetal /code:"c:\linqtest2\northwind.vb": Language: VB "C:\linqtest2\northwnd.mdf" / plural**</span><span class="sxs-lookup"><span data-stu-id="bdebf-117">**sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**</span></span>  
   
-     Para obtener más información, consulta [SqlMetal.exe \(Herramienta de generación de código\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     <span data-ttu-id="bdebf-118">Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="bdebf-118">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## Información general  
- Este tutorial se compone de seis tareas principales:  
+## <a name="overview"></a><span data-ttu-id="bdebf-119">Información general</span><span class="sxs-lookup"><span data-stu-id="bdebf-119">Overview</span></span>  
+ <span data-ttu-id="bdebf-120">Este tutorial se compone de seis tareas principales:</span><span class="sxs-lookup"><span data-stu-id="bdebf-120">This walkthrough consists of six main tasks:</span></span>  
   
--   Crear la solución [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   <span data-ttu-id="bdebf-121">Crear la solución [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bdebf-121">Creating the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span></span>  
   
--   Agregar el archivo de código de la base de datos al proyecto.  
+-   <span data-ttu-id="bdebf-122">Agregar el archivo de código de la base de datos al proyecto.</span><span class="sxs-lookup"><span data-stu-id="bdebf-122">Adding the database code file to the project.</span></span>  
   
--   Crear el nuevo objeto de cliente.  
+-   <span data-ttu-id="bdebf-123">Crear el nuevo objeto de cliente.</span><span class="sxs-lookup"><span data-stu-id="bdebf-123">Creating a new customer object.</span></span>  
   
--   Modificar el nombre de contacto de un cliente.  
+-   <span data-ttu-id="bdebf-124">Modificar el nombre de contacto de un cliente.</span><span class="sxs-lookup"><span data-stu-id="bdebf-124">Modifying the contact name of a customer.</span></span>  
   
--   Eliminar un pedido.  
+-   <span data-ttu-id="bdebf-125">Eliminar un pedido.</span><span class="sxs-lookup"><span data-stu-id="bdebf-125">Deleting an order.</span></span>  
   
--   Enviar estos cambios a la base de datos Northwind.  
+-   <span data-ttu-id="bdebf-126">Enviar estos cambios a la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="bdebf-126">Submitting these changes to the Northwind database.</span></span>  
   
-## Crear una solución LINQ to SQL  
- En esta primera tarea, va a crear una solución de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] que contiene las referencias necesarias para compilar y ejecutar un proyecto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="bdebf-127">Crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="bdebf-127">Creating a LINQ to SQL Solution</span></span>  
+ <span data-ttu-id="bdebf-128">En esta primera tarea, va a crear una solución de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] que contiene las referencias necesarias para compilar y ejecutar un proyecto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bdebf-128">In this first task, you create a [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
   
-#### Para crear una solución LINQ to SQL  
+#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="bdebf-129">Para crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="bdebf-129">To create a LINQ to SQL solution</span></span>  
   
-1.  En el menú **Archivo** de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], haga clic en **Nuevo proyecto**.  
+1.  <span data-ttu-id="bdebf-130">En el [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **archivo** menú, haga clic en **nuevo proyecto**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-130">On the [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **File** menu, click **New Project**.</span></span>  
   
-2.  En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto**, haga clic en **Visual Basic**.  
+2.  <span data-ttu-id="bdebf-131">En el **tipos de proyecto** panel en el **nuevo proyecto** cuadro de diálogo, haga clic en **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-131">In the **Project types** pane in the **New Project** dialog box, click **Visual Basic**.</span></span>  
   
-3.  En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
+3.  <span data-ttu-id="bdebf-132">En el panel **Plantillas**, haga clic en **Aplicación de consola**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-132">In the **Templates** pane, click **Console Application**.</span></span>  
   
-4.  En el cuadro **Nombre**, escriba LinqDataManipulationApp.  
+4.  <span data-ttu-id="bdebf-133">En el **nombre** , escriba **LinqDataManipulationApp**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-133">In the **Name** box, type **LinqDataManipulationApp**.</span></span>  
   
-5.  Haga clic en **Aceptar**.  
+5.  <span data-ttu-id="bdebf-134">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-134">Click **OK**.</span></span>  
   
-## Agregar referencias y directivas LINQ  
- En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada.  Si `System.Data.Linq` no se incluye como referencia en su proyecto \(haga clic en **Mostrar todos los archivos** en el **Explorador de soluciones** y expanda el nodo **Referencias**\), agréguelo, como se explica en los pasos siguientes.  
+## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="bdebf-135">Agregar referencias y directivas LINQ</span><span class="sxs-lookup"><span data-stu-id="bdebf-135">Adding LINQ References and Directives</span></span>  
+ <span data-ttu-id="bdebf-136">En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="bdebf-136">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="bdebf-137">Si `System.Data.Linq` no aparece como una referencia en el proyecto (haga clic en **mostrar todos los archivos** en **el Explorador de soluciones** y expanda el **referencias** nodo), agréguelo, como se explica en los pasos siguientes.</span><span class="sxs-lookup"><span data-stu-id="bdebf-137">If `System.Data.Linq` is not listed as a reference in your project (click **Show All Files** in **Solution Explorer** and expand the **References** node), add it, as explained in the following steps.</span></span>  
   
-#### Para agregar System.Data.Linq  
+#### <a name="to-add-systemdatalinq"></a><span data-ttu-id="bdebf-138">Para agregar System.Data.Linq</span><span class="sxs-lookup"><span data-stu-id="bdebf-138">To add System.Data.Linq</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario del mouse en **Referencias** y, a continuación, haga clic en **Agregar referencia**.  
+1.  <span data-ttu-id="bdebf-139">En **el Explorador de soluciones**, haga clic en **referencias**y, a continuación, haga clic en **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-139">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
   
-2.  En el cuadro de diálogo **Agregar referencia**, haga clic en **.NET**, en el ensamblado System.Data.Linq y, a continuación, en **Aceptar**.  
+2.  <span data-ttu-id="bdebf-140">En el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, haga clic en el ensamblado System.Data.Linq y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-140">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
   
-     El ensamblado se agrega al proyecto.  
+     <span data-ttu-id="bdebf-141">El ensamblado se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="bdebf-141">The assembly is added to the project.</span></span>  
   
-3.  En el editor de código, agregue las directivas siguientes encima de **Module1**:  
+3.  <span data-ttu-id="bdebf-142">En el editor de código, agregue las directivas siguientes encima **Module1**:</span><span class="sxs-lookup"><span data-stu-id="bdebf-142">In the code editor, add the following directives above **Module1**:</span></span>  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
-## Agregar el archivo de código de Northwind al proyecto  
- En estos pasos se asume que ha utilizado la herramienta SQLMetal para generar un archivo de código a partir de la base de datos de ejemplo Northwind.  Para obtener más información, vea la sección Requisitos previos, anteriormente en este tutorial.  
+## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="bdebf-143">Agregar el archivo de código de Northwind al proyecto</span><span class="sxs-lookup"><span data-stu-id="bdebf-143">Adding the Northwind Code File to the Project</span></span>  
+ <span data-ttu-id="bdebf-144">En estos pasos se asume que ha utilizado la herramienta SQLMetal para generar un archivo de código a partir de la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="bdebf-144">These steps assume that you have used the SQLMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="bdebf-145">Para obtener más información, vea la sección Requisitos previos, anteriormente en este tutorial.</span><span class="sxs-lookup"><span data-stu-id="bdebf-145">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
   
-#### Para agregar el archivo de código de Northwind al proyecto  
+#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="bdebf-146">Para agregar el archivo de código de Northwind al proyecto</span><span class="sxs-lookup"><span data-stu-id="bdebf-146">To add the northwind code file to the project</span></span>  
   
-1.  En el menú **Proyecto**, haga clic en **Agregar elemento existente**.  
+1.  <span data-ttu-id="bdebf-147">En el **proyecto** menú, haga clic en **Agregar elemento existente**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-147">On the **Project** menu, click **Add Existing Item**.</span></span>  
   
-2.  En el cuadro de diálogo **Agregar elemento existente**, vaya a c:\\linqtest2\\northwind.vb y, a continuación, haga clic en **Agregar**.  
+2.  <span data-ttu-id="bdebf-148">En el **Agregar elemento existente** cuadro de diálogo, vaya a c:\linqtest2\northwind.vb y, a continuación, haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="bdebf-148">In the **Add Existing Item** dialog box, navigate to c:\linqtest2\northwind.vb, and then click **Add**.</span></span>  
   
-     El archivo northwind.vb se agrega al proyecto.  
+     <span data-ttu-id="bdebf-149">El archivo northwind.vb se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="bdebf-149">The northwind.vb file is added to the project.</span></span>  
   
-## Configurar la conexión a la base de datos  
- Primero, pruebe su conexión a la base de datos.  Observe en particular que el nombre de la base de datos, Northwnd, no tiene la i.  Si se generan errores en los pasos siguientes, revise el archivo northwind.vb para determinar cómo se escribe el nombre de la clase parcial de Northwind.  
+## <a name="setting-up-the-database-connection"></a><span data-ttu-id="bdebf-150">Configurar la conexión a la base de datos</span><span class="sxs-lookup"><span data-stu-id="bdebf-150">Setting Up the Database Connection</span></span>  
+ <span data-ttu-id="bdebf-151">Primero, pruebe su conexión a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="bdebf-151">First, test your connection to the database.</span></span> <span data-ttu-id="bdebf-152">Observe en particular que el nombre de la base de datos, Northwnd, no tiene la i.</span><span class="sxs-lookup"><span data-stu-id="bdebf-152">Note especially that the name of the database, Northwnd, has no i character.</span></span> <span data-ttu-id="bdebf-153">Si se generan errores en los pasos siguientes, revise el archivo northwind.vb para determinar cómo se escribe el nombre de la clase parcial de Northwind.</span><span class="sxs-lookup"><span data-stu-id="bdebf-153">If you generate errors in the next steps, review the northwind.vb file to determine how the Northwind partial class is spelled.</span></span>  
   
-#### Para configurar y probar la conexión a la base de datos  
+#### <a name="to-set-up-and-test-the-database-connection"></a><span data-ttu-id="bdebf-154">Para configurar y probar la conexión a la base de datos</span><span class="sxs-lookup"><span data-stu-id="bdebf-154">To set up and test the database connection</span></span>  
   
-1.  Escriba o pegue el código siguiente en la clase `Sub Main`:  
+1.  <span data-ttu-id="bdebf-155">Escriba o pegue el código siguiente en la clase `Sub Main`:</span><span class="sxs-lookup"><span data-stu-id="bdebf-155">Type or paste the following code into `Sub Main`:</span></span>  
   
      [!code-vb[DLinqWalk3VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#2)]  
   
-2.  Presione F5 para probar la aplicación en este punto.  
+2.  <span data-ttu-id="bdebf-156">Presione F5 para probar la aplicación en este punto.</span><span class="sxs-lookup"><span data-stu-id="bdebf-156">Press F5 to test the application at this point.</span></span>  
   
-     Se abre una ventana **Consola**.  
+     <span data-ttu-id="bdebf-157">A **consola** abre la ventana.</span><span class="sxs-lookup"><span data-stu-id="bdebf-157">A **Console** window opens.</span></span>  
   
-     Para cerrar la aplicación, presione Entrar en la ventana **Consola** o haga clic en **Detener depuración** en el menú **Depurar** de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+     <span data-ttu-id="bdebf-158">Cierre la aplicación presionando ENTRAR en el **consola** ventana, o haga clic en **Detener depuración** en el [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **depurar** menú.</span><span class="sxs-lookup"><span data-stu-id="bdebf-158">Close the application by pressing Enter in the **Console** window, or by clicking **Stop Debugging** on the [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **Debug** menu.</span></span>  
   
-## Crear una nueva entidad  
- Crear entidades es sencillo.  Puede crear objetos \(como `Customer`\) mediante la palabra clave `New`.  
+## <a name="creating-a-new-entity"></a><span data-ttu-id="bdebf-159">Crear una nueva entidad</span><span class="sxs-lookup"><span data-stu-id="bdebf-159">Creating a New Entity</span></span>  
+ <span data-ttu-id="bdebf-160">Crear entidades es sencillo.</span><span class="sxs-lookup"><span data-stu-id="bdebf-160">Creating a new entity is straightforward.</span></span> <span data-ttu-id="bdebf-161">Puede crear objetos (como `Customer`) mediante la palabra clave `New`.</span><span class="sxs-lookup"><span data-stu-id="bdebf-161">You can create objects (such as `Customer`) by using the `New` keyword.</span></span>  
   
- En esta sección y las siguientes, realizará cambios solo en la memoria caché local.  No se enviarán cambios a la base de datos hasta que llame a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, casi al final del tutorial.  
+ <span data-ttu-id="bdebf-162">En esta sección y las siguientes, realizará cambios solo en la memoria caché local.</span><span class="sxs-lookup"><span data-stu-id="bdebf-162">In this and the following sections, you are making changes only to the local cache.</span></span> <span data-ttu-id="bdebf-163">No se enviarán cambios a la base de datos hasta que llame a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, casi al final del tutorial.</span><span class="sxs-lookup"><span data-stu-id="bdebf-163">No changes are sent to the database until you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A> toward the end of this walkthrough.</span></span>  
   
-#### Para agregar un nuevo objeto entidad Customer  
+#### <a name="to-add-a-new-customer-entity-object"></a><span data-ttu-id="bdebf-164">Para agregar un nuevo objeto entidad Customer</span><span class="sxs-lookup"><span data-stu-id="bdebf-164">To add a new Customer entity object</span></span>  
   
-1.  Cree un nuevo `Customer` agregando el código siguiente delante de `Console.ReadLine` en `Sub Main`:  
+1.  <span data-ttu-id="bdebf-165">Cree un nuevo `Customer` agregando el código siguiente delante de `Console.ReadLine` en `Sub Main`:</span><span class="sxs-lookup"><span data-stu-id="bdebf-165">Create a new `Customer` by adding the following code before `Console.ReadLine` in `Sub Main`:</span></span>  
   
      [!code-vb[DLinqWalk3VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#3)]  
   
-2.  Presione F5 para depurar la solución.  
+2.  <span data-ttu-id="bdebf-166">Presione F5 para depurar la solución.</span><span class="sxs-lookup"><span data-stu-id="bdebf-166">Press F5 to debug the solution.</span></span>  
   
-     Los resultados que se muestran en la ventana de la consola son los siguientes:  
+     <span data-ttu-id="bdebf-167">Los resultados que se muestran en la ventana de la consola son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="bdebf-167">The results that are shown in the console window are as follows:</span></span>  
   
      `Customers matching CA before insert:`  
   
@@ -132,46 +136,46 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
      `Customer ID: RICAR`  
   
-     Observe que la nueva fila no aparece en los resultados.  Los nuevos datos no se han enviado todavía a la base de datos.  
+     <span data-ttu-id="bdebf-168">Observe que la nueva fila no aparece en los resultados.</span><span class="sxs-lookup"><span data-stu-id="bdebf-168">Note that the new row does not appear in the results.</span></span> <span data-ttu-id="bdebf-169">Los nuevos datos no se han enviado todavía a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="bdebf-169">The new data has not yet been submitted to the database.</span></span>  
   
-3.  Presione Entrar en la ventana **Consola** para detener la depuración.  
+3.  <span data-ttu-id="bdebf-170">Presione ENTRAR en el **consola** ventana para detener la depuración.</span><span class="sxs-lookup"><span data-stu-id="bdebf-170">Press Enter in the **Console** window to stop debugging.</span></span>  
   
-## Actualizar una entidad  
- En los pasos siguientes, recuperará un objeto `Customer` y modificará una de sus propiedades.  
+## <a name="updating-an-entity"></a><span data-ttu-id="bdebf-171">Actualizar una entidad</span><span class="sxs-lookup"><span data-stu-id="bdebf-171">Updating an Entity</span></span>  
+ <span data-ttu-id="bdebf-172">En los pasos siguientes, recuperará un objeto `Customer` y modificará una de sus propiedades.</span><span class="sxs-lookup"><span data-stu-id="bdebf-172">In the following steps, you will retrieve a `Customer` object and modify one of its properties.</span></span>  
   
-#### Para cambiar el nombre de un cliente  
+#### <a name="to-change-the-name-of-a-customer"></a><span data-ttu-id="bdebf-173">Para cambiar el nombre de un cliente</span><span class="sxs-lookup"><span data-stu-id="bdebf-173">To change the name of a Customer</span></span>  
   
--   Agregue el código siguiente encima de `Console.ReadLine()`:  
+-   <span data-ttu-id="bdebf-174">Agregue el código siguiente encima de `Console.ReadLine()`:</span><span class="sxs-lookup"><span data-stu-id="bdebf-174">Add the following code above `Console.ReadLine()`:</span></span>  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
-## Eliminar una entidad  
- Con el mismo objeto de cliente, puede eliminar el primer pedido.  
+## <a name="deleting-an-entity"></a><span data-ttu-id="bdebf-175">Eliminar una entidad</span><span class="sxs-lookup"><span data-stu-id="bdebf-175">Deleting an Entity</span></span>  
+ <span data-ttu-id="bdebf-176">Con el mismo objeto de cliente, puede eliminar el primer pedido.</span><span class="sxs-lookup"><span data-stu-id="bdebf-176">Using the same customer object, you can delete the first order.</span></span>  
   
- El código siguiente muestra cómo romper las relaciones entre las filas y cómo eliminar una fila de la base de datos.  
+ <span data-ttu-id="bdebf-177">El código siguiente muestra cómo romper las relaciones entre las filas y cómo eliminar una fila de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="bdebf-177">The following code demonstrates how to sever relationships between rows, and how to delete a row from the database.</span></span>  
   
-#### Para eliminar una fila  
+#### <a name="to-delete-a-row"></a><span data-ttu-id="bdebf-178">Para eliminar una fila</span><span class="sxs-lookup"><span data-stu-id="bdebf-178">To delete a row</span></span>  
   
--   Agregue el código siguiente justo encima de `Console.ReadLine()`:  
+-   <span data-ttu-id="bdebf-179">Agregue el código siguiente justo encima de `Console.ReadLine()`:</span><span class="sxs-lookup"><span data-stu-id="bdebf-179">Add the following code just above `Console.ReadLine()`:</span></span>  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   
-## Enviar los cambios a la base de datos  
- El último paso necesario para crear, actualizar y eliminar objetos es realmente enviar los cambios a la base de datos.  Sin este paso, los cambios se habrán realizado localmente y no aparecerán en los resultados de la consulta.  
+## <a name="submitting-changes-to-the-database"></a><span data-ttu-id="bdebf-180">Enviar los cambios a la base de datos</span><span class="sxs-lookup"><span data-stu-id="bdebf-180">Submitting Changes to the Database</span></span>  
+ <span data-ttu-id="bdebf-181">El último paso necesario para crear, actualizar y eliminar objetos es realmente enviar los cambios a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="bdebf-181">The final step required for creating, updating, and deleting objects is to actually submit the changes to the database.</span></span> <span data-ttu-id="bdebf-182">Sin este paso, los cambios se habrán realizado localmente y no aparecerán en los resultados de la consulta.</span><span class="sxs-lookup"><span data-stu-id="bdebf-182">Without this step, your changes are only local and will not appear in query results.</span></span>  
   
-#### Para enviar los cambios a la base de datos  
+#### <a name="to-submit-changes-to-the-database"></a><span data-ttu-id="bdebf-183">Para enviar los cambios a la base de datos</span><span class="sxs-lookup"><span data-stu-id="bdebf-183">To submit changes to the database</span></span>  
   
-1.  Inserte el código siguiente justo encima de `Console.ReadLine`:  
+1.  <span data-ttu-id="bdebf-184">Inserte el código siguiente justo encima de `Console.ReadLine`:</span><span class="sxs-lookup"><span data-stu-id="bdebf-184">Insert the following code just above `Console.ReadLine`:</span></span>  
   
      [!code-vb[DLinqWalk3VB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#6)]  
   
-2.  Inserte el código siguiente \(después de `SubmitChanges`\) para ver el antes y el después de enviar los cambios:  
+2.  <span data-ttu-id="bdebf-185">Inserte el código siguiente (después de `SubmitChanges`) para ver el antes y el después de enviar los cambios:</span><span class="sxs-lookup"><span data-stu-id="bdebf-185">Insert the following code (after `SubmitChanges`) to show the before and after effects of submitting the changes:</span></span>  
   
      [!code-vb[DLinqWalk3VB#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#7)]  
   
-3.  Presione F5 para depurar la solución.  
+3.  <span data-ttu-id="bdebf-186">Presione F5 para depurar la solución.</span><span class="sxs-lookup"><span data-stu-id="bdebf-186">Press F5 to debug the solution.</span></span>  
   
-     En la ventana de la consola aparece lo siguiente.  
+     <span data-ttu-id="bdebf-187">En la ventana de la consola aparece lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="bdebf-187">The console window appears as follows:</span></span>  
   
     ```  
     Customers matching CA before update:  
@@ -186,10 +190,10 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
     Customer ID: RICAR  
     ```  
   
-4.  Presione Entrar en la ventana **Consola** para detener la depuración.  
+4.  <span data-ttu-id="bdebf-188">Presione ENTRAR en el **consola** ventana para detener la depuración.</span><span class="sxs-lookup"><span data-stu-id="bdebf-188">Press Enter in the **Console** window to stop debugging.</span></span>  
   
 > [!NOTE]
->  Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está, porque no puede agregar el mismo cliente de nuevo tal como está.  Para ejecutar de nuevo la solución, cambie el valor del identificador de cliente que se debe agregar.  
+>  <span data-ttu-id="bdebf-189">Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está, porque no puede agregar el mismo cliente de nuevo tal como está.</span><span class="sxs-lookup"><span data-stu-id="bdebf-189">After you have added the new customer by submitting the changes, you cannot execute this solution again as is, because you cannot add the same customer again as is.</span></span> <span data-ttu-id="bdebf-190">Para ejecutar de nuevo la solución, cambie el valor del identificador de cliente que se debe agregar.</span><span class="sxs-lookup"><span data-stu-id="bdebf-190">To execute the solution again, change the value of the customer ID to be added.</span></span>  
   
-## Vea también  
- [Aprender mediante tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a><span data-ttu-id="bdebf-191">Vea también</span><span class="sxs-lookup"><span data-stu-id="bdebf-191">See Also</span></span>  
+ [<span data-ttu-id="bdebf-192">Aprender con tutoriales</span><span class="sxs-lookup"><span data-stu-id="bdebf-192">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
