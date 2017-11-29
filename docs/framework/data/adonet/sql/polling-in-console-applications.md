@@ -1,32 +1,36 @@
 ---
-title: "Sondeo en aplicaciones de consola | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sondear aplicaciones de consola
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Sondeo en aplicaciones de consola
-Las operaciones asincrónicas de ADO.NET permiten iniciar en un subproceso operaciones de base de datos que requieren mucho tiempo mientras en otro subproceso se realizan otras tareas.  En la mayoría de los casos, al final llegará a un punto en el que la aplicación no debe continuar hasta que se complete la operación de base de datos.  En tales casos, resulta útil sondear la operación asincrónica para determinar si se ha completado.  
+# <a name="polling-in-console-applications"></a><span data-ttu-id="23cc5-102">Sondear aplicaciones de consola</span><span class="sxs-lookup"><span data-stu-id="23cc5-102">Polling in Console Applications</span></span>
+<span data-ttu-id="23cc5-103">Las operaciones asincrónicas de ADO.NET permiten iniciar en un subproceso operaciones de base de datos que requieren mucho tiempo mientras en otro subproceso se realizan otras tareas.</span><span class="sxs-lookup"><span data-stu-id="23cc5-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="23cc5-104">En la mayoría de los casos, al final llegará a un punto en el que la aplicación no debe continuar hasta que se complete la operación de base de datos.</span><span class="sxs-lookup"><span data-stu-id="23cc5-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="23cc5-105">En tales casos, resulta útil sondear la operación asincrónica para determinar si se ha completado.</span><span class="sxs-lookup"><span data-stu-id="23cc5-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
   
- Para averiguar si la operación se ha completado, puede utilizar la propiedad <xref:System.IAsyncResult.IsCompleted%2A>.  
+ <span data-ttu-id="23cc5-106">Para averiguar si la operación se ha completado, puede utilizar la propiedad <xref:System.IAsyncResult.IsCompleted%2A>.</span><span class="sxs-lookup"><span data-stu-id="23cc5-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
   
-## Ejemplo  
- La siguiente aplicación de consola actualiza los datos de la base de datos de ejemplo **AdventureWorks**, y realiza su trabajo de forma asincrónica.  Para emular un proceso cuya ejecución tiene una larga duración, en este ejemplo se inserta una instrucción WAITFOR en el texto de comando.  Normalmente, no intentaría hacer que sus comandos se ejecutaran de forma más lenta, pero en este caso facilita la demostración del comportamiento asincrónico.  
+## <a name="example"></a><span data-ttu-id="23cc5-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="23cc5-107">Example</span></span>  
+ <span data-ttu-id="23cc5-108">La siguiente aplicación de consola actualiza los datos de la **AdventureWorks** base de datos de ejemplo, realiza su trabajo de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="23cc5-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="23cc5-109">Para emular un proceso cuya ejecución tiene una larga duración, en este ejemplo se inserta una instrucción WAITFOR en el texto de comando.</span><span class="sxs-lookup"><span data-stu-id="23cc5-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="23cc5-110">Normalmente, no intentaría hacer que sus comandos se ejecutaran de forma más lenta, pero en este caso facilita la demostración del comportamiento asincrónico.</span><span class="sxs-lookup"><span data-stu-id="23cc5-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
   
@@ -102,9 +106,7 @@ Module Module1
 End Module   
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -198,6 +200,6 @@ class Class1
 }  
 ```  
   
-## Vea también  
- [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="23cc5-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="23cc5-111">See Also</span></span>  
+ [<span data-ttu-id="23cc5-112">Operaciones asincrónicas</span><span class="sxs-lookup"><span data-stu-id="23cc5-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [<span data-ttu-id="23cc5-113">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="23cc5-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

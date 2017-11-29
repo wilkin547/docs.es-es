@@ -1,28 +1,38 @@
 ---
-title: "Elemento &lt;authentication&gt; de &lt;clientCertificate&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;authentication&gt; del (elemento) &lt;clientCertificate&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4eb125727d68d1618b32d21612ecfac28eaa5b6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;authentication&gt; de &lt;clientCertificate&gt;
-Especifica los comportamientos de autenticación para los certificados de cliente utilizados por un servicio.  
+# <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a><span data-ttu-id="0927f-102">&lt;authentication&gt; del (elemento) &lt;clientCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="0927f-102">&lt;authentication&gt; of &lt;clientCertificate&gt; Element</span></span>
+<span data-ttu-id="0927f-103">Especifica los comportamientos de autenticación para los certificados de cliente utilizados por un servicio.</span><span class="sxs-lookup"><span data-stu-id="0927f-103">Specifies authentication behaviors for client certificates used by a service.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="0927f-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0927f-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0927f-105">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="0927f-105">\<behaviors></span></span>  
+<span data-ttu-id="0927f-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="0927f-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="0927f-107">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="0927f-107">\<behavior></span></span>  
+<span data-ttu-id="0927f-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="0927f-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="0927f-109">\<clientCertificate ></span><span class="sxs-lookup"><span data-stu-id="0927f-109">\<clientCertificate></span></span>  
+<span data-ttu-id="0927f-110">\<autenticación ></span><span class="sxs-lookup"><span data-stu-id="0927f-110">\<authentication></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="0927f-111">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0927f-111">Syntax</span></span>  
   
+```xml  
 <authentication  
 customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
 certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
@@ -33,62 +43,62 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0927f-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="0927f-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="0927f-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="0927f-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="0927f-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="0927f-114">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|customCertificateValidatorType|Cadena opcional.  Tipo y ensamblado utilizados para validar un tipo personalizado.  Se debe establecer este atributo cuando `certificateValidationMode` está establecido en `Custom`.|  
-|certificateValidationMode|Enumeración opcional.  Especifica uno de los modos usados para validar las credenciales.  Este atributo es del tipo [System.Servicemodel.Security.X509CertificateValidationMode](assetId:///System.Servicemodel.Security.X509CertificateValidationMode?qualifyHint=False&amp;autoUpgrade=True).  Si se establece en `Custom`, también debe proporcionarse un `customCertificateValidator`.  De manera predeterminada, es `ChainTrust`.|  
-|includeWindowsGroups|Opcional booleano.  Especifica si los grupos de Windows están incluidos en el contexto de seguridad.  Al establecer este atributo en `true`, se tiene un impacto de rendimiento y tiene como resultado una expansión de grupo completa.  Establezca este atributo en `false` si no necesita establecer la lista de grupos a los que un usuario pertenece.|  
-|mapClientCertificateToWindowsAcccount|booleano.  Especifica si el cliente puede estar asignado a una identidad de Windows utilizando el certificado.  Active Directory debe estar habilitado para ello.|  
-|revocationMode|Enumeración opcional.  Uno de los modos utilizados para comprobar listas de certificados revocadas \(RCL\).  De manera predeterminada, es `Online`.  Se omite este valor al usar la seguridad de transporte HTTP.|  
-|trustedStoreLocation|Enumeración opcional.  Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`.  Se utiliza este valor cuando un certificado del servicio se negocia al cliente.  La validación se realiza contra el **Personas de confianza** almacén en la ubicación del almacén especificada.  De manera predeterminada, es `CurrentUser`.|  
+|<span data-ttu-id="0927f-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="0927f-115">Attribute</span></span>|<span data-ttu-id="0927f-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="0927f-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="0927f-117">customCertificateValidatorType</span><span class="sxs-lookup"><span data-stu-id="0927f-117">customCertificateValidatorType</span></span>|<span data-ttu-id="0927f-118">Cadena opcional.</span><span class="sxs-lookup"><span data-stu-id="0927f-118">Optional string.</span></span> <span data-ttu-id="0927f-119">Tipo y ensamblado utilizados para validar un tipo personalizado.</span><span class="sxs-lookup"><span data-stu-id="0927f-119">A type and assembly used to validate a custom type.</span></span> <span data-ttu-id="0927f-120">Se debe establecer este atributo cuando `certificateValidationMode` está establecido en `Custom`.</span><span class="sxs-lookup"><span data-stu-id="0927f-120">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span>|  
+|<span data-ttu-id="0927f-121">certificateValidationMode</span><span class="sxs-lookup"><span data-stu-id="0927f-121">certificateValidationMode</span></span>|<span data-ttu-id="0927f-122">Enumeración opcional.</span><span class="sxs-lookup"><span data-stu-id="0927f-122">Optional enumeration.</span></span> <span data-ttu-id="0927f-123">Especifica uno de los modos usados para validar las credenciales.</span><span class="sxs-lookup"><span data-stu-id="0927f-123">Specifies one of the modes used to validate credentials.</span></span> <span data-ttu-id="0927f-124">Este atributo es del tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span><span class="sxs-lookup"><span data-stu-id="0927f-124">This attribute is of the <xref:System.ServiceModel.Security.X509CertificateValidationMode> type.</span></span> <span data-ttu-id="0927f-125">Si se establece en <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, también debe proporcionarse un `customCertificateValidator`.</span><span class="sxs-lookup"><span data-stu-id="0927f-125">If set to <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, then a `customCertificateValidator` must also be supplied.</span></span> <span data-ttu-id="0927f-126">De manera predeterminada, es <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0927f-126">The default is <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.</span></span>|  
+|<span data-ttu-id="0927f-127">includeWindowsGroups</span><span class="sxs-lookup"><span data-stu-id="0927f-127">includeWindowsGroups</span></span>|<span data-ttu-id="0927f-128">Opcional booleano.</span><span class="sxs-lookup"><span data-stu-id="0927f-128">Optional Boolean.</span></span> <span data-ttu-id="0927f-129">Especifica si los grupos de Windows están incluidos en el contexto de seguridad.</span><span class="sxs-lookup"><span data-stu-id="0927f-129">Specifies if Windows groups are included in the security context.</span></span> <span data-ttu-id="0927f-130">Al establecer este atributo en `true`, se tiene un impacto de rendimiento y tiene como resultado una expansión de grupo completa.</span><span class="sxs-lookup"><span data-stu-id="0927f-130">Setting this attribute to `true` has a performance impact, as it results in a full group expansion.</span></span> <span data-ttu-id="0927f-131">Establezca este atributo en `false` si no necesita establecer la lista de grupos a los que un usuario pertenece.</span><span class="sxs-lookup"><span data-stu-id="0927f-131">Set this attribute to `false` if you do not need to establish the list of groups a user belongs to.</span></span>|  
+|<span data-ttu-id="0927f-132">mapClientCertificateToWindowsAcccount</span><span class="sxs-lookup"><span data-stu-id="0927f-132">mapClientCertificateToWindowsAcccount</span></span>|<span data-ttu-id="0927f-133">booleano.</span><span class="sxs-lookup"><span data-stu-id="0927f-133">Boolean.</span></span> <span data-ttu-id="0927f-134">Especifica si el cliente puede estar asignado a una identidad de Windows utilizando el certificado.</span><span class="sxs-lookup"><span data-stu-id="0927f-134">Specifies whether the client can be mapped to a Windows identity using the certificate.</span></span> <span data-ttu-id="0927f-135">Active Directory debe estar habilitado para ello.</span><span class="sxs-lookup"><span data-stu-id="0927f-135">Active Directory must be enabled to do this.</span></span>|  
+|<span data-ttu-id="0927f-136">revocationMode</span><span class="sxs-lookup"><span data-stu-id="0927f-136">revocationMode</span></span>|<span data-ttu-id="0927f-137">Enumeración opcional.</span><span class="sxs-lookup"><span data-stu-id="0927f-137">Optional enumeration.</span></span> <span data-ttu-id="0927f-138">Uno de los modos utilizados para comprobar listas de certificados revocadas (RCL).</span><span class="sxs-lookup"><span data-stu-id="0927f-138">One of the modes used to check for a revoked certificate lists (RCL).</span></span> <span data-ttu-id="0927f-139">De manera predeterminada, es `Online`.</span><span class="sxs-lookup"><span data-stu-id="0927f-139">The default is `Online`.</span></span> <span data-ttu-id="0927f-140">Se omite este valor al usar la seguridad de transporte HTTP.</span><span class="sxs-lookup"><span data-stu-id="0927f-140">This value is ignored when using HTTP transport security.</span></span>|  
+|<span data-ttu-id="0927f-141">trustedStoreLocation</span><span class="sxs-lookup"><span data-stu-id="0927f-141">trustedStoreLocation</span></span>|<span data-ttu-id="0927f-142">Enumeración opcional.</span><span class="sxs-lookup"><span data-stu-id="0927f-142">Optional enumeration.</span></span> <span data-ttu-id="0927f-143">Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="0927f-143">One of the two system store locations: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="0927f-144">Se utiliza este valor cuando un certificado del servicio se negocia al cliente.</span><span class="sxs-lookup"><span data-stu-id="0927f-144">This value is used when a service certificate is negotiated to the client.</span></span> <span data-ttu-id="0927f-145">Validación se realiza contra el **personas de confianza** almacenar en la ubicación del almacén especificado.</span><span class="sxs-lookup"><span data-stu-id="0927f-145">Validation is performed against the **Trusted People** store in the specified store location.</span></span> <span data-ttu-id="0927f-146">De manera predeterminada, es `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="0927f-146">The default is `CurrentUser`.</span></span>|  
   
-## Atributo customCertificateValidatorType  
+## <a name="customcertificatevalidatortype-attribute"></a><span data-ttu-id="0927f-147">Atributo customCertificateValidatorType</span><span class="sxs-lookup"><span data-stu-id="0927f-147">customCertificateValidatorType Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="0927f-148">Valor</span><span class="sxs-lookup"><span data-stu-id="0927f-148">Value</span></span>|<span data-ttu-id="0927f-149">Descripción</span><span class="sxs-lookup"><span data-stu-id="0927f-149">Description</span></span>|  
 |-----------|-----------------|  
-|String|Especifica el nombre de tipo y el ensamblado y otros datos utilizados para buscar el tipo.|  
+|<span data-ttu-id="0927f-150">String</span><span class="sxs-lookup"><span data-stu-id="0927f-150">String</span></span>|<span data-ttu-id="0927f-151">Especifica el nombre de tipo y el ensamblado y otros datos utilizados para buscar el tipo.</span><span class="sxs-lookup"><span data-stu-id="0927f-151">Specifies the type name and assembly and other data used to find the type.</span></span>|  
   
-## Atributo certificateValidationMode  
+## <a name="certificatevalidationmode-attribute"></a><span data-ttu-id="0927f-152">Atributo certificateValidationMode</span><span class="sxs-lookup"><span data-stu-id="0927f-152">certificateValidationMode Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="0927f-153">Valor</span><span class="sxs-lookup"><span data-stu-id="0927f-153">Value</span></span>|<span data-ttu-id="0927f-154">Descripción</span><span class="sxs-lookup"><span data-stu-id="0927f-154">Description</span></span>|  
 |-----------|-----------------|  
-|Enumeración|Uno de los valores siguientes: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Para obtener más información, consulte [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|<span data-ttu-id="0927f-155">Enumeración</span><span class="sxs-lookup"><span data-stu-id="0927f-155">Enumeration</span></span>|<span data-ttu-id="0927f-156">Uno de los valores siguientes: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.</span><span class="sxs-lookup"><span data-stu-id="0927f-156">One of the following values: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.</span></span><br /><br /> <span data-ttu-id="0927f-157">Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="0927f-157">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## Atributo revocationMode  
+## <a name="revocationmode-attribute"></a><span data-ttu-id="0927f-158">Atributo revocationMode</span><span class="sxs-lookup"><span data-stu-id="0927f-158">revocationMode Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="0927f-159">Valor</span><span class="sxs-lookup"><span data-stu-id="0927f-159">Value</span></span>|<span data-ttu-id="0927f-160">Descripción</span><span class="sxs-lookup"><span data-stu-id="0927f-160">Description</span></span>|  
 |-----------|-----------------|  
-|Enumeración|Uno de los valores siguientes: NoCheck, Online, Offline.  Para obtener más información, consulte [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|<span data-ttu-id="0927f-161">Enumeración</span><span class="sxs-lookup"><span data-stu-id="0927f-161">Enumeration</span></span>|<span data-ttu-id="0927f-162">Uno de los valores siguientes: NoCheck, Online, Offline.</span><span class="sxs-lookup"><span data-stu-id="0927f-162">One of the following values: NoCheck, Online, Offline.</span></span> <span data-ttu-id="0927f-163">Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="0927f-163">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## Atributo trustedStoreLocation  
+## <a name="trustedstorelocation-attribute"></a><span data-ttu-id="0927f-164">Atributo trustedStoreLocation</span><span class="sxs-lookup"><span data-stu-id="0927f-164">trustedStoreLocation Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="0927f-165">Valor</span><span class="sxs-lookup"><span data-stu-id="0927f-165">Value</span></span>|<span data-ttu-id="0927f-166">Descripción</span><span class="sxs-lookup"><span data-stu-id="0927f-166">Description</span></span>|  
 |-----------|-----------------|  
-|Enumeración|Uno de los siguientes valores: `LocalMachine` o `CurrentUser`.  De manera predeterminada, es `CurrentUser`.  Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`.  Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.|  
+|<span data-ttu-id="0927f-167">Enumeración</span><span class="sxs-lookup"><span data-stu-id="0927f-167">Enumeration</span></span>|<span data-ttu-id="0927f-168">Uno de los siguientes valores: `LocalMachine` o `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="0927f-168">One of the following values: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="0927f-169">De manera predeterminada, es `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="0927f-169">The default is `CurrentUser`.</span></span> <span data-ttu-id="0927f-170">Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`.</span><span class="sxs-lookup"><span data-stu-id="0927f-170">If the client application is running under a system account then the certificate is typically under `LocalMachine`.</span></span> <span data-ttu-id="0927f-171">Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="0927f-171">If the client application is running under a user account then the certificate is typically in `CurrentUser`.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="0927f-172">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="0927f-172">Child Elements</span></span>  
+ <span data-ttu-id="0927f-173">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="0927f-173">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="0927f-174">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="0927f-174">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<clientCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Define un certificado X.509 que se usa para autenticar un cliente en un servicio.|  
+|<span data-ttu-id="0927f-175">Elemento</span><span class="sxs-lookup"><span data-stu-id="0927f-175">Element</span></span>|<span data-ttu-id="0927f-176">Descripción</span><span class="sxs-lookup"><span data-stu-id="0927f-176">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0927f-177">\<clientCertificate ></span><span class="sxs-lookup"><span data-stu-id="0927f-177">\<clientCertificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|<span data-ttu-id="0927f-178">Define un certificado X.509 que se usa para autenticar un cliente en un servicio.</span><span class="sxs-lookup"><span data-stu-id="0927f-178">Defines an X.509 certificate used to authenticate a client to a service.</span></span>|  
   
-## Comentarios  
- El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>.  Le permite personalizar cómo se autentican los clientes.  Puede establecer el atributo `certificateValidationMode` en `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` o `Custom`.  De forma predeterminada, el nivel está establecido en `ChainTrust`, que especifica que cada certificado debe encontrarse en una jerarquía de certificados que finalizan en una *entidad emisora raíz* en la parte superior de la cadena.  Este es el modo más seguro.  También puede establecer el valor en `PeerOrChainTrust`, que especifica que los certificados autoemitidos \(confianza del mismo nivel\) se aceptan, así como los certificados que están en una cadena de confianza.  Se utiliza este valor cuando se desarrollan y depuran clientes y servicios porque los certificados autoemitidos no necesitan adquirirse desde una autoridad de confianza.  Al implementar un cliente, utilice en su lugar el valor `ChainTrust`.  
+## <a name="remarks"></a><span data-ttu-id="0927f-179">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0927f-179">Remarks</span></span>  
+ <span data-ttu-id="0927f-180">El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>.</span><span class="sxs-lookup"><span data-stu-id="0927f-180">The `<authentication>` element corresponds to the <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> class.</span></span> <span data-ttu-id="0927f-181">Le permite personalizar cómo se autentican los clientes.</span><span class="sxs-lookup"><span data-stu-id="0927f-181">It enables you to customize how clients are authenticated.</span></span> <span data-ttu-id="0927f-182">Puede establecer el atributo `certificateValidationMode` en `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` o `Custom`.</span><span class="sxs-lookup"><span data-stu-id="0927f-182">You can set the `certificateValidationMode` attribute to `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, or `Custom`.</span></span> <span data-ttu-id="0927f-183">De forma predeterminada, el nivel se establece en `ChainTrust`, que especifica que cada certificado debe encontrarse en una jerarquía de certificados que finalizan en una *entidad emisora raíz* en la parte superior de la cadena.</span><span class="sxs-lookup"><span data-stu-id="0927f-183">By default, the level is set to `ChainTrust`, which specifies that each certificate must be found in a hierarchy of certificates ending in a *root authority* at the top of the chain.</span></span> <span data-ttu-id="0927f-184">Este es el modo más seguro.</span><span class="sxs-lookup"><span data-stu-id="0927f-184">This is the most secure mode.</span></span> <span data-ttu-id="0927f-185">También puede establecer el valor en `PeerOrChainTrust`, que especifica que los certificados autoemitidos (confianza del mismo nivel) se aceptan, así como los certificados que están en una cadena de confianza.</span><span class="sxs-lookup"><span data-stu-id="0927f-185">You can also set the value to `PeerOrChainTrust`, which specifies that self-issued certificates (peer trust) are accepted as well as certificates that are in a trusted chain.</span></span> <span data-ttu-id="0927f-186">Se utiliza este valor cuando se desarrollan y depuran clientes y servicios porque los certificados autoemitidos no necesitan adquirirse desde una autoridad de confianza.</span><span class="sxs-lookup"><span data-stu-id="0927f-186">This value is used when developing and debugging clients and services because self-issued certificates need not be purchased from a trusted authority.</span></span> <span data-ttu-id="0927f-187">Al implementar un cliente, utilice en su lugar el valor `ChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="0927f-187">When deploying a client, use the `ChainTrust` value instead.</span></span>  
   
- También puede establecer el valor en `Custom`.  Cuando se establezca en el valor `Custom`, también debe establecer el atributo `customCertificateValidatorType` en un ensamblado y tipo utilizados para validar el certificado.  Para crear su propio validador personalizado, debe heredar a partir de la clase <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstracta.  Para obtener más información, consulte [Cómo crear un servicio que emplee un validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ <span data-ttu-id="0927f-188">También puede establecer el valor en `Custom`.</span><span class="sxs-lookup"><span data-stu-id="0927f-188">You can also set the value to `Custom`.</span></span> <span data-ttu-id="0927f-189">Cuando se establezca en el valor `Custom`, también debe establecer el atributo `customCertificateValidatorType` en un ensamblado y tipo utilizados para validar el certificado.</span><span class="sxs-lookup"><span data-stu-id="0927f-189">When set to the `Custom` value, you must also set the `customCertificateValidatorType` attribute to an assembly and type used to validate the certificate.</span></span> <span data-ttu-id="0927f-190">Para crear su propio validador personalizado, debe heredar a partir de la clase <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstracta.</span><span class="sxs-lookup"><span data-stu-id="0927f-190">To create your own custom validator, you must inherit from the abstract <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span> <span data-ttu-id="0927f-191">Para obtener más información, consulte [Cómo: crear un servicio que emplee un validador de certificado personalizada](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).</span><span class="sxs-lookup"><span data-stu-id="0927f-191">For more information, see [How to: Create a Service that Employs a Custom Certificate Validator](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).</span></span>  
   
-## Ejemplo  
- El código siguiente especifica un certificado X.509 y un tipo de validación personalizado en el elemento `<authentication>`.  
+## <a name="example"></a><span data-ttu-id="0927f-192">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0927f-192">Example</span></span>  
+ <span data-ttu-id="0927f-193">El código siguiente especifica un certificado X.509 y un tipo de validación personalizado en el elemento `<authentication>`.</span><span class="sxs-lookup"><span data-stu-id="0927f-193">The following code specifies an X.509 certificate and a custom validation type in the `<authentication>` element.</span></span>  
   
-```  
+```xml  
 <serviceBehaviors>  
  <behavior name="myServiceBehavior">  
   <clientCertificate>  
@@ -107,12 +117,12 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 </serviceBehaviors>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>   
- <xref:System.ServiceModel.Security.X509CertificateValidationMode>   
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>   
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>   
- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>   
- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Cómo crear un servicio que emplee un validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)   
- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="0927f-194">Vea también</span><span class="sxs-lookup"><span data-stu-id="0927f-194">See Also</span></span>  
+ <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>  
+ <xref:System.ServiceModel.Security.X509CertificateValidationMode>  
+ <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>  
+ <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>  
+ <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>  
+ [<span data-ttu-id="0927f-195">Comportamientos de seguridad</span><span class="sxs-lookup"><span data-stu-id="0927f-195">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="0927f-196">Cómo: crear un servicio que emplee un validador de certificado personalizada</span><span class="sxs-lookup"><span data-stu-id="0927f-196">How to: Create a Service that Employs a Custom Certificate Validator</span></span>](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [<span data-ttu-id="0927f-197">Trabajar con certificados</span><span class="sxs-lookup"><span data-stu-id="0927f-197">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

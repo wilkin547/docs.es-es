@@ -5,75 +5,73 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d5b81e20ed1b39c7750329718729905484eb7fa1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Cómo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF
-## <a name="applies-to"></a>Se aplica a  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="a003b-102">Cómo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF</span><span class="sxs-lookup"><span data-stu-id="a003b-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="a003b-103">Se aplica a</span><span class="sxs-lookup"><span data-stu-id="a003b-103">Applies To</span></span>  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+-   <span data-ttu-id="a003b-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="a003b-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   Formularios Web Forms ASP.NET®  
+-   <span data-ttu-id="a003b-105">Formularios Web Forms ASP.NET®</span><span class="sxs-lookup"><span data-stu-id="a003b-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a>Resumen  
- Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones. También proporciona instrucciones sobre cómo probar la aplicación sencilla de formularios Web Forms ASP.NET para notificaciones para obtener una implementación correcta de la autenticación federada. Este tema de procedimientos no tiene instrucciones detalladas para crear un Servicio de tokens de seguridad (STS) y presupone que ya ha configurado uno.  
+## <a name="summary"></a><span data-ttu-id="a003b-106">Resumen</span><span class="sxs-lookup"><span data-stu-id="a003b-106">Summary</span></span>  
+ <span data-ttu-id="a003b-107">Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones.</span><span class="sxs-lookup"><span data-stu-id="a003b-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="a003b-108">También proporciona instrucciones sobre cómo probar la aplicación sencilla de formularios Web Forms ASP.NET para notificaciones para obtener una implementación correcta de la autenticación federada.</span><span class="sxs-lookup"><span data-stu-id="a003b-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="a003b-109">Este tema de procedimientos no tiene instrucciones detalladas para crear un Servicio de tokens de seguridad (STS) y presupone que ya ha configurado uno.</span><span class="sxs-lookup"><span data-stu-id="a003b-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a>Contenido  
+## <a name="contents"></a><span data-ttu-id="a003b-110">Contenido</span><span class="sxs-lookup"><span data-stu-id="a003b-110">Contents</span></span>  
   
--   Objetivos  
+-   <span data-ttu-id="a003b-111">Objetivos</span><span class="sxs-lookup"><span data-stu-id="a003b-111">Objectives</span></span>  
   
--   Resumen de pasos  
+-   <span data-ttu-id="a003b-112">Resumen de pasos</span><span class="sxs-lookup"><span data-stu-id="a003b-112">Summary of Steps</span></span>  
   
--   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+-   <span data-ttu-id="a003b-113">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="a003b-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
+-   <span data-ttu-id="a003b-114">Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones</span><span class="sxs-lookup"><span data-stu-id="a003b-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
   
--   Paso 3: Probar la solución  
+-   <span data-ttu-id="a003b-115">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="a003b-115">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a>Objetivos  
+## <a name="objectives"></a><span data-ttu-id="a003b-116">Objetivos</span><span class="sxs-lookup"><span data-stu-id="a003b-116">Objectives</span></span>  
   
--   Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
+-   <span data-ttu-id="a003b-117">Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones</span><span class="sxs-lookup"><span data-stu-id="a003b-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
   
--   Probar una aplicación de formularios Web Forms ASP.NET para notificaciones correcta  
+-   <span data-ttu-id="a003b-118">Probar una aplicación de formularios Web Forms ASP.NET para notificaciones correcta</span><span class="sxs-lookup"><span data-stu-id="a003b-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
   
-## <a name="summary-of-steps"></a>Resumen de pasos  
+## <a name="summary-of-steps"></a><span data-ttu-id="a003b-119">Resumen de pasos</span><span class="sxs-lookup"><span data-stu-id="a003b-119">Summary of Steps</span></span>  
   
--   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+-   <span data-ttu-id="a003b-120">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="a003b-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
   
--   Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación federada  
+-   <span data-ttu-id="a003b-121">Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación federada</span><span class="sxs-lookup"><span data-stu-id="a003b-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
   
--   Paso 3: Probar la solución  
+-   <span data-ttu-id="a003b-122">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="a003b-122">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
- En este paso creará una aplicación de formularios Web Forms ASP.NET.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="a003b-123">Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET</span><span class="sxs-lookup"><span data-stu-id="a003b-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="a003b-124">En este paso creará una aplicación de formularios Web Forms ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="a003b-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="a003b-125">Para crear una aplicación de ASP.NET sencilla</span><span class="sxs-lookup"><span data-stu-id="a003b-125">To create a simple ASP.NET application</span></span>  
   
-1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.  
+1.  <span data-ttu-id="a003b-126">Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.</span><span class="sxs-lookup"><span data-stu-id="a003b-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
+2.  <span data-ttu-id="a003b-127">En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="a003b-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
+3.  <span data-ttu-id="a003b-128">En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="a003b-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
- En este paso agregará entradas de configuración al archivo de configuración *Web.config* de su aplicación de formularios Web Forms ASP.NET para notificaciones.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="a003b-129">Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones</span><span class="sxs-lookup"><span data-stu-id="a003b-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="a003b-130">En este paso agregará entradas de configuración al archivo de configuración *Web.config* de su aplicación de formularios Web Forms ASP.NET para notificaciones.</span><span class="sxs-lookup"><span data-stu-id="a003b-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Para configurar la aplicación ASP.NET para la autenticación basada en notificaciones  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="a003b-131">Para configurar la aplicación ASP.NET para la autenticación basada en notificaciones</span><span class="sxs-lookup"><span data-stu-id="a003b-131">To configure ASP.NET application for claims-based authentication</span></span>  
   
-1.  Agregue las siguientes entradas de la sección de configuración al archivo de configuración *Web.config* inmediatamente después del elemento de apertura **\<configuration>**:  
+1.  <span data-ttu-id="a003b-132">Agregue las siguientes entradas de la sección de configuración al archivo de configuración *Web.config* inmediatamente después del elemento de apertura **\<configuration>**:</span><span class="sxs-lookup"><span data-stu-id="a003b-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -82,7 +80,7 @@ ms.lasthandoff: 08/21/2017
     </configSections>  
     ```  
   
-2.  Agregue un elemento **\<location>** que permita el acceso a los metadatos de federación de la aplicación:  
+2.  <span data-ttu-id="a003b-133">Agregue un elemento **\<location>** que permita el acceso a los metadatos de federación de la aplicación:</span><span class="sxs-lookup"><span data-stu-id="a003b-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -94,7 +92,7 @@ ms.lasthandoff: 08/21/2017
     </location>  
     ```  
   
-3.  Agregue las siguientes entradas de configuración dentro de los elementos **\<system.web>** para denegar usuarios, deshabilitar la autenticación nativa y habilitar WIF para administrar la autenticación.  
+3.  <span data-ttu-id="a003b-134">Agregue las siguientes entradas de configuración dentro de los elementos **\<system.web>** para denegar usuarios, deshabilitar la autenticación nativa y habilitar WIF para administrar la autenticación.</span><span class="sxs-lookup"><span data-stu-id="a003b-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/21/2017
     <authentication mode="None" />  
     ```  
   
-4.  Agregue un elemento **\<system.webServer>** que defina los módulos para la autenticación federada. Tenga en cuenta que el atributo *PublicKeyToken* debe ser el mismo que el atributo *PublicKeyToken* para las entradas **\<configSections>** que se han agregado anteriormente:  
+4.  <span data-ttu-id="a003b-135">Agregue un elemento **\<system.webServer>** que defina los módulos para la autenticación federada.</span><span class="sxs-lookup"><span data-stu-id="a003b-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="a003b-136">Tenga en cuenta que el atributo *PublicKeyToken* debe ser el mismo que el atributo *PublicKeyToken* para las entradas **\<configSections>** que se han agregado anteriormente:</span><span class="sxs-lookup"><span data-stu-id="a003b-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
   
     ```xml  
     <system.webServer>  
@@ -114,7 +112,7 @@ ms.lasthandoff: 08/21/2017
     </system.webServer>  
     ```  
   
-5.  Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**. También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
+5.  <span data-ttu-id="a003b-137">Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**.</span><span class="sxs-lookup"><span data-stu-id="a003b-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="a003b-138">También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).</span><span class="sxs-lookup"><span data-stu-id="a003b-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -138,16 +136,16 @@ ms.lasthandoff: 08/21/2017
     </system.identityModel.services>  
     ```  
   
-6.  Agregue una referencia al ensamblado <xref:System.IdentityModel>.  
+6.  <span data-ttu-id="a003b-139">Agregue una referencia al ensamblado <xref:System.IdentityModel>.</span><span class="sxs-lookup"><span data-stu-id="a003b-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-7.  Compile la solución y asegúrese de que no existan errores.  
+7.  <span data-ttu-id="a003b-140">Compile la solución y asegúrese de que no existan errores.</span><span class="sxs-lookup"><span data-stu-id="a003b-140">Compile the solution to make sure there are no errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a>Paso 3: Probar la solución  
- En este paso probará la aplicación de formularios Web Forms ASP.NET configurada para la autenticación basada en notificaciones. Para realizar una prueba básica, agregará código que muestra notificaciones en el token emitido mediante el servicio de token de seguridad (STS).  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="a003b-141">Paso 3: Probar la solución</span><span class="sxs-lookup"><span data-stu-id="a003b-141">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="a003b-142">En este paso probará la aplicación de formularios Web Forms ASP.NET configurada para la autenticación basada en notificaciones.</span><span class="sxs-lookup"><span data-stu-id="a003b-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="a003b-143">Para realizar una prueba básica, agregará código que muestra notificaciones en el token emitido mediante el servicio de token de seguridad (STS).</span><span class="sxs-lookup"><span data-stu-id="a003b-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Para probar su aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="a003b-144">Para probar su aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones</span><span class="sxs-lookup"><span data-stu-id="a003b-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
   
-1.  Abra el archivo **Default.aspx** en el proyecto **TestApp** y reemplace su marcado existente por el marcado siguiente:  
+1.  <span data-ttu-id="a003b-145">Abra el archivo **Default.aspx** en el proyecto **TestApp** y reemplace su marcado existente por el marcado siguiente:</span><span class="sxs-lookup"><span data-stu-id="a003b-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -169,12 +167,12 @@ ms.lasthandoff: 08/21/2017
     </html>  
     ```  
   
-2.  Guarde **Default.aspx** y abra su archivo de código subyacente denominado **Default.aspx.cs**.  
+2.  <span data-ttu-id="a003b-146">Guarde **Default.aspx** y abra su archivo de código subyacente denominado **Default.aspx.cs**.</span><span class="sxs-lookup"><span data-stu-id="a003b-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
   
     > [!NOTE]
-    >  **Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones. Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.  
+    >  <span data-ttu-id="a003b-147">**Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones.</span><span class="sxs-lookup"><span data-stu-id="a003b-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="a003b-148">Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.</span><span class="sxs-lookup"><span data-stu-id="a003b-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
   
-3.  Reemplace el código existente en el método **Page_Load** de **Default.aspx.cs** por el código siguiente:  
+3.  <span data-ttu-id="a003b-149">Reemplace el código existente en el método **Page_Load** de **Default.aspx.cs** por el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="a003b-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
   
     ```csharp  
     using System;  
@@ -213,9 +211,8 @@ ms.lasthandoff: 08/21/2017
     }  
     ```  
   
-4.  Guarde **Default.aspx.cs** y compile la solución.  
+4.  <span data-ttu-id="a003b-150">Guarde **Default.aspx.cs** y compile la solución.</span><span class="sxs-lookup"><span data-stu-id="a003b-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
   
-5.  Presione la tecla **F5** para ejecutar la solución.  
+5.  <span data-ttu-id="a003b-151">Presione la tecla **F5** para ejecutar la solución.</span><span class="sxs-lookup"><span data-stu-id="a003b-151">Run the solution by pressing the **F5** key.</span></span>  
   
-6.  Debe estar presente en la página que muestra las notificaciones del token que ha emitido mediante el servicio de token de seguridad.
-
+6.  <span data-ttu-id="a003b-152">Debe estar presente en la página que muestra las notificaciones del token que ha emitido mediante el servicio de token de seguridad.</span><span class="sxs-lookup"><span data-stu-id="a003b-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>

@@ -1,35 +1,38 @@
 ---
-title: "3346 - ConnectionReaderSendFault | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3346 - ConnectionReaderSendFault
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 137c665f-0ea1-4405-bf48-65aabfad97e5
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 27503b93c8a6bf09ad20c158c891e1355fac0a19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3346 - ConnectionReaderSendFault
-## Propiedades  
+# <a name="3346---connectionreadersendfault"></a><span data-ttu-id="330fc-102">3346 - ConnectionReaderSendFault</span><span class="sxs-lookup"><span data-stu-id="330fc-102">3346 - ConnectionReaderSendFault</span></span>
+## <a name="properties"></a><span data-ttu-id="330fc-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="330fc-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|3346|  
-|Palabras clave|Canal|  
-|Nivel|Error|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="330fc-104">Id.</span><span class="sxs-lookup"><span data-stu-id="330fc-104">ID</span></span>|<span data-ttu-id="330fc-105">3346</span><span class="sxs-lookup"><span data-stu-id="330fc-105">3346</span></span>|  
+|<span data-ttu-id="330fc-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="330fc-106">Keywords</span></span>|<span data-ttu-id="330fc-107">Canal</span><span class="sxs-lookup"><span data-stu-id="330fc-107">Channel</span></span>|  
+|<span data-ttu-id="330fc-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="330fc-108">Level</span></span>|<span data-ttu-id="330fc-109">Error</span><span class="sxs-lookup"><span data-stu-id="330fc-109">Error</span></span>|  
+|<span data-ttu-id="330fc-110">Canal</span><span class="sxs-lookup"><span data-stu-id="330fc-110">Channel</span></span>|<span data-ttu-id="330fc-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="330fc-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Este evento se genera cuando el lector de conexiones está enviando un error.  
+## <a name="description"></a><span data-ttu-id="330fc-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="330fc-112">Description</span></span>  
+ <span data-ttu-id="330fc-113">Este evento se genera cuando el lector de conexiones está enviando un error.</span><span class="sxs-lookup"><span data-stu-id="330fc-113">This event is emitted when the connection reader is sending a fault.</span></span>  
   
-## Mensaje  
- Error en el envío del lector de conexión '%1'.  
+## <a name="message"></a><span data-ttu-id="330fc-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="330fc-114">Message</span></span>  
+ <span data-ttu-id="330fc-115">Error en el envío del lector de conexión '%1'.</span><span class="sxs-lookup"><span data-stu-id="330fc-115">Connection reader sending fault '%1'.</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="330fc-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="330fc-116">Details</span></span>

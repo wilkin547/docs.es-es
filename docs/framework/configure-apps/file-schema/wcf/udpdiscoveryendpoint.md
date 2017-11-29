@@ -1,88 +1,84 @@
 ---
-title: "&lt;udpDiscoveryEndpoint&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;udpDiscoveryEndpoint&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 21f0165f8cda6701aa11058f2dac1bdde0f9ebbd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;udpDiscoveryEndpoint&gt;
-Este elemento de configuración define un extremo estándar que está preconfigurado para las operaciones de detección sobre un enlace de multidifusión UDP.  Este extremo tiene un contrato fijo y admite dos versiones del protocolo WS\-Discovery.  Además, tiene un enlace de UDP fijo y una dirección predeterminada según se indica en las especificaciones de WS\-Discovery \(WS\-Discovery April 2005 o WS\-Discovery V1.1\).  
+# <a name="ltudpdiscoveryendpointgt"></a><span data-ttu-id="20491-102">&lt;udpDiscoveryEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="20491-102">&lt;udpDiscoveryEndpoint&gt;</span></span>
+<span data-ttu-id="20491-103">Este elemento de configuración define un punto de conexión estándar que está preconfigurado para las operaciones de detección sobre un enlace de multidifusión UDP.</span><span class="sxs-lookup"><span data-stu-id="20491-103">This configuration element defines a standard endpoint that is pre-configured for discovery operations over a UDP multicast binding.</span></span> <span data-ttu-id="20491-104">Este extremo tiene un contrato fijo y admite dos versiones del protocolo WS-Discovery.</span><span class="sxs-lookup"><span data-stu-id="20491-104">This endpoint has a fixed contract and supports two WS-Discovery protocol versions.</span></span> <span data-ttu-id="20491-105">Además, tiene un enlace de UDP fijo y una dirección predeterminada según se indica en las especificaciones de WS-Discovery (WS-Discovery April 2005 o WS-Discovery V1.1).</span><span class="sxs-lookup"><span data-stu-id="20491-105">In addition, it has a fixed UDP binding and a default address as specified in the WS-Discovery specifications (WS-Discovery April 2005 or WS-Discovery V1.1)..</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="20491-106">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="20491-106">\<system.ServiceModel></span></span>  
+<span data-ttu-id="20491-107">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="20491-107">\<standardEndpoints></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="20491-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="20491-108">Syntax</span></span>  
   
+```xml  
 <system.serviceModel>  
-    <standardEndpoints>  
-       <discoveryEndpoint>   
-          <standardEndpoint  
-                  discoveryMode=”Adhoc/Managed”  
-                  discoveryVersion=”WSDiscovery11/WSDiscoveryApril2005”  
-                  maxResponseDelay=”Timespan”  
-                  multicastAddress=”Uri”   
-                  name="String" />  
-       </discoveryEndpoint>          
-    </standardEndpoints>  
+    <standardEndpoints>       <discoveryEndpoint>           <standardEndpoint                  discoveryMode="Adhoc/Managed"                  discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"                  maxResponseDelay="Timespan"                  multicastAddress="Uri"                   name="String" />       </discoveryEndpoint>            </standardEndpoints>  
 </system.serviceModel>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="20491-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="20491-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="20491-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="20491-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="20491-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="20491-111">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|discoveryMode|Cadena que especifica el modo del protocolo de detección.  Los valores válidos son "Adhoc" y "Administrado".  En modo administrado, el protocolo se basa en un proxy de detección, que actúa como un repositorio de servicios detectables.  El modo Adhoc requiere que el protocolo utilice el mecanismo de multidifusión UDP para buscar servicios disponibles.  Este valor es del tipo <xref:System.Servicemodel.Discovery.DiscoveryMode>.|  
-|discoveryVersion|Cadena que especifica una de las dos versiones del protocolo WS\-Discovery.  Los valores válidos son WSDiscovery11 y WSDiscoveryApril2005.  Este valor es del tipo <xref:System.Servicemodel.Discovery.DiscoveryVersion>.|  
-|maxResponseDelay|Un valor Timespan que especifica el valor máximo del tiempo que el protocolo Discovery esperará antes de enviar ciertos mensajes como Probe Match o Resolve Match.<br /><br /> Si se envían todos los ProbeMatches al mismo tiempo, puede producirse una tormenta de la red.  Para evitar que esto se produzca, ProbeMatches se envía con un retraso aleatorio entre cada ProbeMatch.  El retraso aleatorio se encuentra en el intervalo entre 0 y el valor establecido por este atributo.  Si este atributo está establecido en 0, los mensajes ProbeMatches se envían en un bucle ajustado sin ningún retraso.  En caso contrario, los mensajes ProbeMatches se envían con cierto retraso aleatorio de modo que el tiempo total empleado en enviar todos los mensajes ProbeMatches no supere maxResponseDelay.  Este valor solo es pertinente para los servicios, clientes no lo utilizan.|  
-|multicastAddress|Uri que especifica una dirección de multidifusión que se va a usar para enviar y recibir los mensajes de detección.  El valor predeterminado es la dirección de multidifusión como compatible con la especificación de protocolo.|  
-|`name`|Cadena que especifica el nombre de la configuración del extremo estándar.  El nombre se utiliza en el atributo `endpointConfiguration` del extremo del servicio para vincular un extremo estándar a su configuración.|  
+|<span data-ttu-id="20491-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="20491-112">Attribute</span></span>|<span data-ttu-id="20491-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="20491-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="20491-114">discoveryMode</span><span class="sxs-lookup"><span data-stu-id="20491-114">discoveryMode</span></span>|<span data-ttu-id="20491-115">Cadena que especifica el modo del protocolo de detección.</span><span class="sxs-lookup"><span data-stu-id="20491-115">A string that specifies the mode of discovery protocol.</span></span> <span data-ttu-id="20491-116">Los valores válidos son "Adhoc" y "Administrado".</span><span class="sxs-lookup"><span data-stu-id="20491-116">Valid values are "Adhoc" and "Managed".</span></span> <span data-ttu-id="20491-117">En modo administrado, el protocolo se basa en un proxy de detección, que actúa como un repositorio de servicios detectables.</span><span class="sxs-lookup"><span data-stu-id="20491-117">In managed mode the protocol relies on a Discovery Proxy, which acts as a repository of Discoverable services.</span></span> <span data-ttu-id="20491-118">El modo Adhoc requiere que el protocolo utilice el mecanismo de multidifusión UDP para buscar servicios disponibles.</span><span class="sxs-lookup"><span data-stu-id="20491-118">Adhoc mode requires the protocol to use UDP multicast mechanism to find available services.</span></span> <span data-ttu-id="20491-119">Este valor es del tipo <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>.</span><span class="sxs-lookup"><span data-stu-id="20491-119">This value is of type <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>.</span></span>|  
+|<span data-ttu-id="20491-120">discoveryVersion</span><span class="sxs-lookup"><span data-stu-id="20491-120">discoveryVersion</span></span>|<span data-ttu-id="20491-121">Cadena que especifica una de las dos versiones del protocolo WS-Discovery.</span><span class="sxs-lookup"><span data-stu-id="20491-121">A string that specifies one of the two versions of WS-Discovery protocol.</span></span> <span data-ttu-id="20491-122">Los valores válidos son WSDiscovery11 y WSDiscoveryApril2005.</span><span class="sxs-lookup"><span data-stu-id="20491-122">Valid values are WSDiscovery11 and WSDiscoveryApril2005.</span></span> <span data-ttu-id="20491-123">Este valor es del tipo <xref:System.ServiceModel.Discovery.DiscoveryVersion>.</span><span class="sxs-lookup"><span data-stu-id="20491-123">This value is of type <xref:System.ServiceModel.Discovery.DiscoveryVersion>.</span></span>|  
+|<span data-ttu-id="20491-124">maxResponseDelay</span><span class="sxs-lookup"><span data-stu-id="20491-124">maxResponseDelay</span></span>|<span data-ttu-id="20491-125">Un valor Timespan que especifica el valor máximo del tiempo que el protocolo Discovery esperará antes de enviar ciertos mensajes como Probe Match o Resolve Match.</span><span class="sxs-lookup"><span data-stu-id="20491-125">A Timespan value that specifies the maximum value for the delay the Discovery protocol will wait before sending certain messages such as Probe Match or Resolve Match.</span></span><br /><br /> <span data-ttu-id="20491-126">Si se envían todos los ProbeMatches al mismo tiempo, puede producirse una tormenta de la red.</span><span class="sxs-lookup"><span data-stu-id="20491-126">If all ProbeMatches are sent at the same time, a network storm may result.</span></span> <span data-ttu-id="20491-127">Para evitar que esto se produzca, ProbeMatches se envía con un retraso aleatorio entre cada ProbeMatch.</span><span class="sxs-lookup"><span data-stu-id="20491-127">To prevent this from occurring, ProbeMatches are sent with a random delay between each ProbeMatch.</span></span> <span data-ttu-id="20491-128">El retraso aleatorio se encuentra en el intervalo entre 0 y el valor establecido por este atributo.</span><span class="sxs-lookup"><span data-stu-id="20491-128">The random delay is in the range of 0 to the value set by this attribute.</span></span> <span data-ttu-id="20491-129">Si este atributo está establecido en 0, los mensajes ProbeMatches se envían en un bucle ajustado sin ningún retraso.</span><span class="sxs-lookup"><span data-stu-id="20491-129">If this attribute is set to 0, then the ProbeMatches messages are sent in a tight loop without any delay.</span></span> <span data-ttu-id="20491-130">En caso contrario, los mensajes ProbeMatches se envían con cierto retraso aleatorio de modo que el tiempo total empleado en enviar todos los mensajes ProbeMatches no supere maxResponseDelay.</span><span class="sxs-lookup"><span data-stu-id="20491-130">Otherwise, the ProbeMatches messages are sent with some random delay such that the total time taken to send all ProbeMatches messages does not exceed the maxResponseDelay.</span></span> <span data-ttu-id="20491-131">Este valor solo es pertinente para los servicios, clientes no lo utilizan.</span><span class="sxs-lookup"><span data-stu-id="20491-131">This value is only relevant for services, it is not used by clients.</span></span>|  
+|<span data-ttu-id="20491-132">multicastAddress</span><span class="sxs-lookup"><span data-stu-id="20491-132">multicastAddress</span></span>|<span data-ttu-id="20491-133">Uri que especifica una dirección de multidifusión que se va a usar para enviar y recibir los mensajes de detección.</span><span class="sxs-lookup"><span data-stu-id="20491-133">A Uri that specifies a multicast address to use for sending and receiving the discovery messages.</span></span> <span data-ttu-id="20491-134">El valor predeterminado es la dirección de multidifusión como compatible con la especificación de protocolo.</span><span class="sxs-lookup"><span data-stu-id="20491-134">The default value is the multicast address as conformant to the protocol specification.</span></span>|  
+|`name`|<span data-ttu-id="20491-135">Cadena que especifica el nombre de la configuración del extremo estándar.</span><span class="sxs-lookup"><span data-stu-id="20491-135">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="20491-136">El nombre se utiliza en el atributo `endpointConfiguration` del extremo del servicio para vincular un extremo estándar a su configuración.</span><span class="sxs-lookup"><span data-stu-id="20491-136">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="20491-137">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="20491-137">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<udpTransportSettings\>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Colección de valores que le permite configurar el transporte UDP para el extremo UDP.|  
+|<span data-ttu-id="20491-138">Elemento</span><span class="sxs-lookup"><span data-stu-id="20491-138">Element</span></span>|<span data-ttu-id="20491-139">Descripción</span><span class="sxs-lookup"><span data-stu-id="20491-139">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="20491-140">\<udpTransportSettings ></span><span class="sxs-lookup"><span data-stu-id="20491-140">\<udpTransportSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|<span data-ttu-id="20491-141">Colección de valores que le permite configurar el transporte UDP para el punto de conexión UDP.</span><span class="sxs-lookup"><span data-stu-id="20491-141">A collection of settings that allow you to configure UDP transport for the UDP endpoint.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="20491-142">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="20491-142">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<standardEndpoints\>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Colección de extremos estándar que son extremos predefinidos con una o más de sus propiedades \(dirección, enlace, contrato\) fijas.|  
+|<span data-ttu-id="20491-143">Elemento</span><span class="sxs-lookup"><span data-stu-id="20491-143">Element</span></span>|<span data-ttu-id="20491-144">Descripción</span><span class="sxs-lookup"><span data-stu-id="20491-144">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="20491-145">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="20491-145">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="20491-146">Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas.</span><span class="sxs-lookup"><span data-stu-id="20491-146">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra un servicio que realiza escuchas de mensajes de detección sobre un transporte de multidifusión UDP.  
+## <a name="example"></a><span data-ttu-id="20491-147">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="20491-147">Example</span></span>  
+ <span data-ttu-id="20491-148">En el siguiente ejemplo se muestra un servicio que realiza escuchas de mensajes de detección sobre un transporte de multidifusión UDP.</span><span class="sxs-lookup"><span data-stu-id="20491-148">The following example demonstrates a service listening for discovery messages over a UDP multicast transport.</span></span>  
   
-```  
-  
+```xml
 <services>  
-    <service name="CalculatorService"  
-         behaviorConfiguration="CalculatorServiceBehavior">  
-         <endpoint binding="basicHttpBinding"   
-           address="calculator" contract="ICalculatorService" />  
-         <endpoint name="DiscoveryEndpoint"  
-                kind="udpDiscoveryEndpoint" />  
-</service>  
-<standardEndpoints>  
-  <udpDiscoveryEndpoint>  
-     <standardEndpoint name="DiscoveryEndpoint"                         
-                       version="WSDiscoveryApril2005" />  
-   </udpDiscoveryEndpoint>  
-</standardEndpoints>  
-  
+  <service name="CalculatorService"  
+           behaviorConfiguration="CalculatorServiceBehavior">  
+    <endpoint binding="basicHttpBinding"   
+              address="calculator" 
+              contract="ICalculatorService" />  
+    <endpoint name="DiscoveryEndpoint"  
+              kind="udpDiscoveryEndpoint" />  
+  </service>  
+  <standardEndpoints>  
+    <udpDiscoveryEndpoint>  
+      <standardEndpoint name="DiscoveryEndpoint"                         
+                        version="WSDiscoveryApril2005" />  
+    </udpDiscoveryEndpoint>  
+  </standardEndpoints>
+</services>
 ```  
   
-## Vea también  
+## <a name="see-also"></a><span data-ttu-id="20491-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="20491-149">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

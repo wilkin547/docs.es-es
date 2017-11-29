@@ -1,91 +1,94 @@
 ---
-title: "Personalizar permisos con suplantaci&#243;n en SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Personalizar permisos con suplantación en SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: cde4fafaa10d7c9b495d4f98ddcd42c7f8a7524a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Personalizar permisos con suplantaci&#243;n en SQL Server
-Muchas aplicaciones utilizan procedimientos almacenados para obtener acceso a los datos, sirviéndose del encadenamiento de propiedad para restringir el acceso a tablas base.  Se pueden conceder permisos EXECUTE en procedimientos almacenados revocando o denegando permisos en las tablas base.  SQL Server no comprueba los permisos del llamador si el procedimiento almacenado y las tablas tienen el mismo propietario.  No obstante, el encadenamiento de propiedad no funciona si los objetos tienen distintos propietarios o en el caso de SQL dinámico.  
+# <a name="customizing-permissions-with-impersonation-in-sql-server"></a><span data-ttu-id="4129b-102">Personalizar permisos con suplantación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-102">Customizing Permissions with Impersonation in SQL Server</span></span>
+<span data-ttu-id="4129b-103">Muchas aplicaciones utilizan procedimientos almacenados para obtener acceso a los datos, sirviéndose del encadenamiento de propiedad para restringir el acceso a tablas base.</span><span class="sxs-lookup"><span data-stu-id="4129b-103">Many applications use stored procedures to access data, relying on ownership chaining to restrict access to base tables.</span></span> <span data-ttu-id="4129b-104">Se pueden conceder permisos EXECUTE en procedimientos almacenados revocando o denegando permisos en las tablas base.</span><span class="sxs-lookup"><span data-stu-id="4129b-104">You can grant EXECUTE permissions on stored procedures, revoking or denying permissions on the base tables.</span></span> <span data-ttu-id="4129b-105">SQL Server no comprueba los permisos del llamador si el procedimiento almacenado y las tablas tienen el mismo propietario.</span><span class="sxs-lookup"><span data-stu-id="4129b-105">SQL Server does not check the permissions of the caller if the stored procedure and tables have the same owner.</span></span> <span data-ttu-id="4129b-106">No obstante, el encadenamiento de propiedad no funciona si los objetos tienen distintos propietarios o en el caso de SQL dinámico.</span><span class="sxs-lookup"><span data-stu-id="4129b-106">However, ownership chaining doesn't work if objects have different owners or in the case of dynamic SQL.</span></span>  
   
- Puede usar la cláusula EXECUTE AS en un procedimiento almacenado cuando el autor de la llamada no dispone de permisos en los objetos de base de datos a los que se hace referencia.  El resultado de la cláusula EXECUTE AS es que el contexto de ejecución cambia al del usuario proxy.  Todo el código, así como todas las llamadas a los desencadenadores y procedimientos almacenados anidados, se ejecutan en el contexto de seguridad del usuario proxy.  El contexto de ejecución se revierte al llamador original sólo después de la ejecución o cuando se ha emitido una instrucción REVERT.  
+ <span data-ttu-id="4129b-107">Puede usar la cláusula EXECUTE AS en un procedimiento almacenado cuando el autor de la llamada no dispone de permisos en los objetos de base de datos a los que se hace referencia.</span><span class="sxs-lookup"><span data-stu-id="4129b-107">You can use the EXECUTE AS clause in a stored procedure when the caller doesn't have permissions on the referenced database objects.</span></span> <span data-ttu-id="4129b-108">El resultado de la cláusula EXECUTE AS es que el contexto de ejecución cambia al del usuario proxy.</span><span class="sxs-lookup"><span data-stu-id="4129b-108">The effect of the EXECUTE AS clause is that the execution context is switched to the proxy user.</span></span> <span data-ttu-id="4129b-109">Todo el código, así como todas las llamadas a los desencadenadores y procedimientos almacenados anidados, se ejecutan en el contexto de seguridad del usuario proxy.</span><span class="sxs-lookup"><span data-stu-id="4129b-109">All code, as well as any calls to nested stored procedures or triggers, executes under the security context of the proxy user.</span></span> <span data-ttu-id="4129b-110">El contexto de ejecución se revierte al llamador original sólo después de la ejecución o cuando se ha emitido una instrucción REVERT.</span><span class="sxs-lookup"><span data-stu-id="4129b-110">Execution context is reverted to the original caller only after execution of the procedure or when a REVERT statement is issued.</span></span>  
   
-## Cambio de contexto con la instrucción EXECUTE AS  
- La instrucción Transact\-SQL EXECUTE AS permite cambiar el contexto de ejecución de una instrucción mediante la suplantación de otro inicio de sesión o usuario de la base de datos.  Esta técnica es útil para probar consultas y procedimientos como otro usuario.  
+## <a name="context-switching-with-the-execute-as-statement"></a><span data-ttu-id="4129b-111">Cambio de contexto con la instrucción EXECUTE AS</span><span class="sxs-lookup"><span data-stu-id="4129b-111">Context Switching with the EXECUTE AS Statement</span></span>  
+ <span data-ttu-id="4129b-112">La instrucción Transact-SQL EXECUTE AS permite cambiar el contexto de ejecución de una instrucción mediante la suplantación de otro inicio de sesión o usuario de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="4129b-112">The Transact-SQL EXECUTE AS statement allows you to switch the execution context of a statement by impersonating another login or database user.</span></span> <span data-ttu-id="4129b-113">Esta técnica es útil para probar consultas y procedimientos como otro usuario.</span><span class="sxs-lookup"><span data-stu-id="4129b-113">This is a useful technique for testing queries and procedures as another user.</span></span>  
   
 ```  
 EXECUTE AS LOGIN = 'loginName';  
 EXECUTE AS USER = 'userName';  
 ```  
   
- Se deben tener permisos IMPERSONATE en el inicio de sesión o usuario al que se está suplantando.  Este permiso está implícito en `sysadmin` de todas las bases de datos y en los miembros del rol `db_owner` de bases de datos de las que son propietarios.  
+ <span data-ttu-id="4129b-114">Se deben tener permisos IMPERSONATE en el inicio de sesión o usuario al que se está suplantando.</span><span class="sxs-lookup"><span data-stu-id="4129b-114">You must have IMPERSONATE permissions on the login or user you are impersonating.</span></span> <span data-ttu-id="4129b-115">Este permiso está implícito en `sysadmin` de todas las bases de datos y en los miembros del rol `db_owner` de bases de datos de las que son propietarios.</span><span class="sxs-lookup"><span data-stu-id="4129b-115">This permission is implied for `sysadmin` for all databases, and `db_owner` role members in databases that they own.</span></span>  
   
-## Conceder permisos con la cláusula EXECUTE AS  
- Se puede utilizar la cláusula EXECUTE AS del encabezado de definición de un procedimiento almacenado, un desencadenador o una función definida por el usuario \(excepto funciones alineadas con valores de tabla\).  Esto hace que el procedimiento se ejecute en el contexto del nombre de usuario o palabra clave especificada en la cláusula EXECUTE AS.  Se puede crear un usuario proxy en la base de datos que no esté asignado a un inicio de sesión, otorgándole únicamente los permisos necesarios en los objetos a los que se obtiene acceso mediante el procedimiento.  Únicamente el usuario proxy especificado en la cláusula EXECUTE AS debe tener permisos en todos los objetos a los que se tiene acceso mediante el módulo.  
+## <a name="granting-permissions-with-the-execute-as-clause"></a><span data-ttu-id="4129b-116">Conceder permisos con la cláusula EXECUTE AS</span><span class="sxs-lookup"><span data-stu-id="4129b-116">Granting Permissions with the EXECUTE AS Clause</span></span>  
+ <span data-ttu-id="4129b-117">Se puede utilizar la cláusula EXECUTE AS del encabezado de definición de un procedimiento almacenado, un desencadenador o una función definida por el usuario (excepto funciones alineadas con valores de tabla).</span><span class="sxs-lookup"><span data-stu-id="4129b-117">You can use the EXECUTE AS clause in the definition header of a stored procedure, trigger, or user-defined function (except for inline table-valued functions).</span></span> <span data-ttu-id="4129b-118">Esto hace que el procedimiento se ejecute en el contexto del nombre de usuario o palabra clave especificada en la cláusula EXECUTE AS.</span><span class="sxs-lookup"><span data-stu-id="4129b-118">This causes the procedure to execute in the context of the user name or keyword specified in the EXECUTE AS clause.</span></span> <span data-ttu-id="4129b-119">Se puede crear un usuario proxy en la base de datos que no esté asignado a un inicio de sesión, otorgándole únicamente los permisos necesarios en los objetos a los que se obtiene acceso mediante el procedimiento.</span><span class="sxs-lookup"><span data-stu-id="4129b-119">You can create a proxy user in the database that is not mapped to a login, granting it only the necessary permissions on the objects accessed by the procedure.</span></span> <span data-ttu-id="4129b-120">Únicamente el usuario proxy especificado en la cláusula EXECUTE AS debe tener permisos en todos los objetos a los que se tiene acceso mediante el módulo.</span><span class="sxs-lookup"><span data-stu-id="4129b-120">Only the proxy user specified in the EXECUTE AS clause must have permissions on all objects accessed by the module.</span></span>  
   
 > [!NOTE]
->  Algunas acciones, como TRUNCATE TABLE, no tienen permisos que se puedan conceder.  Mediante la incorporación de la instrucción dentro de un procedimiento y especificando un usuario proxy que tenga permisos ALTER TABLE, puede ampliar los permisos para truncar la tabla a llamadores que tienen sólo permisos EXECUTE en el procedimiento.  
+>  <span data-ttu-id="4129b-121">Algunas acciones, como TRUNCATE TABLE, no tienen permisos que se puedan conceder.</span><span class="sxs-lookup"><span data-stu-id="4129b-121">Some actions, such as TRUNCATE TABLE, do not have grantable permissions.</span></span> <span data-ttu-id="4129b-122">Mediante la incorporación de la instrucción dentro de un procedimiento y especificando un usuario proxy que tenga permisos ALTER TABLE, puede ampliar los permisos para truncar la tabla a llamadores que tienen sólo permisos EXECUTE en el procedimiento.</span><span class="sxs-lookup"><span data-stu-id="4129b-122">By incorporating the statement within a procedure and specifying a proxy user who has ALTER TABLE permissions, you can extend the permissions to truncate the table to callers who have only EXECUTE permissions on the procedure.</span></span>  
   
- El contexto especificado en la cláusula EXECUTE AS es válido mientras dure el procedimiento, incluidos los desencadenadores y procedimientos almacenados anidados.  El contexto se revierte al llamador cuando se completa la ejecución o se emite una instrucción REVERT.  
+ <span data-ttu-id="4129b-123">El contexto especificado en la cláusula EXECUTE AS es válido mientras dure el procedimiento, incluidos los desencadenadores y procedimientos almacenados anidados.</span><span class="sxs-lookup"><span data-stu-id="4129b-123">The context specified in the EXECUTE AS clause is valid for the duration of the procedure, including nested procedures and triggers.</span></span> <span data-ttu-id="4129b-124">El contexto se revierte al llamador cuando se completa la ejecución o se emite una instrucción REVERT.</span><span class="sxs-lookup"><span data-stu-id="4129b-124">Context reverts to the caller when execution is complete or the REVERT statement is issued.</span></span>  
   
- Son tres los pasos que implica el uso de la cláusula EXECUTE AS en un procedimiento.  
+ <span data-ttu-id="4129b-125">Son tres los pasos que implica el uso de la cláusula EXECUTE AS en un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="4129b-125">There are three steps involved in using the EXECUTE AS clause in a procedure.</span></span>  
   
-1.  Crear un usuario proxy en la base de datos que no esté asignado a un inicio de sesión.  Este no es un requisito, pero ayuda a la hora de asignar permisos.  
+1.  <span data-ttu-id="4129b-126">Crear un usuario proxy en la base de datos que no esté asignado a un inicio de sesión.</span><span class="sxs-lookup"><span data-stu-id="4129b-126">Create a proxy user in the database that is not mapped to a login.</span></span> <span data-ttu-id="4129b-127">Este no es un requisito, pero ayuda a la hora de asignar permisos.</span><span class="sxs-lookup"><span data-stu-id="4129b-127">This is not required, but it helps when managing permissions.</span></span>  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Conceder al usuario proxy los permisos necesarios.  
+1.  <span data-ttu-id="4129b-128">Conceder al usuario proxy los permisos necesarios.</span><span class="sxs-lookup"><span data-stu-id="4129b-128">Grant the proxy user the necessary permissions.</span></span>  
   
-2.  Agregar la cláusula EXECUTE AS al procedimiento almacenado o a la función definida por el usuario.  
+2.  <span data-ttu-id="4129b-129">Agregar la cláusula EXECUTE AS al procedimiento almacenado o a la función definida por el usuario.</span><span class="sxs-lookup"><span data-stu-id="4129b-129">Add the EXECUTE AS clause to the stored procedure or user-defined function.</span></span>  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
 ```  
   
 > [!NOTE]
->  Las aplicaciones que requieren auditoría pueden verse interrumpidas debido a que no se ha mantenido el contexto de seguridad original del llamador.  Las funciones integradas que devuelven la identidad del usuario actual, como SESSION\_USER, USER, o USER\_NAME, devuelven el usuario asociado a la cláusula EXECUTE AS, no el llamador original.  
+>  <span data-ttu-id="4129b-130">Las aplicaciones que requieren auditoría pueden verse interrumpidas debido a que no se ha mantenido el contexto de seguridad original del llamador.</span><span class="sxs-lookup"><span data-stu-id="4129b-130">Applications that require auditing can break because the original security context of the caller is not retained.</span></span> <span data-ttu-id="4129b-131">Las funciones integradas que devuelven la identidad del usuario actual, como SESSION_USER, USER, o USER_NAME, devuelven el usuario asociado a la cláusula EXECUTE AS, no el llamador original.</span><span class="sxs-lookup"><span data-stu-id="4129b-131">Built-in functions that return the identity of the current user, such as SESSION_USER, USER, or USER_NAME, return the user associated with the EXECUTE AS clause, not the original caller.</span></span>  
   
-### Utilizar EXECUTE AS con REVERT  
- Se puede utilizar la instrucción Transact\-SQL REVERT para revertir al contexto de ejecución original.  
+### <a name="using-execute-as-with-revert"></a><span data-ttu-id="4129b-132">Utilizar EXECUTE AS con REVERT</span><span class="sxs-lookup"><span data-stu-id="4129b-132">Using EXECUTE AS with REVERT</span></span>  
+ <span data-ttu-id="4129b-133">Se puede utilizar la instrucción Transact-SQL REVERT para revertir al contexto de ejecución original.</span><span class="sxs-lookup"><span data-stu-id="4129b-133">You can use the Transact-SQL REVERT statement to revert to the original execution context.</span></span>  
   
- La cláusula opcional, WITH NO REVERT COOKIE \= @variableName, permite volver a cambiar el contexto de ejecución al llamador si la variable @variableName contiene el valor correcto.  Con ello podrá volver a cambiar el contexto de ejecución al llamador en entornos donde se utiliza la agrupación de conexiones.  Dado que el valor de @variableName es conocido sólo para el llamador de la instrucción EXECUTE AS, éste puede garantizar que el usuario final no pueda cambiar el contexto de ejecución que invoca la aplicación.  Cuando se cierra la conexión, se devuelve al grupo.  Para obtener más información acerca de agrupación de conexiones en ADO.NET, vea [Agrupación de conexiones en SQL Server \(ADO.NET\)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ <span data-ttu-id="4129b-134">La cláusula opcional, WITH NO REVERT COOKIE = @variableName, permite cambiar el contexto de ejecución de vuelta al llamador si el @variableName variable contiene el valor correcto.</span><span class="sxs-lookup"><span data-stu-id="4129b-134">The optional clause, WITH NO REVERT COOKIE = @variableName, allows you switch the execution context back to the caller if the @variableName variable contains the correct value.</span></span> <span data-ttu-id="4129b-135">Con ello podrá volver a cambiar el contexto de ejecución al llamador en entornos donde se utiliza la agrupación de conexiones.</span><span class="sxs-lookup"><span data-stu-id="4129b-135">This allows you to switch the execution context back to the caller in environments where connection pooling is used.</span></span> <span data-ttu-id="4129b-136">Dado que el valor de @variableName solo lo conoce el llamador de EXECUTE AS (instrucción), el llamador puede garantizar que no se puede cambiar el contexto de ejecución que el usuario final que invoca la aplicación.</span><span class="sxs-lookup"><span data-stu-id="4129b-136">Because the value of @variableName is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context cannot be changed by the end user that invokes the application.</span></span> <span data-ttu-id="4129b-137">Cuando se cierra la conexión, se devuelve al grupo.</span><span class="sxs-lookup"><span data-stu-id="4129b-137">When the connection is closed, it is returned to the pool.</span></span> <span data-ttu-id="4129b-138">Para obtener más información sobre la conexión de la agrupación de conexiones en ADO.NET, vea [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).</span><span class="sxs-lookup"><span data-stu-id="4129b-138">For more information on connection pooling in ADO.NET, see [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).</span></span>  
   
-### Especificar el contexto de ejecución  
- Además de especificar un usuario, EXECUTE AS se puede utilizar también con cualquiera de las palabras clave siguientes.  
+### <a name="specifying-the-execution-context"></a><span data-ttu-id="4129b-139">Especificar el contexto de ejecución</span><span class="sxs-lookup"><span data-stu-id="4129b-139">Specifying the Execution Context</span></span>  
+ <span data-ttu-id="4129b-140">Además de especificar un usuario, EXECUTE AS se puede utilizar también con cualquiera de las palabras clave siguientes.</span><span class="sxs-lookup"><span data-stu-id="4129b-140">In addition to specifying a user, you can also use EXECUTE AS with any of the following keywords.</span></span>  
   
--   CALLER.  La ejecución como CALLER es el valor predeterminado; si no se especifica otra opción, el procedimiento se ejecuta en el contexto de seguridad del llamador.  
+-   <span data-ttu-id="4129b-141">CALLER.</span><span class="sxs-lookup"><span data-stu-id="4129b-141">CALLER.</span></span> <span data-ttu-id="4129b-142">La ejecución como CALLER es el valor predeterminado; si no se especifica otra opción, el procedimiento se ejecuta en el contexto de seguridad del llamador.</span><span class="sxs-lookup"><span data-stu-id="4129b-142">Executing as CALLER is the default; if no other option is specified, then the procedure executes in the security context of the caller.</span></span>  
   
--   OWNER.  La ejecución como OWNER ejecuta el procedimiento en el contexto del propietario del procedimiento.  Si el procedimiento se crea en un esquema cuyo propietario es `dbo` o el propietario de la base de datos, el procedimiento se ejecutará con permisos restringidos.  
+-   <span data-ttu-id="4129b-143">OWNER.</span><span class="sxs-lookup"><span data-stu-id="4129b-143">OWNER.</span></span> <span data-ttu-id="4129b-144">La ejecución como OWNER ejecuta el procedimiento en el contexto del propietario del procedimiento.</span><span class="sxs-lookup"><span data-stu-id="4129b-144">Executing as OWNER executes the procedure in the context of the procedure owner.</span></span> <span data-ttu-id="4129b-145">Si el procedimiento se crea en un esquema cuyo propietario es `dbo` o el propietario de la base de datos, el procedimiento se ejecutará con permisos restringidos.</span><span class="sxs-lookup"><span data-stu-id="4129b-145">If the procedure is created in a schema owned by `dbo` or the database owner, the procedure will execute with unrestricted permissions.</span></span>  
   
--   SELF.  La ejecución como SELF se ejecuta en el contexto de seguridad del creador del procedimiento almacenado.  Esto es equivalente a la ejecución como un usuario especificado, en la que el usuario especificado es la persona que crea o altera el procedimiento.  
+-   <span data-ttu-id="4129b-146">SELF.</span><span class="sxs-lookup"><span data-stu-id="4129b-146">SELF.</span></span> <span data-ttu-id="4129b-147">La ejecución como SELF se ejecuta en el contexto de seguridad del creador del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="4129b-147">Executing as SELF executes in the security context of the creator of the stored procedure.</span></span> <span data-ttu-id="4129b-148">Esto es equivalente a la ejecución como un usuario especificado, en la que el usuario especificado es la persona que crea o altera el procedimiento.</span><span class="sxs-lookup"><span data-stu-id="4129b-148">This is equivalent to executing as a specified user, where the specified user is the person creating or altering the procedure.</span></span>  
   
-## Recursos externos  
- Para obtener más información, vea los siguientes recursos.  
+## <a name="external-resources"></a><span data-ttu-id="4129b-149">Recursos externos</span><span class="sxs-lookup"><span data-stu-id="4129b-149">External Resources</span></span>  
+ <span data-ttu-id="4129b-150">Para obtener más información, vea los siguientes recursos.</span><span class="sxs-lookup"><span data-stu-id="4129b-150">For more information, see the following resources.</span></span>  
   
-|Recurso|Descripción|  
-|-------------|-----------------|  
-|[Cambio de contexto \(motor de base de datos\)](http://msdn.microsoft.com/library/ms188268.aspx) en los Libros en pantalla de SQL Server.|Contiene vínculos a temas que describen cómo utilizar la cláusula EXECUTE AS.|  
-|[Usar EXECUTE AS para crear conjuntos de permisos personalizados](http://msdn.microsoft.com/library/ms190384.aspx) y [Usar EXECUTE AS en módulos](http://msdn.microsoft.com/library/ms178106.aspx) en los Libros en pantalla de SQL Server.|Temas que describen cómo utilizar la cláusula EXECUTE AS.|  
+|<span data-ttu-id="4129b-151">Recurso</span><span class="sxs-lookup"><span data-stu-id="4129b-151">Resource</span></span>|<span data-ttu-id="4129b-152">Descripción</span><span class="sxs-lookup"><span data-stu-id="4129b-152">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="4129b-153">[Cambio de contexto](http://msdn.microsoft.com/library/ms188268.aspx) en libros en pantalla de SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-153">[Context Switching](http://msdn.microsoft.com/library/ms188268.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="4129b-154">Contiene vínculos a temas que describen cómo utilizar la cláusula EXECUTE AS.</span><span class="sxs-lookup"><span data-stu-id="4129b-154">Contains links to topics describing how to use the EXECUTE AS clause.</span></span>|  
+|<span data-ttu-id="4129b-155">[Usar EXECUTE AS para crear conjuntos de permisos personalizados](http://msdn.microsoft.com/library/ms190384.aspx) y [usar EXECUTE AS en módulos](http://msdn.microsoft.com/library/ms178106.aspx) en libros en pantalla de SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-155">[Using EXECUTE AS to Create Custom Permission Sets](http://msdn.microsoft.com/library/ms190384.aspx) and [Using EXECUTE AS in Modules](http://msdn.microsoft.com/library/ms178106.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="4129b-156">Temas que describen cómo utilizar la cláusula EXECUTE AS.</span><span class="sxs-lookup"><span data-stu-id="4129b-156">Topics describe how to use the EXECUTE AS clause.</span></span>|  
   
-## Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Información general sobre seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Administrar permisos con procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)   
- [Escribir SQL dinámico seguro en SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)   
- [Firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)   
- [Modificar datos con procedimientos almacenados](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="4129b-157">Vea también</span><span class="sxs-lookup"><span data-stu-id="4129b-157">See Also</span></span>  
+ [<span data-ttu-id="4129b-158">Proteger aplicaciones de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4129b-158">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="4129b-159">Información general de seguridad de SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-159">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="4129b-160">Escenarios de seguridad de la aplicación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-160">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="4129b-161">Administrar permisos con procedimientos almacenados en SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-161">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="4129b-162">Escribir SQL dinámico seguro en SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-162">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [<span data-ttu-id="4129b-163">Firmar procedimientos almacenados en SQL Server</span><span class="sxs-lookup"><span data-stu-id="4129b-163">Signing Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="4129b-164">Modificar datos con procedimientos almacenados</span><span class="sxs-lookup"><span data-stu-id="4129b-164">Modifying Data with Stored Procedures</span></span>](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="4129b-165">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="4129b-165">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

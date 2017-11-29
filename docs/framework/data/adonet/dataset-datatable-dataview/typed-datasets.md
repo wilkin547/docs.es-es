@@ -1,35 +1,38 @@
 ---
-title: "DataSets con establecimiento de tipos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Objetos DataSet con tipo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e3d5edc4f469b59ff787e500ad447fe0076c332c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# DataSets con establecimiento de tipos
-Además del acceso en tiempo de ejecución a valores mediante variables débilmente tipadas, el <xref:System.Data.DataSet> proporciona acceso a los datos mediante una metáfora fuertemente tipada.  Se puede tener acceso a las tablas y columnas que forman parte del **DataSet** mediante nombres descriptivos y variables fuertemente tipadas.  
+# <a name="typed-datasets"></a><span data-ttu-id="1d554-102">Objetos DataSet con tipo</span><span class="sxs-lookup"><span data-stu-id="1d554-102">Typed DataSets</span></span>
+<span data-ttu-id="1d554-103">Además del acceso en tiempo de ejecución a valores mediante variables débilmente tipadas, el <xref:System.Data.DataSet> proporciona acceso a los datos mediante una metáfora fuertemente tipada.</span><span class="sxs-lookup"><span data-stu-id="1d554-103">Along with late bound access to values through weakly typed variables, the <xref:System.Data.DataSet> provides access to data through a strongly typed metaphor.</span></span> <span data-ttu-id="1d554-104">Tablas y columnas que forman parte de la **conjunto de datos** puede tener acceso mediante nombres descriptivos y variables fuertemente tipadas.</span><span class="sxs-lookup"><span data-stu-id="1d554-104">Tables and columns that are part of the **DataSet** can be accessed using user-friendly names and strongly typed variables.</span></span>  
   
- Un **DataSet** con información de tipos es una clase que se deriva de un **DataSet**.  Como tal, hereda todos los métodos, eventos y propiedades de un **DataSet**.  Además, un **DataSet** con información de tipos proporciona métodos, eventos y propiedades fuertemente tipadas.  Esto significa que se puede tener acceso a tablas y columnas por su nombre, en lugar de utilizar métodos de una colección.  Además de la mayor legibilidad del código, un **DataSet** con información de tipos también permite que el editor de código Visual Studio .NET complete automáticamente las líneas mientras escribe.  
+ <span data-ttu-id="1d554-105">Un tipo **conjunto de datos** es una clase que deriva de un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="1d554-105">A typed **DataSet** is a class that derives from a **DataSet**.</span></span> <span data-ttu-id="1d554-106">Como tal, hereda todos los métodos, eventos y propiedades de un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="1d554-106">As such, it inherits all the methods, events, and properties of a **DataSet**.</span></span> <span data-ttu-id="1d554-107">Además, un tipo **conjunto de datos** proporciona métodos fuertemente tipados, eventos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="1d554-107">Additionally, a typed **DataSet** provides strongly typed methods, events, and properties.</span></span> <span data-ttu-id="1d554-108">Esto significa que se puede tener acceso a tablas y columnas por su nombre, en lugar de utilizar métodos de una colección.</span><span class="sxs-lookup"><span data-stu-id="1d554-108">This means you can access tables and columns by name, instead of using collection-based methods.</span></span> <span data-ttu-id="1d554-109">Además de la mayor legibilidad del código, un tipo **conjunto de datos** también permite que el código de Visual Studio .NET complete automáticamente las líneas mientras escribe el editor.</span><span class="sxs-lookup"><span data-stu-id="1d554-109">Aside from the improved readability of the code, a typed **DataSet** also allows the Visual Studio .NET code editor to automatically complete lines as you type.</span></span>  
   
- Asimismo, el **DataSet** fuertemente tipado proporciona acceso a valores del tipo correcto en el momento de la compilación.  Con un **DataSet** fuertemente tipado, los errores por no coincidencia de tipos se interceptan cuando se compila el código, no en tiempo de ejecución.  
+ <span data-ttu-id="1d554-110">Además, el fuertemente tipado **conjunto de datos** proporciona acceso a los valores del tipo correcto en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="1d554-110">Additionally, the strongly typed **DataSet** provides access to values as the correct type at compile time.</span></span> <span data-ttu-id="1d554-111">Con un fuertemente tipado **conjunto de datos**, errores de falta de coincidencia de tipos se interceptan cuando el código se compila en lugar de en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="1d554-111">With a strongly typed **DataSet**, type mismatch errors are caught when the code is compiled rather than at run time.</span></span>  
   
-## En esta sección  
- [Generar DataSets fuertemente tipados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
- Describe cómo se crea y utiliza un **DataSet** fuertemente tipado.  
+## <a name="in-this-section"></a><span data-ttu-id="1d554-112">En esta sección</span><span class="sxs-lookup"><span data-stu-id="1d554-112">In This Section</span></span>  
+ [<span data-ttu-id="1d554-113">Generar conjuntos de datos fuertemente tipados</span><span class="sxs-lookup"><span data-stu-id="1d554-113">Generating Strongly Typed DataSets</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+ <span data-ttu-id="1d554-114">Describe cómo crear y usar un fuertemente tipado **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="1d554-114">Describes how to create and use a strongly typed **DataSet**.</span></span>  
   
- [Anotar DataSets con tipos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
- Describe cómo se anota el esquema del lenguaje de definición de esquemas XML \(XSD\) utilizado para generar un **DataSet** fuertemente tipado con el fin de asignar nombres descriptivos a los elementos del **DataSet** sin modificar el esquema subyacente.  
+ [<span data-ttu-id="1d554-115">Anotar los conjuntos de datos</span><span class="sxs-lookup"><span data-stu-id="1d554-115">Annotating Typed DataSets</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ <span data-ttu-id="1d554-116">Describe cómo se anota el esquema de lenguaje (XSD) de definición de esquema XML utilizado para generar un fuertemente tipado **conjunto de datos**fin de asignar **conjunto de datos** nombres descriptivos de elementos sin modificar el esquema subyacente.</span><span class="sxs-lookup"><span data-stu-id="1d554-116">Describes how to annotate the XML Schema definition language (XSD) schema used to generate a strongly typed **DataSet**, to give **DataSet** elements friendly names without altering the underlying schema.</span></span>  
   
-## Vea también  
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1d554-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="1d554-117">See Also</span></span>  
+ [<span data-ttu-id="1d554-118">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="1d554-118">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="1d554-119">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="1d554-119">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

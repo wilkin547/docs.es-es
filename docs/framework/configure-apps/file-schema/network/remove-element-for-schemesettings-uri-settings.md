@@ -1,78 +1,80 @@
 ---
-title: "&lt;remove&gt; (Elemento para schemeSettings, Configuraci&#243;n de URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;quitar&gt; elemento para schemeSettings (configuración de Uri)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6d587dced4660774b67a8e884bf6c25df3b6e400
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;remove&gt; (Elemento para schemeSettings, Configuraci&#243;n de URI)
-Quita un valor de esquema de un nombre de esquema.  
+# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="03680-102">&lt;quitar&gt; elemento para schemeSettings (configuración de Uri)</span><span class="sxs-lookup"><span data-stu-id="03680-102">&lt;remove&gt; Element for schemeSettings (Uri Settings)</span></span>
+<span data-ttu-id="03680-103">Quita un valor de esquema para un nombre de esquema.</span><span class="sxs-lookup"><span data-stu-id="03680-103">Removes a scheme setting for a scheme name.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="03680-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="03680-104">\<configuration></span></span>  
+<span data-ttu-id="03680-105">\<URI ></span><span class="sxs-lookup"><span data-stu-id="03680-105">\<uri></span></span>  
+<span data-ttu-id="03680-106">\<schemeSettings ></span><span class="sxs-lookup"><span data-stu-id="03680-106">\<schemeSettings></span></span>  
+<span data-ttu-id="03680-107">\<Quitar ></span><span class="sxs-lookup"><span data-stu-id="03680-107">\<remove></span></span>  
   
+## <a name="syntax"></a><span data-ttu-id="03680-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="03680-108">Syntax</span></span>  
+  
+```xml  
+<remove
+  name="http|https"
+/>
 ```  
   
-      <remove   
-   <name = "http|https"/>  
-/>  
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="03680-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="03680-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="03680-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="03680-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+### <a name="attributes"></a><span data-ttu-id="03680-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="03680-111">Attributes</span></span>  
   
-### Atributos  
+|<span data-ttu-id="03680-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="03680-112">Attribute</span></span>|<span data-ttu-id="03680-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="03680-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="03680-114">name</span><span class="sxs-lookup"><span data-stu-id="03680-114">name</span></span>|<span data-ttu-id="03680-115">El nombre de esquema para el que se aplica esta configuración.</span><span class="sxs-lookup"><span data-stu-id="03680-115">The scheme name for which this setting applies.</span></span> <span data-ttu-id="03680-116">El solo valores compatibles son name = "http" y name = "https".</span><span class="sxs-lookup"><span data-stu-id="03680-116">The only supported values are name="http" and name="https".</span></span>|  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|nombre|El nombre de esquema para el que se aplica este valor.  Los únicos valores compatibles son name\="http" y name\="https".|  
+### <a name="child-elements"></a><span data-ttu-id="03680-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="03680-117">Child Elements</span></span>  
+ <span data-ttu-id="03680-118">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="03680-118">None.</span></span>  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="parent-elements"></a><span data-ttu-id="03680-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="03680-119">Parent Elements</span></span>  
   
-### Elementos primarios  
+|<span data-ttu-id="03680-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="03680-120">Element</span></span>|<span data-ttu-id="03680-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="03680-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="03680-122">Elemento \<schemeSettings> (configuración de URI)</span><span class="sxs-lookup"><span data-stu-id="03680-122">\<schemeSettings> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<span data-ttu-id="03680-123">Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.</span><span class="sxs-lookup"><span data-stu-id="03680-123">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<schemeSettings\> \(Elemento, Configuración de URI\)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica cómo se analizará <xref:System.Uri> para esquemas concretos.|  
-  
-## Comentarios  
- De forma predeterminada, la clase <xref:System.Uri?displayProperty=fullName> quita los caracteres de escape de los delimitadores de ruta de acceso codificados con porcentaje antes de ejecutar la compresión de la ruta de acceso.  Esto se implementó como un mecanismo de seguridad frente a ataques como el siguiente:  
+## <a name="remarks"></a><span data-ttu-id="03680-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="03680-124">Remarks</span></span>  
+ <span data-ttu-id="03680-125">De forma predeterminada, la <xref:System.Uri?displayProperty=nameWithType> delimitadores de ruta de acceso de la codificación de porcentaje de quitar los caracteres de escape de clase antes de ejecutar la compresión de la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="03680-125">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="03680-126">Esto se implementa como un mecanismo de seguridad frente a ataques similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="03680-126">This was implemented as a security mechanism against attacks like the following:</span></span>  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Si este URI se pasa a los módulos sin controlar correctamente los caracteres codificados con porcentaje, podría ocurrir que el servidor ejecute el comando siguiente:  
+ <span data-ttu-id="03680-127">Si este URI se pasa a los módulos no se controla por ciento correctamente los caracteres codificados, podría producir en el siguiente comando que se está ejecutando el servidor:</span><span class="sxs-lookup"><span data-stu-id="03680-127">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esta razón, la clase <xref:System.Uri?displayProperty=fullName> primero quita los caracteres de escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso.  El resultado de pasar la dirección URL malintencionada anterior al constructor de clase <xref:System.Uri?displayProperty=fullName> produce el URI siguiente:  
+ <span data-ttu-id="03680-128">Por esta razón, <xref:System.Uri?displayProperty=nameWithType> clase primera delimitadores de ruta de acceso de los caracteres de escape anular y, a continuación, aplica la compresión de la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="03680-128">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="03680-129">El resultado de pasar la dirección URL malintencionada anterior a <xref:System.Uri?displayProperty=nameWithType> clase resultados de constructor en el URI siguiente:</span><span class="sxs-lookup"><span data-stu-id="03680-129">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Este comportamiento predeterminado se puede modificar para no quitar los caracteres de escape de los delimitadores de ruta de acceso codificados con porcentaje utilizando la opción de configuración schemeSettings para un esquema concreto.  
+ <span data-ttu-id="03680-130">Este comportamiento predeterminado puede modificarse para no anula escape porcentaje de ruta de acceso codificada de los delimitadores con la opción de configuración schemeSettings para un esquema específico.</span><span class="sxs-lookup"><span data-stu-id="03680-130">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="03680-131">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="03680-131">Configuration Files</span></span>  
+ <span data-ttu-id="03680-132">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="03680-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Ejemplo  
- El ejemplo de código siguiente muestra una configuración utilizada por la clase <xref:System.Uri> que quita cualquier valor de esquema para el esquema http.  
+## <a name="example"></a><span data-ttu-id="03680-133">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="03680-133">Example</span></span>  
+ <span data-ttu-id="03680-134">En el ejemplo siguiente se muestra una configuración utilizada por la <xref:System.Uri> clase que quita cualquier configuración de esquema para el esquema http.</span><span class="sxs-lookup"><span data-stu-id="03680-134">The following example shows a configuration used by the <xref:System.Uri> class that removes any scheme settings for the http scheme.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <schemeSettings>  
@@ -82,11 +84,11 @@ Quita un valor de esquema de un nombre de esquema.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
- <xref:System.GenericUriParserOptions?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="03680-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="03680-135">See Also</span></span>  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+ <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
+ [<span data-ttu-id="03680-136">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="03680-136">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

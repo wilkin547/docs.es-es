@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - downloading Internet resources, default proxy
 - sending data, default proxy
@@ -32,25 +27,24 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a4a013b8a4ff60222bb88c6e9c4f14badd689b5d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 05f849810d28ebe69a773bd4bd9d536146df6357
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="configuring-internet-applications"></a>Configuración de aplicaciones de Internet
-El elemento de configuración [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información de configuración de red para las aplicaciones. Con el [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.  
+# <a name="configuring-internet-applications"></a><span data-ttu-id="a1f3b-102">Configuración de aplicaciones de Internet</span><span class="sxs-lookup"><span data-stu-id="a1f3b-102">Configuring Internet Applications</span></span>
+<span data-ttu-id="a1f3b-103">El elemento de configuración [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contiene información de configuración de red para las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-103">The [\<system.Net> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) configuration element contains network configuration information for applications.</span></span> <span data-ttu-id="a1f3b-104">Con el [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), puede establecer servidores proxy, establecer parámetros de administración de conexiones e incluir módulos personalizados de autenticación y solicitud en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-104">Using the [\<system.Net> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element, you can set proxy servers, set connection management parameters, and include custom authentication and request modules in your application.</span></span>  
   
- El [Elemento \<defaultProxy> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) define el servidor proxy devuelto por la clase `GlobalProxySelection`. Cualquier elemento <xref:System.Net.HttpWebRequest> que no tenga su propia propiedad <xref:System.Net.HttpWebRequest.Proxy%2A> establecida en un valor específico, usa el proxy predeterminado. Además de establecer la dirección de proxy, puede crear una lista de direcciones de servidor que no vayan a usar el proxy y puede indicar que no se debería usar el proxy para direcciones locales.  
+ <span data-ttu-id="a1f3b-105">El [Elemento \<defaultProxy> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) define el servidor proxy devuelto por la clase `GlobalProxySelection`.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-105">The [\<defaultProxy> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) element defines the proxy server returned by the `GlobalProxySelection` class.</span></span> <span data-ttu-id="a1f3b-106">Cualquier elemento <xref:System.Net.HttpWebRequest> que no tenga su propia propiedad <xref:System.Net.HttpWebRequest.Proxy%2A> establecida en un valor específico, usa el proxy predeterminado.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-106">Any <xref:System.Net.HttpWebRequest> that does not have its own <xref:System.Net.HttpWebRequest.Proxy%2A> property set to a specific value uses the default proxy.</span></span> <span data-ttu-id="a1f3b-107">Además de establecer la dirección de proxy, puede crear una lista de direcciones de servidor que no vayan a usar el proxy y puede indicar que no se debería usar el proxy para direcciones locales.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-107">In addition to setting the proxy address, you can create a list of server addresses that will not use the proxy, and you can indicate that the proxy should not be used for local addresses.</span></span>  
   
- Es importante tener en cuenta que la configuración de Microsoft Internet Explorer se combina con los valores de configuración, que tienen preferencia.  
+ <span data-ttu-id="a1f3b-108">Es importante tener en cuenta que la configuración de Microsoft Internet Explorer se combina con los valores de configuración, que tienen preferencia.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-108">It is important to note that the Microsoft Internet Explorer settings are combined with the configuration settings, with the latter taking precedence.</span></span>  
   
- En el ejemplo siguiente se establece la dirección del servidor proxy predeterminada en http://proxyserver, se indica que el proxy no debe usarse para las direcciones locales y se especifica que todas las solicitudes a servidores ubicados en el dominio contoso.com deben omitir el proxy.  
+ <span data-ttu-id="a1f3b-109">En el ejemplo siguiente se establece la dirección del servidor proxy predeterminada en http://proxyserver, se indica que el proxy no debe usarse para las direcciones locales y se especifica que todas las solicitudes a servidores ubicados en el dominio contoso.com deben omitir el proxy.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-109">The following example sets the default proxy server address to http://proxyserver, indicates that the proxy should not be used for local addresses, and specifies that all requests to servers located in the contoso.com domain should bypass the proxy.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,7 +63,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
- Use el [Elemento \<connectionManagement> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar el número de conexiones persistentes que pueden realizarse a un servidor concreto o a todos los demás servidores. En el ejemplo siguiente se configura la aplicación para que use dos conexiones persistentes al servidor www.contoso.com, cuatro conexiones persistentes al servidor con la dirección IP 192.168.1.2 y una conexión persistente a todos los demás servidores.  
+ <span data-ttu-id="a1f3b-110">Use el [Elemento \<connectionManagement> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar el número de conexiones persistentes que pueden realizarse a un servidor concreto o a todos los demás servidores.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-110">Use the [\<connectionManagement> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) element to configure the number of persistent connections that can be made to a specific server or to all other servers.</span></span> <span data-ttu-id="a1f3b-111">En el ejemplo siguiente se configura la aplicación para que use dos conexiones persistentes al servidor www.contoso.com, cuatro conexiones persistentes al servidor con la dirección IP 192.168.1.2 y una conexión persistente a todos los demás servidores.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-111">The following example configures the application to use two persistent connections to the server www.contoso.com, four persistent connections to the server with the IP address 192.168.1.2, and one persistent connection to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,9 +77,9 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
- Los módulos de autenticación personalizados se configuran con el [Elemento \<authenticationModules> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md). Los módulos de autenticación personalizados deben implementar la interfaz <xref:System.Net.IAuthenticationModule>.  
+ <span data-ttu-id="a1f3b-112">Los módulos de autenticación personalizados se configuran con el [Elemento \<authenticationModules> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md).</span><span class="sxs-lookup"><span data-stu-id="a1f3b-112">Custom authentication modules are configured with the [\<authenticationModules> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md) element.</span></span> <span data-ttu-id="a1f3b-113">Los módulos de autenticación personalizados deben implementar la interfaz <xref:System.Net.IAuthenticationModule>.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-113">Custom authentication modules must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
   
- En el ejemplo siguiente se configura un módulo de autenticación personalizado.  
+ <span data-ttu-id="a1f3b-114">En el ejemplo siguiente se configura un módulo de autenticación personalizado.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-114">The following example configures a custom authentication module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -97,7 +91,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
- Puede usar el [Elemento \<webRequestModules> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) para configurar la aplicación de modo que use módulos personalizados específicos del protocolo para solicitar información de recursos de Internet. Los módulos especificados deben implementar la interfaz <xref:System.Net.IWebRequestCreate>. Puede invalidar los módulos predeterminados HTTP, HTTPS y de solicitud de archivos si especifica el módulo personalizado en el archivo de configuración, como en el ejemplo siguiente.  
+ <span data-ttu-id="a1f3b-115">Puede usar el [Elemento \<webRequestModules> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) para configurar la aplicación de modo que use módulos personalizados específicos del protocolo para solicitar información de recursos de Internet.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-115">You can use the [\<webRequestModules> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md) element to configure your application to use custom protocol-specific modules to request information from Internet resources.</span></span> <span data-ttu-id="a1f3b-116">Los módulos especificados deben implementar la interfaz <xref:System.Net.IWebRequestCreate>.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-116">The specified modules must implement the <xref:System.Net.IWebRequestCreate> interface.</span></span> <span data-ttu-id="a1f3b-117">Puede invalidar los módulos predeterminados HTTP, HTTPS y de solicitud de archivos si especifica el módulo personalizado en el archivo de configuración, como en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="a1f3b-117">You can override the default HTTP, HTTPS, and file request modules by specifying your custom module in the configuration file, as in the following example.</span></span>  
   
 ```xml  
 <configuration>  
@@ -112,8 +106,7 @@ El elemento de configuración [Elemento \<system.Net> (configuración de red)](.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Network Programming in the .NET Framework (Programación para redes en .NET Framework)](../../../docs/framework/network-programming/index.md)   
- [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)   
- [Elemento \<system.Net> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="a1f3b-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1f3b-118">See Also</span></span>  
+ [<span data-ttu-id="a1f3b-119">Programación para redes en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a1f3b-119">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="a1f3b-120">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="a1f3b-120">Network Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [<span data-ttu-id="a1f3b-121">Elemento \<system.Net> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="a1f3b-121">\<system.Net> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

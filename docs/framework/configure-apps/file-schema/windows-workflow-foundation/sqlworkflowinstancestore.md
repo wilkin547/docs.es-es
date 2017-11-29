@@ -1,68 +1,75 @@
 ---
-title: "&lt;sqlWorkflowInstanceStore&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;sqlWorkflowInstanceStore&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b4b1903182cfa20944d919f57ff1e09e07953b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sqlWorkflowInstanceStore&gt;
-Un comportamiento del servicio que permite configurar la característica <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, que admite la conservación de la información de estado de las instancias del servicio de flujo de trabajo en una base de datos SQL Server 2005 o SQL Server 2008.  Para obtener más información sobre esta característica, consulte [Almacén de instancias de flujo de trabajo de SQL](../../../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md).  
+# <a name="ltsqlworkflowinstancestoregt"></a><span data-ttu-id="e38f3-102">&lt;sqlWorkflowInstanceStore&gt;</span><span class="sxs-lookup"><span data-stu-id="e38f3-102">&lt;sqlWorkflowInstanceStore&gt;</span></span>
+<span data-ttu-id="e38f3-103">Un comportamiento del servicio que le permite configurar el <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> característica, que admite conservar información de estado para instancias de servicio de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="e38f3-103">A service behavior that allows you to configure the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> feature, which supports persisting state information for workflow service instances into an SQL Server 2005 or SQL Server 2008 database.</span></span> <span data-ttu-id="e38f3-104">Para obtener más información sobre esta característica, consulte [almacén de instancias de flujo de trabajo de SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span><span class="sxs-lookup"><span data-stu-id="e38f3-104">For more information on this feature, see [SQL Workflow Instance Store](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span></span>  
   
-## Sintaxis  
+<span data-ttu-id="e38f3-105">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="e38f3-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="e38f3-106">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="e38f3-106">\<behaviors></span></span>  
+<span data-ttu-id="e38f3-107">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="e38f3-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="e38f3-108">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="e38f3-108">\<behavior></span></span>  
+<span data-ttu-id="e38f3-109">\<sqlWorkflowInstanceStore ></span><span class="sxs-lookup"><span data-stu-id="e38f3-109">\<sqlWorkflowInstanceStore></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e38f3-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e38f3-110">Syntax</span></span>  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <sqlWorkflowInstanceStore   
-          connectionStringName=”String”   
-          honstLockRenewalPeriod=”TimeSpan”  
-          instanceCompletionAction=”DeleteNothing/DeleteAll”  
-          instanceEncodingAction=”None/GZip”  
-          instanceLockedExceptionAction=”NoRetry/BasicRetry/AggressiveRetry”  
-          runnableInstancesDetectionPeriod=”TimeSpan” />  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <sqlWorkflowInstanceStore connectionStringName="String" 
+                                honstLockRenewalPeriod="TimeSpan" 
+                                instanceCompletionAction="DeleteNothing/DeleteAll" 
+                                instanceEncodingAction="None/GZip" 
+                                instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry" 
+                                runnableInstancesDetectionPeriod="TimeSpan" />
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e38f3-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="e38f3-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="e38f3-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="e38f3-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="e38f3-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="e38f3-113">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|connectionString|Una cadena que contiene una cadena de conexión que usa para conectarse a una base de datos de persistencia subyacente.|  
-|connectionStringName|Cadena que contiene una cadena de conexión con nombre en el servidor de bases de datos.  Un ejemplo de una cadena de conexión con nombre es "DefaultConnectionString".|  
-|honstLockRenewalPeriod|Valor de Timespan que especifica el período de tiempo en el que el host debe renovar el bloqueo en una instancia.  Si el host no renueva el bloqueo en el período de tiempo especificado, la instancia se desbloquea y se puede escoger a por otro host.<br /><br /> Descargar un flujo de trabajo implica que también se conserva.  Si este atributo se pone a cero, la instancia de flujo de trabajo se conserva y se descarga de inmediato en cuanto el flujo de trabajo se vuelve inactivo.  Al establecer este atributo en TimeSpan.MaxValue, se deshabilita de forma eficaz la operación de descarga.  Las instancias de flujo de trabajo inactivas nunca se descargan.|  
-|instanceCompletionAction|Un valor que especifica si los datos de la instancia de flujo de trabajo se mantienen en el almacén de persistencia después de que la instancia de flujo de trabajo se complete o si se ha eliminado en ese punto.  Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.<br /><br /> Las acciones enumeradas consisten en eliminar los datos de instancia del almacén de persistencia o en no eliminar los datos de instancia del almacén de persistencia cuando la instancia haya completado su operación.<br /><br /> Mantener las instancias una vez completadas provoca que la base de datos de persistencia crezca rápidamente y esto afecta al rendimiento de la base de datos.  Debería configurar una directiva de purga de base de datos para eliminar estos registros de forma periódica para asegurarse de que el rendimiento de la base de datos está en el nivel que satisface sus requisitos de rendimiento.|  
-|instanceEncodingOption|Un valor opcional que especifica si la información de estado de la instancia se comprime utilizando el algoritmo Gzip antes de que la información se guarde en el almacén de persistencia.  Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceEncodingAction>.  Los valores posibles para esta propiedad son "Ninguno", que no especifica la compresión, y "Gzip", que especifica que los datos de instancia se comprimen y utilizan el algoritmo gzip.|  
-|instanceLockedExceptionAction|Un valor que especifica la acción que se produce en respuesta a una excepción que se produce cuando el host intenta bloquear una instancia porque otro host bloquea actualmente la instancia.  Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.<br /><br /> Las opciones permitidas para este campo son: Ninguno, intento básico y reintento agresivo.  El valor predeterminado es None.  La siguiente lista proporciona las descripciones de estas tres opciones:<br /><br /> -   Ninguno.  El host del servicio no intenta bloquear la instancia y pasa el objeto <xref:System.Runtime.Persistence.InstanceLockedException> al autor de la llamada.<br />-   Basic Retry.  El host del servicio vuelve a intentar bloquear la instancia con un intervalo de reintento lineal y pasa la excepción al autor de la llamada al final de la secuencia.<br />-   Aggressive Retry.  El host del servicio vuelve a intentar bloquear la instancia con un retraso en aumento exponencial y pasa el objeto <xref:System.Runtime.Persistence.InstanceLockedException> al autor de llamada al final de la secuencia.|  
-|runnableInstancesDetectionPeriod||  
+|<span data-ttu-id="e38f3-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="e38f3-114">Attribute</span></span>|<span data-ttu-id="e38f3-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="e38f3-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="e38f3-116">connectionString</span><span class="sxs-lookup"><span data-stu-id="e38f3-116">connectionString</span></span>|<span data-ttu-id="e38f3-117">Una cadena que contiene una cadena de conexión utilizada para conectarse a una base de datos de persistencia subyacente.</span><span class="sxs-lookup"><span data-stu-id="e38f3-117">A string that contains a connection string used to connect to an underlying persistence database.</span></span>|  
+|<span data-ttu-id="e38f3-118">connectionStringName</span><span class="sxs-lookup"><span data-stu-id="e38f3-118">connectionStringName</span></span>|<span data-ttu-id="e38f3-119">Una cadena que contiene una cadena de conexión con nombre en el servidor de base de datos.</span><span class="sxs-lookup"><span data-stu-id="e38f3-119">A string that contains a named connection string to the database server.</span></span> <span data-ttu-id="e38f3-120">Un ejemplo de una cadena de conexión con nombre es "DefaultConnectionString".</span><span class="sxs-lookup"><span data-stu-id="e38f3-120">An example of a named connection string is "DefaultConnectionString".</span></span>|  
+|<span data-ttu-id="e38f3-121">honstLockRenewalPeriod</span><span class="sxs-lookup"><span data-stu-id="e38f3-121">honstLockRenewalPeriod</span></span>|<span data-ttu-id="e38f3-122">Valor de Timespan que especifica el período de tiempo en el que el host debe renovar el bloqueo en una instancia.</span><span class="sxs-lookup"><span data-stu-id="e38f3-122">A Timespan value that specifies the time period in which the host must renew the lock on an instance.</span></span> <span data-ttu-id="e38f3-123">Si el host no renueva el bloqueo en el período de tiempo especificado, la instancia se desbloquea y se puede escoger a por otro host.</span><span class="sxs-lookup"><span data-stu-id="e38f3-123">If the host does not renew the lock in the specified time period, the instance is unlocked and may be picked up by another host.</span></span><br /><br /> <span data-ttu-id="e38f3-124">Descargar un flujo de trabajo implica que también se conserva.</span><span class="sxs-lookup"><span data-stu-id="e38f3-124">Unloading a workflow implies that it is also persisted.</span></span> <span data-ttu-id="e38f3-125">Si este atributo se establece en cero se conservan y se descargan inmediatamente después de la instancia de flujo de trabajo del flujo de trabajo se vuelve inactivo.</span><span class="sxs-lookup"><span data-stu-id="e38f3-125">If this attribute is set to zero the workflow instance is persisted and unloaded immediately after the workflow becomes idle.</span></span> <span data-ttu-id="e38f3-126">Establecer este atributo en TimeSpan.MaxValue eficazmente, deshabilita la operación de descarga.</span><span class="sxs-lookup"><span data-stu-id="e38f3-126">Setting this attribute to TimeSpan.MaxValue effectively disables the unload operation.</span></span> <span data-ttu-id="e38f3-127">Las instancias de flujo de trabajo inactivas nunca se descargan.</span><span class="sxs-lookup"><span data-stu-id="e38f3-127">Idle workflow instances are never unloaded.</span></span>|  
+|<span data-ttu-id="e38f3-128">instanceCompletionAction</span><span class="sxs-lookup"><span data-stu-id="e38f3-128">instanceCompletionAction</span></span>|<span data-ttu-id="e38f3-129">Un valor que especifica si los datos de la instancia de flujo de trabajo se mantienen en el almacén de persistencia después de que la instancia de flujo de trabajo se complete o si se ha eliminado en ese punto.</span><span class="sxs-lookup"><span data-stu-id="e38f3-129">A value that specifies whether workflow instance data is kept in the persistence store after the workflow instance completes or if it is deleted at that point.</span></span> <span data-ttu-id="e38f3-130">Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.</span><span class="sxs-lookup"><span data-stu-id="e38f3-130">This value is of type <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.</span></span><br /><br /> <span data-ttu-id="e38f3-131">Las acciones enumeradas consisten en eliminar los datos de instancia del almacén de persistencia o en no eliminar los datos de instancia del almacén de persistencia cuando la instancia haya completado su operación.</span><span class="sxs-lookup"><span data-stu-id="e38f3-131">The enumerated actions consist of deleting the instance data from the persistence store or not deleting the instance data from the persistence store, when the instance has completed its operation.</span></span><br /><br /> <span data-ttu-id="e38f3-132">Mantener las instancias una vez completadas provoca que la base de datos de persistencia crezca rápidamente y esto afecta al rendimiento de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="e38f3-132">Keeping instances after completion causes the persistence database to grow rapidly and this affects the performance of the database.</span></span> <span data-ttu-id="e38f3-133">Debería configurar una directiva de purga de base de datos para eliminar estos registros de forma periódica para asegurarse de que el rendimiento de la base de datos está en el nivel que satisface sus requisitos de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="e38f3-133">You should configure a database purge policy to delete these records periodically to ensure that the performance of the database is at the level that satisfy your performance requirements.</span></span>|  
+|<span data-ttu-id="e38f3-134">instanceEncodingOption</span><span class="sxs-lookup"><span data-stu-id="e38f3-134">instanceEncodingOption</span></span>|<span data-ttu-id="e38f3-135">Un valor opcional que especifica si la información de estado de la instancia se comprime utilizando el algoritmo Gzip antes de que la información se guarde en el almacén de persistencia.</span><span class="sxs-lookup"><span data-stu-id="e38f3-135">An optional value that specifies  whether the instance state information is compressed using the GZip algorithm before the information is saved in the persistence store..</span></span> <span data-ttu-id="e38f3-136">Este valor es del tipo `System.Activities.DurableInstancing.InstanceEncodingAction`.</span><span class="sxs-lookup"><span data-stu-id="e38f3-136">This value is of type `System.Activities.DurableInstancing.InstanceEncodingAction`.</span></span> <span data-ttu-id="e38f3-137">Los valores posibles para esta propiedad son "None", donde no se especifica ninguna compresión y "GZip", que se especifica esa instancia de datos se comprimen y utilizan el algoritmo gzip.</span><span class="sxs-lookup"><span data-stu-id="e38f3-137">Possible values for this property are "None", which specifies no compression, and "GZip", which specifies that instance data is compressed and uses the gzip algorithm.</span></span>|  
+|<span data-ttu-id="e38f3-138">instanceLockedExceptionAction</span><span class="sxs-lookup"><span data-stu-id="e38f3-138">instanceLockedExceptionAction</span></span>|<span data-ttu-id="e38f3-139">Un valor que especifica la acción que se produce en respuesta a una excepción que se produce cuando el host intenta bloquear una instancia porque otro host bloquea actualmente la instancia.</span><span class="sxs-lookup"><span data-stu-id="e38f3-139">A value that specifies the action that occurs in response to an exception that is thrown when the host tries to lock an instance because the instance is currently locked by another host.</span></span> <span data-ttu-id="e38f3-140">Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.</span><span class="sxs-lookup"><span data-stu-id="e38f3-140">This value is of type <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.</span></span><br /><br /> <span data-ttu-id="e38f3-141">Las opciones permitidas para este campo son: Ninguno, intento básico y reintento agresivo.</span><span class="sxs-lookup"><span data-stu-id="e38f3-141">The options allowed for this field are: None, Basic Retry, and Aggressive Retry.</span></span> <span data-ttu-id="e38f3-142">El valor predeterminado es None.</span><span class="sxs-lookup"><span data-stu-id="e38f3-142">The default value is None.</span></span> <span data-ttu-id="e38f3-143">La siguiente lista proporciona las descripciones de estas tres opciones:</span><span class="sxs-lookup"><span data-stu-id="e38f3-143">The following list provides you with the descriptions for these three options:</span></span><br /><br /> <span data-ttu-id="e38f3-144">-   Ninguno.</span><span class="sxs-lookup"><span data-stu-id="e38f3-144">-   None.</span></span> <span data-ttu-id="e38f3-145">El host del servicio no intenta bloquear la instancia y pasa el objeto <xref:System.Runtime.DurableInstancing.InstanceLockedException> al autor de la llamada.</span><span class="sxs-lookup"><span data-stu-id="e38f3-145">The service host does not attempt to lock the instance and passes the <xref:System.Runtime.DurableInstancing.InstanceLockedException> to the caller.</span></span><br /><span data-ttu-id="e38f3-146">-Vuelva a intentar básico.</span><span class="sxs-lookup"><span data-stu-id="e38f3-146">-   Basic Retry.</span></span> <span data-ttu-id="e38f3-147">El host del servicio vuelve a intentar bloquear la instancia con un intervalo de reintento lineal y pasa la excepción al autor de la llamada al final de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="e38f3-147">The service host reattempts to lock the instance with a linear retry interval and passes the exception to the caller at the end of the sequence.</span></span><br /><span data-ttu-id="e38f3-148">-Reintento agresiva.</span><span class="sxs-lookup"><span data-stu-id="e38f3-148">-   Aggressive Retry.</span></span> <span data-ttu-id="e38f3-149">El host del servicio vuelve a intentar bloquear la instancia con un retraso en aumento exponencial y pasa el objeto <xref:System.Runtime.DurableInstancing.InstanceLockedException> al autor de llamada al final de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="e38f3-149">The service host reattempts to lock the instance with an exponentially increasing delay and passes the <xref:System.Runtime.DurableInstancing.InstanceLockedException> to the caller at the end of the sequence.</span></span>|  
+|<span data-ttu-id="e38f3-150">runnableInstancesDetectionPeriod</span><span class="sxs-lookup"><span data-stu-id="e38f3-150">runnableInstancesDetectionPeriod</span></span>||  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="e38f3-151">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="e38f3-151">Child Elements</span></span>  
+ <span data-ttu-id="e38f3-152">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="e38f3-152">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="e38f3-153">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="e38f3-153">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<comportamiento\> de \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
+|<span data-ttu-id="e38f3-154">Elemento</span><span class="sxs-lookup"><span data-stu-id="e38f3-154">Element</span></span>|<span data-ttu-id="e38f3-155">Descripción</span><span class="sxs-lookup"><span data-stu-id="e38f3-155">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e38f3-156">\<comportamiento > de \<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="e38f3-156">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="e38f3-157">Especifica un elemento de comportamiento.</span><span class="sxs-lookup"><span data-stu-id="e38f3-157">Specifies a behavior element.</span></span>|  
   
-## Vea también  
- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>   
- <xref:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement>   
- <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>   
- [Almacén de instancias de flujo de trabajo de SQL](../../../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md)
+## <a name="see-also"></a><span data-ttu-id="e38f3-158">Vea también</span><span class="sxs-lookup"><span data-stu-id="e38f3-158">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>  
+ <xref:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement>  
+ <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>  
+ [<span data-ttu-id="e38f3-159">Almacén de instancias de flujo de trabajo de SQL</span><span class="sxs-lookup"><span data-stu-id="e38f3-159">SQL Workflow Instance Store</span></span>](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)

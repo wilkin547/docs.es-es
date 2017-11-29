@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -22,44 +16,43 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8fda91296ffb27a7661f8e9c5ea4bc664e570ce8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0c051e1513f8e8ad1735085cb93f106b4fb9b0d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="invalidcercall-mda"></a>MDA de invalidCERCall
-El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa cuando hay una llamada desde el gráfico de región de ejecución restringida (CER) a un método que no tiene ningún contrato de confiabilidad o un contrato excesivamente débil. Un contrato débil es el que declara que el peor caso de daño de estado tiene un ámbito mayor que la instancia que se pasa a la llamada, es decir, el estado de <xref:System.AppDomain> o del proceso puede resultar dañado o su resultado no siempre se puede calcular de forma determinista cuando se llama desde dentro de una CER.  
+# <a name="invalidcercall-mda"></a><span data-ttu-id="2f639-102">MDA de invalidCERCall</span><span class="sxs-lookup"><span data-stu-id="2f639-102">invalidCERCall MDA</span></span>
+<span data-ttu-id="2f639-103">El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa cuando hay una llamada desde el gráfico de región de ejecución restringida (CER) a un método que no tiene ningún contrato de confiabilidad o un contrato excesivamente débil.</span><span class="sxs-lookup"><span data-stu-id="2f639-103">The `invalidCERCall` managed debugging assistant (MDA) is activated when there is a call within the constrained execution region (CER) graph to a method that has no reliability contract or an excessively weak contract.</span></span> <span data-ttu-id="2f639-104">Un contrato débil es el que declara que el peor caso de daño de estado tiene un ámbito mayor que la instancia que se pasa a la llamada, es decir, el estado de <xref:System.AppDomain> o del proceso puede resultar dañado o su resultado no siempre se puede calcular de forma determinista cuando se llama desde dentro de una CER.</span><span class="sxs-lookup"><span data-stu-id="2f639-104">A weak contract is a contract that declares that the worst case state corruption is of greater scope than the instance passed to the call, that is, the <xref:System.AppDomain> or process state may become corrupted or that its result is not always deterministically computable when called within a CER.</span></span>  
   
-## <a name="symptoms"></a>Síntomas  
- Resultados inesperados cuando se ejecuta código en una CER. Los síntomas no son específicos. Podría ser una excepción <xref:System.OutOfMemoryException>, <xref:System.Threading.ThreadAbortException> inesperada o de otro tipo en la llamada al método no confiable porque el tiempo de ejecución no lo preparó por adelantado ni lo protegió de excepciones <xref:System.Threading.ThreadAbortException> en tiempo de ejecución. Una amenaza mayor es que cualquier excepción resultante del método en tiempo de ejecución podría dejar al <xref:System.AppDomain> o al proceso en un estado inestable, lo que contradice el objetivo de una CER. El motivo por el que se crea una CER es para evitar este tipo de daños de estado. Los síntomas de estado dañado son específicos de la aplicación porque la definición de estado coherente es diferente entre aplicaciones.  
+## <a name="symptoms"></a><span data-ttu-id="2f639-105">Síntomas</span><span class="sxs-lookup"><span data-stu-id="2f639-105">Symptoms</span></span>  
+ <span data-ttu-id="2f639-106">Resultados inesperados cuando se ejecuta código en una CER.</span><span class="sxs-lookup"><span data-stu-id="2f639-106">Unexpected results when executing code in a CER.</span></span> <span data-ttu-id="2f639-107">Los síntomas no son específicos.</span><span class="sxs-lookup"><span data-stu-id="2f639-107">The symptoms are not specific.</span></span> <span data-ttu-id="2f639-108">Podría ser una excepción <xref:System.OutOfMemoryException>, <xref:System.Threading.ThreadAbortException> inesperada o de otro tipo en la llamada al método no confiable porque el tiempo de ejecución no lo preparó por adelantado ni lo protegió de excepciones <xref:System.Threading.ThreadAbortException> en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="2f639-108">They could be an unexpected <xref:System.OutOfMemoryException>, a <xref:System.Threading.ThreadAbortException>, or other exceptions at the call into the unreliable method because the runtime did not prepare it ahead of time or protect it from <xref:System.Threading.ThreadAbortException> exceptions at run time.</span></span> <span data-ttu-id="2f639-109">Una amenaza mayor es que cualquier excepción resultante del método en tiempo de ejecución podría dejar al <xref:System.AppDomain> o al proceso en un estado inestable, lo que contradice el objetivo de una CER.</span><span class="sxs-lookup"><span data-stu-id="2f639-109">A greater threat is that any exception resulting from the method at run time could leave the <xref:System.AppDomain> or process in an unstable state, which is contrary to the objective of a CER.</span></span> <span data-ttu-id="2f639-110">El motivo por el que se crea una CER es para evitar este tipo de daños de estado.</span><span class="sxs-lookup"><span data-stu-id="2f639-110">The reason a CER is created is to avoid state corruptions such as this.</span></span> <span data-ttu-id="2f639-111">Los síntomas de estado dañado son específicos de la aplicación porque la definición de estado coherente es diferente entre aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2f639-111">The symptoms of corrupt state are application specific because the definition of consistent state is different between applications.</span></span>  
   
-## <a name="cause"></a>Motivo  
- El código dentro de una CER llama a una función sin <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> o con un <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> débil que no es compatible con la ejecución en una CER.  
+## <a name="cause"></a><span data-ttu-id="2f639-112">Motivo</span><span class="sxs-lookup"><span data-stu-id="2f639-112">Cause</span></span>  
+ <span data-ttu-id="2f639-113">El código dentro de una CER llama a una función sin <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> o con un <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> débil que no es compatible con la ejecución en una CER.</span><span class="sxs-lookup"><span data-stu-id="2f639-113">Code within a CER is calling a function with no <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> or with a weak <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> that is not compatible with running in a CER.</span></span>  
   
- En cuanto a la sintaxis de contratos de confiabilidad, un contrato débil es el que no especifica un valor de enumeración <xref:System.Runtime.ConstrainedExecution.Consistency> o especifica un valor <xref:System.Runtime.ConstrainedExecution.Consistency> de <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>, o <xref:System.Runtime.ConstrainedExecution.Cer.None>. Cualquiera de estas condiciones indica que el código que se llama puede impedir los esfuerzos del otro código de la CER para mantener un estado coherente.  Las CER permiten al código tratar los errores de una manera muy determinista, manteniendo invariables internas que son importantes para la aplicación y permitiendo que se siga ejecutando en presencia de errores transitorios como excepciones de memoria insuficiente.  
+ <span data-ttu-id="2f639-114">En cuanto a la sintaxis de contratos de confiabilidad, un contrato débil es el que no especifica un valor de enumeración <xref:System.Runtime.ConstrainedExecution.Consistency> o especifica un valor <xref:System.Runtime.ConstrainedExecution.Consistency> de <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>, o <xref:System.Runtime.ConstrainedExecution.Cer.None>.</span><span class="sxs-lookup"><span data-stu-id="2f639-114">In terms of reliability contract syntax, a weak contract is a contract that does not specify a <xref:System.Runtime.ConstrainedExecution.Consistency> enumeration value or specifies a <xref:System.Runtime.ConstrainedExecution.Consistency> value of <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>, or <xref:System.Runtime.ConstrainedExecution.Cer.None>.</span></span> <span data-ttu-id="2f639-115">Cualquiera de estas condiciones indica que el código que se llama puede impedir los esfuerzos del otro código de la CER para mantener un estado coherente.</span><span class="sxs-lookup"><span data-stu-id="2f639-115">Any of these conditions indicates that the code called may impede the efforts of the other code in the CER to maintain consistent state.</span></span>  <span data-ttu-id="2f639-116">Las CER permiten al código tratar los errores de una manera muy determinista, manteniendo invariables internas que son importantes para la aplicación y permitiendo que se siga ejecutando en presencia de errores transitorios como excepciones de memoria insuficiente.</span><span class="sxs-lookup"><span data-stu-id="2f639-116">CERs allow code to treat errors in a very deterministic manner, maintaining internal invariants that are important to the application and allowing it to continue running in the face of transient errors such as out-of-memory exceptions.</span></span>  
   
- La activación de este MDA indica una posibilidad de que el método que se llama en la CER pueda producir un error que el autor de la llamada no esperaba o que deje el estado de <xref:System.AppDomain> o del proceso dañado o irrecuperable. Por supuesto, es posible que el código llamado se ejecute correctamente y el problema sea simplemente un contrato que falta. Pero los problemas implicados en la escritura de código confiable son sutiles y la ausencia de un contrato es un buen indicador de que es posible que el código no se ejecute correctamente. Los contratos son indicadores de que el programador ha codificado de forma confiable y además promete que estas garantías no cambiarán en revisiones futuras del código.  Es decir, los contratos son declaraciones de intención y no solo detalles de implementación.  
+ <span data-ttu-id="2f639-117">La activación de este MDA indica una posibilidad de que el método que se llama en la CER pueda producir un error que el autor de la llamada no esperaba o que deje el estado de <xref:System.AppDomain> o del proceso dañado o irrecuperable.</span><span class="sxs-lookup"><span data-stu-id="2f639-117">The activation of this MDA indicates a possibility the method being called in the CER can fail in a way that the caller did not expect or that leaves the <xref:System.AppDomain> or process state corrupted or unrecoverable.</span></span> <span data-ttu-id="2f639-118">Por supuesto, es posible que el código llamado se ejecute correctamente y el problema sea simplemente un contrato que falta.</span><span class="sxs-lookup"><span data-stu-id="2f639-118">Of course, the called code might execute correctly and the problem is simply a missing contract.</span></span> <span data-ttu-id="2f639-119">Pero los problemas implicados en la escritura de código confiable son sutiles y la ausencia de un contrato es un buen indicador de que es posible que el código no se ejecute correctamente.</span><span class="sxs-lookup"><span data-stu-id="2f639-119">However, the issues involved in writing reliable code are subtle and the absence of a contract is a good indicator the code might not execute correctly.</span></span> <span data-ttu-id="2f639-120">Los contratos son indicadores de que el programador ha codificado de forma confiable y además promete que estas garantías no cambiarán en revisiones futuras del código.</span><span class="sxs-lookup"><span data-stu-id="2f639-120">The contracts are indicators that the programmer has coded reliably and also promises that these guarantees will not change in future revisions of the code.</span></span>  <span data-ttu-id="2f639-121">Es decir, los contratos son declaraciones de intención y no solo detalles de implementación.</span><span class="sxs-lookup"><span data-stu-id="2f639-121">That is, the contracts are declarations of intent and not just implementation details.</span></span>  
   
- Dado que cualquier método con un contrato débil o inexistente puede producir errores de muchas maneras impredecibles, el tiempo de ejecución no intenta eliminar del método ninguno de sus propios errores impredecibles que se introducen mediante la compilación JIT lenta, la especificación de diccionarios genéricos o la anulación de subprocesos, por ejemplo. Es decir, cuando se activa este MDA, indica que el tiempo de ejecución no incluyó el método llamado en la CER que se está definiendo; el gráfico de llamadas se terminó en este nodo porque continuar la preparación de este subárbol ayudaría a ocultar el posible error.  
+ <span data-ttu-id="2f639-122">Dado que cualquier método con un contrato débil o inexistente puede producir errores de muchas maneras impredecibles, el tiempo de ejecución no intenta eliminar del método ninguno de sus propios errores impredecibles que se introducen mediante la compilación JIT lenta, la especificación de diccionarios genéricos o la anulación de subprocesos, por ejemplo.</span><span class="sxs-lookup"><span data-stu-id="2f639-122">Because any method with a weak or nonexistent contract can potentially fail in many unpredictable ways, the runtime does not attempt to remove any of its own unpredictable failures from the method  that are introduced by lazy JIT-compiling, generics dictionary population, or thread aborts, for example.</span></span> <span data-ttu-id="2f639-123">Es decir, cuando se activa este MDA, indica que el tiempo de ejecución no incluyó el método llamado en la CER que se está definiendo; el gráfico de llamadas se terminó en este nodo porque continuar la preparación de este subárbol ayudaría a ocultar el posible error.</span><span class="sxs-lookup"><span data-stu-id="2f639-123">That is, when this MDA is activated, it indicates that the runtime did not include the called method in the CER being defined; the call graph was terminated at this node because continuing to prepare this subtree would help mask the potential error.</span></span>  
   
-## <a name="resolution"></a>Resolución  
- Agregar un contrato de confiabilidad válido a la función o evitar usar esa llamada de función.  
+## <a name="resolution"></a><span data-ttu-id="2f639-124">Resolución</span><span class="sxs-lookup"><span data-stu-id="2f639-124">Resolution</span></span>  
+ <span data-ttu-id="2f639-125">Agregar un contrato de confiabilidad válido a la función o evitar usar esa llamada de función.</span><span class="sxs-lookup"><span data-stu-id="2f639-125">Add a valid reliability contract to the function or avoid using that function call.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
- El efecto de llamar a un contrato débil desde una CER podría ser que la CER no pueda completar sus operaciones. Esto podría provocar daños en el estado de proceso del <xref:System.AppDomain>.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="2f639-126">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="2f639-126">Effect on the Runtime</span></span>  
+ <span data-ttu-id="2f639-127">El efecto de llamar a un contrato débil desde una CER podría ser que la CER no pueda completar sus operaciones.</span><span class="sxs-lookup"><span data-stu-id="2f639-127">The effect of calling a weak contract from a CER could be the CER failure to complete its operations.</span></span> <span data-ttu-id="2f639-128">Esto podría provocar daños en el estado de proceso del <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="2f639-128">This could lead to corruption of the <xref:System.AppDomain> process state.</span></span>  
   
-## <a name="output"></a>Resultado  
- A continuación puede ver un resultado de ejemplo de este MDA.  
+## <a name="output"></a><span data-ttu-id="2f639-129">Resultado</span><span class="sxs-lookup"><span data-stu-id="2f639-129">Output</span></span>  
+ <span data-ttu-id="2f639-130">A continuación puede ver un resultado de ejemplo de este MDA.</span><span class="sxs-lookup"><span data-stu-id="2f639-130">The following is sample output from this MDA.</span></span>  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
   
-## <a name="configuration"></a>Configuración  
+## <a name="configuration"></a><span data-ttu-id="2f639-131">Configuración</span><span class="sxs-lookup"><span data-stu-id="2f639-131">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -69,8 +62,7 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
- <xref:System.Runtime.ConstrainedExecution>   
- [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="2f639-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="2f639-132">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
+ <xref:System.Runtime.ConstrainedExecution>  
+ [<span data-ttu-id="2f639-133">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="2f639-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

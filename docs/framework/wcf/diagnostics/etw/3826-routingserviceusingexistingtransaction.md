@@ -1,35 +1,38 @@
 ---
-title: "3826 - RoutingServiceUsingExistingTransaction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3826 - RoutingServiceUsingExistingTransaction
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e73b2492-10e9-418e-bdf3-a2605d046acb
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3d42dfb9de85ba65d00e642c96a189d32ab81a9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3826 - RoutingServiceUsingExistingTransaction
-## Propiedades  
+# <a name="3826---routingserviceusingexistingtransaction"></a><span data-ttu-id="2dc16-102">3826 - RoutingServiceUsingExistingTransaction</span><span class="sxs-lookup"><span data-stu-id="2dc16-102">3826 - RoutingServiceUsingExistingTransaction</span></span>
+## <a name="properties"></a><span data-ttu-id="2dc16-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="2dc16-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|3826|  
-|Palabras clave|RoutingServices|  
-|Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="2dc16-104">Id.</span><span class="sxs-lookup"><span data-stu-id="2dc16-104">ID</span></span>|<span data-ttu-id="2dc16-105">3826</span><span class="sxs-lookup"><span data-stu-id="2dc16-105">3826</span></span>|  
+|<span data-ttu-id="2dc16-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="2dc16-106">Keywords</span></span>|<span data-ttu-id="2dc16-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="2dc16-107">RoutingServices</span></span>|  
+|<span data-ttu-id="2dc16-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="2dc16-108">Level</span></span>|<span data-ttu-id="2dc16-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="2dc16-109">Verbose</span></span>|  
+|<span data-ttu-id="2dc16-110">Canal</span><span class="sxs-lookup"><span data-stu-id="2dc16-110">Channel</span></span>|<span data-ttu-id="2dc16-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="2dc16-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Este evento se genera cuando el servicio de enrutamiento envíe mensajes con la transacción existente.  
+## <a name="description"></a><span data-ttu-id="2dc16-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="2dc16-112">Description</span></span>  
+ <span data-ttu-id="2dc16-113">Este evento se genera cuando el servicio de enrutamiento envíe mensajes con la transacción existente.</span><span class="sxs-lookup"><span data-stu-id="2dc16-113">This event is emitted when the Routing Service will send messages using existing transaction.</span></span>  
   
-## Mensaje  
- El servicio de enrutamiento enviará mensajes con la transacción existente '%1'.  
+## <a name="message"></a><span data-ttu-id="2dc16-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="2dc16-114">Message</span></span>  
+ <span data-ttu-id="2dc16-115">El servicio de enrutamiento enviará mensajes con la transacción existente '%1'.</span><span class="sxs-lookup"><span data-stu-id="2dc16-115">The Routing Service will send messages using existing transaction '%1'.</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="2dc16-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="2dc16-116">Details</span></span>
