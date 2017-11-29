@@ -7,53 +7,46 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f446e20f37a83e9effd2a378ce576640bca99763
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 696b1d3dd7312b52c28f11f64f007c29fb8a94b5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration
-El espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> proporciona clases y API que se usan para implementar actividades de colaboración de punto a punto mediante la infraestructura de colaboración de punto a punto.  
+# <a name="about-the-systemnetpeertopeercollaboration-namespace"></a><span data-ttu-id="9c7d0-102">Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration</span><span class="sxs-lookup"><span data-stu-id="9c7d0-102">About the System.Net.PeerToPeer.Collaboration Namespace</span></span>
+<span data-ttu-id="9c7d0-103">El espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> proporciona clases y API que se usan para implementar actividades de colaboración de punto a punto mediante la infraestructura de colaboración de punto a punto.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-103">The <xref:System.Net.PeerToPeer.Collaboration> namespace provides classes and APIs that are used to implement peer collaboration activities using the Peer-to-Peer Collaboration Infrastructure.</span></span>  
   
-## <a name="classes"></a>Clases  
- Las clases principales que se usan en la implementación de una actividad de colaboración de punto a punto son las siguientes:  
+## <a name="classes"></a><span data-ttu-id="9c7d0-104">Clases</span><span class="sxs-lookup"><span data-stu-id="9c7d0-104">Classes</span></span>  
+ <span data-ttu-id="9c7d0-105">Las clases principales que se usan en la implementación de una actividad de colaboración de punto a punto son las siguientes:</span><span class="sxs-lookup"><span data-stu-id="9c7d0-105">The main classes used in the implementation of a Peer-to-Peer Collaboration activity are:</span></span>  
   
--   <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, que se puede usar para almacenar contactos de compañeros.  
+-   <span data-ttu-id="9c7d0-106"><xref:System.Net.PeerToPeer.Collaboration.ContactManager>, que se puede usar para almacenar contactos de compañeros.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-106">The <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, which can be used to store peer contacts.</span></span>  
   
--   <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> en la que se colaborará (por ejemplo, un juego, un cliente de chat o una solución de conferencias).  
+-   <span data-ttu-id="9c7d0-107"><xref:System.Net.PeerToPeer.Collaboration.PeerApplication> en la que se colaborará (por ejemplo, un juego, un cliente de chat o una solución de conferencias).</span><span class="sxs-lookup"><span data-stu-id="9c7d0-107">The <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> in which to collaborate, such as a game, chat client, or conferencing solution.</span></span>  
   
--   Los elementos de mismo nivel que colaborarán en una actividad.  Estos elementos de mismo nivel se pueden representar como objetos <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> o <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.  
+-   <span data-ttu-id="9c7d0-108">Los elementos de mismo nivel que colaborarán en una actividad.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-108">The peers that will be collaborating in an activity.</span></span>  <span data-ttu-id="9c7d0-109">Estos elementos de mismo nivel se pueden representar como objetos <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> o <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-109">These peers can be represented as <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>, or <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> objects.</span></span>  
   
--   La clase estática <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>, que especifica las aplicaciones que están disponibles y los elementos de mismo nivel que participan en ellas.  
+-   <span data-ttu-id="9c7d0-110">La clase estática <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>, que especifica las aplicaciones que están disponibles y los elementos de mismo nivel que participan en ellas.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-110">The static <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> class itself, which specifies which applications are available and which peers are participating in them.</span></span>  
   
- Los métodos <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> se usan para invitar a compañeros a una sesión de colaboración.  Un compañero que efectúa una llamada se puede suscribir a otro compañero para participar en eventos que indican actualizaciones en la información de presencia, de una aplicación o de un objeto, asociada a la sesión de colaboración. Las clases de presencia especifican si hay algún <xref:System.Net.PeerToPeer.Collaboration.Peer> disponible para la colaboración, mientras que la clase <xref:System.Net.PeerToPeer.Collaboration.PeerScope> se usa para especificar qué grado de participación se permite para un compañero: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (global), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe> (subred) o <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.  
+ <span data-ttu-id="9c7d0-111">Los métodos <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> se usan para invitar a compañeros a una sesión de colaboración.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-111">The <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> methods are used to invite peers to a collaboration session.</span></span>  <span data-ttu-id="9c7d0-112">Un compañero que efectúa una llamada se puede suscribir a otro compañero para participar en eventos que indican actualizaciones en la información de presencia, de una aplicación o de un objeto, asociada a la sesión de colaboración.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-112">A calling peer can subscribe to another peer for events that signal updates to application, object, or presence information affiliated with the collaboration session.</span></span> <span data-ttu-id="9c7d0-113">Las clases de presencia especifican si hay algún <xref:System.Net.PeerToPeer.Collaboration.Peer> disponible para la colaboración, mientras que la clase <xref:System.Net.PeerToPeer.Collaboration.PeerScope> se usa para especificar qué grado de participación se permite para un compañero: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (global), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe> (subred) o <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-113">Presence classes specify whether a <xref:System.Net.PeerToPeer.Collaboration.Peer> is available for collaboration, and the <xref:System.Net.PeerToPeer.Collaboration.PeerScope> class is used to specify how much participation is allowed for a peer:  <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (global), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe>, (subnet) or <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.</span></span>  
   
- Una sesión de colaboración consta de cuatro pasos:  
+ <span data-ttu-id="9c7d0-114">Una sesión de colaboración consta de cuatro pasos:</span><span class="sxs-lookup"><span data-stu-id="9c7d0-114">A collaboration session is comprised of four steps:</span></span>  
   
--   Descubrimiento. Descubra o publique aplicaciones, compañeros e información de presencia.  Por ejemplo, buscar a otras personas en la subred local que tengan instalados los mismos juegos.  
+-   <span data-ttu-id="9c7d0-115">Descubrimiento.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-115">Discovery.</span></span> <span data-ttu-id="9c7d0-116">Descubra o publique aplicaciones, compañeros e información de presencia.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-116">Discover or publish applications, peers, and presence information.</span></span>  <span data-ttu-id="9c7d0-117">Por ejemplo, buscar a otras personas en la subred local que tengan instalados los mismos juegos.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-117">For instance, find other people on the local subnet that have the same games installed.</span></span>  
   
--   Invitación. Envíe y acepte invitaciones seguras a los compañeros remotos para iniciar sesiones <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> o unirse a ellas.  
+-   <span data-ttu-id="9c7d0-118">Invitación.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-118">Invitation.</span></span> <span data-ttu-id="9c7d0-119">Envíe y acepte invitaciones seguras a los compañeros remotos para iniciar sesiones <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> o unirse a ellas.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-119">Send and accept secure invitations for remote peer(s) to start or join <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> sessions.</span></span>  
   
--   Administración de contactos. Agregue compañeros que haya descubierto como contacto a un <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
+-   <span data-ttu-id="9c7d0-120">Administración de contactos.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-120">Contact Management.</span></span> <span data-ttu-id="9c7d0-121">Agregue compañeros que haya descubierto como contacto a un <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-121">Add discovered peers as a contact to a <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.</span></span>  
   
--   Comunicación. Una vez establecida la comunicación, use las API <xref:System.Net>, la API <xref:System.Net.PeerToPeer> o las clases de canales del mismo nivel de Windows Communication Foundation para las comunicaciones con varios participantes.  
+-   <span data-ttu-id="9c7d0-122">Comunicación.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-122">Communication.</span></span> <span data-ttu-id="9c7d0-123">Una vez establecida la comunicación, use las API <xref:System.Net>, la API <xref:System.Net.PeerToPeer> o las clases de canales del mismo nivel de Windows Communication Foundation para las comunicaciones con varios participantes.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-123">When communication is established, use the <xref:System.Net> APIs, the <xref:System.Net.PeerToPeer> API, or the Windows Communication Foundation Peer Channel classes for multiparty communications.</span></span>  
   
- Por ejemplo, el compañero anfitrión inicia una sesión de colaboración y usa el método <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> para agregar a un compañero remoto y a uno de sus compañeros locales al administrador de contactos del compañero anfitrión.  Los tres usuarios participarán en su propia sesión de colaboración privada.  
+ <span data-ttu-id="9c7d0-124">Por ejemplo, el compañero anfitrión inicia una sesión de colaboración y usa el método <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> para agregar a un compañero remoto y a uno de sus compañeros locales al administrador de contactos del compañero anfitrión.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-124">For example, the host peer starts a collaboration session, and utilizes the <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> method to add a remote peer and one of its local peers to the Contact Manager of the host peer.</span></span>  <span data-ttu-id="9c7d0-125">Los tres usuarios participarán en su propia sesión de colaboración privada.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-125">The three users will then participate in their own private collaboration session.</span></span>  
   
- Aplicaciones P2P típicas: teleconferencias de colaboración con pizarra o para tomar notas, aplicaciones de chat sin servidor, anuncios interactivos y sesiones de juegos en línea.  
+ <span data-ttu-id="9c7d0-126">Aplicaciones P2P típicas: teleconferencias de colaboración con pizarra o para tomar notas, aplicaciones de chat sin servidor, anuncios interactivos y sesiones de juegos en línea.</span><span class="sxs-lookup"><span data-stu-id="9c7d0-126">Typical P2P applications are: conference calls for collaborative note-taking or whiteboarding, serverless chat applications, interactive advertisements, and online gaming sessions.</span></span>  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a><span data-ttu-id="9c7d0-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c7d0-127">See Also</span></span>  
  <xref:System.Net.PeerToPeer.Collaboration>
-

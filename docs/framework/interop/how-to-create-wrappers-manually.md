@@ -5,54 +5,46 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- wrappers, creating manually
+helpviewer_keywords: wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 218e92b379d562be66c72cb731654907766f2ec4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 19f605203a79f8435d414fb3c2eb7041c9824640
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-wrappers-manually"></a>Cómo: Crear contenedores manualmente
-Si decide declarar manualmente los tipos COM en código fuente administrado, lo mejor es empezar con un archivo o una biblioteca de tipos existente del Lenguaje de definición de interfaz (IDL). Cuando no tiene el archivo IDL o no puede generar un archivo de biblioteca de tipos, puede simular los tipos COM si crea declaraciones administradas y exporta el ensamblado resultante a una biblioteca de tipos.  
+# <a name="how-to-create-wrappers-manually"></a><span data-ttu-id="8a80e-102">Cómo: Crear contenedores manualmente</span><span class="sxs-lookup"><span data-stu-id="8a80e-102">How to: Create Wrappers Manually</span></span>
+<span data-ttu-id="8a80e-103">Si decide declarar manualmente los tipos COM en código fuente administrado, lo mejor es empezar con un archivo o una biblioteca de tipos existente del Lenguaje de definición de interfaz (IDL).</span><span class="sxs-lookup"><span data-stu-id="8a80e-103">If you decide to declare COM types manually in managed source code, the best place to start is with an existing Interface Definition Language (IDL) file or type library.</span></span> <span data-ttu-id="8a80e-104">Cuando no tiene el archivo IDL o no puede generar un archivo de biblioteca de tipos, puede simular los tipos COM si crea declaraciones administradas y exporta el ensamblado resultante a una biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="8a80e-104">When you do not have the IDL file or cannot generate a type library file, you can simulate the COM types by creating managed declarations and exporting the resulting assembly to a type library.</span></span>  
   
-### <a name="to-simulate-com-types-from-managed-source"></a>Para simular tipos COM a partir de código fuente administrado  
+### <a name="to-simulate-com-types-from-managed-source"></a><span data-ttu-id="8a80e-105">Para simular tipos COM a partir de código fuente administrado</span><span class="sxs-lookup"><span data-stu-id="8a80e-105">To simulate COM types from managed source</span></span>  
   
-1.  Declare los tipos en un lenguaje conforme a CLS (Common Language Specification) y compile el archivo.  
+1.  <span data-ttu-id="8a80e-106">Declare los tipos en un lenguaje conforme a CLS (Common Language Specification) y compile el archivo.</span><span class="sxs-lookup"><span data-stu-id="8a80e-106">Declare the types in a language that is compliant with the Common Language Specification (CLS) and compile the file.</span></span>  
   
-2.  Exporte el ensamblado que contiene los tipos con el [Exportador de la biblioteca de tipos (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).  
+2.  <span data-ttu-id="8a80e-107">Exporte el ensamblado que contiene los tipos con el [Exportador de la biblioteca de tipos (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span><span class="sxs-lookup"><span data-stu-id="8a80e-107">Export the assembly containing the types with the [Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span>  
   
-3.  Utilice la biblioteca de tipos COM exportada como base para declarar tipos administrados orientados a COM.  
+3.  <span data-ttu-id="8a80e-108">Utilice la biblioteca de tipos COM exportada como base para declarar tipos administrados orientados a COM.</span><span class="sxs-lookup"><span data-stu-id="8a80e-108">Use the exported COM type library as a basis for declaring COM-oriented managed types.</span></span>  
   
-### <a name="to-create-a-runtime-callable-wrapper-rcw"></a>Para crear un contenedor invocable en tiempo de ejecución (RCW)  
+### <a name="to-create-a-runtime-callable-wrapper-rcw"></a><span data-ttu-id="8a80e-109">Para crear un contenedor invocable en tiempo de ejecución (RCW)</span><span class="sxs-lookup"><span data-stu-id="8a80e-109">To create a runtime callable wrapper (RCW)</span></span>  
   
-1.  Suponiendo que tiene un archivo IDL o un archivo de biblioteca de tipos, decida qué clases e interfaces desea incluir en el RCW personalizado. Puede excluir cualquier tipo que no piense utilizar directa o indirectamente en su aplicación.  
+1.  <span data-ttu-id="8a80e-110">Suponiendo que tiene un archivo IDL o un archivo de biblioteca de tipos, decida qué clases e interfaces desea incluir en el RCW personalizado.</span><span class="sxs-lookup"><span data-stu-id="8a80e-110">Assuming that you have an IDL file or type library file, decide which classes and interfaces you want to include in the custom RCW.</span></span> <span data-ttu-id="8a80e-111">Puede excluir cualquier tipo que no piense utilizar directa o indirectamente en su aplicación.</span><span class="sxs-lookup"><span data-stu-id="8a80e-111">You can exclude any types that you do not intend to use directly or indirectly in your application.</span></span>  
   
-2.  Cree un archivo código fuente en un lenguaje conforme a CLS y declare los tipos. Vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) para obtener una descripción completa del proceso de conversión de importación. Cuando se crea un RCW personalizado, se realiza manualmente la conversión de tipos proporcionada por el [Importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). El ejemplo de la siguiente sección muestra los tipos de un IDL o un archivo de biblioteca de tipos y sus tipos correspondientes en código de C#.  
+2.  <span data-ttu-id="8a80e-112">Cree un archivo código fuente en un lenguaje conforme a CLS y declare los tipos.</span><span class="sxs-lookup"><span data-stu-id="8a80e-112">Create a source file in a CLS-compliant language and declare the types.</span></span> <span data-ttu-id="8a80e-113">Vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) para obtener una descripción completa del proceso de conversión de importación.</span><span class="sxs-lookup"><span data-stu-id="8a80e-113">See [Type Library to Assembly Conversion Summary](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958) for a complete description of the import conversion process.</span></span> <span data-ttu-id="8a80e-114">Cuando se crea un RCW personalizado, se realiza manualmente la conversión de tipos proporcionada por el [Importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span><span class="sxs-lookup"><span data-stu-id="8a80e-114">Effectively, when you create a custom RCW, you are manually performing the type conversion activity provided by the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="8a80e-115">El ejemplo de la siguiente sección muestra los tipos de un IDL o un archivo de biblioteca de tipos y sus tipos correspondientes en código de C#.</span><span class="sxs-lookup"><span data-stu-id="8a80e-115">The example in the next section shows types in an IDL or type library file and their corresponding types in C# code.</span></span>  
   
-3.  Una vez completadas las declaraciones, compile el archivo de la misma forma que compila cualquier otro código fuente administrado.  
+3.  <span data-ttu-id="8a80e-116">Una vez completadas las declaraciones, compile el archivo de la misma forma que compila cualquier otro código fuente administrado.</span><span class="sxs-lookup"><span data-stu-id="8a80e-116">When the declarations are complete, compile the file as you compile any other managed source code.</span></span>  
   
-4.  Como ocurre con los tipos importados con Tlbimp.exe, algunos requieren información adicional, que puede agregar directamente al código. Para obtener más detalles, vea [Cómo: Editar ensamblados de interoperabilidad](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277).  
+4.  <span data-ttu-id="8a80e-117">Como ocurre con los tipos importados con Tlbimp.exe, algunos requieren información adicional, que puede agregar directamente al código.</span><span class="sxs-lookup"><span data-stu-id="8a80e-117">As with the types imported with Tlbimp.exe, some require additional information, which you can add directly to your code.</span></span> <span data-ttu-id="8a80e-118">Para obtener más detalles, vea [Cómo: Editar ensamblados de interoperabilidad](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277).</span><span class="sxs-lookup"><span data-stu-id="8a80e-118">For details, see [How to: Edit Interop Assemblies](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el siguiente código se muestra un ejemplo de la interfaz `ISATest` y la clase `SATest` en IDL, y los tipos correspondientes en código fuente de C#.  
+## <a name="example"></a><span data-ttu-id="8a80e-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8a80e-119">Example</span></span>  
+ <span data-ttu-id="8a80e-120">En el siguiente código se muestra un ejemplo de la interfaz `ISATest` y la clase `SATest` en IDL, y los tipos correspondientes en código fuente de C#.</span><span class="sxs-lookup"><span data-stu-id="8a80e-120">The following code shows an example of the `ISATest` interface and `SATest` class in IDL and the corresponding types in C# source code.</span></span>  
   
- **Archivo IDL o de biblioteca de tipos**  
+ <span data-ttu-id="8a80e-121">**Archivo IDL o de biblioteca de tipos**</span><span class="sxs-lookup"><span data-stu-id="8a80e-121">**IDL or type library file**</span></span>  
   
 ```  
  [  
@@ -77,7 +69,7 @@ coclass SATest
  };  
 ```  
   
- **Contenedor en código fuente administrado**  
+ <span data-ttu-id="8a80e-122">**Contenedor en código fuente administrado**</span><span class="sxs-lookup"><span data-stu-id="8a80e-122">**Wrapper in managed source code**</span></span>  
   
 ```csharp  
 using System;  
@@ -101,9 +93,9 @@ namespace SAServer
  }   
  [ComImport]  
  [Guid("116CCA1E-7E39-4515-9849-90790DA6431E")]  
- [ClassInterface(ClassInterfaceType.None)]   
+ [ClassInterface(ClassInterfaceType.None)]  
  [TypeLibType(TypeLibTypeFlags.FCanCreate)]  
- public class SATest : ISATest   
+ public class SATest : ISATest  
  {  
   [DispId(1)]  
   [MethodImpl(MethodImplOptions.InternalCall,   
@@ -114,11 +106,10 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Personalización de contenedores RCW](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)   
- [Tipos de datos COM](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)   
- [Cómo: Editar ensamblados de interoperabilidad](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)   
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Tlbexp.exe (Exportador de la biblioteca de tipos)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
-
+## <a name="see-also"></a><span data-ttu-id="8a80e-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="8a80e-123">See Also</span></span>  
+ [<span data-ttu-id="8a80e-124">Personalización de contenedores RCW</span><span class="sxs-lookup"><span data-stu-id="8a80e-124">Customizing Runtime Callable Wrappers</span></span>](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [<span data-ttu-id="8a80e-125">Tipos de datos COM</span><span class="sxs-lookup"><span data-stu-id="8a80e-125">COM Data Types</span></span>](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [<span data-ttu-id="8a80e-126">Cómo: Editar ensamblados de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="8a80e-126">How to: Edit Interop Assemblies</span></span>](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [<span data-ttu-id="8a80e-127">Resumen de la conversión de bibliotecas de tipos en ensamblados</span><span class="sxs-lookup"><span data-stu-id="8a80e-127">Type Library to Assembly Conversion Summary</span></span>](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [<span data-ttu-id="8a80e-128">TlbImp.exe (Importador de la biblioteca de tipos)</span><span class="sxs-lookup"><span data-stu-id="8a80e-128">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [<span data-ttu-id="8a80e-129">Tlbexp.exe (Exportador de la biblioteca de tipos)</span><span class="sxs-lookup"><span data-stu-id="8a80e-129">Tlbexp.exe (Type Library Exporter)</span></span>](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)

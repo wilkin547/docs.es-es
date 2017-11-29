@@ -1,49 +1,40 @@
 ---
 title: "Información general sobre los atributos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f1d5399da42b224908fa9c23893eec5d424dd685
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="attributes-overview-visual-basic"></a>Información general sobre los atributos (Visual Basic)
-Los atributos proporcionan un método eficaz para asociar metadatos, o información declarativa, con código (ensamblados, tipos, métodos, propiedades, etc.). Después de asociar un atributo con una entidad de programa, se puede consultar el atributo en tiempo de ejecución mediante la utilización de una técnica denominada *reflexión*. Para más información, vea [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
+# <a name="attributes-overview-visual-basic"></a><span data-ttu-id="47d0c-102">Información general sobre los atributos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47d0c-102">Attributes overview (Visual Basic)</span></span>
+<span data-ttu-id="47d0c-103">Los atributos proporcionan un método eficaz para asociar metadatos, o información declarativa, con código (ensamblados, tipos, métodos, propiedades, etc.).</span><span class="sxs-lookup"><span data-stu-id="47d0c-103">Attributes provide a powerful method of associating metadata, or declarative information, with code (assemblies, types, methods, properties, and so forth).</span></span> <span data-ttu-id="47d0c-104">Después de asociar un atributo con una entidad de programa, se puede consultar el atributo en tiempo de ejecución mediante la utilización de una técnica denominada *reflexión*.</span><span class="sxs-lookup"><span data-stu-id="47d0c-104">After an attribute is associated with a program entity, the attribute can be queried at run time by using a technique called *reflection*.</span></span> <span data-ttu-id="47d0c-105">Para más información, vea [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="47d0c-105">For more information, see [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).</span></span>  
   
- Los atributos tienen las propiedades siguientes:  
+ <span data-ttu-id="47d0c-106">Los atributos tienen las propiedades siguientes:</span><span class="sxs-lookup"><span data-stu-id="47d0c-106">Attributes have the following properties:</span></span>  
   
--   Los atributos agregan metadatos al programa. Los *metadatos* son información sobre los tipos definidos en un programa. Todos los ensamblados .NET contienen un conjunto de metadatos específico que describe los tipos y miembros de tipo definidos en el ensamblado. Puede agregar atributos personalizados para especificar cualquier información adicional que sea necesaria. Para más información, vea [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic]).  
+-   <span data-ttu-id="47d0c-107">Los atributos agregan metadatos al programa.</span><span class="sxs-lookup"><span data-stu-id="47d0c-107">Attributes add metadata to your program.</span></span> <span data-ttu-id="47d0c-108">Los *metadatos* son información sobre los tipos definidos en un programa.</span><span class="sxs-lookup"><span data-stu-id="47d0c-108">*Metadata* is information about the types defined in a program.</span></span> <span data-ttu-id="47d0c-109">Todos los ensamblados .NET contienen un conjunto de metadatos específico que describe los tipos y miembros de tipo definidos en el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="47d0c-109">All .NET assemblies contain a specified set of metadata that describes the types and type members defined in the assembly.</span></span> <span data-ttu-id="47d0c-110">Puede agregar atributos personalizados para especificar cualquier información adicional que sea necesaria.</span><span class="sxs-lookup"><span data-stu-id="47d0c-110">You can add custom attributes to specify any additional information that is required.</span></span> <span data-ttu-id="47d0c-111">Para más información, vea [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic]).</span><span class="sxs-lookup"><span data-stu-id="47d0c-111">For more information, see, [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).</span></span>  
   
--   Puede aplicar uno o más atributos a todos los ensamblados, módulos o elementos de programa más pequeños como clases y propiedades.  
+-   <span data-ttu-id="47d0c-112">Puede aplicar uno o más atributos a todos los ensamblados, módulos o elementos de programa más pequeños como clases y propiedades.</span><span class="sxs-lookup"><span data-stu-id="47d0c-112">You can apply one or more attributes to entire assemblies, modules, or smaller program elements such as classes and properties.</span></span>  
   
--   Los atributos pueden aceptar argumentos de la misma manera que los métodos y las propiedades.  
+-   <span data-ttu-id="47d0c-113">Los atributos pueden aceptar argumentos de la misma manera que los métodos y las propiedades.</span><span class="sxs-lookup"><span data-stu-id="47d0c-113">Attributes can accept arguments in the same way as methods and properties.</span></span>  
   
--   El programa puede examinar sus propios metadatos o los metadatos de otros programas mediante la reflexión. Para más información, vea [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic]).  
+-   <span data-ttu-id="47d0c-114">El programa puede examinar sus propios metadatos o los metadatos de otros programas mediante la reflexión.</span><span class="sxs-lookup"><span data-stu-id="47d0c-114">Your program can examine its own metadata or the metadata in other programs by using reflection.</span></span> <span data-ttu-id="47d0c-115">Para más información, vea [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic]).</span><span class="sxs-lookup"><span data-stu-id="47d0c-115">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="using-attributes"></a>Utilizar atributos  
- Los atributos se pueden colocar en la mayoría de las declaraciones, aunque un determinado atributo podría restringir los tipos de declaraciones en que es válido. En Visual Basic, un atributo se encierra entre corchetes angulares (\< >). Debe aparecer inmediatamente antes del elemento al que se aplica, en la misma línea.  
+## <a name="using-attributes"></a><span data-ttu-id="47d0c-116">Utilizar atributos</span><span class="sxs-lookup"><span data-stu-id="47d0c-116">Using Attributes</span></span>  
+ <span data-ttu-id="47d0c-117">Los atributos se pueden colocar en la mayoría de las declaraciones, aunque un determinado atributo podría restringir los tipos de declaraciones en que es válido.</span><span class="sxs-lookup"><span data-stu-id="47d0c-117">Attributes can be placed on most any declaration, though a specific attribute might restrict the types of declarations on which it is valid.</span></span> <span data-ttu-id="47d0c-118">En Visual Basic, un atributo se encierra entre corchetes angulares (\< >).</span><span class="sxs-lookup"><span data-stu-id="47d0c-118">In Visual Basic, an attribute is enclosed in angle brackets (\< >).</span></span> <span data-ttu-id="47d0c-119">Debe aparecer inmediatamente antes del elemento al que se aplica, en la misma línea.</span><span class="sxs-lookup"><span data-stu-id="47d0c-119">It must appear immediately before the element to which it is applied, on the same line.</span></span>  
   
- En este ejemplo, el atributo <xref:System.SerializableAttribute> se usa para aplicar una característica específica a una clase:  
+ <span data-ttu-id="47d0c-120">En este ejemplo, el atributo <xref:System.SerializableAttribute> se usa para aplicar una característica específica a una clase:</span><span class="sxs-lookup"><span data-stu-id="47d0c-120">In this example, the <xref:System.SerializableAttribute> attribute is used to apply a specific characteristic to a class:</span></span>  
   
 ```vb  
 <System.Serializable()> Public Class SampleClass  
@@ -51,7 +42,7 @@ Los atributos proporcionan un método eficaz para asociar metadatos, o informaci
 End Class  
 ```  
   
- Un método con el atributo <xref:System.Runtime.InteropServices.DllImportAttribute> se declara de esta forma:  
+ <span data-ttu-id="47d0c-121">Un método con el atributo <xref:System.Runtime.InteropServices.DllImportAttribute> se declara de esta forma:</span><span class="sxs-lookup"><span data-stu-id="47d0c-121">A method with the attribute <xref:System.Runtime.InteropServices.DllImportAttribute> is declared like this:</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -63,7 +54,7 @@ Sub SampleMethod()
 End Sub  
 ```  
   
- En una declaración se puede colocar más de un atributo:  
+ <span data-ttu-id="47d0c-122">En una declaración se puede colocar más de un atributo:</span><span class="sxs-lookup"><span data-stu-id="47d0c-122">More than one attribute can be placed on a declaration:</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,7 +67,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub  
 ```  
   
- Algunos atributos se pueden especificar más de una vez para una entidad determinada. Un ejemplo de este tipo de atributos multiuso es <xref:System.Diagnostics.ConditionalAttribute>:  
+ <span data-ttu-id="47d0c-123">Algunos atributos se pueden especificar más de una vez para una entidad determinada.</span><span class="sxs-lookup"><span data-stu-id="47d0c-123">Some attributes can be specified more than once for a given entity.</span></span> <span data-ttu-id="47d0c-124">Un ejemplo de este tipo de atributos multiuso es <xref:System.Diagnostics.ConditionalAttribute>:</span><span class="sxs-lookup"><span data-stu-id="47d0c-124">An example of such a multiuse attribute is <xref:System.Diagnostics.ConditionalAttribute>:</span></span>  
   
 ```vb  
 <Conditional("DEBUG"), Conditional("TEST1")>   
@@ -85,10 +76,10 @@ End Sub
 ```  
   
 > [!NOTE]
->  Por convención, todos los nombres de atributos terminan con la palabra "Attribute" para distinguirlos de otros elementos de .NET Framework. Sin embargo, no es necesario especificar el sufijo de atributo cuando utiliza atributos en el código. Por ejemplo, `[DllImport]` es equivalente a `[DllImportAttribute]`, pero `DllImportAttribute` es el nombre del atributo real en .NET Framework.  
+>  <span data-ttu-id="47d0c-125">Por convención, todos los nombres de atributos terminan con la palabra "Attribute" para distinguirlos de otros elementos de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="47d0c-125">By convention, all attribute names end with the word "Attribute" to distinguish them from other items in the .NET Framework.</span></span> <span data-ttu-id="47d0c-126">Sin embargo, no es necesario especificar el sufijo de atributo cuando utiliza atributos en el código.</span><span class="sxs-lookup"><span data-stu-id="47d0c-126">However, you do not need to specify the attribute suffix when using attributes in code.</span></span> <span data-ttu-id="47d0c-127">Por ejemplo, `[DllImport]` es equivalente a `[DllImportAttribute]`, pero `DllImportAttribute` es el nombre del atributo real en .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="47d0c-127">For example, `[DllImport]` is equivalent to `[DllImportAttribute]`, but `DllImportAttribute` is the attribute's actual name in the .NET Framework.</span></span>  
   
-### <a name="attribute-parameters"></a>Parámetros de atributo  
- Muchos atributos tienen parámetros, que pueden ser posicionales, sin nombre o con nombre. Los parámetros posicionales deben especificarse en un determinado orden y no se pueden omitir; los parámetros con nombre son opcionales y se pueden especificar en cualquier orden. Los parámetros posicionales se especifican en primer lugar. Por ejemplo, estos tres atributos son equivalentes:  
+### <a name="attribute-parameters"></a><span data-ttu-id="47d0c-128">Parámetros de atributo</span><span class="sxs-lookup"><span data-stu-id="47d0c-128">Attribute Parameters</span></span>  
+ <span data-ttu-id="47d0c-129">Muchos atributos tienen parámetros, que pueden ser posicionales, sin nombre o con nombre.</span><span class="sxs-lookup"><span data-stu-id="47d0c-129">Many attributes have parameters, which can be positional, unnamed, or named.</span></span> <span data-ttu-id="47d0c-130">Los parámetros posicionales deben especificarse en un determinado orden y no se pueden omitir; los parámetros con nombre son opcionales y se pueden especificar en cualquier orden.</span><span class="sxs-lookup"><span data-stu-id="47d0c-130">Any positional parameters must be specified in a certain order and cannot be omitted; named parameters are optional and can be specified in any order.</span></span> <span data-ttu-id="47d0c-131">Los parámetros posicionales se especifican en primer lugar.</span><span class="sxs-lookup"><span data-stu-id="47d0c-131">Positional parameters are specified first.</span></span> <span data-ttu-id="47d0c-132">Por ejemplo, estos tres atributos son equivalentes:</span><span class="sxs-lookup"><span data-stu-id="47d0c-132">For example, these three attributes are equivalent:</span></span>  
   
 ```vb  
 <DllImport("user32.dll")>  
@@ -96,25 +87,25 @@ End Sub
 <DllImport("user32.dll", ExactSpelling:=False, SetLastError:=False)>  
 ```  
   
- El primer parámetro, el nombre del archivo DLL, es posicional y siempre va primero; los demás tienen un nombre. En este caso, ambos parámetros con nombre tienen el estado false de forma predeterminada, por lo que se pueden omitir. Consulte la documentación del atributo individual para obtener información sobre los valores de parámetro predeterminados.  
+ <span data-ttu-id="47d0c-133">El primer parámetro, el nombre del archivo DLL, es posicional y siempre va primero; los demás tienen un nombre.</span><span class="sxs-lookup"><span data-stu-id="47d0c-133">The first parameter, the DLL name, is positional and always comes first; the others are named.</span></span> <span data-ttu-id="47d0c-134">En este caso, ambos parámetros con nombre tienen el estado false de forma predeterminada, por lo que se pueden omitir.</span><span class="sxs-lookup"><span data-stu-id="47d0c-134">In this case, both named parameters default to false, so they can be omitted.</span></span> <span data-ttu-id="47d0c-135">Consulte la documentación del atributo individual para obtener información sobre los valores de parámetro predeterminados.</span><span class="sxs-lookup"><span data-stu-id="47d0c-135">Refer to the individual attribute's documentation for information on default parameter values.</span></span>  
   
-### <a name="attribute-targets"></a>Destinos de atributo  
- El *destino* de un atributo es la entidad a la que se aplica el atributo. Por ejemplo, puede aplicar un atributo a una clase, un método determinado o un ensamblado completo. De forma predeterminada, el atributo se aplica al elemento que lo precede. Pero puede identificar explícitamente, por ejemplo, si se aplica un atributo a un método, a su parámetro o a su valor devuelto.  
+### <a name="attribute-targets"></a><span data-ttu-id="47d0c-136">Destinos de atributo</span><span class="sxs-lookup"><span data-stu-id="47d0c-136">Attribute Targets</span></span>  
+ <span data-ttu-id="47d0c-137">El *destino* de un atributo es la entidad a la que se aplica el atributo.</span><span class="sxs-lookup"><span data-stu-id="47d0c-137">The *target* of an attribute is the entity to which the attribute applies.</span></span> <span data-ttu-id="47d0c-138">Por ejemplo, puede aplicar un atributo a una clase, un método determinado o un ensamblado completo.</span><span class="sxs-lookup"><span data-stu-id="47d0c-138">For example, an attribute may apply to a class, a particular method, or an entire assembly.</span></span> <span data-ttu-id="47d0c-139">De forma predeterminada, el atributo se aplica al elemento que lo precede.</span><span class="sxs-lookup"><span data-stu-id="47d0c-139">By default, an attribute applies to the element that it precedes.</span></span> <span data-ttu-id="47d0c-140">Pero puede identificar explícitamente, por ejemplo, si se aplica un atributo a un método, a su parámetro o a su valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="47d0c-140">But you can also explicitly identify, for example, whether an attribute is applied to a method, or to its parameter, or to its return value.</span></span>  
   
- Para identificar un destino de atributo de forma explícita, use la sintaxis siguiente:  
+ <span data-ttu-id="47d0c-141">Para identificar un destino de atributo de forma explícita, use la sintaxis siguiente:</span><span class="sxs-lookup"><span data-stu-id="47d0c-141">To explicitly identify an attribute target, use the following syntax:</span></span>  
   
 ```vb  
 <target : attribute-list>  
 ```  
   
- La lista de posibles valores `target` se muestra en la tabla siguiente.  
+ <span data-ttu-id="47d0c-142">La lista de posibles valores `target` se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="47d0c-142">The list of possible `target` values is shown in the following table.</span></span>  
   
-|Valor del objetivo|Se aplica a|  
+|<span data-ttu-id="47d0c-143">Valor del objetivo</span><span class="sxs-lookup"><span data-stu-id="47d0c-143">Target value</span></span>|<span data-ttu-id="47d0c-144">Se aplica a</span><span class="sxs-lookup"><span data-stu-id="47d0c-144">Applies to</span></span>|  
 |------------------|----------------|  
-|`assembly`|Ensamblado completo|  
-|`module`|Módulo del ensamblado actual (que es diferente de un módulo de Visual Basic)|  
+|`assembly`|<span data-ttu-id="47d0c-145">Ensamblado completo</span><span class="sxs-lookup"><span data-stu-id="47d0c-145">Entire assembly</span></span>|  
+|`module`|<span data-ttu-id="47d0c-146">Módulo del ensamblado actual (que es diferente de un módulo de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47d0c-146">Current assembly module (which is different from a Visual Basic Module)</span></span>|  
   
- En el ejemplo siguiente se muestra cómo aplicar atributos a ensamblados y módulos. Para más información, vea [Atributos comunes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).  
+ <span data-ttu-id="47d0c-147">En el ejemplo siguiente se muestra cómo aplicar atributos a ensamblados y módulos.</span><span class="sxs-lookup"><span data-stu-id="47d0c-147">The following example shows how to apply attributes to assemblies and modules.</span></span> <span data-ttu-id="47d0c-148">Para más información, vea [Atributos comunes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="47d0c-148">For more information, see [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).</span></span>  
   
 ```vb  
 Imports System.Reflection  
@@ -122,46 +113,45 @@ Imports System.Reflection
 Module: CLSCompliant(True)>   
 ```  
   
-## <a name="common-uses-for-attributes"></a>Usos comunes de los atributos  
- La lista siguiente incluye algunos de los usos comunes de atributos en el código:  
+## <a name="common-uses-for-attributes"></a><span data-ttu-id="47d0c-149">Usos comunes de los atributos</span><span class="sxs-lookup"><span data-stu-id="47d0c-149">Common Uses for Attributes</span></span>  
+ <span data-ttu-id="47d0c-150">La lista siguiente incluye algunos de los usos comunes de atributos en el código:</span><span class="sxs-lookup"><span data-stu-id="47d0c-150">The following list includes a few of the common uses of attributes in code:</span></span>  
   
--   Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP. Para obtener más información, consulta <xref:System.Web.Services.WebMethodAttribute>.  
+-   <span data-ttu-id="47d0c-151">Marcar métodos con el atributo `WebMethod` en los servicios web para indicar que el método debe ser invocable a través del protocolo SOAP.</span><span class="sxs-lookup"><span data-stu-id="47d0c-151">Marking methods using the `WebMethod` attribute in Web services to indicate that the method should be callable over the SOAP protocol.</span></span> <span data-ttu-id="47d0c-152">Para obtener más información, consulta <xref:System.Web.Services.WebMethodAttribute>.</span><span class="sxs-lookup"><span data-stu-id="47d0c-152">For more information, see <xref:System.Web.Services.WebMethodAttribute>.</span></span>  
   
--   Describir cómo serializar parámetros de método al interoperar con código nativo. Para obtener más información, consulta <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+-   <span data-ttu-id="47d0c-153">Describir cómo serializar parámetros de método al interoperar con código nativo.</span><span class="sxs-lookup"><span data-stu-id="47d0c-153">Describing how to marshal method parameters when interoperating with native code.</span></span> <span data-ttu-id="47d0c-154">Para obtener más información, consulta <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="47d0c-154">For more information, see <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span></span>  
   
--   Describir las propiedades COM para clases, métodos e interfaces.  
+-   <span data-ttu-id="47d0c-155">Describir las propiedades COM para clases, métodos e interfaces.</span><span class="sxs-lookup"><span data-stu-id="47d0c-155">Describing the COM properties for classes, methods, and interfaces.</span></span>  
   
--   Llamar al código no administrado mediante la clase <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+-   <span data-ttu-id="47d0c-156">Llamar al código no administrado mediante la clase <xref:System.Runtime.InteropServices.DllImportAttribute>.</span><span class="sxs-lookup"><span data-stu-id="47d0c-156">Calling unmanaged code using the <xref:System.Runtime.InteropServices.DllImportAttribute> class.</span></span>  
   
--   Describir los ensamblados en cuanto a título, versión, descripción o marca.  
+-   <span data-ttu-id="47d0c-157">Describir los ensamblados en cuanto a título, versión, descripción o marca.</span><span class="sxs-lookup"><span data-stu-id="47d0c-157">Describing your assembly in terms of title, version, description, or trademark.</span></span>  
   
--   Describir qué miembros de una clase serializar para la persistencia.  
+-   <span data-ttu-id="47d0c-158">Describir qué miembros de una clase serializar para la persistencia.</span><span class="sxs-lookup"><span data-stu-id="47d0c-158">Describing which members of a class to serialize for persistence.</span></span>  
   
--   Describir cómo realizar asignaciones entre los miembros de clase y los nodos XML para la serialización XML.  
+-   <span data-ttu-id="47d0c-159">Describir cómo realizar asignaciones entre los miembros de clase y los nodos XML para la serialización XML.</span><span class="sxs-lookup"><span data-stu-id="47d0c-159">Describing how to map between class members and XML nodes for XML serialization.</span></span>  
   
--   Describir los requisitos de seguridad para los métodos.  
+-   <span data-ttu-id="47d0c-160">Describir los requisitos de seguridad para los métodos.</span><span class="sxs-lookup"><span data-stu-id="47d0c-160">Describing the security requirements for methods.</span></span>  
   
--   Especificar las características utilizadas para reforzar la seguridad.  
+-   <span data-ttu-id="47d0c-161">Especificar las características utilizadas para reforzar la seguridad.</span><span class="sxs-lookup"><span data-stu-id="47d0c-161">Specifying characteristics used to enforce security.</span></span>  
   
--   Controlar optimizaciones mediante el compilador Just-In-Time (JIT) para que el código siga siendo fácil de depurar.  
+-   <span data-ttu-id="47d0c-162">Controlar optimizaciones mediante el compilador Just-In-Time (JIT) para que el código siga siendo fácil de depurar.</span><span class="sxs-lookup"><span data-stu-id="47d0c-162">Controlling optimizations by the just-in-time (JIT) compiler so the code remains easy to debug.</span></span>  
   
--   Obtener información sobre el llamador de un método.  
+-   <span data-ttu-id="47d0c-163">Obtener información sobre el llamador de un método.</span><span class="sxs-lookup"><span data-stu-id="47d0c-163">Obtaining information about the caller to a method.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- Para obtener más información, consulte:  
+## <a name="related-sections"></a><span data-ttu-id="47d0c-164">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="47d0c-164">Related Sections</span></span>  
+ <span data-ttu-id="47d0c-165">Para obtener más información, consulte:</span><span class="sxs-lookup"><span data-stu-id="47d0c-165">For more information, see:</span></span>  
   
--   [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])  
+-   <span data-ttu-id="47d0c-166">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="47d0c-166">[Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)</span></span>  
   
--   [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])  
+-   <span data-ttu-id="47d0c-167">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="47d0c-167">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>  
   
--   [How to: Create a C/C++ Union by Using Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md) (Creación de uniones de C/C++ mediante la utilización de atributos [Visual Basic])  
+-   <span data-ttu-id="47d0c-168">[How to: Create a C/C++ Union by Using Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md) (Creación de uniones de C/C++ mediante la utilización de atributos [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="47d0c-168">[How to: Create a C/C++ Union by Using Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)</span></span>  
   
--   [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Atributos comunes [Visual Basic])  
+-   <span data-ttu-id="47d0c-169">[Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Atributos comunes [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="47d0c-169">[Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)</span></span>  
   
--   [Información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+-   [<span data-ttu-id="47d0c-170">Información del llamador (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47d0c-170">Caller Information (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  (Reflexión [Visual Basic])  
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)
-
+## <a name="see-also"></a><span data-ttu-id="47d0c-171">Vea también</span><span class="sxs-lookup"><span data-stu-id="47d0c-171">See Also</span></span>  
+ [<span data-ttu-id="47d0c-172">Guía de programación en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="47d0c-172">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="47d0c-173">Reflexión (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47d0c-173">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="47d0c-174">Atributos</span><span class="sxs-lookup"><span data-stu-id="47d0c-174">Attributes</span></span>](https://msdn.microsoft.com/library/5x6cd29c)

@@ -1,28 +1,31 @@
 ---
-title: "Configuraci&#243;n recomendada para el seguimiento y el registro de mensajes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Configuración recomendada para el seguimiento y el registro de mensajes"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b6986c775db50ea5b763288f8f3b9bdcf1bf7e67
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Configuraci&#243;n recomendada para el seguimiento y el registro de mensajes
-En este tema se describen la traza recomendada y configuración del registro de mensajes para los entornos operativos diferentes.  
+# <a name="recommended-settings-for-tracing-and-message-logging"></a><span data-ttu-id="f65ce-102">Configuración recomendada para el seguimiento y el registro de mensajes</span><span class="sxs-lookup"><span data-stu-id="f65ce-102">Recommended Settings for Tracing and Message Logging</span></span>
+<span data-ttu-id="f65ce-103">En este tema se describen la traza recomendada y configuración del registro de mensajes para los entornos operativos diferentes.</span><span class="sxs-lookup"><span data-stu-id="f65ce-103">This topic describes recommended tracing and message logging settings for different operating environments.</span></span>  
   
-## Configuración recomendada para un entorno de producción  
- Para un entorno de producción, si está utilizando los orígenes de seguimiento de WCF, establezca `switchValue` a Advertencia.  Si está utilizando el origen de seguimiento de WCF `System.ServiceModel`, establezca el atributo `switchValue` a `Warning` y el atributo `propagateActivity` a `true`.  Si está utilizando un origen de seguimiento definido por un usuario, establezca el atributo `switchValue` a `Warning, ActivityTracing`.  Esto se puede hacer manualmente con [Herramienta del editor de configuración \(SvcConfigEditor.exe\)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  Si no visualiza una repercusión en el rendimiento, puede establecer el atributo `switchValue` en `Information` en todos los casos mencionados previamente, lo cual genera una cantidad bastante grande de información de seguimiento.  El ejemplo siguiente muestra estos valores recomendados.  
+## <a name="recommended-settings-for-a-production-environment"></a><span data-ttu-id="f65ce-104">Configuración recomendada para un entorno de producción</span><span class="sxs-lookup"><span data-stu-id="f65ce-104">Recommended Settings for a Production Environment</span></span>  
+ <span data-ttu-id="f65ce-105">Para un entorno de producción, si está utilizando los orígenes de seguimiento de WCF, establezca `switchValue` a Advertencia.</span><span class="sxs-lookup"><span data-stu-id="f65ce-105">For a production environment, if you are using WCF trace sources, set the `switchValue` to Warning.</span></span> <span data-ttu-id="f65ce-106">Si está utilizando el origen de seguimiento de WCF `System.ServiceModel`, establezca el atributo `switchValue` a `Warning` y el atributo `propagateActivity` a `true`.</span><span class="sxs-lookup"><span data-stu-id="f65ce-106">If you are using the WCF `System.ServiceModel` trace source, set the `switchValue` attribute to `Warning` and the `propagateActivity` attribute to `true`.</span></span> <span data-ttu-id="f65ce-107">Si está utilizando un origen de seguimiento definido por un usuario, establezca el atributo `switchValue` a `Warning, ActivityTracing`.</span><span class="sxs-lookup"><span data-stu-id="f65ce-107">If you are using a user-defined trace source, set the `switchValue` attribute to `Warning, ActivityTracing`.</span></span> <span data-ttu-id="f65ce-108">Esto puede realizarse manualmente mediante la [herramienta Editor de configuración (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).</span><span class="sxs-lookup"><span data-stu-id="f65ce-108">This can be done manually using the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).</span></span> <span data-ttu-id="f65ce-109">Si no visualiza una repercusión en el rendimiento, puede establecer el atributo `switchValue` en `Information` en todos los casos mencionados previamente, lo cual genera una cantidad bastante grande de información de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="f65ce-109">If you do not anticipate a hit in performance, you can set the `switchValue` attribute to `Information` in all the previously mentioned cases, which generates a fairly large amount of trace data.</span></span> <span data-ttu-id="f65ce-110">El ejemplo siguiente muestra estos valores recomendados.</span><span class="sxs-lookup"><span data-stu-id="f65ce-110">The following example demonstrates these recommended settings.</span></span>  
   
-```  
+```xml  
 <configuration>  
  <system.diagnostics>  
   <sources>  
@@ -54,12 +57,12 @@ En este tema se describen la traza recomendada y configuración del registro de 
 </configuration>  
 ```  
   
-## Configuración recomendada para la implementación o depurando  
- Para la implementar o depurar el entorno, elija `Information` o `Verbose`, junto con `ActivityTracing` para o un origen de seguimiento definido por el usuario o `System.ServiceModel`.  Para mejorar la depuración, debería agregar también un origen de seguimiento adicional \(`System.ServiceModel.MessageLogging`\) a la configuración para habilitar el registro de mensajes.  Tenga en cuenta que el atributo `switchValue` no tiene ningún impacto en este origen de seguimiento.  
+## <a name="recommended-settings-for-deployment-or-debugging"></a><span data-ttu-id="f65ce-111">Configuración recomendada para la implementación o depurando</span><span class="sxs-lookup"><span data-stu-id="f65ce-111">Recommended Settings for Deployment or Debugging</span></span>  
+ <span data-ttu-id="f65ce-112">Para la implementar o depurar el entorno, elija `Information` o `Verbose`, junto con `ActivityTracing` para o un origen de seguimiento definido por el usuario o `System.ServiceModel`.</span><span class="sxs-lookup"><span data-stu-id="f65ce-112">For deployment or debugging environment, choose `Information` or `Verbose`, along with `ActivityTracing` for either a user-defined or `System.ServiceModel` trace source.</span></span> <span data-ttu-id="f65ce-113">Para mejorar la depuración, debería agregar también un origen de seguimiento adicional (`System.ServiceModel.MessageLogging`) a la configuración para habilitar el registro de mensajes.</span><span class="sxs-lookup"><span data-stu-id="f65ce-113">To enhance debugging, you should also add an additional trace source (`System.ServiceModel.MessageLogging`) to the configuration to enable message logging.</span></span> <span data-ttu-id="f65ce-114">Tenga en cuenta que el atributo `switchValue` no tiene ningún impacto en este origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="f65ce-114">Notice that the `switchValue` attribute has no impact on this trace source.</span></span>  
   
- El ejemplo siguiente muestra los valores recomendados, mediante un agente de escucha compartido que utiliza `XmlWriterTraceListener`.  
+ <span data-ttu-id="f65ce-115">El ejemplo siguiente muestra los valores recomendados, mediante un agente de escucha compartido que utiliza `XmlWriterTraceListener`.</span><span class="sxs-lookup"><span data-stu-id="f65ce-115">The following example demonstrates the recommended settings, using a shared listener that utilizes the `XmlWriterTraceListener`.</span></span>  
   
-```  
+```xml  
 <configuration>  
  <system.diagnostics>  
   <sources>  
@@ -103,21 +106,21 @@ En este tema se describen la traza recomendada y configuración del registro de 
 </configuration>  
 ```  
   
-## Utilizar WMI para modificar la configuración  
- Puede utilizar WMI para cambiar la configuración en el tiempo de ejecución \(habilitando el atributo `wmiProviderEnabled` en la configuración, tal y como se ha mostrado previamente en el ejemplo de configuración\).  Por ejemplo, puede utilizar WMI dentro del CIM Studio para cambiar el origen de seguimiento desde Advertencia a Información en tiempo de ejecución.  Debe ser consciente de que el coste del rendimiento de la depuración activa de este modo puede ser muy elevado.  Para obtener más información sobre el uso de WMI, consulte el tema [Utilización del instrumental de administración de Windows \(WMI\) para diagnósticos](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+## <a name="using-wmi-to-modify-settings"></a><span data-ttu-id="f65ce-116">Utilizar WMI para modificar la configuración</span><span class="sxs-lookup"><span data-stu-id="f65ce-116">Using WMI to Modify Settings</span></span>  
+ <span data-ttu-id="f65ce-117">Puede utilizar WMI para cambiar la configuración en el tiempo de ejecución (habilitando el atributo `wmiProviderEnabled` en la configuración, tal y como se ha mostrado previamente en el ejemplo de configuración).</span><span class="sxs-lookup"><span data-stu-id="f65ce-117">You can use WMI to change configuration settings at runtime (by enabling the `wmiProviderEnabled` attribute in the configuration, as demonstrated in the previously configuration example).</span></span> <span data-ttu-id="f65ce-118">Por ejemplo, puede utilizar WMI dentro del CIM Studio para cambiar el origen de seguimiento desde Advertencia a Información en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="f65ce-118">For example, you can use WMI within the CIM Studio to change the trace source levels from Warning to Information at runtime.</span></span> <span data-ttu-id="f65ce-119">Debe ser consciente de que el coste del rendimiento de la depuración activa de este modo puede ser muy elevado.</span><span class="sxs-lookup"><span data-stu-id="f65ce-119">You should be aware that the performance cost of live debugging in this way can be very high.</span></span> <span data-ttu-id="f65ce-120">Para obtener más información acerca del uso de WMI, consulte el [utilizando Windows Management Instrumentation para diagnósticos](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) tema.</span><span class="sxs-lookup"><span data-stu-id="f65ce-120">For more information about using WMI, see the [Using Windows Management Instrumentation for Diagnostics](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) topic.</span></span>  
   
-## Habilitación de eventos correlativos en el seguimiento ASP.NET  
- Los eventos ASP.NET no establecen el id. de correlación \(ActivityID\) a menos que esté activado el seguimiento de evento ASP.NET.  Para visualizar correctamente eventos correlativos, debe activar el seguimiento de eventos ASP.NET mediante el siguiente comando de la consola de comandos, al que se puede llamar mediante **Inicio**, **Ejecutar** y escribiendo **cmd**,  
+## <a name="enable-correlated-events-in-aspnet-tracing"></a><span data-ttu-id="f65ce-121">Habilitación de eventos correlativos en el seguimiento ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f65ce-121">Enable Correlated Events in ASP.NET Tracing</span></span>  
+ <span data-ttu-id="f65ce-122">Los eventos ASP.NET no establecen el id. de correlación (ActivityID) a menos que esté activado el seguimiento de evento ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="f65ce-122">ASP.NET events do not set the correlation ID (ActivityID) unless ASP.NET event tracing is turned on.</span></span> <span data-ttu-id="f65ce-123">Para visualizar correctamente eventos correlativos, tendrá que activar eventos ASP.NET traza mediante el siguiente comando en la consola de comandos, que se puede llamar para ello, vaya a **iniciar**, **ejecutar** y tipo **cmd** ,</span><span class="sxs-lookup"><span data-stu-id="f65ce-123">To see correlated events properly, you have to turn on ASP.NET events tracing using the following command in the command console, which can be invoked by going to **Start**, **Run** and type **cmd**,</span></span>  
   
 ```  
 logman start mytrace -pf logman.providers -o test.etl –ets  
 ```  
   
- Para desactivar el seguimiento de eventos ASP.NET, utilice el siguiente comando,  
+ <span data-ttu-id="f65ce-124">Para desactivar el seguimiento de eventos ASP.NET, utilice el siguiente comando,</span><span class="sxs-lookup"><span data-stu-id="f65ce-124">To turn off tracing of ASP.NET events, use the following command,</span></span>  
   
 ```  
 logman stop mytrace -ets  
 ```  
   
-## Vea también  
- [Utilización del instrumental de administración de Windows \(WMI\) para diagnósticos](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+## <a name="see-also"></a><span data-ttu-id="f65ce-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="f65ce-125">See Also</span></span>  
+ [<span data-ttu-id="f65ce-126">Mediante Instrumental de administración de Windows para diagnósticos</span><span class="sxs-lookup"><span data-stu-id="f65ce-126">Using Windows Management Instrumentation for Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

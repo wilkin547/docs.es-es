@@ -1,38 +1,41 @@
 ---
-title: "Asignar restricciones de esquema XML (XSD) a las restricciones de DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Asignar restricciones KEY de un esquema XML (XSD) a restricciones de conjuntos de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f5247d0ccfd2ceec641ff29d29b889a55c1a5e12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignar restricciones de esquema XML (XSD) a las restricciones de DataSet
-En un esquema puede especificar una restricción de clave para un elemento o un atributo mediante el elemento **key**.  El elemento o el atributo para el que se especifica una restricción de clave debe tener valores únicos en cualquier instancia del esquema y no puede tener valores nulos.  
+# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="7fb4f-102">Asignar restricciones KEY de un esquema XML (XSD) a restricciones de conjuntos de datos</span><span class="sxs-lookup"><span data-stu-id="7fb4f-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="7fb4f-103">En un esquema, puede especificar una restricción de clave en un elemento o atributo mediante la **clave** elemento.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="7fb4f-104">El elemento o el atributo para el que se especifica una restricción de clave debe tener valores únicos en cualquier instancia del esquema y no puede tener valores nulos.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  
   
- La restricción de clave es similar a la restricción única, excepto en que la columna sobre la que se define una restricción de clave no puede tener valores nulos.  
+ <span data-ttu-id="7fb4f-105">La restricción de clave es similar a la restricción única, excepto en que la columna sobre la que se define una restricción de clave no puede tener valores nulos.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-105">The key constraint is similar to the unique constraint, except that the column on which a key constraint is defined cannot have null values.</span></span>  
   
- En la siguiente tabla se describen los atributos **msdata** que puede especificar en el elemento **key**.  
+ <span data-ttu-id="7fb4f-106">La siguiente tabla se describen los **msdata** atributos que se pueden especificar en el **clave** elemento.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-106">The following table outlines the **msdata** attributes that you can specify in the **key** element.</span></span>  
   
-|Nombre del atributo|Descripción|  
-|-------------------------|-----------------|  
-|**msdata:ConstraintName**|Si se especifica este atributo, su valor se utiliza como nombre de la restricción.  De lo contrario, el atributo **name** proporciona el valor del nombre de la restricción.|  
-|**msdata:PrimaryKey**|Si `PrimaryKey="true"` está presente, la propiedad **IsPrimaryKey** de la restricción se establece como **true**, lo que la convierte en una clave principal.  La propiedad de columna **AllowDBNull** se establece como **false** porque las claves principales no pueden tener valores nulos.|  
+|<span data-ttu-id="7fb4f-107">Nombre del atributo</span><span class="sxs-lookup"><span data-stu-id="7fb4f-107">Attribute name</span></span>|<span data-ttu-id="7fb4f-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="7fb4f-108">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="7fb4f-109">**msdata: ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="7fb4f-109">**msdata:ConstraintName**</span></span>|<span data-ttu-id="7fb4f-110">Si se especifica este atributo, su valor se utiliza como nombre de la restricción.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-110">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="7fb4f-111">En caso contrario, el **nombre** atributo proporciona el valor del nombre de restricción.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-111">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
+|<span data-ttu-id="7fb4f-112">**msdata: PrimaryKey**</span><span class="sxs-lookup"><span data-stu-id="7fb4f-112">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="7fb4f-113">Si `PrimaryKey="true"` está presente, el **IsPrimaryKey** propiedad de restricción se establece en **true**, lo que una clave principal.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-113">If `PrimaryKey="true"` is present, the **IsPrimaryKey** constraint property is set to **true**, thus making it a primary key.</span></span> <span data-ttu-id="7fb4f-114">El **AllowDBNull** propiedad de columna se establece en **false**, porque las claves principales no pueden tener valores nulos.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-114">The **AllowDBNull** column property is set to **false**, because primary keys cannot have null values.</span></span>|  
   
- Al convertir un esquema en el que se ha especificado una restricción de clave, el proceso de asignación crea una restricción única en la tabla, donde la propiedad de columna **AllowDBNull** se ha establecido como **false** para cada columna de la restricción.  La propiedad **IsPrimaryKey** de la restricción única también se establece como **false** a menos que haya especificado `msdata:PrimaryKey="true"` en el elemento **key**.  Esto es idéntico a una restricción única del esquema donde `PrimaryKey="true"`.  
+ <span data-ttu-id="7fb4f-115">Convertir un esquema en el que se especifica una restricción de clave, el proceso de asignación crea una restricción unique en la tabla con el **AllowDBNull** propiedad column establecida en **false** para cada columna de la restricción.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-115">In converting schema in which a key constraint is specified, the mapping process creates a unique constraint on the table with the **AllowDBNull** column property set to **false** for each column in the constraint.</span></span> <span data-ttu-id="7fb4f-116">El **IsPrimaryKey** propiedad de la restricción única también se establece en **false** a menos que haya especificado `msdata:PrimaryKey="true"` en el **clave** elemento.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-116">The **IsPrimaryKey** property of the unique constraint is also set to **false** unless you have specified `msdata:PrimaryKey="true"` on the **key** element.</span></span> <span data-ttu-id="7fb4f-117">Esto es idéntico a una restricción única del esquema donde `PrimaryKey="true"`.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-117">This is identical to a unique constraint in the schema in which `PrimaryKey="true"`.</span></span>  
   
- En el siguiente ejemplo de esquema, el elemento **key** especifica la restricción de clave del elemento **CustomerID**.  
+ <span data-ttu-id="7fb4f-118">En el siguiente ejemplo de esquema, el **clave** elemento especifica la restricción de clave en el **CustomerID** elemento.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-118">In the following schema example, the **key** element specifies the key constraint on the **CustomerID** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="cod"  
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,15 @@ En un esquema puede especificar una restricción de clave para un elemento o un 
 </xs:schema>   
 ```  
   
- El elemento **key** especifica que los valores del elemento secundario **CustomerID** del elemento **Customers** deben tener valores únicos y no pueden tener valores nulos.  Al traducir el esquema del lenguaje de definición de esquema XML \(XSD\), el proceso de asignación crea la tabla siguiente:  
+ <span data-ttu-id="7fb4f-119">El **clave** elemento especifica que los valores de la **CustomerID** elemento secundario de la **clientes** elemento debe tener valores únicos y no pueden tener valores nulos.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-119">The **key** element specifies that the values of the **CustomerID** child element of the **Customers** element must have unique values and cannot have null values.</span></span> <span data-ttu-id="7fb4f-120">Al traducir el esquema del lenguaje de definición de esquema XML (XSD), el proceso de asignación crea la tabla siguiente:</span><span class="sxs-lookup"><span data-stu-id="7fb4f-120">In translating the XML Schema definition language (XSD) schema, the mapping process creates the following table:</span></span>  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- La asignación de esquema XML crea también una **UniqueConstraint** en la columna **CustomerID**, como se muestra en el siguiente <xref:System.Data.DataSet>.  Para simplificar, sólo se muestran las propiedades relevantes.  
+ <span data-ttu-id="7fb4f-121">La asignación de esquema XML crea también un **UniqueConstraint** en el **CustomerID** columna, tal y como se muestra en la siguiente <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-121">The XML Schema mapping also creates a **UniqueConstraint** on the **CustomerID** column, as shown in the following <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="7fb4f-122">Para simplificar, sólo se muestran las propiedades relevantes.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-122">(For simplicity, only relevant properties are shown.)</span></span>  
   
 ```  
-  
       DataSetName: MyDataSet  
 TableName: customers  
   ColumnName: CustomerID  
@@ -82,11 +84,11 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- En el **DataSet** que se genera, la propiedad **IsPrimaryKey** de la **UniqueConstraint** se establece como **true** porque el esquema contiene `msdata:PrimaryKey="true"` en el elemento **key**.  
+ <span data-ttu-id="7fb4f-123">En el **conjunto de datos** que se genera, la **IsPrimaryKey** propiedad de la **UniqueConstraint** está establecido en **true** porque el esquema especifica `msdata:PrimaryKey="true"` en el **clave** elemento.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-123">In the **DataSet** that is generated, the **IsPrimaryKey** property of the **UniqueConstraint** is set to **true** because the schema specifies `msdata:PrimaryKey="true"` in the **key** element.</span></span>  
   
- El valor de la propiedad **ConstraintName** de la **UniqueConstraint** del **DataSet** es el valor del atributo **msdata:ConstraintName** especificado en el elemento **key** del esquema.  
+ <span data-ttu-id="7fb4f-124">El valor de la **ConstraintName** propiedad de la **UniqueConstraint** en el **conjunto de datos** es el valor de la **msdata: ConstraintName** el atributo especificado en el **clave** elemento en el esquema.</span><span class="sxs-lookup"><span data-stu-id="7fb4f-124">The value of the **ConstraintName** property of the **UniqueConstraint** in the **DataSet** is the value of the **msdata:ConstraintName** attribute specified in the **key** element in the schema.</span></span>  
   
-## Vea también  
- [Asignar restricciones de esquema XML \(XSD\) a las restricciones de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Generar las relaciones de DataSet desde la definición de esquemas XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7fb4f-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="7fb4f-125">See Also</span></span>  
+ [<span data-ttu-id="7fb4f-126">Asignar restricciones de esquema (XSD) de XML a las restricciones de conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="7fb4f-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="7fb4f-127">Generar las relaciones de conjunto de datos desde un esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="7fb4f-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="7fb4f-128">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="7fb4f-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

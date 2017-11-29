@@ -1,105 +1,103 @@
 ---
-title: "Elemento &lt;gcConcurrent&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcConcurrent> (elemento)"
-  - "etiquetas contenedoras, <gcConcurrent> (elemento)"
-  - "gcConcurrent (elemento)"
+title: '&lt;gcConcurrent&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent
+helpviewer_keywords:
+- container tags, <gcConcurrent> element
+- gcConcurrent element
+- <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c7ab16546ae85d1161f9e1323d74f17253edb7e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;gcConcurrent&gt;
-Especifica si Common Language Runtime ejecuta la recolección de elementos no utilizados en un subproceso independiente.  
+# <a name="ltgcconcurrentgt-element"></a><span data-ttu-id="2e0a1-102">&lt;gcConcurrent&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="2e0a1-102">&lt;gcConcurrent&gt; Element</span></span>
+<span data-ttu-id="2e0a1-103">Especifica si Common Language Runtime ejecuta la recolección de elementos no utilizados en un subproceso independiente.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-103">Specifies whether the common language runtime runs garbage collection on a separate thread.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="2e0a1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2e0a1-104">\<configuration></span></span>  
+<span data-ttu-id="2e0a1-105">\<en tiempo de ejecución ></span><span class="sxs-lookup"><span data-stu-id="2e0a1-105">\<runtime></span></span>  
+<span data-ttu-id="2e0a1-106">\<gcConcurrent ></span><span class="sxs-lookup"><span data-stu-id="2e0a1-106">\<gcConcurrent></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="2e0a1-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2e0a1-107">Syntax</span></span>  
+  
+```xml  
 <gcConcurrent    
    enabled="true|false"/>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2e0a1-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="2e0a1-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2e0a1-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="2e0a1-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="2e0a1-110">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si CLR ejecuta la recolección de elementos no utilizados simultáneamente.|  
+|<span data-ttu-id="2e0a1-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="2e0a1-111">Attribute</span></span>|<span data-ttu-id="2e0a1-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="2e0a1-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="2e0a1-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="2e0a1-114">Especifica si CLR ejecuta la recolección de elementos no utilizados simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-114">Specifies whether the runtime runs garbage collection concurrently.</span></span>|  
   
-## Atributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="2e0a1-115">Atributo enabled</span><span class="sxs-lookup"><span data-stu-id="2e0a1-115">enabled Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="2e0a1-116">Valor</span><span class="sxs-lookup"><span data-stu-id="2e0a1-116">Value</span></span>|<span data-ttu-id="2e0a1-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="2e0a1-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|No ejecuta la recolección de elementos no utilizados simultáneamente.|  
-|`true`|Ejecuta la recolección de elementos no utilizados simultáneamente.  Este es el valor predeterminado.|  
+|`false`|<span data-ttu-id="2e0a1-118">No ejecuta la recolección de elementos no utilizados simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-118">Does not run garbage collection concurrently.</span></span>|  
+|`true`|<span data-ttu-id="2e0a1-119">Ejecuta la recolección de elementos no utilizados simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-119">Runs garbage collection concurrently.</span></span> <span data-ttu-id="2e0a1-120">Este es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-120">This is the default.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="2e0a1-121">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="2e0a1-121">Child Elements</span></span>  
+ <span data-ttu-id="2e0a1-122">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-122">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="2e0a1-123">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="2e0a1-123">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
+|<span data-ttu-id="2e0a1-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="2e0a1-124">Element</span></span>|<span data-ttu-id="2e0a1-125">Descripción</span><span class="sxs-lookup"><span data-stu-id="2e0a1-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="2e0a1-126">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="2e0a1-127">Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Comentarios  
- Antes de .NET Framework 4, la recolección de elementos no utilizados de estación de trabajo permitía la recolección de elementos no utilizados  simultánea, que se realizaba en segundo plano en un subproceso independiente.  En .NET Framework 4, la recolección de elementos no utilizados simultánea se reemplazó por GC, que también realiza la recolección de elementos no utilizados en segundo plano en un subproceso independiente.  A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor se puede realizar en segundo plano.  El elemento `<gcConcurrent>` controla si CLR realiza la recolección de elementos no utilizados simultáneamente o en segundo plano, si está disponible o si realiza la recolección de elementos no utilizados en primer plano.  
+## <a name="remarks"></a><span data-ttu-id="2e0a1-128">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2e0a1-128">Remarks</span></span>  
+ <span data-ttu-id="2e0a1-129">Antes de .NET Framework 4, la recolección de elementos no utilizados de estación de trabajo permitía la recolección de elementos no utilizados  simultánea, que se realizaba en segundo plano en un subproceso independiente.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-129">Prior to the .NET Framework 4, workstation garbage collection supported concurrent garbage collection, which performed garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="2e0a1-130">En .NET Framework 4, la recolección de elementos no utilizados simultánea se reemplazó por GC, que también realiza la recolección de elementos no utilizados en segundo plano en un subproceso independiente.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-130">In the .NET Framework 4, concurrent garbage collection was replaced by background GC, which also performs garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="2e0a1-131">A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor se puede realizar en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-131">Starting with the .NET Framework 4.5, background collection became available in server garbage collection.</span></span> <span data-ttu-id="2e0a1-132">El elemento `<gcConcurrent>` controla si CLR realiza la recolección de elementos no utilizados simultáneamente o en segundo plano, si está disponible o si realiza la recolección de elementos no utilizados en primer plano.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-132">The `<gcConcurrent>` element controls whether the runtime performs either concurrent or background garbage collection, if it is available, or whether it performs garbage collection in the foreground.</span></span>  
   
 > [!WARNING]
->  A partir de .NET Framework 4, la recolección de elementos no utilizados en segundo plano reemplaza a la recolección de elementos no utilizados simultánea.  Los términos *simultánea* y *en segundo plano* se usan indistintamente en la documentación de .NET Framework.  Para deshabilitar la recolección de elementos no utilizados en segundo plano, use el elemento `<gcConcurrent>` tal y como se describe en este artículo.  
+>  <span data-ttu-id="2e0a1-133">A partir de .NET Framework 4, la recolección de elementos no utilizados en segundo plano reemplaza a la recolección de elementos no utilizados simultánea.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-133">Starting with the .NET Framework 4, concurrent garbage collection is replaced by background garbage collection.</span></span> <span data-ttu-id="2e0a1-134">Los términos *simultáneas* y *fondo* se usan indistintamente en la documentación de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-134">The terms *concurrent* and *background* are used interchangeably in the .NET Framework documentation.</span></span> <span data-ttu-id="2e0a1-135">Para deshabilitar la recolección de elementos no utilizados en segundo plano, use el elemento `<gcConcurrent>` tal y como se describe en este artículo.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-135">To disable background garbage collection, use the `<gcConcurrent>` element, as discussed in this article.</span></span>  
   
- De forma predeterminada, CLR usa la recolección de elementos no utilizados simultánea, que está optimizada para la latencia.  Si la aplicación requiere mucha interacción por parte del usuario, deje habilitada la recolección de elementos no utilizados simultánea para minimizar el tiempo que la aplicación debe parar para realizar la recolección de elementos no utilizados.  Si establece el atributo `enabled` del elemento `<gcConcurrent>` en `false`, CLR usa la recolección de elementos no utilizados no simultánea, que está optimizada para el rendimiento.  El archivo de configuración siguiente deshabilita la recolección de elementos no utilizados en segundo plano.  
+ <span data-ttu-id="2e0a1-136">De forma predeterminada, CLR usa la recolección de elementos no utilizados simultánea, que está optimizada para la latencia.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-136">By default, the runtime uses concurrent or background garbage collection, which is optimized for latency.</span></span> <span data-ttu-id="2e0a1-137">Si la aplicación requiere mucha interacción por parte del usuario, deje habilitada la recolección de elementos no utilizados simultánea para minimizar el tiempo que la aplicación debe parar para realizar la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-137">If your application involves heavy user interaction, leave concurrent garbage collection enabled to minimize the application's pause time to perform garbage collection.</span></span> <span data-ttu-id="2e0a1-138">Si establece el atributo `enabled` del elemento `<gcConcurrent>` en `false`, CLR usa la recolección de elementos no utilizados no simultánea, que está optimizada para el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-138">If you set the `enabled` attribute of the `<gcConcurrent>` element to `false`, the runtime uses non-concurrent garbage collection, which is optimized for throughput.</span></span> <span data-ttu-id="2e0a1-139">El archivo de configuración siguiente deshabilita la recolección de elementos no utilizados en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-139">The following configuration file disables background garbage collection.</span></span>  
   
 ```xml  
-  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="false"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
- Si hay una opción de configuración `<gcConcurrentSetting>` en el archivo de configuración del equipo, define el valor predeterminado para todas las aplicaciones de .NET Framework.  El archivo de configuración del equipo reemplaza el archivo de configuración de la aplicación.  
+ <span data-ttu-id="2e0a1-140">Si hay una opción de configuración `<gcConcurrentSetting>` en el archivo de configuración del equipo, define el valor predeterminado para todas las aplicaciones de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-140">If there is a `<gcConcurrentSetting>` setting in the machine configuration file, it defines the default value for all .NET Framework applications.</span></span> <span data-ttu-id="2e0a1-141">El archivo de configuración del equipo reemplaza el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-141">The machine configuration file setting overrides the application configuration file setting.</span></span>  
   
- Para obtener más información sobre la recolección de elementos no utilizados simultánea y en segundo plano, consulte la sección "Recolección de elementos no utilizados simultánea" en el tema [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md).  
+ <span data-ttu-id="2e0a1-142">Para obtener más información sobre simultáneas y recolección en segundo plano, consulte la sección "recopilación de elementos no utilizados simultánea" en la [aspectos básicos de la recopilación de elementos no utilizados](../../../../../docs/standard/garbage-collection/fundamentals.md) tema.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-142">For more information on concurrent and background garbage collection, see the "Concurrent garbage collection" section in the [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) topic.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se habilita la recolección de elementos no utilizados simultánea.  
+## <a name="example"></a><span data-ttu-id="2e0a1-143">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2e0a1-143">Example</span></span>  
+ <span data-ttu-id="2e0a1-144">En el ejemplo siguiente se habilita la recolección de elementos no utilizados simultánea.</span><span class="sxs-lookup"><span data-stu-id="2e0a1-144">The following example enables concurrent garbage collection.</span></span>  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="true"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
-## Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)
+## <a name="see-also"></a><span data-ttu-id="2e0a1-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="2e0a1-145">See Also</span></span>  
+ [<span data-ttu-id="2e0a1-146">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="2e0a1-146">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="2e0a1-147">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="2e0a1-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="2e0a1-148">Fundamentos de la recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="2e0a1-148">Fundamentals of Garbage Collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md)

@@ -1,132 +1,141 @@
 ---
-title: "Informaci&#243;n general de sesiones confiables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "Información general de sesiones confiables"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ddec86fac46da7a93d17ecd55f292471fac2ee5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Informaci&#243;n general de sesiones confiables
-La mensajería de confianza de SOAP de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona confiabilidad de transferencia de mensajes de un extremo a otro entre los extremos de SOAP.Hace esto en redes que no son confiables superando errores de transporte y errores del nivel de mensajes SOAP.En particular, proporciona una entrega basada en sesión, individual y \(opcionalmente\) ordenada de mensajes enviados a través de intermediarios de transporte o SOAP.La entrega basada en sesión agrupa los mensajes de una sesión con una ordenación opcional de mensajes.  
-  
- La siguiente discusión explica el concepto de sesión confiable, cómo y cuándo utilizarla y cómo protegerla.  
-  
-## Sesiones confiables de WCF  
- Las sesiones confiables de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] son una implementación de mensajería confiable de SOAP tal y como la define el protocolo WS\-ReliableMessaging.  
-  
- La mensajería confiable SOAP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona una sesión confiable de un extremo a otro entre dos extremos, sin tener en cuenta el número o tipo de intermediarios que separan los extremos de la mensajería.Esto incluye a cualquier intermediario de transporte que no utilice SOAP \(por ejemplo, los servidores proxy HTTP\) o los intermediarios que utilicen SOAP \(por ejemplo, los puentes o enrutadores basados en SOAP\) que son necesarios para que los mensajes fluyan entre los extremos.Un canal de sesión confiable admite la comunicación "interactiva" para que los servicios conectados mediante este tipo de canal se ejecuten simultáneamente y puedan intercambiar y procesar mensajes bajo condiciones de latencia baja, es decir, dentro de intervalos de tiempo relativamente cortos.Este acoplamiento significa que estos componentes progresan o fallan de manera conjunta, de modo que no hay ningún aislamiento proporcionado entre ellos.  
-  
- Una sesión confiable enmascara dos tipos de errores:  
-  
--   Errores del nivel del mensaje de SOAP, que incluyen mensajes perdidos o duplicados y mensajes que llegan en un orden diferente del orden en el que se enviaron.  
-  
--   Errores de transporte.  
-  
- Una sesión confiable implementa el protocolo WS\-ReliableMessaging y una ventana de transferencia en memoria para enmascarar errores del nivel de mensaje de SOAP y restablece las conexiones en caso de errores de transporte.  
-  
- Una sesión confiable proporciona para los mensajes SOAP lo que el TCP proporciona para los paquetes de IP.Una conexión de socket de TCP proporciona una transferencia única, en orden de paquetes IP entre nodos.El canal confiable proporciona el mismo tipo de transferencia confiable, pero difiere de la confiabilidad de socket de TCP de las siguientes maneras:  
-  
--   La confiabilidad se produce en el nivel de mensaje de SOAP, no para un paquete de tamaño aleatorio de bytes.  
-  
--   La confiabilidad se produce de una manera neutral con respecto al transporte, no solo para la transferencia sobre TCP.  
-  
--   La confiabilidad no está ligada a una sesión de transporte determinada \(por ejemplo, la sesión que proporciona una conexión TCP\) y puede utilizar varias sesiones de transporte de manera simultánea o secuencial a lo largo de la duración de la sesión confiable.  
-  
--   La sesión confiable se produce entre los extremos SOAP de envío y recepción, independientemente del número de conexiones de transporte requerido para la conectividad entre ellos.En resumen, la confiabilidad de TCP acaba donde lo hace la conexión de transporte, mientras que una sesión confiable proporciona confiabilidad de un extremo a otro.  
-  
-## Enlaces y sesiones confiables  
- Como se mencionó anteriormente, una sesión confiable es neutral con respecto al transporte y, como tal, se puede implementar sobre muchos transportes.Asimismo, una sesión confiable se puede establecer sobre muchos modelos de intercambio de mensajes, como solicitud\-respuesta o dúplex.Por consiguiente, la sesión confiable de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], se expone como una propiedad de un conjunto de enlaces.  
-  
- Puede utilizar una sesión confiable en extremos que utilicen:  
-  
--   Enlaces estándar de transporte basado en HTTP:  
-  
-    -   `WsHttpBinding` y exponen contratos de solicitud\-respuesta o unidireccionales.  
-  
-    -   Se puede utilizar al utilizar una sesión confiable sobre un contrato de servicio unidireccional único o de solicitud\-respuesta.  
-  
-    -   `WsDualHttpBinding` y exponen contratos dúplex, de solicitud\-respuesta o unidireccionales.  
-  
-    -   `WsFederationHttpBinding` y exponen contratos de solicitud\-respuesta o unidireccionales.  
-  
--   Enlaces estándar de transporte basado en TCP:  
-  
-    -   `NetTcpBinding` y exponen contratos dúplex, de solicitud\-respuesta o unidireccionales.  
-  
- También puede utilizar una sesión confiable en cualquier otro enlace creando un enlace personalizado, como HTTPS \(para obtener más información sobre los problemas, vea la sección "Sesiones confiables y seguridad" más adelante en este tema\) o un enlace de canalización con nombre.  
-  
- Una sesión confiable se puede apilar en diferentes tipos de canal subyacentes y la forma de canal de sesión confiable resultante varía.En el cliente y el servidor, el tipo de canal de la sesión confiable admitido depende del tipo de canal subyacente que se utilice.La siguiente tabla enumera los tipos de canales de sesión admitidos en el cliente como una función del tipo de canal subyacente.  
-  
-|Tipos de canal de sesión confiable admitidos \(valores admitidos de `TChannel` para un tipo de canal subyacente determinado\)|`IRequestChannel`|`IRequestSessionChanne`l|`IDuplexChannel`|`IDuplexSessionChannel`|  
-|-----------------------------------------------------------------------------------------------------------------------------------|-----------------------|------------------------------|----------------------|-----------------------------|  
-|`IOutputSessionChannel`|Sí|Sí|Sí|Sí|  
-|`IRequestSessionChannel`|Sí|Sí|No|No|  
-|`IDuplexSessionChannel`|No|No|Sí|Sí|  
-  
- Los tipos de canal admitidos son los valores disponibles para el valor del parámetro `TChannel` genérico que se pasa al método <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29>.  
-  
- La siguiente tabla enumera los tipos de canales de sesión admitidos en el servidor como una función del tipo de canal subyacente.  
-  
-|Tipos de canal de sesión confiable admitidos \(valores admitidos de `TChannel` para un tipo de canal subyacente determinado\)|`IReplyChannel`|`IReplySessionChannel`|`IDuplexChannel`|`IDuplexSessionChannel`|  
-|-----------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------|----------------------|-----------------------------|  
-|`IInputSessionChannel`|Sí|Sí|Sí|Sí|  
-|`IReplySessionChannel`|Sí|Sí|No|No|  
-|`IDuplexSessionChannel`|No|No|Sí|Sí|  
-  
- Los tipos de canal admitidos son los valores disponibles para el valor del parámetro `TChannel` genérico que se pasa al método <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29>.  
-  
-## Sesiones confiables y seguridad  
- Proteger una sesión confiable es importante para asegurar que se autentiquen las partes que se comunican \(servicio y cliente\) y que los mensajes intercambiados en la sesión no se manipulan.Es más, es importante para garantizar la integridad de cada sesión confiable.Una sesión confiable se protege enlazándola a un contexto de seguridad que se representa y administrado mediante un canal de sesión de seguridad.El canal de seguridad proporciona una sesión de seguridad.Los tokens de seguridad intercambiados durante el establecimiento de la sesión se utilizan a continuación para proteger los mensajes de la sesión confiable.  
-  
- Cuando la sesión confiable tiene lugar sobre TCP\-S, la sesión TCP está ligada a la sesión confiable y, como tal, la seguridad de transporte garantiza que la seguridad también esté ligada a la sesión confiable.En este caso, se desactiva el restablecimiento de la conexión.  
-  
- La única excepción se produce al utilizar HTTPS.La sesión de capa de sockets seguros \(SSL\) no está enlazada a la sesión confiable.Esto supone una amenaza porque las sesiones que comparten un contexto de seguridad \(la sesión SSL\) no se protegen unas de otras; esto puede o no constituir una amenaza real dependiendo de la aplicación.  
-  
-## Uso de sesiones confiables  
- Para utilizar sesiones confiables de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cree un extremo con un enlace que admita una sesión confiable.Utilice uno de los enlaces proporcionados por el sistema que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona con la sesión confiable habilitada, o cree un enlace personalizado que lo haga.Los enlaces definidos por el sistema que admiten y permiten de forma predeterminada una sesión confiable incluyen:  
-  
--   <xref:System.ServiceModel.WSDualHttpBinding>  
-  
- Los enlaces proporcionados por el sistema que admiten una sesión confiable como una opción, pero no habilitan una de forma predeterminada, incluyen:  
-  
--   <xref:System.ServiceModel.WSHttpBinding>  
-  
--   <xref:System.ServiceModel.WSFederationHttpBinding>  
-  
--   <xref:System.ServiceModel.NetTcpBinding>  
-  
- Para obtener un ejemplo sobre cómo crear un enlace personalizado, vea [Creación de un enlace personalizado de sesión confiable con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).  
-  
- Para ver una discusión sobre los enlaces de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que admiten sesiones confiables, vea [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
-  
-## Cuándo utilizar sesiones confiables  
- Es importante entender cuándo usar sesiones confiables en la aplicación.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite sesiones confiables entre los extremos que están activos y en funcionamiento al mismo tiempo.Si su aplicación requiere que uno de los extremos no esté disponible durante un tiempo, puede utilizar las colas para lograr la confiabilidad.  
-  
- Si el escenario requiere que dos extremos estén conectados sobre TCP, puede que TCP sea suficiente para proporcionar el intercambio de mensajes confiable, aunque no es necesario utilizar una sesión confiable; TCP asegura que los paquetes llegan en orden y solo una vez.  
-  
- Si su escenario tiene cualquiera de las características siguientes, debe considerar seriamente utilizar una sesión confiable:  
-  
--   Intermediarios SOAP, como enrutadores SOAP.  
-  
--   Intermediarios proxy o puentes de transporte.  
-  
--   Conectividad intermitente.  
-  
--   Sesiones sobre HTTP.  
-  
-## Vea también  
- [Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [Sesión de confianza de WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)
+# <a name="reliable-sessions-overview"></a><span data-ttu-id="5a5bf-102">Información general de sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="5a5bf-102">Reliable Sessions Overview</span></span>
+
+<span data-ttu-id="5a5bf-103">La mensajería de confianza de SOAP de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] proporciona confiabilidad de transferencia de mensajes de un extremo a otro entre los extremos de SOAP.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP reliable messaging provides end-to-end message transfer reliability between SOAP endpoints.</span></span> <span data-ttu-id="5a5bf-104">Hace esto en redes que no son confiables superando errores de transporte y errores del nivel de mensajes SOAP.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-104">It does this on networks that are unreliable by overcoming transport failures and SOAP message-level failures.</span></span> <span data-ttu-id="5a5bf-105">En particular, proporciona una entrega basada en sesión, individual y (opcionalmente) ordenada de mensajes enviados a través de intermediarios de transporte o SOAP.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-105">In particular, it provides session-based, single, and (optionally) ordered delivery for messages sent across SOAP or transport intermediaries.</span></span> <span data-ttu-id="5a5bf-106">Proporciona entrega basada en sesión para agrupar los mensajes en una sesión con una ordenación opcional de los mensajes.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-106">Session-based delivery provides for grouping messages in a session with optional ordering of the messages.</span></span>
+
+<span data-ttu-id="5a5bf-107">Este tema describe las sesiones confiables, cómo y cuándo utilizarlos y cómo protegerlos.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-107">This topic describes reliable sessions, how and when to use them, and how to secure them.</span></span>
+
+## <a name="wcf-reliable-sessions"></a><span data-ttu-id="5a5bf-108">Sesiones confiables de WCF</span><span class="sxs-lookup"><span data-stu-id="5a5bf-108">WCF reliable sessions</span></span>
+
+<span data-ttu-id="5a5bf-109">Las sesiones confiables de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] son una implementación de mensajería confiable de SOAP tal y como la define el protocolo WS-ReliableMessaging.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-109">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable sessions is an implementation of SOAP reliable messaging as defined by the WS-ReliableMessaging protocol.</span></span>
+
+<span data-ttu-id="5a5bf-110">La mensajería confiable SOAP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona una sesión confiable de un extremo a otro entre dos extremos, sin tener en cuenta el número o tipo de intermediarios que separan los extremos de la mensajería.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-110">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP reliable messaging provides an end-to-end reliable session between two endpoints, regardless of the number or type of intermediaries that separate the messaging endpoints.</span></span> <span data-ttu-id="5a5bf-111">Esto incluye a cualquier intermediario de transporte que no utilice SOAP (por ejemplo, los servidores proxy HTTP) o los intermediarios que utilicen SOAP (por ejemplo, enrutadores basados en SOAP o puentes) que son necesarios para los mensajes fluyan entre los puntos de conexión.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-111">This includes any transport intermediaries that don't use SOAP (for example, HTTP proxies) or intermediaries that use SOAP (for example, SOAP-based routers or bridges) that are required for messages to flow between the endpoints.</span></span> <span data-ttu-id="5a5bf-112">Un canal de sesión confiable admite *interactivo* comunicación para que los servicios conectados mediante este tipo de canal se ejecutan simultáneamente y exchange y procesar mensajes bajo condiciones de baja latencia, es decir, en relativamente corto intervalos de tiempo.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-112">A reliable session channel supports *interactive* communication so that the services connected by such a channel run concurrently and exchange and process messages under conditions of low latency, that is, within relatively short intervals of time.</span></span> <span data-ttu-id="5a5bf-113">Este acoplamiento significa que estos componentes progresan o dan error juntas, así que no hay ningún aislamiento proporcionado entre ellos.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-113">This coupling means that these components make progress together or fail together, so there's no isolation provided between them.</span></span>
+
+<span data-ttu-id="5a5bf-114">Una sesión confiable enmascara dos tipos de errores:</span><span class="sxs-lookup"><span data-stu-id="5a5bf-114">A reliable session masks two kinds of failures:</span></span>
+
+- <span data-ttu-id="5a5bf-115">Errores del nivel del mensaje de SOAP, que incluyen mensajes perdidos o duplicados y mensajes que llegan en un orden diferente del orden en el que se enviaron.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-115">SOAP message-level failures, which includes lost or duplicated messages and messages that arrive in a different order from the order in which they were sent.</span></span>
+
+- <span data-ttu-id="5a5bf-116">Errores de transporte.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-116">Transport failures.</span></span>
+
+<span data-ttu-id="5a5bf-117">Una sesión confiable implementa el protocolo WS-ReliableMessaging y una ventana de transferencia en memoria para enmascarar errores del nivel de mensaje de SOAP y restablece las conexiones en caso de errores de transporte.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-117">A reliable session implements the WS-ReliableMessaging protocol and an in-memory transfer window to mask SOAP message-level failures and re-establishes connections in the case of transport failures.</span></span>
+
+<span data-ttu-id="5a5bf-118">Una sesión confiable proporciona para los mensajes SOAP lo que el TCP proporciona para los paquetes de IP.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-118">A reliable session provides for SOAP messages what TCP provides for IP packets.</span></span> <span data-ttu-id="5a5bf-119">Una conexión de socket de TCP proporciona una transferencia única, en orden de paquetes IP entre nodos.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-119">A TCP socket connection provides a singular, in-order transfer of IP packets between nodes.</span></span> <span data-ttu-id="5a5bf-120">El canal confiable proporciona el mismo tipo de transferencia confiable, pero difiere de la confiabilidad de socket de TCP de las siguientes maneras:</span><span class="sxs-lookup"><span data-stu-id="5a5bf-120">The reliable channel provides the same type of reliable transfer, but it differs from TCP socket reliability in the following ways:</span></span>
+
+- <span data-ttu-id="5a5bf-121">La confiabilidad se produce en el nivel de mensaje de SOAP, no para un paquete de tamaño aleatorio de bytes.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-121">The reliability is at the SOAP message level, not for an arbitrarily sized packet of bytes.</span></span>
+
+- <span data-ttu-id="5a5bf-122">La fiabilidad es independiente del transporte, no solo para la transferencia a través de TCP.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-122">The reliability is transport-neutral, not just for transfer over TCP.</span></span>
+
+- <span data-ttu-id="5a5bf-123">La confiabilidad no está vinculada a una sesión de transporte concreto (por ejemplo, la sesión proporciona una conexión TCP) y puede utilizar varias sesiones de transporte secuencialmente o simultáneamente sobre la duración de la sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-123">The reliability isn't tied to a particular transport session (for example, the session a TCP connection provides) and can use multiple transport sessions concurrently or sequentially over the lifetime of the reliable session.</span></span>
+
+- <span data-ttu-id="5a5bf-124">La sesión confiable se produce entre los puntos de conexión SOAP de envío y recepción, independientemente del número de conexiones de transporte requerido para la conectividad entre ellos.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-124">The reliable session is between the sender and receiver SOAP endpoints, regardless of the number of transport connections required for connectivity between them.</span></span> <span data-ttu-id="5a5bf-125">En resumen, la confiabilidad TCP finaliza donde finaliza la conexión de transporte, mientras que una sesión confiable proporciona confiabilidad to-end.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-125">In short, TCP reliability ends where the transport connection ends, while a reliable session provides end-to-end reliability.</span></span>
+
+## <a name="reliable-sessions-and-bindings"></a><span data-ttu-id="5a5bf-126">Enlaces y sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="5a5bf-126">Reliable sessions and bindings</span></span>
+
+<span data-ttu-id="5a5bf-127">Como se mencionó anteriormente, una sesión confiable es neutral de transporte.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-127">As mentioned earlier, a reliable session is transport neutral.</span></span> <span data-ttu-id="5a5bf-128">Además, puede establecer una sesión confiable sobre muchos patrones de intercambio de mensajes, como solicitud-respuesta o dúplex.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-128">Also, you can establish a reliable session over many message exchange patterns, such as request-reply or duplex.</span></span> <span data-ttu-id="5a5bf-129">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sesión confiable se expone como una propiedad de un conjunto de enlaces.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-129">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable session is exposed as a property of a set of bindings.</span></span>
+
+<span data-ttu-id="5a5bf-130">Utilizar una sesión confiable en extremos que usan:</span><span class="sxs-lookup"><span data-stu-id="5a5bf-130">Use a reliable session on endpoints that use:</span></span>
+
+- <span data-ttu-id="5a5bf-131">Enlaces estándar de transporte basado en HTTP:</span><span class="sxs-lookup"><span data-stu-id="5a5bf-131">HTTP-based transport standard bindings:</span></span>
+
+  - <span data-ttu-id="5a5bf-132">`WsHttpBinding` y exponen contratos de solicitud-respuesta o unidireccionales.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-132">`WsHttpBinding` and expose request-reply or one-way contracts.</span></span>
+
+  - <span data-ttu-id="5a5bf-133">Cuando se usa la sesión confiable mediante una solicitud / respuesta o el contrato de servicio unidireccional único.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-133">When using reliable session over a request-reply or simple one-way service contract.</span></span>
+
+  - <span data-ttu-id="5a5bf-134">`WsDualHttpBinding` y exponen contratos dúplex, de solicitud-respuesta o unidireccionales.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-134">`WsDualHttpBinding` and expose duplex, request-reply, or one-way contracts.</span></span>
+
+  - <span data-ttu-id="5a5bf-135">`WsFederationHttpBinding` y exponen contratos de solicitud-respuesta o unidireccionales.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-135">`WsFederationHttpBinding` and expose request-reply or one-way contracts.</span></span>
+
+- <span data-ttu-id="5a5bf-136">Enlaces estándar de transporte basado en TCP:</span><span class="sxs-lookup"><span data-stu-id="5a5bf-136">TCP-based transport standard bindings:</span></span>
+
+  - <span data-ttu-id="5a5bf-137">`NetTcpBinding` y exponen contratos dúplex, de solicitud-respuesta o unidireccionales.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-137">`NetTcpBinding` and expose duplex, request reply, or one-way contracts.</span></span>
+
+<span data-ttu-id="5a5bf-138">Utilizar una sesión confiable en cualquier otro enlace creando un enlace personalizado, como HTTPS (para obtener más información acerca de los problemas, consulte <a href="#reliable-sessions-and-security">las sesiones confiables y seguridad</a>) o un enlace de canalización con nombre.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-138">Use a reliable session on any other bindings by creating a custom binding, such as HTTPS (for more information about issues, see <a href="#reliable-sessions-and-security">Reliable sessions and security</a>) or a named pipe binding.</span></span>
+
+<span data-ttu-id="5a5bf-139">Se puede apilar en una sesión confiable en diferentes tipos de canal subyacentes y la forma de canal de sesión confiable resultante varía.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-139">You can stack a reliable session on different underlying channel types, and the resulting reliable session channel shape varies.</span></span> <span data-ttu-id="5a5bf-140">En el cliente y el servidor, el tipo de canal de sesión confiable admitido depende del tipo de canal subyacente que se utiliza.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-140">On both the client and the server, the type of reliable session channel supported depends on the type of underlying channel used.</span></span> <span data-ttu-id="5a5bf-141">La siguiente tabla enumera los tipos de canales de sesión admitidos en el cliente como una función del tipo de canal subyacente.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-141">The following table lists the types of session channels supported on the client as a function of the underlying channel type.</span></span>
+
+| <span data-ttu-id="5a5bf-142">Admite tipos de canal de sesión confiable &#8224;</span><span class="sxs-lookup"><span data-stu-id="5a5bf-142">Supported reliable session channel types&#8224;</span></span> | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
+| `IOutputSessionChannel`                         | <span data-ttu-id="5a5bf-143">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-143">Yes</span></span>               | <span data-ttu-id="5a5bf-144">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-144">Yes</span></span>                      | <span data-ttu-id="5a5bf-145">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-145">Yes</span></span>              | <span data-ttu-id="5a5bf-146">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-146">Yes</span></span>                     |
+| `IRequestSessionChannel`                        | <span data-ttu-id="5a5bf-147">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-147">Yes</span></span>               | <span data-ttu-id="5a5bf-148">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-148">Yes</span></span>                      | <span data-ttu-id="5a5bf-149">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-149">No</span></span>               | <span data-ttu-id="5a5bf-150">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-150">No</span></span>                      |
+| `IDuplexSessionChannel`                         | <span data-ttu-id="5a5bf-151">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-151">No</span></span>                | <span data-ttu-id="5a5bf-152">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-152">No</span></span>                       | <span data-ttu-id="5a5bf-153">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-153">Yes</span></span>              | <span data-ttu-id="5a5bf-154">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-154">Yes</span></span>                     |
+
+<span data-ttu-id="5a5bf-155">&#8224; Los tipos de canal admitidos son los valores disponibles para la interfaz genérica `TChannel` valor de parámetro que se pasa a la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> método.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-155">&#8224;The supported channel types are the values available for the generic `TChannel` parameter value that is passed into the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> method.</span></span>
+
+<span data-ttu-id="5a5bf-156">La siguiente tabla enumera los tipos de canales de sesión admitidos en el servidor como una función del tipo de canal subyacente.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-156">The following table lists the types of session channels supported on the server as a function of the underlying channel type.</span></span>
+
+| <span data-ttu-id="5a5bf-157">Admite tipos de canal de sesión confiable &#8225;</span><span class="sxs-lookup"><span data-stu-id="5a5bf-157">Supported reliable session channel types&#8225;</span></span> | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
+| `IInputSessionChannel`                          | <span data-ttu-id="5a5bf-158">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-158">Yes</span></span>             | <span data-ttu-id="5a5bf-159">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-159">Yes</span></span>                    | <span data-ttu-id="5a5bf-160">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-160">Yes</span></span>              | <span data-ttu-id="5a5bf-161">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-161">Yes</span></span>                     |
+| `IReplySessionChannel`                          | <span data-ttu-id="5a5bf-162">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-162">Yes</span></span>             | <span data-ttu-id="5a5bf-163">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-163">Yes</span></span>                    | <span data-ttu-id="5a5bf-164">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-164">No</span></span>               | <span data-ttu-id="5a5bf-165">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-165">No</span></span>                      |
+| `IDuplexSessionChannel`                         | <span data-ttu-id="5a5bf-166">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-166">No</span></span>              | <span data-ttu-id="5a5bf-167">No</span><span class="sxs-lookup"><span data-stu-id="5a5bf-167">No</span></span>                     | <span data-ttu-id="5a5bf-168">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-168">Yes</span></span>              | <span data-ttu-id="5a5bf-169">Sí</span><span class="sxs-lookup"><span data-stu-id="5a5bf-169">Yes</span></span>                     |
+
+<span data-ttu-id="5a5bf-170">&#8225; Los tipos de canal admitidos son los valores disponibles para la interfaz genérica `TChannel` valor de parámetro que se pasa a la <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> método.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-170">&#8225;The supported channel types are the values available for the generic `TChannel` parameter value that is passed into the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> method.</span></span>
+
+## <a name="reliable-sessions-and-security"></a><span data-ttu-id="5a5bf-171">Seguridad y sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="5a5bf-171">Reliable sessions and security</span></span>
+
+<span data-ttu-id="5a5bf-172">Proteger una sesión confiable es importante para asegurarse de que se autentiquen las partes en comunicación (servicio y cliente) y que no se manipulen los mensajes intercambiados en la sesión.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-172">Securing a reliable session is important to ensure that the communicating parties (service and client) are authenticated and that the messages exchanged in the session aren't tampered with.</span></span> <span data-ttu-id="5a5bf-173">Además, es importante garantizar la integridad de cada sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-173">Furthermore, it's important to ensure the integrity of each individual reliable session.</span></span> <span data-ttu-id="5a5bf-174">Una sesión confiable se protege enlazándola a un contexto de seguridad que se representa y administrado mediante un canal de sesión de seguridad.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-174">A reliable session is secured by binding it to a security context that's represented and managed by a security session channel.</span></span> <span data-ttu-id="5a5bf-175">El canal de seguridad proporciona una sesión de seguridad.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-175">The security channel provides a security session.</span></span> <span data-ttu-id="5a5bf-176">Los tokens de seguridad intercambiados durante el establecimiento de la sesión se utilizan a continuación para proteger los mensajes de la sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-176">Security tokens exchanged during the session establishment are then used to secure the messages in the reliable session.</span></span>
+
+<span data-ttu-id="5a5bf-177">Cuando una sesión confiable se encuentra sobre TCP-S, la sesión TCP está ligada a la sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-177">When a reliable session is over TCP-S, the TCP session is tied to the reliable session.</span></span> <span data-ttu-id="5a5bf-178">Por lo tanto, la seguridad de transporte garantiza que la seguridad también esté ligada a la sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-178">Therefore, transport security ensures that security is also tied to the reliable session.</span></span> <span data-ttu-id="5a5bf-179">En este caso, se desactiva el restablecimiento de la conexión.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-179">In this case, connection re-establishment is turned off.</span></span>
+
+<span data-ttu-id="5a5bf-180">La única excepción se produce al utilizar HTTPS.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-180">The only exception is when using HTTPS.</span></span> <span data-ttu-id="5a5bf-181">La sesión de capa de Sockets seguros (SSL) no está enlazada a la sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-181">The Secure Sockets Layer (SSL) session isn't bound to the reliable session.</span></span> <span data-ttu-id="5a5bf-182">Esto supone una amenaza porque las sesiones que comparten un contexto de seguridad (la sesión SSL) no se protegen entre sí; Esto puede o no constituir una amenaza real dependiendo de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-182">This imposes a threat because sessions that are sharing a security context (the SSL session) aren't protected from each other; this might or might not be a real threat depending on the application.</span></span>
+
+## <a name="using-reliable-sessions"></a><span data-ttu-id="5a5bf-183">Uso de sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="5a5bf-183">Using reliable sessions</span></span>
+
+<span data-ttu-id="5a5bf-184">Para utilizar sesiones confiables de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cree un extremo con un enlace que admita una sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-184">To use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable sessions, create an endpoint with a binding that supports a reliable session.</span></span> <span data-ttu-id="5a5bf-185">Utilice uno de los enlaces proporcionados por el sistema que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona con la sesión confiable habilitada o cree su propio enlace personalizado que lo haga.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-185">Use one of the system-provided bindings that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides with the reliable session enabled or create your own custom binding that does this.</span></span>
+
+<span data-ttu-id="5a5bf-186">Los enlaces definidos por el sistema que admiten y permiten de forma predeterminada una sesión confiable incluyen:</span><span class="sxs-lookup"><span data-stu-id="5a5bf-186">The system-defined bindings that support and enable a reliable session by default include:</span></span>
+
+- <xref:System.ServiceModel.WSDualHttpBinding>
+
+<span data-ttu-id="5a5bf-187">Los enlaces proporcionados por el sistema que admiten una sesión confiable como una opción, pero no habilitan una de forma predeterminada son:</span><span class="sxs-lookup"><span data-stu-id="5a5bf-187">The system-provided bindings that support a reliable session as an option but don't enable one by default include:</span></span>
+
+- <xref:System.ServiceModel.WSHttpBinding>
+
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+
+- <xref:System.ServiceModel.NetTcpBinding>
+
+<span data-ttu-id="5a5bf-188">Para obtener un ejemplo de cómo crear un enlace personalizado, vea [Cómo: crear un enlace personalizado de la sesión confiable con HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).</span><span class="sxs-lookup"><span data-stu-id="5a5bf-188">For an example of how to create a custom binding, see [How to: Create a Custom Reliable Session Binding with HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).</span></span>
+
+<span data-ttu-id="5a5bf-189">Para obtener una explicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enlaces que admiten las sesiones confiables, consulte [enlaces proporcionados](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="5a5bf-189">For a discussion of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bindings that support reliable sessions, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>
+
+## <a name="when-to-use-reliable-sessions"></a><span data-ttu-id="5a5bf-190">Cuándo utilizar sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="5a5bf-190">When to use reliable sessions</span></span>
+
+<span data-ttu-id="5a5bf-191">Es importante entender cuándo utilizar sesiones confiables en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-191">It's important to understand when to use reliable sessions in your application.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="5a5bf-192"> admite sesiones confiables entre los extremos que están activos y en funcionamiento al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-192"> supports reliable sessions between endpoints that are active and alive at the same time.</span></span> <span data-ttu-id="5a5bf-193">Si la aplicación requiere uno de los extremos no esté disponible para una duración de tiempo, a continuación, usar las colas para lograr la confiabilidad.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-193">If your application requires one of the endpoints be unavailable for a duration of time, then use queues to achieve reliability.</span></span>
+
+<span data-ttu-id="5a5bf-194">Si el escenario requiere dos extremos que se conectan a través de TCP, puede que TCP sea suficiente para proporcionar los intercambios de mensajes confiables.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-194">If the scenario requires two endpoints connected over TCP, then TCP may be sufficient to provide reliable message exchanges.</span></span> <span data-ttu-id="5a5bf-195">Sin embargo, no es necesario utilizar una sesión confiable, puesto que TCP garantiza que los paquetes llegan en orden y solo una vez.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-195">Although, it isn't necessary to use a reliable session, since TCP ensures that the packets arrive in order and only once.</span></span>
+
+<span data-ttu-id="5a5bf-196">Si su escenario tiene cualquiera de las siguientes características, a continuación, debe considerar seriamente utilizar una sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="5a5bf-196">If your scenario has any of the following characteristics, then you must seriously consider using a reliable session.</span></span>
+
+- <span data-ttu-id="5a5bf-197">Intermediarios SOAP, como enrutadores SOAP</span><span class="sxs-lookup"><span data-stu-id="5a5bf-197">SOAP intermediaries, such as SOAP routers</span></span>
+
+- <span data-ttu-id="5a5bf-198">Intermediarios proxy o puentes de transporte</span><span class="sxs-lookup"><span data-stu-id="5a5bf-198">Proxy intermediaries or transport bridges</span></span>
+
+- <span data-ttu-id="5a5bf-199">Errores de conectividad intermitentes</span><span class="sxs-lookup"><span data-stu-id="5a5bf-199">Intermittent connectivity</span></span>
+
+- <span data-ttu-id="5a5bf-200">Sesiones a través de HTTP</span><span class="sxs-lookup"><span data-stu-id="5a5bf-200">Sessions over HTTP</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5a5bf-201">Vea también</span><span class="sxs-lookup"><span data-stu-id="5a5bf-201">See also</span></span>
+
+<span data-ttu-id="5a5bf-202">[Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) </span><span class="sxs-lookup"><span data-stu-id="5a5bf-202">[Using Bindings to Configure Services and Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) </span></span>  
+[<span data-ttu-id="5a5bf-203">Sesión confiable WS</span><span class="sxs-lookup"><span data-stu-id="5a5bf-203">WS Reliable Session</span></span>](../../../../docs/framework/wcf/samples/ws-reliable-session.md)

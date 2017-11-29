@@ -1,77 +1,75 @@
 ---
-title: "Elemento &lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "NetFx45_CultureAwareComparerGetHashCode_LongStrings (elemento)"
-  - "Elemento <NetFx45_CultureAwareComparerGetHashCode_LongStrings>"
-  - "GetHashCode (método)"
-  - "códigos hash, calcular"
+title: '&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- NetFx45_CultureAwareComparerGetHashCode_LongStrings element
+- <NetFx45_CultureAwareComparerGetHashCode_LongStrings> element
+- GetHashCode method
+- hash codes, calculating
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e21377b28adb7668108064b770c2c5e0f9fee8f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt;
-Especifica si el runtime usa una cantidad de memoria fija para calcular los códigos hash para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName>.  
+# <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a><span data-ttu-id="725be-102">&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="725be-102">&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; Element</span></span>
+<span data-ttu-id="725be-103">Especifica si el runtime usa una cantidad de memoria fija para calcular los códigos hash para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="725be-103">Specifies whether the runtime uses a fixed amount of memory to calculate hash codes for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method.</span></span>  
   
- \<configuration\>  
-\<runtime\>  
-\<NetFx45\_CultureAwareComparerGetHashCode\_LongStrings\>  
+ <span data-ttu-id="725be-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="725be-104">\<configuration></span></span>  
+<span data-ttu-id="725be-105">\<en tiempo de ejecución ></span><span class="sxs-lookup"><span data-stu-id="725be-105">\<runtime></span></span>  
+<span data-ttu-id="725be-106">< NetFx45_CultureAwareComparerGetHashCode_LongStrings ></span><span class="sxs-lookup"><span data-stu-id="725be-106"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="725be-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="725be-107">Syntax</span></span>  
   
-```vb  
+```xml
 <NetFx45_CultureAwareComparerGetHashCode_LongStrings enabled="0|1">  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="725be-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="725be-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="725be-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="725be-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="725be-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="725be-110">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si Common Language Runtime asigna una cantidad de memoria fija al calcular códigos hash.|  
+|<span data-ttu-id="725be-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="725be-111">Attribute</span></span>|<span data-ttu-id="725be-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="725be-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="725be-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="725be-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="725be-114">Especifica si Common Language Runtime asigna una cantidad de memoria fija al calcular códigos hash.</span><span class="sxs-lookup"><span data-stu-id="725be-114">Specifies whether the common language runtime allocates a fixed amount of memory when calculating hash codes.</span></span>|  
   
-## Atributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="725be-115">Atributo enabled</span><span class="sxs-lookup"><span data-stu-id="725be-115">enabled Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="725be-116">Valor</span><span class="sxs-lookup"><span data-stu-id="725be-116">Value</span></span>|<span data-ttu-id="725be-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="725be-117">Description</span></span>|  
 |-----------|-----------------|  
-|0|Common Language Runtime asigna una cantidad de memoria variable para que el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName> calcule códigos hash. Este es el valor predeterminado.|  
-|1|Common Language Runtime asigna una cantidad de memoria fija para que el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName> calcule códigos hash.|  
+|<span data-ttu-id="725be-118">0</span><span class="sxs-lookup"><span data-stu-id="725be-118">0</span></span>|<span data-ttu-id="725be-119">Common Language Runtime asigna una cantidad de memoria variable para que el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> calcule códigos hash.</span><span class="sxs-lookup"><span data-stu-id="725be-119">The common language runtime allocates a variable amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method to calculate hash codes.</span></span> <span data-ttu-id="725be-120">Este es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="725be-120">This is the default.</span></span>|  
+|<span data-ttu-id="725be-121">1</span><span class="sxs-lookup"><span data-stu-id="725be-121">1</span></span>|<span data-ttu-id="725be-122">Common Language Runtime asigna una cantidad de memoria fija para que el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> calcule códigos hash.</span><span class="sxs-lookup"><span data-stu-id="725be-122">The common language runtime allocates a fixed amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method to calculate hash codes.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="725be-123">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="725be-123">Child Elements</span></span>  
+ <span data-ttu-id="725be-124">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="725be-124">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="725be-125">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="725be-125">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
+|<span data-ttu-id="725be-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="725be-126">Element</span></span>|<span data-ttu-id="725be-127">Descripción</span><span class="sxs-lookup"><span data-stu-id="725be-127">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="725be-128">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="725be-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="725be-129">Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="725be-129">Contains information about runtime initialization options.</span></span>|  
   
-## Comentarios  
- De forma predeterminada, Common Language Runtime asigna una cantidad de memoria variable para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName> y puede que se inicie una excepción <xref:System.ArgumentException> cuando el método intenta calcular el código hash de cadenas muy grandes \(con millones de caracteres o más\). Al agregar este elemento a un archivo de configuración de la aplicación y establecer su atributo `enabled` en "1", puede especificar que el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName> use un algoritmo alternativo que asigne una cantidad de memoria fija para el cálculo de códigos hash.  
+## <a name="remarks"></a><span data-ttu-id="725be-130">Comentarios</span><span class="sxs-lookup"><span data-stu-id="725be-130">Remarks</span></span>  
+ <span data-ttu-id="725be-131">De forma predeterminada, Common Language Runtime asigna una cantidad de memoria variable para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> y puede que se inicie una excepción <xref:System.ArgumentException> cuando el método intenta calcular el código hash de cadenas muy grandes (con millones de caracteres o más).</span><span class="sxs-lookup"><span data-stu-id="725be-131">By default, the common language runtime allocates a variable amount of memory for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method, and an <xref:System.ArgumentException> can be thrown when the method attempts to compute the hash code of very large strings (over several million characters long).</span></span> <span data-ttu-id="725be-132">Al agregar este elemento a un archivo de configuración de la aplicación y establecer su atributo `enabled` en "1", puede especificar que el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> use un algoritmo alternativo que asigne una cantidad de memoria fija para el cálculo de códigos hash.</span><span class="sxs-lookup"><span data-stu-id="725be-132">By adding this element to an application configuration file and setting its `enabled` attribute to "1", you can specify that the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method use an alternate algorithm that allocates a fixed amount of memory for the computation of hash codes.</span></span>  
   
 > [!IMPORTANT]
->  El elemento `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` no se usa en [!INCLUDE[win8](../../../../../includes/win8-md.md)] y versiones posteriores.  
+>  <span data-ttu-id="725be-133">El elemento `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` no se usa en [!INCLUDE[win8](../../../../../includes/win8-md.md)] y versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="725be-133">The `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` element is not used in [!INCLUDE[win8](../../../../../includes/win8-md.md)] and later versions.</span></span>  
   
-## Vea también  
- <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName>   
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="725be-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="725be-134">See Also</span></span>  
+ <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="725be-135">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="725be-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="725be-136">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="725be-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

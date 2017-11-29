@@ -5,39 +5,36 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a009f37e1f16646df10e693a10827990b073c65c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="identity-and-access-tool-for-visual-studio-2012"></a>Identity and Access Tool para Visual Studio 2012
-En este tema se describe la nueva Identity and Access Tool para Visual Studio 11. Esta herramienta se puede descargar en la dirección URL siguiente: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) o directamente desde Visual Studio 11, buscando "identity" en el Administrador de extensiones.  
+# <a name="identity-and-access-tool-for-visual-studio-2012"></a><span data-ttu-id="d673e-102">Identity and Access Tool para Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="d673e-102">Identity and Access Tool for Visual Studio 2012</span></span>
+<span data-ttu-id="d673e-103">En este tema se describe la nueva Identity and Access Tool para Visual Studio 11.</span><span class="sxs-lookup"><span data-stu-id="d673e-103">This topic describes the new Identity and Access Tool for Visual Studio 11.</span></span> <span data-ttu-id="d673e-104">Esta herramienta se puede descargar en la dirección URL siguiente: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) o directamente desde Visual Studio 11, buscando "identity" en el Administrador de extensiones.</span><span class="sxs-lookup"><span data-stu-id="d673e-104">You can download this tool from the following URL: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) or directly from within Visual Studio 11 by searching for "identity" directly in the Extensions Manager.</span></span>  
   
- Identity and Access Tool para Visual Studio 11 ofrece una experiencia en tiempo de desarrollo considerablemente simplificada en la que destacan los siguientes aspectos:  
+ <span data-ttu-id="d673e-105">Identity and Access Tool para Visual Studio 11 ofrece una experiencia en tiempo de desarrollo considerablemente simplificada en la que destacan los siguientes aspectos:</span><span class="sxs-lookup"><span data-stu-id="d673e-105">The Identity and Access Tool for Visual Studio 11 delivers a dramatically simplified development-time experience with the following highlights:</span></span>  
   
--   Al usar la nueva herramienta, se puede desarrollar mediante tipos de proyecto de aplicaciones web y tener IIS Express como destino.  
+-   <span data-ttu-id="d673e-106">Al usar la nueva herramienta, se puede desarrollar mediante tipos de proyecto de aplicaciones web y tener IIS Express como destino.</span><span class="sxs-lookup"><span data-stu-id="d673e-106">Using the new tool, you can develop using web applications project types and target IIS express.</span></span>  
   
--   A diferencia de la autenticación abierta de solo protección, con la nueva herramienta se puede especificar el controlador o la página de detección de dominios de inicio locales (o cualquier otro extremo que controle la experiencia de autenticación en la aplicación) y WIF configurará todas las solicitudes no autenticadas para dirigirse a estos, en lugar de redirigirlas al STS.  
+-   <span data-ttu-id="d673e-107">A diferencia de la autenticación abierta de solo protección, con la nueva herramienta se puede especificar el controlador o la página de detección de dominios de inicio locales (o cualquier otro extremo que controle la experiencia de autenticación en la aplicación) y WIF configurará todas las solicitudes no autenticadas para dirigirse a estos, en lugar de redirigirlas al STS.</span><span class="sxs-lookup"><span data-stu-id="d673e-107">Unlike with the blanket protection-only authentication, with the new tool, you can specify your local home realm discovery page/controller (or any other endpoint handling the authentication experience within your application) and WIF will configure all unauthenticated requests to go there, instead of redirecting them to the STS.</span></span>  
   
--   La herramienta incluye un servicio de token de seguridad (STS) de prueba que se ejecuta en el equipo local al iniciar una sesión de depuración. Por consiguiente, ya no es necesario crear proyectos de STS personalizados ni ajustarlos para obtener las notificaciones requeridas para probar las aplicaciones. Los tipos y valores de notificación son totalmente personalizables.  
+-   <span data-ttu-id="d673e-108">La herramienta incluye un servicio de token de seguridad (STS) de prueba que se ejecuta en el equipo local al iniciar una sesión de depuración.</span><span class="sxs-lookup"><span data-stu-id="d673e-108">The tool includes a test Security Token Service (STS) which runs on your local machine when you launch a debug session.</span></span> <span data-ttu-id="d673e-109">Por consiguiente, ya no es necesario crear proyectos de STS personalizados ni ajustarlos para obtener las notificaciones requeridas para probar las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="d673e-109">Therefore, you no longer need to create custom STS projects and tweak them in order to get the claims you need to test your applications.</span></span> <span data-ttu-id="d673e-110">Los tipos y valores de notificación son totalmente personalizables.</span><span class="sxs-lookup"><span data-stu-id="d673e-110">The claim types and values are fully customizable.</span></span>  
   
--   La configuración general puede modificarse directamente a través de la interfaz de usuario de la herramienta, sin necesidad de editar el archivo web.config.  
+-   <span data-ttu-id="d673e-111">La configuración general puede modificarse directamente a través de la interfaz de usuario de la herramienta, sin necesidad de editar el archivo web.config.</span><span class="sxs-lookup"><span data-stu-id="d673e-111">You can modify common settings directly via the tool’s UI, without the need to edit web.config.</span></span>  
   
--   Se puede establecer la federación con los Servicios de federación de Active Directory (AD FS) 2.0 (u otros proveedores de WS-Federation) en una única pantalla.  
+-   <span data-ttu-id="d673e-112">Se puede establecer la federación con los Servicios de federación de Active Directory (AD FS) 2.0 (u otros proveedores de WS-Federation) en una única pantalla.</span><span class="sxs-lookup"><span data-stu-id="d673e-112">You can establish federation with Active Directory Federation Services (AD FS) 2.0 (or other WS-Federation providers) in a single screen.</span></span>  
   
--   La herramienta aprovecha las capacidades del Servicio de control de acceso (ACS) de Microsoft Azure con una simple lista de casillas para todos los proveedores de identidad que desea usar: Facebook, Google, Live ID, Yahoo!, los proveedores de OpenID y los de WS-Federation. Seleccione los proveedores de identidad, haga clic en Aceptar y, a continuación, presione F5. Tanto la aplicación como ACS se configurarán automáticamente y la aplicación de prueba será compatible con ACS.  
+-   <span data-ttu-id="d673e-113">La herramienta aprovecha las capacidades del Servicio de control de acceso (ACS) de Microsoft Azure con una simple lista de casillas para todos los proveedores de identidad que desea usar: Facebook, Google, Live ID, Yahoo!, los proveedores de OpenID y los de WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="d673e-113">The tool leverages Windows Azure Access Control Service (ACS) capabilities with a simple list of checkboxes for all the identity providers that you want to use: Facebook, Google, Live ID, Yahoo!, any OpenID provider, and any WS-Federation provider.</span></span> <span data-ttu-id="d673e-114">Seleccione los proveedores de identidad, haga clic en Aceptar y, a continuación, presione F5. Tanto la aplicación como ACS se configurarán automáticamente y la aplicación de prueba será compatible con ACS.</span><span class="sxs-lookup"><span data-stu-id="d673e-114">Select your identity providers, click OK, then F5, and both your application and ACS will be automatically configured and your test application will be ACS-aware.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Características de WIF](../../../docs/framework/security/wif-features.md)
-
+## <a name="see-also"></a><span data-ttu-id="d673e-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="d673e-115">See Also</span></span>  
+ [<span data-ttu-id="d673e-116">Características de WIF</span><span class="sxs-lookup"><span data-stu-id="d673e-116">WIF Features</span></span>](../../../docs/framework/security/wif-features.md)

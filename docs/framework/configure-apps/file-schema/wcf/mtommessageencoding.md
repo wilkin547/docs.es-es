@@ -5,35 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aed8270818808a6c859f8e3ae59aae78affd8b98
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 237891b5f855707f40f4fb58c08b80daa24f4def
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltmtommessageencodinggt"></a>&lt;mtomMessageEncoding&gt;
-Especifica la codificación y la versión del mensaje utilizada para los mensajes basados en el mecanismo de optimización de la transmisión de mensajes (MTOM) SOAP.  
+# <a name="ltmtommessageencodinggt"></a><span data-ttu-id="d13a1-102">&lt;mtomMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="d13a1-102">&lt;mtomMessageEncoding&gt;</span></span>
+<span data-ttu-id="d13a1-103">Especifica la codificación y la versión del mensaje utilizada para los mensajes basados en el mecanismo de optimización de la transmisión de mensajes (MTOM) SOAP.</span><span class="sxs-lookup"><span data-stu-id="d13a1-103">Specifies the encoding and message versioning used for SOAP Message Transmission Optimization Mechanism (MTOM) based messages.</span></span>  
   
- \<system.serviceModel >  
-\<enlaces >  
-\<customBinding >  
-\<enlace >  
-\<mtomMessageEncoding >  
+ <span data-ttu-id="d13a1-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="d13a1-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="d13a1-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="d13a1-105">\<bindings></span></span>  
+<span data-ttu-id="d13a1-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="d13a1-106">\<customBinding></span></span>  
+<span data-ttu-id="d13a1-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="d13a1-107">\<binding></span></span>  
+<span data-ttu-id="d13a1-108">\<mtomMessageEncoding ></span><span class="sxs-lookup"><span data-stu-id="d13a1-108">\<mtomMessageEncoding></span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="d13a1-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d13a1-109">Syntax</span></span>  
   
 ```xml  
 <mtomMessageEncoding   
@@ -44,37 +39,37 @@ Especifica la codificación y la versión del mensaje utilizada para los mensaje
       writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d13a1-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="d13a1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="d13a1-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="d13a1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Atributos  
+### <a name="attributes"></a><span data-ttu-id="d13a1-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="d13a1-112">Attributes</span></span>  
   
-|Atributo|Descripción|  
+|<span data-ttu-id="d13a1-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="d13a1-113">Attribute</span></span>|<span data-ttu-id="d13a1-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="d13a1-114">Description</span></span>|  
 |---------------|-----------------|  
-|maxBufferSize|Un entero que especifica el tamaño máximo del búfer que se puede utilizar.|  
-|maxReadPoolSize|Un entero que especifica cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 64.|  
-|maxWritePoolSize|Un entero que especifica cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 16.|  
-|messageVersion|Especifica la versión SOAP de los mensajes enviados utilizando el enlace. Los valores válidos son<br /><br /> -Soap11Addressing1<br />-Soap12Addressing10<br /><br /> El valor predeterminado es Soap12Addressing10. Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
-|writeEncoding|Especifica el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son<br /><br /> -UnicodeFffeTextEncoding: Codificación de Unicode BigEndian<br />-Utf16TextEncoding: Codificación de Unicode<br />-Utf8TextEncoding: codificación de 8 bits<br /><br /> El valor predeterminado es Utf8TextEncoding. Este atributo es del tipo <xref:System.Text.Encoding>.|  
+|<span data-ttu-id="d13a1-115">maxBufferSize</span><span class="sxs-lookup"><span data-stu-id="d13a1-115">maxBufferSize</span></span>|<span data-ttu-id="d13a1-116">Un entero que especifica el tamaño máximo del búfer que se puede utilizar.</span><span class="sxs-lookup"><span data-stu-id="d13a1-116">An integer that specifies the maximum size of the buffer that can be used.</span></span>|  
+|<span data-ttu-id="d13a1-117">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="d13a1-117">maxReadPoolSize</span></span>|<span data-ttu-id="d13a1-118">Un entero que especifica cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores.</span><span class="sxs-lookup"><span data-stu-id="d13a1-118">An integer that specifies how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="d13a1-119">Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor.</span><span class="sxs-lookup"><span data-stu-id="d13a1-119">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="d13a1-120">El valor predeterminado es 64.</span><span class="sxs-lookup"><span data-stu-id="d13a1-120">The default is 64.</span></span>|  
+|<span data-ttu-id="d13a1-121">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="d13a1-121">maxWritePoolSize</span></span>|<span data-ttu-id="d13a1-122">Un entero que especifica cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores.</span><span class="sxs-lookup"><span data-stu-id="d13a1-122">An integer that specifies how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="d13a1-123">Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor.</span><span class="sxs-lookup"><span data-stu-id="d13a1-123">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="d13a1-124">El valor predeterminado es 16.</span><span class="sxs-lookup"><span data-stu-id="d13a1-124">The default is 16.</span></span>|  
+|<span data-ttu-id="d13a1-125">messageVersion</span><span class="sxs-lookup"><span data-stu-id="d13a1-125">messageVersion</span></span>|<span data-ttu-id="d13a1-126">Especifica la versión SOAP de los mensajes enviados utilizando el enlace.</span><span class="sxs-lookup"><span data-stu-id="d13a1-126">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="d13a1-127">Los valores válidos son</span><span class="sxs-lookup"><span data-stu-id="d13a1-127">Valid values are</span></span><br /><br /> <span data-ttu-id="d13a1-128">-Soap11Addressing1</span><span class="sxs-lookup"><span data-stu-id="d13a1-128">-   Soap11Addressing1</span></span><br /><span data-ttu-id="d13a1-129">-Soap12Addressing10</span><span class="sxs-lookup"><span data-stu-id="d13a1-129">-   Soap12Addressing10</span></span><br /><br /> <span data-ttu-id="d13a1-130">El valor predeterminado es Soap12Addressing10.</span><span class="sxs-lookup"><span data-stu-id="d13a1-130">The default is Soap12Addressing10.</span></span> <span data-ttu-id="d13a1-131">Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.</span><span class="sxs-lookup"><span data-stu-id="d13a1-131">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
+|<span data-ttu-id="d13a1-132">writeEncoding</span><span class="sxs-lookup"><span data-stu-id="d13a1-132">writeEncoding</span></span>|<span data-ttu-id="d13a1-133">Especifica el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace.</span><span class="sxs-lookup"><span data-stu-id="d13a1-133">Specifies the character set encoding to be used for emitting messages on the binding.</span></span> <span data-ttu-id="d13a1-134">Los valores válidos son</span><span class="sxs-lookup"><span data-stu-id="d13a1-134">Valid values are</span></span><br /><br /> <span data-ttu-id="d13a1-135">-UnicodeFffeTextEncoding: Codificación de Unicode BigEndian</span><span class="sxs-lookup"><span data-stu-id="d13a1-135">-   UnicodeFffeTextEncoding: Unicode BigEndian encoding</span></span><br /><span data-ttu-id="d13a1-136">-Utf16TextEncoding: Codificación de Unicode</span><span class="sxs-lookup"><span data-stu-id="d13a1-136">-   Utf16TextEncoding: Unicode encoding</span></span><br /><span data-ttu-id="d13a1-137">-Utf8TextEncoding: codificación de 8 bits</span><span class="sxs-lookup"><span data-stu-id="d13a1-137">-   Utf8TextEncoding: 8-bit encoding</span></span><br /><br /> <span data-ttu-id="d13a1-138">El valor predeterminado es Utf8TextEncoding.</span><span class="sxs-lookup"><span data-stu-id="d13a1-138">The default is Utf8TextEncoding.</span></span> <span data-ttu-id="d13a1-139">Este atributo es del tipo <xref:System.Text.Encoding>.</span><span class="sxs-lookup"><span data-stu-id="d13a1-139">This attribute is of type <xref:System.Text.Encoding>.</span></span>|  
   
-### <a name="child-elements"></a>Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="d13a1-140">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="d13a1-140">Child Elements</span></span>  
   
-|Elemento|Descripción|  
+|<span data-ttu-id="d13a1-141">Elemento</span><span class="sxs-lookup"><span data-stu-id="d13a1-141">Element</span></span>|<span data-ttu-id="d13a1-142">Descripción</span><span class="sxs-lookup"><span data-stu-id="d13a1-142">Description</span></span>|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[<span data-ttu-id="d13a1-143">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="d13a1-143">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="d13a1-144">Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace.</span><span class="sxs-lookup"><span data-stu-id="d13a1-144">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="d13a1-145">Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="d13a1-145">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a>Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="d13a1-146">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d13a1-146">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
+|<span data-ttu-id="d13a1-147">Elemento</span><span class="sxs-lookup"><span data-stu-id="d13a1-147">Element</span></span>|<span data-ttu-id="d13a1-148">Descripción</span><span class="sxs-lookup"><span data-stu-id="d13a1-148">Description</span></span>|  
 |-------------|-----------------|  
-|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[<span data-ttu-id="d13a1-149">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="d13a1-149">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="d13a1-150">Define todas las funcionalidades de enlace del enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="d13a1-150">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a>Comentarios  
- La codificación es el proceso de transformación de un mensaje en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, Binario y Mecanismo de optimización de transmisión del mensaje (MTOM).  
+## <a name="remarks"></a><span data-ttu-id="d13a1-151">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d13a1-151">Remarks</span></span>  
+ <span data-ttu-id="d13a1-152">La codificación es el proceso de transformación de un mensaje en una secuencia de bytes.</span><span class="sxs-lookup"><span data-stu-id="d13a1-152">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="d13a1-153">La descodificación es el proceso inverso.</span><span class="sxs-lookup"><span data-stu-id="d13a1-153">Decoding is the reverse process.</span></span> <span data-ttu-id="d13a1-154">Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, Binario y Mecanismo de optimización de transmisión del mensaje (MTOM).</span><span class="sxs-lookup"><span data-stu-id="d13a1-154">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
   
- El elemento `MtomMessageEncoding` especifica la codificación de caracteres y control de versión de mensajes y otros valores usados para los mensajes que utilizan una codificación MTOM (mecanismo de optimización de transmisión de mensajes). MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF. El codificador MTOM intenta crear una balanza entre la eficacia y la interoperabilidad. El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza los bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos a su formato codificado base64.  
+ <span data-ttu-id="d13a1-155">El elemento `MtomMessageEncoding` especifica la codificación de caracteres y control de versión de mensajes y otros valores usados para los mensajes que utilizan una codificación MTOM (mecanismo de optimización de transmisión de mensajes).</span><span class="sxs-lookup"><span data-stu-id="d13a1-155">The `MtomMessageEncoding` element specifies the character encoding and message versioning and other settings used for messages using a Message Transmission Optimization Mechanism (MTOM) encoding.</span></span> <span data-ttu-id="d13a1-156">MTOM es una tecnología eficaz para la transmisión de datos binarios en mensajes de WCF.</span><span class="sxs-lookup"><span data-stu-id="d13a1-156">MTOM is an efficient technology for transmitting binary data in WCF messages.</span></span> <span data-ttu-id="d13a1-157">El codificador MTOM intenta crear una balanza entre la eficacia y la interoperabilidad.</span><span class="sxs-lookup"><span data-stu-id="d13a1-157">The MTOM encoder attempts to create a balance between efficiency and interoperability.</span></span> <span data-ttu-id="d13a1-158">El codificador MTOM transmite la mayoría del XML en formato de texto, pero optimiza los bloques grandes de datos binarios transmitiéndolos como son, sin convertirlos a su formato codificado base64.</span><span class="sxs-lookup"><span data-stu-id="d13a1-158">The MTOM encoding transmits most XML in textual form, but optimizes large blocks of binary data by transmitting them as-is, without conversion to their base64 encoded format.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="d13a1-159">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d13a1-159">Example</span></span>  
   
 ```xml  
 <mtomMessageEncoding maxReadPoolSize="211"  
@@ -83,15 +78,14 @@ Especifica la codificación y la versión del mensaje utilizada para los mensaje
     textEncoding="utf-8" />  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.MtomMessageEncodingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>   
- [Codificación de mensajes](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)   
- [Elegir un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-
+## <a name="see-also"></a><span data-ttu-id="d13a1-160">Vea también</span><span class="sxs-lookup"><span data-stu-id="d13a1-160">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.MtomMessageEncodingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+ [<span data-ttu-id="d13a1-161">Codificación de mensajes</span><span class="sxs-lookup"><span data-stu-id="d13a1-161">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [<span data-ttu-id="d13a1-162">Elegir un codificador de mensajes</span><span class="sxs-lookup"><span data-stu-id="d13a1-162">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [<span data-ttu-id="d13a1-163">Enlaces</span><span class="sxs-lookup"><span data-stu-id="d13a1-163">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="d13a1-164">Extensión de enlaces</span><span class="sxs-lookup"><span data-stu-id="d13a1-164">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="d13a1-165">Enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="d13a1-165">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="d13a1-166">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="d13a1-166">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

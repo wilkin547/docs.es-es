@@ -1,41 +1,47 @@
 ---
-title: "Consultas entre tablas (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Consultas entre tablas (LINQ to DataSet)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d0b829840257dc2b3b4bbf0b8c3a294a77060e2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Consultas entre tablas (LINQ to DataSet)
-Además de realizar consultas a una tabla única, también se pueden efectuar consultas entre tablas en [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Esto se consigue mediante una *combinación*.  Una combinación es la asociación de objetos en un origen de datos con objetos que comparten un atributo común en otro origen de datos, como un identificador de contacto o de producto.  En la programación orientada a objetos, las relaciones entre dichos objetos son relativamente fáciles de navegar debido a que cada uno de ellos tiene un miembro que hace referencia a otro. Sin embargo, en tablas de bases de datos externas, navegar por relaciones no es tan sencillo.  Las tablas de bases de datos no contienen relaciones integradas. En estos casos, la operación de combinación se puede usar para hacer coincidir elementos de cada origen.  Por ejemplo, con dos tablas que contienen información de producto y de ventas, se puede utilizar una operación de combinación para hacer coincidir información de ventas y producto del mismo pedido de ventas.  
+# <a name="cross-table-queries-linq-to-dataset"></a><span data-ttu-id="2c793-102">Consultas entre tablas (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="2c793-102">Cross-Table Queries (LINQ to DataSet)</span></span>
+<span data-ttu-id="2c793-103">Además de realizar consultas a una tabla única, en [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] se pueden efectuar consultas entre tablas.</span><span class="sxs-lookup"><span data-stu-id="2c793-103">In addition to querying a single table, you can also perform cross-table queries in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span> <span data-ttu-id="2c793-104">Esto se realiza mediante un *combinación*.</span><span class="sxs-lookup"><span data-stu-id="2c793-104">This is done by using a *join*.</span></span> <span data-ttu-id="2c793-105">Una combinación es la asociación de objetos en un origen de datos con objetos que comparten un atributo común en otro origen de datos, como un identificador de contacto o de producto.</span><span class="sxs-lookup"><span data-stu-id="2c793-105">A join is the association of objects in one data source with objects that share a common attribute in another data source, such as a product or contact ID.</span></span> <span data-ttu-id="2c793-106">En la programación orientada a objetos, las relaciones entre dichos objetos son relativamente fáciles de navegar debido a que cada uno de ellos tiene un miembro que hace referencia a otro.</span><span class="sxs-lookup"><span data-stu-id="2c793-106">In object-oriented programming, relationships between objects are relatively easy to navigate because each object has a member that references another object.</span></span> <span data-ttu-id="2c793-107">Sin embargo, en tablas de bases de datos externas, navegar por relaciones no es tan sencillo.</span><span class="sxs-lookup"><span data-stu-id="2c793-107">In external database tables, however, navigating relationships is not as straightforward.</span></span> <span data-ttu-id="2c793-108">Las tablas de bases de datos no contienen relaciones integradas.</span><span class="sxs-lookup"><span data-stu-id="2c793-108">Database tables do not contain built-in relationships.</span></span> <span data-ttu-id="2c793-109">En estos casos, la operación de combinación se puede utilizar para hacer coincidir elementos de cada origen.</span><span class="sxs-lookup"><span data-stu-id="2c793-109">In these cases, the join operation can be used to match elements from each source.</span></span> <span data-ttu-id="2c793-110">Por ejemplo, con dos tablas que contienen información de producto y de ventas, se puede utilizar una operación de combinación para hacer coincidir información de ventas y producto del mismo pedido de ventas.</span><span class="sxs-lookup"><span data-stu-id="2c793-110">For example, given two tables that contain product information and sales information, you could use a join operation to match sales information and products for the same sales order.</span></span>  
   
- El marco de trabajo [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] proporciona dos operadores de combinación, <xref:System.Linq.Enumerable.Join%2A> y <xref:System.Linq.Enumerable.GroupJoin%2A>. Estos operadores efectúan *combinaciones de igualdad*: es decir, combinaciones que hacen coincidir dos orígenes de datos únicamente cuando sus claves son iguales.  \(por el contrario, [!INCLUDE[tsql](../../../../includes/tsql-md.md)] admite operadores de combinación distintos de `equals`, como el operador `less than`\).  
+ <span data-ttu-id="2c793-111">El marco de trabajo [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] proporciona dos operadores de combinación, <xref:System.Linq.Enumerable.Join%2A> y <xref:System.Linq.Enumerable.GroupJoin%2A>.</span><span class="sxs-lookup"><span data-stu-id="2c793-111">The [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] framework provides two join operators, <xref:System.Linq.Enumerable.Join%2A> and <xref:System.Linq.Enumerable.GroupJoin%2A>.</span></span> <span data-ttu-id="2c793-112">Estos operadores realizan *combinaciones equivalentes*: es decir, las combinaciones que coinciden con los datos de dos orígenes solo cuando sus claves son iguales.</span><span class="sxs-lookup"><span data-stu-id="2c793-112">These operators perform *equi-joins*: that is, joins that match two data sources only when their keys are equal.</span></span> <span data-ttu-id="2c793-113">(por el contrario, [!INCLUDE[tsql](../../../../includes/tsql-md.md)] admite operadores de combinación distintos de `equals`, como el operador `less than`).</span><span class="sxs-lookup"><span data-stu-id="2c793-113">(By contrast, [!INCLUDE[tsql](../../../../includes/tsql-md.md)] supports join operators other than `equals`, such as the `less than` operator.)</span></span>  
   
- En cuanto a las bases de datos relacionales, <xref:System.Linq.Enumerable.Join%2A> implementa una combinación interna.  Una combinación interna es un tipo de combinación en la que solamente se devuelven los objetos que tienen una correspondencia en el conjunto de datos opuesto.  
+ <span data-ttu-id="2c793-114">En cuanto a las bases de datos relacionales, <xref:System.Linq.Enumerable.Join%2A> implementa una combinación interna.</span><span class="sxs-lookup"><span data-stu-id="2c793-114">In relational database terms, <xref:System.Linq.Enumerable.Join%2A> implements an inner join.</span></span> <span data-ttu-id="2c793-115">Una combinación interna es un tipo de combinación en la que solamente se devuelven los objetos que tienen una correspondencia en el conjunto de datos opuesto.</span><span class="sxs-lookup"><span data-stu-id="2c793-115">An inner join is a type of join in which only those objects that have a match in the opposite data set are returned.</span></span>  
   
- Los operadores <xref:System.Linq.Enumerable.GroupJoin%2A> no tienen ningún equivalente directo para las bases de datos relacionales; implementan un supraconjunto de combinaciones internas y combinaciones externas izquierdas. Una combinación externa izquierda es una combinación que devuelve cada uno de los elementos de la primera colección \(izquierda\) aunque no tenga ningún elemento correlacionado en la segunda colección.  
+ <span data-ttu-id="2c793-116">El <xref:System.Linq.Enumerable.GroupJoin%2A> operadores no tienen equivalente directo en términos de bases de datos relacionales; implementan un superconjunto de combinaciones internas y combinaciones externas izquierdas.</span><span class="sxs-lookup"><span data-stu-id="2c793-116">The <xref:System.Linq.Enumerable.GroupJoin%2A> operators have no direct equivalent in relational database terms; they implement a superset of inner joins and left outer joins.</span></span> <span data-ttu-id="2c793-117">Una combinación externa izquierda es una combinación que devuelve cada elemento de la primera colección (izquierda), aunque éste no tenga elementos correlacionados en la segunda colección.</span><span class="sxs-lookup"><span data-stu-id="2c793-117">A left outer join is a join that returns each element of the first (left) collection, even if it has no correlated elements in the second collection.</span></span>  
   
- Para obtener más información sobre combinaciones, vea [Join Operations](../../../../ocs/visual-basic/programming-guide/concepts/linq/join-operations.md).  
+ <span data-ttu-id="2c793-118">Para obtener más información acerca de las combinaciones, vea [operaciones de combinación](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).</span><span class="sxs-lookup"><span data-stu-id="2c793-118">For more information about joins, see [Join Operations](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente realiza una combinación tradicional de las tablas `SalesOrderHeader` y `SalesOrderDetail` de la base de datos de ejemplo AdventureWorks para obtener pedidos en línea del mes de agosto.  
+## <a name="example"></a><span data-ttu-id="2c793-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2c793-119">Example</span></span>  
+ <span data-ttu-id="2c793-120">El ejemplo siguiente realiza una combinación tradicional de las tablas `SalesOrderHeader` y `SalesOrderDetail` de la base de datos de ejemplo AdventureWorks para obtener pedidos en línea del mes de agosto.</span><span class="sxs-lookup"><span data-stu-id="2c793-120">The following example performs a traditional join of the `SalesOrderHeader` and `SalesOrderDetail` tables from the AdventureWorks sample database to obtain online orders from the month of August.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#join)]
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
   
-## Vea también  
- [Consultar DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)   
- [Consultas de tabla única](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)   
- [Consultar DataSets con establecimiento de tipos](../../../../docs/framework/data/adonet/querying-typed-datasets.md)   
- [Join Operations](../../../../ocs/visual-basic/programming-guide/concepts/linq/join-operations.md)   
- [Ejemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a><span data-ttu-id="2c793-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="2c793-121">See Also</span></span>  
+ [<span data-ttu-id="2c793-122">Consultar conjuntos de datos</span><span class="sxs-lookup"><span data-stu-id="2c793-122">Querying DataSets</span></span>](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [<span data-ttu-id="2c793-123">Consultas de tabla única</span><span class="sxs-lookup"><span data-stu-id="2c793-123">Single-Table Queries</span></span>](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
+ [<span data-ttu-id="2c793-124">Consultar conjuntos de datos con tipo</span><span class="sxs-lookup"><span data-stu-id="2c793-124">Querying Typed DataSets</span></span>](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [<span data-ttu-id="2c793-125">Operaciones de combinación</span><span class="sxs-lookup"><span data-stu-id="2c793-125">Join Operations</span></span>](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)  
+ [<span data-ttu-id="2c793-126">LINQ to DataSet Examples</span><span class="sxs-lookup"><span data-stu-id="2c793-126">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

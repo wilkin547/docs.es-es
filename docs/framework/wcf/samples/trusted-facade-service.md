@@ -1,46 +1,49 @@
 ---
-title: "Servicio de fachada confiable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Servicio de fachada confiable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f70e5d7b36b2795dd00c59de6e569623c2bbe180
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Servicio de fachada confiable
-Este ejemplo de escenario muestra cómo fluir la información de identidad del llamador de un servicio a otro utilizando la infraestructura de seguridad [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="trusted-facade-service"></a><span data-ttu-id="8f082-102">Servicio de fachada confiable</span><span class="sxs-lookup"><span data-stu-id="8f082-102">Trusted Facade Service</span></span>
+<span data-ttu-id="8f082-103">Este ejemplo de escenario muestra cómo fluir la información de identidad del llamador de un servicio a otro utilizando la infraestructura de seguridad [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="8f082-103">This scenario sample demonstrates how to flow caller's identity information from one service to another using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] security infrastructure.</span></span>  
   
- Es un patrón de diseño común para exponer la funcionalidad proporcionada por un servicio a la red pública utilizando un servicio de fachada. El servicio de fachada reside normalmente en la red perimetral \(también conocida como DMZ, zona desmilitarizada y subred filtrada\) y se comunica con un servicio back\-end que implementa la lógica comercial y tiene acceso a datos internos. El canal de comunicación entre el servicio de la fachada y el servicio back\-end va a través de un firewall y se limita normalmente solo para un único propósito.  
+ <span data-ttu-id="8f082-104">Es un patrón de diseño común para exponer la funcionalidad proporcionada por un servicio a la red pública utilizando un servicio de fachada.</span><span class="sxs-lookup"><span data-stu-id="8f082-104">It is a common design pattern to expose the functionality provided by a service to the public network using a façade service.</span></span> <span data-ttu-id="8f082-105">El servicio de fachada reside normalmente en la red perimetral (también conocida como DMZ, zona desmilitarizada y subred filtrada) y se comunica con un servicio back-end que implementa la lógica comercial y tiene acceso a datos internos.</span><span class="sxs-lookup"><span data-stu-id="8f082-105">The façade service typically resides in the perimeter network (also known as DMZ, demilitarized zone, and screened subnet) and communicates with a backend service that implements the business logic and has access to internal data.</span></span> <span data-ttu-id="8f082-106">El canal de comunicación entre el servicio de la fachada y el servicio back-end va a través de un firewall y se limita normalmente solo para un único propósito.</span><span class="sxs-lookup"><span data-stu-id="8f082-106">The communication channel between the façade service and the backend service goes through a firewall and is usually limited for a single purpose only.</span></span>  
   
- Este ejemplo consta de los siguientes componentes:  
+ <span data-ttu-id="8f082-107">Este ejemplo consta de los siguientes componentes:</span><span class="sxs-lookup"><span data-stu-id="8f082-107">This sample consists of the following components:</span></span>  
   
--   Cliente de la calculadora  
+-   <span data-ttu-id="8f082-108">Cliente de la calculadora</span><span class="sxs-lookup"><span data-stu-id="8f082-108">Calculator client</span></span>  
   
--   Servicio de fachada de calculadora  
+-   <span data-ttu-id="8f082-109">Servicio de fachada de calculadora</span><span class="sxs-lookup"><span data-stu-id="8f082-109">Calculator façade service</span></span>  
   
--   Servicio back\-end de calculadora.  
+-   <span data-ttu-id="8f082-110">Servicio back-end de calculadora.</span><span class="sxs-lookup"><span data-stu-id="8f082-110">Calculator backend service</span></span>  
   
- El servicio de la fachada es responsable de validar la solicitud y autenticar el llamador. Después de la autenticación y validación correctas, reenvía la solicitud al servicio back\-end utilizando el canal de comunicación controlado de la red perimetral a la red interna. Como parte de la solicitud reenviada, el servicio de fachada incluye información sobre la identidad del llamador para que el servicio back\-end pueda utilizar esta información en su procesamiento. La identidad del llamador se transmite utilizando un token de seguridad `Username` dentro del encabezado `Security` del mensaje . El ejemplo utiliza la infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para transmitir y extraer esta información del encabezado`Security` .  
+ <span data-ttu-id="8f082-111">El servicio de la fachada es responsable de validar la solicitud y autenticar el llamador.</span><span class="sxs-lookup"><span data-stu-id="8f082-111">The façade service is responsible for validating the request and authenticating the caller.</span></span> <span data-ttu-id="8f082-112">Después de la autenticación y validación correctas, reenvía la solicitud al servicio back-end utilizando el canal de comunicación controlado de la red perimetral a la red interna.</span><span class="sxs-lookup"><span data-stu-id="8f082-112">After successful authentication and validation, it forwards the request to the backend service using the controlled communication channel from the perimeter network to the internal network.</span></span> <span data-ttu-id="8f082-113">Como parte de la solicitud reenviada, el servicio de fachada incluye información sobre la identidad del llamador para que el servicio back-end pueda utilizar esta información en su procesamiento.</span><span class="sxs-lookup"><span data-stu-id="8f082-113">As a part of the forwarded request, the façade service includes information about the caller's identity so that the backend service can use this information in its processing.</span></span> <span data-ttu-id="8f082-114">La identidad del llamador se transmite utilizando un token de seguridad `Username` dentro del encabezado `Security` del mensaje .</span><span class="sxs-lookup"><span data-stu-id="8f082-114">The caller's identity is transmitted using a `Username` security token inside the message `Security` header.</span></span> <span data-ttu-id="8f082-115">El ejemplo utiliza la infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para transmitir y extraer esta información del encabezado `Security` .</span><span class="sxs-lookup"><span data-stu-id="8f082-115">The sample uses the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure to transmit and extract this information from the `Security` header.</span></span>  
   
 > [!IMPORTANT]
->  El servicio back\-end confia en el servicio de fachada para autenticar el llamador. Debido a esto, el servicio back\-end no autentica de nuevo el llamador; utiliza la información de identidad proporcionada por el servicio de fachada en la solicitud reenviada. Debido a esta relación de confianza, el servicio back\-end debe autenticar el servicio de fachada para asegurarse de que el mensaje reenviado procede de una fuente de confianza, en este caso el servicio de fachada.  
+>  <span data-ttu-id="8f082-116">El servicio back-end confia en el servicio de fachada para autenticar el llamador.</span><span class="sxs-lookup"><span data-stu-id="8f082-116">The backend service trusts the façade service to authenticate the caller.</span></span> <span data-ttu-id="8f082-117">Debido a esto, el servicio back-end no autentica de nuevo el llamador; utiliza la información de identidad proporcionada por el servicio de fachada en la solicitud reenviada.</span><span class="sxs-lookup"><span data-stu-id="8f082-117">Because of this, the backend service does not authenticate the caller again; it uses the identity information provided by the façade service in the forwarded request.</span></span> <span data-ttu-id="8f082-118">Debido a esta relación de confianza, el servicio back-end debe autenticar el servicio de fachada para asegurarse de que el mensaje reenviado procede de una fuente de confianza, en este caso el servicio de fachada.</span><span class="sxs-lookup"><span data-stu-id="8f082-118">Because of this trust relationship, the backend service must authenticate the façade service to ensure that the forwarded message comes from a trusted source - in this case, the façade service.</span></span>  
   
-## Implementación  
- Hay dos rutas de comunicación en este ejemplo. El primero se da entre el cliente y el servicio de fachada, el segundo entre el servicio de fachada y el servicio back\-end.  
+## <a name="implementation"></a><span data-ttu-id="8f082-119">Implementación</span><span class="sxs-lookup"><span data-stu-id="8f082-119">Implementation</span></span>  
+ <span data-ttu-id="8f082-120">Hay dos rutas de comunicación en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="8f082-120">There are two communication paths in this sample.</span></span> <span data-ttu-id="8f082-121">El primero se da entre el cliente y el servicio de fachada, el segundo entre el servicio de fachada y el servicio back-end.</span><span class="sxs-lookup"><span data-stu-id="8f082-121">First is between the client and the façade service, the second is between the façade service and the backend service.</span></span>  
   
-### Ruta de acceso de comunicación entre Cliente y Servicio de Fachada  
- El cliente a la ruta de comunicación de servicio de fachada utiliza `wsHttpBinding` con un tipo de credencial de cliente `UserName`. Esto significa que el cliente utiliza nombre de usuario y contraseña para autenticarse al servicio de fachada y el servicio de fachada utiliza el certificado X.509 para autenticarse al cliente. El archivo de configuración de enlace se parece al siguiente ejemplo.:  
+### <a name="communication-path-between-client-and-faade-service"></a><span data-ttu-id="8f082-122">Ruta de acceso de comunicación entre Cliente y Servicio de Fachada</span><span class="sxs-lookup"><span data-stu-id="8f082-122">Communication Path between Client and Façade Service</span></span>  
+ <span data-ttu-id="8f082-123">El cliente a la ruta de comunicación de servicio de fachada utiliza `wsHttpBinding` con un tipo de credencial de cliente `UserName` .</span><span class="sxs-lookup"><span data-stu-id="8f082-123">The client to the façade service communication path uses `wsHttpBinding` with a `UserName` client credential type.</span></span> <span data-ttu-id="8f082-124">Esto significa que el cliente utiliza nombre de usuario y contraseña para autenticarse al servicio de fachada y el servicio de fachada utiliza el certificado X.509 para autenticarse al cliente.</span><span class="sxs-lookup"><span data-stu-id="8f082-124">This means that the client uses username and password to authenticate to the façade service and the façade service uses X.509 certificate to authenticate to the client.</span></span> <span data-ttu-id="8f082-125">El archivo de configuración de enlace se parece al siguiente ejemplo.:</span><span class="sxs-lookup"><span data-stu-id="8f082-125">The binding configuration looks like the following example.</span></span>  
   
-```  
+```xml  
 <bindings>  
   <wsHttpBinding>  
     <binding name="Binding1">  
@@ -52,7 +55,7 @@ Este ejemplo de escenario muestra cómo fluir la información de identidad del l
 </bindings>  
 ```  
   
- El servicio de fachada autentica el llamador mediante la implementación `UserNamePasswordValidator` personalizada. Durante la demostración, la autenticación solo asegura que el nombre de usuario del llamador coincide con la contraseña presentada. En una situación real, el usuario se autentica probablemente utilizando Active Directory o el proveedor de suscripciones de ASP.NET personalizado. La implementación del validador reside en el archivo `FacadeService.cs`.  
+ <span data-ttu-id="8f082-126">El servicio de fachada autentica el llamador mediante la implementación `UserNamePasswordValidator` personalizada.</span><span class="sxs-lookup"><span data-stu-id="8f082-126">The façade service authenticates the caller using custom `UserNamePasswordValidator` implementation.</span></span> <span data-ttu-id="8f082-127">Durante la demostración, la autenticación solo asegura que el nombre de usuario del llamador coincide con la contraseña presentada.</span><span class="sxs-lookup"><span data-stu-id="8f082-127">For demonstration purposes, the authentication only ensures that the caller's username matches the presented password.</span></span> <span data-ttu-id="8f082-128">En una situación real, el usuario se autentica probablemente utilizando Active Directory o el proveedor de suscripciones de ASP.NET personalizado.</span><span class="sxs-lookup"><span data-stu-id="8f082-128">In the real world situation, the user is probably authenticated using Active Directory or custom ASP.NET Membership provider.</span></span> <span data-ttu-id="8f082-129">La implementación del validador reside en el archivo `FacadeService.cs` .</span><span class="sxs-lookup"><span data-stu-id="8f082-129">The validator implementation resides in `FacadeService.cs` file.</span></span>  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -70,9 +73,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- El validador personalizado se configura para ser utilizado dentro del comportamiento `serviceCredentials` en el archivo de configuración de servicio de fachada. Este comportamiento también se utiliza para configurar el certificado X.509 del servicio.  
+ <span data-ttu-id="8f082-130">El validador personalizado se configura para ser utilizado dentro del comportamiento `serviceCredentials` en el archivo de configuración de servicio de fachada.</span><span class="sxs-lookup"><span data-stu-id="8f082-130">The custom validator is configured to be used inside the `serviceCredentials` behavior in the façade service configuration file.</span></span> <span data-ttu-id="8f082-131">Este comportamiento también se utiliza para configurar el certificado X.509 del servicio.</span><span class="sxs-lookup"><span data-stu-id="8f082-131">This behavior is also used to configure the service's X.509 certificate.</span></span>  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
     <behavior name="FacadeServiceBehavior">  
@@ -99,12 +102,12 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
-### Ruta de acceso de comunicación entre el Servicio de Fachada y el Servicio Back\-end  
- La ruta de comunicación entre el servicio de fachada y el servicio back\-end utiliza `customBinding` que está compuesto por varios elementos de enlace. Este enlace logra dos cosas. Autentica el servicio de fachada y el servicio back\-end para asegurar que la comunicación es segura y viene de una fuente de confianza. Además, también transmite la identidad del llamador inicial dentro del token de seguridad `Username`. En este caso, solo se transmite el nombre de usuario del llamador inicial al servicio back\-end, la contraseña no está incluida en el mensaje. Esto es porque el servicio back\-end confia en el servicio de fachada para autenticar el llamador antes de reenviar la solicitud a él. Dado que el servicio de fachada se autentica en el servicio back\-end, el servicio back\-end puede confiar en la información contenida en la solicitud reenviada.  
+### <a name="communication-path-between-faade-service-and-backend-service"></a><span data-ttu-id="8f082-132">Ruta de acceso de comunicación entre el Servicio de Fachada y el Servicio Back-end</span><span class="sxs-lookup"><span data-stu-id="8f082-132">Communication Path between Façade Service and Backend Service</span></span>  
+ <span data-ttu-id="8f082-133">La ruta de comunicación entre el servicio de fachada y el servicio back-end utiliza `customBinding` que está compuesto por varios elementos de enlace.</span><span class="sxs-lookup"><span data-stu-id="8f082-133">The façade service to the backend service communication path uses a `customBinding` that consists of several binding elements.</span></span> <span data-ttu-id="8f082-134">Este enlace logra dos cosas.</span><span class="sxs-lookup"><span data-stu-id="8f082-134">This binding accomplishes two things.</span></span> <span data-ttu-id="8f082-135">Autentica el servicio de fachada y el servicio back-end para asegurar que la comunicación es segura y viene de una fuente de confianza.</span><span class="sxs-lookup"><span data-stu-id="8f082-135">It authenticates the façade service and backend service to ensure that the communication is secure and is coming from a trusted source.</span></span> <span data-ttu-id="8f082-136">Además, también transmite la identidad del llamador inicial dentro del token de seguridad `Username` .</span><span class="sxs-lookup"><span data-stu-id="8f082-136">Additionally, it also transmits the initial caller's identity inside the `Username` security token.</span></span> <span data-ttu-id="8f082-137">En este caso, solo se transmite el nombre de usuario del llamador inicial al servicio back-end, la contraseña no está incluida en el mensaje.</span><span class="sxs-lookup"><span data-stu-id="8f082-137">In this case, only the initial caller's username is transmitted to the backend service, the password is not included in the message.</span></span> <span data-ttu-id="8f082-138">Esto es porque el servicio back-end confia en el servicio de fachada para autenticar el llamador antes de reenviar la solicitud a él.</span><span class="sxs-lookup"><span data-stu-id="8f082-138">This is because the backend service trusts the façade service to authenticate the caller before forwarding the request to it.</span></span> <span data-ttu-id="8f082-139">Dado que el servicio de fachada se autentica en el servicio back-end, el servicio back-end puede confiar en la información contenida en la solicitud reenviada.</span><span class="sxs-lookup"><span data-stu-id="8f082-139">Because the façade service authenticates itself to the backend service, the backend service can trust the information contained in the forwarded request.</span></span>  
   
- A continuación, se muestra la configuración de enlace para esta ruta de comunicación.  
+ <span data-ttu-id="8f082-140">A continuación, se muestra la configuración de enlace para esta ruta de comunicación.</span><span class="sxs-lookup"><span data-stu-id="8f082-140">The following is the binding configuration for this communication path.</span></span>  
   
-```  
+```xml  
 <bindings>  
   <customBinding>  
     <binding name="ClientBinding">  
@@ -116,11 +119,11 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- El elemento de enlace [\<seguridad\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) se ocupa de la transmisión y extracción del nombre de usuario del llamador inicial.[\<windowsStreamSecurity\>](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) y [\<tcpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) se encargan de autenticar los servicios de fachada y back\-end y la protección del mensaje.  
+ <span data-ttu-id="8f082-141">El [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento de enlace se encarga de transmisión del nombre de usuario y la extracción del llamador inicial.</span><span class="sxs-lookup"><span data-stu-id="8f082-141">The [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) binding element takes care of the initial caller's username transmission and extraction.</span></span> <span data-ttu-id="8f082-142">El [ \<inicial de windowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) y [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) se encargan de autenticar los servicios de fachada y back-end y protección de mensajes.</span><span class="sxs-lookup"><span data-stu-id="8f082-142">The [\<windowsStreamSecurity>](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) and [\<tcpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) take care of authenticating façade and backend services and message protection.</span></span>  
   
- Para reenviar la solicitud, la implementación del servicio de fachada debe proporcionar el nombre de usuario del llamador inicial para que la infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueda colocarlo en el mensaje reenviado. El nombre de usuario del llamador inicial se proporciona en la implementación del servicio de fachada estableciéndolo en la propiedad `ClientCredentials` en la instancia del proxy de cliente que el servicio de fachada utiliza para comunicarse con el servicio back\-end.  
+ <span data-ttu-id="8f082-143">Para reenviar la solicitud, la implementación del servicio de fachada debe proporcionar el nombre de usuario del llamador inicial para que la infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pueda colocarlo en el mensaje reenviado.</span><span class="sxs-lookup"><span data-stu-id="8f082-143">To forward the request, the façade service implementation must provide the initial caller's username so that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure can place this into the forwarded message.</span></span> <span data-ttu-id="8f082-144">El nombre de usuario del llamador inicial se proporciona en la implementación del servicio de fachada estableciéndolo en la propiedad `ClientCredentials` en la instancia del proxy de cliente que el servicio de fachada utiliza para comunicarse con el servicio back-end.</span><span class="sxs-lookup"><span data-stu-id="8f082-144">The initial caller's username is provided in the façade service implementation by setting it in the `ClientCredentials` property on the client proxy instance that façade service uses to communicate with the backend service.</span></span>  
   
- El código siguiente muestra cómo el método `GetCallerIdentity` se implementa en el servicio de fachada. Otros métodos utilizan el mismo patrón.  
+ <span data-ttu-id="8f082-145">El código siguiente muestra cómo el método `GetCallerIdentity` se implementa en el servicio de fachada.</span><span class="sxs-lookup"><span data-stu-id="8f082-145">The following code shows how `GetCallerIdentity` method is implemented on the façade service.</span></span> <span data-ttu-id="8f082-146">Otros métodos utilizan el mismo patrón.</span><span class="sxs-lookup"><span data-stu-id="8f082-146">Other methods use the same pattern.</span></span>  
   
 ```  
 public string GetCallerIdentity()  
@@ -133,9 +136,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Como se muestra en el código anterior, la contraseña no se establece en la propiedad `ClientCredentials`, solo se establece el nombre de usuario. La infraestructura de seguridad de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea un token de seguridad de nombre de usuario sin contraseña en este caso, que es exactamente lo que se necesita en este escenario.  
+ <span data-ttu-id="8f082-147">Como se muestra en el código anterior, la contraseña no se establece en la propiedad `ClientCredentials` , solo se establece el nombre de usuario.</span><span class="sxs-lookup"><span data-stu-id="8f082-147">As shown in the previous code, the password is not set on the `ClientCredentials` property, only the username is set.</span></span> <span data-ttu-id="8f082-148">La infraestructura de seguridad de[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crea un token de seguridad de nombre de usuario sin contraseña en este caso, que es exactamente lo que se necesita en este escenario.</span><span class="sxs-lookup"><span data-stu-id="8f082-148">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure creates a username security token without a password in this case, which is exactly what is required in this scenario.</span></span>  
   
- En el servicio back\-end, la información contenida en el token de seguridad del nombre de usuario se debe autenticar. De forma predeterminada, la seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intenta asignar al usuario a una cuenta de Windows utilizando la contraseña proporcionada. En este caso, no hay ninguna contraseña proporcionada y no se exige al servicio back\-end que autentique el nombre de usuario porque ya la realizó el servicio de fachada. Para implementar esta funcionalidad en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], se proporciona un `UserNamePasswordValidator` personalizado que solo exige que un nombre de usuario se especifique en el token y no realiza ninguna autenticación adicional.  
+ <span data-ttu-id="8f082-149">En el servicio back-end, la información contenida en el token de seguridad del nombre de usuario se debe autenticar.</span><span class="sxs-lookup"><span data-stu-id="8f082-149">On the backend service, the information contained in the username security token must be authenticated.</span></span> <span data-ttu-id="8f082-150">De forma predeterminada, la seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intenta asignar al usuario a una cuenta de Windows utilizando la contraseña proporcionada.</span><span class="sxs-lookup"><span data-stu-id="8f082-150">By default, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security attempts to map the user to a Windows account using the provided password.</span></span> <span data-ttu-id="8f082-151">En este caso, no hay ninguna contraseña proporcionada y no se exige al servicio back-end que autentique el nombre de usuario porque ya la realizó el servicio de fachada.</span><span class="sxs-lookup"><span data-stu-id="8f082-151">In this case, there is no password provided and the backend service is not required to authenticate the username because the authentication was already performed by the façade service.</span></span> <span data-ttu-id="8f082-152">Para implementar esta funcionalidad en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], se proporciona un `UserNamePasswordValidator` personalizado que solo exige que un nombre de usuario se especifique en el token y no realiza ninguna autenticación adicional.</span><span class="sxs-lookup"><span data-stu-id="8f082-152">To implement this functionality in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], a custom `UserNamePasswordValidator` is provided that only enforces that a username is specified in the token and does not perform any additional authentication.</span></span>  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -156,9 +159,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- El validador personalizado se configura para ser utilizado dentro del comportamiento `serviceCredentials` en el archivo de configuración de servicio de fachada.  
+ <span data-ttu-id="8f082-153">El validador personalizado se configura para ser utilizado dentro del comportamiento `serviceCredentials` en el archivo de configuración de servicio de fachada.</span><span class="sxs-lookup"><span data-stu-id="8f082-153">The custom validator is configured to be used inside the `serviceCredentials` behavior in the façade service configuration file.</span></span>  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
     <behavior name="BackendServiceBehavior">  
@@ -173,7 +176,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
- Para extraer la información del nombre de usuario e información sobre la cuenta de servicio de fachada confiable, la implementación del servicio back\-end utiliza la clase `ServiceSecurityContext`. El código siguiente muestra cómo se implementa el método `GetCallerIdentity`.  
+ <span data-ttu-id="8f082-154">Para extraer la información del nombre de usuario e información sobre la cuenta de servicio de fachada confiable, la implementación del servicio back-end utiliza la clase `ServiceSecurityContext` .</span><span class="sxs-lookup"><span data-stu-id="8f082-154">To extract the username information and information about the trusted façade service account, the backend service implementation uses the `ServiceSecurityContext` class.</span></span> <span data-ttu-id="8f082-155">El código siguiente muestra cómo se implementa el método `GetCallerIdentity` .</span><span class="sxs-lookup"><span data-stu-id="8f082-155">The following code shows how the `GetCallerIdentity` method is implemented.</span></span>  
   
 ```  
 public string GetCallerIdentity()  
@@ -216,10 +219,10 @@ public string GetCallerIdentity()
 }  
 ```  
   
- La información de cuenta de servicio de fachada se extrae utilizando la propiedad `ServiceSecurityContext.Current.WindowsIdentity`. Para tener acceso a la información sobre el llamador inicial el servicio back\-end utiliza la propiedad `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`. Busca una notificación `Identity` con un tipo `Name`. La infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera automáticamente esta noftificación a partir de la información contenida en el token de seguridad `Username`.  
+ <span data-ttu-id="8f082-156">La información de cuenta de servicio de fachada se extrae utilizando la propiedad `ServiceSecurityContext.Current.WindowsIdentity` .</span><span class="sxs-lookup"><span data-stu-id="8f082-156">The façade service account information is extracted using the `ServiceSecurityContext.Current.WindowsIdentity` property.</span></span> <span data-ttu-id="8f082-157">Para tener acceso a la información sobre el llamador inicial el servicio back-end utiliza la propiedad `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` .</span><span class="sxs-lookup"><span data-stu-id="8f082-157">To access the information about the initial caller the backend service uses the `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` property.</span></span> <span data-ttu-id="8f082-158">Busca una notificación `Identity` con un tipo `Name`.</span><span class="sxs-lookup"><span data-stu-id="8f082-158">It looks for an `Identity` claim with a type `Name`.</span></span> <span data-ttu-id="8f082-159">La infraestructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] genera automáticamente esta noftificación a partir de la información contenida en el token de seguridad `Username` .</span><span class="sxs-lookup"><span data-stu-id="8f082-159">This claim is automatically generated by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security infrastructure from the information contained in the `Username` security token.</span></span>  
   
-## Ejecutar el ejemplo  
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente. Puede presionar Entrar en las ventanas de la consola de servicio de fachada y back\-end para cerrar los servicios.  
+## <a name="running-the-sample"></a><span data-ttu-id="8f082-160">Ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="8f082-160">Running the sample</span></span>  
+ <span data-ttu-id="8f082-161">Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="8f082-161">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="8f082-162">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="8f082-162">Press ENTER in the client window to shut down the client.</span></span> <span data-ttu-id="8f082-163">Puede presionar Entrar en las ventanas de la consola de servicio de fachada y back-end para cerrar los servicios.</span><span class="sxs-lookup"><span data-stu-id="8f082-163">You can press ENTER in the façade and backend service console windows to shut down the services.</span></span>  
   
 ```  
 Username authentication required.  
@@ -235,16 +238,15 @@ Multiply(9,81.25) = 731.25
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
- El archivo por lotes Setup.bat incluido con el ejemplo de escenario de Fachada Confiable le permite configurar el servidor con un certificado pertinente para ejecutar el servicio de fachada que exige que la seguridad basada en certificado se autentique al cliente. Para obtener más detalles, vea el procedimiento de configuración al final de este tema.  
+ <span data-ttu-id="8f082-164">El archivo por lotes Setup.bat incluido con el ejemplo de escenario de Fachada Confiable le permite configurar el servidor con un certificado pertinente para ejecutar el servicio de fachada que exige que la seguridad basada en certificado se autentique al cliente.</span><span class="sxs-lookup"><span data-stu-id="8f082-164">The Setup.bat batch file included with the Trusted Facade scenario sample enables you to configure the server with a relevant certificate to run the façade service that requires certificate-based security to authenticate itself to the client.</span></span> <span data-ttu-id="8f082-165">Para obtener más detalles, vea el procedimiento de configuración al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="8f082-165">See the setup procedure at the end of this topic for details.</span></span>  
   
- A continuación se proporciona una información general breve de las diferentes secciones de los archivos por lotes.  
+ <span data-ttu-id="8f082-166">A continuación se proporciona una información general breve de las diferentes secciones de los archivos por lotes.</span><span class="sxs-lookup"><span data-stu-id="8f082-166">The following provides a brief overview of the different sections of the batch files.</span></span>  
   
--   Crear el certificado de servidor.  
+-   <span data-ttu-id="8f082-167">Crear el certificado de servidor.</span><span class="sxs-lookup"><span data-stu-id="8f082-167">Creating the server certificate.</span></span>  
   
-     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.  
+     <span data-ttu-id="8f082-168">Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="8f082-168">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span>  
   
     ```  
     echo ************  
@@ -256,47 +258,47 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     La variable `%SERVER_NAME%` especifica el nombre del servidor; el valor predeterminado es el host local. El certificado se almacena en el almacén LocalMachine.  
+     <span data-ttu-id="8f082-169">La variable `%SERVER_NAME%` especifica el nombre del servidor; el valor predeterminado es el host local.</span><span class="sxs-lookup"><span data-stu-id="8f082-169">The `%SERVER_NAME%` variable specifies the server name - the default value is localhost.</span></span> <span data-ttu-id="8f082-170">El certificado se almacena en el almacén LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="8f082-170">The certificate is stored in the LocalMachine store.</span></span>  
   
--   Instalar el certificado del servicio de fachada en el almacén de certificados de confianza de cliente.  
+-   <span data-ttu-id="8f082-171">Instalar el certificado del servicio de fachada en el almacén de certificados de confianza de cliente.</span><span class="sxs-lookup"><span data-stu-id="8f082-171">Installing the façade service's certificate into the client's trusted certificate store.</span></span>  
   
-     La línea siguiente copia el certificado del servicio de fachada en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
+     <span data-ttu-id="8f082-172">La línea siguiente copia el certificado del servicio de fachada en el almacén de personas de confianza del cliente.</span><span class="sxs-lookup"><span data-stu-id="8f082-172">The following line copies the façade service's certificate into the client trusted people store.</span></span> <span data-ttu-id="8f082-173">Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.</span><span class="sxs-lookup"><span data-stu-id="8f082-173">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="8f082-174">Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.</span><span class="sxs-lookup"><span data-stu-id="8f082-174">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-#### Configurar, compilar y ejecutar el ejemplo  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="8f082-175">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="8f082-175">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="8f082-176">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8f082-176">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="8f082-177">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8f082-177">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-#### Para ejecutar el ejemplo en el mismo equipo  
+#### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="8f082-178">Para ejecutar el ejemplo en el mismo equipo</span><span class="sxs-lookup"><span data-stu-id="8f082-178">To run the sample on the same machine</span></span>  
   
-1.  Asegúrese de que la ruta de acceso incluye la carpeta donde se encuentra Makecert.exe.  
+1.  <span data-ttu-id="8f082-179">Asegúrese de que la ruta de acceso incluye la carpeta donde se encuentra Makecert.exe.</span><span class="sxs-lookup"><span data-stu-id="8f082-179">Ensure that the path includes the folder where Makecert.exe is located.</span></span>  
   
-2.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
+2.  <span data-ttu-id="8f082-180">Ejecute Setup.bat desde la carpeta de instalación del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="8f082-180">Run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="8f082-181">De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="8f082-181">This installs all the certificates required for running the sample.</span></span>  
   
-3.  Inicie BackendService.exe desde el directorio \\BackendService\\bin en una ventana de la consola independiente  
+3.  <span data-ttu-id="8f082-182">Inicie BackendService.exe desde el directorio \BackendService\bin en una ventana de la consola independiente</span><span class="sxs-lookup"><span data-stu-id="8f082-182">Launch the BackendService.exe from \BackendService\bin directory in a separate console window</span></span>  
   
-4.  Inicie FacadeService.exe desde el directorio \\FacadeService\\bin en una ventana de la consola independiente  
+4.  <span data-ttu-id="8f082-183">Inicie FacadeService.exe desde el directorio \FacadeService\bin en una ventana de la consola independiente</span><span class="sxs-lookup"><span data-stu-id="8f082-183">Launch the FacadeService.exe from \FacadeService\bin directory in a separate console window</span></span>  
   
-5.  Inicie Client.exe desde \\client\\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
+5.  <span data-ttu-id="8f082-184">Inicie Client.exe desde \client\bin.</span><span class="sxs-lookup"><span data-stu-id="8f082-184">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="8f082-185">La actividad del cliente se muestra en la aplicación de consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="8f082-185">Client activity is displayed on the client console application.</span></span>  
   
-6.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+6.  <span data-ttu-id="8f082-186">Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="8f082-186">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Para realizar una limpieza después de ejecutar el ejemplo  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="8f082-187">Para realizar una limpieza después de ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="8f082-187">To clean up after the sample</span></span>  
   
-1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+1.  <span data-ttu-id="8f082-188">Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="8f082-188">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="8f082-189">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="8f082-189">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8f082-190">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="8f082-190">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) \[Ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4\] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="8f082-191">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="8f082-191">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8f082-192">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="8f082-192">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="8f082-193">Vea también</span><span class="sxs-lookup"><span data-stu-id="8f082-193">See Also</span></span>

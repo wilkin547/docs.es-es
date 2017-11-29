@@ -1,47 +1,47 @@
 ---
-title: "Herramientas de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF, herramientas"
-  - "Windows Communication Foundation, herramientas"
+title: Herramientas de Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF, tools
+- Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9039ae27ea02b16b9b476c7c94856ea438176dad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Herramientas de Windows Communication Foundation
-Las herramientas [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de Microsoft están diseñadas para facilitar la creación, implementación y administración de aplicaciones [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Esta sección contiene información detallada acerca de las herramientas.  Observe que no se admiten las herramientas.  
+# <a name="windows-communication-foundation-tools"></a><span data-ttu-id="9e2ab-102">Herramientas de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9e2ab-102">Windows Communication Foundation Tools</span></span>
+<span data-ttu-id="9e2ab-103">Las herramientas [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de Microsoft están diseñadas para facilitar la creación, implementación y administración de aplicaciones [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9e2ab-103">Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] tools are designed to make it easier for you to create, deploy, and manage [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="9e2ab-104">Esta sección contiene información detallada acerca de las herramientas.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-104">This section contains detailed information about the tools.</span></span> <span data-ttu-id="9e2ab-105">Observe que no se admiten las herramientas.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-105">Please note that the tools are not supported.</span></span>  
   
- Puede ejecutar todas las herramientas desde la línea de comandos.  
+ <span data-ttu-id="9e2ab-106">Puede ejecutar todas las herramientas desde la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-106">You can run all the tools from the command line.</span></span>  
   
- La tabla siguiente enumera estas herramientas y proporciona una breve descripción.  
+ <span data-ttu-id="9e2ab-107">La tabla siguiente enumera estas herramientas y proporciona una breve descripción.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-107">The following table lists these tools and provides a brief description.</span></span>  
   
-|Herramienta|Descripción|  
-|-----------------|-----------------|  
-|[Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|Genera el código de modelo de servicio de los documentos de metadatos y documentos de metadatos del código de modelo de servicio.|  
-|[Herramienta de búsqueda de clave privada \(FindPrivateKey.exe\)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|Recupera la clave privada de un almacén especificado.|  
-|[Herramienta de registro de ServiceModel \(ServiceModelReg.exe\)](../../../docs/framework/wcf/servicemodelreg-exe.md)|Administra el registro y la anulación de registro de ServiceModel en un equipo único.|  
-|[Herramienta de configuración del modelo de servicio COM\+ \(ComSvcConfig.exe\)](../../../docs/framework/wcf/com-service-model-configuration-tool-comsvcconfig-exe.md)|Configura interfaces de COM\+ que se van a exponer como servicio Web.|  
-|[Herramienta del editor de configuración \(SvcConfigEditor.exe\)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)|Crea y modifica la configuración para los servicios WCF.|  
-|[Herramienta del visor de seguimiento de servicio \(SvcTraceViewer.exe\)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)|Le ayuda ver, agrupar y filtrar mensajes de seguimiento para poder diagnosticar, reparar y comprobar los problemas con los servicios WCF.|  
-|[Utilidad de configuración de WS\-AtomicTransaction \(wsatConfig.exe\)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Configura valores básicos de compatibilidad de WS\-AtomicTransaction mediante una herramienta de línea de comandos.|  
-|[Complemento MMC de configuración de WS\-AtomicTransaction](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Configura valores básicos de compatibilidad de WS\-AtomicTransaction mediante un complemento MMC.|  
-|[Herramienta de registro de servicio de flujo de trabajo \(WFServicesReg.exe\)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Registra un servicio de Windows Workflow.|  
-|[Host de servicio WCF \(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Hospeda servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contenidos en archivos de bibliotecas \(\* .dll\)|  
-|[Cliente de prueba de WCF \(WcfTestClient.exe\)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Herramienta GUI que permite introducir parámetros de tipos arbitrarios, enviar esa entrada al servicio y ver la respuesta que devuelve el servicio.|  
-|[Herramienta de contrato primero](../../../docs/framework/wcf/contract-first-tool.md)|Una tarea de compilación de Visual Studio que crea clases desde código a partir de contratos de datos de XSD.|  
+|<span data-ttu-id="9e2ab-108">Herramienta</span><span class="sxs-lookup"><span data-stu-id="9e2ab-108">Tool</span></span>|<span data-ttu-id="9e2ab-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="9e2ab-109">Description</span></span>|  
+|----------|-----------------|  
+|[<span data-ttu-id="9e2ab-110">Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-110">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|<span data-ttu-id="9e2ab-111">Genera el código de modelo de servicio de los documentos de metadatos y documentos de metadatos del código de modelo de servicio.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-111">Generates service model code from metadata documents and metadata documents from service model code.</span></span>|  
+|[<span data-ttu-id="9e2ab-112">Herramienta de búsqueda de clave privada (FindPrivateKey.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-112">Find Private Key Tool (FindPrivateKey.exe)</span></span>](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|<span data-ttu-id="9e2ab-113">Recupera la clave privada de un almacén especificado.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-113">Retrieves the private key from a specified store.</span></span>|  
+|[<span data-ttu-id="9e2ab-114">Herramienta de registro de ServiceModel (ServiceModelReg.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-114">ServiceModel Registration Tool (ServiceModelReg.exe)</span></span>](../../../docs/framework/wcf/servicemodelreg-exe.md)|<span data-ttu-id="9e2ab-115">Administra el registro y la anulación de registro de ServiceModel en un equipo único.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-115">Manages the registration and un-registration of ServiceModel on a single machine.</span></span>|  
+|[<span data-ttu-id="9e2ab-116">Herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-116">COM+ Service Model Configuration Tool (ComSvcConfig.exe)</span></span>](../../../docs/framework/wcf/com-service-model-configuration-tool-comsvcconfig-exe.md)|<span data-ttu-id="9e2ab-117">Configura interfaces de COM+ que se van a exponer como servicio Web.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-117">Configures COM+ interfaces to be exposed as Web services.</span></span>|  
+|[<span data-ttu-id="9e2ab-118">Herramienta del editor de configuración (SvcConfigEditor.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-118">Configuration Editor Tool (SvcConfigEditor.exe)</span></span>](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)|<span data-ttu-id="9e2ab-119">Crea y modifica la configuración para los servicios WCF.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-119">Creates and modifies configuration settings for WCF services.</span></span>|  
+|[<span data-ttu-id="9e2ab-120">Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-120">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)|<span data-ttu-id="9e2ab-121">Le ayuda ver, agrupar y filtrar mensajes de seguimiento para poder diagnosticar, reparar y comprobar los problemas con los servicios WCF.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-121">Helps you view, group, and filter trace messages so that you can diagnose, repair, and verify issues with WCF services.</span></span>|  
+|[<span data-ttu-id="9e2ab-122">Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-122">WS-AtomicTransaction Configuration Utility (wsatConfig.exe)</span></span>](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|<span data-ttu-id="9e2ab-123">Configura valores básicos de compatibilidad de WS-AtomicTransaction mediante una herramienta de línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-123">Configures basic WS-AtomicTransaction support settings using a command line tool.</span></span>|  
+|[<span data-ttu-id="9e2ab-124">Complemento MMC de configuración de WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="9e2ab-124">WS-AtomicTransaction Configuration MMC Snap-in</span></span>](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|<span data-ttu-id="9e2ab-125">Configura valores básicos de compatibilidad de WS-AtomicTransaction mediante un complemento MMC.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-125">Configures basic WS-AtomicTransaction support settings using a MMC snap-in.</span></span>|  
+|[<span data-ttu-id="9e2ab-126">Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-126">WorkFlow Service Registration Tool (WFServicesReg.exe)</span></span>](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|<span data-ttu-id="9e2ab-127">Registra un servicio de Windows Workflow.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-127">Registers a Windows Workflow service.</span></span>|  
+|[<span data-ttu-id="9e2ab-128">Host de servicio WCF (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-128">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|<span data-ttu-id="9e2ab-129">Hospeda servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contenidos en archivos de bibliotecas (* .dll)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-129">Hosts [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services contained in libraries (*.dll) files</span></span>|  
+|[<span data-ttu-id="9e2ab-130">Cliente de prueba de WCF (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="9e2ab-130">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|<span data-ttu-id="9e2ab-131">Herramienta GUI que permite introducir parámetros de tipos arbitrarios, enviar esa entrada al servicio y ver la respuesta que devuelve el servicio.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-131">A GUI tool that allows you to input parameters of arbitrary types, submit that input to the service, and view the response the service sends back.</span></span>|  
+|[<span data-ttu-id="9e2ab-132">Herramienta de contrato primero</span><span class="sxs-lookup"><span data-stu-id="9e2ab-132">Contract-First Tool</span></span>](../../../docs/framework/wcf/contract-first-tool.md)|<span data-ttu-id="9e2ab-133">Una tarea de compilación de Visual Studio que crea clases desde código a partir de contratos de datos de XSD.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-133">A Visual Studio build task that creates code classes from XSD data contracts.</span></span>|  
   
- Todas las herramientas anteriores excepto ServiceModelReg.exe, WsatConfig.exe y ComSvcConfig.exe se distribuyen con Windows SDK y se pueden buscar en la carpeta C:\\Archivos de Programa\\Microsoft SDKs\\Windows\\v6 .0\\Bin.  Las 3 herramientas concretas se pueden encontrar en C:\\Windows\\Microsoft.NET\\Framework\\v3.0\\Windows Communication Foundation.
+ <span data-ttu-id="9e2ab-134">Todas las herramientas anteriores excepto ServiceModelReg.exe, WsatConfig.exe y ComSvcConfig.exe se distribuyen con Windows SDK y se pueden buscar en la carpeta C:\Archivos de Programa\Microsoft SDKs\Windows\v6 .0\Bin.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-134">All the preceding tools except ServiceModelReg.exe, WsatConfig.exe and ComSvcConfig.exe ship with the Windows SDK, and can be found under the C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin folder.</span></span>  <span data-ttu-id="9e2ab-135">Las 3 herramientas concretas se pueden encontrar en C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="9e2ab-135">The specific 3 tools can be found under C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.</span></span>

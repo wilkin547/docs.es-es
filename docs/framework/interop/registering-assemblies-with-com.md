@@ -5,62 +5,54 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - COM interop, registering assemblies
 - unregistering assemblies
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a467bff903701cf252da983e1265c679171e90b0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c04511772e83129be8042ba5758dc647f82243c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="registering-assemblies-with-com"></a>Registrar ensamblados con COM
-Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM. Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente. La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.  
+# <a name="registering-assemblies-with-com"></a><span data-ttu-id="baa83-102">Registrar ensamblados con COM</span><span class="sxs-lookup"><span data-stu-id="baa83-102">Registering Assemblies with COM</span></span>
+<span data-ttu-id="baa83-103">Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM.</span><span class="sxs-lookup"><span data-stu-id="baa83-103">You can run a command-line tool called the [Assembly Registration Tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) to register or unregister an assembly for use with COM.</span></span> <span data-ttu-id="baa83-104">Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente.</span><span class="sxs-lookup"><span data-stu-id="baa83-104">Regasm.exe adds information about the class to the system registry so COM clients can use the .NET Framework class transparently.</span></span> <span data-ttu-id="baa83-105">La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.</span><span class="sxs-lookup"><span data-stu-id="baa83-105">The <xref:System.Runtime.InteropServices.RegistrationServices> class provides the equivalent functionality.</span></span>  
   
- Para poder activar un componente administrado desde un cliente COM, es necesario registrarlo primero en el Registro de Windows. En la tabla siguiente se muestran las claves que Regasm.exe suele agregar al Registro de Windows. (000000 indica el valor real de GUID).  
+ <span data-ttu-id="baa83-106">Para poder activar un componente administrado desde un cliente COM, es necesario registrarlo primero en el Registro de Windows.</span><span class="sxs-lookup"><span data-stu-id="baa83-106">A managed component must be registered in the Windows registry before it can be activated from a COM client.</span></span> <span data-ttu-id="baa83-107">En la tabla siguiente se muestran las claves que Regasm.exe suele agregar al Registro de Windows.</span><span class="sxs-lookup"><span data-stu-id="baa83-107">The following table shows the keys that Regasm.exe typically adds to the Windows registry.</span></span> <span data-ttu-id="baa83-108">(000000 indica el valor real de GUID).</span><span class="sxs-lookup"><span data-stu-id="baa83-108">(000000 indicates the actual GUID value.)</span></span>  
   
-|GUID|Descripción|Clave del Registro|  
+|<span data-ttu-id="baa83-109">GUID</span><span class="sxs-lookup"><span data-stu-id="baa83-109">GUID</span></span>|<span data-ttu-id="baa83-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="baa83-110">Description</span></span>|<span data-ttu-id="baa83-111">Clave del Registro</span><span class="sxs-lookup"><span data-stu-id="baa83-111">Registry key</span></span>|  
 |----------|-----------------|------------------|  
-|CLSID|Identificador de clase|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
-|IID|Identificador de interfaz|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
-|LIBID|Identificador de biblioteca|HKEY_CLASSES_ROOT\TypeLib\\{000…000}|  
-|Id. de programa|Identificador de programación|HKEY_CLASSES_ROOT\000…000|  
+|<span data-ttu-id="baa83-112">CLSID</span><span class="sxs-lookup"><span data-stu-id="baa83-112">CLSID</span></span>|<span data-ttu-id="baa83-113">Identificador de clase</span><span class="sxs-lookup"><span data-stu-id="baa83-113">Class identifier</span></span>|<span data-ttu-id="baa83-114">HKEY_CLASSES_ROOT\CLSID\\{000…000}</span><span class="sxs-lookup"><span data-stu-id="baa83-114">HKEY_CLASSES_ROOT\CLSID\\{000…000}</span></span>|  
+|<span data-ttu-id="baa83-115">IID</span><span class="sxs-lookup"><span data-stu-id="baa83-115">IID</span></span>|<span data-ttu-id="baa83-116">Identificador de interfaz</span><span class="sxs-lookup"><span data-stu-id="baa83-116">Interface identifier</span></span>|<span data-ttu-id="baa83-117">HKEY_CLASSES_ROOT\Interface\\{000…000}</span><span class="sxs-lookup"><span data-stu-id="baa83-117">HKEY_CLASSES_ROOT\Interface\\{000…000}</span></span>|  
+|<span data-ttu-id="baa83-118">LIBID</span><span class="sxs-lookup"><span data-stu-id="baa83-118">LIBID</span></span>|<span data-ttu-id="baa83-119">Identificador de biblioteca</span><span class="sxs-lookup"><span data-stu-id="baa83-119">Library identifier</span></span>|<span data-ttu-id="baa83-120">HKEY_CLASSES_ROOT\TypeLib\\{000…000}</span><span class="sxs-lookup"><span data-stu-id="baa83-120">HKEY_CLASSES_ROOT\TypeLib\\{000…000}</span></span>|  
+|<span data-ttu-id="baa83-121">Id. de programa</span><span class="sxs-lookup"><span data-stu-id="baa83-121">ProgID</span></span>|<span data-ttu-id="baa83-122">Identificador de programación</span><span class="sxs-lookup"><span data-stu-id="baa83-122">Programmatic identifier</span></span>|<span data-ttu-id="baa83-123">HKEY_CLASSES_ROOT\000…000</span><span class="sxs-lookup"><span data-stu-id="baa83-123">HKEY_CLASSES_ROOT\000…000</span></span>|  
   
- Bajo la clave HKCR\CLSID\\{0000…0000}, el valor predeterminado se establece en el ProgID de la clase y se agregan dos nuevos valores con nombre, Class y Assembly. El tiempo de ejecución lee el valor de Assembly del Registro y lo pasa a la resolución de ensamblado en tiempo de ejecución. La resolución de ensamblado intenta localizar el ensamblado en función de la información de ensamblado, como el nombre y el número de versión. Para que la resolución de ensamblado busque un ensamblado, este debe encontrarse en una de las ubicaciones siguientes:  
+ <span data-ttu-id="baa83-124">Bajo la clave HKCR\CLSID\\{0000…0000}, el valor predeterminado se establece en el ProgID de la clase y se agregan dos nuevos valores con nombre, Class y Assembly.</span><span class="sxs-lookup"><span data-stu-id="baa83-124">Under the HKCR\CLSID\\{0000…0000} key, the default value is set to the ProgID of the class, and two new named values, Class and Assembly, are added.</span></span> <span data-ttu-id="baa83-125">El tiempo de ejecución lee el valor de Assembly del Registro y lo pasa a la resolución de ensamblado en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="baa83-125">The runtime reads the Assembly value from the registry and passes it on to the runtime assembly resolver.</span></span> <span data-ttu-id="baa83-126">La resolución de ensamblado intenta localizar el ensamblado en función de la información de ensamblado, como el nombre y el número de versión.</span><span class="sxs-lookup"><span data-stu-id="baa83-126">The assembly resolver attempts to locate the assembly, based on assembly information such as the name and version number.</span></span> <span data-ttu-id="baa83-127">Para que la resolución de ensamblado busque un ensamblado, este debe encontrarse en una de las ubicaciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="baa83-127">For the assembly resolver to locate an assembly, the assembly has to be in one of the following locations:</span></span>  
   
--   En la caché global de ensamblados (debe ser un ensamblado con nombre seguro).  
+-   <span data-ttu-id="baa83-128">En la caché global de ensamblados (debe ser un ensamblado con nombre seguro).</span><span class="sxs-lookup"><span data-stu-id="baa83-128">The global assembly cache (must be a strong-named assembly).</span></span>  
   
--   En el directorio de la aplicación. Los ensamblados cargados desde la ruta de acceso a la aplicación solo son accesibles desde la misma aplicación.  
+-   <span data-ttu-id="baa83-129">En el directorio de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="baa83-129">In the application directory.</span></span> <span data-ttu-id="baa83-130">Los ensamblados cargados desde la ruta de acceso a la aplicación solo son accesibles desde la misma aplicación.</span><span class="sxs-lookup"><span data-stu-id="baa83-130">Assemblies loaded from the application path are only accessible from that application.</span></span>  
   
--   En una ruta de acceso de archivo especificada con la opción **/codebase** en Regasm.exe.  
+-   <span data-ttu-id="baa83-131">En una ruta de acceso de archivo especificada con la opción **/codebase** en Regasm.exe.</span><span class="sxs-lookup"><span data-stu-id="baa83-131">Along an file path specified with the **/codebase** option to Regasm.exe.</span></span>  
   
- Regasm.exe también crea la clave InProcServer32 bajo la clave HKCR\CLSID\\{0000…0000}. El valor predeterminado de la clave se establece en el nombre del archivo DLL que inicializa Common Language Runtime (Mscoree.dll).  
+ <span data-ttu-id="baa83-132">Regasm.exe también crea la clave InProcServer32 bajo la clave HKCR\CLSID\\{0000…0000}.</span><span class="sxs-lookup"><span data-stu-id="baa83-132">Regasm.exe also creates the InProcServer32 key under the HKCR\CLSID\\{0000…0000} key.</span></span> <span data-ttu-id="baa83-133">El valor predeterminado de la clave se establece en el nombre del archivo DLL que inicializa Common Language Runtime (Mscoree.dll).</span><span class="sxs-lookup"><span data-stu-id="baa83-133">The default value for the key is set to the name of the DLL that initializes the common language runtime (Mscoree.dll).</span></span>  
   
-## <a name="examining-registry-entries"></a>Examinar las entradas del Registro  
- La interoperabilidad COM proporciona una implementación de generador de clases estándar para crear una instancia de cualquier clase de .NET Framework. Los clientes pueden llamar a **DllGetClassObject** en el archivo DLL administrado para obtener un generador de clases y crear objetos, tal como harían con cualquier otro componente COM.  
+## <a name="examining-registry-entries"></a><span data-ttu-id="baa83-134">Examinar las entradas del Registro</span><span class="sxs-lookup"><span data-stu-id="baa83-134">Examining Registry Entries</span></span>  
+ <span data-ttu-id="baa83-135">La interoperabilidad COM proporciona una implementación de generador de clases estándar para crear una instancia de cualquier clase de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="baa83-135">COM interop provides a standard class factory implementation to create an instance of any .NET Framework class.</span></span> <span data-ttu-id="baa83-136">Los clientes pueden llamar a **DllGetClassObject** en el archivo DLL administrado para obtener un generador de clases y crear objetos, tal como harían con cualquier otro componente COM.</span><span class="sxs-lookup"><span data-stu-id="baa83-136">Clients can call **DllGetClassObject** on the managed DLL to get a class factory and create objects, just as they would with any other COM component.</span></span>  
   
- Para la subclave `InprocServer32`, aparece una referencia a Mscoree.dll en lugar de una biblioteca de tipos COM tradicional para indicar que Common Language Runtime crea el objeto administrado.  
+ <span data-ttu-id="baa83-137">Para la subclave `InprocServer32`, aparece una referencia a Mscoree.dll en lugar de una biblioteca de tipos COM tradicional para indicar que Common Language Runtime crea el objeto administrado.</span><span class="sxs-lookup"><span data-stu-id="baa83-137">For the `InprocServer32` subkey, a reference to Mscoree.dll appears in place of a traditional COM type library to indicate that the common language runtime creates the managed object.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Cómo: hacer referencia a tipos de .NET desde COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)   
- [Llamar a un objeto de .NET](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
- [Implementar una aplicación para obtener acceso a COM](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
-
+## <a name="see-also"></a><span data-ttu-id="baa83-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="baa83-138">See Also</span></span>  
+ [<span data-ttu-id="baa83-139">Exponer componentes de .NET Framework en COM</span><span class="sxs-lookup"><span data-stu-id="baa83-139">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [<span data-ttu-id="baa83-140">Cómo: Hacer referencia a tipos de .NET desde COM</span><span class="sxs-lookup"><span data-stu-id="baa83-140">How to: Reference .NET Types from COM</span></span>](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
+ [<span data-ttu-id="baa83-141">Llamar a un objeto de .NET</span><span class="sxs-lookup"><span data-stu-id="baa83-141">Calling a .NET Object</span></span>](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
+ [<span data-ttu-id="baa83-142">Implementar una aplicación para obtener acceso a COM</span><span class="sxs-lookup"><span data-stu-id="baa83-142">Deploying an Application for COM Access</span></span>](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)

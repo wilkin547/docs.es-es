@@ -1,79 +1,80 @@
 ---
-title: "&lt;settings&gt; (Elemento, Configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#settings"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<settings> (elemento)"
-  - "settings (elemento)"
+title: "&lt;configuración&gt; Element (Network Settings)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings
+helpviewer_keywords:
+- settings element
+- <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-caps.latest.revision: 21
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 07f356c0425b071ac320e702a9ba7cd6b9537341
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;settings&gt; (Elemento, Configuraci&#243;n de red)
-Configura las opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=fullName>.  
+# <a name="ltsettingsgt-element-network-settings"></a><span data-ttu-id="62df5-102">&lt;configuración&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="62df5-102">&lt;settings&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="62df5-103">Configura opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="62df5-103">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="62df5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="62df5-104">\<configuration></span></span>  
+<span data-ttu-id="62df5-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="62df5-105">\<system.net></span></span>  
+<span data-ttu-id="62df5-106">\<Configuración ></span><span class="sxs-lookup"><span data-stu-id="62df5-106">\<settings></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="62df5-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="62df5-107">Syntax</span></span>  
   
-      <settings>  
-..<httpListener> … </httpListener>  
-..<httpWebRequest> … </httpWebRequest>  
-..<ipv6> … </ipv6>  
-..<performanceCounters> … </performanceCounters>  
+```xml  
+<settings>  
+  <httpListener> … </httpListener>  
+  <httpWebRequest> … </httpWebRequest>  
+  <ipv6> … </ipv6>  
+  <performanceCounters> … </performanceCounters>  
   <servicePointManager> … </servicePointManager>  
-..<socket> … </socket>  
-..<webProxyScript> … </webProxyScript>  
+  <socket> … </socket>  
+  <webProxyScript> … </webProxyScript>  
 </settings>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="62df5-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="62df5-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="62df5-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="62df5-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- Ninguno.  
+### <a name="attributes"></a><span data-ttu-id="62df5-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="62df5-110">Attributes</span></span>  
+ <span data-ttu-id="62df5-111">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="62df5-111">None.</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="62df5-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="62df5-112">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Personaliza los parámetros utilizados por la clase <xref:System.Net.HttpListener>.|  
-|[el más httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Personaliza los parámetros de solicitud Web.|  
-|[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Permite la compatibilidad con la versión 6 del Protocolo de Internet \(IPv6\).|  
-|[\<performanceCounter\> \(Elemento, Configuración de red\)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Habilita contadores de rendimiento de red.|  
-|[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Configura las conexiones a los recursos de red.|  
-|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Especifica si las operaciones del socket utilizan puertos de terminación.|  
-|[Elemento \<webProxyScript\> \(configuración de red\)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Configura las características del script que se utilizan para detectar los servidores proxy Web.|  
+|<span data-ttu-id="62df5-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="62df5-113">Element</span></span>|<span data-ttu-id="62df5-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="62df5-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="62df5-115">httpListener</span><span class="sxs-lookup"><span data-stu-id="62df5-115">httpListener</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|<span data-ttu-id="62df5-116">Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.</span><span class="sxs-lookup"><span data-stu-id="62df5-116">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>|  
+|[<span data-ttu-id="62df5-117">httpWebRequest</span><span class="sxs-lookup"><span data-stu-id="62df5-117">httpWebRequest</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|<span data-ttu-id="62df5-118">Personaliza los parámetros de solicitud Web.</span><span class="sxs-lookup"><span data-stu-id="62df5-118">Customizes Web request parameters.</span></span>|  
+|[<span data-ttu-id="62df5-119">IPv6</span><span class="sxs-lookup"><span data-stu-id="62df5-119">ipv6</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|<span data-ttu-id="62df5-120">Habilita el protocolo de Internet versión 6 (IPv6) admite.</span><span class="sxs-lookup"><span data-stu-id="62df5-120">Enables Internet Protocol version 6 (IPv6) support.</span></span>|  
+|[<span data-ttu-id="62df5-121">\<performanceCounter > Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="62df5-121">\<performanceCounter> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|<span data-ttu-id="62df5-122">Habilita los contadores de rendimiento de red.</span><span class="sxs-lookup"><span data-stu-id="62df5-122">Enables network performance counters.</span></span>|  
+|[<span data-ttu-id="62df5-123">servicePointManager</span><span class="sxs-lookup"><span data-stu-id="62df5-123">servicePointManager</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|<span data-ttu-id="62df5-124">Configura las conexiones a los recursos de red.</span><span class="sxs-lookup"><span data-stu-id="62df5-124">Configures connections to network resources.</span></span>|  
+|[<span data-ttu-id="62df5-125">Socket</span><span class="sxs-lookup"><span data-stu-id="62df5-125">socket</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|<span data-ttu-id="62df5-126">Especifica si las operaciones de socket utilizan puertos de terminación.</span><span class="sxs-lookup"><span data-stu-id="62df5-126">Specifies whether socket operations use completion ports.</span></span>|  
+|[<span data-ttu-id="62df5-127">\<webProxyScript > Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="62df5-127">\<webProxyScript> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|<span data-ttu-id="62df5-128">Configura las características de la secuencia de comandos que se usa para detectar a servidores proxy Web.</span><span class="sxs-lookup"><span data-stu-id="62df5-128">Configures the characteristics of the script used to discover Web proxies.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="62df5-129">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="62df5-129">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene los valores de configuración que especifican cómo se conecta a la red .NET Framework.|  
+|<span data-ttu-id="62df5-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="62df5-130">Element</span></span>|<span data-ttu-id="62df5-131">Descripción</span><span class="sxs-lookup"><span data-stu-id="62df5-131">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="62df5-132">System.NET</span><span class="sxs-lookup"><span data-stu-id="62df5-132">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="62df5-133">Contiene valores que especifican cómo se conecta .NET Framework a la red.</span><span class="sxs-lookup"><span data-stu-id="62df5-133">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## Comentarios  
+## <a name="remarks"></a><span data-ttu-id="62df5-134">Comentarios</span><span class="sxs-lookup"><span data-stu-id="62df5-134">Remarks</span></span>  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="62df5-135">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="62df5-135">Configuration Files</span></span>  
+ <span data-ttu-id="62df5-136">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="62df5-136">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Vea también  
- <xref:System.Net?displayProperty=fullName>   
- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="62df5-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="62df5-137">See Also</span></span>  
+ <xref:System.Net?displayProperty=nameWithType>  
+ [<span data-ttu-id="62df5-138">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="62df5-138">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

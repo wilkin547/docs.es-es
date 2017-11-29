@@ -1,56 +1,53 @@
 ---
-title: "TREAT (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: TREAT (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fa7bfd2a9fffdd0cfedced76cf83f9e01630c986
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# TREAT (Entity SQL)
-Trata un objeto de un tipo base determinado como un objeto del tipo derivado especificado.  
+# <a name="treat-entity-sql"></a><span data-ttu-id="85ff2-102">TREAT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="85ff2-102">TREAT (Entity SQL)</span></span>
+<span data-ttu-id="85ff2-103">Trata un objeto de un tipo base determinado como un objeto del tipo derivado especificado.</span><span class="sxs-lookup"><span data-stu-id="85ff2-103">Treats an object of a particular base type as an object of the specified derived type.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="85ff2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="85ff2-104">Syntax</span></span>  
   
 ```  
-  
-TREAT (expression as type)  
+TREAT ( expression as type)  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a><span data-ttu-id="85ff2-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="85ff2-105">Arguments</span></span>  
  `expression`  
- Cualquier expresión de consulta válida que devuelve una entidad.  
+ <span data-ttu-id="85ff2-106">Cualquier expresión de consulta válida que devuelve una entidad.</span><span class="sxs-lookup"><span data-stu-id="85ff2-106">Any valid query expression that returns an entity.</span></span>  
   
 > [!NOTE]
->  El tipo de la expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo del tipo de expresión.  
+>  <span data-ttu-id="85ff2-107">El tipo de la expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo del tipo de expresión.</span><span class="sxs-lookup"><span data-stu-id="85ff2-107">The type of the specified expression must be a subtype of the specified data type, or the data type must be a subtype of the type of expression.</span></span>  
   
  `type`  
- Tipo de entidad. El tipo debe estar calificado por un espacio de nombres.  
+ <span data-ttu-id="85ff2-108">Tipo de entidad.</span><span class="sxs-lookup"><span data-stu-id="85ff2-108">An entity type.</span></span> <span data-ttu-id="85ff2-109">El tipo debe estar calificado por un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="85ff2-109">The type must be qualified by a namespace.</span></span>  
   
 > [!NOTE]
->  La expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo de la expresión.  
+>  <span data-ttu-id="85ff2-110">La expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo de la expresión.</span><span class="sxs-lookup"><span data-stu-id="85ff2-110">The specified expression must be a subtype of the specified data type, or the data type must be a subtype of the expression.</span></span>  
   
-## Valor devuelto  
- Un valor del tipo de datos especificado.  
+## <a name="return-value"></a><span data-ttu-id="85ff2-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="85ff2-111">Return Value</span></span>  
+ <span data-ttu-id="85ff2-112">Un valor del tipo de datos especificado.</span><span class="sxs-lookup"><span data-stu-id="85ff2-112">A value of the specified data type.</span></span>  
   
-## Comentarios  
- TREAT se utiliza para realizar una conversión entre clases relacionadas. Por ejemplo, si `Employee` deriva de `Person` y p es de tipo `Person`, `TREAT(p AS NamespaceName.Employee)` convierte una instancia de `Person` genérica a `Employee`; es decir, permite tratar p como `Employee`.  
+## <a name="remarks"></a><span data-ttu-id="85ff2-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="85ff2-113">Remarks</span></span>  
+ <span data-ttu-id="85ff2-114">TREAT se utiliza para realizar una conversión entre clases relacionadas.</span><span class="sxs-lookup"><span data-stu-id="85ff2-114">TREAT is used to perform upcasting between related classes.</span></span> <span data-ttu-id="85ff2-115">Por ejemplo, si `Employee` deriva de `Person` y p es de tipo `Person`, `TREAT(p AS NamespaceName.Employee)` convierte una instancia de `Person` genérica a `Employee`; es decir, permite tratar p como `Employee`.</span><span class="sxs-lookup"><span data-stu-id="85ff2-115">For example, if `Employee` derives from `Person` and p is of type `Person`, `TREAT(p AS NamespaceName.Employee)` upcasts a generic `Person` instance to `Employee`; that is, it allows you to treat p as `Employee`.</span></span>  
   
- TREAT se utiliza en situaciones de herencia donde se puede realizar una consulta como la siguiente:  
+ <span data-ttu-id="85ff2-116">TREAT se utiliza en situaciones de herencia donde se puede realizar una consulta como la siguiente:</span><span class="sxs-lookup"><span data-stu-id="85ff2-116">TREAT is used in inheritance scenarios where you can do a query like the following:</span></span>  
   
 ```  
 SELECT TREAT(p AS NamespaceName.Employee)  
@@ -58,27 +55,27 @@ FROM ContainerName.Person AS p
 WHERE p IS OF (NamespaceName.Employee)   
 ```  
   
- Este consulta convierte entidades `Person` al tipo `Employee`. Si el valor de p no es realmente de tipo `Employee`, la expresión obtiene el valor `null`.  
+ <span data-ttu-id="85ff2-117">Este consulta convierte entidades `Person` al tipo `Employee` .</span><span class="sxs-lookup"><span data-stu-id="85ff2-117">This query upcasts `Person` entities to the `Employee` type.</span></span> <span data-ttu-id="85ff2-118">Si el valor de p no es realmente de tipo `Employee`, la expresión obtiene el valor `null`.</span><span class="sxs-lookup"><span data-stu-id="85ff2-118">If the value of p is not actually of type `Employee`, the expression yields the value `null`.</span></span>  
   
 > [!NOTE]
->  La expresión```Employee```especificada debe ser un subtipo del tipo de datos `Person` especificado, o el tipo de datos debe ser un subtipo de la expresión. De lo contrario, la expresión producirá un error en tiempo de compilación.  
+>  <span data-ttu-id="85ff2-119">La expresión especificada `Employee` debe ser un subtipo del tipo de datos especificado `Person`, o el tipo de datos debe ser un subtipo de la expresión.</span><span class="sxs-lookup"><span data-stu-id="85ff2-119">The specified expression `Employee` must be a subtype of the specified data type `Person`, or the data type must be a subtype of the expression.</span></span> <span data-ttu-id="85ff2-120">De lo contrario, la expresión producirá un error en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="85ff2-120">Otherwise, the expression will result in a compile-time error.</span></span>  
   
- En la tabla siguiente se muestra el comportamiento del tratamiento en algunos patrones típicos y algunos patrones menos comunes. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
+ <span data-ttu-id="85ff2-121">En la tabla siguiente se muestra el comportamiento del tratamiento en algunos patrones típicos y algunos patrones menos comunes.</span><span class="sxs-lookup"><span data-stu-id="85ff2-121">The following table shows the behavior of treat over some typical patterns and some less common patterns.</span></span> <span data-ttu-id="85ff2-122">Todas las excepciones se producen en el cliente antes de que se llame al proveedor:</span><span class="sxs-lookup"><span data-stu-id="85ff2-122">All exceptions are thrown from the client side before the provider gets invoked:</span></span>  
   
-|Modelo|Comportamiento|  
-|------------|--------------------|  
-|`TREAT (null AS EntityType)`|Devuelve `DbNull`.|  
-|`TREAT (null AS ComplexType)`|Inicia una excepción.|  
-|`TREAT (null AS RowType)`|Produce una excepción.|  
-|`TREAT (EntityType AS EntityType)`|Devuelve `EntityType` o `null`.|  
-|`TREAT (ComplexType AS ComplexType)`|Inicia una excepción.|  
-|`TREAT (RowType AS RowType)`|Inicia una excepción.|  
+|<span data-ttu-id="85ff2-123">Modelo</span><span class="sxs-lookup"><span data-stu-id="85ff2-123">Pattern</span></span>|<span data-ttu-id="85ff2-124">Comportamiento</span><span class="sxs-lookup"><span data-stu-id="85ff2-124">Behavior</span></span>|  
+|-------------|--------------|  
+|`TREAT (null AS EntityType)`|<span data-ttu-id="85ff2-125">Devuelve `DbNull`.</span><span class="sxs-lookup"><span data-stu-id="85ff2-125">Returns `DbNull`.</span></span>|  
+|`TREAT (null AS ComplexType)`|<span data-ttu-id="85ff2-126">Inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="85ff2-126">Throws an exception.</span></span>|  
+|`TREAT (null AS RowType)`|<span data-ttu-id="85ff2-127">Produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="85ff2-127">Throws an exception/</span></span>|  
+|`TREAT (EntityType AS EntityType)`|<span data-ttu-id="85ff2-128">Devuelve `EntityType` o `null`.</span><span class="sxs-lookup"><span data-stu-id="85ff2-128">Returns `EntityType` or `null`.</span></span>|  
+|`TREAT (ComplexType AS ComplexType)`|<span data-ttu-id="85ff2-129">Inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="85ff2-129">Throws an exception.</span></span>|  
+|`TREAT (RowType AS RowType)`|<span data-ttu-id="85ff2-130">Inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="85ff2-130">Throws an exception.</span></span>|  
   
-## Ejemplo  
- La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa el operador TREAT para convertir un objeto del tipo Course en una colección de objetos del tipo OnsiteCourse. La consulta se basa en el [modelo School](http://msdn.microsoft.com/es-es/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
+## <a name="example"></a><span data-ttu-id="85ff2-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="85ff2-131">Example</span></span>  
+ <span data-ttu-id="85ff2-132">La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa el operador TREAT para convertir un objeto del tipo Course en una colección de objetos del tipo OnsiteCourse.</span><span class="sxs-lookup"><span data-stu-id="85ff2-132">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the TREAT operator to convert an object of the type Course to a collection of objects of the type OnsiteCourse.</span></span> <span data-ttu-id="85ff2-133">La consulta se basa en el [modelo School](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span><span class="sxs-lookup"><span data-stu-id="85ff2-133">The query is based on the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
-## Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [Tipos estructurados que aceptan valores NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="85ff2-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="85ff2-134">See Also</span></span>  
+ [<span data-ttu-id="85ff2-135">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="85ff2-135">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="85ff2-136">Tipos estructurados que admiten valores null</span><span class="sxs-lookup"><span data-stu-id="85ff2-136">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

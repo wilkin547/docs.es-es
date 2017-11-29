@@ -1,246 +1,247 @@
 ---
-title: "Controles que se utilizan en formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms]"
-  - "Lista de controles de Windows Forms"
+title: Controles que se utilizan en formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms]
+- Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Controles que se utilizan en formularios Windows Forms
-La siguiente es una lista alfabética de los controles y componentes que se pueden usar en formularios Windows Forms. Además de los controles de Windows Forms que se tratan en esta sección, puede agregar controles ActiveX y controles personalizados a formularios Windows Forms. Si no se encuentra el control que necesario enumerados aquí, también puede crear sus propios. Para obtener más información, consulte [desarrollar controles de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Para obtener más información acerca de cómo elegir el control necesario, vea [controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+# <a name="controls-to-use-on-windows-forms"></a><span data-ttu-id="aba4d-102">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aba4d-102">Controls to Use on Windows Forms</span></span>
+<span data-ttu-id="aba4d-103">A continuación, se muestra una lista de controles y componentes por orden alfabético que se puede utilizar en formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="aba4d-103">The following is an alphabetic list of controls and components that can be used on Windows Forms.</span></span> <span data-ttu-id="aba4d-104">Además de los controles de formularios Windows Forms cubiertos en esta sección, puede añadir ActiveX y controles personalizados a formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="aba4d-104">In addition to the Windows Forms controls covered in this section, you can add ActiveX and custom controls to Windows Forms.</span></span> <span data-ttu-id="aba4d-105">Si no encuentra aquí el control que necesita, también puede crear el suyo propio.</span><span class="sxs-lookup"><span data-stu-id="aba4d-105">If you do not find the control you need listed here, you can also create your own.</span></span> <span data-ttu-id="aba4d-106">Para obtener más información, consulte [Desarrollar controles de formularios Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="aba4d-106">For details, see [Developing Windows Forms Controls at Design Time](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="aba4d-107">Para obtener más información sobre cómo elegir el control que necesita, consulte [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).</span><span class="sxs-lookup"><span data-stu-id="aba4d-107">For more information about choosing the control you need, see [Windows Forms Controls by Function](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]los controles se basan en clases proporcionadas por el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  <span data-ttu-id="aba4d-108">Los controles de [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] se basan en clases que proporciona [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aba4d-108">[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] controls are based on classes provided by the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Controles por función de Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- Enumera y describe los controles de formularios Windows Forms basándose en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="aba4d-109">En esta sección</span><span class="sxs-lookup"><span data-stu-id="aba4d-109">In This Section</span></span>  
+ [<span data-ttu-id="aba4d-110">Controles de formularios Windows Forms por función</span><span class="sxs-lookup"><span data-stu-id="aba4d-110">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ <span data-ttu-id="aba4d-111">Enumera y describe los controles de formularios Windows Forms basándose en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aba4d-111">Lists and describes Windows Forms controls based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
- [Controles compatibles con dibujos de propietario integrados](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- Describe cómo modificar aspectos de la apariencia de un control que no están disponibles a través de propiedades.  
+ [<span data-ttu-id="aba4d-112">Controles compatibles con dibujos propietarios integrados</span><span class="sxs-lookup"><span data-stu-id="aba4d-112">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ <span data-ttu-id="aba4d-113">Describe cómo modificar aspectos de la apariencia de un control que no están disponibles en las propiedades.</span><span class="sxs-lookup"><span data-stu-id="aba4d-113">Describes how to alter aspects of a control's appearance that are not available through properties.</span></span>  
   
- [BackgroundWorker (componente)](../../../../docs/framework/winforms/controls/backgroundworker-component.md)  
- Habilita un formulario o control para ejecutar una operación asincrónica.  
+ [<span data-ttu-id="aba4d-114">Componente de BackgroundWorker</span><span class="sxs-lookup"><span data-stu-id="aba4d-114">BackgroundWorker Component</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component.md)  
+ <span data-ttu-id="aba4d-115">Permite que una forma o control ejecuten una operación de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="aba4d-115">Enables a form or control to run an operation asynchronously.</span></span>  
   
- [BindingNavigator (Control)](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- Proporciona la interfaz de usuario (IU) de navegación y manipulación para los controles que están enlazados a datos.  
+ [<span data-ttu-id="aba4d-116">BindingNavigator (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-116">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-117">Es la interfaz de usuario de navegación y manipulación para los controles de un formulario que están enlazados a datos.</span><span class="sxs-lookup"><span data-stu-id="aba4d-117">Provides the navigation and manipulation user interface (UI) for controls that are bound to data.</span></span>  
   
- [BindingSource (componente)](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- Encapsula un origen de datos para el enlace a controles.  
+ [<span data-ttu-id="aba4d-118">Componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="aba4d-118">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ <span data-ttu-id="aba4d-119">Encapsula un origen de datos para el enlace a controles.</span><span class="sxs-lookup"><span data-stu-id="aba4d-119">Encapsulates a data source for binding to controls.</span></span>  
   
- [Control de botón](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)  
- Presenta un botón estándar en el que el usuario puede hacer clic para realizar acciones.  
+ [<span data-ttu-id="aba4d-120">Botón (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-120">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-121">Presenta un botón estándar en el que el usuario puede hacer clic para realizar acciones.</span><span class="sxs-lookup"><span data-stu-id="aba4d-121">Presents a standard button that the user can click to perform actions.</span></span>  
   
- [CheckBox (Control)](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)  
- Indica si una condición está activada o desactivada.  
+ [<span data-ttu-id="aba4d-122">CheckBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-122">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-123">Indica si una condición está activada o desactivada.</span><span class="sxs-lookup"><span data-stu-id="aba4d-123">Indicates whether a condition is on or off.</span></span>  
   
- [CheckedListBox (Control)](../../../../docs/framework/winforms/controls/checkedlistbox-control-windows-forms.md)  
- Muestra una lista de elementos con una casilla de verificación junto a cada elemento.  
+ [<span data-ttu-id="aba4d-124">CheckedListBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-124">CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-125">Muestra una lista de elementos con una casilla junto a cada elemento.</span><span class="sxs-lookup"><span data-stu-id="aba4d-125">Displays a list of items with a check box next to each item.</span></span>  
   
- [ColorDialog (componente)](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- Permite al usuario seleccionar un color de una paleta en un cuadro de diálogo preconfigurado y agregar colores personalizados a la paleta.  
+ [<span data-ttu-id="aba4d-126">ColorDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-126">ColorDialog Component</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-127">Permite al usuario seleccionar un color de una paleta en un cuadro de diálogo preconfigurado y agregar colores personalizados a la paleta.</span><span class="sxs-lookup"><span data-stu-id="aba4d-127">Allows the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
   
- [ComboBox (Control)](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- Muestra los datos en un cuadro combinado desplegable.  
+ [<span data-ttu-id="aba4d-128">ComboBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-128">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-129">Muestra los datos en un cuadro combinado desplegable.</span><span class="sxs-lookup"><span data-stu-id="aba4d-129">Displays data in a drop-down combo box.</span></span>  
   
- [ContextMenu (componente)](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- Proporciona a los usuarios con un menú de fácil acceso de los comandos usados con frecuencia que están asociados con el objeto seleccionado. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> control de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
+ [<span data-ttu-id="aba4d-130">ContextMenu (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-130">ContextMenu Component</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-131">Proporciona a los usuarios un menú de fácil acceso a los comandos usados con frecuencia que están asociados con el objeto seleccionado.</span><span class="sxs-lookup"><span data-stu-id="aba4d-131">Provides users with an easily accessible menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="aba4d-132">Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> control de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si así lo desea.</span><span class="sxs-lookup"><span data-stu-id="aba4d-132">Although <xref:System.Windows.Forms.ContextMenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control of previous versions, <xref:System.Windows.Forms.ContextMenu> is retained for both backward compatibility and future use if so desired.</span></span>  
   
- [ContextMenuStrip (Control)](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
- Representa un menú contextual. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> control de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
+ [<span data-ttu-id="aba4d-133">ContextMenuStrip (Control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-133">ContextMenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
+ <span data-ttu-id="aba4d-134">Representa un menú contextual.</span><span class="sxs-lookup"><span data-stu-id="aba4d-134">Represents a shortcut menu.</span></span> <span data-ttu-id="aba4d-135">Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> control de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si así lo desea.</span><span class="sxs-lookup"><span data-stu-id="aba4d-135">Although <xref:System.Windows.Forms.ContextMenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control of previous versions, <xref:System.Windows.Forms.ContextMenu> is retained for both backward compatibility and future use if so desired.</span></span>  
   
- [DataGrid (Control)](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- Muestra los datos tabulares de un conjunto de datos y permite actualizaciones en el origen de datos.  
+ [<span data-ttu-id="aba4d-136">DataGrid (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-136">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-137">Muestra los datos tabulares de un conjunto de datos y permite actualizaciones en el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="aba4d-137">Displays tabular data from a dataset and allows for updates to the data source.</span></span>  
   
- [DataGridView (Control)](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- Proporciona un sistema flexible y extensible para mostrar y editar datos tabulares.  
+ [<span data-ttu-id="aba4d-138">DataGridView (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-138">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-139">Proporciona un sistema flexible y extensible para mostrar y editar datos tabulares.</span><span class="sxs-lookup"><span data-stu-id="aba4d-139">Provides a flexible, extensible system for displaying and editing tabular data.</span></span>  
   
- [DateTimePicker (Control)](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- Permite al usuario seleccionar un único elemento de una lista de fechas u horas.  
+ [<span data-ttu-id="aba4d-140">DateTimePicker (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-140">DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-141">Permite al usuario seleccionar un solo elemento de una lista de fechas y horas.</span><span class="sxs-lookup"><span data-stu-id="aba4d-141">Allows the user to select a single item from a list of dates or times.</span></span>  
   
- [Componentes y controles de cuadro de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Describe un conjunto de controles que permiten a los usuarios llevar a cabo interacciones estándares con la aplicación o sistema.  
+ [<span data-ttu-id="aba4d-142">Controles y componentes de cuadros de diálogo</span><span class="sxs-lookup"><span data-stu-id="aba4d-142">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="aba4d-143">Describe un conjunto de controles que permiten a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.</span><span class="sxs-lookup"><span data-stu-id="aba4d-143">Describes a set of controls that allow users to perform standard interactions with the application or system.</span></span>  
   
- [DomainUpDown (Control)](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- Muestra las cadenas de texto que un usuario puede examinar y seleccionar.  
+ [<span data-ttu-id="aba4d-144">DomainUpDown (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-144">DomainUpDown Control</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-145">Muestra cadenas de texto que un usuario puede examinar y seleccionar.</span><span class="sxs-lookup"><span data-stu-id="aba4d-145">Displays text strings that a user can browse through and select from.</span></span>  
   
- [ErrorProvider (componente)](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
- Muestra información de error al usuario de forma no intrusiva.  
+ [<span data-ttu-id="aba4d-146">ErrorProvider (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-146">ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-147">Muestra información de error al usuario de forma no intrusiva.</span><span class="sxs-lookup"><span data-stu-id="aba4d-147">Displays error information to the user in a non-intrusive way.</span></span>  
   
- "FileDialog (clase)"  
- Proporciona funcionalidad de la clase base para los cuadros de diálogo de archivo.  
+ <span data-ttu-id="aba4d-148">"FileDialog (clase)"</span><span class="sxs-lookup"><span data-stu-id="aba4d-148">"FileDialog Class"</span></span>  
+ <span data-ttu-id="aba4d-149">Proporciona funcionalidad de la clase base para los cuadros de diálogo de archivo.</span><span class="sxs-lookup"><span data-stu-id="aba4d-149">Provides base-class functionality for file dialog boxes.</span></span>  
   
- [FlowLayoutPanel (Control)](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
- Representa un panel que dispone dinámicamente su contenido horizontal o verticalmente.  
+ [<span data-ttu-id="aba4d-150">FlowLayoutPanel (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-150">FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-151">Representa un panel que dispone dinámicamente su contenido horizontal o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="aba4d-151">Represents a panel that dynamically lays out its contents horizontally or vertically.</span></span>  
   
- [FolderBrowserDialog (componente)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)  
- Muestra una interfaz con la que los usuarios pueden examinar y seleccione un directorio o crear uno nuevo.  
+ [<span data-ttu-id="aba4d-152">FolderBrowserDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-152">FolderBrowserDialog Component</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-153">Muestra una interfaz con la que los usuarios pueden examinar y seleccionar un directorio o crear uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="aba4d-153">Displays an interface with which users can browse and select a directory or create a new one.</span></span>  
   
- [FontDialog (componente)](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)  
- Expone las fuentes que están instaladas actualmente en el sistema.  
+ [<span data-ttu-id="aba4d-154">FontDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-154">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-155">Expone las fuentes que están instaladas actualmente en el sistema.</span><span class="sxs-lookup"><span data-stu-id="aba4d-155">Exposes the fonts that are currently installed on the system.</span></span>  
   
- [GroupBox (Control)](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
- Proporciona una agrupación identificable para otros controles.  
+ [<span data-ttu-id="aba4d-156">GroupBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-156">GroupBox Control</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-157">Proporciona un agrupamiento identificable para otros controles.</span><span class="sxs-lookup"><span data-stu-id="aba4d-157">Provides an identifiable grouping for other controls.</span></span>  
   
- [HelpProvider (componente)](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- Asocia un archivo de Ayuda HTML a una aplicación basada en Windows.  
+ [<span data-ttu-id="aba4d-158">HelpProvider (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-158">HelpProvider Component</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-159">Asocia un archivo de Ayuda HTML con una aplicación basada en Windows.</span><span class="sxs-lookup"><span data-stu-id="aba4d-159">Associates an HTML Help file with a Windows-based application.</span></span>  
   
- [Controles HScrollBar y VScrollBar](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-windows-forms.md)  
- Proporcionar navegación a través de una lista de elementos o un gran volumen de información, ya sea horizontal o verticalmente, dentro de una aplicación o control.  
+ [<span data-ttu-id="aba4d-160">HScrollBar y VScrollBar (controles)</span><span class="sxs-lookup"><span data-stu-id="aba4d-160">HScrollBar and VScrollBar Controls</span></span>](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-windows-forms.md)  
+ <span data-ttu-id="aba4d-161">Facilitan el desplazamiento por una lista de elementos o un gran volumen de información, ya sea horizontal o verticalmente, dentro de una aplicación o control.</span><span class="sxs-lookup"><span data-stu-id="aba4d-161">Provide navigation through a list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span>  
   
- [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- Muestra imágenes en otros controles.  
+ [<span data-ttu-id="aba4d-162">ImageList (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-162">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-163">Muestra imágenes en otros controles.</span><span class="sxs-lookup"><span data-stu-id="aba4d-163">Displays images on other controls.</span></span>  
   
- [Label (Control)](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)  
- Muestra texto que no se puede editar el usuario.  
+ [<span data-ttu-id="aba4d-164">Etiqueta (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-164">Label Control</span></span>](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-165">Muestra texto que no puede editar el usuario.</span><span class="sxs-lookup"><span data-stu-id="aba4d-165">Displays text that cannot be edited by the user.</span></span>  
   
- [LinkLabel (Control)](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)  
- Permite agregar vínculos de estilo Web a aplicaciones de Windows Forms.  
+ [<span data-ttu-id="aba4d-166">LinkLabel (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-166">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-167">Permite agregar vínculos de estilo web a aplicaciones de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="aba4d-167">Allows you to add Web-style links to Windows Forms applications.</span></span>  
   
- [ListBox (Control)](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- Permite al usuario seleccionar uno o más elementos de una lista predefinida.  
+ [<span data-ttu-id="aba4d-168">ListBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-168">ListBox Control</span></span>](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-169">Permite al usuario seleccionar uno o más elementos de una lista predefinida.</span><span class="sxs-lookup"><span data-stu-id="aba4d-169">Allows the user to select one or more items from a predefined list.</span></span>  
   
- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- Muestra una lista de elementos con iconos, en la forma del explorador de Windows.  
+ [<span data-ttu-id="aba4d-170">ListView (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-170">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-171">Muestra una lista de elementos con iconos, al estilo del Explorador de Windows.</span><span class="sxs-lookup"><span data-stu-id="aba4d-171">Displays a list of items with icons, in the manner of Windows Explorer.</span></span>  
   
- [Componente MainMenu](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
- Muestra un menú en tiempo de ejecución. Aunque <xref:System.Windows.Forms.MenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.MainMenu> control de versiones anteriores, <xref:System.Windows.Forms.MainMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.  
+ [<span data-ttu-id="aba4d-172">MainMenu (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-172">MainMenu Component</span></span>](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-173">Muestra un menú en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="aba4d-173">Displays a menu at run time.</span></span> <span data-ttu-id="aba4d-174">Aunque <xref:System.Windows.Forms.MenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.MainMenu> control de versiones anteriores, <xref:System.Windows.Forms.MainMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="aba4d-174">Although <xref:System.Windows.Forms.MenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> control of previous versions, <xref:System.Windows.Forms.MainMenu> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [MaskedTextBox (Control)](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
- Restringe el formato de entrada del usuario en un formulario.  
+ [<span data-ttu-id="aba4d-175">MaskedTextBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-175">MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-176">Restringe el formato de entrada del usuario en un formulario.</span><span class="sxs-lookup"><span data-stu-id="aba4d-176">Constrains the format of user input in a form.</span></span>  
   
- [MenuStrip (Control)](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- Proporciona un sistema de menús para formularios. Aunque <xref:System.Windows.Forms.MenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.MainMenu> control de versiones anteriores, <xref:System.Windows.Forms.MainMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.  
+ [<span data-ttu-id="aba4d-177">MenuStrip (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-177">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-178">Proporciona un sistema de menús para formularios.</span><span class="sxs-lookup"><span data-stu-id="aba4d-178">Provides a menu system for a form.</span></span> <span data-ttu-id="aba4d-179">Aunque <xref:System.Windows.Forms.MenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.MainMenu> control de versiones anteriores, <xref:System.Windows.Forms.MainMenu> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="aba4d-179">Although <xref:System.Windows.Forms.MenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> control of previous versions, <xref:System.Windows.Forms.MainMenu> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [MonthCalendar (Control)](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- Presenta una interfaz gráfica intuitiva para los usuarios ver y establecer información de fecha.  
+ [<span data-ttu-id="aba4d-180">MonthCalendar (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-180">MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-181">Presenta una interfaz gráfica intuitiva para que los usuarios vean y establezcan la información de fecha.</span><span class="sxs-lookup"><span data-stu-id="aba4d-181">Presents an intuitive graphical interface for users to view and set date information.</span></span>  
   
- [NotifyIcon (componente)](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- Muestra iconos para procesos que se ejecutan en segundo plano y no tendría interfaces de usuario.  
+ [<span data-ttu-id="aba4d-182">NotifyIcon (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-182">NotifyIcon Component</span></span>](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-183">Muestra iconos para procesos que se ejecutan en segundo plano y que de otro modo no tendrían interfaces de usuario.</span><span class="sxs-lookup"><span data-stu-id="aba4d-183">Displays icons for processes that run in the background and would not otherwise have user interfaces.</span></span>  
   
- [NumericUpDown (Control)](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- Muestra los números que un usuario puede examinar y seleccionar.  
+ [<span data-ttu-id="aba4d-184">NumericUpDown (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-184">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-185">Muestra numerales que un usuario puede examinar y seleccionar.</span><span class="sxs-lookup"><span data-stu-id="aba4d-185">Displays numerals that a user can browse through and select from.</span></span>  
   
- [OpenFileDialog (componente)](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
- Permite a los usuarios abrir archivos mediante un cuadro de diálogo preconfigurado.  
+ [<span data-ttu-id="aba4d-186">OpenFileDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-186">OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-187">Permite a los usuarios abrir archivos mediante un cuadro de diálogo preconfigurado.</span><span class="sxs-lookup"><span data-stu-id="aba4d-187">Allows users to open files by using a pre-configured dialog box.</span></span>  
   
- [PageSetupDialog (componente)](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
- Establece la página de detalles de impresión a través de un cuadro de diálogo preconfigurado.  
+ [<span data-ttu-id="aba4d-188">PageSetupDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-188">PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-189">Establece la página de detalles de impresión mediante un cuadro de diálogo preconfigurado.</span><span class="sxs-lookup"><span data-stu-id="aba4d-189">Sets page details for printing through a pre-configured dialog box.</span></span>  
   
- [Panel (Control)](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- Proporciona una agrupación identificable para otros controles y permite el desplazamiento.  
+ [<span data-ttu-id="aba4d-190">Panel (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-190">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-191">Proporciona un agrupamiento identificable para otros controles y permite el desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="aba4d-191">Provide an identifiable grouping for other controls, and allows for scrolling.</span></span>  
   
- [PictureBox (Control)](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)  
- Muestra gráficos en formato de mapa de bits, GIF, JPEG, metarchivo o icono.  
+ [<span data-ttu-id="aba4d-192">PictureBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-192">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-193">Muestra gráficos en formato de mapa de bits, GIF, JPEG, metarchivo o icono.</span><span class="sxs-lookup"><span data-stu-id="aba4d-193">Displays graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  
   
- [PrintDialog (componente)](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
- Selecciona una impresora, elige las páginas que se van a imprimir y determina otros valores de configuración relacionados con la impresión.  
+ [<span data-ttu-id="aba4d-194">PrintDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-194">PrintDialog Component</span></span>](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-195">Selecciona una impresora, elige las páginas que se van a imprimir y determina otros valores de configuración relacionados con la impresión.</span><span class="sxs-lookup"><span data-stu-id="aba4d-195">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
   
- [PrintDocument (componente)](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- Establece las propiedades que describen qué imprimir e imprime el documento en aplicaciones basadas en Windows.  
+ [<span data-ttu-id="aba4d-196">PrintDocument (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-196">PrintDocument Component</span></span>](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-197">Establece las propiedades que describen qué imprimir e imprime el documento en aplicaciones basadas en Windows.</span><span class="sxs-lookup"><span data-stu-id="aba4d-197">Sets the properties that describe what to print, and prints the document in Windows-based applications.</span></span>  
   
- [PrintPreviewControl (Control)](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
- Le permite crear sus propios `PrintPreview` cuadro de diálogo o componente en lugar de utilizar la versión preconfigurada.  
+ [<span data-ttu-id="aba4d-198">PrintPreviewControl (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-198">PrintPreviewControl Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-199">Le permite crear su propio componente o cuadro de diálogo `PrintPreview` en lugar de utilizar la versión preconfigurada.</span><span class="sxs-lookup"><span data-stu-id="aba4d-199">Allows you to create your own `PrintPreview` component or dialog box instead of using the pre-configured version.</span></span>  
   
- [PrintPreviewDialog (Control)](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- Muestra un documento tal y como aparecerá cuando se imprima.  
+ [<span data-ttu-id="aba4d-200">PrintPreviewDialog (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-200">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-201">Muestra un documento tal y como aparecerá cuando se imprima.</span><span class="sxs-lookup"><span data-stu-id="aba4d-201">Displays a document as it will appear when it is printed.</span></span>  
   
- [ProgressBar (Control)](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)  
- Indica gráficamente el progreso de una acción hacia su finalización.  
+ [<span data-ttu-id="aba4d-202">ProgressBar (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-202">ProgressBar Control</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-203">Indica gráficamente el progreso de una acción hasta su finalización.</span><span class="sxs-lookup"><span data-stu-id="aba4d-203">Graphically indicates the progress of an action towards completion.</span></span>  
   
- [RadioButton (Control)](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)  
- Presenta un conjunto de dos o más opciones mutuamente excluyentes para el usuario.  
+ [<span data-ttu-id="aba4d-204">RadioButton (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-204">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-205">Presenta un conjunto de dos o más opciones mutuamente excluyentes para el usuario.</span><span class="sxs-lookup"><span data-stu-id="aba4d-205">Presents a set of two or more mutually exclusive options to the user.</span></span>  
   
- [RichTextBox (Control)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- Permite a los usuarios escribir, mostrar y manipular texto con formato.  
+ [<span data-ttu-id="aba4d-206">RichTextBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-206">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-207">Permite al usuario escribir, mostrar y manipular texto con formato.</span><span class="sxs-lookup"><span data-stu-id="aba4d-207">Allows users to enter, display, and manipulate text with formatting.</span></span>  
   
- [SaveFileDialog (componente)](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
- Selecciona archivos para guardar y dónde guardarlos.  
+ [<span data-ttu-id="aba4d-208">SaveFileDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-208">SaveFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-209">Selecciona archivos para guardar y dónde guardarlos.</span><span class="sxs-lookup"><span data-stu-id="aba4d-209">Selects files to save and where to save them.</span></span>  
   
- "SoundPlayer (clase)"  
- Le permite incluir con facilidad sonidos en las aplicaciones.  
+ <span data-ttu-id="aba4d-210">"SoundPlayer (clase)"</span><span class="sxs-lookup"><span data-stu-id="aba4d-210">"SoundPlayer Class"</span></span>  
+ <span data-ttu-id="aba4d-211">Le permite incluir con facilidad sonidos en las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="aba4d-211">Enables you to easily include sounds in your applications.</span></span>  
   
- [SplitContainer (Control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- Permite al usuario cambiar el tamaño de un control acoplado.  
+ [<span data-ttu-id="aba4d-212">SplitContainer (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-212">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-213">Permite al usuario cambiar el tamaño de un control acoplado.</span><span class="sxs-lookup"><span data-stu-id="aba4d-213">Allows the user to resize a docked control.</span></span>  
   
- [Splitter (Control)](../../../../docs/framework/winforms/controls/splitter-control-windows-forms.md)  
- Permite al usuario cambiar el tamaño de un control acoplado ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 1.x).  
+ [<span data-ttu-id="aba4d-214">Splitter (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-214">Splitter Control</span></span>](../../../../docs/framework/winforms/controls/splitter-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-215">Permite al usuario cambiar el tamaño de un control acoplado ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 1.x).</span><span class="sxs-lookup"><span data-stu-id="aba4d-215">Allows the user to resize a docked control ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.x).</span></span>  
   
- [StatusBar (Control)](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
- Muestra información de estado relacionada con el control que tiene el foco. Aunque <xref:System.Windows.Forms.StatusStrip> reemplaza y amplía el <xref:System.Windows.Forms.StatusBar> control de versiones anteriores, <xref:System.Windows.Forms.StatusBar> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.  
+ [<span data-ttu-id="aba4d-216">StatusBar (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-216">StatusBar Control</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-217">Muestra información de estado relacionada con el control que está activado.</span><span class="sxs-lookup"><span data-stu-id="aba4d-217">Displays status information related to the control that has focus.</span></span> <span data-ttu-id="aba4d-218">Aunque el control <xref:System.Windows.Forms.StatusStrip> reemplaza y amplía el control <xref:System.Windows.Forms.StatusBar> de versiones anteriores, <xref:System.Windows.Forms.StatusBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, según sea el caso.</span><span class="sxs-lookup"><span data-stu-id="aba4d-218">Although <xref:System.Windows.Forms.StatusStrip> replaces and extends the <xref:System.Windows.Forms.StatusBar> control of previous versions, <xref:System.Windows.Forms.StatusBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [StatusStrip (Control)](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
- Representa un control de barra de estado de Windows. Aunque <xref:System.Windows.Forms.StatusStrip> reemplaza y amplía el <xref:System.Windows.Forms.StatusBar> control de versiones anteriores, <xref:System.Windows.Forms.StatusBar> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.  
+ [<span data-ttu-id="aba4d-219">StatusStrip (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-219">StatusStrip Control</span></span>](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
+ <span data-ttu-id="aba4d-220">Representa un control de barra de estado de Windows.</span><span class="sxs-lookup"><span data-stu-id="aba4d-220">Represents a Windows status bar control.</span></span> <span data-ttu-id="aba4d-221">Aunque el control <xref:System.Windows.Forms.StatusStrip> reemplaza y amplía el control <xref:System.Windows.Forms.StatusBar> de versiones anteriores, <xref:System.Windows.Forms.StatusBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, según sea el caso.</span><span class="sxs-lookup"><span data-stu-id="aba4d-221">Although <xref:System.Windows.Forms.StatusStrip> replaces and extends the <xref:System.Windows.Forms.StatusBar> control of previous versions, <xref:System.Windows.Forms.StatusBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [TabControl (Control)](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
- Muestra múltiples fichas que pueden contener imágenes u otros controles.  
+ [<span data-ttu-id="aba4d-222">TabControl (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-222">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-223">Muestra múltiples pestañas que pueden contener imágenes u otros controles.</span><span class="sxs-lookup"><span data-stu-id="aba4d-223">Displays multiple tabs that can contain pictures or other controls.</span></span>  
   
- [Control TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)  
- Representa un panel que dispone dinámicamente su contenido en una cuadrícula que se compone de filas y columnas.  
+ [<span data-ttu-id="aba4d-224">TableLayoutPanel (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-224">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-225">Representa un panel que dispone dinámicamente su contenido en una cuadrícula que se compone de filas y columnas.</span><span class="sxs-lookup"><span data-stu-id="aba4d-225">Represents a panel that dynamically lays out its contents in a grid composed of rows and columns.</span></span>  
   
- [TextBox (Control)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
- Permite la entrada multilínea y editable por el usuario.  
+ [<span data-ttu-id="aba4d-226">TextBox (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-226">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-227">Permite al usuario la introducción multilínea y editable.</span><span class="sxs-lookup"><span data-stu-id="aba4d-227">Allows editable, multiline input from the user.</span></span>  
   
- [Timer (componente)](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- Genera un evento a intervalos regulares.  
+ [<span data-ttu-id="aba4d-228">Timer (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-228">Timer Component</span></span>](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-229">Genere un evento a intervalos regulares.</span><span class="sxs-lookup"><span data-stu-id="aba4d-229">Raises an event at regular intervals.</span></span>  
   
- [ToolBar (Control)](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- Muestra los menús y botones de mapa de bits que activan comandos. Puede extender la funcionalidad del control y modificar su apariencia y comportamiento. Aunque <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ToolBar> control de versiones anteriores, <xref:System.Windows.Forms.ToolBar> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.  
+ [<span data-ttu-id="aba4d-230">ToolBar (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-230">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-231">Muestra los menús y botones de mapa de bits que activan comandos.</span><span class="sxs-lookup"><span data-stu-id="aba4d-231">Displays menus and bitmapped buttons that activate commands.</span></span> <span data-ttu-id="aba4d-232">Puede extender la funcionalidad del control y modificar su apariencia y comportamiento.</span><span class="sxs-lookup"><span data-stu-id="aba4d-232">You can extend the functionality of the control and modify its appearance and behavior.</span></span> <span data-ttu-id="aba4d-233">Aunque <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ToolBar> control de versiones anteriores, <xref:System.Windows.Forms.ToolBar> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="aba4d-233">Although <xref:System.Windows.Forms.ToolStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control of previous versions, <xref:System.Windows.Forms.ToolBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [ToolStrip (Control)](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- Crea menús y barras de herramientas personalizadas en las aplicaciones de Windows Forms. Aunque <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ToolBar> control de versiones anteriores, <xref:System.Windows.Forms.ToolBar> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.  
+ [<span data-ttu-id="aba4d-234">Control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="aba4d-234">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-235">Crea menús y barras de herramientas personalizadas en las aplicaciones de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="aba4d-235">Creates custom toolbars and menus in your Windows Forms applications.</span></span> <span data-ttu-id="aba4d-236">Aunque <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ToolBar> control de versiones anteriores, <xref:System.Windows.Forms.ToolBar> se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="aba4d-236">Although <xref:System.Windows.Forms.ToolStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control of previous versions, <xref:System.Windows.Forms.ToolBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [ToolStripContainer (Control)](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- Proporciona paneles a cada lado de un formulario para acoplar, compartir espacio y organizar <xref:System.Windows.Forms.ToolStrip> controles y una central <xref:System.Windows.Forms.ToolStripContentPanel> para los controles tradicionales.  
+ [<span data-ttu-id="aba4d-237">ToolStripContainer (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-237">ToolStripContainer Control</span></span>](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
+ <span data-ttu-id="aba4d-238">Proporciona paneles a cada lado de un formulario para acoplar, compartir el espacio y organizar <xref:System.Windows.Forms.ToolStrip> controles y un centro de <xref:System.Windows.Forms.ToolStripContentPanel> para los controles tradicionales.</span><span class="sxs-lookup"><span data-stu-id="aba4d-238">Provides panels on each side of a form for docking, rafting, and arranging <xref:System.Windows.Forms.ToolStrip> controls, and a central <xref:System.Windows.Forms.ToolStripContentPanel> for traditional controls.</span></span>  
   
- [ToolStripPanel (Control)](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
- Proporciona un panel para acoplar, compartir espacio y organizar <xref:System.Windows.Forms.ToolStrip> controles.  
+ [<span data-ttu-id="aba4d-239">ToolStripPanel (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-239">ToolStripPanel Control</span></span>](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
+ <span data-ttu-id="aba4d-240">Proporciona un panel para acoplar, compartir el espacio y organizar <xref:System.Windows.Forms.ToolStrip> controles.</span><span class="sxs-lookup"><span data-stu-id="aba4d-240">Provides one panel for docking, rafting and arranging <xref:System.Windows.Forms.ToolStrip> controls.</span></span>  
   
- [Información general del Control ToolStripProgressBar](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
- Indica gráficamente el progreso de una acción hacia su finalización. El <xref:System.Windows.Forms.ToolStripProgressBar> normalmente se encuentra en un <xref:System.Windows.Forms.StatusStrip>.  
+ [<span data-ttu-id="aba4d-241">Información general sobre ToolStripProgressBar (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-241">ToolStripProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
+ <span data-ttu-id="aba4d-242">Indica gráficamente el progreso de una acción hasta su finalización.</span><span class="sxs-lookup"><span data-stu-id="aba4d-242">Graphically indicates the progress of an action towards completion.</span></span> <span data-ttu-id="aba4d-243">El <xref:System.Windows.Forms.ToolStripProgressBar> normalmente se encuentra en un <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="aba4d-243">The <xref:System.Windows.Forms.ToolStripProgressBar> is typically contained in a <xref:System.Windows.Forms.StatusStrip>.</span></span>  
   
- [ToolStripStatusLabel (Control)](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
- Representa un panel de un <xref:System.Windows.Forms.StatusStrip> control.  
+ [<span data-ttu-id="aba4d-244">ToolStripStatusLabel (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-244">ToolStripStatusLabel Control</span></span>](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
+ <span data-ttu-id="aba4d-245">Representa un panel de un control <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="aba4d-245">Represents a panel in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
- [ToolTip (componente)](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- Muestra texto cuando el usuario apunta a otros controles.  
+ [<span data-ttu-id="aba4d-246">ToolTip (componente)</span><span class="sxs-lookup"><span data-stu-id="aba4d-246">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ <span data-ttu-id="aba4d-247">Muestra texto cuando un usuario señala otros controles.</span><span class="sxs-lookup"><span data-stu-id="aba4d-247">Displays text when the user points at other controls.</span></span>  
   
- [TrackBar (Control)](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)  
- Permite la navegación a través de una gran cantidad de información o el ajuste visual de un valor numérico.  
+ [<span data-ttu-id="aba4d-248">TrackBar (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-248">TrackBar Control</span></span>](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-249">Permite la navegación por una gran cantidad de información o el ajuste visual de un parámetro numérico.</span><span class="sxs-lookup"><span data-stu-id="aba4d-249">Allows navigation through a large amount of information or visually adjusting a numeric setting.</span></span>  
   
- [TreeView (Control)](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- Muestra una jerarquía de nodos que se pueden expandir o contraer.  
+ [<span data-ttu-id="aba4d-250">TreeView (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-250">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-251">Muestra una jerarquía de nodos que se pueden expandir o contraer.</span><span class="sxs-lookup"><span data-stu-id="aba4d-251">Displays a hierarchy of nodes that can be expanded or collapsed.</span></span>  
   
- [WebBrowser (Control)](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
- Hospeda páginas Web y proporciona funciones para la aplicación de exploración de Web de Internet.  
+ [<span data-ttu-id="aba4d-252">WebBrowser (control)</span><span class="sxs-lookup"><span data-stu-id="aba4d-252">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+ <span data-ttu-id="aba4d-253">Hospeda páginas web y proporciona a su aplicación funciones de navegación web por Internet.</span><span class="sxs-lookup"><span data-stu-id="aba4d-253">Hosts Web pages and provides Internet Web browsing capabilities to your application.</span></span>  
   
- [Usados para mostrar opciones de controles de Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Describe un conjunto de controles que se utiliza para proporcionar a los usuarios una lista de opciones que puede elegir.  
+ [<span data-ttu-id="aba4d-254">Controles de formularios Windows Forms usados para mostrar opciones</span><span class="sxs-lookup"><span data-stu-id="aba4d-254">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="aba4d-255">Describe un conjunto de controles que se utiliza para proporcionar a los usuarios una lista de opciones de entre las que puede elegir.</span><span class="sxs-lookup"><span data-stu-id="aba4d-255">Describes a set of controls used to provide users with a list of options to choose from.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Explica el uso de controles de formularios Windows Forms y describe conceptos importantes para trabajar con ellos.  
+## <a name="related-sections"></a><span data-ttu-id="aba4d-256">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="aba4d-256">Related Sections</span></span>  
+ [<span data-ttu-id="aba4d-257">Controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aba4d-257">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="aba4d-258">Explica el uso de controles de formularios Windows Forms y describe conceptos importantes para trabajar con ellos.</span><span class="sxs-lookup"><span data-stu-id="aba4d-258">Explains the use of Windows Forms controls, and describes important concepts for working with them.</span></span>  
   
- [Desarrollar controles Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- Proporciona vínculos a temas paso a paso, recomendaciones para qué tipo de control para crear y otra información acerca de cómo crear su propio control.  
+ [<span data-ttu-id="aba4d-259">Desarrollar controles de formularios Windows Forms en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="aba4d-259">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="aba4d-260">Proporciona vínculos a temas detallados, recomendaciones del tipo de control que crear y otra información acerca de cómo crear su propio control.</span><span class="sxs-lookup"><span data-stu-id="aba4d-260">Provides links to step-by-step topics, recommendations for which kind of control to create, and other information about creating your own control.</span></span>  
   
- [Controles y objetos programables comparados en varios lenguajes y bibliotecas](http://msdn.microsoft.com/es-es/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
- Proporciona una tabla que asigna controles de Visual Basic 6.0 al control correspondiente en [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Tenga en cuenta que los controles ahora son clases en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ [<span data-ttu-id="aba4d-261">Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas</span><span class="sxs-lookup"><span data-stu-id="aba4d-261">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ <span data-ttu-id="aba4d-262">Proporciona una tabla que asigna controles de Visual Basic 6.0 al control correspondiente en [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aba4d-262">Provides a table that maps controls in Visual Basic 6.0 to the corresponding control in [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)].</span></span> <span data-ttu-id="aba4d-263">Tenga en cuenta que los controles ahora son clases en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aba4d-263">Note that controls are now classes in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
- [Cómo: agregar controles ActiveX a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- Describe cómo utilizar controles ActiveX en formularios Windows Forms.
+ [<span data-ttu-id="aba4d-264">Procedimiento para agregar controles ActiveX a formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aba4d-264">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ <span data-ttu-id="aba4d-265">Describe cómo utilizar controles ActiveX en formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="aba4d-265">Describes how to use ActiveX controls on Windows Forms.</span></span>

@@ -1,56 +1,53 @@
 ---
-title: "Introducci&#243;n a WCF Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "HTML"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "WCF Data Services, introducción"
+title: "Introducción a Data Services de WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 124e0fe04293c52fb152ef76e7f93f00c679c9f8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Introducci&#243;n a WCF Data Services
-Los temas de esta sección le ayudan a comprender rápidamente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] y cómo usar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para exponer y utilizar fuentes [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] mediante la explicación de las tecnologías subyacentes.  En esta sección se incluye contenido conceptual y un [tutorial rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+# <a name="getting-started-with-wcf-data-services"></a><span data-ttu-id="6f965-102">Introducción a Data Services de WCF</span><span class="sxs-lookup"><span data-stu-id="6f965-102">Getting Started with WCF Data Services</span></span>
+<span data-ttu-id="6f965-103">Los temas de esta sección ayudan a comprender rápidamente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] y cómo usar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para exponer y consumir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución mediante la explicación de las tecnologías subyacentes.</span><span class="sxs-lookup"><span data-stu-id="6f965-103">The topics in this section help you quickly understand [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] and how to use [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to expose and consume [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds by explaining the underlying technologies.</span></span> <span data-ttu-id="6f965-104">En esta sección se incluye contenido conceptual y una [inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) tutorial.</span><span class="sxs-lookup"><span data-stu-id="6f965-104">This section includes both conceptual content and a [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) tutorial.</span></span>  
   
-## En esta sección  
- En los temas siguientes se describe cómo crear servicios de datos con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="6f965-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="6f965-105">In This Section</span></span>  
+ <span data-ttu-id="6f965-106">En los temas siguientes se describe cómo crear servicios de datos con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6f965-106">The following topics describe how to create data services by using [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span>  
   
- [Exponer los datos como servicio](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
- Describe los pasos necesarios para crear un servicio de datos con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ [<span data-ttu-id="6f965-107">Exponer los datos como un servicio</span><span class="sxs-lookup"><span data-stu-id="6f965-107">Exposing Your Data as a Service</span></span>](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ <span data-ttu-id="6f965-108">Describe los pasos necesarios para crear un servicio de datos con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6f965-108">Describes the steps that are required to create a data service by using [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span>  
   
- [Acceso a recursos del servicio de datos](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- Describe cómo trabajar con fuentes [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ [<span data-ttu-id="6f965-109">Acceder a recursos de servicio de datos</span><span class="sxs-lookup"><span data-stu-id="6f965-109">Accessing Data Service Resources</span></span>](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ <span data-ttu-id="6f965-110">Describe cómo trabajar con [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución.</span><span class="sxs-lookup"><span data-stu-id="6f965-110">Describes how to work with [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.</span></span>  
   
- [Usar un servicio de datos en una aplicación cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
- Describe cómo trabajar con una fuente [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en una aplicación cliente de .NET Framework.  
+ [<span data-ttu-id="6f965-111">Usar un servicio de datos en una aplicación cliente</span><span class="sxs-lookup"><span data-stu-id="6f965-111">Using a Data Service in a Client Application</span></span>](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+ <span data-ttu-id="6f965-112">Describe cómo trabajar con un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de la fuente en una aplicación de cliente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6f965-112">Describes how to work with an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a .NET Framework client application.</span></span>  
   
- [Inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- Muestra cómo crear y tener acceso a un servicio basado en [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] simple que expone una fuente basada en la base de datos de ejemplo Northwind.  
+ [<span data-ttu-id="6f965-113">Inicio rápido</span><span class="sxs-lookup"><span data-stu-id="6f965-113">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ <span data-ttu-id="6f965-114">Muestra cómo crear y tener acceso a un sencillo [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-según el servicio que expone una fuente basada en la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="6f965-114">Shows how to create and access a simple [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-based service that exposes a feed based on the Northwind sample database.</span></span>  
   
- [Escenarios de las aplicaciones](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
- Resalta un conjunto básico de escenarios de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admitidos por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
+ [<span data-ttu-id="6f965-115">Escenarios de aplicación</span><span class="sxs-lookup"><span data-stu-id="6f965-115">Application Scenarios</span></span>](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
+ <span data-ttu-id="6f965-116">Resalta un conjunto básico de escenarios de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admitidos por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6f965-116">Highlights a core set of [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] scenarios that are supported by [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span>  
   
- [Recursos](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
- Proporciona vínculos a recursos de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] y [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ [<span data-ttu-id="6f965-117">Recursos</span><span class="sxs-lookup"><span data-stu-id="6f965-117">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
+ <span data-ttu-id="6f965-118">Proporciona vínculos a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] y [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] recursos.</span><span class="sxs-lookup"><span data-stu-id="6f965-118">Provides links to [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] resources.</span></span>  
   
-## Secciones relacionadas  
- [WCF Data Services \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkID=143149)  
+## <a name="related-sections"></a><span data-ttu-id="6f965-119">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="6f965-119">Related Sections</span></span>  
+ [<span data-ttu-id="6f965-120">Servicios de datos de WCF (Silverlight)</span><span class="sxs-lookup"><span data-stu-id="6f965-120">WCF Data Services (Silverlight)</span></span>](http://go.microsoft.com/fwlink/?LinkID=143149)  
   
- [Introducción](../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [<span data-ttu-id="6f965-121">Introducción</span><span class="sxs-lookup"><span data-stu-id="6f965-121">Getting Started</span></span>](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
-## Vea también  
- [SDK de OData](http://go.microsoft.com/fwlink/?LinkID=185248)
+## <a name="see-also"></a><span data-ttu-id="6f965-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="6f965-122">See Also</span></span>  
+ [<span data-ttu-id="6f965-123">SDK de OData</span><span class="sxs-lookup"><span data-stu-id="6f965-123">OData SDK</span></span>](http://go.microsoft.com/fwlink/?LinkID=185248)

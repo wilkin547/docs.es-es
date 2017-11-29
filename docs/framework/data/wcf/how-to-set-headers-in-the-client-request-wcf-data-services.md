@@ -1,43 +1,48 @@
 ---
-title: "C&#243;mo: establecer los encabezados en la solicitud de cliente (Servicios de datos de WCF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servicios de datos de Microsoft WCF, personalizar solicitudes"
+title: "Cómo: establecer los encabezados en la solicitud de cliente (Data Services de WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 62bd78c58f83e0fbe2a6d8ed08104b15e183001b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: establecer los encabezados en la solicitud de cliente (Servicios de datos de WCF)
-Cuando use la biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para acceder a un servicio de datos compatible con [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], la biblioteca establece automáticamente los encabezados HTTP necesarios en los mensajes de solicitud enviados al servicio de datos.  Sin embargo, la biblioteca cliente no sabe establecer los encabezados de mensaje necesarios en ciertos casos, como cuando el servicio de datos necesita cookies o autenticación basada en notificaciones.  Para obtener más información, vea [Proteger WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication).  En estos casos, debe establecer manualmente los encabezados de mensaje del mensaje de solicitud antes de enviarlo.  En el ejemplo de este tema se muestra cómo controla el evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> para agregar un nuevo encabezado al mensaje de solicitud antes de que se envíe al servicio de datos.  
+# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a><span data-ttu-id="0f5c6-102">Cómo: establecer los encabezados en la solicitud de cliente (Data Services de WCF)</span><span class="sxs-lookup"><span data-stu-id="0f5c6-102">How to: Set Headers in the Client Request (WCF Data Services)</span></span>
+<span data-ttu-id="0f5c6-103">Cuando use la biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para acceder a un servicio de datos compatible con [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], la biblioteca establece automáticamente los encabezados HTTP necesarios en los mensajes de solicitud enviados al servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-103">When you use the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library to access a data service that supports the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], the client library automatically sets the required HTTP headers in request messages sent to the data service.</span></span> <span data-ttu-id="0f5c6-104">Sin embargo, la biblioteca cliente no sabe establecer los encabezados de mensaje necesarios en ciertos casos, como cuando el servicio de datos necesita cookies o autenticación basada en notificaciones.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-104">However, the client library does not know to set message headers that are required in certain cases, such as when the data service requires claims-based authentication or cookies.</span></span> <span data-ttu-id="0f5c6-105">Para obtener más información, consulte [proteger WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication).</span><span class="sxs-lookup"><span data-stu-id="0f5c6-105">For more information, see [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication).</span></span> <span data-ttu-id="0f5c6-106">En estos casos, debe establecer manualmente los encabezados de mensaje del mensaje de solicitud antes de enviarlo.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-106">In these cases, you must manually set message headers in the request message before it is sent.</span></span> <span data-ttu-id="0f5c6-107">En el ejemplo de este tema se muestra cómo controla el evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> para agregar un nuevo encabezado al mensaje de solicitud antes de que se envíe al servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-107">The example in this topic shows how to handle the <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> event to add a new header to the request message before it is sent to the data service.</span></span>  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente.  Se crean este servicio y las clases de datos del cliente al completar el [tutorial rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  Además puede usar el  [servicio de datos de ejemplo Northwind](http://go.microsoft.com/fwlink/?LinkId=187426) que se publica en el sitio web de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Este servicio de datos de ejemplo es de solo lectura y si se intentan guardar los cambios, devuelve un error.  Los servicios de datos de ejemplo del sitio web de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] permiten la autenticación anónima.  
+ <span data-ttu-id="0f5c6-108">En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="0f5c6-109">Se crean este servicio y las clases de datos de cliente al completar la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="0f5c6-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="0f5c6-110">También puede usar el [servicio de datos de ejemplo Northwind](http://go.microsoft.com/fwlink/?LinkId=187426) que se publica en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sitio Web; estos datos de ejemplo servicio es de solo lectura e intentando guardar cambios devuelve un error.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-110">You can also use the [Northwind sample data service](http://go.microsoft.com/fwlink/?LinkId=187426) that is published on the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web site; this sample data service is read-only and attempting to save changes returns an error.</span></span> <span data-ttu-id="0f5c6-111">Servicios de los datos de ejemplo en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sitio Web permiten la autenticación anónima.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-111">The sample data services on the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Web site allow anonymous authentication.</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo se registra un controlador del evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> y, a continuación, se ejecuta una consulta en el servicio de datos.  
+## <a name="example"></a><span data-ttu-id="0f5c6-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0f5c6-112">Example</span></span>  
+ <span data-ttu-id="0f5c6-113">En el siguiente ejemplo se registra un controlador del evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> y, a continuación, se ejecuta una consulta en el servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-113">The following example registers a handler for the <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> event and then executes a query against the data service.</span></span>  
   
 > [!NOTE]
->  Cuando un servicio de datos necesita que se establezca manualmente el encabezado del mensaje de todas las solicitudes, plantéese registrar el controlador del evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> mediante la invalidación del método parcial `OnContextCreated` del contenedor de entidades que represente el servicio de datos, que en este caso es `NorthwindEntities`.  
+>  <span data-ttu-id="0f5c6-114">Cuando un servicio de datos necesita que se establezca manualmente el encabezado del mensaje de todas las solicitudes, plantéese registrar el controlador del evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> mediante la invalidación del método parcial `OnContextCreated` del contenedor de entidades que represente el servicio de datos, que en este caso es `NorthwindEntities`.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-114">When a data service requires you to manually set the message header for every request, consider registering the handler for the <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> event by overriding the `OnContextCreated` partial method in the entity container that represents the data service, which in this case is `NorthwindEntities`.</span></span>  
   
- [!code-csharp[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#registerheadersquery)]
- [!code-vb[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#registerheadersquery)]  
+[!code-csharp[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#registerheadersquery)]   
+[!code-vb[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#registerheadersquery)]
   
-## Ejemplo  
- El siguiente método controla el evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> y agrega un encabezado de autenticación a la solicitud.  
+## <a name="example"></a><span data-ttu-id="0f5c6-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0f5c6-115">Example</span></span>  
+ <span data-ttu-id="0f5c6-116">El siguiente método controla el evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> y agrega un encabezado de autenticación a la solicitud.</span><span class="sxs-lookup"><span data-stu-id="0f5c6-116">The following method handles the <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> event and adds an Authentication header to the request.</span></span>  
   
- [!code-csharp[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onsendingrequest)]
+ [!code-csharp[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onsendingrequest)]  
  [!code-vb[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onsendingrequest)]  
   
-## Vea también  
- [Proteger WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)   
- [Biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="0f5c6-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="0f5c6-117">See Also</span></span>  
+ [<span data-ttu-id="0f5c6-118">Proteger WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="0f5c6-118">Securing WCF Data Services</span></span>](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
+ [<span data-ttu-id="0f5c6-119">Biblioteca cliente de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="0f5c6-119">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

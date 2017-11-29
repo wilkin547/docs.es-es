@@ -1,39 +1,42 @@
 ---
-title: "C&#243;mo: Migrar el c&#243;digo de cliente de servicio web ASP.NET a Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Migrar el código de cliente de servicio web ASP.NET a Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e0a22a7-e1d5-4718-8997-4319a7cd9027
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d77e07cca938b67f5b79416ac4d8fdef96739ed2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Migrar el c&#243;digo de cliente de servicio web ASP.NET a Windows Communication Foundation
-El procedimiento siguiente describe los amplios pasos que se han de seguir para migrar el código de cliente del servicio web de ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="how-to-migrate-aspnet-web-service-client-code-to-the-windows-communication-foundation"></a><span data-ttu-id="003ca-102">Cómo: Migrar el código de cliente de servicio web ASP.NET a Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="003ca-102">How to: Migrate ASP.NET Web Service Client Code to the Windows Communication Foundation</span></span>
+<span data-ttu-id="003ca-103">El procedimiento siguiente describe los amplios pasos que se han de seguir para migrar el código de cliente del servicio web de ASP.NET a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="003ca-103">The following procedure describes the broad steps that need to be followed to migrate ASP.NET Web Service client code to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## Procedimiento  
+## <a name="procedure"></a><span data-ttu-id="003ca-104">Procedimiento</span><span class="sxs-lookup"><span data-stu-id="003ca-104">Procedure</span></span>  
   
-#### Para migrar un código de cliente de servicio web de ASP.NET a WCF  
+#### <a name="to-migrate-aspnet-web-service-client-code-to-wcf"></a><span data-ttu-id="003ca-105">Para migrar un código de cliente de servicio web de ASP.NET a WCF</span><span class="sxs-lookup"><span data-stu-id="003ca-105">To migrate ASP.NET Web Service client code to WCF</span></span>  
   
-1.  Asegúrese de que existe un conjunto completo de pruebas para el cliente.  
+1.  <span data-ttu-id="003ca-106">Asegúrese de que existe un conjunto completo de pruebas para el cliente.</span><span class="sxs-lookup"><span data-stu-id="003ca-106">Ensure that a comprehensive set of tests exist for the client.</span></span>  
   
-2.  Utilice Visual Studio 2005 para actualizar la aplicación cliente a .NET 2.0.Ejecute el conjunto de pruebas.  
+2.  <span data-ttu-id="003ca-107">Utilice Visual Studio 2005 para actualizar la aplicación cliente a .NET 2.0.</span><span class="sxs-lookup"><span data-stu-id="003ca-107">Use Visual Studio 2005 to upgrade the client application to .NET 2.0.</span></span> <span data-ttu-id="003ca-108">Ejecute el conjunto de pruebas.</span><span class="sxs-lookup"><span data-stu-id="003ca-108">Run the set of tests.</span></span>  
   
-3.  Elimine el código de cliente de ASP.NET del proyecto de cliente.Ese código está en módulos generados mediante la herramienta WSDL.exe.  
+3.  <span data-ttu-id="003ca-109">Elimine el código de cliente de ASP.NET del proyecto de cliente.</span><span class="sxs-lookup"><span data-stu-id="003ca-109">Remove ASP.NET client code from the client project.</span></span> <span data-ttu-id="003ca-110">Ese código está en módulos generados mediante la herramienta WSDL.exe.</span><span class="sxs-lookup"><span data-stu-id="003ca-110">That code is in modules generated using the WSDL.exe tool.</span></span>  
   
-4.  Genere código de cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mediante [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).Agregue ese código al proyecto de cliente y combine el resultado de configuración con el archivo de configuración existente del cliente.  
+4.  <span data-ttu-id="003ca-111">Generar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] código de cliente mediante la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="003ca-111">Generate [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client code using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="003ca-112">Agregue ese código al proyecto de cliente y fusione mediante combinación el resultado de configuración con el archivo de configuración existente del cliente.</span><span class="sxs-lookup"><span data-stu-id="003ca-112">Add that code to the client project and merge the configuration output into the client’s existing configuration file.</span></span>  
   
-5.  Compile la aplicación.Repare los errores de compilación reemplazando las referencias a los tipos de cliente de ASP.NET anteriores por referencias a los nuevos tipos de cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+5.  <span data-ttu-id="003ca-113">Compile la aplicación.</span><span class="sxs-lookup"><span data-stu-id="003ca-113">Compile the application.</span></span> <span data-ttu-id="003ca-114">Repare los errores de compilación reemplazando las referencias a los tipos de cliente de ASP.NET anteriores por referencias a los nuevos tipos de cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="003ca-114">Repair the compilation errors by replacing references to the former ASP.NET client types with references to the new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client types.</span></span>  
   
-6.  Ejecute el conjunto de pruebas.  
+6.  <span data-ttu-id="003ca-115">Ejecute el conjunto de pruebas.</span><span class="sxs-lookup"><span data-stu-id="003ca-115">Run the set of tests.</span></span>  
   
-## Vea también  
- [Cómo migrar el código del servicio web ASP.NET a Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="003ca-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="003ca-116">See Also</span></span>  
+ [<span data-ttu-id="003ca-117">Cómo: migrar código del servicio Web de ASP.NET a Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="003ca-117">How to: Migrate ASP.NET Web Service Code to the Windows Communication Foundation</span></span>](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-to-wcf.md)

@@ -1,56 +1,56 @@
 ---
-title: "Informaci&#243;n general sobre el control BindingNavigator (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DataNavigator"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingNavigator (control) [Windows Forms], acerca del control BindingNavigator"
-  - "datos [Windows Forms], navegar"
-  - "exploración de datos"
-  - "registros, explorar en un formulario"
+title: "Información general sobre el control BindingNavigator (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DataNavigator
+helpviewer_keywords:
+- BindingNavigator control [Windows Forms], about BindingNavigator control
+- records [Windows Forms], navigating on a form
+- data [Windows Forms], navigating
+- data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-caps.latest.revision: 26
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 932223a48500d8a0df5be6ae1ca08e1f333fc711
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el control BindingNavigator (formularios Windows Forms)
-Puede usar el control <xref:System.Windows.Forms.BindingNavigator> para crear un medio estandarizado para que los usuarios busquen y cambien los datos en un Windows Form.  El control <xref:System.Windows.Forms.BindingNavigator> suele usarse con el componente <xref:System.Windows.Forms.BindingSource> para que los usuarios puedan desplazarse por los registros de datos en un formulario e interactuar con los registros.  
+# <a name="bindingnavigator-control-overview-windows-forms"></a><span data-ttu-id="2fed2-102">Información general sobre el control BindingNavigator (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2fed2-102">BindingNavigator Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="2fed2-103">Puede usar el control <xref:System.Windows.Forms.BindingNavigator> para crear un medio estandarizado para que los usuarios busquen y cambien los datos en un Windows Form.</span><span class="sxs-lookup"><span data-stu-id="2fed2-103">You can use the <xref:System.Windows.Forms.BindingNavigator> control to create a standardized means for users to search and change data on a Windows Form.</span></span> <span data-ttu-id="2fed2-104">El control <xref:System.Windows.Forms.BindingNavigator> suele usarse con el componente <xref:System.Windows.Forms.BindingSource> para que los usuarios puedan desplazarse por los registros de datos en un formulario e interactuar con los registros.</span><span class="sxs-lookup"><span data-stu-id="2fed2-104">You frequently use <xref:System.Windows.Forms.BindingNavigator> with the <xref:System.Windows.Forms.BindingSource> component to enable users to move through data records on a form and interact with the records.</span></span>  
   
-## Cómo funciona BindingNavigator  
- El control <xref:System.Windows.Forms.BindingNavigator> se compone de una <xref:System.Windows.Forms.ToolStrip> con una serie de objetos <xref:System.Windows.Forms.ToolStripItem> para la mayoría de las acciones comunes relacionadas con datos: agregar datos, eliminar datos y navegar por los datos.  De forma predeterminada, el control <xref:System.Windows.Forms.BindingNavigator> contiene estos botones estándar.  La siguiente captura de pantalla muestra el control <xref:System.Windows.Forms.BindingNavigator> en un formulario.  
+## <a name="how-the-bindingnavigator-works"></a><span data-ttu-id="2fed2-105">Cómo funciona BindingNavigator</span><span class="sxs-lookup"><span data-stu-id="2fed2-105">How the BindingNavigator Works</span></span>  
+ <span data-ttu-id="2fed2-106">El control <xref:System.Windows.Forms.BindingNavigator> se compone de una <xref:System.Windows.Forms.ToolStrip> con una serie de objetos <xref:System.Windows.Forms.ToolStripItem> para la mayoría de las acciones comunes relacionadas con datos: agregar datos, eliminar datos y navegar por los datos.</span><span class="sxs-lookup"><span data-stu-id="2fed2-106">The <xref:System.Windows.Forms.BindingNavigator> control is composed of a <xref:System.Windows.Forms.ToolStrip> with a series of <xref:System.Windows.Forms.ToolStripItem> objects for most of the common data-related actions: adding data, deleting data, and navigating through data.</span></span> <span data-ttu-id="2fed2-107">De forma predeterminada, el control <xref:System.Windows.Forms.BindingNavigator> contiene estos botones estándar.</span><span class="sxs-lookup"><span data-stu-id="2fed2-107">By default, the <xref:System.Windows.Forms.BindingNavigator> control contains these standard buttons.</span></span> <span data-ttu-id="2fed2-108">La siguiente captura de pantalla muestra el control <xref:System.Windows.Forms.BindingNavigator> en un formulario.</span><span class="sxs-lookup"><span data-stu-id="2fed2-108">The following screen shot shows the <xref:System.Windows.Forms.BindingNavigator> control on a form.</span></span>  
   
- ![Control BindingNavigator](../../../../docs/framework/winforms/controls/media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ <span data-ttu-id="2fed2-109">![BindingNavigator (Control)](../../../../docs/framework/winforms/controls/media/cpdatacontainerctrl.gif "cpDataContainerCtrl")</span><span class="sxs-lookup"><span data-stu-id="2fed2-109">![BindingNavigator Control](../../../../docs/framework/winforms/controls/media/cpdatacontainerctrl.gif "cpDataContainerCtrl")</span></span>  
   
- En la tabla siguiente se enumeran los controles y se describen sus funciones.  
+ <span data-ttu-id="2fed2-110">En la tabla siguiente se enumeran los controles y se describen sus funciones.</span><span class="sxs-lookup"><span data-stu-id="2fed2-110">The following table lists the controls and describes their functions.</span></span>  
   
-|Control|Función|  
-|-------------|-------------|  
-|Botón <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>|Inserta una nueva fila en el origen de datos subyacente.|  
-|Botón <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>|Elimina la fila actual del origen de datos subyacente.|  
-|Botón <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>|Se desplaza al primer elemento del origen de datos subyacente.|  
-|Botón <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>|Se desplaza al último elemento del origen de datos subyacente.|  
-|Botón <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>|Se desplaza al siguiente elemento del origen de datos subyacente.|  
-|Botón <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>|Se desplaza al elemento anterior del origen de datos subyacente.|  
-|Cuadro de texto <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Devuelve la posición actual dentro del origen de datos subyacente.|  
-|Cuadro de texto <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Devuelve el número total de elementos en el origen de datos subyacente.|  
+|<span data-ttu-id="2fed2-111">Control</span><span class="sxs-lookup"><span data-stu-id="2fed2-111">Control</span></span>|<span data-ttu-id="2fed2-112">Función</span><span class="sxs-lookup"><span data-stu-id="2fed2-112">Function</span></span>|  
+|-------------|--------------|  
+|<span data-ttu-id="2fed2-113">Botón <xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-113"><xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> button</span></span>|<span data-ttu-id="2fed2-114">Inserta una nueva fila en el origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-114">Inserts a new row into the underlying data source.</span></span>|  
+|<span data-ttu-id="2fed2-115">Botón <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-115"><xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> button</span></span>|<span data-ttu-id="2fed2-116">Elimina la fila actual del origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-116">Deletes the current row from the underlying data source.</span></span>|  
+|<span data-ttu-id="2fed2-117">Botón <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-117"><xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> button</span></span>|<span data-ttu-id="2fed2-118">Se desplaza al primer elemento del origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-118">Moves to the first item in the underlying data source.</span></span>|  
+|<span data-ttu-id="2fed2-119">Botón <xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-119"><xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> button</span></span>|<span data-ttu-id="2fed2-120">Se desplaza al último elemento del origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-120">Moves to the last item in the underlying data source.</span></span>|  
+|<span data-ttu-id="2fed2-121">Botón <xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-121"><xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> button</span></span>|<span data-ttu-id="2fed2-122">Se desplaza al siguiente elemento del origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-122">Moves to the next item in the underlying data source.</span></span>|  
+|<span data-ttu-id="2fed2-123">Botón <xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-123"><xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> button</span></span>|<span data-ttu-id="2fed2-124">Se desplaza al elemento anterior del origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-124">Moves to the previous item in the underlying data source.</span></span>|  
+|<span data-ttu-id="2fed2-125">Cuadro de texto <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-125"><xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> text box</span></span>|<span data-ttu-id="2fed2-126">Devuelve la posición actual dentro del origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-126">Returns the current position within the underlying data source.</span></span>|  
+|<span data-ttu-id="2fed2-127">Cuadro de texto <xref:System.Windows.Forms.BindingNavigator.CountItem%2A></span><span class="sxs-lookup"><span data-stu-id="2fed2-127"><xref:System.Windows.Forms.BindingNavigator.CountItem%2A> text box</span></span>|<span data-ttu-id="2fed2-128">Devuelve el número total de elementos en el origen de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-128">Returns the total number of items in the underlying data source.</span></span>|  
   
- Para cada control de esta colección, hay un miembro correspondiente del componente <xref:System.Windows.Forms.BindingSource> que proporciona la misma funcionalidad de mediante programación.  Por ejemplo, el botón <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> corresponde al método <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> del componente <xref:System.Windows.Forms.BindingSource>, el botón <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> corresponde al método <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>, y así sucesivamente.  
+ <span data-ttu-id="2fed2-129">Para cada control de esta colección, hay un miembro correspondiente del componente <xref:System.Windows.Forms.BindingSource> que proporciona la misma funcionalidad de mediante programación.</span><span class="sxs-lookup"><span data-stu-id="2fed2-129">For each control in this collection, there is a corresponding member of the <xref:System.Windows.Forms.BindingSource> component that programmatically provides the same functionality.</span></span> <span data-ttu-id="2fed2-130">Por ejemplo, el botón <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> corresponde al método <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> del componente <xref:System.Windows.Forms.BindingSource>, el botón <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> corresponde al método <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>, y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="2fed2-130">For example, the <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> button corresponds to the <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> method of the <xref:System.Windows.Forms.BindingSource> component, the <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> button corresponds to the <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> method, and so on.</span></span>  
   
- Si los botones predeterminados no son adecuados para su aplicación o si necesita otros botones para admitir otro tipo de funcionalidad, puede proporcionar sus propios botones <xref:System.Windows.Forms.ToolStrip>.  Consulte también [Cómo: Agregar los botones Cargar, Guardar y Cancelar al control BindingNavigator de formularios Windows Forms](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).  
+ <span data-ttu-id="2fed2-131">Si los botones predeterminados no son adecuados para su aplicación o si necesita otros botones para admitir otro tipo de funcionalidad, puede proporcionar sus propios botones <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="2fed2-131">If the default buttons are not suited to your application, or if you require additional buttons to support other types of functionality, you can supply your own <xref:System.Windows.Forms.ToolStrip> buttons.</span></span> <span data-ttu-id="2fed2-132">Vea también [Cómo: Agregar los botones Cargar, Guardar y Cancelar al control BindingNavigator de Windows Forms](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).</span><span class="sxs-lookup"><span data-stu-id="2fed2-132">Also see [How to: Add Load, Save, and Cancel Buttons to the Windows Forms BindingNavigator Control](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.BindingNavigator>   
- <xref:System.Windows.Forms.BindingSource>   
- [BindingNavigator \(Control\)](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="2fed2-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="2fed2-133">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [<span data-ttu-id="2fed2-134">BindingNavigator (control)</span><span class="sxs-lookup"><span data-stu-id="2fed2-134">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)

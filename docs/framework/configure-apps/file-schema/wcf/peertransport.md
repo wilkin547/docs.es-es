@@ -1,28 +1,36 @@
 ---
-title: "&lt;peerTransport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;peerTransport&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c9c01e997e3ba804eae3036e94f2e2e1b951b25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;peerTransport&gt;
-Define un transporte del mismo nivel para un enlace personalizado.  
+# <a name="ltpeertransportgt"></a><span data-ttu-id="4bc14-102">&lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="4bc14-102">&lt;peerTransport&gt;</span></span>
+<span data-ttu-id="4bc14-103">Define un transporte del mismo nivel para un enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="4bc14-103">Defines a peer transport for a custom binding.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="4bc14-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="4bc14-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="4bc14-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="4bc14-105">\<bindings></span></span>  
+<span data-ttu-id="4bc14-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="4bc14-106">\<customBinding></span></span>  
+<span data-ttu-id="4bc14-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="4bc14-107">\<binding></span></span>  
+<span data-ttu-id="4bc14-108">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="4bc14-108">\<peerTransport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4bc14-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4bc14-109">Syntax</span></span>  
   
+```xml  
 <peerTransport   
     listenIpAddress="String"  
     maxBufferPoolSize="Integer"  
@@ -33,41 +41,41 @@ Define un transporte del mismo nivel para un enlace personalizado.
 />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4bc14-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="4bc14-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="4bc14-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="4bc14-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="4bc14-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="4bc14-112">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|listenIpAddress|Una cadena que especifica una dirección IP en la que el nodo entre pares realizará escuchas para los mensajes del TCP.  De manera predeterminada, es `null`.|  
-|maxBufferPoolSize|Un entero positivo que especifica el tamaño máximo del grupo de búferes.  El valor predeterminado es 524288.<br /><br /> Muchas partes de los búferes de uso WCF.  Crear y destruir búferes cada vez que se usan es caro, y la recolección de elementos no utilizados para los búferes también es cara.  Con grupos de búferes, puede tomar un búfer del grupo, usarlo y devolverlo al grupo una vez haya terminado.  Así se evita la sobrecarga al crear y destruir búferes.|  
-|maxReceivedMessageSize|Un entero positivo que define el tamaño de mensaje máximo en bytes incluidos los encabezados.  El remitente de un mensaje recibe un error SOAP cuando el mensaje es demasiado grande para el receptor.  El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento.  El valor predeterminado es 65536.|  
-|puerto|Un entero que especifica el puerto de la interfaz de red en el que este enlace procesará los mensajes de TCP de canal del mismo nivel.  Dicho valor debe encontrarse entre <xref:System.Net.IPEndPoint.MinPort> y <xref:System.Net.IPEndPoint.MaxPort>.  El valor predeterminado es 0.|  
+|<span data-ttu-id="4bc14-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="4bc14-113">Attribute</span></span>|<span data-ttu-id="4bc14-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="4bc14-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="4bc14-115">listenIpAddress</span><span class="sxs-lookup"><span data-stu-id="4bc14-115">listenIpAddress</span></span>|<span data-ttu-id="4bc14-116">Una cadena que especifica una dirección IP en la que el nodo entre pares realizará escuchas para los mensajes del TCP.</span><span class="sxs-lookup"><span data-stu-id="4bc14-116">A string that specifies an IP address on which the peer node will listen for TCP messages.</span></span> <span data-ttu-id="4bc14-117">De manera predeterminada, es `null`.</span><span class="sxs-lookup"><span data-stu-id="4bc14-117">The default is `null`.</span></span>|  
+|<span data-ttu-id="4bc14-118">maxBufferPoolSize</span><span class="sxs-lookup"><span data-stu-id="4bc14-118">maxBufferPoolSize</span></span>|<span data-ttu-id="4bc14-119">Un entero positivo que especifica el tamaño máximo del grupo de búferes.</span><span class="sxs-lookup"><span data-stu-id="4bc14-119">A positive integer that specifies the maximum size of the buffer pool.</span></span> <span data-ttu-id="4bc14-120">El valor predeterminado es 524288.</span><span class="sxs-lookup"><span data-stu-id="4bc14-120">The default is 524288.</span></span><br /><br /> <span data-ttu-id="4bc14-121">Muchas partes de los búferes de uso WCF.</span><span class="sxs-lookup"><span data-stu-id="4bc14-121">Many parts of WCF use buffers.</span></span> <span data-ttu-id="4bc14-122">Crear y destruir búferes cada vez que se usan es caro, y la recolección de elementos no utilizados para los búferes también es cara.</span><span class="sxs-lookup"><span data-stu-id="4bc14-122">Creating and destroying buffers each time they are used is expensive, and garbage collection for buffers is also expensive.</span></span> <span data-ttu-id="4bc14-123">Con grupos de búferes, puede tomar un búfer del grupo, usarlo y devolverlo al grupo una vez haya terminado.</span><span class="sxs-lookup"><span data-stu-id="4bc14-123">With buffer pools, you can take a buffer from the pool, use it, and return it to the pool once you are done.</span></span> <span data-ttu-id="4bc14-124">Así se evita la sobrecarga al crear y destruir búferes.</span><span class="sxs-lookup"><span data-stu-id="4bc14-124">Thus the overhead in creating and destroying buffers is avoided.</span></span>|  
+|<span data-ttu-id="4bc14-125">maxReceivedMessageSize</span><span class="sxs-lookup"><span data-stu-id="4bc14-125">maxReceivedMessageSize</span></span>|<span data-ttu-id="4bc14-126">Un entero positivo que define el tamaño de mensaje máximo en bytes incluidos los encabezados.</span><span class="sxs-lookup"><span data-stu-id="4bc14-126">A positive integer that defines the maximum message size in bytes including headers.</span></span> <span data-ttu-id="4bc14-127">El remitente de un mensaje recibe un error SOAP cuando el mensaje es demasiado grande para el receptor.</span><span class="sxs-lookup"><span data-stu-id="4bc14-127">The sender of a message receives a SOAP fault when the message is too large for the receiver.</span></span> <span data-ttu-id="4bc14-128">El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="4bc14-128">The receiver drops the message and creates an entry of the event in the trace log.</span></span> <span data-ttu-id="4bc14-129">El valor predeterminado es 65536.</span><span class="sxs-lookup"><span data-stu-id="4bc14-129">The default is 65536.</span></span>|  
+|<span data-ttu-id="4bc14-130">puerto</span><span class="sxs-lookup"><span data-stu-id="4bc14-130">port</span></span>|<span data-ttu-id="4bc14-131">Un entero que especifica el puerto de la interfaz de red en el que este enlace procesará los mensajes de TCP de canal del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="4bc14-131">An integer that specifies the network interface port on which this binding will process peer channel TCP messages.</span></span> <span data-ttu-id="4bc14-132">Dicho valor debe encontrarse entre <xref:System.Net.IPEndPoint.MinPort> y <xref:System.Net.IPEndPoint.MaxPort>.</span><span class="sxs-lookup"><span data-stu-id="4bc14-132">This value must be between <xref:System.Net.IPEndPoint.MinPort> and <xref:System.Net.IPEndPoint.MaxPort>.</span></span> <span data-ttu-id="4bc14-133">El valor predeterminado es 0.</span><span class="sxs-lookup"><span data-stu-id="4bc14-133">The default is 0.</span></span>|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="4bc14-134">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="4bc14-134">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<seguridad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Define la configuración de seguridad para este transporte.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
+|<span data-ttu-id="4bc14-135">Elemento</span><span class="sxs-lookup"><span data-stu-id="4bc14-135">Element</span></span>|<span data-ttu-id="4bc14-136">Descripción</span><span class="sxs-lookup"><span data-stu-id="4bc14-136">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4bc14-137">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="4bc14-137">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|<span data-ttu-id="4bc14-138">Define la configuración de seguridad para este transporte.</span><span class="sxs-lookup"><span data-stu-id="4bc14-138">Defines the security settings for this transport.</span></span> <span data-ttu-id="4bc14-139">Este elemento es del tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="4bc14-139">This element is of type <xref:System.ServiceModel.Configuration.PeerSecurityElement>.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="4bc14-140">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="4bc14-140">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<enlace\>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|<span data-ttu-id="4bc14-141">Elemento</span><span class="sxs-lookup"><span data-stu-id="4bc14-141">Element</span></span>|<span data-ttu-id="4bc14-142">Descripción</span><span class="sxs-lookup"><span data-stu-id="4bc14-142">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4bc14-143">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="4bc14-143">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="4bc14-144">Define todas las funcionalidades de enlace del enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="4bc14-144">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## Comentarios  
- Este transporte no se puede utilizar con contratos que tengan operaciones respuesta\-solicitud.  
+## <a name="remarks"></a><span data-ttu-id="4bc14-145">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4bc14-145">Remarks</span></span>  
+ <span data-ttu-id="4bc14-146">Este transporte no se puede utilizar con contratos que tengan operaciones respuesta-solicitud.</span><span class="sxs-lookup"><span data-stu-id="4bc14-146">This transport cannot be used with contracts that have request/reply operations.</span></span>  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.PeerTransportElement>   
- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>   
- <xref:System.ServiceModel.Channels.TransportBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)   
- [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="4bc14-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="4bc14-147">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.PeerTransportElement>  
+ <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="4bc14-148">Transportes</span><span class="sxs-lookup"><span data-stu-id="4bc14-148">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="4bc14-149">Elegir un transporte</span><span class="sxs-lookup"><span data-stu-id="4bc14-149">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="4bc14-150">Enlaces</span><span class="sxs-lookup"><span data-stu-id="4bc14-150">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="4bc14-151">Extensión de enlaces</span><span class="sxs-lookup"><span data-stu-id="4bc14-151">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="4bc14-152">Enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="4bc14-152">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="4bc14-153">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="4bc14-153">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

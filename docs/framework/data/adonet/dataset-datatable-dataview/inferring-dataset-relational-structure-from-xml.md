@@ -1,58 +1,61 @@
 ---
-title: "Deducir la estructura relacional de DataSet de XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Inferir una estructura relacional de un conjunto de datos a partir de XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5a846bc321aab19cb1d04ba55ca4cca4b7188bcd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Deducir la estructura relacional de DataSet de XML
-La estructura relacional, o esquema, de un <xref:System.Data.DataSet> está compuesta por tablas, columnas, restricciones y relaciones.  Al cargar un <xref:System.Data.DataSet> desde XML es posible predefinir el esquema, o bien crearlo, de forma explícita o por inferencia, a partir del código XML que se carga.  Para obtener más información sobre la carga del esquema y el contenido de un <xref:System.Data.DataSet> desde XML, vea [Cargar DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) y [Cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
+# <a name="inferring-dataset-relational-structure-from-xml"></a><span data-ttu-id="4f2b4-102">Inferir una estructura relacional de un conjunto de datos a partir de XML</span><span class="sxs-lookup"><span data-stu-id="4f2b4-102">Inferring DataSet Relational Structure from XML</span></span>
+<span data-ttu-id="4f2b4-103">La estructura relacional, o esquema, de un <xref:System.Data.DataSet> está compuesta por tablas, columnas, restricciones y relaciones.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-103">The relational structure, or schema, of a <xref:System.Data.DataSet> is made up of tables, columns, constraints, and relations.</span></span> <span data-ttu-id="4f2b4-104">Al cargar un <xref:System.Data.DataSet> desde XML es posible predefinir el esquema, o bien crearlo, de forma explícita o por inferencia, a partir del código XML que se carga.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-104">When loading a <xref:System.Data.DataSet> from XML, the schema can be predefined, or it can be created, either explicitly or through inference, from the XML being loaded.</span></span> <span data-ttu-id="4f2b4-105">Para obtener más información acerca de cómo cargar el esquema y el contenido de un <xref:System.Data.DataSet> de XML, vea [cargar DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) y [cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4f2b4-105">For more information about loading the schema and contents of a <xref:System.Data.DataSet> from XML, see [Loading a DataSet from XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) and [Loading DataSet Schema Information from XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).</span></span>  
   
- Si se crea el esquema de un <xref:System.Data.DataSet> desde XML, el método aconsejado es especificar de forma explícita el esquema mediante el lenguaje de definición de esquema XML \(XSD\) \(tal y como se describen en [Derivar la estructura relacional de DataSet desde la definición de esquema XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)\) o mediante el reducido de datos XML \(XDR\).  Si no hay ningún esquema XML o XDR disponible en XML, el esquema del <xref:System.Data.DataSet> se puede deducir de la estructura de los elementos y atributos XML.  
+ <span data-ttu-id="4f2b4-106">Si el esquema de un <xref:System.Data.DataSet> se crea desde XML, el método preferido consiste en especificar explícitamente el esquema mediante el esquema XML definición lenguaje (XSD) (como se describe en [derivar estructura relacional de DataSet de esquemas XML (XSD) ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)) o los datos XML reducen (XDR).</span><span class="sxs-lookup"><span data-stu-id="4f2b4-106">If the schema of a <xref:System.Data.DataSet> is being created from XML, the preferred method is to explicitly specify the schema using either the XML Schema definition language (XSD) (as described in [Deriving DataSet Relational Structure from XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)) or the XML-Data Reduced (XDR).</span></span> <span data-ttu-id="4f2b4-107">Si no hay ningún esquema XML o XDR disponible en XML, el esquema del <xref:System.Data.DataSet> se puede deducir de la estructura de los elementos y atributos XML.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-107">If no XML Schema or XDR schema is available in the XML, the schema of the <xref:System.Data.DataSet> can be inferred from the structure of the XML elements and attributes.</span></span>  
   
- En esta sección se describen las reglas para deducir el esquema de un <xref:System.Data.DataSet>; para ello se muestran los elementos y atributos XML y su estructura, así como el esquema deducido del <xref:System.Data.DataSet> resultante.  
+ <span data-ttu-id="4f2b4-108">En esta sección se describen las reglas para deducir el esquema de un <xref:System.Data.DataSet>; para ello se muestran los elementos y atributos XML y su estructura, así como el esquema deducido del <xref:System.Data.DataSet> resultante.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-108">This section describes the rules for <xref:System.Data.DataSet> schema inference by showing XML elements and attributes and their structure, and the resulting inferred <xref:System.Data.DataSet> schema.</span></span>  
   
- No todos los atributos presentes en un documento XML deben incluirse en el proceso de deducción.  Los atributos calificados por el espacio de nombres pueden incluir metadatos importantes para el documento XML, pero no para el esquema del <xref:System.Data.DataSet>.  Mediante <xref:System.Data.DataSet.InferXmlSchema%2A> es posible especificar determinados espacios de nombres que desea pasar por alto durante el proceso de inferencia.  Para obtener más información, consulta [Cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
+ <span data-ttu-id="4f2b4-109">No todos los atributos presentes en un documento XML deben incluirse en el proceso de deducción.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-109">Not all attributes present in an XML document should be included in the inference process.</span></span> <span data-ttu-id="4f2b4-110">Los atributos calificados por el espacio de nombres pueden incluir metadatos importantes para el documento XML, pero no para el esquema del <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-110">Namespace-qualified attributes can include metadata that is important for the XML document but not for the <xref:System.Data.DataSet> schema.</span></span> <span data-ttu-id="4f2b4-111">Mediante <xref:System.Data.DataSet.InferXmlSchema%2A> es posible especificar determinados espacios de nombres que desea pasar por alto durante el proceso de inferencia.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-111">Using <xref:System.Data.DataSet.InferXmlSchema%2A>, you can specify namespaces to be ignored during the inference process.</span></span> <span data-ttu-id="4f2b4-112">Para obtener más información, consulte [cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4f2b4-112">For more information, see [Loading DataSet Schema Information from XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).</span></span>  
   
-## En esta sección  
- [Resumen del proceso de inferencia de esquemas de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
- Proporciona un resumen general de las reglas para deducir el esquema de un <xref:System.Data.DataSet> a partir de XML.  
+## <a name="in-this-section"></a><span data-ttu-id="4f2b4-113">En esta sección</span><span class="sxs-lookup"><span data-stu-id="4f2b4-113">In This Section</span></span>  
+ [<span data-ttu-id="4f2b4-114">Resumen del proceso de inferencia del esquema de conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="4f2b4-114">Summary of the DataSet Schema Inference Process</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
+ <span data-ttu-id="4f2b4-115">Proporciona un resumen general de las reglas para deducir el esquema de un <xref:System.Data.DataSet> a partir de XML.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-115">Provides a high-level summary of the rules for inferring the schema of a <xref:System.Data.DataSet> from XML.</span></span>  
   
- [Deducir tablas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
- Describe los elementos XML que se deducen como tablas en un <xref:System.Data.DataSet>.  
+ [<span data-ttu-id="4f2b4-116">Inferir tablas</span><span class="sxs-lookup"><span data-stu-id="4f2b4-116">Inferring Tables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
+ <span data-ttu-id="4f2b4-117">Describe los elementos XML que se deducen como tablas en un <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-117">Describes the XML elements that are inferred as tables in a <xref:System.Data.DataSet>.</span></span>  
   
- [Deducir columnas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-columns.md)  
- Describe los elementos y atributos XML que se deducen como columnas de tabla.  
+ [<span data-ttu-id="4f2b4-118">Inferir columnas</span><span class="sxs-lookup"><span data-stu-id="4f2b4-118">Inferring Columns</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-columns.md)  
+ <span data-ttu-id="4f2b4-119">Describe los elementos y atributos XML que se deducen como columnas de tabla.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-119">Describes the XML elements and attributes that are inferred as table columns.</span></span>  
   
- [Deducir relaciones](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
- Describe los objetos <xref:System.Data.DataRelation> y <xref:System.Data.ForeignKeyConstraint> creados para tablas deducidas y anidadas.  
+ [<span data-ttu-id="4f2b4-120">Deducir relaciones</span><span class="sxs-lookup"><span data-stu-id="4f2b4-120">Inferring Relationships</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-relationships.md)  
+ <span data-ttu-id="4f2b4-121">Describe los objetos <xref:System.Data.DataRelation> y <xref:System.Data.ForeignKeyConstraint> creados para tablas deducidas y anidadas.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-121">Describes the <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects created for nested, inferred tables.</span></span>  
   
- [Deducir texto de elemento](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  
- Describe las columnas que se crean para texto en los elementos XML y explica cuándo se pasa por alto el texto de los elementos XML.  
+ [<span data-ttu-id="4f2b4-122">Deducir texto de elemento</span><span class="sxs-lookup"><span data-stu-id="4f2b4-122">Inferring Element Text</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-element-text.md)  
+ <span data-ttu-id="4f2b4-123">Describe las columnas que se crean para texto en los elementos XML y explica cuándo se pasa por alto el texto de los elementos XML.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-123">Describes the columns that are created for text in XML elements, and explains when text in XML elements is ignored.</span></span>  
   
- [Limitaciones de la inferencia](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inference-limitations.md)  
- Describe las limitaciones de la inferencia del esquema.  
+ [<span data-ttu-id="4f2b4-124">Limitaciones de inferencia</span><span class="sxs-lookup"><span data-stu-id="4f2b4-124">Inference Limitations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inference-limitations.md)  
+ <span data-ttu-id="4f2b4-125">Describe las limitaciones de la inferencia del esquema.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-125">Discusses the limitations of schema inference.</span></span>  
   
-## Secciones relacionadas  
- [Utilizar XML en un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- Describe cómo interactúa el objeto <xref:System.Data.DataSet> con los datos XML.  
+## <a name="related-sections"></a><span data-ttu-id="4f2b4-126">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="4f2b4-126">Related Sections</span></span>  
+ [<span data-ttu-id="4f2b4-127">Usar XML en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="4f2b4-127">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ <span data-ttu-id="4f2b4-128">Describe cómo interactúa el objeto <xref:System.Data.DataSet> con los datos XML.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-128">Describes how the <xref:System.Data.DataSet> object interacts with XML data.</span></span>  
   
- [Derivar la estructura relacional de DataSet desde la definición de esquema XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Describe la estructura relacional o un esquema de un <xref:System.Data.DataSet> que se crea a partir del esquema del lenguaje de definición de esquemas XML \(XSD\).  
+ [<span data-ttu-id="4f2b4-129">Derivar la estructura relacional de un conjunto de datos de esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="4f2b4-129">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="4f2b4-130">Describe la estructura relacional o un esquema de un <xref:System.Data.DataSet> que se crea a partir del esquema del lenguaje de definición de esquemas XML (XSD).</span><span class="sxs-lookup"><span data-stu-id="4f2b4-130">Describes the relational structure, or schema, of a <xref:System.Data.DataSet> that is created from XML Schema definition language (XSD) schema.</span></span>  
   
- [Información general sobre ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
- Describe la arquitectura y los componentes de ADO.NET, así como su uso para obtener acceso a orígenes de datos existentes y para administrar los datos de aplicación.  
+ [<span data-ttu-id="4f2b4-131">Información general sobre ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4f2b4-131">ADO.NET Overview</span></span>](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ <span data-ttu-id="4f2b4-132">Describe la arquitectura y los componentes de ADO.NET, así como su uso para obtener acceso a orígenes de datos existentes y para administrar los datos de aplicación.</span><span class="sxs-lookup"><span data-stu-id="4f2b4-132">Describes the ADO.NET architecture and components and how to use them to access existing data sources and manage application data.</span></span>  
   
-## Vea también  
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="4f2b4-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="4f2b4-133">See Also</span></span>  
+ [<span data-ttu-id="4f2b4-134">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="4f2b4-134">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

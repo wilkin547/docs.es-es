@@ -1,67 +1,72 @@
 ---
-title: "&lt;userPrincipalName&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;userPrincipalName&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b93a0cc24953024e265df418ec6dd738598dd0f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;userPrincipalName&gt;
-Especifica el Nombre principal de usuario \(UPN\) de un servicio que va a autenticar el cliente.  
+# <a name="ltuserprincipalnamegt"></a><span data-ttu-id="ec1e1-102">&lt;userPrincipalName&gt;</span><span class="sxs-lookup"><span data-stu-id="ec1e1-102">&lt;userPrincipalName&gt;</span></span>
+<span data-ttu-id="ec1e1-103">Especifica el Nombre principal de usuario (UPN) de un servicio que va a autenticar el cliente.</span><span class="sxs-lookup"><span data-stu-id="ec1e1-103">Specifies the User Principal Name (UPN) of a service to be authenticated by the client.</span></span>  
   
- Para obtener más información sobre la configuración de UPN, consulte [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ <span data-ttu-id="ec1e1-104">Para obtener más información acerca de cómo establecer el UPN, consulte [autenticación e identidad de servicio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="ec1e1-104">For more information about setting the UPN, see [Service Identity and Authentication](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
-## Sintaxis  
+<span data-ttu-id="ec1e1-105">\<identidad ></span><span class="sxs-lookup"><span data-stu-id="ec1e1-105">\<identity></span></span>  
+<span data-ttu-id="ec1e1-106">\<userPrincipalName ></span><span class="sxs-lookup"><span data-stu-id="ec1e1-106">\<userPrincipalName></span></span>  
   
+## <a name="syntax"></a><span data-ttu-id="ec1e1-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ec1e1-107">Syntax</span></span>  
+  
+```xml  
+<userPrincipalName value="String" />  
 ```  
   
-<userPrincipalName value = "String" />  
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ec1e1-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="ec1e1-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ec1e1-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ec1e1-109">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
+### <a name="attributes"></a><span data-ttu-id="ec1e1-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="ec1e1-110">Attributes</span></span>  
   
-### Atributos  
+|<span data-ttu-id="ec1e1-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="ec1e1-111">Attribute</span></span>|<span data-ttu-id="ec1e1-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="ec1e1-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="ec1e1-113">value</span><span class="sxs-lookup"><span data-stu-id="ec1e1-113">value</span></span>|<span data-ttu-id="ec1e1-114">Un nombre de cuenta de usuario (a veces denominado nombre de inicio de sesión de usuario) y un nombre de dominio que identifica el dominio en el que se ubica la cuenta de usuario.</span><span class="sxs-lookup"><span data-stu-id="ec1e1-114">A user account name (sometimes referred to as the user logon name) and a domain name identifying the domain in which the user account is located.</span></span> <span data-ttu-id="ec1e1-115">Éste es el uso estándar para iniciar sesión en un dominio de Windows.</span><span class="sxs-lookup"><span data-stu-id="ec1e1-115">This is the standard usage for logging on to a Windows domain.</span></span> <span data-ttu-id="ec1e1-116">El formato es: someone@example.com (para una dirección de correo electrónico).</span><span class="sxs-lookup"><span data-stu-id="ec1e1-116">The format is: someone@example.com (as for an e-mail address).</span></span>|  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|value|Un nombre de cuenta de usuario \(a veces denominado nombre de inicio de sesión de usuario\) y un nombre de dominio que identifica el dominio en el que se ubica la cuenta de usuario.  Éste es el uso estándar para iniciar sesión en un dominio de Windows.  El formato es: nombre@ejemplo.com \(para una dirección de correo electrónico\).|  
+### <a name="child-elements"></a><span data-ttu-id="ec1e1-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ec1e1-117">Child Elements</span></span>  
+ <span data-ttu-id="ec1e1-118">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="ec1e1-118">None.</span></span>  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="parent-elements"></a><span data-ttu-id="ec1e1-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ec1e1-119">Parent Elements</span></span>  
   
-### Elementos primarios  
+|<span data-ttu-id="ec1e1-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="ec1e1-120">Element</span></span>|<span data-ttu-id="ec1e1-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="ec1e1-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ec1e1-122">\<identidad ></span><span class="sxs-lookup"><span data-stu-id="ec1e1-122">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="ec1e1-123">Especifica la identidad del servicio que va a autenticar el cliente.</span><span class="sxs-lookup"><span data-stu-id="ec1e1-123">Specifies the identity of the service to be authenticated by the client.</span></span>|  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<identidad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
+## <a name="remarks"></a><span data-ttu-id="ec1e1-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ec1e1-124">Remarks</span></span>  
+ <span data-ttu-id="ec1e1-125">Un cliente [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] seguro que se conecta a un extremo con esta identidad utiliza UPN al realizar la autenticación de SSPI con el extremo.</span><span class="sxs-lookup"><span data-stu-id="ec1e1-125">A secure [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] client that connects to an endpoint with this identity uses the UPN when performing SSPI authentication with the endpoint.</span></span>  
   
-## Comentarios  
- Un cliente [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] seguro que se conecta a un extremo con esta identidad utiliza UPN al realizar la autenticación de SSPI con el extremo.  
+## <a name="example"></a><span data-ttu-id="ec1e1-126">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ec1e1-126">Example</span></span>  
+ <span data-ttu-id="ec1e1-127">El código de configuración siguiente especifica el UPN del servicio que va a autenticar el cliente.</span><span class="sxs-lookup"><span data-stu-id="ec1e1-127">The following configuration code specifies the UPN of the service to be authenticated by the client.</span></span>  
   
-## Ejemplo  
- El código de configuración siguiente especifica el UPN del servicio que va a autenticar el cliente.  
-  
-```  
+```xml  
 <identity>  
   <userPrincipalName value="someone@cohowinery.com" />  
 </identity>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>   
- <xref:System.ServiceModel.UpnEndpointIdentity>   
- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<identidad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a><span data-ttu-id="ec1e1-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="ec1e1-128">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
+ <xref:System.ServiceModel.UpnEndpointIdentity>  
+ [<span data-ttu-id="ec1e1-129">Autenticación e identidad de servicio</span><span class="sxs-lookup"><span data-stu-id="ec1e1-129">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="ec1e1-130">\<identidad ></span><span class="sxs-lookup"><span data-stu-id="ec1e1-130">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

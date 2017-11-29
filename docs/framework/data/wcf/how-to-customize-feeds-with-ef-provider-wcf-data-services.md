@@ -1,51 +1,54 @@
 ---
-title: "C&#243;mo: Personalizar fuentes con el proveedor de Entity Framework (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servicios de datos de Microsoft WCF, personalizar"
-  - "Servicios de datos de Microsoft WCF, personalizar fuentes"
+title: "Cómo: Personalizar fuentes con el proveedor de Entity Framework (Data Services de WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, customizing
+- WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 44dfa0a8371ff8184462e15da71f8a9f0f9767d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Personalizar fuentes con el proveedor de Entity Framework (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a los elementos no usados que se definen en el protocolo AtomPub.  En este tema se explica cómo definir los atributos de asignación para los tipos de entidad en un modelo de datos definido en un archivo .edmx utilizando el proveedor de Entity Framework.  Para obtener más información, consulta [Personalización de fuentes](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a><span data-ttu-id="2db8b-102">Cómo: Personalizar fuentes con el proveedor de Entity Framework (Data Services de WCF)</span><span class="sxs-lookup"><span data-stu-id="2db8b-102">How to: Customize Feeds with the Entity Framework Provider (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="2db8b-103"> le permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a los elementos no usados que se definen en el protocolo AtomPub.</span><span class="sxs-lookup"><span data-stu-id="2db8b-103"> enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="2db8b-104">En este tema se explica cómo definir los atributos de asignación para los tipos de entidad en un modelo de datos definido en un archivo .edmx utilizando el proveedor de Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="2db8b-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined in an .edmx file by using the Entity Framework provider.</span></span> <span data-ttu-id="2db8b-105">Para obtener más información, consulte [personalización de fuente](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="2db8b-105">For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span></span>  
   
- En este tema modificará manualmente el archivo .edmx generado por la herramienta que contiene el modelo de datos.  Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo.  Para obtener más información sobre el archivo .edmx generado por las herramientas de Entity Data Model, vea [.edmx File Overview](http://msdn.microsoft.com/es-es/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente.  Se crean este servicio y las clases de datos del cliente al completar el [tutorial rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ <span data-ttu-id="2db8b-106">En este tema modificará manualmente el archivo .edmx generado por la herramienta que contiene el modelo de datos.</span><span class="sxs-lookup"><span data-stu-id="2db8b-106">In this topic you will manually modify the tool-generated .edmx file that contains the data model.</span></span> <span data-ttu-id="2db8b-107">Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo.</span><span class="sxs-lookup"><span data-stu-id="2db8b-107">You must manually modify the file because extensions to the data model are not supported by the Entity Designer.</span></span> <span data-ttu-id="2db8b-108">Para obtener más información acerca del archivo .edmx que generan las herramientas de Entity Data Model, vea [información general sobre archivo .edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span><span class="sxs-lookup"><span data-stu-id="2db8b-108">For more information about the .edmx file that the Entity Data Model tools generate, see [.edmx File Overview](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span></span> <span data-ttu-id="2db8b-109">En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="2db8b-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="2db8b-110">Se crean este servicio y las clases de datos de cliente al completar la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="2db8b-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-### Para modificar manualmente el archivo Northwind.edmx para agregar los atributos de personalización de fuente  
+### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a><span data-ttu-id="2db8b-111">Para modificar manualmente el archivo Northwind.edmx para agregar los atributos de personalización de fuente</span><span class="sxs-lookup"><span data-stu-id="2db8b-111">To manually modify the Northwind.edmx file to add feed customization attributes</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario del mouse en el archivo `Northwind.edmx` y, a continuación, elija **Abrir con**.  
+1.  <span data-ttu-id="2db8b-112">En **el Explorador de soluciones**, haga clic en el `Northwind.edmx` de archivos y, a continuación, haga clic en **abrir con**.</span><span class="sxs-lookup"><span data-stu-id="2db8b-112">In **Solution Explorer**, right-click the `Northwind.edmx` file, and then click **Open with**.</span></span>  
   
-2.  En el cuadro de diálogo **Abrir con \- Northwind.edmx**, seleccione **Editor XML** y, a continuación, haga clic en **Aceptar**.  
+2.  <span data-ttu-id="2db8b-113">En el **abrir con - Northwind.edmx** cuadro de diálogo, seleccione **Editor XML**y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="2db8b-113">In the **Open With - Northwind.edmx** dialog box, select **XML Editor**, and then click **OK**.</span></span>  
   
-3.  Busque el elemento `ConceptualModels` y reemplace el tipo de entidad `Customers` existente con el siguiente elemento que contiene los atributos de asignación de personalización de la fuente:  
+3.  <span data-ttu-id="2db8b-114">Busque el elemento `ConceptualModels` y reemplace el tipo de entidad `Customers` existente con el siguiente elemento que contiene los atributos de asignación de personalización de la fuente:</span><span class="sxs-lookup"><span data-stu-id="2db8b-114">Locate the `ConceptualModels` element and replace the existing `Customers` entity type with the following element that contains feed customization mapping attributes:</span></span>  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  Guarde los cambios y cierre el archivo Northwind.edmx.  
+4.  <span data-ttu-id="2db8b-115">Guarde los cambios y cierre el archivo Northwind.edmx.</span><span class="sxs-lookup"><span data-stu-id="2db8b-115">Save changes and close the Northwind.edmx file.</span></span>  
   
-5.  \(Opcional\) Haga clic con el botón secundario en el archivo Northwind.edmx y, a continuación, haga clic en **Ejecutar herramienta personalizada**.  
+5.  <span data-ttu-id="2db8b-116">(Opcional) Haga clic en el archivo Northwind.edmx y, a continuación, haga clic en **ejecutar herramienta personalizada**.</span><span class="sxs-lookup"><span data-stu-id="2db8b-116">(Optional) Right-click the Northwind.edmx file and then click **Run Custom Tool**.</span></span>  
   
-     Esto regenera el archivo de capa de objeto, que puede ser necesario.  
+     <span data-ttu-id="2db8b-117">Esto regenera el archivo de capa de objeto, que puede ser necesario.</span><span class="sxs-lookup"><span data-stu-id="2db8b-117">This regenerates the object layer file, which may be required.</span></span>  
   
-6.  Compile de nuevo el proyecto.  
+6.  <span data-ttu-id="2db8b-118">Compile de nuevo el proyecto.</span><span class="sxs-lookup"><span data-stu-id="2db8b-118">Recompile the project.</span></span>  
   
-## Ejemplo  
- En el ejemplo anterior se devuelve el resultado siguiente para el URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.  
+## <a name="example"></a><span data-ttu-id="2db8b-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2db8b-119">Example</span></span>  
+ <span data-ttu-id="2db8b-120">En el ejemplo anterior se devuelve el resultado siguiente para el identificador URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span><span class="sxs-lookup"><span data-stu-id="2db8b-120">The previous example returns the following result for the URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span></span>  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## Vea también  
- [Proveedor de Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="2db8b-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="2db8b-121">See Also</span></span>  
+ [<span data-ttu-id="2db8b-122">Proveedor de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="2db8b-122">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

@@ -1,33 +1,36 @@
 ---
-title: "Enlace de seguridad de mensaje | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Enlace de seguridad de mensaje
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: ca1ce99fae09ef7d3c9ad3ea47984b671cadb27c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enlace de seguridad de mensaje
-Esta sección contiene ejemplos que muestran el enlace de seguridad de mensajes en Servicios de Windows en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="message-security-binding"></a><span data-ttu-id="06344-102">Enlace de seguridad de mensaje</span><span class="sxs-lookup"><span data-stu-id="06344-102">Message Security Binding</span></span>
+<span data-ttu-id="06344-103">Esta sección contiene ejemplos que muestran el enlace de seguridad de mensajes en Servicios de Windows en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06344-103">This section contains samples that demonstrate message security binding in Windows Services in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## En esta sección  
- [Seguridad de mensaje anónima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- Este ejemplo muestra cómo implementar una aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que utiliza la seguridad de nivel de mensaje sin la autenticación del cliente pero que requiere la autenticación del servidor mediante el certificado X.509 del servidor.  
+## <a name="in-this-section"></a><span data-ttu-id="06344-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="06344-104">In This Section</span></span>  
+ [<span data-ttu-id="06344-105">Seguridad de mensaje anónima</span><span class="sxs-lookup"><span data-stu-id="06344-105">Message Security Anonymous</span></span>](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ <span data-ttu-id="06344-106">Este ejemplo muestra cómo implementar una aplicación de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que utiliza la seguridad de nivel de mensaje sin la autenticación del cliente pero que requiere la autenticación del servidor mediante el certificado X.509 del servidor.</span><span class="sxs-lookup"><span data-stu-id="06344-106">This sample demonstrates how to implement a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application that uses message-level security with no client authentication but that requires server authentication using the server's X.509 certificate.</span></span>  
   
- [Certificado de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
- Este ejemplo muestra cómo implementar una aplicación que utiliza WS\-Security con autenticación de certificado X.509 v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509 v3 del servidor.  
+ [<span data-ttu-id="06344-107">Certificado de seguridad de mensaje</span><span class="sxs-lookup"><span data-stu-id="06344-107">Message Security Certificate</span></span>](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
+ <span data-ttu-id="06344-108">Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509 v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509 v3 del servidor.</span><span class="sxs-lookup"><span data-stu-id="06344-108">This sample demonstrates how to implement an application that uses WS-Security with X.509 v3 certificate authentication for the client and requires server authentication using the server's X.509 v3 certificate.</span></span>  
   
- [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- Este ejemplo muestra cómo implementar una aplicación que utiliza WS\-Security con autenticación de nombre de usuario para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor.  
+ [<span data-ttu-id="06344-109">Nombre de usuario de seguridad de mensaje</span><span class="sxs-lookup"><span data-stu-id="06344-109">Message Security User Name</span></span>](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ <span data-ttu-id="06344-110">Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de nombre de usuario para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor.</span><span class="sxs-lookup"><span data-stu-id="06344-110">This sample demonstrates how to implement an application that uses WS-Security with username authentication for the client and requires server authentication using the server's X.509v3 certificate.</span></span>  
   
- [Seguridad de mensaje de Windows](../../../../docs/framework/wcf/samples/message-security-windows.md)  
- Este ejemplo muestra cómo configurar un enlace <xref:System.ServiceModel.WSHttpBinding> para utilizar la seguridad de nivel de mensaje con autenticación de Windows.
+ [<span data-ttu-id="06344-111">Mensaje de seguridad Windows</span><span class="sxs-lookup"><span data-stu-id="06344-111">Message Security Windows</span></span>](../../../../docs/framework/wcf/samples/message-security-windows.md)  
+ <span data-ttu-id="06344-112">Este ejemplo muestra cómo configurar un<xref:System.ServiceModel.WSHttpBinding> que enlaza para utilizar la seguridad del nivel de mensaje con autenticación de Windows.</span><span class="sxs-lookup"><span data-stu-id="06344-112">This sample demonstrates how to configure a <xref:System.ServiceModel.WSHttpBinding> binding to use message-level security with Windows authentication.</span></span>

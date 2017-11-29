@@ -1,38 +1,44 @@
 ---
-title: "Find a UI Automation Element for a List Item | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "list items, finding elements for"
-  - "elements, finding for list items"
-  - "UI Automation, finding elements for List items"
+title: Buscar un elemento de UI Automation para un elemento de lista
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- list items, finding elements for
+- elements, finding for list items
+- UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-caps.latest.revision: 5
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 16016f5e5b0ab9633f9f8e4ac662838dd7936b18
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Find a UI Automation Element for a List Item
+# <a name="find-a-ui-automation-element-for-a-list-item"></a><span data-ttu-id="94ff7-102">Buscar un elemento de UI Automation para un elemento de lista</span><span class="sxs-lookup"><span data-stu-id="94ff7-102">Find a UI Automation Element for a List Item</span></span>
 > [!NOTE]
->  Esta documentación está dirigida a desarrolladores de .NET Framework que desean usar las clases administradas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definidas en el espacio de nombres <xref:System.Windows.Automation>.  Para obtener información actualizada sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vea [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="94ff7-103">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="94ff7-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="94ff7-104">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="94ff7-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- En este tema se muestra cómo recuperar un objeto <xref:System.Windows.Automation.AutomationElement> para un elemento de una lista cuando se conoce el índice del elemento.  
+ <span data-ttu-id="94ff7-105">Este tema muestra cómo recuperar un <xref:System.Windows.Automation.AutomationElement> para un elemento dentro de una lista cuando se conoce el índice del elemento.</span><span class="sxs-lookup"><span data-stu-id="94ff7-105">This topic shows how to retrieve an <xref:System.Windows.Automation.AutomationElement> for an item within a list when the index of the item is known.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se muestran dos maneras de recuperar un elemento específico de una lista: mediante <xref:System.Windows.Automation.TreeWalker> y mediante <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.  
+## <a name="example"></a><span data-ttu-id="94ff7-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="94ff7-106">Example</span></span>  
+ <span data-ttu-id="94ff7-107">En el ejemplo siguiente se muestra dos maneras de recuperar un elemento especificado de una lista, uno con <xref:System.Windows.Automation.TreeWalker> y el uso de otra <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.</span><span class="sxs-lookup"><span data-stu-id="94ff7-107">The following example shows two ways of retrieving a specified item from a list, one using <xref:System.Windows.Automation.TreeWalker> and the other using <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.</span></span>  
   
- La primera técnica suele ser más rápida para los controles [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], pero la segunda lo es más para los controles [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)].  
+ <span data-ttu-id="94ff7-108">La primera técnica suele ser más rápido para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles, pero el segundo es más rápido para [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] controles.</span><span class="sxs-lookup"><span data-stu-id="94ff7-108">The first technique tends to be faster for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls, but the second is faster for [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] controls.</span></span>  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
-## Vea también  
- [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
+## <a name="see-also"></a><span data-ttu-id="94ff7-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="94ff7-109">See Also</span></span>  
+ [<span data-ttu-id="94ff7-110">Obtener elementos de UI Automation</span><span class="sxs-lookup"><span data-stu-id="94ff7-110">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)

@@ -1,52 +1,34 @@
 ---
-title: Error de acceso de archivo de la ruta de acceso | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Error de acceso al archivo de la ruta de acceso
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID75
-dev_langs:
-- VB
+f1_keywords: vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ac730bac76540331206daebe600445ca54cc15a9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="pathfile-access-error"></a>Error de acceso a la ruta o al archivo
-Durante una operación de acceso a archivos o acceso al disco, el sistema operativo no pudo realizar una conexión entre la ruta de acceso y el nombre de archivo.  
+# <a name="pathfile-access-error"></a><span data-ttu-id="42cfe-102">Error de acceso a la ruta o al archivo</span><span class="sxs-lookup"><span data-stu-id="42cfe-102">Path/File access error</span></span>
+<span data-ttu-id="42cfe-103">Durante una operación de acceso a archivos o acceso al disco, el sistema operativo no pudo realizar una conexión entre la ruta de acceso y el nombre de archivo.</span><span class="sxs-lookup"><span data-stu-id="42cfe-103">During a file-access or disk-access operation, the operating system could not make a connection between the path and the file name.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="42cfe-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="42cfe-104">To correct this error</span></span>  
   
-1.  Asegúrese de que la especificación de archivo tiene el formato correcto. Un nombre de archivo puede contener un nombre completo (absoluta) o relativa ruta de acceso. Una ruta de acceso completa comienza con el nombre de unidad (si la ruta está en otra unidad) y muestra la ruta de acceso explícita desde la raíz del archivo. Cualquier ruta de acceso no es un nombre completo es relativa a la unidad y directorio actuales.  
+1.  <span data-ttu-id="42cfe-105">Asegúrese de que la especificación de archivo tiene el formato correcto.</span><span class="sxs-lookup"><span data-stu-id="42cfe-105">Make sure the file specification is correctly formatted.</span></span> <span data-ttu-id="42cfe-106">Un nombre de archivo puede contener un acceso completa (absoluta) o relativa ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="42cfe-106">A file name can contain a fully qualified (absolute) or relative path.</span></span> <span data-ttu-id="42cfe-107">Ruta de acceso completa se inicia con el nombre de unidad (si la ruta de acceso está en otra unidad) y muestra la ruta de acceso explícita desde la raíz en el archivo.</span><span class="sxs-lookup"><span data-stu-id="42cfe-107">A fully qualified path starts with the drive name (if the path is on another drive) and lists the explicit path from the root to the file.</span></span> <span data-ttu-id="42cfe-108">Cualquier ruta de acceso que no es un nombre completo es relativa a la unidad actual y el directorio.</span><span class="sxs-lookup"><span data-stu-id="42cfe-108">Any path that is not fully qualified is relative to the current drive and directory.</span></span>  
   
-2.  Asegúrese de que no ha intentado guardar un archivo que reemplazaría a un archivo de sólo lectura existente. Si es así, cambie el atributo de sólo lectura del archivo de destino o guarde el archivo con un nombre de archivo diferente.  
+2.  <span data-ttu-id="42cfe-109">Asegúrese de que no ha intentado guardar un archivo que reemplaza un archivo de sólo lectura existente.</span><span class="sxs-lookup"><span data-stu-id="42cfe-109">Make sure that you did not attempt to save a file that would replace an existing read-only file.</span></span> <span data-ttu-id="42cfe-110">Si este es el caso, cambie el atributo de sólo lectura del archivo de destino o guarde el archivo con un nombre de archivo diferente.</span><span class="sxs-lookup"><span data-stu-id="42cfe-110">If this is the case, change the read-only attribute of the target file, or save the file with a different file name.</span></span>  
   
-3.  Asegúrese de que no ha intentado abrir un archivo de sólo lectura en secuencial`Output`o `Append` modo. Si este es el caso, abra el archivo en `Input` modo o cambiar el atributo de sólo lectura del archivo.  
+3.  <span data-ttu-id="42cfe-111">Asegúrese de que no ha intentado abrir un archivo de solo lectura en secuencial `Output` o `Append` modo.</span><span class="sxs-lookup"><span data-stu-id="42cfe-111">Make sure you did not attempt to open a read-only file in sequential `Output` or `Append` mode.</span></span> <span data-ttu-id="42cfe-112">Si este es el caso, abra el archivo en `Input` modo o cambiar el atributo de sólo lectura del archivo.</span><span class="sxs-lookup"><span data-stu-id="42cfe-112">If this is the case, open the file in `Input` mode or change the read-only attribute of the file.</span></span>  
   
-4.  Asegúrese de que no ha intentado cambiar un [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] proyecto dentro de una base de datos o documento.  
+4.  <span data-ttu-id="42cfe-113">Asegúrese de que no intentó cambiar un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] proyecto dentro de una base de datos o el documento.</span><span class="sxs-lookup"><span data-stu-id="42cfe-113">Make sure you did not attempt to change a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] project within a database or document.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="42cfe-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="42cfe-114">See Also</span></span>  
+ [<span data-ttu-id="42cfe-115">Tipos de error</span><span class="sxs-lookup"><span data-stu-id="42cfe-115">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

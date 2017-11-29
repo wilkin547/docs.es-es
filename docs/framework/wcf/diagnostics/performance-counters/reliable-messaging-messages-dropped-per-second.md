@@ -1,27 +1,30 @@
 ---
-title: "Mensajes de mensajer&#237;a de confianza quitados por segundo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Mensajes de mensajería de confianza quitados por segundo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a11b0b80-b242-48e1-b0bb-7f756db5486b
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 06df77ae14dbe4980ae54cc09a0822f59731bf1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Mensajes de mensajer&#237;a de confianza quitados por segundo
-Nombre de contador: sesiones de mensajería de confianza quitadas por segundo.  
+# <a name="reliable-messaging-messages-dropped-per-second"></a><span data-ttu-id="8148a-102">Mensajes de mensajería de confianza quitados por segundo</span><span class="sxs-lookup"><span data-stu-id="8148a-102">Reliable Messaging Messages Dropped Per Second</span></span>
+<span data-ttu-id="8148a-103">Nombre de contador: sesiones de mensajería de confianza quitadas por segundo.</span><span class="sxs-lookup"><span data-stu-id="8148a-103">Counter Name: Reliable Messaging Sessions Dropped Per Second.</span></span>  
   
-## Descripción  
- Número total de mensajes de mensajería de confianza que han sido quitados en este servicio en un segundo.  
+## <a name="description"></a><span data-ttu-id="8148a-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="8148a-104">Description</span></span>  
+ <span data-ttu-id="8148a-105">Número total de mensajes de mensajería de confianza que han sido quitados en este servicio en un segundo.</span><span class="sxs-lookup"><span data-stu-id="8148a-105">Total number of reliable messaging messages that have been dropped in this service in a second.</span></span>  
   
- Este contador es un tipo de contador de rendimiento [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula mediante la fórmula siguiente.  
+ <span data-ttu-id="8148a-106">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.</span><span class="sxs-lookup"><span data-stu-id="8148a-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)
+ <span data-ttu-id="8148a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="8148a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

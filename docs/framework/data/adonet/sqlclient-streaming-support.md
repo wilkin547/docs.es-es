@@ -1,41 +1,44 @@
 ---
-title: "Compatibilidad de transmisi&#243;n de datos de SqlClient | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Compatibilidad de transmisión de datos de SqlClient"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Compatibilidad de transmisi&#243;n de datos de SqlClient
-Gracias a la compatibilidad con streaming entre [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] y una aplicación \(novedad en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]\) se admiten datos no estructurados en el servidor \(documentos, imágenes y archivos multimedia\).  Una base de datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] puede almacenar objetos binarios grandes \(BLOB\), pero la recuperación de BLOB puede usar mucha memoria.  
+# <a name="sqlclient-streaming-support"></a><span data-ttu-id="f9c20-102">Compatibilidad de transmisión de datos de SqlClient</span><span class="sxs-lookup"><span data-stu-id="f9c20-102">SqlClient Streaming Support</span></span>
+<span data-ttu-id="f9c20-103">Gracias a la compatibilidad con streaming entre [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] y una aplicación (novedad en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) se admiten datos no estructurados en el servidor (documentos, imágenes y archivos multimedia).</span><span class="sxs-lookup"><span data-stu-id="f9c20-103">Streaming support between [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="f9c20-104">Una base de datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] puede almacenar objetos binarios grandes (BLOB), pero la recuperación de BLOB puede usar mucha memoria.</span><span class="sxs-lookup"><span data-stu-id="f9c20-104">A [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>  
   
- La compatibilidad con streaming hacia y desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simplifica la escritura de aplicaciones que transmiten datos, sin necesidad de cargar totalmente los datos en la memoria, lo que da como resultado menos excepciones de desbordamiento de memoria.  
+ <span data-ttu-id="f9c20-105">La compatibilidad con streaming hacia y desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simplifica la escritura de aplicaciones que transmiten datos, sin necesidad de cargar totalmente los datos en la memoria, lo que da como resultado menos excepciones de desbordamiento de memoria.</span><span class="sxs-lookup"><span data-stu-id="f9c20-105">Streaming support to and from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>  
   
- La compatibilidad con streaming también permitirá que las aplicaciones de nivel intermedio escalen mejor, especialmente en escenarios donde los objetos comerciales establezcan conexión con SQL Azure para enviar, recuperar y manipular BLOB grandes.  
+ <span data-ttu-id="f9c20-106">La compatibilidad con streaming también permitirá que las aplicaciones de nivel intermedio escalen mejor, especialmente en escenarios donde los objetos comerciales establezcan conexión con SQL Azure para enviar, recuperar y manipular BLOB grandes.</span><span class="sxs-lookup"><span data-stu-id="f9c20-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>  
   
 > [!WARNING]
->  Las llamadas asincrónicas no se admiten si una aplicación también usa la palabra clave de cadena de conexión `Context Connection`.  
+>  <span data-ttu-id="f9c20-107">Las llamadas asincrónicas no se admiten si una aplicación también usa la palabra clave de cadena de conexión `Context Connection`.</span><span class="sxs-lookup"><span data-stu-id="f9c20-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
 >   
->  Los miembros agregados para admitir streaming se usan para recuperar datos de consultas y para pasar parámetros a consultas y procedimientos almacenados.  La característica de streaming está dirigida a escenarios OLTP y de migración de datos básicos, y es aplicable en entornos de migración de datos locales y remotos.  
+>  <span data-ttu-id="f9c20-108">Los miembros agregados para admitir streaming se usan para recuperar datos de consultas y para pasar parámetros a consultas y procedimientos almacenados.</span><span class="sxs-lookup"><span data-stu-id="f9c20-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="f9c20-109">La característica de streaming está dirigida a escenarios OLTP y de migración de datos básicos, y es aplicable en entornos de migración de datos locales y remotos.</span><span class="sxs-lookup"><span data-stu-id="f9c20-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on premise and off premise data migrations.environments.</span></span>  
   
-## Compatibilidad con streaming de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- La compatibilidad con streaming de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] presenta una nueva funcionalidad en las clases <xref:System.Data.Common.DbDataReader> y <xref:System.Data.SqlClient.SqlDataReader> para obtener objetos <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> y <xref:System.IO.TextReader>, y reaccionar ante ellos.  Estas clases se usan para recuperar datos de consultas.  Como resultado, la compatibilidad con streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] está dirigida a escenarios de OLTP y se aplica a entornos locales y remotos.  
+## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="f9c20-110">Compatibilidad con streaming de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9c20-110">Streaming Support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="f9c20-111">La compatibilidad con streaming de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] presenta una nueva funcionalidad en las clases <xref:System.Data.Common.DbDataReader> y <xref:System.Data.SqlClient.SqlDataReader> para obtener objetos <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> y <xref:System.IO.TextReader>, y reaccionar ante ellos.</span><span class="sxs-lookup"><span data-stu-id="f9c20-111">Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span>  <span data-ttu-id="f9c20-112">Estas clases se usan para recuperar datos de consultas.</span><span class="sxs-lookup"><span data-stu-id="f9c20-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="f9c20-113">Como resultado, la compatibilidad con streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] está dirigida a escenarios de OLTP y se aplica a entornos locales y remotos.</span><span class="sxs-lookup"><span data-stu-id="f9c20-113">As a result, Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] addresses OLTP scenarios and applies to on-premise and off-premise environments.</span></span>  
   
- Los miembros siguientes se agregaron a <xref:System.Data.SqlClient.SqlDataReader> para habilitar la compatibilidad con streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ <span data-ttu-id="f9c20-114">Los miembros siguientes se agregaron a <xref:System.Data.SqlClient.SqlDataReader> para habilitar la compatibilidad con streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="f9c20-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=fullName>  
+2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>  
   
 3.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>  
   
@@ -45,7 +48,7 @@ Gracias a la compatibilidad con streaming entre [!INCLUDE[ssNoVersion](../../../
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- Los miembros siguientes se agregaron a <xref:System.Data.Common.DbDataReader> para habilitar la compatibilidad con streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ <span data-ttu-id="f9c20-115">Los miembros siguientes se agregaron a <xref:System.Data.Common.DbDataReader> para habilitar la compatibilidad con streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="f9c20-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -53,35 +56,35 @@ Gracias a la compatibilidad con streaming entre [!INCLUDE[ssNoVersion](../../../
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## Compatibilidad con streaming hacia [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- La compatibilidad con streaming hacia [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] presenta una nueva funcionalidad en la clase <xref:System.Data.SqlClient.SqlParameter>, por lo que puede aceptar y reaccionar ante objetos <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> y <xref:System.IO.TextReader>.  <xref:System.Data.SqlClient.SqlParameter> se usa para pasar parámetros a consultas y procedimientos almacenados.  
+## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="f9c20-116">Compatibilidad con streaming hacia [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9c20-116">Streaming Support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="f9c20-117">La compatibilidad con streaming hacia [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] presenta una nueva funcionalidad en la clase <xref:System.Data.SqlClient.SqlParameter>, por lo que puede aceptar y reaccionar ante objetos <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> y <xref:System.IO.TextReader>.</span><span class="sxs-lookup"><span data-stu-id="f9c20-117">Streaming support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="f9c20-118"><xref:System.Data.SqlClient.SqlParameter> se usa para pasar parámetros a consultas y procedimientos almacenados.</span><span class="sxs-lookup"><span data-stu-id="f9c20-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>  
   
- Al desechar un objeto <xref:System.Data.SqlClient.SqlCommand> o llamar a <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> se cancela cualquier operación de streaming.  Si una aplicación envía <xref:System.Threading.CancellationToken>, la cancelación no se puede garantizar.  
+ <span data-ttu-id="f9c20-119">Al desechar un objeto <xref:System.Data.SqlClient.SqlCommand> o llamar a <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> se cancela cualquier operación de streaming.</span><span class="sxs-lookup"><span data-stu-id="f9c20-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="f9c20-120">Si una aplicación envía <xref:System.Threading.CancellationToken>, la cancelación no se puede garantizar.</span><span class="sxs-lookup"><span data-stu-id="f9c20-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>  
   
- Los siguientes tipos <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptarán <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.Stream>:  
+ <span data-ttu-id="f9c20-121">Los siguientes tipos <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptarán <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.Stream>:</span><span class="sxs-lookup"><span data-stu-id="f9c20-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>  
   
--   **Binary**  
+-   <span data-ttu-id="f9c20-122">**Binary**</span><span class="sxs-lookup"><span data-stu-id="f9c20-122">**Binary**</span></span>  
   
--   **VarBinary**  
+-   <span data-ttu-id="f9c20-123">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="f9c20-123">**VarBinary**</span></span>  
   
- Los siguientes tipos <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptarán <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.TextReader>:  
+ <span data-ttu-id="f9c20-124">Los siguientes tipos <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptarán <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.TextReader>:</span><span class="sxs-lookup"><span data-stu-id="f9c20-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>  
   
--   **Char**  
+-   <span data-ttu-id="f9c20-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="f9c20-125">**Char**</span></span>  
   
--   **NChar**  
+-   <span data-ttu-id="f9c20-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="f9c20-126">**NChar**</span></span>  
   
--   **NVarChar**  
+-   <span data-ttu-id="f9c20-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="f9c20-127">**NVarChar**</span></span>  
   
--   **Xml**  
+-   <span data-ttu-id="f9c20-128">**Xml**</span><span class="sxs-lookup"><span data-stu-id="f9c20-128">**Xml**</span></span>  
   
- El tipo **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptará <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.  
+ <span data-ttu-id="f9c20-129">El **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> tipo aceptará un <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="f9c20-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>  
   
- <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> puede aceptar valores de tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> y <xref:System.IO.Stream>.  
+ <span data-ttu-id="f9c20-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> puede aceptar valores de tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> y <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="f9c20-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>  
   
- Los objetos <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> y <xref:System.IO.Stream> se transferirán al valor definido por <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
+ <span data-ttu-id="f9c20-131">Los objetos <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> y <xref:System.IO.Stream> se transferirán al valor definido por <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span><span class="sxs-lookup"><span data-stu-id="f9c20-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>  
   
-## Ejemplo: streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Use el código [!INCLUDE[tsql](../../../../includes/tsql-md.md)] siguiente para crear la base de datos de ejemplo:  
+## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="f9c20-132">Ejemplo: streaming desde [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9c20-132">Sample -- Streaming from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="f9c20-133">Use el código [!INCLUDE[tsql](../../../../includes/tsql-md.md)] siguiente para crear la base de datos de ejemplo:</span><span class="sxs-lookup"><span data-stu-id="f9c20-133">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
   
 ```  
 CREATE DATABASE [Demo]  
@@ -100,17 +103,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO  
 ```  
   
- El ejemplo muestra cómo hacer lo siguiente:  
+ <span data-ttu-id="f9c20-134">El ejemplo muestra cómo hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="f9c20-134">The sample shows how to do the following:</span></span>  
   
--   Evitar bloquear un subproceso de interfaz de usuario al proporcionar una manera asincrónica para recuperar archivos grandes.  
+-   <span data-ttu-id="f9c20-135">Evitar bloquear un subproceso de interfaz de usuario al proporcionar una manera asincrónica para recuperar archivos grandes.</span><span class="sxs-lookup"><span data-stu-id="f9c20-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>  
   
--   Transferir un archivo de texto grande de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="f9c20-136">Transferir un archivo de texto grande de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9c20-136">Transfer a large text file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Transferir un archivo XML grande de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="f9c20-137">Transferir un archivo XML grande de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9c20-137">Transfer a large XML file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Recuperar datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+-   <span data-ttu-id="f9c20-138">Recuperar datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9c20-138">Retrieve data from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
   
--   Transferir archivos grandes \(BLOB\) de una base de datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a otra sin quedarse sin memoria.  
+-   <span data-ttu-id="f9c20-139">Transferir archivos grandes (BLOB) de una base de datos de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a otra sin quedarse sin memoria.</span><span class="sxs-lookup"><span data-stu-id="f9c20-139">Transfer large files (BLOBs) from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database to another without running out of memory.</span></span>  
   
 ```  
 using System;  
@@ -299,11 +302,10 @@ namespace StreamingFromServer {
       }  
    }  
 }  
-  
 ```  
   
-## Ejemplo: streaming a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Use el código [!INCLUDE[tsql](../../../../includes/tsql-md.md)] siguiente para crear la base de datos de ejemplo:  
+## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="f9c20-140">Ejemplo: streaming a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9c20-140">Sample -- Streaming to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="f9c20-141">Use el código [!INCLUDE[tsql](../../../../includes/tsql-md.md)] siguiente para crear la base de datos de ejemplo:</span><span class="sxs-lookup"><span data-stu-id="f9c20-141">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
   
 ```  
 CREATE DATABASE [Demo2]  
@@ -324,19 +326,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO  
 ```  
   
- El ejemplo muestra cómo hacer lo siguiente:  
+ <span data-ttu-id="f9c20-142">El ejemplo muestra cómo hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="f9c20-142">The sample shows how to do the following:</span></span>  
   
--   Transferir un BLOB grande a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="f9c20-143">Transferir un BLOB grande a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9c20-143">Transferring a large BLOB to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Transferir un archivo de texto grande a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="f9c20-144">Transferir un archivo de texto grande a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9c20-144">Transferring a large text file to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Usar la nueva característica asincrónica para transferir un BLOB grande.  
+-   <span data-ttu-id="f9c20-145">Usar la nueva característica asincrónica para transferir un BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="f9c20-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>  
   
--   Usar la nueva característica asincrónica y la palabra clave await para transferir un BLOB grande.  
+-   <span data-ttu-id="f9c20-146">Usar la nueva característica asincrónica y la palabra clave await para transferir un BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="f9c20-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>  
   
--   Cancelar la transferencia de un BLOB grande.  
+-   <span data-ttu-id="f9c20-147">Cancelar la transferencia de un BLOB grande.</span><span class="sxs-lookup"><span data-stu-id="f9c20-147">Cancelling the transfer of a large BLOB..</span></span>  
   
--   Streaming desde un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a otro mediante la nueva característica asincrónica.  
+-   <span data-ttu-id="f9c20-148">Streaming desde un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a otro mediante la nueva característica asincrónica.</span><span class="sxs-lookup"><span data-stu-id="f9c20-148">Streaming from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another using the new asynchronous feature.</span></span>  
   
 ```  
 using System;  
@@ -456,11 +458,10 @@ namespace StreamingToServer {
       }  
    }  
 }  
-  
 ```  
   
-## Ejemplo: streaming de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Este ejemplo muestra cómo realizar el streaming de un BLOB grande de forma asincrónica desde un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a otro, con compatibilidad para cancelación.  
+## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="f9c20-149">Ejemplo: streaming de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9c20-149">Sample -- Streaming From One [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to Another [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="f9c20-150">Este ejemplo muestra cómo realizar el streaming de un BLOB grande de forma asincrónica desde un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a otro, con compatibilidad para cancelación.</span><span class="sxs-lookup"><span data-stu-id="f9c20-150">This sample demonstrates how to asynchronously stream a large BLOB from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another, with support for cancellation.</span></span>  
   
 ```  
 using System;  
@@ -523,8 +524,7 @@ namespace StreamingFromServerToAnother {
       }  
    }  
 }  
-  
 ```  
   
-## Vea también  
- [Recuperación y modificación de datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+## <a name="see-also"></a><span data-ttu-id="f9c20-151">Vea también</span><span class="sxs-lookup"><span data-stu-id="f9c20-151">See Also</span></span>  
+ [<span data-ttu-id="f9c20-152">Recuperar y modificar datos en ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f9c20-152">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

@@ -1,33 +1,32 @@
 ---
-title: "Flujo de la transacci&#243;n WS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Transacciones"
+title: "Flujo de la transacción WS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 43
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 43
+caps.latest.revision: "43"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7043956427561e4485bdad6a98673b997bc88e85
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Flujo de la transacci&#243;n WS
-Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions.  Este ejemplo está basado en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero los atributos de las operaciones se han utilizado para mostrar el uso de `TransactionFlowAttribute` con la enumeración **TransactionFlowOption** con el fin de determinar para en qué grado está habilitado el flujo de transacción.  Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado \- si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
+# <a name="ws-transaction-flow"></a><span data-ttu-id="e7bdd-102">Flujo de la transacción WS</span><span class="sxs-lookup"><span data-stu-id="e7bdd-102">WS Transaction Flow</span></span>
+<span data-ttu-id="e7bdd-103">Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-103">This sample demonstrates the use of a client-coordinated transaction and the client and server options for transaction flow using either the WS-Atomic Transaction or OleTransactions protocol.</span></span> <span data-ttu-id="e7bdd-104">En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para demostrar el uso de la `TransactionFlowAttribute` con el **TransactionFlowOption** enumeración para determinar a qué grado de transacción está habilitado el flujo.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service but the operations are attributed to demonstrate the use of the `TransactionFlowAttribute` with the **TransactionFlowOption** enumeration to determine to what degree transaction flow is enabled.</span></span> <span data-ttu-id="e7bdd-105">Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-105">Within the scope of the flowed transaction, a log of the requested operations is written to a database and persists until the client coordinated transaction has completed - if the client transaction does not complete, the Web service transaction ensures that the appropriate updates to the database are not committed.</span></span>  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  <span data-ttu-id="e7bdd-106">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Después de iniciar una conexión al servicio y una transacción, el cliente tiene acceso a varias operaciones del servicio.  El contrato para el servicio se define como sigue con cada una de las operaciones que muestran un valor diferente para `TransactionFlowOption`:  
+ <span data-ttu-id="e7bdd-107">Después de iniciar una conexión al servicio y una transacción, el cliente tiene acceso a varias operaciones del servicio.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-107">After initiating a connection to the service and a transaction, the client accesses several service operations.</span></span> <span data-ttu-id="e7bdd-108">El contrato para el servicio se define como sigue con cada una de las operaciones que muestran un valor diferente para `TransactionFlowOption`:</span><span class="sxs-lookup"><span data-stu-id="e7bdd-108">The contract for the service is defined as follows with each of the operations demonstrating a different setting for the `TransactionFlowOption`.</span></span>  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -45,22 +44,21 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);   
 }  
-  
 ```  
   
- Esto define las operaciones en el orden que serán procesadas:  
+ <span data-ttu-id="e7bdd-109">Esto define las operaciones en el orden que serán procesadas:</span><span class="sxs-lookup"><span data-stu-id="e7bdd-109">This defines the operations in the order they are to be processed:</span></span>  
   
--   Una solicitud de operación `Add` debe incluir una transacción fluida.  
+-   <span data-ttu-id="e7bdd-110">Una solicitud de operación `Add` debe incluir una transacción fluida.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-110">An `Add` operation request must include a flowed transaction.</span></span>  
   
--   Una solicitud de operación `Subtract` puede incluir una transacción fluida.  
+-   <span data-ttu-id="e7bdd-111">Una solicitud de operación `Subtract` puede incluir una transacción fluida.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-111">A `Subtract` operation request may include a flowed transaction.</span></span>  
   
--   Una solicitud de operación `Multiply` no debe incluir una transacción fluida a través del valor NotAllowed explícito.  
+-   <span data-ttu-id="e7bdd-112">Una solicitud de operación `Multiply` no debe incluir una transacción fluida a través del valor NotAllowed explícito.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-112">A `Multiply` operation request must not include a flowed transaction through the explicit NotAllowed setting.</span></span>  
   
--   Una solicitud de operación `Divide` no debe incluir una transacción fluida a través de la omisión de un atributo `TransactionFlow`.  
+-   <span data-ttu-id="e7bdd-113">Una solicitud de operación `Divide` no debe incluir una transacción fluida a través de la omisión de un atributo `TransactionFlow`.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-113">A `Divide` operation request must not include a flowed transaction through the omission of a `TransactionFlow` attribute.</span></span>  
   
- Para habilitar el flujo de la transacción, los enlaces con la propiedad habilitada [\<transactionFlow\>](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) se deben utilizar además de los atributos de operación adecuados.  En este ejemplo, la configuración del servicio expone un extremo del TCP y un extremo HTTP además del extremo de intercambio de metadatos.  El extremo del TCP y el extremo HTTP utilizan los enlaces siguientes, los cuales tienen habilitada la propiedad [\<transactionFlow\>](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md).  
+ <span data-ttu-id="e7bdd-114">Para habilitar el flujo de transacción, los enlaces con el [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) propiedad habilitado debe utilizarse además de los atributos de la operación apropiada.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-114">To enable transaction flow, bindings with the [\<transactionFlow>](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) property enabled must be used in addition to the appropriate operation attributes.</span></span> <span data-ttu-id="e7bdd-115">En este ejemplo, la configuración del servicio expone un punto de conexión del TCP y un punto de conexión HTTP además del punto de conexión de intercambio de metadatos.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-115">In this sample, the service's configuration exposes a TCP endpoint and an HTTP endpoint in addition to a Metadata Exchange endpoint.</span></span> <span data-ttu-id="e7bdd-116">El punto de conexión TCP y el extremo HTTP utilizan los siguientes enlaces, ambos de los cuales tienen la [ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) propiedad habilitada.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-116">The TCP endpoint and the HTTP endpoint use the following bindings, both of which have the [\<transactionFlow>](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) property enabled.</span></span>  
   
-```  
+```xml  
 <bindings>  
   <netTcpBinding>  
     <binding name="transactionalOleTransactionsTcpBinding"  
@@ -75,12 +73,12 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  El netTcpBinding proporcionado por el sistema permite especificaciones de transactionProtocol, mientras que el wsHttpBinding proporcionado por el sistema utiliza solamente el protocolo más interoperable WSAtomicTransactionOctober2004.  El protocolo OleTransactions solo está disponible para su uso por clientes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+>  <span data-ttu-id="e7bdd-117">El netTcpBinding proporcionado por el sistema permite especificaciones de transactionProtocol, mientras que el wsHttpBinding proporcionado por el sistema utiliza solamente el protocolo más interoperable WSAtomicTransactionOctober2004.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-117">The system-provided netTcpBinding allows specification of the transactionProtocol whereas the system-provided wsHttpBinding uses only the more interoperable WSAtomicTransactionOctober2004 protocol.</span></span> <span data-ttu-id="e7bdd-118">El protocolo OleTransactions solo está disponible para su uso por clientes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e7bdd-118">The OleTransactions protocol is only available for use by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] clients.</span></span>  
   
- Para la clase que implementa la interfaz `ICalculator`, todos los métodos se atribuyen con propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> establecida en `true`.  Este valor declara que todas las acciones tomadas dentro del método se producen dentro del ámbito de una transacción.  En este caso, las acciones tomadas incluyen la grabación a la base de datos de registro.  Si la solicitud de la operación incluye a continuación una transacción fluida las acciones se producen dentro del ámbito de la transacción entrante o se genera automáticamente un nuevo ámbito de la transacción.  
+ <span data-ttu-id="e7bdd-119">Para la clase que implementa la interfaz `ICalculator`, todos los métodos se atribuyen con propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> establecida en `true`.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-119">For the class that implements the `ICalculator` interface, all of the methods are attributed with <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> property set to `true`.</span></span> <span data-ttu-id="e7bdd-120">Este valor declara que todas las acciones tomadas dentro del método se producen dentro del ámbito de una transacción.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-120">This setting declares that all actions taken within the method occur within the scope of a transaction.</span></span> <span data-ttu-id="e7bdd-121">En este caso, las acciones tomadas incluyen la grabación a la base de datos de registro.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-121">In this case, the actions taken include recording to the log database.</span></span> <span data-ttu-id="e7bdd-122">Si la solicitud de la operación incluye a continuación una transacción fluida las acciones se producen dentro del ámbito de la transacción entrante o se genera automáticamente un nuevo ámbito de la transacción.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-122">If the operation request includes a flowed transaction then the actions occur within the scope of the incoming transaction or a new transaction scope is automatically generated.</span></span>  
   
 > [!NOTE]
->  La propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> define el comportamiento local de las implementaciones de método de servicio y no define la capacidad del cliente ni el requisito para que una transacción fluya.  
+>  <span data-ttu-id="e7bdd-123">La propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> define el comportamiento local de las implementaciones de método de servicio y no define la capacidad del cliente ni el requisito para que una transacción fluya.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-123">The <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> property defines behavior local to the service method implementations and does not define the client's ability to or requirement for flowing a transaction.</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -119,19 +117,18 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- En el cliente, la configuración de `TransactionFlowOption` del servicio en las operaciones se refleja en la definición generada del cliente de la interfaz `ICalculator`.  Asimismo, la configuración de propiedades del servicio `transactionFlow` se refleja en la configuración de la aplicación del cliente.  El cliente puede seleccionar el transporte y el protocolo seleccionando el `endpointConfigurationName` adecuado:  
+ <span data-ttu-id="e7bdd-124">En el cliente, la configuración de `TransactionFlowOption` del servicio en las operaciones se refleja en la definición generada del cliente de la interfaz `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-124">On the client, the service's `TransactionFlowOption` settings on the operations are reflected in the client's generated definition of the `ICalculator` interface.</span></span> <span data-ttu-id="e7bdd-125">Asimismo, la configuración de propiedades del servicio `transactionFlow` se refleja en la configuración de la aplicación del cliente.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-125">Also, the service's `transactionFlow` property settings are reflected in the client's application configuration.</span></span> <span data-ttu-id="e7bdd-126">El cliente puede seleccionar el transporte y el protocolo seleccionando el `endpointConfigurationName` adecuado:</span><span class="sxs-lookup"><span data-stu-id="e7bdd-126">The client can select the transport and protocol by selecting the appropriate `endpointConfigurationName`.</span></span>  
   
 ```  
 // Create a client using either wsat or oletx endpoint configurations  
 CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");  
 // CalculatorClient client = new CalculatorClient("OleTransactions_endpoint");  
-  
 ```  
   
 > [!NOTE]
->  El comportamiento observado de este ejemplo es el mismo, independientemente de qué protocolo o transporte se elige.  
+>  <span data-ttu-id="e7bdd-127">El comportamiento observado de este ejemplo es el mismo, independientemente de qué protocolo o transporte se elige.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-127">The observed behavior of this sample is the same no matter which protocol or transport is chosen.</span></span>  
   
- Habiendo iniciado la conexión al servicio, el cliente crea un nuevo `TransactionScope` alrededor de las llamadas a las operaciones del servicio.  
+ <span data-ttu-id="e7bdd-128">Habiendo iniciado la conexión al servicio, el cliente crea un nuevo `TransactionScope` alrededor de las llamadas a las operaciones del servicio.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-128">Having initiated the connection to the service, the client creates a new `TransactionScope` around the calls to the service operations.</span></span>  
   
 ```  
 // Start a transaction scope  
@@ -190,22 +187,21 @@ using (TransactionScope tx =
 }  
   
 Console.WriteLine("Transaction committed");  
-  
 ```  
   
- Las llamadas a las operaciones son como sigue:  
+ <span data-ttu-id="e7bdd-129">Las llamadas a las operaciones son como sigue:</span><span class="sxs-lookup"><span data-stu-id="e7bdd-129">The calls to the operations are as follows:</span></span>  
   
--   La solicitud `Add` provoca que la transacción necesaria fluya hasta al servicio y las acciones del servicio se producen dentro del ámbito de la transacción del cliente.  
+-   <span data-ttu-id="e7bdd-130">La solicitud `Add` provoca que la transacción necesaria fluya hasta al servicio y las acciones del servicio se producen dentro del ámbito de la transacción del cliente.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-130">The `Add` request flows the required transaction to the service and the service's actions occur within the scope of the client's transaction.</span></span>  
   
--   La primera solicitud `Subtract` también fluye la transacción permitida hacia el servicio y de nuevo las acciones del servicio se producen dentro del ámbito de la transacción del cliente.  
+-   <span data-ttu-id="e7bdd-131">La primera solicitud `Subtract` también fluye la transacción permitida hacia el servicio y de nuevo las acciones del servicio se producen dentro del ámbito de la transacción del cliente.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-131">The first `Subtract` request also flows the allowed transaction to the service and again the service's actions occur within the scope of the client's transaction.</span></span>  
   
--   La segunda solicitud `Subtract` se realiza dentro de un nuevo ámbito de la transacción declarado con la opción `TransactionScopeOption.Suppress`.  Esto suprime la transacción exterior inicial del cliente y la solicitud no fluye hasta una transacción al servicio.  Este enfoque permite a un cliente cancelar explícitamente una suscripción y protegerse contra el fluir de una transacción a un servicio cuando no es necesario.  Las acciones del servicio se producen dentro del ámbito de una transacción nueva y no conectada.  
+-   <span data-ttu-id="e7bdd-132">La segunda solicitud `Subtract` se realiza dentro de un nuevo ámbito de la transacción declarado con la opción `TransactionScopeOption.Suppress`.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-132">The second `Subtract` request is performed within a new transaction scope declared with the `TransactionScopeOption.Suppress` option.</span></span> <span data-ttu-id="e7bdd-133">Esto suprime la transacción exterior inicial del cliente y la solicitud no fluye hasta una transacción al servicio.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-133">This suppresses the client's initial outer transaction and the request does not flow a transaction to the service.</span></span> <span data-ttu-id="e7bdd-134">Este enfoque permite a un cliente cancelar explícitamente una suscripción y protegerse contra el fluir de una transacción a un servicio cuando no es necesario.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-134">This approach allows a client to explicitly opt-out of and protect against flowing a transaction to a service when that is not required.</span></span> <span data-ttu-id="e7bdd-135">Las acciones del servicio se producen dentro del ámbito de una transacción nueva y no conectada.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-135">The service's actions occur within the scope of a new and unconnected transaction.</span></span>  
   
--   La solicitud `Multiply` no fluye una transacción al servicio porque la definición generada del cliente de la interfaz `ICalculator` incluye un conjunto <xref:System.ServiceModel.TransactionFlowAttribute> establecido como <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+-   <span data-ttu-id="e7bdd-136">La solicitud `Multiply` no fluye una transacción al servicio porque la definición generada del cliente de la interfaz `ICalculator` incluye un conjunto <xref:System.ServiceModel.TransactionFlowAttribute> establecido como <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-136">The `Multiply` request does not flow a transaction to the service because the client's generated definition of the `ICalculator` interface includes a <xref:System.ServiceModel.TransactionFlowAttribute> set to <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.</span></span>  
   
--   La solicitud `Divide` no fluye una transacción al servicio porque, de nuevo, la definición de la interfaz `ICalculator` generada del cliente, no incluye un `TransactionFlowAttribute`.  Las acciones del servicio se producen de nuevo dentro del ámbito de otra transacción nueva y no conectada.  
+-   <span data-ttu-id="e7bdd-137">La solicitud `Divide` no fluye una transacción al servicio porque, de nuevo, la definición de la interfaz `ICalculator` generada del cliente, no incluye un `TransactionFlowAttribute`.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-137">The `Divide` request does not flow a transaction to the service because again the client's generated definition of the `ICalculator` interface does not include a `TransactionFlowAttribute`.</span></span> <span data-ttu-id="e7bdd-138">Las acciones del servicio se producen de nuevo dentro del ámbito de otra transacción nueva y no conectada.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-138">The service's actions again occur within the scope of another new and unconnected transaction.</span></span>  
   
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.  Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ <span data-ttu-id="e7bdd-139">Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-139">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="e7bdd-140">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-140">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Starting transaction  
@@ -219,7 +215,7 @@ Transaction committed
 Press <ENTER> to terminate client.  
 ```  
   
- El registro de las solicitudes de operación de servicio se muestra en la ventana de la consola del servicio.  Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ <span data-ttu-id="e7bdd-141">El registro de las solicitudes de operación de servicio se muestra en la ventana de la consola del servicio.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-141">The logging of the service operation requests are displayed in the service's console window.</span></span> <span data-ttu-id="e7bdd-142">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-142">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Press <ENTER> to terminate the service.  
@@ -230,74 +226,74 @@ Press <ENTER> to terminate the service.
   Writing row to database: Dividing 22 by 7  
 ```  
   
- Después de una ejecución correcta, el ámbito de la transacción del cliente se completa y se confirman todas las acciones tomadas dentro de ese ámbito.  Específicamente, los 5 registros nombrados se conservan en la base de datos del servicio.  Los 2 primeros de éstos se han producido dentro del ámbito de la transacción del cliente.  
+ <span data-ttu-id="e7bdd-143">Después de una ejecución correcta, el ámbito de la transacción del cliente se completa y se confirman todas las acciones tomadas dentro de ese ámbito.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-143">After a successful execution, the client's transaction scope completes and all actions taken within that scope are committed.</span></span> <span data-ttu-id="e7bdd-144">Específicamente, los 5 registros nombrados se conservan en la base de datos del servicio.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-144">Specifically, the noted 5 records are persisted in the service's database.</span></span> <span data-ttu-id="e7bdd-145">Los 2 primeros de éstos se han producido dentro del ámbito de la transacción del cliente.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-145">The first 2 of these have occurred within the scope of the client's transaction.</span></span>  
   
- Si se produce una excepción en cualquier parte dentro del `TransactionScope` del cliente, la transacción no puede completarse.  Esto produce que los registros registrados dentro de ese ámbito no se confirmen en la base de datos.  Este efecto se puede observar repitiendo el ejemplo ejecutado después de marcar como comentario la llamada para completar el `TransactionScope` exterior.  En este tipo de procesos, solo se registran las tres últimas acciones \(desde la segunda solicitud `Subtract`, `Multiply` y `Divide`\) porque la transacción del cliente no fluyó hacia ellas.  
+ <span data-ttu-id="e7bdd-146">Si se produce una excepción en cualquier parte dentro del `TransactionScope` del cliente, la transacción no puede completarse.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-146">If an exception occurred anywhere within the client's `TransactionScope` then the transaction cannot complete.</span></span> <span data-ttu-id="e7bdd-147">Esto produce que los registros registrados dentro de ese ámbito no se confirmen en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-147">This causes the records logged within that scope to not be committed to the database.</span></span> <span data-ttu-id="e7bdd-148">Este efecto se puede observar repitiendo el ejemplo ejecutado después de marcar como comentario la llamada para completar el `TransactionScope` exterior.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-148">This effect can be observed by repeating the sample run after commenting out the call to complete the outer `TransactionScope`.</span></span> <span data-ttu-id="e7bdd-149">En este tipo de procesos, solo se registran las tres últimas acciones (desde la segunda solicitud `Subtract`, `Multiply` y `Divide`) porque la transacción del cliente no fluyó hacia ellas.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-149">On such a run, only the last 3 actions (from the second `Subtract`, the `Multiply` and the `Divide` requests) are logged because the client transaction did not flow to those.</span></span>  
   
-### Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e7bdd-150">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="e7bdd-150">To set up, build, and run the sample</span></span>  
   
-1.  Para compilar la versión de C\# o Visual Basic .NET de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  <span data-ttu-id="e7bdd-151">Para compilar la versión de C# o Visual Basic .NET de la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)</span><span class="sxs-lookup"><span data-stu-id="e7bdd-151">To build the C# or Visual Basic .NET version of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)</span></span>  
   
-2.  Asegúrese de que se ha instalado SQL Server Express Edition o SQL Server, y que la cadena de conexión se ha establecido correctamente en el archivo de configuración de la aplicación del servicio.  Para ejecutar el ejemplo sin utilizar una base de datos, establezca el valor `usingSql` en el archivo de configuración de la aplicación del servicio en `false`  
+2.  <span data-ttu-id="e7bdd-152">Asegúrese de que se ha instalado SQL Server Express Edition o SQL Server, y que la cadena de conexión se ha establecido correctamente en el archivo de configuración de la aplicación del servicio.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-152">Ensure that you have installed SQL Server Express Edition or SQL Server, and that the connection string has been correctly set in the service’s application configuration file.</span></span> <span data-ttu-id="e7bdd-153">Para ejecutar el ejemplo sin utilizar una base de datos, establezca el valor `usingSql` en el archivo de configuración de la aplicación del servicio en `false`</span><span class="sxs-lookup"><span data-stu-id="e7bdd-153">To run the sample without using a database, set the `usingSql` value in the service’s application configuration file to `false`</span></span>  
   
-3.  Para ejecutar el ejemplo en una configuración con un único equipo o con varios, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="e7bdd-154">Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7bdd-154">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  Para una configuración de varios equipos, habilite el Coordinador de transacciones distribuidas mediante las instrucciones siguientes, y utilice la herramienta WsatConfig.exe de Windows SDK con el fin de habilitar la compatibilidad para red de las transacciones WCF.  Vea [Configuración de la compatibilidad con WS\-Atomic Transaction](http://go.microsoft.com/fwlink/?LinkId=190370) para obtener información sobre cómo configurar WsatConfig.exe.  
+    >  <span data-ttu-id="e7bdd-155">Para una configuración de varios equipos, habilite el Coordinador de transacciones distribuidas mediante las instrucciones siguientes, y utilice la herramienta WsatConfig.exe de Windows SDK con el fin de habilitar la compatibilidad para red de las transacciones WCF.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-155">For cross-machine configuration, enable the Distributed Transaction Coordinator using the instructions below, and use the WsatConfig.exe tool from the Windows SDK to enable WCF Transactions network support.</span></span> <span data-ttu-id="e7bdd-156">Vea [configuración de compatibilidad con las transacciones WS-Atomic](http://go.microsoft.com/fwlink/?LinkId=190370) para obtener información sobre cómo configurar WsatConfig.exe.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-156">See [Configuring WS-Atomic Transaction Support](http://go.microsoft.com/fwlink/?LinkId=190370) for information on setting up WsatConfig.exe.</span></span>  
   
- Tanto si ejecuta el ejemplo en el mismo equipo como en equipos diferentes, es preciso configurar el Coordinador de transacciones distribuidas de Microsoft \(MSDTC\) para habilitar el flujo de transacciones de red y utilizar la herramienta WsatConfig.exe para habilitar la compatibilidad de red de las transacciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="e7bdd-157">Tanto si ejecuta el ejemplo en el mismo equipo como en equipos diferentes, es preciso configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) para habilitar el flujo de transacciones de red y utilizar la herramienta WsatConfig.exe para habilitar la compatibilidad de red de las transacciones de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e7bdd-157">Whether you run the sample on the same computer or on different computers, you must configure the Microsoft Distributed Transaction Coordinator (MSDTC) to enable network transaction flow and use the WsatConfig.exe tool to enable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transactions network support.</span></span>  
   
-### Para configurar el Coordinador de transacciones distribuidas \(MSDTC\) con el fin de permitir la ejecución del ejemplo  
+### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a><span data-ttu-id="e7bdd-158">Para configurar el Coordinador de transacciones distribuidas (MSDTC) con el fin de permitir la ejecución del ejemplo</span><span class="sxs-lookup"><span data-stu-id="e7bdd-158">To configure the Microsoft Distributed Transaction Coordinator (MSDTC) to support running the sample</span></span>  
   
-1.  En un equipo de servicio que ejecute Windows Server 2003 o Windows XP, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
+1.  <span data-ttu-id="e7bdd-159">En un equipo de servicio que ejecute Windows Server 2003 o Windows XP, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-159">On a service machine running Windows Server 2003 or Windows XP, configure MSDTC to allow incoming network transactions by following these instructions.</span></span>  
   
-    1.  En el menú **Inicio**, navegue hasta el **Panel de control**, después vaya a **Herramientas administrativas** y, por último, a **Servicios de componentes**.  
+    1.  <span data-ttu-id="e7bdd-160">Desde el **iniciar** menú, vaya a **el Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-160">From the **Start** menu, navigate to **Control Panel**, then **Administrative Tools**, and then **Component Services**.</span></span>  
   
-    2.  Expanda **Component Services**.  Abra la carpeta **Equipos**.  
+    2.  <span data-ttu-id="e7bdd-161">Expanda **servicios de componentes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-161">Expand **Component Services**.</span></span> <span data-ttu-id="e7bdd-162">Abra la **equipos** carpeta.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-162">Open the **Computers** folder.</span></span>  
   
-    3.  Haga clic con el botón secundario en **Mi PC** y seleccione **Propiedades**.  
+    3.  <span data-ttu-id="e7bdd-163">Haga clic en **Mi PC** y seleccione **propiedades**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-163">Right-click **My Computer** and select **Properties**.</span></span>  
   
-    4.  En la pestaña **MSDTC**, haga clic en **Configuración de seguridad**.  
+    4.  <span data-ttu-id="e7bdd-164">En el **MSDTC** , haga clic en **configuración de seguridad**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-164">On the **MSDTC** tab, click **Security Configuration**.</span></span>  
   
-    5.  Marque **Acceso a DTC desde la red** y **Permitir entrantes**.  
+    5.  <span data-ttu-id="e7bdd-165">Comprobar **acceso a DTC desde la red** y **Permitir entrantes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-165">Check **Network DTC Access** and **Allow Inbound**.</span></span>  
   
-    6.  Haga clic en **Aceptar** y, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
+    6.  <span data-ttu-id="e7bdd-166">Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-166">Click **OK**, then click **Yes** to restart the MSDTC service.</span></span>  
   
-    7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    7.  <span data-ttu-id="e7bdd-167">Haga clic en **Aceptar** para cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-167">Click **OK** to close the dialog box.</span></span>  
   
-2.  En un equipo de servicio que ejecute Windows Server 2008 o Windows Vista, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
+2.  <span data-ttu-id="e7bdd-168">En un equipo de servicio que ejecute Windows Server 2008 o Windows Vista, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-168">On a service machine running Windows Server 2008 or Windows Vista, configure MSDTC to allow incoming network transactions by following these instructions.</span></span>  
   
-    1.  En el menú **Inicio**, navegue hasta el **Panel de control**, después vaya a **Herramientas administrativas** y, por último, a **Servicios de componentes**.  
+    1.  <span data-ttu-id="e7bdd-169">Desde el **iniciar** menú, vaya a **el Panel de Control**, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-169">From the **Start** menu, navigate to **Control Panel**, then **Administrative Tools**, and then **Component Services**.</span></span>  
   
-    2.  Expanda **Component Services**.  Abra la carpeta **Equipos**.  Seleccione **Coordinador de transacciones distribuidas**.  
+    2.  <span data-ttu-id="e7bdd-170">Expanda **servicios de componentes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-170">Expand **Component Services**.</span></span> <span data-ttu-id="e7bdd-171">Abra la **equipos** carpeta.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-171">Open the **Computers** folder.</span></span> <span data-ttu-id="e7bdd-172">Seleccione **Coordinador de transacciones distribuidas**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-172">Select **Distributed Transaction Coordinator**.</span></span>  
   
-    3.  Haga clic con el botón secundario en **Coordinador DTC** y seleccione **Propiedades**.  
+    3.  <span data-ttu-id="e7bdd-173">Haga clic en **coordinador DTC** y seleccione **propiedades**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-173">Right-click **DTC Coordinator** and select **Properties**.</span></span>  
   
-    4.  En la pestaña **Seguridad**, active **Acceso a DTC desde la red** y **Permitir entrantes**.  
+    4.  <span data-ttu-id="e7bdd-174">En el **seguridad** ficha, verificación **acceso de red DTC** y **Permitir entrantes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-174">On the **Security** tab, check **Network DTC Access** and **Allow Inbound**.</span></span>  
   
-    5.  Haga clic en **Aceptar** y, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
+    5.  <span data-ttu-id="e7bdd-175">Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-175">Click **OK**, then click **Yes** to restart the MSDTC service.</span></span>  
   
-    6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    6.  <span data-ttu-id="e7bdd-176">Haga clic en **Aceptar** para cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-176">Click **OK** to close the dialog box.</span></span>  
   
-3.  En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:  
+3.  <span data-ttu-id="e7bdd-177">En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:</span><span class="sxs-lookup"><span data-stu-id="e7bdd-177">On the client machine, configure MSDTC to allow outgoing network transactions:</span></span>  
   
-    1.  En el menú **Inicio**, desplácese al `Control Panel`, después a **Herramientas administrativas** y por último a **Servicios de componentes**.  
+    1.  <span data-ttu-id="e7bdd-178">Desde el **iniciar** menú, vaya a `Control Panel`, a continuación, **herramientas administrativas**y, a continuación, **servicios de componentes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-178">From the **Start** menu, navigate to `Control Panel`, then **Administrative Tools**, and then **Component Services**.</span></span>  
   
-    2.  Haga clic con el botón secundario en **Mi PC** y seleccione **Propiedades**.  
+    2.  <span data-ttu-id="e7bdd-179">Haga clic en **Mi PC** y seleccione **propiedades**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-179">Right-click **My Computer** and select **Properties**.</span></span>  
   
-    3.  En la pestaña **MSDTC**, haga clic en **Configuración de seguridad**.  
+    3.  <span data-ttu-id="e7bdd-180">En el **MSDTC** , haga clic en **configuración de seguridad**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-180">On the **MSDTC** tab, click **Security Configuration**.</span></span>  
   
-    4.  Marque **Acceso a DTC desde la red** y **Permitir salientes**.  
+    4.  <span data-ttu-id="e7bdd-181">Comprobar **acceso a DTC desde la red** y **Permitir salientes**.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-181">Check **Network DTC Access** and **Allow Outbound**.</span></span>  
   
-    5.  Haga clic en **Aceptar** y, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.  
+    5.  <span data-ttu-id="e7bdd-182">Haga clic en **Aceptar**, a continuación, haga clic en **Sí** para reiniciar el servicio MSDTC.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-182">Click **OK**, then click **Yes** to restart the MSDTC service.</span></span>  
   
-    6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    6.  <span data-ttu-id="e7bdd-183">Haga clic en **Aceptar** para cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-183">Click **OK** to close the dialog box.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="e7bdd-184">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-184">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e7bdd-185">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-185">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="e7bdd-186">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e7bdd-186">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e7bdd-187">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="e7bdd-187">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

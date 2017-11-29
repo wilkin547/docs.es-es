@@ -1,128 +1,131 @@
 ---
-title: "Traza anal&#237;tica de WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Traza analítica de WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b752ea7fa4d4eda1afefca69778c68feb898177d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Traza anal&#237;tica de WCF
-Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en el flujo de seguimientos analíticos que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado.En este ejemplo se muestra cómo utilizar las API <xref:System.Diagnostics.Eventing?displayProperty=fullName> para escribir eventos que se integran con los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="wcf-analytic-tracing"></a><span data-ttu-id="bcf3a-102">Traza analítica de WCF</span><span class="sxs-lookup"><span data-stu-id="bcf3a-102">WCF Analytic Tracing</span></span>
+<span data-ttu-id="bcf3a-103">Este ejemplo muestra cómo agregar sus propios eventos de seguimiento en el flujo de seguimientos analíticos que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] escribe en ETW en [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bcf3a-103">This sample demonstrates how to add your own tracing events into the stream of analytic traces that [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] writes to ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span> <span data-ttu-id="bcf3a-104">Los seguimientos analíticos pretenden facilitar la visibilidad en los servicios sin que el rendimiento se vea penalizado.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-104">Analytic traces are meant to make it easy to get visibility into your services without paying a high performance penalty.</span></span> <span data-ttu-id="bcf3a-105">En este ejemplo se muestra cómo utilizar las API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> para escribir eventos que se integran con los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bcf3a-105">This sample shows how to use the <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs to write events that integrate with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] las API <xref:System.Diagnostics.Eventing?displayProperty=fullName>, vea <xref:System.Diagnostics.Eventing?displayProperty=fullName>.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="bcf3a-106"> las API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>, vea <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-106"> the <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, see <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.</span></span>  
   
- Para obtener más información acerca de la traza de eventos en Windows, vea [Mejorar el ajuste de la depuración y el rendimiento con ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
+ <span data-ttu-id="bcf3a-107">Para más información sobre el seguimiento de eventos de Windows, consulte [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkId=166488).</span><span class="sxs-lookup"><span data-stu-id="bcf3a-107">To learn more about event tracing in Windows, see [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkId=166488).</span></span>  
   
-## Eliminar EventProvider  
- En este ejemplo se usa la clase <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=fullName>, que implementa el objeto <xref:System.IDisposable?displayProperty=fullName>.Al implementar el seguimiento de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], es probable que pueda utilizar los recursos de <xref:System.Diagnostics.Eventing.EventProvider> mientras dura el servicio.Por esta razón y para conservar la legibilidad, este ejemplo nunca elimina el objeto <xref:System.Diagnostics.Eventing.EventProvider> ajustado.Si por alguna razón su servicio tiene requisitos diferentes para el seguimiento y debe desechar este recurso, debe modificar este ejemplo de acuerdo con los procedimientos recomendados para desechar recursos no administrados.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo desechar recursos no administrados, vea [Implementar un método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).  
+## <a name="disposing-eventprovider"></a><span data-ttu-id="bcf3a-108">Eliminar EventProvider</span><span class="sxs-lookup"><span data-stu-id="bcf3a-108">Disposing EventProvider</span></span>  
+ <span data-ttu-id="bcf3a-109">En este ejemplo se usa la clase <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa el objeto <xref:System.IDisposable?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-109">This sample uses the <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> class, which implements <xref:System.IDisposable?displayProperty=nameWithType>.</span></span> <span data-ttu-id="bcf3a-110">Al implementar el seguimiento de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], es probable que pueda utilizar los recursos de <xref:System.Diagnostics.Eventing.EventProvider> mientras dura el servicio.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-110">When implementing tracing for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, it is likely that you may use the <xref:System.Diagnostics.Eventing.EventProvider>’s resources for the lifetime of the service.</span></span> <span data-ttu-id="bcf3a-111">Por esta razón y para conservar la legibilidad, este ejemplo nunca elimina el objeto <xref:System.Diagnostics.Eventing.EventProvider> ajustado.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-111">For this reason, and for readability, this sample never disposes of the wrapped <xref:System.Diagnostics.Eventing.EventProvider>.</span></span> <span data-ttu-id="bcf3a-112">Si por alguna razón su servicio tiene requisitos diferentes para el seguimiento y debe desechar este recurso, debe modificar este ejemplo de acuerdo con los procedimientos recomendados para desechar recursos no administrados.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-112">If for some reason your service has different requirements for tracing and you must dispose of this resource, then you should modify this sample in accordance with the best practices for disposing of unmanaged resources.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="bcf3a-113">desechar recursos no administrados, vea [implementa un método Dispose](http://go.microsoft.com/fwlink/?LinkId=166436).</span><span class="sxs-lookup"><span data-stu-id="bcf3a-113"> disposing unmanaged resources, see [Implementing a Dispose Method](http://go.microsoft.com/fwlink/?LinkId=166436).</span></span>  
   
-## Autohospedaje yHospedaje web  
- Para los servicios hospedados en web, los seguimientos analíticos de WCF proporcionan un campo, denominado "HostReference", que se utiliza para identificar el servicio que está emitiendo los seguimientos.Los seguimientos extensibles de usuario pueden participar en este modelo; este ejemplo muestra los procedimientos recomendados para ello.El formato de una referencia al hospedamiento en web cuando el carácter '&#124;' de canalización aparece realmente en la cadena resultante puede ser cualquiera de los siguientes:  
+## <a name="self-hosting-vs-web-hosting"></a><span data-ttu-id="bcf3a-114">Autohospedaje y Hospedaje web</span><span class="sxs-lookup"><span data-stu-id="bcf3a-114">Self-Hosting vs. Web Hosting</span></span>  
+ <span data-ttu-id="bcf3a-115">Para los servicios hospedados en Web, los seguimientos analíticos de WCF proporcionan un campo, denominado "HostReference", que se utiliza para identificar el servicio que está emitiendo los seguimientos.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-115">For Web-hosted services, WCF’s analytic traces provide a field, called "HostReference", which is used to identify the service that is emitting the traces.</span></span> <span data-ttu-id="bcf3a-116">Los seguimientos extensibles de usuario pueden participar en este modelo; este ejemplo muestra los procedimientos recomendados para ello.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-116">The extensible user traces can participate in this model and this sample demonstrates best practices for doing so.</span></span> <span data-ttu-id="bcf3a-117">El formato de un host Web hacer referencia cuando la canalización ' &#124;' carácter aparece realmente en el cuadro cadena puede ser cualquiera de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="bcf3a-117">The format of a Web host reference when the pipe ‘&#124;’ character actually appears in the resulting string can be any one of the following:</span></span>  
   
--   Si la aplicación no está en la raíz.  
+-   <span data-ttu-id="bcf3a-118">Si la aplicación no está en la raíz.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-118">If the application is not at the root.</span></span>  
   
-     \<nombreDeSitio\>\<rutaDeAccesoVirtualDeAplicación\>&#124;\<rutaDeAccesoVirtualDeServicio\>&#124;\<nombreDeServicio\>  
+     <span data-ttu-id="bcf3a-119">\<Nombre del sitio >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName ></span><span class="sxs-lookup"><span data-stu-id="bcf3a-119">\<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName></span></span>  
   
--   Si la aplicación está en la raíz.  
+-   <span data-ttu-id="bcf3a-120">Si la aplicación está en la raíz.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-120">If the application is at the root.</span></span>  
   
-     \<nombreDeSitio\>&#124;\<rutaDeAccesoVirtualDeServicio\>&#124;\<nombreDeServicio\>  
+     <span data-ttu-id="bcf3a-121">\<Nombre del sitio > &#124; \<ServiceVirtualPath > &#124; \<ServiceName ></span><span class="sxs-lookup"><span data-stu-id="bcf3a-121">\<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName></span></span>  
   
- En los servicios autohospedados, los seguimientos analíticos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no rellenan el campo "HostReference".La clase `WCFUserEventProvider` de este ejemplo se comporta de forma coherente cuando se utiliza en un servicio autohospedado.  
+ <span data-ttu-id="bcf3a-122">Para los servicios autohospedados, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]de seguimientos analíticos no rellenan el campo "HostReference".</span><span class="sxs-lookup"><span data-stu-id="bcf3a-122">For self-hosted services, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]’s analytic traces do not populate the "HostReference" field.</span></span> <span data-ttu-id="bcf3a-123">La clase `WCFUserEventProvider` de este ejemplo se comporta de forma coherente cuando se utiliza en un servicio autohospedado.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-123">The `WCFUserEventProvider` class in this sample behaves consistently when used by a self-hosted service.</span></span>  
   
-## Detalles de eventos personalizados  
- El manifiesto del proveedor de eventos de ETW de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] define tres eventos que están diseñados para ser emitidos por los autores de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde dentro del código del servicio.La siguiente tabla muestra un desglose de los tres eventos:  
+## <a name="custom-event-details"></a><span data-ttu-id="bcf3a-124">Detalles de eventos personalizados</span><span class="sxs-lookup"><span data-stu-id="bcf3a-124">Custom Event Details</span></span>  
+ <span data-ttu-id="bcf3a-125">El manifiesto del proveedor de eventos de ETW de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] define tres eventos que están diseñados para ser emitidos por los autores de servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] desde dentro del código del servicio.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-125">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]’s ETW Event Provider manifest defines three events that are designed to be emitted by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service authors from within service code.</span></span> <span data-ttu-id="bcf3a-126">La siguiente tabla muestra un desglose de los tres eventos:</span><span class="sxs-lookup"><span data-stu-id="bcf3a-126">The following table shows a breakdown of the three events.</span></span>  
   
-|Evento|Descripción|Identificador del evento|  
-|------------|-----------------|------------------------------|  
-|UserDefinedInformationEventOccurred|Emita este evento cuando ocurra algo en un servicio que no constituya un problema.Por ejemplo, podría emitir un evento después de realizar una llamada a una base de datos correctamente.|301|  
-|UserDefinedWarningOccurred|Emita este evento cuando se produzca un problema que pueda provocar un error en el futuro.Por ejemplo, puede emitir un evento de advertencia cuando se produce un error en una llamada a una base de datos pero se pudo recuperar retirándose a un almacén de datos redundante.|302|  
-|UserDefinedErrorOccurred|Emita este evento cuando el servicio no se comporte como se preveía.Por ejemplo, podría emitir un evento si se produce un error en una llamada a una base de datos y no pudo recuperar los datos de otro lugar.|303|  
+|<span data-ttu-id="bcf3a-127">Evento</span><span class="sxs-lookup"><span data-stu-id="bcf3a-127">Event</span></span>|<span data-ttu-id="bcf3a-128">Descripción</span><span class="sxs-lookup"><span data-stu-id="bcf3a-128">Description</span></span>|<span data-ttu-id="bcf3a-129">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="bcf3a-129">Event ID</span></span>|  
+|-----------|-----------------|--------------|  
+|<span data-ttu-id="bcf3a-130">UserDefinedInformationEventOccurred</span><span class="sxs-lookup"><span data-stu-id="bcf3a-130">UserDefinedInformationEventOccurred</span></span>|<span data-ttu-id="bcf3a-131">Emita este evento cuando ocurra algo en un servicio que no constituya un problema.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-131">Emit this event when something of note happens in your service that is not a problem.</span></span> <span data-ttu-id="bcf3a-132">Por ejemplo, podría emitir un evento después de realizar una llamada a una base de datos correctamente.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-132">For example, you might emit an event after successfully making a call to a database.</span></span>|<span data-ttu-id="bcf3a-133">301</span><span class="sxs-lookup"><span data-stu-id="bcf3a-133">301</span></span>|  
+|<span data-ttu-id="bcf3a-134">UserDefinedWarningOccurred</span><span class="sxs-lookup"><span data-stu-id="bcf3a-134">UserDefinedWarningOccurred</span></span>|<span data-ttu-id="bcf3a-135">Emita este evento cuando se produzca un problema que pueda provocar un error en el futuro.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-135">Emit this event when a problem occurs that may result in a failure in the future.</span></span> <span data-ttu-id="bcf3a-136">Por ejemplo, puede emitir un evento de advertencia cuando se produce un error en una llamada a una base de datos pero se pudo recuperar retirándose a un almacén de datos redundante.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-136">For example, you may emit a warning event when a call to a database fails but you were able to recover by falling back to a redundant data store.</span></span>|<span data-ttu-id="bcf3a-137">302</span><span class="sxs-lookup"><span data-stu-id="bcf3a-137">302</span></span>|  
+|<span data-ttu-id="bcf3a-138">UserDefinedErrorOccurred</span><span class="sxs-lookup"><span data-stu-id="bcf3a-138">UserDefinedErrorOccurred</span></span>|<span data-ttu-id="bcf3a-139">Emita este evento cuando el servicio no se comporte como se preveía.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-139">Emit this event when your service fails to behave as expected.</span></span> <span data-ttu-id="bcf3a-140">Por ejemplo, podría emitir un evento si se produce un error en una llamada a una base de datos y no pudo recuperar los datos de otro lugar.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-140">For example, you might emit an event if a call to a database fails and you could not retrieve the data from elsewhere.</span></span>|<span data-ttu-id="bcf3a-141">303</span><span class="sxs-lookup"><span data-stu-id="bcf3a-141">303</span></span>|  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="bcf3a-142">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="bcf3a-142">To use this sample</span></span>  
   
-1.  Con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra el archivo de solución WCFAnalyticTracingExtensibility.sln.  
+1.  <span data-ttu-id="bcf3a-143">Con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra el archivo de solución WCFAnalyticTracingExtensibility.sln.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-143">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the WCFAnalyticTracingExtensibility.sln solution file.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="bcf3a-144">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-144">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  <span data-ttu-id="bcf3a-145">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-145">To run the solution, press CTRL+F5.</span></span>  
   
-     En el explorador web, haga clic en **Calculator.svc**.El URI del documento WSDL para el servicio debería aparecer en el explorador.Copie ese URI.  
+     <span data-ttu-id="bcf3a-146">En el explorador Web, haga clic en **Calculator.svc**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-146">In the Web browser, click **Calculator.svc**.</span></span> <span data-ttu-id="bcf3a-147">El URI del documento WSDL para el servicio debería aparecer en el explorador.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-147">The URI of the WSDL document for the service should appear in the browser.</span></span> <span data-ttu-id="bcf3a-148">Copie ese URI.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-148">Copy that URI.</span></span>  
   
-4.  Ejecute el cliente de prueba de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \(WcfTestClient.exe\).  
+4.  <span data-ttu-id="bcf3a-149">Ejecute el cliente de prueba de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).</span><span class="sxs-lookup"><span data-stu-id="bcf3a-149">Run the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client (WcfTestClient.exe).</span></span>  
   
-     El cliente de prueba de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \(WcfTestClient.exe\) se encuentra en el \<directorio de instalación de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] \>\\Common7\\IDE\\WcfTestClient.exe \(de forma predeterminada, el directorio de instalación de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] es C:\\Common7\\IDE\\ WcfTestClient.exe\).  
+     <span data-ttu-id="bcf3a-150">El [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de prueba (WcfTestClient.exe) se encuentra en la \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directorio de instalación > \Common7\IDE\ WcfTestClient.exe (valor predeterminado [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] directorio de instalación es C:\Program Files\Microsoft Visual Studio 10.0).</span><span class="sxs-lookup"><span data-stu-id="bcf3a-150">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client (WcfTestClient.exe) is located in the \<[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install Dir>\Common7\IDE\ WcfTestClient.exe (default [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] install dir is C:\Program Files\Microsoft Visual Studio 10.0).</span></span>  
   
-5.  Dentro del cliente de prueba de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], agregue el servicio seleccionando **Archivo** y, a continuación, **Agregar servicio**.  
+5.  <span data-ttu-id="bcf3a-151">En el [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente de prueba, agregue el servicio seleccionando **archivo**y, a continuación, **Agregar servicio**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-151">Within the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] test client, add the service by selecting **File**, and then **Add Service**.</span></span>  
   
-     Agregue la dirección del extremo en el cuadro de entrada.  
+     <span data-ttu-id="bcf3a-152">Agregue la dirección del punto de conexión en el cuadro de entrada.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-152">Add the endpoint address in the input box.</span></span>  
   
-6.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+6.  <span data-ttu-id="bcf3a-153">Haga clic en **Aceptar** para cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-153">Click **OK** to close the dialog.</span></span>  
   
-     El servicio ICalculator se agrega en el panel izquierdo bajo **Mis proyectos de servicios**.  
+     <span data-ttu-id="bcf3a-154">El servicio ICalculator se agrega en el panel izquierdo bajo **Mis proyectos de servicios**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-154">The ICalculator service is added in the left pane under **My Service Projects**.</span></span>  
   
-7.  Abra la aplicación Visor de eventos.  
+7.  <span data-ttu-id="bcf3a-155">Abra la aplicación Visor de eventos.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-155">Open the Event Viewer application.</span></span>  
   
-     Antes de invocar el servicio, inicie el Visor de eventos y asegúrese de que el registro de eventos escucha los eventos de seguimiento emitidos por el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     <span data-ttu-id="bcf3a-156">Antes de invocar el servicio, inicie el Visor de eventos y asegúrese de que el registro de eventos escucha los eventos de seguimiento emitidos por el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bcf3a-156">Before invoking the service, start Event Viewer and ensure that the event log is listening for tracking events emitted from the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-8.  En el menú **Inicio**, seleccione **Herramientas administrativas** y, a continuación, **Visor de eventos**.Habilite los registros de **Depuración** y **Analíticos**.  
+8.  <span data-ttu-id="bcf3a-157">Desde el **iniciar** menú, seleccione **herramientas administrativas**y, a continuación, **Visor de eventos**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-157">From the **Start** menu, select **Administrative Tools**, and then **Event Viewer**.</span></span> <span data-ttu-id="bcf3a-158">Habilitar la **analítico** y **depurar** registros.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-158">Enable the **Analytic** and **Debug** logs.</span></span>  
   
-9. En la vista de árbol del Visor de eventos, navegue hasta **Visor de eventos**, **Registros de aplicaciones y servicios**, **Microsoft** **Windows** y **Servidor de aplicaciones\-Aplicaciones**.Haga clic con el botón secundario en **Servidor de aplicaciones\-Aplicaciones**, seleccione **Ver** y, después, **Mostrar registros analíticos y de depuración**.  
+9. <span data-ttu-id="bcf3a-159">En la vista de árbol en el Visor de eventos, navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **Servidor de aplicaciones**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-159">In the tree view in Event Viewer, navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, and then **Application Server-Applications**.</span></span> <span data-ttu-id="bcf3a-160">Haga clic en **servidor de aplicaciones**, seleccione **vista**y, a continuación, **mostrar registros analíticos y depuración**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-160">Right-click **Application Server-Applications**, select **View**, and then **Show Analytic and Debug Logs**.</span></span>  
   
-     Asegúrese de que esté activada la opción **Mostrar registros analíticos y de depuración**.Habilite el registro **Analítico**.  
+     <span data-ttu-id="bcf3a-161">Asegúrese de que el **mostrar registros analíticos y depuración** opción está activada.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-161">Ensure that the **Show Analytic and Debug Logs** option is checked.</span></span> <span data-ttu-id="bcf3a-162">Habilitar la **analítico** registro.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-162">Enable the **Analytic** log.</span></span>  
   
-     íEn la vista de árbol del Visor de eventos, navegue hasta **Visor de eventos**, **Registros de aplicaciones y servicios**, **Microsoft** **Windows**, **Servidor de aplicaciones\-Aplicaciones** y **Analítico**.Haga clic con el botón secundario en **Analítico** y seleccione **Habilitar registro**.  
+     <span data-ttu-id="bcf3a-163">En la vista de árbol en el Visor de eventos, navegue hasta **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Servidor de aplicaciones**y, a continuación, **analíticos**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-163">In the tree view in Event Viewer, navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**, and then **Analytic**.</span></span> <span data-ttu-id="bcf3a-164">Haga clic en **analítico** y seleccione **Habilitar registro**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-164">Right-click **Analytic** and select **Enable Log**.</span></span>  
   
-10. Pruebe el servicio con el cliente de prueba de WCF.  
+10. <span data-ttu-id="bcf3a-165">Pruebe el servicio con el Cliente de prueba WCF.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-165">Test the service using the WCF Test Client.</span></span>  
   
-    1.  En el cliente de prueba de WCF, haga doble clic en **Add\(\)** bajo el nodo de servicio ICalculator.  
+    1.  <span data-ttu-id="bcf3a-166">En el cliente de prueba WCF, haga doble clic en **Add()** bajo el nodo de servicio ICalculator.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-166">In the WCF Test Client, double-click **Add()** under the ICalculator service node.</span></span>  
   
-         El método **Add\(\)** aparece en el panel derecho con dos parámetros.  
+         <span data-ttu-id="bcf3a-167">El **Add()** método aparece en el panel derecho con dos parámetros.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-167">The **Add()** method appears in the right pane with two parameters.</span></span>  
   
-    2.  Escriba 2 en el primer parámetro y 3 en el segundo.  
+    2.  <span data-ttu-id="bcf3a-168">Escriba 2 en el primer parámetro y 3 en el segundo.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-168">Type in 2 for the first parameter and 3 for the second parameter.</span></span>  
   
-    3.  Haga clic en **Invocar** para invocar el método.  
+    3.  <span data-ttu-id="bcf3a-169">Haga clic en **Invoke** para invocar el método.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-169">Click **Invoke** to invoke the method.</span></span>  
   
-11. Vaya a la ventana del **Visor de eventos** que ya ha abierto.Navegue hasta **Visor de eventos**, **Registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **Aplicaciones de servidor\-Aplicaciones**.  
+11. <span data-ttu-id="bcf3a-170">Vaya a la **Visor de eventos** ventana que ya tiene abierta.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-170">Go to the **Event Viewer** window that you have already opened.</span></span> <span data-ttu-id="bcf3a-171">Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **aplicación Aplicaciones de servidor**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-171">Navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**.</span></span>  
   
-12. Haga clic con el botón secundario en el nodo **Analítico** y seleccione **Actualizar**.  
+12. <span data-ttu-id="bcf3a-172">Haga clic en el **analítico** nodo y seleccione **actualizar**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-172">Right-click the **Analytic** node and select **Refresh**.</span></span>  
   
-     Los eventos aparecen en el panel derecho.  
+     <span data-ttu-id="bcf3a-173">Los eventos aparecen en el panel derecho.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-173">The events appear in the right pane.</span></span>  
   
-13. Busque el evento con el identificador 303 y haga doble clic en él para abrirlo e inspeccionar su contenido.  
+13. <span data-ttu-id="bcf3a-174">Busque el evento con el identificador 303 y haga doble clic en él para abrirlo e inspeccionar su contenido.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-174">Locate the event with the ID of 303 and double-click it to open it up and inspect its contents.</span></span>  
   
-     Este evento fue emitido por el método `Add()` del servicio ICalculator y tenía una carga igual a "2\+3\=5".  
+     <span data-ttu-id="bcf3a-175">Este evento fue emitido por el `Add()` método del servicio ICalculator y tenía una carga igual a "2 + 3 = 5".</span><span class="sxs-lookup"><span data-stu-id="bcf3a-175">This event was emitted by the `Add()` method of the ICalculator service and has a payload equal to "2+3=5".</span></span>  
   
-#### Para realizar la limpieza \(Opcional\)  
+#### <a name="to-clean-up-optional"></a><span data-ttu-id="bcf3a-176">Para realizar la limpieza (Opcional)</span><span class="sxs-lookup"><span data-stu-id="bcf3a-176">To clean up (Optional)</span></span>  
   
-1.  Abra el **Visor de eventos**.  
+1.  <span data-ttu-id="bcf3a-177">Abra **Visor de eventos**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-177">Open **Event Viewer**.</span></span>  
   
-2.  Desplácese hasta **Visor de eventos**, **Registros de aplicaciones y servicios**, **Microsoft** **Windows** y **Aplicaciones de servidor\-Aplicaciones**.Haga clic con el botón secundario en **Analítico** y seleccione **Deshabilitar registro**.  
+2.  <span data-ttu-id="bcf3a-178">Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación,  **Aplicaciones de servidor**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-178">Navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, and then **Application-Server-Applications**.</span></span> <span data-ttu-id="bcf3a-179">Haga clic en **analítico** y seleccione **Deshabilitar registro**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-179">Right-click **Analytic** and select **Disable Log**.</span></span>  
   
-3.  Desplácese hasta **Visor de eventos**, **Registros de aplicaciones y servicios**, **Microsoft** **Windows**, **Aplicaciones de servidor\-Aplicaciones** y, después, en **Analítico**.Haga clic con el botón secundario en **Analítico** y seleccione **Borrar registro**.  
+3.  <span data-ttu-id="bcf3a-180">Vaya a **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**,  **Aplicaciones de servidor**y, a continuación, **analíticos**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-180">Navigate to **Event Viewer**, **Applications and Services Logs**, **Microsoft**, **Windows**, **Application-Server-Applications**, and then **Analytic**.</span></span> <span data-ttu-id="bcf3a-181">Haga clic en **analítico** y seleccione **Vaciar registro**.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-181">Right-click **Analytic** and select **Clear Log**.</span></span>  
   
-4.  Haga clic en **Borrar** para borrar los eventos.  
+4.  <span data-ttu-id="bcf3a-182">Haga clic en **borrar** para borrar los eventos.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-182">Click **Clear** to clear the events.</span></span>  
   
-## Problema conocido  
- Existe un problema conocido en el **Visor de eventos** en virtud del cual el visor no puede descodificar eventos de ETW.Puede ver un mensaje de error similar a: "No se puede encontrar la descripción del id. de evento \<id.\> del origen Microsoft\-Windows\-Servidor de aplicaciones\-Aplicaciones.El componente que genera este evento no está instalado en el equipo local, o bien la instalación está dañada.Puede instalar o reparar el componente en el equipo local". Si encuentra este error, seleccione **Actualizar** en el menú **Acciones**.El evento debería descodificarse entonces correctamente.  
+## <a name="known-issue"></a><span data-ttu-id="bcf3a-183">Problema conocido</span><span class="sxs-lookup"><span data-stu-id="bcf3a-183">Known Issue</span></span>  
+ <span data-ttu-id="bcf3a-184">Hay un problema conocido en la **Visor de eventos** donde no puede descodificar eventos de ETW.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-184">There is a known issue in the **Event Viewer** where it may fail to decode ETW events.</span></span> <span data-ttu-id="bcf3a-185">Puede recibir un mensaje de error que dice: "la descripción del Id. de evento \<id > de origen no se puede encontrar aplicaciones de servidor de aplicación de Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-185">You may see an error message that says: "The description for Event ID \<id> from source Microsoft-Windows-Application Server-Applications cannot be found.</span></span> <span data-ttu-id="bcf3a-186">El componente que genera este evento no está instalado en el equipo local, o bien la instalación está dañada.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-186">Either the component that raises this event is not installed on your local computer or the installation is corrupted.</span></span> <span data-ttu-id="bcf3a-187">Puede instalar o reparar el componente en el equipo local."</span><span class="sxs-lookup"><span data-stu-id="bcf3a-187">You can install or repair the component on the local computer."</span></span> <span data-ttu-id="bcf3a-188">Si se produce este error, seleccione **actualizar** desde el **acciones** menú.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-188">If you encounter this error, select **Refresh** from the **Actions** menu.</span></span> <span data-ttu-id="bcf3a-189">El evento debería descodificarse entonces correctamente.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-189">The event should then decode properly.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="bcf3a-190">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-190">The samples may already be installed on your computer.</span></span> <span data-ttu-id="bcf3a-191">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-191">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="bcf3a-192">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="bcf3a-192">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bcf3a-193">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="bcf3a-193">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## Vea también  
- [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="bcf3a-194">Vea también</span><span class="sxs-lookup"><span data-stu-id="bcf3a-194">See Also</span></span>  
+ [<span data-ttu-id="bcf3a-195">Ejemplos de supervisión de AppFabric</span><span class="sxs-lookup"><span data-stu-id="bcf3a-195">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

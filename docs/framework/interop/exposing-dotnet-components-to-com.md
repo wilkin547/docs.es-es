@@ -5,67 +5,59 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8248d78ffa7360f838ceb0389686ab9b348ffd8d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9451504b64ddaa8dc0ea6b3a0754257b2c8b3824
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="exposing-net-framework-components-to-com"></a>Exponer componentes de .NET Framework en COM
-Escribir un tipo .NET y consumirlo desde código no administrado son actividades distintas para los desarrolladores. En esta sección se describen varias sugerencias para escribir código administrado que interopere con clientes COM:  
+# <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="7b0b6-102">Exponer componentes de .NET Framework en COM</span><span class="sxs-lookup"><span data-stu-id="7b0b6-102">Exposing .NET Framework Components to COM</span></span>
+<span data-ttu-id="7b0b6-103">Escribir un tipo .NET y consumirlo desde código no administrado son actividades distintas para los desarrolladores.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="7b0b6-104">En esta sección se describen varias sugerencias para escribir código administrado que interopere con clientes COM:</span><span class="sxs-lookup"><span data-stu-id="7b0b6-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  
   
--   [Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+-   <span data-ttu-id="7b0b6-105">[Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).</span><span class="sxs-lookup"><span data-stu-id="7b0b6-105">[Qualifying .NET types for interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).</span></span>  
   
-     Todos los tipos, métodos, propiedades, campos y eventos administrados que desee exponer a COM deben ser públicos. Los tipos deben tener un constructor predeterminado público, que es el único al que se puede llamar mediante COM.  
+     <span data-ttu-id="7b0b6-106">Todos los tipos, métodos, propiedades, campos y eventos administrados que desee exponer a COM deben ser públicos.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-106">All managed types, methods, properties, fields, and events that you want to expose to COM must be public.</span></span> <span data-ttu-id="7b0b6-107">Los tipos deben tener un constructor predeterminado público, que es el único al que se puede llamar mediante COM.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-107">Types must have a public default constructor, which is the only constructor that can be invoked through COM.</span></span>  
   
--   [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md).  
+-   <span data-ttu-id="7b0b6-108">[Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="7b0b6-108">[Applying interop attributes](../../../docs/framework/interop/applying-interop-attributes.md).</span></span>  
   
-     Los atributos personalizados de código administrado pueden mejorar la interoperabilidad de un componente.  
+     <span data-ttu-id="7b0b6-109">Los atributos personalizados de código administrado pueden mejorar la interoperabilidad de un componente.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-109">Custom attributes within managed code can enhance the interoperability of a component.</span></span>  
   
--   [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
+-   <span data-ttu-id="7b0b6-110">[Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).</span><span class="sxs-lookup"><span data-stu-id="7b0b6-110">[Packaging an assembly for COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).</span></span>  
   
-     Es posible que los programadores de COM requieran que resuma los pasos necesarios para hacer referencia a los ensamblados e implementarlos.  
+     <span data-ttu-id="7b0b6-111">Es posible que los programadores de COM requieran que resuma los pasos necesarios para hacer referencia a los ensamblados e implementarlos.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-111">COM developers might require that you summarize the steps involved in referencing and deploying your assemblies.</span></span>  
   
- Además, en esta sección se identifican las tareas relacionadas con el consumo de un tipo administrado desde un cliente COM.  
+ <span data-ttu-id="7b0b6-112">Además, en esta sección se identifican las tareas relacionadas con el consumo de un tipo administrado desde un cliente COM.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-112">Additionally, this section identifies the tasks related to consuming a managed type from a COM client.</span></span>  
   
-#### <a name="to-consume-a-managed-type-from-com"></a>Para consumir un tipo administrado desde COM  
+#### <a name="to-consume-a-managed-type-from-com"></a><span data-ttu-id="7b0b6-113">Para consumir un tipo administrado desde COM</span><span class="sxs-lookup"><span data-stu-id="7b0b6-113">To consume a managed type from COM</span></span>  
   
-1.  [Registrar ensamblados con COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1.  <span data-ttu-id="7b0b6-114">[Registrar ensamblados con COM](../../../docs/framework/interop/registering-assemblies-with-com.md).</span><span class="sxs-lookup"><span data-stu-id="7b0b6-114">[Register assemblies with COM](../../../docs/framework/interop/registering-assemblies-with-com.md).</span></span>  
   
-     Los tipos de un ensamblado (y bibliotecas de tipos) deben registrarse en tiempo de diseño. Si un instalador no registra el ensamblado, indique a los programadores de COM que usen Regasm.exe.  
+     <span data-ttu-id="7b0b6-115">Los tipos de un ensamblado (y bibliotecas de tipos) deben registrarse en tiempo de diseño.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-115">Types in an assembly (and type libraries) must be registered at design time.</span></span> <span data-ttu-id="7b0b6-116">Si un instalador no registra el ensamblado, indique a los programadores de COM que usen Regasm.exe.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-116">If an installer does not register the assembly, instruct COM developers to use Regasm.exe.</span></span>  
   
-2.  [Hacer referencia a tipos de .NET desde COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2.  <span data-ttu-id="7b0b6-117">[Hacer referencia a tipos de .NET desde COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).</span><span class="sxs-lookup"><span data-stu-id="7b0b6-117">[Reference .NET types from COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).</span></span>  
   
-     Los desarrolladores de COM pueden hacer referencia a tipos en un ensamblado con las mismas herramientas y técnicas que usan actualmente.  
+     <span data-ttu-id="7b0b6-118">Los desarrolladores de COM pueden hacer referencia a tipos en un ensamblado con las mismas herramientas y técnicas que usan actualmente.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-118">COM developers can reference types in an assembly using the same tools and techniques they use today.</span></span>  
   
-3.  [Llamar a un objeto de .NET](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33).  
+3.  <span data-ttu-id="7b0b6-119">[Llamar a un objeto de .NET](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33).</span><span class="sxs-lookup"><span data-stu-id="7b0b6-119">[Call a .NET object](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33).</span></span>  
   
-     Los desarrolladores de COM pueden llamar a métodos en el objeto .NET de la misma manera que llaman a los métodos de cualquier tipo no administrado. Por ejemplo, la API **CoCreateInstance** de COM activa objetos .NET.  
+     <span data-ttu-id="7b0b6-120">Los desarrolladores de COM pueden llamar a métodos en el objeto .NET de la misma manera que llaman a los métodos de cualquier tipo no administrado.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-120">COM developers can call methods on the .NET object the same way they call methods on any unmanaged type.</span></span> <span data-ttu-id="7b0b6-121">Por ejemplo, la API **CoCreateInstance** de COM activa objetos .NET.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-121">For example, the COM **CoCreateInstance** API activates .NET objects.</span></span>  
   
-4.  [Implementar una aplicación para obtener acceso a COM](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce).  
+4.  <span data-ttu-id="7b0b6-122">[Implementar una aplicación para obtener acceso a COM](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce).</span><span class="sxs-lookup"><span data-stu-id="7b0b6-122">[Deploy an application for COM access](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce).</span></span>  
   
-     Un ensamblado con nombre seguro puede instalarse en la caché global de ensamblados y requiere una firma de su editor. Los ensamblados que no tienen nombre seguro deben instalarse en el directorio de aplicación del cliente.  
+     <span data-ttu-id="7b0b6-123">Un ensamblado con nombre seguro puede instalarse en la caché global de ensamblados y requiere una firma de su editor.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-123">A strong-named assembly can be installed in the global assembly cache and requires a signature from its publisher.</span></span> <span data-ttu-id="7b0b6-124">Los ensamblados que no tienen nombre seguro deben instalarse en el directorio de aplicación del cliente.</span><span class="sxs-lookup"><span data-stu-id="7b0b6-124">Assemblies that are not strong named must be installed in the application directory of the client.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Interoperar con código no administrado](../../../docs/framework/interop/index.md)   
- [Ejemplo de interoperabilidad COM: cliente COM y servidor .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
-
+## <a name="see-also"></a><span data-ttu-id="7b0b6-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="7b0b6-125">See Also</span></span>  
+ <span data-ttu-id="7b0b6-126">[Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)</span><span class="sxs-lookup"><span data-stu-id="7b0b6-126">[Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md)</span></span>  
+ [<span data-ttu-id="7b0b6-127">Ejemplo de interoperabilidad COM: cliente COM y servidor .NET</span><span class="sxs-lookup"><span data-stu-id="7b0b6-127">COM Interop Sample: COM Client and .NET Server</span></span>](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

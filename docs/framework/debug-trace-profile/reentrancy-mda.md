@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged code, debugging
 - transitioning threads unmanaged to managed code
@@ -26,42 +20,41 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: beefdb130c953c30d50d948ef9add7ad9d867e45
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a54a985abbc59aea0eeb46cc74560485e86b897d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="reentrancy-mda"></a>MDA de reentrada
-El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuando se realiza un intento de realizar la transición de código nativo a código administrado en casos donde no se realizó un cambio anterior desde código administrado a código nativo a través de una transición ordenada.  
+# <a name="reentrancy-mda"></a><span data-ttu-id="59f1b-102">MDA de reentrada</span><span class="sxs-lookup"><span data-stu-id="59f1b-102">reentrancy MDA</span></span>
+<span data-ttu-id="59f1b-103">El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuando se realiza un intento de realizar la transición de código nativo a código administrado en casos donde no se realizó un cambio anterior desde código administrado a código nativo a través de una transición ordenada.</span><span class="sxs-lookup"><span data-stu-id="59f1b-103">The `reentrancy` managed debugging assistant (MDA) is activated when an attempt is made to transition from native to managed code in cases where a prior switch from managed to native code was not performed through an orderly transition.</span></span>  
   
-## <a name="symptoms"></a>Síntomas  
- El montón de objetos está dañado o se producen otros errores graves al realizar la transición de código nativo a código administrado.  
+## <a name="symptoms"></a><span data-ttu-id="59f1b-104">Síntomas</span><span class="sxs-lookup"><span data-stu-id="59f1b-104">Symptoms</span></span>  
+ <span data-ttu-id="59f1b-105">El montón de objetos está dañado o se producen otros errores graves al realizar la transición de código nativo a código administrado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-105">The object heap is corrupted or other serious errors are occurring when transitioning from native to managed code.</span></span>  
   
- Los subprocesos que cambian entre código nativo y administrado en cualquier dirección deben realizar una transición ordenada. Pero ciertos puntos de extensibilidad de bajo nivel en el sistema operativo, por ejemplo el controlador de excepciones orientado, permiten pasar de código administrado a código nativo sin realizar una transición ordenada.  Estos modificadores están bajo el control del sistema operativo, en lugar de bajo el control de Common Language Runtime (CLR).  Cualquier código nativo que se ejecute dentro de estos puntos de extensibilidad debe evitar realizar llamadas a código administrado.  
+ <span data-ttu-id="59f1b-106">Los subprocesos que cambian entre código nativo y administrado en cualquier dirección deben realizar una transición ordenada.</span><span class="sxs-lookup"><span data-stu-id="59f1b-106">Threads that switch between native and managed code in either direction must perform an orderly transition.</span></span> <span data-ttu-id="59f1b-107">Pero ciertos puntos de extensibilidad de bajo nivel en el sistema operativo, por ejemplo el controlador de excepciones orientado, permiten pasar de código administrado a código nativo sin realizar una transición ordenada.</span><span class="sxs-lookup"><span data-stu-id="59f1b-107">However, certain low-level extensibility points in the operating system, such as the vectored exception handler, allow switches from managed to native code without performing an orderly transition.</span></span>  <span data-ttu-id="59f1b-108">Estos modificadores están bajo el control del sistema operativo, en lugar de bajo el control de Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="59f1b-108">These switches are under operating system control, rather than under common language runtime (CLR) control.</span></span>  <span data-ttu-id="59f1b-109">Cualquier código nativo que se ejecute dentro de estos puntos de extensibilidad debe evitar realizar llamadas a código administrado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-109">Any native code that executes inside these extensibility points must avoid calling back into managed code.</span></span>  
   
-## <a name="cause"></a>Motivo  
- Se ha activado un punto de extensibilidad de bajo nivel del sistema operativo, como el controlador de excepciones orientado, mientras se ejecuta código administrado.  El código de aplicación que se invoca a través de ese punto de extensibilidad está intentando devolver la llamada al código administrado.  
+## <a name="cause"></a><span data-ttu-id="59f1b-110">Motivo</span><span class="sxs-lookup"><span data-stu-id="59f1b-110">Cause</span></span>  
+ <span data-ttu-id="59f1b-111">Se ha activado un punto de extensibilidad de bajo nivel del sistema operativo, como el controlador de excepciones orientado, mientras se ejecuta código administrado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-111">A low-level operating system extensibility point, such as the vectored exception handler, has activated while executing managed code.</span></span>  <span data-ttu-id="59f1b-112">El código de aplicación que se invoca a través de ese punto de extensibilidad está intentando devolver la llamada al código administrado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-112">The application code that is invoked through that extensibility point is attempting to call back into managed code.</span></span>  
   
- Este problema siempre está causado por código de aplicación.  
+ <span data-ttu-id="59f1b-113">Este problema siempre está causado por código de aplicación.</span><span class="sxs-lookup"><span data-stu-id="59f1b-113">This problem is always caused by application code.</span></span>  
   
-## <a name="resolution"></a>Resolución  
- Examine el seguimiento de la pila para el subproceso que ha activado este MDA.  El subproceso está intentando llamar de forma no autorizada al código administrado.  El seguimiento de la pila debe mostrar el código de aplicación que usa este punto de extensibilidad, el código del sistema operativo que proporciona este punto de extensibilidad y el código administrado que el punto de extensibilidad ha interrumpido.  
+## <a name="resolution"></a><span data-ttu-id="59f1b-114">Resolución</span><span class="sxs-lookup"><span data-stu-id="59f1b-114">Resolution</span></span>  
+ <span data-ttu-id="59f1b-115">Examine el seguimiento de la pila para el subproceso que ha activado este MDA.</span><span class="sxs-lookup"><span data-stu-id="59f1b-115">Examine the stack trace for the thread that has activated this MDA.</span></span>  <span data-ttu-id="59f1b-116">El subproceso está intentando llamar de forma no autorizada al código administrado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-116">The thread is attempting to illegally call into managed code.</span></span>  <span data-ttu-id="59f1b-117">El seguimiento de la pila debe mostrar el código de aplicación que usa este punto de extensibilidad, el código del sistema operativo que proporciona este punto de extensibilidad y el código administrado que el punto de extensibilidad ha interrumpido.</span><span class="sxs-lookup"><span data-stu-id="59f1b-117">The stack trace should reveal the application code using this extensibility point, the operating system code that provides this extensibility point, and the managed code that was interrupted by the extensibility point.</span></span>  
   
- Por ejemplo, verá que el MDA se activa en un intento de llamar a código administrado desde dentro de un controlador de excepciones orientado.  En la pila verá el código de control de excepciones del sistema operativo y algún código administrado que desencadena una excepción como <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  
+ <span data-ttu-id="59f1b-118">Por ejemplo, verá que el MDA se activa en un intento de llamar a código administrado desde dentro de un controlador de excepciones orientado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-118">For example, you will see the MDA activated in an attempt to call managed code from inside a vectored exception handler.</span></span>  <span data-ttu-id="59f1b-119">En la pila verá el código de control de excepciones del sistema operativo y algún código administrado que desencadena una excepción como <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.</span><span class="sxs-lookup"><span data-stu-id="59f1b-119">On the stack you will see the operating system exception handling code and some managed code triggering an exception such as a <xref:System.DivideByZeroException> or an <xref:System.AccessViolationException>.</span></span>  
   
- En este ejemplo, la solución correcta consiste en implementar el controlador de excepciones orientado completamente en código no administrado.  
+ <span data-ttu-id="59f1b-120">En este ejemplo, la solución correcta consiste en implementar el controlador de excepciones orientado completamente en código no administrado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-120">In this example, the correct resolution is to implement the vectored exception handler completely in unmanaged code.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
- Este MDA no tiene ningún efecto en el CLR.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="59f1b-121">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="59f1b-121">Effect on the Runtime</span></span>  
+ <span data-ttu-id="59f1b-122">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="59f1b-122">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>Salida  
- El MDA informa de que se ha intentado una reentrada ilegal.  Examine la pila del subproceso para determinar por qué sucede esto y cómo corregir el problema. A continuación se incluye la salida del ejemplo.  
+## <a name="output"></a><span data-ttu-id="59f1b-123">Salida</span><span class="sxs-lookup"><span data-stu-id="59f1b-123">Output</span></span>  
+ <span data-ttu-id="59f1b-124">El MDA informa de que se ha intentado una reentrada ilegal.</span><span class="sxs-lookup"><span data-stu-id="59f1b-124">The MDA reports that illegal reentrancy is being attempted.</span></span>  <span data-ttu-id="59f1b-125">Examine la pila del subproceso para determinar por qué sucede esto y cómo corregir el problema.</span><span class="sxs-lookup"><span data-stu-id="59f1b-125">Examine the thread's stack to determine why this is happening and how to correct the problem.</span></span> <span data-ttu-id="59f1b-126">A continuación se incluye la salida del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="59f1b-126">The following is sample output.</span></span>  
   
 ```  
 Additional Information: Attempting to call into managed code without   
@@ -71,7 +64,7 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## <a name="configuration"></a>Configuración  
+## <a name="configuration"></a><span data-ttu-id="59f1b-127">Configuración</span><span class="sxs-lookup"><span data-stu-id="59f1b-127">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -81,8 +74,8 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>Ejemplo  
- El siguiente código de ejemplo hace que se inicie una excepción <xref:System.AccessViolationException>.  En versiones de Windows que admiten el control de excepciones orientado, esto hará que se llame al controlador de excepciones orientado.  Si el MDA `reentrancy` está habilitado, se activará durante el intento de llamada a `MyHandler` desde el código de soporte de control de excepciones orientado del sistema operativo.  
+## <a name="example"></a><span data-ttu-id="59f1b-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="59f1b-128">Example</span></span>  
+ <span data-ttu-id="59f1b-129">El siguiente código de ejemplo hace que se inicie una excepción <xref:System.AccessViolationException>.</span><span class="sxs-lookup"><span data-stu-id="59f1b-129">The following code example causes an <xref:System.AccessViolationException> to be thrown.</span></span>  <span data-ttu-id="59f1b-130">En versiones de Windows que admiten el control de excepciones orientado, esto hará que se llame al controlador de excepciones orientado.</span><span class="sxs-lookup"><span data-stu-id="59f1b-130">On versions of Windows that support vectored exception handling, this will cause the managed vectored exception handler to be called.</span></span>  <span data-ttu-id="59f1b-131">Si el MDA `reentrancy` está habilitado, se activará durante el intento de llamada a `MyHandler` desde el código de soporte de control de excepciones orientado del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="59f1b-131">If the `reentrancy` MDA is enabled, the MDA will activate during the attempted call to `MyHandler` from the operating system's vectored exception handling support code.</span></span>  
   
 ```  
 using System;  
@@ -119,6 +112,5 @@ public class Reenter
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="59f1b-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="59f1b-132">See Also</span></span>  
+ [<span data-ttu-id="59f1b-133">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="59f1b-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

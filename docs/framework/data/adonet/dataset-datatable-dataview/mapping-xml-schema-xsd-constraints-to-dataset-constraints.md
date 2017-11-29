@@ -1,54 +1,57 @@
 ---
-title: "Asignar restricciones de esquema XML (XSD) a las restricciones de DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Asignar restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9ac8e64c02d96450d41233cfbe65e1db839df9e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Asignar restricciones de esquema XML (XSD) a las restricciones de DataSet
-El lenguaje de definición de esquemas XML \(XSD\) permite especificar restricciones para los elementos y atributos que define.  Al asignar un esquema XML al esquema relacional de un <xref:System.Data.DataSet>, las restricciones de esquema XML se asignan a las restricciones relacionales apropiadas de las tablas y columnas contenidas en el **DataSet**.  
+# <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="99396-102">Asignar restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos</span><span class="sxs-lookup"><span data-stu-id="99396-102">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="99396-103">El lenguaje de definición de esquemas XML (XSD) permite especificar restricciones para los elementos y atributos que define.</span><span class="sxs-lookup"><span data-stu-id="99396-103">The XML Schema definition language (XSD) allows constraints to be specified on the elements and attributes it defines.</span></span> <span data-ttu-id="99396-104">Al asignar un esquema XML al esquema relacional de un <xref:System.Data.DataSet>, restricciones de esquema XML se asignan a las restricciones relacionales apropiadas en las tablas y columnas dentro de la **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="99396-104">When mapping an XML Schema to relational schema in a <xref:System.Data.DataSet>, XML Schema constraints are mapped to appropriate relational constraints on the tables and columns within the **DataSet**.</span></span>  
   
- En esta sección se describe la asignación de las siguientes restricciones de esquema XML:  
+ <span data-ttu-id="99396-105">En esta sección se describe la asignación de las siguientes restricciones de esquema XML:</span><span class="sxs-lookup"><span data-stu-id="99396-105">This section discusses the mapping of the following XML Schema constraints:</span></span>  
   
--   La restricción de unicidad especificada mediante el elemento **unique**.  
+-   <span data-ttu-id="99396-106">La restricción de unicidad especificada mediante el **único** elemento.</span><span class="sxs-lookup"><span data-stu-id="99396-106">The uniqueness constraint specified using the **unique** element.</span></span>  
   
--   La restricción de clave especificada mediante el elemento **key**.  
+-   <span data-ttu-id="99396-107">La restricción de clave especificada mediante la **clave** elemento.</span><span class="sxs-lookup"><span data-stu-id="99396-107">The key constraint specified using the **key** element.</span></span>  
   
--   La restricción keyref especificada mediante el elemento **keyref**.  
+-   <span data-ttu-id="99396-108">La restricción keyref especificada mediante el **keyref** elemento.</span><span class="sxs-lookup"><span data-stu-id="99396-108">The keyref constraint specified using the **keyref** element.</span></span>  
   
- El uso de una restricción sobre un elemento o un atributo permite especificar ciertas restricciones para los valores del elemento en cualquier instancia del documento.  Por ejemplo, una restricción de clave en un elemento secundario **CustomerID** de un elemento **Customer** del esquema indica que los valores del elemento secundario **CustomerID** deben ser únicos en cualquier instancia del documento y que no se permiten valores nulos.  
+ <span data-ttu-id="99396-109">El uso de una restricción sobre un elemento o un atributo permite especificar ciertas restricciones para los valores del elemento en cualquier instancia del documento.</span><span class="sxs-lookup"><span data-stu-id="99396-109">By using a constraint on an element or attribute, you specify certain restrictions on the values of the element in any instance of the document.</span></span> <span data-ttu-id="99396-110">Por ejemplo, una restricción de clave en un **CustomerID** elemento secundario de un **cliente** elemento en el esquema indica que los valores de la **CustomerID** debe ser el elemento secundario único en cualquier instancia del documento, y que no se permiten valores null.</span><span class="sxs-lookup"><span data-stu-id="99396-110">For example, a key constraint on a **CustomerID** child element of a **Customer** element in the schema indicates that the values of the **CustomerID** child element must be unique in any document instance, and that null values are not allowed.</span></span>  
   
- También se pueden especificar restricciones entre los elementos y atributos de un documento para establecer una relación dentro del documento.  Las restricciones key y keyref se utilizan en el esquema para especificar las restricciones dentro del documento, lo que da como resultado una relación entre los elementos y atributos del documento.  
+ <span data-ttu-id="99396-111">También se pueden especificar restricciones entre los elementos y atributos de un documento para establecer una relación dentro del documento.</span><span class="sxs-lookup"><span data-stu-id="99396-111">Constraints can also be specified between elements and attributes in a document, in order to establish a relationship within the document.</span></span> <span data-ttu-id="99396-112">Las restricciones key y keyref se utilizan en el esquema para especificar las restricciones dentro del documento, lo que da como resultado una relación entre los elementos y atributos del documento.</span><span class="sxs-lookup"><span data-stu-id="99396-112">The key and keyref constraints are used in the schema to specify the constraints within the document, resulting in a relationship between document elements and attributes.</span></span>  
   
- El proceso de asignación convierte estas restricciones del esquema en las restricciones apropiadas para las tablas creadas dentro del **DataSet**.  
+ <span data-ttu-id="99396-113">El proceso de asignación convierte estas restricciones del esquema en las restricciones apropiadas para las tablas creadas dentro de la **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="99396-113">The mapping process converts these schema constraints into appropriate constraints on the tables created within the **DataSet**.</span></span>  
   
-## En esta sección  
- [Asignar restricciones unique de esquema XML \(XSD\) a las restricciones de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Describe los elementos de esquema XML utilizados para crear restricciones únicas en un **DataSet**.  
+## <a name="in-this-section"></a><span data-ttu-id="99396-114">En esta sección</span><span class="sxs-lookup"><span data-stu-id="99396-114">In This Section</span></span>  
+ [<span data-ttu-id="99396-115">Asignar restricciones unique de esquema XML (XSD) a las restricciones de conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="99396-115">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="99396-116">Describe los elementos de esquema XML utilizados para crear restricciones únicas en un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="99396-116">Describes the XML Schema elements used to create unique constraints in a **DataSet**.</span></span>  
   
- [Asignar restricciones de esquema XML \(XSD\) a las restricciones de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Describe los elementos de esquema XML utilizados para crear restricciones de clave \(restricciones únicas donde no se permiten valores nulos\) en un **DataSet**.  
+ [<span data-ttu-id="99396-117">Clave de las restricciones de esquema XML (XSD) se asignan a las restricciones de DataSet</span><span class="sxs-lookup"><span data-stu-id="99396-117">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="99396-118">Describe los elementos de esquema XML utilizados para crear restricciones de clave (restricciones únicas donde no se permiten valores null) en un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="99396-118">Describes the XML Schema elements used to create key constraints (unique constraints where null values are not allowed) in a **DataSet**.</span></span>  
   
- [Asignar restricciones keyref de esquema XML \(XSD\) a las restricciones de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Describe los elementos de esquema XML utilizados para crear restricciones keyref \(de clave externa\) en un **DataSet**.  
+ [<span data-ttu-id="99396-119">Asignar restricciones keyref de esquema XML (XSD) a las restricciones de conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="99396-119">Map keyref XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="99396-120">Describe los elementos de esquema XML utilizados para crear restricciones (clave externa) en keyref un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="99396-120">Describes the XML Schema elements used to create keyref (foreign key) constraints in a **DataSet**.</span></span>  
   
-## Secciones relacionadas  
- [Derivar la estructura relacional de DataSet desde la definición de esquema XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Describe la estructura relacional, o esquema, de un **DataSet** creado a partir de un esquema XSD.  
+## <a name="related-sections"></a><span data-ttu-id="99396-121">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="99396-121">Related Sections</span></span>  
+ [<span data-ttu-id="99396-122">Derivar la estructura relacional de un conjunto de datos de esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="99396-122">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="99396-123">Describe la estructura relacional, o esquema, de un **conjunto de datos** creado a partir de un esquema XSD.</span><span class="sxs-lookup"><span data-stu-id="99396-123">Describes the relational structure, or schema, of a **DataSet** that is created from XSD schema.</span></span>  
   
- [Generar las relaciones de DataSet desde la definición de esquemas XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- Describe los elementos de esquema XML utilizados para crear relaciones entre columnas de tabla de un **DataSet**.  
+ [<span data-ttu-id="99396-124">Generar las relaciones de conjunto de datos desde un esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="99396-124">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ <span data-ttu-id="99396-125">Describe los elementos de esquema XML utilizados para crear relaciones entre columnas de tabla en una **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="99396-125">Describes the XML Schema elements used to create relations between table columns in a **DataSet**.</span></span>  
   
-## Vea también  
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="99396-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="99396-126">See Also</span></span>  
+ [<span data-ttu-id="99396-127">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="99396-127">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

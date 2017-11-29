@@ -1,27 +1,33 @@
 ---
-title: "AcceptChanges y RejectChanges | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Objetos AcceptChange y RejectChange
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6ac64fee869ce58413e799f4217f009ef6ae91a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# AcceptChanges y RejectChanges
-Después de comprobar la exactitud de los cambios realizados en una <xref:System.Data.DataTable>, se pueden aceptar con el método <xref:System.Data.DataRow.AcceptChanges%2A> de <xref:System.Data.DataRow>, <xref:System.Data.DataTable> o <xref:System.Data.DataSet>, que configurará los valores de fila **Current** de modo que sean los valores **Original** y establecerá la propiedad **RowState** en **Unchanged**.  Si se aceptan o se rechazan los cambios, se elimina la información de **RowError** y se establece la propiedad **HasErrors** en **false**.  Aceptar o rechazar cambios también puede afectar a la actualización de datos en el origen de datos.  Para obtener más información, consulta [Actualizar orígenes de datos con DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+# <a name="acceptchanges-and-rejectchanges"></a><span data-ttu-id="e3999-102">Objetos AcceptChange y RejectChange</span><span class="sxs-lookup"><span data-stu-id="e3999-102">AcceptChanges and RejectChanges</span></span>
+<span data-ttu-id="e3999-103">Después de comprobar la exactitud de los cambios realizados a los datos en un <xref:System.Data.DataTable>, puede aceptar los cambios mediante el <xref:System.Data.DataRow.AcceptChanges%2A> método de la <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, o <xref:System.Data.DataSet>, que establecerá la **actual** fila valores para que sean la **Original** valores y establecerá el **RowState** propiedad **Unchanged**.</span><span class="sxs-lookup"><span data-stu-id="e3999-103">After verifying the accuracy of changes made to data in a <xref:System.Data.DataTable>, you can accept the changes using the <xref:System.Data.DataRow.AcceptChanges%2A> method of the <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, or <xref:System.Data.DataSet>, which will set the **Current** row values to be the **Original** values and will set the **RowState** property to **Unchanged**.</span></span> <span data-ttu-id="e3999-104">Aceptar o rechazar los cambios se elimina la información **RowError** y se establece la **HasErrors** propiedad **false**.</span><span class="sxs-lookup"><span data-stu-id="e3999-104">Accepting or rejecting changes clears out any **RowError** information and sets the **HasErrors** property to **false**.</span></span> <span data-ttu-id="e3999-105">Aceptar o rechazar cambios también puede afectar a la actualización de datos en el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="e3999-105">Accepting or rejecting changes can also affect updating data in the data source.</span></span> <span data-ttu-id="e3999-106">Para obtener más información, consulte [actualizar orígenes de datos con DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).</span><span class="sxs-lookup"><span data-stu-id="e3999-106">For more information, see [Updating Data Sources with DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).</span></span>  
   
- Si hay restricciones de clave externa en la **DataTable**, los cambios que se acepten o se rechacen con **AcceptChanges** y **RejectChanges** se propagan a las filas secundarias de la **DataRow** de acuerdo con la **ForeignKeyConstraint.AcceptRejectRule**.  Para obtener más información, consulta [Restricciones de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ <span data-ttu-id="e3999-107">Si hay restricciones de clave externas en la **DataTable**, cambios aceptan o rechazan mediante **AcceptChanges** y **RejectChanges** se propagan a las filas secundarias de la  **DataRow** según la **ForeignKeyConstraint.AcceptRejectRule**.</span><span class="sxs-lookup"><span data-stu-id="e3999-107">If foreign key constraints exist on the **DataTable**, changes accepted or rejected using **AcceptChanges** and **RejectChanges** are propagated to child rows of the **DataRow** according to the **ForeignKeyConstraint.AcceptRejectRule**.</span></span> <span data-ttu-id="e3999-108">Para obtener más información, consulte [restricciones de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span><span class="sxs-lookup"><span data-stu-id="e3999-108">For more information, see [DataTable Constraints](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span></span>  
   
- En el ejemplo siguiente se comprueba si hay filas con errores, se resuelven los errores que haya y se rechazan las filas en las que no se puede resolver el error.  Tenga en cuenta que, en los errores que se resuelven, el valor **RowError** se restablece en una cadena vacía, con lo que la propiedad **HasErrors** se establece en **false**.  Una vez que se han resuelto o rechazado todas las filas con errores, se llama a **AcceptChanges** para aceptar todos los cambios de toda la **DataTable**.  
+ <span data-ttu-id="e3999-109">En el ejemplo siguiente se comprueba si hay filas con errores, se resuelven los errores que haya y se rechazan las filas en las que no se puede resolver el error.</span><span class="sxs-lookup"><span data-stu-id="e3999-109">The following example checks for rows with errors, resolves the errors where applicable, and rejects the rows where the error cannot be resolved.</span></span> <span data-ttu-id="e3999-110">Tenga en cuenta que, para resolver errores, el **RowError** valor se restablece en una cadena vacía, que produce el **HasErrors** propiedad se establezca en **false**.</span><span class="sxs-lookup"><span data-stu-id="e3999-110">Note that, for resolved errors, the **RowError** value is reset to an empty string, causing the **HasErrors** property to be set to **false**.</span></span> <span data-ttu-id="e3999-111">Cuando todas las filas con errores se han resuelto o rechazado, **AcceptChanges** se llama para aceptar todos los cambios para toda la colección **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="e3999-111">When all the rows with errors have been resolved or rejected, **AcceptChanges** is called to accept all changes for the entire **DataTable**.</span></span>  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -39,7 +45,6 @@ If workTable.HasErrors Then
 End If  
   
 workTable.AcceptChanges()  
-  
 ```  
   
 ```csharp  
@@ -61,9 +66,9 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## Vea también  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- [Manipular datos en DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e3999-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="e3999-112">See Also</span></span>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="e3999-113">Manipular datos en un objeto DataTable</span><span class="sxs-lookup"><span data-stu-id="e3999-113">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="e3999-114">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="e3999-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

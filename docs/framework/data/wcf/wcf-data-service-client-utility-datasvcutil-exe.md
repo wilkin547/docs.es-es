@@ -1,57 +1,60 @@
 ---
-title: "Utilidad de cliente de WCF Data Service (DataSvcUtil.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF Data Services, biblioteca de cliente"
-  - "WCF Data Services, uso"
-  - "WCF Data Services, generar clases de datos del cliente"
+title: Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, generating client data classes
+- WCF Data Services, client library
+- WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 06c7107fe58647d29146ed5ef4cc31fc9004d2b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Utilidad de cliente de WCF Data Service (DataSvcUtil.exe)
-DataSvcUtil.exe es una herramienta de línea de comandos proporcionada por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que utiliza una fuente de [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] y genera las clases de servicio de datos de cliente necesarias para tener acceso a un servicio de datos desde una aplicación cliente de .NET Framework.  Esta utilidad puede generar las clases de datos utilizando los siguientes orígenes de metadatos:  
+# <a name="wcf-data-service-client-utility-datasvcutilexe"></a><span data-ttu-id="856c3-102">Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)</span><span class="sxs-lookup"><span data-stu-id="856c3-102">WCF Data Service Client Utility (DataSvcUtil.exe)</span></span>
+<span data-ttu-id="856c3-103">DataSvcUtil.exe es una herramienta de línea de comandos proporcionada por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] que consume una [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente y genera las clases de servicio de datos de cliente que se necesitan para tener acceso a un servicio de datos desde una aplicación de cliente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="856c3-103">DataSvcUtil.exe is a command-line tool provided by [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] that consumes an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed and generates the client data service classes that are needed to access a data service from a .NET Framework client application.</span></span> <span data-ttu-id="856c3-104">Esta utilidad puede generar las clases de datos utilizando los siguientes orígenes de metadatos:</span><span class="sxs-lookup"><span data-stu-id="856c3-104">This utility can generate data classes by using the following metadata sources:</span></span>  
   
--   El URI de la raíz de un servicio de datos.  La utilidad solicita el documento de metadatos de servicio, que describe el modelo de datos expuesto por el servicio de datos.  Para obtener más información, vea el tema sobre [OData: documento de metadatos de servicios](http://go.microsoft.com/fwlink/?LinkId=186070).  
+-   <span data-ttu-id="856c3-105">El URI de la raíz de un servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="856c3-105">The root URI of a data service.</span></span> <span data-ttu-id="856c3-106">La utilidad solicita el documento de metadatos de servicio, que describe el modelo de datos expuesto por el servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="856c3-106">The utility requests the service metadata document, which describes the data model exposed by the data service.</span></span> <span data-ttu-id="856c3-107">Para obtener más información, consulte [OData: documento de metadatos del servicio](http://go.microsoft.com/fwlink/?LinkId=186070).</span><span class="sxs-lookup"><span data-stu-id="856c3-107">For more information, see [OData: Service Metadata Document](http://go.microsoft.com/fwlink/?LinkId=186070).</span></span>  
   
--   Un archivo de modelo de datos \(.csdl\) definido mediante el lenguaje de definición de esquemas conceptuales \(CSDL\), tal y como se define en [\[MC\-CSDL\]: Formato de archivos de definición de esquemas conceptuales](http://go.microsoft.com/fwlink/?LinkID=159072).  
+-   <span data-ttu-id="856c3-108">Un archivo de modelo de datos (.csdl) que se definen mediante el lenguaje de definición de esquemas conceptuales (CSDL), tal como se define en el [ \[MC-CSDL\]: formato de archivo de definición de esquemas conceptuales](http://go.microsoft.com/fwlink/?LinkID=159072) especificación.</span><span class="sxs-lookup"><span data-stu-id="856c3-108">A data model file (.csdl) defined by using the conceptual schema definition language (CSDL), as defined in the [\[MC-CSDL\]: Conceptual Schema Definition File Format](http://go.microsoft.com/fwlink/?LinkID=159072) specification.</span></span>  
   
--   Un archivo .edmx creado mediante las herramientas de Entity Data Model que se proporcionan con Entity Framework.  Para obtener más información, vea la especificación [\[MC\-EDMX\]: Entity Data Model for Data Services Packaging Format](http://go.microsoft.com/fwlink/?LinkID=178833).  
+-   <span data-ttu-id="856c3-109">Un archivo .edmx creado mediante las herramientas de Entity Data Model que se proporcionan con Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="856c3-109">An .edmx file created by using the Entity Data Model tools that are provided with the Entity Framework.</span></span> <span data-ttu-id="856c3-110">Para obtener más información, consulte el [ \[MC-EDMX\]: Entity Data Model for Data Services Packaging Format](http://go.microsoft.com/fwlink/?LinkID=178833) especificación.</span><span class="sxs-lookup"><span data-stu-id="856c3-110">For more information, see the [\[MC-EDMX\]: Entity Data Model for Data Services Packaging Format](http://go.microsoft.com/fwlink/?LinkID=178833) specification.</span></span>  
   
- Para obtener más información, consulta [Cómo: Generar manualmente clases del servicio de datos del cliente](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+ <span data-ttu-id="856c3-111">Para obtener más información, consulte [Cómo: manualmente generar datos clases del servicio cliente](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="856c3-111">For more information, see [How to: Manually Generate Client Data Service Classes](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).</span></span>  
   
- La herramienta DataSvcUtil.exe se instala en el directorio de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  En muchos casos, se encuentra en C:\\Windows\\Microsoft.NET\\Framework\\v4.0.  Para los sistemas de 64 bits, se encuentra en C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.  También puede tener acceso a la herramienta DataSvcUtil.exe desde el símbolo del sistema de Visual Studio \(haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft Visual Studio 2010**, **Visual Studio Tools** y haga clic en **Símbolo del sistema de Visual Studio 2010**\).  
+ <span data-ttu-id="856c3-112">La herramienta DataSvcUtil.exe se instala en el directorio de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="856c3-112">The DataSvcUtil.exe tool is installed in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] directory.</span></span> <span data-ttu-id="856c3-113">En muchos casos, se encuentra en C:\Windows\Microsoft.NET\Framework\v4.0.</span><span class="sxs-lookup"><span data-stu-id="856c3-113">In many cases, this is located in C:\Windows\Microsoft.NET\Framework\v4.0,.</span></span> <span data-ttu-id="856c3-114">Para los sistemas de 64 bits, se encuentra en C:\Windows\Microsoft.NET\Framework64\v4.0.</span><span class="sxs-lookup"><span data-stu-id="856c3-114">For 64-bit systems, this is located in C:\Windows\Microsoft.NET\Framework64\v4.0.</span></span> <span data-ttu-id="856c3-115">También puede tener acceso a la herramienta DataSvcUtil.exe desde el símbolo del sistema de Visual Studio (haga clic en **iniciar**, seleccione **todos los programas**, seleccione **Microsoft Visual Studio 2010**, Seleccione **Visual Studio Tools**y, a continuación, haga clic en **símbolo del sistema de Visual Studio 2010**).</span><span class="sxs-lookup"><span data-stu-id="856c3-115">You can also access the DataSvcUtil.exe tool from the Visual Studio command prompt (Click **Start**, point to **All Programs**, point to **Microsoft Visual Studio 2010**, point to **Visual Studio Tools**, and then click **Visual Studio 2010 Command Prompt**).</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="856c3-116">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="856c3-116">Syntax</span></span>  
   
 ```  
 datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/language:devlang] [/nologo] [/version:ver] [/help]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="856c3-117">Parámetros</span><span class="sxs-lookup"><span data-stu-id="856c3-117">Parameters</span></span>  
   
-|Opción|Descripción|  
+|<span data-ttu-id="856c3-118">Opción</span><span class="sxs-lookup"><span data-stu-id="856c3-118">Option</span></span>|<span data-ttu-id="856c3-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="856c3-119">Description</span></span>|  
 |------------|-----------------|  
-|`/dataservicecollection`|Especifica que también se genera el código necesario para enlazar los objetos a los controles.|  
-|`/help`<br /><br /> o bien<br /><br /> `/?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|`/in:` *\<archivo\>*|Especifica el archivo .csdl o .edmx o un directorio donde se encuentra el archivo.|  
-|`/language:`\[VB&#124;CSharp\]|Especifica el lenguaje de los archivos de código fuente generados.  El lenguaje predeterminado es C\#.|  
-|`/nologo`|Evita que se muestre el mensaje de copyright.|  
-|`/out:` *\<archivo\>*|Especifica el nombre del archivo de código fuente que contiene las clases de servicio de datos de cliente generadas.|  
-|`/uri:` *\<string\>*|El URI de la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].|  
-|`/version:`\[1.0&#124;2.0\]|Especifica la versión superior aceptada de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  La versión se determina basándose en el atributo `DataServiceVersion` del elemento DataService en los metadatos devueltos del servicio de datos.  Para obtener más información, consulta [Control de versiones del servicio de datos](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  Al especificar el parámetro `/dataservicecollection`, también debe especificar `/version:2.0` para habilitar el enlace de datos.|  
+|`/dataservicecollection`|<span data-ttu-id="856c3-120">Especifica que también se genera el código necesario para enlazar los objetos a los controles.</span><span class="sxs-lookup"><span data-stu-id="856c3-120">Specifies that the code required to bind objects to controls is also generated.</span></span>|  
+|`/help`<br /><br /> <span data-ttu-id="856c3-121">o bien</span><span class="sxs-lookup"><span data-stu-id="856c3-121">-or-</span></span><br /><br /> `/?`|<span data-ttu-id="856c3-122">Muestra las opciones y la sintaxis de los comandos para la herramienta.</span><span class="sxs-lookup"><span data-stu-id="856c3-122">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="856c3-123">`/in:` *\<archivo >*</span><span class="sxs-lookup"><span data-stu-id="856c3-123">`/in:` *\<file>*</span></span>|<span data-ttu-id="856c3-124">Especifica el archivo .csdl o .edmx o un directorio donde se encuentra el archivo.</span><span class="sxs-lookup"><span data-stu-id="856c3-124">Specifies the .csdl or .edmx file or a directory where the file is located.</span></span>|  
+|<span data-ttu-id="856c3-125">`/language:`[VB &#124; CSharp]</span><span class="sxs-lookup"><span data-stu-id="856c3-125">`/language:`[VB&#124;CSharp]</span></span>|<span data-ttu-id="856c3-126">Especifica el lenguaje de los archivos de código fuente generados.</span><span class="sxs-lookup"><span data-stu-id="856c3-126">Specifies the language for the generated source code files.</span></span> <span data-ttu-id="856c3-127">El lenguaje predeterminado es C#.</span><span class="sxs-lookup"><span data-stu-id="856c3-127">The language defaults to C#.</span></span>|  
+|`/nologo`|<span data-ttu-id="856c3-128">Evita que se muestre el mensaje de copyright.</span><span class="sxs-lookup"><span data-stu-id="856c3-128">Suppresses the copyright message from displaying.</span></span>|  
+|<span data-ttu-id="856c3-129">`/out:` *\<archivo >*</span><span class="sxs-lookup"><span data-stu-id="856c3-129">`/out:` *\<file>*</span></span>|<span data-ttu-id="856c3-130">Especifica el nombre del archivo de código fuente que contiene las clases de servicio de datos de cliente generadas.</span><span class="sxs-lookup"><span data-stu-id="856c3-130">Specifies the name of the source code file that contains the generated client data service classes.</span></span>|  
+|<span data-ttu-id="856c3-131">`/uri:` *\<cadena >*</span><span class="sxs-lookup"><span data-stu-id="856c3-131">`/uri:` *\<string>*</span></span>|<span data-ttu-id="856c3-132">El URI de la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de distribución.</span><span class="sxs-lookup"><span data-stu-id="856c3-132">The URI of the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span>|  
+|<span data-ttu-id="856c3-133">`/version:`[1.0&#124;2.0]</span><span class="sxs-lookup"><span data-stu-id="856c3-133">`/version:`[1.0&#124;2.0]</span></span>|<span data-ttu-id="856c3-134">Especifica la versión superior aceptada de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="856c3-134">Specifies the highest accepted version of [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].</span></span> <span data-ttu-id="856c3-135">La versión se determina según la `DataServiceVersion` atributo del elemento DataService en los metadatos del servicio de datos devueltos.</span><span class="sxs-lookup"><span data-stu-id="856c3-135">The version is determined based on the `DataServiceVersion` attribute of the DataService element in the returned data service metadata.</span></span> <span data-ttu-id="856c3-136">Para obtener más información, consulte [versiones del servicio de datos](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="856c3-136">For more information, see [Data Service Versioning](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).</span></span> <span data-ttu-id="856c3-137">Cuando se especifica la `/dataservicecollection` parámetro, también debe especificar `/version:2.0` para habilitar el enlace de datos.</span><span class="sxs-lookup"><span data-stu-id="856c3-137">When you specify the `/dataservicecollection` parameter, you must also specify `/version:2.0` to enable data binding.</span></span>|  
   
-## Vea también  
- [Generar la biblioteca de cliente del servicio de datos](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)   
- [Cómo: Agregar una referencia a un servicio de datos](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="856c3-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="856c3-138">See Also</span></span>  
+ [<span data-ttu-id="856c3-139">Generar la biblioteca cliente del servicio de datos</span><span class="sxs-lookup"><span data-stu-id="856c3-139">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
+ [<span data-ttu-id="856c3-140">Cómo: agregar una referencia de servicio de datos</span><span class="sxs-lookup"><span data-stu-id="856c3-140">How to: Add a Data Service Reference</span></span>](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

@@ -1,154 +1,147 @@
 ---
-title: "Code Access Security Policy Compatibility and Migration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "policy migration, compatibility"
-  - "CLR poliicy migration"
+title: "Compatibilidad con la directiva de seguridad de acceso del código y migración"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- policy migration, compatibility
+- CLR poliicy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-caps.latest.revision: 15
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 29e81f5e83bc3cbf9467c7940ba6acfd0a8c99b7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Code Access Security Policy Compatibility and Migration
-La parte de la directiva de seguridad de acceso del código \(CAS\) se ha quedado obsoleta en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  Como resultado, puede encontrar advertencias de compilación y excepciones en tiempo de ejecución si se llama a los tipos y miembros obsoletos de la directiva [explícita](#explicit_use) o [implícitamente](#implicit_use) \(a través de otros tipos y miembros\).  
+# <a name="code-access-security-policy-compatibility-and-migration"></a><span data-ttu-id="36c22-102">Compatibilidad con la directiva de seguridad de acceso del código y migración</span><span class="sxs-lookup"><span data-stu-id="36c22-102">Code Access Security Policy Compatibility and Migration</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Para los errores y advertencias:  
+ <span data-ttu-id="36c22-103">La parte de la directiva de seguridad de acceso del código (CAS) se ha quedado obsoleta en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="36c22-103">The policy portion of code access security (CAS) has been made obsolete in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="36c22-104">Como resultado, puede encontrar advertencias de compilación y excepciones en tiempo de ejecución si se llama a los tipos obsoletos de la directiva y miembros [explícitamente](#explicit_use) o [implícitamente](#implicit_use) (a través de otros tipos y miembros).</span><span class="sxs-lookup"><span data-stu-id="36c22-104">As a result, you may encounter compilation warnings and runtime exceptions if you call the obsolete policy types and members [explicitly](#explicit_use) or [implicitly](#implicit_use) (through other types and members).</span></span>  
   
--   [Migre](#migration) a los sustitutos de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] para las llamadas obsoletas.  
+ <span data-ttu-id="36c22-105">Para los errores y advertencias:</span><span class="sxs-lookup"><span data-stu-id="36c22-105">You can avoid the warnings and errors by either:</span></span>  
   
-     o bien  
+-   <span data-ttu-id="36c22-106">[Migrar](#migration) a la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] reemplazos para las llamadas obsoletas.</span><span class="sxs-lookup"><span data-stu-id="36c22-106">[Migrating](#migration) to the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] replacements for the obsolete calls.</span></span>  
   
--   Use el [elemento de configuración \<NetFx40\_LegacySecurityPolicy\>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para participar en el comportamiento de la directiva CAS heredada.  
+     <span data-ttu-id="36c22-107">\- o -</span><span class="sxs-lookup"><span data-stu-id="36c22-107">\- or -</span></span>  
   
- Este tema contiene las siguientes secciones:  
+-   <span data-ttu-id="36c22-108">Mediante el [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para participar en el comportamiento de directiva CAS heredada.</span><span class="sxs-lookup"><span data-stu-id="36c22-108">Using the [<NetFx40_LegacySecurityPolicy> configuration element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) to opt into the legacy CAS policy behavior.</span></span>  
   
--   [Uso explícito](#explicit_use)  
+ <span data-ttu-id="36c22-109">Este tema contiene las siguientes secciones:</span><span class="sxs-lookup"><span data-stu-id="36c22-109">This topic contains the following sections:</span></span>  
   
--   [Uso implícito](#implicit_use)  
+-   [<span data-ttu-id="36c22-110">Uso explícito</span><span class="sxs-lookup"><span data-stu-id="36c22-110">Explicit Use</span></span>](#explicit_use)  
   
--   [Errores y advertencias](#errors_and_warnings)  
+-   [<span data-ttu-id="36c22-111">Uso implícito</span><span class="sxs-lookup"><span data-stu-id="36c22-111">Implicit Use</span></span>](#implicit_use)  
   
--   [Migración: reemplazo para las llamadas obsoletas](#migration)  
+-   [<span data-ttu-id="36c22-112">Errores y advertencias</span><span class="sxs-lookup"><span data-stu-id="36c22-112">Errors and Warnings</span></span>](#errors_and_warnings)  
   
--   [Compatibilidad: usar la opción de directiva CAS heredada](#compatibility)  
+-   [<span data-ttu-id="36c22-113">Migración: Reemplazo para las llamadas obsoletas</span><span class="sxs-lookup"><span data-stu-id="36c22-113">Migration: Replacement for Obsolete Calls</span></span>](#migration)  
   
-> [!CAUTION]
->  Seguridad de acceso del código y código de confianza parcial  
->   
->  .NET Framework proporciona seguridad de acceso del código \(CAS\), que es un mecanismo para el cumplimiento de los distintos niveles de confianza en diferentes códigos que se ejecutan en la misma aplicación.  La seguridad de acceso del código en .NET Framework no debe usarse como límite de seguridad para código de confianza parcial, especialmente si se trata de código de origen desconocido.  Le aconsejamos que no cargue ni ejecute código de orígenes desconocidos sin contar con medidas de seguridad alternativas.  
->   
->  Esta directiva se aplica a todas las versiones de .NET Framework, pero no se aplica a la versión de .NET Framework incluida en Silverlight.  
+-   [<span data-ttu-id="36c22-114">Compatibilidad: Usar la opción de directiva CAS heredada</span><span class="sxs-lookup"><span data-stu-id="36c22-114">Compatibility: Using the CAS Policy Legacy Option</span></span>](#compatibility)  
   
 <a name="explicit_use"></a>   
-## Uso explícito  
- Los miembros que manipulan directamente directivas de seguridad o que necesitan la directiva CAS para el espacio aislado están obsoletos y generarán errores de forma predeterminada.  
+## <a name="explicit-use"></a><span data-ttu-id="36c22-115">Uso explícito</span><span class="sxs-lookup"><span data-stu-id="36c22-115">Explicit Use</span></span>  
+ <span data-ttu-id="36c22-116">Los miembros que manipulan directamente directivas de seguridad o que necesitan la directiva CAS para el espacio aislado están obsoletos y generarán errores de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="36c22-116">Members that directly manipulate security policy or require CAS policy to sandbox are obsolete and will produce errors by default.</span></span>  
   
- Algunos ejemplos son:  
+ <span data-ttu-id="36c22-117">Algunos ejemplos son:</span><span class="sxs-lookup"><span data-stu-id="36c22-117">Examples of these are:</span></span>  
   
--   <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.HostSecurityManager.DomainPolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.HostSecurityManager.DomainPolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.Policy.PolicyLevel.CreateAppDomainLevel%2A?displayProperty=fullName>  
+-   <xref:System.Security.Policy.PolicyLevel.CreateAppDomainLevel%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.LoadPolicyLevelFromString%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.LoadPolicyLevelFromString%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.ResolveSystemPolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.ResolveSystemPolicy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.ResolvePolicyGroups%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.ResolvePolicyGroups%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.PolicyHierarchy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.PolicyHierarchy%2A?displayProperty=nameWithType>  
   
--   <xref:System.Security.SecurityManager.SavePolicy%2A?displayProperty=fullName>  
+-   <xref:System.Security.SecurityManager.SavePolicy%2A?displayProperty=nameWithType>  
   
 <a name="implicit_use"></a>   
-## Uso implícito  
- Cuando varios ensamblados cargan sobrecargas se producen errores debido a su uso implícito de la directiva CAS.  Estas sobrecargas toman un parámetro <xref:System.Security.Policy.Evidence> que se usa para resolver la directiva CAS y proporcionar un conjunto de permisos concedidos a un ensamblado.  
+## <a name="implicit-use"></a><span data-ttu-id="36c22-118">Uso implícito</span><span class="sxs-lookup"><span data-stu-id="36c22-118">Implicit Use</span></span>  
+ <span data-ttu-id="36c22-119">Cuando varios ensamblados cargan sobrecargas se producen errores debido a su uso implícito de la directiva CAS.</span><span class="sxs-lookup"><span data-stu-id="36c22-119">Several assembly loading overloads produce errors because of their implicit use of CAS policy.</span></span> <span data-ttu-id="36c22-120">Estas sobrecargas toman un parámetro <xref:System.Security.Policy.Evidence> que se usa para resolver la directiva CAS y proporcionar un conjunto de permisos concedidos a un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="36c22-120">These overloads take an <xref:System.Security.Policy.Evidence> parameter that is used to resolve CAS policy and provide a permission grant set for an assembly.</span></span>  
   
- Estos son algunos ejemplos:  Las sobrecargas obsoletas son las que toman <xref:System.Security.Policy.Evidence> como parámetro:  
+ <span data-ttu-id="36c22-121">Estos son algunos ejemplos:</span><span class="sxs-lookup"><span data-stu-id="36c22-121">Here are some examples.</span></span> <span data-ttu-id="36c22-122">Las sobrecargas obsoletas son las que toman <xref:System.Security.Policy.Evidence> como parámetro:</span><span class="sxs-lookup"><span data-stu-id="36c22-122">The obsolete overloads are those that take <xref:System.Security.Policy.Evidence> as a parameter:</span></span>  
   
--   <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=fullName>  
+-   <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.ExecuteAssemblyByName%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.Load%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
   
 <a name="errors_and_warnings"></a>   
-## Errores y advertencias  
- Los tipos y miembros obsoletos generan los siguientes mensajes de error cuando se usan.  Tenga en cuenta que el tipo <xref:System.Security.Policy.Evidence?displayProperty=fullName> en sí no está obsoleto.  
+## <a name="errors-and-warnings"></a><span data-ttu-id="36c22-123">Errores y advertencias</span><span class="sxs-lookup"><span data-stu-id="36c22-123">Errors and Warnings</span></span>  
+ <span data-ttu-id="36c22-124">Los tipos y miembros obsoletos generan los siguientes mensajes de error cuando se usan.</span><span class="sxs-lookup"><span data-stu-id="36c22-124">The obsolete types and members produce the following error messages when they are used.</span></span> <span data-ttu-id="36c22-125">Tenga en cuenta que el tipo <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> en sí no está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="36c22-125">Note that the <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> type itself is not obsolete.</span></span>  
   
- Advertencia en tiempo de compilación:  
+ <span data-ttu-id="36c22-126">Advertencia en tiempo de compilación:</span><span class="sxs-lookup"><span data-stu-id="36c22-126">Compile-time warning:</span></span>  
   
- `warning CS0618: '<API Name>' is obsolete: 'This method is obsolete and will be removed in a future release of the .NET Framework.  Please use <suggested alternate API>.  See <link> for more information.'`  
+ `warning CS0618: '<API Name>' is obsolete: 'This method is obsolete and will be removed in a future release of the .NET Framework. Please use <suggested alternate API>. See <link> for more information.'`  
   
- Excepción de tiempo de ejecución:  
+ <span data-ttu-id="36c22-127">Excepción de tiempo de ejecución:</span><span class="sxs-lookup"><span data-stu-id="36c22-127">Run-time exception:</span></span>  
   
- <xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`  
+ <span data-ttu-id="36c22-128"><xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`</span><span class="sxs-lookup"><span data-stu-id="36c22-128"><xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`</span></span>  
   
 <a name="migration"></a>   
-## Migración: reemplazo para las llamadas obsoletas  
+## <a name="migration-replacement-for-obsolete-calls"></a><span data-ttu-id="36c22-129">Migración: reemplazo para las llamadas obsoletas</span><span class="sxs-lookup"><span data-stu-id="36c22-129">Migration: Replacement for Obsolete Calls</span></span>  
   
-### Determinar el nivel de confianza de un ensamblado  
- La directiva CAS suele usarse para determinar el nivel de confianza o el conjunto de permisos concedidos a un ensamblado o dominio de aplicación.  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone las siguientes propiedades útiles que no necesitan resolver la directiva de seguridad:  
+### <a name="determining-an-assemblys-trust-level"></a><span data-ttu-id="36c22-130">Determinar el nivel de confianza de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="36c22-130">Determining an Assembly’s Trust Level</span></span>  
+ <span data-ttu-id="36c22-131">La directiva CAS suele usarse para determinar el nivel de confianza o el conjunto de permisos concedidos a un ensamblado o dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="36c22-131">CAS policy is often used to determine an assembly’s or application domain’s permission grant set or trust level.</span></span> <span data-ttu-id="36c22-132">[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone las siguientes propiedades útiles que no necesitan resolver la directiva de seguridad:</span><span class="sxs-lookup"><span data-stu-id="36c22-132">The [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] exposes the following useful properties that do not need to resolve security policy:</span></span>  
   
--   <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>  
   
--   <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=fullName>  
+-   <xref:System.Reflection.Assembly.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.PermissionSet%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.PermissionSet%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=fullName>  
+-   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
-### Espacio aislado del dominio de aplicación  
- El método <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=fullName> suele usarse para hospedar en un espacio aislado los ensamblados de un dominio de aplicación.  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone miembros que no tienen que usar <xref:System.Security.Policy.PolicyLevel> con este fin. Para obtener más información, consulte [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+### <a name="application-domain-sandboxing"></a><span data-ttu-id="36c22-133">Espacio aislado del dominio de aplicación</span><span class="sxs-lookup"><span data-stu-id="36c22-133">Application Domain Sandboxing</span></span>  
+ <span data-ttu-id="36c22-134">El método <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> suele usarse para hospedar en un espacio aislado los ensamblados de un dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="36c22-134">The <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> method is typically used for sandboxing the assemblies in an application domain.</span></span> <span data-ttu-id="36c22-135">El [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone miembros que no tienen que usar <xref:System.Security.Policy.PolicyLevel> para este propósito.</span><span class="sxs-lookup"><span data-stu-id="36c22-135">The [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] exposes members that do not have to use <xref:System.Security.Policy.PolicyLevel> for this purpose.</span></span> <span data-ttu-id="36c22-136">Para obtener más información, consulte [Cómo: ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).</span><span class="sxs-lookup"><span data-stu-id="36c22-136">For more information, see [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).</span></span>  
   
-### Determinar el conjunto de permisos seguro o razonable para código de confianza parcial  
- Los hosts suelen necesitar determinar los permisos adecuados para el código hospedado en espacio aislado.  Antes de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la directiva CAS proporcionaba una manera de hacerlo con el método <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=fullName>.  Como reemplazo, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] proporciona el método <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=fullName>, que devuelve un conjunto de permisos estándar y seguro para la evidencia proporcionada.  
+### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a><span data-ttu-id="36c22-137">Determinar el conjunto de permisos seguro o razonable para código de confianza parcial</span><span class="sxs-lookup"><span data-stu-id="36c22-137">Determining a Safe or Reasonable Permission Set for Partially Trusted Code</span></span>  
+ <span data-ttu-id="36c22-138">Los hosts suelen necesitar determinar los permisos adecuados para el código hospedado en espacio aislado.</span><span class="sxs-lookup"><span data-stu-id="36c22-138">Hosts often need to determine the permissions that are appropriate for sandboxing hosted code.</span></span> <span data-ttu-id="36c22-139">Antes de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la directiva CAS proporcionaba una manera de hacerlo con el <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="36c22-139">Before the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], CAS policy provided a way to do this with the <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="36c22-140">Como reemplazo, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] proporciona el <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> método, que devuelve un prueba de errores estándar conjunto de permisos para la evidencia proporcionada.</span><span class="sxs-lookup"><span data-stu-id="36c22-140">As a replacement, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] provides the <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> method, which returns a safe, standard permission set for the provided evidence.</span></span>  
   
-### Escenarios sin espacio aislado: sobrecargas para cargas de ensamblado  
- La razón para usar una sobrecarga de carga de ensamblado puede ser usar parámetros que de otra forma no están disponibles, en lugar de hospedar el ensamblado en un espacio aislado.  A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], las sobrecargas de carga de ensamblado que no requieren un objeto <xref:System.Security.Policy.Evidence?displayProperty=fullName> como parámetro, por ejemplo, [AppDomain.ExecuteAssembly\(String, String\[\], Byte\<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=fullName>, habilitan este escenario.  
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a><span data-ttu-id="36c22-141">Escenarios sin espacio aislado: sobrecargas para cargas de ensamblado</span><span class="sxs-lookup"><span data-stu-id="36c22-141">Non-Sandboxing Scenarios: Overloads for Assembly Loads</span></span>  
+ <span data-ttu-id="36c22-142">La razón para usar una sobrecarga de carga de ensamblado puede ser usar parámetros que de otra forma no están disponibles, en lugar de hospedar el ensamblado en un espacio aislado.</span><span class="sxs-lookup"><span data-stu-id="36c22-142">The reason for using an assembly load overload might be to use parameters that are not otherwise available, instead of sandboxing the assembly.</span></span> <span data-ttu-id="36c22-143">A partir de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], las sobrecargas de carga de ensamblado que no requieren un <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> objeto como parámetro, por ejemplo, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, habilitar este escenario.</span><span class="sxs-lookup"><span data-stu-id="36c22-143">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], assembly load overloads that do not require a <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> object as a parameter, for example, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, enable this scenario.</span></span>  
   
- Si quiere hospedar un ensamblado en un espacio aislado, use la sobrecarga [AppDomain.CreateDomain\(String, Evidence, AppDomainSetup, PermissionSet, StrongName\<xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=fullName>.  
+ <span data-ttu-id="36c22-144">Si quiere hospedar un ensamblado en un espacio aislado, use la sobrecarga <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="36c22-144">If you want to sandbox an assembly, use the <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> overload.</span></span>  
   
 <a name="compatibility"></a>   
-## Compatibilidad: usar la opción de directiva CAS heredada  
- El elemento de configuración [\<NetFx40\_LegacySecurityPolicy\>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) permite especificar que un proceso o una biblioteca usa la directiva CAS heredada.  Cuando se habilita este elemento, las sobrecargas de directiva y de evidencia funcionarán igual que en versiones anteriores de Framework.  
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a><span data-ttu-id="36c22-145">Compatibilidad: usar la opción de directiva CAS heredada</span><span class="sxs-lookup"><span data-stu-id="36c22-145">Compatibility: Using the CAS Policy Legacy Option</span></span>  
+ <span data-ttu-id="36c22-146">El [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) permite especificar que un proceso o una biblioteca usa la directiva CAS heredada.</span><span class="sxs-lookup"><span data-stu-id="36c22-146">The [<NetFx40_LegacySecurityPolicy> configuration element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) lets you specify that a process or library uses legacy CAS policy.</span></span> <span data-ttu-id="36c22-147">Cuando se habilita este elemento, las sobrecargas de directiva y de evidencia funcionarán igual que en versiones anteriores de Framework.</span><span class="sxs-lookup"><span data-stu-id="36c22-147">When you enable this element, the policy and evidence overloads will work as they did in previous versions of the framework.</span></span>  
   
 > [!NOTE]
->  El comportamiento de la directiva CAS es específico de cada versión del tiempo de ejecución y por lo tanto, modificar la directiva CAS para una versión del tiempo de ejecución no afecta a la directiva CAS de otra versión.  
+>  <span data-ttu-id="36c22-148">El comportamiento de la directiva CAS es específico de cada versión del tiempo de ejecución y por lo tanto, modificar la directiva CAS para una versión del tiempo de ejecución no afecta a la directiva CAS de otra versión.</span><span class="sxs-lookup"><span data-stu-id="36c22-148">CAS policy behavior is specified on a runtime version basis, so modifying CAS policy for one runtime version does not affect the CAS policy of another version.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <NetFx40_LegacySecurityPolicy enabled="true"/>  
@@ -156,5 +149,5 @@ La parte de la directiva de seguridad de acceso del código \(CAS\) se ha quedad
 </configuration>  
 ```  
   
-## Vea también  
- [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a><span data-ttu-id="36c22-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="36c22-149">See Also</span></span>  
+ [<span data-ttu-id="36c22-150">Cómo: Ejecutar código de confianza parcial en un espacio aislado</span><span class="sxs-lookup"><span data-stu-id="36c22-150">How to: Run Partially Trusted Code in a Sandbox</span></span>](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

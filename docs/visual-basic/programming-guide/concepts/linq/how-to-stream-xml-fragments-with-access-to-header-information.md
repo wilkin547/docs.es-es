@@ -1,43 +1,34 @@
 ---
-title: "Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic)
-A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a><span data-ttu-id="513ec-102">Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="513ec-102">How to: Stream XML Fragments with Access to Header Information (Visual Basic)</span></span>
+<span data-ttu-id="513ec-103">A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible.</span><span class="sxs-lookup"><span data-stu-id="513ec-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="513ec-104">Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo).</span><span class="sxs-lookup"><span data-stu-id="513ec-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="513ec-105">Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.</span><span class="sxs-lookup"><span data-stu-id="513ec-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> Sin embargo, desea utilizar [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, consulte [Cómo: escribir un LINQ al método de eje XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ <span data-ttu-id="513ec-106">Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="513ec-106">One option is to write your application using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="513ec-107">Pero quizás prefiera usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar el árbol XML.</span><span class="sxs-lookup"><span data-stu-id="513ec-107">However, you might want to use [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to query the XML tree.</span></span> <span data-ttu-id="513ec-108">En ese caso, puede escribir su propio método de eje personalizado.</span><span class="sxs-lookup"><span data-stu-id="513ec-108">If this is the case, you can write your own custom axis method.</span></span> <span data-ttu-id="513ec-109">Para obtener más información, consulte [Cómo: escribir un LINQ en método de eje XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).</span><span class="sxs-lookup"><span data-stu-id="513ec-109">For more information, see [How to: Write a LINQ to XML Axis Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).</span></span>  
   
- Para escribir su propio método de eje, debe escribir un pequeño método que utiliza el <xref:System.Xml.XmlReader>para leer hasta que llega a uno de los nodos en el que esté interesado.</xref:System.Xml.XmlReader> A continuación, llama al método <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de la <xref:System.Xml.XmlReader>y crea instancias de un fragmento XML.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> A continuación puede escribir las consultas LINQ en su método de eje personalizado.  
+ <span data-ttu-id="513ec-110">Para escribir su propio método de eje, debe escribir un pequeño método que utiliza los nodos <xref:System.Xml.XmlReader> para leer hasta que llega a uno de los nodos en el que está interesado.</span><span class="sxs-lookup"><span data-stu-id="513ec-110">To write your own axis method, you write a small method that uses the <xref:System.Xml.XmlReader> to read nodes until it reaches one of the nodes in which you are interested.</span></span> <span data-ttu-id="513ec-111">A continuación el método llama a <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de <xref:System.Xml.XmlReader> y crea una instancia de un fragmento XML.</span><span class="sxs-lookup"><span data-stu-id="513ec-111">The method then calls <xref:System.Xml.Linq.XNode.ReadFrom%2A>, which reads from the <xref:System.Xml.XmlReader> and instantiates an XML fragment.</span></span> <span data-ttu-id="513ec-112">A continuación puede escribir las consultas LINQ en su método de eje personalizado.</span><span class="sxs-lookup"><span data-stu-id="513ec-112">You can then write LINQ queries on your custom axis method.</span></span>  
   
- Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Estándar de cierto operadores de consulta, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, ordenan y finalmente producen el primer elemento de la secuencia.</xref:System.Linq.Enumerable.OrderBy%2A> Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña.  
+ <span data-ttu-id="513ec-113">Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento.</span><span class="sxs-lookup"><span data-stu-id="513ec-113">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="513ec-114">Ciertos operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia.</span><span class="sxs-lookup"><span data-stu-id="513ec-114">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="513ec-115">Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña.</span><span class="sxs-lookup"><span data-stu-id="513ec-115">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- A veces el problema se pone un poco más interesante. En el siguiente documento XML, el consumidor de su método de eje personalizado también tiene que conocer el nombre del cliente al que pertenece cada elemento.  
+## <a name="example"></a><span data-ttu-id="513ec-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="513ec-116">Example</span></span>  
+ <span data-ttu-id="513ec-117">A veces el problema se pone un poco más interesante.</span><span class="sxs-lookup"><span data-stu-id="513ec-117">Sometimes the problem gets just a little more interesting.</span></span> <span data-ttu-id="513ec-118">En el siguiente documento XML, el consumidor de su método de eje personalizado también tiene que conocer el nombre del cliente al que pertenece cada elemento.</span><span class="sxs-lookup"><span data-stu-id="513ec-118">In the following XML document, the consumer of your custom axis method also has to know the name of the customer that each item belongs to.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -84,11 +75,11 @@ A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicac
 </Root>  
 ```  
   
- El enfoque que toma este ejemplo consiste en consultar también esta información de encabezado, guardar la información de encabezado y después crear un pequeño árbol XML que contiene la información de encabezado y el detalle que está enumerando. El método de eje ofrece este nuevo y pequeño árbol XML. La consulta tiene acceso a la información de encabezado así como a la información detallada.  
+ <span data-ttu-id="513ec-119">El enfoque que toma este ejemplo consiste en consultar también esta información de encabezado, guardar la información de encabezado y después crear un pequeño árbol XML que contiene la información de encabezado y el detalle que está enumerando.</span><span class="sxs-lookup"><span data-stu-id="513ec-119">The approach that this example takes is to also watch for this header information, save the header information, and then build a small XML tree that contains both the header information and the detail that you are enumerating.</span></span> <span data-ttu-id="513ec-120">El método de eje ofrece este nuevo y pequeño árbol XML.</span><span class="sxs-lookup"><span data-stu-id="513ec-120">The axis method then yields this new, small XML tree.</span></span> <span data-ttu-id="513ec-121">La consulta tiene acceso a la información de encabezado así como a la información detallada.</span><span class="sxs-lookup"><span data-stu-id="513ec-121">The query then has access to the header information as well as the detail information.</span></span>  
   
- Este enfoque ocupa una pequeña superficie de memoria. Como se ofrecen todos los fragmentos XML detallados, no se guardan referencias al fragmento anterior y está disponible para la recolección de elementos no utilizados. Tenga en cuenta que esta técnica crea muchos objetos de vida corta en el montón.  
+ <span data-ttu-id="513ec-122">Este enfoque ocupa una pequeña superficie de memoria.</span><span class="sxs-lookup"><span data-stu-id="513ec-122">This approach has a small memory footprint.</span></span> <span data-ttu-id="513ec-123">Como se ofrecen todos los fragmentos XML detallados, no se guardan referencias al fragmento anterior y está disponible para la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="513ec-123">As each detail XML fragment is yielded, no references are kept to the previous fragment, and it is available for garbage collection.</span></span> <span data-ttu-id="513ec-124">Tenga en cuenta que esta técnica crea muchos objetos de vida corta en el montón.</span><span class="sxs-lookup"><span data-stu-id="513ec-124">Note that this technique creates many short lived objects on the heap.</span></span>  
   
- En el siguiente ejemplo se muestra cómo implementar y utilizar un método de eje personalizado que transmite por secuencias fragmentos XML del archivo especificado por la URI. Este eje personalizado ha sido escrito específicamente para que espere un documento que tiene los elementos `Customer`, `Name`, y `Item`, y que esos elementos se ordenarán como en el documento `Source.xml` anterior. Se trata de una implementación simplista. Una implementación más sólida estaría preparada para analizar un documento no válido.  
+ <span data-ttu-id="513ec-125">En el siguiente ejemplo se muestra cómo implementar y utilizar un método de eje personalizado que transmite por secuencias fragmentos XML del archivo especificado por la URI.</span><span class="sxs-lookup"><span data-stu-id="513ec-125">The following example shows how to implement and use a custom axis method that streams XML fragments from the file specified by the URI.</span></span> <span data-ttu-id="513ec-126">Este eje personalizado ha sido escrito específicamente para que espere un documento que tiene los elementos `Customer`, `Name`, y `Item`, y que esos elementos se ordenarán como en el documento `Source.xml` anterior.</span><span class="sxs-lookup"><span data-stu-id="513ec-126">This custom axis is specifically written such that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the above `Source.xml` document.</span></span> <span data-ttu-id="513ec-127">Se trata de una implementación simplista.</span><span class="sxs-lookup"><span data-stu-id="513ec-127">It is a simplistic implementation.</span></span> <span data-ttu-id="513ec-128">Una implementación más sólida estaría preparada para analizar un documento no válido.</span><span class="sxs-lookup"><span data-stu-id="513ec-128">A more robust implementation would be prepared to parse an invalid document.</span></span>  
   
 ```vb  
 Module Module1  
@@ -221,7 +212,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- Este código genera el siguiente resultado:  
+ <span data-ttu-id="513ec-129">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="513ec-129">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -248,6 +239,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Avanzada de LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="513ec-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="513ec-130">See Also</span></span>  
+ [<span data-ttu-id="513ec-131">Avanzada de LINQ to XML programación (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="513ec-131">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

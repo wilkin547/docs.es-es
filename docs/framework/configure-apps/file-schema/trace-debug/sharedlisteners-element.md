@@ -1,74 +1,76 @@
 ---
-title: "&lt;sharedListeners&gt; (Elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sharedListeners> (elemento)"
-  - "agentes de escucha"
-  - "agentes de escucha compartidos"
-  - "sharedListeners (elemento)"
-  - "agentes de escucha de seguimiento, <sharedListeners> (elemento)"
+title: '&lt;sharedListeners&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners
+helpviewer_keywords:
+- <sharedListeners> element
+- listeners
+- shared listeners
+- trace listeners, <sharedListeners> element
+- sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7ab96ad43248517dca99bff176be7edfab8d3ced
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sharedListeners&gt; (Elemento)
-Contiene agentes de escucha a los que puede hacer referencia cualquier origen o elemento de traza.  Estos agentes de escucha no reciben de forma predeterminada ningún seguimiento y no es posible recuperar estos agentes de escucha en tiempo de ejecución.  Los agentes de escucha identificados como agentes de escucha compartidos se pueden agregar por nombre a los orígenes o trazas.  
+# <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="daa0f-102">&lt;sharedListeners&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="daa0f-102">&lt;sharedListeners&gt; Element</span></span>
+<span data-ttu-id="daa0f-103">Contiene los agentes de escucha a los que puede hacer referencia cualquier origen o elemento de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="daa0f-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="daa0f-104">Estos agentes de escucha no reciben ninguna traza de forma predeterminada y no es posible recuperar estos agentes de escucha en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="daa0f-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="daa0f-105">Los agentes de escucha identificados como agentes de escucha compartidos se pueden agregar a los orígenes o seguimientos por su nombre.</span><span class="sxs-lookup"><span data-stu-id="daa0f-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="daa0f-106">\<configuration></span><span class="sxs-lookup"><span data-stu-id="daa0f-106">\<configuration></span></span>  
+<span data-ttu-id="daa0f-107">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="daa0f-107">\<system.diagnostics></span></span>  
+<span data-ttu-id="daa0f-108">\<sharedListeners ></span><span class="sxs-lookup"><span data-stu-id="daa0f-108">\<sharedListeners></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="daa0f-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="daa0f-109">Syntax</span></span>  
+  
+```xml  
 <sharedListeners>   
   <add>...</add>  
 </sharedListeners>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="daa0f-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="daa0f-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="daa0f-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="daa0f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- Ninguno.  
+### <a name="attributes"></a><span data-ttu-id="daa0f-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="daa0f-112">Attributes</span></span>  
+ <span data-ttu-id="daa0f-113">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="daa0f-113">None.</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="daa0f-114">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="daa0f-114">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `sharedListeners`.|  
+|<span data-ttu-id="daa0f-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="daa0f-115">Element</span></span>|<span data-ttu-id="daa0f-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="daa0f-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="daa0f-117">\<add></span><span class="sxs-lookup"><span data-stu-id="daa0f-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="daa0f-118">Agrega un agente de escucha a la colección `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="daa0f-118">Adds a listener to the `sharedListeners` collection.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="daa0f-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="daa0f-119">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`Configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`system.diagnostics`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
+|<span data-ttu-id="daa0f-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="daa0f-120">Element</span></span>|<span data-ttu-id="daa0f-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="daa0f-121">Description</span></span>|  
+|-------------|-----------------|  
+|`Configuration`|<span data-ttu-id="daa0f-122">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="daa0f-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="daa0f-123">Especifica el elemento raíz de la sección de configuración de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="daa0f-123">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## Comentarios  
- Agregar un agente de escucha a la colección de agentes de escucha compartidos no la convierte en un agente de escucha activo.  Todavía es necesario agregarla a un origen de seguimiento o a un seguimiento incluyéndola en la colección `Listeners` de ese elemento de seguimiento.  Las clases de agente de escucha incluidas en .NET Framework se derivan de la clase <xref:System.Diagnostics.TraceListener>.  
+## <a name="remarks"></a><span data-ttu-id="daa0f-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="daa0f-124">Remarks</span></span>  
+ <span data-ttu-id="daa0f-125">Agregar un agente de escucha a la colección de agentes de escucha compartidos no hace que sea un agente de escucha activo.</span><span class="sxs-lookup"><span data-stu-id="daa0f-125">Adding a listener to the shared listeners collection does not make it an active listener.</span></span> <span data-ttu-id="daa0f-126">Todavía debe agregarse a un origen de seguimiento o un seguimiento agregándolo a la `Listeners` colección para ese elemento de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="daa0f-126">It must still be added to a trace source or a trace by adding it to the `Listeners` collection for that trace element.</span></span> <span data-ttu-id="daa0f-127">Las clases de agente de escucha en .NET Framework se derivan de la <xref:System.Diagnostics.TraceListener> clase.</span><span class="sxs-lookup"><span data-stu-id="daa0f-127">The listener classes in the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
- Este elemento se puede utilizar en el archivo de configuración del equipo \(Machine.config\) y en el archivo de configuración de la aplicación.  
+ <span data-ttu-id="daa0f-128">Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="daa0f-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar el elemento `<sharedListeners>` para agregar el agente de escucha `console` a la colección `Listeners` para ambas clases, <xref:System.Diagnostics.TraceSource> y <xref:System.Diagnostics.Trace>.  El agente de escucha de seguimiento de la consola escribe información de seguimiento en la consola a través de llamadas a <xref:System.Diagnostics.TraceSource> o <xref:System.Diagnostics.Trace>.  
+## <a name="example"></a><span data-ttu-id="daa0f-129">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="daa0f-129">Example</span></span>  
+ <span data-ttu-id="daa0f-130">En el ejemplo siguiente se muestra cómo utilizar el `<sharedListeners>` elemento que se va a agregar el agente de escucha `console` a la `Listeners` colección tanto para el <xref:System.Diagnostics.TraceSource> y <xref:System.Diagnostics.Trace> clases.</span><span class="sxs-lookup"><span data-stu-id="daa0f-130">The following example shows how to use the `<sharedListeners>` element to add the listener `console` to the `Listeners` collection for both the <xref:System.Diagnostics.TraceSource> and <xref:System.Diagnostics.Trace> classes.</span></span> <span data-ttu-id="daa0f-131">El agente de escucha de seguimiento de consola escribe información de seguimiento en la consola a través de llamadas a <xref:System.Diagnostics.TraceSource> o <xref:System.Diagnostics.Trace>.</span><span class="sxs-lookup"><span data-stu-id="daa0f-131">The console trace listener writes trace information to the console through calls to either <xref:System.Diagnostics.TraceSource> or <xref:System.Diagnostics.Trace>.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sharedListeners>  
@@ -96,7 +98,7 @@ Contiene agentes de escucha a los que puede hacer referencia cualquier origen o 
 </configuration></system.diagnostics>   
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.TraceListener>   
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="daa0f-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="daa0f-132">See Also</span></span>  
+ <xref:System.Diagnostics.TraceListener>  
+ [<span data-ttu-id="daa0f-133">Esquema de la configuración de seguimiento y depuración</span><span class="sxs-lookup"><span data-stu-id="daa0f-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="daa0f-134">Agentes de escucha de seguimiento</span><span class="sxs-lookup"><span data-stu-id="daa0f-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

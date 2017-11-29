@@ -1,37 +1,40 @@
 ---
-title: "Elemento &lt;listeners&gt; de &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<listeners> (elemento) para <source>"
-  - "listeners (elemento) para <source>"
+title: '&lt;los agentes de escucha&gt; (elemento) para &lt;origen&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
+helpviewer_keywords:
+- listeners element for <source>
+- <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 71b11cbc34bdbb5d414aa250ea2c2fce85cfac0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;listeners&gt; de &lt;source&gt;
-Agrega o quita los agentes de escucha de la colección <xref:System.Diagnostics.TraceSource.Listeners%2A> para un origen <xref:System.Diagnostics.TraceSource>.  Los agentes de escucha dirigen los resultados de la traza a un destino apropiado, como un registro, una ventana o un archivo de texto.  
+# <a name="ltlistenersgt-element-for-ltsourcegt"></a><span data-ttu-id="dfc51-102">&lt;los agentes de escucha&gt; (elemento) para &lt;origen&gt;</span><span class="sxs-lookup"><span data-stu-id="dfc51-102">&lt;listeners&gt; Element for &lt;source&gt;</span></span>
+<span data-ttu-id="dfc51-103">Agrega o quita los agentes de escucha de la <xref:System.Diagnostics.TraceSource.Listeners%2A> colección para un <xref:System.Diagnostics.TraceSource>.</span><span class="sxs-lookup"><span data-stu-id="dfc51-103">Adds or removes listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A> collection for a <xref:System.Diagnostics.TraceSource>.</span></span> <span data-ttu-id="dfc51-104">Agentes de escucha dirigen los resultados del seguimiento a un destino apropiado, como un registro, una ventana o un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="dfc51-104">A listener directs the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="dfc51-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dfc51-105">\<configuration></span></span>  
+<span data-ttu-id="dfc51-106">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="dfc51-106">\<system.diagnostics></span></span>  
+<span data-ttu-id="dfc51-107">\<orígenes ></span><span class="sxs-lookup"><span data-stu-id="dfc51-107">\<sources></span></span>  
+<span data-ttu-id="dfc51-108">\<origen ></span><span class="sxs-lookup"><span data-stu-id="dfc51-108">\<source></span></span>  
+<span data-ttu-id="dfc51-109">\<los agentes de escucha > elemento</span><span class="sxs-lookup"><span data-stu-id="dfc51-109">\<listeners> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="dfc51-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="dfc51-110">Syntax</span></span>  
+  
+```xml  
 <listeners>   
   <add>...</add>  
   <remove ... />  
@@ -39,38 +42,38 @@ Agrega o quita los agentes de escucha de la colección <xref:System.Diagnostics.
 </listeners>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dfc51-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="dfc51-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="dfc51-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="dfc51-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- Ninguno.  
+### <a name="attributes"></a><span data-ttu-id="dfc51-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="dfc51-113">Attributes</span></span>  
+ <span data-ttu-id="dfc51-114">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="dfc51-114">None.</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="dfc51-115">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="dfc51-115">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners`.|  
-|[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la colección `Listeners`.|  
-|[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` para un origen de traza.|  
+|<span data-ttu-id="dfc51-116">Elemento</span><span class="sxs-lookup"><span data-stu-id="dfc51-116">Element</span></span>|<span data-ttu-id="dfc51-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="dfc51-117">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="dfc51-118">\<add></span><span class="sxs-lookup"><span data-stu-id="dfc51-118">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="dfc51-119">Agrega un agente de escucha a la colección `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="dfc51-119">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="dfc51-120">\<remove></span><span class="sxs-lookup"><span data-stu-id="dfc51-120">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="dfc51-121">Quita un agente de escucha de la `Listeners` colección.</span><span class="sxs-lookup"><span data-stu-id="dfc51-121">Removes a listener from the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="dfc51-122">\<clear></span><span class="sxs-lookup"><span data-stu-id="dfc51-122">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="dfc51-123">Borra la colección `Listeners` de un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="dfc51-123">Clears the `Listeners` collection for a trace source.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="dfc51-124">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="dfc51-124">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.|  
-|`sources`|Contiene orígenes de traza que inician mensajes de traza.|  
-|`source`|Especifica un origen de traza que inicia mensajes de traza.|  
+|<span data-ttu-id="dfc51-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="dfc51-125">Element</span></span>|<span data-ttu-id="dfc51-126">Descripción</span><span class="sxs-lookup"><span data-stu-id="dfc51-126">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="dfc51-127">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="dfc51-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="dfc51-128">Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="dfc51-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="dfc51-129">Contiene orígenes de seguimiento que inician mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="dfc51-129">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="dfc51-130">Contiene un origen de seguimiento que inicia mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="dfc51-130">Specifies a trace source that initiates tracing messages.</span></span>|  
   
-## Comentarios  
+## <a name="remarks"></a><span data-ttu-id="dfc51-131">Comentarios</span><span class="sxs-lookup"><span data-stu-id="dfc51-131">Remarks</span></span>  
   
-## Archivo de configuración  
- Este elemento se puede utilizar en el archivo de configuración del equipo \(Machine.config\) y en el archivo de configuración de la aplicación.  
+## <a name="configuration-file"></a><span data-ttu-id="dfc51-132">Archivo de configuración</span><span class="sxs-lookup"><span data-stu-id="dfc51-132">Configuration File</span></span>  
+ <span data-ttu-id="dfc51-133">Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="dfc51-133">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar el elemento `<listeners>`  para agregar un agente de escucha de traza de consola al origen `mySource` y para quitar el agente de escucha de traza predeterminado.  
+## <a name="example"></a><span data-ttu-id="dfc51-134">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="dfc51-134">Example</span></span>  
+ <span data-ttu-id="dfc51-135">En el ejemplo siguiente se muestra cómo utilizar el `<listeners>` elemento que se va a agregar un agente de escucha de seguimiento de consola a la `mySource` origen y para quitar el agente de escucha de seguimiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="dfc51-135">The following example shows how to use the `<listeners>` element to add a console trace listener to the `mySource` source and to remove the default trace listener.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -93,7 +96,7 @@ Agrega o quita los agentes de escucha de la colección <xref:System.Diagnostics.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.TraceListener>   
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="dfc51-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="dfc51-136">See Also</span></span>  
+ <xref:System.Diagnostics.TraceListener>  
+ [<span data-ttu-id="dfc51-137">Esquema de la configuración de seguimiento y depuración</span><span class="sxs-lookup"><span data-stu-id="dfc51-137">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="dfc51-138">Agentes de escucha de seguimiento</span><span class="sxs-lookup"><span data-stu-id="dfc51-138">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

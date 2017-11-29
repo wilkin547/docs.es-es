@@ -1,37 +1,39 @@
 ---
-title: "C&#243;mo: Agregar elementos de men&#250; a ContextMenuStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "menús contextuales, agregar elementos de menú"
-  - "ContextMenuStrips, agregar elementos de menú"
-  - "menús contextuales, agregar elementos"
+title: "Cómo: Agregar elementos de menú a ContextMenuStrip"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ContextMenuStrips [Windows Forms], adding menu items
+- shortcut menus [Windows Forms], adding items
+- context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ad9aa3ced90793b8051b377f499c94466bc3751a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Agregar elementos de men&#250; a ContextMenuStrip
-Puede agregar un único elemento de menú o varios elementos a la vez a <xref:System.Windows.Forms.ContextMenuStrip>.  
+# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="41625-102">Cómo: Agregar elementos de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="41625-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
+<span data-ttu-id="41625-103">Puede agregar solo un elemento de menú o varios elementos a la vez a un <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="41625-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-### Para agregar un elemento de menú único a un ContextMenuStrip  
+### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a><span data-ttu-id="41625-104">Para agregar un solo elemento de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="41625-104">To add a single menu item to a ContextMenuStrip</span></span>  
   
--   Utilice el método <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> para agregar un elemento de menú a <xref:System.Windows.Forms.ContextMenuStrip>.  
+-   <span data-ttu-id="41625-105">Use la <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> método para agregar un elemento de menú a un <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="41625-105">Use the <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add one menu item to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
     ```  
   
@@ -39,13 +41,11 @@ Puede agregar un único elemento de menú o varios elementos a la vez a <xref:Sy
     this.contextMenuStrip1.Items.Add(toolStripMenuItem1);  
     ```  
   
-### Para agregar varios elementos de menú a un ContextMenuStrip  
+### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="41625-106">Para agregar varios elementos de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="41625-106">To add several menu items to a ContextMenuStrip</span></span>  
   
--   Utilice el método <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> para agregar varios elementos de menú a <xref:System.Windows.Forms.ContextMenuStrip>.  
+-   <span data-ttu-id="41625-107">Use la <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> método para agregar varios elementos de menú a un <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="41625-107">Use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> method to add several menu items to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Me.contextMenuStrip1.Items.AddRange(New _  
        System.Windows.Forms.ToolStripItem() {Me.toolStripMenuItem1, _  
           Me.toolStripMenuItem2})  
@@ -57,5 +57,5 @@ Puede agregar un único elemento de menú o varios elementos a la vez a <xref:Sy
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## Vea también  
- [ContextMenuStrip \(Control\)](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+## <a name="see-also"></a><span data-ttu-id="41625-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="41625-108">See Also</span></span>  
+ [<span data-ttu-id="41625-109">ContextMenuStrip (Control)</span><span class="sxs-lookup"><span data-stu-id="41625-109">ContextMenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)

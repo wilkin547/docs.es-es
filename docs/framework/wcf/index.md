@@ -1,91 +1,86 @@
 ---
-title: "Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF [WCF]"
-  - "Windows Communication Foundation [WCF]"
-ms.assetid: 96aad289-58bc-4389-89d0-b09dfc4d5c58
-caps.latest.revision: 2
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+title: Windows Communication Foundation
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF]
+- WCF [WCF]
+ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d0e4a33f83cc8bbd0b67a7f21d786ac9f646bd5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] es el modelo de programación unificado de Microsoft para compilar aplicaciones orientadas a servicios.  Permite a los desarrolladores compilar soluciones de transacción seguras y de confianza que se integran en las plataformas e interaccionan con inversiones existentes.  
+# <a name="developing-service-oriented-applications-with-wcf"></a><span data-ttu-id="22680-102">Desarrollar aplicaciones orientadas a servicios mediante WCF</span><span class="sxs-lookup"><span data-stu-id="22680-102">Developing Service-Oriented Applications with WCF</span></span>
+<span data-ttu-id="22680-103">Esta sección de la documentación proporciona información sobre Windows Communication Foundation (WCF), que es un modelo de programación unificado para compilar aplicaciones orientadas a servicios.</span><span class="sxs-lookup"><span data-stu-id="22680-103">This section of the documentation provides information about Windows Communication Foundation (WCF), which is a unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="22680-104">Permite a los desarrolladores compilar soluciones de transacción seguras y confiables que se integran en diferentes plataformas y que interactúan con las inversiones existentes.</span><span class="sxs-lookup"><span data-stu-id="22680-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span>
+ 
+## <a name="in-this-section"></a><span data-ttu-id="22680-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="22680-105">In this section</span></span>  
+ [<span data-ttu-id="22680-106">Novedades de Windows Communication Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="22680-106">What's New in Windows Communication Foundation 4.5</span></span>](../../../docs/framework/wcf/whats-new.md)  
+ <span data-ttu-id="22680-107">Describe las características nuevas de Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="22680-107">Discusses features new to Windows Communication Foundation.</span></span>  
   
-## En esta sección  
- [Novedades de Windows Communication Foundation 4.5](../../../docs/framework/wcf/whats-new.md)  
- Describe las características nuevas de Windows Communication Foundation.  
+ [<span data-ttu-id="22680-108">Características de simplificación de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-108">WCF Simplification Features</span></span>](../../../docs/framework/wcf/wcf-simplification-features.md)  
+ <span data-ttu-id="22680-109">Describe las nuevas características que simplifican la escritura de aplicaciones WCF.</span><span class="sxs-lookup"><span data-stu-id="22680-109">Discusses new features that make writing WCF applications simpler.</span></span>  
   
- [Características de simplificación de WCF](../../../docs/framework/wcf/wcf-simplification-features.md)  
- Describe las nuevas características que simplifican la escritura de aplicaciones WCF.  
+ [<span data-ttu-id="22680-110">Guía de la documentación</span><span class="sxs-lookup"><span data-stu-id="22680-110">Guide to the Documentation</span></span>](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ <span data-ttu-id="22680-111">Descripción de la documentación de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-111">A description of the WCF documentation</span></span>  
   
- [Guía de la documentación](../../../docs/framework/wcf/guide-to-the-documentation.md)  
- Descripción de la documentación de WCF  
+ [<span data-ttu-id="22680-112">Información conceptual</span><span class="sxs-lookup"><span data-stu-id="22680-112">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ <span data-ttu-id="22680-113">Resume la información sobre el sistema de mensajería de Windows Communication Foundation (WCF) y las clases que admiten su uso.</span><span class="sxs-lookup"><span data-stu-id="22680-113">Summarizes information about the Windows Communication Foundation (WCF) messaging system and the classes that support its use.</span></span>  
   
- [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)  
- Resume la información sobre el sistema de mensajería de Windows Communication Foundation \(WCF\) y las clases que admiten su uso.  
+ [<span data-ttu-id="22680-114">Tutorial de introducción</span><span class="sxs-lookup"><span data-stu-id="22680-114">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ <span data-ttu-id="22680-115">Tutorial paso a paso para crear un servicio WCF y un cliente</span><span class="sxs-lookup"><span data-stu-id="22680-115">A step by step tutorial to create a WCF service and client</span></span>  
   
- [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md)  
- Tutorial paso a paso para crear un servicio WCF y un cliente  
+ [<span data-ttu-id="22680-116">Programación básica de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-116">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ <span data-ttu-id="22680-117">Describe los fundamentos para crear aplicaciones de Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="22680-117">Describes the fundamentals for creating Windows Communication Foundation applications.</span></span>  
   
- [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- Describe los fundamentos para crear aplicaciones de Windows Communication Foundation.  
+ [<span data-ttu-id="22680-118">Detalles de las características de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-118">WCF Feature Details</span></span>](../../../docs/framework/wcf/feature-details/index.md)  
+ <span data-ttu-id="22680-119">Muestra temas que le permitirán elegir qué característica o características de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] necesita emplear.</span><span class="sxs-lookup"><span data-stu-id="22680-119">Shows topics that let you choose which [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] feature or features you need to employ.</span></span>  
   
- [Detalles de las características de WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Muestra temas que le permitirán elegir qué característica o características de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] necesita emplear.  
+ [<span data-ttu-id="22680-120">Extensión de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-120">Extending WCF</span></span>](../../../docs/framework/wcf/extending/extending-wcf.md)  
+ <span data-ttu-id="22680-121">Describe cómo modificar y extender los componentes del tiempo de ejecución de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-121">Describes how to modify and extend WCF runtime components</span></span>  
   
- [Extensión de WCF](../../../docs/framework/wcf/extending/extending-wcf.md)  
- Describe cómo modificar y extender los componentes del tiempo de ejecución de WCF  
+ [<span data-ttu-id="22680-122">Instrucciones y procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="22680-122">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ <span data-ttu-id="22680-123">Proporciona instrucciones para crear aplicaciones de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="22680-123">Provides guidelines for creating Windows Communication Foundation (WCF) applications.</span></span>  
   
- [Instrucciones y procedimientos recomendados](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- Proporciona instrucciones para crear aplicaciones de Windows Communication Foundation \(WCF\).  
+ [<span data-ttu-id="22680-124">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="22680-124">Administration and Diagnostics</span></span>](../../../docs/framework/wcf/diagnostics/index.md)  
+ <span data-ttu-id="22680-125">Describe las características de diagnóstico de WCF.</span><span class="sxs-lookup"><span data-stu-id="22680-125">Describes the diagnostic features of WCF</span></span>  
   
- [Administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md)  
- Describe las características de diagnóstico de WCF.  
+ [<span data-ttu-id="22680-126">Requisitos del sistema</span><span class="sxs-lookup"><span data-stu-id="22680-126">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
+ <span data-ttu-id="22680-127">Describe los requisitos del sistema necesarios para ejecutar WCF</span><span class="sxs-lookup"><span data-stu-id="22680-127">Describes system requirements needed to run WCF</span></span>  
   
- [Requisitos del sistema](../../../docs/framework/wcf/wcf-system-requirements.md)  
- Describe los requisitos del sistema necesarios para ejecutar WCF  
+ [<span data-ttu-id="22680-128">Recursos del sistema operativo necesarios para WCF</span><span class="sxs-lookup"><span data-stu-id="22680-128">Operating System Resources Required by WCF</span></span>](../../../docs/framework/wcf/operating-system-resources-required-by-wcf.md)  
+ <span data-ttu-id="22680-129">Describe los recursos del sistema operativo necesarios para WCF</span><span class="sxs-lookup"><span data-stu-id="22680-129">Describes operating system resources required by WCF</span></span>  
   
- [Recursos del sistema operativo necesarios para WCF](../../../docs/framework/wcf/operating-system-resources-required-by-wcf.md)  
- Describe los recursos del sistema operativo necesarios para WCF  
+ [<span data-ttu-id="22680-130">Solución de problemas de instalación</span><span class="sxs-lookup"><span data-stu-id="22680-130">Troubleshooting Setup Issues</span></span>](../../../docs/framework/wcf/troubleshooting-setup-issues.md)  
+ <span data-ttu-id="22680-131">Proporciona instrucciones para corregir problemas de configuración de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-131">Provides guidance for fixing WCF setup issues</span></span>  
   
- [Solución de problemas de instalación](../../../docs/framework/wcf/troubleshooting-setup-issues.md)  
- Proporciona instrucciones para corregir problemas de configuración de WCF  
+ [<span data-ttu-id="22680-132">Migración de .NET Remoting a WCF</span><span class="sxs-lookup"><span data-stu-id="22680-132">Migrating from .NET Remoting to WCF</span></span>](../../../docs/framework/wcf/migrating-from-net-remoting-to-wcf.md)  
+ <span data-ttu-id="22680-133">Compara .NET Remoting con WCF y proporciona una guía de migración para escenarios comunes.</span><span class="sxs-lookup"><span data-stu-id="22680-133">Compares .NET Remoting to WCF and provides migration guidance for common scenarios.</span></span>  
   
- [Migración de .NET Remoting a WCF](../../../docs/framework/wcf/migrating-from-net-remoting-to-wcf.md)  
- Compara .NET Remoting con WCF y proporciona una guía de migración para escenarios comunes.  
+ [<span data-ttu-id="22680-134">Utilización de las herramientas de desarrollo de WCF</span><span class="sxs-lookup"><span data-stu-id="22680-134">Using the WCF Development Tools</span></span>](../../../docs/framework/wcf/using-the-wcf-development-tools.md)  
+ <span data-ttu-id="22680-135">Describe las herramientas de desarrollo de Windows Communication Foundation de Visual Studio que pueden ayudarle a desarrollar su WCFservice.</span><span class="sxs-lookup"><span data-stu-id="22680-135">Describes the Visual Studio Windows Communication Foundation development tools that can assist you in developing your WCFservice.</span></span>  
   
- [Utilización de las herramientas de desarrollo de WCF](../../../docs/framework/wcf/using-the-wcf-development-tools.md)  
- Describe las herramientas de desarrollo de Windows Communication Foundation de Visual Studio que pueden ayudarle a desarrollar su WCFservice.  
+ [<span data-ttu-id="22680-136">Herramientas de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="22680-136">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
+ <span data-ttu-id="22680-137">Describe las herramientas de WCF diseñadas para facilitar la creación, implementación y administración de aplicaciones WCF.</span><span class="sxs-lookup"><span data-stu-id="22680-137">Describes WCF tools designed to make it easier to create, deploy, and manage WCF applications</span></span>  
   
- [Herramientas de Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
- Describe las herramientas de WCF diseñadas para facilitar la creación, implementación y administración de aplicaciones WCF.  
+ [<span data-ttu-id="22680-138">Ejemplos de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="22680-138">Windows Communication Foundation Samples</span></span>](../../../docs/framework/wcf/samples/index.md)  
+ <span data-ttu-id="22680-139">Ejemplos que proporcionan instrucciones sobre distintos aspectos de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="22680-139">Samples that provide instruction on various aspects of Windows Communication Foundation</span></span>  
   
- [Ejemplos de Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)  
- Ejemplos que proporcionan instrucciones sobre distintos aspectos de Windows Communication Foundation  
+ [<span data-ttu-id="22680-140">Glosario de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="22680-140">Windows Communication Foundation Glossary</span></span>](../../../docs/framework/wcf/glossary.md)  
+ <span data-ttu-id="22680-141">Muestra una lista de términos específicos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="22680-141">Shows a list of terms specific to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]</span></span>  
   
- [Glosario de Windows Communication Foundation](../../../docs/framework/wcf/glossary.md)  
- Muestra una lista de términos específicos de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="22680-142">Referencia general</span><span class="sxs-lookup"><span data-stu-id="22680-142">General Reference</span></span>](../../../docs/framework/wcf/general-reference.md)  
+ <span data-ttu-id="22680-143">La sección describe los elementos que se usan para configurar clientes y servicios de Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="22680-143">The section describes the elements that are used to configure Windows Communication Foundation clients and services.</span></span>  
   
- [Referencia general](../../../docs/framework/wcf/general-reference.md)  
- La sección describe los elementos que se usan para configurar clientes y servicios de Windows Communication Foundation.  
+ [<span data-ttu-id="22680-144">Comentarios y comunidad</span><span class="sxs-lookup"><span data-stu-id="22680-144">Feedback and Community</span></span>](../../../docs/framework/wcf/feedback-and-community.md)  
+ <span data-ttu-id="22680-145">Información sobre cómo proporcionar comentarios sobre Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="22680-145">Information about how to provide feedback about Windows Communication Foundation</span></span>  
   
- [Comentarios y comunidad](../../../docs/framework/wcf/feedback-and-community.md)  
- Información sobre cómo proporcionar comentarios sobre Windows Communication Foundation  
-  
- [Información de la privacidad](../../../docs/framework/wcf/privacy-information.md)  
- Información relacionada con WCF y la privacidad  
-  
-## Referencia  
-  
-## Secciones relacionadas
+ [<span data-ttu-id="22680-146">Información de privacidad</span><span class="sxs-lookup"><span data-stu-id="22680-146">Privacy Information</span></span>](../../../docs/framework/wcf/privacy-information.md)  
+ <span data-ttu-id="22680-147">Información relacionada con WCF y la privacidad</span><span class="sxs-lookup"><span data-stu-id="22680-147">Information regarding WCF and Privacy</span></span>  

@@ -1,29 +1,32 @@
 ---
-title: "Ejemplo b&#225;sico | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ejemplo básico"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ba2c7c4117ca212dd5f460064d5c59f8948dcc69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo b&#225;sico
-En este ejemplo se muestra cómo hacer que un servicio se pueda detectar y cómo buscar y llamar a un servicio detectable.  Este ejemplo se compone de dos proyectos: servicio y cliente.  
+# <a name="basic-sample"></a><span data-ttu-id="0ab5b-102">Ejemplo básico</span><span class="sxs-lookup"><span data-stu-id="0ab5b-102">Basic Sample</span></span>
+<span data-ttu-id="0ab5b-103">En este ejemplo se muestra cómo hacer que un servicio se pueda detectar y cómo buscar y llamar a un servicio detectable.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-103">This sample shows how to make a service discoverable and how to search for and call a discoverable service.</span></span> <span data-ttu-id="0ab5b-104">Este ejemplo se compone de dos proyectos: servicio y cliente.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-104">This sample is composed of two projects: service and client.</span></span>  
   
 > [!NOTE]
->  En él se implementa la detección en el código.  Para obtener un ejemplo que implementa la detección en la configuración, vea [Configuración](../../../../docs/framework/wcf/samples/configuration-sample.md).  
+>  <span data-ttu-id="0ab5b-105">En él se implementa la detección en el código.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-105">This sample implements discovery in code.</span></span>  <span data-ttu-id="0ab5b-106">Para obtener un ejemplo que implementa la detección de configuración, consulte [configuración](../../../../docs/framework/wcf/samples/configuration-sample.md).</span><span class="sxs-lookup"><span data-stu-id="0ab5b-106">For a sample that implements discovery in configuration, see [Configuration](../../../../docs/framework/wcf/samples/configuration-sample.md).</span></span>  
   
-## Servicio  
- Se trata de la implementación de un servicio de calculadora sencillo.  El código relacionado con la detección se puede encontrar en `Main` donde un objeto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> se agrega al host del servicio y un objeto <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> se agrega como se muestra en el siguiente código.  
+## <a name="service"></a><span data-ttu-id="0ab5b-107">Servicio</span><span class="sxs-lookup"><span data-stu-id="0ab5b-107">Service</span></span>  
+ <span data-ttu-id="0ab5b-108">Se trata de la implementación de un servicio de calculadora sencillo.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-108">This is a simple calculator service implementation.</span></span> <span data-ttu-id="0ab5b-109">El código relacionado con la detección se puede encontrar en `Main` donde un objeto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> se agrega al host del servicio y un objeto <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> se agrega como se muestra en el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-109">The discovery related code can be found in `Main` where a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> is added to the service host and a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> is added as shown in the following code.</span></span>  
   
 ```  
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
@@ -40,8 +43,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }  
 ```  
   
-## Cliente  
- El cliente usa un objeto <xref:System.ServiceModel.Discovery.DynamicEndpoint> para localizar el servicio.  El <xref:System.ServiceModel.Discovery.DynamicEndpoint>, un extremo estándar, resuelve el extremo del servicio cuando se abre el cliente.  En este caso, el <xref:System.ServiceModel.Discovery.DynamicEndpoint> busca el servicio según el contrato de servicio.  El <xref:System.ServiceModel.Discovery.DynamicEndpoint> realiza la búsqueda a través de un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> de forma predeterminada.  Cuando localiza un extremo de servicio, el cliente se conecta a ese servicio a través del enlace especificado.  
+## <a name="client"></a><span data-ttu-id="0ab5b-110">Cliente</span><span class="sxs-lookup"><span data-stu-id="0ab5b-110">Client</span></span>  
+ <span data-ttu-id="0ab5b-111">El cliente usa un objeto <xref:System.ServiceModel.Discovery.DynamicEndpoint> para localizar el servicio.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-111">The client uses a <xref:System.ServiceModel.Discovery.DynamicEndpoint> to locate the service.</span></span> <span data-ttu-id="0ab5b-112">El <xref:System.ServiceModel.Discovery.DynamicEndpoint>, un extremo estándar, resuelve el extremo del servicio cuando se abre el cliente.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-112">The <xref:System.ServiceModel.Discovery.DynamicEndpoint>, a standard endpoint, resolves the endpoint of the service when the client is opened.</span></span> <span data-ttu-id="0ab5b-113">En este caso, el <xref:System.ServiceModel.Discovery.DynamicEndpoint> busca el servicio según el contrato de servicio.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-113">In this case, the <xref:System.ServiceModel.Discovery.DynamicEndpoint> looks for the service based on the service contract.</span></span> <span data-ttu-id="0ab5b-114">El <xref:System.ServiceModel.Discovery.DynamicEndpoint> realiza la búsqueda a través de un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-114">The <xref:System.ServiceModel.Discovery.DynamicEndpoint> conducts the search over a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> by default.</span></span> <span data-ttu-id="0ab5b-115">Cuando localiza un extremo de servicio, el cliente se conecta a ese servicio a través del enlace especificado.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-115">Once it locates a service endpoint, the client connects to that service over the specified binding.</span></span>  
   
 ```csharp  
 public static void Main()  
@@ -51,7 +54,7 @@ public static void Main()
 }              
 ```  
   
- El cliente define un método denominado `InvokeCalculatorService` que utiliza la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> para buscar servicios.  <xref:System.ServiceModel.Discovery.DynamicEndpoint> hereda de <xref:System.ServiceModel.Description.ServiceEndpoint>, de modo que se pueda pasar al método `InvokeCalculatorService`.  A continuación, el ejemplo utiliza <xref:System.ServiceModel.Discovery.DynamicEndpoint> para crear una instancia de `CalculatorServiceClient` y llama a diversas operaciones del servicio de calculadora.  
+ <span data-ttu-id="0ab5b-116">El cliente define un método denominado `InvokeCalculatorService` que utiliza la clase <xref:System.ServiceModel.Discovery.DiscoveryClient> para buscar servicios.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-116">The client defines a method called `InvokeCalculatorService` that uses the <xref:System.ServiceModel.Discovery.DiscoveryClient> class to search for services.</span></span> <span data-ttu-id="0ab5b-117"><xref:System.ServiceModel.Discovery.DynamicEndpoint> hereda de <xref:System.ServiceModel.Description.ServiceEndpoint>, de modo que se pueda pasar al método `InvokeCalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-117">The <xref:System.ServiceModel.Discovery.DynamicEndpoint> inherits from <xref:System.ServiceModel.Description.ServiceEndpoint>, so it can be passed to the `InvokeCalculatorService` method.</span></span> <span data-ttu-id="0ab5b-118">A continuación, el ejemplo utiliza <xref:System.ServiceModel.Discovery.DynamicEndpoint> para crear una instancia de `CalculatorServiceClient` y llama a diversas operaciones del servicio de calculadora.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-118">The example then uses the <xref:System.ServiceModel.Discovery.DynamicEndpoint> to create an instance of `CalculatorServiceClient` and calls the various operations of the calculator service.</span></span>  
   
 ```csharp  
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)  
@@ -85,28 +88,27 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
    //Closing the client gracefully closes the connection and cleans up resources  
    client.Close();  
 }  
-  
 ```  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="0ab5b-119">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="0ab5b-119">To use this sample</span></span>  
   
-1.  Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353).  Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas.  Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería.  `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  <span data-ttu-id="0ab5b-120">Este ejemplo utiliza los puntos de conexión HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-120">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="0ab5b-121">[Configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353).</span><span class="sxs-lookup"><span data-stu-id="0ab5b-121"> [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353).</span></span> <span data-ttu-id="0ab5b-122">Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-122">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="0ab5b-123">Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-123">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra Basic.sln y compile el ejemplo.  
+2.  <span data-ttu-id="0ab5b-124">Con [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra Basic.sln y compile el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-124">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the Basic.sln and build the sample.</span></span>  
   
-3.  Ejecute la aplicación service.exe.  
+3.  <span data-ttu-id="0ab5b-125">Ejecute la aplicación service.exe.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-125">Run the service.exe application.</span></span>  
   
-4.  Después de que se inicie el servicio, ejecute la aplicación client.exe.  
+4.  <span data-ttu-id="0ab5b-126">Después de que se inicie el servicio, ejecute la aplicación client.exe.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-126">After the service has started, run the client.exe.</span></span>  
   
-5.  Observe que el cliente pudo encontrar el servicio sin conocer su dirección.  
+5.  <span data-ttu-id="0ab5b-127">Observe que el cliente pudo encontrar el servicio sin conocer su dirección.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-127">Observe that the client was able to find the service without knowing its address.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="0ab5b-128">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0ab5b-129">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-129">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="0ab5b-130">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0ab5b-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0ab5b-131">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="0ab5b-131">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="0ab5b-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="0ab5b-132">See Also</span></span>

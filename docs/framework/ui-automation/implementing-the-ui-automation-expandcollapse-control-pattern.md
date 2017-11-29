@@ -1,79 +1,82 @@
 ---
-title: "Implementing the UI Automation ExpandCollapse Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, ExpandCollapse control pattern"
-  - "ExpandCollapse control pattern"
-  - "control patterns, ExpandCollapse"
+title: "Implementar el patrón de control ExpandCollapse de UI Automation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, ExpandCollapse control pattern
+- ExpandCollapse control pattern
+- control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-caps.latest.revision: 25
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 877fac575255159c82d1c1e3c3c4b3dbb803198e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation ExpandCollapse Control Pattern
+# <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a><span data-ttu-id="40c4c-102">Implementar el patrón de control ExpandCollapse de UI Automation</span><span class="sxs-lookup"><span data-stu-id="40c4c-102">Implementing the UI Automation ExpandCollapse Control Pattern</span></span>
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="40c4c-103">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="40c4c-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="40c4c-104">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="40c4c-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, incluida la información sobre propiedades, métodos y eventos. Al final de la información general se proporcionan vínculos a referencias adicionales.  
+ <span data-ttu-id="40c4c-105">En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, incluida la información sobre propiedades, métodos y eventos.</span><span class="sxs-lookup"><span data-stu-id="40c4c-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="40c4c-106">Al final de la información general se proporcionan vínculos a referencias adicionales.</span><span class="sxs-lookup"><span data-stu-id="40c4c-106">Links to additional references are listed at the end of the overview.</span></span>  
   
- El patrón de control <xref:System.Windows.Automation.ExpandCollapsePattern> se usa para admitir controles que se expanden visualmente para mostrar más contenido y se contraen para ocultarlo. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="40c4c-107">El patrón de control <xref:System.Windows.Automation.ExpandCollapsePattern> se usa para admitir controles que se expanden visualmente para mostrar más contenido y se contraen para ocultarlo.</span><span class="sxs-lookup"><span data-stu-id="40c4c-107">The <xref:System.Windows.Automation.ExpandCollapsePattern> control pattern is used to support controls that visually expand to display more content and collapse to hide content.</span></span> <span data-ttu-id="40c4c-108">Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="40c4c-108">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Directrices y convenciones de implementación  
- Al implementar el patrón de control ExpandCollapse, tenga en cuenta las siguientes directrices y convenciones:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="40c4c-109">Directrices y convenciones de implementación</span><span class="sxs-lookup"><span data-stu-id="40c4c-109">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="40c4c-110">Al implementar el patrón de control ExpandCollapse, tenga en cuenta las siguientes directrices y convenciones:</span><span class="sxs-lookup"><span data-stu-id="40c4c-110">When implementing the ExpandCollapse control pattern, note the following guidelines and conventions:</span></span>  
   
--   Los controles agregados, compilados con objetos secundarios que proporcionan la funcionalidad de expandir y contraer a la interfaz de usuario, deben ser compatibles con el patrón de control <xref:System.Windows.Automation.ExpandCollapsePattern>, mientras que sus elementos secundarios no tienen que serlo. Por ejemplo, se crea un control de cuadro combinado con una combinación de cuadro de lista, botón y controles de edición, pero solo el cuadro combinado primario debe ser compatible con el <xref:System.Windows.Automation.ExpandCollapsePattern>.  
+-   <span data-ttu-id="40c4c-111">Los controles agregados, compilados con objetos secundarios que proporcionan la funcionalidad de expandir y contraer a la interfaz de usuario, deben ser compatibles con el patrón de control <xref:System.Windows.Automation.ExpandCollapsePattern> , mientras que sus elementos secundarios no tienen que serlo.</span><span class="sxs-lookup"><span data-stu-id="40c4c-111">Aggregate controls—built with child objects that provide the UI with expand/collapse functionality—must support the <xref:System.Windows.Automation.ExpandCollapsePattern> control pattern whereas their child elements do not.</span></span> <span data-ttu-id="40c4c-112">Por ejemplo, se crea un control de cuadro combinado con una combinación de cuadro de lista, botón y controles de edición, pero solo el cuadro combinado primario debe ser compatible con el <xref:System.Windows.Automation.ExpandCollapsePattern>.</span><span class="sxs-lookup"><span data-stu-id="40c4c-112">For example, a combo box control is built with a combination of list box, button, and edit controls, but it is only the parent combo box that must support the <xref:System.Windows.Automation.ExpandCollapsePattern>.</span></span>  
   
     > [!NOTE]
-    >  Una excepción es el control de menú, que es un agregado de objetos MenuItem individuales. Los objetos MenuItem son compatibles con el patrón de control <xref:System.Windows.Automation.ExpandCollapsePattern>, pero el control Menú primario no lo es. Se aplica una excepción similar a los controles Árbol y Elemento de árbol.  
+    >  <span data-ttu-id="40c4c-113">Una excepción es el control de menú, que es un agregado de objetos MenuItem individuales.</span><span class="sxs-lookup"><span data-stu-id="40c4c-113">An exception is the menu control, which is an aggregate of individual MenuItem objects.</span></span> <span data-ttu-id="40c4c-114">Los objetos MenuItem son compatibles con el patrón de control <xref:System.Windows.Automation.ExpandCollapsePattern> , pero el control Menú primario no lo es.</span><span class="sxs-lookup"><span data-stu-id="40c4c-114">The MenuItem objects can support the <xref:System.Windows.Automation.ExpandCollapsePattern> control pattern, but the parent Menu control cannot.</span></span> <span data-ttu-id="40c4c-115">Se aplica una excepción similar a los controles Árbol y Elemento de árbol.</span><span class="sxs-lookup"><span data-stu-id="40c4c-115">A similar exception applies to the Tree and Tree Item controls.</span></span>  
   
--   Si el <xref:System.Windows.Automation.ExpandCollapseState> de un control se establece en <xref:System.Windows.Automation.ExpandCollapseState>, toda funcionalidad <xref:System.Windows.Automation.ExpandCollapsePattern> está actualmente inactiva para el control y la única información que se puede obtener mediante este patrón de control es <xref:System.Windows.Automation.ExpandCollapseState>. Si posteriormente se agrega cualquier objeto secundario, <xref:System.Windows.Automation.ExpandCollapseState> cambia y se activa la funcionalidad <xref:System.Windows.Automation.ExpandCollapsePattern>.  
+-   <span data-ttu-id="40c4c-116">Si el <xref:System.Windows.Automation.ExpandCollapseState> de un control se establece en <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, toda funcionalidad <xref:System.Windows.Automation.ExpandCollapsePattern> está actualmente inactiva para el control y la única información que se puede obtener mediante este patrón de control es <xref:System.Windows.Automation.ExpandCollapseState>.</span><span class="sxs-lookup"><span data-stu-id="40c4c-116">When the <xref:System.Windows.Automation.ExpandCollapseState> of a control is set to <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, any <xref:System.Windows.Automation.ExpandCollapsePattern> functionality is currently inactive for the control and the only information that can be obtained using this control pattern is the <xref:System.Windows.Automation.ExpandCollapseState>.</span></span> <span data-ttu-id="40c4c-117">Si posteriormente se agrega cualquier objeto secundario, <xref:System.Windows.Automation.ExpandCollapseState> cambia y se activa la funcionalidad <xref:System.Windows.Automation.ExpandCollapsePattern> .</span><span class="sxs-lookup"><span data-stu-id="40c4c-117">If any child objects are subsequently added, the <xref:System.Windows.Automation.ExpandCollapseState> changes and <xref:System.Windows.Automation.ExpandCollapsePattern> functionality is activated.</span></span>  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> hace referencia únicamente a la visibilidad de los objetos secundarios inmediatos, no a la visibilidad de todos los objetos descendientes.  
+-   <span data-ttu-id="40c4c-118"><xref:System.Windows.Automation.ExpandCollapseState> hace referencia únicamente a la visibilidad de los objetos secundarios inmediatos, no a la visibilidad de todos los objetos descendientes.</span><span class="sxs-lookup"><span data-stu-id="40c4c-118"><xref:System.Windows.Automation.ExpandCollapseState> refers to the visibility of immediate child objects only; it does not refer to the visibility of all descendant objects.</span></span>  
   
--   La funcionalidad de expandir y contraer es específica del control. A continuación se muestran ejemplos de este comportamiento.  
+-   <span data-ttu-id="40c4c-119">La funcionalidad de expandir y contraer es específica del control.</span><span class="sxs-lookup"><span data-stu-id="40c4c-119">Expand and Collapse functionality is control-specific.</span></span> <span data-ttu-id="40c4c-120">A continuación se muestran ejemplos de este comportamiento.</span><span class="sxs-lookup"><span data-stu-id="40c4c-120">The following are examples of this behavior.</span></span>  
   
-    -   El menú Personal de Office puede ser un MenuItem de tres estados \(<xref:System.Windows.Automation.ExpandCollapseState>, <xref:System.Windows.Automation.ExpandCollapseState> y <xref:System.Windows.Automation.ExpandCollapseState>\), donde el control especifica el estado que se debe adoptar cuando se llama a un <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>.  
+    -   <span data-ttu-id="40c4c-121">El menú Personal de Office puede ser un MenuItem de tres estados (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> y <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>), donde el control especifica el estado que se debe adoptar cuando se llama a un <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> .</span><span class="sxs-lookup"><span data-stu-id="40c4c-121">The Office Personal Menu can be a tri-state MenuItem (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> and <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) where the control specifies the state to adopt when an <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called.</span></span>  
   
-    -   Llamar a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> en un objeto TreeItem puede hacer que se muestren todos los descendientes o solo los elementos secundarios inmediatos.  
+    -   <span data-ttu-id="40c4c-122">Llamar a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> en un objeto TreeItem puede hacer que se muestren todos los descendientes o solo los elementos secundarios inmediatos.</span><span class="sxs-lookup"><span data-stu-id="40c4c-122">Calling <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> on a TreeItem may display all descendants or only immediate children.</span></span>  
   
-    -   Si llamar a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> en un control mantiene el estado de sus descendientes, debería enviarse un evento de cambio de visibilidad, no un evento de cambio de estado. Si el control primario no mantiene el estado de sus descendientes cuando se contrae, el control podría destruir todos los descendientes que ya no estén visibles y generar un evento destruido; o podría cambiar la <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> de cada descendiente y generar un evento de cambio de visibilidad.  
+    -   <span data-ttu-id="40c4c-123">Si llamar a <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> en un control mantiene el estado de sus descendientes, debería enviarse un evento de cambio de visibilidad, no un evento de cambio de estado. Si el control primario no mantiene el estado de sus descendientes cuando se contrae, el control podría destruir todos los descendientes que ya no estén visibles y generar un evento destruido; o podría cambiar la <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> de cada descendiente y generar un evento de cambio de visibilidad.</span><span class="sxs-lookup"><span data-stu-id="40c4c-123">If calling <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> on a control maintains the state of its descendants, a visibility change event should be sent, not a state change event If the parent control does not maintain the state of its descendants when collapsed, the control may destroy all the descendants that are no longer visible and raise a destroyed event; or it may change the <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> for each descendant and raise a visibility change event.</span></span>  
   
--   Para garantizar la navegación, es deseable que un objeto esté en el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] \(con el estado de visibilidad adecuado\), independientemente de sus elementos primarios <xref:System.Windows.Automation.ExpandCollapseState>. Si los descendientes se generan a petición, solo pueden aparecer en el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] después de que se muestren por primera vez o solo mientras estén visibles.  
+-   <span data-ttu-id="40c4c-124">Para garantizar la navegación, es deseable que un objeto esté en el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (con el estado de visibilidad adecuado), independientemente de sus elementos primarios <xref:System.Windows.Automation.ExpandCollapseState>.</span><span class="sxs-lookup"><span data-stu-id="40c4c-124">To guarantee navigation, it is desirable for an object to be in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree (with appropriate visibility state) regardless of its parents <xref:System.Windows.Automation.ExpandCollapseState>.</span></span> <span data-ttu-id="40c4c-125">Si los descendientes se generan a petición, solo pueden aparecer en el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] después de que se muestren por primera vez o solo mientras estén visibles.</span><span class="sxs-lookup"><span data-stu-id="40c4c-125">If descendants are generated on demand, they may only appear in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree after being displayed for the first time or only while they are visible.</span></span>  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
-## Miembros requeridos para IExpandCollapseProvider  
- Para implementar <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, se requieren las siguientes propiedades y métodos.  
+## <a name="required-members-for-iexpandcollapseprovider"></a><span data-ttu-id="40c4c-126">Miembros requeridos para IExpandCollapseProvider</span><span class="sxs-lookup"><span data-stu-id="40c4c-126">Required Members for IExpandCollapseProvider</span></span>  
+ <span data-ttu-id="40c4c-127">Para implementar <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, se requieren las siguientes propiedades y métodos.</span><span class="sxs-lookup"><span data-stu-id="40c4c-127">The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.</span></span>  
   
-|Miembros requeridos|Tipo de miembro|Notas|  
-|-------------------------|---------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Método|Ninguna|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|Evento|Este control no tiene ningún evento asociado; use este delegado genérico.|  
+|<span data-ttu-id="40c4c-128">Miembros requeridos</span><span class="sxs-lookup"><span data-stu-id="40c4c-128">Required members</span></span>|<span data-ttu-id="40c4c-129">Tipo de miembro</span><span class="sxs-lookup"><span data-stu-id="40c4c-129">Member type</span></span>|<span data-ttu-id="40c4c-130">Notas</span><span class="sxs-lookup"><span data-stu-id="40c4c-130">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|<span data-ttu-id="40c4c-131">Propiedad</span><span class="sxs-lookup"><span data-stu-id="40c4c-131">Property</span></span>|<span data-ttu-id="40c4c-132">Ninguno</span><span class="sxs-lookup"><span data-stu-id="40c4c-132">None</span></span>|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|<span data-ttu-id="40c4c-133">Método</span><span class="sxs-lookup"><span data-stu-id="40c4c-133">Method</span></span>|<span data-ttu-id="40c4c-134">Ninguno</span><span class="sxs-lookup"><span data-stu-id="40c4c-134">None</span></span>|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|<span data-ttu-id="40c4c-135">Método</span><span class="sxs-lookup"><span data-stu-id="40c4c-135">Method</span></span>|<span data-ttu-id="40c4c-136">Ninguna</span><span class="sxs-lookup"><span data-stu-id="40c4c-136">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|<span data-ttu-id="40c4c-137">Evento</span><span class="sxs-lookup"><span data-stu-id="40c4c-137">Event</span></span>|<span data-ttu-id="40c4c-138">Este control no tiene ningún evento asociado; use este delegado genérico.</span><span class="sxs-lookup"><span data-stu-id="40c4c-138">This control has no associated events; use this generic delegate.</span></span>|  
   
 <a name="Exceptions"></a>   
-## Excepciones  
- Los proveedores deben producir las siguientes excepciones.  
+## <a name="exceptions"></a><span data-ttu-id="40c4c-139">Excepciones</span><span class="sxs-lookup"><span data-stu-id="40c4c-139">Exceptions</span></span>  
+ <span data-ttu-id="40c4c-140">Los proveedores deben producir las siguientes excepciones.</span><span class="sxs-lookup"><span data-stu-id="40c4c-140">Providers must throw the following exceptions.</span></span>  
   
-|Tipo de excepción|Condición|  
-|-----------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> se llama cuando <xref:System.Windows.Automation.ExpandCollapseState> \= <xref:System.Windows.Automation.ExpandCollapseState>.|  
+|<span data-ttu-id="40c4c-141">Tipo de excepción</span><span class="sxs-lookup"><span data-stu-id="40c4c-141">Exception type</span></span>|<span data-ttu-id="40c4c-142">Condición</span><span class="sxs-lookup"><span data-stu-id="40c4c-142">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="40c4c-143">Ya sea <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> se llama cuando el <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.</span><span class="sxs-lookup"><span data-stu-id="40c4c-143">Either <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called when the <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.</span></span>|  
   
-## Vea también  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Navigate Among UI Automation Elements with TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="40c4c-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="40c4c-144">See Also</span></span>  
+ [<span data-ttu-id="40c4c-145">Información general del patrones de Control UI Automation</span><span class="sxs-lookup"><span data-stu-id="40c4c-145">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="40c4c-146">Patrones de Control compatibles en un proveedor de UI Automation</span><span class="sxs-lookup"><span data-stu-id="40c4c-146">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="40c4c-147">Patrones de Control UI Automation para clientes</span><span class="sxs-lookup"><span data-stu-id="40c4c-147">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="40c4c-148">Navegar entre elementos de UI Automation con TreeWalker</span><span class="sxs-lookup"><span data-stu-id="40c4c-148">Navigate Among UI Automation Elements with TreeWalker</span></span>](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [<span data-ttu-id="40c4c-149">Información general sobre el árbol de automatización de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="40c4c-149">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="40c4c-150">Usar almacenamiento en caché en la UI Automation</span><span class="sxs-lookup"><span data-stu-id="40c4c-150">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

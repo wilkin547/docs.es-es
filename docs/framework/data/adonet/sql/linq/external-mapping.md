@@ -1,48 +1,51 @@
 ---
-title: "Asignaci&#243;n externa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Asignación externa"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7a0650f444f901d37797ca81343f06cb566f8112
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignaci&#243;n externa
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite *asignación externa*, un proceso por el cual se utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y el modelo de objetos.  Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
+# <a name="external-mapping"></a><span data-ttu-id="9fca0-102">Asignación externa</span><span class="sxs-lookup"><span data-stu-id="9fca0-102">External Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="9fca0-103">admite *asignación externa*, un proceso por el que utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y su modelo de objetos.</span><span class="sxs-lookup"><span data-stu-id="9fca0-103"> supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="9fca0-104">Las ventajas de utilizar una archivo de asignación externa son las siguientes:</span><span class="sxs-lookup"><span data-stu-id="9fca0-104">Advantages of using an external mapping file include the following:</span></span>  
   
--   Puede separar el código de la asignación del código de la aplicación.  Este enfoque reduce el desorden en el código de la aplicación.  
+-   <span data-ttu-id="9fca0-105">Puede separar el código de la asignación del código de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="9fca0-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="9fca0-106">Este enfoque reduce el desorden en el código de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="9fca0-106">This approach reduces clutter in your application code.</span></span>  
   
--   Puede tratar un archivo de asignación externo de forma similar a un archivo de configuración.  Por ejemplo, puede actualizar cómo se comportará su aplicación después de distribuir los binarios simplemente cambiando el archivo de asignación externo.  
+-   <span data-ttu-id="9fca0-107">Puede tratar un archivo de asignación externo de forma similar a un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="9fca0-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="9fca0-108">Por ejemplo, puede actualizar cómo se comportará su aplicación después de distribuir los binarios simplemente cambiando el archivo de asignación externo.</span><span class="sxs-lookup"><span data-stu-id="9fca0-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
   
-## Requisitos  
- El archivo de asignación debe ser un archivo XML y se debe validar con un archivo de definición de esquema \(.xsd\) de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="requirements"></a><span data-ttu-id="9fca0-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9fca0-109">Requirements</span></span>  
+ <span data-ttu-id="9fca0-110">El archivo de asignación debe ser un archivo XML y el archivo debe validarse con un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] archivo (.xsd) de definición de esquemas.</span><span class="sxs-lookup"><span data-stu-id="9fca0-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
   
- Se aplican las siguientes reglas:  
+ <span data-ttu-id="9fca0-111">Se aplican las siguientes reglas:</span><span class="sxs-lookup"><span data-stu-id="9fca0-111">The following rules apply:</span></span>  
   
--   El archivo de asignación debe ser un archivo XML.  
+-   <span data-ttu-id="9fca0-112">El archivo de asignación debe ser un archivo XML.</span><span class="sxs-lookup"><span data-stu-id="9fca0-112">The mapping file must be an XML file.</span></span>  
   
--   El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML.  Para obtener más información, consulta [Cómo: Validar archivos de asignación externa y DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+-   <span data-ttu-id="9fca0-113">El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML.</span><span class="sxs-lookup"><span data-stu-id="9fca0-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="9fca0-114">Para obtener más información, consulte [Cómo: validar archivos DBML y externos de asignación](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="9fca0-114">For more information, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
--   La asignación externa invalida la asignación basada en atributos.  En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases.  Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
+-   <span data-ttu-id="9fca0-115">La asignación externa invalida la asignación basada en atributos.</span><span class="sxs-lookup"><span data-stu-id="9fca0-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="9fca0-116">En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases.</span><span class="sxs-lookup"><span data-stu-id="9fca0-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="9fca0-117">Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.</span><span class="sxs-lookup"><span data-stu-id="9fca0-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite el uso híbrido de los dos enfoques de asignación \(basado en atributos y externo\).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="9fca0-118"> no admite el uso híbrido de los dos enfoques de asignación (basado en atributos y externo).</span><span class="sxs-lookup"><span data-stu-id="9fca0-118"> does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
   
-## Archivo de definición de esquema XML  
- La asignación externa en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] debe ser válida según la siguiente definición de esquema XML.  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="9fca0-119">Archivo de definición de esquema XML</span><span class="sxs-lookup"><span data-stu-id="9fca0-119">XML Schema Definition File</span></span>  
+ <span data-ttu-id="9fca0-120">La asignación externa en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] debe ser válida según la siguiente definición de esquema XML.</span><span class="sxs-lookup"><span data-stu-id="9fca0-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
   
- Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML.  Para obtener más información, vea [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ <span data-ttu-id="9fca0-121">Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML.</span><span class="sxs-lookup"><span data-stu-id="9fca0-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="9fca0-122">Para obtener más información, consulte [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).</span><span class="sxs-lookup"><span data-stu-id="9fca0-122">For more information, see [Code Generation in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).</span></span>  
   
 > [!NOTE]
->  Los usuarios de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también encontrarán este archivo XSD en el cuadro de diálogo Esquemas XML como "LinqToSqlMapping.xsd".  Para utilizar correctamente este archivo para validar un archivo de asignación externa, vea [Cómo: Validar archivos de asignación externa y DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  <span data-ttu-id="9fca0-123">Los usuarios de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también encontrarán este archivo XSD en el cuadro de diálogo Esquemas XML como "LinqToSqlMapping.xsd".</span><span class="sxs-lookup"><span data-stu-id="9fca0-123">[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="9fca0-124">Para usar este archivo correctamente para validar un archivo de asignación externo, consulte [Cómo: validar archivos DBML y externo asignación](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="9fca0-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -148,7 +151,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## Vea también  
- [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [Cómo: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a><span data-ttu-id="9fca0-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="9fca0-125">See Also</span></span>  
+ [<span data-ttu-id="9fca0-126">Generación de código en LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="9fca0-126">Code Generation in LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [<span data-ttu-id="9fca0-127">Referencia</span><span class="sxs-lookup"><span data-stu-id="9fca0-127">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="9fca0-128">Cómo: generar el modelo de objetos como un archivo externo</span><span class="sxs-lookup"><span data-stu-id="9fca0-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -1,65 +1,69 @@
 ---
-title: "Clase base NativeActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Clase base NativeActivity
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 22c9557c53c15fef3ca8dee4a0f665d333c5ffe4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Clase base NativeActivity
-<xref:System.Activities.NativeActivity> es una clase abstracta con un constructor protegido.Al igual que ocurre con <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> se usa para escribir el comportamiento imperativo al implementar un método <xref:System.Activities.NativeActivity.Execute%2A>.A diferencia de <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> tiene acceso a todas las características expuestas del tiempo de ejecución del flujo de trabajo a través del objeto <xref:System.Activities.NativeActivityContext> pasado al método <xref:System.Activities.NativeActivity.Execute%2A>.  
+# <a name="nativeactivity-base-class"></a><span data-ttu-id="e8056-102">Clase base NativeActivity</span><span class="sxs-lookup"><span data-stu-id="e8056-102">NativeActivity Base Class</span></span>
+<span data-ttu-id="e8056-103"><xref:System.Activities.NativeActivity> es una clase abstracta con un constructor protegido.</span><span class="sxs-lookup"><span data-stu-id="e8056-103"><xref:System.Activities.NativeActivity> is an abstract class with a protected constructor.</span></span> <span data-ttu-id="e8056-104">Al igual que ocurre con <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> se usa para escribir el comportamiento imperativo al implementar un método <xref:System.Activities.NativeActivity.Execute%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-104">Like <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> is used for writing imperative behavior by implementing an <xref:System.Activities.NativeActivity.Execute%2A> method.</span></span> <span data-ttu-id="e8056-105">A diferencia de <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> tiene acceso a todas las características expuestas del tiempo de ejecución del flujo de trabajo a través del objeto <xref:System.Activities.NativeActivityContext> pasado al método <xref:System.Activities.NativeActivity.Execute%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-105">Unlike <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> has access to all of the exposed features of the workflow runtime through the <xref:System.Activities.NativeActivityContext> object passed to the <xref:System.Activities.NativeActivity.Execute%2A> method.</span></span>  
   
-## Usar NativeActivityContext  
- Se puede tener acceso a las características del tiempo de ejecución del flujo de trabajo desde dentro del método <xref:System.Activities.NativeActivity.Execute%2A> usando los miembros del parámetro `context`, del tipo <xref:System.Activities.NativeActivityContext>.Las características disponibles mediante <xref:System.Activities.NativeActivityContext> incluyen lo siguiente:  
+## <a name="using-nativeactivitycontext"></a><span data-ttu-id="e8056-106">Usar NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="e8056-106">Using NativeActivityContext</span></span>  
+ <span data-ttu-id="e8056-107">Se puede tener acceso a las características del tiempo de ejecución del flujo de trabajo desde dentro del método <xref:System.Activities.NativeActivity.Execute%2A> usando los miembros del parámetro `context`, del tipo <xref:System.Activities.NativeActivityContext>.</span><span class="sxs-lookup"><span data-stu-id="e8056-107">Features of the workflow runtime can be accessed from within the <xref:System.Activities.NativeActivity.Execute%2A> method by using members of the `context` parameter, of type <xref:System.Activities.NativeActivityContext>.</span></span> <span data-ttu-id="e8056-108">Las características disponibles mediante <xref:System.Activities.NativeActivityContext> incluyen lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="e8056-108">The features available through <xref:System.Activities.NativeActivityContext> include the following:</span></span>  
   
--   Obtener y definir los argumentos y variables.  
+-   <span data-ttu-id="e8056-109">Obtener y definir los argumentos y variables.</span><span class="sxs-lookup"><span data-stu-id="e8056-109">Getting and setting of arguments and variables.</span></span>  
   
--   Programar las actividades secundarias con <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>  
+-   <span data-ttu-id="e8056-110">Programar las actividades secundarias con <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A></span><span class="sxs-lookup"><span data-stu-id="e8056-110">Scheduling child activities with <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A></span></span>  
   
--   Anular la ejecución de la actividad con <xref:System.Activities.NativeActivityContext.Abort%2A>.  
+-   <span data-ttu-id="e8056-111">Anular la ejecución de la actividad con <xref:System.Activities.NativeActivityContext.Abort%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-111">Aborting activity execution using <xref:System.Activities.NativeActivityContext.Abort%2A>.</span></span>  
   
--   Cancelar la ejecución secundaria con <xref:System.Activities.NativeActivityContext.CancelChild%2A> y <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.  
+-   <span data-ttu-id="e8056-112">Cancelar la ejecución secundaria con <xref:System.Activities.NativeActivityContext.CancelChild%2A> y <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-112">Canceling child execution using <xref:System.Activities.NativeActivityContext.CancelChild%2A> and <xref:System.Activities.NativeActivityContext.CancelChildren%2A>.</span></span>  
   
--   Obtener acceso a los marcadores de actividad usando dichos métodos como <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> y <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.  
+-   <span data-ttu-id="e8056-113">Obtener acceso a los marcadores de actividad usando dichos métodos como <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A> y <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-113">Access to activity bookmarks using such methods as <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, and <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A>.</span></span>  
   
--   Características de seguimiento personalizadas con <xref:System.Activities.CodeActivityContext.Track%2A>.  
+-   <span data-ttu-id="e8056-114">Características de seguimiento personalizadas con <xref:System.Activities.CodeActivityContext.Track%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-114">Custom tracking features using <xref:System.Activities.CodeActivityContext.Track%2A>.</span></span>  
   
--   Acceso a las propiedades de ejecución de la actividad y a las propiedades de los valores con <xref:System.Activities.CodeActivityContext.GetProperty%2A> y <xref:System.Activities.NativeActivityContext.GetValue%2A>.  
+-   <span data-ttu-id="e8056-115">Acceso a las propiedades de ejecución de la actividad y a las propiedades de los valores con <xref:System.Activities.CodeActivityContext.GetProperty%2A> y <xref:System.Activities.NativeActivityContext.GetValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-115">Access to the activity’s execution properties and value properties using <xref:System.Activities.CodeActivityContext.GetProperty%2A> and <xref:System.Activities.NativeActivityContext.GetValue%2A>.</span></span>  
   
--   Programar las acciones de la actividad y las funciones mediante <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> y <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.  
+-   <span data-ttu-id="e8056-116">Programar las acciones de la actividad y las funciones mediante <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> y <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-116">Scheduling activity actions and functions using <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> and <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.</span></span>  
   
-#### Para crear una actividad personalizada que herede de NativeActivity  
+#### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a><span data-ttu-id="e8056-117">Para crear una actividad personalizada que herede de NativeActivity</span><span class="sxs-lookup"><span data-stu-id="e8056-117">To create a custom activity that inherits from NativeActivity</span></span>  
   
-1.  Abra [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="e8056-118">Abra [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e8056-118">Open[!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Seleccione **Archivo**, **Nuevo** y, a continuación, **Proyecto**.Seleccione **Workflow 4.0** debajo de **Visual C\#** en la ventana **Tipos de proyecto** y seleccione el nodo **v2010**.Seleccione **Biblioteca de actividad** en la ventana **Plantillas**.Dé al nuevo proyecto el nombre "HelloActivity".  
+2.  <span data-ttu-id="e8056-119">Seleccione **archivo**, **nueva**y, a continuación, **proyecto**.</span><span class="sxs-lookup"><span data-stu-id="e8056-119">Select **File**, **New**, and then **Project**.</span></span> <span data-ttu-id="e8056-120">Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo.</span><span class="sxs-lookup"><span data-stu-id="e8056-120">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="e8056-121">Seleccione **biblioteca de actividades** en el **plantillas** ventana.</span><span class="sxs-lookup"><span data-stu-id="e8056-121">Select **Activity Library** in the **Templates** window.</span></span> <span data-ttu-id="e8056-122">Dé al nuevo proyecto el nombre "HelloActivity".</span><span class="sxs-lookup"><span data-stu-id="e8056-122">Name the new project HelloActivity.</span></span>  
   
-3.  Haga clic con el botón secundario en Activity.xaml en el proyecto HelloActivity y seleccione **Eliminar**.  
+3.  <span data-ttu-id="e8056-123">Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.</span><span class="sxs-lookup"><span data-stu-id="e8056-123">Right-click Activity1.xaml in the HelloActivity project and select **Delete**.</span></span>  
   
-4.  Haga clic con el botón secundario en el proyecto HelloActivity y seleccione **Agregar** y después **Clase**.Dé a la nueva clase el nombre "HelloActivity.cs".  
+4.  <span data-ttu-id="e8056-124">Haga clic en el proyecto HelloActivity y seleccione **agregar**y, a continuación, **clase**.</span><span class="sxs-lookup"><span data-stu-id="e8056-124">Right-click the HelloActivity project and select **Add**, and then **Class**.</span></span> <span data-ttu-id="e8056-125">Dé a la nueva clase el nombre "HelloActivity.cs".</span><span class="sxs-lookup"><span data-stu-id="e8056-125">Name the new class HelloActivity.cs.</span></span>  
   
-5.  En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.  
+5.  <span data-ttu-id="e8056-126">En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.</span><span class="sxs-lookup"><span data-stu-id="e8056-126">In the HelloActivity.cs file, add the following `using` directives.</span></span>  
   
     ```csharp  
     using System.Activities;  
     using System.Activities.Statements;  
     ```  
   
-6.  Haga que la nueva clase herede de <xref:System.Activities.NativeActivity> al agregar una clase base a la declaración de clase.  
+6.  <span data-ttu-id="e8056-127">Haga que la nueva clase herede de <xref:System.Activities.NativeActivity> al agregar una clase base a la declaración de clase.</span><span class="sxs-lookup"><span data-stu-id="e8056-127">Make the new class inherit from <xref:System.Activities.NativeActivity> by adding a base class to the class declaration.</span></span>  
   
     ```csharp  
     class HelloActivity : NativeActivity  
     ```  
   
-7.  Agregue funcionalidad a la clase agregando un método <xref:System.Activities.NativeActivity.Execute%2A>.  
+7.  <span data-ttu-id="e8056-128">Agregue la funcionalidad a la clase agregando un método <xref:System.Activities.NativeActivity.Execute%2A>.</span><span class="sxs-lookup"><span data-stu-id="e8056-128">Add functionality to the class by adding an <xref:System.Activities.NativeActivity.Execute%2A> method.</span></span>  
   
     ```csharp  
     protected override void Execute(NativeActivityContext context)  
@@ -68,9 +72,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-8.  Invalide el método <xref:System.Activities.NativeActivity.CacheMetadata%2A> y llame al método Add adecuado para que el runtime del flujo de trabajo conozca las variables, los argumentos, los elementos secundarios y los delegados personalizados de la actividad.Para obtener más información, vea la clase <xref:System.Activities.NativeActivityMetadata>.  
+8.  <span data-ttu-id="e8056-129">Invalide el método <xref:System.Activities.NativeActivity.CacheMetadata%2A> y llame al método Add adecuado para que el tiempo de ejecución del flujo de trabajo conozca las variables, los argumentos, los elementos secundarios y los delegados personalizados de la actividad.</span><span class="sxs-lookup"><span data-stu-id="e8056-129">Override the <xref:System.Activities.NativeActivity.CacheMetadata%2A> method and call the appropriate Add method to let the workflow runtime know about the custom activity’s variables, arguments, children, and delegates.</span></span> <span data-ttu-id="e8056-130">Para obtener más información, vea la clase <xref:System.Activities.NativeActivityMetadata>.</span><span class="sxs-lookup"><span data-stu-id="e8056-130">For more information see the <xref:System.Activities.NativeActivityMetadata> class.</span></span>  
   
-9. Utilice el objeto <xref:System.Activities.NativeActivityContext> para programar un marcador.Vea <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> para obtener detalles sobre cómo crear, programar y reanudar un marcador.  
+9. <span data-ttu-id="e8056-131">Utilice el objeto <xref:System.Activities.NativeActivityContext> para programar un marcador.</span><span class="sxs-lookup"><span data-stu-id="e8056-131">Use the <xref:System.Activities.NativeActivityContext> object to schedule a bookmark.</span></span> <span data-ttu-id="e8056-132">Vea <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> para obtener detalles sobre cómo crear, programar y reanudar un marcador.</span><span class="sxs-lookup"><span data-stu-id="e8056-132">See <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> for details on how to create, schedule, and resume a bookmark.</span></span>  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -79,5 +83,4 @@ caps.handback.revision: 8
             context.CreateBookmark(BookmarkName.Get(context),   
                 new BookmarkCallback(OnResumeBookmark));  
         }  
-  
     ```

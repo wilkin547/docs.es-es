@@ -1,46 +1,48 @@
 ---
-title: "Enlaces de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enlaces [WCF]"
+title: Enlaces de Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b458c0491ec91cd528b40fb19e93b7948f8c059a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enlaces de Windows Communication Foundation
-Los enlaces especifican cómo un extremo de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se comunica con otros extremos.En lo más básico, un enlace debe especificar el transporte \(por ejemplo, HTTP o TCP\) a utilizar.También puede establecer otras características, como seguridad y soporte de transacciones, a través de los enlaces.  
+# <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="df782-102">Enlaces de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="df782-102">Windows Communication Foundation Bindings</span></span>
+<span data-ttu-id="df782-103">Los enlaces especifican cómo un extremo de servicio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] se comunica con otros extremos.</span><span class="sxs-lookup"><span data-stu-id="df782-103">Bindings specify how a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="df782-104">En lo más básico, un enlace debe especificar el transporte (por ejemplo, HTTP o TCP) a utilizar.</span><span class="sxs-lookup"><span data-stu-id="df782-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="df782-105">También puede establecer otras características, como seguridad y soporte de transacciones, a través de los enlaces.</span><span class="sxs-lookup"><span data-stu-id="df782-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  
   
-## En esta sección  
- [Información general de WCF Bindings](../../../docs/framework/wcf/bindings-overview.md)  
- Información general de qué hacen los enlaces [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], qué enlaces proporciona el sistema y cómo puede definirlos o modificarlos.  
+## <a name="in-this-section"></a><span data-ttu-id="df782-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="df782-106">In This Section</span></span>  
+ [<span data-ttu-id="df782-107">Información general sobre enlaces WCF</span><span class="sxs-lookup"><span data-stu-id="df782-107">WCF Bindings Overview</span></span>](../../../docs/framework/wcf/bindings-overview.md)  
+ <span data-ttu-id="df782-108">Información general de qué hacen los enlaces [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], qué enlaces proporciona el sistema y cómo puede definirlos o modificarlos.</span><span class="sxs-lookup"><span data-stu-id="df782-108">Overview of what [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bindings do, what bindings the system provides, and how you can define or modify them.</span></span>  
   
- [Enlaces proporcionados por el sistema](../../../docs/framework/wcf/system-provided-bindings.md)  
- Una lista de enlaces incluida con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].Estos enlaces cubren la mayoría de requisitos de modelos de seguridad y mensajes.  
+ [<span data-ttu-id="df782-109">Enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="df782-109">System-Provided Bindings</span></span>](../../../docs/framework/wcf/system-provided-bindings.md)  
+ <span data-ttu-id="df782-110">Una lista de enlaces incluida con [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="df782-110">A list of bindings included with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="df782-111">Estos enlaces cubren la mayoría de requisitos de patrones de seguridad y mensajes.</span><span class="sxs-lookup"><span data-stu-id="df782-111">These bindings cover the majority of security and message pattern requirements.</span></span>  
   
- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- Un enlace [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contiene información importante que los clientes deben utilizar para conectarse a los extremos de servicio.  
+ [<span data-ttu-id="df782-112">Utilización de enlaces para configurar servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="df782-112">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ <span data-ttu-id="df782-113">Un enlace [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contiene información importante que los clientes deben utilizar para conectarse a los extremos de servicio.</span><span class="sxs-lookup"><span data-stu-id="df782-113">A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] binding contains important information that clients must use to connect to service endpoints.</span></span>  
   
- [Configurar enlaces para los servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- La configuración permite a los administradores e instaladores personalizar los enlaces para los extremos de servicio.  
+ [<span data-ttu-id="df782-114">Configuración de enlaces para los servicios</span><span class="sxs-lookup"><span data-stu-id="df782-114">Configuring Bindings for Services</span></span>](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ <span data-ttu-id="df782-115">La configuración permite a los administradores e instaladores personalizar los enlaces para los puntos de conexión de servicio.</span><span class="sxs-lookup"><span data-stu-id="df782-115">Configuration enables administrators and installers to customize the bindings for service endpoints.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="df782-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="df782-116">Reference</span></span>  
  <xref:System.ServiceModel.Channels>  
   
-## Secciones relacionadas  
- [Extremos: direcciones, enlaces y contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+## <a name="related-sections"></a><span data-ttu-id="df782-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="df782-117">Related Sections</span></span>  
+ [<span data-ttu-id="df782-118">Los puntos de conexión: Direcciones, enlaces y contratos</span><span class="sxs-lookup"><span data-stu-id="df782-118">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
- [Enlaces](../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="df782-119">Enlaces</span><span class="sxs-lookup"><span data-stu-id="df782-119">Bindings</span></span>](../../../docs/framework/wcf/feature-details/bindings.md)  
   
-## Vea también  
- [Enlaces personalizados](../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="df782-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="df782-120">See Also</span></span>  
+ [<span data-ttu-id="df782-121">Enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="df782-121">Custom Bindings</span></span>](../../../docs/framework/wcf/extending/custom-bindings.md)

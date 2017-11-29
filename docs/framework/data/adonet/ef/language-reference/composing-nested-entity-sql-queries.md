@@ -1,30 +1,29 @@
 ---
-title: "Crear consultas de Entity SQL anidadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Crear consultas anidadas de Entity SQL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 175affdd8e9763f6cc7d0c48c38498af6e8ffabb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Crear consultas de Entity SQL anidadas
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] es un lenguaje funcional enriquecido.  El bloque de creación de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es una expresión.  A diferencia del SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se limita a un conjunto de resultados tabular: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite crear expresiones complejas que pueden tener literales, parámetros o expresiones anidadas.  Un valor de la expresión se puede parametrizar o componer con alguna otra expresión.  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="b2af8-102">Crear consultas anidadas de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="b2af8-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="b2af8-103"> es un lenguaje funcional enriquecido.</span><span class="sxs-lookup"><span data-stu-id="b2af8-103"> is a rich functional language.</span></span> <span data-ttu-id="b2af8-104">El bloque de creación de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es una expresión.</span><span class="sxs-lookup"><span data-stu-id="b2af8-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="b2af8-105">A diferencia del SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se limita a un conjunto de resultados tabular: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite crear expresiones complejas que pueden tener literales, parámetros o expresiones anidadas.</span><span class="sxs-lookup"><span data-stu-id="b2af8-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="b2af8-106">Un valor de la expresión se puede parametrizar o formado por alguna otra expresión.</span><span class="sxs-lookup"><span data-stu-id="b2af8-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## Expresiones anidadas  
- Una expresión anidada se puede colocar en cualquier parte donde se acepte un valor del tipo que devuelve.  Por ejemplo:  
+## <a name="nested-expressions"></a><span data-ttu-id="b2af8-107">Expresiones anidadas</span><span class="sxs-lookup"><span data-stu-id="b2af8-107">Nested Expressions</span></span>  
+ <span data-ttu-id="b2af8-108">Una expresión anidada se puede colocar en cualquier parte donde se acepte un valor del tipo que devuelve.</span><span class="sxs-lookup"><span data-stu-id="b2af8-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="b2af8-109">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="b2af8-109">For example:</span></span>  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -36,7 +35,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- Una consulta anidada se puede colocar en una cláusula de proyección.  Por ejemplo:  
+ <span data-ttu-id="b2af8-110">Una consulta anidada se puede colocar en una cláusula de proyección.</span><span class="sxs-lookup"><span data-stu-id="b2af8-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="b2af8-111">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="b2af8-111">For example:</span></span>  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +45,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- En [!INCLUDE[esql](../../../../../../includes/esql-md.md)], las consultas anidadas siempre deben ir entre paréntesis:  
+ <span data-ttu-id="b2af8-112">En [!INCLUDE[esql](../../../../../../includes/esql-md.md)], las consultas anidadas siempre deben ir entre paréntesis:</span><span class="sxs-lookup"><span data-stu-id="b2af8-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -57,19 +56,19 @@ UNION ALL
 FROM … );  
 ```  
   
- En el siguiente ejemplo se muestra cómo anidar apropiadamente las expresiones en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/es-es/853c583a-eaba-4400-830d-be974e735313).  
+ <span data-ttu-id="b2af8-113">En el ejemplo siguiente se muestra cómo anidar apropiadamente las expresiones en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Cómo: ordenar la unión de dos consultas](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).</span><span class="sxs-lookup"><span data-stu-id="b2af8-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).</span></span>  
   
-## Consultas anidadas en proyección  
- Las consultas anidadas en la cláusula del proyecto se podrían traducir en consultas de producto cartesiano en el servidor.  Esto puede hacer que la tabla TempDB aumente, lo que puede afectar adversamente al rendimiento del servidor en algunos servidores de servicios backend, incluido SLQ Server.  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="b2af8-114">Consultas anidadas en proyección</span><span class="sxs-lookup"><span data-stu-id="b2af8-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="b2af8-115">Las consultas anidadas en la cláusula del proyecto se podrían traducir en consultas de producto cartesiano en el servidor.</span><span class="sxs-lookup"><span data-stu-id="b2af8-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="b2af8-116">Esto puede hacer que la tabla TempDB aumente, lo que puede afectar adversamente al rendimiento del servidor en algunos servidores de servicios backend, incluido SLQ Server.</span><span class="sxs-lookup"><span data-stu-id="b2af8-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- A continuación se muestra un ejemplo de dicha consulta:  
+ <span data-ttu-id="b2af8-117">A continuación se muestra un ejemplo de dicha consulta:</span><span class="sxs-lookup"><span data-stu-id="b2af8-117">The following is an example of such a query:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## Ordenar las consultas anidadas  
- En el Entity Framework, una expresión anidada se puede colocar en cualquier parte de la consulta.  Dado que Entity SQL permite gran flexibilidad al escribir las consultas, es posible escribir una consulta que contenga una ordenación de las consultas anidadas.  Sin embargo, el orden de una consulta anidada no se conserva.  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="b2af8-118">Ordenar las consultas anidadas</span><span class="sxs-lookup"><span data-stu-id="b2af8-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="b2af8-119">En el Entity Framework, una expresión anidada se puede colocar en cualquier parte de la consulta.</span><span class="sxs-lookup"><span data-stu-id="b2af8-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="b2af8-120">Dado que Entity SQL permite gran flexibilidad al escribir las consultas, es posible escribir una consulta que contenga una ordenación de las consultas anidadas.</span><span class="sxs-lookup"><span data-stu-id="b2af8-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="b2af8-121">Sin embargo, el orden de una consulta anidada no se conserva.</span><span class="sxs-lookup"><span data-stu-id="b2af8-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by last name.  
@@ -86,5 +85,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## Vea también  
- [Información general de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b2af8-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="b2af8-122">See Also</span></span>  
+ [<span data-ttu-id="b2af8-123">Información general sobre de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="b2af8-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

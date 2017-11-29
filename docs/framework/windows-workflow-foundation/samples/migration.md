@@ -1,25 +1,29 @@
 ---
-title: "Migraci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Migración"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51ca5be7-94dc-4bed-a206-f57c898cf078
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 77fb4c31063a77d7ae37fa37b3a6bea7a1d389ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Migraci&#243;n
-Esta sección contiene ejemplos que muestran cómo migrar el contenido de [!INCLUDE[wf](../../../../includes/wf-md.md)] escrito mediante [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] a [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
+# <a name="migration"></a><span data-ttu-id="bcb6f-102">Migración</span><span class="sxs-lookup"><span data-stu-id="bcb6f-102">Migration</span></span>
+<span data-ttu-id="bcb6f-103">Esta sección contiene ejemplos que muestran cómo migrar el contenido de [!INCLUDE[wf](../../../../includes/wf-md.md)] escrito mediante [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] a [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bcb6f-103">This section contains samples that demonstrate how to migrate [!INCLUDE[wf](../../../../includes/wf-md.md)] content written using [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] to [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].</span></span>  
   
-## En esta sección  
- [Usar una actividad de .NET Framework 3.0 o .NET Framework 3.5 en un flujo de trabajo de .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)  
- Muestra cómo utilizar la actividad <xref:System.Activities.Statements.Interop> para pasar una cadena como un argumento a una actividad de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] personalizada.  
+## <a name="in-this-section"></a><span data-ttu-id="bcb6f-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="bcb6f-104">In This Section</span></span>  
+ [<span data-ttu-id="bcb6f-105">Use un .NET Framework 3.0 o .NET Framework 3.5 actividad en un flujo de trabajo de .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="bcb6f-105">Using a .NET Framework 3.0 or .NET Framework 3.5 Activity in a .NET Framework 4.5 Workflow</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)  
+ <span data-ttu-id="bcb6f-106">Muestra cómo utilizar la actividad <xref:System.Activities.Statements.Interop> para pasar una cadena como un argumento a una actividad de [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] personalizada.</span><span class="sxs-lookup"><span data-stu-id="bcb6f-106">Demonstrates how to use the <xref:System.Activities.Statements.Interop> activity to pass a string as an argument to a custom [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] activity.</span></span>  
   
- [Utilizar interoperabilidad con intercambio de datos externos](../../../../docs/framework/windows-workflow-foundation/samples/using-interop-with-external-data-exchange.md)  
- Muestra cómo configurar y ejecutar un flujo de trabajo WF3 que usa <xref:System.Workflow.Activities.ExternalDataExchangeService> \(y las actividades personalizadas correspondientes para llamar a los métodos y administrar los eventos\) usando la actividad <xref:System.Activities.Statements.Interop> en un servicio de flujo de trabajo WF4.
+ [<span data-ttu-id="bcb6f-107">Mediante la interoperabilidad con intercambio de datos externos</span><span class="sxs-lookup"><span data-stu-id="bcb6f-107">Using Interop with External Data Exchange</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/using-interop-with-external-data-exchange.md)  
+ <span data-ttu-id="bcb6f-108">Muestra cómo configurar y ejecutar un flujo de trabajo WF3 que usa <xref:System.Workflow.Activities.ExternalDataExchangeService> (y las actividades personalizadas correspondientes para llamar a los métodos y administrar los eventos) mediante la actividad <xref:System.Activities.Statements.Interop> en un servicio de flujo de trabajo WF4.</span><span class="sxs-lookup"><span data-stu-id="bcb6f-108">Demonstrates how to configure and run a WF3 workflow that uses <xref:System.Workflow.Activities.ExternalDataExchangeService> (and corresponding custom activities for calling methods and handling events) by using the <xref:System.Activities.Statements.Interop> activity in a WF4 workflow service.</span></span>

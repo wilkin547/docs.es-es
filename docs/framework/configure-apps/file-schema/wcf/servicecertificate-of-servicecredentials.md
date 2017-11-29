@@ -1,65 +1,74 @@
 ---
-title: "Elemento &lt;serviceCertificate&gt; de &lt;serviceCredentials&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;serviceCertificate&gt; de &lt;serviceCredentials&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ee21218ad9dd9103b90cd7be00a172ad321ba266
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;serviceCertificate&gt; de &lt;serviceCredentials&gt;
-Especifique un certificado X.509 que se vaya a utilizar para autenticar el servicio a los clientes utilizando el modo de seguridad de mensajes.  
+# <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a><span data-ttu-id="726cf-102">Elemento &lt;serviceCertificate&gt; de &lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="726cf-102">&lt;serviceCertificate&gt; of &lt;serviceCredentials&gt;</span></span>
+<span data-ttu-id="726cf-103">Especifique un certificado X.509 que se vaya a utilizar para autenticar el servicio a los clientes utilizando el modo de seguridad de mensajes.</span><span class="sxs-lookup"><span data-stu-id="726cf-103">Specify an X.509 certificate that will be used to authenticate the service to clients using Message security mode.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="726cf-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="726cf-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="726cf-105">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="726cf-105">\<behaviors></span></span>  
+<span data-ttu-id="726cf-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="726cf-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="726cf-107">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="726cf-107">\<behavior></span></span>  
+<span data-ttu-id="726cf-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="726cf-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="726cf-109">\<serviceCertificate ></span><span class="sxs-lookup"><span data-stu-id="726cf-109">\<serviceCertificate></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="726cf-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="726cf-110">Syntax</span></span>  
   
+```xml  
 <serviceCertificate findValue="String"   
     storeLocation="LocalMachine/CurrentUser"  
     storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-X509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"  
+x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"  
 />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="726cf-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="726cf-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="726cf-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="726cf-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="726cf-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="726cf-113">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`findValue`|Una cadena que contiene el valor que se va a buscar en el almacén de certificados X.509.  El tipo contenido en el atributo debe satisfacer los requisitos del X509FindType especificado.  El valor predeterminado es una cadena vacía.|  
-|`storeLocation`|Especifica la ubicación del almacén de certificados X.509 que el cliente utiliza para validar el certificado del servidor.  Los valores válidos son los siguientes:<br /><br /> -   LocalMachine: el almacén de certificados asignado al equipo local.<br />-   CurrentUser: el almacén de certificados asignado al usuario actual.<br /><br /> El valor predeterminado es LocalMachine.|  
-|`storeName`|Especifica el nombre del almacén del certificado X.509 que se va a abrir.  Los valores válidos son los siguientes:<br /><br /> -   AddressBook: almacén de certificados para otros usuarios.<br />-   AuthRoot: almacén de certificados para las entidades de certificación \(CA\) de terceros.<br />-   CertificatAuthority: almacén de certificados para las entidades de certificación \(CA\) intermedias.<br />-   Disallowed: almacén de certificados para los certificados revocados.<br />-   My: almacén de certificados para los certificados personales.<br />-   Root: almacén de certificados para las entidades de certificación \(CA\) raíz de confianza.<br />-   TrustedPeople: almacén de certificados para las personas y los recursos de confianza directa.<br />-   TrustedPublisher: almacén de certificados para publicadores de confianza directa.<br /><br /> El valor predeterminado es My.|  
-|`X509FindType`|Define el tipo de búsqueda de X.509 que se va a ejecutar.  Los valores válidos son los siguientes:<br /><br /> -   FindByThumbprint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> El tipo contenido en el atributo `findValue` debe satisfacer los requisitos del X509FindType especificado.<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName.|  
+|<span data-ttu-id="726cf-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="726cf-114">Attribute</span></span>|<span data-ttu-id="726cf-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="726cf-115">Description</span></span>|  
+|---------------|-----------------|  
+|`findValue`|<span data-ttu-id="726cf-116">Una cadena que contiene el valor que se va a buscar en el almacén de certificados X.509.</span><span class="sxs-lookup"><span data-stu-id="726cf-116">A string that contains the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="726cf-117">El tipo contenido en el atributo debe satisfacer los requisitos del X509FindType especificado.</span><span class="sxs-lookup"><span data-stu-id="726cf-117">The type contained in the attribute must satisfy the requirements of the specified X509FindType.</span></span> <span data-ttu-id="726cf-118">El valor predeterminado es una cadena vacía.</span><span class="sxs-lookup"><span data-stu-id="726cf-118">The default is an empty string.</span></span>|  
+|`storeLocation`|<span data-ttu-id="726cf-119">Especifica la ubicación del almacén de certificados X.509 que el cliente utiliza para validar el certificado del servidor.</span><span class="sxs-lookup"><span data-stu-id="726cf-119">Specifies the location of the X.509 certificate store that the client uses to validate the server’s certificate against.</span></span> <span data-ttu-id="726cf-120">Los valores válidos son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="726cf-120">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="726cf-121">-LocalMachine: el almacén de certificados asignado al equipo local.</span><span class="sxs-lookup"><span data-stu-id="726cf-121">-   LocalMachine: the certificate store assigned to the local machine.</span></span><br /><span data-ttu-id="726cf-122">-CurrentUser: el almacén de certificados asignado al usuario actual.</span><span class="sxs-lookup"><span data-stu-id="726cf-122">-   CurrentUser: the certificate store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="726cf-123">El valor predeterminado es LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="726cf-123">The default is LocalMachine.</span></span>|  
+|`storeName`|<span data-ttu-id="726cf-124">Especifica el nombre del almacén del certificado X.509 que se va a abrir.</span><span class="sxs-lookup"><span data-stu-id="726cf-124">Specifies the name of the X.509 certificate store to open.</span></span> <span data-ttu-id="726cf-125">Los valores válidos son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="726cf-125">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="726cf-126">-AddressBook: Almacén de certificados para otros usuarios.</span><span class="sxs-lookup"><span data-stu-id="726cf-126">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="726cf-127">-AuthRoot: Almacén de certificados para entidades de certificación (CA) de terceros.</span><span class="sxs-lookup"><span data-stu-id="726cf-127">-   AuthRoot: Certificate store for third-party certification authorities (CAs).</span></span><br /><span data-ttu-id="726cf-128">-CertificatAuthority: Almacén de certificados para entidades de certificación intermedias (CA).</span><span class="sxs-lookup"><span data-stu-id="726cf-128">-   CertificatAuthority: Certificate store for intermediate certification authorities (CAs).</span></span><br /><span data-ttu-id="726cf-129">-Disallowed: Almacén de certificados para certificados revocados.</span><span class="sxs-lookup"><span data-stu-id="726cf-129">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="726cf-130">-My: Almacén de certificados para los certificados personales.</span><span class="sxs-lookup"><span data-stu-id="726cf-130">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="726cf-131">-Root: Almacén de certificados para entidades de certificación raíz de confianza (CA).</span><span class="sxs-lookup"><span data-stu-id="726cf-131">-   Root: Certificate store for trusted root certification authorities (CAs).</span></span><br /><span data-ttu-id="726cf-132">-TrustedPeople: Almacén de certificados para las personas de confianza directa y recursos.</span><span class="sxs-lookup"><span data-stu-id="726cf-132">-   TrustedPeople: Certificate store for directly trusted people and resources.</span></span><br /><span data-ttu-id="726cf-133">-TrustedPublisher: Almacén de certificados para publicadores de confianza directa.</span><span class="sxs-lookup"><span data-stu-id="726cf-133">-   TrustedPublisher: Certificate store for directly trusted publishers.</span></span><br /><br /> <span data-ttu-id="726cf-134">El valor predeterminado es My.</span><span class="sxs-lookup"><span data-stu-id="726cf-134">The default is My.</span></span>|  
+|`x509FindType`|<span data-ttu-id="726cf-135">Define el tipo de búsqueda de X.509 que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="726cf-135">Defines the type of X.509 search to be executed.</span></span> <span data-ttu-id="726cf-136">Los valores válidos son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="726cf-136">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="726cf-137">-FindByThumbprint</span><span class="sxs-lookup"><span data-stu-id="726cf-137">-   FindByThumbprint</span></span><br /><span data-ttu-id="726cf-138">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="726cf-138">-   FindBySubjectName</span></span><br /><span data-ttu-id="726cf-139">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="726cf-139">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="726cf-140">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="726cf-140">-   FindByIssuerName</span></span><br /><span data-ttu-id="726cf-141">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="726cf-141">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="726cf-142">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="726cf-142">-   FindBySerialNumber</span></span><br /><span data-ttu-id="726cf-143">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="726cf-143">-   FindByTimeValid</span></span><br /><span data-ttu-id="726cf-144">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="726cf-144">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="726cf-145">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="726cf-145">-   FindByTemplateName</span></span><br /><span data-ttu-id="726cf-146">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="726cf-146">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="726cf-147">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="726cf-147">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="726cf-148">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="726cf-148">-   FindByExtension</span></span><br /><span data-ttu-id="726cf-149">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="726cf-149">-   FindByKeyUsage</span></span><br /><span data-ttu-id="726cf-150">-FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="726cf-150">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="726cf-151">El tipo contenido en el atributo `findValue` debe satisfacer los requisitos del X509FindType especificado.</span><span class="sxs-lookup"><span data-stu-id="726cf-151">The type contained in the `findValue` attribute must satisfy the requirements of the specified X509FindType.</span></span><br /><br /> <span data-ttu-id="726cf-152">El valor predeterminado es FindBySubjectDistinguishedName.</span><span class="sxs-lookup"><span data-stu-id="726cf-152">The default value is FindBySubjectDistinguishedName.</span></span>|  
   
-### Elementos secundarios  
- Ninguna  
+### <a name="child-elements"></a><span data-ttu-id="726cf-153">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="726cf-153">Child Elements</span></span>  
+ <span data-ttu-id="726cf-154">Ninguna</span><span class="sxs-lookup"><span data-stu-id="726cf-154">None</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="726cf-155">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="726cf-155">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
+|<span data-ttu-id="726cf-156">Elemento</span><span class="sxs-lookup"><span data-stu-id="726cf-156">Element</span></span>|<span data-ttu-id="726cf-157">Descripción</span><span class="sxs-lookup"><span data-stu-id="726cf-157">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="726cf-158">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="726cf-158">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="726cf-159">Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.</span><span class="sxs-lookup"><span data-stu-id="726cf-159">Specifies the credential to be used in authenticating the service, and the client credential validation related settings.</span></span>|  
   
-## Comentarios  
- Utilice este elemento para especificar un certificado X.509 que se utilizará para autenticar el servicio a los clientes utilizando el modo de seguridad de mensajes.  Si está utilizando un certificado que se renovará periódicamente, su huella digital cambiará.  En ese caso, utilice el nombre del asunto como el `X509FindType` porque el certificado se puede volver a emitir con el mismo nombre de asunto.  
+## <a name="remarks"></a><span data-ttu-id="726cf-160">Comentarios</span><span class="sxs-lookup"><span data-stu-id="726cf-160">Remarks</span></span>  
+ <span data-ttu-id="726cf-161">Utilice este elemento para especificar un certificado X.509 que se utilizará para autenticar el servicio a los clientes utilizando el modo de seguridad de mensajes.</span><span class="sxs-lookup"><span data-stu-id="726cf-161">Use this element to specify an X.509 certificate that will be used to authenticate the service to clients using Message security mode.</span></span> <span data-ttu-id="726cf-162">Si está utilizando un certificado que se renovará periódicamente, su huella digital cambiará.</span><span class="sxs-lookup"><span data-stu-id="726cf-162">If you are using a certificate that will be periodically renewed, then its thumbprint will change.</span></span> <span data-ttu-id="726cf-163">En ese caso, utilice el nombre del asunto como el `x509FindType` porque el certificado se puede volver a emitir con el mismo nombre de asunto.</span><span class="sxs-lookup"><span data-stu-id="726cf-163">In that case, use the subject name as the `x509FindType` because the certificate can be reissued with the same subject name.</span></span>  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] uso del elemento, vea [Cómo: Especificar los valores de credenciales de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="726cf-164">utilizando el elemento, consulte [Cómo: especificar valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).</span><span class="sxs-lookup"><span data-stu-id="726cf-164"> using the element, see [How to: Specify Client Credential Values](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).</span></span>  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>   
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>   
- <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>   
- <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>   
- [Cómo: Especificar los valores de credenciales de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)   
- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="726cf-165">Vea también</span><span class="sxs-lookup"><span data-stu-id="726cf-165">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>  
+ <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>  
+ <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  
+ <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>  
+ [<span data-ttu-id="726cf-166">Cómo especificar los valores de credenciales de cliente</span><span class="sxs-lookup"><span data-stu-id="726cf-166">How to: Specify Client Credential Values</span></span>](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
+ [<span data-ttu-id="726cf-167">Comportamientos de seguridad</span><span class="sxs-lookup"><span data-stu-id="726cf-167">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
