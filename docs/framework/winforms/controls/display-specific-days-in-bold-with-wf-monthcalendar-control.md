@@ -1,47 +1,50 @@
 ---
-title: "C&#243;mo: Mostrar d&#237;as espec&#237;ficos en negrita con el control MonthCalendar de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "calendarios, mostrar las fechas en negrita"
-  - "ejemplos [Windows Forms], controles de calendario"
-  - "GetDayBold (evento)"
-  - "MonthCalendar (control) [Windows Forms], fechas en negrita"
+title: "Cómo: Mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- calendars [Windows Forms], displaying dates in bold
+- examples [Windows Forms], calendar controls
+- GetDayBold event
+- MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 18a199592a8bfbef2e4a15b056e37af6d885f5f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Mostrar d&#237;as espec&#237;ficos en negrita con el control MonthCalendar de formularios Windows Forms
-El control <xref:System.Windows.Forms.MonthCalendar> de formularios Windows Forms puede mostrar días en negrita, ya sea porque correspondan a fechas señaladas o con una periodicidad.  Puede hacer esto para destacar fechas especiales, tales como vacaciones y fines de semana.  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Cómo: Mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms
+Los formularios Windows Forms <xref:System.Windows.Forms.MonthCalendar> control puede mostrar días en negrita, como fechas singulares o de forma repetitiva. Puede hacer esto para destacar fechas especiales, tales como vacaciones y fines de semana.  
   
- Hay tres propiedades que controlan esta característica.  La propiedad <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> contiene fechas únicas.  La propiedad <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> contiene fechas que aparecen en negrita todos los años.  La propiedad <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> contiene fechas que aparecen en negrita todos los meses.  Cada una de estas propiedades contiene una matriz de objetos <xref:System.DateTime>.  Para agregar o quitar una fecha de una de estas listas, deberá agregar o quitar un objeto <xref:System.DateTime>.  
+ Tres propiedades que controlan esta característica. El <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propiedad contiene fechas únicas. El <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> propiedad contiene fechas que aparecen en negrita todos los años. El <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propiedad contiene fechas que aparecen en negrita todos los meses. Cada una de estas propiedades contiene una matriz de <xref:System.DateTime> objetos. Para agregar o quitar una fecha de una de estas listas, debe agregar o quitar un <xref:System.DateTime> objeto.  
   
-### Para que una fecha aparezca en negrita  
+### <a name="to-make-a-date-appear-in-bold-type"></a>Para que una fecha aparezca en negrita  
   
-1.  Cree los objetos <xref:System.DateTime>.  
+1.  Crear el <xref:System.DateTime> objetos.  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
     Dim myVacation2 As Date = New DateTime(2001, 6, 17)  
-  
     ```  
   
     ```csharp  
     DateTime myVacation1 = new DateTime(2001, 6, 10);  
     DateTime myVacation2 = new DateTime(2001, 6, 17);  
-  
     ```  
   
     ```cpp  
@@ -49,18 +52,16 @@ El control <xref:System.Windows.Forms.MonthCalendar> de formularios Windows Form
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2.  Para poner en negrita una única fecha, llame a los métodos <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A> o <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> del control <xref:System.Windows.Forms.MonthCalendar>.  
+2.  Poner una sola fecha en negrita mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> método de la <xref:System.Windows.Forms.MonthCalendar> control.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
     MonthCalendar1.AddBoldedDate(myVacation2)  
-  
     ```  
   
     ```csharp  
     monthCalendar1.AddBoldedDate(myVacation1);  
     monthCalendar1.AddBoldedDate(myVacation2);  
-  
     ```  
   
     ```cpp  
@@ -68,20 +69,18 @@ El control <xref:System.Windows.Forms.MonthCalendar> de formularios Windows Form
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     O bien  
+     -O bien-  
   
-     Para poner en negrita un conjunto de fechas a la vez, cree una matriz de objetos <xref:System.DateTime> y asígnela a una de las propiedades.  
+     Realizar un conjunto de fechas de negrita a la vez mediante la creación de una matriz de <xref:System.DateTime> objetos y asígnela a una de las propiedades.  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
     MonthCalendar1.BoldedDates = VacationDates  
-  
     ```  
   
     ```csharp  
     DateTime[] VacationDates = {myVacation1, myVacation2};  
     monthCalendar1.BoldedDates = VacationDates;  
-  
     ```  
   
     ```cpp  
@@ -89,20 +88,18 @@ El control <xref:System.Windows.Forms.MonthCalendar> de formularios Windows Form
     monthCalendar1->BoldedDates = VacationDates;  
     ```  
   
-### Para que una fecha aparezca con la fuente normal  
+### <a name="to-make-a-date-appear-in-the-regular-font"></a>Para que una fecha aparezca en el formato de fuente normal  
   
-1.  Para que una única fecha en negrita aparezca con la fuente normal, llame a los métodos <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A> o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A>.  
+1.  Que una fecha única en negrita aparezca con la fuente normal mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> método.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
     MonthCalendar1.RemoveBoldedDate(myVacation2)  
-  
     ```  
   
     ```csharp  
     monthCalendar1.RemoveBoldedDate(myVacation1);  
     monthCalendar1.RemoveBoldedDate(myVacation2);  
-  
     ```  
   
     ```cpp  
@@ -110,42 +107,38 @@ El control <xref:System.Windows.Forms.MonthCalendar> de formularios Windows Form
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     O bien  
+     -O bien-  
   
-     Para quitar todas las fechas en negrita de una de las tres listas, llame a los métodos <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A> o <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A>.  
+     Quitar todas las fechas en negrita de una de las tres listas mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> método.  
   
     ```vb  
     MonthCalendar1.RemoveAllBoldedDates()  
-  
     ```  
   
     ```csharp  
     monthCalendar1.RemoveAllBoldedDates();  
-  
     ```  
   
     ```cpp  
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  Para actualizar la apariencia de la fuente, llame al método <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A>.  
+2.  Actualizar la apariencia de la fuente mediante una llamada a la <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> método.  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  
-  
     ```  
   
     ```csharp  
     monthCalendar1.UpdateBoldedDates();  
-  
     ```  
   
     ```cpp  
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## Vea también  
- [MonthCalendar \(Control\)](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)   
- [Cómo: Seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)   
- [Cómo: Cambiar la apariencia del control MonthCalendar de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)   
- [Cómo: Mostrar más de un mes en el control MonthCalendar de formularios Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>Vea también  
+ [MonthCalendar (control)](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [Seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ [Cambiar la apariencia del control MonthCalendar de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
+ [Mostrar más de un mes en el control MonthCalendar de formularios Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

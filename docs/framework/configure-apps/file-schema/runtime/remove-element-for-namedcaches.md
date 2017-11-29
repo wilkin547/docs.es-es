@@ -1,61 +1,64 @@
 ---
-title: "&lt;remove&gt; (Elemento para &lt;namedCaches&gt;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove> (elemento) para namedCaches"
-  - "remove (elemento) para namedCaches"
+title: '&lt;quitar&gt; (elemento) para &lt;namedCaches&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remove element for namedCaches
+- <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6170b59e87948225708c9e697cba1542d756d2f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;remove&gt; (Elemento para &lt;namedCaches&gt;)
-Quita una entrada de la caché con nombre de la colección `namedCaches` de una memoria caché en memoria.  
+# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;quitar&gt; (elemento) para &lt;namedCaches&gt;
+Quita una entrada de caché con nombre de la colección `namedCaches` de una caché en memoria.  
   
-## Sintaxis  
+ \<System.Runtime.Caching >  
+\<memoryCache >  
+\<namedCaches >  
+\<Quitar >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <namedCaches>  
     <remove name="default" />  
     <!-- child elements -->  
  </namedCaches>  
 ```  
   
-## Tipo  
+## <a name="type"></a>Tipo  
  `None`  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  `None`  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  `None`  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<namedCaches\>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contiene una colección de configuraciones de las instancias con nombre de <xref:System.Runtime.Caching.MemoryCache>.|  
+|-------------|-----------------|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contiene una colección de valores de configuración para la instancia con nombre <xref:System.Runtime.Caching.MemoryCache> instancias.|  
   
-## Comentarios  
- El elemento `remove` quita una entrada `namedCache` de la colección de la caché con nombre de una memoria caché en memoria.  
+## <a name="remarks"></a>Comentarios  
+ El `remove` elemento quita un `namedCache` entrada de la colección de caché con nombre de una memoria caché.  
   
-## Vea también  
- [\<namedCaches\> \(Elemento, Configuración de caché\)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a>Vea también  
+ [\<namedCaches > Element (Cache Settings)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

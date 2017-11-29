@@ -1,64 +1,57 @@
 ---
-title: "Implements (Cl&#225;usula, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ImplementsClause"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Implements (palabra clave)"
-  - "Implements (instrucción), acerca de Implements"
-  - "implementación de interfaces, Implements (palabra clave)"
-  - "implementación de interfaces, segunda implementación"
-  - "miembros de interfaz"
-  - "miembros de interfaz, implementar"
-  - "miembros de interfaz, Implements (palabra clave)"
-  - "miembros de interfaz, segunda implementación"
-  - "miembros, implementar"
-  - "miembros, Implements (palabra clave)"
-  - "miembros, segunda implementación"
-  - "segunda implementación"
+title: "Implements (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ImplementsClause
+helpviewer_keywords:
+- interface implementation [Visual Basic], reimplementation
+- interface members [Visual Basic], reimplementation
+- interface members [Visual Basic], Implements keyword
+- interface members
+- members [Visual Basic], reimplementation
+- interface implementation [Visual Basic], Implements keyword
+- interface members [Visual Basic], implementing
+- Implements keyword [Visual Basic]
+- Implements statement [Visual Basic], about Implements
+- members [Visual Basic], implementing
+- members [Visual Basic], Implements keyword
+- reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 73f66eda29e37fda15b4c838da5a0458684131da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Implements (Cl&#225;usula, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+# <a name="implements-clause-visual-basic"></a>Implements (Cláusula, Visual Basic)
+Indica que un miembro de clase o estructura proporciona la implementación para un miembro definido en una interfaz.  
+  
+## <a name="remarks"></a>Comentarios  
+El `Implements` palabra clave no es el mismo que el [Implements (instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md). Usa el `Implements` instrucción para especificar que una clase o estructura implementa una o más interfaces, y, a continuación, para cada miembro use el `Implements` palabra clave para especificar qué interfaz y qué miembro implementa.
 
-Indica que un miembro de clase o de estructura proporciona la implementación para un miembro definido en una interfaz.  
+Si una clase o estructura implementa una interfaz, debe incluir el `Implements` instrucción inmediatamente después de la [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md) o [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md), y debe implementar todos los miembros define la interfaz.
+
+## <a name="reimplementation"></a>Segunda implementación  
+En una clase derivada, puede volver a implementar a un miembro de interfaz que la clase base ya ha implementado. Esto es diferente de reemplazar al miembro de clase base en los siguientes aspectos:
+
+- No es necesario ser miembro de clase base [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) para ser implementado de nuevo.
+- Puede volver a implementar al miembro con un nombre diferente.
+
+El `Implements` palabra clave puede utilizarse en los contextos siguientes:
+- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Comentarios  
- La palabra clave `Implements` no es lo mismo que [Implements \(Instrucción\)](../../../visual-basic/language-reference/statements/implements-statement.md).  Se utiliza la instrucción `Implements` para especificar que una clase o estructura implementa una o varias interfaces y luego, para cada miembro, se utiliza la palabra clave `Implements` para especificar las interfaces y los miembros que implementa.  
-  
- Si una clase o estructura implementa una interfaz, debe incluir la instrucción `Implements` inmediatamente después de [Class \(Instrucción\)](../../../visual-basic/language-reference/statements/class-statement.md) o [Structure \(Instrucción\)](../../../visual-basic/language-reference/statements/structure-statement.md) y debe implementar todos los miembros definidos por la interfaz.  
-  
-## Reimplementación  
- En una clase derivada, puede reimplementar un miembro de interfaz que la clase base ya ha implementado.  Esto es diferente de reemplazar el miembro de clase base en los aspectos siguientes:  
-  
--   El miembro de clase base no necesita ser [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) para ser reimplementado.  
-  
--   Puede reimplementar el miembro con un nombre diferente.  
-  
- La palabra clave `Implements` se puede utilizar en estos contextos:  
-  
- [Event \(Instrucción\)](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Property \(Instrucción\)](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
-## Vea también  
- [Implements \(Instrucción\)](../../../visual-basic/language-reference/statements/implements-statement.md)   
- [Interface \(Instrucción\)](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Class \(Instrucción\)](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Structure \(Instrucción\)](../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Implements (instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)

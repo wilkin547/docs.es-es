@@ -1,88 +1,91 @@
 ---
-title: "x:Static Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StaticExtension"
-  - "xStatic"
-  - "x:Static"
-helpviewer_keywords: 
-  - "x:Static markup extension [XAML Services]"
-  - "Static markup extension in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Static markup extension"
+title: Extensiones de marcado x:Static
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- StaticExtension
+- xStatic
+- x:Static
+helpviewer_keywords:
+- x:Static markup extension [XAML Services]
+- Static markup extension in XAML [XAML Services]
+- XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: 25
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: d006c8d0937a454dcbe092dcc3e35c4644088e59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# x:Static Markup Extension
-Hace referencia a cualquier entidad de código estática por valor definida conforme a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)].  La propiedad estática a la que se hace referencia se puede usar para proporcionar el valor de una propiedad en XAML.  
+# <a name="xstatic-markup-extension"></a>Extensiones de marcado x:Static
+Hace referencia a cualquier entidad de código por valor estático que se define en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]: modo compatible. La propiedad estática que se hace referencia puede usarse para proporcionar el valor de una propiedad en XAML.  
   
-## Uso de atributos XAML  
+## <a name="xaml-attribute-usage"></a>Uso de atributos XAML  
   
+```xaml  
+<object property="{x:Static prefix:typeName.staticMemberName}" .../>  
 ```  
-<object property="{x:Static prefix:typeName.staticMemberName}" .../>  
-```  
   
-## Valores XAML  
+## <a name="xaml-values"></a>Valores XAML  
   
 |||  
 |-|-|  
-|`prefix`|Opcional.  Prefijo que se refiere a un espacio de nombres XAML asignado, no predeterminado.  `prefix` se muestra explícitamente en la utilización porque raramente se hace referencia a las propiedades estáticas que proceden de un espacio de nombres XAML predeterminado.  Vea la sección Comentarios.|  
-|`typeName`|Obligatorio.  Nombre del tipo que define el miembro estático deseado.|  
-|`staticMemberName`|Obligatorio.  Nombre del miembro de valor estático deseado \(una constante, una propiedad estática, un campo o un valor de enumeración\).|  
+|`prefix`|Opcional. Un prefijo que hace referencia a un espacio de nombres XAML asignado, no predeterminado. `prefix`se muestra explícitamente el uso de porque rara vez hacen referencia a propiedades estáticas que proceden de un espacio de nombres XAML predeterminado. Vea la sección Comentarios.|  
+|`typeName`|Obligatorio. El nombre del tipo que define al miembro estático deseado.|  
+|`staticMemberName`|Obligatorio. El nombre del miembro de valor estático deseado (una constante, una propiedad estática, un campo o un valor de enumeración).|  
   
-## Comentarios  
- La entidad de código a la que se hace referencia debe ser una de las siguientes:  
+## <a name="remarks"></a>Comentarios  
+ La entidad de código que se hace referencia debe ser uno de los siguientes:  
   
--   Constante.  
+-   Una constante  
   
 -   Una propiedad estática  
   
 -   Un campo  
   
--   Valor de enumeración  
+-   Un valor de enumeración  
   
- Especificar cualquier otra entidad del código, como una propiedad no estática, provoca un error del tiempo de compilación si el XAML es marcado compilado o una excepción de análisis en tiempo de carga de XAML.  
+ Si se especifica cualquier otra entidad de código, por ejemplo, una propiedad no estática, provoca un error en tiempo de compilación si el XAML es compilado por marcado, o una excepción de análisis de tiempo de carga XAML.  
   
- Se puede hacer referencias `x:Static` a campos estáticos o propiedades que no pertenezcan al espacio de nombres XAML predeterminado en el documento XAML; no obstante, para ello se requiere una asignación de prefijo.  Los espacios de nombres XAML se definen casi siempre en el elemento raíz del documento XAML.  
+ Puede realizar `x:Static` referencias a campos estáticos o propiedades que no están en el espacio de nombres XAML predeterminado para el documento XAML actual; sin embargo, esto requiere una asignación de prefijo. Espacios de nombres XAML casi siempre se definen en el elemento raíz del documento XAML.  
   
- Los servicios XAML de .NET Framework, así como sus lectores XAML y sistemas de escritura XAML pueden realizar operaciones de búsqueda para las propiedades estáticas, al ejecutarse con el contexto de esquema XAML predeterminado.  Este contexto de esquema XAML puede utilizar la reflexión de CLR para proporcionar los valores estáticos necesarios para la construcción del gráfico de objeto.  El `typeName` que se especifica es realmente un nombre de tipo XAML, no un nombre de tipo de CLR, si bien estos son básicamente el mismo nombre cuando se usa el contexto de esquema XAML predeterminado o se utilizan todos los marcos de implementación de XAML basados en CLR existentes.  
+ Las operaciones de búsqueda para las propiedades estáticas pueden realizarse mediante los servicios XAML de .NET Framework y sus lectores XAML y escritores XAML, cuando se están ejecutando con el contexto de esquema XAML predeterminado. Este contexto de esquema XAML puede usar la reflexión de CLR para proporcionar los valores estáticos necesarios para la construcción del gráfico de objeto. El `typeName` especificar es realmente un nombre de tipo XAML, no un nombre de tipo CLR, aunque se trata básicamente el mismo nombre cuando se usa el contexto de esquema XAML predeterminado o al usar todos los marcos de trabajo existentes basado en CLR implementan XAML.  
   
- Extreme las precauciones cuando haga referencias a `x:Static` que no son directamente el tipo de valor de una propiedad.  En la secuencia del procesamiento XAML, los valores proporcionado de una extensión de marcado no invocan conversión de valor adicional.  Esto es true incluso si la referencia `x:Static` crea una cadena de texto, y suele producirse una conversión de valor para los valores de atributo basados en cadena de texto para ese miembro concreto o para cualquier valor de miembro del tipo devuelto.  
+ Tenga cuidado al realizar `x:Static` referencias que no son directamente el tipo del valor de una propiedad. En el código XAML procesar secuencia, proporcione los valores de una extensión de marcado no invocan conversión de valor adicional. Esto es cierto incluso si la `x:Static` referencia crea una cadena de texto y se produce una conversión de valor para los valores de atributo basados en cadena de texto normalmente para ese miembro concreto o para cualquier valor de miembro de tipo de valor devuelto.  
   
- La sintaxis de atributo es la que se usa más a menudo con esta extensión de marcado.  El token de cadena que se proporciona después de la cadena de identificador `x:Static` se asigna como valor de <xref:System.Windows.Markup.StaticExtension.Member%2A> de la clase de extensión <xref:System.Windows.Markup.StaticExtension> subyacente.  
+ La sintaxis de atributo es la que se usa normalmente con esta extensión de marcado. El token de cadena que se proporciona después de la cadena de identificador `x:Static` se asigna como valor de <xref:System.Windows.Markup.StaticExtension.Member%2A> de la clase de extensión <xref:System.Windows.Markup.StaticExtension> subyacente.  
   
- Existen otros dos usos de XAML que son técnicamente posibles.  Sin embargo, estos usos son menos comunes porque están detallados innecesariamente:  
+ Hay dos otros usos XAML que son técnicamente posibles. Sin embargo, estos usos son menos común porque es innecesariamente detallados:  
   
- **Sintaxis de elementos de objeto:** `<x:Static Member="``prefix``:``typeName``.``staticMemberName``" .../>`  
+ **Sintaxis de elemento de objeto:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
   
- **Sintaxis de atributo con propiedad Member explícita para la cadena de inicialización:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
+ **Sintaxis de atributo con propiedad Member explícita para la cadena de inicialización:** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
   
- La clase <xref:System.Windows.Markup.StaticExtension> define el control para esta extensión de marcado en la implementación de servicios XAML de .NET Framework.  
+ En la implementación de servicios XAML de .NET Framework, el control para esta extensión de marcado se define mediante la <xref:System.Windows.Markup.StaticExtension> clase.  
   
- `x:Static` es una extensión de marcado.  Todas las extensiones de marcado de código XAML usan caracteres `{` y `}` en su sintaxis de atributo, que es la convención que permite que un procesador XAML reconozca que una extensión de marcado debe proporcionar un valor.  Para obtener más información sobre las extensiones de marcado, vea [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ `x:Static` es una extensión de marcado. Todas las extensiones de marcado de XAML utilizan la `{` y `}` caracteres en su sintaxis de atributo, que es la convención que permite que un procesador XAML reconozca que una extensión de marcado debe proporcionar un valor. Para más información sobre las extensiones de marcado, vea [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
-## Notas de uso de WPF  
- El espacio de nombres XAML predeterminado que utiliza para programación de WPF no contiene muchas propiedades estáticas útiles, y la mayoría de las propiedades estáticas útiles tienen apoyo tales como los convertidores de tipos que facilitan la utilización sin requerir `{x:Static}`.  Para las propiedades estáticas, debe asignar un prefijo para un espacio de nombres XAML si se cumple una de las condiciones siguientes:  
+## <a name="wpf-usage-notes"></a>Notas de uso WPF  
+ El espacio de nombres XAML predeterminado usa para la programación de WPF no contiene muchas propiedades estáticas útiles, y la mayoría de las propiedades estáticas útiles tiene apoyo tales como los convertidores de tipos que facilitan el uso sin necesidad de `{x:Static}` . Para las propiedades estáticas, debe asignar un prefijo para un espacio de nombres XAML si se cumple alguna de las siguientes acciones:  
   
--   Se hace referencia a un tipo que existe en WPF pero que no forma parte del espacio de nombres XAML predeterminado de WPF \([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]\).  Éste es un escenario relativamente común para utilizar `x:Static`.  Por ejemplo, puede usar una referencia `x:Static` con un espacio de nombres XAML que se asigna al espacio de nombres <xref:System> de CLR y al ensamblado mscorlib a fin de hacer referencia a las propiedades estáticas de la clase <xref:System.Environment>.  
+-   Hace referencia a un tipo que existe en WPF, pero no forma parte del espacio de nombres XAML predeterminado para WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). Se trata de un escenario bastante común para utilizar `x:Static`. Por ejemplo, podría usar un `x:Static` referencia con una asignación de espacio de nombres XAML para la <xref:System> ensamblado mscorlib y de espacio de nombres CLR para hacer referencia a las propiedades estáticas de la <xref:System.Environment> clase.  
   
--   Se hace referencia a un tipo de un ensamblado personalizado.  
+-   Hace referencia a un tipo de un ensamblado personalizado.  
   
--   Se hace referencia a un tipo que existe en un ensamblado de WPF, pero ese tipo se encuentra dentro de un espacio de nombres CLR que no se ha asignado de manera que forme parte del espacio de nombres XAML predeterminado de WPF.  Las definiciones en varios ensamblados de WPF \(para obtener más información sobre este concepto, vea [Espacios de nombres y asignación de espacios de nombres XAML para WPF](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)\), realizan la asignación de espacios de nombres CLR en el espacio de nombres XAML predeterminado para WPF.  Los espacios de nombres CLR sin asignar pueden existir si el espacio de nombres CLR se compone mayoritariamente de las definiciones de clase que no suelen estar pensados para XAML, como <xref:System.Windows.Threading>.  
+-   Hace referencia a un tipo que existe en un ensamblado WPF, pero ese tipo se encuentra dentro de un espacio de nombres CLR que no se ha asignado para formar parte del espacio de nombres XAML de WPF predeterminado. La asignación de espacios de nombres CLR en el espacio de nombres XAML de WPF se realiza mediante las definiciones en varios ensamblados de WPF (para obtener más información sobre este concepto, vea [espacios de nombres XAML y asignación de Namespace para XAML de WPF](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Espacios de nombres CLR sin asignar pueden existir si ese espacio de nombres CLR está compuesta principalmente de definiciones de clases que no son suelen estar pensadas para XAML, como <xref:System.Windows.Threading>.  
   
- Para obtener más información sobre cómo usar prefijos y espacios de nombres XAML en WPF, vea [Espacios de nombres y asignación de espacios de nombres XAML para WPF](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Para obtener más información sobre cómo usar los prefijos y espacios de nombres XAML de WPF, vea [XAML Namespaces and Namespace Mapping para XAML de WPF](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-## Vea también  
- [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Vea también  
+ [x:Type (extensión de marcado)](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [Tipos migrados de WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

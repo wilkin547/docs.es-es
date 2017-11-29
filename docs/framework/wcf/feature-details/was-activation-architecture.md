@@ -1,46 +1,49 @@
 ---
-title: "Arquitectura de activaci&#243;n de WAS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Arquitectura de activación de WAS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3ecd0ab8e285ff8c05ad8b39f68e5b2d0a3c7886
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Arquitectura de activaci&#243;n de WAS
-Este tema detalla y discute los componentes de Windows Process Activation Service \(también conocido como WAS\).  
+# <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
+Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
   
-## Componentes de activación  
+## <a name="activation-components"></a>Componentes de activación  
  WAS está compuesto por varios componentes arquitectónicos:  
   
--   Adaptadores de escucha.Servicios de Windows que reciben mensajes en protocolos de red concretos y se comunican con WAS para enrutar los mensajes entrantes hasta el proceso de trabajo correcto.  
+-   Adaptadores de escucha. Servicios de Windows que reciben mensajes en protocolos de red concretos y se comunican con WAS para enrutar los mensajes entrantes hasta el proceso de trabajo correcto.  
   
--   WAS.El servicio de Windows que administra la creación y duración de procesos de trabajo.  
+-   WAS. El servicio de Windows que administra la creación y duración de procesos de trabajo.  
   
--   La aplicación ejecutable del proceso de trabajo genérica \(w3wp.exe\).  
+-   La aplicación ejecutable del proceso de trabajo genérica (w3wp.exe).  
   
--   Administrador de aplicaciones.Administra la creación y duración de dominios de aplicación que hospedan aplicaciones dentro del proceso de trabajo.  
+-   Administrador de aplicaciones. Administra la creación y duración de dominios de aplicación que hospedan aplicaciones dentro del proceso de trabajo.  
   
--   Controladores de protocolos.Componentes específicos de protocolos que se ejecutan en el proceso de trabajo y administran la comunicación entre el proceso de trabajo y los adaptadores de escucha individuales.Existen dos tipos de controladores de protocolo: controladores de protocolo de proceso y controladores de protocolo del AppDomain.  
+-   Controladores de protocolos. Componentes específicos de protocolos que se ejecutan en el proceso de trabajo y administran la comunicación entre el proceso de trabajo y los adaptadores de escucha individuales. Existen dos tipos de controladores de protocolo: controladores de protocolo de proceso y controladores de protocolo del AppDomain.  
   
- Cuando WAS activa una instancia del proceso de trabajo, carga los controladores de protocolo de proceso requeridos en el proceso de trabajo y utiliza el administrador de aplicaciones para crear un dominio de aplicación que hospede la aplicación.El dominio de la aplicación carga el código de la aplicación así como los controladores de protocolo del AppDomain que requieren los protocolos de red utilizados por la aplicación.  
+ Cuando WAS activa una instancia del proceso de trabajo, carga los controladores de protocolo de proceso requeridos en el proceso de trabajo y utiliza el administrador de aplicaciones para crear un dominio de aplicación que hospede la aplicación. El dominio de la aplicación carga el código de la aplicación así como los controladores de protocolo del AppDomain que requieren los protocolos de red utilizados por la aplicación.  
   
  ![Arquitectura de WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
-### Adaptadores de escucha  
- Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas.La siguiente tabla enumera los adaptadores de escucha para los protocolos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+### <a name="listener-adapters"></a>Adaptadores de escucha  
+ Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas. La siguiente tabla enumera los adaptadores de escucha para los protocolos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-|Nombre de servicio de adaptador de escucha|Protocol|Notas|  
-|------------------------------------------------|--------------|-----------|  
+|Nombre de servicio de adaptador de escucha|Protocolo|Notas|  
+|-----------------------------------|--------------|-----------|  
 |W3SVC|http|Componente común que proporciona la activación de HTTP para IIS 7.0 e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
 |NetTcpActivator|net.tcp|Depende del servicio NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
@@ -49,7 +52,7 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
   
  Los adaptadores de escucha para protocolos concretos se registran durante la instalación en el archivo applicationHost.config, tal y como se muestra en el siguiente XML de ejemplo.  
   
-```  
+```xml  
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
@@ -65,10 +68,10 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
 </system.applicationHost>  
 ```  
   
-### Controladores de protocolo  
+### <a name="protocol-handlers"></a>Controladores de protocolo  
  Los controladores de protocolo de proceso y AppDomain se registran en el archivo Web.config de nivel de equipo.  
   
-```  
+```xml  
 <system.web>  
    <protocols>  
       <add name="net.tcp"   
@@ -81,7 +84,7 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  
-           "System.ServiceModel.WasHosting.NamedPipeAppDomainProtocolHandler”/>  
+           "System.ServiceModel.WasHosting.NamedPipeAppDomainProtocolHandler"/>  
       <add name="net.msmq"  
         processHandlerType=  
          "System.ServiceModel.WasHosting.MsmqProcessProtocolHandler"  
@@ -92,6 +95,6 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
 </system.web>  
 ```  
   
-## Vea también  
- [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)   
+## <a name="see-also"></a>Vea también  
+ [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
  [Características de hospedaje de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -1,31 +1,34 @@
 ---
-title: "SslNoPrivateKey | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SslNoPrivateKey
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 67eef8f6-360d-42f2-a3ac-2bb17329f247
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: edb738443f4ef21ce0512289820c6a624f713f38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# SslNoPrivateKey
-Id: 154  
+# <a name="sslnoprivatekey"></a>SslNoPrivateKey
+Id.: 154  
   
  Gravedad: error  
   
  Categoría: TransactionBridge  
   
-## Descripción  
- Este evento indica que un certificado de identidad con el nombre de sujeto concreto y la huella digital no tiene una clave privada.El evento enumera el nombre y el id. de proceso.  
+## <a name="description"></a>Descripción  
+ Este evento indica que un certificado de identidad con el nombre de sujeto concreto y la huella digital no tiene una clave privada. El evento enumera el nombre y el id. de proceso.  
   
-## Vea también  
- [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [Referencia general de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Referencia General de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

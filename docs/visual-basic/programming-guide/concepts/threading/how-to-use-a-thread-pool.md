@@ -1,37 +1,29 @@
 ---
-title: "Cómo: utilizar un grupo de subprocesos (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: usar un grupo de subprocesos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 90a0bb24-39f8-41f5-a217-b52a7d4fed0b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60bceea0ed956075233f5f045131ffb2eb37eef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 42a4120900203eb7eb5ad8463fba4491636882b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-a-thread-pool-visual-basic"></a>Cómo: utilizar un grupo de subprocesos (Visual Basic)
-*Agrupación de subprocesos* es una forma de multithreading en las tareas que se agregan a una cola y se inicia automáticamente cuando se crean subprocesos. Para obtener más información, consulte [agrupación de subprocesos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).  
+# <a name="how-to-use-a-thread-pool-visual-basic"></a>Cómo: usar un grupo de subprocesos (Visual Basic)
+La *agrupación de subprocesos* es una forma de multithreading en la que se agregan tareas a una cola y se inician automáticamente cuando se crean subprocesos. Para obtener más información, consulte [agrupación de subprocesos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).  
   
- En el ejemplo siguiente se utiliza el grupo de subprocesos de .NET Framework para calcular el `Fibonacci` resultado para diez números entre 20 y 40. Cada `Fibonacci` resultado se representa mediante el `Fibonacci` clase, que proporciona un método denominado `ThreadPoolCallback` que realiza el cálculo. Un objeto que representa cada `Fibonacci` valor se crea y el `ThreadPoolCallback` método se pasa a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, que asigna un subproceso disponible en el grupo para ejecutar el método.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ En el ejemplo siguiente se usa el grupo de subprocesos de .NET Framework para calcular el resultado de `Fibonacci` para diez números entre 20 y 40. Cada resultado de `Fibonacci` se representa mediante la clase `Fibonacci`, que proporciona un método denominado `ThreadPoolCallback` que realiza el cálculo. Se crea un objeto que representa cada valor de `Fibonacci` y el método `ThreadPoolCallback` se pasa a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, que asigna un subproceso disponible en el grupo para ejecutar el método.  
   
- Dado que cada `Fibonacci` objeto se asigna un valor aleatorio parcial para calcular y dado que cada subproceso compite para obtener tiempo de procesador, no puede saber de antemano cuánto tardará calculará los diez resultados. Por eso cada `Fibonacci` objeto se pasa una instancia de la <xref:System.Threading.ManualResetEvent>clase durante la construcción.</xref:System.Threading.ManualResetEvent> Cada objeto señaliza el objeto de evento proporcionado cuando su cálculo está completo, que permite que el subproceso principal para bloquear la ejecución con <xref:System.Threading.WaitHandle.WaitAll%2A>hasta que los diez `Fibonacci` objetos han calculado un resultado.</xref:System.Threading.WaitHandle.WaitAll%2A> El `Main` método, a continuación, muestra cada `Fibonacci` resultado.  
+ Dado que a cada objeto `Fibonacci` se le asigna un valor semialeatorio para calcular y dado que cada subproceso compite para obtener tiempo de procesador, no se puede saber de antemano cuánto tardarán en calcularse los diez resultados. Por eso se pasa a cada objeto `Fibonacci` una instancia de la clase <xref:System.Threading.ManualResetEvent> durante la construcción. Cada objeto indica al objeto de evento proporcionado que su cálculo está completo, lo que permite que el subproceso principal bloquee la ejecución con <xref:System.Threading.WaitHandle.WaitAll%2A> hasta que los diez objetos `Fibonacci` hayan calculado un resultado. El método `Main` muestra entonces cada resultado de `Fibonacci`.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -113,7 +105,7 @@ Module Module1
 End Module  
 ```  
   
- Siguiente es un ejemplo de la salida.  
+ El siguiente es un ejemplo de la salida.  
   
 ```  
 launching 10 tasks...  
@@ -151,14 +143,14 @@ Fibonacci(27) = 196418
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Mutex></xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A></xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A></xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent></xref:System.Threading.ManualResetEvent>   
- [(Visual Basic) de agrupación de subprocesos](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)   
- [Subprocesamiento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- @System.Threading.Monitor   
- [Seguridad](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [Agrupación de subprocesos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)  
+ [Subprocesamiento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [Seguridad](../../../../standard/security/index.md)

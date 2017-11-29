@@ -1,57 +1,63 @@
 ---
-title: "Seguridad del transporte con clientes an&#243;nimos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Seguridad del transporte con clientes anónimos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Seguridad del transporte con clientes an&#243;nimos
-Este escenario de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza la seguridad del transporte \(HTTPS\) para garantizar la confidencialidad y la integridad.El servidor debe autenticarse con un certificado de Capa de sockets seguros \(SSL\) y los clientes deben confiar en el certificado del servidor.Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.  
+# <a name="transport-security-with-an-anonymous-client"></a>Seguridad del transporte con clientes anónimos
+Este escenario de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza la seguridad del transporte (HTTPS) para garantizar la confidencialidad y la integridad. El servidor debe autenticarse con un certificado de Capa de sockets seguros (SSL) y los clientes deben confiar en el certificado del servidor. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.  
   
- Para obtener una aplicación de ejemplo, consulte [Seguridad de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] la seguridad del transporte, vea [Información general de la seguridad del transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+ Para una aplicación de ejemplo, vea [seguridad de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]seguridad de transporte, consulte [información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo usar un certificado con un servicio, vea [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) y [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uso de un certificado con un servicio, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) y [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
- ![Utilización de la seguridad de transporte con un cliente anónimo](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931\-0cfb\-4aaa\-9272\-91d652b85d8d")  
+ ![Usar seguridad de transporte con un cliente anónimo](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Modo de seguridad|Transporte|  
 |Interoperabilidad|Con servicios y clientes Web existentes|  
-|Autenticación \(servidor\)<br /><br /> Autenticación \(cliente\)|Sí<br /><br /> Nivel de aplicación \(no se admite [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\)|  
+|Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí<br /><br /> Nivel de aplicación (no se admite [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)])|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
-|Transport|HTTPS|  
-|Enlaces|<xref:System.ServiceModel.WsHttpBinding>|  
+|Transporte|HTTPS|  
+|Enlaces|<<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>|  
   
-## Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.Siga uno de los procedimientos siguientes:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 -   Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio con la configuración proporcionada, pero sin definir ningún extremo.  
+-   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
   
-### Código  
- El código siguiente muestra cómo crear un extremo mediante la seguridad del transporte:  
+### <a name="code"></a>Código  
+ El código siguiente muestra cómo crear un punto de conexión mediante la seguridad del transporte:  
   
  [!code-csharp[c_SecurityScenarios#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
-### Configuración  
- El código siguiente configura el mismo extremo mediante la configuración.Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.  
+### <a name="configuration"></a>Configuración  
+ El código siguiente configura el mismo extremo mediante la configuración. Ningún mecanismo autentica el cliente y es, por lo tanto, anónimo.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -78,24 +84,24 @@ Este escenario de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliz
 </configuration>  
 ```  
   
-## Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de manera independiente.Realice uno de los procedimientos siguientes:  
+## <a name="client"></a>Cliente  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
--   Cree un cliente independiente mediante el código \(y el código de cliente\).  
+-   Cree un cliente independiente mediante el código (y el código de cliente).  
   
--   Cree un cliente que no defina direcciones de extremo.En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento.Por ejemplo:  
+-   Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Código  
+### <a name="code"></a>Código  
  [!code-csharp[c_SecurityScenarios#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
  [!code-vb[c_SecurityScenarios#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]  
   
-### Configuración  
+### <a name="configuration"></a>Configuración  
  Se puede usar la configuración siguiente en lugar del código para configurar el servicio.  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <bindings>  
@@ -118,8 +124,8 @@ Este escenario de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliz
 </configuration>  
 ```  
   
-## Vea también  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Seguridad de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)   
- [Información general de la seguridad del transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)   
- [Modelo de seguridad para Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Seguridad de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [Información general sobre la seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

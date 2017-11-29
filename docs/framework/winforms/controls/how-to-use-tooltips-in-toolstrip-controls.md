@@ -1,52 +1,53 @@
 ---
-title: "C&#243;mo: Utilizar la informaci&#243;n sobre herramientas en los controles ToolStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barras de herramientas [Windows Forms], agregar información sobre herramientas"
-  - "ToolStrip (control) [Windows Forms], agregar información sobre herramientas"
-  - "información sobre herramientas [Windows Forms], agregar"
+title: "Cómo: Utilizar la información sobre herramientas en los controles ToolStrip"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], adding tooltips
+- toolbars [Windows Forms], adding tooltips
+- tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bc52dd1b629829564532fd93650737f51e5d7f24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Utilizar la informaci&#243;n sobre herramientas en los controles ToolStrip
-Se puede mostrar una <xref:System.Windows.Forms.ToolTip> para el control <xref:System.Windows.Forms.ToolStrip> que desee, estableciendo la propiedad <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> de control en `true`.  
+# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Cómo: Utilizar la información sobre herramientas en los controles ToolStrip
+Puede mostrar un <xref:System.Windows.Forms.ToolTip> para el <xref:System.Windows.Forms.ToolStrip> control que desee estableciendo el control <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> propiedad `true`.  
   
-### Para mostrar una ToolTip  
+### <a name="to-display-a-tooltip"></a>Para mostrar una información sobre herramientas  
   
--   Establezca la propiedad <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> del control en `true`:  
+-   Establecer el <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> propiedad del control a `true`.  
   
-     El valor predeterminado de <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=fullName> es `true` y el valor predeterminado de <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=fullName> y <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=fullName> es `false`.  
+     El valor predeterminado de <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> es `true`y el valor predeterminado de <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> es `false`.  
   
-### Para utilizar la propiedad ToolTipText para el texto de información sobre herramientas de ToolStripButton  
+### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>Para usar la propiedad ToolTipText para el texto de información sobre herramientas de ToolStripButton  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> del botón en `true`.  
+1.  Establecer el <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> propiedad del botón en `true`.  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=fullName> del botón en `false`.  
+2.  Establecer el <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType> propiedad del botón en `false`.  
   
-     De forma predeterminada, la propiedad `AutoToolTip` es `true` para <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton> y <xref:System.Windows.Forms.ToolStripSplitButton>.  
+     El `AutoToolTip` propiedad es `true` de forma predeterminada para <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, y <xref:System.Windows.Forms.ToolStripSplitButton>.  
   
-     De forma predeterminada, <xref:System.Windows.Forms.ToolStripButton> utiliza su propiedad `Text` para el texto <xref:System.Windows.Forms.ToolTip>.  Utilice este procedimiento para mostrar el texto personalizado de una <xref:System.Windows.Forms.ToolTip> del <xref:System.Windows.Forms.ToolStripButton>.  
+     A <xref:System.Windows.Forms.ToolStripButton> usa su `Text` propiedad para el <xref:System.Windows.Forms.ToolTip> texto de forma predeterminada. Utilice este procedimiento para mostrar el texto personalizado en un <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
   
 > [!NOTE]
->  Si establece <xref:System.Windows.Forms.ToolStripItemDisplayStyle> en <xref:System.Windows.Forms.ToolStripItemDisplayStyle> o <xref:System.Windows.Forms.ToolStripItemDisplayStyle>, no se mostrará ningún texto en el botón, pero la información sobre herramientas sí aparece.  
+>  Si establece <xref:System.Windows.Forms.ToolStripItemDisplayStyle> a <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> o <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, se mostrará ningún texto en el botón, pero sigue apareciendo la información sobre herramientas.  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>   
- <xref:System.Windows.Forms.ToolStripButton>   
- <xref:System.Windows.Forms.ToolStripDropDownButton>   
- <xref:System.Windows.Forms.ToolStripSplitButton>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
+ <xref:System.Windows.Forms.ToolStripButton>  
+ <xref:System.Windows.Forms.ToolStripDropDownButton>  
+ <xref:System.Windows.Forms.ToolStripSplitButton>  
  [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

@@ -1,38 +1,41 @@
 ---
-title: "C&#243;mo: Modificar el extremo en el final de una l&#237;nea o segmento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gráficos, Shape (extremos)"
-  - "Shape (elementos), extremos"
-  - "Shape (elementos), extremos"
+title: "Cómo: Modificar el extremo en el final de una línea o segmento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Shape elements [WPF], ends
+- Shape elements [WPF], caps
+- graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e062b82e698a99705a2b06588aa9aae3a0c93157
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Modificar el extremo en el final de una l&#237;nea o segmento
-En este ejemplo se muestra cómo modificar la forma al principio o al fin de un elemento <xref:System.Windows.Shapes.Shape> abierto.  Para cambiar el remate inicial de un objeto <xref:System.Windows.Shapes.Shape> abierto, utilice su propiedad <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A>.  Para cambiar el remate final de un objeto <xref:System.Windows.Shapes.Shape> abierto, utilice su propiedad <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A>.  Para ver los remates de línea disponibles, vea la enumeración <xref:System.Windows.Media.PenLineCap>.  
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Cómo: Modificar el extremo en el final de una línea o segmento
+Este ejemplo muestra cómo modificar la forma al principio o al final de un circuito abierto <xref:System.Windows.Shapes.Shape> elemento. Para cambiar el extremo al principio de un formato de archivo <xref:System.Windows.Shapes.Shape>, usar su <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> propiedad. Para cambiar el extremo al final de un formato de archivo <xref:System.Windows.Shapes.Shape>, usar su <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> propiedad. Para ver los extremos de línea disponibles, vea el <xref:System.Windows.Media.PenLineCap> enumeración.  
   
 > [!NOTE]
->  Esta propiedad sólo afecta a una forma abierta, como un elemento <xref:System.Windows.Shapes.Line>, un elemento <xref:System.Windows.Shapes.Polyline>o un elemento <xref:System.Windows.Shapes.Path> abierto.  
+>  Esta propiedad solo afecta a una forma abierta, como un <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Polyline>, o abierto <xref:System.Windows.Shapes.Path> elemento.  
   
- En el ejemplo siguiente se dibujan cuatro elementos <xref:System.Windows.Shapes.Polyline> y utiliza un conjunto diferente de formas en los extremos de cada uno.  
+ En el ejemplo siguiente se dibuja cuatro <xref:System.Windows.Shapes.Polyline> elementos y utiliza un conjunto diferente de formas en los extremos de cada uno.  
   
-## Ejemplo  
- [!code-xml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
+## <a name="example"></a>Ejemplo  
+ [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
- Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ Este ejemplo forma parte de un ejemplo más extenso; Para obtener un ejemplo completo, vea [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## Vea también  
- <xref:System.Windows.Shapes.Polyline>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Shapes.Polyline>  
  <xref:System.Windows.Media.PenLineCap>

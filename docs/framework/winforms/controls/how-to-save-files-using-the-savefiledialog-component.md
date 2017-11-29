@@ -1,48 +1,53 @@
 ---
-title: "C&#243;mo: Guardar archivos mediante el componente SaveFileDialog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "archivos, guardar"
-  - "OpenFile (método), guardar archivos mediante el componente SaveFileDialog"
-  - "SaveFileDialog (componente), guardar archivos"
-  - "guardar archivos"
+title: "Cómo: Guardar archivos mediante el componente SaveFileDialog"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- saving files
+- SaveFileDialog component [Windows Forms], saving files
+- files [Windows Forms], saving
+- OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01bac8fc020955e78e7648db72492014acc19944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Guardar archivos mediante el componente SaveFileDialog
-El componente <xref:System.Windows.Forms.SaveFileDialog> permite a los usuarios examinar el sistema de archivos y seleccionar los archivos que deseen guardar.  El cuadro de diálogo devuelve la ruta de acceso y el nombre del archivo que seleccionó el usuario en el cuadro de diálogo.  Sin embargo, debe escribir el código para escribir realmente los archivos en el disco.  
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Cómo: Guardar archivos mediante el componente SaveFileDialog
+El <xref:System.Windows.Forms.SaveFileDialog> componente permite a los usuarios examinar el sistema de archivos y seleccione los archivos se guarden. El cuadro de diálogo devuelve la ruta de acceso y el nombre del archivo que el usuario seleccionó en el cuadro de diálogo. Sin embargo, debe escribir el código para escribir realmente los archivos en el disco.  
   
-### Para guardar un archivo utilizando el componente SaveFileDialog  
+### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Guardar un archivo mediante el componente SaveFileDialog  
   
 -   Muestre el cuadro de diálogo **Guardar archivo** y llame a un método para guardar el archivo seleccionado por el usuario.  
   
-     Utilice el método <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> del componente <xref:System.Windows.Forms.SaveFileDialog> para guardar el archivo.  Este método proporciona un objeto <xref:System.IO.Stream> en el que se puede escribir.  
+     Use la <xref:System.Windows.Forms.SaveFileDialog> del componente <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> método para guardar el archivo. Este método le proporciona un <xref:System.IO.Stream> puede escribir en el objeto.  
   
-     En el siguiente ejemplo se utiliza la propiedad <xref:System.Windows.Forms.DialogResult> para obtener el nombre del archivo y el método <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> para guardar este archivo.  El método <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> le proporciona una secuencia en la que escribir el archivo.  
+     El ejemplo siguiente utiliza la <xref:System.Windows.Forms.DialogResult> propiedad que se va a obtener el nombre del archivo y el <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método para guardar el archivo. El <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> método le proporciona un flujo que se va a escribir el archivo.  
   
-     En el ejemplo siguiente hay un control <xref:System.Windows.Forms.Button> con una imagen asignada.  Cuando se hace clic en el botón, se crea una instancia del componente <xref:System.Windows.Forms.SaveFileDialog> con un filtro que permite archivos de tipo .gif, .jpeg y .bmp.  Si se selecciona un archivo de este tipo en el cuadro de diálogo Guardar archivo, se guarda la imagen del botón.  
+     En el ejemplo siguiente, hay un <xref:System.Windows.Forms.Button> control con una imagen asignada a él. Al hacer clic en el botón, un <xref:System.Windows.Forms.SaveFileDialog> se crea una instancia de componente con un filtro que permite que los archivos de tipo .gif y .jpeg, .bmp. Si se selecciona un archivo de este tipo en el cuadro de diálogo Guardar archivo, se guarda la imagen del botón.  
   
     > [!IMPORTANT]
-    >  Para obtener o establecer la propiedad <xref:System.Windows.Forms.FileDialog.FileName%2A>, el ensamblado necesita que la clase <xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName> le conceda un nivel de privilegios.  Si ejecuta el proceso en un contexto de confianza parcial, podría desencadenarse una excepción por falta de privilegios.  Para obtener más información, vea [Conceptos básicos sobre la seguridad de acceso del código](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Para obtener o establecer el <xref:System.Windows.Forms.FileDialog.FileName%2A> propiedad, el ensamblado requiere un nivel de privilegio concedido por la <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> clase. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
-     En el ejemplo se supone que el formulario tiene un control <xref:System.Windows.Forms.Button> con su propiedad <xref:System.Windows.Forms.ButtonBase.Image%2A> definida como un archivo de tipo .gif, .jpeg o .bmp.  
+     En el ejemplo se da por supuesto que el formulario tiene un <xref:System.Windows.Forms.Button> control con su <xref:System.Windows.Forms.ButtonBase.Image%2A> propiedad establecida en un archivo de tipo .gif, .jpeg o .bmp.  
   
     > [!NOTE]
-    >  La propiedad <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> de la clase <xref:System.Windows.Forms.FileDialog> \(que, debido a su herencia, forma parte de la clase <xref:System.Windows.Forms.SaveFileDialog>\) utiliza un índice de base uno.  Esto es importante si va a escribir código para guardar datos con un formato específico \(por ejemplo, guardar un archivo con texto sin formato frente al formato binario\).  El ejemplo siguiente muestra el uso de esta propiedad.  
+    >  El <xref:System.Windows.Forms.FileDialog> la clase <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> propiedad (que, debido a su herencia, forma parte de la <xref:System.Windows.Forms.SaveFileDialog> clase) utiliza un índice basado en uno. Esto es importante si escribe código para guardar datos en un formato concreto (por ejemplo, al guardar un archivo de texto sin formato frente al formato binario). Esta propiedad se incluye en el ejemplo siguiente.  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -79,7 +84,6 @@ El componente <xref:System.Windows.Forms.SaveFileDialog> permite a los usuarios 
            fs.Close()  
         End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -122,7 +126,6 @@ El componente <xref:System.Windows.Forms.SaveFileDialog> permite a los usuarios 
        fs.Close();  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -143,7 +146,7 @@ El componente <xref:System.Windows.Forms.SaveFileDialog> permite a los usuarios 
              // Saves the Image through a FileStream created by  
              // the OpenFile method.  
              System::IO::FileStream ^ fs =   
-                safe_cast<System::IO::FileStream*>(  
+                safe_cast\<System::IO::FileStream*>(  
                 saveFileDialog1->OpenFile());  
              // Saves the Image in the appropriate ImageFormat based on  
              // the file type selected in the dialog box.  
@@ -168,11 +171,10 @@ El componente <xref:System.Windows.Forms.SaveFileDialog> permite a los usuarios 
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  
-  
     ```  
   
     ```cpp  
@@ -180,11 +182,11 @@ El componente <xref:System.Windows.Forms.SaveFileDialog> permite a los usuarios 
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     Para obtener más información sobre la escritura en secuencias de archivo, vea [FileStream.BeginWrite \(Método\)](frlrfSystemIOFileStreamClassBeginWriteTopic) y [FileStream.Write \(Método\)](https://msdn.microsoft.com/en-us/library/system.io.filestream.write.aspx).  
+     Para obtener más información sobre cómo escribir secuencias de archivo, consulte <xref:System.IO.FileStream.BeginWrite%2A> y <xref:System.IO.FileStream.Write%2A>.  
   
     > [!NOTE]
-    >  Algunos controles, como <xref:System.Windows.Forms.RichTextBox>, pueden guardar archivos.  Para obtener más información, vea la sección "SaveFileDialog Component" del artículo técnico de MSDN Online Library, [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575).  
+    >  Ciertos controles, como el <xref:System.Windows.Forms.RichTextBox> controlar, tiene la capacidad de guardar archivos. Para obtener más información, consulte la sección "SaveFileDialog (componente)" del artículo técnico de MSDN Online Library, [Código esencial para los cuadros de diálogo de Windows Forms](http://go.microsoft.com/fwlink/?LinkID=102575).  
   
-## Vea también  
- <xref:System.Windows.Forms.SaveFileDialog>   
- [SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.SaveFileDialog>  
+ [SaveFileDialog (componente)](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)

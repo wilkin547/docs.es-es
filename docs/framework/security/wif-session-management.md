@@ -5,30 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d71b83231140dcc18e6d2351091fbfd4985e90a2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9c41b9c0c9abe3fc80d16dbd847c35c8b2da7038
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-session-management"></a>Administración de sesiones de WIF
-Cuando un cliente intenta acceder a un recurso protegido hospedado en un usuario de confianza por primera vez, primero debe autenticarse en un servicio de token de seguridad (STS) que sea de confianza para el usuario de confianza. Luego el STS emite un token de seguridad al cliente. El cliente presenta este token al usuario de confianza, que, entonces, le concede acceso al recurso protegido. Pero no es deseable que el cliente tenga que volver a autenticarse en el STS para cada solicitud, sobre todo porque incluso podría no ser en el mismo equipo o en el mismo dominio que el usuario de confianza. Así, Windows Identity Foundation (WIF) hace que el cliente y el usuario de confianza establezcan una sesión en la que el cliente usa un token de seguridad de sesión para autenticarse en el usuario de confianza para todas las solicitudes después de la primera. El usuario de confianza puede usar este token de seguridad de sesión, que se almacena en una cookie, para reconstruir el elemento <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> del cliente.  
+Cuando un cliente intenta acceder a un recurso protegido hospedado en un usuario de confianza por primera vez, primero debe autenticarse en un servicio de token de seguridad (STS) que sea de confianza para el usuario de confianza. Luego el STS emite un token de seguridad al cliente. El cliente presenta este token al usuario de confianza, que, entonces, le concede acceso al recurso protegido. Pero no es deseable que el cliente tenga que volver a autenticarse en el STS para cada solicitud, sobre todo porque incluso podría no ser en el mismo equipo o en el mismo dominio que el usuario de confianza. Así, Windows Identity Foundation (WIF) hace que el cliente y el usuario de confianza establezcan una sesión en la que el cliente usa un token de seguridad de sesión para autenticarse en el usuario de confianza para todas las solicitudes después de la primera. El usuario de confianza puede usar este token de seguridad de sesión, que se almacena en una cookie, para reconstruir el elemento <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> del cliente.  
   
  El STS define qué autenticación debe proporcionar el cliente. Pero el cliente puede tener varias credenciales con las que se puede autenticar en el STS. Por ejemplo, puede tener un token de Windows Live, un nombre de usuario y una contraseña, un certificado y una smartkey. En ese caso, el STS concede al cliente varias identidades, cada una de las cuales corresponde a una de las credenciales que presenta el cliente. El usuario de confianza puede usar una o varias de estas identidades cuando decide qué nivel de acceso concede al cliente.  
   
- <xref:System.IdentityModel.Tokens.SessionSecurityToken?displayProperty=fullName> se usa para reconstruir el elemento <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> del cliente, que contiene todas las identidades del cliente en <xref:System.Security.Claims.ClaimsPrincipal.Identities%2A>. Cada <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> de la colección contiene los tokens de arranque asociados a esa identidad.  
+ <xref:System.IdentityModel.Tokens.SessionSecurityToken?displayProperty=nameWithType> se usa para reconstruir el elemento <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> del cliente, que contiene todas las identidades del cliente en <xref:System.Security.Claims.ClaimsPrincipal.Identities%2A>. Cada <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> de la colección contiene los tokens de arranque asociados a esa identidad.  
   
- Si se emite un nuevo token de sesión con el identificador de sesión del token de sesión original, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler?displayProperty=fullName> no actualiza el token de sesión en la caché de tokens. Siempre debe crear una instancia de un token de sesión con un identificador de sesión único.  
+ Si se emite un nuevo token de sesión con el identificador de sesión del token de sesión original, <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler?displayProperty=nameWithType> no actualiza el token de sesión en la caché de tokens. Siempre debe crear una instancia de un token de sesión con un identificador de sesión único.  
   
 > [!NOTE]
 >  Session.SecurityTokenHandler.ReadToken produce una excepción <xref:System.Xml.XmlException> si recibe una entrada no válida; por ejemplo, si la cookie que contiene el token de sesión está dañada. Se recomienda detectar esta excepción y proporcionar un comportamiento específico de la aplicación.  
@@ -38,7 +36,6 @@ Cuando un cliente intenta acceder a un recurso protegido hospedado en un usuario
  Para funcionar en modo de referencia, Microsoft recomienda proporcionar un controlador para el evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> en el archivo **global.asax.cs** y establecer la propiedad **IsReferenceMode** en el token pasado en la propiedad <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A>. Estas actualizaciones garantizan que el token de sesión funcione en modo de referencia para cada solicitud y que se prefiera al mero establecimiento de la propiedad <xref:System.IdentityModel.Services.SessionAuthenticationModule.IsReferenceMode%2A> en el módulo de autenticación de sesión.  
   
 ## <a name="extensibility"></a>Extensibilidad  
- Puede extender el mecanismo de administración de sesión. Una razón para hacerlo es mejorar el rendimiento. Por ejemplo, puede crear un controlador de cookies personalizado que transforme u optimice el token de seguridad de sesión entre su estado en memoria y lo que se incluye en la cookie. Para ello, puede configurar la propiedad <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=fullName> de <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=fullName> para usar un controlador de cookies personalizado que derive de <xref:System.IdentityModel.Services.CookieHandler?displayProperty=fullName>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=fullName> es el controlador de cookies predeterminado porque las cookies superan el tamaño permitido para el protocolo de transferencia de hipertexto (HTTP); si usa un controlador de cookies personalizado, debe implementar la fragmentación.  
+ Puede extender el mecanismo de administración de sesión. Una razón para hacerlo es mejorar el rendimiento. Por ejemplo, puede crear un controlador de cookies personalizado que transforme u optimice el token de seguridad de sesión entre su estado en memoria y lo que se incluye en la cookie. Para ello, puede configurar la propiedad <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> de <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> para usar un controlador de cookies personalizado que derive de <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> es el controlador de cookies predeterminado porque las cookies superan el tamaño permitido para el protocolo de transferencia de hipertexto (HTTP); si usa un controlador de cookies personalizado, debe implementar la fragmentación.  
   
  Para más información, vea el ejemplo [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408). Este ejemplo muestra una memoria caché de sesión lista para una granja de servidores (en lugar de un elemento tokenreplycache) para que pueda usar sesiones por referencia en lugar de intercambiar cookies grandes; este ejemplo también muestra una manera más sencilla de proteger las cookies de una granja de servidores. La caché de sesión se basa en WCF. Con respecto a la protección de sesión, el ejemplo muestra una nueva capacidad de WIF 4.5: una transformación de cookies basada en MachineKey que puede activarse con solo pegar el fragmento de código adecuado en web.config. El ejemplo en sí mismo no es una "granja", pero muestra lo que se necesita para hacer que la aplicación esté lista para una granja de servidores.
-

@@ -1,36 +1,41 @@
 ---
-title: "C&#243;mo: Deshabilitar ToolStripMenuItems | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "deshabilitar elementos de menú"
-  - "elementos de menú, deshabilitar"
-  - "elementos de menú, habilitar"
-  - "menús, deshabilitar elementos de menú"
-  - "ToolStripMenuItems, deshabilitar"
-  - "ToolStripMenuItems, habilitar"
+title: "Cómo: Deshabilitar ToolStripMenuItems"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], enabling
+- ToolStripMenuItems [Windows Forms], disabling
+- menu items [Windows Forms], disabling
+- disabling menu items
+- menu items [Windows Forms], enabling
+- menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e3307da3e0810ea775c799a4b065e1f7484b5779
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Deshabilitar ToolStripMenuItems
-Puede limitar o ampliar los comandos que introducen los usuarios habilitando y deshabilitando los elementos de menú en respuesta a las actividades del usuario.  Los elementos de menú están habilitados de forma predeterminada cuando se crean, pero esto se puede ajustar mediante la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>.  Puede manipular en tiempo de diseño esta propiedad en la ventana **Propiedades** o mediante programación estableciéndola en código.  
+# <a name="how-to-disable-toolstripmenuitems"></a>Cómo: Deshabilitar ToolStripMenuItems
+Puede limitar o ampliar los comandos que un usuario puede realizar para habilitar y deshabilitar elementos de menú en respuesta a las actividades del usuario. Elementos de menú están habilitados de forma predeterminada cuando se crean, pero esto se puede ajustar mediante el <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propiedad. Puede manipular esta propiedad en tiempo de diseño en el **propiedades** ventana o mediante programación si se establece en el código.  
   
-### Para deshabilitar un elemento de menú mediante programación  
+### <a name="to-disable-a-menu-item-programmatically"></a>Para deshabilitar un elemento de menú mediante programación  
   
--   Dentro del método donde se establecen las propiedades del elemento de menú, agregue código para establecer la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> en `false`.  
+-   Dentro del método donde estableció las propiedades del elemento de menú, agregue código para establecer el <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propiedad `false`.  
   
     ```vb  
     MenuItem1.Enabled = False  
@@ -45,10 +50,10 @@ Puede limitar o ampliar los comandos que introducen los usuarios habilitando y d
     ```  
   
     > [!TIP]
-    >  Al deshabilitar el primer elemento de menú o de nivel superior de un menú se ocultan todos los elementos de menú contenidos dentro del menú, pero no se deshabilitan.  Del mismo modo, al deshabilitar un elemento de menú que tenga elementos de submenú se ocultan los elementos de submenú, pero no se deshabilitan.  Si ninguno de los comandos de un menú dado está disponible para el usuario, se considera una buena práctica de programación ocultar y deshabilitar todo el menú, para presentar una interfaz de usuario limpia.  Debe ocultar y deshabilitar el menú, y deshabilitar todos los elementos y elementos de submenú del menú, ya que el hecho de ocultarlo no impide el acceso a un comando de menú mediante una tecla de método abreviado.  Establezca la propiedad <xref:System.Windows.Forms.ToolStripItem.Visible%2A> de un elemento de menú de nivel superior en `false` para ocultar todo el menú.  
+    >  Deshabilitar el elemento de menú de primer o de nivel superior en un menú oculta todos los elementos de menú contenidos en el menú, pero no deshabilitará. Del mismo modo, al deshabilitar un elemento de menú que tiene elementos de submenú oculta los elementos de submenú, pero no deshabilitará. Si todos los comandos de un menú no están disponibles para el usuario, se considera buena práctica de programación ocultar y deshabilitar todo el menú, tal y como se presenta una interfaz de usuario limpia. Debe ocultar y deshabilitar el menú y deshabilitar cada elemento y el elemento de submenú en el menú, ya que oculta por sí solo no impide el acceso a un comando de menú a través de una tecla de método abreviado. Establecer el <xref:System.Windows.Forms.ToolStripItem.Visible%2A> propiedad de un elemento de menú de nivel superior para `false` para ocultar todo el menú.  
   
-## Vea también  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [Cómo: Ocultar ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [Ocultar ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
  [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

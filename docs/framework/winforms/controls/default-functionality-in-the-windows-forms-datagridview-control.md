@@ -1,60 +1,61 @@
 ---
-title: "Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadrículas de datos, funcionalidad predeterminada en el control DataGridView"
-  - "DataGridView (control) [Windows Forms], funcionalidad predeterminada"
+title: Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], default functionality in DataGridView control
+- DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms
-El control <xref:System.Windows.Forms.DataGridView> de formularios Windows Forms proporciona a los usuarios gran cantidad de funciones predeterminadas.  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms
+Los formularios Windows Forms <xref:System.Windows.Forms.DataGridView> control proporciona a los usuarios con una cantidad significativa de funcionalidad predeterminada.  
   
-## Funcionalidad predeterminada  
- De manera predeterminada, un control <xref:System.Windows.Forms.DataGridView>:  
+## <a name="default-functionality"></a>Funcionalidad predeterminada  
+ De forma predeterminada, un <xref:System.Windows.Forms.DataGridView> control:  
   
--   Muestra automáticamente encabezados de columna y de fila que permanecen visibles cuando se recorre la tabla verticalmente.  
+-   Muestra automáticamente encabezados de columna y encabezados de fila que permanecen visibles cuando la tabla se desplaza verticalmente.  
   
--   Tiene un encabezado de fila que contiene un indicador de selección para la fila actual.  
+-   Tiene un encabezado de fila que contiene un indicador de selección de la fila actual.  
   
 -   Tiene un rectángulo de selección en la primera celda.  
   
--   Tiene columnas cuyo tamaño se puede cambiar automáticamente si el usuario hace doble clic en los divisores de columnas.  
+-   Tiene columnas que pueden cambiarse automáticamente cuando el usuario hace doble clic en los divisores de columna.  
   
--   Admite automáticamente estilos visuales en Windows XP y la familia de servidores de Windows Server 2003 cuando se llama al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> desde el método `Main` de la aplicación.  
+-   Admite automáticamente los estilos visuales en Windows XP y la familia Windows Server 2003 cuando la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método se llama desde la aplicación `Main` método.  
   
- Además, se puede editar el contenido de un control <xref:System.Windows.Forms.DataGridView> de manera predeterminada:  
+ Además, el contenido de un <xref:System.Windows.Forms.DataGridView> control puede modificarse de forma predeterminada:  
   
--   Si el usuario hace doble clic o presiona F2 en una celda, el control aplica automáticamente a la celda el modo de edición y actualiza el contenido de la celda conforme teclea el usuario.  
+-   Si el usuario hace doble clic o presiona F2 en una celda, el control pone la celda en modo de edición y actualiza el contenido de la celda cuando el usuario escribe automáticamente.  
   
--   Si el usuario se desplaza al final de la cuadrícula, verá que hay una fila para agregar registros nuevos.  Cuando el usuario hace clic en esta fila, se agrega una nueva fila al control <xref:System.Windows.Forms.DataGridView>, con valores predeterminados.  Cuando el usuario presiona ESC, esta nueva fila desaparece.  
+-   Si el usuario se desplaza hasta el final de la cuadrícula, el usuario verá que una fila para agregar nuevos registros está presente. Cuando el usuario hace clic en esta fila, se agrega una nueva fila a la <xref:System.Windows.Forms.DataGridView> control, con los valores predeterminados. Cuando el usuario presiona ESC, esta nueva fila desaparece.  
   
--   Si el usuario hace clic en el encabezado de una fila, se selecciona la fila completa.  
+-   Si el usuario hace clic en un encabezado de fila, se selecciona la fila completa.  
   
- Cuando se enlaza un control <xref:System.Windows.Forms.DataGridView> a un origen de datos estableciendo su propiedad <xref:System.Windows.Forms.DataGridView.DataSource%2A>, el control:  
+ Al enlazar un <xref:System.Windows.Forms.DataGridView> control a un origen de datos estableciendo su <xref:System.Windows.Forms.DataGridView.DataSource%2A> propiedad, el control:  
   
--   Utiliza automáticamente los nombres de las columnas del origen de datos como texto de los encabezados de columna.  
+-   Usa automáticamente los nombres de columnas del origen de datos como el texto del encabezado de columna.  
   
--   Se rellena con el contenido del origen de datos.  Las columnas <xref:System.Windows.Forms.DataGridView> se crean automáticamente para cada columna en el origen de datos.  
+-   Se rellena con el contenido del origen de datos. <xref:System.Windows.Forms.DataGridView>las columnas se crean automáticamente para cada columna del origen de datos.  
   
--   Crea una fila para cada fila visible de la tabla.  
+-   Crea una fila para cada fila visible en la tabla.  
   
--   Ordena automáticamente las filas tomando como base los datos subyacentes cuando el usuario hace clic en el encabezado de una columna.  
+-   Se ordena automáticamente las filas basándose en los datos subyacentes cuando el usuario hace clic en un encabezado de columna.  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- [Control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.DataGridView>  
+ [DataGridView (control)](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

@@ -1,38 +1,37 @@
 ---
-title: "C&#243;mo: Crear cadenas mediante un objeto StringBuilder en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "StringBuilder (clase)"
-  - "cadenas [Visual Basic], mediante StringBuilder"
+title: "Cómo: Crear cadenas mediante un objeto StringBuilder en Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- StringBuilder class
+- strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c799794b319843b0239ce9589e0c556c603c8617
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear cadenas mediante un objeto StringBuilder en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Este ejemplo crea una cadena larga a partir de muchas cadenas más pequeñas mediante la clase <xref:System.Text.StringBuilder>.  La clase <xref:System.Text.StringBuilder> es más eficaz que el operador `&=` para concatenar muchas cadenas.  
+# <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Cómo: Crear cadenas mediante un objeto StringBuilder en Visual Basic
+Este ejemplo crea una cadena larga de muchas cadenas más pequeñas mediante la <xref:System.Text.StringBuilder> clase. El <xref:System.Text.StringBuilder> clase es más eficaz que la `&=` operador para concatenar muchas cadenas.  
   
-## Ejemplo  
- En el ejemplo siguiente se crea una instancia de la clase <xref:System.Text.StringBuilder>, se anexan 1.000 cadenas a esa instancia y, a continuación, se devuelve su representación de cadena.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se crea una instancia de la <xref:System.Text.StringBuilder> (clase), anexan 1.000 cadenas a esa instancia y, a continuación, devuelve la representación de cadena.  
   
  [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
   
-## Vea también  
- [Utilizar la clase StringBuilder](../Topic/Using%20the%20StringBuilder%20Class%20in%20the%20.NET%20Framework.md)   
- [&\= \(Operador\)](../../../../visual-basic/language-reference/operators/and-assignment-operator.md)   
- [Cadenas](../../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [Crear cadenas nuevas](../Topic/Creating%20New%20Strings%20in%20the%20.NET%20Framework.md)   
- [Manipular cadenas](../Topic/Manipulating%20Strings%20in%20the%20.NET%20Framework.md)   
- [Strings Sample](http://msdn.microsoft.com/es-es/be9e82a3-dc95-4aaa-9396-61b66e467e02)
+## <a name="see-also"></a>Vea también  
+ [Utilizar la clase StringBuilder](../../../../standard/base-types/stringbuilder.md)  
+ [Operador &=](../../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [Cadenas](../../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [Creación de cadenas nuevas](../../../../standard/base-types/creating-new.md)  
+ [Manipular cadenas](../../../../standard/base-types/manipulating-strings.md)  
+ [Ejemplo de cadenas](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)

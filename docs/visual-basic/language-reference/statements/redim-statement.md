@@ -1,117 +1,116 @@
 ---
-title: "Instrucci&#243;n ReDim (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ReDim"
-  - "vb.Preserve"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "matrices [Visual Basic], y escalares"
-  - "matrices [Visual Basic], declarar"
-  - "matrices [Visual Basic], dimensiones"
-  - "matrices [Visual Basic], reasignar"
-  - "matrices [Visual Basic], reinicializar"
-  - "As (palabra clave), en la instrucción ReDim"
-  - "tipos de datos [Visual Basic], asignar"
-  - "instrucciones de declaración"
-  - "declaraciones, matrices dinámicas"
-  - "matrices dinámicas, ReDim (instrucción)"
-  - "cadenas de longitud fija, declarar"
-  - "Preserve (palabra clave), ReDim (instrucción)"
-  - "ReDim (instrucción)"
-  - "ReDim (instrucción), sintaxis"
-  - "variables escalares"
-  - "escalares"
-  - "escalares, y matrices"
-  - "storage, asignar"
-  - "To (palabra clave), ReDim (instrucción)"
-  - "variables [Visual Basic], escalares"
+title: "Instrucción ReDim (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ReDim
+- vb.Preserve
+helpviewer_keywords:
+- fixed-length strings [Visual Basic], declaring
+- ReDim statement [Visual Basic], syntax
+- dynamic arrays [Visual Basic], ReDim statement
+- arrays [Visual Basic], reallocating
+- arrays [Visual Basic], reinitializing
+- arrays [Visual Basic], dimensions
+- scalars, and arrays
+- scalars
+- declarations [Visual Basic], dynamic arrays
+- variables [Visual Basic], scalar
+- ReDim statement [Visual Basic]
+- data types [Visual Basic], assigning
+- As keyword [Visual Basic], in ReDim statement
+- To keyword [Visual Basic], ReDim statement
+- arrays [Visual Basic], declaring
+- Preserve keyword [Visual Basic], ReDim statement
+- storage [Visual Basic], allocating
+- arrays [Visual Basic], and scalars
+- declaration statements [Visual Basic]
+- scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Instrucci&#243;n ReDim (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="redim-statement-visual-basic"></a>Instrucción ReDim (Visual Basic)
 Reasigna espacio de almacenamiento a una variable de matriz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
+ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
   
 |Término|Definición|  
-|-------------|----------------|  
-|`Preserve`|Opcional.  Modificador usado para mantener los datos en la matriz existente cuando cambia el tamaño solamente de la última dimensión.|  
-|`name`|Requerido.  Nombre de la variable de matriz.  Vea [Nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Requerido.  Lista de límites de cada dimensión de la matriz redefinida.|  
+|----------|----------------|  
+|`Preserve`|Opcional. Modificador usado para mantener los datos en la matriz existente cuando cambia el tamaño solamente de la última dimensión.|  
+|`name`|Obligatorio. Nombre de la variable de matriz. Vea [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Obligatorio. Lista de límites de cada dimensión de la matriz redefinida.|  
   
-## Comentarios  
- Puede utilizar la instrucción `ReDim` para cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado.  Si tiene una matriz grande y ya no necesita algunos de sus elementos, `ReDim` puede liberar memoria al reducir el tamaño de la matriz.  Por otro lado, si la matriz necesita más elementos, `ReDim` puede agregarlos.  
+## <a name="remarks"></a>Comentarios  
+ Puede utilizar la instrucción `ReDim` para cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado. Si tiene una matriz grande y ya no necesita algunos de sus elementos, `ReDim` puede liberar memoria al reducir el tamaño de la matriz. Por otro lado, si la matriz necesita más elementos, `ReDim` puede agregarlos.  
   
- La instrucción `ReDim` está destinada solo a las matrices.  No es válida en escalares \(variables que contienen un único valor\), colecciones ni estructuras.  Tenga en cuenta que, si declara una variable de tipo `Array`, la instrucción `ReDim` no tiene suficiente información de tipo para crear la nueva matriz.  
+ La instrucción `ReDim` está destinada solo a las matrices. No es válida en escalares (variables que contienen un único valor), colecciones ni estructuras. Tenga en cuenta que, si declara una variable de tipo `Array`, la instrucción `ReDim` no tiene suficiente información de tipo para crear la nueva matriz.  
   
- Solo puede usar `ReDim` en el nivel de procedimiento.  Por lo tanto, el contexto de declaración de la variable debe ser un procedimiento; no puede ser un archivo de código fuente, un espacio de nombres, una interfaz, una clase, una estructura, un módulo o un bloque.  Para obtener más información, vea [Contextos de declaración y niveles de acceso predeterminados](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Solo puede usar `ReDim` en el nivel de procedimiento. Por lo tanto, el contexto de declaración de la variable debe ser un procedimiento; no puede ser un archivo de código fuente, un espacio de nombres, una interfaz, una clase, una estructura, un módulo o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
-## Reglas  
+## <a name="rules"></a>Reglas  
   
--   **Varias variables.** Puede cambiar el tamaño de varias variables de matriz en la misma instrucción de declaración y especificar las partes `name` y `boundlist` para cada variable.  Las variables se separan con comas.  
+-   **Varias Variables.** Puede cambiar el tamaño de varias variables de matriz en la misma instrucción de declaración y especificar las partes `name` y `boundlist` para cada variable. Las variables se separan con comas.  
   
--   **Límites de matrices.** Cada entrada de `boundlist` puede especificar los límites inferior y superior de esa dimensión.  El límite inferior es siempre 0 \(cero\).  El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión \(que es el límite superior más uno\).  El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
+-   **Límites de la matriz.** Cada entrada de `boundlist` puede especificar los límites inferior y superior de esa dimensión. El límite inferior es siempre 0 (cero). El límite superior es el valor de índice posible más alto para esa dimensión, no la longitud de la dimensión (que es el límite superior más uno). El índice de cada dimensión puede variar entre 0 y el valor del límite superior.  
   
-     El número de dimensiones de `boundlist` debe coincidir con el número de dimensiones \(rango\) de la matriz original.  
+     El número de dimensiones de `boundlist` debe coincidir con el número de dimensiones (rango) de la matriz original.  
   
 -   **Tipos de datos.** La instrucción `ReDim` no puede cambiar el tipo de datos de una variable de matriz o de sus elementos.  
   
 -   **Inicialización.** La instrucción `ReDim` no puede proporcionar nuevos valores de inicialización para los elementos de la matriz.  
   
--   **Rango.** La instrucción `ReDim` no puede cambiar el rango \(el número de dimensiones\) de la matriz.  
+-   **Rango.** La instrucción `ReDim` no puede cambiar el rango (el número de dimensiones) de la matriz.  
   
--   **Cambiar el tamaño con Preserve.** Si usa `Preserve`, puede cambiar el tamaño únicamente de la última dimensión de la matriz.  Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
+-   **Cambiar el tamaño con Preserve.** Si usa `Preserve`, puede cambiar el tamaño únicamente de la última dimensión de la matriz. Para cualquier otra dimensión, debe especificar el límite de la matriz existente.  
   
-     Por ejemplo, si su matriz tiene solo una dimensión, puede cambiar el tamaño de esa dimensión y conservar todo el contenido de la matriz, ya que es la última y única dimensión.  Sin embargo, si su matriz tiene dos o más dimensiones, puede cambiar solamente el tamaño de la última dimensión si utiliza `Preserve`.  
+     Por ejemplo, si su matriz tiene solo una dimensión, puede cambiar el tamaño de esa dimensión y conservar todo el contenido de la matriz, ya que es la última y única dimensión. Sin embargo, si su matriz tiene dos o más dimensiones, puede cambiar solamente el tamaño de la última dimensión si utiliza `Preserve`.  
   
 -   **Propiedades.** Puede usar `ReDim` en una propiedad que contiene una matriz de valores.  
   
-## Comportamiento  
+## <a name="behavior"></a>Comportamiento  
   
--   **Reemplazo de matriz.** `ReDim` libera la matriz existente y crea una nueva matriz con el mismo rango.  La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
+-   **Reemplazo de matriz.** `ReDim`Libera la matriz existente y crea una nueva matriz con el mismo rango. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
   
 -   **Inicialización sin Preserve.** Si no se especifica `Preserve`, `ReDim` inicializa los elementos de la nueva matriz utilizando el valor predeterminado para su tipo de datos.  
   
 -   **Inicialización con Preserve.** Si se especifica `Preserve`, Visual Basic copia los elementos de la matriz existente en la nueva matriz.  
   
-## Ejemplo  
- El ejemplo siguiente aumenta el tamaño de la última dimensión de una matriz dinámica sin perder los datos existentes en la matriz y, a continuación, reduce el tamaño con pérdida de datos parcial.  Por último, reduce el tamaño a su valor original y reinicializa todos los elementos de la matriz.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente aumenta el tamaño de la última dimensión de una matriz dinámica sin perder los datos existentes en la matriz y, a continuación, reduce el tamaño con pérdida de datos parcial. Por último, reduce el tamaño a su valor original y reinicializa todos los elementos de la matriz.  
   
  [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
   
- La instrucción `Dim` crea una nueva matriz con tres dimensiones.  Cada dimensión se declara con un límite de 10, por lo que el índice de matriz para cada dimensión puede oscilar entre 0 y 10.  En el siguiente análisis, las tres dimensiones se conocen como capa, fila y columna.  
+ La instrucción `Dim` crea una nueva matriz con tres dimensiones. Cada dimensión se declara con un límite de 10, por lo que el índice de matriz para cada dimensión puede oscilar entre 0 y 10. En el siguiente análisis, las tres dimensiones se conocen como capa, fila y columna.  
   
- El primer `ReDim` crea una nueva matriz que reemplaza la matriz existente en la variable `intArray`.  `ReDim` copia todos los elementos de la matriz existente en la nueva matriz.  También agrega 10 columnas más al final de cada fila en cada capa e inicializa los elementos de estas nuevas columnas a 0 \(el valor predeterminado de `Integer`, que es el tipo de elemento de la matriz\).  
+ El primer `ReDim` crea una nueva matriz que reemplaza la matriz existente en la variable `intArray`. `ReDim` copia todos los elementos de la matriz existente en la nueva matriz. También agrega 10 columnas más al final de cada fila en cada capa e inicializa los elementos de estas nuevas columnas a 0 (el valor predeterminado de `Integer`, que es el tipo de elemento de la matriz).  
   
- El segundo `ReDim` crea otra nueva matriz y copia todos los elementos que quepan.  Sin embargo, se pierden cinco columnas del final de cada fila en cada capa.  No es un problema si ya ha terminado de utilizar estas columnas.  Reducir el tamaño de una matriz grande puede liberar memoria que ya no necesite.  
+ El segundo `ReDim` crea otra nueva matriz y copia todos los elementos que quepan. Sin embargo, se pierden cinco columnas del final de cada fila en cada capa. No es un problema si ya ha terminado de utilizar estas columnas. Reducir el tamaño de una matriz grande puede liberar memoria que ya no necesite.  
   
- El tercer `ReDim` crea otra nueva matriz y quita otras cinco columnas del final de cada fila en cada capa.  Esta vez no copia los elementos existentes.  Esta instrucción revierte la matriz a su tamaño original.  Dado que la instrucción no incluye el modificador `Preserve`, establece todos los elementos de matriz con sus valores predeterminados originales.  
+ El tercer `ReDim` crea otra nueva matriz y quita otras cinco columnas del final de cada fila en cada capa. Esta vez no copia los elementos existentes. Esta instrucción revierte la matriz a su tamaño original. Dado que la instrucción no incluye el modificador `Preserve`, establece todos los elementos de matriz con sus valores predeterminados originales.  
   
- Para obtener ejemplos adicionales, vea [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Para obtener ejemplos adicionales, vea [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## Vea también  
- <xref:System.IndexOutOfRangeException>   
- [Const \(Instrucción\)](../../../visual-basic/language-reference/statements/const-statement.md)   
- [Dim \(Instrucción\)](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Erase \(Instrucción\)](../../../visual-basic/language-reference/statements/erase-statement.md)   
- [Nothing](../../../visual-basic/language-reference/nothing.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.IndexOutOfRangeException>  
+ [Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Erase (instrucción)](../../../visual-basic/language-reference/statements/erase-statement.md)  
+ [Nothing](../../../visual-basic/language-reference/nothing.md)  
  [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)

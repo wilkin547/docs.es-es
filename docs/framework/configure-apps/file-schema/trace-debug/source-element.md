@@ -1,76 +1,73 @@
 ---
-title: "&lt;source&gt; (Elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> (elemento)"
-  - "source (elemento)"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: '&lt;origen&gt; elemento'
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;source&gt; (Elemento)
-Especifica un origen de traza que inicia mensajes de traza.  
+# <a name="ltsourcegt-element"></a>&lt;origen&gt; elemento
+Contiene un origen de seguimiento que inicia mensajes de seguimiento.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.Diagnostics >  
+\<orígenes >  
+\<origen >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|`name`|Atributo opcional.<br /><br /> Especifica el nombre del origen de traza.|  
-|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia de modificador de traza en la aplicación.  Si el modificador no se identifica en un elemento `<switches>`, el valor especifica el nivel del modificador.|  
-|`switchType`|Atributo opcional.<br /><br /> Especifica el tipo del modificador de traza.  Si está presente, el tipo debe ser un nombre de clase válido y no puede ser una cadena vacía.|  
-|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor para una traza que el atributo específico del origen identificado por el método <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> de ese origen de traza.|  
+|---------------|-----------------|  
+|`name`|Atributo opcional.<br /><br /> Especifica el nombre del origen de seguimiento.|  
+|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia de modificador de seguimiento en la aplicación. Si el conmutador no se identifica en un `<switches>` elemento, el valor especifica el nivel para el conmutador.|  
+|`switchType`|Atributo opcional.<br /><br /> Especifica el tipo del modificador de seguimiento. Si está presente, el tipo debe ser un nombre de clase válido y no puede ser una cadena vacía.|  
+|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor de un atributo específico del origen de seguimiento identificado por la <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para ese origen de seguimiento.|  
   
-### Elementos secundarios  
-  
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes.|  
-  
-### Elementos primarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Contiene los agentes de escucha que recopilarán, almacenan y enrutan los mensajes.|  
+  
+### <a name="parent-elements"></a>Elementos primarios  
+  
+|Elemento|Descripción|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.|  
-|`sources`|Contiene orígenes de traza que inician mensajes de traza.|  
+|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
+|`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
   
-## Comentarios  
- Este elemento se puede utilizar en el archivo de configuración del equipo \(Machine.config\) y en el archivo de configuración de la aplicación.  
+## <a name="remarks"></a>Comentarios  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar el elemento `<source>`  para agregar el origen de traza `mySource` y establecer el nivel del modificador de origen denominado `sourceSwitch`.  Se agrega un agente de escucha de traza de la consola que escribe información de traza en la consola.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `<source>` elemento que se va a agregar el origen de seguimiento `mySource` y para establecer el nivel para el modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ Especifica un origen de traza que inicia mensajes de traza.
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>Vea también  
+ [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Modificadores de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

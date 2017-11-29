@@ -1,35 +1,38 @@
 ---
-title: "3300 - ReceiveContextCompleteFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3300 - ReceiveContextCompleteFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d6b3a31-5c12-4886-b682-2d0d86407d82
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 05f556e76cd0f255c8b48eb6e8ce30f59562ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3300 - ReceiveContextCompleteFailed
-## Propiedades  
+# <a name="3300---receivecontextcompletefailed"></a>3300 - ReceiveContextCompleteFailed
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|3300|  
 |Palabras clave|Canal|  
 |Nivel|Advertencia|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Se genera este evento cuando el contexto de recepción genera un error al completarse.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  No se pudo completar %1.  
   
-## Detalles
+## <a name="details"></a>Detalles

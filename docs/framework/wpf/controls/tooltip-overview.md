@@ -1,87 +1,93 @@
 ---
-title: "Informaci&#243;n general de informaci&#243;n sobre herramientas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controles, Información sobre herramientas"
-  - "ToolTip (control), acerca del control ToolTip"
+title: "Información general de información sobre herramientas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolTip control [WPF], about ToolTip control
+- controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31bd56323e90368f850ae54854e6f50b63d5f7fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general de informaci&#243;n sobre herramientas
-Una información sobre herramientas es una pequeña ventana emergente que aparece cuando el usuario detiene el puntero del mouse sobre un elemento, por ejemplo sobre un control <xref:System.Windows.Controls.Button>.  En este tema se presenta la información sobre herramientas y se aborda cómo crear y personalizar el contenido de la información sobre herramientas.  
+# <a name="tooltip-overview"></a>Información general de información sobre herramientas
+Una información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario pausa el puntero del mouse sobre un elemento, por ejemplo, como en un <xref:System.Windows.Controls.Button>. En este tema se presenta la información sobre herramientas y se explica cómo crear y personalizar el contenido de la información sobre herramientas.  
   
-   
+ 
   
 <a name="what_is_a_tooltip"></a>   
-## ¿Qué es la información sobre herramientas?  
- Cuando el usuario mueve el puntero del mouse sobre un elemento que tiene información sobre herramientas, aparece una ventana que contiene el contenido de la información sobre herramientas \(por ejemplo, contenido de texto que describe la función de un control\) durante un periodo específico de tiempo.  Si el usuario aleja el puntero del mouse del control, la ventana desaparece porque el contenido de la información sobre herramientas no puede recibir el foco.  
+## <a name="what-is-a-tooltip"></a>¿Qué es la información sobre herramientas?  
+ Cuando un usuario mueve el puntero del mouse sobre un elemento que tiene información sobre herramientas, aparece una ventana con información sobre herramientas (por ejemplo, texto que describe la función de un control) durante un período de tiempo especificado. Si el usuario mueve el puntero del mouse fuera del control, la ventana desaparece porque el contenido de la información sobre herramientas deja de recibir el foco.  
   
- El contenido de la información sobre herramientas puede constar de una o varias líneas de texto, imágenes, formas u otro contenido visual.  Para definir la información sobre herramientas de un control, establezca una de las propiedades siguientes en el contenido de la información sobre herramientas.  
+ La información sobre herramientas puede contener una o más líneas de texto, imágenes, formas u otro contenido visual. Para definir la información sobre herramientas de un control, establezca una de las siguientes propiedades en el contenido de la información sobre herramientas.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=fullName>  
+-   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=fullName>  
+-   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
- La propiedad que utilice depende de si el control que define la información sobre herramientas hereda de la clase <xref:System.Windows.FrameworkContentElement> o <xref:System.Windows.FrameworkElement>.  
+ La propiedad que utilice depende de si el control que define la información sobre herramientas se hereda de la <xref:System.Windows.FrameworkContentElement> o <xref:System.Windows.FrameworkElement> clase.  
   
 <a name="create_tooltip"></a>   
-## Crear una información sobre herramientas  
- En el ejemplo siguiente se muestra cómo crear una información sobre herramientas simple estableciendo la propiedad <xref:System.Windows.FrameworkElement.ToolTip%2A> de un control <xref:System.Windows.Controls.Button> en una cadena de texto.  
+## <a name="creating-a-tooltip"></a>Creación de una información sobre herramientas  
+ En el ejemplo siguiente se muestra cómo crear una información sobre herramientas simple estableciendo la <xref:System.Windows.FrameworkElement.ToolTip%2A> propiedad para un <xref:System.Windows.Controls.Button> control en una cadena de texto.  
   
- [!code-xml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
+ [!code-xaml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
   
- También puede definir la información sobre herramientas como un objeto <xref:System.Windows.Controls.ToolTip>.  En el ejemplo siguiente se utiliza [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para especificar un objeto <xref:System.Windows.Controls.ToolTip> como la información sobre herramientas de un elemento <xref:System.Windows.Controls.TextBox>.  Observe que en el ejemplo se especifica el objeto <xref:System.Windows.Controls.ToolTip> estableciendo la propiedad <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=fullName>.  
+ También puede definir una información sobre herramientas como un <xref:System.Windows.Controls.ToolTip> objeto. En el ejemplo siguiente se utiliza [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para especificar un <xref:System.Windows.Controls.ToolTip> objeto como la información sobre herramientas de un <xref:System.Windows.Controls.TextBox> elemento. Tenga en cuenta que el ejemplo se especifica la <xref:System.Windows.Controls.ToolTip> estableciendo el <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> propiedad.  
   
- [!code-xml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
   
- En el ejemplo siguiente se utiliza código para generar un objeto <xref:System.Windows.Controls.ToolTip>.  En el ejemplo se crea un objeto <xref:System.Windows.Controls.ToolTip> \(`tt`\) que se asocia a un control <xref:System.Windows.Controls.Button>.  
+ En el ejemplo siguiente se utiliza código para generar un <xref:System.Windows.Controls.ToolTip> objeto. El ejemplo se crea un <xref:System.Windows.Controls.ToolTip> (`tt`) y lo asocia a un <xref:System.Windows.Controls.Button>.  
   
  [!code-csharp[ToolTipSimple#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ToolTipSimple#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
   
- También puede crear contenido de información sobre herramientas que no se defina como un objeto <xref:System.Windows.Controls.ToolTip> incluyendo el contenido de la información sobre herramientas en un elemento de diseño, como un control <xref:System.Windows.Controls.DockPanel>.  En el ejemplo siguiente se muestra cómo establecer la propiedad <xref:System.Windows.FrameworkElement.ToolTip%2A> de un control <xref:System.Windows.Controls.TextBox> en contenido incluido en un control <xref:System.Windows.Controls.DockPanel>.  
+ También puede crear contenido de información sobre herramientas que no está definido como un <xref:System.Windows.Controls.ToolTip> objeto, incluya el contenido de la información sobre herramientas en un elemento de diseño, como un <xref:System.Windows.Controls.DockPanel>. En el ejemplo siguiente se muestra cómo establecer el <xref:System.Windows.FrameworkElement.ToolTip%2A> propiedad de un <xref:System.Windows.Controls.TextBox> a contenido que se incluye en un <xref:System.Windows.Controls.DockPanel> control.  
   
- [!code-xml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
+ [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
   
 <a name="Using_the_ToolTip_and_ToolTipService_Properties"></a>   
-## Utilizar las propiedades de las clases ToolTip y ToolTipService  
- Puede personalizar el contenido de la información sobre herramientas estableciendo propiedades visuales y aplicando estilos.  Si define el contenido de la información sobre herramientas como un objeto <xref:System.Windows.Controls.ToolTip>, podrá establecer las propiedades visuales del objeto <xref:System.Windows.Controls.ToolTip>.  De lo contrario, debe establecer las [propiedades asociadas](GTMT) equivalentes en la clase <xref:System.Windows.Controls.ToolTipService>.  
+## <a name="using-the-properties-of-the-tooltip-and-tooltipservice-classes"></a>Uso de las propiedades de las clases ToolTip y ToolTipService  
+ Para personalizar el contenido de la información sobre herramientas, puede establecer las propiedades visuales y aplicar estilos. Si se define la información sobre herramientas contenido como un <xref:System.Windows.Controls.ToolTip> objeto, puede establecer las propiedades visuales de la <xref:System.Windows.Controls.ToolTip> objeto. En caso contrario, debe establecer las propiedades adjuntas equivalente en el <xref:System.Windows.Controls.ToolTipService> clase.  
   
- Si desea ver un ejemplo de cómo establecer las propiedades para especificar la posición del contenido de la información sobre herramientas utilizando las propiedades <xref:System.Windows.Controls.ToolTip> y <xref:System.Windows.Controls.ToolTipService>, vea [Situar una información sobre herramientas](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
+ Para obtener un ejemplo de cómo establecer propiedades para especificar la posición del contenido de la información sobre herramientas mediante la <xref:System.Windows.Controls.ToolTip> y <xref:System.Windows.Controls.ToolTipService> propiedades, consulte [colocar una información sobre herramientas](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
   
 <a name="StylingToolTip"></a>   
-## Aplicar estilos a una información sobre herramientas  
- Puede aplicar estilos a un control <xref:System.Windows.Controls.ToolTip> definiendo un objeto <xref:System.Windows.Style> personalizado.  En el ejemplo siguiente se define un objeto <xref:System.Windows.Style> denominado `Simple` que muestra cómo desplazar la posición del objeto <xref:System.Windows.Controls.ToolTip> y cambiar su apariencia estableciendo las propiedades <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A> y <xref:System.Windows.Controls.Control.FontWeight%2A>.  
+## <a name="styling-a-tooltip"></a>Aplicar estilos a una información sobre herramientas  
+ Puedes aplicar estilo a un <xref:System.Windows.Controls.ToolTip> definiendo un personalizado <xref:System.Windows.Style>. En el ejemplo siguiente se define un <xref:System.Windows.Style> llama `Simple` que muestra cómo desplazar la colocación de la <xref:System.Windows.Controls.ToolTip> y cambiar su apariencia estableciendo la <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, y <xref:System.Windows.Controls.Control.FontWeight%2A>.  
   
- [!code-xml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
+ [!code-xaml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
   
 <a name="UsingtheToolTipServiceTimeIntervalProperties"></a>   
-## Utilizar las propiedades de intervalo de tiempo de ToolTipService  
- La clase <xref:System.Windows.Controls.ToolTipService> proporciona las propiedades siguientes para establecer los tiempos de presentación de la información sobre herramientas: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
+## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Uso de las propiedades de intervalo de tiempo de ToolTipService  
+ El <xref:System.Windows.Controls.ToolTipService> clase proporciona las siguientes propiedades para establecer información sobre herramientas muestran horas: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Utilice las propiedades <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> para especificar el tiempo, normalmente breve, que debe transcurrir hasta que aparezca un control <xref:System.Windows.Controls.ToolTip> y también para especificar cuánto tiempo permanece visible el control <xref:System.Windows.Controls.ToolTip>.  Para obtener más información, vea [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/es-es/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Use la <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propiedades para especificar un retraso, por lo general breve, antes un <xref:System.Windows.Controls.ToolTip> aparece y también para especificar cuánto tiempo un <xref:System.Windows.Controls.ToolTip> permanece visible. Para obtener más información, consulte [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7) (Cómo: Retrasar la visualización de una información sobre herramientas).  
   
- La propiedad <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> determina si la información sobre herramientas de los diferentes controles aparece sin retraso inicial al moverse rápidamente el puntero del mouse entre ellos.  Para obtener más información sobre la propiedad <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, vea [Usar la propiedad BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
+ El <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad determina si aparece información sobre herramientas para controles diferentes sin retraso inicial cuando se mueve el puntero del mouse rápidamente entre ellos. Para obtener más información sobre la <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad, vea [usar la propiedad BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   
  En el ejemplo siguiente se muestra cómo establecer estas propiedades para una información sobre herramientas.  
   
- [!code-xml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
-## Vea también  
- <xref:System.Windows.Controls.ToolTipService>   
- <xref:System.Windows.Controls.ToolTip>   
- <xref:System.Windows.Controls.ToolTipEventArgs>   
- <xref:System.Windows.Controls.ToolTipEventHandler>   
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Controls.ToolTipService>  
+ <xref:System.Windows.Controls.ToolTip>  
+ <xref:System.Windows.Controls.ToolTipEventArgs>  
+ <xref:System.Windows.Controls.ToolTipEventHandler>  
+ [Temas de procedimientos](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

@@ -1,97 +1,99 @@
 ---
-title: "Introduction to Windows Service Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController"
-helpviewer_keywords: 
-  - "Windows Service applications, deploying"
-  - "OnStop method"
-  - "OnPause method"
-  - "services, about services"
-  - "Service class, Windows Service applications"
-  - "framework services, creating services"
-  - "ServiceController components, about Windows services"
-  - "Win32OwnProcess service type"
-  - "services, lifetime"
-  - "OnContinue method"
-  - "Windows Service applications, about Windows Service applications"
-  - "services, states"
-  - "service states"
-  - "WaitForStatus method"
-  - "Win32ShareProcess service type"
-  - "Windows Service applications, lifetime"
+title: "Introducción a las aplicaciones de servicios de Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ServiceController
+helpviewer_keywords:
+- Windows Service applications, deploying
+- OnStop method
+- OnPause method
+- services, about services
+- Service class, Windows Service applications
+- framework services, creating services
+- ServiceController components, about Windows services
+- Win32OwnProcess service type
+- services, lifetime
+- OnContinue method
+- Windows Service applications, about Windows Service applications
+- services, states
+- service states
+- WaitForStatus method
+- Win32ShareProcess service type
+- Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Introduction to Windows Service Applications
-Los servicios de Microsoft Windows, antes conocidos como servicios NT, permiten crear aplicaciones ejecutables de larga duración, que se ejecutan en sus propias sesiones de Windows.  Estos servicios pueden iniciarse automáticamente cuando el equipo arranca, se pueden pausar y reiniciar, y no muestran ninguna interfaz de usuario.  Estas características hacen que los servicios resulten perfectos para ejecutarse en un servidor o donde se necesite una funcionalidad de ejecución larga que no interfiera con los demás usuarios que trabajen en el mismo equipo.  También puede ejecutar servicios en el contexto de seguridad de una cuenta de usuario específica, diferente de la del usuario que inició la sesión o de la cuenta predeterminada del equipo.  Para obtener más información sobre los servicios y sesiones de Windows, consulte la documentación referente a Windows SDK en MSDN Library.  
+# <a name="introduction-to-windows-service-applications"></a>Introducción a las aplicaciones de servicios de Windows
+Servicios de Microsoft Windows, antes conocidos como servicios NT, permiten crear aplicaciones ejecutables de larga duración que se ejecutan en sus propias sesiones de Windows. Estos servicios pueden iniciarse automáticamente cuando el equipo arranca, se pueden pausar y reiniciar y no muestran ninguna interfaz de usuario. Estas características dificultan servicios ideal para su uso en un servidor o siempre que tenga funcionalidad de ejecución prolongada que no interfiere con otros usuarios que trabajan en el mismo equipo. También puede ejecutar servicios en el contexto de seguridad de una cuenta de usuario que sea diferente del usuario que ha iniciado sesión o la cuenta de equipo predeterminada. Para obtener más información sobre los servicios y sesiones de Windows, consulte la documentación del SDK de Windows.  
   
- Puede crear servicios fácilmente mediante el desarrollo de aplicaciones que se instalan como servicios.  Por ejemplo, suponga que desea supervisar los datos del contador de rendimiento y reaccionar a valores umbral.  Podría escribir una aplicación de servicios de Windows que lea los datos del contador de rendimiento, implementar la aplicación y comenzar a recoger y analizar los datos.  
+ Puede crear fácilmente servicios mediante la creación de una aplicación que se instala como un servicio. Por ejemplo, imagine que desea supervisar los datos de contador de rendimiento y reaccionar a valores de umbral. Puede escribir una aplicación de servicio de Windows que realiza escuchas para los datos del contador de rendimiento, implementar la aplicación y empezar a recopilar y analizar los datos.  
   
- El servicio se crea como proyecto de Microsoft Visual Studio, se define el código que controla qué comandos se pueden enviar al servicio y qué acciones se deben realizar al recibir esos comandos.  Entre los comandos que se pueden enviar a un servicio se encuentran los comandos de inicio, pausa, reanudación y detención del servicio; asimismo, puede ejecutar comandos personalizados.  
+ Crear el servicio como un proyecto de Microsoft Visual Studio, defina el código que controla qué comandos puede enviarse al servicio y qué acciones deben ejecutarse cuando se reciben esos comandos. Los comandos que se pueden enviar a un servicio incluyen iniciar, pausar, reanudar y detener el servicio; También puede ejecutar comandos personalizados.  
   
- Después de crear y generar la aplicación, puede instalarla ejecutando la utilidad de línea de comandos InstallUtil.exe y pasando la ruta de acceso al archivo ejecutable del servicio.  A continuación, puede utilizar el **Administrador de control de servicios** para iniciar, detener, pausar, reanudar y configurar el servicio.  Además, puede realizar muchas de estas mismas tareas en el nodo **Servicios** del **Explorador de servidores** o al usar la clase <xref:System.ServiceProcess.ServiceController>.  
+ Después de crear y compilar la aplicación, puede instalarlo mediante la ejecución de la utilidad de línea de comandos InstallUtil.exe y pase la ruta de acceso al archivo ejecutable del servicio. A continuación, puede usar el **Administrador de Control de servicios** para iniciar, detener, pausar, reanudar y configurar el servicio. También puede realizar muchas de estas mismas tareas en el **servicios** nodo **Explorador de servidores** o mediante la <xref:System.ServiceProcess.ServiceController> clase.  
   
-## Aplicaciones de servicio frente a otras aplicaciones de Visual Studio  
- Las aplicaciones de servicios funcionan, en varios aspectos, de forma diferente a muchos otros tipos de proyectos:  
+## <a name="service-applications-vs-other-visual-studio-applications"></a>Frente a las aplicaciones de servicio. Otras aplicaciones de Visual Studio  
+ Función de las aplicaciones de servicio de manera diferente a muchos otros tipos de proyecto de varias maneras:  
   
--   El archivo ejecutable compilado que crea un proyecto de aplicación de servicios debe instalarse en el servidor para que el proyecto pueda funcionar de forma significativa.  No es posible depurar o ejecutar una aplicación de servicios presionando F5 o F11; no es posible ejecutar inmediatamente un servicio o ejecutarlo paso a paso en su código.  En su lugar, es necesario instalar e iniciar el servicio y, a continuación, adjuntar un depurador al proceso del servicio.  Para obtener más información, vea [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+-   El archivo ejecutable compilado que crea un proyecto de aplicación de servicio debe instalarse en el servidor antes de que el proyecto pueda funcionar de forma significativa. No puede depurar o ejecutar una aplicación de servicio, presione la tecla F5 o F11; no se puede ejecutar inmediatamente un servicio o un paso en su código. En su lugar, debe instalar e iniciar el servicio y, a continuación, adjuntar a un depurador al proceso del servicio. Para obtener más información, consulte [Cómo: depurar aplicaciones de servicios de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   A diferencia de algunos tipos de proyectos, deberá crear componentes de instalación para las aplicaciones de servicios.  Los componentes de instalación instalan y registran el servicio en el servidor y crean una entrada para el servicio con el **Administrador de control de servicios** de Windows.  Para obtener más información, vea [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+-   A diferencia de algunos tipos de proyectos, debe crear componentes de instalación para las aplicaciones de servicio. Los componentes de instalación, instalar y registrar el servicio en el servidor y crear una entrada para el servicio con las ventanas **Administrador de Control de servicios**. Para obtener más información, consulte [Cómo: agregar instaladores a la aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
--   El método `Main` para la aplicación de servicios debe emitir el comando Run para los servicios que contiene el proyecto.  El método `Run` carga los servicios en el **Administrador de control de servicios** del servidor adecuado.  Si utiliza la plantilla de proyecto **Servicios de Windows**, este método se escribirá automáticamente.  Tenga en cuenta que cargar un servicio no es lo mismo que iniciarlo.  Vea el apartado "Duración de los servicios" para obtener más información.  
+-   El `Main` método para la aplicación de servicio debe emitir el comando Run para los servicios de su proyecto contiene. El `Run` método carga los servicios en la **Administrador de Control de servicios** en el servidor apropiado. Si usas el **Windows Services** plantilla de proyecto, este método se escribirá automáticamente. Tenga en cuenta que cargar un servicio no es lo mismo que iniciar el servicio. Vea "Duración del servicio" a continuación para obtener más información.  
   
--   Las aplicaciones de servicios de Windows se ejecutan en una sesión de ventana diferente a la sesión interactiva del usuario que ha iniciado una sesión.  Una estación de ventana es un objeto seguro que contiene un Portapapeles, un conjunto de átomos globales y un grupo de objetos de escritorio.  Puesto que la estación de un servicio de Windows no es interactiva, los cuadros de diálogo que proceden de una aplicación de servicio de Windows no se ven y pueden causar que el programa deje de responder.  Asimismo, es recomendable registrar los mensajes de error en el registro de eventos de Windows, en lugar de hacerlo en la interfaz del usuario.  
+-   Aplicaciones de servicios de Windows se ejecutan en una estación de ventana diferente a la sesión interactiva del usuario que ha iniciado sesión. Una estación de ventana es un objeto seguro que contiene un Portapapeles, un conjunto de átomos globales y un grupo de objetos de escritorio. Dado que la estación de servicio de Windows no es una sesión interactiva, cuadros de diálogo generan desde dentro de una ventana de aplicación de servicio no se verán y puede provocar que el programa deje de responder. Del mismo modo, mensajes de error deben se registran en el registro de eventos de Windows en lugar de hacerlo en la interfaz de usuario.  
   
-     Las clases de servicios de Windows compatibles con .NET Framework no admiten la interacción con estaciones interactivas, es decir, con el usuario que ha iniciado una sesión.  .NET Framework tampoco incluye clases que representen estaciones y escritorios.  Si el servicio de Windows debe interactuar con otras estaciones, deberá obtener acceso a la API de Windows no administrada.  Para obtener más información, consulte la documentación referente a Windows SDK.  
+     Las clases de servicio de Windows compatibles con .NET Framework no admiten la interacción con estaciones interactivas, es decir, el usuario ha iniciado sesión. .NET Framework no también incluye clases que representan las estaciones y escritorios. Si el servicio de Windows debe interactuar con otras estaciones, debe tener acceso a la API no administrada de Windows. Para obtener más información, consulte la documentación del SDK de Windows.  
   
-     La interacción del servicio de Windows con el usuario u otras estaciones debe diseñarse con cuidado para que incluya casos como, por ejemplo, que no exista un usuario que haya iniciado una sesión o que el usuario tenga un conjunto inesperado de objetos de escritorio.  En algunos casos, puede ser más apropiado escribir una aplicación para Windows que se ejecute bajo el control del usuario.  
+     La interacción de las ventanas de servicio con el usuario u otras estaciones debe diseñarse con cuidado para que incluya casos tales como que se va a ningún usuario ha iniciado sesión o el usuario tenga un conjunto inesperado de objetos de escritorio. En algunos casos, puede ser más adecuado escribir una aplicación de Windows que se ejecuta bajo el control del usuario.  
   
--   Las aplicaciones de servicios de Windows se ejecutan en su propio contexto de seguridad y se inician antes de que el usuario inicie la sesión en el equipo Windows en el que se encuentran instaladas.  Debe considerar detenidamente en qué cuenta de usuario se ejecutará el servicio; un servicio que se ejecute bajo la cuenta del sistema tendrá más permisos y privilegios que una cuenta de usuario.  
+-   Las aplicaciones de servicio de Windows se ejecutan en su propio contexto de seguridad y se inician antes el usuario inicia sesión en el equipo de Windows en el que se instalan. Debe considerar detenidamente en qué cuenta de usuario para ejecutar el servicio; un servicio que se ejecuta bajo la cuenta del sistema tiene más permisos y privilegios que una cuenta de usuario.  
   
-## Duración de los servicios  
- Un servicio pasa por varios estados internos a lo largo de su duración.  En primer lugar, se instala el servicio en el sistema en el que se ejecutará.  Este proceso ejecuta los instaladores para el proyecto del servicio y carga el servicio en el **Administrador de control de servicios** del equipo.  El **Administrador de control de servicios** es la utilidad central que proporciona Windows para administrar servicios.  
+## <a name="service-lifetime"></a>Duración del servicio  
+ Un servicio pasa por varios Estados internos de su duración. En primer lugar, el servicio está instalado en el sistema en el que se ejecutará. Este proceso ejecuta los instaladores para el proyecto de servicio y carga el servicio en la **Administrador de Control de servicios** de ese equipo. El **Administrador de Control de servicios** es la utilidad central que proporciona Windows para administrar servicios.  
   
- Una vez cargado el servicio, es necesario iniciarlo.  Al iniciar el servicio, se permite que empiece a funcionar.  Puede iniciar un servicio desde el **Administrador de control de servicios**, desde el **Explorador de servidores** o desde código llamando al método <xref:System.ServiceProcess.ServiceController.Start%2A>.  El método <xref:System.ServiceProcess.ServiceController.Start%2A> pasa el procesamiento al método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> de la aplicación y procesa el código que haya definido allí.  
+ Después de haberse cargado el servicio, debe estar iniciado. Iniciando el servicio le permite comenzar a funcionar. Puede iniciar un servicio desde el **Administrador de Control de servicios**, de **Explorador de servidores**, o desde el código mediante una llamada a la <xref:System.ServiceProcess.ServiceController.Start%2A> método. El <xref:System.ServiceProcess.ServiceController.Start%2A> método pasa el procesamiento a la aplicación <xref:System.ServiceProcess.ServiceBase.OnStart%2A> método y procesa el código que haya definido allí.  
   
- Un servicio en ejecución puede permanecer indefinidamente en este estado, hasta que se detiene o se pausa, o hasta que se apaga el equipo.  Un servicio puede estar en uno de estos tres estados básicos: <xref:System.ServiceProcess.ServiceControllerStatus>, <xref:System.ServiceProcess.ServiceControllerStatus> o <xref:System.ServiceProcess.ServiceControllerStatus>.  El servicio también puede informar del estado de un comando pendiente: <xref:System.ServiceProcess.ServiceControllerStatus>, <xref:System.ServiceProcess.ServiceControllerStatus>, <xref:System.ServiceProcess.ServiceControllerStatus> o <xref:System.ServiceProcess.ServiceControllerStatus>.  Estos estados indican que se emitió un comando, por ejemplo, para hacer una pausa en un servicio en ejecución, pero que el comando aún no se ejecutó.  Puede consultar <xref:System.ServiceProcess.ServiceController.Status%2A> para determinar en qué estado se encuentra el servicio, o bien utilizar <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A> para realizar una acción cuando se produzca uno de estos estados.  
+ Puede existir un servicio en ejecución en este estado indefinidamente hasta que se ha detenido o en pausa o hasta que el equipo se apaga. Un servicio puede residir en uno de estos tres estados básicos: <xref:System.ServiceProcess.ServiceControllerStatus.Running>, <xref:System.ServiceProcess.ServiceControllerStatus.Paused>, o <xref:System.ServiceProcess.ServiceControllerStatus.Stopped>. El servicio también puede informar del estado de un comando pendiente: <xref:System.ServiceProcess.ServiceControllerStatus.ContinuePending>, <xref:System.ServiceProcess.ServiceControllerStatus.PausePending>, <xref:System.ServiceProcess.ServiceControllerStatus.StartPending>, o <xref:System.ServiceProcess.ServiceControllerStatus.StopPending>. Estos estados indican que un comando ha sido emitido, por ejemplo, un comando para pausar un servicio en ejecución, pero no se ha efectuado aún. Puede consultar la <xref:System.ServiceProcess.ServiceController.Status%2A> para determinar lo que un servicio de estado, o usar el <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A> para llevar a cabo una acción cuando cualquiera de estos estados se produce.  
   
- Puede pausar, detener o reanudar un servicio desde el **Administrador de control de servicios**, desde el **Explorador de servidores** o llamando a los métodos adecuados desde el código.  Cada una de estas acciones puede llamar a un procedimiento asociado en el servicio \(<xref:System.ServiceProcess.ServiceBase.OnStop%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> o <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>\), en el que es posible definir procesos adicionales que se realizarán cuando cambie el estado del servicio.  
+ Puede pausar, detener o reanudar un servicio desde el **Administrador de Control de servicios**, de **Explorador de servidores**, o puede llamar a métodos en el código. Cada una de estas acciones puede llamar a un procedimiento asociado en el servicio (<xref:System.ServiceProcess.ServiceBase.OnStop%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, o <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>), en el que puede definir un procesamiento adicional que se realizará cuando el servicio cambia el estado.  
   
-## Tipos de servicios  
- Hay dos tipos de servicios que puede crear en Visual Studio utilizando .NET Framework.  Los servicios que son el único servicio de un proceso se asignan al tipo <xref:System.ServiceProcess.ServiceType>.  Los servicios que comparten un proceso con otro servicio se asignan al tipo <xref:System.ServiceProcess.ServiceType>.  Puede recuperar el tipo de servicio consultando la propiedad <xref:System.ServiceProcess.ServiceController.ServiceType%2A>.  
+## <a name="types-of-services"></a>Tipos de servicios  
+ Hay dos tipos de servicios que puede crear en Visual Studio con .NET Framework. Servicios que son el único servicio en un proceso se asignan al tipo <xref:System.ServiceProcess.ServiceType.Win32OwnProcess>. Los servicios que comparten un proceso con otro servicio se asignan al tipo <xref:System.ServiceProcess.ServiceType.Win32ShareProcess>. Puede recuperar el tipo de servicio consultando la <xref:System.ServiceProcess.ServiceController.ServiceType%2A> propiedad.  
   
- Ocasionalmente, podría ver otros tipos de servicio si consulta servicios existentes que no se crearon en Visual Studio.  Para obtener más información al respecto, vea <xref:System.ServiceProcess.ServiceType>.  
+ En ocasiones, podría ver otros tipos de servicios si consulta servicios existentes que no se crearon en Visual Studio. Para obtener más información al respecto, consulte el <xref:System.ServiceProcess.ServiceType>.  
   
-## Los servicios y el componente ServiceController  
- El componente <xref:System.ServiceProcess.ServiceController> se utiliza para conectarse con un servicio instalado y manipular su estado. Al utilizar un componente <xref:System.ServiceProcess.ServiceController>, puede iniciar y detener un servicio, hacer una pausa y continuar con su funcionamiento, así como enviar comandos personalizados a un servicio.  Sin embargo, no necesita utilizar un componente <xref:System.ServiceProcess.ServiceController> cuando crea una aplicación de servicio.  En realidad, en la mayoría de los casos el componente <xref:System.ServiceProcess.ServiceController> deberá existir en una aplicación separada de la aplicación de servicios de Windows que define el servicio.  
+## <a name="services-and-the-servicecontroller-component"></a>Servicios y el componente ServiceController  
+ El <xref:System.ServiceProcess.ServiceController> componente se utiliza para conectarse a un servicio instalado y manipular su estado; mediante una <xref:System.ServiceProcess.ServiceController> , componente, puede iniciar y detener un servicio, pausar y continuar con su funcionamiento y enviar comandos personalizados a un servicio. Sin embargo, no es necesario usar un <xref:System.ServiceProcess.ServiceController> componente cuando se crea una aplicación de servicio. De hecho, en la mayoría de los casos la <xref:System.ServiceProcess.ServiceController> componente debe existir en una aplicación independiente de la aplicación de servicio de Windows que define el servicio.  
   
- Para obtener más información, vea <xref:System.ServiceProcess.ServiceController>.  
+ Para obtener más información, consulta <xref:System.ServiceProcess.ServiceController>.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
--   Los servicios deben crearse en un proyecto de aplicación de **Servicio de Windows** o en otro proyecto compatible con .NET Framework que cree un archivo .exe al ser generado y que herede de la clase<xref:System.ServiceProcess.ServiceBase>.  
+-   Servicios deben crearse en un **servicio de Windows** proyecto de aplicación o en otro proyecto compatible con .NET Framework que crea un archivo .exe cuando se compila y se hereda de la <xref:System.ServiceProcess.ServiceBase> clase.  
   
--   Los proyectos que contienen servicios de Windows deben tener componentes de instalación para el proyecto y sus servicios.  Esto se puede hacer fácilmente desde la ventana **Propiedades**.  Para obtener más información, vea [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+-   Proyectos que contienen servicios de Windows deben tener componentes de instalación para el proyecto y sus servicios. Esto puede realizarse fácilmente desde la **propiedades** ventana. Para obtener más información, consulte [Cómo: agregar instaladores a la aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-## Vea también  
- [Windows Service Applications](../../../docs/framework/windows-services/index.md)   
- [Service Application Programming Architecture](../../../docs/framework/windows-services/service-application-programming-architecture.md)   
- [How to: Create Windows Services](../../../docs/framework/windows-services/how-to-create-windows-services.md)   
- [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)   
- [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md)   
- [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)   
- [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)   
- [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>Vea también  
+ [Aplicaciones de servicios de Windows](../../../docs/framework/windows-services/index.md)  
+ [Arquitectura de programación de aplicaciones de servicio](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
+ [Cómo: crear servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Cómo: instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Cómo: iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Cómo: depurar aplicaciones de servicio de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Tutorial: Crear una aplicación de servicio de Windows en el Diseñador de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [Cómo: agregar instaladores a la aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

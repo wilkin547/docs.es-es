@@ -1,30 +1,22 @@
 ---
-title: "Cómo: crear un documento con espacios de nombres (LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: Crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 761967351cfc6292eb60a5941e213bfd90036f65
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 038e2924603eba7250620bc2792ec87b8e978787
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Cómo: Crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)
 En este tema se muestra cómo crear un documento con espacios de nombres en Visual Basic.  
@@ -96,7 +88,7 @@ End Module
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente crea un documento que contiene varios espacios de nombres, todos ellos con prefijos de espacio de nombres.  
   
- Cuando se serializa un árbol XML, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] emite declaraciones de espacios de nombres a medida que se necesitan, para que cada elemento se encuentre en su espacio de nombres designado.  
+ Cuando se serializa un árbol XML, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] emite declaraciones de espacios de nombres a medida que se necesitan, para que cada elemento se encuentre en su espacio de nombres designado.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

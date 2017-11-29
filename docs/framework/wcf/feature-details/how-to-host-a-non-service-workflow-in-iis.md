@@ -1,45 +1,48 @@
 ---
-title: "C&#243;mo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS
-Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hospedar en IIS\/WAS.  Esto es útil cuando deba hospedar un flujo de trabajo escrito por otra persona.  Por ejemplo, si hospeda en otro host el diseñador de flujo de trabajo y permite a los usuarios que creen sus propios flujos de trabajo.  Si se hospedan flujos de trabajo no pertenecientes al servicio en IIS, se proporciona compatibilidad con características como el reciclaje de proceso, el apagado por inactividad, la supervisión del estado de los procesos y la activación basada en mensajes.  Los servicios de flujo de trabajo hospedados en IIS contienen actividades de la clase <xref:System.ServiceModel.Activities.Receive> y se activan cuando IIS recibe un mensaje.  Los flujos de trabajo no pertenecientes al servicio no contienen actividades de mensajería y no se pueden activar enviando un mensaje de forma predeterminada.  Debe derivar una clase de la clase <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> y definir un contrato de servicio que contenga operaciones para crear una instancia de flujo de trabajo.  Este tema le guiará por el proceso de creación de un flujo de trabajo sencillo, de definición de un contrato de servicio que pueda usar un cliente para activar el flujo de trabajo y de derivación de una clase de la clase <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> que usa el contrato de servicio para escuchar solicitudes de creación de flujo de trabajo.  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a>Cómo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS
+Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hospedar en IIS/WAS. Esto es útil cuando deba hospedar un flujo de trabajo escrito por otra persona. Por ejemplo, si hospeda en otro host el diseñador de flujo de trabajo y permite a los usuarios que creen sus propios flujos de trabajo.  Si se hospedan flujos de trabajo no pertenecientes al servicio en IIS, se proporciona compatibilidad con características como el reciclaje de proceso, el apagado por inactividad, la supervisión del estado de los procesos y la activación basada en mensajes. Los servicios de flujo de trabajo hospedados en IIS contienen actividades de la clase <xref:System.ServiceModel.Activities.Receive> y se activan cuando IIS recibe un mensaje. Los flujos de trabajo no pertenecientes al servicio no contienen actividades de mensajería y no se pueden activar enviando un mensaje de forma predeterminada.  Debe derivar una clase de la clase <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> y definir un contrato de servicio que contenga operaciones para crear una instancia de flujo de trabajo. Este tema le guiará a través de la creación de un flujo de trabajo simple, definir un contrato de servicio que un cliente puede utilizar para activar el flujo de trabajo y derivar una clase de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> que utiliza el contrato de servicio para escuchar las solicitudes de creación de flujo de trabajo.  
   
-### Crear un flujo de trabajo simple  
+### <a name="create-a-simple-workflow"></a>Crear un flujo de trabajo simple  
   
 1.  Cree una nueva solución de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vacía denominada `CreationEndpointTest`.  
   
-2.  Agregue un nuevo proyecto de aplicación de servicio de flujo de trabajo WCF denominado `SimpleWorkflow` a la solución.  Se abrirá el diseñador de flujo de trabajo.  
+2.  Agregue un nuevo proyecto de aplicación de servicio de flujo de trabajo WCF denominado `SimpleWorkflow` a la solución. Se abrirá el diseñador de flujo de trabajo.  
   
-3.  Elimine las actividades ReceiveRequest y SendResponse.  Estas actividades son las que convierten un flujo de trabajo en un servicio de flujo de trabajo.  Puesto que no estamos trabajando con un servicio de flujo de trabajo, ya no las necesitamos.  
+3.  Elimine las actividades ReceiveRequest y SendResponse. Estas actividades son las que convierten un flujo de trabajo en un servicio de flujo de trabajo. Puesto que no estamos trabajando con un servicio de flujo de trabajo, ya no las necesitamos.  
   
-4.  Establezca el valor de DisplayName para la actividad de secuencia en “Flujo de trabajo secuencial”.  
+4.  Establezca el valor de DisplayName para la actividad de secuencia a "Flujo de trabajo secuencial".  
   
 5.  Cambie el nombre de Service1.xamlx a Workflow1.xamlx.  
   
-6.  Haga clic en el diseñador fuera de la actividad de secuencia y establezca el valor de las propiedades Name y ConfigurationName en “Workflow1”  
+6.  Haga clic en el diseñador fuera de la actividad de secuencia y establezca las propiedades Name y ConfigurationName en "Workflow1"  
   
-7.  Arrastre una actividad <xref:System.Activities.Statements.WriteLine> a la clase <xref:System.Activities.Statements.Sequence>.  La actividad <xref:System.Activities.Statements.WriteLine> se puede encontrar en la sección **Primitivas** del cuadro de herramientas.  Establezca la propiedad <xref:System.Activities.Statements.WriteLine.Text%2A> de la actividad <xref:System.Activities.Statements.WriteLine> en “Hello, world”.  
+7.  Arrastre una actividad <xref:System.Activities.Statements.WriteLine> a la clase <xref:System.Activities.Statements.Sequence>. El <xref:System.Activities.Statements.WriteLine> actividad puede encontrarse en el **primitivas** sección del cuadro de herramientas. Establecer el <xref:System.Activities.Statements.WriteLine.Text%2A> propiedad de la <xref:System.Activities.Statements.WriteLine> actividad a "Hola, mundo".  
   
      El flujo de trabajo ahora debe tener la misma apariencia que la del siguiente diagrama.  
   
-     ![Flujo de trabajo simple](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
+     ![Un flujo de trabajo simple](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
   
-### Crear el contrato de servicio de creación del flujo de trabajo  
+### <a name="create-the-workflow-creation-service-contract"></a>Crear el contrato de servicio de creación del flujo de trabajo  
   
 1.  Agregue un nuevo proyecto de biblioteca de clases denominado `Shared` a la solución `CreationEndpointTest`.  
   
@@ -69,11 +72,11 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     }  
     ```  
   
-     Este contrato define dos operaciones que crean una nueva instancia de flujo de trabajo no perteneciente al servicio que acaba de crear.  Una crea una nueva instancia con un identificador de instancia generado y la otra permite especificar el identificador de instancia de la nueva instancia de flujo de trabajo.  Ambos métodos permiten pasar parámetros a la nueva instancia de flujo de trabajo.  Este contrato lo expondrá la clase <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> para que los clientes puedan crear nuevas instancias de un flujo de trabajo no perteneciente al servicio.  
+     Este contrato define dos operaciones que crean una nueva instancia de flujo de trabajo no perteneciente al servicio que acaba de crear. Una crea una nueva instancia con un identificador de instancia generado y la otra permite especificar el identificador de instancia de la nueva instancia de flujo de trabajo.  Ambos métodos permiten pasar parámetros a la nueva instancia de flujo de trabajo. Este contrato lo expondrá la <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> para permitir a los clientes crear nuevas instancias de un flujo de trabajo no pertenecientes al servicio.  
   
-### Derivar una clase de WorkflowHostingEndpoint  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a>Derivar una clase de WorkflowHostingEndpoint  
   
-1.  Agregue una nueva clase denominada `CreationEndpoint` derivada de la clase <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> al proyecto `Shared`.  
+1.  Agregue una nueva clase denominada `CreationEndpoint` deriva <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> a la `Shared` proyecto.  
   
     ```  
     using System;  
@@ -101,7 +104,7 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     }  
     ```  
   
-3.  Agregue el siguiente constructor a la clase `CreationEndpoint`.  Observe que especificamos el contrato de servicio `IWorkflowCreation` en la llamada al constructor base.  
+3.  Agregue el siguiente constructor a la clase `CreationEndpoint`. Observe que especificamos el contrato de servicio `IWorkflowCreation` en la llamada al constructor base.  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -120,7 +123,7 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
        }  
     ```  
   
-5.  Agregue una propiedad `DefaultBaseUri` estática a la clase `CreationEndpoint`.  Esta propiedad se usará para contener un URI base predeterminado si no se proporciona ninguno.  
+5.  Agregue una propiedad `DefaultBaseUri` estática a la clase `CreationEndpoint`. Esta propiedad se usará para contener un URI base predeterminado si no se proporciona ninguno.  
   
     ```  
     static Uri DefaultBaseUri  
@@ -148,7 +151,7 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     }  
     ```  
   
-7.  Invalide el método <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> para devolver el identificador de instancia de flujo de trabajo.  Si el encabezado `Action` termina en “Create”, se devuelve un GUID vacío, si el encabezado `Action` termina en “CreateWithInstanceId”, devuelve el GUID pasado en el método.  De lo contrario, se produce una excepción <xref:System.InvalidOperationException>.  Estos encabezados `Action` corresponden a las dos operaciones definidas en el contrato de servicio `IWorkflowCreation`.  
+7.  Invalide el método <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> para devolver el identificador de instancia de flujo de trabajo. Si el `Action` termina de encabezado en "Create" devuelve un GUID vacío, si la `Action` encabezado termina con "createwithinstanceid", devuelve el GUID pasado al método. De lo contrario, se produce una excepción <xref:System.InvalidOperationException>. Estos encabezados `Action` corresponden a las dos operaciones definidas en el contrato de servicio `IWorkflowCreation`.  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -198,11 +201,11 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     }  
     ```  
   
-### Crear un elemento de extremo estándar para que pueda configurar WorkflowCreationEndpoint  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a>Crear un elemento de extremo estándar para que pueda configurar WorkflowCreationEndpoint  
   
 1.  Agregue una referencia a Shared en el proyecto `CreationEndpoint`  
   
-2.  Agregue una nueva clase denominada `CreationEndpointElement` derivada de la clase <xref:System.ServiceModel.Configuration.StandardEndpointElement> al proyecto `CreationEndpoint`.  Esta clase representará una clase `CreationEndpoint` en un archivo web.config.  
+2.  Agregue una nueva clase denominada `CreationEndpointElement` derivada de la clase <xref:System.ServiceModel.Configuration.StandardEndpointElement> al proyecto `CreationEndpoint`. Esta clase representará una clase `CreationEndpoint` en un archivo web.config.  
   
     ```  
     using System;  
@@ -236,10 +239,9 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     {  
        return new CreationEndpoint();  
     }  
-  
     ```  
   
-5.  Sobrecargue los métodos <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> y <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>.  Estos métodos solo se deben definir, no necesitan que se les agregue código.  
+5.  Sobrecargue los métodos <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> y <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>. Estos métodos solo se deben definir, no necesitan que se les agregue código.  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -259,7 +261,7 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     }  
     ```  
   
-6.  Agregue la clase de colección de `CreationEndpoint` al archivo CreationEndpointElement.cs del proyecto `CreationEndpoint`.  Esta clase se usa durante la configuración para contener muchas instancias de `CreationEndpoint` en un archivo web.config.  
+6.  Agregue la clase de colección de `CreationEndpoint` al archivo CreationEndpointElement.cs del proyecto `CreationEndpoint`. Esta clase se usa durante la configuración para contener muchas instancias de `CreationEndpoint` en un archivo web.config.  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,13 +271,13 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
   
 7.  Compile la solución.  
   
-### Hospede el flujo de trabajo en IIS  
+### <a name="host-the-workflow-in-iis"></a>Hospede el flujo de trabajo en IIS  
   
 1.  Cree una nueva aplicación denominada `MyCreationEndpoint` en IIS.  
   
 2.  Copie el archivo workflow1.xaml generado por el diseñador de flujo de trabajo en el directorio de la aplicación y cámbiele el nombre a workflow1.xamlx.  
   
-3.  Copie los archivos shared.dll y CreationEndpoint.dll en el directorio \\bin de la aplicación. Cree este directorio si no está presente.  
+3.  Copie los archivos shared.dll y CreationEndpoint.dll en el directorio \bin de la aplicación. Cree este directorio si no está presente.  
   
 4.  Reemplace el contenido de archivo Web.config del proyecto `CreationEndpoint` por el código siguiente.  
   
@@ -290,7 +292,7 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
   
 5.  A continuación del elemento `<system.web>`, registre `CreationEndpoint` agregando el siguiente código de configuración.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <!--register CreationEndpoint-->  
         <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
@@ -300,24 +302,22 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
           </endpointExtensions>  
         </extensions>  
     </system.serviceModel>  
-  
     ```  
   
      De esta forma, se registra la clase `CreationEndpointCollection` para que pueda configurar una clase `CreationEndpoint` en un archivo web.config.  
   
-6.  Agregue un elemento `<service>`, a continuación de la etiqueta \<\/extensions\>, con una clase `CreationEndpoint` que escuchará los mensajes entrantes.  
+6.  Agregar un `<service>` elemento (después de la \</extensions > etiqueta) con un `CreationEndpoint` que escuchará los mensajes entrantes.  
   
-    ```  
+    ```xml  
     <services>  
           <!-- add endpoint to service-->  
           <service name="Workflow1" behaviorConfiguration="basicConfig" >  
             <endpoint kind="creationEndpoint" binding="basicHttpBinding" address=""/>  
           </service>  
         </services>  
-  
     ```  
   
-7.  Agregue un elemento \<behaviors\>, a continuación de la etiqueta \<\/services\>, para habilitar los metadatos del servicio.  
+7.  Agregar un \<comportamientos > elemento (después de la  \< /servicios > etiqueta) para habilitar los metadatos del servicio.  
   
     ```xml  
     <behaviors>  
@@ -327,22 +327,21 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
             </behavior>  
           </serviceBehaviors>  
         </behaviors>  
-  
     ```  
   
 8.  Copie el archivo web.config en el directorio de la aplicación IIS.  
   
-9. Pruebe para ver si el extremo de creación funciona iniciando Internet Explorer y buscando http:\/\/localhost\/MyCreationEndpoint\/Workflow1.xamlx.  Internet Explorer debe mostrar la siguiente pantalla:  
+9. Pruebe para ver si el extremo de creación funciona iniciando Internet Explorer y buscando http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer debe mostrar la siguiente pantalla:  
   
      ![Probar el servicio](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   
-### Crear un cliente que llamará a CreationEndpoint.  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a>Crear un cliente que llamará a CreationEndpoint.  
   
 1.  Agregue una nueva aplicación de consola a la solución `CreationEndpointTest`.  
   
 2.  Agregue  referencias a System.ServiceModel.dll, System.ServiceModel.Activities y al proyecto `Shared`.  
   
-3.  En el método `Main` cree una clase <xref:System.ServiceModel.ChannelFactory%601> de tipo `IWorkflowCreation` y llame al método <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.  De esta forma, se devolverá un proxy.  Después, puede llamar a `Create` en ese proxy para crear una instancia de flujo de trabajo hospedad en IIS:  
+3.  En el `Main` método crea un <xref:System.ServiceModel.ChannelFactory%601> de tipo `IWorkflowCreation` y llame a <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>. De esta forma, se devolverá un proxy. Después, puede llamar a `Create` en ese proxy para crear una instancia de flujo de trabajo hospedad en IIS:  
   
     ```  
     using System.Text;  
@@ -374,18 +373,16 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     }  
     ```  
   
-4.  Ejecute CreationEndpointClient.  La salida debe tener un aspecto parecido al siguiente:  
+4.  Ejecute CreationEndpointClient. La salida debe tener un aspecto parecido al siguiente:  
   
     ```Output  
-  
-                Instancia de flujo de trabajo creada usando el objeto CreationEndpoint agregado en config.  Identificador de instancia: 0875dac0-2b8b-473e-b3cc-abcb235e9693  
-    Presione entrar para salir...    
+    Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
     >  No verá la salida del flujo de trabajo porque se está ejecutando en IIS, que no tiene salida de la consola.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Este es el código completo de este ejemplo.  
   
 ```xaml  
@@ -430,7 +427,6 @@ Los flujos de trabajo que no sean servicios de flujo de trabajo se pueden hosped
     <p:WriteLine sap:VirtualizedContainerService.HintSize="211,61" Text="Hello, world" />  
   </p:Sequence>  
 </WorkflowService>  
-  
 ```  
   
 ```csharp  
@@ -488,7 +484,6 @@ namespace CreationEndpointTest
     {  
     }  
 }  
-  
 ```  
   
 ```xml  
@@ -521,7 +516,6 @@ namespace CreationEndpointTest
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ```csharp  
@@ -545,7 +539,6 @@ namespace Shared
         void CreateWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -649,7 +642,6 @@ namespace Shared
         }  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -686,17 +678,16 @@ namespace CreationClient
     }  
   
 }  
-  
 ```  
   
- Este ejemplo puede parecer confuso porque el usuario nunca implementa ningún servicio que implemente `IWorkflowCreation`.  La razón es que `CreationEndpoint` lo hace automáticamente.  
+ Este ejemplo puede parecer confuso porque el usuario nunca implementa ningún servicio que implemente `IWorkflowCreation`. La razón es que `CreationEndpoint` lo hace automáticamente.  
   
-## Vea también  
- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [Procedimientos recomendados de hospedaje de Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [Instrucciones de hospedaje Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [Arquitectura de Windows Workflow](../../../../docs/framework/windows-workflow-foundation//architecture.md)   
- [Reanudar marcador WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)   
- [Rehospedar el Diseñador de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Información general de Windows Workflow](../../../../docs/framework/windows-workflow-foundation//overview.md)
+## <a name="see-also"></a>Vea también  
+ [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Procedimientos recomendados de hospedaje de Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Instrucciones de hospedaje de Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Arquitectura de Windows Workflow](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [Reanudar marcador WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [Rehospedaje del Diseñador de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Información general de Windows Workflow](../../../../docs/framework/windows-workflow-foundation/overview.md)

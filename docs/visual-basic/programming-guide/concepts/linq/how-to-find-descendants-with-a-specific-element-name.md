@@ -1,29 +1,25 @@
 ---
-title: "Cómo: buscar descendientes con un nombre de elemento específico (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar descendientes con un nombre de elemento específico (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 678622fe04ae971e7fed2cea182b21d895edaa1c
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 076a2d6707cf0f09945030cfe75814c195cdd6cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Cómo: buscar descendientes con un nombre de elemento específico (Visual Basic)
-A veces, desea encontrar todos los descendientes con un nombre determinado. Puede escribir código para recorrer en iteración todos los descendientes, pero es más fácil utilizar el <xref:System.Xml.Linq.XContainer.Descendants%2A>eje.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+A veces, desea encontrar todos los descendientes con un nombre determinado. Podría escribir código para procesar una iteración en todos los descendientes, pero es más fácil usar el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo encontrar descendientes según el nombre de elemento.  
@@ -114,5 +110,5 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XContainer.Descendants%2A></xref:System.Xml.Linq.XContainer.Descendants%2A>   
+ <xref:System.Xml.Linq.XContainer.Descendants%2A>  
  [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

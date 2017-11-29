@@ -1,57 +1,60 @@
 ---
-title: "x:Null Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NullExtension"
-  - "x:NullExtension"
-  - "x:Null"
-  - "Null"
-  - "xNull"
-helpviewer_keywords: 
-  - "Null markup extension in XAML [XAML Services]"
-  - "x:Null markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Null markup extension"
+title: "x:Null (Extensión de marcado)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- NullExtension
+- x:NullExtension
+- x:Null
+- Null
+- xNull
+helpviewer_keywords:
+- Null markup extension in XAML [XAML Services]
+- x:Null markup extension [XAML Services]
+- XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-caps.latest.revision: 20
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: a60d74bdf3343d02eaf912ac7700f36a649f659c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# x:Null Markup Extension
-Especifica `null` como valor para un miembro XAML.  
+# <a name="xnull-markup-extension"></a>x:Null (Extensión de marcado)
+Especifica `null` como un valor para un miembro XAML.  
   
-## Uso de atributos XAML  
+## <a name="xaml-attribute-usage"></a>Uso de atributos XAML  
   
+```xaml  
+<object property="{x:Null}" .../>  
 ```  
-<object property="{x:Null}" .../>  
-```  
   
-## Comentarios  
- La palabra clave para una referencia nula  en [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] y [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] es NULL.  La palabra clave [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] para una referencia null es `Nothing`, pero siempre utiliza `{x:Null}` como la utilización XAML sin tener en cuenta que el lenguaje de código subyacente que se asocie a XAML.  
+## <a name="remarks"></a>Comentarios  
+ La palabra clave para una referencia nula en [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] y [!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)] es null. El [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)] palabra clave para una referencia nula es `Nothing`, pero siempre utilizar `{x:Null}` como el uso XAML sin tener en cuenta qué lenguaje de código subyacente se asocia con el código XAML.  
   
- La extensión de marcado `x:Null` no tiene ninguna propiedad que se pueda establecer.  
+ El `x:Null` extensión de marcado no tiene ninguna propiedad configurable.  
   
- Con frecuencia, una utilización de null está asociada a la exposición de miembro XAML de un valor <xref:System.Nullable%601> de CLR.  
+ Un uso null a menudo está asociado a la exposición de miembro XAML de un CLR <xref:System.Nullable%601> valor.  
   
- La extensión de marcado `x:Null`, al igual que todas las extensiones de marcado XAML, usa llaves \(`{,}`\) a fin de permitir, mediante secuencias de escape, el control de valores de atributos que no sean literales o referencias del controlador de eventos.  La sintaxis de atributo es la que se usa más a menudo con esta extensión de marcado.  Una sintaxis de elementos de objeto `<x:Null />` es técnicamente posible, pero raramente se usa porque la extensión de marcado `x:Null` no tiene ningún parámetro posicional ni argumentos de construcción.  
+ El `x:Null` extensión de marcado, al igual que todas las extensiones de marcado XAML, utiliza las llaves (`{,}`) para la administración de los valores de atributo de literales o referencias de controlador de eventos de secuencia de escape. La sintaxis de atributo es la sintaxis que se usan con mayor frecuencia con esta extensión de marcado. Una sintaxis de elemento de objeto `<x:Null />` es técnicamente posible, pero se usa con poca frecuencia porque el `x:Null` extensión de marcado no tiene parámetros posicionales o argumentos de construcción.  
   
- Para obtener información sobre las extensiones de marcado, vea [Extensiones de marcado y XAML de WPF](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Para obtener información acerca de las extensiones de marcado, vea [las extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- La clase <xref:System.Windows.Markup.NullExtension> define el control para esta extensión de marcado en servicios XAML de .NET Framework.  
+ En los servicios XAML de .NET Framework, el control para esta extensión de marcado se define por la <xref:System.Windows.Markup.NullExtension> clase.  
   
-## Notas de uso de WPF  
- Observe que `null` no es necesariamente el valor inicial no establecido para una propiedad de dependencia de tipo de referencia.  El valor predeterminado inicial puede variar para cada propiedad de dependencia, y puede estar basado en metadatos específicos de la propiedad.  Muchas propiedades de dependencia no aceptan el valor `null`, mediante marcado ni mediante código, debido a sus implementaciones de devolución de llamada de validación.  Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](../../../ocs/framework/wpf/advanced/dependency-properties-overview.md).  
+## <a name="wpf-usage-notes"></a>Notas de uso WPF  
+ Tenga en cuenta que `null` no es necesariamente el valor inicial no establecido para una propiedad de dependencia de tipo de referencia. El valor predeterminado inicial puede variar para cada propiedad de dependencia y se puede basar en metadatos específicos de la propiedad. Muchas propiedades de dependencia no aceptan `null` como un valor, ya sea a través de marcado o el código debido a sus implementaciones de devolución de llamada de validación. Para obtener más información acerca de las propiedades de dependencia, vea [información general sobre propiedades de dependencia](../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
-## Vea también  
- <xref:System.Windows.DependencyProperty.UnsetValue>   
- [Información general sobre XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Extensiones de marcado y XAML de WPF](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.DependencyProperty.UnsetValue>  
+ [Información general sobre XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

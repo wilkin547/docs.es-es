@@ -1,43 +1,47 @@
 ---
-title: "C&#243;mo: Extraer el icono asociado a un archivo en Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "mostrar un nombre de archivo y el icono de tipo de archivo en un control ListView [Windows Forms]"
-  - "extraer iconos asociados a un tipo de archivo [Windows Forms]"
-  - "iconos de extensiones de nombre de archivo [Windows Forms], mostrar en un control ListView"
+title: "Cómo: Extraer el icono asociado a un archivo en Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- displaying a file name and its file type icon in a ListView control [Windows Forms]
+- file name extension icons [Windows Forms], displaying in a ListView
+- extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 69999e598bfc57278c1793d3cc82e0055026267d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Extraer el icono asociado a un archivo en Windows Forms
-Muchos archivos tienen iconos incrustados que proporcionan una representación visual del tipo de archivo asociado.  Por ejemplo, los documentos de Microsoft Word contienen un icono que los identifica como documentos de Word.  Al mostrar los archivos en un control de lista o control de tabla, quizás desee mostrar el icono que representa el tipo de archivo al lado de cada nombre de archivo.  Esto es fácil con el método <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>.  
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Cómo: Extraer el icono asociado a un archivo en Windows Forms
+Muchos archivos tienen iconos incrustados que proporcionan una representación visual del tipo de archivo asociado. Por ejemplo, documentos de Microsoft Word contienen un icono que los identifica como documentos de Word. Al mostrar archivos en un control de lista o tabla, puede que desee mostrar el icono que representa el tipo de archivo junto a cada nombre de archivo. Puede hacer esto fácilmente mediante el uso de la <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> método.  
   
-## Ejemplo  
- En el ejemplo de código siguiente se muestra cómo extraer el icono asociado a un archivo y cómo mostrar el nombre de archivo y el icono asociado en un control <xref:System.Windows.Forms.ListView>.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se muestra cómo extraer el icono asociado a un archivo y mostrar el nombre de archivo y el icono asociado en un <xref:System.Windows.Forms.ListView> control.  
   
  [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para compilar el ejemplo:  
   
--   Pegue el código anterior en un Windows Form y llame al método `ExtractAssociatedIconExample` desde el constructor del formulario o al método de control del evento <xref:System.Windows.Forms.Form.Load>.  
+-   Pegue el código anterior en un formulario Windows Forms y llame a la `ExtractAssociatedIconExample` método desde el constructor del formulario o <xref:System.Windows.Forms.Form.Load> método de control de eventos.  
   
-     Necesitará asegurarse de que su formulario importa el espacio de nombres <xref:System.IO>.  
+     Debe asegurarse de que el formulario se importa el <xref:System.IO> espacio de nombres.  
   
-## Vea también  
- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [ListView \(Control\)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

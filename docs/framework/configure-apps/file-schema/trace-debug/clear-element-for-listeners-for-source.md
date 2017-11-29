@@ -1,69 +1,73 @@
 ---
-title: "Elemento &lt;clear&gt; de &lt;listeners&gt; de &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> (elemento) para <listeners> de <source>"
-  - "clear (elemento) para <listeners> de <source>"
+title: '&lt;Borrar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
+helpviewer_keywords:
+- <clear> element for <listeners> for <source>
+- clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d5e8518f2ca8a04d91f5bfdd9f6389c741d0278e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;clear&gt; de &lt;listeners&gt; de &lt;source&gt;
-Borra la colección `Listeners` para un origen de traza.  
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Borrar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;
+Borra la colección `Listeners` de un origen de seguimiento.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.Diagnostics >  
+\<orígenes >  
+\<origen >  
+\<los agentes de escucha >  
+\<Borrar >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <clear/>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.|  
-|`sources`|Contiene orígenes de traza que inician mensajes de traza.|  
-|`source`|Especifica un origen de traza que inicia mensajes de traza.|  
-|`listeners`|Especifica agentes de escucha que recopilan, almacenan y enrutan mensajes.|  
+|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
+|`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
+|`source`|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
+|`listeners`|Especifica los agentes de escucha que recopilarán, almacenan y enrutan los mensajes.|  
   
-## Comentarios  
- El elemento `<clear>` quita todos los agentes de escucha de la colección `Listeners` para un origen de traza, incluido <xref:System.Diagnostics.DefaultTraceListener>.  Puede utilizar el elemento `<clear>` antes de utilizar el elemento `<add>` para asegurarse de que no hay ningún otro agente de escucha activo en la colección.  
+## <a name="remarks"></a>Comentarios  
+ El `<clear>` elemento quita todos los agentes de escucha de la `Listeners` colección para un origen de seguimiento, incluido el <xref:System.Diagnostics.DefaultTraceListener>. Puede usar el `<clear>` elemento antes de usar el `<add>` elemento para estar seguro de que no hay ningún otro agente de escucha activo en la colección.  
   
-## Archivo de configuración  
- Este elemento se puede utilizar en el archivo de configuración del equipo \(Machine.config\) y en el archivo de configuración de la aplicación.  
+## <a name="configuration-file"></a>Archivo de configuración  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar el elemento `<clear>` antes de usar elementos `<add>` para agregar agentes de escucha `console` y `textListener` a la colección `Listeners` para el origen de traza `TraceSourceApp`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `<clear>` elemento antes de usar el `<add>` elementos que se agregan los agentes de escucha `console` y `textListener` a la `Listeners` colección para el origen de seguimiento `TraceSourceApp`.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -89,8 +93,8 @@ Borra la colección `Listeners` para un origen de traza.
 </configuration>   
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

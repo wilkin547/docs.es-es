@@ -1,23 +1,26 @@
 ---
-title: "Especificar un algoritmo criptogr&#225;fico personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Especificar un algoritmo criptográfico personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 630457e4d1b30fe2a9439c3a41af5da92606c55a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Especificar un algoritmo criptogr&#225;fico personalizado
-WCF permite especificar un algoritmo criptográfico personalizado para usarlo cuando se cifren datos o se calculen firmas digitales.  Para ello, se siguen estos pasos:  
+# <a name="specifying-a-custom-crypto-algorithm"></a>Especificar un algoritmo criptográfico personalizado
+WCF permite especificar un algoritmo criptográfico personalizado para usarlo cuando se cifren datos o se calculen firmas digitales. Para ello, se siguen estos pasos:  
   
 1.  Derivar una clase de la clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
   
@@ -25,8 +28,8 @@ WCF permite especificar un algoritmo criptográfico personalizado para usarlo cu
   
 3.  Configurar el enlace con la clase derivada de la clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
   
-## Derivar una clase de SecurityAlgorithmSuite  
- La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> es una clase base abstracta derivada que permite especificar el algoritmo que se va a usar cuando se realicen distintas operaciones relacionadas con la seguridad.  Por ejemplo, calcular un hash para una firma digital o cifrar un mensaje.  En el código siguientes se muestra cómo derivar una clase de la clase <xref:System.ServiceModel.Security.SecurityAlgorithm>:  
+## <a name="derive-a-class-from-securityalgorithmsuite"></a>Derivar una clase de SecurityAlgorithmSuite  
+ La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> es una clase base abstracta derivada que permite especificar el algoritmo que se va a usar cuando se realicen distintas operaciones relacionadas con la seguridad. Por ejemplo, calcular un hash para una firma digital o cifrar un mensaje. En el código siguientes se muestra cómo derivar una clase de la clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -91,11 +94,10 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
             return length >= 128 && length <= 256;  
         }  
     }  
-  
 ```  
   
-## Registrar el algoritmo personalizado  
- El registro se puede realizar en un archivo de configuración o en código imperativo.  El registro de un algoritmo personalizado se lleva a cabo mediante la creación de una asignación entre una clase que implemente un proveedor de servicios criptográficos y un alias.  A continuación, el alias se asigna a un URI que se usa cuando se especifica el algoritmo en el enlace del servicio WCF.  En el siguiente fragmento de código de configuración se muestra cómo registrar un algoritmo personalizado en config:  
+## <a name="register-the-custom-algorithm"></a>Registrar el algoritmo personalizado  
+ El registro se puede realizar en un archivo de configuración o en código imperativo. El registro de un algoritmo personalizado se lleva a cabo mediante la creación de una asignación entre una clase que implemente un proveedor de servicios criptográficos y un alias. A continuación, el alias se asigna a un URI que se usa cuando se especifica el algoritmo en el enlace del servicio WCF. En el siguiente fragmento de código de configuración se muestra cómo registrar un algoritmo personalizado en config:  
   
 ```xml  
 <configuration>  
@@ -111,33 +113,30 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
         </cryptographySettings>  
     </mscorlib>  
 </configuration>  
-  
 ```  
   
- La sección debajo del elemento \<`cryptoClasses`\> crea la asignación entre SHA256CryptoServiceProvider y el alias “SHA256CSP”.  El elemento \<[nameEntry](assetId:///nameEntry?qualifyHint=False&amp;autoUpgrade=True)\> crea la asignación entre el alias “SHA256CSP” y la URL especificada \(http:\/\/constoso.com\/CustomAlgorithms\/CustomHashAlgorithm\).  
+ La sección en la <`cryptoClasses`> elemento crea la asignación entre el SHA256CryptoServiceProvider y el alias "SHA256CSP". El <`nameEntry`> elemento crea la asignación entre el alias "SHA256CSP" y la dirección URL especificada (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).  
   
- Use el método [M:System.Security.Cryptography.CryptoConfig.AddAlgorithm\(System.Type, System.String\<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False&autoUpgrade=True para registrar el algoritmo personalizado en código.  Este método crea ambas asignaciones.  En el ejemplo siguiente se muestra cómo llamar a este método:  
+ Para registrar el algoritmo personalizado en código use la <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False & autoUpgrade = True (método). Este método crea ambas asignaciones. En el ejemplo siguiente se muestra cómo llamar a este método:  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
-  
 ```  
   
-## Configurar el enlace  
+## <a name="configure-the-binding"></a>Configurar el enlace  
  Configure el enlace especificando la clase derivada de la clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> personalizada en la configuración del enlace como se muestra en el siguiente fragmento de código:  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
-  
 ```  
   
- Para ver un ejemplo de código completo, vea el ejemplo [Agilidad criptográfica en la seguridad de WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md).  
+ Para obtener un ejemplo de código completo, vea el [agilidad criptográfica en la seguridad de WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) ejemplo.  
   
-## Vea también  
- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)   
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
+## <a name="see-also"></a>Vea también  
+ [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)  
+ [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
