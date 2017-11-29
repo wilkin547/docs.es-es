@@ -1,27 +1,33 @@
 ---
-title: "Anotar DataSets con tipos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Comentar conjuntos de datos con tipo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d3965ced44bae21feef3d01d49149387fce4fa46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Anotar DataSets con tipos
-Las anotaciones permiten modificar los nombres de los elementos del <xref:System.Data.DataSet> con información de tipos sin modificar el esquema subyacente.  La modificación de los nombres de los elementos del esquema subyacente haría que el **DataSet** con información de tipos hiciera referencia a objetos que no existen en el origen de datos, además de perder una referencia a los objetos existentes en el origen de datos.  
+# <a name="annotating-typed-datasets"></a>Comentar conjuntos de datos con tipo
+Las anotaciones permiten modificar los nombres de los elementos del <xref:System.Data.DataSet> con información de tipos sin modificar el esquema subyacente. Modificación de los nombres de los elementos del esquema subyacente haría que el tipo **conjunto de datos** para hacer referencia a objetos que no existen en el origen de datos, así como perder una referencia a los objetos que existen en el origen de datos.  
   
- Con las anotaciones es posible personalizar los nombres de objetos del **DataSet** con información de tipos para utilizar nombres más significativos; esto hace que el código sea más legible y que los clientes puedan utilizar más fácilmente el **DataSet**, al tiempo que se deja intacto el esquema subyacente.  Por ejemplo, el siguiente elemento de esquema para la tabla **Customers** de la base de datos **Northwind** da como resultado un nombre de objeto **DataRow** de **CustomersRow** y una <xref:System.Data.DataRowCollection> denominada **Customers**.  
+ Con las anotaciones, puede personalizar los nombres de objetos con información de tipos **conjunto de datos** con nombres más significativos, la realización código sea más legible y con información de tipos **conjunto de datos** más fácil para los clientes que usen, dejando esquema subyacente intacto. Por ejemplo, el siguiente elemento de esquema para el **clientes** tabla de la **Northwind** base de datos, se crearán un **DataRow** nombre de objeto del  **CustomersRow** y un <xref:System.Data.DataRowCollection> denominado **clientes**.  
   
-```  
+```xml  
 <xs:element name="Customers">  
   <xs:complexType>  
     <xs:sequence>  
@@ -31,9 +37,9 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 </xs:element>  
 ```  
   
- Un nombre **Customers** para una **DataRowCollection** es significativo en el código de cliente, pero una **DataRow** denominada **CustomersRow** puede llevar a confusión porque se trata de un único objeto.  Además, en situaciones normales, se haría referencia al objeto sin el identificador **Row** y en su lugar se haría referencia al mismo simplemente como un objeto **Customer**.  La solución consiste en anotar el esquema e identificar nuevos nombres para los objetos **DataRow** y **DataRowCollection**.  A continuación se muestra la versión anotada del esquema anterior.  
+ A **DataRowCollection** nombre de **clientes** es significativo en el código de cliente, pero una **DataRow** nombre de **CustomersRow** es erróneo Dado que se trata de un único objeto. Además, en común los escenarios, el objeto se haría referencia sin el **fila** identificador y en su lugar se haría referencia al mismo simplemente como un **cliente** objeto. La solución consiste en anotar el esquema e identificar nuevos nombres para el **DataRow** y **DataRowCollection** objetos. A continuación se muestra la versión anotada del esquema anterior.  
   
-```  
+```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
   <xs:complexType>  
     <xs:sequence>  
@@ -43,50 +49,50 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 </xs:element>  
 ```  
   
- Al especificar un valor **Customer** para **typedName**, el nombre de un objeto **DataRow** será **Customer**.  Si se especifica el valor **Customers** para **typedPlural** se conservará el nombre **Customers** para **DataRowCollection**.  
+ Especificar un **typedName** valo **cliente** dará como resultado un **DataRow** nombre de objeto del **cliente**. Especificar un **Customers** valo **clientes** conserva la **DataRowCollection** nombre de **clientes**.  
   
  En la siguiente tabla se muestran las anotaciones disponibles.  
   
 |Anotación|Descripción|  
-|---------------|-----------------|  
+|----------------|-----------------|  
 |**typedName**|Nombre del objeto.|  
-|**typedPlural**|Nombre de una colección de objetos.|  
+|**Customers**|Nombre de una colección de objetos.|  
 |**typedParent**|Nombre del objeto cuando se hace referencia al mismo en una relación primaria.|  
 |**typedChildren**|Nombre del método para devolver objetos de una relación secundaria.|  
-|**nullValue**|Valor si el valor subyacente es **DBNull**.  Vea las anotaciones **nullValue** en la tabla siguiente.  El valor predeterminado es **\_throw**.|  
+|**nullValue**|El valor si el valor subyacente es **DBNull**. Consulte la tabla siguiente para **nullValue** anotaciones. El valor predeterminado es **_throw**.|  
   
- En la tabla siguiente se presentan los valores que se pueden especificar para la anotación **nullValue**.  
+ En la tabla siguiente se muestra los valores que se pueden especificar para el **nullValue** anotación.  
   
 |Valor nullValue|Descripción|  
 |---------------------|-----------------|  
-|*Valor de reemplazo*|Especifica un valor que se va a devolver.  El valor devuelto debe coincidir con el tipo del elemento.  Por ejemplo, utilice `nullValue="0"` para devolver 0 en el caso de campos null integer.|  
-|**\_throw**|Iniciar una excepción.  Este es el valor predeterminado.|  
-|**\_null**|Devuelve una referencia nula o inicia una excepción si se encuentra un tipo primitivo.|  
-|**\_empty**|En el caso de cadenas, devuelve **String.Empty**; de lo contrario, devuelve un objeto creado desde un constructor vacío.  Si se encuentra un tipo primitivo, inicia una excepción.|  
+|*Valor de reemplazo*|Especifica un valor que se va a devolver. El valor devuelto debe coincidir con el tipo del elemento. Por ejemplo, utilice `nullValue="0"` para devolver 0 en el caso de campos null integer.|  
+|**_throw**|Iniciar una excepción. Este es el valor predeterminado.|  
+|**_null**|Devuelve una referencia nula o inicia una excepción si se encuentra un tipo primitivo.|  
+|**_empty**|Cadenas, devuelve **String.Empty**, en caso contrario, devuelve un objeto creado desde un constructor vacío. Si se encuentra un tipo primitivo, inicia una excepción.|  
   
- En la siguiente tabla se muestran los valores predeterminados de los objetos en un **DataSet** con información de tipos y las anotaciones disponibles.  
+ La siguiente tabla muestra los valores predeterminados para los objetos en un tipo **conjunto de datos** y las anotaciones disponibles.  
   
-|Objeto\/Método\/Evento|Default|Anotación|  
-|----------------------------|-------------|---------------|  
+|Objeto/Método/Evento|Default|Anotación|  
+|---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
-|Métodos **DataTable**|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
+|**DataTable** métodos|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
-|**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Propiedad**|PropertyName|typedName|  
-|Descriptor de acceso **secundario**|GetChildTableNameRows|typedChildren|  
-|Descriptor de acceso **Parent**|TableNameRow|typedParent|  
-|Eventos **DataSet**|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
+|**Objeto DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
+|**Property**|PropertyName|typedName|  
+|**Secundario** descriptor de acceso|GetChildTableNameRows|typedChildren|  
+|**Elemento primario** descriptor de acceso|TableNameRow|typedParent|  
+|**Conjunto de datos** eventos|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Para utilizar anotaciones de **DataSet** con información de tipos debe incluir la siguiente referencia **xmlns** en el esquema del lenguaje de definición de esquemas XML \(XSD\).  \(Para crear un xsd a partir de las tablas de base de datos, vea <xref:System.Data.DataSet.WriteXmlSchema%2A> o [Trabajar con los conjuntos de datos en Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)\).  
+ Para usar con un tipo **conjunto de datos** anotaciones, debe incluir la siguiente **xmlns** referencia en el esquema de lenguaje (XSD) de definición de esquemas XML. (Para crear un xsd a partir de tablas de base de datos, vea <xref:System.Data.DataSet.WriteXmlSchema%2A> o [trabajar con conjuntos de datos en Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- A continuación se muestra un ejemplo de esquema anotado que expone la tabla **Customers** de la base de datos **Northwind**, incluida una relación con la tabla **Orders**.  
+ Éste es un ejemplo de esquema anotado que expone la **clientes** tabla de la **Northwind** base de datos con una relación con la **pedidos** tabla incluida.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema id="CustomerDataSet"   
       xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
@@ -96,34 +102,29 @@ xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"
   <xs:element name="CustomerDataSet" msdata:IsDataSet="true">  
     <xs:complexType>  
       <xs:choice maxOccurs="unbounded">  
-        <xs:element name="Customers" codegen:typedName="Customer"  
-codegen:typedPlural="Customers">  
+        <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
           <xs:complexType>  
             <xs:sequence>  
               <xs:element name="CustomerID"  
 codegen:typedName="CustomerID" type="xs:string" minOccurs="0" />  
               <xs:element name="CompanyName"  
 codegen:typedName="CompanyName" type="xs:string" minOccurs="0" />  
-              <xs:element name="Phone" codegen:typedName="Phone"  
-codegen:nullValue="" type="xs:string" minOccurs="0" />  
+              <xs:element name="Phone" codegen:typedName="Phone" codegen:nullValue="" type="xs:string" minOccurs="0" />  
             </xs:sequence>  
           </xs:complexType>  
         </xs:element>  
-        <xs:element name="Orders" codegen:typedName="Order"  
-codegen:typedPlural="Orders">  
+        <xs:element name="Orders" codegen:typedName="Order" codegen:typedPlural="Orders">  
           <xs:complexType>  
             <xs:sequence>  
               <xs:element name="OrderID" codegen:typedName="OrderID"  
 type="xs:int" minOccurs="0" />  
               <xs:element name="CustomerID"  
-codegen:typedName="CustomerID"  
-                 codegen:nullValue="" type="xs:string" minOccurs="0" />  
+codegen:typedName="CustomerID"                  codegen:nullValue="" type="xs:string" minOccurs="0" />  
               <xs:element name="EmployeeID"  
 codegen:typedName="EmployeeID" codegen:nullValue="0"   
 type="xs:int" minOccurs="0" />  
               <xs:element name="OrderAdapter"  
-codegen:typedName="OrderAdapter"  
-codegen:nullValue="1980-01-01T00:00:00"   
+codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"   
 type="xs:dateTime" minOccurs="0" />  
             </xs:sequence>  
           </xs:complexType>  
@@ -143,7 +144,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- En el siguiente ejemplo de código se utiliza un **DataSet** fuertemente tipado creado a partir del esquema de ejemplo.  Utiliza un <xref:System.Data.SqlClient.SqlDataAdapter> para rellenar la tabla **Customers** y otro <xref:System.Data.SqlClient.SqlDataAdapter> para rellenar la tabla **Orders**.  El **DataSet** fuertemente tipado define las **DataRelations**.  
+ En el ejemplo de código siguiente se usa un fuertemente tipado **conjunto de datos** creado a partir del esquema de ejemplo. Utiliza un <xref:System.Data.SqlClient.SqlDataAdapter> para rellenar la **clientes** tabla y otra <xref:System.Data.SqlClient.SqlDataAdapter> para rellenar la **pedidos** tabla. Fuertemente tipado **conjunto de datos** define la **DataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -188,7 +189,6 @@ Private Shared Sub OnCustomerChanged( _
     sender As Object, e As CustomerDataSet.CustomerChangeEvent)  
   
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -232,9 +232,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## Vea también  
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataSet>   
- [DataSets con establecimiento de tipos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataSet>  
+ [Objetos DataSet con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
+ [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

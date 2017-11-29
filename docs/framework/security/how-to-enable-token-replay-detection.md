@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Cómo: habilitar la detección de reproducción de tokens
 ## <a name="applies-to"></a>Se aplica a  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/21/2017
 2.  Haga clic en el botón **Atrás** del explorador. Debería aparecer una página de **Error de servidor en la aplicación '/'** con la siguiente descripción: *ID1062: Se ha detectado la reproducción para: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*, seguido de un elemento *AssertionId* y un *Emisor*.  
   
      Está viendo esta página de error porque se ha producido una excepción de tipo <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> al detectarse la reproducción de tokens. Este error se produce porque está intentando volver a enviar la solicitud POST inicial cuando el token se presenta por primera vez. El botón **Atrás** no provocará este comportamiento en las solicitudes siguientes al servidor.
-
