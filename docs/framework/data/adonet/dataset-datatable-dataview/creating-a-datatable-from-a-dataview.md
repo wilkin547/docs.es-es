@@ -1,30 +1,36 @@
 ---
-title: "Crear una DataTable desde una DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crear un objeto DataTable a partir de un objeto DataView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e51188f550b7d910cb278165776133d6f4c03eb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Crear una DataTable desde una DataView
-Después de recuperar datos de un origen de datos y rellenar una <xref:System.Data.DataTable> con los mismos, puede ordenarlos, filtrarlos o limitar los datos devueltos sin volver a recuperarlos.  Esto es posible gracias a la clase <xref:System.Data.DataView>.  Si además necesita crear una <xref:System.Data.DataTable> `` nueva desde la <xref:System.Data.DataView>, puede utilizar el método <xref:System.Data.DataView.ToTable%2A> para copiar todas las filas y columnas o bien un subconjunto de los datos en una <xref:System.Data.DataTable> nueva.  El método <xref:System.Data.DataView.ToTable%2A> proporciona sobrecargas para:  
+# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="ce6ed-102">Crear un objeto DataTable a partir de un objeto DataView</span><span class="sxs-lookup"><span data-stu-id="ce6ed-102">Creating a DataTable from a DataView</span></span>
+<span data-ttu-id="ce6ed-103">Después de recuperar datos de un origen de datos y rellenar una <xref:System.Data.DataTable> con los mismos, puede ordenarlos, filtrarlos o limitar los datos devueltos sin volver a recuperarlos.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-103">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="ce6ed-104">Esto es posible gracias a la clase <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-104">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="ce6ed-105">Además, si necesita crear un nuevo <xref:System.Data.DataTable> desde el <xref:System.Data.DataView>, puede usar el <xref:System.Data.DataView.ToTable%2A> método para copiar todas las filas y columnas o un subconjunto de los datos en un nuevo <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-105">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="ce6ed-106">El método <xref:System.Data.DataView.ToTable%2A> proporciona sobrecargas para:</span><span class="sxs-lookup"><span data-stu-id="ce6ed-106">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
   
--   Crear una <xref:System.Data.DataTable> que contenga columnas que son un subconjunto de las columnas de la <xref:System.Data.DataView>.  
+-   <span data-ttu-id="ce6ed-107">Crear una <xref:System.Data.DataTable> que contenga columnas que son un subconjunto de las columnas de la <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-107">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
   
--   Crear una <xref:System.Data.DataTable> `` que incluya solamente filas distintas de la <xref:System.Data.DataView>, de forma análoga a la palabra clave DISTINCT en Transact\-SQL.  
+-   <span data-ttu-id="ce6ed-108">Crear un <xref:System.Data.DataTable> que incluya solo filas distintas de la <xref:System.Data.DataView>, de forma análoga a la palabra clave DISTINCT en Transact-SQL.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-108">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo de aplicación de consola se crea una <xref:System.Data.DataTable> `` que contiene datos de la tabla **Person.Contact** en la base de datos de ejemplo **AdventureWorks**.  A continuación, se crea una <xref:System.Data.DataView> `` ordenada y filtrada basada en la <xref:System.Data.DataTable>.  Después de mostrar el contenido de la <xref:System.Data.DataTable> `` y la <xref:System.Data.DataView>, se crea una nueva <xref:System.Data.DataTable> `` desde la <xref:System.Data.DataView> mediante el método <xref:System.Data.DataView.ToTable%2A> y se selecciona solamente un subconjunto de las columnas disponibles.  Por último, se muestra el contenido de la <xref:System.Data.DataTable> nueva.  
+## <a name="example"></a><span data-ttu-id="ce6ed-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ce6ed-109">Example</span></span>  
+ <span data-ttu-id="ce6ed-110">En el ejemplo de aplicación de consola siguiente se crea un <xref:System.Data.DataTable> que contiene los datos de la **Person.Contact** tabla el **AdventureWorks** base de datos de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-110">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="ce6ed-111">A continuación, en el ejemplo se crea un ordenado y filtrado <xref:System.Data.DataView> tomando como base el <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-111">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="ce6ed-112">Después de mostrar el contenido de la <xref:System.Data.DataTable> y <xref:System.Data.DataView>, en el ejemplo se crea un nuevo <xref:System.Data.DataTable> desde el <xref:System.Data.DataView> mediante una llamada a la <xref:System.Data.DataView.ToTable%2A> método, al seleccionar solo un subconjunto de las columnas disponibles.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-112">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="ce6ed-113">Por último, se muestra el contenido de la <xref:System.Data.DataTable> nueva.</span><span class="sxs-lookup"><span data-stu-id="ce6ed-113">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -207,9 +213,9 @@ Console.WriteLine();
 }  
 ```  
   
- }  
+ <span data-ttu-id="ce6ed-114">}</span><span class="sxs-lookup"><span data-stu-id="ce6ed-114">}</span></span>  
   
-## Vea también  
- <xref:System.Data.DataView.ToTable%2A>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="ce6ed-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="ce6ed-115">See Also</span></span>  
+ <xref:System.Data.DataView.ToTable%2A>  
+ [<span data-ttu-id="ce6ed-116">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="ce6ed-116">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="ce6ed-117">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="ce6ed-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

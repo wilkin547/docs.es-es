@@ -1,25 +1,28 @@
 ---
-title: "ReliableSessionBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ReliableSessionBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f4aff60c96db5071d41a3f011019b05746f0c96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# ReliableSessionBindingElement
-ReliableSessionBindingElement  
+# <a name="reliablesessionbindingelement"></a><span data-ttu-id="f9e75-102">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="f9e75-102">ReliableSessionBindingElement</span></span>
+<span data-ttu-id="f9e75-103">ReliableSessionBindingElement</span><span class="sxs-lookup"><span data-stu-id="f9e75-103">ReliableSessionBindingElement</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="f9e75-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f9e75-104">Syntax</span></span>  
   
 ```  
 class ReliableSessionBindingElement : BindingElement  
@@ -35,73 +38,73 @@ class ReliableSessionBindingElement : BindingElement
 };  
 ```  
   
-## Métodos  
- La clase ReliableSessionBindingElement no define ningún método.  
+## <a name="methods"></a><span data-ttu-id="f9e75-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="f9e75-105">Methods</span></span>  
+ <span data-ttu-id="f9e75-106">La clase ReliableSessionBindingElement no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="f9e75-106">The ReliableSessionBindingElement class does not define any methods.</span></span>  
   
-## Propiedades  
- La clase ReliableSessionBindingElement posee las siguientes propiedades:  
+## <a name="properties"></a><span data-ttu-id="f9e75-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="f9e75-107">Properties</span></span>  
+ <span data-ttu-id="f9e75-108">La clase ReliableSessionBindingElement posee las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="f9e75-108">The ReliableSessionBindingElement class has the following properties:</span></span>  
   
-### AcknowledgementInterval  
- Tipo de datos: datetime  
+### <a name="acknowledgementinterval"></a><span data-ttu-id="f9e75-109">AcknowledgementInterval</span><span class="sxs-lookup"><span data-stu-id="f9e75-109">AcknowledgementInterval</span></span>  
+ <span data-ttu-id="f9e75-110">Tipo de datos: datetime</span><span class="sxs-lookup"><span data-stu-id="f9e75-110">Data type: datetime</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-111">Access type: Read-only</span></span>  
   
- Intervalo de tiempo que un destino espera antes de enviar una confirmación al origen del mensaje en canales de confianza creados por el que generador.  
+ <span data-ttu-id="f9e75-112">Intervalo de tiempo que un destino espera antes de enviar una confirmación al origen del mensaje en canales de confianza creados por el que generador.</span><span class="sxs-lookup"><span data-stu-id="f9e75-112">The interval of time that a destination waits before sending an acknowledgement to the message source on reliable channels that are created by the factory.</span></span>  
   
-### FlowControlEnabled  
- Tipo de datos: booleano  
+### <a name="flowcontrolenabled"></a><span data-ttu-id="f9e75-113">FlowControlEnabled</span><span class="sxs-lookup"><span data-stu-id="f9e75-113">FlowControlEnabled</span></span>  
+ <span data-ttu-id="f9e75-114">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="f9e75-114">Data type: boolean</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-115">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-115">Access type: Read-only</span></span>  
   
- Valor booleano que especifica si el control de flujo está habilitado.  
+ <span data-ttu-id="f9e75-116">Valor booleano que especifica si el control de flujo está habilitado.</span><span class="sxs-lookup"><span data-stu-id="f9e75-116">A Boolean value that specifies whether flow control is enabled.</span></span>  
   
-### InactivityTimeout  
- Tipo de datos: datetime  
+### <a name="inactivitytimeout"></a><span data-ttu-id="f9e75-117">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="f9e75-117">InactivityTimeout</span></span>  
+ <span data-ttu-id="f9e75-118">Tipo de datos: datetime</span><span class="sxs-lookup"><span data-stu-id="f9e75-118">Data type: datetime</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-119">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-119">Access type: Read-only</span></span>  
   
- Especifica la duración máxima durante la cual el canal permite a la otra parte de la comunicación no enviar ningún mensaje antes de que se produzca un error.  
+ <span data-ttu-id="f9e75-120">Especifica la duración máxima durante la cual el canal permite a la otra parte de la comunicación no enviar ningún mensaje antes de que se produzca un error.</span><span class="sxs-lookup"><span data-stu-id="f9e75-120">Specifies the maximum duration the channel is going to allow the other communicating party not to send any messages before faulting the channel.</span></span>  
   
-### MaxPendingChannels  
- Tipo de datos: sint32  
+### <a name="maxpendingchannels"></a><span data-ttu-id="f9e75-121">MaxPendingChannels</span><span class="sxs-lookup"><span data-stu-id="f9e75-121">MaxPendingChannels</span></span>  
+ <span data-ttu-id="f9e75-122">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="f9e75-122">Data type: sint32</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-123">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-123">Access type: Read-only</span></span>  
   
- Número máximo de canales que pueden esperar a ser aceptados en el agente de escucha.  
+ <span data-ttu-id="f9e75-124">Número máximo de canales que pueden esperar a ser aceptados en el agente de escucha.</span><span class="sxs-lookup"><span data-stu-id="f9e75-124">The maximum number of channels that can wait to be accepted on the listener.</span></span>  
   
-### MaxRetryCount  
- Tipo de datos: sint32  
+### <a name="maxretrycount"></a><span data-ttu-id="f9e75-125">MaxRetryCount</span><span class="sxs-lookup"><span data-stu-id="f9e75-125">MaxRetryCount</span></span>  
+ <span data-ttu-id="f9e75-126">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="f9e75-126">Data type: sint32</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-127">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-127">Access type: Read-only</span></span>  
   
- Número máximo de veces que un canal de confianza intenta retransmitir un mensaje, para él que no ha recibido una confirmación, llamando a `Send` en su canal subyacente.  
+ <span data-ttu-id="f9e75-128">Número máximo de veces que un canal de confianza intenta retransmitir un mensaje, para él que no ha recibido una confirmación, llamando a `Send` en su canal subyacente.</span><span class="sxs-lookup"><span data-stu-id="f9e75-128">The maximum number of times a reliable channel attempts to retransmit a message it has not received an acknowledgement for, by calling `Send` on its underlying channel.</span></span>  
   
-### MaxTransferWindowSize  
- Tipo de datos: sint32  
+### <a name="maxtransferwindowsize"></a><span data-ttu-id="f9e75-129">MaxTransferWindowSize</span><span class="sxs-lookup"><span data-stu-id="f9e75-129">MaxTransferWindowSize</span></span>  
+ <span data-ttu-id="f9e75-130">Tipo de datos: sint32</span><span class="sxs-lookup"><span data-stu-id="f9e75-130">Data type: sint32</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-131">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-131">Access type: Read-only</span></span>  
   
- El tamaño máximo de la ventana de transferencia para la sesión de confianza.  
+ <span data-ttu-id="f9e75-132">El tamaño máximo de la ventana de transferencia para la sesión de confianza.</span><span class="sxs-lookup"><span data-stu-id="f9e75-132">The maximum transfer window size for the reliable session.</span></span>  
   
-### Por orden  
- Tipo de datos: booleano  
+### <a name="ordered"></a><span data-ttu-id="f9e75-133">Por orden </span><span class="sxs-lookup"><span data-stu-id="f9e75-133">Ordered</span></span>  
+ <span data-ttu-id="f9e75-134">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="f9e75-134">Data type: boolean</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-135">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-135">Access type: Read-only</span></span>  
   
- Un valor booleano que especifica si se garantiza que los mensajes lleguen en el orden en el que fueron enviados.  
+ <span data-ttu-id="f9e75-136">Un valor booleano que especifica si se garantiza que los mensajes lleguen en el orden en el que fueron enviados.</span><span class="sxs-lookup"><span data-stu-id="f9e75-136">A Boolean value that specifies whether messages are guaranteed to arrive in the order they were sent.</span></span>  
   
-### ReliableMessagingVersion  
- Tipo de datos: enteros  
+### <a name="reliablemessagingversion"></a><span data-ttu-id="f9e75-137">ReliableMessagingVersion</span><span class="sxs-lookup"><span data-stu-id="f9e75-137">ReliableMessagingVersion</span></span>  
+ <span data-ttu-id="f9e75-138">Tipo de datos: enteros</span><span class="sxs-lookup"><span data-stu-id="f9e75-138">Data type: integer</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="f9e75-139">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="f9e75-139">Access type: Read-only</span></span>  
   
- Entero que especifica la versión de protocolo de WS\-ReliableMessaging utilizado en la sesión de confianza.  
+ <span data-ttu-id="f9e75-140">Entero que especifica la versión de protocolo de WS-ReliableMessaging utilizado en la sesión de confianza.</span><span class="sxs-lookup"><span data-stu-id="f9e75-140">An integer that specifies the WS-ReliableMessaging protocol version used in the reliable session.</span></span>  
   
-## Requisitos  
+## <a name="requirements"></a><span data-ttu-id="f9e75-141">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f9e75-141">Requirements</span></span>  
   
-|MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|<span data-ttu-id="f9e75-142">MOF</span><span class="sxs-lookup"><span data-stu-id="f9e75-142">MOF</span></span>|<span data-ttu-id="f9e75-143">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="f9e75-143">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="f9e75-144">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="f9e75-144">Namespace</span></span>|<span data-ttu-id="f9e75-145">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f9e75-145">Defined in root\ServiceModel</span></span>|  
   
-## Vea también  
+## <a name="see-also"></a><span data-ttu-id="f9e75-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="f9e75-146">See Also</span></span>  
  <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

@@ -1,32 +1,35 @@
 ---
-title: "C&#243;mo: Animar en un estilo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, propiedades, dentro de estilos"
-  - "estilos, animar propiedades dentro de"
+title: "Cómo: Animar en un estilo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], properties [WPF], within styles
+- styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10cd243c633e7a7e458d2026fc5e3d91d2996427
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Animar en un estilo
-En este ejemplo se muestra cómo animar propiedades en un estilo.  Al animar dentro de un estilo, únicamente se puede establecer como destino directo el elemento marco cuyo estilo se define.  Para establecer el destino en un objeto freezable, debe "establecer una relación" desde una propiedad del elemento al que se aplica el estilo.  
+# <a name="how-to-animate-in-a-style"></a><span data-ttu-id="fd720-102">Cómo: Animar en un estilo</span><span class="sxs-lookup"><span data-stu-id="fd720-102">How to: Animate in a Style</span></span>
+<span data-ttu-id="fd720-103">En este ejemplo se muestra cómo animar propiedades dentro de un estilo.</span><span class="sxs-lookup"><span data-stu-id="fd720-103">This example shows how to animate properties within a style.</span></span> <span data-ttu-id="fd720-104">Al animar dentro de un estilo, se puede destinar solo el elemento de marco de trabajo para el que se define el estilo directamente.</span><span class="sxs-lookup"><span data-stu-id="fd720-104">When animating within a style, only the framework element for which the style is defined can be targeted directly.</span></span> <span data-ttu-id="fd720-105">Que tenga como destino un objeto freezable, debe "establecer una relación" desde una propiedad del elemento de estilo.</span><span class="sxs-lookup"><span data-stu-id="fd720-105">To target a freezable object, you must "dot down" from a property of the styled element.</span></span>  
   
- En el ejemplo siguiente, se definen varias animaciones dentro de un estilo y se aplican a un control <xref:System.Windows.Controls.Button>.  Cuando el usuario mueve el mouse sobre el botón, se desvanece de opaco a parcialmente translúcido y viceversa, repetidamente.  Cuando el usuario retira el mouse y del botón, se vuelve completamente opaco.  Cuando se hace clic en el botón, su color de fondo cambia de la naranja al blanco y de nuevo al naranja.  Dado que el objeto <xref:System.Windows.Media.SolidColorBrush> puede utilizado para pintar el botón no se puede establecer directamente como destino, se tiene acceso a él estableciendo una relación desde la propiedad <xref:System.Windows.Controls.Control.Background%2A> del botón.  
+ <span data-ttu-id="fd720-106">En el ejemplo siguiente, se define dentro de un estilo varias animaciones y se aplican a un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="fd720-106">In the following example, several animations are defined within a style and applied to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="fd720-107">Cuando el usuario mueve el mouse sobre el botón, fundido de opaco a parcialmente translúcido y viceversa, repetidamente.</span><span class="sxs-lookup"><span data-stu-id="fd720-107">When the user moves the mouse over the button, it fades from opaque to partially translucent and back again, repeatedly.</span></span> <span data-ttu-id="fd720-108">Cuando el usuario mueve el mouse fuera del botón, se vuelve completamente opaco.</span><span class="sxs-lookup"><span data-stu-id="fd720-108">When the user moves the mouse off the button, it becomes completely opaque.</span></span> <span data-ttu-id="fd720-109">Cuando se hace clic en el botón, su color de fondo cambia de color naranja en blanco y vuelva a hacer.</span><span class="sxs-lookup"><span data-stu-id="fd720-109">When the button is clicked, its background color changes from orange to white and back again.</span></span> <span data-ttu-id="fd720-110">Dado que la <xref:System.Windows.Media.SolidColorBrush> utilizado para pintar el botón no se puede establecer como destino directamente, se tiene acceso estableciendo una relación en el botón <xref:System.Windows.Controls.Control.Background%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="fd720-110">Because the <xref:System.Windows.Media.SolidColorBrush> used to paint the button can't be targeted directly, it is accessed by dotting down from the button's <xref:System.Windows.Controls.Control.Background%2A> property.</span></span>  
   
-## Ejemplo  
- [!code-xml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
+## <a name="example"></a><span data-ttu-id="fd720-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fd720-111">Example</span></span>  
+ [!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
   
- Tenga en cuenta que al animar dentro de un estilo, es posible establecer como destinos objetos que no existen.  Por ejemplo, suponga que el estilo utiliza un objeto <xref:System.Windows.Media.SolidColorBrush> para establecer la propiedad del fondo de un botón, pero que en algún punto se invalida el estilo y se establece el fondo del botón en un objeto <xref:System.Windows.Media.LinearGradientBrush>.  Si intenta animar <xref:System.Windows.Media.SolidColorBrush>, no se iniciará ninguna excepción; simplemente se producirá un error en la animación, que no se comunicará.  
+ <span data-ttu-id="fd720-112">Tenga en cuenta que al animar dentro de un estilo, es posible a los objetos de destino que no existen.</span><span class="sxs-lookup"><span data-stu-id="fd720-112">Note that when animating within a style, it's possible to target objects that don't exist.</span></span> <span data-ttu-id="fd720-113">Por ejemplo, supongamos que usa su estilo de un <xref:System.Windows.Media.SolidColorBrush> establecer la propiedad de fondo de un botón, pero en algún momento el estilo se invalida y se establece el fondo del botón con un <xref:System.Windows.Media.LinearGradientBrush>.</span><span class="sxs-lookup"><span data-stu-id="fd720-113">For example, suppose your style uses a <xref:System.Windows.Media.SolidColorBrush> to set a Button's background property, but at some point the style is overridden and the button's background is set with a <xref:System.Windows.Media.LinearGradientBrush>.</span></span>  <span data-ttu-id="fd720-114">Si intenta animar el <xref:System.Windows.Media.SolidColorBrush> , no se iniciará una excepción; la animación simplemente se producirá un error en modo silencioso.</span><span class="sxs-lookup"><span data-stu-id="fd720-114">Trying to animate the <xref:System.Windows.Media.SolidColorBrush> won't throw an exception; the animation will simply fail silently.</span></span>  
   
- Para obtener más información sobre la sintaxis de establecimiento de destinos en guiones gráficos, vea [Información general sobre objetos Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  Para obtener más información acerca de la animación, vea [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  Para obtener más información acerca de los estilos, vea [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+ <span data-ttu-id="fd720-115">Para obtener más información acerca de la sintaxis de destino de guión gráfico, vea el [información general de guiones gráficos](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span><span class="sxs-lookup"><span data-stu-id="fd720-115">Fore more information about storyboard targeting syntax, see the [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span> <span data-ttu-id="fd720-116">Para obtener más información acerca de la animación, consulte el [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="fd720-116">For more information about animation, see the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span> <span data-ttu-id="fd720-117">Para obtener más información sobre los estilos, vea el [estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="fd720-117">For more information about styles, see the [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>

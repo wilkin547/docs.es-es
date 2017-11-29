@@ -1,72 +1,73 @@
 ---
-title: "Utilizar clases gr&#225;ficas administradas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, clases administradas"
-  - "gráficos, clases administradas"
-  - "gráficos, usar en Windows Forms"
+title: "Utilizar clases gráficas administradas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, managed classes
+- graphics [Windows Forms], using in Windows Forms
+- graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizar clases gr&#225;ficas administradas
-En los temas siguientes se describe cómo utilizar la API de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] en el marco de trabajo de clases administradas.  
+# <a name="using-managed-graphics-classes"></a><span data-ttu-id="2a932-102">Utilizar clases gráficas administradas</span><span class="sxs-lookup"><span data-stu-id="2a932-102">Using Managed Graphics Classes</span></span>
+<span data-ttu-id="2a932-103">Los temas siguientes describen cómo utilizar el [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API en el marco de trabajo de la clase administrada.</span><span class="sxs-lookup"><span data-stu-id="2a932-103">The following topics describe how to use the [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API in the managed class framework.</span></span>  
   
-## En esta sección  
- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- Describe cómo llevar a cabo tareas básicas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="2a932-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2a932-104">In This Section</span></span>  
+ [<span data-ttu-id="2a932-105">Introducción a la programación de gráficos</span><span class="sxs-lookup"><span data-stu-id="2a932-105">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ <span data-ttu-id="2a932-106">Describe cómo realizar tareas básicas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2a932-106">Describes how to accomplish basic tasks with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].</span></span>  
   
- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Muestra cómo construir un lápiz y utilizarlo para dibujar una variedad de líneas y formas.  
+ [<span data-ttu-id="2a932-107">Utilizar lápiz para dibujar líneas y formas</span><span class="sxs-lookup"><span data-stu-id="2a932-107">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ <span data-ttu-id="2a932-108">Muestra cómo construir un lápiz y utilizarlo para dibujar una serie de líneas y formas.</span><span class="sxs-lookup"><span data-stu-id="2a932-108">Demonstrates how to construct a pen and use it to draw a variety of lines and shapes.</span></span>  
   
- [Utilizar un pincel para rellenar formas](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
- Muestra cómo construir un pincel y rellenar formas con una variedad de efectos.  
+ [<span data-ttu-id="2a932-109">Utilizar un pincel para rellenar formas</span><span class="sxs-lookup"><span data-stu-id="2a932-109">Using a Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
+ <span data-ttu-id="2a932-110">Muestra cómo construir un pincel y rellenar formas con una variedad de efectos.</span><span class="sxs-lookup"><span data-stu-id="2a932-110">Demonstrates how to construct a brush and fill shapes with a variety of effects.</span></span>  
   
- [Utilizar un pincel degradado para rellenar formas](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Muestra cómo crear y utilizar tipos diferentes de pinceles de degradado.  
+ [<span data-ttu-id="2a932-111">Utilizar un pincel degradado para rellenar formas</span><span class="sxs-lookup"><span data-stu-id="2a932-111">Using a Gradient Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
+ <span data-ttu-id="2a932-112">Muestra cómo crear y utilizar diferentes tipos de pinceles degradados.</span><span class="sxs-lookup"><span data-stu-id="2a932-112">Shows how to create and use different types of gradient brushes.</span></span>  
   
- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- Muestra cómo construir y manipular las imágenes.  
+ [<span data-ttu-id="2a932-113">Trabajar con imágenes, mapas de bits, iconos y metarchivos</span><span class="sxs-lookup"><span data-stu-id="2a932-113">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
+ <span data-ttu-id="2a932-114">Muestra cómo crear y manipular imágenes.</span><span class="sxs-lookup"><span data-stu-id="2a932-114">Demonstrates how to construct and manipulate images.</span></span>  
   
- [Líneas y rellenos con mezcla alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- Muestra cómo lograr la transparencia para las formas y líneas.  
+ [<span data-ttu-id="2a932-115">Líneas y rellenos con combinación alfa</span><span class="sxs-lookup"><span data-stu-id="2a932-115">Alpha Blending Lines and Fills</span></span>](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
+ <span data-ttu-id="2a932-116">Muestra cómo lograr la transparencia para formas y líneas.</span><span class="sxs-lookup"><span data-stu-id="2a932-116">Demonstrates how to achieve transparency for shapes and lines.</span></span>  
   
- [Utilizar fuentes y texto](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- Muestra cómo dibujar texto y utilizar fuentes y familias de fuentes.  
+ [<span data-ttu-id="2a932-117">Utilizar fuentes y texto</span><span class="sxs-lookup"><span data-stu-id="2a932-117">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ <span data-ttu-id="2a932-118">Muestra cómo dibujar texto y utilizar fuentes y familias de fuentes.</span><span class="sxs-lookup"><span data-stu-id="2a932-118">Shows how to draw text and use fonts and font families.</span></span>  
   
- [Crear y dibujar curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- Muestra cómo dibujar curvas spline cardinal y Bezier.  
+ [<span data-ttu-id="2a932-119">Crear y dibujar curvas</span><span class="sxs-lookup"><span data-stu-id="2a932-119">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
+ <span data-ttu-id="2a932-120">Muestra cómo dibujar curvas spline cardinales y Bézier.</span><span class="sxs-lookup"><span data-stu-id="2a932-120">Shows how to draw Cardinal and Bezier splines.</span></span>  
   
- [Crear y dibujar trazados](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
- Muestra cómo crear ilustraciones con rutas de acceso.  
+ [<span data-ttu-id="2a932-121">Crear y dibujar trazados</span><span class="sxs-lookup"><span data-stu-id="2a932-121">Constructing and Drawing Paths</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
+ <span data-ttu-id="2a932-122">Muestra cómo crear ilustraciones con rutas de acceso.</span><span class="sxs-lookup"><span data-stu-id="2a932-122">Shows how to create figures using paths.</span></span>  
   
- [Usar transformaciones en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Muestra las transformaciones de la matriz.  
+ [<span data-ttu-id="2a932-123">Usar transformaciones en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="2a932-123">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ <span data-ttu-id="2a932-124">Muestra las transformaciones de matrices.</span><span class="sxs-lookup"><span data-stu-id="2a932-124">Demonstrates matrix transformations.</span></span>  
   
- [Utilizar contenedores de gráficos](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
- Muestra cómo administrar el estado de objetos gráficos y los contenedores de gráficos anidados.  
+ [<span data-ttu-id="2a932-125">Utilizar contenedores de gráficos</span><span class="sxs-lookup"><span data-stu-id="2a932-125">Using Graphics Containers</span></span>](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
+ <span data-ttu-id="2a932-126">Muestra cómo administrar contenedores de gráficos anidados y estado de objeto de gráficos.</span><span class="sxs-lookup"><span data-stu-id="2a932-126">Shows how to manage graphics object state and nested graphics containers.</span></span>  
   
- [Utilizar regiones](../../../../docs/framework/winforms/advanced/using-regions.md)  
- Muestra la comprobación de visitas y el recorte con regiones.  
+ [<span data-ttu-id="2a932-127">Utilizar regiones</span><span class="sxs-lookup"><span data-stu-id="2a932-127">Using Regions</span></span>](../../../../docs/framework/winforms/advanced/using-regions.md)  
+ <span data-ttu-id="2a932-128">Muestra la comprobación de visitas y recorte con regiones.</span><span class="sxs-lookup"><span data-stu-id="2a932-128">Demonstrates hit testing and clipping with regions.</span></span>  
   
- [Cambiar el color de las imágenes](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
- Muestra distintos aspectos de manipular los colores.  
+ [<span data-ttu-id="2a932-129">Cambiar el color de las imágenes</span><span class="sxs-lookup"><span data-stu-id="2a932-129">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ <span data-ttu-id="2a932-130">Muestra varios aspectos de manipular los colores.</span><span class="sxs-lookup"><span data-stu-id="2a932-130">Demonstrates various aspects of manipulating colors.</span></span>  
   
- [Usar codificadores y descodificadores de imagen en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- Muestra cómo utilizar codificadores y descodificadores de imágenes para manipular imágenes.  
+ [<span data-ttu-id="2a932-131">Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="2a932-131">Using Image Encoders and Decoders in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ <span data-ttu-id="2a932-132">Se muestra cómo utilizar descodificadores y codificadores de imágenes para manipular imágenes.</span><span class="sxs-lookup"><span data-stu-id="2a932-132">Show how to use image encoders and decoders to manipulate images.</span></span>  
   
- [Gráficos de doble búfer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Muestra cómo reducir el parpadeo con búfer doble.
+ [<span data-ttu-id="2a932-133">Gráficos de doble búfer</span><span class="sxs-lookup"><span data-stu-id="2a932-133">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ <span data-ttu-id="2a932-134">Muestra cómo reducir el parpadeo con doble búfer.</span><span class="sxs-lookup"><span data-stu-id="2a932-134">Demonstrates how to reduce flicker with double buffering.</span></span>

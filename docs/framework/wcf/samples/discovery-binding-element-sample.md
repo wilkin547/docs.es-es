@@ -1,45 +1,48 @@
 ---
-title: "Ejemplo de elemento de enlace de detecci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ejemplo de elemento de enlace de detección"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 821f629a7f39869975af19c793fe26188a40d7d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de elemento de enlace de detecci&#243;n
-En este ejemplo se muestra cómo utilizar el elemento de enlace de cliente de detección para detectar un servicio.Esta característica permite a los desarrolladores de software agregar un canal de cliente de detección a su pila del canal de clientes existente, con lo que el modelo de programación resulta muy intuitivo.Cuando se abre el canal asociado, la dirección del servicio se resuelve utilizando la detección.Este ejemplo consta de los siguientes proyectos:  
+# <a name="discovery-binding-element-sample"></a><span data-ttu-id="e4a93-102">Ejemplo de elemento de enlace de detección</span><span class="sxs-lookup"><span data-stu-id="e4a93-102">Discovery Binding Element Sample</span></span>
+<span data-ttu-id="e4a93-103">En este ejemplo se muestra cómo utilizar el elemento de enlace de cliente de detección para detectar un servicio.</span><span class="sxs-lookup"><span data-stu-id="e4a93-103">This sample demonstrates how to use the discovery client binding element to discover a service.</span></span> <span data-ttu-id="e4a93-104">Esta característica permite a los desarrolladores de software agregar un canal de cliente de detección a su pila del canal de clientes existente, con lo que el modelo de programación resulta muy intuitivo.</span><span class="sxs-lookup"><span data-stu-id="e4a93-104">This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive.</span></span> <span data-ttu-id="e4a93-105">Cuando se abre el canal asociado, la dirección del servicio se resuelve utilizando la detección.</span><span class="sxs-lookup"><span data-stu-id="e4a93-105">When the associated channel is opened, the address of the service is resolved using discovery.</span></span> <span data-ttu-id="e4a93-106">Este ejemplo consta de los siguientes proyectos:</span><span class="sxs-lookup"><span data-stu-id="e4a93-106">This sample consists of the following projects:</span></span>  
   
--   **CalculatorService**: un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se puede detectar.  
+-   <span data-ttu-id="e4a93-107">**CalculatorService**: un reconocible [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio.</span><span class="sxs-lookup"><span data-stu-id="e4a93-107">**CalculatorService**: A discoverable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
--   **CalculatorClient**: una aplicación cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utiliza el canal de cliente de detección para buscar y llamar a CalculatorService.  
+-   <span data-ttu-id="e4a93-108">**CalculatorClient**: un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicación cliente que utiliza el canal de cliente de detección para buscar y llamar a CalculatorService.</span><span class="sxs-lookup"><span data-stu-id="e4a93-108">**CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses the discovery client channel to search for and call the CalculatorService.</span></span>  
   
--   **DynamicCalculatorClient**: una aplicación cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que utiliza un extremo dinámico para buscar y llamar a CalculatorService.  
+-   <span data-ttu-id="e4a93-109">**DynamicCalculatorClient**: un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplicación cliente que utiliza un extremo dinámico para buscar y llamar a CalculatorService.</span><span class="sxs-lookup"><span data-stu-id="e4a93-109">**DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses a dynamic endpoint to search for and call the CalculatorService.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="e4a93-110">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="e4a93-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e4a93-111">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="e4a93-111">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="e4a93-112">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e4a93-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e4a93-113">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="e4a93-113">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
-## CalculatorService  
- Este proyecto contiene un servicio de calculadora sencillo que implementa el contrato de la interfaz `ICalculatorService`.  
+## <a name="calculatorservice"></a><span data-ttu-id="e4a93-114">CalculatorService</span><span class="sxs-lookup"><span data-stu-id="e4a93-114">CalculatorService</span></span>  
+ <span data-ttu-id="e4a93-115">Este proyecto contiene un servicio de calculadora sencillo que implementa el contrato de la interfaz `ICalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="e4a93-115">This project contains a simple calculator service that implements the `ICalculatorService` contract.</span></span>  
   
- El siguiente archivo App.config se utiliza para agregar un comportamiento `<serviceDiscovery>` en los comportamientos del servicio, así como el extremo de detección.  
+ <span data-ttu-id="e4a93-116">El siguiente archivo App.config se utiliza para agregar un comportamiento `<serviceDiscovery>` en los comportamientos del servicio, así como el extremo de detección.</span><span class="sxs-lookup"><span data-stu-id="e4a93-116">The following App.config file is used to add a `<serviceDiscovery>` behavior in the service behaviors as well as the discovery endpoint.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service behaviorConfiguration="CalculatorBehavior" name="Microsoft.Samples.Discovery.CalculatorService">  
@@ -58,7 +61,7 @@ En este ejemplo se muestra cómo utilizar el elemento de enlace de cliente de de
   </system.serviceModel>  
 ```  
   
- Esto hace que el servicio y sus extremos se puedan detectar.CalculatorService es un servicio autohospedado que agrega un extremo mediante el enlace NetTcpBinding.También agrega un `EndpointDiscoveryBehavior` al extremo y especifica un ámbito como se muestra en el siguiente código.  
+ <span data-ttu-id="e4a93-117">Esto hace que el servicio y sus extremos se puedan detectar.</span><span class="sxs-lookup"><span data-stu-id="e4a93-117">This makes the service and its endpoints discoverable.</span></span> <span data-ttu-id="e4a93-118">CalculatorService es un servicio autohospedado que agrega un extremo mediante el enlace NetTcpBinding.</span><span class="sxs-lookup"><span data-stu-id="e4a93-118">The CalculatorService is a self-hosted service that adds one endpoint using the NetTcpBinding binding.</span></span> <span data-ttu-id="e4a93-119">También agrega un `EndpointDiscoveryBehavior` al extremo y especifica un ámbito como se muestra en el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="e4a93-119">It also adds an `EndpointDiscoveryBehavior` to the endpoint and specifies a scope as shown in the following code.</span></span>  
   
 ```  
 // Add a NET.TCP endpoint and add a scope to that endpoint.  
@@ -69,8 +72,8 @@ netTcpEndpoint.Behaviors.Add(netTctEndpointBehavior);
 serviceHost.Open();  
 ```  
   
-## CalculatorClient  
- Este proyecto contiene una implementación del cliente que envía los mensajes a CalculatorService.Este programa utiliza el método `CreateCustomBindingWithDiscoveryElement()` para crear un enlace personalizado que utiliza el canal de cliente de detección.  
+## <a name="calculatorclient"></a><span data-ttu-id="e4a93-120">CalculatorClient</span><span class="sxs-lookup"><span data-stu-id="e4a93-120">CalculatorClient</span></span>  
+ <span data-ttu-id="e4a93-121">Este proyecto contiene una implementación del cliente que envía los mensajes a CalculatorService.</span><span class="sxs-lookup"><span data-stu-id="e4a93-121">This project contains a client implementation that sends messages to the CalculatorService.</span></span> <span data-ttu-id="e4a93-122">Este programa utiliza el método `CreateCustomBindingWithDiscoveryElement()` para crear un enlace personalizado que utiliza el canal de cliente de detección.</span><span class="sxs-lookup"><span data-stu-id="e4a93-122">This program uses the `CreateCustomBindingWithDiscoveryElement()` method to create a custom binding that uses the Discovery Client Channel.</span></span>  
   
 ```  
 static CustomBinding CreateCustomBindingWithDiscoveryElement()  
@@ -89,7 +92,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- Una vez creado el objeto <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, el desarrollador de software especifica los criterios que se usan al buscar un servicio.En este caso, el criterio de búsqueda de detección es el tipo de la interfaz `ICalculatorService`.Además, el desarrollador de software especifica un <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> que devuelve un <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> que especifica dónde buscar los servicios.El <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> devuelve una nueva instancia de <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Utilizar un enlace personalizado con el canal del cliente de detección](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ <span data-ttu-id="e4a93-123">Una vez creado el objeto <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, el desarrollador de software especifica los criterios que se usan al buscar un servicio.</span><span class="sxs-lookup"><span data-stu-id="e4a93-123">After the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> is instantiated, the developer specifies the criteria to use when searching for a service.</span></span> <span data-ttu-id="e4a93-124">En este caso, el criterio de búsqueda de detección es el tipo de la interfaz `ICalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="e4a93-124">In this case, the discovery find criterion is the `ICalculatorService` type.</span></span> <span data-ttu-id="e4a93-125">Además, el desarrollador de software especifica un <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> que devuelve un <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> que especifica dónde buscar los servicios.</span><span class="sxs-lookup"><span data-stu-id="e4a93-125">Additionally, the developer specifies a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> which returns a <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> that specifies where to look for the services.</span></span> <span data-ttu-id="e4a93-126">El <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> devuelve una nueva instancia de <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="e4a93-126">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> returns a new <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instance.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="e4a93-127">[Mediante un enlace personalizado con el canal de cliente de detección](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).</span><span class="sxs-lookup"><span data-stu-id="e4a93-127"> [Using a Custom Binding with the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).</span></span>  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -104,27 +107,27 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
     }  
 ```  
   
- En este caso, el cliente utiliza el mecanismo de multidifusión de UDP definido por el protocolo de detección para buscar los servicios en la subred local.El resto del método crea un enlace personalizado e inserta el elemento de enlace de detección en la parte superior de la pila.  
+ <span data-ttu-id="e4a93-128">En este caso, el cliente utiliza el mecanismo de multidifusión de UDP definido por el protocolo de detección para buscar los servicios en la subred local.</span><span class="sxs-lookup"><span data-stu-id="e4a93-128">In this case, the client uses the UDP multicast mechanism defined by the Discovery protocol to search for services on the local subnet.</span></span> <span data-ttu-id="e4a93-129">El resto del método crea un enlace personalizado e inserta el elemento de enlace de detección en la parte superior de la pila.</span><span class="sxs-lookup"><span data-stu-id="e4a93-129">The remainder of the method creates a custom binding and inserts the Discovery binding element at the top of the stack.</span></span>  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> se debe colocar en la parte superior de la pila de enlaces.El objeto <xref:System.ServiceModel.Channels.BindingElement> sobre <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> debe asegurarse de que el generador de canales o el canal que crea no use las propiedades `Via` o `EndpointAddress`, porque la dirección real solo se encuentra en el canal del cliente de detección.  
+>  <span data-ttu-id="e4a93-130"><xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> se debe colocar en la parte superior de la pila de enlaces.</span><span class="sxs-lookup"><span data-stu-id="e4a93-130">The <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must be placed on the top of the binding stack.</span></span> <span data-ttu-id="e4a93-131">El objeto <xref:System.ServiceModel.Channels.BindingElement> sobre <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> debe asegurarse de que el generador de canales o el canal que crea no use las propiedades `EndpointAddress` o `Via`, porque la dirección real solo se encuentra en el canal del cliente de detección.</span><span class="sxs-lookup"><span data-stu-id="e4a93-131">Any <xref:System.ServiceModel.Channels.BindingElement> on top of <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must make sure that the channel factory or channel it creates does not use the `EndpointAddress` or `Via` properties, because the actual address is found only at the Discovery client channel.</span></span>  
   
- Después, se puede crear una instancia de `CalculatorClient` pasando este enlace personalizado así como una dirección del extremo.  
+ <span data-ttu-id="e4a93-132">Después, se puede crear una instancia de `CalculatorClient` pasando este enlace personalizado así como una dirección del extremo.</span><span class="sxs-lookup"><span data-stu-id="e4a93-132">Next, the `CalculatorClient` can be instantiated by passing in this custom binding as well as an endpoint address.</span></span>  
   
 ```  
 CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBindingWithDiscoveryElement(), DiscoveryClientBindingElement.DiscoveryEndpointAddress);  
 ```  
   
- Al usar el canal de cliente de detección, se pasa la dirección constante de extremo especificada anteriormente.Ahora en tiempo de ejecución, el canal de cliente de detección encuentra el servicio especificado por los criterios de búsqueda y se conecta a él.Para que el servicio y el cliente establezcan una conexión, deben tener también la misma pila de enlaces subyacente.  
+ <span data-ttu-id="e4a93-133">Al usar el canal de cliente de detección, se pasa la dirección constante de extremo especificada anteriormente.</span><span class="sxs-lookup"><span data-stu-id="e4a93-133">When using the Discovery Client Channel, the constant endpoint address specified previously is passed in.</span></span> <span data-ttu-id="e4a93-134">Ahora en tiempo de ejecución, el canal de cliente de detección encuentra el servicio especificado por los criterios de búsqueda y se conecta a él.</span><span class="sxs-lookup"><span data-stu-id="e4a93-134">Now at runtime, the Discovery Client Channel finds the service specified by the find criteria and connects to it.</span></span> <span data-ttu-id="e4a93-135">Para que el servicio y el cliente establezcan una conexión, deben tener también la misma pila de enlaces subyacente.</span><span class="sxs-lookup"><span data-stu-id="e4a93-135">For the service and the client to establish a connection, they must also have the same underlying binding stack.</span></span>  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="e4a93-136">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="e4a93-136">To use this sample</span></span>  
   
-1.  Abra la solución en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  <span data-ttu-id="e4a93-137">Abra la solución en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e4a93-137">Open the solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  Compile la solución.  
+2.  <span data-ttu-id="e4a93-138">Compile la solución.</span><span class="sxs-lookup"><span data-stu-id="e4a93-138">Build the solution.</span></span>  
   
-3.  Ejecute la aplicación de servicio y cada una de las aplicaciones cliente.  
+3.  <span data-ttu-id="e4a93-139">Ejecute la aplicación de servicio y cada una de las aplicaciones cliente.</span><span class="sxs-lookup"><span data-stu-id="e4a93-139">Run the service application and each of the client applications.</span></span>  
   
-4.  Observe que el cliente pudo encontrar el servicio sin conocer su dirección.  
+4.  <span data-ttu-id="e4a93-140">Observe que el cliente pudo encontrar el servicio sin conocer su dirección.</span><span class="sxs-lookup"><span data-stu-id="e4a93-140">Observe that the client was able to find the service without knowing its address.</span></span>  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="e4a93-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="e4a93-141">See Also</span></span>

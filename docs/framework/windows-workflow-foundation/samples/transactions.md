@@ -1,34 +1,32 @@
 ---
-title: "Transacciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transactions2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 51212219-a39e-448e-bff3-10064ff5de64
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c7611ce26c1a3b9150a60ced7b4931cc1282eecd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Transacciones
-Esta sección contiene ejemplos que muestran escenarios que utilizan transacciones de flujo de trabajo en [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+# <a name="transactions"></a><span data-ttu-id="c0270-102">Transacciones</span><span class="sxs-lookup"><span data-stu-id="c0270-102">Transactions</span></span>
+<span data-ttu-id="c0270-103">Esta sección contiene ejemplos que muestran las transacciones de flujo de trabajo de [!INCLUDE[wf](../../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c0270-103">This section contains samples that demonstrate workflow transactions in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span>  
   
-## En esta sección  
- [Ejecutar un flujo de trabajo en un objeto TransactionScope imperativo](../../../../docs/framework/windows-workflow-foundation/samples/execute-a-workflow-in-an-imperative-transactionscope.md)  
- Muestra cómo ejecutar un flujo de trabajo utilizando <xref:System.Activities.WorkflowInvoker> en un objeto <xref:System.Transactions.Transaction> con código C\# imperativo.  
+## <a name="in-this-section"></a><span data-ttu-id="c0270-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c0270-104">In This Section</span></span>  
+ [<span data-ttu-id="c0270-105">TransactionScope básico</span><span class="sxs-lookup"><span data-stu-id="c0270-105">Basic TransactionScope</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/basic-transactionscope.md)  
+ <span data-ttu-id="c0270-106">Consta de cuatro escenarios que muestran cómo anidar instancias de <xref:System.Activities.Statements.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="c0270-106">Consists of four scenarios that show how to nest <xref:System.Activities.Statements.TransactionScope> instances.</span></span>  
   
- [Ámbito de convoy de transacción](../../../../docs/framework/windows-workflow-foundation/samples/transaction-convoy-scope.md)  
- Muestra cómo crear un modelo de actividad de mensajería de convoy paralelo junto con un objeto <xref:System.ServiceModel.Activities.TransactedReceiveScope> para modelar un protocolo donde varias operaciones pueden suceder en cualquier orden y todas en la misma transacción.  
+ [<span data-ttu-id="c0270-107">Uso de TransactedReceiveScope</span><span class="sxs-lookup"><span data-stu-id="c0270-107">Use of TransactedReceiveScope</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/use-of-transactedreceivescope.md)  
+ <span data-ttu-id="c0270-108">Muestra cómo pasar una transacción de un cliente a un servidor utilizando <xref:System.Activities.Statements.TransactionScope> para crear una transacción en el cliente y <xref:System.ServiceModel.Activities.TransactedReceiveScope> para recibir un mensaje con una transacción de flujo y determinar la duración de la transacción en el servidor.</span><span class="sxs-lookup"><span data-stu-id="c0270-108">Demonstrates how to flow a transaction from a client to a server using <xref:System.Activities.Statements.TransactionScope> to create a new transaction on the client and a <xref:System.ServiceModel.Activities.TransactedReceiveScope> to receive a message with a flowed transaction and scope the lifetime of the transaction on the server.</span></span>  
   
- [Revertir una transacción](../../../../docs/framework/windows-workflow-foundation/samples/transaction-rollback.md)  
- Muestra cómo crear un objeto <xref:System.Activities.NativeActivity> personalizado que tenga acceso al ambiente <xref:System.Activities.RuntimeTransactionHandle> para obtener la transacción ambiente y deshacerla explícitamente.  
-  
- [Suprimir el ámbito de transacción](../../../../docs/framework/windows-workflow-foundation/samples/suppress-transaction-scope.md)  
- Muestra cómo crear una actividad `SuppressTransactionScope` personalizada para suprimir la transacción en tiempo de ejecución ambiente, si está presente.  
-  
- [Colas de transacción](../../../../docs/framework/windows-workflow-foundation/samples/transacted-queues.md)  
- Muestra cómo integrar colas y transacciones en [!INCLUDE[wf1](../../../../includes/wf1-md.md)] para crear servicios escalables y fiables.
+ [<span data-ttu-id="c0270-109">Anidamiento de TransactionScope dentro de un servicio</span><span class="sxs-lookup"><span data-stu-id="c0270-109">Nesting of TransactionScope within a service</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/nesting-of-transactionscope-within-a-service.md)  
+ <span data-ttu-id="c0270-110">Consta de dos escenarios que muestran cómo administrar las instancias de la actividad <xref:System.Activities.Statements.TransactionScope> dentro de un servicio.</span><span class="sxs-lookup"><span data-stu-id="c0270-110">Consists of two scenarios that show how to handle <xref:System.Activities.Statements.TransactionScope> activity instances within a service.</span></span>

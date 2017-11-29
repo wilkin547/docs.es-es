@@ -1,41 +1,44 @@
 ---
-title: "Mallas del mismo nivel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mallas del mismo nivel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1ca3d934564447018f44a423c36f26454588db4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Mallas del mismo nivel
-Una *malla* es una colección con nombre \(un gráfico interconectado\) de nodos del mismo nivel que pueden comunicarse entre ellos y que se identifican por un id. de malla único.  Cada nodo se conecta a varios nodos.  En una malla correctamente conectada, siempre hay una ruta entre dos nodos dados, a una distancia en saltos relativamente corta entre los nodos de los bordes más lejanos, y la malla permanece conectada aun cuando se quitan algunos nodos o conexiones.  Los nodos activos en la malla publican la información de su extremo con el Id. de malla pertinente para que otros pares puedan buscarlos.  
+# <a name="peer-meshes"></a><span data-ttu-id="8304e-102">Mallas del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="8304e-102">Peer Meshes</span></span>
+<span data-ttu-id="8304e-103">A *malla* es una colección con nombre (un gráfico interconectado) de los nodos del mismo nivel que pueden comunicarse entre ellos y que se identifican mediante un identificador de malla único.</span><span class="sxs-lookup"><span data-stu-id="8304e-103">A *mesh* is a named collection (an interconnected graph) of peer nodes that can communicate among themselves and that are identified by a unique mesh ID.</span></span> <span data-ttu-id="8304e-104">Cada nodo se conecta a varios nodos.</span><span class="sxs-lookup"><span data-stu-id="8304e-104">Each node is connected to multiple other nodes.</span></span> <span data-ttu-id="8304e-105">En una malla correctamente conectada, siempre hay una ruta entre dos nodos dados, a una distancia en saltos relativamente corta entre los nodos de los bordes más lejanos, y la malla permanece conectada aun cuando se quitan algunos nodos o conexiones. Los nodos activos en la malla publican la información de su extremo con el Id. de malla pertinente para que otros pares puedan buscarlos.</span><span class="sxs-lookup"><span data-stu-id="8304e-105">In a well-connected mesh, there is a path between any two nodes, with relatively few hops between the nodes on the furthest edges of the mesh, and the mesh will remain connected even if some nodes or connections drop out. Active nodes in the mesh publish their endpoint information with a corresponding mesh ID so that other peers can find them.</span></span>  
   
-## Características de una malla creada mediante el canal del mismo nivel  
+## <a name="characteristics-of-a-mesh-created-using-peer-channel"></a><span data-ttu-id="8304e-106">Características de una malla creada mediante el canal del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="8304e-106">Characteristics of a Mesh Created Using Peer Channel</span></span>  
   
-#### Identificación única  
+#### <a name="uniquely-identified"></a><span data-ttu-id="8304e-107">Identificación única</span><span class="sxs-lookup"><span data-stu-id="8304e-107">Uniquely Identified</span></span>  
   
--   Un identificador único identifica cada malla.  El nombre de la malla \(o Id. de la malla\) está en el mismo formato que un nombre de host del servidor de nombres de dominio \(DNS\).  Como tal, este Id. de malla debe ser único para el cliente previsto de la aplicación dentro del ámbito de la resolución que se está usando.  Un nombre común, como "MyFamilysPeers" o "KevinsPokerTable", puede chocar con facilidad con otros nombres de usuario y puede devolver información de extremo del mismo nivel imprevista, que podría provocar problemas de privacidad o aumentar la latencia de conexión.  Una manera de evitar estos problemas puede ser agregar un identificador único a continuación del alias de la malla \(por ejemplo, "KevinsPokerTable90210"\).  
+-   <span data-ttu-id="8304e-108">Un identificador único identifica cada malla.</span><span class="sxs-lookup"><span data-stu-id="8304e-108">A unique ID identifies each mesh.</span></span> <span data-ttu-id="8304e-109">El nombre de la malla (o Id. de la malla) está en el mismo formato que un nombre de host del servidor de nombres de dominio (DNS).</span><span class="sxs-lookup"><span data-stu-id="8304e-109">The name of the mesh (or mesh ID) is in the same format as a Domain Name System (DNS) host name.</span></span> <span data-ttu-id="8304e-110">Como tal, este Id. de malla debe ser único para el cliente previsto de la aplicación dentro del ámbito de la resolución que se está usando.</span><span class="sxs-lookup"><span data-stu-id="8304e-110">As such, this mesh ID must be unique for the intended client of the application within the scope of the resolver being used.</span></span> <span data-ttu-id="8304e-111">Un nombre común, como "MyFamilysPeers" o "KevinsPokerTable", puede chocar con facilidad con otros nombres de usuario y puede devolver información de extremo del mismo nivel imprevista, que podría provocar problemas de privacidad o aumentar la latencia de conexión.</span><span class="sxs-lookup"><span data-stu-id="8304e-111">A common name such as "MyFamilysPeers" or "KevinsPokerTable," may easily collide with other user names and may return unintended peer endpoint information, which could result in privacy issues or increase connection latency.</span></span> <span data-ttu-id="8304e-112">Una manera de evitar estos problemas puede ser agregar un identificador único a continuación del alias de la malla (por ejemplo, "KevinsPokerTable90210").</span><span class="sxs-lookup"><span data-stu-id="8304e-112">One way to avoid these issues may be to add a unique ID as a postfix to the nickname for the mesh (for example, "KevinsPokerTable90210").</span></span>  
   
-#### Distribución de mensajes  
+#### <a name="message-flooding"></a><span data-ttu-id="8304e-113">Distribución de mensajes</span><span class="sxs-lookup"><span data-stu-id="8304e-113">Message Flooding</span></span>  
   
--   La malla permite que se propaguen los mensajes de uno o más remitentes a todos los nodos del mismo nivel en la misma malla.  Los mensajes distribuidos por los nodos del mismo nivel usan los encabezados especificados en el espacio de nombres de `http://schemas.microsoft.com/net/2006/05/peer`.  
+-   <span data-ttu-id="8304e-114">La malla permite que se propaguen los mensajes de uno o más remitentes a todos los nodos del mismo nivel en la misma malla.</span><span class="sxs-lookup"><span data-stu-id="8304e-114">The mesh allows messages to be propagated from one or more senders to all other peer nodes in the same mesh.</span></span> <span data-ttu-id="8304e-115">Los mensajes distribuidos por los nodos del mismo nivel usan los encabezados especificados en el espacio de nombres de `http://schemas.microsoft.com/net/2006/05/peer`.</span><span class="sxs-lookup"><span data-stu-id="8304e-115">Messages flooded by peer nodes use headers specified in the namespace at `http://schemas.microsoft.com/net/2006/05/peer`.</span></span>  
   
-#### Conexiones optimizadas  
+#### <a name="optimized-connections"></a><span data-ttu-id="8304e-116">Conexiones optimizadas</span><span class="sxs-lookup"><span data-stu-id="8304e-116">Optimized Connections</span></span>  
   
--   Una malla de canal del mismo nivel se ajusta automáticamente a medida que los nodos se conectan y desconectan, garantizando que todos los nodos tengan una buena conectividad, con poca probabilidad de que se generen particiones \(grupos de nodos aislados entre sí\).  Las conexiones en la malla también se optimizan dinámicamente según los patrones de tráfico actuales, para que así la latencia de mensaje del remitente al receptor sea lo más pequeña posible.  
+-   <span data-ttu-id="8304e-117">Una malla de canal del mismo nivel se ajusta automáticamente a medida que los nodos se conectan y desconectan, garantizando que todos los nodos tengan una buena conectividad, con poca probabilidad de que se generen particiones (grupos de nodos aislados entre sí).</span><span class="sxs-lookup"><span data-stu-id="8304e-117">A Peer Channel mesh automatically adjusts when nodes join and leave, ensuring that all nodes have good connectivity with little chance of creating partitions (groups of nodes isolated from each other).</span></span> <span data-ttu-id="8304e-118">Las conexiones en la malla también se optimizan dinámicamente según los patrones de tráfico actuales, para que así la latencia de mensaje del remitente al receptor sea lo más pequeña posible.</span><span class="sxs-lookup"><span data-stu-id="8304e-118">Connections in the mesh are also dynamically optimized based on current traffic patterns so that message latency from sender to receiver is as small as possible.</span></span>  
   
-#### Características de red conocidas que el canal del mismo nivel no proporciona  
- Es importante tener en cuenta que hay características de red populares que el canal del mismo nivel no proporciona.  Estas características, que se pueden compilar sobre el canal del mismo nivel, son:  
+#### <a name="popular-network-features-that-peer-channel-does-not-provide"></a><span data-ttu-id="8304e-119">Características de red conocidas que el canal del mismo nivel no proporciona</span><span class="sxs-lookup"><span data-stu-id="8304e-119">Popular Network Features That Peer Channel Does Not Provide</span></span>  
+ <span data-ttu-id="8304e-120">Es importante tener en cuenta que hay características de red populares que el canal del mismo nivel no proporciona.</span><span class="sxs-lookup"><span data-stu-id="8304e-120">It is important to be aware of popular network features that Peer Channel does not provide.</span></span> <span data-ttu-id="8304e-121">Estas características, que se pueden compilar sobre el canal del mismo nivel, son:</span><span class="sxs-lookup"><span data-stu-id="8304e-121">These features, which may all be built on top of Peer Channel, include the following:</span></span>  
   
--   **Clasificación de los mensajes:** es posible que los mensajes de un origen no lleguen a todas las demás partes en el mismo orden o en el orden en que se enviaron.  Las aplicaciones que requieren que los mensajes se entreguen en un cierto orden deben integrarlo en sus aplicaciones \(por ejemplo, incluyendo un id. que aumente monotónicamente con todos los mensajes\).  
+-   <span data-ttu-id="8304e-122">**Orden de los mensajes:** posible que los mensajes de un único origen no lleguen a todas las demás partes en el mismo orden o en el orden en que envía el origen.</span><span class="sxs-lookup"><span data-stu-id="8304e-122">**Message ordering:** Messages originating from a single source may not arrive at all other parties in the same order or in the order that the source sent.</span></span> <span data-ttu-id="8304e-123">Las aplicaciones que requieren que los mensajes se entreguen en un cierto orden deben integrarlo en sus aplicaciones (por ejemplo, incluyendo un id. que aumente monotónicamente con todos los mensajes).</span><span class="sxs-lookup"><span data-stu-id="8304e-123">Applications that require messages be delivered in a certain order must build it into their applications (for example, by including a monotonically increasing ID with all messages).</span></span>  
   
--   **Mensajería confiable:** el canal del mismo nivel no incluye un mecanismo para garantizar la recepción de los mensajes por todos los pares.  Para garantizar la entrega del mensaje, debe escribir una capa de confiabilidad sobre el canal del mismo nivel.
+-   <span data-ttu-id="8304e-124">**Mensajería de confianza:** canal del mismo nivel no incluye un mecanismo para garantizar la recepción de mensajes por todos los equipos del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="8304e-124">**Reliable messaging:** Peer Channel does not include a mechanism to ensure message reception by all peers.</span></span> <span data-ttu-id="8304e-125">Para garantizar la entrega del mensaje, debe escribir una capa de confiabilidad sobre el canal del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="8304e-125">To guarantee message delivery, you must write a reliability layer on top of Peer Channel.</span></span>

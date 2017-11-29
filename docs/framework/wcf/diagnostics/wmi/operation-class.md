@@ -1,25 +1,28 @@
 ---
-title: "Clase de operaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Clase de operación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 739f8309e7a01eeecf921b50fcde24417fbbc515
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Clase de operaci&#243;n
-Operación  
+# <a name="operation-class"></a><span data-ttu-id="7dfd7-102">Clase de operación</span><span class="sxs-lookup"><span data-stu-id="7dfd7-102">Operation class</span></span>
+<span data-ttu-id="7dfd7-103">Operación</span><span class="sxs-lookup"><span data-stu-id="7dfd7-103">Operation</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="7dfd7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7dfd7-104">Syntax</span></span>  
   
 ```  
 class Operation  
@@ -39,101 +42,101 @@ class Operation
 };  
 ```  
   
-## Métodos  
- La clase Operación no define ningún método.  
+## <a name="methods"></a><span data-ttu-id="7dfd7-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="7dfd7-105">Methods</span></span>  
+ <span data-ttu-id="7dfd7-106">La clase Operación no define ningún método.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-106">The Operation class does not define any methods.</span></span>  
   
-## Propiedades  
- La clase Operación tiene las siguientes propiedades:  
+## <a name="properties"></a><span data-ttu-id="7dfd7-107">Propiedades</span><span class="sxs-lookup"><span data-stu-id="7dfd7-107">Properties</span></span>  
+ <span data-ttu-id="7dfd7-108">La clase Operación tiene las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="7dfd7-108">The Operation class has the following properties:</span></span>  
   
-### Acción  
- Tipo de datos: cadena  
+### <a name="action"></a><span data-ttu-id="7dfd7-109">Acción</span><span class="sxs-lookup"><span data-stu-id="7dfd7-109">Action</span></span>  
+ <span data-ttu-id="7dfd7-110">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="7dfd7-110">Data type: string</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-111">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-111">Access type: Read-only</span></span>  
   
- La acción WS\-Addressing del mensaje de solicitud.  
+ <span data-ttu-id="7dfd7-112">La acción WS-Addressing del mensaje de solicitud.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-112">The WS-Addressing action of the request message.</span></span>  
   
-### AsyncPattern  
- Tipo de datos: booleano  
+### <a name="asyncpattern"></a><span data-ttu-id="7dfd7-113">AsyncPattern</span><span class="sxs-lookup"><span data-stu-id="7dfd7-113">AsyncPattern</span></span>  
+ <span data-ttu-id="7dfd7-114">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="7dfd7-114">Data type: boolean</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-115">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-115">Access type: Read-only</span></span>  
   
- Indica que una operación se implementa de forma asincrónica mediante `Begin` \[abrir\/cerrar corchetes angulares\] y `End` \[abrir\/cerrar corchetes angulares\] el par de método en un contrato de servicios.  
+ <span data-ttu-id="7dfd7-116">Indica que una operación se implementa de forma asincrónica con un `Begin`[Abrir/cerrar corchetes angulares] y `End`[Abrir/cerrar corchetes] el par de métodos en un contrato de servicio.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-116">Indicates that an operation is implemented asynchronously using a `Begin`[open/close angle brackets] and `End`[open/close angle brackets] method pair in a service contract.</span></span>  
   
-### Comportamientos  
- Tipo de datos: matriz de comportamientos  
+### <a name="behaviors"></a><span data-ttu-id="7dfd7-117">comportamientos</span><span class="sxs-lookup"><span data-stu-id="7dfd7-117">Behaviors</span></span>  
+ <span data-ttu-id="7dfd7-118">Tipo de datos: matriz de comportamientos</span><span class="sxs-lookup"><span data-stu-id="7dfd7-118">Data type: Behavior array</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-119">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-119">Access type: Read-only</span></span>  
   
- Los comportamientos asociados a esta operación.  
+ <span data-ttu-id="7dfd7-120">Los comportamientos asociados a esta operación.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-120">The behaviors associated with this operation.</span></span>  
   
-### IsCallback  
- Tipo de datos: booleano  
+### <a name="iscallback"></a><span data-ttu-id="7dfd7-121">IsCallback</span><span class="sxs-lookup"><span data-stu-id="7dfd7-121">IsCallback</span></span>  
+ <span data-ttu-id="7dfd7-122">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="7dfd7-122">Data type: boolean</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-123">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-123">Access type: Read-only</span></span>  
   
- Verdadero cuando la operación es una operación de devolución de llamada.  
+ <span data-ttu-id="7dfd7-124">Verdadero cuando la operación es una operación de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-124">True when the operation is a callback operation.</span></span>  
   
-### IsInitiating  
- Tipo de datos: booleano  
+### <a name="isinitiating"></a><span data-ttu-id="7dfd7-125">IsInitiating</span><span class="sxs-lookup"><span data-stu-id="7dfd7-125">IsInitiating</span></span>  
+ <span data-ttu-id="7dfd7-126">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="7dfd7-126">Data type: boolean</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-127">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-127">Access type: Read-only</span></span>  
   
- Indica si el método implementa una operación que puede iniciar una sesión en el servidor.  
+ <span data-ttu-id="7dfd7-128">Indica si el método implementa una operación que puede iniciar una sesión en el servidor.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-128">Indicates whether the method implements an operation that can initiate a session on the server.</span></span>  
   
-### IsOneWay  
- Tipo de datos: booleano  
+### <a name="isoneway"></a><span data-ttu-id="7dfd7-129">IsOneWay</span><span class="sxs-lookup"><span data-stu-id="7dfd7-129">IsOneWay</span></span>  
+ <span data-ttu-id="7dfd7-130">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="7dfd7-130">Data type: boolean</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-131">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-131">Access type: Read-only</span></span>  
   
- Indica si una operación devuelve un mensaje de respuesta.  
+ <span data-ttu-id="7dfd7-132">Indica si una operación devuelve un mensaje de respuesta.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-132">Indicates whether an operation returns a reply message.</span></span>  
   
-### IsTerminating  
- Tipo de datos: booleano  
+### <a name="isterminating"></a><span data-ttu-id="7dfd7-133">IsTerminating</span><span class="sxs-lookup"><span data-stu-id="7dfd7-133">IsTerminating</span></span>  
+ <span data-ttu-id="7dfd7-134">Tipo de datos: booleano</span><span class="sxs-lookup"><span data-stu-id="7dfd7-134">Data type: boolean</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-135">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-135">Access type: Read-only</span></span>  
   
- Indica si una operación devuelve un mensaje de respuesta.  
+ <span data-ttu-id="7dfd7-136">Indica si una operación devuelve un mensaje de respuesta.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-136">Indicates whether an operation returns a reply message.</span></span>  
   
-### MethodSignature  
- Tipo de datos: cadena  
+### <a name="methodsignature"></a><span data-ttu-id="7dfd7-137">MethodSignature</span><span class="sxs-lookup"><span data-stu-id="7dfd7-137">MethodSignature</span></span>  
+ <span data-ttu-id="7dfd7-138">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="7dfd7-138">Data type: string</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-139">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-139">Access type: Read-only</span></span>  
   
- La firma del método de la operación.  
+ <span data-ttu-id="7dfd7-140">La firma del método de la operación.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-140">The method signature of the operation.</span></span>  
   
-### Nombre  
- Tipo de datos: cadena  
+### <a name="name"></a><span data-ttu-id="7dfd7-141">Nombre</span><span class="sxs-lookup"><span data-stu-id="7dfd7-141">Name</span></span>  
+ <span data-ttu-id="7dfd7-142">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="7dfd7-142">Data type: string</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-143">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-143">Access type: Read-only</span></span>  
   
- El nombre de la operación.  
+ <span data-ttu-id="7dfd7-144">Nombre de la operación.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-144">The name of the operation.</span></span>  
   
-### ParameterTypes  
- Tipo de datos: matriz de cadenas  
+### <a name="parametertypes"></a><span data-ttu-id="7dfd7-145">ParameterTypes</span><span class="sxs-lookup"><span data-stu-id="7dfd7-145">ParameterTypes</span></span>  
+ <span data-ttu-id="7dfd7-146">Tipo de datos: matriz de cadenas</span><span class="sxs-lookup"><span data-stu-id="7dfd7-146">Data type: string array</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-147">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-147">Access type: Read-only</span></span>  
   
- Tipos de los parámetros de la operación.  
+ <span data-ttu-id="7dfd7-148">Tipos de los parámetros de la operación.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-148">The types of the parameters of the operation.</span></span>  
   
-### ReplyAction  
- Tipo de datos: cadena  
+### <a name="replyaction"></a><span data-ttu-id="7dfd7-149">ReplyAction</span><span class="sxs-lookup"><span data-stu-id="7dfd7-149">ReplyAction</span></span>  
+ <span data-ttu-id="7dfd7-150">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="7dfd7-150">Data type: string</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-151">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-151">Access type: Read-only</span></span>  
   
- El valor de la acción SOAP para el mensaje de respuesta de la operación.  
+ <span data-ttu-id="7dfd7-152">El valor de la acción SOAP para el mensaje de respuesta de la operación.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-152">The value of the SOAP action for the reply message of the operation.</span></span>  
   
-### ReturnType  
- Tipo de datos: cadena  
+### <a name="returntype"></a><span data-ttu-id="7dfd7-153">ReturnType</span><span class="sxs-lookup"><span data-stu-id="7dfd7-153">ReturnType</span></span>  
+ <span data-ttu-id="7dfd7-154">Tipo de datos: cadena</span><span class="sxs-lookup"><span data-stu-id="7dfd7-154">Data type: string</span></span>  
   
- Tipo de acceso: solo lectura  
+ <span data-ttu-id="7dfd7-155">Tipo de acceso: solo lectura</span><span class="sxs-lookup"><span data-stu-id="7dfd7-155">Access type: Read-only</span></span>  
   
- Tipo devuelto de la operación.  
+ <span data-ttu-id="7dfd7-156">Tipo devuelto de la operación.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-156">The return type of the operation.</span></span>  
   
-## Requisitos  
+## <a name="requirements"></a><span data-ttu-id="7dfd7-157">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7dfd7-157">Requirements</span></span>  
   
-|MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|<span data-ttu-id="7dfd7-158">MOF</span><span class="sxs-lookup"><span data-stu-id="7dfd7-158">MOF</span></span>|<span data-ttu-id="7dfd7-159">Se declara en Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="7dfd7-159">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="7dfd7-160">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="7dfd7-160">Namespace</span></span>|<span data-ttu-id="7dfd7-161">Se define en root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7dfd7-161">Defined in root\ServiceModel</span></span>|  
   
-## Vea también  
+## <a name="see-also"></a><span data-ttu-id="7dfd7-162">Vea también</span><span class="sxs-lookup"><span data-stu-id="7dfd7-162">See Also</span></span>  
  <xref:System.ServiceModel.Description.OperationDescription>

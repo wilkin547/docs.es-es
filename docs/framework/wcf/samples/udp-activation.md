@@ -1,43 +1,46 @@
 ---
-title: "Activaci&#243;n UDP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Activación UDP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 706b870d51f2120f373b356d2fb71bd79bde8fdf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Activaci&#243;n UDP
-Este ejemplo se basa en el ejemplo [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).Extiende el ejemplo [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) para admitir la activación del proceso usando el Servicio de activación de procesos de Windows \(WAS\).  
+# <a name="udp-activation"></a><span data-ttu-id="ee8ed-102">Activación UDP</span><span class="sxs-lookup"><span data-stu-id="ee8ed-102">UDP Activation</span></span>
+<span data-ttu-id="ee8ed-103">En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="ee8ed-104">Extiende la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo para admitir la activación de procesos mediante Windows Process Activation Service (WAS).</span><span class="sxs-lookup"><span data-stu-id="ee8ed-104">It extends the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample to support process activation using the Windows Process Activation Service (WAS).</span></span>  
   
- El ejemplo está compuesto de tres partes principales:  
+ <span data-ttu-id="ee8ed-105">El ejemplo está compuesto de tres partes principales:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-105">The sample consists of three major pieces:</span></span>  
   
--   Un activador del protocolo UDP, un proceso independiente que recibe los mensajes de UDP en nombre de las aplicaciones que se van a activar.  
+-   <span data-ttu-id="ee8ed-106">Un activador del protocolo UDP, un proceso independiente que recibe los mensajes de UDP en nombre de las aplicaciones que se van a activar.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-106">A UDP Protocol Activator, a standalone process that receives UDP messages on behalf of applications that are to be activated.</span></span>  
   
--   Un cliente que utiliza el transporte personalizado de UDP para enviar los mensajes.  
+-   <span data-ttu-id="ee8ed-107">Un cliente que utiliza el transporte personalizado de UDP para enviar los mensajes.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-107">A client that uses the UDP custom transport to send messages.</span></span>  
   
--   Un servicio \(hospedado en un proceso de trabajo activado por WAS\) que recibe los mensajes sobre el transporte personalizado de UDP.  
+-   <span data-ttu-id="ee8ed-108">Un servicio (hospedado en un proceso de trabajo activado por WAS) que recibe los mensajes sobre el transporte personalizado de UDP.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-108">A service (hosted in a worker process activated by WAS) that receives messages over the UDP custom transport.</span></span>  
   
-## Activador del protocolo UDP  
- El activador del protocolo UDP es un puente entre el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y el servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Proporciona la comunicación de datos a través del protocolo UDP en el nivel de transporte.Tiene dos funciones principales:  
+## <a name="udp-protocol-activator"></a><span data-ttu-id="ee8ed-109">Activador del protocolo UDP</span><span class="sxs-lookup"><span data-stu-id="ee8ed-109">UDP Protocol Activator</span></span>  
+ <span data-ttu-id="ee8ed-110">El activador del protocolo UDP es un puente entre el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y el servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ee8ed-110">The UDP Protocol Activator is a bridge between the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="ee8ed-111">Proporciona la comunicación de datos a través del protocolo UDP en el nivel de transporte.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-111">It provides data communication through the UDP protocol at the transport layer.</span></span> <span data-ttu-id="ee8ed-112">Tiene dos funciones principales:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-112">It has two major functions:</span></span>  
   
--   El Adaptador del agente de escucha \(LA\) de WAS, que colabora con WAS para activar los procesos como respuesta a los mensajes entrantes.  
+-   <span data-ttu-id="ee8ed-113">El Adaptador del agente de escucha (LA) de WAS, que colabora con WAS para activar los procesos como respuesta a los mensajes entrantes.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-113">WAS Listener Adapter (LA), which collaborates with WAS to activate processes in response to incoming messages.</span></span>  
   
--   El Agente de escucha del protocolo UDP, que acepta los mensajes de UDP en nombre de las aplicaciones que se van a activar.  
+-   <span data-ttu-id="ee8ed-114">El Agente de escucha del protocolo UDP, que acepta los mensajes de UDP en nombre de las aplicaciones que se van a activar.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-114">UDP Protocol Listener, which accepts UDP messages on behalf of applications that are to be activated.</span></span>  
   
- El activador se debe estar ejecutando como un programa independiente en el equipo del servidor.Normalmente, los adaptadores del agente de escucha de WAS \(como NetTcpActivator y NetPipeActivator\) se implementan en servicios de Windows de ejecución prolongada.Sin embargo, por motivos de simplicidad y claridad, este ejemplo implementa el activador de protocolo como una aplicación independiente.  
+ <span data-ttu-id="ee8ed-115">El activador se debe estar ejecutando como un programa independiente en el equipo del servidor.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-115">The activator must be running as a standalone program on the server machine.</span></span> <span data-ttu-id="ee8ed-116">Normalmente, los adaptadores del agente de escucha de WAS (como NetTcpActivator y NetPipeActivator) se implementan en servicios de Windows de ejecución prolongada.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-116">Normally, WAS listener adapters (such as the NetTcpActivator and the NetPipeActivator) are implemented in long-running Windows services.</span></span> <span data-ttu-id="ee8ed-117">Sin embargo, por motivos de simplicidad y claridad, este ejemplo implementa el activador de protocolo como una aplicación independiente.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-117">However, for simplicity and clarity, this sample implements the protocol activator as a standalone application.</span></span>  
   
-### Adaptador del agente de escucha de WAS  
- El Adaptador del agente de escucha de WAS para UDP se implementa en la clase `UdpListenerAdapter`.Es el módulo que interactúa con WAS para realizar la activación de la aplicación para el protocolo UDP.Esto se logra llamando a las API de Webhost siguientes:  
+### <a name="was-listener-adapter"></a><span data-ttu-id="ee8ed-118">Adaptador del agente de escucha de WAS</span><span class="sxs-lookup"><span data-stu-id="ee8ed-118">WAS Listener Adapter</span></span>  
+ <span data-ttu-id="ee8ed-119">El Adaptador del agente de escucha de WAS para UDP se implementa en la clase `UdpListenerAdapter`.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-119">The WAS Listener Adapter for UDP is implemented in the `UdpListenerAdapter` class.</span></span> <span data-ttu-id="ee8ed-120">Es el módulo que interactúa con WAS para realizar la activación de la aplicación para el protocolo UDP.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-120">It is the module that interacts with WAS to perform application activation for the UDP protocol.</span></span> <span data-ttu-id="ee8ed-121">Esto se logra llamando a las API de Webhost siguientes:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-121">This is achieved by calling the following Webhost APIs:</span></span>  
   
 -   `WebhostRegisterProtocol`  
   
@@ -47,89 +50,88 @@ Este ejemplo se basa en el ejemplo [Transporte: UDP](../../../../docs/framework/
   
 -   `WebhostCloseAllListenerChannelInstances`  
   
- Después de llamar inicialmente a `WebhostRegisterProtocol`, el adaptador del agente de escucha recibe `ApplicationCreated` de la devolución de la llamada desde WAS para todas las aplicaciones registradas en applicationHost.config \(situado en %windir%\\system32\\inetsrv\).En este ejemplo, administramos solo las aplicaciones con el protocolo UDP \(con el id. de protocolo como "net.udp"\) habilitado.Otras implementaciones pueden administrar esto de manera diferente si tales implementaciones responden a los cambios de configuración dinámicos en la aplicación \(por ejemplo, una transición de la aplicación de deshabilitada a habilitada\).  
+ <span data-ttu-id="ee8ed-122">Después de llamar inicialmente a `WebhostRegisterProtocol`, el adaptador del agente de escucha recibe `ApplicationCreated` de la devolución de la llamada desde WAS para todas las aplicaciones registradas en applicationHost.config (situado en %windir%\system32\inetsrv).</span><span class="sxs-lookup"><span data-stu-id="ee8ed-122">After initially calling `WebhostRegisterProtocol`, the listener adapter receives the callback `ApplicationCreated` from WAS for all of the applications registered in applicationHost.config (located in %windir%\system32\inetsrv).</span></span> <span data-ttu-id="ee8ed-123">En este ejemplo, administramos solo las aplicaciones con el protocolo UDP (con el id. de protocolo como "net.udp") habilitado.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-123">In this sample, we only handle the applications with the UDP protocol (with the protocol id as "net.udp") enabled.</span></span> <span data-ttu-id="ee8ed-124">Otras implementaciones pueden administrar esto de manera diferente si tales implementaciones responden a los cambios de configuración dinámicos en la aplicación (por ejemplo, una transición de la aplicación de deshabilitada a habilitada).</span><span class="sxs-lookup"><span data-stu-id="ee8ed-124">Other implementations may handle this differently if such implementations respond to dynamic configuration changes to the application (for example, an application transition from disabled to enabled).</span></span>  
   
- Cuando se recibe `ConfigManagerInitializationCompleted` de devolución de llamada, indica que WAS ha terminado todas las notificaciones para la inicialización del protocolo.En este momento, el adaptador del agente de escucha está listo para procesar las solicitudes de activación del proceso.  
+ <span data-ttu-id="ee8ed-125">Cuando se recibe `ConfigManagerInitializationCompleted` de devolución de llamada, indica que WAS ha terminado todas las notificaciones para la inicialización del protocolo.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-125">When the callback `ConfigManagerInitializationCompleted` is received, it indicates that WAS has finished all of the notifications for the initialization of the protocol.</span></span> <span data-ttu-id="ee8ed-126">En este momento, el adaptador del agente de escucha está listo para procesar las solicitudes de activación del proceso.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-126">At this time, the listener adapter is ready to process activation requests.</span></span>  
   
- Cuando una nueva solicitud entra por primera vez para una aplicación, el adaptador del agente de escucha llama a `WebhostOpenListenerChannelInstance` en WAS, lo que inicia el proceso de trabajo si no se ha iniciado aún.A continuación, se cargan los controladores de protocolo y se puede iniciar la comunicación entre el adaptador del agente de escucha y la aplicación virtual.  
+ <span data-ttu-id="ee8ed-127">Cuando una nueva solicitud entra por primera vez para una aplicación, el adaptador del agente de escucha llama a `WebhostOpenListenerChannelInstance` en WAS, lo que inicia el proceso de trabajo si no se ha iniciado aún.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-127">When a new request comes in the first time for an application, the listener adapter calls `WebhostOpenListenerChannelInstance` into WAS, which starts the worker process if it is not started yet.</span></span> <span data-ttu-id="ee8ed-128">A continuación, se cargan los controladores de protocolo y se puede iniciar la comunicación entre el adaptador del agente de escucha y la aplicación virtual.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-128">Then the protocol handlers are loaded and the communication between the listener adapter and the virtual application can start.</span></span>  
   
- El adaptador del agente de escucha se registra en %SystemRoot%\\System32\\inetsrv\\ApplicationHost.config en la sección \<`listenerAdapters`\> de la siguiente manera:  
+ <span data-ttu-id="ee8ed-129">El adaptador de escucha está registrado en el %SystemRoot%\System32\inetsrv\ApplicationHost.config en el <`listenerAdapters`> sección como sigue:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-129">The listener adapter is registered in the %SystemRoot%\System32\inetsrv\ApplicationHost.config in the <`listenerAdapters`> section as following:</span></span>  
   
-```  
+```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
 ```  
   
-### Agente de escucha de protocolo  
- El agente de escucha del protocolo UDP es un módulo dentro del activador de protocolo que realiza escuchas en un extremo de UDP en nombre de la aplicación virtual.Se implementa en la clase `UdpSocketListener`.El extremo se representa como `IPEndpoint` para lo que el número de puerto se extrae del enlace del protocolo para el sitio.  
+### <a name="protocol-listener"></a><span data-ttu-id="ee8ed-130">Agente de escucha de protocolo</span><span class="sxs-lookup"><span data-stu-id="ee8ed-130">Protocol Listener</span></span>  
+ <span data-ttu-id="ee8ed-131">El agente de escucha del protocolo UDP es un módulo dentro del activador de protocolo que realiza escuchas en un extremo de UDP en nombre de la aplicación virtual.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-131">The UDP protocol listener is a module inside the protocol activator that listens at a UDP endpoint on behalf of the virtual application.</span></span> <span data-ttu-id="ee8ed-132">Se implementa en la clase `UdpSocketListener`.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-132">It is implemented in the class `UdpSocketListener`.</span></span> <span data-ttu-id="ee8ed-133">El extremo se representa como `IPEndpoint` para lo que el número de puerto se extrae del enlace del protocolo para el sitio.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-133">The endpoint is represented as `IPEndpoint` for which the port number is extracted from the binding of the protocol for the site.</span></span>  
   
-### Servicio de control  
- En este ejemplo, utilizamos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para comunicarse entre el activador y el proceso de trabajo de WAS.El servicio que reside en el activador se denomina "servicio de control".  
+### <a name="control-service"></a><span data-ttu-id="ee8ed-134">Servicio de control</span><span class="sxs-lookup"><span data-stu-id="ee8ed-134">Control Service</span></span>  
+ <span data-ttu-id="ee8ed-135">En este ejemplo, utilizamos [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para comunicarse entre el activador y el proceso de trabajo de WAS.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-135">In this sample, we use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to communicate between the activator and the WAS worker process.</span></span> <span data-ttu-id="ee8ed-136">El servicio que reside en el activador se denomina "servicio de control".</span><span class="sxs-lookup"><span data-stu-id="ee8ed-136">The service that resides in the activator is called the Control Service.</span></span>  
   
-## Controladores de protocolo  
- Después de que el adaptador del agente de escucha llame a `WebhostOpenListenerChannelInstance`, el administrador del proceso de WAS inicia el proceso de trabajo si no comienza.El administrador de la aplicación dentro del proceso de trabajo carga a continuación el controlador de protocolo de proceso UDP \(PPH\) con la solicitud para ese `ListenerChannelId`.PPH a su vez llama a `IAdphManager`.`StartAppDomainProtocolListenerChannel` para iniciar el controlador de protocolo AppDomain de UDP \(ADPH\).  
+## <a name="protocol-handlers"></a><span data-ttu-id="ee8ed-137">Controladores de protocolo</span><span class="sxs-lookup"><span data-stu-id="ee8ed-137">Protocol Handlers</span></span>  
+ <span data-ttu-id="ee8ed-138">Después de que el adaptador del agente de escucha llame a `WebhostOpenListenerChannelInstance`, el administrador del proceso de WAS inicia el proceso de trabajo si no comienza.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-138">After the listener adapter calls `WebhostOpenListenerChannelInstance`, the WAS process manager starts the worker process if it is not started.</span></span> <span data-ttu-id="ee8ed-139">El administrador de la aplicación dentro del proceso de trabajo carga a continuación el controlador de protocolo de proceso UDP (PPH) con la solicitud para ese `ListenerChannelId`.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-139">The application manager inside the worker process then loads the UDP Process Protocol Handler (PPH) with the request for that `ListenerChannelId`.</span></span> <span data-ttu-id="ee8ed-140">PPH a su vez llama `IAdphManager`.`StartAppDomainProtocolListenerChannel`</span><span class="sxs-lookup"><span data-stu-id="ee8ed-140">The PPH in turns calls `IAdphManager`.`StartAppDomainProtocolListenerChannel`</span></span> <span data-ttu-id="ee8ed-141">Para iniciar el controlador de protocolo del AppDomain de UDP (ADPH).</span><span class="sxs-lookup"><span data-stu-id="ee8ed-141">to start the UDP AppDomain Protocol Handler (ADPH).</span></span>  
   
-## HostedUDPTransportConfiguration  
- La información se registra en Web.config de la siguiente manera:  
+## <a name="hostedudptransportconfiguration"></a><span data-ttu-id="ee8ed-142">HostedUDPTransportConfiguration</span><span class="sxs-lookup"><span data-stu-id="ee8ed-142">HostedUDPTransportConfiguration</span></span>  
+ <span data-ttu-id="ee8ed-143">La información se registra en Web.config de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-143">The information is registered in the Web.config as follows:</span></span>  
   
-```  
+```xml  
 <serviceHostingEnvironment>  
 <add name="net.udp" transportConfigurationType="Microsoft.ServiceModel.Samples.Hosting.HostedUdpTransportConfiguration, UdpActivation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6fa904d2da1848d6" />  
 </serviceHostingEnvironment>  
 ```  
   
-## Instalación especial para este ejemplo  
- Este ejemplo solo se puede compilar y ejecutar en Windows Vista, Windows Server 2008 o Windows 7.Para ejecutar el ejemplo, debe tener primero todos los componentes configurados correctamente.Siga estos pasos para instalar el ejemplo.  
+## <a name="special-setup-for-this-sample"></a><span data-ttu-id="ee8ed-144">Instalación especial para este ejemplo</span><span class="sxs-lookup"><span data-stu-id="ee8ed-144">Special Setup for This Sample</span></span>  
+ <span data-ttu-id="ee8ed-145">Este ejemplo solo se puede compilar y ejecutar en Windows Vista, Windows Server 2008 o Windows 7.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-145">This sample can be only built and run on Windows Vista, Windows Server 2008, or Windows 7.</span></span> <span data-ttu-id="ee8ed-146">Para ejecutar el ejemplo, debe tener primero todos los componentes configurados correctamente.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-146">To run the sample, you must first get all of the components set up correctly.</span></span> <span data-ttu-id="ee8ed-147">Siga estos pasos para instalar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-147">Use the following steps to install the sample.</span></span>  
   
-#### Para configurar este ejemplo  
+#### <a name="to-set-up-this-sample"></a><span data-ttu-id="ee8ed-148">Para configurar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="ee8ed-148">To set up this sample</span></span>  
   
-1.  Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando.  
+1.  <span data-ttu-id="ee8ed-149">Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-149">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Compile el proyecto en Windows Vista.Después de la compilación, realiza también las operaciones siguientes en la fase posterior a la generación:  
+2.  <span data-ttu-id="ee8ed-150">Compile el proyecto en Windows Vista.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-150">Build the project on Windows Vista.</span></span> <span data-ttu-id="ee8ed-151">Después de la compilación, realiza también las operaciones siguientes en la fase posterior a la compilación:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-151">After compilation, it also performs the following operations in the post-build phase:</span></span>  
   
-    -   Instala el enlace de UDP para "Sitio web predeterminado" del sitio.  
+    -   <span data-ttu-id="ee8ed-152">Instala el enlace de UDP para "Sitio web predeterminado" del sitio.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-152">Installs the UDP binding to the site "Default Web Site".</span></span>  
   
-    -   Crea "ServiceModelSamples" de la aplicación virtual para señalar a la ruta de acceso física: "%SystemDrive%\\inetpub\\wwwroot\\servicemodelsamples."  
+    -   <span data-ttu-id="ee8ed-153">Crea "ServiceModelSamples" de la aplicación virtual para señalar a la ruta de acceso física: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples."</span><span class="sxs-lookup"><span data-stu-id="ee8ed-153">Creates the virtual application "ServiceModelSamples" to point to the physical path: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples".</span></span>  
   
-    -   También habilita el protocolo "net.udp" para esta aplicación virtual.  
+    -   <span data-ttu-id="ee8ed-154">También habilita el protocolo "net.udp" para esta aplicación virtual.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-154">It also enables "net.udp" protocol for this virtual application.</span></span>  
   
-3.  Inicie "WasNetActivator.exe" de la aplicación de interfaz de usuario.Haga clic en la pestaña **Programa de instalación**, marque las casillas siguientes y, a continuación, haga clic en **Instalar** para instalarlos:  
+3.  <span data-ttu-id="ee8ed-155">Inicie "WasNetActivator.exe" de la aplicación de interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-155">Start the user interface application "WasNetActivator.exe".</span></span> <span data-ttu-id="ee8ed-156">Haga clic en el **el programa de instalación** ficha, active las casillas de verificación siguientes y, a continuación, haga clic en **instalar** para instalarlos:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-156">Click the **Setup** tab, check the following check boxes and then click **Install** to install them:</span></span>  
   
-    -   Adaptador del agente de escucha de UDP  
+    -   <span data-ttu-id="ee8ed-157">Adaptador del agente de escucha de UDP</span><span class="sxs-lookup"><span data-stu-id="ee8ed-157">UDP Listener Adapter</span></span>  
   
-    -   Controladores de protocolo UDP  
+    -   <span data-ttu-id="ee8ed-158">Controladores de protocolo UDP</span><span class="sxs-lookup"><span data-stu-id="ee8ed-158">UDP Protocol Handlers</span></span>  
   
-4.  Haga clic en la pestaña **Activación** de "WasNetActivator.exe" de la aplicación de interfaz de usuario.Haga clic en el botón **Iniciar** para iniciar el adaptador del agente de escucha.Ahora ya está listo para ejecutar el programa.  
+4.  <span data-ttu-id="ee8ed-159">Haga clic en el **activación** pestaña de la aplicación de interfaz de usuario "WasNetActivator.exe".</span><span class="sxs-lookup"><span data-stu-id="ee8ed-159">Click the **Activation** tab of the user interface application "WasNetActivator.exe".</span></span> <span data-ttu-id="ee8ed-160">Haga clic en el **iniciar** botón para iniciar el adaptador de escuchas.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-160">Click the **Start** button to start the listener adapter.</span></span> <span data-ttu-id="ee8ed-161">Ahora ya está listo para ejecutar el programa.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-161">Now you are ready to run the program.</span></span>  
   
     > [!NOTE]
-    >  Cuando haya finalizado con este ejemplo, debe ejecutar Cleanup.bat para quitar el enlace net.udp del "Sitio web predeterminado".  
+    >  <span data-ttu-id="ee8ed-162">Cuando haya finalizado con este ejemplo, debe ejecutar Cleanup.bat para quitar el enlace net.udp del "Sitio Web predeterminado".</span><span class="sxs-lookup"><span data-stu-id="ee8ed-162">When you are finished with this sample, you must run Cleanup.bat to remove the net.udp binding from the "Default Web Site".</span></span>  
   
-## Uso del ejemplo  
- Después de la compilación, se han generador cuatro archivos binarios diferentes:  
+## <a name="sample-usage"></a><span data-ttu-id="ee8ed-163">Uso del ejemplo</span><span class="sxs-lookup"><span data-stu-id="ee8ed-163">Sample Usage</span></span>  
+ <span data-ttu-id="ee8ed-164">Después de la compilación, se han generador cuatro binarios diferentes:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-164">After compilation, there are four different binaries generated:</span></span>  
   
--   Client.exe: el código de cliente.App.config está compilado en el archivo de configuración del cliente Client.exe.config.  
+-   <span data-ttu-id="ee8ed-165">Client.exe: el código de cliente.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-165">Client.exe: The client code.</span></span> <span data-ttu-id="ee8ed-166">App.config está compilado en el archivo de configuración del cliente Client.exe.config.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-166">The App.config is compiled into the client configuration file Client.exe.config.</span></span>  
   
--   UDPActivation.dll: la biblioteca que contiene todas las implementaciones de UDP principales.  
+-   <span data-ttu-id="ee8ed-167">UDPActivation.dll: la biblioteca que contiene todas las implementaciones de UDP principales.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-167">UDPActivation.dll: the library that contains all of the major UDP implementations.</span></span>  
   
--   Service.dll: el código de servicio.Se copia en el directorio \\bin de ServiceModelSamples de la aplicación virtual.El archivo de servicio es Service.svc y el de configuración, Web.config.Después de la compilación, se copian en la siguiente ubicación: %SystemDrive%\\Inetpub\\wwwroot\\ServiceModelSamples.  
+-   <span data-ttu-id="ee8ed-168">Service.dll: el código de servicio.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-168">Service.dll: The service code.</span></span> <span data-ttu-id="ee8ed-169">Se copia en el directorio \bin de ServiceModelSamples de la aplicación virtual.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-169">This is copied to the \bin directory of the virtual application ServiceModelSamples.</span></span> <span data-ttu-id="ee8ed-170">El archivo de servicio es Service.svc y el de configuración, Web.config. Después de la compilación, se copian en la siguiente ubicación: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-170">The service file is Service.svc and the configuration file is Web.config. After compilation, they are copied to the following location: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.</span></span>  
   
--   WasNetActivator: el programa activador de UDP.  
+-   <span data-ttu-id="ee8ed-171">WasNetActivator: el programa activador de UDP.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-171">WasNetActivator: The UDP activator program.</span></span>  
   
--   Asegúrese de que todas las piezas necesarias se instalan correctamente.Los pasos siguientes muestran cómo ejecutar el ejemplo:  
+-   <span data-ttu-id="ee8ed-172">Asegúrese de que todas las piezas necesarias se instalan correctamente.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-172">Ensure that all of the required pieces are installed correctly.</span></span> <span data-ttu-id="ee8ed-173">Los pasos siguientes muestran cómo ejecutar el ejemplo:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-173">The following steps show how to run the sample:</span></span>  
   
-1.  Asegúrese que se hayan iniciado los siguientes servicios de Windows:  
+1.  <span data-ttu-id="ee8ed-174">Asegúrese que se hayan iniciado los siguientes servicios de Windows:</span><span class="sxs-lookup"><span data-stu-id="ee8ed-174">Ensure that the following Windows services have been started:</span></span>  
   
-    -   Servicio de activación de procesos de Windows \(WAS\).  
+    -   <span data-ttu-id="ee8ed-175">Servicio de activación de procesos de Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="ee8ed-175">Windows Process Activation Service (WAS).</span></span>  
   
-    -   Internet Information Services \(IIS\): W3SVC.  
+    -   <span data-ttu-id="ee8ed-176">Internet Information Services (IIS): W3SVC.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-176">Internet Information Services (IIS): W3SVC.</span></span>  
   
-2.  A continuación, inicie el activador, WasNetActivator.exe.En la pestaña **Activación**, el único protocolo, **UDP**, está seleccionado en la lista desplegable.Haga clic en el botón **Iniciar** para iniciar el activador.  
+2.  <span data-ttu-id="ee8ed-177">A continuación, inicie el activador, WasNetActivator.exe.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-177">Then start the activator, WasNetActivator.exe.</span></span> <span data-ttu-id="ee8ed-178">En el **activación** ficha, el único protocolo, **UDP**, está seleccionado en la lista desplegable.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-178">Under the **Activation** tab, the only protocol, **UDP**, is selected in the drop down list.</span></span> <span data-ttu-id="ee8ed-179">Haga clic en el **iniciar** botón para iniciar el activador.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-179">Click the **Start** button to start the activator.</span></span>  
   
-3.  Una vez iniciado el activador, puede ejecutar el código de cliente ejecutando Client.exe desde una ventana de comandos.A continuación, se incluye la salida del ejemplo.  
+3.  <span data-ttu-id="ee8ed-180">Una vez iniciado el activador, puede ejecutar el código de cliente ejecutando Client.exe desde una ventana de comandos.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-180">Once the activator is started, you can run the client code by running Client.exe from a command window.</span></span> <span data-ttu-id="ee8ed-181">A continuación, se incluye la salida del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-181">The following is the sample output:</span></span>  
   
     ```  
     Testing Udp Activation.  
@@ -162,12 +164,12 @@ Este ejemplo se basa en el ejemplo [Transporte: UDP](../../../../docs/framework/
     ```  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="ee8ed-182">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-182">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ee8ed-183">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-183">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="ee8ed-184">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ee8ed-184">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ee8ed-185">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="ee8ed-185">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="ee8ed-186">Vea también</span><span class="sxs-lookup"><span data-stu-id="ee8ed-186">See Also</span></span>

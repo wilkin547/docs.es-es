@@ -1,53 +1,59 @@
 ---
-title: "Modificar datos con DbDataAdapter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modificar datos con un objeto DbDataAdapter
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 850e56e6d6b5e6416ff9bb99e8c458982347e860
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Modificar datos con DbDataAdapter
-El método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> de un objeto <xref:System.Data.Common.DbProviderFactory> proporciona un objeto <xref:System.Data.Common.DbDataAdapter> fuertemente tipado en el proveedor de datos subyacente especificado en el momento de crear el generador.  Se puede utilizar <xref:System.Data.Common.DbCommandBuilder> para crear comandos para insertar, actualizar y eliminar datos desde <xref:System.Data.DataSet> a un origen de datos.  
+# <a name="modifying-data-with-a-dbdataadapter"></a><span data-ttu-id="10517-102">Modificar datos con un objeto DbDataAdapter</span><span class="sxs-lookup"><span data-stu-id="10517-102">Modifying Data with a DbDataAdapter</span></span>
+<span data-ttu-id="10517-103">El método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> de un objeto <xref:System.Data.Common.DbProviderFactory> proporciona un objeto <xref:System.Data.Common.DbDataAdapter> fuertemente tipado en el proveedor de datos subyacente especificado en el momento de crear el generador.</span><span class="sxs-lookup"><span data-stu-id="10517-103">The <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> method of a <xref:System.Data.Common.DbProviderFactory> object gives you a <xref:System.Data.Common.DbDataAdapter> object that is strongly typed to the underlying data provider specified at the time you create the factory.</span></span> <span data-ttu-id="10517-104">Se puede utilizar <xref:System.Data.Common.DbCommandBuilder> para crear comandos para insertar, actualizar y eliminar datos desde <xref:System.Data.DataSet> a un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="10517-104">You can then use a <xref:System.Data.Common.DbCommandBuilder> to create commands to insert, update, and delete data from a <xref:System.Data.DataSet> to a data source.</span></span>  
   
-## Recuperación de datos con un DbDataAdapter  
- Este ejemplo muestra cómo crear un `DbDataAdapter` fuertemente tipado basado en el nombre de proveedor y la cadena de conexión.  El código utiliza el método <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> de <xref:System.Data.Common.DbProviderFactory> para crear <xref:System.Data.Common.DbConnection>.  A continuación, el código utiliza el método <xref:System.Data.Common.DbProviderFactory.CreateCommand%2A> para crear un <xref:System.Data.Common.DbCommand> para seleccionar datos estableciendo sus propiedades `CommandText` y `Connection`.  Finalmente, el código crear un objeto <xref:System.Data.Common.DbDataAdapter> mediante el método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> y establece su propiedad `SelectCommand`.  El método `Fill` de `DbDataAdapter` carga los datos en <xref:System.Data.DataTable>.  
+## <a name="retrieving-data-with-a-dbdataadapter"></a><span data-ttu-id="10517-105">Recuperación de datos con un DbDataAdapter</span><span class="sxs-lookup"><span data-stu-id="10517-105">Retrieving Data with a DbDataAdapter</span></span>  
+ <span data-ttu-id="10517-106">Este ejemplo muestra cómo crear un `DbDataAdapter` fuertemente tipado basado en el nombre de proveedor y la cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="10517-106">This example demonstrates how to create a strongly typed `DbDataAdapter` based on a provider name and connection string.</span></span> <span data-ttu-id="10517-107">El código utiliza el método <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> de <xref:System.Data.Common.DbProviderFactory> para crear <xref:System.Data.Common.DbConnection>.</span><span class="sxs-lookup"><span data-stu-id="10517-107">The code uses the <xref:System.Data.Common.DbProviderFactory.CreateConnection%2A> method of the <xref:System.Data.Common.DbProviderFactory> to create a <xref:System.Data.Common.DbConnection>.</span></span> <span data-ttu-id="10517-108">A continuación, el código utiliza el método <xref:System.Data.Common.DbProviderFactory.CreateCommand%2A> para crear un <xref:System.Data.Common.DbCommand> para seleccionar datos estableciendo sus propiedades `CommandText` y `Connection`.</span><span class="sxs-lookup"><span data-stu-id="10517-108">Next, the code uses the <xref:System.Data.Common.DbProviderFactory.CreateCommand%2A> method to create a <xref:System.Data.Common.DbCommand> to select data by setting its `CommandText` and `Connection` properties.</span></span> <span data-ttu-id="10517-109">Finalmente, el código crear un objeto <xref:System.Data.Common.DbDataAdapter> mediante el método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> y establece su propiedad `SelectCommand`.</span><span class="sxs-lookup"><span data-stu-id="10517-109">Finally, the code creates a <xref:System.Data.Common.DbDataAdapter> object using the <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> method and sets its `SelectCommand` property.</span></span> <span data-ttu-id="10517-110">El método `Fill` de `DbDataAdapter` carga los datos en <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="10517-110">The `Fill` method of the `DbDataAdapter` loads the data into a <xref:System.Data.DataTable>.</span></span>  
   
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/VB/source.vb#1)]  
   
-## Modificar datos con un objeto DbDataAdapter  
- Este ejemplo muestra cómo modificar datos en `DataTable` utilizando <xref:System.Data.Common.DbDataAdapter> mediante <xref:System.Data.Common.DbCommandBuilder> para generar los comandos necesarios para actualizar datos en el origen de datos.  El <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> de `DbDataAdapter` se configura para recuperar el CustomerID y el CompanyName desde la tabla Customers.  El método <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A> se utiliza para establecer la propiedad <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, el método <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A> para establecer la propiedad <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> y el método <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A> para establecer la propiedad <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A>.  El código agrega una nueva fila a la tabla Customers y actualiza el origen de datos.  A continuación, el código localiza la fila agregada buscando en CustomerID, que es la clave principal definida para la tabla Customers.  Cambia el CompanyName y actualiza el origen de datos.  Finalmente, el código elimina la fila.  
+## <a name="modifying-data-with-a-dbdataadapter"></a><span data-ttu-id="10517-111">Modificar datos con un objeto DbDataAdapter</span><span class="sxs-lookup"><span data-stu-id="10517-111">Modifying Data with a DbDataAdapter</span></span>  
+ <span data-ttu-id="10517-112">Este ejemplo muestra cómo modificar datos en `DataTable` utilizando <xref:System.Data.Common.DbDataAdapter> mediante <xref:System.Data.Common.DbCommandBuilder> para generar los comandos necesarios para actualizar datos en el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="10517-112">This example demonstrates how to modify data in a `DataTable` using a <xref:System.Data.Common.DbDataAdapter> by using a <xref:System.Data.Common.DbCommandBuilder> to generate the commands required for updating data at the data source.</span></span> <span data-ttu-id="10517-113">El <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> de `DbDataAdapter` se configura para recuperar el CustomerID y el CompanyName desde la tabla Customers.</span><span class="sxs-lookup"><span data-stu-id="10517-113">The <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> of the `DbDataAdapter` is set to retrieve the CustomerID and CompanyName from the Customers table.</span></span> <span data-ttu-id="10517-114">El método <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A> se utiliza para establecer la propiedad <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, el método <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A> para establecer la propiedad <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> y el método <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A> para establecer la propiedad <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A>.</span><span class="sxs-lookup"><span data-stu-id="10517-114">The <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A> method is used to set the <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> property, the <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A> method is used to set the <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> property, and the <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A> method is used to set the <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> property.</span></span> <span data-ttu-id="10517-115">El código agrega una nueva fila a la tabla Customers y actualiza el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="10517-115">The code adds a new row to the Customers table and updates the data source.</span></span> <span data-ttu-id="10517-116">A continuación, el código localiza la fila agregada buscando en CustomerID, que es la clave principal definida para la tabla Customers.</span><span class="sxs-lookup"><span data-stu-id="10517-116">The code then locates the added row by searching on the CustomerID, which is the primary key defined for the Customers table.</span></span> <span data-ttu-id="10517-117">Cambia el CompanyName y actualiza el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="10517-117">It changes the CompanyName and updates the data source.</span></span> <span data-ttu-id="10517-118">Finalmente, el código elimina la fila.</span><span class="sxs-lookup"><span data-stu-id="10517-118">Finally, the code deletes the row.</span></span>  
   
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/VB/source.vb#1)]  
   
-## Control de parámetros  
- Los proveedores de datos .NET Framework administran la asignación de nombres y la especificación de parámetros y marcadores de posición de parámetros de diferente forma.  Esta sintaxis se adapta a un origen de datos específico, como se describe en la tabla siguiente.  
+## <a name="handling-parameters"></a><span data-ttu-id="10517-119">Control de parámetros</span><span class="sxs-lookup"><span data-stu-id="10517-119">Handling Parameters</span></span>  
+ <span data-ttu-id="10517-120">Los proveedores de datos .NET Framework administran la asignación de nombres y la especificación de parámetros y marcadores de posición de parámetros de diferente forma.</span><span class="sxs-lookup"><span data-stu-id="10517-120">The .NET Framework data providers handle naming and specifying parameters and parameter placeholders differently.</span></span> <span data-ttu-id="10517-121">Esta sintaxis se adapta a un origen de datos específico, como se describe en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="10517-121">This syntax is tailored to a specific data source, as described in the following table.</span></span>  
   
-|Proveedor de datos|Sintaxis de nomenclatura de parámetros|  
-|------------------------|--------------------------------------------|  
-|`SqlClient`|Usa parámetros con nombre, con el formato `@`*nombreDeParámetro*.|  
-|`OracleClient`|Usa parámetros con nombre, con el formato `:`*nombreDeParámetro* \(o *nombreDeParámetro*\).|  
-|`OleDb`|Usa marcadores de parámetro de posición, indicados por un signo de interrogación \(`?`\).|  
-|`Odbc`|Usa marcadores de parámetro de posición, indicados por un signo de interrogación \(`?`\).|  
+|<span data-ttu-id="10517-122">Proveedor de datos</span><span class="sxs-lookup"><span data-stu-id="10517-122">Data provider</span></span>|<span data-ttu-id="10517-123">Sintaxis de nomenclatura de parámetros</span><span class="sxs-lookup"><span data-stu-id="10517-123">Parameter naming syntax</span></span>|  
+|-------------------|-----------------------------|  
+|`SqlClient`|<span data-ttu-id="10517-124">Usa parámetros con nombre, con el formato `@`*nombreDeParámetro*.</span><span class="sxs-lookup"><span data-stu-id="10517-124">Uses named parameters in the format `@`*parametername*.</span></span>|  
+|`OracleClient`|<span data-ttu-id="10517-125">Usa parámetros con nombre, con el formato `:`*nombreDeParámetro* (o *nombreDeParámetro*).</span><span class="sxs-lookup"><span data-stu-id="10517-125">Uses named parameters in the format `:`*parmname* (or *parmname*).</span></span>|  
+|`OleDb`|<span data-ttu-id="10517-126">Usa marcadores de parámetro de posición, indicados por un signo de interrogación (`?`).</span><span class="sxs-lookup"><span data-stu-id="10517-126">Uses positional parameter markers indicated by a question mark (`?`).</span></span>|  
+|`Odbc`|<span data-ttu-id="10517-127">Usa marcadores de parámetro de posición, indicados por un signo de interrogación (`?`).</span><span class="sxs-lookup"><span data-stu-id="10517-127">Uses positional parameter markers indicated by a question mark (`?`).</span></span>|  
   
- El modelo de generador no es útil para la creación de objetos `DbCommand` y `DbDataAdapter` con parámetros.  Es necesario bifurcar en el código para crear parámetros que se adapten al proveedor de datos.  
+ <span data-ttu-id="10517-128">El modelo de generador no es útil para la creación de objetos `DbCommand` y `DbDataAdapter` con parámetros.</span><span class="sxs-lookup"><span data-stu-id="10517-128">The factory model is not helpful for creating parameterized `DbCommand` and `DbDataAdapter` objects.</span></span> <span data-ttu-id="10517-129">Es necesario bifurcar en el código para crear parámetros que se adapten al proveedor de datos.</span><span class="sxs-lookup"><span data-stu-id="10517-129">You will need to branch in your code to create parameters that are tailored to your data provider.</span></span>  
   
 > [!IMPORTANT]
->  Por razones de seguridad, no es recomendable evitar totalmente parámetros específicos del proveedor mediante el uso de concatenación de cadenas para construir instrucciones SQL directas.  El uso de cadenas de concatenación en lugar de parámetros expone a la aplicación a ataques por inyección de SQL.  
+>  <span data-ttu-id="10517-130">Por razones de seguridad, no es recomendable evitar totalmente parámetros específicos del proveedor mediante el uso de concatenación de cadenas para construir instrucciones SQL directas.</span><span class="sxs-lookup"><span data-stu-id="10517-130">Avoiding provider-specific parameters altogether by using string concatenation to construct direct SQL statements is not recommended for security reasons.</span></span> <span data-ttu-id="10517-131">El uso de cadenas de concatenación en lugar de parámetros expone a la aplicación a ataques por inyección de SQL.</span><span class="sxs-lookup"><span data-stu-id="10517-131">Using string concatenation instead of parameters leaves your application vulnerable to SQL injection attacks.</span></span>  
   
-## Vea también  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)   
- [Obtener DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)   
- [DbConnection, DbCommand y DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="10517-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="10517-132">See Also</span></span>  
+ [<span data-ttu-id="10517-133">DbProviderFactories</span><span class="sxs-lookup"><span data-stu-id="10517-133">DbProviderFactories</span></span>](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [<span data-ttu-id="10517-134">Obtener un objeto DbProviderFactory</span><span class="sxs-lookup"><span data-stu-id="10517-134">Obtaining a DbProviderFactory</span></span>](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
+ [<span data-ttu-id="10517-135">DbConnection, DbCommand y DbException</span><span class="sxs-lookup"><span data-stu-id="10517-135">DbConnection, DbCommand and DbException</span></span>](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
+ [<span data-ttu-id="10517-136">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="10517-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

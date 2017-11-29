@@ -1,50 +1,52 @@
 ---
-title: "C&#243;mo: Utilizar plantillas para aplicar un estilo a un control ListView que utiliza un modo GridView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView (controles), aplicar estilos"
+title: "Cómo: Utilizar plantillas para aplicar un estilo a un control ListView que utiliza un modo GridView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 246c144a18d7c1014096a6e37ad09b6eec5ad932
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Utilizar plantillas para aplicar un estilo a un control ListView que utiliza un modo GridView
-En este ejemplo se muestra cómo usar los objetos <xref:System.Windows.DataTemplate> y <xref:System.Windows.Style> para especificar la apariencia de un control <xref:System.Windows.Controls.ListView> que usa un modo de vista <xref:System.Windows.Controls.GridView>.  
+# <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a><span data-ttu-id="e2d26-102">Cómo: Utilizar plantillas para aplicar un estilo a un control ListView que utiliza un modo GridView</span><span class="sxs-lookup"><span data-stu-id="e2d26-102">How to: Use Templates to Style a ListView That Uses GridView</span></span>
+<span data-ttu-id="e2d26-103">Este ejemplo muestra cómo utilizar el <xref:System.Windows.DataTemplate> y <xref:System.Windows.Style> objetos que se va a especificar la apariencia de un <xref:System.Windows.Controls.ListView> control que usa un <xref:System.Windows.Controls.GridView> el modo de vista.</span><span class="sxs-lookup"><span data-stu-id="e2d26-103">This example shows how to use the <xref:System.Windows.DataTemplate> and <xref:System.Windows.Style> objects to specify the appearance of a <xref:System.Windows.Controls.ListView> control that uses a <xref:System.Windows.Controls.GridView> view mode.</span></span>  
   
-## Ejemplo  
- En los ejemplos siguientes se muestran objetos <xref:System.Windows.Style> y <xref:System.Windows.DataTemplate> que personalizan la apariencia de un encabezado de columna para <xref:System.Windows.Controls.GridViewColumn>.  
+## <a name="example"></a><span data-ttu-id="e2d26-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e2d26-104">Example</span></span>  
+ <span data-ttu-id="e2d26-105">Los ejemplos siguientes muestran <xref:System.Windows.Style> y <xref:System.Windows.DataTemplate> objetos que personalizan la apariencia de un encabezado de columna para un <xref:System.Windows.Controls.GridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="e2d26-105">The following examples show <xref:System.Windows.Style> and <xref:System.Windows.DataTemplate> objects that customize the appearance of a column header for a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
   
- [!code-xml[ListViewTemplate#GridViewHeaderStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewheaderstyle)]  
+ [!code-xaml[ListViewTemplate#GridViewHeaderStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewheaderstyle)]  
   
- [!code-xml[ListViewTemplate#GridViewHeaderTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewheadertemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewHeaderTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewheadertemplate)]  
   
- En el ejemplo siguiente se muestra cómo usar estos objetos <xref:System.Windows.Style> y <xref:System.Windows.DataTemplate> para establecer las propiedades <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> y <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> de <xref:System.Windows.Controls.GridViewColumn>.  La propiedad <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> define el contenido de las celdas de columna.  
+ <span data-ttu-id="e2d26-106">En el ejemplo siguiente se muestra cómo usar estas <xref:System.Windows.Style> y <xref:System.Windows.DataTemplate> objetos que se va a establecer el <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> y <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> propiedades de un <xref:System.Windows.Controls.GridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="e2d26-106">The following example shows how to use these <xref:System.Windows.Style> and <xref:System.Windows.DataTemplate> objects to set the <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> and <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> properties of a <xref:System.Windows.Controls.GridViewColumn>.</span></span> <span data-ttu-id="e2d26-107">El <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> propiedad define el contenido de las celdas de la columna.</span><span class="sxs-lookup"><span data-stu-id="e2d26-107">The <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property defines the content of the column cells.</span></span>  
   
- [!code-xml[ListViewTemplate#GridViewColumnTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcolumntemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewColumnTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcolumntemplate)]  
   
- <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> y <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> son sólo dos de varias propiedades que puede usar para personalizar la apariencia del encabezado de columna para un control <xref:System.Windows.Controls.GridView>.  Para obtener más información, vea [Información general sobre plantillas y estilos de encabezado de columna en modo GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
+ <span data-ttu-id="e2d26-108">El <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> y <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> son sólo dos de varias propiedades que puede usar para personalizar la apariencia del encabezado de columna para un <xref:System.Windows.Controls.GridView> control.</span><span class="sxs-lookup"><span data-stu-id="e2d26-108">The <xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A> and <xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> are only two of several properties that you can use to customize column header appearance for a <xref:System.Windows.Controls.GridView> control.</span></span> <span data-ttu-id="e2d26-109">Para más información, consulte [Información general sobre plantillas y estilos de encabezado de columna en modo GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).</span><span class="sxs-lookup"><span data-stu-id="e2d26-109">For more information, see [GridView Column Header Styles and Templates Overview](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).</span></span>  
   
- En el ejemplo siguiente se muestra cómo definir una <xref:System.Windows.DataTemplate> que personaliza la apariencia de las celdas de <xref:System.Windows.Controls.GridViewColumn>.  
+ <span data-ttu-id="e2d26-110">En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.DataTemplate> que personaliza la apariencia de las celdas de un <xref:System.Windows.Controls.GridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="e2d26-110">The following example shows how to define a <xref:System.Windows.DataTemplate> that customizes the appearance of the cells in a <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
   
- [!code-xml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- En el ejemplo siguiente se muestra cómo usar <xref:System.Windows.DataTemplate> para definir el contenido de una celda de <xref:System.Windows.Controls.GridViewColumn>.  Esta plantilla se usa en lugar de la propiedad <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> que se muestra en el ejemplo de <xref:System.Windows.Controls.GridViewColumn> anterior.  
+ <span data-ttu-id="e2d26-111">En el ejemplo siguiente se muestra cómo utilizar este <xref:System.Windows.DataTemplate> para definir el contenido de un <xref:System.Windows.Controls.GridViewColumn> celda.</span><span class="sxs-lookup"><span data-stu-id="e2d26-111">The following example shows how to use this <xref:System.Windows.DataTemplate> to define the content of a <xref:System.Windows.Controls.GridViewColumn> cell.</span></span> <span data-ttu-id="e2d26-112">Esta plantilla se usa en lugar de la <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> propiedad que se muestra en la versión anterior <xref:System.Windows.Controls.GridViewColumn> ejemplo.</span><span class="sxs-lookup"><span data-stu-id="e2d26-112">This template is used instead of the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property that is shown in the previous <xref:System.Windows.Controls.GridViewColumn> example.</span></span>  
   
- [!code-xml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
+ [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
-## Vea también  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e2d26-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="e2d26-113">See Also</span></span>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [<span data-ttu-id="e2d26-114">Información general sobre GridView</span><span class="sxs-lookup"><span data-stu-id="e2d26-114">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="e2d26-115">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="e2d26-115">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="e2d26-116">Información general sobre ListView</span><span class="sxs-lookup"><span data-stu-id="e2d26-116">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

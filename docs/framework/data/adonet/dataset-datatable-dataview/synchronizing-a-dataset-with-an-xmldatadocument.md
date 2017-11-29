@@ -1,27 +1,33 @@
 ---
-title: "Sincronizar DataSet con XmlDataDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sincronizar un objeto DataSet con un objeto XmlDataDocument
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bea557d8a09ba874fb4b6a3f3a54c09dac4778cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Sincronizar DataSet con XmlDataDocument
-En esta sección se muestra un paso del procesamiento de una orden de compra, donde se utiliza un <xref:System.Data.DataSet> fuertemente tipado sincronizado con un <xref:System.Xml.XmlDataDocument>.  En el ejemplo siguiente se crea un **DataSet** con un esquema minimizado que solo coincide con una parte del documento XML de origen.  En los ejemplos se utiliza un **XmlDataDocument** para conservar la fidelidad del documento XML de origen, lo que permite utilizar el **DataSet** para exponer un subconjunto del documento XML.  
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a><span data-ttu-id="052d9-102">Sincronizar un objeto DataSet con un objeto XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="052d9-102">Synchronizing a DataSet with an XmlDataDocument</span></span>
+<span data-ttu-id="052d9-103">En esta sección se muestra un paso del procesamiento de una orden de compra, donde se utiliza un <xref:System.Data.DataSet> fuertemente tipado sincronizado con un <xref:System.Xml.XmlDataDocument>.</span><span class="sxs-lookup"><span data-stu-id="052d9-103">This section demonstrates one step in the processing of a purchase order, using a strongly typed <xref:System.Data.DataSet> synchronized with an <xref:System.Xml.XmlDataDocument>.</span></span> <span data-ttu-id="052d9-104">Los ejemplos siguientes se crea un **conjunto de datos** con un esquema minimizado que coincida con solo una parte del documento XML de origen.</span><span class="sxs-lookup"><span data-stu-id="052d9-104">The examples that follow create a **DataSet** with a minimized schema that matches only a portion of the source XML document.</span></span> <span data-ttu-id="052d9-105">Los ejemplos utilizan un **XmlDataDocument** para conservar la fidelidad del documento XML de origen, habilitar la **conjunto de datos** que se utilizará para exponer un subconjunto del documento XML.</span><span class="sxs-lookup"><span data-stu-id="052d9-105">The examples use an **XmlDataDocument** to preserve the fidelity of the source XML document, enabling the **DataSet** to be used to expose a subset of the XML document.</span></span>  
   
- El siguiente documento XML contiene toda la información relativa a una orden de compra: información del cliente, artículos pedidos, información de envío, etc.  
+ <span data-ttu-id="052d9-106">El siguiente documento XML contiene toda la información relativa a una orden de compra: información del cliente, artículos pedidos, información de envío, etc.</span><span class="sxs-lookup"><span data-stu-id="052d9-106">The following XML document contains all the information pertaining to a purchase order: customer information, items ordered, shipping information, and so on.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" standalone="yes"?>  
 <PurchaseOrder>  
   <Customers>  
@@ -113,11 +119,11 @@ En esta sección se muestra un paso del procesamiento de una orden de compra, do
 </PurchaseOrder>  
 ```  
   
- Un paso del procesamiento de la información de la orden de compra contenida en el documento XML anterior es para rellenar la orden desde el inventario actual de la compañía.  El empleado responsable de rellenar la orden de compra desde el almacén de la compañía no necesita ver todo el contenido de la orden de compra; solo necesita ver la información de producto.  Para exponer únicamente la información de producto desde el documento XML, cree un **DataSet** fuertemente tipado con un esquema, escrito como un esquema del lenguaje de definición de esquema XML \(XSD\), que se asigne a los productos y cantidades pedidos.  Para obtener más información sobre objetos **DataSet** fuertemente tipados, vea [DataSets con establecimiento de tipos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
+ <span data-ttu-id="052d9-107">Un paso del procesamiento de la información de la orden de compra contenida en el documento XML anterior es para rellenar la orden desde el inventario actual de la compañía.</span><span class="sxs-lookup"><span data-stu-id="052d9-107">One step in processing the purchase order information contained in the preceding XML document is for the order to be filled from the company's current inventory.</span></span> <span data-ttu-id="052d9-108">El empleado responsable de rellenar la orden de compra desde el almacén de la compañía no necesita ver todo el contenido de la orden de compra; solo necesita ver la información de producto.</span><span class="sxs-lookup"><span data-stu-id="052d9-108">The employee responsible for filling the order from the company's warehouse does not need to see the entire contents of the purchase order; they only need to see the product information for the order.</span></span> <span data-ttu-id="052d9-109">Para exponer únicamente la información de producto desde el documento XML, cree un fuertemente tipado **conjunto de datos** con un esquema, escrito como un esquema de lenguaje (XSD) de definición de esquema XML, que se asigne a los productos y cantidades pedidos.</span><span class="sxs-lookup"><span data-stu-id="052d9-109">To expose only the product information from the XML document, create a strongly typed **DataSet** with a schema, written as XML Schema definition language (XSD) schema, that maps to the products and quantities ordered.</span></span> <span data-ttu-id="052d9-110">Para obtener más información acerca de establecimiento inflexible de tipos **conjunto de datos** los objetos, vea [conjuntos de datos con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).</span><span class="sxs-lookup"><span data-stu-id="052d9-110">For more information about strongly typed **DataSet** objects, see [Typed DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).</span></span>  
   
- En el código siguiente se muestra el esquema a partir del cual se genera el **DataSet** fuertemente tipado para este ejemplo.  
+ <span data-ttu-id="052d9-111">El código siguiente muestra el esquema desde el que fuertemente tipado **conjunto de datos** se genera para este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="052d9-111">The following code shows the schema from which the strongly typed **DataSet** is generated for this sample.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" standalone="yes"?>  
 <xs:schema id="OrderDetail" xmlns=""   
                             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
@@ -161,11 +167,11 @@ En esta sección se muestra un paso del procesamiento de una orden de compra, do
 </xs:schema>  
 ```  
   
- Observe que en el esquema del **DataSet** solo se incluye información de los elementos **OrderDetails** y **Products** del documento XML original.  La sincronización del **DataSet** con un **XmlDataDocument** garantiza que los elementos no incluidos en el **DataSet** persistirán con el documento XML.  
+ <span data-ttu-id="052d9-112">Tenga en cuenta esa única información de la **OrderDetails** y **productos** se incluyen los elementos del documento XML original en el esquema para el **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="052d9-112">Notice that only information from the **OrderDetails** and **Products** elements of the original XML document are included in the schema for the **DataSet**.</span></span> <span data-ttu-id="052d9-113">Sincronizar la **conjunto de datos** con una **XmlDataDocument** garantiza que los elementos no incluidos en el **conjunto de datos** persistirán con el documento XML.</span><span class="sxs-lookup"><span data-stu-id="052d9-113">Synchronizing the **DataSet** with an **XmlDataDocument** ensures that the elements not included in the **DataSet** will persist with the XML document.</span></span>  
   
- Con el **DataSet** fuertemente tipado generado a partir del esquema XML \(con un espacio de nombres **Northwind.FillOrder**\), se puede exponer una parte del documento XML original si sincroniza el **DataSet** con el **XmlDataDocument** cargado desde el documento XML de origen.  Hay que tener en cuenta que el **DataSet** generado desde el esquema contiene estructura, pero no datos.  Los datos se rellenan al cargar el XML en el **XmlDataDocument**.  Si intenta cargar un **XmlDataDocument** sincronizado con un **DataSet** que ya contiene datos, se iniciará una excepción.  
+ <span data-ttu-id="052d9-114">Con fuertemente tipado **conjunto de datos** generado desde el esquema XML (con un espacio de nombres de **Northwind.FillOrder**), se puede exponer una parte del documento XML original si sincroniza el  **Conjunto de datos** con el **XmlDataDocument** cargado desde el documento XML de origen.</span><span class="sxs-lookup"><span data-stu-id="052d9-114">With the strongly typed **DataSet** generated from the XML Schema (with a namespace of **Northwind.FillOrder**), a portion of the original XML document can be exposed by synchronizing the **DataSet** with the **XmlDataDocument** loaded from the source XML document.</span></span> <span data-ttu-id="052d9-115">Tenga en cuenta que la **conjunto de datos** generado desde el esquema contiene estructura, pero ningún dato.</span><span class="sxs-lookup"><span data-stu-id="052d9-115">Notice that the **DataSet** generated from the schema contains structure but no data.</span></span> <span data-ttu-id="052d9-116">Los datos se rellenan al cargar el XML en el **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="052d9-116">The data is filled in when you load the XML into the **XmlDataDocument**.</span></span> <span data-ttu-id="052d9-117">Si intenta cargar un **XmlDataDocument** que se ha sincronizado con un **conjunto de datos** que ya contiene datos, se producirá una excepción.</span><span class="sxs-lookup"><span data-stu-id="052d9-117">If you attempt to load an **XmlDataDocument** that has been synchronized with a **DataSet** that already contains data, an exception will be thrown.</span></span>  
   
- Una vez actualizado el **DataSet** \(y el **XmlDataDocument**\), el **XmlDataDocument** puede escribir el documento XML modificado con los elementos omitidos por el **DataSet** todavía intactos, como se muestra a continuación.  En el escenario de la orden de compra, una vez rellenados los artículos pedidos, se puede pasar el documento XML modificado al siguiente paso del proceso de pedido, quizás al departamento de envíos de la compañía.  
+ <span data-ttu-id="052d9-118">Después de la **conjunto de datos** (y la **XmlDataDocument**) se ha actualizado, el **XmlDataDocument** , a continuación, puede escribir el documento XML modificado con los elementos omitidos por el **Conjunto de datos** todavía intactos, como se muestra a continuación.</span><span class="sxs-lookup"><span data-stu-id="052d9-118">After the **DataSet** (and the **XmlDataDocument**) has been updated, the **XmlDataDocument** can then write out the modified XML document with the elements ignored by the **DataSet** still intact, as shown below.</span></span> <span data-ttu-id="052d9-119">En el escenario de la orden de compra, una vez rellenados los artículos pedidos, se puede pasar el documento XML modificado al siguiente paso del proceso de pedido, quizás al departamento de envíos de la compañía.</span><span class="sxs-lookup"><span data-stu-id="052d9-119">In the purchase order scenario, after the order items have been filled, the modified XML document can then be passed on to the next step in the order process, perhaps to the company's shipping department.</span></span>  
   
 ```vb  
 Imports System  
@@ -235,6 +241,6 @@ public class Sample
 }  
 ```  
   
-## Vea también  
- [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="052d9-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="052d9-120">See Also</span></span>  
+ [<span data-ttu-id="052d9-121">Sincronización de DataSet y XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="052d9-121">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="052d9-122">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="052d9-122">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

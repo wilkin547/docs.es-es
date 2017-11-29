@@ -1,53 +1,55 @@
 ---
-title: "WCF y nombres de dominio internacionalizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WCF y nombres de dominio internacionalizados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ab9346e7826fcef5151ef976b6ca7f25120fa5a3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# WCF y nombres de dominio internacionalizados
-Se ha agregado compatibilidad para permitir servicios WCF con nombres de dominio internacionalizados \(IDN\).  Un nombre de dominio internacionalizado es un nombre de dominio que contiene caracteres no ASCII.  Esta compatibilidad incluye tanto la capacidad para hospedar un servicio de WCF con un nombre IDN y un cliente de WCF para comunicarse con un servicio web con un nombre IDN.  
+# <a name="wcf-and-internationalized-domain-names"></a><span data-ttu-id="0594e-102">WCF y nombres de dominio internacionalizados</span><span class="sxs-lookup"><span data-stu-id="0594e-102">WCF and Internationalized Domain Names</span></span>
+<span data-ttu-id="0594e-103">Se ha agregado compatibilidad para permitir servicios WCF con nombres de dominio internacionalizados (IDN).</span><span class="sxs-lookup"><span data-stu-id="0594e-103">Support has been added to allow for WCF services with Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="0594e-104">Un nombre de dominio internacionalizado es un nombre de dominio que contiene caracteres no ASCII.</span><span class="sxs-lookup"><span data-stu-id="0594e-104">An internationalized domain name is a domain name that contains non-ASCII characters.</span></span> <span data-ttu-id="0594e-105">Esta compatibilidad incluye tanto la capacidad para hospedar un servicio de WCF con un nombre IDN y un cliente de WCF para comunicarse con un servicio web con un nombre IDN.</span><span class="sxs-lookup"><span data-stu-id="0594e-105">This support includes both the ability to host a WCF service with an IDN name and a WCF client to talk to a web service with an IDN name.</span></span>  
   
-## System.Uri e IDN  
- <xref:System.Uri> tiene dos propiedades <xref:System.Uri.Host%2A> y <xref:System.Uri.DnsSafeHost%2A>.  Estas propiedades contienen valores Unicode o Punycode dependiendo de las opciones de configuración de IDN.  
+## <a name="systemuri-and-idn"></a><span data-ttu-id="0594e-106">System.Uri e IDN</span><span class="sxs-lookup"><span data-stu-id="0594e-106">System.Uri and IDN</span></span>  
+ <span data-ttu-id="0594e-107"><xref:System.Uri> tiene dos propiedades <xref:System.Uri.Host%2A> y <xref:System.Uri.DnsSafeHost%2A>.</span><span class="sxs-lookup"><span data-stu-id="0594e-107"><xref:System.Uri> has two properties <xref:System.Uri.Host%2A> and <xref:System.Uri.DnsSafeHost%2A>.</span></span> <span data-ttu-id="0594e-108">Estas propiedades contienen valores Unicode o Punycode dependiendo de las opciones de configuración de IDN.</span><span class="sxs-lookup"><span data-stu-id="0594e-108">These properties contain Unicode or Punycode values depending upon the IDN configuration settings.</span></span>  
   
- IDN está habilitada en el archivo de configuración de una aplicación mediante el código XML siguiente  
+ <span data-ttu-id="0594e-109">IDN está habilitada en el archivo de configuración de una aplicación mediante el código XML siguiente</span><span class="sxs-lookup"><span data-stu-id="0594e-109">IDN is enabled in an application’s configuration file using the following XML</span></span>  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All/AllExceptIntranet/None" />  
   </uri>  
 </configuration>  
-  
 ```  
   
- El elemento \<idn\> contiene el atributo enabled que se puede establecer en uno de los siguientes valores:  
+ <span data-ttu-id="0594e-110">El \<idn > elemento contiene el atributo enabled que se puede establecer en uno de los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="0594e-110">The \<idn> element contains the enabled attribute which can be set to one of the following values:</span></span>  
   
-1.  "Ninguno"  
+1.  <span data-ttu-id="0594e-111">"None"</span><span class="sxs-lookup"><span data-stu-id="0594e-111">"None"</span></span>  
   
-2.  “AllExceptIntranet”  
+2.  <span data-ttu-id="0594e-112">"AllExceptIntranet"</span><span class="sxs-lookup"><span data-stu-id="0594e-112">"AllExceptIntranet"</span></span>  
   
-3.  "Todos"  
+3.  <span data-ttu-id="0594e-113">"All"</span><span class="sxs-lookup"><span data-stu-id="0594e-113">"All"</span></span>  
   
- Cuando el valor de IDN se establece en “None”, Uri.Host o Uri.DnsSafeHost no realiza ninguna conversión.  Cuando el valor de IDN se establece en “All”, uri.Host sigue siendo Unicode y uri.DnsSafeHost se convierte en Punycode.  Cuando el valor de IDN se establece en “AllExceptIntranet”, uri.DnsSafeHost se convierte en Punycode para las direcciones de Internet y sigue siendo Unicode para las direcciones de la intranet.  Este valor es importante para la resolución de nombres DNS correcta.  Observe que no es necesario configurar este valor para Windows 8 y las versiones más recientes.  
-  
-> [!WARNING]
->  Nunca debe codificar una dirección mediante Punycode.  WCF lo convertirá automáticamente basándose en las opciones de configuración que se apliquen.  
+ <span data-ttu-id="0594e-114">Cuando el valor de IDN se establece en "None", no se realizan conversiones Uri.Host o Uri.DnsSafeHost.</span><span class="sxs-lookup"><span data-stu-id="0594e-114">When the IDN setting is set to "None", no conversions are performed by Uri.Host or Uri.DnsSafeHost.</span></span> <span data-ttu-id="0594e-115">Cuando el valor de IDN se establece en "All", uri. Host sigue siendo Unicode y uri. DnsSafeHost se convierte en Punycode.</span><span class="sxs-lookup"><span data-stu-id="0594e-115">When the IDN setting is set to "All", uri.Host remains Unicode and uri.DnsSafeHost is converted to Punycode.</span></span> <span data-ttu-id="0594e-116">Cuando el valor de IDN se establece en "AllExceptIntranet", el uri. DnsSafeHost se convierte en Punycode para las direcciones de internet y sigue siendo Unicode para las direcciones de intranet.</span><span class="sxs-lookup"><span data-stu-id="0594e-116">When the IDN setting is set to "AllExceptIntranet", uri.DnsSafeHost is converted to Punycode for internet addresses, and remains Unicode for intranet addresses.</span></span> <span data-ttu-id="0594e-117">Este valor es importante para la resolución de nombres DNS correcta.</span><span class="sxs-lookup"><span data-stu-id="0594e-117">This setting is important for correct DNS name resolution.</span></span> <span data-ttu-id="0594e-118">Observe que no es necesario configurar este valor para Windows 8 y las versiones más recientes.</span><span class="sxs-lookup"><span data-stu-id="0594e-118">Note this setting is not required to be configured for Windows 8 and newer versions.</span></span>  
   
 > [!WARNING]
->  Al agregar caracteres Unicode a applicationHost.exe.config, guarde el archivo con codificación UTF\-8.  
+>  <span data-ttu-id="0594e-119">Nunca debe codificar una dirección mediante Punycode.</span><span class="sxs-lookup"><span data-stu-id="0594e-119">You should never hard-code an address using Punycode.</span></span> <span data-ttu-id="0594e-120">WCF lo convertirá automáticamente basándose en las opciones de configuración que se apliquen.</span><span class="sxs-lookup"><span data-stu-id="0594e-120">WCF will convert it for you based on the configuration settings you apply.</span></span>  
   
-## Vea también  
- [System.Uri](http://msdn.microsoft.com/library/system.uri.aspx)
+> [!WARNING]
+>  <span data-ttu-id="0594e-121">Al agregar caracteres Unicode a applicationHost.exe.config, guarde el archivo con codificación UTF-8.</span><span class="sxs-lookup"><span data-stu-id="0594e-121">When adding Unicode characters to applicationHost.exe.config, save the file using the UTF-8 encoding.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0594e-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="0594e-122">See Also</span></span>  
+ [<span data-ttu-id="0594e-123">System.Uri</span><span class="sxs-lookup"><span data-stu-id="0594e-123">System.Uri</span></span>](http://msdn.microsoft.com/library/system.uri.aspx)

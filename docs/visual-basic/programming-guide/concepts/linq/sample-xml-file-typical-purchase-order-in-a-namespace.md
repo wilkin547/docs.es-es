@@ -1,35 +1,27 @@
 ---
-title: "Archivo XML de ejemplo: Pedido de compra típico en un Namespace3 | Documentos de Microsoft"
+title: "Archivo XML de ejemplo: Pedido de compra típico en una Namespace3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4ba219afdf809e7539c1c521eb15f5d8786f8a6f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 689570221e4777eee0ecc7f30c8af8b46d99654a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres
-El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Este archivo es un pedido de compra típico. El XML se encuentra en un espacio de nombres.  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="3a882-102">Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="3a882-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="3a882-103">El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a882-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="3a882-104">Este archivo es un pedido de compra típico.</span><span class="sxs-lookup"><span data-stu-id="3a882-104">This file is a typical purchase order.</span></span> <span data-ttu-id="3a882-105">El XML se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="3a882-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="3a882-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="3a882-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -71,5 +63,5 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Documentos XML de ejemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="3a882-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="3a882-107">See Also</span></span>  
+ [<span data-ttu-id="3a882-108">Documentos XML de ejemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="3a882-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

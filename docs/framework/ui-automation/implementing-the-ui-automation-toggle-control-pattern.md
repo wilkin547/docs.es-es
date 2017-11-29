@@ -1,64 +1,67 @@
 ---
-title: "Implementing the UI Automation Toggle Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Toggle control pattern"
-  - "control patterns, Toggle"
-  - "UI Automation, Toggle control pattern"
+title: "Implementar el patrón de control Toggle de UI Automation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Toggle control pattern
+- control patterns, Toggle
+- UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 93e2599a6151a7948edf1baf931b553008afd8de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Toggle Control Pattern
+# <a name="implementing-the-ui-automation-toggle-control-pattern"></a><span data-ttu-id="16c33-102">Implementar el patrón de control Toggle de UI Automation</span><span class="sxs-lookup"><span data-stu-id="16c33-102">Implementing the UI Automation Toggle Control Pattern</span></span>
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="16c33-103">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="16c33-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="16c33-104">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="16c33-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IToggleProvider>, incluida la información sobre métodos y propiedades. Al final del tema se ofrecen vínculos a referencias adicionales.  
+ <span data-ttu-id="16c33-105">En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IToggleProvider>, incluida la información sobre métodos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="16c33-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IToggleProvider>, including information about methods and properties.</span></span> <span data-ttu-id="16c33-106">Al final del tema se ofrecen vínculos a referencias adicionales.</span><span class="sxs-lookup"><span data-stu-id="16c33-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- El patrón de control <xref:System.Windows.Automation.TogglePattern> se usa para admitir controles que pueden recorrer un conjunto de estados y mantener un estado una vez establecido. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="16c33-107">El patrón de control <xref:System.Windows.Automation.TogglePattern> se usa para admitir controles que pueden recorrer un conjunto de estados y mantener un estado una vez establecido.</span><span class="sxs-lookup"><span data-stu-id="16c33-107">The <xref:System.Windows.Automation.TogglePattern> control pattern is used to support controls that can cycle through a set of states and maintain a state once set.</span></span> <span data-ttu-id="16c33-108">Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="16c33-108">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Directrices y convenciones de implementación  
- Al implementar el patrón de control Toggle, tenga en cuenta las siguientes directrices y convenciones:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="16c33-109">Directrices y convenciones de implementación</span><span class="sxs-lookup"><span data-stu-id="16c33-109">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="16c33-110">Al implementar el patrón de control Toggle, tenga en cuenta las siguientes directrices y convenciones:</span><span class="sxs-lookup"><span data-stu-id="16c33-110">When implementing the Toggle control pattern, note the following guidelines and conventions:</span></span>  
   
--   Los controles que no mantienen el estado cuando se activan, como botones, botones de barra de herramientas e hipervínculos, deben implementar <xref:System.Windows.Automation.Provider.IInvokeProvider> en su lugar.  
+-   <span data-ttu-id="16c33-111">Los controles que no mantienen el estado cuando se activan, como botones, botones de barra de herramientas e hipervínculos, deben implementar <xref:System.Windows.Automation.Provider.IInvokeProvider> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="16c33-111">Controls that do not maintain state when activated, such as buttons, toolbar buttons, and hyperlinks, must implement <xref:System.Windows.Automation.Provider.IInvokeProvider> instead.</span></span>  
   
--   Un control debe recorrer su <xref:System.Windows.Automation.ToggleState> en el siguiente orden: <xref:System.Windows.Automation.ToggleState>, <xref:System.Windows.Automation.ToggleState> y, si se admite, <xref:System.Windows.Automation.ToggleState>.  
+-   <span data-ttu-id="16c33-112">Un control debe recorrer su <xref:System.Windows.Automation.ToggleState> en el siguiente orden: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> y, si se admite, <xref:System.Windows.Automation.ToggleState.Indeterminate>.</span><span class="sxs-lookup"><span data-stu-id="16c33-112">A control must cycle through its <xref:System.Windows.Automation.ToggleState> in the following order: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> and, if supported, <xref:System.Windows.Automation.ToggleState.Indeterminate>.</span></span>  
   
--   <xref:System.Windows.Automation.TogglePattern> no ofrece un método SetState\(newState\) debido a problemas relacionados con la configuración directa de una CheckBox de tres estados sin recorrer su secuencia <xref:System.Windows.Automation.ToggleState> correspondiente.  
+-   <span data-ttu-id="16c33-113"><xref:System.Windows.Automation.TogglePattern> no ofrece un método SetState(newState) debido a problemas relacionados con la configuración directa de una CheckBox de tres estados sin recorrer su secuencia <xref:System.Windows.Automation.ToggleState> correspondiente.</span><span class="sxs-lookup"><span data-stu-id="16c33-113"><xref:System.Windows.Automation.TogglePattern> does not provide a SetState(newState) method due to issues surrounding the direct setting of a tri-state CheckBox without cycling through its appropriate <xref:System.Windows.Automation.ToggleState> sequence.</span></span>  
   
--   El control RadioButton no implementa <xref:System.Windows.Automation.Provider.IToggleProvider>, ya que no es capaz de recorrer sus estados válidos.  
+-   <span data-ttu-id="16c33-114">El control RadioButton no implementa <xref:System.Windows.Automation.Provider.IToggleProvider>, ya que no es capaz de recorrer sus estados válidos.</span><span class="sxs-lookup"><span data-stu-id="16c33-114">The RadioButton control does not implement <xref:System.Windows.Automation.Provider.IToggleProvider>, as it is not capable of cycling through its valid states.</span></span>  
   
 <a name="Required_Members_for_IToggleProvider"></a>   
-## Miembros requeridos para IToggleProvider  
- Para implementar <xref:System.Windows.Automation.Provider.IToggleProvider>, se requieren las siguientes propiedades y métodos.  
+## <a name="required-members-for-itoggleprovider"></a><span data-ttu-id="16c33-115">Miembros requeridos para IToggleProvider</span><span class="sxs-lookup"><span data-stu-id="16c33-115">Required Members for IToggleProvider</span></span>  
+ <span data-ttu-id="16c33-116">Para implementar <xref:System.Windows.Automation.Provider.IToggleProvider>, se requieren las siguientes propiedades y métodos.</span><span class="sxs-lookup"><span data-stu-id="16c33-116">The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IToggleProvider>.</span></span>  
   
-|Miembro requerido|Tipo de miembro|Notas|  
-|-----------------------|---------------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Propiedad|Ninguna|  
+|<span data-ttu-id="16c33-117">Miembro requerido</span><span class="sxs-lookup"><span data-stu-id="16c33-117">Required member</span></span>|<span data-ttu-id="16c33-118">Tipo de miembro</span><span class="sxs-lookup"><span data-stu-id="16c33-118">Member type</span></span>|<span data-ttu-id="16c33-119">Notas</span><span class="sxs-lookup"><span data-stu-id="16c33-119">Notes</span></span>|  
+|---------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|<span data-ttu-id="16c33-120">Método</span><span class="sxs-lookup"><span data-stu-id="16c33-120">Method</span></span>|<span data-ttu-id="16c33-121">Ninguno</span><span class="sxs-lookup"><span data-stu-id="16c33-121">None</span></span>|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|<span data-ttu-id="16c33-122">Propiedad</span><span class="sxs-lookup"><span data-stu-id="16c33-122">Property</span></span>|<span data-ttu-id="16c33-123">Ninguno</span><span class="sxs-lookup"><span data-stu-id="16c33-123">None</span></span>|  
   
- Este patrón de control no tiene eventos asociados.  
+ <span data-ttu-id="16c33-124">Este patrón de control no tiene eventos asociados.</span><span class="sxs-lookup"><span data-stu-id="16c33-124">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## Excepciones  
- Este patrón de control no tiene excepciones asociadas.  
+## <a name="exceptions"></a><span data-ttu-id="16c33-125">Excepciones</span><span class="sxs-lookup"><span data-stu-id="16c33-125">Exceptions</span></span>  
+ <span data-ttu-id="16c33-126">Este patrón de control no tiene excepciones asociadas.</span><span class="sxs-lookup"><span data-stu-id="16c33-126">This control pattern has no associated exceptions.</span></span>  
   
-## Vea también  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Get the Toggle State of a Check Box Using UI Automation](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="16c33-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="16c33-127">See Also</span></span>  
+ [<span data-ttu-id="16c33-128">Información general del patrones de Control UI Automation</span><span class="sxs-lookup"><span data-stu-id="16c33-128">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="16c33-129">Patrones de Control compatibles en un proveedor de UI Automation</span><span class="sxs-lookup"><span data-stu-id="16c33-129">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="16c33-130">Patrones de Control UI Automation para clientes</span><span class="sxs-lookup"><span data-stu-id="16c33-130">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="16c33-131">Obtener el estado de alternancia de una casilla mediante UI Automation</span><span class="sxs-lookup"><span data-stu-id="16c33-131">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="16c33-132">Información general sobre el árbol de automatización de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="16c33-132">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="16c33-133">Usar almacenamiento en caché en la UI Automation</span><span class="sxs-lookup"><span data-stu-id="16c33-133">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

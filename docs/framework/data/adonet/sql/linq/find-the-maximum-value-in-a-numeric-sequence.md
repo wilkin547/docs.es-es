@@ -1,47 +1,53 @@
 ---
-title: "Buscar el valor m&#225;ximo en una secuencia num&#233;rica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Buscar el valor máximo de una secuencia numérica"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 06c8d2b2eedc2d3684ef44f028cd73e80a8da5cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Buscar el valor m&#225;ximo en una secuencia num&#233;rica
-Utilice el operador <xref:System.Linq.Enumerable.Max%2A> para buscar el valor máximo de una secuencia de valores numéricos.  
+# <a name="find-the-maximum-value-in-a-numeric-sequence"></a><span data-ttu-id="7b491-102">Buscar el valor máximo de una secuencia numérica</span><span class="sxs-lookup"><span data-stu-id="7b491-102">Find the Maximum Value in a Numeric Sequence</span></span>
+<span data-ttu-id="7b491-103">Utilice el operador <xref:System.Linq.Enumerable.Max%2A> para buscar el valor máximo de una secuencia de valores numéricos.</span><span class="sxs-lookup"><span data-stu-id="7b491-103">Use the <xref:System.Linq.Enumerable.Max%2A> operator to find the highest value in a sequence of numeric values.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se busca la fecha de la última contratación de cualquier empleado.  
+## <a name="example"></a><span data-ttu-id="7b491-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7b491-104">Example</span></span>  
+ <span data-ttu-id="7b491-105">En el ejemplo siguiente se busca la fecha de la última contratación de cualquier empleado.</span><span class="sxs-lookup"><span data-stu-id="7b491-105">The following example finds the latest date of hire for any employee.</span></span>  
   
- Si ejecuta esta consulta en la base de datos de ejemplo Northwind, el resultado es: `11/15/1994 12:00:00 AM`.  
+ <span data-ttu-id="7b491-106">Si ejecuta esta consulta en la base de datos de ejemplo Northwind, el resultado es: `11/15/1994 12:00:00 AM`.</span><span class="sxs-lookup"><span data-stu-id="7b491-106">If you run this query against the sample Northwind database, the output is: `11/15/1994 12:00:00 AM`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#6)]
  [!code-vb[DLinqQueryExamples#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#6)]  
   
-## Ejemplo  
- En el ejemplo siguiente se busca el número máximo de unidades en existencias para cualquier producto.  
+## <a name="example"></a><span data-ttu-id="7b491-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7b491-107">Example</span></span>  
+ <span data-ttu-id="7b491-108">En el ejemplo siguiente se busca el número máximo de unidades en existencias para cualquier producto.</span><span class="sxs-lookup"><span data-stu-id="7b491-108">The following example finds the most units in stock for any product.</span></span>  
   
- Si ejecuta este ejemplo en la base de datos de ejemplo Northwind, el resultado es: `125`.  
+ <span data-ttu-id="7b491-109">Si ejecuta este ejemplo en la base de datos de ejemplo Northwind, el resultado es: `125`.</span><span class="sxs-lookup"><span data-stu-id="7b491-109">If you run this example against the sample Northwind database, the output is: `125`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#7)]
  [!code-vb[DLinqQueryExamples#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#7)]  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza Max para encontrar los `Products` que tienen el precio unitario más alto en cada categoría.  En este caso, los resultados se muestran por categoría.  
+## <a name="example"></a><span data-ttu-id="7b491-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7b491-110">Example</span></span>  
+ <span data-ttu-id="7b491-111">En el ejemplo siguiente se utiliza Max para encontrar los `Products` que tienen el precio unitario más alto en cada categoría.</span><span class="sxs-lookup"><span data-stu-id="7b491-111">The following example uses Max to find the `Products` that have the highest unit price in each category.</span></span> <span data-ttu-id="7b491-112">En este caso, los resultados se muestran por categoría.</span><span class="sxs-lookup"><span data-stu-id="7b491-112">The output then lists the results by category.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#8)]
  [!code-vb[DLinqQueryExamples#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#8)]  
   
- Si ejecuta la consulta anterior en la base de datos de ejemplo Northwind, los resultados se parecerán a los siguientes:  
+ <span data-ttu-id="7b491-113">Si ejecuta la consulta anterior en la base de datos de ejemplo Northwind, los resultados se parecerán a los siguientes:</span><span class="sxs-lookup"><span data-stu-id="7b491-113">If you run the previous query against the Northwind sample database, your results will resemble the following:</span></span>  
   
  `1`  
   
@@ -75,6 +81,6 @@ Utilice el operador <xref:System.Linq.Enumerable.Max%2A> para buscar el valor m�
   
  `Carnarvon Tigers`  
   
-## Vea también  
- [Consultas de agregado](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)   
- [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a><span data-ttu-id="7b491-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="7b491-114">See Also</span></span>  
+ [<span data-ttu-id="7b491-115">Consultas de agregado</span><span class="sxs-lookup"><span data-stu-id="7b491-115">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
+ [<span data-ttu-id="7b491-116">Descargar bases de datos de ejemplo</span><span class="sxs-lookup"><span data-stu-id="7b491-116">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

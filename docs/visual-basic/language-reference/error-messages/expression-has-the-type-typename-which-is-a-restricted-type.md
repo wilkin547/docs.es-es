@@ -1,59 +1,41 @@
 ---
-title: "Expresión tiene el tipo &quot;&lt;typename&gt;&quot; que es un tipo restringido y no se puede utilizar para tener acceso a miembros heredados de &quot;Object&quot; o &quot;ValueType&quot; | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Expresión tiene el tipo de &#39; &lt;typename&gt;&#39; lo que es un tipo restringido y no se puede usar para tener acceso a miembros heredados de &#39; objeto &#39; o &#39; Tipo de valor &#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc31393
 - vbc31393
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC31393
+helpviewer_keywords: BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aaedfd825889498159f92cbd1d615cc0064973d3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a30742bd46ccd1a3e5a688ebd2621e2c8a3d50e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>Expresión tiene el tipo '&lt;typename&gt;' que es un tipo restringido y no se puede utilizar para tener acceso a miembros heredados de 'Object' o 'ValueType'
-Una expresión se evalúa como un tipo que no se puede aplicar la conversión boxing common language runtime (CLR), pero tiene acceso a un miembro que requiere la conversión boxing.  
+# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a><span data-ttu-id="27845-102">Expresión tiene el tipo de &#39; &lt;typename&gt;&#39; lo que es un tipo restringido y no se puede usar para tener acceso a miembros heredados de &#39; objeto &#39; o &#39; Tipo de valor &#39;</span><span class="sxs-lookup"><span data-stu-id="27845-102">Expression has the type &#39;&lt;typename&gt;&#39; which is a restricted type and cannot be used to access members inherited from &#39;Object&#39; or &#39;ValueType&#39;</span></span>
+<span data-ttu-id="27845-103">Una expresión se evalúa como un tipo que no se puede realizar la conversión boxing por common language runtime (CLR), pero tiene acceso a un miembro que requiere la conversión boxing.</span><span class="sxs-lookup"><span data-stu-id="27845-103">An expression evaluates to a type that cannot be boxed by the common language runtime (CLR) but accesses a member that requires boxing.</span></span>  
   
- *Conversión boxing* hace referencia al procesamiento necesario para convertir un tipo a `Object` o, en ocasiones, <xref:System.ValueType>.</xref:System.ValueType> Common language runtime no puede cuadro ciertos tipos de estructura, por ejemplo <xref:System.ArgIterator>, <xref:System.RuntimeArgumentHandle>y <xref:System.TypedReference>.</xref:System.TypedReference> </xref:System.RuntimeArgumentHandle> </xref:System.ArgIterator>  
+ <span data-ttu-id="27845-104">La*conversión boxing* hace referencia al procesamiento necesario para convertir un tipo a `Object` o, en ocasiones, a <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="27845-104">*Boxing* refers to the processing necessary to convert a type to `Object` or, on occasion, to <xref:System.ValueType>.</span></span> <span data-ttu-id="27845-105">Common language runtime no puede boxing a ciertos tipos de estructura, por ejemplo <xref:System.ArgIterator>, <xref:System.RuntimeArgumentHandle>, y <xref:System.TypedReference>.</span><span class="sxs-lookup"><span data-stu-id="27845-105">The common language runtime cannot box certain structure types, for example <xref:System.ArgIterator>, <xref:System.RuntimeArgumentHandle>, and <xref:System.TypedReference>.</span></span>  
   
- Esta expresión intenta utilizar el tipo restringido para llamar a un método heredado de <xref:System.Object>o <xref:System.ValueType>, como <xref:System.Object.GetHashCode%2A>o <xref:System.Object.ToString%2A>.</xref:System.Object.ToString%2A> </xref:System.Object.GetHashCode%2A> </xref:System.ValueType> </xref:System.Object> Para obtener acceso a este método [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ha intentado una conversión boxing implícita que produce este error.  
+ <span data-ttu-id="27845-106">Esta expresión intenta utilizar el tipo restringido para llamar a un método heredado de <xref:System.Object> o <xref:System.ValueType>, como <xref:System.Object.GetHashCode%2A> o <xref:System.Object.ToString%2A>.</span><span class="sxs-lookup"><span data-stu-id="27845-106">This expression attempts to use the restricted type to call a method inherited from <xref:System.Object> or <xref:System.ValueType>, such as <xref:System.Object.GetHashCode%2A> or <xref:System.Object.ToString%2A>.</span></span> <span data-ttu-id="27845-107">Para tener acceso a este método, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ha intentado una conversión boxing implícita que produce este error.</span><span class="sxs-lookup"><span data-stu-id="27845-107">To access this method, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] has attempted an implicit boxing conversion that causes this error.</span></span>  
   
- **Id. de error:** BC31393  
+ <span data-ttu-id="27845-108">**Id. de error:** BC31393</span><span class="sxs-lookup"><span data-stu-id="27845-108">**Error ID:** BC31393</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="27845-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="27845-109">To correct this error</span></span>  
   
-1.  Localice la expresión que se evalúa en el tipo mencionado.  
+1.  <span data-ttu-id="27845-110">Localice la expresión que se evalúa en el tipo mencionado.</span><span class="sxs-lookup"><span data-stu-id="27845-110">Locate the expression that evaluates to the cited type.</span></span>  
   
-2.  Busque la parte de la instrucción que intenta llamar al método heredado o <xref:System.Object> <xref:System.ValueType>.</xref:System.ValueType> </xref:System.Object>  
+2.  <span data-ttu-id="27845-111">Busque la parte de la instrucción que intenta llamar al método se hereda de <xref:System.Object> o <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="27845-111">Locate the part of your statement that attempts to call the method inherited from <xref:System.Object> or <xref:System.ValueType>.</span></span>  
   
-3.  Vuelva a escribir la instrucción para evitar la llamada al método.  
+3.  <span data-ttu-id="27845-112">Vuelva a escribir la instrucción para evitar la llamada al método.</span><span class="sxs-lookup"><span data-stu-id="27845-112">Rewrite the statement to avoid the method call.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="27845-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="27845-113">See Also</span></span>  
+ [<span data-ttu-id="27845-114">Conversiones implícitas y explícitas</span><span class="sxs-lookup"><span data-stu-id="27845-114">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

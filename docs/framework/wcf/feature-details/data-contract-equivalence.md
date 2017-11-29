@@ -1,75 +1,77 @@
 ---
-title: "Equivalencia del contrato de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "contratos de datos [WCF], equivalencia"
+title: Equivalencia del contrato de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e3494c877db156ecc818c760bd0712f5e59ca0a3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Equivalencia del contrato de datos
-Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, o para que un servicio envíe correctamente datos a un cliente, el tipo enviado no tiene que existir necesariamente en el extremo receptor.  El único requisito es que los contratos de datos de ambos tipos sean equivalentes.  \(En ocasiones, no se requiere la equivalencia estricta, como se explica en [Versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).\)  
+# <a name="data-contract-equivalence"></a><span data-ttu-id="1a319-102">Equivalencia del contrato de datos</span><span class="sxs-lookup"><span data-stu-id="1a319-102">Data Contract Equivalence</span></span>
+<span data-ttu-id="1a319-103">Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, o para que un servicio envíe correctamente datos a un cliente, el tipo enviado no tiene que existir necesariamente en el extremo receptor.</span><span class="sxs-lookup"><span data-stu-id="1a319-103">For a client to successfully send data of a certain type to a service, or a service to successfully send data to a client, the sent type does not necessarily have to exist on the receiving end.</span></span> <span data-ttu-id="1a319-104">El único requisito es que los contratos de datos de ambos tipos sean equivalentes.</span><span class="sxs-lookup"><span data-stu-id="1a319-104">The only requirement is that the data contracts of both types be equivalent.</span></span> <span data-ttu-id="1a319-105">(A veces, una equivalencia estricta no es necesaria, como se describe en [versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)</span><span class="sxs-lookup"><span data-stu-id="1a319-105">(Sometimes, strict equivalence is not required, as discussed in [Data Contract Versioning](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)</span></span>  
   
- Para que los contratos de datos sean equivalentes, deben incluir el mismo espacio de nombres y nombre.  Además, cada miembro de datos en un lado debe tener un miembro de datos equivalente en el otro.  
+ <span data-ttu-id="1a319-106">Para que los contratos de datos sean equivalentes, deben incluir el mismo espacio de nombres y nombre.</span><span class="sxs-lookup"><span data-stu-id="1a319-106">For data contracts to be equivalent, they must have the same namespace and name.</span></span> <span data-ttu-id="1a319-107">Además, cada miembro de datos en un lado debe tener un miembro de datos equivalente en el otro.</span><span class="sxs-lookup"><span data-stu-id="1a319-107">Additionally, each data member on one side must have an equivalent data member on the other side.</span></span>  
   
- Para que los miembros de datos sean equivalentes, deben tener el mismo nombre.  De manera adicional, deben representar el mismo tipo de datos; es decir, sus contratos de datos deben ser equivalentes.  
+ <span data-ttu-id="1a319-108">Para que los miembros de datos sean equivalentes, deben tener el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="1a319-108">For data members to be equivalent, they must have the same name.</span></span> <span data-ttu-id="1a319-109">De manera adicional, deben representar el mismo tipo de datos; es decir, sus contratos de datos deben ser equivalentes.</span><span class="sxs-lookup"><span data-stu-id="1a319-109">Additionally, they must represent the same type of data; that is, their data contracts must be equivalent.</span></span>  
   
 > [!NOTE]
->  Tenga en cuenta que los nombres y espacios de nombres de contrato de datos, así como los nombres del miembros de datos, distinguen entre mayúsculas y minúsculas.  
+>  <span data-ttu-id="1a319-110">Tenga en cuenta que los nombres y espacios de nombres de contrato de datos, así como los nombres del miembros de datos, distinguen entre mayúsculas y minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1a319-110">Note that data contract names and namespaces, as well as data member names, are case-sensitive.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] nombres y espacios de nombres de contratos de datos, así como los nombres del miembro de datos, vea [Nombres de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1a319-111">espacios de nombres y nombres de contrato de datos, así como los nombres de miembro de datos, vea [nombres de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md).</span><span class="sxs-lookup"><span data-stu-id="1a319-111"> data contract names and namespaces, as well as data member names, see [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).</span></span>  
   
- Si dos tipos existen en el mismo lado \(remitente o receptor\) y sus contratos de datos no son equivalentes \(por ejemplo, tienen diferentes miembros de datos\), no debería darles el mismo nombre y espacio de nombres.  Si lo hace, pueden iniciarse excepciones.  
+ <span data-ttu-id="1a319-112">Si dos tipos existen en el mismo lado (remitente o receptor) y sus contratos de datos no son equivalentes (por ejemplo, tienen diferentes miembros de datos), no debería darles el mismo nombre y espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="1a319-112">If two types exist on the same side (sender or receiver) and their data contracts are not equivalent (for example, they have different data members), you should not give them the same name and namespace.</span></span> <span data-ttu-id="1a319-113">Si lo hace, pueden iniciarse excepciones.</span><span class="sxs-lookup"><span data-stu-id="1a319-113">Doing so may cause exceptions to be thrown.</span></span>  
   
- Los contratos de datos de los tipos siguientes son equivalentes:  
+ <span data-ttu-id="1a319-114">Los contratos de datos de los tipos siguientes son equivalentes:</span><span class="sxs-lookup"><span data-stu-id="1a319-114">The data contracts for the following types are equivalent:</span></span>  
   
  [!code-csharp[C_DataContractNames#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#5)]
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
-## Orden del miembro de datos y equivalencia del contrato de datos  
- Utilizar la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> de la clase <xref:System.Runtime.Serialization.DataMemberAttribute> puede afectar a la equivalencia del contrato de datos.  Los contratos de datos deben tener miembros que aparecen en el mismo orden para ser equivalentes.  El orden predeterminado es alfabético.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Orden de los miembros de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="data-member-order-and-data-contract-equivalence"></a><span data-ttu-id="1a319-115">Orden del miembro de datos y equivalencia del contrato de datos</span><span class="sxs-lookup"><span data-stu-id="1a319-115">Data Member Order and Data Contract equivalence</span></span>  
+ <span data-ttu-id="1a319-116">Utilizar la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> de la clase <xref:System.Runtime.Serialization.DataMemberAttribute> puede afectar a la equivalencia del contrato de datos.</span><span class="sxs-lookup"><span data-stu-id="1a319-116">Using the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> class may affect data contract equivalence.</span></span> <span data-ttu-id="1a319-117">Los contratos de datos deben tener miembros que aparecen en el mismo orden para ser equivalentes.</span><span class="sxs-lookup"><span data-stu-id="1a319-117">The data contracts must have members that appear in the same order to be equivalent.</span></span> <span data-ttu-id="1a319-118">El orden predeterminado es alfabético.</span><span class="sxs-lookup"><span data-stu-id="1a319-118">The default order is alphabetical.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1a319-119">[Orden del miembro de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md).</span><span class="sxs-lookup"><span data-stu-id="1a319-119"> [Data Member Order](../../../../docs/framework/wcf/feature-details/data-member-order.md).</span></span>  
   
- Por ejemplo, el código siguiente produce contratos de datos equivalentes.  
+ <span data-ttu-id="1a319-120">Por ejemplo, el código siguiente produce contratos de datos equivalentes.</span><span class="sxs-lookup"><span data-stu-id="1a319-120">For example, the following code results in equivalent data contracts.</span></span>  
   
  [!code-csharp[C_DataContractNames#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#6)]
  [!code-vb[C_DataContractNames#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#6)]  
   
- Sin embargo, el siguiente código no produce un contrato de datos equivalente.  
+ <span data-ttu-id="1a319-121">Sin embargo, el siguiente código no produce un contrato de datos equivalente.</span><span class="sxs-lookup"><span data-stu-id="1a319-121">However, the following does not result in an equivalent data contract.</span></span>  
   
  [!code-csharp[C_DataContractNames#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#7)]
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
-## Herencia, interfaces y equivalencia del contrato de datos  
- Al determinar la equivalencia, un contrato de datos que hereda de otro contrato de datos se trata como si fuese, simplemente, un contrato de datos que incluye todos los miembros de datos del tipo base.  Tenga presente que el orden de los miembros de datos debe coincidir y que los miembros de tipo base preceden, en el orden, a los miembros de tipo derivado.  Además, si, como en el ejemplo de código siguiente, dos miembros de datos tienen el mismo valor de orden, la clasificación de esos miembros de datos será alfabética.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Orden de los miembros de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+## <a name="inheritance-interfaces-and-data-contract-equivalence"></a><span data-ttu-id="1a319-122">Herencia, interfaces y equivalencia del contrato de datos</span><span class="sxs-lookup"><span data-stu-id="1a319-122">Inheritance, Interfaces, and Data Contract Equivalence</span></span>  
+ <span data-ttu-id="1a319-123">Al determinar la equivalencia, un contrato de datos que hereda de otro contrato de datos se trata como si fuese, simplemente, un contrato de datos que incluye todos los miembros de datos del tipo base.</span><span class="sxs-lookup"><span data-stu-id="1a319-123">When determining equivalence, a data contract that inherits from another data contract is treated as if it is just one data contract that includes all of the data members from the base type.</span></span> <span data-ttu-id="1a319-124">Tenga presente que el orden de los miembros de datos debe coincidir y que los miembros de tipo base preceden, en el orden, a los miembros de tipo derivado.</span><span class="sxs-lookup"><span data-stu-id="1a319-124">Keep in mind that the order of the data members must match and that base type members precede derived type members in the order.</span></span> <span data-ttu-id="1a319-125">Además, si, como en el ejemplo de código siguiente, dos miembros de datos tienen el mismo valor de orden, la clasificación de esos miembros de datos será alfabética.</span><span class="sxs-lookup"><span data-stu-id="1a319-125">Furthermore, if, as in the following code example, two data members have the same order value, the ordering for those data members is alphabetical.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1a319-126">[Orden del miembro de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md).</span><span class="sxs-lookup"><span data-stu-id="1a319-126"> [Data Member Order](../../../../docs/framework/wcf/feature-details/data-member-order.md).</span></span>  
   
- En el ejemplo siguiente, el contrato de datos para el tipo `Employee` es equivalente al contrato de datos para el tipo `Worker`.  
+ <span data-ttu-id="1a319-127">En el ejemplo siguiente, el contrato de datos para el tipo `Employee` es equivalente al contrato de datos para el tipo `Worker`.</span><span class="sxs-lookup"><span data-stu-id="1a319-127">In the following example, the data contract for type `Employee` is equivalent to the data contract for the type `Worker`.</span></span>  
   
  [!code-csharp[C_DataContractNames#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#8)]
  [!code-vb[C_DataContractNames#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#8)]  
   
- Cuando se pasan parámetros y valores devueltos entre un cliente y un servicio, no se puede enviar un contrato de datos de una clase base si el extremo receptor espera un contrato de datos de una clase derivada.  Esto es conforme con los principios de la programación orientada a objetos.  En el ejemplo anterior, no se puede enviar un objeto de tipo `Person` si se espera `Employee` .  
+ <span data-ttu-id="1a319-128">Cuando se pasan parámetros y valores devueltos entre un cliente y un servicio, no se puede enviar un contrato de datos de una clase base si el extremo receptor espera un contrato de datos de una clase derivada.</span><span class="sxs-lookup"><span data-stu-id="1a319-128">When passing parameters and return values between a client and a service, a data contract from a base class cannot be sent when the receiving endpoint expects a data contract from a derived class.</span></span> <span data-ttu-id="1a319-129">Esto es conforme con los principios de la programación orientada a objetos.</span><span class="sxs-lookup"><span data-stu-id="1a319-129">This is in accordance with object-oriented programming tenets.</span></span> <span data-ttu-id="1a319-130">En el ejemplo anterior, un objeto de tipo `Person` no se puede enviar cuando un `Employee` se espera.</span><span class="sxs-lookup"><span data-stu-id="1a319-130">In the previous example, an object of type `Person` cannot be sent when an `Employee` is expected.</span></span>  
   
- Se puede enviar un contrato de datos de una clase derivada si se espera un contrato de datos de una clase base, pero solo si el extremo receptor "conoce" el tipo derivado mediante <xref:System.Runtime.Serialization.KnownTypeAttribute>.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  En el ejemplo anterior, se puede enviar un objeto de tipo `Employee` si se espera un `Person`, aunque solo si el código del receptor utiliza <xref:System.Runtime.Serialization.KnownTypeAttribute> para incluirlo en la lista de tipos conocidos.  
+ <span data-ttu-id="1a319-131">Se puede enviar un contrato de datos de una clase derivada si se espera un contrato de datos de una clase base, pero solo si el extremo receptor "conoce" el tipo derivado mediante <xref:System.Runtime.Serialization.KnownTypeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="1a319-131">A data contract from a derived class can be sent when a data contract from a base class is expected, but only if the receiving endpoint "knows" of the derived type using the <xref:System.Runtime.Serialization.KnownTypeAttribute>.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1a319-132">[Tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="1a319-132"> [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span> <span data-ttu-id="1a319-133">En el ejemplo anterior, se puede enviar un objeto de tipo `Employee` si se espera un `Person`, aunque solo si el código del receptor utiliza <xref:System.Runtime.Serialization.KnownTypeAttribute> para incluirlo en la lista de tipos conocidos.</span><span class="sxs-lookup"><span data-stu-id="1a319-133">In the previous example, an object of type `Employee` can be sent when a `Person` is expected, but only if the receiver code employs the <xref:System.Runtime.Serialization.KnownTypeAttribute> to include it in the list of known types.</span></span>  
   
- Al pasar parámetros y valores devueltos entre las aplicaciones, si el tipo esperado es una interfaz, es equivalente a cuando el tipo esperado es <xref:System.Object>.  Dado que, en última instancia, cada tipo deriva de <xref:System.Object>, todos los contratos de datos derivan, a la larga, del contrato de datos para <xref:System.Object>.  De este modo, se puede pasar cualquier tipo de contrato de datos cuando se espera una interfaz.  Son necesarios algunos pasos adicionales para trabajar correctamente con interfaces; para más información, vea [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ <span data-ttu-id="1a319-134">Al pasar parámetros y valores devueltos entre las aplicaciones, si el tipo esperado es una interfaz, es equivalente a cuando el tipo esperado es <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="1a319-134">When passing parameters and return values between applications, if the expected type is an interface, it is equivalent to the expected type being of type <xref:System.Object>.</span></span> <span data-ttu-id="1a319-135">Dado que, en última instancia, cada tipo deriva de <xref:System.Object>, todos los contratos de datos derivan, a la larga, del contrato de datos para <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="1a319-135">Because every type ultimately derives from <xref:System.Object>, every data contract ultimately derives from the data contract for <xref:System.Object>.</span></span> <span data-ttu-id="1a319-136">De este modo, se puede pasar cualquier tipo de contrato de datos cuando se espera una interfaz.</span><span class="sxs-lookup"><span data-stu-id="1a319-136">Thus, any data contract type can be passed when an interface is expected.</span></span> <span data-ttu-id="1a319-137">Se requieren pasos adicionales para que funcione correctamente con interfaces; Para obtener más información, consulte [tipos conocidos de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span><span class="sxs-lookup"><span data-stu-id="1a319-137">Additional steps are required to successfully work with interfaces; for more information, see [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).</span></span>  
   
-## Vea también  
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- [Orden de los miembros de datos](../../../../docs/framework/wcf/feature-details/data-member-order.md)   
- [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [Nombres de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+## <a name="see-also"></a><span data-ttu-id="1a319-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="1a319-138">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ [<span data-ttu-id="1a319-139">Orden del miembro de datos</span><span class="sxs-lookup"><span data-stu-id="1a319-139">Data Member Order</span></span>](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
+ [<span data-ttu-id="1a319-140">Los tipos conocidos de contrato de datos</span><span class="sxs-lookup"><span data-stu-id="1a319-140">Data Contract Known Types</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="1a319-141">Nombres de contrato de datos</span><span class="sxs-lookup"><span data-stu-id="1a319-141">Data Contract Names</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

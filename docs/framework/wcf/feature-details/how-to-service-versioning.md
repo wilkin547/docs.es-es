@@ -1,50 +1,53 @@
 ---
-title: "C&#243;mo: Control de versiones del servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Control de versiones del servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: 6
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Control de versiones del servicio
-Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio.En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` \(v1\) y `regularCalc` \(v2\).Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos.Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
+# <a name="how-to-service-versioning"></a><span data-ttu-id="0d7d6-102">Cómo: Control de versiones del servicio</span><span class="sxs-lookup"><span data-stu-id="0d7d6-102">How To: Service Versioning</span></span>
+<span data-ttu-id="0d7d6-103">Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-103">This topic outlines the basic steps required to create a routing configuration that routes messages to different versions of the same service.</span></span> <span data-ttu-id="0d7d6-104">En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2).</span><span class="sxs-lookup"><span data-stu-id="0d7d6-104">In this example, messages are routed to two different versions of a calculator service, `roundingCalc` (v1) and `regularCalc` (v2).</span></span> <span data-ttu-id="0d7d6-105">Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-105">Both implementations support the same operations; however the older service, `roundingCalc`, rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="0d7d6-106">Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-106">A client application must be able to indicate whether to use the newer `regularCalc` service.</span></span>  
   
 > [!WARNING]
->  Para enrutar un mensaje a una versión de servicio concreta, el servicio de enrutamiento debe poder determinar el destino del mensaje en función del contenido del mensaje.En el método mostrado a continuación, el cliente especificará la versión insertando información en un encabezado del mensaje.Existen métodos de control de versiones del servicio que no requieren que los clientes pasen datos adicionales.Por ejemplo, un mensaje se podría enrutar a la versión más reciente o más compatible de un servicio, o el enrutador podría usar una parte del sobre SOAP estándar.  
+>  <span data-ttu-id="0d7d6-107">Para enrutar un mensaje a una versión de servicio concreta, el servicio de enrutamiento debe poder determinar el destino del mensaje en función del contenido del mensaje.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-107">In order to route a message to a specific service version, the Routing Service must be able to determine the message destination based on the message content.</span></span> <span data-ttu-id="0d7d6-108">En el método mostrado a continuación, el cliente especificará la versión insertando información en un encabezado del mensaje.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-108">In the method demonstrated below, the client will specify the version by inserting information into a message header.</span></span> <span data-ttu-id="0d7d6-109">Existen métodos de control de versiones del servicio que no requieren que los clientes pasen datos adicionales.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-109">There are methods of service versioning that do not require clients to pass additional data.</span></span> <span data-ttu-id="0d7d6-110">Por ejemplo, un mensaje se podría enrutar a la versión más reciente o más compatible de un servicio, o el enrutador podría usar una parte del sobre SOAP estándar.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-110">For example, a message could be routed to the most recent or most compatible version of a service or the router could use a part of the standard SOAP envelope.</span></span>  
   
- Las operaciones expuestas por ambos servicios son:  
+ <span data-ttu-id="0d7d6-111">Las operaciones expuestas por ambos servicios son:</span><span class="sxs-lookup"><span data-stu-id="0d7d6-111">The operations exposed by both services are:</span></span>  
   
--   Sumar  
+-   <span data-ttu-id="0d7d6-112">Add</span><span class="sxs-lookup"><span data-stu-id="0d7d6-112">Add</span></span>  
   
--   Restar  
+-   <span data-ttu-id="0d7d6-113">Restar</span><span class="sxs-lookup"><span data-stu-id="0d7d6-113">Subtract</span></span>  
   
--   Multiplicar  
+-   <span data-ttu-id="0d7d6-114">Multiplicar</span><span class="sxs-lookup"><span data-stu-id="0d7d6-114">Multiply</span></span>  
   
--   Dividir  
+-   <span data-ttu-id="0d7d6-115">Dividir</span><span class="sxs-lookup"><span data-stu-id="0d7d6-115">Divide</span></span>  
   
- Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud.Por ejemplo, no se pueden utilizar los filtros de acción porque las acciones predeterminadas para ambos servicios son las mismas.  
+ <span data-ttu-id="0d7d6-116">Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-116">Because both service implementations handle the same operations, and are essentially identical other than the data that they return, the base data contained in messages sent from client applications is not unique enough to allow you to determine how to route the request.</span></span> <span data-ttu-id="0d7d6-117">Por ejemplo, no se pueden utilizar los filtros de acción porque las acciones predeterminadas para ambos servicios son las mismas.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-117">For example, Action filters cannot be used because the default actions for both services are the same.</span></span>  
   
- Esto se puede resolver de varias maneras: exponiendo un extremo concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.  
+ <span data-ttu-id="0d7d6-118">Esto se puede resolver de varias maneras: exponiendo un extremo concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-118">This can be resolved in several ways, such as exposing a specific endpoint on the router for each version of the service or adding a custom header element to the message to indicate service version.</span></span>  <span data-ttu-id="0d7d6-119">Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-119">Each of these approaches allows you to uniquely route incoming messages to a specific version of the service, but utilizing unique message content is the preferred method of differentiating between requests for different service versions.</span></span>  
   
- En este ejemplo, la aplicación cliente agrega el encabezado personalizado 'CalcVer' al mensaje de solicitud.Este encabezado contendrá un valor que indica la versión del servicio al que se debería enrutar el mensaje.Un valor de '1' indica que el servicio roundingCalc debe procesar el mensaje, mientras que un valor de '2' indica el servicio de regularCalc.Esto permite que la aplicación cliente controle directamente que versión del servicio procesará el mensaje.Como el encabezado personalizado es un valor contenido dentro del mensaje, puede utilizar un extremo para recibir mensajes destinados a ambas versiones del servicio.Se puede utilizar el siguiente código en la aplicación cliente para agregar este encabezado personalizado al mensaje:  
+ <span data-ttu-id="0d7d6-120">En este ejemplo, la aplicación cliente agrega el encabezado personalizado 'CalcVer' al mensaje de solicitud.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-120">In this example, the client application adds the ‘CalcVer’ custom header to the request message.</span></span> <span data-ttu-id="0d7d6-121">Este encabezado contendrá un valor que indica la versión del servicio al que se debería enrutar el mensaje.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-121">This header will contain a value that indicates the version of the service that the message should be routed to.</span></span> <span data-ttu-id="0d7d6-122">Un valor de '1' indica que el servicio roundingCalc debe procesar el mensaje, mientras que un valor de '2' indica el servicio de regularCalc.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-122">A value of ‘1’ indicates that the message must be processed by the roundingCalc service, while a value of ‘2’ indicates the regularCalc service.</span></span> <span data-ttu-id="0d7d6-123">Esto permite que la aplicación cliente controle directamente que versión del servicio procesará el mensaje.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-123">This allows the client application to directly control which version of the service will process the message.</span></span>  <span data-ttu-id="0d7d6-124">Como el encabezado personalizado es un valor contenido dentro del mensaje, puede utilizar un extremo para recibir mensajes destinados a ambas versiones del servicio.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-124">Since the custom header is a value contained within the message, you can use one endpoint to receive messages destined for both versions of the service.</span></span> <span data-ttu-id="0d7d6-125">Se puede utilizar el siguiente código en la aplicación cliente para agregar este encabezado personalizado al mensaje:</span><span class="sxs-lookup"><span data-stu-id="0d7d6-125">The following code can be used in the client application to add this custom header to the message:</span></span>  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### Implementación de versiones del servicio  
+### <a name="implement-service-versioning"></a><span data-ttu-id="0d7d6-126">Implementación de versiones del servicio</span><span class="sxs-lookup"><span data-stu-id="0d7d6-126">Implement Service Versioning</span></span>  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio.En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes.También se definen los extremos del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` \(v1\) y `regularCalc` \(v2\).  
+1.  <span data-ttu-id="0d7d6-127">Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-127">Create the basic Routing Service configuration by specifying the service endpoint exposed by the service.</span></span> <span data-ttu-id="0d7d6-128">En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-128">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="0d7d6-129">También se definen los extremos del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).</span><span class="sxs-lookup"><span data-stu-id="0d7d6-129">It also defines the client endpoints which will be used to send messages to the `roundingCalc` (v1) and the `regularCalc` (v2) services.</span></span>  
   
     ```xml  
     <services>  
@@ -74,10 +77,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
                     binding="wsHttpBinding"  
                     contract="*" />  
         </client>  
-  
     ```  
   
-2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.En este ejemplo, el filtro XPath se usa para detectar el valor del encabezado personalizado "CalcVer" para determinar a qué versión debe enrutarse el mensaje.También se utiliza un filtro XPath para detectar mensajes que no contienen el encabezado "CalcVer".En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
+2.  <span data-ttu-id="0d7d6-130">Defina los filtros usados para enrutar mensajes a los puntos de conexión del destino.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-130">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="0d7d6-131">En este ejemplo, el filtro XPath se usa para detectar el valor del encabezado personalizado "CalcVer" para determinar qué versión debe enrutarse el mensaje.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-131">For this example, the XPath filter is used to detect the value of the "CalcVer" custom header to determine which version the message should be routed to.</span></span> <span data-ttu-id="0d7d6-132">También se utiliza un filtro de XPath para detectar mensajes que no contienen el encabezado "CalcVer".</span><span class="sxs-lookup"><span data-stu-id="0d7d6-132">An XPath filter is also used to detect messages that do not contain the "CalcVer" header.</span></span> <span data-ttu-id="0d7d6-133">En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-133">The following example defines the required filters and namespace table.</span></span>  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -102,11 +104,11 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres "http:\/\/www.w3.org\/2003\/05\/soap\-envelope".  
+    >  <span data-ttu-id="0d7d6-134">El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres "http://www.w3.org/2003/05/soap-envelope".</span><span class="sxs-lookup"><span data-stu-id="0d7d6-134">The s12 namespace prefix is defined by default in the namespace table, and represents the namespace "http://www.w3.org/2003/05/soap-envelope".</span></span>  
   
-3.  Defina la tabla de filtro, que asocia cada filtro a un extremo del cliente.Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio de regularCalc.Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc.Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
+3.  <span data-ttu-id="0d7d6-135">Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-135">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="0d7d6-136">Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio de regularCalc.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-136">If the message contains the "CalcVer" header with a value of 1, it will be sent to the regularCalc service.</span></span> <span data-ttu-id="0d7d6-137">Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-137">If the header contains a value of 2, it will be sent to the roundingCalc service.</span></span> <span data-ttu-id="0d7d6-138">Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-138">If no header is present, the message will be routed to the regularCalc.</span></span>  
   
-     El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.  
+     <span data-ttu-id="0d7d6-139">El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-139">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -125,7 +127,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los extremos de servicio mediante el comportamiento de enrutamiento.En el siguiente ejemplo, se muestra cómo asociar "filterTable1" a los extremos de servicio:  
+4.  <span data-ttu-id="0d7d6-140">Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-140">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span>  <span data-ttu-id="0d7d6-141">En el ejemplo siguiente se muestra cómo asociar "filterTable1" a los extremos de servicio:</span><span class="sxs-lookup"><span data-stu-id="0d7d6-141">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -136,11 +138,10 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Ejemplo  
- A continuación, se muestra una lista completa del archivo de configuración.  
+## <a name="example"></a><span data-ttu-id="0d7d6-142">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0d7d6-142">Example</span></span>  
+ <span data-ttu-id="0d7d6-143">A continuación, se muestra una lista completa del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-143">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -220,14 +221,12 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Ejemplo  
- A continuación, se muestra una lista completa de la aplicación cliente.  
+## <a name="example"></a><span data-ttu-id="0d7d6-144">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0d7d6-144">Example</span></span>  
+ <span data-ttu-id="0d7d6-145">A continuación, se muestra una lista completa de la aplicación cliente.</span><span class="sxs-lookup"><span data-stu-id="0d7d6-145">The following is a complete listing of the client application.</span></span>  
   
 ```csharp  
-  
 using System;  
 using System.ServiceModel;  
 using System.ServiceModel.Channels;  
@@ -333,8 +332,7 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## Vea también  
- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a><span data-ttu-id="0d7d6-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="0d7d6-146">See Also</span></span>  
+ [<span data-ttu-id="0d7d6-147">Servicios de enrutamiento</span><span class="sxs-lookup"><span data-stu-id="0d7d6-147">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)

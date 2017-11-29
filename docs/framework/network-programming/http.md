@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - protocols, HTTP
 - sending data, HTTP
@@ -24,30 +19,28 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124e383efbe6cf6bb459d013b9689bf5da287cf1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 701ff252380ef93dbe3668c8aca73f08a8425d6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="http"></a>HTTP
-.NET Framework proporciona compatibilidad completa para el protocolo HTTP, que constituye la mayor parte de todo el tráfico de Internet, con las clases <xref:System.Net.HttpWebRequest> y <xref:System.Net.HttpWebResponse>. Estas clases, derivadas de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, se devuelven de manera predeterminada siempre que el método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> detecte un URI que comience por "http" o "https". En la mayoría de los casos, las clases **WebRequest** y **WebResponse** proporcionan todo lo necesario para realizar la solicitud, pero si necesita tener acceso a las características específicas de HTTP expuestas como propiedades, puede convertir estas clases en **HttpWebRequest** o **HttpWebResponse**.  
+# <a name="http"></a><span data-ttu-id="a050b-102">HTTP</span><span class="sxs-lookup"><span data-stu-id="a050b-102">HTTP</span></span>
+<span data-ttu-id="a050b-103">.NET Framework proporciona compatibilidad completa para el protocolo HTTP, que constituye la mayor parte de todo el tráfico de Internet, con el <xref:System.Net.HttpWebRequest> y <xref:System.Net.HttpWebResponse> clases.</span><span class="sxs-lookup"><span data-stu-id="a050b-103">The .NET Framework provides comprehensive support for the HTTP protocol, which makes up the majority of all Internet traffic, with the <xref:System.Net.HttpWebRequest> and <xref:System.Net.HttpWebResponse> classes.</span></span> <span data-ttu-id="a050b-104">Estas clases, derivadas de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, se devuelven de manera predeterminada siempre que el método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> detecte un URI que comience por "http" o "https".</span><span class="sxs-lookup"><span data-stu-id="a050b-104">These classes, derived from <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse>, are returned by default whenever the static method <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> encounters a URI beginning with "http" or "https".</span></span> <span data-ttu-id="a050b-105">En la mayoría de los casos, las clases **WebRequest** y **WebResponse** proporcionan todo lo necesario para realizar la solicitud, pero si necesita tener acceso a las características específicas de HTTP expuestas como propiedades, puede convertir estas clases en **HttpWebRequest** o **HttpWebResponse**.</span><span class="sxs-lookup"><span data-stu-id="a050b-105">In most cases, the **WebRequest** and **WebResponse** classes provide all that is necessary to make the request, but if you need access to the HTTP-specific features exposed as properties, you can typecast these classes to **HttpWebRequest** or **HttpWebResponse**.</span></span>  
   
- **HttpWebRequest** y **HttpWebResponse** encapsulan una transacción de solicitud y respuesta HTTP estándar y proporcionan acceso a los encabezados HTTP comunes. Estas clases también admiten la mayoría de las características de HTTP 1.1, incluidas la canalización, envío y recepción de datos en fragmentos, autenticación, preautenticación, cifrado, compatibilidad de proxy, validación de certificados de servidor y administración de conexiones. Los encabezados y los encabezados personalizados que no se proporcionan mediante propiedades pueden almacenarse y se puede acceder a ellos mediante la propiedad **Headers**.  
+ <span data-ttu-id="a050b-106">**HttpWebRequest** y **HttpWebResponse** encapsulan una transacción de solicitud y respuesta HTTP estándar y proporcionan acceso a los encabezados HTTP comunes.</span><span class="sxs-lookup"><span data-stu-id="a050b-106">**HttpWebRequest** and **HttpWebResponse** encapsulate a standard HTTP request-and-response transaction and provide access to common HTTP headers.</span></span> <span data-ttu-id="a050b-107">Estas clases también admiten la mayoría de las características de HTTP 1.1, incluidas la canalización, envío y recepción de datos en fragmentos, autenticación, preautenticación, cifrado, compatibilidad de proxy, validación de certificados de servidor y administración de conexiones.</span><span class="sxs-lookup"><span data-stu-id="a050b-107">These classes also support most HTTP 1.1 features, including pipelining, sending and receiving data in chunks, authentication, preauthentication, encryption, proxy support, server certificate validation, and connection management.</span></span> <span data-ttu-id="a050b-108">Los encabezados y los encabezados personalizados que no se proporcionan mediante propiedades pueden almacenarse y se puede acceder a ellos mediante la propiedad **Headers**.</span><span class="sxs-lookup"><span data-stu-id="a050b-108">Custom headers and headers not provided through properties can be stored in and accessed through the **Headers** property.</span></span>  
   
- **HttpWebRequest** es la clase predeterminada que usa **WebRequest** y no necesita registrarse antes de que pueda pasar un URI al método **WebRequest.Create**.  
+ <span data-ttu-id="a050b-109">**HttpWebRequest** es la clase predeterminada que usa **WebRequest** y no necesita registrarse antes de que pueda pasar un URI al método **WebRequest.Create**.</span><span class="sxs-lookup"><span data-stu-id="a050b-109">**HttpWebRequest** is the default class used by **WebRequest** and does not need to be registered before you can pass a URI to the **WebRequest.Create** method.</span></span>  
   
- Puede hacer que su aplicación siga las redirecciones de HTTP automáticamente estableciendo la propiedad <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> en **True** (el valor predeterminado). La aplicación redirigirá las solicitudes, y la propiedad <xref:System.Net.HttpWebResponse.ResponseUri%2A> de **HttpWebResponse** contendrá el recurso web actual que ha respondido a la solicitud. Si establece **AllowAutoRedirect** en **False**, su aplicación debe poder controlar las redirecciones como errores de protocolo HTTP.  
+ <span data-ttu-id="a050b-110">Puede hacer que su aplicación siga las redirecciones de HTTP automáticamente estableciendo la propiedad <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> en **True** (el valor predeterminado).</span><span class="sxs-lookup"><span data-stu-id="a050b-110">You can make your application follow HTTP redirects automatically by setting the <xref:System.Net.HttpWebRequest.AllowAutoRedirect%2A> property to **true** (the default).</span></span> <span data-ttu-id="a050b-111">La aplicación redirigirá las solicitudes, y la propiedad <xref:System.Net.HttpWebResponse.ResponseUri%2A> de **HttpWebResponse** contendrá el recurso web actual que ha respondido a la solicitud.</span><span class="sxs-lookup"><span data-stu-id="a050b-111">The application will redirect requests, and the <xref:System.Net.HttpWebResponse.ResponseUri%2A> property of **HttpWebResponse** will contain the actual Web resource that responded to the request.</span></span> <span data-ttu-id="a050b-112">Si establece **AllowAutoRedirect** en **False**, su aplicación debe poder controlar las redirecciones como errores de protocolo HTTP.</span><span class="sxs-lookup"><span data-stu-id="a050b-112">If you set **AllowAutoRedirect** to **false**, your application must be able to handle redirects as HTTP protocol errors.</span></span>  
   
- Las aplicaciones reciben errores de protocolo HTTP capturando <xref:System.Net.WebException> con <xref:System.Net.WebException.Status%2A> establecido en <xref:System.Net.WebExceptionStatus>. La propiedad <xref:System.Net.WebException.Response%2A> contiene la **WebResponse** que ha enviado el servidor e indica el error HTTP actual que se ha detectado.  
+ <span data-ttu-id="a050b-113">Las aplicaciones reciben errores de protocolo HTTP capturando <xref:System.Net.WebException> con <xref:System.Net.WebException.Status%2A> establecido en <xref:System.Net.WebExceptionStatus>.</span><span class="sxs-lookup"><span data-stu-id="a050b-113">Applications receive HTTP protocol errors by catching a <xref:System.Net.WebException> with the <xref:System.Net.WebException.Status%2A> set to <xref:System.Net.WebExceptionStatus>.</span></span> <span data-ttu-id="a050b-114">La propiedad <xref:System.Net.WebException.Response%2A> contiene la **WebResponse** que ha enviado el servidor e indica el error HTTP actual que se ha detectado.</span><span class="sxs-lookup"><span data-stu-id="a050b-114">The <xref:System.Net.WebException.Response%2A> property contains the **WebResponse** sent by the server and indicates the actual HTTP error encountered.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)   
- [Cómo: obtener acceso a propiedades específicas de HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
-
+## <a name="see-also"></a><span data-ttu-id="a050b-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="a050b-115">See Also</span></span>  
+ [<span data-ttu-id="a050b-116">Acceso a Internet a través de un proxy</span><span class="sxs-lookup"><span data-stu-id="a050b-116">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [<span data-ttu-id="a050b-117">Usar protocolos de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="a050b-117">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [<span data-ttu-id="a050b-118">Cómo: obtener acceso a propiedades específicas de HTTP</span><span class="sxs-lookup"><span data-stu-id="a050b-118">How to: Access HTTP-Specific Properties</span></span>](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

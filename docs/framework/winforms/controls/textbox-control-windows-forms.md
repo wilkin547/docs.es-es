@@ -1,55 +1,56 @@
 ---
-title: "TextBox (Control, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadros de texto"
-  - "TextBox (control) [Windows Forms]"
+title: TextBox (Control, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- text boxes
+- TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4800b06b5d0bbc5ce51d7cf00798ca98ef8bf656
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# TextBox (Control, formularios Windows Forms)
-Los cuadros de texto de formularios Windows Forms se utilizan para obtener entradas del usuario o para mostrar texto.  El control `TextBox` se utiliza generalmente para el texto que se puede editar, aunque también puede configurarse como control de sólo lectura.  Los cuadros de texto pueden mostrar varias líneas, ajustar el texto al tamaño del control y agregar formato básico.  El control `TextBox` permite un único formato para el texto que se muestra o escribe en el control.  
+# <a name="textbox-control-windows-forms"></a><span data-ttu-id="18572-102">TextBox (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="18572-102">TextBox Control (Windows Forms)</span></span>
+<span data-ttu-id="18572-103">Cuadros de texto de formularios Windows Forms se utilizan para obtener datos proporcionados por el usuario o para mostrar el texto.</span><span class="sxs-lookup"><span data-stu-id="18572-103">Windows Forms text boxes are used to get input from the user or to display text.</span></span> <span data-ttu-id="18572-104">El `TextBox` control se utiliza generalmente para el texto editable, aunque también pueden realizarse de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="18572-104">The `TextBox` control is generally used for editable text, although it can also be made read-only.</span></span> <span data-ttu-id="18572-105">Cuadros de texto pueden mostrar varias líneas, ajustar el texto al tamaño del control y agregar formato básico.</span><span class="sxs-lookup"><span data-stu-id="18572-105">Text boxes can display multiple lines, wrap text to the size of the control, and add basic formatting.</span></span> <span data-ttu-id="18572-106">El `TextBox` control permite un único formato para el texto mostrado o escrito en el control.</span><span class="sxs-lookup"><span data-stu-id="18572-106">The `TextBox` control allows a single format for text displayed or entered in the control.</span></span>  
   
-## En esta sección  
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- Explica qué es este control y describe sus características y propiedades más importantes.  
+## <a name="in-this-section"></a><span data-ttu-id="18572-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="18572-107">In This Section</span></span>  
+ [<span data-ttu-id="18572-108">Información general sobre el control TextBox</span><span class="sxs-lookup"><span data-stu-id="18572-108">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="18572-109">Explica qué es este control y sus propiedades y características clave.</span><span class="sxs-lookup"><span data-stu-id="18572-109">Explains what this control is and its key features and properties.</span></span>  
   
- [Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- Ofrece indicaciones para especificar dónde aparece el punto de inserción cuando un control de edición recibe el foco por primera vez.  
+ [<span data-ttu-id="18572-110">Controlar el punto de inserción en un control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="18572-110">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ <span data-ttu-id="18572-111">Proporciona instrucciones para especificar dónde se muestra el punto de inserción cuando un control de edición primero obtiene el foco.</span><span class="sxs-lookup"><span data-stu-id="18572-111">Gives directions for specifying where the insertion point appears when an edit control first gets the focus.</span></span>  
   
- [Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- Explica cómo ocultar lo que se escribe en un cuadro de texto.  
+ [<span data-ttu-id="18572-112">Crear un cuadro de texto de contraseña con el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="18572-112">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ <span data-ttu-id="18572-113">Explica cómo ocultar lo que se escribe en un cuadro de texto.</span><span class="sxs-lookup"><span data-stu-id="18572-113">Explains how to conceal what is typed into a text box.</span></span>  
   
- [Cómo: Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- Explica cómo impedir que se cambie el contenido de un cuadro de texto.  
+ [<span data-ttu-id="18572-114">Crear un cuadro de texto de sólo lectura</span><span class="sxs-lookup"><span data-stu-id="18572-114">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ <span data-ttu-id="18572-115">Describe cómo impedir que el contenido de un cuadro de texto que se va a cambiar.</span><span class="sxs-lookup"><span data-stu-id="18572-115">Describes how to prevent the contents of a text box from being changed.</span></span>  
   
- [Cómo: Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- Explica cómo agregar comillas a una cadena de un cuadro de texto.  
+ [<span data-ttu-id="18572-116">Insertar comillas en una cadena</span><span class="sxs-lookup"><span data-stu-id="18572-116">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ <span data-ttu-id="18572-117">Explica cómo agregar comillas a una cadena en un cuadro de texto.</span><span class="sxs-lookup"><span data-stu-id="18572-117">Explains adding quotation marks to a string in a text box.</span></span>  
   
- [Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- Explica cómo resaltar texto en un cuadro de texto.  
+ [<span data-ttu-id="18572-118">Seleccionar texto en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="18572-118">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ <span data-ttu-id="18572-119">Explica cómo resaltar texto en un cuadro de texto.</span><span class="sxs-lookup"><span data-stu-id="18572-119">Explains how to highlight text in a text box.</span></span>  
   
- [Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- Describe cómo hacer que se pueda desplazar el texto de un cuadro de texto.  
+ [<span data-ttu-id="18572-120">Ver múltiples líneas en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="18572-120">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ <span data-ttu-id="18572-121">Describe cómo hacer que un cuadro de texto desplazable.</span><span class="sxs-lookup"><span data-stu-id="18572-121">Describes how to make a text box scrollable.</span></span>  
   
-## Referencia  
- <xref:System.Windows.Forms.TextBox> \(clase\)  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+## <a name="reference"></a><span data-ttu-id="18572-122">Referencia</span><span class="sxs-lookup"><span data-stu-id="18572-122">Reference</span></span>  
+ <span data-ttu-id="18572-123">Clase <xref:System.Windows.Forms.TextBox></span><span class="sxs-lookup"><span data-stu-id="18572-123"><xref:System.Windows.Forms.TextBox> class</span></span>  
+ <span data-ttu-id="18572-124">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="18572-124">Describes this class and has links to all its members.</span></span>  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+## <a name="related-sections"></a><span data-ttu-id="18572-125">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="18572-125">Related Sections</span></span>  
+ [<span data-ttu-id="18572-126">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="18572-126">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="18572-127">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="18572-127">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

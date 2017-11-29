@@ -1,35 +1,38 @@
 ---
-title: "Datos binarios y de valores grandes de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Datos binarios y datos de valores grandes de SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9065f467cd353c17471db2c0d67001a188459819
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Datos binarios y de valores grandes de SQL Server
-SQL Server proporciona el especificador `max`, que amplía la capacidad de almacenamiento de los tipos de datos `varchar`, `nvarchar` y `varbinary`.  `varchar(max)`, `nvarchar(max)` y `varbinary(max)` se denominan colectivamente *tipos de datos de valores grandes*.  Puede utilizar los tipos de datos de valores grandes para almacenar hasta 2^31\-1 bytes de datos.  
+# <a name="sql-server-binary-and-large-value-data"></a><span data-ttu-id="f7c06-102">Datos binarios y datos de valores grandes de SQL Server</span><span class="sxs-lookup"><span data-stu-id="f7c06-102">SQL Server Binary and Large-Value Data</span></span>
+<span data-ttu-id="f7c06-103">SQL Server proporciona el especificador `max`, que amplía la capacidad de almacenamiento de los tipos de datos `varchar`, `nvarchar` y `varbinary`.</span><span class="sxs-lookup"><span data-stu-id="f7c06-103">SQL Server provides the `max` specifier, which expands the storage capacity of the `varchar`, `nvarchar`, and `varbinary` data types.</span></span> <span data-ttu-id="f7c06-104">`varchar(max)`, `nvarchar(max)`, y `varbinary(max)` se denominan colectivamente *tipos de datos de valores grandes*.</span><span class="sxs-lookup"><span data-stu-id="f7c06-104">`varchar(max)`, `nvarchar(max)`, and `varbinary(max)` are collectively called *large-value data types*.</span></span> <span data-ttu-id="f7c06-105">Puede utilizar los tipos de datos de valores grandes para almacenar hasta 2^31-1 bytes de datos.</span><span class="sxs-lookup"><span data-stu-id="f7c06-105">You can use the large-value data types to store up to 2^31-1 bytes of data.</span></span>  
   
- SQL Server 2008 incorpora el atributo FILESTREAM, que no es un tipo de datos, sino un atributo que se puede definir en una columna, y permite almacenar datos de valores grandes en el sistema de archivos en lugar de almacenarlos en la base de datos.  
+ <span data-ttu-id="f7c06-106">SQL Server 2008 incorpora el atributo FILESTREAM, que no es un tipo de datos, sino un atributo que se puede definir en una columna, y permite almacenar datos de valores grandes en el sistema de archivos en lugar de almacenarlos en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="f7c06-106">SQL Server 2008 introduces the FILESTREAM attribute, which is not a data type, but rather an attribute that can be defined on a column, allowing large-value data to be stored on the file system instead of in the database.</span></span>  
   
-## En esta sección  
- [Modificación de datos de valores grandes \(max\) en ADO.NET](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
- Describe cómo trabajar con tipos de datos de valores grandes.  
+## <a name="in-this-section"></a><span data-ttu-id="f7c06-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f7c06-107">In This Section</span></span>  
+ [<span data-ttu-id="f7c06-108">Modificar datos (max) de valores grandes en ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f7c06-108">Modifying Large-Value (max) Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/modifying-large-value-max-data.md)  
+ <span data-ttu-id="f7c06-109">Describe cómo trabajar con tipos de datos de valores grandes.</span><span class="sxs-lookup"><span data-stu-id="f7c06-109">Describes how to work with the large-value data types.</span></span>  
   
- [Datos FILESTREAM](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
- Describe cómo trabajar con datos de valores grandes almacenados en SQL Server 2008 con el atributo FILESTREAM.  
+ [<span data-ttu-id="f7c06-110">Datos FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="f7c06-110">FILESTREAM Data</span></span>](../../../../../docs/framework/data/adonet/sql/filestream-data.md)  
+ <span data-ttu-id="f7c06-111">Describe cómo trabajar con datos de valores grandes almacenados en SQL Server 2008 con el atributo FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="f7c06-111">Describes how to work with large-value data stored in SQL Server 2008 with the FILESTREAM attribute.</span></span>  
   
-## Vea también  
- [Tipos de datos de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)   
- [Operaciones de datos de SQL Server en ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)   
- [Recuperación y modificación de datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f7c06-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="f7c06-112">See Also</span></span>  
+ [<span data-ttu-id="f7c06-113">Tipos de datos de SQL Server y ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f7c06-113">SQL Server Data Types and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [<span data-ttu-id="f7c06-114">Operaciones de datos de SQL Server en ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f7c06-114">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [<span data-ttu-id="f7c06-115">Recuperar y modificar datos en ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f7c06-115">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="f7c06-116">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="f7c06-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

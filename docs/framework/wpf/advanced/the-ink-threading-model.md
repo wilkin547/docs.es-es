@@ -1,107 +1,110 @@
 ---
-title: "Modelo de subprocesamiento de entrada manuscrita | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "subproceso de interfaz de usuario de aplicación"
-  - "subproceso de representación dinámica"
-  - "complemento para la recopilación de entrada manuscrita"
-  - "modelo de subprocesamiento de entrada manuscrita"
-  - "entrada manuscrita, representación"
-  - "subproceso de lápiz"
-  - "complementos, para entrada manuscrita"
-  - "representar entrada manuscrita"
-  - "complemento de lápiz"
-  - "modelo de subprocesamiento"
+title: Modelo de subprocesamiento de entrada manuscrita
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application user interface thread [WPF]
+- stylus plug-in
+- ink threading model [WPF]
+- ink [WPF], rendering
+- pen thread [WPF]
+- threading model [WPF]
+- rendering ink [WPF]
+- dynamic rendering thread [WPF]
+- ink collection plug-in
+- plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: efbd05f88b962363e3b866fbf914f6d3a37823cc
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Modelo de subprocesamiento de entrada manuscrita
-Una de las ventajas de la entrada de lápiz en un Tablet PC es que se asemeja mucho a la escritura normal con lápiz y papel.  Para conseguirlo, el lápiz de Tablet PC recopila los datos de entrada a una velocidad muy superior a la del mouse y representa la entrada de lápiz mientras el usuario escribe.  El subproceso de la interfaz de usuario de la aplicación no es suficiente para recopilar los datos del lápiz y representar la entrada de lápiz, porque se puede bloquear.  Para resolverlo, una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa dos subprocesos adicionales cuando un usuario escribe entrada de lápiz.  
+# <a name="the-ink-threading-model"></a><span data-ttu-id="86439-102">Modelo de subprocesamiento de entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="86439-102">The Ink Threading Model</span></span>
+<span data-ttu-id="86439-103">Una de las ventajas de la tinta en un Tablet PC es que asemeja mucho a escribir con un lápiz normal y el papel.</span><span class="sxs-lookup"><span data-stu-id="86439-103">One of the benefits of ink on a Tablet PC is that it feels a lot like writing with a regular pen and paper.</span></span>  <span data-ttu-id="86439-104">Para lograr esto, el lápiz de tablet PC recopila datos de entrada a una velocidad mucho más alta que un mouse y representa la entrada de lápiz mientras el usuario escribe.</span><span class="sxs-lookup"><span data-stu-id="86439-104">To accomplish this, the tablet pen collects input data at a much higher rate than a mouse does and renders the ink as the user writes.</span></span>  <span data-ttu-id="86439-105">Subproceso de interfaz (UI) de usuario de la aplicación no es suficiente para recopilar los datos del lápiz y tinta de representación, porque puede quedarse bloqueado.</span><span class="sxs-lookup"><span data-stu-id="86439-105">The application's user interface (UI) thread is not sufficient for collecting pen data and rendering ink, because it can become blocked.</span></span>  <span data-ttu-id="86439-106">Para solucionarlo, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación usa dos subprocesos adicionales cuando un usuario escribe la entrada de lápiz.</span><span class="sxs-lookup"><span data-stu-id="86439-106">To solve this, a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application uses two additional threads when a user writes ink.</span></span>  
   
- En la lista siguiente se describen los subprocesos que participan en la recopilación y representación de la entrada de lápiz digital:  
+ <span data-ttu-id="86439-107">En la lista siguiente se describe los subprocesos que toman parte en la recopilación y representación de entrada de lápiz digital:</span><span class="sxs-lookup"><span data-stu-id="86439-107">The following list describes the threads that take part in collecting and rendering digital ink:</span></span>  
   
--   Subproceso del lápiz, que es el que toma la entrada del lápiz.  \(En realidad, es un grupo de subprocesos, pero en este tema se le designa como subproceso del lápiz.\)  
+-   <span data-ttu-id="86439-108">Subproceso del lápiz - el subproceso que toma como entrado de lápiz.</span><span class="sxs-lookup"><span data-stu-id="86439-108">Pen thread - the thread that takes input from the stylus.</span></span>  <span data-ttu-id="86439-109">(En realidad, se trata de un grupo de subprocesos, pero este tema hace referencia a él como un subproceso del lápiz.)</span><span class="sxs-lookup"><span data-stu-id="86439-109">(In reality, this is a thread pool, but this topic refers to it as a pen thread.)</span></span>  
   
--   Subproceso de interfaz de usuario de aplicación, que es el subproceso que controla la interfaz de usuario de la aplicación.  
+-   <span data-ttu-id="86439-110">Subproceso de interfaz de usuario de la aplicación: el subproceso que controla la interfaz de usuario de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="86439-110">Application user interface thread - the thread that controls the user interface of the application.</span></span>  
   
--   Subproceso de representación dinámica, que es el que representa la entrada de lápiz mientras el usuario dibuja un trazo.  El subproceso de representación dinámica es diferente del subproceso que representa otros elementos de la interfaz de usuario para la aplicación, como se menciona en [Modelo de subprocesos](../../../../docs/framework/wpf/advanced/threading-model.md) de Window Presentation Foundation.  
+-   <span data-ttu-id="86439-111">Subproceso de representación dinámica - el subproceso que representa la entrada de lápiz mientras el usuario dibuja un trazo.</span><span class="sxs-lookup"><span data-stu-id="86439-111">Dynamic rendering thread - the thread that renders the ink while the user draws a stroke.</span></span> <span data-ttu-id="86439-112">El subproceso de representación dinámica es diferente del subproceso que representa otros elementos de interfaz de usuario para la aplicación, como se mencionó en la ventana Presentation Foundation [modelo de subprocesamiento](../../../../docs/framework/wpf/advanced/threading-model.md).</span><span class="sxs-lookup"><span data-stu-id="86439-112">The dynamic rendering thread is different than the thread that renders other UI elements for the application, as mentioned in Window Presentation Foundation [Threading Model](../../../../docs/framework/wpf/advanced/threading-model.md).</span></span>  
   
- El modelo de entrada de lápiz es el mismo si la aplicación usa <xref:System.Windows.Controls.InkCanvas> o un control personalizado similar al de [Creación de un control de entrada manuscrita](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).  Aunque en este tema se analiza el subprocesamiento en lo que se refiere a <xref:System.Windows.Controls.InkCanvas>, se aplican los mismos conceptos al crear un control personalizado.  
+ <span data-ttu-id="86439-113">El modelo de escritura a mano es el mismo independientemente de la aplicación utilice la <xref:System.Windows.Controls.InkCanvas> o un control personalizado similar a la de [crear un Control de entrada manuscrita](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span><span class="sxs-lookup"><span data-stu-id="86439-113">The inking model is the same whether the application uses the <xref:System.Windows.Controls.InkCanvas> or a custom control similar to the one in [Creating an Ink Input Control](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span></span>  <span data-ttu-id="86439-114">Aunque en este tema se describe el subprocesamiento en términos de la <xref:System.Windows.Controls.InkCanvas>, los mismos conceptos que se aplican cuando se crea un control personalizado.</span><span class="sxs-lookup"><span data-stu-id="86439-114">Although this topic discusses threading in terms of the <xref:System.Windows.Controls.InkCanvas>, the same concepts apply when you create a custom control.</span></span>  
   
-## Información general acerca del subprocesamiento  
- El diagrama siguiente ilustra el modelo de subprocesos cuando un usuario dibuja un trazo:  
+## <a name="threading-overview"></a><span data-ttu-id="86439-115">Información general de subprocesos</span><span class="sxs-lookup"><span data-stu-id="86439-115">Threading Overview</span></span>  
+ <span data-ttu-id="86439-116">El siguiente diagrama ilustra el modelo de subprocesos cuando un usuario dibuja un trazo:</span><span class="sxs-lookup"><span data-stu-id="86439-116">The following diagram illustrates the threading model when a user draws a stroke:</span></span>  
   
- ![Modelo de subprocesos mientras se dibuja un trazo.](../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading\_DrawingInk")  
+ <span data-ttu-id="86439-117">![Modelo de subprocesos mientras se dibuja un trazo. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")</span><span class="sxs-lookup"><span data-stu-id="86439-117">![Threading model while drawing a stroke.](../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")</span></span>  
   
-1.  Acciones que suceden mientras el usuario dibuja el trazo  
+1.  <span data-ttu-id="86439-118">Acciones que se producen mientras el usuario dibuja el trazo</span><span class="sxs-lookup"><span data-stu-id="86439-118">Actions occurring while the user draws the stroke</span></span>  
   
-    1.  Cuando el usuario dibuja un trazo, los puntos del lápiz se incorporan al subproceso del lápiz.  Los complementos del lápiz, incluido <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, aceptan los puntos del lápiz en el subproceso del lápiz y tienen la oportunidad de modificarlos antes de que <xref:System.Windows.Controls.InkCanvas> los reciba.  
+    1.  <span data-ttu-id="86439-119">Cuando el usuario dibuja un trazo, los puntos del lápiz se enciende el subproceso del lápiz.</span><span class="sxs-lookup"><span data-stu-id="86439-119">When the user draws a stroke, the stylus points come in on the pen thread.</span></span>  <span data-ttu-id="86439-120">Lápiz complementos, incluido el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, acepte los puntos del lápiz en el subproceso del lápiz y tienen la oportunidad de modificarlos antes de la <xref:System.Windows.Controls.InkCanvas> reciben.</span><span class="sxs-lookup"><span data-stu-id="86439-120">Stylus plug-ins, including the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, accept the stylus points on the pen thread and have the chance to modify them before the <xref:System.Windows.Controls.InkCanvas> receives them.</span></span>  
   
-    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa los puntos del lápiz en el subproceso de representación dinámica.  Esto sucede al mismo tiempo que el paso anterior.  
+    2.  <span data-ttu-id="86439-121">El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa los puntos del lápiz en el subproceso de representación dinámica.</span><span class="sxs-lookup"><span data-stu-id="86439-121">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the stylus points on the dynamic rendering thread.</span></span> <span data-ttu-id="86439-122">Esto sucede al mismo tiempo que el paso anterior.</span><span class="sxs-lookup"><span data-stu-id="86439-122">This happens at the same time as the previous step.</span></span>  
   
-    3.  <xref:System.Windows.Controls.InkCanvas> recibe los puntos del lápiz en el subproceso de la interfaz de usuario.  
+    3.  <span data-ttu-id="86439-123">El <xref:System.Windows.Controls.InkCanvas> recibe los puntos del lápiz en el subproceso de interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="86439-123">The <xref:System.Windows.Controls.InkCanvas> receives the stylus points on the UI thread.</span></span>  
   
-2.  Acciones que suceden después de que el usuario finaliza el trazo  
+2.  <span data-ttu-id="86439-124">Acciones que se producen después de que el usuario finaliza el trazo</span><span class="sxs-lookup"><span data-stu-id="86439-124">Actions occurring after the user ends the stroke</span></span>  
   
-    1.  Cuando el usuario termina de dibujar el trazo, <xref:System.Windows.Controls.InkCanvas> crea un objeto <xref:System.Windows.Ink.Stroke> y lo agrega a <xref:System.Windows.Controls.InkPresenter>, que lo representa estáticamente.  
+    1.  <span data-ttu-id="86439-125">Cuando el usuario termina de dibujar el trazo del <xref:System.Windows.Controls.InkCanvas> crea un <xref:System.Windows.Ink.Stroke> objeto y lo agrega a la <xref:System.Windows.Controls.InkPresenter>, que representa de forma estática.</span><span class="sxs-lookup"><span data-stu-id="86439-125">When the user finishes drawing the stroke, the <xref:System.Windows.Controls.InkCanvas> creates a <xref:System.Windows.Ink.Stroke> object and adds it to the <xref:System.Windows.Controls.InkPresenter>, which statically renders it.</span></span>  
   
-    2.  El subproceso de la interfaz de usuario advierte a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> de que el trazo se representa estáticamente, por lo que <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> quita su representación visual del trazo.  
+    2.  <span data-ttu-id="86439-126">Las alertas de subproceso de interfaz de usuario la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> que el trazo se representa estáticamente, por lo que el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> quita su representación visual del trazo.</span><span class="sxs-lookup"><span data-stu-id="86439-126">The UI thread alerts the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> that the stroke is statically rendered, so the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> removes its visual representation of the stroke.</span></span>  
   
-## Recopilación de la entrada de lápiz y complementos del lápiz  
- Cada <xref:System.Windows.UIElement> tiene una <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  Los objetos <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> de <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> reciben y pueden modificar los puntos del lápiz en el subproceso del lápiz.  Los objetos <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> reciben los puntos del lápiz según su orden en <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
+## <a name="ink-collection-and-stylus-plug-ins"></a><span data-ttu-id="86439-127">Colección de tinta y complementos de lápiz</span><span class="sxs-lookup"><span data-stu-id="86439-127">Ink collection and Stylus Plug-ins</span></span>  
+ <span data-ttu-id="86439-128">Cada <xref:System.Windows.UIElement> tiene un <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span><span class="sxs-lookup"><span data-stu-id="86439-128">Each <xref:System.Windows.UIElement> has a <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span>  <span data-ttu-id="86439-129">El <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objetos en el <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> reciben y pueden modificar los puntos del lápiz en el subproceso del lápiz.</span><span class="sxs-lookup"><span data-stu-id="86439-129">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> receive and can modify the stylus points on the pen thread.</span></span> <span data-ttu-id="86439-130">El <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objetos reciben los puntos del lápiz según el orden de la <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span><span class="sxs-lookup"><span data-stu-id="86439-130">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects receive the stylus points according to their order in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span>  
   
- El diagrama siguiente ilustra la situación hipotética de que la colección <xref:System.Windows.UIElement.StylusPlugIns%2A> de <xref:System.Windows.UIElement> contenga `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> y `stylusPlugin2`, por ese orden.  
+ <span data-ttu-id="86439-131">El diagrama siguiente ilustra la situación hipotética donde la <xref:System.Windows.UIElement.StylusPlugIns%2A> colección de un <xref:System.Windows.UIElement> contiene `stylusPlugin1`, un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, y `stylusPlugin2`, en ese orden.</span><span class="sxs-lookup"><span data-stu-id="86439-131">The following diagram illustrates the hypothetical situation where the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection of a <xref:System.Windows.UIElement> contains `stylusPlugin1`, a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, and `stylusPlugin2`, in that order.</span></span>  
   
- ![Orden de resultado de influencia de complementos de lápiz.](../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading\_PluginOrder")  
+ <span data-ttu-id="86439-132">![Orden de complementos de lápiz afecta a la salida. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")</span><span class="sxs-lookup"><span data-stu-id="86439-132">![Order of Stylus Plugins affect output.](../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")</span></span>  
   
- En el diagrama anterior, se produce el siguiente comportamiento:  
+ <span data-ttu-id="86439-133">En el diagrama anterior, produzca el siguiente comportamiento:</span><span class="sxs-lookup"><span data-stu-id="86439-133">In the previous diagram, the following behavior takes place:</span></span>  
   
-1.  `StylusPlugin1` modifica los valores de x e y.  
+1.  <span data-ttu-id="86439-134">`StylusPlugin1`modifica los valores de x e y.</span><span class="sxs-lookup"><span data-stu-id="86439-134">`StylusPlugin1` modifies the values for x and y.</span></span>  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recibe los puntos del lápiz modificados y los representa en el subproceso de representación dinámica.  
+2.  <span data-ttu-id="86439-135"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>recibe los puntos del lápiz modificados y los representa en el subproceso de representación dinámica.</span><span class="sxs-lookup"><span data-stu-id="86439-135"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives the modified stylus points and renders them on the dynamic rendering thread.</span></span>  
   
-3.  `StylusPlugin2` recibe los puntos del lápiz modificados y modifica una vez más los valores de x e y.  
+3.  <span data-ttu-id="86439-136">`StylusPlugin2`recibe los puntos del lápiz modificados y más modifica los valores de x e y.</span><span class="sxs-lookup"><span data-stu-id="86439-136">`StylusPlugin2` receives the modified stylus points and further modifies the values for x and y.</span></span>  
   
-4.  La aplicación recopila los puntos del lápiz y, cuando el usuario finaliza el trazo, lo representa estáticamente.  
+4.  <span data-ttu-id="86439-137">La aplicación recopila los puntos del lápiz y, cuando el usuario finaliza el trazo, lo representa estáticamente.</span><span class="sxs-lookup"><span data-stu-id="86439-137">The application collects the stylus points, and, when the user finishes the stroke, statically renders the stroke.</span></span>  
   
- Supongamos que `stylusPlugin1` restringe los puntos del lápiz a un rectángulo y `stylusPlugin2` traslada los puntos del lápiz a la derecha.  En el escenario anterior, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recibe los puntos del lápiz restringidos, pero no los puntos del lápiz trasladados.  Cuando el usuario dibuja el trazo, el trazo se representa dentro de los límites del rectángulo, pero el trazo no parece trasladarse hasta que el usuario levanta el lápiz.  
+ <span data-ttu-id="86439-138">Suponga que `stylusPlugin1` restringe los puntos del lápiz a un rectángulo y `stylusPlugin2` traduce los puntos del lápiz a la derecha.</span><span class="sxs-lookup"><span data-stu-id="86439-138">Suppose that `stylusPlugin1` restricts the stylus points to a rectangle and `stylusPlugin2` translates the stylus points to the right.</span></span>  <span data-ttu-id="86439-139">En el escenario anterior, el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> recibe los puntos del lápiz restringidos, pero no los puntos del lápiz traducidos.</span><span class="sxs-lookup"><span data-stu-id="86439-139">In the previous scenario, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives the restricted stylus points, but not the translated stylus points.</span></span>  <span data-ttu-id="86439-140">Cuando el usuario dibuja el trazo, el trazo se representa dentro de los límites del rectángulo, pero no aparece el trazo que se deben traducir hasta que el usuario levanta el lápiz.</span><span class="sxs-lookup"><span data-stu-id="86439-140">When the user draws the stroke, the stroke is rendered within the bounds of the rectangle, but the stroke doesn't appear to be translated until the user lifts the pen.</span></span>  
   
-### Operaciones con un complemento de lápiz óptico en el subproceso de la interfaz de usuario  
- Dado que no se puede realizar una prueba de aciertos precisa en el subproceso del lápiz, algunos elementos podrían recibir ocasionalmente entrada del lápiz dirigida a otros elementos.  Si necesita asegurarse de que la entrada se enrutó correctamente antes de realizar una operación, realice la operación en el método <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>o <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> después de suscribirse al mismo.  El subproceso de la aplicación invoca estos métodos una vez realizada una prueba de aciertos precisa.  Para suscribirse a estos métodos, llame al método <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> en el método que se ejecuta en el subproceso del lápiz.  
+### <a name="performing-operations-with-a-stylus-plug-in-on-the-ui-thread"></a><span data-ttu-id="86439-141">Realizar operaciones con un lápiz de complemento en el subproceso de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="86439-141">Performing operations with a Stylus Plug-in on the UI thread</span></span>  
+ <span data-ttu-id="86439-142">Porque no se puede realizar la prueba de posicionamiento precisa en el subproceso del lápiz, algunos elementos en ocasiones pueden recibir la entrada del lápiz dirigida a otros elementos.</span><span class="sxs-lookup"><span data-stu-id="86439-142">Because accurate hit-testing cannot be performed on the pen thread, some elements might occasionally receive stylus input intended for other elements.</span></span> <span data-ttu-id="86439-143">Si necesita asegurarse de que la entrada se enrutó correctamente antes de realizar una operación, suscribirse a y realizar la operación en el <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, o <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> método.</span><span class="sxs-lookup"><span data-stu-id="86439-143">If you need to make sure the input was routed correctly before performing an operation, subscribe to and perform the operation in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, or <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> method.</span></span> <span data-ttu-id="86439-144">Estos métodos se invocan mediante el subproceso de la aplicación una vez realizada la prueba de posicionamiento precisa.</span><span class="sxs-lookup"><span data-stu-id="86439-144">These methods are invoked by the application thread after accurate hit-testing has been performed.</span></span> <span data-ttu-id="86439-145">Para suscribirse a estos métodos, llame a la <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> método en el método que tiene lugar en el subproceso del lápiz.</span><span class="sxs-lookup"><span data-stu-id="86439-145">To subscribe to these methods, call the <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> method in the method that occurs on the pen thread.</span></span>  
   
- El diagrama siguiente ilustra la relación entre el subproceso del lápiz y subproceso de la interfaz de usuario con respecto a los eventos de lápiz de <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
+ <span data-ttu-id="86439-146">En el diagrama siguiente ilustra la relación entre el subproceso del lápiz y el subproceso de interfaz de usuario con respecto a los eventos de lápiz de un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span><span class="sxs-lookup"><span data-stu-id="86439-146">The following diagram illustrates the relationship between the pen thread and UI thread with respect to the stylus events of a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span></span>  
   
- ![Modelos de subprocesos de entrada manuscrita &#40;IU y lápiz&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading\_PluginCallbacks")  
+ <span data-ttu-id="86439-147">![Modelos de subprocesamiento &#40; la tinta Interfaz de usuario y lápiz &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")</span><span class="sxs-lookup"><span data-stu-id="86439-147">![Ink Threading Models &#40;UI and Pen&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")</span></span>  
   
-## Representación de la entrada de lápiz  
- A medida que el usuario dibuja un trazo, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa la entrada de lápiz en un subproceso independiente, de forma que la entrada de lápiz parece "fluir" del lápiz cuando el subproceso de la interfaz de usuario no está disponible.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila un árbol visual en el subproceso de representación dinámica mientras recopila los puntos del lápiz.  Cuando el usuario finaliza el trazo, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> solicita que se le notifique cuando la aplicación realice el siguiente paso de representación.  Después de que la aplicación completa el siguiente paso de representación, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> borra su árbol visual.  En el diagrama siguiente se muestra este proceso.  
+## <a name="rendering-ink"></a><span data-ttu-id="86439-148">Representar entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="86439-148">Rendering Ink</span></span>  
+ <span data-ttu-id="86439-149">Como el usuario dibuja un trazo, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> representa la tinta en un subproceso independiente de forma que la entrada de lápiz parece "fluir" del lápiz incluso cuando el subproceso de interfaz de usuario está ocupado.</span><span class="sxs-lookup"><span data-stu-id="86439-149">As the user draws a stroke, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the ink on a separate thread so the ink appears to "flow" from the pen even when the UI thread is busy.</span></span>  <span data-ttu-id="86439-150">El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> genera un árbol visual en el subproceso de representación dinámica como recopila los puntos del lápiz.</span><span class="sxs-lookup"><span data-stu-id="86439-150">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> builds a visual tree on the dynamic rendering thread as it collects stylus points.</span></span>  <span data-ttu-id="86439-151">Cuando el usuario finaliza el trazo, el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> le pide que se le notifique cuando la aplicación realiza el siguiente paso de representación.</span><span class="sxs-lookup"><span data-stu-id="86439-151">When the user finishes the stroke, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> asks to be notified when the application does the next rendering pass.</span></span>  <span data-ttu-id="86439-152">Cuando la aplicación termina el siguiente paso de representación, el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> limpia su árbol visual.</span><span class="sxs-lookup"><span data-stu-id="86439-152">After the application completes the next rendering pass, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> cleans up its visual tree.</span></span>  <span data-ttu-id="86439-153">El siguiente diagrama ilustra este proceso.</span><span class="sxs-lookup"><span data-stu-id="86439-153">The following diagram illustrates this process.</span></span>  
   
- ![Diagrama de subprocesos de entrada manuscrita](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading\_VisualTree")  
+ <span data-ttu-id="86439-154">![Diagrama de subprocesos de tinta](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")</span><span class="sxs-lookup"><span data-stu-id="86439-154">![Ink threading diagram](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")</span></span>  
   
-1.  El usuario inicia el trazo.  
+1.  <span data-ttu-id="86439-155">El usuario inicia el trazo.</span><span class="sxs-lookup"><span data-stu-id="86439-155">The user begins the stroke.</span></span>  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crea el árbol visual.  
+    1.  <span data-ttu-id="86439-156">El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crea el árbol visual.</span><span class="sxs-lookup"><span data-stu-id="86439-156">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> creates the visual tree.</span></span>  
   
-2.  El usuario está dibujando el trazo.  
+2.  <span data-ttu-id="86439-157">El usuario está dibujando el trazo.</span><span class="sxs-lookup"><span data-stu-id="86439-157">The user is drawing the stroke.</span></span>  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila el árbol visual.  
+    1.  <span data-ttu-id="86439-158">El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila el árbol visual.</span><span class="sxs-lookup"><span data-stu-id="86439-158">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> builds the visual tree.</span></span>  
   
-3.  El usuario finaliza el trazo.  
+3.  <span data-ttu-id="86439-159">El usuario finaliza el trazo.</span><span class="sxs-lookup"><span data-stu-id="86439-159">The user ends the stroke.</span></span>  
   
-    1.  <xref:System.Windows.Controls.InkPresenter> agrega el trazo a su árbol visual.  
+    1.  <span data-ttu-id="86439-160">El <xref:System.Windows.Controls.InkPresenter> agrega el trazo a su árbol visual.</span><span class="sxs-lookup"><span data-stu-id="86439-160">The <xref:System.Windows.Controls.InkPresenter> adds the stroke to its visual tree.</span></span>  
   
-    2.  La capa de integración multimedia \(MIL\) representa los trazos estáticamente.  
+    2.  <span data-ttu-id="86439-161">La capa de integración multimedia (MIL) representa los trazos estáticamente.</span><span class="sxs-lookup"><span data-stu-id="86439-161">The Media Integration Layer (MIL) statically renders the strokes.</span></span>  
   
-    3.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> borra la representación visual.
+    3.  <span data-ttu-id="86439-162">El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> limpia los objetos visuales.</span><span class="sxs-lookup"><span data-stu-id="86439-162">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> cleans up the visuals.</span></span>

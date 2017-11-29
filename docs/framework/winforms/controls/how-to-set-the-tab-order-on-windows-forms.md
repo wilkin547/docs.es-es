@@ -1,70 +1,71 @@
 ---
-title: "C&#243;mo: Establecer el orden de tabulaci&#243;n en formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TabStop"
-  - "TabIndex"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms], establecer el orden de tabulación"
-  - "orden de tabulación, controles de formularios Windows Forms"
-  - "controles de Windows Forms, establecer el orden de tabulación"
-  - "Windows Forms, establecer el orden de tabulación"
+title: "Cómo: Establecer el orden de tabulación en formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TabStop
+- TabIndex
+helpviewer_keywords:
+- tab order [Windows Forms], controls on Windows forms
+- Windows Forms controls, setting tab order
+- controls [Windows Forms], setting tab order
+- Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer el orden de tabulaci&#243;n en formularios Windows Forms
-El orden de tabulación es el orden en el que el usuario mueve el foco de un control a otro al presionar la tecla TABULADOR.  Cada formulario tiene su propio orden de tabulación.  De forma predeterminada, el orden de tabulación es el mismo que el orden en el que se crearon los controles.  La numeración del orden de tabulación empieza por cero.  
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a><span data-ttu-id="9b2cb-102">Cómo: Establecer el orden de tabulación en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9b2cb-102">How to: Set the Tab Order on Windows Forms</span></span>
+<span data-ttu-id="9b2cb-103">El orden de tabulación es el orden en que un usuario mueve foco de un control a otro presionando la tecla TAB.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-103">The tab order is the order in which a user moves focus from one control to another by pressing the TAB key.</span></span> <span data-ttu-id="9b2cb-104">Cada formulario tiene su propio orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-104">Each form has its own tab order.</span></span> <span data-ttu-id="9b2cb-105">De forma predeterminada, el orden de tabulación es el mismo que el orden en que se crean los controles.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-105">By default, the tab order is the same as the order in which you created the controls.</span></span> <span data-ttu-id="9b2cb-106">Numeración de orden de tabulación empieza por cero.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-106">Tab-order numbering begins with zero.</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="9b2cb-107">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="9b2cb-108">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="9b2cb-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="9b2cb-109">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="9b2cb-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Para establecer el orden de tabulación de un control  
+### <a name="to-set-the-tab-order-of-a-control"></a><span data-ttu-id="9b2cb-110">Para establecer el orden de tabulación de un control</span><span class="sxs-lookup"><span data-stu-id="9b2cb-110">To set the tab order of a control</span></span>  
   
-1.  En el menú **Ver**, haga clic en **Orden de tabulación**.  
+1.  <span data-ttu-id="9b2cb-111">En el **vista** menú, haga clic en **orden de tabulación**.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-111">On the **View** menu, click **Tab Order**.</span></span>  
   
-     Esto activa el modo de selección del orden de tabulación en el formulario.  En la esquina superior izquierda de cada control aparecerá un número \(que representa la propiedad <xref:System.Windows.Forms.Control.TabIndex%2A>\).  
+     <span data-ttu-id="9b2cb-112">Esto activa el modo de selección de orden de tabulación en el formulario.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-112">This activates the tab-order selection mode on the form.</span></span> <span data-ttu-id="9b2cb-113">Un número (que representa el <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad) aparece en la esquina superior izquierda de cada control.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-113">A number (representing the <xref:System.Windows.Forms.Control.TabIndex%2A> property) appears in the upper-left corner of each control.</span></span>  
   
-2.  Haga clic secuencialmente en los controles para establecer el orden de tabulación que desee.  
-  
-    > [!NOTE]
-    >  La posición de un control dentro del orden de tabulación puede establecerse en cualquier valor mayor o igual que 0.  Cuando hay duplicados, se evalúa el orden Z de los dos controles y el control de la parte superior se pone en primer lugar.  El orden z es la disposición visual en capas de los controles en un formulario a lo largo del eje z del formulario \(profundidad\).  El orden z determina qué controles se encuentran por delante de otros controles. Para obtener más información acerca del orden z, vea [Disponer objetos en capas en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
-  
-3.  Cuando termine, haga clic de nuevo en **Orden de tabulación** en el menú **Ver** para abandonar el modo de orden de tabulación.  
+2.  <span data-ttu-id="9b2cb-114">Haga clic en los controles de forma secuencial para establecer el orden de tabulación que desee.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-114">Click the controls sequentially to establish the tab order you want.</span></span>  
   
     > [!NOTE]
-    >  Los controles que no pueden tener el foco, así como los deshabilitados e invisibles, no tienen propiedad <xref:System.Windows.Forms.Control.TabIndex%2A> y no se incluyen en el orden de tabulación.  Cuando el usuario presiona la tecla TABULADOR, estos controles se omiten.  
+    >  <span data-ttu-id="9b2cb-115">Posición de un control en el orden de tabulación puede establecerse en cualquier valor mayor o igual que 0.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-115">A control's place within the tab order can be set to any value greater than or equal to 0.</span></span> <span data-ttu-id="9b2cb-116">Cuando se produzcan duplicados, se evalúa el orden z de los dos controles y el control en la parte superior se pone en primer lugar.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-116">When duplicates occur, the z-order of the two controls is evaluated and the control on top is tabbed to first.</span></span> <span data-ttu-id="9b2cb-117">(El orden z es la disposición visual en capas de los controles de un formulario a lo largo del eje z del formulario [profundidad].</span><span class="sxs-lookup"><span data-stu-id="9b2cb-117">(The z-order is the visual layering of controls on a form along the form's z-axis [depth].</span></span> <span data-ttu-id="9b2cb-118">El orden z determina qué controles están delante de otros controles.) Para obtener más información acerca del orden z, vea [disponer objetos en capas en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="9b2cb-118">The z-order determines which controls are in front of other controls.) For more information on z-order, see [Layering Objects on Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).</span></span>  
   
- También es posible establecer el orden de tabulación en la ventana Propiedades mediante la propiedad <xref:System.Windows.Forms.Control.TabIndex%2A>.  La propiedad <xref:System.Windows.Forms.Control.TabIndex%2A> de un control determina su posición dentro del orden de tabulación.  De forma predeterminada, para el primer control que se dibuja el valor de <xref:System.Windows.Forms.Control.TabIndex%2A> es 0; para el segundo, el valor de <xref:System.Windows.Forms.Control.TabIndex%2A> es 1 y así sucesivamente.  
-  
- Además, de forma predeterminada, los controles <xref:System.Windows.Forms.GroupBox> tienen su propio valor <xref:System.Windows.Forms.Control.TabIndex%2A>, que es un número entero.  Un control <xref:System.Windows.Forms.GroupBox> no puede tener por sí mismo el foco en tiempo de ejecución.  De ese modo, cada control incluido en un objeto <xref:System.Windows.Forms.GroupBox> tiene su propio valor <xref:System.Windows.Forms.Control.TabIndex%2A> decimal, que comienza por ,0.  Naturalmente, conforme aumente el valor <xref:System.Windows.Forms.Control.TabIndex%2A> de un control <xref:System.Windows.Forms.GroupBox>, los controles que contiene se irán incrementando en consecuencia.  Si cambia el valor de <xref:System.Windows.Forms.Control.TabIndex%2A> de 5 a 6, el valor de <xref:System.Windows.Forms.Control.TabIndex%2A> del primer control de su grupos cambia automáticamente a 6.0, etc.  
-  
- Finalmente, es posible omitir cualquier control del formulario en el orden de tabulación.  Habitualmente, al presionar sucesivamente la tecla TABULADOR en tiempo de ejecución, se selecciona cada control en el orden de tabulación.  Al desactivar la propiedad <xref:System.Windows.Forms.Control.TabStop%2A>, es posible hacer que un control se pase por alto en el orden de tabulación del formulario.  
-  
-#### Para quitar un control del orden de tabulación  
-  
-1.  Establezca la propiedad <xref:System.Windows.Forms.Control.TabStop%2A> del control en `false` en la ventana Propiedades.  
-  
-     Un control cuya propiedad <xref:System.Windows.Forms.Control.TabStop%2A> se haya establecido en `false` seguirá manteniendo su posición en el orden de tabulación, incluso aunque se omita al recorrer los controles con la tecla TABULADOR.  
+3.  <span data-ttu-id="9b2cb-119">Cuando haya terminado, haga clic en **orden de tabulación** en el **vista** nuevo menú para abandonar el modo de orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-119">When you have finished, click **Tab Order** on the **View** menu again to leave tab order mode.</span></span>  
   
     > [!NOTE]
-    >  Un grupo de botones de radio tiene una única tabulación en tiempo de ejecución.  El botón seleccionado \(es decir, el botón cuya propiedad <xref:System.Windows.Forms.RadioButton.Checked%2A> está establecida en `true`\) tiene su propiedad <xref:System.Windows.Forms.Control.TabStop%2A> establecida automáticamente en `true`, mientras que los demás botones tienen su propiedad <xref:System.Windows.Forms.Control.TabStop%2A> establecida en `false`.  Para obtener más información sobre agrupar controles <xref:System.Windows.Forms.RadioButton>, vea [Agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  <span data-ttu-id="9b2cb-120">Controles que no se pueden obtener el foco, así como controles deshabilitados e invisibles, no tiene un <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad y están no incluidos en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-120">Controls that cannot get the focus, as well as disabled and invisible controls, do not have a <xref:System.Windows.Forms.Control.TabIndex%2A> property and are not included in the tab order.</span></span> <span data-ttu-id="9b2cb-121">Cuando el usuario presiona la tecla TAB, se omiten estos controles.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-121">As a user presses the TAB key, these controls are skipped.</span></span>  
   
-## Vea también  
- [Controles de Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ <span data-ttu-id="9b2cb-122">Como alternativa, se puede establecer el orden de tabulación en la ventana de propiedades mediante el <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-122">Alternatively, tab order can be set in the Properties window using the <xref:System.Windows.Forms.Control.TabIndex%2A> property.</span></span> <span data-ttu-id="9b2cb-123">El <xref:System.Windows.Forms.Control.TabIndex%2A> propiedad de un control determina dónde se coloca en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-123">The <xref:System.Windows.Forms.Control.TabIndex%2A> property of a control determines where it is positioned in the tab order.</span></span> <span data-ttu-id="9b2cb-124">De forma predeterminada, el primer control dibujado tiene un <xref:System.Windows.Forms.Control.TabIndex%2A> valor de 0, el segundo tiene un <xref:System.Windows.Forms.Control.TabIndex%2A> de 1 y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-124">By default, the first control drawn has a <xref:System.Windows.Forms.Control.TabIndex%2A> value of 0, the second has a <xref:System.Windows.Forms.Control.TabIndex%2A> of 1, and so on.</span></span>  
+  
+ <span data-ttu-id="9b2cb-125">Además, de forma predeterminada, un <xref:System.Windows.Forms.GroupBox> control tiene su propio <xref:System.Windows.Forms.Control.TabIndex%2A> valor, que es un número entero.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-125">Additionally, by default, a <xref:System.Windows.Forms.GroupBox> control has its own <xref:System.Windows.Forms.Control.TabIndex%2A> value, which is a whole number.</span></span> <span data-ttu-id="9b2cb-126">Un <xref:System.Windows.Forms.GroupBox> propio control no puede tener el foco en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-126">A <xref:System.Windows.Forms.GroupBox> control itself cannot have focus at run time.</span></span> <span data-ttu-id="9b2cb-127">Por lo tanto, cada control dentro de un <xref:System.Windows.Forms.GroupBox> tiene su propio decimal <xref:System.Windows.Forms.Control.TabIndex%2A> valor, comenzando con.0.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-127">Thus, each control within a <xref:System.Windows.Forms.GroupBox> has its own decimal <xref:System.Windows.Forms.Control.TabIndex%2A> value, beginning with .0.</span></span> <span data-ttu-id="9b2cb-128">Naturalmente, como el <xref:System.Windows.Forms.Control.TabIndex%2A> de un <xref:System.Windows.Forms.GroupBox> se incrementa el control, los controles en él se incrementará en consecuencia.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-128">Naturally, as the <xref:System.Windows.Forms.Control.TabIndex%2A> of a <xref:System.Windows.Forms.GroupBox> control is incremented, the controls within it will be incremented accordingly.</span></span> <span data-ttu-id="9b2cb-129">Si ha cambiado una <xref:System.Windows.Forms.Control.TabIndex%2A> valor comprendido entre 5 y 6, el <xref:System.Windows.Forms.Control.TabIndex%2A> cambia automáticamente el valor del primer control en su grupo de a 6.0 y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-129">If you changed a <xref:System.Windows.Forms.Control.TabIndex%2A> value from 5 to 6, the <xref:System.Windows.Forms.Control.TabIndex%2A> value of the first control in its group automatically changes to 6.0, and so on.</span></span>  
+  
+ <span data-ttu-id="9b2cb-130">Por último, se puede omitir cualquier control de varios en el formulario en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-130">Finally, any control of the many on your form can be skipped in the tab order.</span></span> <span data-ttu-id="9b2cb-131">Por lo general, al presionar TAB consecutivamente en tiempo de ejecución selecciona cada control en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-131">Usually, pressing TAB successively at run time selects each control in the tab order.</span></span> <span data-ttu-id="9b2cb-132">Si se desactiva la <xref:System.Windows.Forms.Control.TabStop%2A> propiedad, puede hacer que un control se pase por alto en el orden de tabulación del formulario.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-132">By turning off the <xref:System.Windows.Forms.Control.TabStop%2A> property, you can make a control be passed over in the tab order of the form.</span></span>  
+  
+#### <a name="to-remove-a-control-from-the-tab-order"></a><span data-ttu-id="9b2cb-133">Para quitar un control del orden de tabulación</span><span class="sxs-lookup"><span data-stu-id="9b2cb-133">To remove a control from the tab order</span></span>  
+  
+1.  <span data-ttu-id="9b2cb-134">Establecer el control <xref:System.Windows.Forms.Control.TabStop%2A> propiedad `false` en la ventana Propiedades.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-134">Set the control's <xref:System.Windows.Forms.Control.TabStop%2A> property to `false` in the Properties window.</span></span>  
+  
+     <span data-ttu-id="9b2cb-135">Un control cuya <xref:System.Windows.Forms.Control.TabStop%2A> propiedad se ha establecido en `false` manteniendo su posición en el orden de tabulación, aunque se omita al recorrer los controles con la tecla TAB.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-135">A control whose <xref:System.Windows.Forms.Control.TabStop%2A> property has been set to `false` still maintains its position in the tab order, even though the control is skipped when you cycle through the controls with the TAB key.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="9b2cb-136">Un grupo de botones de radio tiene una única tabulación en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-136">A radio button group has a single tab stop at run time.</span></span> <span data-ttu-id="9b2cb-137">El botón seleccionado (es decir, el botón con su <xref:System.Windows.Forms.RadioButton.Checked%2A> propiedad establecida en `true`) tiene su <xref:System.Windows.Forms.Control.TabStop%2A> propiedad se establece automáticamente en `true`, mientras que los demás botones tienen sus <xref:System.Windows.Forms.Control.TabStop%2A> propiedad establecida en `false`.</span><span class="sxs-lookup"><span data-stu-id="9b2cb-137">The selected button (that is, the button with its <xref:System.Windows.Forms.RadioButton.Checked%2A> property set to `true`) has its <xref:System.Windows.Forms.Control.TabStop%2A> property automatically set to `true`, while the other buttons have their <xref:System.Windows.Forms.Control.TabStop%2A> property set to `false`.</span></span> <span data-ttu-id="9b2cb-138">Para obtener más información acerca de la agrupación <xref:System.Windows.Forms.RadioButton> controles, vea [agrupar controles RadioButton de formularios Windows Forms funcione como un conjunto](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).</span><span class="sxs-lookup"><span data-stu-id="9b2cb-138">For more information about grouping <xref:System.Windows.Forms.RadioButton> controls, see [Grouping Windows Forms RadioButton Controls to Function as a Set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="9b2cb-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="9b2cb-139">See Also</span></span>  
+ [<span data-ttu-id="9b2cb-140">Controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9b2cb-140">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="9b2cb-141">Organizar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9b2cb-141">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="9b2cb-142">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9b2cb-142">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="9b2cb-143">Controles de formularios Windows Forms por función</span><span class="sxs-lookup"><span data-stu-id="9b2cb-143">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

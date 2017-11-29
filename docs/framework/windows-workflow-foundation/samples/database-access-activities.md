@@ -1,44 +1,48 @@
 ---
-title: "Actividades de acceso a bases de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Actividades de acceso a bases de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 10066c1d5e6bd0d03d91337a2fed987c881b23b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Actividades de acceso a bases de datos
-Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo.Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar información y usar [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.  
+# <a name="database-access-activities"></a><span data-ttu-id="7a962-102">Actividades de acceso a bases de datos</span><span class="sxs-lookup"><span data-stu-id="7a962-102">Database Access Activities</span></span>
+<span data-ttu-id="7a962-103">Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="7a962-103">Database access activities allow you to access a database within a workflow.</span></span> <span data-ttu-id="7a962-104">Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar la información y usar [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="7a962-104">These activities allow accessing databases to retrieve or modify information and use [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) to access the database.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="7a962-105">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="7a962-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7a962-106">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="7a962-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a \(página de descarga\) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="7a962-107">Si este directorio no existe, vaya a (página de descarga) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7a962-107">If this directory does not exist, go to (download page) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7a962-108">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="7a962-108">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
-## Actividades de base de datos  
- En las siguientes secciones se detalla la lista de actividades incluidas en este ejemplo.  
+## <a name="database-activities"></a><span data-ttu-id="7a962-109">Actividades de base de datos</span><span class="sxs-lookup"><span data-stu-id="7a962-109">Database Activities</span></span>  
+ <span data-ttu-id="7a962-110">En las siguientes secciones se detalla la lista de actividades incluidas en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="7a962-110">The following sections detail the list of activities included in this sample.</span></span>  
   
-## DbUpdate  
- Ejecuta una consulta SQL que genera una modificación en la base de datos \(inserción, actualización, eliminación y otras modificaciones\).  
+## <a name="dbupdate"></a><span data-ttu-id="7a962-111">DbUpdate</span><span class="sxs-lookup"><span data-stu-id="7a962-111">DbUpdate</span></span>  
+ <span data-ttu-id="7a962-112">Ejecuta una consulta SQL que genera una modificación en la base de datos (inserción, actualización, eliminación y otras modificaciones).</span><span class="sxs-lookup"><span data-stu-id="7a962-112">Executes a SQL query that produces a modification in the database (insert, update, delete, and other modifications).</span></span>  
   
- Esta clase realiza su trabajo de forma asincrónica \(deriva de <xref:System.Activities.AsyncCodeActivity> y usa sus capacidades asincrónicas\).  
+ <span data-ttu-id="7a962-113">Esta clase realiza su trabajo de forma asincrónica (deriva de <xref:System.Activities.AsyncCodeActivity> y usa sus capacidades asincrónicas).</span><span class="sxs-lookup"><span data-stu-id="7a962-113">This class performs its work asynchronously (it derives from <xref:System.Activities.AsyncCodeActivity> and uses its asynchronous capabilities).</span></span>  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ <span data-ttu-id="7a962-114">La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7a962-114">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
+ <span data-ttu-id="7a962-115">La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="7a962-115">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- Una vez ejecutado `DbUpdate`, el número de registros afectado se devuelve en la propiedad `AffectedRecords`.  
+ <span data-ttu-id="7a962-116">Una vez ejecutado `DbUpdate`, el número de registros afectado se devuelve en la propiedad `AffectedRecords`.</span><span class="sxs-lookup"><span data-stu-id="7a962-116">After `DbUpdate` is executed, the number of affected records is returned in the `AffectedRecords` property.</span></span>  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
@@ -74,27 +78,26 @@ Public class DbUpdate: AsyncCodeActivity
 }  
 ```  
   
-|||  
+|<span data-ttu-id="7a962-117">Argumento</span><span class="sxs-lookup"><span data-stu-id="7a962-117">Argument</span></span>|<span data-ttu-id="7a962-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="7a962-118">Description</span></span>|  
 |-|-|  
-|Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
-|CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
-|Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
-|AffectedRecords|Número de registros afectado por la última operación.|  
+|<span data-ttu-id="7a962-119">ProviderName</span><span class="sxs-lookup"><span data-stu-id="7a962-119">ProviderName</span></span>|<span data-ttu-id="7a962-120">Nombre invariable de proveedor de ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="7a962-120">ADO.NET provider invariant name.</span></span> <span data-ttu-id="7a962-121">Si se establece este argumento, también se debe establecer `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-121">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-122">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="7a962-122">ConnectionString</span></span>|<span data-ttu-id="7a962-123">Cadena de conexión para conectar a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="7a962-123">Connection string to connect to the database.</span></span> <span data-ttu-id="7a962-124">Si se establece este argumento, también se debe establecer `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="7a962-124">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-125">ConfigName</span><span class="sxs-lookup"><span data-stu-id="7a962-125">ConfigName</span></span>|<span data-ttu-id="7a962-126">Nombre de la sección de archivo de configuración donde se almacena la información de conexión.</span><span class="sxs-lookup"><span data-stu-id="7a962-126">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="7a962-127">Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-127">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="7a962-128">CommandType</span><span class="sxs-lookup"><span data-stu-id="7a962-128">CommandType</span></span>|<span data-ttu-id="7a962-129">Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-129">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="7a962-130">Sql</span><span class="sxs-lookup"><span data-stu-id="7a962-130">Sql</span></span>|<span data-ttu-id="7a962-131">El comando SQL que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-131">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="7a962-132">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7a962-132">Parameters</span></span>|<span data-ttu-id="7a962-133">Colección de los parámetros de la consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="7a962-133">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="7a962-134">AffectedRecords</span><span class="sxs-lookup"><span data-stu-id="7a962-134">AffectedRecords</span></span>|<span data-ttu-id="7a962-135">Número de registros afectado por la última operación.</span><span class="sxs-lookup"><span data-stu-id="7a962-135">Number of records affected by the last operation.</span></span>|  
   
-## DbQueryScalar  
- Ejecuta una consulta que recupera un único valor de la base de datos.  
+## <a name="dbqueryscalar"></a><span data-ttu-id="7a962-136">DbQueryScalar</span><span class="sxs-lookup"><span data-stu-id="7a962-136">DbQueryScalar</span></span>  
+ <span data-ttu-id="7a962-137">Ejecuta una consulta que recupera un único valor de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="7a962-137">Executes a query that retrieves a single value from the database.</span></span>  
   
- Esta clase realiza su trabajo de forma asincrónica \(deriva de <xref:System.Activities.AsyncCodeActivity%601> y usa sus capacidades asincrónicas\).  
+ <span data-ttu-id="7a962-138">Esta clase realiza su trabajo de forma asincrónica (deriva de <xref:System.Activities.AsyncCodeActivity%601> y usa sus capacidades asincrónicas).</span><span class="sxs-lookup"><span data-stu-id="7a962-138">This class performs its work asynchronously (it derives from <xref:System.Activities.AsyncCodeActivity%601> and uses its asynchronous capabilities).</span></span>  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ <span data-ttu-id="7a962-139">La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7a962-139">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
+ <span data-ttu-id="7a962-140">La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="7a962-140">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- Una vez ejecutado `DbQueryScalar`, el valor escalar se devuelve en el argumento `Result``out` \(de tipo `TResult`, que se define en la clase base <xref:System.Activities.AsyncCodeActivity%601>\).  
+ <span data-ttu-id="7a962-141">Después de `DbQueryScalar` es ejecuta, se devuelve el valor escalar en el `Result``out` argumento (de tipo `TResult`, que es definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).</span><span class="sxs-lookup"><span data-stu-id="7a962-141">After `DbQueryScalar` is executed, the scalar is returned in the `Result``out` argument (of type `TResult`, that is defined in the base class <xref:System.Activities.AsyncCodeActivity%601>).</span></span>  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -128,25 +131,24 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }  
 ```  
   
-|||  
+|<span data-ttu-id="7a962-142">Argumento</span><span class="sxs-lookup"><span data-stu-id="7a962-142">Argument</span></span>|<span data-ttu-id="7a962-143">Descripción</span><span class="sxs-lookup"><span data-stu-id="7a962-143">Description</span></span>|  
 |-|-|  
-|Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
-|CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
-|Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
-|Result|Valor escalar que se obtiene una vez ejecutada la consulta.Este argumento es de tipo `TResult`.|  
+|<span data-ttu-id="7a962-144">ProviderName</span><span class="sxs-lookup"><span data-stu-id="7a962-144">ProviderName</span></span>|<span data-ttu-id="7a962-145">Nombre invariable de proveedor de ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="7a962-145">ADO.NET provider invariant name.</span></span> <span data-ttu-id="7a962-146">Si se establece este argumento, también se debe establecer `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-146">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-147">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="7a962-147">ConnectionString</span></span>|<span data-ttu-id="7a962-148">Cadena de conexión para conectar a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="7a962-148">Connection string to connect to the database.</span></span> <span data-ttu-id="7a962-149">Si se establece este argumento, también se debe establecer `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="7a962-149">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-150">ConfigName</span><span class="sxs-lookup"><span data-stu-id="7a962-150">ConfigName</span></span>|<span data-ttu-id="7a962-151">Nombre de la sección de archivo de configuración donde se almacena la información de conexión.</span><span class="sxs-lookup"><span data-stu-id="7a962-151">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="7a962-152">Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-152">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="7a962-153">CommandType</span><span class="sxs-lookup"><span data-stu-id="7a962-153">CommandType</span></span>|<span data-ttu-id="7a962-154">Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-154">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="7a962-155">Sql</span><span class="sxs-lookup"><span data-stu-id="7a962-155">Sql</span></span>|<span data-ttu-id="7a962-156">El comando SQL que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-156">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="7a962-157">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7a962-157">Parameters</span></span>|<span data-ttu-id="7a962-158">Colección de los parámetros de la consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="7a962-158">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="7a962-159">Resultado</span><span class="sxs-lookup"><span data-stu-id="7a962-159">Result</span></span>|<span data-ttu-id="7a962-160">Valor escalar que se obtiene una vez ejecutada la consulta.</span><span class="sxs-lookup"><span data-stu-id="7a962-160">Scalar that is obtained after the query is executed.</span></span> <span data-ttu-id="7a962-161">Este argumento es de tipo `TResult`.</span><span class="sxs-lookup"><span data-stu-id="7a962-161">This argument is of type `TResult`.</span></span>|  
   
-## DbQuery  
- Ejecuta una consulta que recupera una lista de objetos.Una vez ejecutada la consulta, se ejecuta una función de asignación \(puede ser <xref:System.Func%601>\<`DbDataReader`, `TResult`\> o <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult` \>\).Esta función de asignación obtiene un registro de `DbDataReader` y lo asigna al objeto que se va a devolver.  
+## <a name="dbquery"></a><span data-ttu-id="7a962-162">DbQuery</span><span class="sxs-lookup"><span data-stu-id="7a962-162">DbQuery</span></span>  
+ <span data-ttu-id="7a962-163">Ejecuta una consulta que recupera una lista de objetos.</span><span class="sxs-lookup"><span data-stu-id="7a962-163">Executes a query that retrieves a list of objects.</span></span> <span data-ttu-id="7a962-164">Después de ejecuta la consulta, se ejecuta una función de asignación (puede ser <xref:System.Func%601> < `DbDataReader`, `TResult`> o un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>).</span><span class="sxs-lookup"><span data-stu-id="7a962-164">After the query is executed, a mapping function is executed (it can be <xref:System.Func%601><`DbDataReader`, `TResult`> or an <xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>).</span></span> <span data-ttu-id="7a962-165">Esta función de asignación obtiene un registro de `DbDataReader` y lo asigna al objeto que se va a devolver.</span><span class="sxs-lookup"><span data-stu-id="7a962-165">This mapping function gets a record in a `DbDataReader` and maps it to the object to be returned.</span></span>  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ <span data-ttu-id="7a962-166">La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7a962-166">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
+ <span data-ttu-id="7a962-167">La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="7a962-167">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- Los resultados de la consulta SQL se recuperan utilizando `DbDataReader`.La actividad recorre en iteración `DbDataReader` y asigna las filas de `DbDataReader` a una instancia de `TResult`.El usuario de `DbQuery` tiene que proporcionar el código de asignación, lo que se puede llevar a cabo de dos maneras: mediante <xref:System.Func%601>\<`DbDataReader`, `TResult`\> o <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>.En el primer caso, la asignación se realiza en un pulso único de ejecución.Por tanto, es más rápida, pero esto no se puede serializar en XAML.En el último caso, la asignación se realiza en varios pulsos.Por tanto, puede ser más lenta pero se serializar en XAML y crear mediante declaración \(cualquier actividad existente puede participar en la asignación\).  
+ <span data-ttu-id="7a962-168">Los resultados de la consulta SQL se recuperan utilizando `DbDataReader`.</span><span class="sxs-lookup"><span data-stu-id="7a962-168">The results of the SQL query are retrieved using a `DbDataReader`.</span></span> <span data-ttu-id="7a962-169">La actividad recorre en iteración `DbDataReader` y asigna las filas de `DbDataReader` a una instancia de `TResult`.</span><span class="sxs-lookup"><span data-stu-id="7a962-169">The activity iterates through the `DbDataReader` and maps the rows in the `DbDataReader` to an instance of `TResult`.</span></span> <span data-ttu-id="7a962-170">El usuario de `DbQuery` tiene que proporcionar el código de asignación y, por lo que pueden hacerse de dos maneras: mediante un <xref:System.Func%601> < `DbDataReader`, `TResult`> o un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>.</span><span class="sxs-lookup"><span data-stu-id="7a962-170">The user of `DbQuery` has to provide the mapping code and this can be done in two ways: using a <xref:System.Func%601><`DbDataReader`, `TResult`> or an <xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>.</span></span> <span data-ttu-id="7a962-171">En el primer caso, la asignación se realiza en un pulso único de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7a962-171">In the first case, the map is done in a single pulse of execution.</span></span> <span data-ttu-id="7a962-172">Por tanto, es más rápida, pero esto no se puede serializar en XAML.</span><span class="sxs-lookup"><span data-stu-id="7a962-172">Therefore, it is faster, but this cannot be serialized to XAML.</span></span> <span data-ttu-id="7a962-173">En el último caso, la asignación se realiza en varios pulsos.</span><span class="sxs-lookup"><span data-stu-id="7a962-173">In the last case, the map is performed in multiple pulses.</span></span> <span data-ttu-id="7a962-174">Por tanto, puede ser más lenta pero se serializar en XAML y crear mediante declaración (cualquier actividad existente puede participar en la asignación).</span><span class="sxs-lookup"><span data-stu-id="7a962-174">Therefore, it might be slower but can be serialized to XAML and authored declaratively (any existing activity can participate in the mapping).</span></span>  
   
 ```  
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class  
@@ -188,27 +190,26 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }  
 ```  
   
-|||  
+|<span data-ttu-id="7a962-175">Argumento</span><span class="sxs-lookup"><span data-stu-id="7a962-175">Argument</span></span>|<span data-ttu-id="7a962-176">Descripción</span><span class="sxs-lookup"><span data-stu-id="7a962-176">Description</span></span>|  
 |-|-|  
-|Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
-|CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
-|Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
-|Mapper|Función de asignación \(<xref:System.Func%601>\<`DbDataReader`, `TResult`\>\) que toma un registro de `DataReader` obtenido como resultado de la ejecución de la consulta y devuelve una instancia de un objeto de tipo `TResult` que se va a agregar a la colección `Result`.<br /><br /> En este caso, la asignación se realiza mediante un único pulso de ejecución, pero no se puede crear mediante declaración utilizando el diseñador.|  
-|MapperFunc|Función de asignación \(<xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>\) que toma un registro de `DataReader` obtenido como resultado de la ejecución de la consulta y devuelve una instancia de un objeto de tipo `TResult` que se va a agregar a la colección `Result`.<br /><br /> En este caso, la asignación se realiza en varios pulsos de ejecución.Esta función se puede serializar en XAML y crear mediante declaración \(cualquier actividad existente puede participar en la asignación\).|  
-|Result|Lista de objetos obtenidos como resultado de ejecutar la consulta y ejecutar la función de asignación para cada registro de `DataReader`.|  
+|<span data-ttu-id="7a962-177">ProviderName</span><span class="sxs-lookup"><span data-stu-id="7a962-177">ProviderName</span></span>|<span data-ttu-id="7a962-178">Nombre invariable de proveedor de ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="7a962-178">ADO.NET provider invariant name.</span></span> <span data-ttu-id="7a962-179">Si se establece este argumento, también se debe establecer `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-179">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-180">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="7a962-180">ConnectionString</span></span>|<span data-ttu-id="7a962-181">Cadena de conexión para conectar a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="7a962-181">Connection string to connect to the database.</span></span> <span data-ttu-id="7a962-182">Si se establece este argumento, también se debe establecer `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="7a962-182">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-183">ConfigName</span><span class="sxs-lookup"><span data-stu-id="7a962-183">ConfigName</span></span>|<span data-ttu-id="7a962-184">Nombre de la sección de archivo de configuración donde se almacena la información de conexión.</span><span class="sxs-lookup"><span data-stu-id="7a962-184">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="7a962-185">Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-185">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="7a962-186">CommandType</span><span class="sxs-lookup"><span data-stu-id="7a962-186">CommandType</span></span>|<span data-ttu-id="7a962-187">Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-187">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="7a962-188">Sql</span><span class="sxs-lookup"><span data-stu-id="7a962-188">Sql</span></span>|<span data-ttu-id="7a962-189">El comando SQL que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-189">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="7a962-190">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7a962-190">Parameters</span></span>|<span data-ttu-id="7a962-191">Colección de los parámetros de la consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="7a962-191">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="7a962-192">Mapper</span><span class="sxs-lookup"><span data-stu-id="7a962-192">Mapper</span></span>|<span data-ttu-id="7a962-193">Función de asignación (<xref:System.Func%601><`DbDataReader`, `TResult`>) que toma un registro el `DataReader` obtenido como resultado de ejecutar la consulta y devuelve una instancia de un objeto de tipo `TResult` va a agregar a la `Result` colección.</span><span class="sxs-lookup"><span data-stu-id="7a962-193">Mapping function (<xref:System.Func%601><`DbDataReader`, `TResult`>) that takes a record in the `DataReader` obtained as result of executing the query and returns an instance of an object of type `TResult` to be added to the `Result` collection.</span></span><br /><br /> <span data-ttu-id="7a962-194">En este caso, la asignación se realiza mediante un único pulso de ejecución, pero no se puede crear mediante declaración utilizando el diseñador.</span><span class="sxs-lookup"><span data-stu-id="7a962-194">In this case, mapping is done in a single pulse of execution, but it cannot be authored declaratively using the designer.</span></span>|  
+|<span data-ttu-id="7a962-195">MapperFunc</span><span class="sxs-lookup"><span data-stu-id="7a962-195">MapperFunc</span></span>|<span data-ttu-id="7a962-196">Función de asignación (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) que toma un registro el `DataReader` obtenido como resultado de ejecutar la consulta y devuelve una instancia de un objeto de tipo `TResult` va a agregar a la `Result` colección.</span><span class="sxs-lookup"><span data-stu-id="7a962-196">Mapping function (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) that takes a record in the `DataReader` obtained as result of executing the query and returns an instance of an object of type `TResult` to be added to the `Result` collection.</span></span><br /><br /> <span data-ttu-id="7a962-197">En este caso, la asignación se realiza en varios pulsos de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7a962-197">In this case, the mapping is done in multiple pulses of execution.</span></span> <span data-ttu-id="7a962-198">Esta función se puede serializar en XAML y crear mediante declaración (cualquier actividad existente puede participar en la asignación).</span><span class="sxs-lookup"><span data-stu-id="7a962-198">This function can be serialized to XAML and authored declaratively (any existing activity can participate in the mapping).</span></span>|  
+|<span data-ttu-id="7a962-199">Resultado</span><span class="sxs-lookup"><span data-stu-id="7a962-199">Result</span></span>|<span data-ttu-id="7a962-200">Lista de objetos obtenidos como resultado de ejecutar la consulta y ejecutar la función de asignación para cada registro de `DataReader`.</span><span class="sxs-lookup"><span data-stu-id="7a962-200">List of objects obtained as result of executing the query and executing the mapping function for each record in the `DataReader`.</span></span>|  
   
-## DbQueryDataSet  
- Ejecuta una consulta que devuelve una clase <xref:System.Data.DataSet>.Esta clase realiza su trabajo de forma asincrónica.Deriva de <xref:System.Activities.AsyncCodeActivity>\<`TResult`\> y utiliza sus capacidades asincrónicas.  
+## <a name="dbquerydataset"></a><span data-ttu-id="7a962-201">DbQueryDataSet</span><span class="sxs-lookup"><span data-stu-id="7a962-201">DbQueryDataSet</span></span>  
+ <span data-ttu-id="7a962-202">Ejecuta una consulta que devuelve una clase <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="7a962-202">Executes a query that returns a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="7a962-203">Esta clase realiza su trabajo de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="7a962-203">This class performs its work asynchronously.</span></span> <span data-ttu-id="7a962-204">Deriva de <xref:System.Activities.AsyncCodeActivity> < `TResult`> y utiliza sus capacidades asincrónicas.</span><span class="sxs-lookup"><span data-stu-id="7a962-204">It derives from <xref:System.Activities.AsyncCodeActivity><`TResult`> and uses its asynchronous capabilities.</span></span>  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ <span data-ttu-id="7a962-205">La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7a962-205">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
+ <span data-ttu-id="7a962-206">La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="7a962-206">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- Una vez ejecutado `DbQueryDataSet`, la clase `DataSet` se devuelve en el argumento `Result``out` \(de tipo `TResult`, que se define en la clase base <xref:System.Activities.AsyncCodeActivity%601>\).  
+ <span data-ttu-id="7a962-207">Después de la `DbQueryDataSet` se ejecuta la `DataSet` se devuelve en el `Result``out` argumento (de tipo `TResult`, es decir definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).</span><span class="sxs-lookup"><span data-stu-id="7a962-207">After the `DbQueryDataSet` is executed the `DataSet` is returned in the `Result``out` argument (of type `TResult`, that is defined in the base class <xref:System.Activities.AsyncCodeActivity%601>).</span></span>  
   
 ```  
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>  
@@ -242,21 +243,20 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }  
 ```  
   
-|||  
+|<span data-ttu-id="7a962-208">Argumento</span><span class="sxs-lookup"><span data-stu-id="7a962-208">Argument</span></span>|<span data-ttu-id="7a962-209">Descripción</span><span class="sxs-lookup"><span data-stu-id="7a962-209">Description</span></span>|  
 |-|-|  
-|Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
-|CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
-|Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
-|Result|<xref:System.Data.DataSet> que se obtiene una vez ejecutada la consulta.|  
+|<span data-ttu-id="7a962-210">ProviderName</span><span class="sxs-lookup"><span data-stu-id="7a962-210">ProviderName</span></span>|<span data-ttu-id="7a962-211">Nombre invariable de proveedor de ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="7a962-211">ADO.NET provider invariant name.</span></span> <span data-ttu-id="7a962-212">Si se establece este argumento, también se debe establecer `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-212">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-213">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="7a962-213">ConnectionString</span></span>|<span data-ttu-id="7a962-214">Cadena de conexión para conectar a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="7a962-214">Connection string to connect to the database.</span></span> <span data-ttu-id="7a962-215">Si se establece este argumento, también se debe establecer `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="7a962-215">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="7a962-216">ConfigName</span><span class="sxs-lookup"><span data-stu-id="7a962-216">ConfigName</span></span>|<span data-ttu-id="7a962-217">Nombre de la sección de archivo de configuración donde se almacena la información de conexión.</span><span class="sxs-lookup"><span data-stu-id="7a962-217">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="7a962-218">Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="7a962-218">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="7a962-219">CommandType</span><span class="sxs-lookup"><span data-stu-id="7a962-219">CommandType</span></span>|<span data-ttu-id="7a962-220">Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-220">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="7a962-221">Sql</span><span class="sxs-lookup"><span data-stu-id="7a962-221">Sql</span></span>|<span data-ttu-id="7a962-222">El comando SQL que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="7a962-222">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="7a962-223">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7a962-223">Parameters</span></span>|<span data-ttu-id="7a962-224">Colección de los parámetros de la consulta SQL.</span><span class="sxs-lookup"><span data-stu-id="7a962-224">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="7a962-225">Resultado</span><span class="sxs-lookup"><span data-stu-id="7a962-225">Result</span></span>|<span data-ttu-id="7a962-226"><xref:System.Data.DataSet> que se obtiene una vez ejecutada la consulta.</span><span class="sxs-lookup"><span data-stu-id="7a962-226"><xref:System.Data.DataSet> that is obtained after the query is executed.</span></span>|  
   
-## Configurar información de conexión  
- Todas las actividades de base de datos comparten los mismos parámetros de configuración.Se pueden configurar de dos maneras:  
+## <a name="configuring-connection-information"></a><span data-ttu-id="7a962-227">Configurar información de conexión</span><span class="sxs-lookup"><span data-stu-id="7a962-227">Configuring Connection Information</span></span>  
+ <span data-ttu-id="7a962-228">Todas las actividades de base de datos comparten los mismos parámetros de configuración.</span><span class="sxs-lookup"><span data-stu-id="7a962-228">All DbActivities share the same configuration parameters.</span></span> <span data-ttu-id="7a962-229">Se pueden configurar de dos maneras:</span><span class="sxs-lookup"><span data-stu-id="7a962-229">They can be configured in two ways:</span></span>  
   
--   `ConnectionString + InvariantName`: establezca el nombre invariable de proveedor de ADO.NET y la cadena de conexión.  
+-   <span data-ttu-id="7a962-230">`ConnectionString + InvariantName`: establezca el nombre invariable de proveedor de ADO.NET y la cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="7a962-230">`ConnectionString + InvariantName`: Set the ADO.NET provider invariant name and connection string.</span></span>  
   
     ```  
     Activity dbSelectCount = new DbQueryScalar<DateTime>()  
@@ -269,9 +269,9 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };  
     ```  
   
--   `ConfigName`: establezca el nombre de la sección de configuración que contiene la información de conexión.  
+-   <span data-ttu-id="7a962-231">`ConfigName`: establezca el nombre de la sección de configuración que contiene la información de conexión.</span><span class="sxs-lookup"><span data-stu-id="7a962-231">`ConfigName`: Set the name of the configuration section that contains the connection information.</span></span>  
   
-    ```  
+    ```xml  
     <connectionStrings>      
         <add name="DbActivitiesSample"  
              providerName="System.Data.SqlClient"  
@@ -279,7 +279,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>  
     ```  
   
--   En la actividad:  
+-   <span data-ttu-id="7a962-232">En la actividad:</span><span class="sxs-lookup"><span data-stu-id="7a962-232">In the activity:</span></span>  
   
     ```  
     Activity dbSelectCount = new DbQueryScalar<int>()  
@@ -289,51 +289,51 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };  
     ```  
   
-## Ejecutar este ejemplo  
+## <a name="running-this-sample"></a><span data-ttu-id="7a962-233">Ejecutar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="7a962-233">Running this sample</span></span>  
   
-### Instrucciones de instalación  
- En este ejemplo se utiliza una base de datos.Con el ejemplo se proporciona un script de instalación y carga \(Setup.cmd\).Debe ejecutar ese archivo mediante el símbolo del sistema.  
+### <a name="setup-instructions"></a><span data-ttu-id="7a962-234">Instrucciones de instalación</span><span class="sxs-lookup"><span data-stu-id="7a962-234">Setup instructions</span></span>  
+ <span data-ttu-id="7a962-235">En este ejemplo se utiliza una base de datos.</span><span class="sxs-lookup"><span data-stu-id="7a962-235">This sample uses a database.</span></span> <span data-ttu-id="7a962-236">Con el ejemplo se proporciona un script de instalación y carga (Setup.cmd).</span><span class="sxs-lookup"><span data-stu-id="7a962-236">A set-up and load script (Setup.cmd) is provided with the sample.</span></span> <span data-ttu-id="7a962-237">Debe ejecutar ese archivo mediante el símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="7a962-237">You must execute that file using the command prompt.</span></span>  
   
- El script Setup.cmd invoca el archivo de script CreateDb.sql, que contiene comandos SQL con los que realiza lo siguiente:  
+ <span data-ttu-id="7a962-238">El script Setup.cmd invoca el archivo de script CreateDb.sql, que contiene comandos SQL con los que realiza lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="7a962-238">The Setup.cmd script invokes the CreateDb.sql script file, which contains SQL commands that do the following:</span></span>  
   
--   Crea una base de datos llamada DbActivitiesSample.  
+-   <span data-ttu-id="7a962-239">Crea una base de datos llamada DbActivitiesSample.</span><span class="sxs-lookup"><span data-stu-id="7a962-239">Creates a database called DbActivitiesSample.</span></span>  
   
--   Crea la tabla Roles.  
+-   <span data-ttu-id="7a962-240">Crea la tabla Roles.</span><span class="sxs-lookup"><span data-stu-id="7a962-240">Creates the Roles table.</span></span>  
   
--   Crea la tabla Employees.  
+-   <span data-ttu-id="7a962-241">Crea la tabla Employees.</span><span class="sxs-lookup"><span data-stu-id="7a962-241">Creates Employees table.</span></span>  
   
--   Inserta tres registros en la tabla Roles.  
+-   <span data-ttu-id="7a962-242">Inserta tres registros en la tabla Roles.</span><span class="sxs-lookup"><span data-stu-id="7a962-242">Inserts three records into the Roles table.</span></span>  
   
--   Inserta doce registros en la tabla Employees.  
+-   <span data-ttu-id="7a962-243">Inserta doce registros en la tabla Employees.</span><span class="sxs-lookup"><span data-stu-id="7a962-243">Inserts twelve records into the Employees table.</span></span>  
   
-##### Para ejecutar Setup.cmd  
+##### <a name="to-run-setupcmd"></a><span data-ttu-id="7a962-244">Para ejecutar Setup.cmd</span><span class="sxs-lookup"><span data-stu-id="7a962-244">To run Setup.cmd</span></span>  
   
-1.  Abra un símbolo del sistema.  
+1.  <span data-ttu-id="7a962-245">Abra un símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="7a962-245">Open a command prompt.</span></span>  
   
-2.  Vaya a la carpeta de ejemplo DbActivities.  
+2.  <span data-ttu-id="7a962-246">Vaya a la carpeta de ejemplo DbActivities.</span><span class="sxs-lookup"><span data-stu-id="7a962-246">Go to the DbActivities sample folder.</span></span>  
   
-3.  Escriba "setup.cmd" y presione Entrar.  
+3.  <span data-ttu-id="7a962-247">Escriba "setup.cmd" y presione ENTRAR.</span><span class="sxs-lookup"><span data-stu-id="7a962-247">Type "setup.cmd" and press ENTER.</span></span>  
   
     > [!NOTE]
-    >  Setup.cmd intenta instalar el ejemplo en la instancia de SqlExpress del equipo local.Si desea instalarlo en otra instancia de SQL Server, modifique Setup.cmd con el nombre de la nueva instancia.  
+    >  <span data-ttu-id="7a962-248">Setup.cmd intenta instalar el ejemplo en la instancia de SqlExpress del equipo local.</span><span class="sxs-lookup"><span data-stu-id="7a962-248">Setup.cmd attempts to install the sample in your local machine SqlExpress instance.</span></span> <span data-ttu-id="7a962-249">Si desea instalarlo en otra instancia de SQL Server, modifique Setup.cmd con el nombre de la nueva instancia.</span><span class="sxs-lookup"><span data-stu-id="7a962-249">If you want to install it in other SQL server instance, edit Setup.cmd with the new instance name.</span></span>  
   
-##### Para desinstalar la base de datos de ejemplo  
+##### <a name="to-uninstall-the-sample-database"></a><span data-ttu-id="7a962-250">Para desinstalar la base de datos de ejemplo</span><span class="sxs-lookup"><span data-stu-id="7a962-250">To uninstall the sample database</span></span>  
   
-1.  Ejecute Cleanup.cmd desde la carpeta de ejemplo en un símbolo del sistema.  
+1.  <span data-ttu-id="7a962-251">Ejecute Cleanup.cmd desde la carpeta de ejemplo en un símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="7a962-251">Run Cleanup.cmd from the sample folder in a command prompt.</span></span>  
   
-##### Para ejecutar el ejemplo  
+##### <a name="to-run-the-sample"></a><span data-ttu-id="7a962-252">Para ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="7a962-252">To run the sample</span></span>  
   
-1.  Abra la solución en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="7a962-253">Abra la solución en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7a962-253">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="7a962-254">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="7a962-254">To compile the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Para ejecutar el ejemplo sin depurar, presione CTRL\+F5.  
+3.  <span data-ttu-id="7a962-255">Para ejecutar el ejemplo sin depurar, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="7a962-255">To run the sample without debugging, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="7a962-256">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="7a962-256">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7a962-257">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="7a962-257">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="7a962-258">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="7a962-258">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7a962-259">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="7a962-259">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

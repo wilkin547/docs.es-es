@@ -1,37 +1,36 @@
 ---
-title: "Informaci&#243;n general sobre el control PrintPreviewDialog (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PrintPreviewDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "PrintPreviewDialog (control) (mediante el diseñador), acerca de PrintPreviewDialog"
+title: "Información general sobre el control PrintPreviewDialog (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PrintPreviewDialog
+helpviewer_keywords: PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c898dc24c9a4418e3af45fce507e6befcf905a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el control PrintPreviewDialog (formularios Windows Forms)
-El control <xref:System.Windows.Forms.PrintPreviewDialog> de formularios Windows Forms es un cuadro de diálogo preconfigurado que se utiliza para mostrar la presentación de [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) cuando se imprima.  Utilícelo dentro de la aplicación para Windows como una solución sencilla, en lugar de configurar un cuadro de diálogo propio.  El control contiene botones para imprimir, acercar, mostrar una o varias páginas y cerrar el cuadro de diálogo.  
+# <a name="printpreviewdialog-control-overview-windows-forms"></a><span data-ttu-id="75d12-102">Información general sobre el control PrintPreviewDialog (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="75d12-102">PrintPreviewDialog Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="75d12-103">Los formularios Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> control es un cuadro de diálogo preconfigurado que se utiliza para mostrar cómo un [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) aparecerá cuando se imprima.</span><span class="sxs-lookup"><span data-stu-id="75d12-103">The Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> control is a pre-configured dialog box used to display how a [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) will appear when printed.</span></span> <span data-ttu-id="75d12-104">Utilícelo en la aplicación basada en Windows como una solución sencilla, en lugar de configurar su propio cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="75d12-104">Use it within your Windows-based application as a simple solution instead of configuring your own dialog box.</span></span> <span data-ttu-id="75d12-105">El control contiene botones para imprimir, acercar, mostrar una o varias páginas y cerrar el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="75d12-105">The control contains buttons for printing, zooming in, displaying one or multiple pages, and closing the dialog box.</span></span>  
   
-## Propiedades y métodos principales  
- La propiedad principal del control es <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, que establece el documento para la vista preliminar.  El documento debe ser un objeto <xref:System.Drawing.Printing.PrintDocument>.  Para que se muestre el cuadro de diálogo, llame al método <xref:System.Windows.Forms.Form.ShowDialog%2A>.  La función de suavizado de contorno puede hacer que el texto aparezca más nítido, pero también hace que la presentación sea más lenta; para utilizarla, establezca la propiedad <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> en `true`.  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="75d12-106">Métodos y propiedades claves</span><span class="sxs-lookup"><span data-stu-id="75d12-106">Key Properties and Methods</span></span>  
+ <span data-ttu-id="75d12-107">Ninguna propiedad clave del control <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, que establece el documento en una vista previa.</span><span class="sxs-lookup"><span data-stu-id="75d12-107">The control's key property is <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, which sets the document to be previewed.</span></span> <span data-ttu-id="75d12-108">El documento debe ser un <xref:System.Drawing.Printing.PrintDocument> objeto.</span><span class="sxs-lookup"><span data-stu-id="75d12-108">The document must be a <xref:System.Drawing.Printing.PrintDocument> object.</span></span> <span data-ttu-id="75d12-109">Para mostrar el cuadro de diálogo, debe llamar a su <xref:System.Windows.Forms.Form.ShowDialog%2A> método.</span><span class="sxs-lookup"><span data-stu-id="75d12-109">In order to display the dialog box, you must call its <xref:System.Windows.Forms.Form.ShowDialog%2A> method.</span></span> <span data-ttu-id="75d12-110">El suavizado puede hacer que el texto aparezca más suave, pero también puede hacer que la pantalla sea más lenta; para utilizarla, establezca la <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="75d12-110">Anti-aliasing can make the text appear smoother, but it can also make the display slower; to use it, set the <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> property to `true`.</span></span>  
   
- Ciertas propiedades están disponibles a través de <xref:System.Windows.Forms.PrintPreviewControl>, contenida en <xref:System.Windows.Forms.PrintPreviewDialog>.  \(No tiene que agregar este control <xref:System.Windows.Forms.PrintPreviewDialog> al formulario; se incluye automáticamente en el cuadro de diálogo <xref:System.Windows.Forms.PrintPreviewControl> cuando se agrega el cuadro de diálogo al formulario.\) Algunos ejemplos de propiedades disponibles a través de <xref:System.Windows.Forms.PrintPreviewControl> son las propiedades <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> y <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>, que determinan el número de páginas que se muestran horizontal y verticalmente en el control.  Se puede tener acceso a la propiedad <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> como `PrintPreviewDialog1.PrintPreviewControl.Columns` en [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], `printPreviewDialog1.PrintPreviewControl.Columns` en [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] o `printPreviewDialog1->PrintPreviewControl->Columns` en [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].  
+ <span data-ttu-id="75d12-111">Algunas propiedades están disponibles a través de la <xref:System.Windows.Forms.PrintPreviewControl> que la <xref:System.Windows.Forms.PrintPreviewDialog> contiene.</span><span class="sxs-lookup"><span data-stu-id="75d12-111">Certain properties are available through the <xref:System.Windows.Forms.PrintPreviewControl> that the <xref:System.Windows.Forms.PrintPreviewDialog> contains.</span></span> <span data-ttu-id="75d12-112">(No es necesario agregar este <xref:System.Windows.Forms.PrintPreviewControl> al formulario; se incluye automáticamente dentro de la <xref:System.Windows.Forms.PrintPreviewDialog> cuando se agrega el cuadro de diálogo al formulario.) Ejemplos de propiedades disponibles a través de la <xref:System.Windows.Forms.PrintPreviewControl> son la <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> y <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> propiedades, que determinan el número de páginas que se muestran horizontal y verticalmente en el control.</span><span class="sxs-lookup"><span data-stu-id="75d12-112">(You do not have to add this <xref:System.Windows.Forms.PrintPreviewControl> to the form; it is automatically contained within the <xref:System.Windows.Forms.PrintPreviewDialog> when you add the dialog to your form.) Examples of properties available through the <xref:System.Windows.Forms.PrintPreviewControl> are the <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> and <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> properties, which determine the number of pages displayed horizontally and vertically on the control.</span></span> <span data-ttu-id="75d12-113">Puede tener acceso a la <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> propiedad como `PrintPreviewDialog1.PrintPreviewControl.Columns` en [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], `printPreviewDialog1.PrintPreviewControl.Columns` en [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], o `printPreviewDialog1->PrintPreviewControl->Columns` en [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].</span><span class="sxs-lookup"><span data-stu-id="75d12-113">You can access the <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> property as `PrintPreviewDialog1.PrintPreviewControl.Columns` in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], `printPreviewDialog1.PrintPreviewControl.Columns` in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], or `printPreviewDialog1->PrintPreviewControl->Columns` in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.PrintPreviewDialog>   
- [Información general sobre el control PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)   
- [PrintPreviewDialog \(Control\)](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [Controles y componentes de cuadros de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="75d12-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="75d12-114">See Also</span></span>  
+ <xref:System.Windows.Forms.PrintPreviewDialog>  
+ [<span data-ttu-id="75d12-115">Información general sobre el control PrintPreviewControl</span><span class="sxs-lookup"><span data-stu-id="75d12-115">PrintPreviewControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="75d12-116">PrintPreviewDialog (control)</span><span class="sxs-lookup"><span data-stu-id="75d12-116">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [<span data-ttu-id="75d12-117">Controles y componentes de cuadros de diálogo</span><span class="sxs-lookup"><span data-stu-id="75d12-117">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)

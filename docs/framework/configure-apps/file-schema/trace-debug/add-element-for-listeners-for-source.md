@@ -1,103 +1,107 @@
 ---
-title: "Elemento &lt;add&gt; de &lt;listeners&gt; de &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento) para <listeners> de <source>"
-  - "add (elemento) para <listeners> de <source>"
-  - "initializeData (atributo)"
+title: '&lt;agregar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
+helpviewer_keywords:
+- initializeData attribute
+- add element for <listeners> for <source>
+- <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 69a5f855251f1f2c9c94ae3b571b8b78881631fb
+ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/23/2017
 ---
-# Elemento &lt;add&gt; de &lt;listeners&gt; de &lt;source&gt;
-Agrega un agente de escucha a la colección `Listeners` de un origen de traza.  
+# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="68e7c-102">&lt;agregar&gt; (elemento) para &lt;los agentes de escucha&gt; para &lt;origen&gt;</span><span class="sxs-lookup"><span data-stu-id="68e7c-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
+<span data-ttu-id="68e7c-103">Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="68e7c-103">Adds a listener to the `Listeners` collection for a trace source.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="68e7c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="68e7c-104">\<configuration></span></span>  
+<span data-ttu-id="68e7c-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="68e7c-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="68e7c-106">\<orígenes ></span><span class="sxs-lookup"><span data-stu-id="68e7c-106">\<sources></span></span>  
+<span data-ttu-id="68e7c-107">\<origen ></span><span class="sxs-lookup"><span data-stu-id="68e7c-107">\<source></span></span>  
+<span data-ttu-id="68e7c-108">\<los agentes de escucha ></span><span class="sxs-lookup"><span data-stu-id="68e7c-108">\<listeners></span></span>  
+<span data-ttu-id="68e7c-109">\<add></span><span class="sxs-lookup"><span data-stu-id="68e7c-109">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="68e7c-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="68e7c-110">Syntax</span></span>  
+  
+```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
   initializeData="data"/>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="68e7c-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="68e7c-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="68e7c-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="68e7c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="68e7c-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="68e7c-113">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`type`|Atributo necesario.<br /><br /> Especifica el tipo del agente de escucha.  Debe utilizar una cadena que cumpla los requisitos enumerados en [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Atributo opcional.<br /><br /> Cadena pasada al constructor de la clase especificada.  Si la clase no tiene un constructor que toma una cadena, se inicia una excepción <xref:System.Configuration.ConfigurationException>.|  
-|`name`|Atributo opcional.<br /><br /> Especifica el nombre del agente de escucha.|  
-|`traceOutputOptions`|Atributo opcional.<br /><br /> Especifica el valor de propiedad <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> para el agente de escucha de traza.|  
-|\[atributos personalizados\]|Atributos opcionales.<br /><br /> Especifica el valor para los atributos específicos del agente de escucha identificados por el método <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> de ese agente de escucha.  <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> es un ejemplo de un atributo adicional único de la clase <xref:System.Diagnostics.DelimitedListTraceListener>.|  
+|<span data-ttu-id="68e7c-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="68e7c-114">Attribute</span></span>|<span data-ttu-id="68e7c-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="68e7c-115">Description</span></span>|  
+|---------------|-----------------|  
+|`type`|<span data-ttu-id="68e7c-116">Requiere el atributo, a menos que se está haciendo referencia a un agente de escucha en el `sharedListeners` colección, en el que caso, solo tiene que hacer referencia a él por su nombre (vea la [ejemplo](#example)).</span><span class="sxs-lookup"><span data-stu-id="68e7c-116">Required attribute, unless you're referencing a listener in the `sharedListeners` collection, in which case you only need to refer to it by name (see the [Example](#example)).</span></span><br /><br /> <span data-ttu-id="68e7c-117">Especifica el tipo del agente de escucha.</span><span class="sxs-lookup"><span data-stu-id="68e7c-117">Specifies the type of the listener.</span></span> <span data-ttu-id="68e7c-118">Debe utilizar una cadena que cumpla los requisitos especificados en [especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="68e7c-118">You must use a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="68e7c-119">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="68e7c-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="68e7c-120">La cadena pasada al constructor de la clase especificada.</span><span class="sxs-lookup"><span data-stu-id="68e7c-120">The string passed to the constructor for the specified class.</span></span> <span data-ttu-id="68e7c-121">Un <xref:System.Configuration.ConfigurationException> se produce si la clase no tiene un constructor que toma una cadena.</span><span class="sxs-lookup"><span data-stu-id="68e7c-121">A <xref:System.Configuration.ConfigurationException> is thrown if the class does not have a constructor that takes a string.</span></span>|  
+|`name`|<span data-ttu-id="68e7c-122">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="68e7c-122">Optional attribute.</span></span><br /><br /> <span data-ttu-id="68e7c-123">Especifica el nombre del agente de escucha.</span><span class="sxs-lookup"><span data-stu-id="68e7c-123">Specifies the name of the listener.</span></span>|  
+|`traceOutputOptions`|<span data-ttu-id="68e7c-124">Atributo opcional.</span><span class="sxs-lookup"><span data-stu-id="68e7c-124">Optional attribute.</span></span><br /><br /> <span data-ttu-id="68e7c-125">Especifica la <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> valor de propiedad para el agente de escucha de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="68e7c-125">Specifies the <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> property value for the trace listener.</span></span>|  
+|<span data-ttu-id="68e7c-126">[atributos personalizados]</span><span class="sxs-lookup"><span data-stu-id="68e7c-126">[custom attributes]</span></span>|<span data-ttu-id="68e7c-127">Atributos opcionales.</span><span class="sxs-lookup"><span data-stu-id="68e7c-127">Optional attributes.</span></span><br /><br /> <span data-ttu-id="68e7c-128">Especifica el valor para atributos específicos del agente de escucha identificados por el <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> método para ese agente de escucha.</span><span class="sxs-lookup"><span data-stu-id="68e7c-128">Specifies the value for listener-specific attributes identified by the <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> method for that listener.</span></span> <span data-ttu-id="68e7c-129"><xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>es un ejemplo de un atributo adicional único para la <xref:System.Diagnostics.DelimitedListTraceListener> clase.</span><span class="sxs-lookup"><span data-stu-id="68e7c-129"><xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> is an example of an extra attribute unique to the <xref:System.Diagnostics.DelimitedListTraceListener> class.</span></span>|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="68e7c-130">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="68e7c-130">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Agrega un filtro a un agente de escucha de la colección `Listeners` para un origen de traza.|  
+|<span data-ttu-id="68e7c-131">Elemento</span><span class="sxs-lookup"><span data-stu-id="68e7c-131">Element</span></span>|<span data-ttu-id="68e7c-132">Descripción</span><span class="sxs-lookup"><span data-stu-id="68e7c-132">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="68e7c-133">\<filter></span><span class="sxs-lookup"><span data-stu-id="68e7c-133">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|<span data-ttu-id="68e7c-134">Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="68e7c-134">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="68e7c-135">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="68e7c-135">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.|  
-|`sources`|Contiene orígenes de traza que inician mensajes de traza.|  
-|`source`|Especifica un origen de traza que inicia mensajes de traza.|  
-|`listeners`|Especifica agentes de escucha que recopilan, almacenan y enrutan mensajes.|  
+|<span data-ttu-id="68e7c-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="68e7c-136">Element</span></span>|<span data-ttu-id="68e7c-137">Descripción</span><span class="sxs-lookup"><span data-stu-id="68e7c-137">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="68e7c-138">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="68e7c-138">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="68e7c-139">Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="68e7c-139">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="68e7c-140">Contiene orígenes de seguimiento que inician mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="68e7c-140">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="68e7c-141">Contiene un origen de seguimiento que inicia mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="68e7c-141">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="68e7c-142">Especifica los agentes de escucha que recopilarán, almacenan y enrutan los mensajes.</span><span class="sxs-lookup"><span data-stu-id="68e7c-142">Specifies listeners that collect, store, and route messages.</span></span>|  
   
-## Comentarios  
- Las clases de agente de escucha incluidas en .NET Framework se derivan de la clase <xref:System.Diagnostics.TraceListener>.  
+## <a name="remarks"></a><span data-ttu-id="68e7c-143">Comentarios</span><span class="sxs-lookup"><span data-stu-id="68e7c-143">Remarks</span></span>  
+ <span data-ttu-id="68e7c-144">Las clases de agente de escucha incluidas en .NET Framework se derivan de la <xref:System.Diagnostics.TraceListener> clase.</span><span class="sxs-lookup"><span data-stu-id="68e7c-144">The listener classes shipped with the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
- Si no especifica el atributo `name` del agente de escucha de traza, la propiedad <xref:System.Diagnostics.TraceListener.Name%2A> del agente de escucha de traza tiene como valor predeterminado una cadena vacía \(""\).  Si su aplicación tiene sólo un agente de escucha, puede agregarlo sin especificar un nombre y quitarlo especificando una cadena vacía para el nombre.  Sin embargo, si su aplicación tiene más de un agente de escucha, debe especificar un nombre único para cada agente de escucha de traza, de forma que pueda identificar y administrar los agentes de escucha de traza individualmente dentro de la colección <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=fullName>.  
-  
-> [!NOTE]
->  Agregar más de un agente de escucha de traza del mismo tipo y con el mismo nombre tiene como resultado que sólo se agregue a la colección `Listeners` un agente de escucha de traza con ese tipo y nombre.  Sin embargo, puede agregar mediante programación varios agentes de escucha idénticos a la colección `Listeners`.  
-  
- El valor del atributo `initializeData` depende del tipo de agente de escucha que se cree.  No todos los agentes de escucha de traza requieren que se especifique `initializeData`.  
+ <span data-ttu-id="68e7c-145">Si no se especifica la `name` atributo del agente de escucha de seguimiento, la <xref:System.Diagnostics.TraceListener.Name%2A> la propiedad del agente de escucha de seguimiento es una cadena vacía ("").</span><span class="sxs-lookup"><span data-stu-id="68e7c-145">If you do not specify the `name` attribute of the trace listener, the <xref:System.Diagnostics.TraceListener.Name%2A> property of the trace listener defaults to an empty string ("").</span></span> <span data-ttu-id="68e7c-146">Si la aplicación tiene sólo un agente de escucha, puede agregarlo sin especificar un nombre y quitarlo especificando una cadena vacía para el nombre.</span><span class="sxs-lookup"><span data-stu-id="68e7c-146">If your application has only one listener, you can add it without specifying a name, and you can remove it by specifying an empty string for the name.</span></span> <span data-ttu-id="68e7c-147">Sin embargo, si la aplicación tiene más de un agente de escucha, debe especificar un nombre único para cada agente de escucha de seguimiento, lo que permite identificar y administrar los agentes de escucha de seguimiento individuales de la <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> colección.</span><span class="sxs-lookup"><span data-stu-id="68e7c-147">However, if your application has more than one listener, you should specify a unique name for each trace listener, which allows you to identify and manage individual trace listeners in the <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> collection.</span></span>  
   
 > [!NOTE]
->  Cuando se utiliza el atributo `initializeData`, puede aparecer la advertencia del compilador "No se ha declarado el atributo 'initializeData'". Esta advertencia se produce porque la configuración se valida con arreglo a la clase base abstracta <xref:System.Diagnostics.TraceListener>, que no reconoce el atributo `initializeData`.  Por lo general, puede hacer caso omiso de esta advertencia en las implementaciones de agentes de escucha de traza que tienen un constructor que toma un parámetro.  
+>  <span data-ttu-id="68e7c-148">Agregar más de un agente de escucha de seguimiento del mismo tipo y con el mismo nombre da como resultado un único agente de escucha de ese tipo y nombre que se va a agregar a la `Listeners` colección.</span><span class="sxs-lookup"><span data-stu-id="68e7c-148">Adding more than one trace listener of the same type and with the same name results in only one trace listener of that type and name being added to the `Listeners` collection.</span></span> <span data-ttu-id="68e7c-149">Sin embargo, puede agregar mediante programación varios agentes de escucha idénticos a los `Listeners` colección.</span><span class="sxs-lookup"><span data-stu-id="68e7c-149">However, you can programmatically add multiple identical listeners to the `Listeners` collection.</span></span>  
   
- En la tabla siguiente se muestran los agentes de escucha de traza incluidos en .NET Framework y se describe el valor de sus atributos `initializeData`.  
+ <span data-ttu-id="68e7c-150">El valor de la `initializeData` atributo depende del tipo de escucha que se cree.</span><span class="sxs-lookup"><span data-stu-id="68e7c-150">The value for the `initializeData` attribute depends on the type of listener you create.</span></span> <span data-ttu-id="68e7c-151">No todos los agentes de escucha de seguimiento requieren que se especifiquen `initializeData`.</span><span class="sxs-lookup"><span data-stu-id="68e7c-151">Not all trace listeners require that you specify `initializeData`.</span></span>  
   
-|Clase de agente de escucha de traza|Valor del atributo initializeData|  
-|-----------------------------------------|---------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>|El valor de `useErrorStream` para el constructor <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>.  Establezca el atributo `initializeData` en "`true`" para escribir los resultados de la traza y la depuración en el flujo estándar de error; establézcalo en "`false`" para escribir en el flujo de salida estándar.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>|Nombre del archivo en el que <xref:System.Diagnostics.DelimitedListTraceListener> va a escribir.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|Nombre de un origen existente del registro de eventos.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|Nombre del archivo en el que escribe <xref:System.Diagnostics.EventSchemaTraceListener>.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|Nombre del archivo en el que escribe <xref:System.Diagnostics.TextWriterTraceListener>.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>|Nombre del archivo en el que escribe <xref:System.Diagnostics.XmlWriterTraceListener>.|  
+> [!NOTE]
+>  <span data-ttu-id="68e7c-152">Cuando se usa el `initializeData` atributo, es posible que obtenga el compilador advertencia "no se declaró el atributo 'initializeData'".</span><span class="sxs-lookup"><span data-stu-id="68e7c-152">When you use the `initializeData` attribute, you may get the compiler warning "The 'initializeData' attribute is not declared."</span></span> <span data-ttu-id="68e7c-153">Esta advertencia se produce porque los valores de configuración se validan con la clase base abstracta <xref:System.Diagnostics.TraceListener>, que no reconoce el `initializeData` atributo.</span><span class="sxs-lookup"><span data-stu-id="68e7c-153">This warning occurs because the configuration settings are validated against the abstract base class <xref:System.Diagnostics.TraceListener>, which does not recognize the `initializeData` attribute.</span></span> <span data-ttu-id="68e7c-154">Por lo general, puede omitir esta advertencia para las implementaciones de agente de escucha de seguimiento que tiene un constructor que toma un parámetro.</span><span class="sxs-lookup"><span data-stu-id="68e7c-154">Typically, you can ignore this warning for trace listener implementations that have a constructor that takes a parameter.</span></span>  
   
-## Archivo de configuración  
- Este elemento se puede utilizar en el archivo de configuración del equipo \(Machine.config\) y en el archivo de configuración de la aplicación.  
+ <span data-ttu-id="68e7c-155">En la tabla siguiente muestra los agentes de escucha de seguimiento que se incluyen con .NET Framework y se describe el valor de sus `initializeData` atributos.</span><span class="sxs-lookup"><span data-stu-id="68e7c-155">The following table shows the trace listeners that are included with the .NET Framework and describes the value of their `initializeData` attributes.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar elementos `<add>` para agregar los agentes de escucha `console` y `textListener` a la colección `Listeners` del origen de traza `TraceSourceApp`.  El agente de escucha `textListener` escribe el resultado de la traza en el archivo myListener.log.  
+|<span data-ttu-id="68e7c-156">Clase de agente de escucha de seguimiento</span><span class="sxs-lookup"><span data-stu-id="68e7c-156">Trace listener class</span></span>|<span data-ttu-id="68e7c-157">valor del atributo initializeData</span><span class="sxs-lookup"><span data-stu-id="68e7c-157">initializeData attribute value</span></span>|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|<span data-ttu-id="68e7c-158">El `useErrorStream` valor para el <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> constructor.</span><span class="sxs-lookup"><span data-stu-id="68e7c-158">The `useErrorStream` value for the <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> constructor.</span></span>  <span data-ttu-id="68e7c-159">Establecer el `initializeData` atribuir a "`true`"escribir trace y debug de salida en el flujo de error estándar; establézcala en"`false`" para escribir en el flujo de salida estándar.</span><span class="sxs-lookup"><span data-stu-id="68e7c-159">Set the `initializeData` attribute to "`true`" to write trace and debug output to the standard error stream; set it to "`false`" to write to the standard output stream.</span></span>|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|<span data-ttu-id="68e7c-160">El nombre del archivo de la <xref:System.Diagnostics.DelimitedListTraceListener> escribe en.</span><span class="sxs-lookup"><span data-stu-id="68e7c-160">The name of the file the <xref:System.Diagnostics.DelimitedListTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|<span data-ttu-id="68e7c-161">El nombre de un origen de registro de eventos existente.</span><span class="sxs-lookup"><span data-stu-id="68e7c-161">The name of an existing event log source.</span></span>|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<span data-ttu-id="68e7c-162">El nombre del archivo que el <xref:System.Diagnostics.EventSchemaTraceListener> escribe en.</span><span class="sxs-lookup"><span data-stu-id="68e7c-162">The name of the file that the <xref:System.Diagnostics.EventSchemaTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="68e7c-163">El nombre del archivo que el <xref:System.Diagnostics.TextWriterTraceListener> escribe en.</span><span class="sxs-lookup"><span data-stu-id="68e7c-163">The name of the file that the <xref:System.Diagnostics.TextWriterTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="68e7c-164">El nombre del archivo que el <xref:System.Diagnostics.XmlWriterTraceListener> escribe en.</span><span class="sxs-lookup"><span data-stu-id="68e7c-164">The name of the file that the <xref:System.Diagnostics.XmlWriterTraceListener> writes to.</span></span>|  
   
-```  
+## <a name="configuration-file"></a><span data-ttu-id="68e7c-165">Archivo de configuración</span><span class="sxs-lookup"><span data-stu-id="68e7c-165">Configuration File</span></span>  
+ <span data-ttu-id="68e7c-166">Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="68e7c-166">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="68e7c-167">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="68e7c-167">Example</span></span>  
+ <span data-ttu-id="68e7c-168">En el ejemplo siguiente se muestra cómo usar `<add>` elementos que se agregan los agentes de escucha `console` y `textListener` a la `Listeners` colección para el origen de seguimiento `TraceSourceApp`.</span><span class="sxs-lookup"><span data-stu-id="68e7c-168">The following example shows how to use `<add>` elements to add the listeners `console` and `textListener` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span> <span data-ttu-id="68e7c-169">La `textListener` agente de escucha escribe la salida de seguimiento en el archivo myListener.log.</span><span class="sxs-lookup"><span data-stu-id="68e7c-169">The `textListener` listener writes trace output to the file myListener.log.</span></span>  
+  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -123,8 +127,8 @@ Agrega un agente de escucha a la colección `Listeners` de un origen de traza.
 </configuration>   
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="68e7c-170">Vea también</span><span class="sxs-lookup"><span data-stu-id="68e7c-170">See Also</span></span>  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [<span data-ttu-id="68e7c-171">Esquema de la configuración de seguimiento y depuración</span><span class="sxs-lookup"><span data-stu-id="68e7c-171">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="68e7c-172">Agentes de escucha de seguimiento</span><span class="sxs-lookup"><span data-stu-id="68e7c-172">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

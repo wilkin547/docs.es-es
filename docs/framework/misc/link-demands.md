@@ -1,48 +1,51 @@
 ---
-title: "Link Demands | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], demands"
-  - "demanded permissions"
-  - "permissions [.NET Framework], demands"
-  - "granting permissions, demands"
-  - "code access security, demands"
-  - "user demands for permission"
-  - "caller security checks"
-  - "link demands"
+title: "Peticiones de vínculos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security [.NET Framework], demands
+- demanded permissions
+- permissions [.NET Framework], demands
+- granting permissions, demands
+- code access security, demands
+- user demands for permission
+- caller security checks
+- link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-caps.latest.revision: 18
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: faeeabeda89ea233e67b66b8848f5bbb665d3804
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Link Demands
-Una petición de vínculo hace que se produzca una comprobación de seguridad durante la compilación Just\-In\-Time y comprueba solo el ensamblado de llamada inmediato del código.  La vinculación se produce cuando el código se enlaza a una referencia de tipo, incluidas las referencias del puntero de función y las llamadas a métodos.  Si el ensamblado de llamada no tiene permisos suficientes para vincularse al código, no se permitirá el vínculo y se producirá una excepción en tiempo de ejecución cuando se cargue y ejecute el código.  Las peticiones de vínculo pueden reemplazarse en las clases que heredan de su código.  
+# <a name="link-demands"></a><span data-ttu-id="c2037-102">Peticiones de vínculos</span><span class="sxs-lookup"><span data-stu-id="c2037-102">Link Demands</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Tenga en cuenta que no se efectúa ningún recorrido de pila completo con este tipo de petición y que el código sigue siendo vulnerable a ataques.  Por ejemplo, si una petición de vínculo protege un método del ensamblado A, se evalúa a un llamador directo del ensamblado B según los permisos del ensamblado B.  Sin embargo, la petición de vínculo no evaluará ningún método del ensamblado C si llama indirectamente al método del ensamblado A con el método del ensamblado B.  La petición de vínculo solo especifica que los llamadores directos de permisos del ensamblado de llamada inmediato deben estar vinculados al código.  No especifica los permisos que deben tener todos los llamadores para ejecutar el código.  
+ <span data-ttu-id="c2037-103">Una petición de vínculo hace que se produzca una comprobación de seguridad durante la compilación Just-In-Time y comprueba solo el ensamblado de llamada inmediato del código.</span><span class="sxs-lookup"><span data-stu-id="c2037-103">A link demand causes a security check during just-in-time compilation and checks only the immediate calling assembly of your code.</span></span> <span data-ttu-id="c2037-104">La vinculación se produce cuando el código se enlaza a una referencia de tipo, incluidas las referencias del puntero de función y las llamadas a métodos.</span><span class="sxs-lookup"><span data-stu-id="c2037-104">Linking occurs when your code is bound to a type reference, including function pointer references and method calls.</span></span> <span data-ttu-id="c2037-105">Si el ensamblado de llamada no tiene permisos suficientes para vincularse al código, no se permitirá el vínculo y se producirá una excepción en tiempo de ejecución cuando se cargue y ejecute el código.</span><span class="sxs-lookup"><span data-stu-id="c2037-105">If the calling assembly does not have sufficient permission to link to your code, the link is not allowed and a runtime exception is thrown when the code is loaded and run.</span></span> <span data-ttu-id="c2037-106">Las peticiones de vínculo pueden reemplazarse en las clases que heredan de su código.</span><span class="sxs-lookup"><span data-stu-id="c2037-106">Link demands can be overridden in classes that inherit from your code.</span></span>  
   
- Los modificadores de recorrido de pila <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> y <xref:System.Security.CodeAccessPermission.PermitOnly%2A> no afectan a la evaluación de las peticiones de vínculo.  Dado que las peticiones de vínculo no efectúan ningún recorrido de pila, los modificadores de recorrido de pila no tienen ningún efecto sobre las peticiones de vínculo.  
+ <span data-ttu-id="c2037-107">Tenga en cuenta que no se efectúa ningún recorrido de pila completo con este tipo de petición y que el código sigue siendo vulnerable a ataques.</span><span class="sxs-lookup"><span data-stu-id="c2037-107">Note that a full stack walk is not performed with this type of demand and that your code is still susceptible to luring attacks.</span></span> <span data-ttu-id="c2037-108">Por ejemplo, si un método en el ensamblado A está protegido por una petición de vínculo, un llamador directo del ensamblado B se evalúa según los permisos del ensamblado B.  Sin embargo, la petición de vínculo no evaluará un método del ensamblado C si llama indirectamente al método del ensamblado A con el método del ensamblado B. La petición de vínculo especifica que solamente los permisos directos llamadores en el ensamblado de llamada inmediato deben estar vinculados al código.</span><span class="sxs-lookup"><span data-stu-id="c2037-108">For example, if a method in assembly A is protected by a link demand, a direct caller in assembly B is evaluated based on the permissions of Assembly B.  However, the link demand will not evaluate a method in assembly C if it indirectly calls the method in assembly A using the method in assembly B. The link demand specifies only the permissions direct callers in the immediate calling assembly must have to link to your code.</span></span> <span data-ttu-id="c2037-109">No especifica los permisos que deben tener todos los llamadores para ejecutar el código.</span><span class="sxs-lookup"><span data-stu-id="c2037-109">It does not specify the permissions all callers must have to run your code.</span></span>  
   
- Si se accede a un método protegido por una petición de vínculo a través de [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md), habrá una petición de vínculo que comprobará el llamador inmediato del código al que se ha accedido a través de reflexión.  Esto es válido tanto para la detección de métodos como para la invocación de métodos efectuados por reflexión.  Por ejemplo, supongamos que el código usa la reflexión para devolver un objeto <xref:System.Reflection.MethodInfo> que representa un método protegido por una petición de vínculo y, luego, pasa el objeto **MethodInfo** a otro código que usa dicho objeto para invocar el método original.  En este caso, la comprobación de la petición de vínculo tiene lugar dos veces: una vez para el código que devuelve el objeto **MethodInfo** y otra para el código que lo invoca.  
+ <span data-ttu-id="c2037-110">Los modificadores de recorrido de pila <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> y <xref:System.Security.CodeAccessPermission.PermitOnly%2A> no afectan a la evaluación de las peticiones de vínculo.</span><span class="sxs-lookup"><span data-stu-id="c2037-110">The <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A>, and <xref:System.Security.CodeAccessPermission.PermitOnly%2A> stack walk modifiers do not affect the evaluation of link demands.</span></span>  <span data-ttu-id="c2037-111">Dado que las peticiones de vínculo no efectúan ningún recorrido de pila, los modificadores de recorrido de pila no tienen ningún efecto sobre las peticiones de vínculo.</span><span class="sxs-lookup"><span data-stu-id="c2037-111">Because link demands do not perform a stack walk, the stack walk modifiers have no effect on link demands.</span></span>  
+  
+ <span data-ttu-id="c2037-112">Si se tiene acceso a un método protegido por una petición de vínculo a través de [reflexión](../../../docs/framework/reflection-and-codedom/reflection.md), a continuación, una petición de vínculo comprueba el llamador inmediato del código que tiene acceso a través de reflexión.</span><span class="sxs-lookup"><span data-stu-id="c2037-112">If a method protected by a link demand is accessed through [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md), then a link demand checks the immediate caller of the code accessed through reflection.</span></span> <span data-ttu-id="c2037-113">Esto es válido tanto para la detección de métodos como para la invocación de métodos efectuados por reflexión.</span><span class="sxs-lookup"><span data-stu-id="c2037-113">This is true both for method discovery and for method invocation performed using reflection.</span></span> <span data-ttu-id="c2037-114">Por ejemplo, suponga que el código utiliza la reflexión para devolver un <xref:System.Reflection.MethodInfo> objeto que representa un método protegido por una petición de vínculo y, a continuación, pasa **MethodInfo** objeto a otro código que usa el objeto para invocar el método original.</span><span class="sxs-lookup"><span data-stu-id="c2037-114">For example, suppose code uses reflection to return a <xref:System.Reflection.MethodInfo> object representing a method protected by a link demand and then passes that **MethodInfo** object to some other code that uses the object to invoke the original method.</span></span> <span data-ttu-id="c2037-115">En este caso, la comprobación de la petición de vínculo tiene lugar dos veces: una vez para el código que devuelve el **MethodInfo** objeto y otra para el código que lo invoca.</span><span class="sxs-lookup"><span data-stu-id="c2037-115">In this case the link demand check occurs twice: once for the code that returns the **MethodInfo** object and once for the code that invokes it.</span></span>  
   
 > [!NOTE]
->  Una petición de vínculo efectuada en un constructor de clases estáticas no protege el constructor, puesto que el sistema llama a los constructores estáticos, fuera de la ruta de acceso de ejecución del código de la aplicación.  Como resultado, al aplicar una petición de vínculo a toda una clase, no puede proteger el acceso a un constructor estático, aunque proteja el resto de la clase.  
+>  <span data-ttu-id="c2037-116">Una petición de vínculo efectuada en un constructor de clases estáticas no protege el constructor, puesto que el sistema llama a los constructores estáticos, fuera de la ruta de acceso de ejecución del código de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="c2037-116">A link demand performed on a static class constructor does not protect the constructor because static constructors are called by the system, outside the application's code execution path.</span></span> <span data-ttu-id="c2037-117">Como resultado, al aplicar una petición de vínculo a toda una clase, no puede proteger el acceso a un constructor estático, aunque proteja el resto de la clase.</span><span class="sxs-lookup"><span data-stu-id="c2037-117">As a result, when a link demand is applied to an entire class, it cannot protect access to a static constructor, although it does protect the rest of the class.</span></span>  
   
- El siguiente fragmento de código especifica de manera declarativa que cualquier código vinculado al método `ReadData` debe tener el permiso `CustomPermission`.  Este permiso es un permiso personalizado hipotético y no existe en .NET Framework.  La petición se efectúa pasando una marca **SecurityAction.LinkDemand** a `CustomPermissionAttribute`.  
+ <span data-ttu-id="c2037-118">El siguiente fragmento de código especifica de manera declarativa que cualquier código vinculado al método `ReadData` debe tener el permiso `CustomPermission`.</span><span class="sxs-lookup"><span data-stu-id="c2037-118">The following code fragment declaratively specifies that any code linking to the `ReadData` method must have the `CustomPermission` permission.</span></span> <span data-ttu-id="c2037-119">Este permiso es un permiso personalizado hipotético y no existe en .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c2037-119">This permission is a hypothetical custom permission and does not exist in the .NET Framework.</span></span> <span data-ttu-id="c2037-120">La petición se efectúa pasando una **SecurityAction.LinkDemand** indicador en el `CustomPermissionAttribute`.</span><span class="sxs-lookup"><span data-stu-id="c2037-120">The demand is made by passing a **SecurityAction.LinkDemand** flag to the `CustomPermissionAttribute`.</span></span>  
   
 ```vb  
 <CustomPermissionAttribute(SecurityAction.LinkDemand)> _  
@@ -59,6 +62,6 @@ public static string ReadData()
 }  
 ```  
   
-## Vea también  
- [Atributos](../../../docs/standard/attributes/index.md)   
- [Code Access Security](../../../docs/framework/misc/code-access-security.md)
+## <a name="see-also"></a><span data-ttu-id="c2037-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="c2037-121">See Also</span></span>  
+ [<span data-ttu-id="c2037-122">Atributos</span><span class="sxs-lookup"><span data-stu-id="c2037-122">Attributes</span></span>](../../../docs/standard/attributes/index.md)  
+ [<span data-ttu-id="c2037-123">Seguridad de acceso del código</span><span class="sxs-lookup"><span data-stu-id="c2037-123">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)

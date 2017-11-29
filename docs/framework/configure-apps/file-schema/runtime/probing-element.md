@@ -1,66 +1,69 @@
 ---
-title: "Elemento &lt;probing&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#probing"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<probing> (elemento)"
-  - "etiquetas contenedoras, <probing> (elemento)"
-  - "probing (elemento)"
+title: '&lt;el sondeo&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#probing
+helpviewer_keywords:
+- <probing> element
+- container tags, <probing> element
+- probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7dd829fbbfbaa6f26b59e26d5a8b1d2b36593f57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;probing&gt;
-Especifica los subdirectorios base de la aplicación en los que busca Common Language Runtime cuando se cargan los ensamblados.  
+# <a name="ltprobinggt-element"></a><span data-ttu-id="02671-102">&lt;el sondeo&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="02671-102">&lt;probing&gt; Element</span></span>
+<span data-ttu-id="02671-103">Especifica los subdirectorios base de common language runtime buscar al cargar los ensamblados de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="02671-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="02671-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="02671-104">\<configuration></span></span>  
+<span data-ttu-id="02671-105">\<en tiempo de ejecución ></span><span class="sxs-lookup"><span data-stu-id="02671-105">\<runtime></span></span>  
+<span data-ttu-id="02671-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="02671-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="02671-107">\<probing ></span><span class="sxs-lookup"><span data-stu-id="02671-107">\<probing></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="02671-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="02671-108">Syntax</span></span>  
+  
+```xml  
 <probing privatePath="paths"/>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="02671-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="02671-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="02671-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="02671-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="02671-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="02671-111">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`privatePath`|Atributo necesario.<br /><br /> Especifica los subdirectorios del directorio base de la aplicación que puede contener ensamblados.  Delimita cada subdirectorio con un punto y coma.|  
+|<span data-ttu-id="02671-112">Atributo</span><span class="sxs-lookup"><span data-stu-id="02671-112">Attribute</span></span>|<span data-ttu-id="02671-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="02671-113">Description</span></span>|  
+|---------------|-----------------|  
+|`privatePath`|<span data-ttu-id="02671-114">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="02671-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="02671-115">Especifica los subdirectorios del directorio base de la aplicación que pueden contener ensamblados.</span><span class="sxs-lookup"><span data-stu-id="02671-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="02671-116">Delimita cada subdirectorio con un punto y coma.</span><span class="sxs-lookup"><span data-stu-id="02671-116">Delimit each subdirectory with a semicolon.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="02671-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="02671-117">Child Elements</span></span>  
+ <span data-ttu-id="02671-118">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="02671-118">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="02671-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="02671-119">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
+|<span data-ttu-id="02671-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="02671-120">Element</span></span>|<span data-ttu-id="02671-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="02671-121">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyBinding`|<span data-ttu-id="02671-122">Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="02671-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="02671-123">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="02671-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="02671-124">Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="02671-124">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra cómo especificar los subdirectorios base de la aplicación en los que el motor de ejecución debe buscar ensamblados.  
+## <a name="example"></a><span data-ttu-id="02671-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="02671-125">Example</span></span>  
+ <span data-ttu-id="02671-126">En el ejemplo siguiente se muestra cómo especificar los subdirectorios base de la aplicación que el tiempo de ejecución debe buscar ensamblados.</span><span class="sxs-lookup"><span data-stu-id="02671-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -70,8 +73,8 @@ Especifica los subdirectorios base de la aplicación en los que busca Common Lan
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Especificar la ubicación de un ensamblado](../../../../../docs/framework/configure-apps/specify-assembly-location.md)   
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="02671-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="02671-127">See Also</span></span>  
+ [<span data-ttu-id="02671-128">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="02671-128">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="02671-129">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="02671-129">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="02671-130">Especificar la ubicación de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="02671-130">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [<span data-ttu-id="02671-131">Cómo el motor en tiempo de ejecución ubica ensamblados</span><span class="sxs-lookup"><span data-stu-id="02671-131">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

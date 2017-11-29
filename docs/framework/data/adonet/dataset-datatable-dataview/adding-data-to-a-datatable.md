@@ -1,41 +1,45 @@
 ---
-title: "Agregar datos a DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Agregar datos a un objeto DataTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6e05e8cb0c7de638e0c4efe74ffd27ab0dc45508
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Agregar datos a DataTable
-Después de crear una <xref:System.Data.DataTable> y definir su estructura usando columnas y restricciones, se le pueden agregar nuevas filas de datos.  Para agregar una nueva fila, declare una nueva variable como tipo <xref:System.Data.DataRow>.  Se devuelve un nuevo objeto **DataRow** cuando se llama al método <xref:System.Data.DataTable.NewRow%2A>.  A continuación, la **DataTable** crea el objeto **DataRow** basándose en la estructura de la tabla, definida por la <xref:System.Data.DataColumnCollection>.  
+# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="73b6c-102">Agregar datos a un objeto DataTable</span><span class="sxs-lookup"><span data-stu-id="73b6c-102">Adding Data to a DataTable</span></span>
+<span data-ttu-id="73b6c-103">Después de crear una <xref:System.Data.DataTable> y definir su estructura usando columnas y restricciones, se le pueden agregar nuevas filas de datos.</span><span class="sxs-lookup"><span data-stu-id="73b6c-103">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="73b6c-104">Para agregar una nueva fila, declare una nueva variable como tipo <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="73b6c-104">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="73b6c-105">Un nuevo **DataRow** objeto se devuelve cuando se llama a la <xref:System.Data.DataTable.NewRow%2A> método.</span><span class="sxs-lookup"><span data-stu-id="73b6c-105">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="73b6c-106">El **DataTable** , a continuación, crea la **DataRow** objeto basándose en la estructura de la tabla, tal como se define por la <xref:System.Data.DataColumnCollection>.</span><span class="sxs-lookup"><span data-stu-id="73b6c-106">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
   
- En el ejemplo siguiente se muestra cómo se crea una nueva fila llamando al método **NewRow**.  
+ <span data-ttu-id="73b6c-107">En el ejemplo siguiente se muestra cómo crear una nueva fila mediante una llamada a la **NewRow** método.</span><span class="sxs-lookup"><span data-stu-id="73b6c-107">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
-  
 ```  
   
 ```csharp  
 DataRow workRow = workTable.NewRow();  
 ```  
   
- A continuación, la fila recién agregada se puede manipular mediante un índice o nombre de columna, como se muestra en el siguiente ejemplo.  
+ <span data-ttu-id="73b6c-108">A continuación, la fila recién agregada se puede manipular mediante un índice o nombre de columna, como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="73b6c-108">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
   
 ```vb  
 workRow("CustLName") = "Smith"  
 workRow(1) = "Smith"  
-  
 ```  
   
 ```csharp  
@@ -43,31 +47,29 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Una vez que se han insertado datos en la nueva fila, se utiliza el método **Add** para agregar la fila a la <xref:System.Data.DataRowCollection>, como se muestra en el siguiente código.  
+ <span data-ttu-id="73b6c-109">Después de insertan datos en la nueva fila, el **agregar** método se usa para agregar la fila a la <xref:System.Data.DataRowCollection>, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="73b6c-109">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
   
 ```vb  
 workTable.Rows.Add(workRow)  
-  
 ```  
   
 ```csharp  
 workTable.Rows.Add(workRow);  
 ```  
   
- También se puede llamar al método **Add** para agregar una nueva fila pasando una matriz de valores, con el tipo <xref:System.Object>, tal y como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="73b6c-110">También puede llamar a la **agregar** método para agregar una nueva fila pasando una matriz de valores, de tipo <xref:System.Object>, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="73b6c-110">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
-  
 ```  
   
 ```csharp  
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Si se pasa una matriz de objetos con el tipo **Object** al método **Add**, se crea una nueva fila dentro de la tabla y se establece sus valores de columna en los valores de la matriz de objetos.  Tenga en cuenta que los valores de la matriz se hacen coincidir en secuencia con las columnas, basándose en el orden en que aparecen en la tabla.  
+ <span data-ttu-id="73b6c-111">Pasar una matriz de valores, de tipo **objeto**, a la **agregar** método crea una nueva fila dentro de la tabla y establece sus valores de columna a los valores de la matriz de objetos.</span><span class="sxs-lookup"><span data-stu-id="73b6c-111">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="73b6c-112">Tenga en cuenta que los valores de la matriz se hacen coincidir en secuencia con las columnas, basándose en el orden en que aparecen en la tabla.</span><span class="sxs-lookup"><span data-stu-id="73b6c-112">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
   
- En el siguiente ejemplo se agregan diez filas a la tabla **Customers** recién creada.  
+ <span data-ttu-id="73b6c-113">En el ejemplo siguiente se agrega 10 filas en recién creada **clientes** tabla.</span><span class="sxs-lookup"><span data-stu-id="73b6c-113">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
   
 ```vb  
 Dim workRow As DataRow  
@@ -79,7 +81,6 @@ For i = 0 To 9
   workRow(1) = "CustName" & I.ToString()  
   workTable.Rows.Add(workRow)  
 Next  
-  
 ```  
   
 ```csharp  
@@ -94,10 +95,10 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## Vea también  
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataRowCollection>   
- <xref:System.Data.DataTable>   
- [Manipular datos en DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="73b6c-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="73b6c-114">See Also</span></span>  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataRowCollection>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="73b6c-115">Manipular datos en un objeto DataTable</span><span class="sxs-lookup"><span data-stu-id="73b6c-115">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="73b6c-116">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="73b6c-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

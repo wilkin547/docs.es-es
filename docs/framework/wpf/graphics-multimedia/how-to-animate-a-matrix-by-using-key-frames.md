@@ -1,48 +1,51 @@
 ---
-title: "C&#243;mo: Animar un objeto Matrix mediante fotogramas clave | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, Matrix (propiedades) con fotogramas clave"
-  - "fotogramas clave, animar propiedades Matrix con"
-  - "Matrix (propiedades), animar con fotogramas clave"
+title: "Cómo: Animar un objeto Matrix mediante fotogramas clave"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], Matrix properties with key frames
+- Matrix properties [WPF], animating with key frames
+- key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8c67b5c8e179485083a40aa8a196fbee3e0fc24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Animar un objeto Matrix mediante fotogramas clave
-En este ejemplo, se muestra cómo animar la propiedad <xref:System.Windows.Media.MatrixTransform.Matrix%2A> de <xref:System.Windows.Media.MatrixTransform> mediante fotogramas clave.  
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a><span data-ttu-id="6dfe8-102">Cómo: Animar un objeto Matrix mediante fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="6dfe8-102">How to: Animate a Matrix by Using Key Frames</span></span>
+<span data-ttu-id="6dfe8-103">Este ejemplo muestra cómo animar la <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propiedad de un <xref:System.Windows.Media.MatrixTransform> mediante el uso de fotogramas clave.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-103">This example shows how to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform> by using key frames.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza la clase <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> para animar la propiedad <xref:System.Windows.Media.MatrixTransform.Matrix%2A> de <xref:System.Windows.Media.MatrixTransform>.  En el ejemplo se utiliza el objeto <xref:System.Windows.Media.MatrixTransform> para transformar el aspecto y la posición de un control <xref:System.Windows.Controls.Button>.  
+## <a name="example"></a><span data-ttu-id="6dfe8-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6dfe8-104">Example</span></span>  
+ <span data-ttu-id="6dfe8-105">En el ejemplo siguiente se usa el <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> clase para animar la <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propiedad de un <xref:System.Windows.Media.MatrixTransform>.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-105">The following example uses the <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform>.</span></span> <span data-ttu-id="6dfe8-106">El ejemplo se utiliza la <xref:System.Windows.Media.MatrixTransform> objeto que se va a transformar el aspecto y la posición de un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-106">The example uses the <xref:System.Windows.Media.MatrixTransform> object to transform the appearance and position of a <xref:System.Windows.Controls.Button>.</span></span>  
   
- En esta animación se utiliza la clase <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> para crear dos fotogramas clave y se hace lo siguiente con ellos:  
+ <span data-ttu-id="6dfe8-107">Esta animación usa la <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> clase para crear dos fotogramas clave y realiza las siguientes acciones con ellos:</span><span class="sxs-lookup"><span data-stu-id="6dfe8-107">This animation uses the <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> class to create two key frames and does the following with them:</span></span>  
   
-1.  Se anima el primer objeto <xref:System.Windows.Media.Matrix> durante los primeros 0,2 segundos.  En el ejemplo se cambian las propiedades <xref:System.Windows.Media.Matrix.M11%2A> y <xref:System.Windows.Media.Matrix.M12%2A> de <xref:System.Windows.Media.Matrix>.  Este cambio hace que el botón se ajuste y se sesgue.  En el ejemplo también se cambian las propiedades <xref:System.Windows.Media.Matrix.OffsetX%2A> y <xref:System.Windows.Media.Matrix.OffsetY%2A> para que el botón cambie de posición.  
+1.  <span data-ttu-id="6dfe8-108">Anima el primer <xref:System.Windows.Media.Matrix> durante los primeros 0,2 segundos.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-108">Animates the first <xref:System.Windows.Media.Matrix> during the first 0.2 seconds.</span></span> <span data-ttu-id="6dfe8-109">El ejemplo se cambia el <xref:System.Windows.Media.Matrix.M11%2A> y <xref:System.Windows.Media.Matrix.M12%2A> propiedades de la <xref:System.Windows.Media.Matrix>.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-109">The example changes the <xref:System.Windows.Media.Matrix.M11%2A> and <xref:System.Windows.Media.Matrix.M12%2A> properties of the <xref:System.Windows.Media.Matrix>.</span></span> <span data-ttu-id="6dfe8-110">Este cambio hace que el botón Ajustar y se convierten en sesgado.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-110">This change causes the button to stretch and become skewed.</span></span> <span data-ttu-id="6dfe8-111">El ejemplo también se cambia el <xref:System.Windows.Media.Matrix.OffsetX%2A> y <xref:System.Windows.Media.Matrix.OffsetY%2A> propiedades para que el botón cambia de posición.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-111">The example also changes the <xref:System.Windows.Media.Matrix.OffsetX%2A> and <xref:System.Windows.Media.Matrix.OffsetY%2A> properties so that the button changes position.</span></span>  
   
-2.  Se anima el segundo objeto <xref:System.Windows.Media.Matrix> a los 1,0 segundos.  El botón se mueve a otra posición y ya no está sesgado ni ajustado.  
+2.  <span data-ttu-id="6dfe8-112">Anima el segundo <xref:System.Windows.Media.Matrix> en 1,0 segundo.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-112">Animates the second <xref:System.Windows.Media.Matrix> at 1.0 seconds.</span></span> <span data-ttu-id="6dfe8-113">El botón se mueve a otra posición mientras el botón ya no está sesgado ni ajustado.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-113">The button moves to another position while the button is no longer skewed or stretched.</span></span>  
   
-3.  Se repite indefinidamente la animación.  
+3.  <span data-ttu-id="6dfe8-114">Repite indefinidamente la animación.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-114">Repeats the animation indefinitely.</span></span>  
   
 > [!NOTE]
->  Los fotogramas clave que se derivan del objeto <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> crean saltos súbitos entre los valores, es decir, el movimiento de la animación es brusco.  
+>  <span data-ttu-id="6dfe8-115">Marcos que se derivan de la clave del <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> objeto crean saltos súbitos entre valores, es decir, el movimiento de la animación es irregular.</span><span class="sxs-lookup"><span data-stu-id="6dfe8-115">Key frames that derive from the <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> object create sudden jumps between values, that is, the movement of the animation is jerky.</span></span>  
   
- [!code-xml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   
- Para obtener el ejemplo completo, vea [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ <span data-ttu-id="6dfe8-116">Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](http://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="6dfe8-116">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>   
- <xref:System.Windows.Media.MatrixTransform>   
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Temas "Cómo..." de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="6dfe8-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="6dfe8-117">See Also</span></span>  
+ <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  
+ <xref:System.Windows.Media.MatrixTransform>  
+ [<span data-ttu-id="6dfe8-118">Información general sobre animaciones de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="6dfe8-118">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="6dfe8-119">Temas de procedimientos de fotogramas clave</span><span class="sxs-lookup"><span data-stu-id="6dfe8-119">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

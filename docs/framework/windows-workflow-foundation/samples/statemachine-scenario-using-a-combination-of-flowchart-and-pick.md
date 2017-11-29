@@ -1,67 +1,70 @@
 ---
-title: "Escenario StateMachine utilizando una combinaci&#243;n de actividades FlowChart y Pick | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Escenario StateMachine utilizando una combinación de actividades FlowChart y Pick"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0fb0364310c8780dd41c5369e6b1851dee668d15
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Escenario StateMachine utilizando una combinaci&#243;n de actividades FlowChart y Pick
-En este ejemplo se muestra cómo implementar un escenario de cronómetro simple mediante una combinación de actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>.Utiliza actividades Receive y Send dentro de la actividad Pick para escuchar eventos de cronómetro.  
+# <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a><span data-ttu-id="2bfe0-102">Escenario StateMachine utilizando una combinación de actividades FlowChart y Pick</span><span class="sxs-lookup"><span data-stu-id="2bfe0-102">StateMachine Scenario Using a Combination of FlowChart and Pick</span></span>
+<span data-ttu-id="2bfe0-103">En este ejemplo se muestra cómo implementar un escenario de cronómetro simple mediante una combinación de actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-103">This sample demonstrates how to implement a simple stopwatch scenario using a combination of the <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Pick> activities.</span></span> <span data-ttu-id="2bfe0-104">Utiliza actividades Receive y Send dentro de la actividad Pick para escuchar eventos de cronómetro.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-104">It uses Receive and Send within the Pick activity to listen for stopwatch events.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="2bfe0-105">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2bfe0-106">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a \(página de descarga\) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="2bfe0-107">Si este directorio no existe, vaya a (página de descarga) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2bfe0-107">If this directory does not exist, go to (download page) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2bfe0-108">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-108">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>: \WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
   
-## Detalles del ejemplo  
- En la tabla siguiente se enumeran los proyectos de este ejemplo.  
+## <a name="sample-details"></a><span data-ttu-id="2bfe0-109">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="2bfe0-109">Sample Details</span></span>  
+ <span data-ttu-id="2bfe0-110">En la tabla siguiente se enumeran los proyectos de este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-110">The following table lists the projects in this sample.</span></span>  
   
-|||  
+|<span data-ttu-id="2bfe0-111">Nombre del proyecto</span><span class="sxs-lookup"><span data-stu-id="2bfe0-111">Project Name</span></span>|<span data-ttu-id="2bfe0-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="2bfe0-112">Description</span></span>|  
 |-|-|  
-|Nombre del proyecto|Descripción|  
-|StopWatchService|Este proyecto contiene la implementación de un equipo de estado para el ejemplo del cronómetro utilizando una combinación de las actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>.<br /><br /> La actividad <xref:System.Activities.Statements.Pick> tiene 3 instrucciones <xref:System.Activities.Statements.PickBranch> dentro de la propiedad <xref:System.Activities.Statements.Pick.Branches%2A> que escuchan eventos de `GetStart`, `GetOff` y `GetStop`.En función del evento de entrada, se activan los desencadenadores de una de las bifurcaciones y se desencadena la propiedad <xref:System.Activities.Statements.PickBranch.Action%2A> correspondiente.En la propiedad <xref:System.Activities.Statements.PickBranch.Action%2A>, hay una instrucción <xref:System.Activities.Statements.Switch%601> que evalúa si la transición es legítima y si lo es, la propiedad `currentState` se actualiza al estado de transición y se envía al cliente.<br /><br /> La actividad <xref:System.Activities.Statements.FlowDecision> al final de <xref:System.Activities.Statements.Flowchart> evalúa la propiedad `currentState` para determinar si el estado es terminal.Si es así, el flujo de trabajo finaliza; de lo contrario, el control vuelve en bucle al inicio de la actividad <xref:System.Activities.Statements.Pick> donde el flujo de trabajo está a la espera de más eventos de cronómetro.|  
-|StopWatchClient|Esta es una aplicación de consola de flujo de trabajo secuencial simple que envía varios eventos de cronómetro con combinaciones de actividades Send o Receive simples.|  
+|<span data-ttu-id="2bfe0-113">StopWatchService</span><span class="sxs-lookup"><span data-stu-id="2bfe0-113">StopWatchService</span></span>|<span data-ttu-id="2bfe0-114">Este proyecto contiene la implementación de un equipo de estado para el ejemplo del cronómetro utilizando una combinación de las actividades <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Pick>.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-114">This project contains the implementation of a state machine for the stopwatch sample using a combination of the <xref:System.Activities.Statements.Flowchart> and <xref:System.Activities.Statements.Pick> activities.</span></span><br /><br /> <span data-ttu-id="2bfe0-115">La actividad <xref:System.Activities.Statements.Pick> tiene 3 instrucciones <xref:System.Activities.Statements.PickBranch> dentro de la propiedad <xref:System.Activities.Statements.Pick.Branches%2A> que escuchan eventos de `GetStart`, `GetStop` y `GetOff`.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-115">The <xref:System.Activities.Statements.Pick> activity has 3 <xref:System.Activities.Statements.PickBranch> statements within the <xref:System.Activities.Statements.Pick.Branches%2A> property that listen for `GetStart`, `GetStop` and `GetOff` events.</span></span> <span data-ttu-id="2bfe0-116">En función del evento de entrada, se activan los desencadenadores de una de las bifurcaciones y se desencadena la propiedad <xref:System.Activities.Statements.PickBranch.Action%2A> correspondiente.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-116">Based on the incoming event, the triggers for one of the branches activate and the corresponding <xref:System.Activities.Statements.PickBranch.Action%2A> is triggered.</span></span> <span data-ttu-id="2bfe0-117">En la propiedad <xref:System.Activities.Statements.PickBranch.Action%2A>, hay una instrucción <xref:System.Activities.Statements.Switch%601> que evalúa si la transición es legítima y si lo es, la propiedad `currentState` se actualiza al estado de transición y se envía al cliente.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-117">In the <xref:System.Activities.Statements.PickBranch.Action%2A> property, there is a <xref:System.Activities.Statements.Switch%601> statement that evaluates whether the transition is a legitimate transition and if it is, the `currentState` property is updated to the transitioning state and sent to the client.</span></span><br /><br /> <span data-ttu-id="2bfe0-118">La actividad <xref:System.Activities.Statements.FlowDecision> al final de <xref:System.Activities.Statements.Flowchart> evalúa la propiedad `currentState` para determinar si el estado es terminal.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-118">The <xref:System.Activities.Statements.FlowDecision> activity at the end of the <xref:System.Activities.Statements.Flowchart> evaluates the `currentState` property to determine whether the state is terminal.</span></span> <span data-ttu-id="2bfe0-119">Si es así, el flujo de trabajo finaliza; de lo contrario, el control vuelve en bucle al inicio de la actividad <xref:System.Activities.Statements.Pick> donde el flujo de trabajo está a la espera de más eventos de cronómetro.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-119">If it is, the workflow ends; otherwise control loops back to the start of the <xref:System.Activities.Statements.Pick> activity where the workflow waits for more stopwatch events.</span></span>|  
+|<span data-ttu-id="2bfe0-120">StopWatchClient</span><span class="sxs-lookup"><span data-stu-id="2bfe0-120">StopWatchClient</span></span>|<span data-ttu-id="2bfe0-121">Esta es una aplicación de consola de flujo de trabajo secuencial simple que envía varios eventos de cronómetro con combinaciones de actividades Send o Receive simples.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-121">This is a simple sequential workflow console application that sends various stopwatch events with simple Send or Receive activity combinations.</span></span>|  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="2bfe0-122">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="2bfe0-122">To use this sample</span></span>  
   
-1.  Abra el archivo de solución StateMachineWithPick.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="2bfe0-123">Abra el archivo de solución StateMachineWithPick.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2bfe0-123">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open StateMachineWithPick.sln solution file.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="2bfe0-124">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-124">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Inicie StopWatchService.exe desde el [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] como administrador haciendo clic con el botón secundario en el archivo .exe y seleccionando **Ejecutar como administrador**.  
+3.  <span data-ttu-id="2bfe0-125">Inicie StopWatchService.exe desde [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] como administrador, haga clic en el archivo .exe y seleccionando **ejecutar como administrador**.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-125">Start the StopWatchService.exe from [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] as an administrator by right clicking the .exe file and selecting **Run as administrator**.</span></span>  
   
-    1.  Navegue a la carpeta StateMachineWithPick\\CS\\StopWatchService\\bin\\Debug.  
+    1.  <span data-ttu-id="2bfe0-126">Navegue a la carpeta StateMachineWithPick\CS\StopWatchService\bin\Debug.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-126">Navigate to the StateMachineWithPick\CS\StopWatchService\bin\Debug folder.</span></span>  
   
-    2.  Haga clic con el botón secundario en el archivo StopWatchService.exe y seleccione **Ejecutar como administrador**.  
+    2.  <span data-ttu-id="2bfe0-127">Haga clic en el archivo StopWatchService.exe y seleccione **ejecutar como administrador**.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-127">Right-click the StopWatchService.exe file and select **Run as administrator**.</span></span>  
   
-4.  Inicie la aplicación cliente StopWatchClient desde [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+4.  <span data-ttu-id="2bfe0-128">Inicie la aplicación cliente StopWatchClient desde [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2bfe0-128">Start the StopWatchClient client application from within [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-    1.  En el **Explorador de soluciones**, seleccione el proyecto **StopWatchClient** y haga clic con el botón secundario en **Establecer como proyecto de inicio**.  
+    1.  <span data-ttu-id="2bfe0-129">En **el Explorador de soluciones**, seleccione la **StopWatchClient** del proyecto y haga clic en **establecer como proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-129">In **Solution Explorer**, select the **StopWatchClient** project and right-click **Set as StartUp Project**.</span></span>  
   
-    2.  Presione CTRL\+F5 para ejecutar la solución.  
+    2.  <span data-ttu-id="2bfe0-130">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-130">To run the solution, press CTRL+F5.</span></span>  
   
-5.  Cambie a la ventana de consola de StopWatchService.exe para ver las transiciones de estado.  
+5.  <span data-ttu-id="2bfe0-131">Cambie a la ventana de consola de StopWatchService.exe para ver las transiciones de estado.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-131">Switch back to the console window for the StopWatchService.exe to view the state transitions.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="2bfe0-132">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2bfe0-133">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-133">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="2bfe0-134">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="2bfe0-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2bfe0-135">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="2bfe0-135">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>: \WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="2bfe0-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="2bfe0-136">See Also</span></span>

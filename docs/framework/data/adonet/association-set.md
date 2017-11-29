@@ -1,52 +1,55 @@
 ---
-title: "conjunto de asociaciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: conjunto de asociaciones
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db293cbc636d0ae4e532f24b2852444395f603c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# conjunto de asociaciones
-Un *conjunto de asociaciones* es un contenedor lógico para las instancias de [asociación](../../../../docs/framework/data/adonet/association-type.md) del mismo tipo.  Un conjunto de asociaciones no es una construcción del modelado de datos; es decir, no describe la estructura de datos o relaciones.  En su lugar, un conjunto de asociaciones proporciona una construcción para que un entorno de hospedaje o de almacenamiento \(como Common Language Runtime o una base de datos de SQL Server\) agrupe las instancias de asociaciones a fin de que se puedan asignar a un almacén de datos.  
+# <a name="association-set"></a><span data-ttu-id="61a71-102">conjunto de asociaciones</span><span class="sxs-lookup"><span data-stu-id="61a71-102">association set</span></span>
+<span data-ttu-id="61a71-103">Un *conjunto de asociaciones* es un contenedor lógico para [asociación](../../../../docs/framework/data/adonet/association-type.md) instancias del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="61a71-103">An *association set* is a logical container for [association](../../../../docs/framework/data/adonet/association-type.md) instances of the same type.</span></span> <span data-ttu-id="61a71-104">Un conjunto de asociaciones no es una construcción del modelado de datos; es decir, no describe la estructura de datos o relaciones.</span><span class="sxs-lookup"><span data-stu-id="61a71-104">An association set is not a data modeling construct; that is, it does not describe the structure of data or relationships.</span></span> <span data-ttu-id="61a71-105">En su lugar, un conjunto de asociaciones proporciona una construcción para que un entorno de hospedaje o de almacenamiento (como Common Language Runtime o una base de datos de SQL Server) agrupe las instancias de asociaciones a fin de que se puedan asignar a un almacén de datos.</span><span class="sxs-lookup"><span data-stu-id="61a71-105">Instead, an association set provides a construct for a hosting or storage environment (such as the common language runtime or a SQL Server database) to group association instances so that they can be mapped to a data store.</span></span>  
   
- Un conjunto de asociaciones se define dentro de un [contenedor de entidades](../../../../docs/framework/data/adonet/entity-container.md), que es una agrupación lógica de [conjuntos de entidades](../../../../docs/framework/data/adonet/entity-set.md) y conjuntos de asociaciones.  
+ <span data-ttu-id="61a71-106">Un conjunto de asociaciones se define dentro de un [contenedor de entidades](../../../../docs/framework/data/adonet/entity-container.md), que es una agrupación lógica de [conjuntos de entidades](../../../../docs/framework/data/adonet/entity-set.md) y conjuntos de asociaciones.</span><span class="sxs-lookup"><span data-stu-id="61a71-106">An association set is defined within an [entity container](../../../../docs/framework/data/adonet/entity-container.md), which is a logical grouping of [entity sets](../../../../docs/framework/data/adonet/entity-set.md) and association sets.</span></span>  
   
- Una definición de un conjunto de asociaciones contiene la información siguiente:  
+ <span data-ttu-id="61a71-107">Una definición de un conjunto de asociaciones contiene la información siguiente:</span><span class="sxs-lookup"><span data-stu-id="61a71-107">A definition for an association set contains the following information:</span></span>  
   
--   El nombre del conjunto de asociaciones.  \(Necesario\)  
+-   <span data-ttu-id="61a71-108">El nombre del conjunto de asociaciones.</span><span class="sxs-lookup"><span data-stu-id="61a71-108">The association set name.</span></span> <span data-ttu-id="61a71-109">(Necesario)</span><span class="sxs-lookup"><span data-stu-id="61a71-109">(Required)</span></span>  
   
--   La asociación cuyas instancias contendrá.  \(Necesario\)  
+-   <span data-ttu-id="61a71-110">La asociación cuyas instancias contendrá.</span><span class="sxs-lookup"><span data-stu-id="61a71-110">The association of which it will contain instances.</span></span> <span data-ttu-id="61a71-111">(Necesario)</span><span class="sxs-lookup"><span data-stu-id="61a71-111">(Required)</span></span>  
   
--   Dos [extremos del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md).  
+-   <span data-ttu-id="61a71-112">Dos [extremos del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md).</span><span class="sxs-lookup"><span data-stu-id="61a71-112">Two [association set ends](../../../../docs/framework/data/adonet/association-set-end.md).</span></span>  
   
-## Ejemplo  
- El diagrama siguiente muestra un modelo conceptual con dos asociaciones: `PublishedBy` y `WrittenBy`.  Aunque la información sobre los conjuntos de asociaciones no se muestra en el diagrama, el diagrama siguiente muestra un ejemplo de conjuntos de asociaciones y conjuntos de entidades basados en este modelo.  
+## <a name="example"></a><span data-ttu-id="61a71-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="61a71-113">Example</span></span>  
+ <span data-ttu-id="61a71-114">El diagrama siguiente muestra un modelo conceptual con dos asociaciones: `PublishedBy` y `WrittenBy`.</span><span class="sxs-lookup"><span data-stu-id="61a71-114">The diagram below shows a conceptual model with two associations: `PublishedBy`, and `WrittenBy`.</span></span> <span data-ttu-id="61a71-115">Aunque la información sobre los conjuntos de asociaciones no se muestra en el diagrama, el diagrama siguiente muestra un ejemplo de conjuntos de asociaciones y conjuntos de entidades basados en este modelo.</span><span class="sxs-lookup"><span data-stu-id="61a71-115">Although information about association sets is not conveyed in the diagram, the next diagram shows an example of association sets and entity sets based on this model.</span></span>  
   
- ![Modelo de ejemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="61a71-116">![Ejemplo de modelo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="61a71-116">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- El siguiente ejemplo muestra un conjunto de asociaciones \(`PublishedBy` y dos conjuntos de entidades \(`Books` y `Publishers`\) basados en el modelo conceptual mostrado anteriormente.  En el conjunto de entidades `Books`, Bi representa una instancia del tipo de entidad `Book` en tiempo de ejecución.  De igual forma, Pj representa una instancia de `Publisher` en el conjunto de entidades `Publishers`.  BiPj representa una instancia de la asociación `PublishedBy` en el conjunto de asociaciones `PublishedBy`.  
+ <span data-ttu-id="61a71-117">El siguiente ejemplo muestra un conjunto de asociaciones (`PublishedBy` y dos conjuntos de entidades (`Books` y `Publishers`) basados en el modelo conceptual mostrado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="61a71-117">The following example shows an association set (`PublishedBy`) and two entity sets (`Books` and `Publishers`) based on the conceptual model shown above.</span></span> <span data-ttu-id="61a71-118">BI en el `Books` conjunto de entidades representa una instancia de la `Book` tipo de entidad en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="61a71-118">Bi in the `Books` entity set represents an instance of the `Book` entity type at run time.</span></span> <span data-ttu-id="61a71-119">De forma similar, Pj representa un `Publisher` de instancia de la `Publishers` conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="61a71-119">Similarly, Pj represents a `Publisher` instance in the `Publishers` entity set.</span></span> <span data-ttu-id="61a71-120">BiPj representa una instancia de la `PublishedBy` asociación en el `PublishedBy` conjunto de asociaciones.</span><span class="sxs-lookup"><span data-stu-id="61a71-120">BiPj represents an instance of the `PublishedBy` association in the `PublishedBy` association set.</span></span>  
   
- ![Ejemplo de conjuntos](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ <span data-ttu-id="61a71-121">![Establece en el ejemplo se](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")</span><span class="sxs-lookup"><span data-stu-id="61a71-121">![Sets Example](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")</span></span>  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio \(DSL\) denominado lenguaje de definición de esquemas conceptuales \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\) para definir los modelos conceptuales.  El siguiente CSDL define un contenedor de entidad con un conjunto de asociaciones para cada asociación en el diagrama anterior.  Observe que el nombre y asociación para cada conjunto de asociaciones se definen utilizando los atributos XML.  
+ <span data-ttu-id="61a71-122">El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales.</span><span class="sxs-lookup"><span data-stu-id="61a71-122">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="61a71-123">El siguiente CSDL define un contenedor de entidad con un conjunto de asociaciones para cada asociación en el diagrama anterior.</span><span class="sxs-lookup"><span data-stu-id="61a71-123">The following CSDL defines an entity container with one association set for each association in the diagram above.</span></span> <span data-ttu-id="61a71-124">Observe que el nombre y asociación para cada conjunto de asociaciones se definen utilizando los atributos XML.</span><span class="sxs-lookup"><span data-stu-id="61a71-124">Note that the name and association for each association set are defined using XML attributes.</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- Es posible definir varios conjuntos de asociaciones por asociación, siempre que dos conjuntos de asociaciones no compartan un [extremo del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md).  En el siguiente CSDL se define un contenedor de entidades con dos conjuntos de asociaciones para la asociación `WrittenBy`.  Observe que se han definido varios conjuntos de entidades para los tipos de entidad `Author` y `Book` y que ningún conjunto de asociaciones comparte un extremo del conjunto de asociaciones.  
+ <span data-ttu-id="61a71-125">Es posible definir varios conjuntos de asociaciones por asociación, siempre y cuando ningún recurso compartido de conjuntos de dos asociación un [final del conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set-end.md).</span><span class="sxs-lookup"><span data-stu-id="61a71-125">It is possible to define multiple association sets per association, as long as no two association sets share an [association set end](../../../../docs/framework/data/adonet/association-set-end.md).</span></span> <span data-ttu-id="61a71-126">En el siguiente CSDL se define un contenedor de entidades con dos conjuntos de asociaciones para la asociación `WrittenBy`.</span><span class="sxs-lookup"><span data-stu-id="61a71-126">The following CSDL defines an entity container with two association sets for the `WrittenBy` association.</span></span> <span data-ttu-id="61a71-127">Observe que se han definido varios conjuntos de entidades para los tipos de entidad `Book` y `Author` y que ningún conjunto de asociaciones comparte un extremo del conjunto de asociaciones.</span><span class="sxs-lookup"><span data-stu-id="61a71-127">Notice that multiple entity sets have been defined for the `Book` and `Author` entity types and that no association set shares an association set end.</span></span>  
   
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
-## Vea también  
- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)   
- [propiedad de clave externa](../../../../docs/framework/data/adonet/foreign-key-property.md)
+## <a name="see-also"></a><span data-ttu-id="61a71-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="61a71-128">See Also</span></span>  
+ [<span data-ttu-id="61a71-129">Conceptos básicos de modelo de datos de entidad</span><span class="sxs-lookup"><span data-stu-id="61a71-129">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="61a71-130">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="61a71-130">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)  
+ [<span data-ttu-id="61a71-131">propiedad de clave externa</span><span class="sxs-lookup"><span data-stu-id="61a71-131">foreign key property</span></span>](../../../../docs/framework/data/adonet/foreign-key-property.md)

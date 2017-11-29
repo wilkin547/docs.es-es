@@ -1,67 +1,68 @@
 ---
-title: "Controles de formularios Windows Forms usados para mostrar opciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "listas de opciones en Windows Forms"
-  - "controles de Windows Forms, mostrar las opciones"
+title: Controles de formularios Windows Forms usados para mostrar opciones
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, listing options
+- option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Controles de formularios Windows Forms usados para mostrar opciones
-Si desea que los usuarios dispongan de una lista de opciones para elegir, puede agregar diferentes controles a un Windows Form.  En función de cuánto desee restringir la entrada de los usuarios, puede agregar un control <xref:System.Windows.Forms.ListBox>, un control <xref:System.Windows.Forms.ComboBox> o un control <xref:System.Windows.Forms.CheckedListBox>.  Utilice los vínculos siguientes para determinar cuál es el control que mejor se ajusta a sus necesidades.  
+# <a name="windows-forms-controls-used-to-list-options"></a><span data-ttu-id="b9e0e-102">Controles de formularios Windows Forms usados para mostrar opciones</span><span class="sxs-lookup"><span data-stu-id="b9e0e-102">Windows Forms Controls Used to List Options</span></span>
+<span data-ttu-id="b9e0e-103">Puede agregar una variedad de controles a un formulario de Windows si desea proporcionar a los usuarios con una lista de opciones que puede elegir.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-103">You can add a variety of controls to a Windows Form if you want to provide users with a list of options to choose from.</span></span> <span data-ttu-id="b9e0e-104">Dependiendo de la cantidad que desea restringir los usuarios de entrada, puede agregar un <xref:System.Windows.Forms.ListBox> (control), un <xref:System.Windows.Forms.ComboBox> (control), o un <xref:System.Windows.Forms.CheckedListBox> control.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-104">Depending on how much you want to restrict your users' input, you can add a <xref:System.Windows.Forms.ListBox> control, a <xref:System.Windows.Forms.ComboBox> control, or a <xref:System.Windows.Forms.CheckedListBox> control.</span></span> <span data-ttu-id="b9e0e-105">Use los vínculos siguientes para determinar qué control que mejor se adapte a sus necesidades.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-105">Use the following links to determine which control best suits your needs.</span></span>  
   
-## En esta sección  
- [Cuándo utilizar un control ComboBox de formularios Windows Forms en lugar de un control ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- Recomienda un control basado en una lista apropiado, dependiendo de las necesidades y restricciones del Windows Form.  
+## <a name="in-this-section"></a><span data-ttu-id="b9e0e-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="b9e0e-106">In This Section</span></span>  
+ [<span data-ttu-id="b9e0e-107">Cuándo utilizar un control ComboBox de formularios Windows Forms en lugar de un control ListBox</span><span class="sxs-lookup"><span data-stu-id="b9e0e-107">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ <span data-ttu-id="b9e0e-108">Recomienda un control basado en lista apropiado según las necesidades y restricciones del formulario Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-108">Recommends an appropriate list-based control depending on the needs and restrictions of your Windows Form.</span></span>  
   
- [Cómo: Obtener acceso a elementos específicos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- Ofrece indicaciones para determinar, mediante programación, qué elemento de una lista aparece en una posición especificada.  
+ [<span data-ttu-id="b9e0e-109">Obtener acceso a elementos específicos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9e0e-109">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ <span data-ttu-id="b9e0e-110">Proporciona instrucciones para determinar mediante programación qué elemento de una lista aparece en una posición especificada.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-110">Gives instructions for programmatically determining which item in a list appears in a given position.</span></span>  
   
- [Cómo: Agregar y quitar elementos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
- Proporciona instrucciones para agregar o quitar elementos de la lista de elementos de un control.  
+ [<span data-ttu-id="b9e0e-111">Agregar y quitar elementos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9e0e-111">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ <span data-ttu-id="b9e0e-112">Proporciona instrucciones para agregar o quitar elementos de lista de un control de elementos.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-112">Gives instructions for adding or removing items from a control's list of items.</span></span>  
   
- [Cómo: Crear una tabla de búsqueda para un control ComboBox, ListBox o CheckedListBox de Windows Forms](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- Ofrece indicaciones para mostrar y almacenar datos de formulario en formatos útiles.  
+ [<span data-ttu-id="b9e0e-113">Crear una tabla de búsqueda para un control ComboBox, ListBox o CheckedListBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9e0e-113">How to: Create a Lookup Table for a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ <span data-ttu-id="b9e0e-114">Proporciona instrucciones para mostrar y almacenar datos de formulario en formatos útiles.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-114">Gives directions for displaying and storing form data in useful formats.</span></span>  
   
- [Cómo: Enlazar un control ComboBox o ListBox de formularios Windows Forms a datos](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- Ofrece indicaciones para enlazar un control basado en una lista a un origen de datos.  
+ [<span data-ttu-id="b9e0e-115">Enlazar un control ComboBox o ListBox de formularios Windows Forms a datos</span><span class="sxs-lookup"><span data-stu-id="b9e0e-115">How to: Bind a Windows Forms ComboBox or ListBox Control to Data</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ <span data-ttu-id="b9e0e-116">Proporciona instrucciones para enlazar un control basado en la lista a un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-116">Gives directions for binding a list-based control to a data source.</span></span>  
   
- [Cómo: Ordenar el contenido de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- Explica cómo ordenar los datos de una lista en su origen de datos.  
+ [<span data-ttu-id="b9e0e-117">Ordenar el contenido de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9e0e-117">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ <span data-ttu-id="b9e0e-118">Explica cómo ordenar los datos de la lista en su origen de datos.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-118">Explains how to sort list data at its data source.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="b9e0e-119">Referencia</span><span class="sxs-lookup"><span data-stu-id="b9e0e-119">Reference</span></span>  
  <xref:System.Windows.Forms.CheckedListBox>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+ <span data-ttu-id="b9e0e-120">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-120">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.ComboBox>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+ <span data-ttu-id="b9e0e-121">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-121">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.ListBox>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+ <span data-ttu-id="b9e0e-122">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-122">Describes this class and has links to all its members.</span></span>  
   
-## Secciones relacionadas  
- [Información general sobre el control CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- Explica qué es este control y describe sus características y propiedades más importantes.  
+## <a name="related-sections"></a><span data-ttu-id="b9e0e-123">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="b9e0e-123">Related Sections</span></span>  
+ [<span data-ttu-id="b9e0e-124">CheckedListBox Control Overview</span><span class="sxs-lookup"><span data-stu-id="b9e0e-124">CheckedListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="b9e0e-125">Explica qué es este control y sus propiedades y características clave.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-125">Explains what this control is and its key features and properties.</span></span>  
   
- [Información general sobre el control ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- Explica qué es este control y describe sus características y propiedades más importantes.  
+ [<span data-ttu-id="b9e0e-126">Información general sobre el control ComboBox</span><span class="sxs-lookup"><span data-stu-id="b9e0e-126">ComboBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ <span data-ttu-id="b9e0e-127">Explica qué es este control y sus propiedades y características clave.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-127">Explains what this control is and its key features and properties.</span></span>  
   
- [Información general sobre ListBox \(Control\)](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- Explica qué es este control y describe sus características y propiedades más importantes.  
+ [<span data-ttu-id="b9e0e-128">Información general sobre ListBox (Control)</span><span class="sxs-lookup"><span data-stu-id="b9e0e-128">ListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="b9e0e-129">Explica qué es este control y sus propiedades y características clave.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-129">Explains what this control is and its key features and properties.</span></span>  
   
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+ [<span data-ttu-id="b9e0e-130">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9e0e-130">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="b9e0e-131">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="b9e0e-131">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

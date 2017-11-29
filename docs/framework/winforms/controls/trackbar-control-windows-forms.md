@@ -1,38 +1,39 @@
 ---
-title: "TrackBar (Control, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles deslizantes"
-  - "controles deslizantes"
-  - "TrackBar (control) [Windows Forms]"
+title: TrackBar (Control, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sliders
+- slider controls [Windows Forms]
+- TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 36e978aedd1f1259ff99703e0b94d623d565a8ee
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# TrackBar (Control, formularios Windows Forms)
-El control `TrackBar` de Windows Forms \(también denominado en ocasiones control "deslizante"\) se utiliza para navegar por grandes volúmenes de información o para ajustar visualmente una configuración numérica.  El control `TrackBar` tiene dos partes: el control de posición, también conocido como control deslizante, y las marcas de paso.  El control de posición es la parte que puede ajustarse.  Su posición corresponde a la propiedad <xref:System.Windows.Forms.TrackBar.Value%2A>.  Las marcas de paso son indicadores visuales espaciados a intervalos regulares.  La barra de seguimiento se desplaza en los incrementos que se especifiquen y puede alinearse horizontal o verticalmente.  Un ejemplo del uso de una barra de seguimiento sería el establecimiento de la velocidad de intermitencia del cursor o de la velocidad del mouse.  
+# <a name="trackbar-control-windows-forms"></a><span data-ttu-id="5b83f-102">TrackBar (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5b83f-102">TrackBar Control (Windows Forms)</span></span>
+<span data-ttu-id="5b83f-103">Los formularios Windows Forms `TrackBar` control (a veces denominado control "deslizante") se utiliza para navegar por una gran cantidad de información o para ajustar visualmente una configuración numérica.</span><span class="sxs-lookup"><span data-stu-id="5b83f-103">The Windows Forms `TrackBar` control (also sometimes called a "slider" control) is used for navigating through a large amount of information or for visually adjusting a numeric setting.</span></span> <span data-ttu-id="5b83f-104">El `TrackBar` control tiene dos partes: el control de posición, también conocido como control deslizante y las marcas de graduación.</span><span class="sxs-lookup"><span data-stu-id="5b83f-104">The `TrackBar` control has two parts: the thumb, also known as a slider, and the tick marks.</span></span> <span data-ttu-id="5b83f-105">El cuadro de desplazamiento es la parte que se puede ajustar.</span><span class="sxs-lookup"><span data-stu-id="5b83f-105">The thumb is the part that can be adjusted.</span></span> <span data-ttu-id="5b83f-106">Su posición corresponde a la <xref:System.Windows.Forms.TrackBar.Value%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="5b83f-106">Its position corresponds to the <xref:System.Windows.Forms.TrackBar.Value%2A> property.</span></span> <span data-ttu-id="5b83f-107">Las marcas de graduación son indicadores visuales que se llevan a intervalos regulares.</span><span class="sxs-lookup"><span data-stu-id="5b83f-107">The tick marks are visual indicators that are spaced at regular intervals.</span></span> <span data-ttu-id="5b83f-108">La barra de seguimiento se mueve en incrementos que se especifiquen y puede alinearse horizontal o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="5b83f-108">The track bar moves in increments that you specify and can be aligned horizontally or vertically.</span></span> <span data-ttu-id="5b83f-109">Un ejemplo del uso de una barra de seguimiento sería para establecer la velocidad de velocidad o el mouse intermitencia del cursor.</span><span class="sxs-lookup"><span data-stu-id="5b83f-109">An example use of a track bar would be for setting cursor blink rate or mouse speed.</span></span>  
   
-## En esta sección  
- [Información general del control TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
- Presenta conceptos generales acerca del control `TrackBar`, que permite a los usuarios navegar por la información mediante el ajuste visual de un valor numérico.  
+## <a name="in-this-section"></a><span data-ttu-id="5b83f-110">En esta sección</span><span class="sxs-lookup"><span data-stu-id="5b83f-110">In This Section</span></span>  
+ [<span data-ttu-id="5b83f-111">Información general del control TrackBar</span><span class="sxs-lookup"><span data-stu-id="5b83f-111">TrackBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/trackbar-control-overview-windows-forms.md)  
+ <span data-ttu-id="5b83f-112">Presenta los conceptos generales de la `TrackBar` control, lo que permite a los usuarios desplazarse por la información mediante el ajuste visualmente un valor numérico.</span><span class="sxs-lookup"><span data-stu-id="5b83f-112">Introduces the general concepts of the `TrackBar` control, which allows users to navigate through information by visually adjusting a numeric setting.</span></span>  
   
-## Referencia  
- <xref:System.Windows.Forms.TrackBar> \(clase\)  
- Proporciona información de referencia acerca de la clase y sus miembros.  
+## <a name="reference"></a><span data-ttu-id="5b83f-113">Referencia</span><span class="sxs-lookup"><span data-stu-id="5b83f-113">Reference</span></span>  
+ <span data-ttu-id="5b83f-114">Clase <xref:System.Windows.Forms.TrackBar></span><span class="sxs-lookup"><span data-stu-id="5b83f-114"><xref:System.Windows.Forms.TrackBar> class</span></span>  
+ <span data-ttu-id="5b83f-115">Contiene información de referencia sobre la clase y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="5b83f-115">Provides reference information on the class and its members.</span></span>  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+## <a name="related-sections"></a><span data-ttu-id="5b83f-116">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="5b83f-116">Related Sections</span></span>  
+ [<span data-ttu-id="5b83f-117">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5b83f-117">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="5b83f-118">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="5b83f-118">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

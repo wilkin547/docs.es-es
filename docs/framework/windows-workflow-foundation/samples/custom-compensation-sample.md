@@ -1,60 +1,64 @@
 ---
-title: "Ejemplo de compensaci&#243;n personalizada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ejemplo de compensación personalizada"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3a9745c0cdd3a2d7050aed083d2eee5dfd4aaaf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de compensaci&#243;n personalizada
-En este ejemplo se muestra cómo utilizar <xref:System.Activities.Statements.CompensableActivity> y su controlador de compensación para definir lógica de compensación personalizada.El escenario modelado en este ejemplo es una agencia de alquiler de camiones.  
+# <a name="custom-compensation-sample"></a><span data-ttu-id="0b943-102">Ejemplo de compensación personalizada</span><span class="sxs-lookup"><span data-stu-id="0b943-102">Custom Compensation Sample</span></span>
+<span data-ttu-id="0b943-103">En este ejemplo se muestra cómo utilizar <xref:System.Activities.Statements.CompensableActivity> y su controlador de compensación para definir lógica de compensación personalizada.</span><span class="sxs-lookup"><span data-stu-id="0b943-103">This sample shows how to use <xref:System.Activities.Statements.CompensableActivity> and its compensation handler to define custom compensation logic.</span></span> <span data-ttu-id="0b943-104">El escenario modelado en este ejemplo es una agencia de alquiler de camiones.</span><span class="sxs-lookup"><span data-stu-id="0b943-104">The scenario modeled in this sample is a Truck Rental Agency.</span></span>  
   
-## Detalles del ejemplo  
- Los pasos simulados son:  
+## <a name="sample-details"></a><span data-ttu-id="0b943-105">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="0b943-105">Sample Details</span></span>  
+ <span data-ttu-id="0b943-106">Los pasos simulados son:</span><span class="sxs-lookup"><span data-stu-id="0b943-106">The steps simulated are:</span></span>  
   
-1.  El usuario solicita ofertas de alquiler de camiones para una fecha determinada.  
+1.  <span data-ttu-id="0b943-107">El usuario solicita ofertas de alquiler de camiones para una fecha determinada.</span><span class="sxs-lookup"><span data-stu-id="0b943-107">The user requests truck rental quotes for a given date.</span></span>  
   
-2.  Se establece contacto con tres empresas de camiones y se proporcionan tres ofertas.  
+2.  <span data-ttu-id="0b943-108">Se establece contacto con tres empresas de camiones y se proporcionan tres ofertas.</span><span class="sxs-lookup"><span data-stu-id="0b943-108">Three truck companies are contacted and the three quotes are provided.</span></span>  
   
-3.  El usuario selecciona una oferta de camión y realiza el pedido con tarjeta de crédito.  
+3.  <span data-ttu-id="0b943-109">El usuario selecciona una oferta de camión y realiza el pedido con tarjeta de crédito.</span><span class="sxs-lookup"><span data-stu-id="0b943-109">The user selects one truck quote and proceeds to order by credit card.</span></span>  
   
-4.  La aplicación cancela las otras dos ofertas de camión.  
+4.  <span data-ttu-id="0b943-110">La aplicación cancela las otras dos ofertas de camión.</span><span class="sxs-lookup"><span data-stu-id="0b943-110">The application cancels the other two truck quotes.</span></span>  
   
-5.  La aplicación carga una cuota de servicio que no se puede reembolsar en las cuentas no bonificadas si se produce una cancelación en un periodo inferior a 10 días antes de la fecha de reserva.  
+5.  <span data-ttu-id="0b943-111">La aplicación carga una cuota de servicio que no se puede reembolsar en las cuentas no bonificadas si se produce una cancelación en un periodo inferior a 10 días antes de la fecha de reserva.</span><span class="sxs-lookup"><span data-stu-id="0b943-111">The application charges a service fee that is non-refundable for non-premium accounts if cancelation happens 10 days or less prior to the reservation date.</span></span>  
   
-6.  La aplicación carga la cuota de alquiler del camión.  
+6.  <span data-ttu-id="0b943-112">La aplicación carga la cuota de alquiler del camión.</span><span class="sxs-lookup"><span data-stu-id="0b943-112">The application charges the truck rental fee.</span></span>  
   
-7.  La aplicación espera hasta la fecha de la reserva o hasta que el cliente decida cancelar la reserva, lo que suceda primero.  
+7.  <span data-ttu-id="0b943-113">La aplicación espera hasta la fecha de la reserva o hasta que el cliente decida cancelar la reserva, lo que suceda primero.</span><span class="sxs-lookup"><span data-stu-id="0b943-113">The application waits until the reservation date or until the customer decided to cancel the reservation, whichever comes first.</span></span>  
   
-8.  Si el cliente cancela la reserva, se ejecuta la lógica de compensación personalizada de <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> según la siguiente lógica:  
+8.  <span data-ttu-id="0b943-114">Si el cliente cancela la reserva, se ejecuta la lógica de compensación personalizada de <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> según la siguiente lógica:</span><span class="sxs-lookup"><span data-stu-id="0b943-114">If the customer cancels the reservation, the <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> custom compensation logic runs according to the following logic:</span></span>  
   
-    1.  Si el cliente tiene una cuenta no bonificada y faltan menos de 10 días para la fecha de reserva, se sigue cobrando la cuota de servicio; en caso contrario, la aplicación reembolsa la cuota de servicio.  
+    1.  <span data-ttu-id="0b943-115">Si el cliente tiene una cuenta no bonificada y faltan menos de 10 días para la fecha de reserva, se sigue cobrando la cuota de servicio; en caso contrario, la aplicación reembolsa la cuota de servicio.</span><span class="sxs-lookup"><span data-stu-id="0b943-115">If the customer has a non-premium account and it is less than 10 days prior to the reservation date, then the service fee is still charged; otherwise, the application refunds the service fee.</span></span>  
   
-    2.  El resto de las actividades compensables \(el pedido de camión \+ la cuota de pedido de camión\) se ejecutan según la lógica de compensación predeterminada, que compensa en orden inverso a la ejecución.  
+    2.  <span data-ttu-id="0b943-116">El resto de las actividades compensables (el pedido de camión + la cuota de pedido de camión) se ejecutan según la lógica de compensación predeterminada, que compensa en orden inverso a la ejecución.</span><span class="sxs-lookup"><span data-stu-id="0b943-116">The rest of the compensable activities (truck order + truck order fee) are run according to the default compensation logic, which is to compensate in reverse order of execution.</span></span>  
   
-#### Para configurar, compilar y ejecutar el ejemplo  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="0b943-117">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="0b943-117">To set up, build, and run the sample</span></span>  
   
-1.  Abra el archivo de solución CustomCompensation.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].Se encuentra en el directorio \\WF\\Basic\\Compensation\\CustomCompensation.  
+1.  <span data-ttu-id="0b943-118">Abra el archivo de solución CustomCompensation.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b943-118">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the CustomCompensation.sln solution.</span></span> <span data-ttu-id="0b943-119">Se encuentra en el directorio \WF\Basic\Compensation\CustomCompensation.</span><span class="sxs-lookup"><span data-stu-id="0b943-119">It is located in the \WF\Basic\Compensation\CustomCompensation directory.</span></span>  
   
-2.  Presione Ctrl\+MAYÚS\+B para compilar la solución.  
+2.  <span data-ttu-id="0b943-120">Presione Ctrl+MAYÚS+B para compilar la solución.</span><span class="sxs-lookup"><span data-stu-id="0b943-120">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-3.  Presione CTRL\+F5 para ejecutar la aplicación.  
+3.  <span data-ttu-id="0b943-121">Presione CTRL+F5 para ejecutar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0b943-121">Press CTRL + F5 to run the application.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="0b943-122">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="0b943-122">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0b943-123">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="0b943-123">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="0b943-124">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0b943-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0b943-125">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="0b943-125">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="0b943-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="0b943-126">See Also</span></span>

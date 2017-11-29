@@ -1,47 +1,46 @@
 ---
-title: "&lt;code&gt; (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<code> (etiqueta XML)"
-  - "code (etiqueta XML)"
+title: "&lt;código&gt; (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- code XML tag
+- <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a7c1d8ab3db0c36c6a2935b9ffbef15e87df5ebc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;code&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Indica que el texto consiste en varias líneas de código.  
+# <a name="ltcodegt-visual-basic"></a><span data-ttu-id="7c1d5-102">&lt;código&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7c1d5-102">&lt;code&gt; (Visual Basic)</span></span>
+<span data-ttu-id="7c1d5-103">Indica que el texto de varias líneas de código.</span><span class="sxs-lookup"><span data-stu-id="7c1d5-103">Indicates that the text is multiple lines of code.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="7c1d5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7c1d5-104">Syntax</span></span>  
   
-```  
+```xml  
 <code>content</code>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="7c1d5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7c1d5-105">Parameters</span></span>  
  `content`  
- El texto que se marca como código.  
+ <span data-ttu-id="7c1d5-106">Texto que se va a marcar como código.</span><span class="sxs-lookup"><span data-stu-id="7c1d5-106">The text to mark as code.</span></span>  
   
-## Comentarios  
- Utilice la etiqueta `<code>` para indicar varias líneas como código.  Utilice [\<c\>](../../../visual-basic/language-reference/xmldoc/c.md) para indicar que el texto de una descripción debe marcarse como código.  
+## <a name="remarks"></a><span data-ttu-id="7c1d5-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7c1d5-107">Remarks</span></span>  
+ <span data-ttu-id="7c1d5-108">Use la `<code>` etiqueta para indicar varias líneas como código.</span><span class="sxs-lookup"><span data-stu-id="7c1d5-108">Use the `<code>` tag to indicate multiple lines as code.</span></span> <span data-ttu-id="7c1d5-109">Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) para indicar que el texto dentro de una descripción debe marcarse como código.</span><span class="sxs-lookup"><span data-stu-id="7c1d5-109">Use [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) to indicate that text within a description should be marked as code.</span></span>  
   
- Compile con [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
+ <span data-ttu-id="7c1d5-110">Compile con el parámetro [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación y generar un archivo con ellos.</span><span class="sxs-lookup"><span data-stu-id="7c1d5-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## Ejemplo  
- En este ejemplo se utiliza la etiqueta \<code\> para incluir el código de ejemplo para utilizar el campo `ID`.  
+## <a name="example"></a><span data-ttu-id="7c1d5-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7c1d5-111">Example</span></span>  
+ <span data-ttu-id="7c1d5-112">Este ejemplo se utiliza la \<código > etiqueta para incluir código de ejemplo para usar el `ID` campo.</span><span class="sxs-lookup"><span data-stu-id="7c1d5-112">This example uses the \<code> tag to include example code for using the `ID` field.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
   
-## Vea también  
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="7c1d5-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="7c1d5-113">See Also</span></span>  
+ [<span data-ttu-id="7c1d5-114">Etiquetas XML para comentarios</span><span class="sxs-lookup"><span data-stu-id="7c1d5-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

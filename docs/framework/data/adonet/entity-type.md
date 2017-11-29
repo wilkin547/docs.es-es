@@ -1,48 +1,51 @@
 ---
-title: "tipo de entidad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: tipo de entidad
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1b84ff5a55cff4548539e81b16406e234dcb43f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# tipo de entidad
-El *tipo de entidad* es la unidad de creación fundamental para describir la estructura de datos con Entity Data Model \(EDM\).  En un modelo conceptual, un tipo de entidad representa la estructura de conceptos de nivel superior, como clientes o pedidos.  Un tipo de entidad es una plantilla para las instancias de tipo de entidad.  Cada plantilla contiene la información siguiente:  
+# <a name="entity-type"></a><span data-ttu-id="46f1d-102">tipo de entidad</span><span class="sxs-lookup"><span data-stu-id="46f1d-102">entity type</span></span>
+<span data-ttu-id="46f1d-103">El *tipo de entidad* es el bloque de creación fundamental para describir la estructura de datos con Entity Data Model (EDM).</span><span class="sxs-lookup"><span data-stu-id="46f1d-103">The *entity type* is the fundamental building block for describing the structure of data with the Entity Data Model (EDM).</span></span> <span data-ttu-id="46f1d-104">En un modelo conceptual, un tipo de entidad representa la estructura de conceptos de nivel superior, como clientes o pedidos.</span><span class="sxs-lookup"><span data-stu-id="46f1d-104">In a conceptual model, an entity type represents the structure of top-level concepts, such as customers or orders.</span></span> <span data-ttu-id="46f1d-105">Un tipo de entidad es una plantilla para las instancias de tipo de entidad.</span><span class="sxs-lookup"><span data-stu-id="46f1d-105">An entity type is a template for entity type instances.</span></span> <span data-ttu-id="46f1d-106">Cada plantilla contiene la información siguiente:</span><span class="sxs-lookup"><span data-stu-id="46f1d-106">Each template contains the following information:</span></span>  
   
--   Un nombre único.  \(Requerido\)  
+-   <span data-ttu-id="46f1d-107">Un nombre único.</span><span class="sxs-lookup"><span data-stu-id="46f1d-107">A unique name.</span></span> <span data-ttu-id="46f1d-108">(Requerido)</span><span class="sxs-lookup"><span data-stu-id="46f1d-108">(Required.)</span></span>  
   
--   Una [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) definida por una o más propiedades.  \(Requerido\)  
+-   <span data-ttu-id="46f1d-109">Un [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) definido por una o varias propiedades.</span><span class="sxs-lookup"><span data-stu-id="46f1d-109">An [entity key](../../../../docs/framework/data/adonet/entity-key.md) defined by one or more properties.</span></span> <span data-ttu-id="46f1d-110">(Requerido)</span><span class="sxs-lookup"><span data-stu-id="46f1d-110">(Required.)</span></span>  
   
--   Datos en el formulario de [propiedades](../../../../docs/framework/data/adonet/property.md).  \(Opcional\)  
+-   <span data-ttu-id="46f1d-111">Datos en forma de [propiedades](../../../../docs/framework/data/adonet/property.md).</span><span class="sxs-lookup"><span data-stu-id="46f1d-111">Data in the form of [properties](../../../../docs/framework/data/adonet/property.md).</span></span> <span data-ttu-id="46f1d-112">(Opcional)</span><span class="sxs-lookup"><span data-stu-id="46f1d-112">(Optional.)</span></span>  
   
--   Las [propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) que permiten la navegación desde un [extremo](../../../../docs/framework/data/adonet/association-end.md) de una [asociación](../../../../docs/framework/data/adonet/association-type.md) al otro extremo.  \(Opcional\)  
+-   <span data-ttu-id="46f1d-113">[Propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) que permiten la navegación desde un [final](../../../../docs/framework/data/adonet/association-end.md) de un [asociación](../../../../docs/framework/data/adonet/association-type.md) hacia el otro extremo.</span><span class="sxs-lookup"><span data-stu-id="46f1d-113">[Navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) that allow for navigation from one [end](../../../../docs/framework/data/adonet/association-end.md) of an [association](../../../../docs/framework/data/adonet/association-type.md) to the other end.</span></span> <span data-ttu-id="46f1d-114">(Opcional)</span><span class="sxs-lookup"><span data-stu-id="46f1d-114">(Optional)</span></span>  
   
- En una aplicación, una instancia de un tipo de entidad representa un objeto específico \(como un cliente o un pedido concreto\).  Cada instancia de un tipo de entidad debe tener una [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) única dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md).  
+ <span data-ttu-id="46f1d-115">En una aplicación, una instancia de un tipo de entidad representa un objeto específico (como un cliente o un pedido concreto).</span><span class="sxs-lookup"><span data-stu-id="46f1d-115">In an application, an instance of an entity type represents a specific object (such as a specific customer or order).</span></span> <span data-ttu-id="46f1d-116">Cada instancia de un tipo de entidad debe tener un único [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md).</span><span class="sxs-lookup"><span data-stu-id="46f1d-116">Each instance of an entity type must have a unique [entity key](../../../../docs/framework/data/adonet/entity-key.md) within an [entity set](../../../../docs/framework/data/adonet/entity-set.md).</span></span>  
   
- Dos instancias de tipo de entidad se consideran iguales solo si son del mismo tipo y los valores de sus claves de entidad son idénticos.  
+ <span data-ttu-id="46f1d-117">Dos instancias de tipo de entidad se consideran iguales solo si son del mismo tipo y los valores de sus claves de entidad son idénticos.</span><span class="sxs-lookup"><span data-stu-id="46f1d-117">Two entity type instances are considered equal only if they are of the same type and the values of their entity keys are the same.</span></span>  
   
-## Ejemplo  
- El diagrama siguiente muestra un modelo conceptual con tres tipos de entidad: `Book`, `Publisher` y `Author`:  
+## <a name="example"></a><span data-ttu-id="46f1d-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="46f1d-118">Example</span></span>  
+ <span data-ttu-id="46f1d-119">El diagrama siguiente muestra un modelo conceptual con tres tipos de entidad: `Book`, `Publisher` y `Author`:</span><span class="sxs-lookup"><span data-stu-id="46f1d-119">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`:</span></span>  
   
- ![Modelo de ejemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="46f1d-120">![Ejemplo de modelo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="46f1d-120">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- Tenga en cuenta que las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "\(Key\)".  
+ <span data-ttu-id="46f1d-121">Tenga en cuenta que las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "(Key)".</span><span class="sxs-lookup"><span data-stu-id="46f1d-121">Note that the properties of each entity type that make up its entity key are denoted with "(Key)".</span></span>  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio \(DSL\) denominado lenguaje de definición de esquemas conceptuales \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\) para definir los modelos conceptuales.  El siguiente CSDL define el tipo de entidad `Book` mostrado en el diagrama anterior.  
+ <span data-ttu-id="46f1d-122">El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales.</span><span class="sxs-lookup"><span data-stu-id="46f1d-122">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="46f1d-123">El siguiente CSDL define el tipo de entidad `Book` mostrado en el diagrama anterior.</span><span class="sxs-lookup"><span data-stu-id="46f1d-123">The following CSDL defines the `Book` entity type shown in the diagram above:</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
-## Vea también  
- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)   
- [faceta](../../../../docs/framework/data/adonet/facet.md)
+## <a name="see-also"></a><span data-ttu-id="46f1d-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="46f1d-124">See Also</span></span>  
+ [<span data-ttu-id="46f1d-125">Conceptos básicos de modelo de datos de entidad</span><span class="sxs-lookup"><span data-stu-id="46f1d-125">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="46f1d-126">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="46f1d-126">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)  
+ [<span data-ttu-id="46f1d-127">facet</span><span class="sxs-lookup"><span data-stu-id="46f1d-127">facet</span></span>](../../../../docs/framework/data/adonet/facet.md)

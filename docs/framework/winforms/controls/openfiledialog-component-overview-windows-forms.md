@@ -1,38 +1,38 @@
 ---
-title: "Informaci&#243;n general sobre el componente OpenFileDialog (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OpenFileDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Abrir archivo (cuadro de diálogo), mostrar en Windows Forms"
-  - "OpenFileDialog (componente), acerca de OpenFileDialog"
+title: "Información general sobre el componente OpenFileDialog (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OpenFileDialog
+helpviewer_keywords:
+- OpenFileDialog component [Windows Forms], about OpenFileDialog
+- Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 35c947e3efbb9b2e5df775f83ffc6068e49c84e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el componente OpenFileDialog (formularios Windows Forms)
-El componente <xref:System.Windows.Forms.OpenFileDialog> de Windows Forms es un cuadro de diálogo preconfigurado.  Es el mismo cuadro de diálogo **Abrir archivo** que expone el sistema operativo de Windows.  Se hereda de la clase <xref:System.Windows.Forms.CommonDialog>.  
+# <a name="openfiledialog-component-overview-windows-forms"></a><span data-ttu-id="f6686-102">Información general sobre el componente OpenFileDialog (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f6686-102">OpenFileDialog Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="f6686-103">El componente <xref:System.Windows.Forms.OpenFileDialog> de Windows Forms es un cuadro de diálogo preconfigurado.</span><span class="sxs-lookup"><span data-stu-id="f6686-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="f6686-104">Es el mismo **archivos abiertos** cuadro de diálogo expuesto por el sistema operativo Windows.</span><span class="sxs-lookup"><span data-stu-id="f6686-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="f6686-105">Se hereda de la clase <xref:System.Windows.Forms.CommonDialog>.</span><span class="sxs-lookup"><span data-stu-id="f6686-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
   
-## Utilizar este componente  
- Utilice este componente dentro de la aplicación para Windows como una solución sencilla para seleccionar archivos, en lugar de configurar un cuadro de diálogo propio.  Al basarse en cuadros de diálogo estándar de Windows, creará aplicaciones cuya funcionalidad básica les resultará inmediatamente familiar a los usuarios.  Tenga en cuenta, no obstante, que cuando utilice el componente <xref:System.Windows.Forms.OpenFileDialog> deberá escribir su propia lógica de almacenamiento de archivos.  
+## <a name="using-this-component"></a><span data-ttu-id="f6686-106">Utilizando este componente</span><span class="sxs-lookup"><span data-stu-id="f6686-106">Using this Component</span></span>  
+ <span data-ttu-id="f6686-107">Utilice este componente dentro de la aplicación basada en Windows como una solución sencilla para seleccionar archivos, en lugar de configurar su propio cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="f6686-107">Use this component within your Windows-based application as a simple solution for file selection in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="f6686-108">Al basarse en cuadros de diálogo estándar de Windows, crea aplicaciones cuya funcionalidad básica resultará de inmediato familiar a los usuarios.</span><span class="sxs-lookup"><span data-stu-id="f6686-108">By relying on standard Windows dialog boxes, you create applications whose basic functionality is immediately familiar to users.</span></span> <span data-ttu-id="f6686-109">Tenga en cuenta, sin embargo, que, cuando uso el <xref:System.Windows.Forms.OpenFileDialog> componente, debe escribir su propia lógica de apertura de archivos.</span><span class="sxs-lookup"><span data-stu-id="f6686-109">Be aware, however, that when using the <xref:System.Windows.Forms.OpenFileDialog> component, you must write your own file-opening logic.</span></span>  
   
- Utilice el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para mostrar el cuadro de diálogo en tiempo de ejecución.  Para permitir que los usuarios seleccionen múltiples archivos para abrirlos, utilice la propiedad <xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A>.  Además, puede utilizar la propiedad <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> para determinar si aparecerá una casilla de sólo lectura en el cuadro de diálogo.  La propiedad <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> indica si la casilla de sólo lectura está activada.  Por último, la propiedad <xref:System.Windows.Forms.FileDialog.Filter%2A> establece la cadena de filtro de nombres de archivo actual, que determina las opciones que aparecen en el cuadro "Tipo de archivos" del cuadro de diálogo.  
+ <span data-ttu-id="f6686-110">Use la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para mostrar el cuadro de diálogo en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="f6686-110">Use the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method to display the dialog at run time.</span></span> <span data-ttu-id="f6686-111">Puede permitir a los usuarios seleccionar varios archivos que desea abrir con el <xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="f6686-111">You can enable users to multi-select files to be opened with the <xref:System.Windows.Forms.OpenFileDialog.Multiselect%2A> property.</span></span> <span data-ttu-id="f6686-112">Además, puede usar el <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> propiedad para determinar si en el cuadro de diálogo aparece una casilla de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="f6686-112">Additionally, you can use the <xref:System.Windows.Forms.OpenFileDialog.ShowReadOnly%2A> property to determine if a read-only check box appears in the dialog box.</span></span> <span data-ttu-id="f6686-113">El <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> propiedad indica si está seleccionada la casilla de verificación sólo lectura.</span><span class="sxs-lookup"><span data-stu-id="f6686-113">The <xref:System.Windows.Forms.OpenFileDialog.ReadOnlyChecked%2A> property indicates whether the read-only check box is selected.</span></span> <span data-ttu-id="f6686-114">Por último, el <xref:System.Windows.Forms.FileDialog.Filter%2A> propiedad establece la cadena de filtro de nombre de archivo actual, que determina las opciones que aparecen en el cuadro "Archivos de tipo" en el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="f6686-114">Finally, the <xref:System.Windows.Forms.FileDialog.Filter%2A> property sets the current file name filter string, which determines the choices that appear in the "Files of type" box in the dialog box.</span></span>  
   
- Cuando se agrega a un formulario, el componente <xref:System.Windows.Forms.OpenFileDialog> aparece en la bandeja de la parte inferior del Diseñador de Windows Forms.  
+ <span data-ttu-id="f6686-115">Cuando se agrega a un formulario, el <xref:System.Windows.Forms.OpenFileDialog> componente aparece en la bandeja en la parte inferior del Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="f6686-115">When it is added to a form, the <xref:System.Windows.Forms.OpenFileDialog> component appears in the tray at the bottom of the Windows Forms Designer.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.OpenFileDialog>   
- [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f6686-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="f6686-116">See Also</span></span>  
+ <xref:System.Windows.Forms.OpenFileDialog>  
+ [<span data-ttu-id="f6686-117">OpenFileDialog (componente)</span><span class="sxs-lookup"><span data-stu-id="f6686-117">OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

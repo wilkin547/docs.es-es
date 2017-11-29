@@ -1,28 +1,37 @@
 ---
-title: "Elemento &lt;message&gt; de &lt;wsDualHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;message&gt; de &lt;wsDualHttpBinding&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c2d4eda0a1975da4518d077b6cfa779a8e764a66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;message&gt; de &lt;wsDualHttpBinding&gt;
-Define la seguridad de nivel de mensaje para [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
+# <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="7d5ff-102">Elemento &lt;message&gt; de &lt;wsDualHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="7d5ff-102">&lt;message&gt; of &lt;wsDualHttpBinding&gt;</span></span>
+<span data-ttu-id="7d5ff-103">Define la seguridad de nivel de mensaje para la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="7d5ff-103">Defines message-level security for the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="7d5ff-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="7d5ff-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-105">\<bindings></span></span>  
+<span data-ttu-id="7d5ff-106">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-106">\<wsDualHttpBinding></span></span>  
+<span data-ttu-id="7d5ff-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-107">\<binding></span></span>  
+<span data-ttu-id="7d5ff-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-108">\<security></span></span>  
+<span data-ttu-id="7d5ff-109">\<mensaje ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7d5ff-110">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7d5ff-110">Syntax</span></span>  
   
+```xml  
 <message   
       clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
      negotiateServiceCredential="Boolean"  
@@ -30,67 +39,67 @@ Define la seguridad de nivel de mensaje para [\<wsDualHttpBinding\>](../../../..
 </message>  
 ```  
   
-## Tipo  
+## <a name="type"></a><span data-ttu-id="7d5ff-111">Tipo</span><span class="sxs-lookup"><span data-stu-id="7d5ff-111">Type</span></span>  
  <xref:System.ServiceModel.MessageSecurityOverHttp>  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7d5ff-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="7d5ff-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="7d5ff-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="7d5ff-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="7d5ff-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="7d5ff-114">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|algorithmSuite|Opcional.  Establece el cifrado de mensajes y los algoritmos de encapsulado de claves.  La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave.  Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad \(WS\-SecurityPolicy\).<br /><br /> Consulte a continuación los valores posibles.  El valor predeterminado es `Basic256`.|  
-|clientCredentialType|Opcional.  Especifica que el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante el modo de seguridad es `Message`.  Consulte a continuación los valores posibles.  De manera predeterminada, es `Windows`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.|  
-|negotiateServiceCredential|Opcional.  Un valor booleano que especifica si la credencial de servicio se proporciona en el cliente fuera de banda o se obtiene del servicio al cliente a través de un proceso de negociación.  Este tipo de negociación es un precursor del intercambio de mensajes usual.<br /><br /> Si el atributo `clientCredentialType` es None, Username o Certificate, establecer este atributo en `false` implica que el certificado del servicio está disponible en el cliente fuera de la banda y que el cliente necesita especificar el certificado del servicio \(utilizando [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\) en el comportamiento del servicio [\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  Este modo es interoperable con pilas SOAP que implementan WS\-Trust y WS\-SecureConversation.<br /><br /> Si el atributo `ClientCredentialType` está establecido en `Windows`, establecer este atributo en `false` especifica la autenticación basada en Kerberos.  Esto significa que el cliente y el servicio deben formar parte del mismo dominio Kerberos.  Este modo es interoperable con pilas SOAP que implementan el perfil de token de Kerberos \(tal y como se define en OASIS WSS TC\), así como WS\-Trust y WS\-SecureConversation.  Cuando este atributo es `true`, produce una negociación .NET SOAP que tuneliza el intercambio de SPNego mediante mensajes SOAP.<br /><br /> De manera predeterminada, es `true`.|  
+|<span data-ttu-id="7d5ff-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="7d5ff-115">Attribute</span></span>|<span data-ttu-id="7d5ff-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="7d5ff-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="7d5ff-117">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="7d5ff-117">algorithmSuite</span></span>|<span data-ttu-id="7d5ff-118">Opcional.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-118">Optional.</span></span> <span data-ttu-id="7d5ff-119">Establece el cifrado de mensajes y los algoritmos de encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-119">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="7d5ff-120">La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-120">The algorithms and the key sizes are determined by the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> class.</span></span> <span data-ttu-id="7d5ff-121">Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).</span><span class="sxs-lookup"><span data-stu-id="7d5ff-121">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="7d5ff-122">Consulte a continuación los valores posibles.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-122">See below for possible values.</span></span> <span data-ttu-id="7d5ff-123">El valor predeterminado es `Basic256`.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-123">The default value is `Basic256`.</span></span>|  
+|<span data-ttu-id="7d5ff-124">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="7d5ff-124">clientCredentialType</span></span>|<span data-ttu-id="7d5ff-125">Opcional.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-125">Optional.</span></span> <span data-ttu-id="7d5ff-126">Especifica que el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante el modo de seguridad es `Message`.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-126">Specifies the type of credential to be used when performing client authentication using the security mode is `Message`.</span></span> <span data-ttu-id="7d5ff-127">Consulte a continuación los valores posibles.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-127">See below for possible values.</span></span> <span data-ttu-id="7d5ff-128">De manera predeterminada, es `Windows`.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-128">The default is `Windows`.</span></span><br /><br /> <span data-ttu-id="7d5ff-129">Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-129">This attribute is of type <xref:System.ServiceModel.MessageCredentialType>.</span></span>|  
+|<span data-ttu-id="7d5ff-130">negotiateServiceCredential</span><span class="sxs-lookup"><span data-stu-id="7d5ff-130">negotiateServiceCredential</span></span>|<span data-ttu-id="7d5ff-131">Opcional.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-131">Optional.</span></span> <span data-ttu-id="7d5ff-132">Un valor booleano que especifica si la credencial de servicio se proporciona en el cliente fuera de banda o se obtiene del servicio al cliente a través de un proceso de negociación.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-132">A Boolean value that specifies whether the service credential is provisioned at the client out of band or is obtained from the service to the client through a process of negotiation.</span></span> <span data-ttu-id="7d5ff-133">Este tipo de negociación es un precursor del intercambio de mensajes usual.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-133">Such a negotiation is a precursor to the usual message exchange.</span></span><br /><br /> <span data-ttu-id="7d5ff-134">Si el `clientCredentialType` atributo es igual a ninguno, Username o certificado, si se establece este atributo en `false` implica que el certificado de servicio está disponible en el cliente fuera de banda y que el cliente necesita especificar el certificado de servicio (mediante el [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) en el [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) comportamiento del servicio.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-134">If the `clientCredentialType` attribute equals to None, Username, or Certificate, setting this attribute to `false` implies that the service certificate is available at the client out of band and that the client needs to specify the service certificate (using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) in the [\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) service behavior.</span></span> <span data-ttu-id="7d5ff-135">Este modo es interoperable con pilas SOAP que implementan WS-Trust y WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-135">This mode is interoperable with SOAP stacks which implement WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="7d5ff-136">Si el atributo `ClientCredentialType` está establecido en `Windows`, establecer este atributo en `false` especifica la autenticación basada en Kerberos.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-136">If the `ClientCredentialType` attribute is set to `Windows`, setting this attribute to `false` specifies Kerberos based authentication.</span></span> <span data-ttu-id="7d5ff-137">Esto significa que el cliente y el servicio deben formar parte del mismo dominio Kerberos.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-137">This means that the client and service must be part of the same Kerberos domain.</span></span> <span data-ttu-id="7d5ff-138">Este modo es interoperable con pilas SOAP que implementan el perfil de token de Kerberos (tal y como se define en OASIS WSS TC), así como WS-Trust y WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-138">This mode is interoperable with SOAP stacks which implement the Kerberos token profile (as defined at OASIS WSS TC) as well as WS-Trust and WS-SecureConversation.</span></span> <span data-ttu-id="7d5ff-139">Cuando este atributo es `true`, produce una negociación .NET SOAP que tuneliza el intercambio de SPNego mediante mensajes SOAP.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-139">When this attribute is `true`, it causes a .NET SOAP negotiation that tunnels SPNego exchange over SOAP messages.</span></span><br /><br /> <span data-ttu-id="7d5ff-140">De manera predeterminada, es `true`.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-140">The default is `true`.</span></span>|  
   
-## atributo algorithmSuite  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="7d5ff-141">atributo algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="7d5ff-141">algorithmSuite Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="7d5ff-142">Valor</span><span class="sxs-lookup"><span data-stu-id="7d5ff-142">Value</span></span>|<span data-ttu-id="7d5ff-143">Descripción</span><span class="sxs-lookup"><span data-stu-id="7d5ff-143">Description</span></span>|  
 |-----------|-----------------|  
-|Basic128|Utilice el cifrado Aes128, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic192|Utilice el cifrado Aes192, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic256|Utilice el cifrado Aes256, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el cifrado de claves.|  
-|Basic256Rsa15|Utilice Aes256 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|Basic192Rsa15|Utilice Aes192 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|TripleDes|Utilice el cifrado TripleDes, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic128Rsa15|Utilice Aes128 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|TripleDesRsa15|Utilice el cifrado TripleDes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|Basic128Sha256|Utilice Aes256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic192Sha256|Utilice Aes192 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic256Sha256|Utilice Aes256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|TripleDesSha256|Utilice TripleDes para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic128Sha256Rsa15|Utilice Aes128 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|Basic192Sha256Rsa15|Utilice Aes192 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|Basic256Sha256Rsa15|Utilice Aes256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|TripleDesSha256Rsa15|Utilice TripleDes para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
+|<span data-ttu-id="7d5ff-144">Basic128</span><span class="sxs-lookup"><span data-stu-id="7d5ff-144">Basic128</span></span>|<span data-ttu-id="7d5ff-145">Utilice el cifrado Aes128, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-145">Use Aes128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-146">Basic192</span><span class="sxs-lookup"><span data-stu-id="7d5ff-146">Basic192</span></span>|<span data-ttu-id="7d5ff-147">Utilice el cifrado Aes192, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-147">Use Aes192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-148">Basic256</span><span class="sxs-lookup"><span data-stu-id="7d5ff-148">Basic256</span></span>|<span data-ttu-id="7d5ff-149">Utilice el cifrado Aes256, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el cifrado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-149">Use Aes256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-150">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-150">Basic256Rsa15</span></span>|<span data-ttu-id="7d5ff-151">Utilice Aes256 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-151">Use Aes256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-152">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-152">Basic192Rsa15</span></span>|<span data-ttu-id="7d5ff-153">Utilice Aes192 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-153">Use Aes192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-154">TripleDes</span><span class="sxs-lookup"><span data-stu-id="7d5ff-154">TripleDes</span></span>|<span data-ttu-id="7d5ff-155">Utilice el cifrado TripleDes, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-155">Use TripleDes encryption, , Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-156">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-156">Basic128Rsa15</span></span>|<span data-ttu-id="7d5ff-157">Utilice Aes128 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-157">Use Aes128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-158">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-158">TripleDesRsa15</span></span>|<span data-ttu-id="7d5ff-159">Utilice el cifrado TripleDes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-159">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-160">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="7d5ff-160">Basic128Sha256</span></span>|<span data-ttu-id="7d5ff-161">Utilice Aes256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-161">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-162">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="7d5ff-162">Basic192Sha256</span></span>|<span data-ttu-id="7d5ff-163">Utilice Aes192 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-163">Use Aes192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-164">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="7d5ff-164">Basic256Sha256</span></span>|<span data-ttu-id="7d5ff-165">Utilice Aes256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-165">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-166">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="7d5ff-166">TripleDesSha256</span></span>|<span data-ttu-id="7d5ff-167">Utilice TripleDes para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-167">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-168">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-168">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="7d5ff-169">Utilice Aes128 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-169">Use Aes128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-170">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-170">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="7d5ff-171">Utilice Aes192 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-171">Use Aes192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-172">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-172">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="7d5ff-173">Utilice Aes256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-173">Use Aes256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="7d5ff-174">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="7d5ff-174">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="7d5ff-175">Utilice TripleDes para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-175">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-## Atributo clientCredentialType  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="7d5ff-176">Atributo clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="7d5ff-176">clientCredentialType Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="7d5ff-177">Valor</span><span class="sxs-lookup"><span data-stu-id="7d5ff-177">Value</span></span>|<span data-ttu-id="7d5ff-178">Descripción</span><span class="sxs-lookup"><span data-stu-id="7d5ff-178">Description</span></span>|  
 |-----------|-----------------|  
-|Ninguna|Esto permite al servicio interactuar con clientes anónimos.  En el lado del servicio, esto indica que el servicio no requiere ninguna credencial del cliente.  En el cliente, esto indica que el cliente no proporciona ninguna credencial del cliente.|  
-|Windows|Permite a los intercambios de SOAP estar bajo el contexto autenticado de una credencial de Windows.  Si el atributo `negotiateServiceCredential` está establecido en `true`, esto realiza una Negociación de la SSPI o Kerberos \(una norma interoperable\).|  
-|UserName|Permite que el servicio requiera que el cliente se autentique con una credencial UserName.  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] no permite enviar un resumen de contraseña ni derivar claves mediante una contraseña, así como tampoco usar dichas claves para seguridad de mensajes.  Como tal, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] garantiza que el transporte sea seguro al usar credenciales UserName.  Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.|  
-|Certificado|Permite al servicio exigir la autenticación del cliente mediante un certificado.  Si se utiliza el modo de seguridad del mensaje y el atributo `negotiateServiceCredential` está establecido como `false`, se necesita proporcionar al cliente el certificado de servicio.|  
-|IssuedToken|Especifica un token personalizado, normalmente emitido por un servicio de token de seguridad.|  
+|<span data-ttu-id="7d5ff-179">Ninguna</span><span class="sxs-lookup"><span data-stu-id="7d5ff-179">None</span></span>|<span data-ttu-id="7d5ff-180">Esto permite al servicio interactuar con clientes anónimos.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-180">This allows the service to interact with anonymous clients.</span></span> <span data-ttu-id="7d5ff-181">En el lado del servicio, esto indica que el servicio no requiere ninguna credencial del cliente.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-181">On the service side, this indicates that the service does not require any client credential.</span></span> <span data-ttu-id="7d5ff-182">En el cliente, esto indica que el cliente no proporciona ninguna credencial del cliente.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-182">On the client, this indicates that the client does not provide any client credential.</span></span>|  
+|<span data-ttu-id="7d5ff-183">Windows</span><span class="sxs-lookup"><span data-stu-id="7d5ff-183">Windows</span></span>|<span data-ttu-id="7d5ff-184">Permite a los intercambios de SOAP estar bajo el contexto autenticado de una credencial de Windows.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-184">Allows the SOAP exchanges to be under the authenticated context of a Windows credential.</span></span> <span data-ttu-id="7d5ff-185">Si el atributo `negotiateServiceCredential` está establecido en `true`, esto realiza una Negociación de la SSPI o Kerberos (una norma interoperable).</span><span class="sxs-lookup"><span data-stu-id="7d5ff-185">If the `negotiateServiceCredential` attribute is set to `true`, this either performs an SSPI Negotiation or Kerberos (an interoperable standard).</span></span>|  
+|<span data-ttu-id="7d5ff-186">UserName</span><span class="sxs-lookup"><span data-stu-id="7d5ff-186">UserName</span></span>|<span data-ttu-id="7d5ff-187">Permite que el servicio requiera que el cliente se autentique con una credencial UserName.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-187">Allows the service to require that the client be authenticated using a UserName credential.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="7d5ff-188"> no permite enviar un resumen de contraseña ni derivar claves mediante una contraseña, así como tampoco usar dichas claves para seguridad de mensajes.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-188"> does not support sending a password digest or deriving keys using password and using such keys for message security.</span></span> <span data-ttu-id="7d5ff-189">Como tal, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] garantiza que el transporte sea seguro al usar credenciales UserName.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-189">As such, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport is secured when using UserName credentials.</span></span> <span data-ttu-id="7d5ff-190">Este modo de credencial produce o bien un intercambio interoperable o bien una negociación no interoperable basada en el atributo `negotiateServiceCredential`.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-190">This credential mode results in either an interoperable exchange or a non-interoperable negotiation based on the `negotiateServiceCredential` attribute.</span></span>|  
+|<span data-ttu-id="7d5ff-191">Certificado</span><span class="sxs-lookup"><span data-stu-id="7d5ff-191">Certificate</span></span>|<span data-ttu-id="7d5ff-192">Permite al servicio exigir la autenticación del cliente mediante un certificado.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-192">Allows the service to require that the client be authenticated using a certificate.</span></span> <span data-ttu-id="7d5ff-193">Si se utiliza el modo de seguridad del mensaje y el atributo `negotiateServiceCredential` está establecido como `false`, se necesita proporcionar al cliente el certificado de servicio.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-193">If message security mode is used and the `negotiateServiceCredential` attribute is set to `false`, the client needs to be provisioned with the service certificate.</span></span>|  
+|<span data-ttu-id="7d5ff-194">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="7d5ff-194">IssuedToken</span></span>|<span data-ttu-id="7d5ff-195">Especifica un token personalizado, normalmente emitido por un servicio de token de seguridad.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-195">Specifies a custom token, usually issued by a Security Token Service.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="7d5ff-196">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="7d5ff-196">Child Elements</span></span>  
+ <span data-ttu-id="7d5ff-197">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="7d5ff-197">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="7d5ff-198">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="7d5ff-198">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<seguridad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|Define todas las funciones de seguridad de [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|<span data-ttu-id="7d5ff-199">Elemento</span><span class="sxs-lookup"><span data-stu-id="7d5ff-199">Element</span></span>|<span data-ttu-id="7d5ff-200">Descripción</span><span class="sxs-lookup"><span data-stu-id="7d5ff-200">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7d5ff-201">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-201">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|<span data-ttu-id="7d5ff-202">Define las capacidades de seguridad de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="7d5ff-202">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>   
- <xref:System.ServiceModel.MessageSecurityOverHttp>   
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<enlace\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="7d5ff-203">Vea también</span><span class="sxs-lookup"><span data-stu-id="7d5ff-203">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>  
+ <xref:System.ServiceModel.MessageSecurityOverHttp>  
+ [<span data-ttu-id="7d5ff-204">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="7d5ff-204">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="7d5ff-205">Enlaces</span><span class="sxs-lookup"><span data-stu-id="7d5ff-205">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="7d5ff-206">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="7d5ff-206">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="7d5ff-207">Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="7d5ff-207">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="7d5ff-208">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="7d5ff-208">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

@@ -1,50 +1,51 @@
 ---
-title: "NumericUpDown (Control, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "NumericUpDown (control) [Windows Forms]"
-  - "control de botón de número"
-  - "control de botón de número, controles de flechas"
-  - "controles de flechas"
-  - "controles de flechas, control de botón de número"
-  - "controles de Windows Forms, NumericUpDown (control)"
+title: NumericUpDown (Control, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, NumericUpDown control
+- spin button control [Windows Forms], up-down controls
+- up-down controls [Windows Forms], spin button control
+- up-down controls
+- spin button control
+- NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c674fec227e765213edfe2f2827543024cceac7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# NumericUpDown (Control, formularios Windows Forms)
-El control `NumericUpDown` de formularios Windows Forms es similar a una combinación de un cuadro de texto y un par de flechas en las que el usuario puede hacer clic para ajustar un valor.  El control muestra y establece un valor numérico único a partir de una lista de opciones.  Para incrementar y reducir el número, el usuario puede hacer clic en los botones hacia arriba y hacia abajo, presionar las teclas de dirección ARRIBA y ABAJO, o escribir un número.  Al presionar la tecla de dirección ARRIBA, se mueve hacia arriba hacia el valor máximo; al presionar la tecla de dirección ABAJO, la posición se mueve hacia el valor mínimo.  Un ejemplo donde puede ser útil este tipo de control es el control de volumen de un reproductor de música.  Los controles numéricos de flechas se utilizan en algunas aplicaciones del Panel de control de Windows.  
+# <a name="numericupdown-control-windows-forms"></a><span data-ttu-id="3b7c2-102">NumericUpDown (Control, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="3b7c2-102">NumericUpDown Control (Windows Forms)</span></span>
+<span data-ttu-id="3b7c2-103">El control `NumericUpDown` de Windows Forms es similar a una combinación de un cuadro de texto y un par de flechas en los que el usuario puede hacer clic para ajustar un valor.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-103">The Windows Forms `NumericUpDown` control looks like a combination of a text box and a pair of arrows that the user can click to adjust a value.</span></span> <span data-ttu-id="3b7c2-104">El control muestra y establece un valor numérico único de una lista de opciones.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-104">The control displays and sets a single numeric value from a list of choices.</span></span> <span data-ttu-id="3b7c2-105">El usuario puede aumentar y disminuir el número. Para ello, puede hacer clic en los botones arriba y abajo, presionar las teclas FLECHA ARRIBA y ABAJO o escribir un número.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-105">The user can increase and decrease the number by clicking up and down buttons, by pressing the UP and DOWN ARROW keys, or by typing a number.</span></span> <span data-ttu-id="3b7c2-106">Al presionar la tecla FLECHA ARRIBA, se desplaza el valor hacia el máximo; al presionar la tecla FLECHA ABAJO, se desplaza el valor hacia el mínimo.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-106">Clicking the UP ARROW key moves the value toward its maximum; clicking the DOWN ARROW key moves the position toward the minimum.</span></span> <span data-ttu-id="3b7c2-107">Un ejemplo donde este tipo de control puede ser útil es un control de volumen en un reproductor de música.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-107">An example where this kind of control might be useful is for a volume control on a music player.</span></span> <span data-ttu-id="3b7c2-108">Los controles numéricos de flechas se usan en algunas aplicaciones del panel de control de Windows.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-108">Numeric up-down controls are used in some Windows control panel applications.</span></span>  
   
-## En esta sección  
- [Información general sobre el control NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)  
- Presenta conceptos generales acerca del control `NumericUpDown`, que permite a los usuarios examinar una lista de valores numéricos y seleccionar en ella.  
+## <a name="in-this-section"></a><span data-ttu-id="3b7c2-109">En esta sección</span><span class="sxs-lookup"><span data-stu-id="3b7c2-109">In This Section</span></span>  
+ [<span data-ttu-id="3b7c2-110">Información general sobre el control NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="3b7c2-110">NumericUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)  
+ <span data-ttu-id="3b7c2-111">Presenta los conceptos generales del control `NumericUpDown`, que permite a los usuarios navegar por una lista de valores numéricos y seleccionarlos.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-111">Introduces the general concepts of the `NumericUpDown` control, which allows users to browse through and select from a list of numeric values.</span></span>  
   
- [Cómo: Establecer y devolver valores numéricos con el control NumericUpDown de formularios Windows Forms](../../../../docs/framework/winforms/controls/set-and-return-numeric-values-with-wf-numericupdown-control.md)  
- Describe cómo comprobar el valor del control.  
+ [<span data-ttu-id="3b7c2-112">Cómo: Establecer y devolver valores numéricos con el control NumericUpDown de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3b7c2-112">How to: Set and Return Numeric Values with the Windows Forms NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/set-and-return-numeric-values-with-wf-numericupdown-control.md)  
+ <span data-ttu-id="3b7c2-113">Se describe cómo probar el valor del control.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-113">Describes how to test for the value of the control.</span></span>  
   
- [Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
- Describe cómo configurar la presentación de los valores en el control.  
+ [<span data-ttu-id="3b7c2-114">Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3b7c2-114">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ <span data-ttu-id="3b7c2-115">Se describe cómo configurar cómo se muestran los valores en el control.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-115">Describes how to configure how values are displayed in the control.</span></span>  
   
-## Referencia  
- [NumericUpDown \(clase\)](frlrfSystemWindowsFormsNumericUpDownClassTopic)  
- Proporciona información de referencia acerca de la clase <xref:System.Windows.Forms.NumericUpDown> y sus miembros.  
+## <a name="reference"></a><span data-ttu-id="3b7c2-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="3b7c2-116">Reference</span></span>  
+ <xref:System.Windows.Forms.NumericUpDown>  
+ <span data-ttu-id="3b7c2-117">Proporciona información de referencia acerca de la clase <xref:System.Windows.Forms.NumericUpDown> y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-117">Provides reference information on the <xref:System.Windows.Forms.NumericUpDown> class and its members.</span></span>  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.  
+## <a name="related-sections"></a><span data-ttu-id="3b7c2-118">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="3b7c2-118">Related Sections</span></span>  
+ [<span data-ttu-id="3b7c2-119">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3b7c2-119">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="3b7c2-120">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-120">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [DomainUpDown \(Control\)](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- Presenta un control similar a <xref:System.Windows.Forms.NumericUpDown>, excepto en que el control <xref:System.Windows.Forms.DomainUpDown> muestra cadenas en lugar de valores numéricos.
+ [<span data-ttu-id="3b7c2-121">DomainUpDown (control)</span><span class="sxs-lookup"><span data-stu-id="3b7c2-121">DomainUpDown Control</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
+ <span data-ttu-id="3b7c2-122">Presenta un control similar a <xref:System.Windows.Forms.NumericUpDown>, salvo que el <xref:System.Windows.Forms.DomainUpDown> control muestra cadenas en lugar de valores numéricos.</span><span class="sxs-lookup"><span data-stu-id="3b7c2-122">Introduces a control similar to <xref:System.Windows.Forms.NumericUpDown>, except that the <xref:System.Windows.Forms.DomainUpDown> control displays string instead of numeric values.</span></span>

@@ -1,29 +1,35 @@
 ---
-title: "Enumerar instancias de SQL Server (ADO.NET) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Enumerar instancias de SQL Server (ADO.NET)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 99111cb9e48bd5ccd4463afcee6b78bc2387cf7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Enumerar instancias de SQL Server (ADO.NET)
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] permite que las aplicaciones busquen instancias de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] en la red actual.  La clase <xref:System.Data.Sql.SqlDataSourceEnumerator> expone esta información para el programador de la aplicación, suministrando una <xref:System.Data.DataTable> que contiene información acerca de todos los servidores visibles.  Esta tabla devuelta contiene una lista con las instancias de servidor disponibles en la red que coincide con la lista proporcionada cuando un usuario intenta crear una nueva conexión, y expande la lista desplegable que contiene todos los servidores disponibles en el cuadro de diálogo **Propiedades de conexión**.  Los resultados mostrados no siempre están completos.  
+# <a name="enumerating-instances-of-sql-server-adonet"></a><span data-ttu-id="7f14f-102">Enumerar instancias de SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="7f14f-102">Enumerating Instances of SQL Server (ADO.NET)</span></span>
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="7f14f-103"> permite que las aplicaciones busquen instancias de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] en la red actual.</span><span class="sxs-lookup"><span data-stu-id="7f14f-103"> permits applications to find [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instances within the current network.</span></span> <span data-ttu-id="7f14f-104">La clase <xref:System.Data.Sql.SqlDataSourceEnumerator> expone esta información para el programador de la aplicación, suministrando una <xref:System.Data.DataTable> que contiene información acerca de todos los servidores visibles.</span><span class="sxs-lookup"><span data-stu-id="7f14f-104">The <xref:System.Data.Sql.SqlDataSourceEnumerator> class exposes this information to the application developer, providing a <xref:System.Data.DataTable> containing information about all the visible servers.</span></span> <span data-ttu-id="7f14f-105">Esta tabla devuelta contiene una lista de instancias de servidor disponibles en la red que coincide con la lista proporcionada cuando un usuario intenta crear una nueva conexión y expande la lista desplegable que contiene todos los servidores disponibles en la **conexión Propiedades** cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="7f14f-105">This returned table contains a list of server instances available on the network that matches the list provided when a user attempts to create a new connection, and expands the drop-down list containing all the available servers on the **Connection Properties** dialog box.</span></span> <span data-ttu-id="7f14f-106">Los resultados mostrados no siempre están completos.</span><span class="sxs-lookup"><span data-stu-id="7f14f-106">The results displayed are not always complete.</span></span>  
   
 > [!NOTE]
->  Como sucede con la mayoría de servicios de Windows, es mejor ejecutar el servicio de explorador de SQL con los menos privilegios posibles.  Para obtener más información acerca del servicio SQL Browser y acerca de cómo administrar su comportamiento, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+>  <span data-ttu-id="7f14f-107">Como sucede con la mayoría de servicios de Windows, es mejor ejecutar el servicio de explorador de SQL con los menos privilegios posibles.</span><span class="sxs-lookup"><span data-stu-id="7f14f-107">As with most Windows services, it is best to run the SQL Browser service with the least possible privileges.</span></span> <span data-ttu-id="7f14f-108">Para obtener más información acerca del servicio SQL Browser y acerca de cómo administrar su comportamiento, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f14f-108">See [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online for more information on the SQL Browser service, and how to manage its behavior.</span></span>  
   
-## Recuperación de una instancia de enumeración  
- Para recuperar la tabla que contiene información acerca de las instancias de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] disponibles, primero debe recuperar un enumerador mediante la propiedad <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> compartida o estática:  
+## <a name="retrieving-an-enumerator-instance"></a><span data-ttu-id="7f14f-109">Recuperación de una instancia de enumeración</span><span class="sxs-lookup"><span data-stu-id="7f14f-109">Retrieving an Enumerator Instance</span></span>  
+ <span data-ttu-id="7f14f-110">Para recuperar la tabla que contiene información acerca de las instancias de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] disponibles, primero debe recuperar un enumerador mediante la propiedad <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> compartida o estática:</span><span class="sxs-lookup"><span data-stu-id="7f14f-110">In order to retrieve the table containing information about the available [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instances, you must first retrieve an enumerator, using the shared/static <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> property:</span></span>  
   
 ```vb  
 Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
@@ -35,7 +41,7 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
- Una vez que haya recuperado la instancia estática, puede llamar al método <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A>, que devuelve una <xref:System.Data.DataTable> que contiene información acerca de los servidores disponibles:  
+ <span data-ttu-id="7f14f-111">Una vez que haya recuperado la instancia estática, puede llamar al método <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A>, que devuelve una <xref:System.Data.DataTable> que contiene información acerca de los servidores disponibles:</span><span class="sxs-lookup"><span data-stu-id="7f14f-111">Once you have retrieved the static instance, you can call the <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> method, which returns a <xref:System.Data.DataTable> containing information about the available servers:</span></span>  
   
 ```vb  
 Dim dataTable As System.Data.DataTable = instance.GetDataSources()  
@@ -45,27 +51,27 @@ Dim dataTable As System.Data.DataTable = instance.GetDataSources()
 System.Data.DataTable dataTable = instance.GetDataSources();  
 ```  
   
- La tabla que devuelve la llamada al método contiene las siguientes columnas, cada una de las cuales incluye valores `string`:  
+ <span data-ttu-id="7f14f-112">La tabla que devuelve la llamada al método contiene las siguientes columnas, cada una de las cuales incluye valores `string`:</span><span class="sxs-lookup"><span data-stu-id="7f14f-112">The table returned from the method call contains the following columns, all of which contain `string` values:</span></span>  
   
-|Columna|Descripción|  
-|-------------|-----------------|  
-|**ServerName**|Nombre del servidor.|  
-|**InstanceName**|Nombre de la instancia del servidor.  Si el servidor se ejecuta como instancia predeterminada, esta columna se muestra en blanco.|  
-|**IsClustered**|Indica si el servidor forma parte de un clúster.|  
-|**Versión**|Versión del servidor.  Por ejemplo:<br /><br /> -   9,00.x \([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]\)<br />-   10.0.xx \([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)]\)<br />-   10.50.x \([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)]\)<br />-   11.0.xx \([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012\)|  
+|<span data-ttu-id="7f14f-113">Columna</span><span class="sxs-lookup"><span data-stu-id="7f14f-113">Column</span></span>|<span data-ttu-id="7f14f-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="7f14f-114">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="7f14f-115">**ServerName**</span><span class="sxs-lookup"><span data-stu-id="7f14f-115">**ServerName**</span></span>|<span data-ttu-id="7f14f-116">Nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="7f14f-116">Name of the server.</span></span>|  
+|<span data-ttu-id="7f14f-117">**NombreDeInstancia**</span><span class="sxs-lookup"><span data-stu-id="7f14f-117">**InstanceName**</span></span>|<span data-ttu-id="7f14f-118">Nombre de la instancia del servidor.</span><span class="sxs-lookup"><span data-stu-id="7f14f-118">Name of the server instance.</span></span> <span data-ttu-id="7f14f-119">Si el servidor se ejecuta como instancia predeterminada, esta columna se muestra en blanco.</span><span class="sxs-lookup"><span data-stu-id="7f14f-119">Blank if the server is running as the default instance.</span></span>|  
+|<span data-ttu-id="7f14f-120">**IsClustered**</span><span class="sxs-lookup"><span data-stu-id="7f14f-120">**IsClustered**</span></span>|<span data-ttu-id="7f14f-121">Indica si el servidor forma parte de un clúster.</span><span class="sxs-lookup"><span data-stu-id="7f14f-121">Indicates whether the server is part of a cluster.</span></span>|  
+|<span data-ttu-id="7f14f-122">**Versión**</span><span class="sxs-lookup"><span data-stu-id="7f14f-122">**Version**</span></span>|<span data-ttu-id="7f14f-123">Versión del servidor.</span><span class="sxs-lookup"><span data-stu-id="7f14f-123">Version of the server.</span></span> <span data-ttu-id="7f14f-124">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="7f14f-124">For example:</span></span><br /><br /> <span data-ttu-id="7f14f-125">-9, 00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])</span><span class="sxs-lookup"><span data-stu-id="7f14f-125">-   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])</span></span><br /><span data-ttu-id="7f14f-126">-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])</span><span class="sxs-lookup"><span data-stu-id="7f14f-126">-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])</span></span><br /><span data-ttu-id="7f14f-127">-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])</span><span class="sxs-lookup"><span data-stu-id="7f14f-127">-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])</span></span><br /><span data-ttu-id="7f14f-128">-11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)</span><span class="sxs-lookup"><span data-stu-id="7f14f-128">-   11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)</span></span>|  
   
-## Limitaciones de la enumeración  
- Es posible que en la lista no aparezcan todos los servidores disponibles.  La lista puede variar dependiendo de algunos factores, como los tiempos de espera o el tráfico de la red.  Como consecuencia, la lista puede ser diferente en dos llamadas consecutivas.  Solo aparecerán en la lista los servidores de la misma red.  Normalmente, los paquetes de difusión no recorren los enrutadores; este es el motivo de que a lo mejor no pueda ver uno de los servidores que aparecen en la lista, aunque se mantenga estable entre llamadas.  
+## <a name="enumeration-limitations"></a><span data-ttu-id="7f14f-129">Limitaciones de la enumeración</span><span class="sxs-lookup"><span data-stu-id="7f14f-129">Enumeration Limitations</span></span>  
+ <span data-ttu-id="7f14f-130">Es posible que en la lista no aparezcan todos los servidores disponibles.</span><span class="sxs-lookup"><span data-stu-id="7f14f-130">All of the available servers may or may not be listed.</span></span> <span data-ttu-id="7f14f-131">La lista puede variar dependiendo de algunos factores, como los tiempos de espera o el tráfico de la red.</span><span class="sxs-lookup"><span data-stu-id="7f14f-131">The list can vary depending on factors such as timeouts and network traffic.</span></span> <span data-ttu-id="7f14f-132">Como consecuencia, la lista puede ser diferente en dos llamadas consecutivas.</span><span class="sxs-lookup"><span data-stu-id="7f14f-132">This can cause the list to be different on two consecutive calls.</span></span> <span data-ttu-id="7f14f-133">Solo aparecerán en la lista los servidores de la misma red.</span><span class="sxs-lookup"><span data-stu-id="7f14f-133">Only servers on the same network will be listed.</span></span> <span data-ttu-id="7f14f-134">Normalmente, los paquetes de difusión no recorren los enrutadores; este es el motivo de que a lo mejor no pueda ver uno de los servidores que aparecen en la lista, aunque se mantenga estable entre llamadas.</span><span class="sxs-lookup"><span data-stu-id="7f14f-134">Broadcast packets typically won't traverse routers, which is why you may not see a server listed, but it will be stable across calls.</span></span>  
   
- Los servidores de la lista pueden tener o no información adicional como `IsClustered` y la versión.  Todo depende de cómo se haya obtenido la lista.  Los servidores que aparecen en la lista a través del servicio de explorador de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] tendrán más detalles que los que se encuentran a través de la infraestructura de Windows, que solo muestra el nombre.  
+ <span data-ttu-id="7f14f-135">Los servidores de la lista pueden tener o no información adicional como `IsClustered` y la versión.</span><span class="sxs-lookup"><span data-stu-id="7f14f-135">Listed servers may or may not have additional information such as `IsClustered` and version.</span></span> <span data-ttu-id="7f14f-136">Todo depende de cómo se haya obtenido la lista.</span><span class="sxs-lookup"><span data-stu-id="7f14f-136">This is dependent on how the list was obtained.</span></span> <span data-ttu-id="7f14f-137">Los servidores que aparecen en la lista a través del servicio de explorador de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] tendrán más detalles que los que se encuentran a través de la infraestructura de Windows, que solo muestra el nombre.</span><span class="sxs-lookup"><span data-stu-id="7f14f-137">Servers listed through the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] browser service will have more details than those found through the Windows infrastructure, which will list only the name.</span></span>  
   
 > [!NOTE]
->  La enumeración de servidores solo se encuentra disponible cuando se ejecuta con plena confianza.  Los ensamblados que se ejecutan en un entorno de confianza parcial no podrán utilizarla, aunque dispongan del permiso de seguridad de acceso del código \(CAS\) <xref:System.Data.SqlClient.SqlClientPermission>.  
+>  <span data-ttu-id="7f14f-138">La enumeración de servidores solo se encuentra disponible cuando se ejecuta con plena confianza.</span><span class="sxs-lookup"><span data-stu-id="7f14f-138">Server enumeration is only available when running in full-trust.</span></span> <span data-ttu-id="7f14f-139">Los ensamblados que se ejecutan en un entorno de confianza parcial no podrán utilizarla, aunque dispongan del permiso de seguridad de acceso del código (CAS) <xref:System.Data.SqlClient.SqlClientPermission>.</span><span class="sxs-lookup"><span data-stu-id="7f14f-139">Assemblies running in a partially-trusted environment will not be able to use it, even if they have the <xref:System.Data.SqlClient.SqlClientPermission> Code Access Security (CAS) permission.</span></span>  
   
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] proporciona información para <xref:System.Data.Sql.SqlDataSourceEnumerator> mediante el uso de un servicio externo de Windows llamado SQL Browser.  Este servicio está habilitado de forma predeterminada, pero los administradores pueden desactivarlo o deshabilitarlo, para que la instancia del servidor sea invisible para esta clase.  
+ [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="7f14f-140"> proporciona información para <xref:System.Data.Sql.SqlDataSourceEnumerator> mediante el uso de un servicio externo de Windows llamado SQL Browser.</span><span class="sxs-lookup"><span data-stu-id="7f14f-140"> provides information for the <xref:System.Data.Sql.SqlDataSourceEnumerator> through the use of an external Windows service named SQL Browser.</span></span> <span data-ttu-id="7f14f-141">Este servicio está habilitado de forma predeterminada, pero los administradores pueden desactivarlo o deshabilitarlo, para que la instancia del servidor sea invisible para esta clase.</span><span class="sxs-lookup"><span data-stu-id="7f14f-141">This service is enabled by default, but administrators may turn it off or disable it, making the server instance invisible to this class.</span></span>  
   
-## Ejemplo  
- La siguiente aplicación de consola recupera información acerca de todas las instancias de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] visibles y muestra esta información en la ventana de la consola.  
+## <a name="example"></a><span data-ttu-id="7f14f-142">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7f14f-142">Example</span></span>  
+ <span data-ttu-id="7f14f-143">La siguiente aplicación de consola recupera información acerca de todas las instancias de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] visibles y muestra esta información en la ventana de la consola.</span><span class="sxs-lookup"><span data-stu-id="7f14f-143">The following console application retrieves information about all of the visible [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instances and displays the information in the console window.</span></span>  
   
 ```vb  
 Imports System.Data.Sql  
@@ -128,6 +134,6 @@ class Program
 }  
 ```  
   
-## Vea también  
- [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7f14f-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="7f14f-144">See Also</span></span>  
+ [<span data-ttu-id="7f14f-145">SQL Server y ADO.NET</span><span class="sxs-lookup"><span data-stu-id="7f14f-145">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="7f14f-146">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="7f14f-146">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

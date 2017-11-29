@@ -1,80 +1,80 @@
 ---
-title: "Enlace de datos en Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles enlazados, Windows Forms"
-  - "datos [Windows Forms]"
-  - "datos [Windows Forms], arquitectura"
-  - "Controles de Windows Forms, enlace de datos"
-  - "Windows Forms, enlace de datos"
+title: Enlace de datos en Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms]
+- Windows Forms, data binding
+- data [Windows Forms], architecture
+- Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60a9f66fec64ceda71dd5b70211b897c84113429
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Enlace de datos en Windows Forms
-El enlace de datos en Windows Forms proporciona los medios para mostrar y realizar cambios en la información de un origen de datos en los controles del formulario.  Puede enlazar a orígenes de datos tradicionales y a casi cualquier estructura que contenga datos.  
+# <a name="windows-forms-data-binding"></a><span data-ttu-id="9061a-102">Enlace de datos en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9061a-102">Windows Forms Data Binding</span></span>
+<span data-ttu-id="9061a-103">El enlace de datos en Windows Forms proporciona los medios para mostrar y realizar cambios en la información de un origen de datos en los controles del formulario.</span><span class="sxs-lookup"><span data-stu-id="9061a-103">Data binding in Windows Forms gives you the means to display and make changes to information from a data source in controls on the form.</span></span> <span data-ttu-id="9061a-104">Puede enlazar a orígenes de datos tradicionales y a casi cualquier estructura que contenga datos.</span><span class="sxs-lookup"><span data-stu-id="9061a-104">You can bind to both traditional data sources as well as almost any structure that contains data.</span></span>  
   
-## En esta sección  
- [Enlace de datos y formularios Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- Proporciona información general del enlace de datos en Windows Forms.  
+## <a name="in-this-section"></a><span data-ttu-id="9061a-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="9061a-105">In This Section</span></span>  
+ [<span data-ttu-id="9061a-106">Enlace de datos y Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9061a-106">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ <span data-ttu-id="9061a-107">Proporciona información general del enlace de datos en Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="9061a-107">Provides an overview of data binding in Windows Forms.</span></span>  
   
- [Orígenes de datos compatibles con formularios Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
- Describe los orígenes de datos que se pueden usar con Windows Forms.  
+ [<span data-ttu-id="9061a-108">Orígenes de datos compatibles con Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9061a-108">Data Sources Supported by Windows Forms</span></span>](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ <span data-ttu-id="9061a-109">Describe los orígenes de datos que se pueden usar con Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="9061a-109">Describes the data sources that can be used with Windows Forms.</span></span>  
   
- [Interfaces relacionadas con el enlace de datos](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
- Describe algunas de las interfaces usadas con el enlace de datos de Windows Forms.  
+ [<span data-ttu-id="9061a-110">Interfaces relacionadas con el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="9061a-110">Interfaces Related to Data Binding</span></span>](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
+ <span data-ttu-id="9061a-111">Describe algunas de las interfaces usadas con el enlace de datos de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="9061a-111">Describes several of the interfaces used with Windows Forms data binding.</span></span>  
   
- [Cómo: Desplazarse por datos en formularios Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
- Muestra cómo navegar por los elementos de un origen de datos.  
+ [<span data-ttu-id="9061a-112">Desplazarse por datos en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9061a-112">How to: Navigate Data in Windows Forms</span></span>](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
+ <span data-ttu-id="9061a-113">Muestra cómo navegar por los elementos de un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="9061a-113">Shows how to navigate through items in a data source.</span></span>  
   
- [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- Describe los diferentes tipos de notificación de cambios para el enlace de datos de Windows Forms.  
+ [<span data-ttu-id="9061a-114">Notificación de cambios en el enlace de datos de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9061a-114">Change Notification in Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ <span data-ttu-id="9061a-115">Describe los diferentes tipos de notificación de cambios para el enlace de datos de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="9061a-115">Describes different types of change notification for Windows Forms data binding.</span></span>  
   
- [Cómo: Implementar la interfaz INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
- Muestra cómo implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  La interfaz comunica a un control enlazado los cambios de propiedad en un objeto comercial.  
+ [<span data-ttu-id="9061a-116">Implementar la interfaz INotifyPropertyChanged</span><span class="sxs-lookup"><span data-stu-id="9061a-116">How to: Implement the INotifyPropertyChanged Interface</span></span>](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
+ <span data-ttu-id="9061a-117">Muestra cómo implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.</span><span class="sxs-lookup"><span data-stu-id="9061a-117">Shows how to implement the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span> <span data-ttu-id="9061a-118">La interfaz comunica a un control enlazado los cambios de propiedad en un objeto comercial.</span><span class="sxs-lookup"><span data-stu-id="9061a-118">The interface  communicates to a bound control the property changes on a business object</span></span>  
   
- [Cómo: Aplicar el modelo PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- Muestra cómo aplicar el modelo *PropertyName*Changed a las propiedades de un control de usuario de Windows Forms.  
+ [<span data-ttu-id="9061a-119">Aplicar el modelo PropertyNameChanged</span><span class="sxs-lookup"><span data-stu-id="9061a-119">How to: Apply the PropertyNameChanged Pattern</span></span>](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
+ <span data-ttu-id="9061a-120">Muestra cómo aplicar el *PropertyName*modelo Changed a las propiedades de un control de usuario de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="9061a-120">Shows how to apply the *PropertyName*Changed pattern to properties of a Windows Forms user control.</span></span>  
   
- [Cómo: Implementar la interfaz ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
- Muestra cómo habilitar la detección del esquema de una lista enlazable mediante la implementación de la interfaz <xref:System.ComponentModel.ITypedList>.  
+ [<span data-ttu-id="9061a-121">Implementar la interfaz ITypedList</span><span class="sxs-lookup"><span data-stu-id="9061a-121">How to: Implement the ITypedList Interface</span></span>](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
+ <span data-ttu-id="9061a-122">Muestra cómo habilitar la detección del esquema de una lista enlazable mediante la implementación de la interfaz <xref:System.ComponentModel.ITypedList>.</span><span class="sxs-lookup"><span data-stu-id="9061a-122">Shows how to enable discovery of the schema for a bindable list by implementing the <xref:System.ComponentModel.ITypedList> interface.</span></span>  
   
- [Cómo: Implementar la interfaz IListSource](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
- Muestra cómo la implementación de la interfaz <xref:System.ComponentModel.IListSource> para crear una clase enlazable no implementa <xref:System.Collections.IList>, sino que proporciona una lista de otra ubicación.  
+ [<span data-ttu-id="9061a-123">Implementar la interfaz IListSource</span><span class="sxs-lookup"><span data-stu-id="9061a-123">How to: Implement the IListSource Interface</span></span>](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
+ <span data-ttu-id="9061a-124">Muestra cómo la implementación de la interfaz <xref:System.ComponentModel.IListSource> para crear una clase enlazable no implementa <xref:System.Collections.IList>, sino que proporciona una lista de otra ubicación.</span><span class="sxs-lookup"><span data-stu-id="9061a-124">Shows how to implement the <xref:System.ComponentModel.IListSource> interface to create a bindable class does not implement <xref:System.Collections.IList>, but provides a list from another location.</span></span>  
   
- [Cómo: Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- Muestra cómo controlar el evento <xref:System.Windows.Forms.BindingSource.BindingComplete> para asegurarse de que todos los controles enlazados a un origen de datos permanezcan sincronizados.  
+ [<span data-ttu-id="9061a-125">Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados</span><span class="sxs-lookup"><span data-stu-id="9061a-125">How to: Ensure Multiple Controls Bound to the Same Data Source Remain Synchronized</span></span>](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ <span data-ttu-id="9061a-126">Muestra cómo controlar el evento <xref:System.Windows.Forms.BindingSource.BindingComplete> para asegurarse de que todos los controles enlazados a un origen de datos permanezcan sincronizados.</span><span class="sxs-lookup"><span data-stu-id="9061a-126">Shows how to handle the <xref:System.Windows.Forms.BindingSource.BindingComplete> event to ensure all controls bound to a data source remain synchronized.</span></span>  
   
- [Cómo: Garantizar que la fila seleccionada de una tabla secundaria conserva la posición correcta](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
- Muestra cómo asegurarse de que no cambie la fila seleccionada de una tabla secundaria cuando se realice un cambio en un campo de la tabla primaria.  
+ [<span data-ttu-id="9061a-127">Garantizar que la fila seleccionada de una tabla secundaria conserva la posición correcta</span><span class="sxs-lookup"><span data-stu-id="9061a-127">How to: Ensure the Selected Row in a Child Table Remains at the Correct Position</span></span>](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
+ <span data-ttu-id="9061a-128">Muestra cómo asegurarse de que no cambie la fila seleccionada de una tabla secundaria cuando se realice un cambio en un campo de la tabla primaria.</span><span class="sxs-lookup"><span data-stu-id="9061a-128">Shows how to ensure the selected row of a child table does not change, when a change is made to a field of the parent table.</span></span>  
   
- Consulte también [Interfaces relacionadas con enlace de datos](http://msdn.microsoft.com/library/41e17s4b%20\(v=vs.110\)), [Cómo: Desplazarse por datos en Windows Forms](http://msdn.microsoft.com/library/b63ha24w%20\(v=vs.110\)), [Cómo: Crear un control con enlace simple en un Windows Form](http://msdn.microsoft.com/library/sw223a62%20\(v=vs.110\)).  
+ <span data-ttu-id="9061a-129">Consulte también [Interfaces relacionadas con enlace de datos](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [Cómo: navegar por datos en formularios Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Cómo: crear un Control con enlace Simple en un formulario Windows Forms](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="9061a-129">Also see [Interfaces Related to Data Binding](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [How to: Navigate Data in Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [How to: Create a Simple-Bound Control on a Windows Form](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).</span></span>  
   
-## Referencia  
- <xref:System.Windows.Forms.Binding?displayProperty=fullName>  
- Describe la clase que representa el enlace entre un componente enlazable y un origen de datos.  
+## <a name="reference"></a><span data-ttu-id="9061a-130">Referencia</span><span class="sxs-lookup"><span data-stu-id="9061a-130">Reference</span></span>  
+ <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
+ <span data-ttu-id="9061a-131">Describe la clase que representa el enlace entre un componente enlazable y un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="9061a-131">Describes the class that represents the binding between a bindable component and a data source.</span></span>  
   
- <xref:System.Windows.Forms.BindingSource?displayProperty=fullName>  
- Describe la clase que encapsula un origen de datos para el enlace a controles.  
+ <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
+ <span data-ttu-id="9061a-132">Describe la clase que encapsula un origen de datos para el enlace a controles.</span><span class="sxs-lookup"><span data-stu-id="9061a-132">Describes the class that encapsulates a data source for binding to controls.</span></span>  
   
-## Secciones relacionadas  
- [BindingSource \(Componente\)](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- Contiene una lista de los temas que muestran cómo usar el componente <xref:System.Windows.Forms.BindingSource>.  
+## <a name="related-sections"></a><span data-ttu-id="9061a-133">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="9061a-133">Related Sections</span></span>  
+ [<span data-ttu-id="9061a-134">Componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="9061a-134">BindingSource Component</span></span>](../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ <span data-ttu-id="9061a-135">Contiene una lista de los temas que muestran cómo usar el componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="9061a-135">Contains a list of topics that demonstrate how to use the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- [Control DataGridView](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- Proporciona una lista de temas que muestran cómo usar un control datagrid enlazable.  
+ [<span data-ttu-id="9061a-136">DataGridView (control)</span><span class="sxs-lookup"><span data-stu-id="9061a-136">DataGridView Control</span></span>](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ <span data-ttu-id="9061a-137">Proporciona una lista de temas que muestran cómo usar un control datagrid enlazable.</span><span class="sxs-lookup"><span data-stu-id="9061a-137">Provides a list of topics that demonstrate how to use a bindable datagrid control.</span></span>  
   
- Consulte también [Acceso a datos en Visual Studio](http://msdn.microsoft.com/library/wzabh8c4%20\(v=vs.110\)) o [Acceso a datos en Visual Studio](http://msdn.microsoft.com/library/wzabh8c4%20\(v=vs.110\)).
+ <span data-ttu-id="9061a-138">Consulte también [acceso a datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="9061a-138">Also see [Accessing Data in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).</span></span>

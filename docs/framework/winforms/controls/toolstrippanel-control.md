@@ -1,47 +1,48 @@
 ---
-title: "ToolStripPanel (Control) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "espacio horizontal"
-  - "área de herramientas [Windows Forms]"
-  - "ToolStrip (control) [Windows Forms], ToolStripPanel"
-  - "ToolStripPanel (control) [Windows Forms]"
-  - "espacio vertical"
+title: ToolStripPanel (Control)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStripPanel control [Windows Forms]
+- horizontal space
+- ToolStrip control [Windows Forms], ToolStripPanel
+- tool area [Windows Forms]
+- vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aee4c6b99572ca5fa82036ed817c95c02d447a11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# ToolStripPanel (Control)
-El control `ToolStripPanel` habilita el uso compartido de espacio horizontal o vertical dentro del área de herramientas cuando se acopla y la disposición de controles <xref:System.Windows.Forms.ToolStrip> cuando no necesita los cuatro paneles y el panel central de un control <xref:System.Windows.Forms.ToolStripContainer>.  
+# <a name="toolstrippanel-control"></a><span data-ttu-id="062d4-102">ToolStripPanel (Control)</span><span class="sxs-lookup"><span data-stu-id="062d4-102">ToolStripPanel Control</span></span>
+<span data-ttu-id="062d4-103">El control `ToolStripPanel` habilita el uso compartido de espacio horizontal o vertical dentro del área de herramientas cuando se acopla y la disposición de controles <xref:System.Windows.Forms.ToolStrip> cuando no necesita los cuatro paneles y el panel central de un control <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="062d4-103">`ToolStripPanel` control enables the sharing of horizontal or vertical space within the tool area when docked and arranging of <xref:System.Windows.Forms.ToolStrip> controls when you do not need the four panels and central panel of a <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  
   
- En los temas de esta sección se describen los conceptos y técnicas que puede usar para crear características `ToolStripPanel` en sus aplicaciones.  
+ <span data-ttu-id="062d4-104">En los temas de esta sección se describen los conceptos y las técnicas que puede usar para compilar características de `ToolStripPanel` en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="062d4-104">The topics in this section describe the concepts and techniques that you can use to build `ToolStripPanel` features into your applications.</span></span>  
   
-## En esta sección  
- [Información general del control ToolStripPanel](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
- Proporciona temas que describen el propósito y los conceptos principales del control <xref:System.Windows.Forms.ToolStripContainer> de Windows Forms.  
+## <a name="in-this-section"></a><span data-ttu-id="062d4-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="062d4-105">In This Section</span></span>  
+ [<span data-ttu-id="062d4-106">Información general del control ToolStripPanel</span><span class="sxs-lookup"><span data-stu-id="062d4-106">ToolStripPanel Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
+ <span data-ttu-id="062d4-107">Proporciona temas que describen el propósito y los conceptos principales del control <xref:System.Windows.Forms.ToolStripContainer> de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="062d4-107">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripContainer> control.</span></span>  
   
- [Cómo: Unir ToolStripPanels](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
- Muestra cómo agregar controles <xref:System.Windows.Forms.ToolStrip> a `ToolStripPanel`.  
+ [<span data-ttu-id="062d4-108">Cómo: Unir ToolStripPanels</span><span class="sxs-lookup"><span data-stu-id="062d4-108">How to: Join ToolStripPanels</span></span>](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
+ <span data-ttu-id="062d4-109">Muestra cómo agregar controles <xref:System.Windows.Forms.ToolStrip> a `ToolStripPanel`.</span><span class="sxs-lookup"><span data-stu-id="062d4-109">Demonstrates adding <xref:System.Windows.Forms.ToolStrip> controls to a `ToolStripPanel`.</span></span>  
   
- [Cómo: Utilizar controles ToolStripPanel para MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
- Muestra la flexibilidad proporcionada por los controles `ToolStripPanel` en una aplicación de interfaz de múltiples documentos.  
+ [<span data-ttu-id="062d4-110">Cómo: Utilizar controles ToolStripPanel para MDI</span><span class="sxs-lookup"><span data-stu-id="062d4-110">How to: Use ToolStripPanels for MDI</span></span>](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
+ <span data-ttu-id="062d4-111">Muestra la flexibilidad proporcionada por los controles `ToolStripPanel` en una aplicación de interfaz de múltiples documentos.</span><span class="sxs-lookup"><span data-stu-id="062d4-111">Demonstrates the flexibility afforded by `ToolStripPanel` controls in a Multiple Document Interface application.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="062d4-112">Referencia</span><span class="sxs-lookup"><span data-stu-id="062d4-112">Reference</span></span>  
  <xref:System.Windows.Forms.ToolStripPanel>  
- Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripPanel>.  
+ <span data-ttu-id="062d4-113">Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="062d4-113">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
-## Vea también  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="062d4-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="062d4-114">See Also</span></span>  
+ [<span data-ttu-id="062d4-115">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="062d4-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

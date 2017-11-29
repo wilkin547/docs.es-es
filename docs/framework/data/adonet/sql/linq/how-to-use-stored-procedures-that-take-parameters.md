@@ -1,28 +1,34 @@
 ---
-title: "C&#243;mo: Usar procedimientos almacenados que toman par&#225;metros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Usar procedimientos almacenados que toman parámetros"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: fbd4e0b7534a213f56c5c6ba60208d3024535bd7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Usar procedimientos almacenados que toman par&#225;metros
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna los parámetros de salida a parámetros de referencia y, para los tipos de valor, declara el parámetro como que acepta valores NULL.  
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a><span data-ttu-id="e7a89-102">Cómo: Usar procedimientos almacenados que toman parámetros</span><span class="sxs-lookup"><span data-stu-id="e7a89-102">How to: Use Stored Procedures that Take Parameters</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="e7a89-103"> asigna los parámetros de salida a parámetros de referencia y, para los tipos de valor, declara el parámetro como que acepta valores NULL.</span><span class="sxs-lookup"><span data-stu-id="e7a89-103"> maps output parameters to reference parameters, and for value types declares the parameter as nullable.</span></span>  
   
- Para obtener un ejemplo de cómo utilizar un parámetro de entrada en una consulta que devuelve un conjunto de filas, vea [Cómo: Devolver conjuntos de filas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
+ <span data-ttu-id="e7a89-104">Para obtener un ejemplo de cómo usar un parámetro de entrada en una consulta que devuelve un conjunto de filas, vea [Cómo: devolver conjuntos de filas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span><span class="sxs-lookup"><span data-stu-id="e7a89-104">For an example of how to use an input parameter in a query that returns a rowset, see [How to: Return Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza un parámetro de entrada único \(el identificador de cliente\) y se devuelve un parámetro de salida \(las ventas totales para ese cliente\).  
+## <a name="example"></a><span data-ttu-id="e7a89-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e7a89-105">Example</span></span>  
+ <span data-ttu-id="e7a89-106">En el ejemplo siguiente se utiliza un parámetro de entrada único (el identificador de cliente) y se devuelve un parámetro de salida (las ventas totales para ese cliente).</span><span class="sxs-lookup"><span data-stu-id="e7a89-106">The following example takes a single input parameter (the customer ID) and returns an out parameter (the total sales for that customer).</span></span>  
   
 ```  
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
@@ -37,14 +43,14 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-csharp[DLinqSprox#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#2)]
  [!code-vb[DLinqSprox#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#2)]  
   
-## Ejemplo  
- La llamada a este procedimiento almacenado sería como sigue:  
+## <a name="example"></a><span data-ttu-id="e7a89-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e7a89-107">Example</span></span>  
+ <span data-ttu-id="e7a89-108">La llamada a este procedimiento almacenado sería como sigue:</span><span class="sxs-lookup"><span data-stu-id="e7a89-108">You would call this stored procedure as follows:</span></span>  
   
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
-## Vea también  
- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)   
- [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)   
- [Utilizar tipos que aceptan valores NULL](../Topic/Using%20Nullable%20Types%20\(C%23%20Programming%20Guide\).md)   
- [Tipos de valor que aceptan valores NULL](../Topic/Nullable%20Value%20Types%20\(Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="e7a89-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="e7a89-109">See Also</span></span>  
+ [<span data-ttu-id="e7a89-110">Procedimientos almacenados</span><span class="sxs-lookup"><span data-stu-id="e7a89-110">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [<span data-ttu-id="e7a89-111">Descargar bases de datos de ejemplo</span><span class="sxs-lookup"><span data-stu-id="e7a89-111">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="e7a89-112">Utilizar tipos que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="e7a89-112">Using Nullable Types</span></span>](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)  
+ [<span data-ttu-id="e7a89-113">Tipos de valor que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="e7a89-113">Nullable Value Types</span></span>](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
