@@ -1,12 +1,8 @@
 ---
 title: Colecciones y estructuras de datos
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - grouping data in collections
@@ -16,19 +12,18 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 106ab093a277645dd54e39686a7dd5fa5c0e029e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2538f300ef2af6051c2750e749674c8ea7145530
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
-A menudo, los datos similares pueden controlarse de forma más eficaz si se almacenan y manipulan como si fuesen una colección. Puede usar la clase <xref:System.Array?displayProperty=fullName> o las clases de los espacios de nombres <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> y System.Collections.Immutable para agregar, quitar y modificar elementos individuales o intervalos de elementos de una colección.  
+A menudo, los datos similares pueden controlarse de forma más eficaz si se almacenan y manipulan como si fuesen una colección. Puede usar la clase <xref:System.Array?displayProperty=nameWithType> o las clases de los espacios de nombres <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> y System.Collections.Immutable para agregar, quitar y modificar elementos individuales o intervalos de elementos de una colección.  
   
  Hay dos tipos principales de colecciones: las colecciones genéricas y las colecciones no genéricas. Las colecciones genéricas se agregaron en la versión 2.0 de.NET Framework y son colecciones con seguridad de tipos en tiempo de compilación. Debido a esto, las colecciones genéricas normalmente ofrecen un mejor rendimiento. Las colecciones genéricas aceptan un parámetro de tipo cuando se construyen y no requieren conversiones con el tipo <xref:System.Object> al agregar o quitar elementos de la colección.  Además, la mayoría de colecciones genéricas son compatibles con aplicaciones de la [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Las colecciones no genéricas almacenan elementos como <xref:System.Object>, requieren conversión y la mayoría no son compatibles con el desarrollo de aplicaciones de la [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Sin embargo, puede que vea colecciones no genéricas en código antiguo.  
   
@@ -41,7 +36,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
   
 -   **Capacidad para enumerar la colección**  
   
-     Las colecciones de .NET Framework implementan <xref:System.Collections.IEnumerable?displayProperty=fullName> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> para permitir procesar una iteración en la colección. Un enumerador puede considerarse como un puntero móvil para cualquier elemento de la colección. Las instrucciones [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) y [For Each...Next](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) usan el enumerador expuesto por el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> y ocultan la complejidad que supone manipular el enumerador. Además, cualquier colección que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> se considera un *tipo consultable* y se puede consultar con LINQ. Las consultas LINQ proporcionan un modelo común para acceder a los datos. Por lo general, son más concisas y legibles que los bucles `foreach` estándar y ofrecen capacidad de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, consulte [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) e [Introducción a las consultas LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Las colecciones de .NET Framework implementan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir procesar una iteración en la colección. Un enumerador puede considerarse como un puntero móvil para cualquier elemento de la colección. Las instrucciones [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) y [For Each...Next](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) usan el enumerador expuesto por el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> y ocultan la complejidad que supone manipular el enumerador. Además, cualquier colección que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> se considera un *tipo consultable* y se puede consultar con LINQ. Las consultas LINQ proporcionan un modelo común para acceder a los datos. Por lo general, son más concisas y legibles que los bucles `foreach` estándar y ofrecen capacidad de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, consulte [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) e [Introducción a las consultas LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
 -   **Capacidad de copiar el contenido de la colección en una matriz**  
   
@@ -59,7 +54,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
   
 -   **Límite inferior coherente**  
   
-     El límite inferior de una colección es el índice de su primer elemento. Todas las colecciones indizadas en el espacio de nombres <xref:System.Collections> tienen un límite inferior de cero, lo que significa que están indizadas en 0. De forma predeterminada, <xref:System.Array> tiene un límite inferior de cero, pero se puede definir un límite inferior diferente mediante la creación de una instancia de la clase **Array** con <xref:System.Array.CreateInstance%2A?displayProperty=fullName>.  
+     El límite inferior de una colección es el índice de su primer elemento. Todas las colecciones indizadas en el espacio de nombres <xref:System.Collections> tienen un límite inferior de cero, lo que significa que están indizadas en 0. De forma predeterminada, <xref:System.Array> tiene un límite inferior de cero, pero se puede definir un límite inferior diferente mediante la creación de una instancia de la clase **Array** con <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
 -   **Sincronización para el acceso de varios subprocesos** (solo clases <xref:System.Collections>).  
   
@@ -71,14 +66,14 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
 <!-- todo: All code-formatted API refs in the table need to be changed into links -->  
 |Deseo...|Opciones de colección genérica|Opciones de colección no genérica|Opciones de colección de subprocesos o inmutable|  
 |-|-|-|-|  
-|Almacenar elementos como pares clave/valor para una consulta rápida por clave|<xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>|<xref:System.Collections.Hashtable><br /><br /> (Colección de pares clave/valor que se organizan en función del código hash de la clave).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=fullName><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
-|Acceso a elementos por índice|<xref:System.Collections.Generic.List%601?displayProperty=fullName>|<xref:System.Array?displayProperty=fullName><br /><br /> <xref:System.Collections.ArrayList?displayProperty=fullName>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
-|Utilizar elementos FIFO (el primero en entrar es el primero en salir)|<xref:System.Collections.Generic.Queue%601?displayProperty=fullName>|<xref:System.Collections.Queue?displayProperty=fullName>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName><br /><br /> `ImmutableQueue(T) Class`|  
-|Utilizar datos LIFO (el último en entrar es el primero en salir)|<xref:System.Collections.Generic.Stack%601?displayProperty=fullName>|<xref:System.Collections.Stack?displayProperty=fullName>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName><br /><br /> `ImmutableStack(T) Class`|  
-|Acceso a elementos de forma secuencial|<xref:System.Collections.Generic.LinkedList%601?displayProperty=fullName>|Sin recomendación|Sin recomendación|  
-|Recibir notificaciones cuando se quitan o se agregan elementos a la colección. (implementa <xref:System.ComponentModel.INotifyPropertyChanged> y <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=fullName>)|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=fullName>|Sin recomendación|Sin recomendación|  
-|Una colección ordenada|<xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>|<xref:System.Collections.SortedList?displayProperty=fullName>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
-|Un conjunto de funciones matemáticas|<xref:System.Collections.Generic.HashSet%601?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=fullName>|Sin recomendación|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|Almacenar elementos como pares clave/valor para una consulta rápida por clave|<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>|<xref:System.Collections.Hashtable><br /><br /> (Colección de pares clave/valor que se organizan en función del código hash de la clave).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
+|Acceso a elementos por índice|<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>|<xref:System.Array?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ArrayList?displayProperty=nameWithType>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
+|Utilizar elementos FIFO (el primero en entrar es el primero en salir)|<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>|<xref:System.Collections.Queue?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType><br /><br /> `ImmutableQueue(T) Class`|  
+|Utilizar datos LIFO (el último en entrar es el primero en salir)|<xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>|<xref:System.Collections.Stack?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType><br /><br /> `ImmutableStack(T) Class`|  
+|Acceso a elementos de forma secuencial|<xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>|Sin recomendación|Sin recomendación|  
+|Recibir notificaciones cuando se quitan o se agregan elementos a la colección. (implementa <xref:System.ComponentModel.INotifyPropertyChanged> y <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>)|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>|Sin recomendación|Sin recomendación|  
+|Una colección ordenada|<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>|<xref:System.Collections.SortedList?displayProperty=nameWithType>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|Un conjunto de funciones matemáticas|<xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>|Sin recomendación|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
   
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
@@ -86,27 +81,20 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Seleccionar una clase de colección](../../../docs/standard/collections/selecting-a-collection-class.md)|Describe las diferentes colecciones y le ayuda a seleccionar una para su escenario.|  
-|[Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)|Describe los tipos de colección genéricos y no genéricos más utilizados, como <xref:System.Array?displayProperty=fullName>, <xref:System.Collections.Generic.List%601?displayProperty=fullName> y <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>.|  
+|[Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)|Describe los tipos de colección genéricos y no genéricos más utilizados, como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
 |[Cuándo utilizar colecciones genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Describe el uso de los tipos de colección genéricos.|  
 |[Comparaciones y ordenaciones en colecciones](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Describe el uso de las comparaciones de igualdad y ordenación en las colecciones.|  
 |[Tipos de colecciones ordenadas](../../../docs/standard/collections/sorted-collection-types.md)|Describe las características y el funcionamiento de colecciones ordenadas.|  
 |[Tipos de las colecciones Hashtable y Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Describe las características de los tipos de diccionarios basados en hash genéricos y no genéricos.|  
-|[Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md)|Describe los tipos de colección, como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> y <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>, que admiten un acceso simultáneo seguro y eficaz desde varios subprocesos.|  
+|[Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md)|Describe los tipos de colección, como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> y <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>, que admiten un acceso simultáneo seguro y eficaz desde varios subprocesos.|  
 |System.Collections.Immutable|Presenta las colecciones inalterables y proporciona vínculos a los tipos de colección.|  
   
 <a name="BKMK_Reference"></a>   
 ## <a name="reference"></a>Referencia  
- <xref:System.Array?displayProperty=fullName>  
-  
- <xref:System.Collections?displayProperty=fullName>  
-  
- <xref:System.Collections.Concurrent?displayProperty=fullName>  
-  
- <xref:System.Collections.Generic?displayProperty=fullName>  
-  
- <xref:System.Collections.Specialized?displayProperty=fullName>  
-  
- <xref:System.Linq?displayProperty=fullName>  
-  
- System.Collections.Immutable
-
+ <xref:System.Array?displayProperty=nameWithType>  
+ <xref:System.Collections?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
+ <xref:System.Collections.Specialized?displayProperty=nameWithType>  
+ <xref:System.Linq?displayProperty=nameWithType>  
+ <xref:System.Collections.Immutable>

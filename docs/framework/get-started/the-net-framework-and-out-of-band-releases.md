@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 208ea77318d67900eb059606b8ecd8e0e3b203a0
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework y versiones fuera de banda
 .NET Framework ha evolucionado para adaptarse a distintas plataformas, como aplicaciones de Windows Phone, de la Tienda Windows y aplicaciones de escritorio y web tradicionales, y para maximizar la reutilización de código. Además de las versiones de .NET Framework periódicas, publicamos nuevas características fuera de banda (OOB) para mejorar el desarrollo multiplataforma o para incluir una nueva funcionalidad. En este tema se trata la dirección que seguirá en el futuro .NET Framework y sus versiones OOB.  
@@ -30,7 +28,7 @@ ms.lasthandoff: 07/28/2017
  Cuando utilice una característica de OOB en su aplicación, los usuarios no tendrán que instalar la versión más reciente de .NET Framework para ejecutar la aplicación, ya que los ensamblados de OOB se implementan con el paquete de aplicación.  
   
 ## <a name="how-oob-packages-are-distributed"></a>Cómo se distribuyen los paquetes OOB  
- Las versiones de OOB para componentes básicos de Common Language Runtime (CLR) se entregan a través del [Administrador de paquetes NuGet](http://nuget.codeplex.com/), que es una extensión de Visual Studio de código abierto. NuGet permite examinar y agregar bibliotecas a los proyectos de .NET Framework con facilidad desde el Explorador de soluciones de Visual Studio. NuGet se incluye con todas las ediciones de Visual Studio a partir de Visual Studio 2012. Para saber si NuGet está instalado, busque **Administrador de paquetes de biblioteca** en el menú **Herramientas** de Visual Studio. Si no está instalado:  
+Versiones OOB para componentes básicos common language runtime (CLR) se entregan a través de la [NuGet](https://www.nuget.org/), que es un administrador de paquetes para. NET. NuGet permite examinar y agregar bibliotecas a los proyectos de .NET Framework con facilidad desde el Explorador de soluciones de Visual Studio. NuGet se incluye con todas las ediciones de Visual Studio a partir de Visual Studio 2012. Para saber si NuGet está instalado, busque **Administrador de paquetes de biblioteca** en el menú **Herramientas** de Visual Studio. Si no está instalado:  
   
 1.  En la barra de menús de Visual Studio, elija **Herramientas**, **Extensiones y actualizaciones** (en Visual Studio 2010, elija **Administrador de extensiones**).  
   
@@ -66,4 +64,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>Vea también  
  [Introducción](../../../docs/framework/get-started/index.md)
-

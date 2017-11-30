@@ -1,40 +1,38 @@
 ---
-title: "Compatibilidad con la funci&#243;n msxsl:node-set() | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Compatibilidad con la función msxsl:node-set()"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a3dcb45e6aeecb9e54ad48db4130689ac0fdd358
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Compatibilidad con la funci&#243;n msxsl:node-set()
-La función `msxsl:node-set` permite convertir un fragmento del árbol de resultados en un conjunto de nodos.  El conjunto de nodos resultante siempre contiene un único nodo, que es el nodo raíz del árbol.  
+# <a name="support-for-the-msxslnode-set-function"></a>Compatibilidad con la función msxsl:node-set()
+La función `msxsl:node-set` permite convertir un fragmento del árbol de resultados en un conjunto de nodos. El conjunto de nodos resultante siempre contiene un único nodo, que es el nodo raíz del árbol.  
   
 > [!NOTE]
->  La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  Puede llevar a cabo Extensible Stylesheet Language for Transformations \(XSLT\) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  Para obtener más información, vea [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Vea [mediante la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
   
- La función `msxsl:node-set` permite convertir un fragmento del árbol de resultados en un conjunto de nodos.  El conjunto de nodos resultante siempre contiene un único nodo, que es el nodo raíz del árbol.  
+ La función `msxsl:node-set` permite convertir un fragmento del árbol de resultados en un conjunto de nodos. El conjunto de nodos resultante siempre contiene un único nodo, que es el nodo raíz del árbol.  
   
-## Ejemplo  
- En el ejemplo siguiente, `$var` es una variable que es un árbol de nodos en la hoja de estilos.  La instrucción for\-each, combinada con la función `node-set`, permite que el usuario itere por este árbol como un conjunto de nodos.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente, `$var` es una variable que es un árbol de nodos en la hoja de estilos. La instrucción for-each, combinada con la función `node-set`, permite que el usuario itere por este árbol como un conjunto de nodos.  
   
-## nodeset.xsl  
+## <a name="nodesetxsl"></a>nodeset.xsl  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
                 xmlns:msxsl="urn:schemas-microsoft-com:xslt"  
                 xmlns:user="http://www.contoso.com"  
@@ -54,13 +52,13 @@ La función `msxsl:node-set` permite convertir un fragmento del árbol de result
 </xsl:stylesheet>  
 ```  
   
-## Salida  
+## <a name="output"></a>Salida  
  El resultado de la transformación es  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## Vea también  
- [La clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Vea también  
+ [Clase XslTransform implementa el procesador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

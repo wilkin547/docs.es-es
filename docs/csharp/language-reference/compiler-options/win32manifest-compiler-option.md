@@ -1,42 +1,23 @@
 ---
 title: -win32manifest (Opciones del compilador de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32manifest
-dev_langs:
-- CSharp
+f1_keywords: /win32manifest
 helpviewer_keywords:
 - /win32manifest compiler option [C#]
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 40b1fa1f9aa465a56eccaf5fff5cf7bb59144e85
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 938317fdf0c56469b85b1231a47f83e9c2a7d0f2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (Opciones del compilador de C#)
 Use la opción **/win32manifest** para identificar un archivo de manifiesto de aplicación Win32 definido por el usuario que se va a incrustar en un archivo portable ejecutable (PE) del proyecto.  
@@ -57,7 +38,7 @@ Use la opción **/win32manifest** para identificar un archivo de manifiesto de a
 > [!NOTE]
 >  Esta opción y [/win32res (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) son mutuamente excluyentes. Si intenta usar ambas en la misma línea de comandos, obtendrá un error de compilación.  
   
- Una aplicación sin manifiesto de aplicación que especifique un nivel de ejecución solicitado estará sujeta a virtualización de archivos y Registro conforme a la característica Control de cuentas de usuario de Windows Vista. Para más información sobre la virtualización, vea [The Windows Vista Developer Story: Windows Vista Application Development Requirements for User Account Control (UAC) (Historia para desarrolladores de Windows Vista: Requisitos de desarrollo para el control de cuentas de usuario en Windows Vista)](http://go.microsoft.com/fwlink/?LinkId=95452).  
+ Una aplicación que no tiene ninguna aplicación del manifiesto que especifica que un nivel de ejecución solicitado estará sujeto a la virtualización de archivos y del registro bajo la característica de Control de cuentas de usuario de Windows. Para obtener más información, consulte [User Account Control](/windows/access-protection/user-account-control/user-account-control-overview).  
   
  La aplicación estará sujeta a virtualización si se cumple cualquiera de estas condiciones:  
   
@@ -90,7 +71,6 @@ Use la opción **/win32manifest** para identificar un archivo de manifiesto de a
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [/nowin32manifest (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [/nowin32manifest (opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)  
  [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
-

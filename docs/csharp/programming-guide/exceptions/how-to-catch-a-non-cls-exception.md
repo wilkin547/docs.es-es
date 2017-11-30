@@ -1,38 +1,19 @@
 ---
 title: "Cómo: Detectar excepciones no compatibles con CLS"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], non-CLS
+helpviewer_keywords: exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 473cace033983915c66647d14cae16dc7f5d5b9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 18a19fe34b8ec13bd9fc6d25335d0931a22ce4a3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Cómo: Detectar excepciones no compatibles con CLS
 Algunos lenguajes. NET, incluido C++/CLI, permiten que los objetos inicien excepciones que no se derivan de <xref:System.Exception>. Dichas excepciones se denominan *excepciones de no compatibilidad con CLS* o *no excepciones*. En [!INCLUDE[csprcs](~/includes/csprcs-md.md)] no se pueden producir excepciones de no compatibilidad con CLS, pero se pueden detectar de dos formas:  
@@ -52,7 +33,7 @@ Algunos lenguajes. NET, incluido C++/CLI, permiten que los objetos inicien excep
 2.  Acceda a la excepción original mediante la propiedad <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo detectar una excepción de no compatibilidad con CLS iniciada desde una biblioteca de clases escrita en C++/CLR. Tenga en cuenta que en este ejemplo, el código de cliente de [!INCLUDE[csprcs](~/includes/csprcs-md.md)] conoce por adelantado que el tipo de excepción producida es un <xref:System.String?displayProperty=fullName>. Puede convertir la propiedad <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> de vuelta a su tipo original siempre que el tipo sea accesible desde su código.  
+ En el ejemplo siguiente se muestra cómo detectar una excepción de no compatibilidad con CLS iniciada desde una biblioteca de clases escrita en C++/CLR. Tenga en cuenta que en este ejemplo, el código de cliente de [!INCLUDE[csprcs](~/includes/csprcs-md.md)] conoce por adelantado que el tipo de excepción producida es un <xref:System.String?displayProperty=nameWithType>. Puede convertir la propiedad <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> de vuelta a su tipo original siempre que el tipo sea accesible desde su código.  
   
 ```  
 // Class library written in C++/CLR.  
@@ -84,6 +65,5 @@ Algunos lenguajes. NET, incluido C++/CLI, permiten que los objetos inicien excep
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.RuntimeWrappedException>   
+ <xref:System.Runtime.CompilerServices.RuntimeWrappedException>  
  [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)
-

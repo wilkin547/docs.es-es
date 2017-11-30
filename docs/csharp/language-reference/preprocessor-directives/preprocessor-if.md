@@ -1,40 +1,20 @@
 ---
 title: '#<a name="if-c-reference"></a>if (Referencia de C#)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#if'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#if directive [C#]'
+f1_keywords: '#if'
+helpviewer_keywords: '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e4e3b79f64f5190d48d7248726ecdf031ad685e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f70dac98d5731370ae961f795b08a71946867d9b
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="if-c-reference"></a>#if (Referencia de C#)
 Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por una directiva [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), compilará el código entre las directivas solo si se ha definido el símbolo especificado.  A diferencia de C y C++, no puede asignar un valor numérico a un símbolo; la instrucción #if en C# es booleana y solo comprueba si el símbolo se ha definido o no. Por ejemplo,  
@@ -66,7 +46,8 @@ Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por
   
 ```csharp
 // preprocessor_if.cs  
-#define DEBUG#define MYTEST  
+#define DEBUG
+#define MYTEST  
 using System;  
 public class MyClass   
 {  
@@ -85,9 +66,8 @@ public class MyClass
 }  
 ```  
   
- **Se definen DEBUG y MYTEST**   
+ **Se definen DEBUG y MYTEST**  
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
  [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
-

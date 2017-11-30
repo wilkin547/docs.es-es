@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client application services, configuring
+helpviewer_keywords: client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1d15e380b6b7e8b226f26b261f4d4540eeef88d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>Cómo: Configurar servicios de aplicaciones cliente
 En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para habilitar y configurar servicios de aplicaciones cliente. Los servicios de aplicaciones cliente se pueden usar para validar a los usuarios y recuperar configuraciones y roles de usuario de un servicio de aplicaciones [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Después de la configuración, se puede acceder a los servicios habilitados en el código de la aplicación, tal como se describe en [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para más información sobre los servicios de la aplicación de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Información general sobre los servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -54,7 +51,7 @@ En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCL
   
 6.  Si ha seleccionado **Usar autenticación de formularios**, tiene la opción de especificar un valor en el cuadro **Proveedor de credenciales**. El proveedor de credenciales debe implementar la interfaz <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>. Mediante el uso de un proveedor de credenciales, puede separar la interfaz de usuario de inicio de sesión del otro código de aplicación. Esto permite crear un único cuadro de diálogo de inicio de sesión para usarlo en varias aplicaciones. Para más información, vea [Cómo: Implementar el inicio de sesión de usuarios con servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md).  
   
-     Si especifica un proveedor de credenciales, debe hacerlo como un nombre de tipo calificado con el ensamblado. Para obtener más información, consulte <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> y [Nombres del ensamblado](../../../docs/framework/app-domains/assembly-names.md). En su forma más simple, un nombre de tipo calificado con el ensamblado es similar al ejemplo siguiente:  
+     Si especifica un proveedor de credenciales, debe hacerlo como un nombre de tipo calificado con el ensamblado. Para obtener más información, consulte <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> y [Nombres del ensamblado](../../../docs/framework/app-domains/assembly-names.md). En su forma más simple, un nombre de tipo calificado con el ensamblado es similar al ejemplo siguiente:  
   
     ```  
     MyNamespace.MyLoginClass, MyAssembly  
@@ -99,7 +96,7 @@ En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCL
   
      El valor predeterminado de `Data Source = |SQL/CE|` aparece en el cuadro de texto.  
   
-3.  Para generar y utilizar una base de datos de SQL Server Compact, mantenga el valor de cadena de conexión predeterminado. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] generará un archivo de base de datos y lo colocará en el directorio indicado por la propiedad <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName>.  
+3.  Para generar y utilizar una base de datos de SQL Server Compact, mantenga el valor de cadena de conexión predeterminado. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] generará un archivo de base de datos y lo colocará en el directorio indicado por la propiedad <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
   
 4.  Para generar y utilizar una base de datos cifrada de [!INCLUDE[ssEW](../../../includes/ssew-md.md)], agregue los valores `password` y `encrypt database` en la cadena de conexión como se muestra en el ejemplo siguiente.  
   
@@ -124,7 +121,7 @@ En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCL
     ```  
   
 ## <a name="using-custom-providers"></a>Usar proveedores personalizados  
- De manera predeterminada, la característica de servicios de aplicaciones cliente usa los proveedores del espacio de nombres <xref:System.Web.ClientServices.Providers?displayProperty=fullName>. Al configurar la aplicación mediante la página **Servicios** del **Diseñador de proyectos**, las referencias a estos proveedores se agregan al archivo App.config. Estos proveedores predeterminados acceden a los proveedores correspondientes en el servidor. Los servicios web a menudo se configuran para acceder a los datos de usuario a través de proveedores como <xref:System.Web.Security.SqlMembershipProvider> y <xref:System.Web.Security.SqlRoleProvider>.  
+ De manera predeterminada, la característica de servicios de aplicaciones cliente usa los proveedores del espacio de nombres <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>. Al configurar la aplicación mediante la página **Servicios** del **Diseñador de proyectos**, las referencias a estos proveedores se agregan al archivo App.config. Estos proveedores predeterminados acceden a los proveedores correspondientes en el servidor. Los servicios web a menudo se configuran para acceder a los datos de usuario a través de proveedores como <xref:System.Web.Security.SqlMembershipProvider> y <xref:System.Web.Security.SqlRoleProvider>.  
   
  Si desea utilizar proveedores de servicios personalizados, lo normal es cambiar los proveedores en el servidor para que afecten a todas las aplicaciones cliente que acceden al servidor. Sin embargo, tiene la opción de utilizar proveedores no predeterminados en el cliente. Puede especificar los proveedores personalizados de autenticación o roles en el archivo App.config de su proyecto, como se muestra en el siguiente procedimiento. Para información sobre cómo crear una autenticación personalizada y proveedores de roles, vea [Implementar un proveedor de pertenencia](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) e [Implementar un proveedor de roles](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). También puede usar un proveedor de configuración personalizado mediante la modificación de la clase `Settings` de su proyecto (a la que se accede como `Properties.Settings.Default` en C# y `My.Settings` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Para más información, consulte [Arquitectura de configuración de la aplicación](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
@@ -140,7 +137,7 @@ En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCL
   
 4.  Busque el elemento `<providers>` en el elemento `<membership>` o `<roleManager>`. Estos elementos son elementos secundarios de `<system.web>`. El elemento `<membership>` se usa para especificar los proveedores de autenticación, mientras que el elemento `<roleManager>` se emplea para especificar los proveedores de roles.  
   
-5.  Cree un elemento `<add>` como elemento secundario de `<providers>`. Especifique los atributos `name` y `type` tal como se muestra en el ejemplo siguiente. El valor del atributo `type` debe ser un nombre de tipo calificado con el ensamblado. Para obtener más información, consulte <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> y [Nombres del ensamblado](../../../docs/framework/app-domains/assembly-names.md).  
+5.  Cree un elemento `<add>` como elemento secundario de `<providers>`. Especifique los atributos `name` y `type` tal como se muestra en el ejemplo siguiente. El valor del atributo `type` debe ser un nombre de tipo calificado con el ensamblado. Para obtener más información, consulte <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> y [Nombres del ensamblado](../../../docs/framework/app-domains/assembly-names.md).  
   
     ```xml  
     <add name="MyCustomRoleProvider" type="MyNamespace.MyRoleProvider, MyAssembly" />  
@@ -153,14 +150,13 @@ En este tema se describe cómo utilizar el **Diseñador de proyectos** de [!INCL
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de aplicación cliente](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [Página Servicios, Diseñador de proyectos](https://msdn.microsoft.com/library/bb398109)   
- [Configuración avanzada de servicios (Cuadro de diálogo)](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)   
- [Cómo: Implementar el inicio de sesión de usuarios con servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)   
- [Tutorial: Usar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)   
- [Implementar un proveedor de pertenencia](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)   
- [Implementar un proveedor de roles](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)   
- [Arquitectura de configuración de la aplicación](../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
+ [Servicios de aplicación cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Página Servicios, Diseñador de proyectos](https://msdn.microsoft.com/library/bb398109)  
+ [Cuadro de diálogo Configuración avanzada de servicios](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
+ [Cómo: Implementar el inicio de sesión de usuarios con servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [Tutorial: Usar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Implementar un proveedor de pertenencia](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [Implementar un proveedor de funciones](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [Arquitectura de configuración de la aplicación](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
  [Crear y configurar la base de datos de servicios de la aplicación para SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
-

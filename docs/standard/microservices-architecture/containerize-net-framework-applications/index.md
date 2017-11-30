@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 3bce714d517615bdd56473a8c74acde424d2d5a7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 1756ff0f49d9bb243fa561ba760418eba79de1f0
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Migrar aplicaciones de .NET Framework monolíticas heredadas a contenedores de Windows
 
@@ -191,4 +190,3 @@ En el entorno de desarrollo, debe ejecutar todos los contenedores en el mismo si
 
 >[!div class="step-by-step"]
 [Anterior] (../net-core-single-containers-linux-windows-server-hosts/index.md) [Siguiente] (../multi-container-microservice-net-applications/index.md)
-

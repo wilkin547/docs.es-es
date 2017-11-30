@@ -1,25 +1,21 @@
 ---
 title: "Consultar árboles XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 66028510b57981879412a1c2a161652adde340bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4bad11434ed2610492854d5ec4a7a84bceb189f3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="querying-xml-trees-c"></a>Consultar árboles XML (C#)
 En esta sección se ofrecen ejemplos de consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -39,6 +35,5 @@ En esta sección se ofrecen ejemplos de consultas de [!INCLUDE[sqltecxlinq](~/in
 |[Pure Functional Transformations of XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md) (Transformaciones funcionales puras de XML [C#])|Presenta un pequeño tutorial acerca de cómo escribir consultas en el estilo de la programación funcional.|  
   
 ## <a name="see-also"></a>Vea también  
- [Programming Guide (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  (Guía de programación (LINQ to XML) [C#])  
+ [Guía de programación (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

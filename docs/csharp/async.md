@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
+ms.openlocfilehash: dc9b45e21f15ad92304685a1aff6760f3406cee2
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/22/2017
 ---
-
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
 Si tiene cualquier necesidad enlazada a E/S (por ejemplo, solicitar datos de una red o acceder a una base de datos), deberá usar la programación asincrónica.  También podría tener código enlazado a la CPU, como realizar un cálculo costoso, que también es un buen escenario para escribir código asincrónico.
@@ -141,7 +139,7 @@ public async Task<int> GetDotNetCountAsync()
     // to accept another request, rather than blocking on this one.
     var html = await _httpClient.DownloadStringAsync("http://dotnetfoundation.org");
 
-    return Regex.Matches(html, ".NET").Count;
+    return Regex.Matches(html, @"\.NET").Count;
 }
 ```
 
@@ -164,7 +162,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
     // This is what allows the app to be responsive and not hang on the UI thread.
     var html = await getDotNetFoundationHtmlTask;
-    int count = Regex.Matches(html, ".NET").Count;
+    int count = Regex.Matches(html, @"\.NET").Count;
 
     DotNetCountLabel.Text = $"Number of .NETs on dotnetfoundation.org: {count}";
 
@@ -175,12 +173,12 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>Esperar a que se completen varias tareas
 
-Es posible que se vea en una situación en la que necesite recuperar varios fragmentos de datos al mismo tiempo.  La API `Task` contiene dos métodos, `Task.WhenAll` y `Task.WhenAny`, que le permiten escribir código asincrónico que realiza una espera sin bloqueo en varios trabajos en segundo plano.
+Es posible que se vea en una situación en la que necesite recuperar varios fragmentos de datos al mismo tiempo.  El `Task` API contiene dos métodos, `Task.WhenAll` y `Task.WhenAny` que le permiten escribir código asincrónico que lleva a cabo una espera antibloqueo en varios trabajos en segundo plano.
 
 En este ejemplo se muestra cómo podría captar datos `User` de un conjunto de elementos `userId`.
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -188,13 +186,13 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
+public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
     
     foreach (int userId in userIds)
     {
-        getUserTasks.Add(GetUser(id));
+        getUserTasks.Add(GetUserAsync(userId));
     }
     
     return await Task.WhenAll(getUserTasks);
@@ -204,7 +202,7 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 Aquí tiene otra manera de escribir lo mismo de una forma más sucinta, con LINQ:
 
 ```csharp
-public async Task<User> GetUser(int userId)
+public async Task<User> GetUserAsync(int userId)
 {
     // Code omitted:
     //
@@ -212,9 +210,9 @@ public async Task<User> GetUser(int userId)
     // to the entry in the database with {userId} as its Id.
 }
 
-public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
+public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 {
-    var getUserTasks = userIds.Select(id => GetUser(id));
+    var getUserTasks = userIds.Select(id => GetUserAsync(id));
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -272,4 +270,3 @@ Un objetivo recomendado es lograr una [transparencia referencial](https://en.wik
 
 * En el artículo [Async en profundidad](../standard/async-in-depth.md) se proporciona más información sobre cómo funcionan las tareas.
 * Los vídeos [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (Seis consejos esenciales para la programación asincrónica) de Lucian Wischik son un recurso fantástico para este tipo de programación.
-

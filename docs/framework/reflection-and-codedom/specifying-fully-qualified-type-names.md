@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +22,18 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6759e7b62f4083f6d53663385398baf098f2676f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 966bc0883cf29774ab6f52f6f3207241c129159c
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nombres de tipo completos
-Debe especificar nombres de tipo para tener entradas válidas en varias operaciones de reflexión. Un nombre de tipo completo consiste en una especificación de nombre de ensamblado, una especificación de espacio de nombres y un nombre de tipo. Las especificaciones de nombre de tipo las usan métodos como <xref:System.Type.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> y <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>.  
+Debe especificar nombres de tipo para tener entradas válidas en varias operaciones de reflexión. Un nombre de tipo completo consiste en una especificación de nombre de ensamblado, una especificación de espacio de nombres y un nombre de tipo. Las especificaciones de nombre de tipo las usan métodos como <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> y <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
 ## <a name="backus-naur-form-grammar-for-type-names"></a>Gramática de la forma de Backus-Naur para nombres de tipo  
  La forma de Backus-Naur (BNF) define la sintaxis de los lenguajes formales. En la tabla siguiente se muestran las reglas léxicas de BNF que describen cómo reconocer una entrada válida. Los terminales (es decir, los elementos que no se pueden reducir más) se muestran en mayúsculas. Los no terminales (es decir, los elementos que se pueden reducir más) se muestran en cadenas con mayúsculas y minúsculas mezcladas o en cadenas entre comillas simples, pero la comilla simple (') no forma parte de la sintaxis en sí. El carácter de canalización (&#124;) indica las reglas que tienen subreglas.  
@@ -76,7 +74,7 @@ Debe especificar nombres de tipo para tener entradas válidas en varias operacio
   
  Tenga en cuenta que los espacios son relevantes en todos los componentes de TypeSpec, salvo en AssemblyNameSpec. En AssemblyNameSpec, los espacios delante del separador "," son relevantes, pero los espacios detrás del separador "," se omiten.  
   
- Las clases de reflexión, como <xref:System.Type.FullName%2A?displayProperty=fullName>, devuelven el nombre alterado para que el nombre devuelto pueda usarse en una llamada a <xref:System.Type.GetType%2A>, como en `MyType.GetType(myType.FullName)`.  
+ Las clases de reflexión, como <xref:System.Type.FullName%2A?displayProperty=nameWithType>, devuelven el nombre alterado para que el nombre devuelto pueda usarse en una llamada a <xref:System.Type.GetType%2A>, como en `MyType.GetType(myType.FullName)`.  
   
  Por ejemplo, el nombre completo de un tipo podría ser `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.  
   
@@ -136,7 +134,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  SimpleTypeSpec & representa un puntero administrado o referencia. Por ejemplo, para obtener una referencia al tipo MyType, use `Type.GetType("MyType &")`. Tenga en cuenta que, a diferencia de los punteros, las referencias están limitadas a un nivel.  
   
 ## <a name="specifying-arrays"></a>Especificar matrices  
- En la gramática de BNF, ReflectionEmitDimension solo se aplica a las definiciones de tipo incompletas recuperadas mediante <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName>. Las definiciones de tipo incompletas son objetos <xref:System.Reflection.Emit.TypeBuilder> construidos mediante <xref:System.Reflection.Emit?displayProperty=fullName>, pero en los que no se ha llamado a <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=fullName>. Se puede usar ReflectionDimension para recuperar cualquier definición de tipo que se haya completado, es decir, un tipo que se haya cargado.  
+ En la gramática de BNF, ReflectionEmitDimension solo se aplica a las definiciones de tipo incompletas recuperadas mediante <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>. Las definiciones de tipo incompletas son objetos <xref:System.Reflection.Emit.TypeBuilder> construidos mediante <xref:System.Reflection.Emit?displayProperty=nameWithType>, pero en los que no se ha llamado a <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>. Se puede usar ReflectionDimension para recuperar cualquier definición de tipo que se haya completado, es decir, un tipo que se haya cargado.  
   
  Para obtener acceso a las matrices en la reflexión, se debe especificar el rango de la matriz:  
   
@@ -153,11 +151,10 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  Para **ModuleBuilder.GetType**, `MyArray[0..5]` indica una matriz unidimensional de tamaño 6 y límite inferior 0. `MyArray[4…]` indica una matriz unidimensional de tamaño desconocido y límite inferior 4.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Reflection.AssemblyName>   
- <xref:System.Reflection.Emit.ModuleBuilder>   
- <xref:System.Reflection.Emit.TypeBuilder>   
- <xref:System.Type.FullName%2A?displayProperty=fullName>   
- <xref:System.Type.GetType%2A?displayProperty=fullName>   
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>   
+ <xref:System.Reflection.AssemblyName>  
+ <xref:System.Reflection.Emit.ModuleBuilder>  
+ <xref:System.Reflection.Emit.TypeBuilder>  
+ <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
+ <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
+ <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
  [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
-

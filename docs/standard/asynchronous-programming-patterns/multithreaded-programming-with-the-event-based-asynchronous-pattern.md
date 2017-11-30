@@ -1,54 +1,57 @@
 ---
-title: "Multithreaded Programming with the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "components [.NET Framework], asynchronous"
-  - "AsyncOperation class"
-  - "AsyncCompletedEventArgs class"
+title: "Programación multiproceso con el modelo asincrónico basado en eventos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- components [.NET Framework], asynchronous
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a26f6750f68609b40e6917fc5b257e43d95c3c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Multithreaded Programming with the Event-based Asynchronous Pattern
-Hay varias maneras de exponer las características asincrónicas al código de cliente.  El modelo asincrónico basado en eventos prescribe la manera recomendada para que las clases presenten comportamiento asincrónico.  
+# <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Programación multiproceso con el modelo asincrónico basado en eventos
+Hay varias maneras de exponer las características asincrónicas al código de cliente. El modelo asincrónico basado en eventos prescribe la manera recomendada para que las clases presenten comportamiento asincrónico.  
   
-## En esta sección  
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)  
  Describe cómo el Modelo asincrónico basado en evento pone a su disposición las ventajas de las aplicaciones multithreading ocultando muchos de los problemas complejos inherentes al diseño multithreading.  
   
- [Implementing the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ [Implementación del modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
  Describe la manera estándar de empaquetar una clase que tiene características asincrónicas.  
   
  [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
  Describe los requisitos para exponer las características asincrónicas según el Modelo asincrónico basado en evento.  
   
- [Deciding When to Implement the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ [Decisión de cuándo implementar el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  Describe cómo determinar cuándo se debería decidir implementar el Modelo asincrónico basado en evento en lugar del modelo <xref:System.IAsyncResult>.  
   
- [Walkthrough: Implementing a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- Explica cómo crear un componente que implementa el Modelo asincrónico basado en evento.  Se implementa utilizando las clases auxiliares del espacio de nombres <xref:System.ComponentModel?displayProperty=fullName>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación.  
+ [Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md) (Tutorial: Implementación de un componente que admita el modelo asincrónico basado en eventos)  
+ Explica cómo crear un componente que implementa el Modelo asincrónico basado en evento. Se implementa utilizando las clases auxiliares del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, que garantiza que el componente funciona correctamente bajo cualquier modelo de aplicación.  
   
- [How to: Use Components That Support the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [How to: Use Components That Support the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md) (Uso de componentes que admitan el modelo asincrónico basado en eventos)  
  Describe cómo utilizar un componente que admite el Modelo asincrónico basado en evento.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.ComponentModel.AsyncOperation>  
  Describe la clase <xref:System.ComponentModel.AsyncOperation> y contiene vínculos a todos sus miembros.  
   
@@ -58,8 +61,8 @@ Hay varias maneras de exponer las características asincrónicas al código de c
  <xref:System.ComponentModel.BackgroundWorker>  
  Describe el componente <xref:System.ComponentModel.BackgroundWorker> y contiene vínculos a todos sus miembros.  
   
-## Vea también  
- [Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md)   
- [Eventos](../../../docs/standard/events/index.md)   
- [Multithreading in Components](../Topic/Multithreading%20in%20Components.md)   
- [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+## <a name="see-also"></a>Vea también  
+ [Procedimientos recomendados para el subprocesamiento administrado](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Eventos](../../../docs/standard/events/index.md)  
+ [Subprocesamiento múltiple en componentes](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [Modelo asincrónico basado en eventos (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

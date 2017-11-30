@@ -1,41 +1,22 @@
 ---
 title: uint (Referencia de C#)
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - uint
 - uint_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- uint keyword [C#]
+helpviewer_keywords: uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d32f7146d1f9e13d8cf0f275f4fd78b693b09d31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="uint-c-reference"></a>uint (Referencia de C#)
 
@@ -43,28 +24,32 @@ La palabra clave `uint` denota un tipo entero que almacena valores según el tam
   
 |Tipo|Intervalo|Tamaño|Tipo de .NET Framework|  
 |----------|-----------|----------|-------------------------|  
-|`uint`|De 0 a 4.294.967.295|Entero de 32 bits sin signo|<xref:System.UInt32?displayProperty=fullName>|  
+|`uint`|De 0 a 4.294.967.295|Entero de 32 bits sin signo|<xref:System.UInt32?displayProperty=nameWithType>|  
   
  **Nota**: El tipo `uint` no es conforme a CLS. Use `int` siempre que sea posible.  
   
 ## <a name="literals"></a>Literales  
 
-Puede declarar e inicializar una variable `uint` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario. Si el literal entero está fuera del intervalo de `uint` (es decir, si es inferior a <xref:System.UInt32.MinValue?displayProperty=fullName> o mayor que <xref:System.UInt32.MaxValue?displayProperty=fullName>), se produce un error de compilación.
+Puede declarar e inicializar una variable `uint` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario. Si el literal entero está fuera del intervalo de `uint` (es decir, si es inferior a <xref:System.UInt32.MinValue?displayProperty=nameWithType> o mayor que <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), se produce un error de compilación.
 
 En el ejemplo siguiente, los enteros que equivalen a 3 000 000 000 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `uint`.  
   
-[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]  
+[!code-csharp[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UInt)]  
 
 > [!NOTE] 
 > Use el prefijo `0x` o `0X` para denotar un literal hexadecimal y el prefijo `0b` o `0B` para denotar un literal binario. Los literales decimales no tienen prefijo. 
 
-A partir de C# 7, también puede usar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como se muestra en el ejemplo siguiente.
+A partir de C# 7, se han agregado un par de características mejorar la legibilidad. 
+ - C# 7.0 permite el uso del carácter de subrayado, `_`, como un separador de dígito.
+ - 7.2 C# permite `_` para usarse como un separador de dígitos de un literal binario o hexadecimal, después del prefijo. Un literal decimal no está permitido que tengan un carácter de subrayado inicial.
 
-[!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
+A continuación se muestran algunos ejemplos.
+
+[!code-csharp[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
- Los literales enteros también pueden incluir un sufijo que denote el tipo. El sufijo `U` o "u" denota `uint` o `ulong`, dependiendo del valor numérico del literal. En el ejemplo siguiente se usa el sufijo `u` para denotar un entero sin signo de ambos tipos. Tenga en cuenta que el primer literal es `uint` porque su valor es inferior a <xref:System.UInt32.MaxValue?displayProperty=fullName>, mientras que el segundo es `ulong` porque su valor es superior a <xref:System.UInt32.MaxValue?displayProperty=fullName>.
+ Los literales enteros también pueden incluir un sufijo que denote el tipo. El sufijo `U` o "u" denota `uint` o `ulong`, dependiendo del valor numérico del literal. En el ejemplo siguiente se usa el sufijo `u` para denotar un entero sin signo de ambos tipos. Tenga en cuenta que el primer literal es `uint` porque su valor es inferior a <xref:System.UInt32.MaxValue?displayProperty=nameWithType>, mientras que el segundo es `ulong` porque su valor es superior a <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.
 
-[!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
+[!code-csharp[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
  
 Si un literal entero no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor: 
 
@@ -107,12 +92,11 @@ uint y = (uint)3.0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.UInt32>   
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.UInt32>  
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

@@ -10,18 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
+ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
-ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Deconstruir tuplas y otros tipos #
 
 Una tupla proporciona una manera ligera de recuperar varios valores de una llamada de método. Pero una vez que recupere la tupla, deberá controlar sus elementos individuales. Como se muestra en el ejemplo siguiente, es complicado hacerlo elemento a elemento. El método `QueryCityData` devuelve una tupla de 3, y cada uno de sus elementos se asigna a una variable en una operación independiente.
 
-[!code-csharp[Sin deconstrucción](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
+[!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
 También puede ser complicado recuperar varios valores de campo y propiedad de un objeto, ya que tendrá que asignar un valor de campo o propiedad a una variable miembro a miembro. 
 
@@ -39,7 +38,7 @@ Hay dos formas de deconstruir una tupla:
 
 - Se puede declarar explícitamente el tipo de cada campo entre paréntesis. En el ejemplo siguiente se usa este enfoque para deconstruir la tupla de 3 devuelta por el método `QueryCityData`.
 
-    [!code-csharp[Deconstrucción explícita](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
+    [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
 - Puede usar la palabra clave `var` para que C# deduzca el tipo de cada variable. Debe colocar la palabra clave `var` fuera de los paréntesis. En el ejemplo siguiente se usa la inferencia de tipos al deconstruir la tupla de 3 devuelta por el método `QueryCityData`.
  
@@ -61,17 +60,17 @@ A menudo, cuando se deconstruye una tupla, solo interesan los valores de algunos
 
 En el ejemplo siguiente se muestra el uso de tuplas con descartes. El método `QueryCityDataForYears` devuelve una tupla de 6 con el nombre de una ciudad, su superficie, un año, la población de la ciudad en ese año, un segundo año y la población de la ciudad en ese segundo año. En el ejemplo se muestra la evolución de la población entre esos dos años. De los datos disponibles en la tupla, no nos interesa la superficie de la ciudad, y conocemos el nombre de la ciudad y las dos fechas en tiempo de diseño. Como resultado, solo nos interesan los dos valores de población almacenados en la tupla, y podemos controlar los valores restantes como descartes.  
 
-[!code-csharp[Descarte de la tupla](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
+[!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 ### <a name="deconstructing-user-defined-types"></a>Deconstruir tipos definidos por el usuario
 
 Los tipos que no son de tupla no ofrecen compatibilidad integrada con los descartes. A pesar de ello, como autor de una clase, una estructura o una interfaz, puede permitir que las instancias del tipo se deconstruyan mediante la implementación de uno o varios métodos `Deconstruct`. El método no devuelve ningún valor, y cada valor que se va a deconstruir se indica mediante un parámetro [out](language-reference/keywords/out-parameter-modifier.md) en la firma del método. Por ejemplo, el siguiente método `Deconstruct` de una clase `Person` devuelve el nombre de pila, el segundo nombre y los apellidos:
 
-[!code-csharp[Deconstrucción de clase](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
 Después, puede deconstruir una instancia de la clase `Person` denominada `p` con una asignación similar a la siguiente:
 
-[!code-csharp[Deconstrucción de clase](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#2)]
 
 En el ejemplo siguiente se sobrecarga el método `Deconstruct` para devolver varias combinaciones de las propiedades de un objeto `Person`. Las sobrecargas individuales devuelven lo siguiente:
 
@@ -79,13 +78,13 @@ En el ejemplo siguiente se sobrecarga el método `Deconstruct` para devolver var
 - El nombre de pila, los apellidos y el segundo nombre.
 - El nombre de pila, los apellidos, el nombre de la ciudad y el nombre del estado.
 
-[!code-csharp[Deconstrucción de clase](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
+[!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
 Dado que se puede sobrecargar el método `Deconstruct` para reflejar los grupos de datos que se suelen extraer de un objeto, debe tener cuidado y definir métodos `Deconstruct` con firmas que sean distintivas y no resulten ambiguas. Puede resultar confuso usar varios métodos `Deconstruct` que tengan el mismo número de parámetros `out` o el mismo número y tipo de parámetros `out` en un orden diferente. 
 
 El método `Deconstruct` sobrecargado del ejemplo siguiente muestra un posible motivo de confusión. La primera sobrecarga devuelve el nombre de pila, el segundo nombre, los apellidos y la edad de un objeto `Person`, en ese orden. La segunda sobrecarga devuelve información sobre el nombre acompañada únicamente de los ingresos anuales, pero el nombre de pila, el segundo nombre y los apellidos están en un orden diferente. Esto hace que se pueda confundir fácilmente el orden de los argumentos cuando se deconstruye una instancia `Person`.
 
-[!code-csharp[Ambigüedad de la deconstrucción](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
+[!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>Deconstruir un tipo definido por el usuario con descartes
 
@@ -93,17 +92,16 @@ Tal como haría con las [tuplas](#deconstructing-tuple-elements-with-discards), 
 
 En el siguiente ejemplo se deconstruye un objeto `Person` en cuatro cadenas (el nombre propio, los apellidos, la ciudad y el estado), pero se descartan los apellidos y el estado.
 
-[!code-csharp[Descarte de clase](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
+[!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs#1)]
 
 ## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Deconstruir un tipo definido por el usuario con un método de extensión
 
 Aunque usted no haya creado una clase, una estructura o una interfaz, puede igualmente deconstruir objetos de ese tipo. Para ello, implemente uno o varios [métodos de extensión](programming-guide/classes-and-structs/extension-methods.md) `Deconstruct` que devuelvan los valores que le interesen. 
 
-En el ejemplo siguiente se definen dos métodos de extensión `Deconstruct` para la clase <xref:System.Reflection.PropertyInfo?displayProperty=fullName>. El primero devuelve un conjunto de valores que indican las características de la propiedad, incluido su tipo, si es estática o de instancia, si es de solo lectura y si está indexada. El segundo indica la accesibilidad de la propiedad. Dado que la accesibilidad de los descriptores de acceso get y set puede diferir, los valores booleanos indican si la propiedad tiene descriptores de acceso get y set independientes y, si es así, si tienen la misma accesibilidad. Si solo hay un descriptor de acceso, o si los descriptores de acceso get y set tienen la misma accesibilidad, la variable `access` indica la accesibilidad de la propiedad en conjunto. En caso contrario, la accesibilidad de los descriptores de acceso get y set se indica mediante las variables `getAccess` y `setAccess`.
+En el ejemplo siguiente se definen dos métodos de extensión `Deconstruct` para la clase <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType>. El primero devuelve un conjunto de valores que indican las características de la propiedad, incluido su tipo, si es estática o de instancia, si es de solo lectura y si está indexada. El segundo indica la accesibilidad de la propiedad. Dado que la accesibilidad de los descriptores de acceso get y set puede diferir, los valores booleanos indican si la propiedad tiene descriptores de acceso get y set independientes y, si es así, si tienen la misma accesibilidad. Si solo hay un descriptor de acceso, o si los descriptores de acceso get y set tienen la misma accesibilidad, la variable `access` indica la accesibilidad de la propiedad en conjunto. En caso contrario, la accesibilidad de los descriptores de acceso get y set se indica mediante las variables `getAccess` y `setAccess`.
 
-[!code-csharp[Deconstrucción de extensión](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
+[!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
 ## <a name="see-also"></a>Vea también
 [Descartes](discards.md)   
 [Tuplas](tuples.md)  
-

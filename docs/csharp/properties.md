@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
+ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5d2d5d7074678383243e687d4b469606007e585
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="properties"></a>Propiedades
 
 Las propiedades son ciudadanos de primera clase en C#. El lenguaje define la sintaxis que permite a los desarrolladores escribir código que exprese con precisión su intención de diseño.
@@ -151,7 +149,7 @@ public class Person
 
 Ahora, se puede obtener acceso a la propiedad `FirstName` desde cualquier código, pero solo puede asignarse desde otro código de la clase `Person`.
 
-Puede agregar cualquier modificador de acceso restrictivo al descriptor de acceso set o get. Ningún modificador de acceso que se coloque en el descriptor de acceso concreto debe ser más limitado que el modificador de acceso en la definición de la propiedad. El ejemplo anterior es válido porque la propiedad `FirstName` es `public`, pero el descriptor de acceso set es `private`. No se puede declarar una propiedad `private` con un descriptor de acceso `public`. Las declaraciones de propiedad también se pueden declarar como `protected`, `internal`, `protected internal` o incluso `private`.   
+Puede agregar cualquier modificador de acceso restrictivo al descriptor de acceso set o get. Ningún modificador de acceso que se coloque en el descriptor de acceso concreto debe ser más limitado que el modificador de acceso en la definición de la propiedad. El ejemplo anterior es válido porque la propiedad `FirstName` es `public`, pero el descriptor de acceso set es `private`. No se puede declarar una propiedad `private` con un descriptor de acceso `public`. También se pueden declarar las declaraciones de propiedad `protected`, `internal`, `protected internal`, `private protected` o incluso `private`.   
 
 También es válido colocar el modificador más restrictivo en el descriptor de acceso `get`. Por ejemplo, se podría tener una propiedad `public`, pero restringir el descriptor de acceso `get` a `private`. Ese escenario raramente se aplica en la práctica.
 
@@ -317,4 +315,3 @@ De nuevo, es un ejemplo de un caso en el que se puede escribir código en los de
 
 Las propiedades son una forma de campos inteligentes en una clase o un objeto. Desde fuera del objeto, parecen campos en el objeto. Pero las propiedades pueden implementarse mediante la paleta completa de funcionalidad de C#.
 Se puede proporcionar validación, tipos diferentes de accesibilidad, evaluación diferida o los requisitos que se necesiten para cada escenario.
-

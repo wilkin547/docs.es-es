@@ -18,24 +18,24 @@ ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 66528c9804b74b0bba088627b3116be804c65eb0
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="switch-c-reference"></a>switch (Referencia de C#)
 `switch` es una instrucción de selección que elige una sola *sección switch* para ejecutarla desde una lista de candidatos en función de una coincidencia de patrones con la *expresión de coincidencia*. 
   
- [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
+ [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
 La instrucción `switch` se suele usar como alternativa a un constructor [if-else](if-else.md) si una sola expresión se prueba con tres o más condiciones. Por ejemplo, la siguiente instrucción `switch` determina si una variable de tipo `Color` tiene uno de tres valores: 
 
-[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
 
 Es equivalente al siguiente ejemplo que usa un constructor `if`-`else`. 
 
-[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
 
 ## <a name="the-match-expression"></a>Expresión de coincidencia
 
@@ -61,9 +61,9 @@ A partir de C# 7, la expresión de coincidencia puede ser cualquier expresión q
  
   Una instrucción `switch` puede incluir cualquier número de secciones switch y cada sección puede tener una o más etiquetas case, como se muestra en el ejemplo siguiente. Pero dos etiquetas case no pueden contener la misma expresión.  
 
- [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+ [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
 
- Solo se ejecuta una sección switch en una instrucción switch. C# no permite que la ejecución continúe de una sección switch a la siguiente. Por este motivo, el código siguiente genera un error del compilador, CS0163: "El control no puede pasar explícitamente de una etiqueta case (<case label>) a otra".   
+ Solo se ejecuta una sección switch en una instrucción switch. C# no permite que la ejecución continúe de una sección switch a la siguiente. Por este motivo, el código siguiente genera un error del compilador, CS0163: "El control no puede pasar explícitamente de una etiqueta case (<case label>) a otra".  
 
 ```csharp  
 switch (caseSwitch)  
@@ -79,7 +79,7 @@ switch (caseSwitch)
 ```  
 Este requisito se suele cumplir al salir explícitamente de la sección switch mediante una instrucción [break](break.md), [goto](goto.md) o [return](return.md). Pero el código siguiente también es válido, porque garantiza que el control del programa no puede pasar explícitamente a la sección switch `default`.
   
- [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
+ [!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
  La ejecución de la lista de instrucciones en la sección switch con una etiqueta case que coincide con la expresión de coincidencia comienza con la primera instrucción y continúa a lo largo de la lista de instrucciones, normalmente hasta que se alcanza una instrucción de salto, como `break`, `goto case`, `goto label`, `return` o `throw`. En este punto, el control se transfiere fuera de la instrucción `switch` o a otra etiqueta case. Una instrucción `goto`, si se usa, debe transferir el control a una etiqueta de constante. Esta restricción es necesaria, ya que el intento de transferir el control a una etiqueta que no es de constante puede tener efectos secundarios no deseados, como la transferencia de control a una ubicación no deseada en el código o la creación de un bucle sin fin.
 
@@ -95,7 +95,7 @@ Este requisito se suele cumplir al salir explícitamente de la sección switch m
 
  En el ejemplo siguiente se muestra una instrucción `switch` que usa una variedad de patrones que no son mutuamente excluyentes. Si mueve la sección switch `case 0:` de modo que ya no sea la primera sección de la instrucción `switch`, C# genera un error del compilador debido a que un entero cuyo valor es cero es un subconjunto de todos los enteros, que es el patrón definido por la instrucción `case int val`.
 
- [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+ [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
 
 Puede corregir este problema y eliminar la advertencia del compilador de alguna de estas dos formas:
 
@@ -138,11 +138,11 @@ La expresión de constante se evalúa de la siguiente forma:
 
 En el ejemplo siguiente se usa el patrón de constante para determinar si una fecha determinada es un fin de semana, el primer día, el último día o la mitad de la semana laboral. Evalúa la propiedad <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> del día actual con los miembros de la enumeración <xref:System.DayOfWeek>. 
 
-[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 En el ejemplo siguiente se usa el patrón de constante para controlar la entrada del usuario en una aplicación de consola que simula una cafetera automática.
   
- [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+ [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
 
 ### <a name="type-pattern"></a>Patrón de tipo
 
@@ -173,11 +173,11 @@ case null:
  
 En el ejemplo siguiente se usa el patrón de tipo para proporcionar información sobre los distintos tipos de colección.
 
-[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 Sin coincidencia de patrones, este código podría escribirse del modo siguiente. El uso de la coincidencia de patrones de tipo genera código más compacto y legible al eliminar la necesidad de comprobar si el resultado de una conversión es `null` o de realizar conversiones repetidas.  
 
-[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="the-case-statement-and-the-when-clause"></a>Instrucción `case` y cláusula `when`
 
@@ -185,7 +185,7 @@ A partir de C# 7, dado que las instrucciones case no necesitan ser mutuamente ex
 
  En el ejemplo siguiente se define una clase base `Shape`, una clase `Rectangle` que deriva de `Shape` y una clase `Square` que deriva de `Rectangle`. Usa la cláusula `when` para asegurarse de que `ShowShapeInfo` trate a un objeto `Rectangle` al que se han asignado las mismas longitudes y anchos como si fuera `Square` aunque de él no se hayan creado instancias como de un objeto `Square`. El método no intenta mostrar información sobre un objeto que es `null` ni sobre una forma cuya área es cero. 
 
-[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
   
 Tenga en cuenta que la cláusula `when` del ejemplo que intenta comprobar si un objeto `Shape` es `null` no se ejecuta. El patrón de tipo correcto para comprobar `null` es `case null:`.
 
@@ -194,11 +194,11 @@ Tenga en cuenta que la cláusula `when` del ejemplo que intenta comprobar si un 
   
 ## <a name="see-also"></a>Vea también  
 
- [Referencia de C#](../index.md)   
- [Guía de programación de C#](../../programming-guide/index.md)   
- [Palabras clave de C#](index.md)   
- [if-else](if-else.md)   
- [Coincidencia de patrones](../../pattern-matching.md)   
+ [Referencia de C#](../index.md)  
+ [Guía de programación de C#](../../programming-guide/index.md)  
+ [Palabras clave de C#](index.md)  
+ [if-else](if-else.md)  
+ [Coincidencia de patrones](../../pattern-matching.md)  
  
 
  

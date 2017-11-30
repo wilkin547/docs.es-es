@@ -1,45 +1,26 @@
 ---
 title: "Introducción a las consultas LINQ (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - deferred execution [LINQ]
 - LINQ, queries
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ae7a2d03859e95d939ff4c62fa33e07917a873a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8427a0f439516cbba0b38db25f48b0083a337b1b
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introducción a las consultas LINQ (C#)
 Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consultas especializado. Con el tiempo se han desarrollado diferentes lenguajes para los distintos tipos de orígenes de datos, como SQL para las bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que deben admitir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica esta situación al ofrecer un modelo coherente para trabajar con los datos de varios formatos y orígenes. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Se usan los mismos modelos de codificación básicos para consultar y transformar los datos en documentos XML, bases de datos SQL, conjuntos de datos [!INCLUDE[vstecado](~/includes/vstecado-md.md)], colecciones de .NET y cualquier otro formato para el que está disponible un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -55,7 +36,7 @@ Una *consulta* es una expresión que recupera datos de un origen de datos. Las c
   
  En el siguiente ejemplo se muestra cómo se expresan las tres partes de una operación de consulta en código fuente. En el ejemplo se usa una matriz de enteros como origen de datos para su comodidad, aunque se aplican los mismos conceptos a otros orígenes de datos. En el resto de este tema se hará referencia a este ejemplo.  
   
- [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
  En la siguiente ilustración se muestra toda la operación de consulta. En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la ejecución de la consulta es distinta de la propia consulta; en otras palabras, no ha recuperado los datos creando una variable de consulta.  
   
@@ -66,7 +47,7 @@ Una *consulta* es una expresión que recupera datos de un origen de datos. Las c
   
  Un tipo consultable no requiere ninguna modificación ni ningún tratamiento especial para actuar como origen de datos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Si el origen de datos no está en la memoria como tipo consultable, el proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] debe representarlo como tal. Por ejemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carga un documento XML en un tipo <xref:System.Xml.Linq.XElement> consultable:  
   
- [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
  Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], primero se crea una asignación relacional de objetos en tiempo de diseño ya sea manualmente o mediante las [herramientas de LINQ to SQL](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) de Visual Studio. Después, se escriben las consultas en los objetos y, en tiempo de ejecución, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] controla la comunicación con la base de datos. En el ejemplo siguiente, `Customers` representa una tabla específica en una base de datos, y el tipo del resultado de la consulta, <xref:System.Linq.IQueryable%601>, se deriva de <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -98,7 +79,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>Ejecución aplazada  
  Como se ha indicado anteriormente, la variable de consulta solo almacena los comandos de consulta. La ejecución real de la consulta se aplaza hasta que se procese una iteración en la variable de consulta en una instrucción `foreach`. Este concepto se conoce como *ejecución aplazada* y se muestra en el ejemplo siguiente:  
   
- [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
   
  La instrucción `foreach` es también donde se recuperan los resultados de la consulta. Por ejemplo, en la consulta anterior, la variable de iteración `num` contiene cada valor (de uno en uno) en la secuencia devuelta.  
   
@@ -107,19 +88,18 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>Forzar la ejecución inmediata  
  Las consultas que llevan a cabo funciones de agregación en un intervalo de elementos de origen primero deben recorrer en iteración dichos elementos. Ejemplos de estas consultas son `Count`, `Max`, `Average` y `First`. Se ejecutan sin una instrucción `foreach` explícita, ya que la propia consulta debe usar `foreach` para poder devolver un resultado. Tenga en cuenta también que estos tipos de consultas devuelven un único valor, y no una colección `IEnumerable`. La consulta siguiente devuelve un recuento de los números pares de la matriz de origen:  
   
- [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
  Para forzar la ejecución inmediata de cualquier consulta y almacenar en caché los resultados correspondientes, puede llamar a los métodos <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
  También puede forzar la ejecución colocando el bucle `foreach` justo después de la expresión de consulta, aunque, si se llama a `ToList` o a `ToArray`, también se almacenan en caché todos los datos de un objeto de colección.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Tutorial: Escribir consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [Tutorial: Escribir consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
+ [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [Tutorial: Escribir consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Tutorial: Escribir consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
  [Palabras clave para consultas (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
-

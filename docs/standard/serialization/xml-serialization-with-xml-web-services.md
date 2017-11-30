@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML Web services, XML serialization
 - XML serialization, XML Web services
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 6e84c0f0a1022ff4c4fe5a82d1f40f74b51c0f7c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c8ec820d631532b782b738f0fefcffce3e4b93d6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Serialización XML con servicios Web XML
 La serialización XML es el mecanismo de transporte subyacente utilizado en la arquitectura de los servicios Web XML, realizada por la clase <xref:System.Xml.Serialization.XmlSerializer>. Para controlar el XML generado por un servicio web XML, puede aplicar los atributos de [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) y [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) a las clases, los valores devueltos, los parámetros y los campos de un archivo usados para crear un servicio web XML (.asmx). Para más información sobre cómo crear un servicio web XML, vea [Generar un servicio web XML básico con ASP.NET](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
@@ -134,7 +131,7 @@ public class MyService{
 ```  
   
 ### <a name="applying-attributes-to-return-values"></a>Aplicar los atributos a los valores de devolución  
- También puede aplicar los atributos a los valores devueltos para controlar el espacio de nombres, nombre de elemento, etc.. En el ejemplo de código siguiente se aplica el atributo `XmlElementAttribute` para devolver valores del método `MyLiteralMethod`. Hacer esto le permite controlar el espacio de nombres y nombre de elemento.  
+ También puede aplicar los atributos a los valores devueltos para controlar el espacio de nombres, nombre de elemento, etc. En el ejemplo de código siguiente se aplica el atributo `XmlElementAttribute` para devolver valores del método `MyLiteralMethod`. Hacer esto le permite controlar el espacio de nombres y nombre de elemento.  
   
 ```vb  
 <WebMethod, SoapDocumentMethod> _  
@@ -173,7 +170,7 @@ public Order MyLiteralMethod(){
 ```  
   
 ### <a name="attributes-applied-to-parameters"></a>Atributos aplicados a parámetros  
- También puede aplicar los atributos a los parámetros para especificar el espacio de nombres, nombre de elemento etc.. El ejemplo de código siguiente agrega un parámetro al método `MyLiteralMethodResponse` y aplica el atributo `XmlAttributeAttribute` al parámetro. El nombre de elemento y espacio de nombres están establecidos para el parámetro.  
+ También puede aplicar los atributos a los parámetros para especificar el espacio de nombres, nombre de elemento etc. El ejemplo de código siguiente agrega un parámetro al método `MyLiteralMethodResponse` y aplica el atributo `XmlAttributeAttribute` al parámetro. El nombre de elemento y espacio de nombres están establecidos para el parámetro.  
   
 ```vb  
 <WebMethod, SoapDocumentMethod> _  
@@ -270,11 +267,10 @@ public class Order{
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)   
- [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)   
- [Cómo: Invalidar la serialización XML SOAP codificada](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)   
- [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Atributos que controlan la serialización SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+ [Cómo: Invalidar la serialización XML SOAP codificada](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+ [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

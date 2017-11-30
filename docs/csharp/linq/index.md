@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
+ms.openlocfilehash: c4c26e2b7b0693ec940958a9b7d2d306001090e7
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da116ce67428e9349e03dea60b35abd52dcffee2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="language-integrated-query-linq"></a>Language-Integrated Query (LINQ)
 
 Language-Integrated Query (LINQ) es el nombre de un conjunto de tecnologías basadas en la integración de capacidades de consulta directamente en el lenguaje C#. Tradicionalmente, las consultas con datos se expresaban como cadenas simples sin comprobación de tipos en tiempo de compilación ni compatibilidad con IntelliSense. Además, tiene que aprender un lenguaje de consultas diferente para cada tipo de origen de datos: bases de datos SQL, documentos XML y varios servicios web, entre otros. Con LINQ, una consulta es una construcción de lenguaje de primera clase, como clases, métodos y eventos.
@@ -26,7 +24,7 @@ Para un desarrollador que escribe consultas, la parte más visible de "lenguaje 
 
 En el ejemplo siguiente se muestra la operación de consulta completa. La operación completa incluye crear un origen de datos, definir la expresión de consulta y ejecutar la consulta en una instrucción `foreach`.
 
-[!code-cs[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
+[!code-csharp[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
 ## <a name="query-expression-overview"></a>Información general sobre la expresión de consulta
 
@@ -58,6 +56,5 @@ Para obtener más información sobre LINQ, empiece a familiarizarse con algunos 
 Para comprender mejor los aspectos generales de LINQ, vea [LINQ in C#](linq-in-csharp.md) (LINQ en C#).
 
 Para empezar a trabajar con LINQ en C#, vea el tutorial [Working with LINQ](../tutorials/working-with-linq.md) (Trabajar con LINQ).
-
 
 

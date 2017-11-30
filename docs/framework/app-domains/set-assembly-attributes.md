@@ -5,25 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 0683ee1e79d9e5fd9bef7af3b6b85dd5a58c3845
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53dcff7fea0f2a751574d470031b56697e76447d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="setting-assembly-attributes"></a>Configurar atributos de ensamblados
 Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado. Los atributos se dividen en los siguientes conjuntos de información:  
@@ -45,11 +47,13 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica la referencia cultural que admite el ensamblado. Un ensamblado también puede especificar independencia de la referencia cultural, lo que indica que contiene los recursos para la referencia cultural predeterminada. **Nota:** El tiempo de ejecución trata cualquier ensamblado que no tenga el atributo de referencia cultural establecido en NULL como un ensamblado satélite. Estos ensamblados están sujetos a las reglas de enlace de ensamblados satélite. Para más información, consulte [Cómo ubica ensamblados el tiempo de ejecución](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valor que establece atributos de ensamblado, como por ejemplo, si se puede ejecutar el ensamblado en paralelo.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico con el formato *versión_principal*.*versión_secundaria*.*compilación*.*revisión* (por ejemplo, 2.4.0.0). Common Language Runtime usa este valor para realizar operaciones de enlace en ensamblados con nombre seguro. **Nota:** Si el atributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> no se aplica a un ensamblado, el número de versión que especifica el atributo <xref:System.Reflection.AssemblyVersionAttribute> lo usan las propiedades <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> y <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName>.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico con el formato *versión_principal*.*versión_secundaria*.*compilación*.*revisión* (por ejemplo, 2.4.0.0). Common Language Runtime usa este valor para realizar operaciones de enlace en ensamblados con nombre seguro. **Nota:** Si el atributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> no se aplica a un ensamblado, el número de versión que especifica el atributo <xref:System.Reflection.AssemblyVersionAttribute> lo usan las propiedades <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
   
  En el ejemplo de código siguiente se muestra cómo aplicar los atributos de versión y referencia cultural a un ensamblado.  
   
- [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)] [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)] [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
+ [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)]
+ [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)]
+ [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
   
 ## <a name="informational-attributes"></a>Atributos informativos  
  Puede utilizar atributos informativos para proporcionar información adicional de la compañía o de producto para un ensamblado. En la tabla siguiente se describen los atributos informativos que se pueden aplicar a un ensamblado.  
@@ -59,7 +63,7 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Valor de cadena que especifica un nombre de compañía.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Valor de cadena que especifica información de copyright.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Valor de cadena que especifica el número de versión del archivo Win32. Normalmente el valor predeterminado es la versión del ensamblado.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valor de cadena que especifica la información de versión que Common Language Runtime no usa, como por ejemplo un número de versión del producto completo. **Nota:** Si este atributo se aplica a un ensamblado, se puede obtener la cadena que especifica en tiempo de ejecución mediante la propiedad <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName>. La cadena también se usa en la clave del Registro y la ruta de acceso que proporcionan las propiedades <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> y <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName>.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valor de cadena que especifica la información de versión que Common Language Runtime no usa, como por ejemplo un número de versión del producto completo. **Nota:** Si este atributo se aplica a un ensamblado, se puede obtener la cadena que especifica en tiempo de ejecución mediante la propiedad <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. La cadena también se usa en la clave del Registro y la ruta de acceso que proporcionan las propiedades <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Valor de cadena que especifica la información del producto.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Valor de cadena que especifica la información de marca comercial.|  
   
@@ -86,9 +90,10 @@ Los atributos de ensamblado son valores que proporcionan información sobre un e
   
  En el ejemplo de código siguiente, se muestran los atributos que se aplicarán cuando se usa la firma retardada para crear un ensamblado con nombre seguro con un archivo de clave pública denominado `myKey.snk`.  
   
- [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)] [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)] [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+ [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
+ [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
+ [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Vea también  
- [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)   
+ [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

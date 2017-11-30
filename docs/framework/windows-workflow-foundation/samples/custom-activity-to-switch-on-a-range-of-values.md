@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f2f422c4001c2e6ec46fc796e8dbf1b85e6a2b77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: ff6a55157e886b54d631d1ca5d2598785de7608d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Actividad personalizada para cambiar en un intervalo de valores
 En este ejemplo se muestra cómo crear una actividad personalizada que amplía el uso de una instrucción <xref:System.Activities.Statements.Switch%601>. Una instrucción <xref:System.Activities.Statements.Switch%601> convencional permite el cambio en función de un único valor. Sin embargo, existen escenarios empresariales donde una actividad debe cambiar en función de un intervalo de valores. Por ejemplo, una actividad podría ejecutar una acción cuando el valor de cambio se sitúa entre 1 y 5, otra acción cuando el valor se sitúa entre 6 y 10 y una acción predeterminada para los demás valores. Esta actividad personalizada permite exactamente ese escenario.  
@@ -112,6 +112,4 @@ Activity SwitchRange = new SwitchRange<int>
 >   
 >  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`  
-  
-## <a name="see-also"></a>Vea también
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SwitchRange`

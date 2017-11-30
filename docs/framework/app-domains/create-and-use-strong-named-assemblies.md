@@ -2,8 +2,7 @@
 title: Crear y utilizar ensamblados con nombre seguro
 ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
 ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 <a name="top"></a> Un nombre seguro se compone de la identidad del ensamblado, es decir, de su nombre de texto simple, número de versión e información sobre referencia cultural (si se proporciona), más una clave pública y una firma digital. Se genera a partir de un archivo de ensamblado mediante la clave privada correspondiente. (El archivo de ensamblado contiene el manifiesto del ensamblado, que a su vez contiene los nombres y códigos hash de todos los archivos que forman el ensamblado).  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/02/2017
 |[Cómo retrasar la firma de un ensamblado en Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Explica cómo firmar un ensamblado con un nombre seguro después de haber creado el ensamblado.|  
 |[Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Describe la herramienta incluida en .NET Framework que ayuda a crear ensamblados con nombres seguros. Esta herramienta proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.|  
 |[Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Describe la herramienta incluida en .NET Framework que genera un archivo que tiene un manifiesto de ensamblado a partir de archivos de recursos o módulos.|
-

@@ -7,18 +7,17 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
 `dotnet test`: controlador de prueba de .NET usado para ejecutar pruebas unitarias.
 
@@ -46,7 +45,7 @@ El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto d
 
 Los proyectos de prueba también deben especificar el ejecutor de pruebas. Para ello se utiliza un elemento `<PackageReference>` ordinario, como se puede ver en el siguiente archivo de proyecto de ejemplo:
 
-[!code-xml[Plantilla de XUnit Basic](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+[!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -212,12 +211,11 @@ Las expresiones se pueden combinar con operadores condicionales:
 | <code>&#124;</code>      | O       |
 | `&`      | AND      |
 
-Cuando se utilizan operadores condicionales puede encerrar expresiones entre paréntesis (por ejemplo, `(Name~TestMethod1) | (Name~TestMethod2)`).
+Puede incluir expresiones entre paréntesis cuando se utilizan operadores condicionales (por ejemplo, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
 Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Running selective unit tests](../testing/selective-unit-tests.md) (Ejecución de pruebas unitarias selectivas).
 
 ## <a name="see-also"></a>Vea también
 
- [Marcos y destinos](../../standard/frameworks.md)   
+ [Marcos y destinos](../../standard/frameworks.md)  
  [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)
-

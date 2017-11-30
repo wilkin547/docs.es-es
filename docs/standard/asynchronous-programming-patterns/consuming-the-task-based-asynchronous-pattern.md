@@ -1,43 +1,46 @@
 ---
-title: "Consuming the Task-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework, and TAP"
-  - "asynchronous design patterns, .NET Framework"
-  - "TAP, .NET Framework support for"
-  - "Task-based Asynchronous Pattern, .NET Framework support for"
-  - ".NET Framework, asynchronous design patterns"
+title: "Utilizar el modelo asincrónico basado en tareas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework, and TAP
+- asynchronous design patterns, .NET Framework
+- TAP, .NET Framework support for
+- Task-based Asynchronous Pattern, .NET Framework support for
+- .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 90b2a36f0e6bf06b0fefe2191d5b17c9c07d1588
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Consuming the Task-based Asynchronous Pattern
-Cuando se utiliza el patrón asincrónico basado en tareas \(TAP\) para ejecutar operaciones asincrónicas, se pueden utilizar devoluciones de llamada para conseguir esperas sin bloqueos.  Para las tareas, esto se logra con métodos como <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=fullName>.  La compatibilidad asincrónica basada en lenguajes oculta devoluciones de llamada al permitir que las operaciones asincrónicas sean esperadas dentro del flujo de control normal y el código generado por el compilador proporcione esta misma compatibilidad a nivel de API.  
+# <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizar el modelo asincrónico basado en tareas
+Cuando se utiliza el modelo asincrónico basado en tareas (TAP) para trabajar con operaciones asincrónicas, puede utilizar las devoluciones de llamada para conseguir esperas sin bloqueos.  Para las tareas, esto se logra a través de métodos como <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. La compatibilidad asincrónica basada en lenguaje oculta las devoluciones de llamada al permitir que las operaciones asincrónicas se puedan esperar en el flujo de control normal y que el código generado por el compilador proporcione esta misma compatibilidad de nivel de API.  
   
-## Suspender la ejecución con Await  
- Empezando con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se puede utilizar la palabra clave [await](../Topic/await%20\(C%23%20Reference\).md) en C\# y [Await \(Operador\)](../Topic/Await%20Operator%20\(Visual%20Basic\).md) en Visual Basic para esperar asincrónicamente a <xref:System.Threading.Tasks.Task> y a los objetos <xref:System.Threading.Tasks.Task%601>.  Cuando se está esperando una <xref:System.Threading.Tasks.Task>, la expresión `await` es de tipo `void`.  Cuando se está esperando una <xref:System.Threading.Tasks.Task%601>, la expresión `await` es de tipo `TResult`.  Una expresión `await` debe aparecer en el cuerpo de un método asincrónico.  Para obtener más información sobre la compatibilidad del lenguaje C\# y Visual Basic en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte las especificaciones del lenguaje C\# y Visual Basic.  
+## <a name="suspending-execution-with-await"></a>Suspender la ejecución con Await  
+ A partir de la [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], puede usar el [await](~/docs/csharp/language-reference/keywords/await.md) palabra clave de C# y la [operador Await](~/docs/visual-basic/language-reference/operators/await-operator.md) en Visual Basic para esperar de forma asincrónica <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> objetos. Cuando está esperando un <xref:System.Threading.Tasks.Task>, `await` expresión es del tipo `void`. Cuando está esperando un <xref:System.Threading.Tasks.Task%601>, `await` expresión es del tipo `TResult`. Debe producirse una expresión `await` dentro del cuerpo de un método asincrónico. Para más información sobre la compatibilidad del lenguaje C# y Visual Basic en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte las especificaciones del lenguaje C# y Visual Basic.  
   
- Más en detalle, la función de espera instala una devolución de llamada en la tarea mediante una continuación.  Esta devolución de llamada reanuda el método asincrónico en el momento de suspensión.  Cuando se reanuda el método asincrónico, si la operación en espera se completa correctamente y fue <xref:System.Threading.Tasks.Task%601>, se devuelve su `TResult`.  Si <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> esperado terminó en el estado <xref:System.Threading.Tasks.TaskStatus>, se lanza una excepción <xref:System.OperationCanceledException>.  Si <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> esperado terminó en el estado <xref:System.Threading.Tasks.TaskStatus>, se lanza la excepción que produjo el error.  `Task` puede darse como resultado de varias excepciones, pero sólo una de estas excepciones se propaga.  Sin embargo, la propiedad <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=fullName> devuelve una excepción <xref:System.AggregateException> que contiene todos los errores.  
+ En realidad, la funcionalidad de await instala una devolución de llamada en la tarea mediante una continuación.  Esta devolución de llamada reanuda el método asincrónico en el punto de suspensión. Cuando se reanuda el método asincrónico, si la operación de espera se completó correctamente y fue un <xref:System.Threading.Tasks.Task%601>, sus `TResult` se devuelve.  Si el <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> que se esperó finalizó en el <xref:System.Threading.Tasks.TaskStatus.Canceled> estado, un <xref:System.OperationCanceledException> se produce la excepción.  Si el <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> que se esperó finalizó con el <xref:System.Threading.Tasks.TaskStatus.Faulted> de estado, se produce la excepción que provocó el error. Un objeto `Task` puede producir un error como resultado de múltiples excepciones, pero solo una de estas excepciones se propaga. Sin embargo, el <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propiedad devuelve un <xref:System.AggregateException> la excepción que contiene todos los errores.  
   
- Si un contexto de sincronización \(objeto<xref:System.Threading.SynchronizationContext>\) está asociado al subproceso que estaba ejecutando el método asincrónico en el momento de la suspensión \(por ejemplo, si la propiedad <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=fullName> no es `null`\), el método asincrónico se reanuda en el mismo contexto de sincronización utilizando el método <xref:System.Threading.SynchronizationContext.Post%2A> del contexto.  De lo contrario, se basa en el programador de tareas \(objeto<xref:System.Threading.Tasks.TaskScheduler>\) que estaba en curso en el momento de la suspensión.  Normalmente, éste es el programador de tareas predeterminado \(<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=fullName>\), que tiene como destino el grupo de subprocesos.  Este programador de tareas determina si la operación asincrónica esperada debe reanudarse donde se completó o si la reanudación debe programarse.  El programador predeterminado suele permitir que la continuación se ejecute en el subproceso que la operación en espera completó.  
+ Si un contexto de sincronización (<xref:System.Threading.SynchronizationContext> objeto) está asociado con el subproceso que se estaba ejecutando el método asincrónico en el momento de suspensión (por ejemplo, si la <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> propiedad no es `null`), el método asincrónico se reanuda en el que mismo contexto de sincronización mediante el contexto <xref:System.Threading.SynchronizationContext.Post%2A> método. En caso contrario, se basa en el programador de tareas (<xref:System.Threading.Tasks.TaskScheduler> objeto) que era el actual en el momento de suspensión. Normalmente, esto es el programador de tareas predeterminado (<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>), que tiene como destino el grupo de subprocesos. El programador de tareas determina si la operación asincrónica en espera debe reanudarse donde ha completado o si se debe programar la reanudación. Normalmente, el programador predeterminado permite que la continuación se ejecute en el subproceso que ha completado la operación de espera.  
   
- Cuando se invoca un método asincrónico, se ejecuta sincrónicamente el cuerpo de la función hasta la primera expresión en espera de una instancia esperable que aún no se ha completado, punto en el que la invocación vuelve al llamador.  Si el método asincrónico no devuelve `void`, se devuelve un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> para representar el cálculo en curso.  En un método asincrónico que no es void, si se encuentra una instrucción de retorno, o se alcanza el final del cuerpo del método, la tarea se completa en el estado final <xref:System.Threading.Tasks.TaskStatus>.  Si una excepción no controlada hace que el control deje el cuerpo del método asincrónico, la tarea termina en el estado <xref:System.Threading.Tasks.TaskStatus>.  Si la excepción es <xref:System.OperationCanceledException>, la tarea finaliza en el estado <xref:System.Threading.Tasks.TaskStatus>.  De esta manera, el resultado o la excepción se publican finalmente.  
+ Cuando se llama a un método asincrónico, ejecuta sincrónicamente el cuerpo de la función hasta que la primera expresión de espera en una instancia esperable que todavía no se ha completado, momento en el que la invocación se devuelve al llamador. Si el método asincrónico no devuelve `void`, <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> se devuelve el objeto para representar el cálculo en curso. En un método asincrónico no nulo, si se encuentra una instrucción return o se llega al final del cuerpo del método, la tarea se completa en el <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> estado final. Si una excepción no controlada hace que el control a abandonar el cuerpo del método asincrónico, la tarea finaliza en el <xref:System.Threading.Tasks.TaskStatus.Faulted> estado. Si esa excepción es una <xref:System.OperationCanceledException>, en su lugar, la tarea finaliza en el <xref:System.Threading.Tasks.TaskStatus.Canceled> estado. De esta manera, el resultado o excepción se publica finalmente.  
   
- Hay muchas variaciones importantes de este comportamiento.  Por razones de rendimiento, si una tarea ya se ha completado cuando se espera, el control no se cede y la función sigue ejecutándose.  Además, volver al contexto original no siempre es el comportamiento deseado y se puede modificar; esto se describe con más detalle en la sección siguiente.  
+ Hay diversas variaciones importantes de este comportamiento.  Por motivos de rendimiento, si ya ha completado una tarea en el momento en que se esperaba, no se obtiene el control y la función continúa ejecutándose.  Además, volver al contexto original no siempre es el comportamiento deseado y se puede cambiar. Esto se describe con más detalle en la sección siguiente.  
   
-### Configurar la suspension y reanudación con Yield y ConfigureAwait  
- Varios son los métodos que proporcionan mayor control sobre la ejecución de un método asincrónico.  Por ejemplo, se puede utilizar el método <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=fullName> para incluir un punto de producción en el método asincrónico:  
+### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>Configurar la suspensión y reanudación con Yield y ConfigureAwait  
+ Varios métodos proporcionan más control sobre la ejecución de un método asincrónico. Por ejemplo, puede usar el <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> método introducir un punto de rendimiento en el método asincrónico:  
   
 ```csharp  
 public class Task : …  
@@ -45,13 +48,12 @@ public class Task : …
     public static YieldAwaitable Yield();  
     …  
 }  
-  
 ```  
   
- Esto es equivalente a enviar de forma asincrónica o a programar de nuevo el contexto actual.  
+ Esto es equivalente a volver a registrar o programar de manera asincrónica al contexto actual.  
   
 ```csharp  
-Task.Run(async  delegate  
+Task.Run(async delegate  
 {  
     for(int i=0; i<1000000; i++)  
     {  
@@ -59,70 +61,65 @@ Task.Run(async  delegate
         ...  
     }  
 });  
-  
 ```  
   
- También se puede utilizar el método <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=fullName> para un mejor control sobre la suspensión y la reanudación de un método asincrónico.  Como se mencionó anteriormente, de forma predeterminada, el contexto actual se capturan cuando se suspende un método asincrónico, y ese contexto capturado se utiliza para invocar la continuación del método asincrónico sobre la reanudación.  En muchos casos, éste es el comportamiento exacto que se desea.  En otros casos, puede no interesar saber el contexto de continuación y se puede mejorar el rendimiento si se evita que tales elementos vuelvan al contexto original.  Para habilitar esto, utilice el método <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=fullName> para informar a la operación en espera de que no capture ni reanude el contexto, sino que continúe la ejecución siempre que la operación asincrónica en espera se complete:  
+ También puede usar el <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> método para un mejor control sobre la suspensión y reanudación de un método asincrónico.  Como se mencionó anteriormente, de forma predeterminada, se captura el contexto actual en el momento en que se suspende un método asincrónico, y ese contexto capturado se utiliza para invocar la continuación del método asincrónico tras la reanudación.  En muchos casos, este es el comportamiento exacto que desea.  En otros casos, es posible que no le preocupe el contexto de continuación y puede lograr un mejor rendimiento al evitar dichos registros en el contexto original.  Para habilitar esto, use el <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> método para informar a la operación await no para capturar y reanudar en el contexto, pero continuar ejecución siempre que completar la operación asincrónica que se está esperó:  
   
 ```csharp  
 await someTask.ConfigureAwait(continueOnCapturedContext:false);  
-  
 ```  
   
-## Cancelar una operación asincrónica  
- Empezando con [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los métodos TAP que admiten cancelación proporcionan al menos una sobrecarga que acepta un token de cancelación \(objeto<xref:System.Threading.CancellationToken> \).  
+## <a name="canceling-an-asynchronous-operation"></a>Cancelar una operación asincrónica  
+ A partir de la [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], métodos de TAP que admiten la cancelación proporcionan al menos una sobrecarga que acepta un token de cancelación (<xref:System.Threading.CancellationToken> objeto).  
   
- El token de cancelación se crea desde el origen de tokens de cancelación \(objeto<xref:System.Threading.CancellationTokenSource> \).  La propiedad <xref:System.Threading.CancellationTokenSource.Token%2A> del origen devuelve el token de cancelación que se notificará cuando se llame al método <xref:System.Threading.CancellationTokenSource.Cancel%2A> del origen.  Por ejemplo, si se desea descargar una sola página web y poder cancelar la operación, se crea un objeto <xref:System.Threading.CancellationTokenSource>, se pasa el token al método TAP y después se llama al método <xref:System.Threading.CancellationTokenSource.Cancel%2A> cuando esté preparado para cancelar la operación:  
+ Se crea un token de cancelación a través de un origen de token de cancelación (<xref:System.Threading.CancellationTokenSource> objeto).  El origen <xref:System.Threading.CancellationTokenSource.Token%2A> propiedad devuelve el token de cancelación se señalará cuando el origen <xref:System.Threading.CancellationTokenSource.Cancel%2A> se llama al método.  Por ejemplo, si desea descargar una única página Web y desea poder cancelar la operación, cree un <xref:System.Threading.CancellationTokenSource> de objetos, pasar su token para el método de TAP y, a continuación, llame a la fuente <xref:System.Threading.CancellationTokenSource.Cancel%2A> método cuando esté listo para cancelar la operación:  
   
 ```csharp  
 var cts = new CancellationTokenSource();  
 string result = await DownloadStringAsync(url, cts.Token);  
 … // at some point later, potentially on another thread  
 cts.Cancel();  
-  
 ```  
   
- Para cancelar llamadas asincrónicas múltiples, se puede pasar el mismo token a todas las invocaciones:  
+ Para cancelar varias invocaciones asincrónicas, puede pasar el mismo token para todas las llamadas:  
   
 ```csharp  
-var cts = new CancellationTokenSource();  
-    IList<string> results = await Task.WhenAll(from url in urls select DownloadStringAsync(url, cts.Token));  
-    // at some point later, potentially on another thread  
-    …  
-    cts.Cancel();  
-  
+var cts = new CancellationTokenSource();  
+    IList<string> results = await Task.WhenAll(from url in urls select DownloadStringAsync(url, cts.Token));  
+    // at some point later, potentially on another thread  
+    …  
+    cts.Cancel();  
 ```  
   
- O bien, se puede pasar el mismo token a un subconjunto selectivo de operaciones:  
+ O bien, puede pasar el mismo token a un subconjunto de operaciones selectivo:  
   
 ```csharp  
-var cts = new CancellationTokenSource();  
-    byte [] data = await DownloadDataAsync(url, cts.Token);  
-    await SaveToDiskAsync(outputPath, data, CancellationToken.None);  
-    … // at some point later, potentially on another thread  
-    cts.Cancel();  
-  
+var cts = new CancellationTokenSource();  
+    byte [] data = await DownloadDataAsync(url, cts.Token);  
+    await SaveToDiskAsync(outputPath, data, CancellationToken.None);  
+    … // at some point later, potentially on another thread  
+    cts.Cancel();  
 ```  
   
  Las solicitudes de cancelación se pueden iniciar desde cualquier subproceso.  
   
- Se puede pasar el valor <xref:System.Threading.CancellationToken.None%2A?displayProperty=fullName> a cualquier método que acepte un token de cancelación para indicar que la cancelación nunca se solicitará.  Esto hace que la propiedad <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=fullName> devuelva `false` y consiguientemente el método llamado pueda optimizarse.  Con fines de prueba, también se puede pasar un token precancelado de cancelación del que se creen instancias utilizando el constructor que acepta un valor booleano para indicar si el token debería comenzar en un estado ya cancelado o no cancelable.  
+ Puede pasar el <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> valor a cualquier método que acepta un token de cancelación para indicar que nunca se le solicitó la cancelación.  Esto hace que la <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> propiedad para devolver `false`, y el método llamado pueda optimizar en consecuencia.  Con fines de prueba, también puede pasar un token de cancelación cancelado previamente cuyas instancias se crean mediante el constructor que acepta un valor booleano para indicar si el token debe iniciarse en un estado ya cancelado o que no se puede cancelar.  
   
- Este tratamiento de la cancelación tiene varias ventajas:  
+ Este enfoque de cancelación tiene varias ventajas:  
   
--   Se puede pasar el mismo token de cancelación a cualquier número de operaciones asincrónicas o sincrónicas.  
+-   Puede pasar el mismo token de cancelación a cualquier número de operaciones sincrónicas y asincrónicas.  
   
--   La misma solicitud de cancelación puede extenderse a cualquier número de oyentes.  
+-   La misma solicitud de cancelación puede extenderse a cualquier número de agentes de escucha.  
   
--   El desarrollador de la API asincrónica tiene completo control de si la cancelación puede ser solicitada y cuándo puede tener lugar.  
+-   El desarrollador de la API asincrónica tiene todo el control de si se puede solicitar la cancelación y cuándo puede surtir efecto.  
   
--   El consumidor de la API puede determinar selectivamente las llamadas asincrónicas a las que las solicitudes de cancelación se propagarán.  
+-   El código que utiliza la API puede determinar de forma selectiva las llamadas asincrónicas que se propagarán las solicitudes de cancelación.  
   
-## Supervisar el progreso  
- Algunos métodos asincrónicos presentan su progreso a través de una interfaz de progreso que pasa por el método asincrónico.  Por ejemplo, piense en una función que de forma asincrónica descarga una cadena de texto y en el camino provoca actualizaciones de progreso que incluyen el porcentaje de descarga que se ha completado hasta el momento.  Este método se puede utilizar en una aplicación de Windows Presentation Foundation \(WPF\) como se indica a continuación:  
+## <a name="monitoring-progress"></a>Supervisar el progreso  
+ Algunos métodos asincrónicos exponen progreso a través de una interfaz de progreso pasada al método asincrónico.  Por ejemplo, considere una función que se descarga de manera asincrónica una cadena de texto y que genera las actualizaciones de progreso que incluyen el porcentaje de descarga que se ha completado hasta el momento.  Este método se puede utilizar en una aplicación de Windows Presentation Foundation (WPF) como sigue:  
   
 ```csharp  
-private async  void btnDownload_Click(object sender, RoutedEventArgs e)    
+private async void btnDownload_Click(object sender, RoutedEventArgs e)    
 {  
     btnDownload.IsEnabled = false;  
     try  
@@ -132,18 +129,17 @@ private async  void btnDownload_Click(object sender, RoutedEventArgs e)
     }  
     finally { btnDownload.IsEnabled = true; }  
 }  
-  
 ```  
   
 <a name="combinators"></a>   
-## Utilizar los elementos de combinación basados en tareas integradas  
- El espacio de nombres <xref:System.Threading.Tasks> incluye varios métodos para componer y trabajar con tareas.  
+## <a name="using-the-built-in-task-based-combinators"></a>Usar los combinadores integrados basados en tareas  
+ El <xref:System.Threading.Tasks> espacio de nombres incluye varios métodos para crear y trabajar con tareas.  
   
-### Task.Run  
- La clase <xref:System.Threading.Tasks.Task> incluye varios métodos <xref:System.Threading.Tasks.Task.Run%2A> que permiten con facilidad librarse de trabajo como un <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> al grupo de subprocesos, por ejemplo:  
+### <a name="taskrun"></a>Task.Run  
+ El <xref:System.Threading.Tasks.Task> clase incluye varios <xref:System.Threading.Tasks.Task.Run%2A> métodos que le permiten descargar de trabajo como un <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> al grupo de subprocesos, por ejemplo:  
   
 ```csharp  
-public async  void button1_Click(object sender, EventArgs e)  
+public async void button1_Click(object sender, EventArgs e)  
 {  
     textBox1.Text = await Task.Run(() =>  
     {  
@@ -151,13 +147,12 @@ public async  void button1_Click(object sender, EventArgs e)
         return answer;  
     });  
 }  
-  
 ```  
   
- Algunos de estos métodos <xref:System.Threading.Tasks.Task.Run%2A> tales como la sobrecarga de <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=fullName> existen como una versión reducida del método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=fullName>.  Otras sobrecargas, como <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=fullName>, permiten que la espera se utilice dentro del trabajo descargado, por ejemplo:  
+ Algunas de estas <xref:System.Threading.Tasks.Task.Run%2A> métodos, como el <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> sobrecarga, existen como método abreviado para el <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> método.  Otras sobrecargas, como <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>, habilitar usar await dentro del trabajo descargado, por ejemplo:  
   
 ```csharp  
-public async  void button1_Click(object sender, EventArgs e)  
+public async void button1_Click(object sender, EventArgs e)  
 {  
     pictureBox1.Image = await Task.Run(async() =>  
     {  
@@ -168,10 +163,10 @@ public async  void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- Dichas sobrecargas son lógicamente equivalentes a utilizar el método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=fullName> en conjunción con el método de extensión <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> en la biblioteca de tareas paralelas.  
+ Estas sobrecargas están lógicamente equivalentes a de la <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> método junto con el <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> método de extensión en Task Parallel Library.  
   
-### Task.FromResult  
- Para esos escenarios en los que los datos pueden estar ya disponibles y simplemente necesitan ser devueltos desde un método que devuelve tareas subido en un <xref:System.Threading.Tasks.Task.FromResult%2A>, el método <xref:System.Threading.Tasks.Task%601> puede ser utilizado:  
+### <a name="taskfromresult"></a>Task.FromResult  
+ Use la <xref:System.Threading.Tasks.Task.FromResult%2A> método en escenarios donde los datos pueden resultar ya está disponible y sólo debe devolverse desde un método de devolución de tarea que se soluciona en un <xref:System.Threading.Tasks.Task%601>:  
   
 ```csharp  
 public Task<int> GetValueAsync(string key)  
@@ -182,25 +177,23 @@ public Task<int> GetValueAsync(string key)
         GetValueAsyncInternal();  
 }  
   
-private async  Task<int> GetValueAsyncInternal(string key)  
+private async Task<int> GetValueAsyncInternal(string key)  
 {  
     …  
 }  
-  
 ```  
   
-### Task.WhenAll  
- Utilice el método <xref:System.Threading.Tasks.Task.WhenAll%2A> de forma asincrónica para atender varias operaciones asincrónicas que se representan como tareas.  El método tiene múltiples sobrecargas que admiten un conjunto de tareas no genéricas o un conjunto no uniforme de tareas genéricas \(por ejemplo, tareas que esperan asincrónicamente varias operaciones de retorno tipo void, o tareas que esperan asincrónicamente múltiples métodos de valores de retorno en los que cada valor puede ser de diferente tipo\) así como también admiten un conjunto uniforme de tareas genéricas \(tales como esperar asincrónicamente varios métodos de retorno `TResult`\).  
+### <a name="taskwhenall"></a>Task.WhenAll  
+ Use la <xref:System.Threading.Tasks.Task.WhenAll%2A> método para esperar en varias operaciones asincrónicas que se representan como tareas de forma asincrónica.  El método tiene varias sobrecargas que admiten un conjunto de tareas no genéricas o un conjunto no uniforme de tareas genéricas (por ejemplo, esperando de forma asincrónica varias operaciones que devuelven void o esperando de forma asincrónica varios métodos que devuelven valores, donde cada valor puede tener un tipo diferente) y para admitir un conjunto uniforme de tareas genéricas (como esperar de forma asincrónica para varios métodos que devuelven `TResult`).  
   
- Digamos que se desea enviar un correo electrónico a varios clientes  Se puede solapar el envío de mensajes para que no se tenga que esperar a que un mensaje se complete antes de enviar el siguiente.  También se puede averiguar qué operaciones de envío se han completado y si se ha producido algún error.  
+ Supongamos que desea enviar mensajes de correo electrónico a varios clientes. Puede superponer el envío de los mensajes, para que no esté esperando que se complete un mensaje antes de enviar el siguiente. También puede averiguar cuando se completan las operaciones de envío y si se ha producido algún error:  
   
 ```csharp  
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);  
 await Task.WhenAll(asyncOps);  
-  
 ```  
   
- Este código no controla explícitamente las excepciones que se pueden producir, sino que permite que las excepciones se propaguen fuera de `await` en la tarea resultante de <xref:System.Threading.Tasks.Task.WhenAll%2A>.  Para controlar las excepciones, se puede usar el siguiente código:  
+ Este código no controla explícitamente las excepciones que pueden aparecer, pero permite que las excepciones se propagan fuera de la `await` en la tarea resultante de <xref:System.Threading.Tasks.Task.WhenAll%2A>.  Para controlar las excepciones, puede utilizar código como el siguiente:  
   
 ```csharp  
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);  
@@ -212,10 +205,9 @@ catch(Exception exc)
 {  
     ...  
 }  
-  
 ```  
   
- En este caso, si una operación asincrónica da error, todas las excepciones se consolidarán en una excepción <xref:System.AggregateException>, que se almacena en <xref:System.Threading.Tasks.Task> que se devuelve desde el método <xref:System.Threading.Tasks.Task.WhenAll%2A>.  Sin embargo, sólo una de esas excepciones se propaga por la palabra clave `await` .  Si se desean examinar todas las excepciones, se puede volver a escribir el código anterior como sigue:  
+ En este caso, si se produce un error en cualquier operación asincrónica, todas las excepciones se consolidará en un <xref:System.AggregateException> excepción, que se almacena en la <xref:System.Threading.Tasks.Task> que se devuelve desde el <xref:System.Threading.Tasks.Task.WhenAll%2A> método.  Sin embargo, solo una de esas excepciones se propaga por la palabra clave `await`.  Si desea examinar todas las excepciones, puede volver a escribir el código anterior como sigue:  
   
 ```csharp  
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();  
@@ -230,17 +222,16 @@ catch(Exception exc)
         … // work with faulted and faulted.Exception  
     }  
 }  
-  
 ```  
   
- Considere el caso de cómo descargar varios archivos de la web de forma asincrónica.  En este caso, todas las operaciones asincrónicas tienen tipos de resultado homogéneos y el acceso a los resultados es simple:  
+ Veamos un ejemplo de descarga de varios archivos desde la web de forma asincrónica.  En este caso, todas las operaciones asincrónicas tienen tipos de resultado homogéneos, y es fácil acceder a los resultados:  
   
 ```csharp  
 string [] pages = await Task.WhenAll(  
     from url in urls select DownloadStringAsync(url));  
 ```  
   
- Como en el caso anterior que se devuelve void, las mismas técnicas de control de excepciones se pueden utilizar aquí:  
+ Puede utilizar las mismas técnicas de control de excepciones que se explicaron en el escenario anterior que devuelve void:  
   
 ```csharp  
 Task [] asyncOps =   
@@ -257,22 +248,21 @@ catch(Exception exc)
         … // work with faulted and faulted.Exception  
     }  
 }  
-  
 ```  
   
-### Task.WhenAny  
- Se puede usar el método <xref:System.Threading.Tasks.Task.WhenAny%2A> para esperar de forma asincrónica a una de las múltiples operaciones asincrónicas representadas como tareas a completar.  Este método tiene cuatro usos principales:  
+### <a name="taskwhenany"></a>Task.WhenAny  
+ Puede usar el <xref:System.Threading.Tasks.Task.WhenAny%2A> método para esperar de forma asincrónica con una sola de varias operaciones asincrónicas se representa como tareas en completarse.  Este método actúa en cuatro casos de uso principales:  
   
--   Redundancia:  Realizando varias veces una operación y seleccionando el que complete primero \(por ejemplo, contactando servicios web varias de cita común que generarán un solo resultado y la selección de que completa el más rápido\).  
+-   Redundancia: realizar una operación varias veces y seleccionar la que se complete primero (por ejemplo, ponerse en contacto con varios servicios web de cotización bursátil que va a generar un único resultado y seleccionar la que se completa con más rapidez).  
   
--   El intercalación:  Iniciar varias operaciones y esperar todos de completar, pero procesarlos como completa.  
+-   Intercalación: iniciar varias operaciones y esperar que se completen todas, pero procesarlas a medida que se completan.  
   
--   La restricción:  Permitir que las operaciones adicionales comienzan con otras completadas.  Esto es una extensión del escenario de intercalado.  
+-   Limitación: permitir que operaciones adicionales comiencen a medida que otras se completan.  Esto es una extensión del escenario de intercalación.  
   
--   Desalojo urgente a:  Por ejemplo, una operación representada por T1 de la tarea se puede agrupar en una tarea de <xref:System.Threading.Tasks.Task.WhenAny%2A> con otro t2 de tarea, y puede esperar a la tarea de <xref:System.Threading.Tasks.Task.WhenAny%2A> .  La tarea t2 podría representar un tiempo de espera, o cancelación, o alguna otra señal que haga que la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> se complete antes de completarse t1.  
+-   Cese de hash temprano: por ejemplo, una operación representada por la tarea t1 se puede agrupar en un <xref:System.Threading.Tasks.Task.WhenAny%2A> tarea con otra tarea t2 así puede esperar en la <xref:System.Threading.Tasks.Task.WhenAny%2A> tarea. La tarea t2 puede representar un tiempo de espera, o cancelación o algunos otros tipos de señales que provoca la <xref:System.Threading.Tasks.Task.WhenAny%2A> tarea se complete antes de que finalice de t1.  
   
-#### Redundancia  
- Considere un caso en el que se desea tomar una decisión sobre si adquirir un valor o no.  Hay varios servicios web de recomendación de valores en los que se confía, pero dependiendo de la carga diaria, cada uno de los servicios puede resultar bastante lento en momentos diferentes.  Se puede usar el método <xref:System.Threading.Tasks.Task.WhenAny%2A> para recibir una notificación cuando cualquier operación se complete:  
+#### <a name="redundancy"></a>Redundancia  
+ Considere un caso en el que quiera tomar la decisión de comprar o no una acción.  Hay varios servicios web de recomendación bursátil en los que confía, pero según la carga diaria, cada servicio puede acabar ralentizándose en momentos diferentes.  Puede usar el <xref:System.Threading.Tasks.Task.WhenAny%2A> método para recibir una notificación cuando se complete cualquier operación:  
   
 ```csharp  
 var recommendations = new List<Task<bool>>()   
@@ -283,12 +273,11 @@ var recommendations = new List<Task<bool>>()
 };  
 Task<bool> recommendation = await Task.WhenAny(recommendations);  
 if (await recommendation) BuyStock(symbol);  
-  
 ```  
   
- A diferencia de <xref:System.Threading.Tasks.Task.WhenAll%2A>, que devuelve los resultados empaquetados de todas las tareas que se completan correctamente, <xref:System.Threading.Tasks.Task.WhenAny%2A> devuelve la tarea que se completó.  Si una tarea da error, es importante saber dónde está el error, y si acaba correctamente, es importante saber a qué tarea está asociada el valor devuelto.  Por consiguiente, necesita tener acceso al resultado de la tarea devuelta, o la espera aún más, como en este ejemplo.  
+ A diferencia de <xref:System.Threading.Tasks.Task.WhenAll%2A>, que devuelve los resultados de todas las tareas que ha realizado correctamente, sin ajustar <xref:System.Threading.Tasks.Task.WhenAny%2A> devuelve la tarea completada. Si se produce un error en una tarea, es importante saber que se produjo un error y, si una tarea se realiza correctamente, es importante saber con qué tarea está asociado el valor devuelto.  Por lo tanto, necesitará acceder al resultado de la tarea devuelta o esperarla aún más, tal como se muestra en este ejemplo.  
   
- Al igual que con <xref:System.Threading.Tasks.Task.WhenAll%2A>, se necesita poder alojar excepciones.  Debido a que se recibe de vuelta la tarea completada, se puede esperar que la tarea devuelta tenga los errores propagados, y hacer `try/catch` sobre estos correctamente; por ejemplo:  
+ Al igual que con <xref:System.Threading.Tasks.Task.WhenAll%2A>, tendrá que ser capaz de dar cabida a excepciones.  Dado que recibe de vuelta la tarea de completa, puede esperar que se hayan propagado los errores en la tarea devuelta y `try/catch` adecuadamente; por ejemplo:  
   
 ```csharp  
 Task<bool> [] recommendations = …;  
@@ -305,10 +294,9 @@ while(recommendations.Count > 0)
         recommendations.Remove(recommendation);  
     }  
 }  
-  
 ```  
   
- Además, aún en el caso de que una primera tarea se complete correctamente, las tareas posteriores pueden producir errores.  En este punto, tiene varias opciones para trabajar con excepciones:  Puede esperar hasta que todas las tareas iniciadas han completado, en cuyo caso puede utilizar el método de <xref:System.Threading.Tasks.Task.WhenAll%2A> , o puede decidir que todas las excepciones son importantes y debe registrarse.  Para ello, se pueden utilizar directamente las continuaciones para recibir una notificación cuando las tareas estén completadas de forma asincrónica:  
+ Además, aunque una primera tarea se complete correctamente, las tareas subsiguientes pueden producir un error.  En este punto, tiene varias opciones para controlar las excepciones: puede esperar a que se han completado todas las tareas iniciadas, en cuyo caso puede utilizar el <xref:System.Threading.Tasks.Task.WhenAll%2A> método, también puede decidir que todas las excepciones son importantes y deben haber iniciado sesión.  Para ello, puede usar las continuaciones para recibir una notificación cuando se hayan completado las tareas de forma asincrónica:  
   
 ```csharp  
 foreach(Task recommendation in recommendations)  
@@ -316,7 +304,6 @@ foreach(Task recommendation in recommendations)
     var ignored = recommendation.ContinueWith(  
         t => { if (t.IsFaulted) Log(t.Exception); });  
 }  
-  
 ```  
   
  O bien  
@@ -327,13 +314,12 @@ foreach(Task recommendation in recommendations)
     var ignored = recommendation.ContinueWith(  
         t => Log(t.Exception), TaskContinuationOptions.OnlyOnFaulted);  
 }  
-  
 ```  
   
  o incluso:  
   
 ```  
-private static async  void LogCompletionIfFailed(IEnumerable<Task> tasks)  
+private static async void LogCompletionIfFailed(IEnumerable<Task> tasks)  
 {  
     foreach(var task in tasks)  
     {  
@@ -343,10 +329,9 @@ private static async  void LogCompletionIfFailed(IEnumerable<Task> tasks)
 }  
 …  
 LogCompletionIfFailed(recommendations);  
-  
 ```  
   
- Finalmente, se puede desear cancelar todas las operaciones restantes.  
+ Por último, puede querer cancelar todas las operaciones restantes:  
   
 ```csharp  
 var cts = new CancellationTokenSource();  
@@ -360,11 +345,10 @@ var recommendations = new List<Task<bool>>()
 Task<bool> recommendation = await Task.WhenAny(recommendations);  
 cts.Cancel();  
 if (await recommendation) BuyStock(symbol);  
-  
 ```  
   
-#### Intercalado  
- Considere el caso en el que se descarguen imágenes de la web y se procese cada imagen \(por ejemplo, agregar la imagen a un control de UI\).  Se tiene que hacer el procesado secuencialmente en el subproceso de UI, pero se desea que las imágenes se descarguen de forma simultánea en la medida de lo posible.  Además, no se desea esperar a agregar las imágenes a la UI hasta que se hayan descargado todas \(se desean agregar a medida que se completan\):  
+#### <a name="interleaving"></a>Intercalación  
+ Considere un caso donde descarga imágenes de la web y procesa cada imagen (por ejemplo, agregando la imagen a un control de interfaz de usuario).  Tendrá que realizar el procesamiento secuencialmente en el subproceso de interfaz de usuario, pero quiere descargar las imágenes lo más simultáneamente como sea posible. Además, no desea mantener la adición de las imágenes en la interfaz de usuario hasta que todas se hayan descargado, sino que desea agregarlas a medida que se realizan:  
   
 ```csharp  
 List<Task<Bitmap>> imageTasks =   
@@ -381,10 +365,9 @@ while(imageTasks.Count > 0)
     }  
     catch{}  
 }  
-  
 ```  
   
- El mismo intercalado también se puede aplicar a un escenario que implica procesamiento de cómputo intensivo en el <xref:System.Threading.ThreadPool> de imágenes descargadas; por ejemplo:  
+ También puede aplicar una intercalación a un escenario que implica un procesamiento muy intenso computacional en el <xref:System.Threading.ThreadPool> de las imágenes descargadas; por ejemplo:  
   
 ```csharp  
 List<Task<Bitmap>> imageTasks =   
@@ -402,11 +385,10 @@ while(imageTasks.Count > 0)
     }  
     catch{}  
 }  
-  
 ```  
   
-#### Limitación de peticiones  
- Piense en el ejemplo de intercalado, excepto que el usuario ahora está descargando tantas imágenes que las descargas necesitan que se limiten explícitamente; por ejemplo, sólo se desea realizar un número específico de descargas simultáneamente.  Para lograr esto, se puede iniciar un subconjunto de las operaciones asincrónicas.  A medida que las operaciones se completan, se pueden iniciar operaciones adicionales para reemplazarlas:  
+#### <a name="throttling"></a>Limitación de peticiones  
+ Considere el ejemplo de intercalación, excepto en que el usuario descarga tantas imágenes que las descargas tienen que limitarse; por ejemplo, desea que solo un número específico de descargas ocurra al mismo tiempo. Para lograr esto, puede iniciar un subconjunto de operaciones asincrónicas.  Cuando se completen las operaciones, puede iniciar operaciones adicionales que ocupen su lugar:  
   
 ```csharp  
 const int CONCURRENCY_LEVEL = 15;  
@@ -437,11 +419,10 @@ while(imageTasks.Count > 0)
         nextIndex++;  
     }  
 }  
-  
 ```  
   
-#### Rescate temprano  
- Considere que se está esperando asincrónicamente que una operación se complete mientras simultáneamente se responde a la solicitud de cancelación de un usuario \(por ejemplo, un usuario hace clic en el botón de cancelación\).  En el siguiente código se muestra este escenario:  
+#### <a name="early-bailout"></a>Salida anticipada  
+ Considere que está esperando asincrónicamente que una operación se complete mientras se responde simultáneamente a la solicitud de cancelación de un usuario (por ejemplo, el usuario hace clic en un botón Cancelar). El código siguiente muestra este escenario:  
   
 ```csharp  
 private CancellationTokenSource m_cts;   
@@ -451,7 +432,7 @@ public void btnCancel_Click(object sender, EventArgs e)
     if (m_cts != null) m_cts.Cancel();  
 }  
   
-public async  void btnRun_Click(object sender, EventArgs e)  
+public async void btnRun_Click(object sender, EventArgs e)  
 {  
     m_cts = new CancellationTokenSource();  
     btnRun.Enabled = false;  
@@ -469,7 +450,7 @@ public async  void btnRun_Click(object sender, EventArgs e)
     finally { btnRun.Enabled = true; }  
 }  
   
-private static async  Task UntilCompletionOrCancellation(  
+private static async Task UntilCompletionOrCancellation(  
     Task asyncOp, CancellationToken ct)  
 {  
     var tcs = new TaskCompletionSource<bool>();  
@@ -477,15 +458,14 @@ private static async  Task UntilCompletionOrCancellation(
         await Task.WhenAny(asyncOp, tcs.Task);  
     return asyncOp;  
 }  
-  
 ```  
   
- Esta implementación vuelve a habilitar la interfaz de usuario en cuanto decidamos salir pero no cancela las operaciones asincrónicas subyacentes.  Otra alternativa sería cancelar las operaciones pendientes cuando decidamos salir, aunque no se restaure la interfaz de usuario hasta que las operaciones se completen efectivamente, posiblemente por una finalización temprana debido a una solicitud de cancelación:  
+ Esta implementación permite volver a la interfaz de usuario en cuanto decide abandonar la operación, pero no se cancelan las operaciones asincrónicas subyacentes.  Otra alternativa sería cancelar las operaciones pendientes cuando decide abandone la operación, pero no se restablece la interfaz de usuario hasta que las operaciones se hayan finalizado, posiblemente debido a una finalización anticipada debido a la solicitud de cancelación:  
   
 ```csharp  
 private CancellationTokenSource m_cts;  
   
-public async  void btnRun_Click(object sender, EventArgs e)  
+public async void btnRun_Click(object sender, EventArgs e)  
 {  
     m_cts = new CancellationTokenSource();  
   
@@ -500,20 +480,19 @@ public async  void btnRun_Click(object sender, EventArgs e)
     catch(OperationCanceledException) {}  
     finally { btnRun.Enabled = true; }  
 }  
-  
 ```  
   
- Otro ejemplo de rescate temprano implica usar el método <xref:System.Threading.Tasks.Task.WhenAny%2A> junto con el método <xref:System.Threading.Tasks.Task.Delay%2A> como se discute en la siguiente sección.  
+ Otro ejemplo de cese de hash temprano implica el uso de la <xref:System.Threading.Tasks.Task.WhenAny%2A> método junto con el <xref:System.Threading.Tasks.Task.Delay%2A> método, como se describe en la sección siguiente.  
   
-### Task.Delay  
- Se puede usar el método <xref:System.Threading.Tasks.Task.Delay%2A> para introducir pausas en una ejecución asincrónica del método.  Esto es útil para muchos tipos de funcionalidad, como compilar los bucles de sondeo y retrasar el control de datos proporcionados por el usuario durante un período de tiempo predeterminado.  El método <xref:System.Threading.Tasks.Task.Delay%2A> puede también resultar útil junto con <xref:System.Threading.Tasks.Task.WhenAny%2A> para implementar tiempos de espera.  
+### <a name="taskdelay"></a>Task.Delay  
+ Puede usar el <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> método para presentar a los que se hace una pausa en la ejecución de un método asincrónico.  Esto es útil para muchos tipos de funcionalidad, incluida la generación de bucles de sondeo y el retraso del control de entrada de usuario durante un período predeterminado.  El <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> método también puede ser útil en combinación con <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> para implementar los tiempos de espera en espera.  
   
- Si una tarea que forma parte de una operación asincrónica mayor \(por ejemplo, un servicio web ASP.NET\) tarda demasiado tiempo en completarse, la operación global podría sufrir, especialmente si no llega a completarse nunca.  Por esta razón, es importante poder tener tiempos muertos cuando se espera en una operación asincrónica.  Los métodos sincrónicos <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.%2A> WaitAll?qualifyHint=False&autoUpgrade=True y <xref:System.Threading.Tasks.Task.%2A> WaitAny?qualifyHint=False&autoUpgrade=True aceptan valores de tiempo de espera, pero los métodos <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>\/<xref:System.Threading.Tasks.Task.WhenAny%2A> y el mencionado previamente <xref:System.Threading.Tasks.Task.WhenAll%2A>\/<xref:System.Threading.Tasks.Task.WhenAny%2A> correspondientes no.  En su lugar, se puede usar <xref:System.Threading.Tasks.Task.Delay%2A> y <xref:System.Threading.Tasks.Task.WhenAny%2A> en conjunto para implementar un tiempo de espera.  
+ Si una tarea que forma parte de una operación asincrónica mayor (por ejemplo, un servicio web ASP.NET) tarda demasiado tiempo en completarse, la operación global podría verse afectada, especialmente si no se puede completar.  Por este motivo, es importante poder agotar el tiempo de espera al esperar a una operación asincrónica.  Sincrónico <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType>, y <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> métodos aceptan valores de tiempo de espera, pero la correspondiente <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> y mencionados anteriormente <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>métodos no lo hace.  En su lugar, puede usar <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> en combinación para implementar un tiempo de espera.  
   
- Por ejemplo, en la aplicación de interfaz de usuario, digamos que se desea descargar una imagen y deshabilitar la interfaz de usuario mientras se descarga dicha imagen.  Sin embargo, si la descarga lleva mucho tiempo, se desea rehabilitar la interfaz de usuario y la descarga debe descartarse:  
+ Por ejemplo, en la aplicación de la interfaz de usuario, supongamos que desea descargar una imagen y deshabilitar la interfaz de usuario mientras se descarga la imagen. Sin embargo, si la descarga tarda mucho tiempo, quiere volver a habilitar la interfaz de usuario y descartar la descarga:  
   
 ```csharp  
-public async  void btnDownload_Click(object sender, EventArgs e)  
+public async void btnDownload_Click(object sender, EventArgs e)  
 {  
     btnDownload.Enabled = false;  
     try  
@@ -523,25 +502,24 @@ public async  void btnDownload_Click(object sender, EventArgs e)
         {  
             Bitmap bmp = await download;  
             pictureBox.Image = bmp;  
-            status.Text = “Downloaded”;  
+            status.Text = "Downloaded";  
         }  
         else  
         {  
             pictureBox.Image = null;  
-            status.Text = “Timed out”;  
+            status.Text = "Timed out";  
             var ignored = download.ContinueWith(  
-                t => Trace(“Task finally completed”));  
+                t => Trace("Task finally completed"));  
         }  
     }  
     finally { btnDownload.Enabled = true; }  
 }  
-  
 ```  
   
- Lo mismo ocurre con las descargas múltiples, puesto que <xref:System.Threading.Tasks.Task.WhenAll%2A> devuelve una tarea:  
+ Lo mismo se aplica a varias descargas, porque <xref:System.Threading.Tasks.Task.WhenAll%2A> devuelve una tarea:  
   
 ```csharp  
-public async  void btnDownload_Click(object sender, RoutedEventArgs e)  
+public async void btnDownload_Click(object sender, RoutedEventArgs e)  
 {  
     btnDownload.Enabled = false;  
     try  
@@ -551,24 +529,23 @@ public async  void btnDownload_Click(object sender, RoutedEventArgs e)
         if (downloads == await Task.WhenAny(downloads, Task.Delay(3000)))  
         {  
             foreach(var bmp in downloads) panel.AddImage(bmp);  
-            status.Text = “Downloaded”;  
+            status.Text = "Downloaded";  
         }  
         else  
         {  
-            status.Text = “Timed out”;  
+            status.Text = "Timed out";  
             downloads.ContinueWith(t => Log(t));  
         }  
     }  
     finally { btnDownload.Enabled = true; }  
 }  
-  
 ```  
   
-## Compilar elementos de combinación basados en tareas  
- Dado que una tarea es capaz de representar completamente una operación asincrónica y proporcionar funciones sincrónicas y asincrónicas para combinar con la operación, recuperar los resultados, etc., es posible compilar las bibliotecas útiles de los combinadores que constituyen las tareas para compilar modelos más grandes.  Como se ha visto en la sección anterior, .NET Framework incluye varios combinadores integrados, pero también se pueden compilar los propios.  Las siguientes secciones ofrecen varios ejemplos de posibles métodos de elementos de combinación.  
+## <a name="building-task-based-combinators"></a>Crear combinadores basados en tareas  
+ Como una tarea se puede representar completamente una operación asincrónica y proporciona funcionalidades sincrónicas y asincrónicas para combinarse con la operación y recuperar sus resultados, entre otros, puede crear bibliotecas útiles de combinadores que componen tareas para crear patrones más grandes.  Como se describe en la sección anterior, .NET Framework incluye varios combinadores integrados, pero también puede crear los suyos propios. Las secciones siguientes proporcionan varios ejemplos de tipos y métodos de combinadores posibles.  
   
-### RetryOnFault  
- En muchas situaciones, se puede desear reintentar una operación si un intento previo da error.  Para el código sincrónico, se podría compilar un método auxiliar como `RetryOnFault` en el siguiente ejemplo para lograrlo:  
+### <a name="retryonfault"></a>RetryOnFault  
+ En muchas situaciones, puede querer reintentar la operación si se produce un error en un intento anterior.  Para el código sincrónico, podría crear un método auxiliar como `RetryOnFault` en el ejemplo siguiente para lograr esto:  
   
 ```csharp  
 public static T RetryOnFault<T>(  
@@ -581,13 +558,12 @@ public static T RetryOnFault<T>(
     }  
     return default(T);  
 }  
-  
 ```  
   
- Se puede compilar un método auxiliar casi idéntico para las operaciones asincrónicas implementadas con el TAP y que devuelvan tareas:  
+ Puede crear un método auxiliar prácticamente idéntico para las operaciones asincrónicas que se implementan con TAP y, por tanto, devolver las tareas:  
   
 ```csharp  
-public static async  Task<T> RetryOnFault<T>(  
+public static async Task<T> RetryOnFault<T>(  
     Func<Task<T>> function, int maxTries)  
 {  
     for(int i=0; i<maxTries; i++)  
@@ -599,19 +575,18 @@ public static async  Task<T> RetryOnFault<T>(
 }  
 ```  
   
- Se puede usar este combinador para encapsular reintentos en la lógica de la aplicación; por ejemplo:  
+ Después puede usar este combinador para codificar los reintentos en la lógica de la aplicación; por ejemplo:  
   
 ```csharp  
 // Download the URL, trying up to three times in case of failure  
 string pageContents = await RetryOnFault(  
     () => DownloadStringAsync(url), 3);  
-  
 ```  
   
- Se podría extender la función `RetryOnFault` más adelante:  Por ejemplo, la función podría aceptar otro `Func<Task>` que se invocará entre reintentos para determinar cuándo probar la operación otra vez; por ejemplo:  
+ Puede ampliar aún más la función `RetryOnFault`. Por ejemplo, la función puede aceptar otro `Func<Task>` que se invocará entre reintentos para determinar cuándo volver a intentar la operación, por ejemplo:  
   
 ```csharp  
-public static async  Task<T> RetryOnFault<T>(  
+public static async Task<T> RetryOnFault<T>(  
     Func<Task<T>> function, int maxTries, Func<Task> retryWhen)  
 {  
     for(int i=0; i<maxTries; i++)  
@@ -624,21 +599,20 @@ public static async  Task<T> RetryOnFault<T>(
 }  
 ```  
   
- Se podría usar la función como se muestra para esperar un segundo antes de reintentar la operación:  
+ Después, puede utilizar la función siguiente para esperar un segundo antes de reintentar la operación:  
   
 ```csharp  
 // Download the URL, trying up to three times in case of failure,  
 // and delaying for a second between retries  
 string pageContents = await RetryOnFault(  
     () => DownloadStringAsync(url), 3, () => Task.Delay(1000));  
-  
 ```  
   
-### NeedOnlyOne  
- A veces, se puede aprovechar la redundancia para mejorar la latencia y las posibilidades de éxito de una operación.  Piense en los múltiples servicios web que proporcionan cotizaciones, pero que, durante varias horas del día cada uno de los servicios puede proporcionar diferentes niveles de calidad y de tiempos de respuesta.  Para tratar con estas fluctuaciones, se pueden mandar solicitudes a todos los servicios web y tan pronto como se reciba una respuesta de una, cancelar las solicitudes restantes.  Se puede implementar una función auxiliar para facilitar la implementación de este patrón común para iniciar múltiples operaciones, esperar alguna y después de cancelar el resto:  La función `NeedOnlyOne` en el siguiente ejemplo muestra este escenario:  
+### <a name="needonlyone"></a>NeedOnlyOne  
+ A veces, puede sacar partido de la redundancia para mejorar la latencia y las posibilidades de éxito de una operación.  Considere la posibilidad de varios servicios web que proporcionan cotizaciones bursátiles, pero a lo largo del día cada servicio puede proporcionar diferentes niveles de calidad y tiempos de respuesta.  Para tratar estas fluctuaciones, pueden emitir solicitudes a todos los servicios web y tan pronto como obtiene una respuesta de uno, cancelar las solicitudes restantes.  Puede implementar una función auxiliar para que resulte más fácil de implementar este patrón común de iniciar varias operaciones, esperar alguna y, después, cancelar el resto. La función `NeedOnlyOne` del ejemplo siguiente muestra este escenario:  
   
 ```csharp  
-public static async  Task<T> NeedOnlyOne(  
+public static async Task<T> NeedOnlyOne(  
     params Func<CancellationToken,Task<T>> [] functions)  
 {  
     var cts = new CancellationTokenSource();  
@@ -655,17 +629,17 @@ public static async  Task<T> NeedOnlyOne(
 }  
 ```  
   
- Esta función se puede utilizar como se indica a continuación:  
+ Después puede utilizar esta función como sigue:  
   
 ```csharp  
 double currentPrice = await NeedOnlyOne(  
-    ct => GetCurrentPriceFromServer1Async(“msft”, ct),  
-    ct => GetCurrentPriceFromServer2Async(“msft”, ct),  
-    ct => GetCurrentPriceFromServer3Async(“msft”, ct));  
+    ct => GetCurrentPriceFromServer1Async("msft", ct),  
+    ct => GetCurrentPriceFromServer2Async("msft", ct),  
+    ct => GetCurrentPriceFromServer3Async("msft", ct));  
 ```  
   
-### Operaciones de intercalado  
- Existe un potencial problema de rendimiento si se usa el método <xref:System.Threading.Tasks.Task.WhenAny%2A> para admitir un escenario de intercalado cuando se utilizan conjuntos de tareas muy grandes.  Cada llamada a <xref:System.Threading.Tasks.Task.WhenAny%2A> da como resultado una continuación que se registra con cada tarea.  Para un número N de tareas, esto da como resultado O\(N2\) continuaciones creadas sobre el tiempo de vida de la operación de intercalado.  Si está trabajando con un amplio conjunto de tareas, puede utilizar un combinator \(`Interleaved` en el ejemplo siguiente\) para resolver el problema de rendimiento:  
+### <a name="interleaved-operations"></a>Operaciones intercaladas  
+ Hay un posible problema de rendimiento con el uso de la <xref:System.Threading.Tasks.Task.WhenAny%2A> método para admitir un escenario de intercalación cuando se trabaja con grandes conjuntos de tareas.  Todas las llamadas a <xref:System.Threading.Tasks.Task.WhenAny%2A> da como resultado una continuación que se va a registrar con cada tarea. Para el número N de tareas, el resultado de O(N2) continuaciones creadas durante la vigencia de la operación de intercalación.  Si está trabajando con un gran conjunto de tareas, puede utilizar un combinador (`Interleaved` en el ejemplo siguiente) para solucionar el problema de rendimiento:  
   
 ```csharp  
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)  
@@ -692,10 +666,9 @@ static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
     return from source in sources   
            select source.Task;  
 }  
-  
 ```  
   
- Se podría utilizar el combinador para procesar los resultados de tareas a medida que éstas se completan; por ejemplo:  
+ Después puede usar el combinador para procesar los resultados de las tareas a medida que se completan; por ejemplo:  
   
 ```csharp  
 IEnumerable<Task<int>> tasks = ...;  
@@ -706,35 +679,34 @@ foreach(var task in Interleaved(tasks))
 }  
 ```  
   
-### WhenAllOrFirstException  
- En ciertos escenarios de dispersión\/recolección, quizás se desee esperar a todas las tareas de un conjunto, a menos que una de ellas dé error, en cuyo caso se desee detener la espera tan pronto se produzca la excepción.  Se puede conseguir esto con un método combinador como `WhenAllOrFirstException` en el siguiente ejemplo:  
+### <a name="whenallorfirstexception"></a>WhenAllOrFirstException  
+ En ciertos escenarios de dispersión y recopilación, puede querer esperar a todas las tareas de un conjunto, a menos que una de ellas falle, en cuyo caso deseará detener la espera en cuanto se produzca la excepción.  Puede conseguirlo con un método de combinador como `WhenAllOrFirstException` en el ejemplo siguiente:  
   
 ```csharp  
-public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)  
+public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)  
 {  
-    var inputs = tasks.ToList();  
-    var ce = new CountdownEvent(inputs.Count);  
-    var tcs = new TaskCompletionSource<T[]>();  
+    var inputs = tasks.ToList();  
+    var ce = new CountdownEvent(inputs.Count);  
+    var tcs = new TaskCompletionSource<T[]>();  
   
-    Action<Task> onCompleted = (Task completed) =>  
-    {  
-        if (completed.IsFaulted)   
-            tcs.TrySetException(completed.Exception.InnerExceptions);  
-        if (ce.Signal() && !tcs.Task.IsCompleted)  
-            tcs.TrySetResult(inputs.Select(t => t.Result).ToArray());  
-    };  
+    Action<Task> onCompleted = (Task completed) =>  
+    {  
+        if (completed.IsFaulted)   
+            tcs.TrySetException(completed.Exception.InnerExceptions);  
+        if (ce.Signal() && !tcs.Task.IsCompleted)  
+            tcs.TrySetResult(inputs.Select(t => t.Result).ToArray());  
+    };  
   
-    foreach (var t in inputs) t.ContinueWith(onCompleted);  
-    return tcs.Task;  
+    foreach (var t in inputs) t.ContinueWith(onCompleted);  
+    return tcs.Task;  
 }  
-  
 ```  
   
-## Compilando estructuras de datos basadas en tareas  
- Además de la capacidad de compilar elementos de combinación basados en tareas personalizadas, el hecho de tener una estructura de datos en <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> que representa tanto los resultados de una operación asincrónica y la sincronización necesaria para unirlo hace que sea un tipo muy eficaz para compilar las estructuras de datos personalizadas que se utilizarán en escenarios asincrónicos.  
+## <a name="building-task-based-data-structures"></a>Crear estructuras de datos basadas en tareas  
+ Además de la capacidad para generar combinadores basado en tareas personalizadas, que tienen una estructura de datos en <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> que representa tanto los resultados de una operación asincrónica y la sincronización necesaria para unirse a él resulta muy eficaz Escriba en el que se va a crear estructuras de datos personalizadas para su uso en escenarios asincrónicos.  
   
-### AsyncCache  
- Un aspecto importante de una tarea es que se puede distribuir a todos los consumidores que la esperan, que registran continuaciones con ella, que obtienen su resultado o excepciones \(en el caso de <xref:System.Threading.Tasks.Task%601>\), etc.  Esto hace que <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> sean perfectamente aptos para su uso en una infraestructura de almacenamiento en caché asincrónica.  He aquí un ejemplo de una pequeña pero eficaz memoria caché asincrónica compilada sobre <xref:System.Threading.Tasks.Task%601>:  
+### <a name="asynccache"></a>AsyncCache  
+ Un aspecto importante de una tarea es que se puede transferir a varios consumidores, todos los cuales pueden esperar a que finalice, las continuaciones de registro con él, obtener su resultado o excepciones (en el caso de <xref:System.Threading.Tasks.Task%601>), y así sucesivamente.  Esto hace que <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> perfectamente adecuado para su uso en una infraestructura de almacenamiento en caché asincrónica.  Este es un ejemplo de una pequeña pero eficaz caché asincrónica construidos sobre <xref:System.Threading.Tasks.Task%601>:  
   
 ```csharp  
 public class AsyncCache<TKey, TValue>  
@@ -759,23 +731,21 @@ public class AsyncCache<TKey, TValue>
         }  
     }  
 }  
-  
 ```  
   
- [AsyncCache\<TKey, TValue\>](http://go.microsoft.com/fwlink/p/?LinkId=251941) La clase acepta como un delegado a su constructor una función que toma `TKey` y devuelve <xref:System.Threading.Tasks.Task%601>.  Cualquier valor al que se ha obtenido acceso previamente desde la memoria caché se almacena en el diccionario interno y `AsyncCache` asegura que sólo una tarea se genera por clave, aun cuando se obtenga acceso a la memoria caché simultáneamente.  
+ El [AsyncCache\<TKey, TValue >](http://go.microsoft.com/fwlink/p/?LinkId=251941) clase acepta como un delegado a su constructor una función que toma un `TKey` y devuelve un <xref:System.Threading.Tasks.Task%601>.  Todos los valores a los que se accedió previamente desde la memoria caché se almacenan en el diccionario interno y `AsyncCache` asegura que solo una tarea se genera por clave, incluso si se tiene acceso a la memoria caché al mismo tiempo.  
   
- Por ejemplo, se puede construir una memoria caché para páginas web descargadas:  
+ Por ejemplo, puede crear una caché de páginas web descargadas:  
   
 ```csharp  
 private AsyncCache<string,string> m_webPages =   
     new AsyncCache<string,string>(DownloadStringAsync);  
-  
 ```  
   
- Se puede usar esta memoria caché en métodos asincrónicos siempre que se necesiten los contenidos de una página web.  La clase `AsyncCache` garantiza que se estén descargando tan pocas páginas como sea posible y guarda en memoria caché los resultados.  
+ Después puede utilizar esta caché en métodos asincrónicos siempre que necesite el contenido de una página web. La clase `AsyncCache` garantiza que está descargando el menor número de páginas posible y almacena en caché los resultados.  
   
 ```csharp  
-private async  void btnDownload_Click(object sender, RoutedEventArgs e)   
+private async void btnDownload_Click(object sender, RoutedEventArgs e)   
 {  
     btnDownload.IsEnabled = false;  
     try  
@@ -784,13 +754,12 @@ private async  void btnDownload_Click(object sender, RoutedEventArgs e)
     }  
     finally { btnDownload.IsEnabled = true; }  
 }  
-  
 ```  
   
-### AsyncProducerConsumerCollection  
- También se pueden utilizar tareas para compilar las estructuras de datos con el fin de coordinar las actividades asincrónicas entre sí.  Piense en uno de los patrones paralelos clásicos de diseño: productor\/consumidor.  En este patrón, los productores generan datos que los consumidores adquieren y los productores y consumidores pueden ejecutarlos en paralelo.  Por ejemplo, el consumidor procesa el punto 1, que fue generado previamente por un productor que ahora está generando el punto 2.  Para el modelo de productor y consumidor, necesita invariable de alguna estructura de datos para almacenar el trabajo creado por los productores de forma que los consumidores puedan ser notificados de datos nuevos y encontrarlo cuando están disponibles.  
+### <a name="asyncproducerconsumercollection"></a>AsyncProducerConsumerCollection  
+ También puede usar tareas para crear estructuras de datos para la coordinación de actividades asincrónicas.  Considere uno de los patrones de diseño paralelo clásico: productor-consumidor.  En este patrón, los productores generan datos consumidos por los consumidores, y los productores y los consumidores pueden ejecutarlos en paralelo. Por ejemplo, el consumidor procesa el elemento 1, que fue generado previamente por un productor que ahora está produciendo el elemento 2.  Para el modelo productor-consumidor, necesita invariablemente alguna estructura de datos para almacenar los trabajos creados por los productores, para que los consumidores puedan recibir notificaciones de nuevos datos y encontrarlos si están disponibles.  
   
- A continuación se muestra una simple estructura de datos compilada sobre una tarea que habilita los métodos asincrónicos que se utilizarán como productores y consumidores:  
+ A continuación se muestra una estructura de datos simple creada sobre las tareas, que permite el uso de métodos asincrónicos como productores y consumidores:  
   
 ```csharp  
 public class AsyncProducerConsumerCollection<T>  
@@ -827,15 +796,14 @@ public class AsyncProducerConsumerCollection<T>
         }  
     }  
 }  
-  
 ```  
   
- Con esa estructura de datos en su lugar, se puede escribir código como el siguiente:  
+ Con esta estructura de datos en su lugar, puede escribir código como el siguiente:  
   
 ```csharp  
 private static AsyncProducerConsumerCollection<int> m_data = …;  
 …  
-private static async  Task ConsumerAsync()  
+private static async Task ConsumerAsync()  
 {  
     while(true)  
     {  
@@ -850,12 +818,12 @@ private static void Produce(int data)
 }  
 ```  
   
- El espacio de nombres <xref:System.Threading.Tasks.Dataflow> incluye el tipo <xref:System.Threading.Tasks.Dataflow.BufferBlock%601>, que se puede usar de una manera similar, pero sin tener que construir un tipo de colecciones personalizado:  
+ El <xref:System.Threading.Tasks.Dataflow> espacio de nombres incluye las <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> tipo, que puede usar de forma similar, pero sin tener que crear un tipo de colección personalizado:  
   
 ```csharp  
 private static BufferBlock<int> m_data = …;  
 …  
-private static async  Task ConsumerAsync()  
+private static async Task ConsumerAsync()  
 {  
     while(true)  
     {  
@@ -868,13 +836,12 @@ private static void Produce(int data)
 {  
     m_data.Post(data);  
 }  
-  
 ```  
   
 > [!NOTE]
->  El espacio de nombres <xref:System.Threading.Tasks.Dataflow> está disponible en el [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] por medio de **NuGet**.  Para instalar el ensamblado que contiene el espacio de nombres <xref:System.Threading.Tasks.Dataflow> , abra su proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **Administrar paquetes NuGet** desde el menú del proyecto y busque en línea el paquete Microsoft.Tpl.Dataflow.  
+>  El <xref:System.Threading.Tasks.Dataflow> espacio de nombres está disponible en la [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a través de **NuGet**. Para instalar el ensamblado que contiene el <xref:System.Threading.Tasks.Dataflow> espacio de nombres, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **administrar paquetes de NuGet** en el menú proyecto y busque en línea el paquete Microsoft.Tpl.Dataflow.  
   
-## Vea también  
- [Task\-based Asynchronous Pattern \(TAP\)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)   
- [Implementing the Task\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)   
- [Interop with Other Asynchronous Patterns and Types](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+## <a name="see-also"></a>Vea también  
+ [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP])  
+ [Implementar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+ [Interoperabilidad con otros tipos y patrones asincrónicos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

@@ -7,18 +7,17 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 65fe52f07ed823b4f7518c5b1f2da1f7a61b0371
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
 `dotnet nuget delete`: elimina o quita de la lista un paquete del servidor.
 

@@ -1,30 +1,21 @@
 ---
 title: "Sincronización de subprocesos (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2b51775eac5221ec8c723d89323d1f4f542d2453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df4093d4bf777f904aa8ce376cd164ed822350a0
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-synchronization-c"></a>Sincronización de subprocesos (C#)
 En las secciones siguientes se describen las características y clases que se pueden usar para sincronizar el acceso a recursos en aplicaciones multiproceso.  
@@ -73,7 +64,7 @@ public class TestThreading
   
 -   [lock (instrucción)](../../../../csharp/language-reference/keywords/lock-statement.md)  
   
--   @System.Threading.Monitor  
+-   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>Monitores  
  Como la palabra clave `lock`, los monitores evitan que varios subprocesos ejecuten simultáneamente bloques de código. El método <xref:System.Threading.Monitor.Enter%2A> permite que un subproceso, y solo uno, continúe con las instrucciones siguientes; todos los demás subprocesos se bloquean hasta que el subproceso en ejecución llama a <xref:System.Threading.Monitor.Exit%2A>. Esto es similar a usar la palabra clave `lock`. Por ejemplo:  
@@ -107,7 +98,7 @@ finally
   
  Existen dos tipos de eventos de sincronización: <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent>. Solo difieren en que <xref:System.Threading.AutoResetEvent> cambia automáticamente de señalizado a no señalizado siempre que activa un subproceso. Por el contrario, <xref:System.Threading.ManualResetEvent> permite que se active cualquier número de subprocesos mediante su estado señalizado, y solo volverá a un estado no señalizado cuando se llame a su método <xref:System.Threading.EventWaitHandle.Reset%2A>.  
   
- Los subprocesos pueden crearse para que esperen en eventos llamando a uno de los métodos de espera, como <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> o <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> hace que el subproceso espere hasta que un único evento se señaliza, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> bloquea un subproceso hasta que uno o más eventos indicados se señalizan y <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> bloquea el subproceso hasta que todos los eventos indicados se señalizan. Un evento se señaliza cuando se llama a su método <xref:System.Threading.EventWaitHandle.Set%2A>.  
+ Los subprocesos pueden crearse para que esperen en eventos llamando a uno de los métodos de espera, como <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> o <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType> hace que el subproceso espere hasta que un único evento se señaliza, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> bloquea un subproceso hasta que uno o más eventos indicados se señalizan y <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> bloquea el subproceso hasta que todos los eventos indicados se señalizan. Un evento se señaliza cuando se llama a su método <xref:System.Threading.EventWaitHandle.Set%2A>.  
   
  En el ejemplo siguiente, la función `Main` crea e inicia un subproceso. El nuevo subproceso espera en un evento con el método <xref:System.Threading.WaitHandle.WaitOne%2A>. Se suspende el subproceso hasta que el evento sea señalizado por el subproceso primario que está ejecutando la función `Main`. Cuando el evento se señaliza, el subproceso auxiliar se devuelve. En este caso, como el evento solo se usa para una activación de subproceso, pueden usarse las clases <xref:System.Threading.AutoResetEvent> o <xref:System.Threading.ManualResetEvent>.  
   
@@ -160,27 +151,26 @@ class ThreadingExample
  La sincronización de subprocesos resulta de un valor incalculable en aplicaciones multiproceso, pero siempre existe el peligro de crear un `deadlock`, en el que varios subprocesos están esperando unos a otros y la aplicación se bloquea. Un interbloqueo es una situación análoga a otra en la que hay automóviles parados en un cruce con cuatro señales de stop y cada uno de los conductores está esperando a que los otros se pongan en marcha. Evitar los interbloqueos es importante; la clave se planea cuidadosamente. A menudo es posible predecir situaciones de interbloqueo mediante la creación de diagramas de las aplicaciones multiproceso, antes de empezar a escribir código.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread>   
- <xref:System.Threading.WaitHandle.WaitOne%2A>   
- <xref:System.Threading.WaitHandle.WaitAny%2A>   
- <xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.Thread.Join%2A>   
- <xref:System.Threading.Thread.Start%2A>   
- <xref:System.Threading.Thread.Sleep%2A>   
- <xref:System.Threading.Monitor>   
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.Interlocked>   
- <xref:System.Threading.WaitHandle>   
- <xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading>   
- <xref:System.Threading.EventWaitHandle.Set%2A>   
- [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
- [lock (Instrucción)](../../../../csharp/language-reference/keywords/lock-statement.md)   
- [Exclusiones mutuas (mutex)](../../../../standard/threading/mutexes.md)   
- @System.Threading.Monitor   
- [Operaciones de bloqueo](../../../../standard/threading/interlocked-operations.md)   
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>  
+ <xref:System.Threading.WaitHandle.WaitAny%2A>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.Thread.Join%2A>  
+ <xref:System.Threading.Thread.Start%2A>  
+ <xref:System.Threading.Thread.Sleep%2A>  
+ <xref:System.Threading.Monitor>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.Monitor>  
+ [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [lock (instrucción)](../../../../csharp/language-reference/keywords/lock-statement.md)  
+ [Mutexes](../../../../standard/threading/mutexes.md) (Clases Mutex)  
+ [Interlocked Operations](../../../../standard/threading/interlocked-operations.md) (Operaciones Interlocked)  
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
  [Sincronizar datos para subprocesamiento múltiple](../../../../standard/threading/synchronizing-data-for-multithreading.md)
-

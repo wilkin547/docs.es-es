@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 52c36870134006eafaaf64824969c5314459d2c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: b3b436d1f01e1ddb2f8f8058acfbbbdc7dcae12f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
 En este ejemplo se muestra el uso de varias características de [!INCLUDE[wf](../../../../includes/wf-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] al mismo tiempo. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.  
@@ -155,6 +155,4 @@ En este ejemplo se muestra el uso de varias características de [!INCLUDE[wf](..
   
 ##### <a name="to-clean-up"></a>Para realizar una limpieza  
   
-1.  En un símbolo de sistema de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], navegue a la carpeta DocumentApprovalProcess y ejecute Cleanup.cmd.  
-  
-## <a name="see-also"></a>Vea también
+1.  En un símbolo de sistema de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], navegue a la carpeta DocumentApprovalProcess y ejecute Cleanup.cmd.

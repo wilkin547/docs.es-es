@@ -4,19 +4,17 @@ description: Conozca las diferencias entre los archivos csproj de .NET Core y lo
 keywords: referencia, csproj, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 05/24/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
+ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63c7a6f0aa3a926c7ae01ad6c434ecf296c81811
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
 En este documento se describen los cambios que se han agregado a los archivos de proyecto como parte del cambio de *project.json* a *csproj* y [MSBuild](https://github.com/Microsoft/MSBuild). Para obtener más información sobre la sintaxis y la referencia del archivo de proyecto general, consulte la documentación del [archivo de proyecto de MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
@@ -39,10 +37,11 @@ Se hace una referencia implícita a los metapaquetes basándose en los marcos de
 ### <a name="recommendations"></a>Recomendaciones
 Como se hace referencia implícitamente a los metapaquetes `Microsoft.NETCore.App` o `NetStandard.Library`, estos son los procedimientos recomendados:
 
-* Nunca tenga una referencia explícita a los metapaquetes `Microsoft.NETCore.App` o `NetStandard.Library` a través de un elemento `<PackageReference>` en el archivo de proyecto.
-* Si necesita una versión específica del tiempo de ejecución, debe usar la propiedad `<RuntimeFrameworkVersion>` de su proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia al metapaquete.
+* Cuando el destino es .NET Core o el estándar. NET, nunca tienen una referencia explícita a la `Microsoft.NETCore.App` o `NetStandard.Library` metapackages a través de un `<PackageReference>` elemento en el archivo de proyecto.
+* Si necesita una versión específica del tiempo de ejecución cuando el destino es .NET Core, debe usar el `<RuntimeFrameworkVersion>` propiedad del proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia a la metapackage.
     * Esto puede ocurrir si está usando [implementaciones autocontenidas](../deploying/index.md#self-contained-deployments-scd) y necesita una versión de revisión específica del tiempo de ejecución de LTS 1.0.0, por ejemplo.
-* Si necesita una versión específica del metapaquete `NetStandard.Library`, puede usar la propiedad `<NetStandardImplicitPackageVersion>` y establecer la versión necesaria. 
+* Si necesita una versión específica de la `NetStandard.Library` metapackage cuando el destino es .NET estándar, puede usar el `<NetStandardImplicitPackageVersion>` propiedad y establezca la versión necesita.
+* No agregar o actualizar las referencias a cualquiera explícitamente la `Microsoft.NETCore.App` o `NetStandard.Library` metapackage en proyectos de .NET Framework. Si cualquier versión de `NetStandard.Library` es necesaria cuando se utiliza un paquete de NuGet basada en .NET estándar, NuGet automáticamente instala esa versión.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Inclusiones de compilación predeterminadas en proyectos .NET Core
 Con el cambio al formato *csproj* en las últimas versiones del SDK, hemos trasladado las inclusiones y exclusiones predeterminadas para los elementos de compilación y los recursos incrustados a los archivos de propiedades del SDK. Esto implica que ya no tiene que especificar dichos elementos en el archivo del proyecto. 
@@ -71,6 +70,15 @@ Para evitar este error, puede quitar los elementos `Compile` explícitos que coi
 Al establecer esta propiedad en `false`, se invalidará la inclusión implícita y el comportamiento se revertirá a los SDK anteriores en los que tenía que especificar los globs predeterminados en el proyecto. 
 
 Este cambio no modifica los mecanismos principales de otras inclusiones. En cambio, si quiere especificar, por ejemplo, que algunos archivos se publiquen con la aplicación, puede seguir usando los mecanismos con los que está familiarizado en *csproj* (por ejemplo, el elemento `<Content>`).
+
+`<EnableDefaultCompileItems>`sólo se deshabilita `Compile` globs pero no afecta a otros globs, al igual que la parte implícita `None` glob, que también se aplica a \*.cs elementos. Debido a eso, **el Explorador de soluciones** continuará mostrar \*.cs elementos como parte del proyecto, incluido como `None` elementos. De forma similar, puede usar `<EnableDefaultNoneItems>` para deshabilitar la parte implícita `None` glob.
+
+Para deshabilitar **globs implícita todos los**, puede establecer la `<EnableDefaultItems>` propiedad `false` como en el ejemplo siguiente:
+```xml
+<PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
 
 ### <a name="recommendation"></a>Recomendación
 Con csproj, se recomienda quitar los globs predeterminados del proyecto y agregar solo rutas de archivos con globs para aquellos artefactos que su aplicación o biblioteca necesita para varios escenarios (por ejemplo, tiempo de ejecución y empaquetado NuGet).
@@ -261,4 +269,3 @@ Ruta de acceso base para el archivo *.nuspec*.
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 Lista separada por punto y coma de pares clave=valor.
-

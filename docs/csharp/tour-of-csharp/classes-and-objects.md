@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
+ms.openlocfilehash: 37e04e918ead283f474899a9421aee2140ab7c11
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c71aee3dbfb6544973e1527955ca03deb6b569f3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="classes-and-objects"></a>Clases y objetos
 
@@ -74,6 +73,8 @@ Cada miembro de una clase tiene asociada una accesibilidad, que controla las reg
     - Acceso limitado a la clase contenedora o a las clases derivadas de la clase contenedora
 * `private`
     - Acceso limitado a esta clase
+* `private protected`
+    - Acceso limitado a la clase o clases de contenedor derivado de la dentro del tipo que contiene el mismo ensamblado
 
 ## <a name="type-parameters"></a>Parámetros de tipo
 
@@ -140,7 +141,7 @@ Un *parámetro de salida* se usa para pasar argumentos mediante una referencia. 
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-Una *matriz de parámetros* permite que se pasen a un método un número variable de argumentos. Una matriz de parámetros se declara con el modificador `params`. Solo el último parámetro de un método puede ser una matriz de parámetros y el tipo de una matriz de parámetros debe ser un tipo de matriz unidimensional. Los métodos Write y WriteLine de la clase `@System.Console` son buenos ejemplos de uso de la matriz de parámetros. Se declaran de la manera siguiente.
+Una *matriz de parámetros* permite que se pasen a un método un número variable de argumentos. Una matriz de parámetros se declara con el modificador `params`. Solo el último parámetro de un método puede ser una matriz de parámetros y el tipo de una matriz de parámetros debe ser un tipo de matriz unidimensional. Los métodos Write y WriteLine de la clase <xref:System.Console?displayProperty=nameWithType> son buenos ejemplos de uso de la matriz de parámetros. Se declaran de la manera siguiente.
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -301,4 +302,3 @@ La instrucción `using` proporciona un mejor enfoque para la destrucción de obj
 >[!div class="step-by-step"]
 [Anterior](statements.md)
 [Siguiente](structs.md)
-

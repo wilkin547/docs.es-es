@@ -10,25 +10,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
+ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="lambda-expressions"></a>Expresiones lambda #
 
 Una *expresión lambda* es un bloque de código (una expresión o un bloque de instrucciones) que se trata como un objeto. Se puede pasar como argumento a los métodos y también la pueden devolver las llamadas al método. Las expresiones lambda se usan mayoritariamente para:
 
-- Pasar el código que se debe ejecutar a métodos asincrónicos, como @System.Threading.Tasks.Task.Run(System.Action).
+- Pasar el código que es que se ejecute a métodos asincrónicos, como <xref:System.Threading.Tasks.Task.Run(System.Action)>.
 
 - Escribir [expresiones de consulta LINQ](linq/index.md).
 
 - Crear [árboles de expresión](expression-trees-building.md).
 
-Las expresiones lambda son un código que se puede representar como un delegado o como un árbol de expresión que se compila en un delegado. El tipo de delegado específico de una expresión lambda depende de sus parámetros y del valor devuelto. Las expresiones lambda que no devuelven ningún valor corresponden a un delegado `Action` específico, según el número de parámetros. Las expresiones lambda que devuelven un valor corresponden a un delegado `Func` específico, según el número de parámetros. Por ejemplo, una expresión lambda que tiene dos parámetros pero que no devuelve ningún valor corresponde a un delegado @System.Action%602. Una expresión lambda que tiene un parámetro y devuelve un valor corresponde a un delegado @System.Func%602.
+Las expresiones lambda son un código que se puede representar como un delegado o como un árbol de expresión que se compila en un delegado. El tipo de delegado específico de una expresión lambda depende de sus parámetros y del valor devuelto. Las expresiones lambda que no devuelven ningún valor corresponden a un delegado `Action` específico, según el número de parámetros. Las expresiones lambda que devuelven un valor corresponden a un delegado `Func` específico, según el número de parámetros. Por ejemplo, una expresión lambda que tiene dos parámetros, pero no devuelve ningún valor corresponde a un <xref:System.Action%602> delegar. Una expresión lambda que tiene un parámetro y devuelve un valor que corresponde a <xref:System.Func%602> delegar.
 
 Una expresión lambda usa `=>`, el [operador de declaración lambda](language-reference/operators/lambda-operator.md), para separar del código ejecutable la lista de parámetros de la lambda. Para crear una expresión lambda, especifique los parámetros de entrada (si existen) a la izquierda del operador lambda y coloque el bloque de expresiones o de instrucciones en el otro lado. Por ejemplo, la expresión lambda de una sola línea `x => x * x` especifica un parámetro denominado `x` y devuelve el valor de `x` al cuadrado. Puede asignar esta expresión a un tipo delegado, como se muestra en el ejemplo siguiente:
 
@@ -98,7 +96,7 @@ Para obtener más información sobre la compatibilidad de las tuplas en C#, vea 
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas con los operadores de consulta estándar ##
 
-LINQ to Objects, entre otras implementaciones, tiene un parámetro de entrada cuyo tipo es uno de la familia @System.Func%601 de delegados genéricos. Estos delegados usan parámetros de tipo para definir el número y el tipo de los parámetros de entrada, así como el tipo de valor devuelto del delegado. Los delegados `Func` son muy útiles para encapsular expresiones definidas por el usuario que se aplican a cada elemento en un conjunto de datos de origen. Por ejemplo, imagínese que tiene el delegado @System.Func%601, cuya sintaxis es la siguiente:
+LINQ a objetos, entre otras implementaciones tienen un parámetro de entrada cuyo tipo es uno de los <xref:System.Func%601> familia de los delegados genéricos. Estos delegados usan parámetros de tipo para definir el número y el tipo de los parámetros de entrada, así como el tipo de valor devuelto del delegado. Los delegados `Func` son muy útiles para encapsular expresiones definidas por el usuario que se aplican a cada elemento en un conjunto de datos de origen. Por ejemplo, considere la <xref:System.Func%601> delegado, cuya sintaxis es:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -110,7 +108,7 @@ donde `int` es un parámetro de entrada y `bool` es el valor devuelto. El valor 
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-También puede proporcionar una expresión lambda cuando el tipo de argumento es @System.Linq.Expressions.Expression%601 (por ejemplo, en los operadores de consulta estándar que se definen en el tipo @System.Linq.Queryable ). Al especificar un argumento @System.Linq.Expressions.Expression%601, la lambda se compila en un árbol de expresión. En el ejemplo siguiente se usa el operador de consulta estándar [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
+También puede proporcionar una expresión lambda cuando el tipo de argumento es un <xref:System.Linq.Expressions.Expression%601>, por ejemplo, en los operadores de consulta estándar que se definen en el <xref:System.Linq.Queryable> tipo. Cuando se especifica un <xref:System.Linq.Expressions.Expression%601> argumento, la expresión lambda se compila en un árbol de expresión. En el ejemplo siguiente se usa el operador de consulta estándar [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
@@ -138,7 +136,7 @@ Las reglas generales para la inferencia de tipos de las lambdas son las siguient
 
 - El valor devuelto de la lambda (si existe) debe poder convertirse implícitamente al tipo de valor devuelto del delegado.
 
-Observe que las expresiones lambda, en sí mismas, no tienen tipo, ya que el sistema de tipos comunes no tiene ningún concepto intrínseco de "expresión lambda". Sin embargo, a veces resulta práctico hablar coloquialmente del "tipo" de una expresión lambda. En estos casos, el tipo hace referencia al tipo del delegado o el tipo de @System.Linq.Expressions.Expression en el que se convierte la expresión lambda.
+Observe que las expresiones lambda, en sí mismas, no tienen tipo, ya que el sistema de tipos comunes no tiene ningún concepto intrínseco de "expresión lambda". Sin embargo, a veces resulta práctico hablar coloquialmente del "tipo" de una expresión lambda. En estos casos, el tipo hace referencia al tipo del delegado o el tipo de <xref:System.Linq.Expressions.Expression> en el que se convierte la expresión lambda.
 
 ## <a name="variable-scope-in-lambda-expressions"></a>Ámbito de las variables en las expresiones lambda ##
 
@@ -163,4 +161,3 @@ Las lambdas pueden hacer referencia a las *variables externas* (vea [Métodos an
 [LINQ (Language-Integrated Query)](../standard/using-linq.md)   
 [Métodos anónimos](programming-guide/statements-expressions-operators/anonymous-methods.md)   
 [Árboles de expresión](expression-trees.md)
-

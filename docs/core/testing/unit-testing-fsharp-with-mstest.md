@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.topic: article
+dev_langs: fsharp
 ms.prod: .net-core
+ms.openlocfilehash: f8ea697596f144fdd6d50c871399388a075ba935
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: f07569a4d352162f9d6e9a13ab1c5eb921077416
-ms.contentlocale: es-es
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y MSTest
 
@@ -29,7 +29,7 @@ En el directorio de la solución, cree un directorio *MathService*. Esta es la e
     /MathService
 ```
 
-Convierta *MathService* en el directorio actual y ejecute [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) para crear el proyecto de origen.  Para usar el desarrollo controlado por pruebas (TDD), tendrá que crear una implementación de errores del servicio de matemáticas:
+Make *MathService* the current directory and run [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) to create the source project.  Para usar el desarrollo controlado por pruebas (TDD), tendrá que crear una implementación de errores del servicio de matemáticas:
 
 ```fsharp
 module MyMath =
@@ -179,4 +179,3 @@ let sumOfSquares xs =
 ```
 
 Ha creado una biblioteca pequeña y un conjunto de pruebas unitarias para esa biblioteca. Ha estructurado la solución, por lo que agregar pruebas y paquetes nuevos es parte del flujo de trabajo normal. Ha centrado la mayor parte del tiempo y del esfuerzo en resolver los objetivos de la aplicación.
-

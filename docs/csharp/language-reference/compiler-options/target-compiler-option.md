@@ -1,43 +1,24 @@
 ---
 title: -target (Opciones del compilador de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /target
-dev_langs:
-- CSharp
+f1_keywords: /target
 helpviewer_keywords:
 - target compiler options [C#]
 - /target compiler options [C#]
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4666f0305fc2de35c1fa594ccef3dd3a64c0f67c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="target-c-compiler-options"></a>/target (Opciones del compilador de C#)
 La opción del compilador **/target** se puede especificar en uno de cuatro formatos:  
@@ -60,7 +41,7 @@ La opción del compilador **/target** se puede especificar en uno de cuatro form
  [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  Para crear un archivo .winmdobj intermedio.  
   
- A menos que se especifique **/target:module**, **/target** hace que se coloque un manifiesto de ensamblado de .NET Framework en un archivo de salida. Para más información, vea [Ensamblados en Common Language Runtime](https://msdn.microsoft.com/library/k3677y81) y [Atributos comunes](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b).  
+ A menos que se especifique **/target:module**, **/target** hace que se coloque un manifiesto de ensamblado de .NET Framework en un archivo de salida. Para más información, vea [Ensamblados en Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) y [Atributos comunes](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  El manifiesto de ensamblado se coloca en el primer archivo de salida .exe de la compilación o en el primer archivo DLL si no hay ningún archivo de salida .exe. Por ejemplo, en la siguiente línea de comandos, el manifiesto se colocará en `1.exe`:  
   
@@ -86,7 +67,6 @@ public class TestClass
  Para obtener más información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)   
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)  
  [/subsystemversion (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
-

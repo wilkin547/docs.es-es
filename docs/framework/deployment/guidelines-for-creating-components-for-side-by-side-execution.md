@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 246cd565cd9ab981a993fcbee588783ec4e4e8fb
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Instrucciones para crear componentes para la ejecución en paralelo
 Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:  
@@ -78,6 +71,5 @@ Siga estas instrucciones generales para crear aplicaciones administradas o compo
  La [herramienta de caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) permite reemplazar un ensamblado solo cuando el número de versión del archivo es más reciente. Generalmente, el programa de instalación no instala encima de un ensamblado a menos que el número de versión del ensamblado sea mayor.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md)   
+ [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md)  
  [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-

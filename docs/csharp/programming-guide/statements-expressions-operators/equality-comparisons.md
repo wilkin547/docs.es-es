@@ -1,39 +1,19 @@
 ---
 title: "Comparaciones de igualdad (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- object equality [C#]
+helpviewer_keywords: object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (Guía de programación de C#)
 A veces es necesario comparar si dos valores son iguales. En algunos casos, se prueba la *igualdad de valores*, también denominada *equivalencia*, lo que significa que los valores contenidos en las dos variables son iguales. En otros casos, hay que determinar si dos variables hacen referencia al mismo objeto subyacente de la memoria. Este tipo de igualdad se denomina *igualdad de referencia* o *identidad*. En este tema se describen estos dos tipos de igualdad y se proporcionan vínculos a otros temas para obtener más información.  
@@ -41,7 +21,7 @@ A veces es necesario comparar si dos valores son iguales. En algunos casos, se p
 ## <a name="reference-equality"></a>Igualdad de referencia  
  La igualdad de referencia significa que dos referencias de objeto hacen referencia al mismo objeto subyacente. Esto puede suceder mediante una asignación simple, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  En este código, se crean dos objetos, pero después de la instrucción de asignación, ambas referencias hacen referencia al mismo objeto. Por consiguiente, presentan igualdad de referencia. Use el método <xref:System.Object.ReferenceEquals%2A> para determinar si dos referencias hacen referencia al mismo objeto.  
   
@@ -66,7 +46,7 @@ if( b == a)
  En cambio, no hay ningún requisito que exija que la equivalencia se base en todos los campos de un tipo. Se puede basar en un subconjunto. Al comparar tipos que no sean de su propiedad, es importante asegurarse concretamente de cómo se define la equivalencia para ese tipo. Para obtener más información sobre cómo definir la igualdad de valores en sus propias clases y structs, vea [Cómo: Definir la igualdad de valores para un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Igualdad de valores en valores de número de punto flotante  
- Las comparaciones de igualdad de valores de punto flotante ([double](../../../csharp/language-reference/keywords/double.md) y [float](../../../csharp/language-reference/keywords/float.md)) son problemáticas debido a la imprecisión de la aritmética de número de punto flotante en los equipos binarios. Para obtener más información, vea los comentarios en el tema <xref:System.Double?displayProperty=fullName>.  
+ Las comparaciones de igualdad de valores de punto flotante ([double](../../../csharp/language-reference/keywords/double.md) y [float](../../../csharp/language-reference/keywords/float.md)) son problemáticas debido a la imprecisión de la aritmética de número de punto flotante en los equipos binarios. Para obtener más información, vea los comentarios en el tema <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
@@ -79,4 +59,3 @@ if( b == a)
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-

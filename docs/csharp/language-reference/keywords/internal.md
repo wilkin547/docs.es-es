@@ -1,44 +1,29 @@
 ---
 title: internal (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - internal_CSharpKeyword
 - internal
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- internal keyword [C#]
+helpviewer_keywords: internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a3b115022ed2b38dfcfbbfad3c5fc00e0203b255
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5674a78e2c317357c31d9e2661a25ce86cbf4f6a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="internal-c-reference"></a>internal (Referencia de C#)
-La palabra clave `internal` es un [modificador de acceso](../../../csharp/language-reference/keywords/access-modifiers.md) para tipos y miembros de tipo. Solo se puede tener acceso a los tipos internos o los miembros desde los archivos del mismo ensamblado, como en este ejemplo:  
+La palabra clave `internal` es un [modificador de acceso](../../../csharp/language-reference/keywords/access-modifiers.md) para tipos y miembros de tipo. 
+  
+ > Esta página cubre `internal` acceso. El `internal` palabra clave es también parte de la [ `protected internal` ](./protected-internal.md) modificador de acceso.
+  
+Solo se puede tener acceso a los tipos internos o los miembros desde los archivos del mismo ensamblado, como en este ejemplo:  
   
 ```  
 public class BaseClass   
@@ -47,9 +32,7 @@ public class BaseClass
     internal static int x = 0;  
 }  
 ```  
-  
- Se puede obtener acceso a los tipos o miembros que tienen el modificador de acceso `protected internal` desde el ensamblado actual o desde tipos que se derivan de la clase contenedora.  
-  
+
  Para obtener una comparación de `internal` con los demás modificadores de acceso, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md) y [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Para más información sobre los ensamblados, vea [Ensamblados y caché global de ensamblados](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
@@ -111,13 +94,12 @@ public class TestAccess
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Modificadores de acceso](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Modificadores de acceso](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
  [protected](../../../csharp/language-reference/keywords/protected.md)
-

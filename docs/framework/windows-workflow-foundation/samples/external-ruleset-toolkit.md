@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6e3ec30edc65fd136fff56b1469664a6ba3b44f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9ff7a7e7cfd29ea6e5029219115b4bfff1c6895c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de herramientas de RuleSet externo
 Normalmente cuando las reglas se utilizan dentro de una aplicación de flujo de trabajo, las reglas forman parte del ensamblado. En algunos escenarios, puede desear mantener separadamente RuleSets del ensamblado para que se puedan actualizar sin recompilar e implementar el ensamblado de flujo de trabajo. Este ejemplo le permite administrar y editar RuleSets en una base de datos y acceder a ellos desde un flujo de trabajo en tiempo de ejecución. Esto habilita las instancias de flujo de trabajo en ejecución para que incorporen automáticamente los cambios de RuleSet.  
@@ -143,6 +143,4 @@ Normalmente cuando las reglas se utilizan dentro de una aplicación de flujo de 
 10. Ahora puede ejecutar el proyecto `RuleSetToolkitUsageSample` como lo haría con cualquier otra aplicación de consola del flujo de trabajo. Presione F5 ó Ctrl+F5 dentro de [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] o ejecute directamente el archivo RuleSetToolkitUsageSample.exe.  
   
     > [!NOTE]
-    >  Debe cerrar la herramienta RuleSet para recompilar el ejemplo de uso, porque la herramienta carga el ensamblado del ejemplo de uso.  
-  
-## <a name="see-also"></a>Vea también
+    >  Debe cerrar la herramienta RuleSet para recompilar el ejemplo de uso, porque la herramienta carga el ensamblado del ejemplo de uso.

@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 30aa268fbfa8a6f59491de30dbde6508ccdd7a68
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: affc9d1638148971dd9c57969c75166facfd545c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="auto-confirm-pattern"></a>Patrón de autoconfirmación
 Este ejemplo consta de tres escenarios que se ejecutan para mostrar una actividad `AutoConfirmScope` personalizada. En el primer ejemplo se muestra la ejecución correcta de una secuencia de cuatro actividades de compensación, donde las actividades segunda y tercera están anidadas en una actividad `AutoConfirmScope`. En el segundo ejemplo se muestra la misma secuencia, con una excepción que se produce después de la ejecución de la cuarta actividad <xref:System.Activities.Statements.CompensableActivity>. En el tercer escenario se muestra la misma secuencia, con una excepción que se produce en la actividad `AutoConfirmScope` después de que se complete la segunda actividad <xref:System.Activities.Statements.CompensableActivity>.  
@@ -46,6 +46,4 @@ Este ejemplo consta de tres escenarios que se ejecutan para mostrar una activida
 >   
 >  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`  
-  
-## <a name="see-also"></a>Vea también
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

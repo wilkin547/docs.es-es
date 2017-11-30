@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - resource files, deploying
@@ -31,16 +33,15 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c91195c4e70366a3feb7a96f80e4e44dda89239e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5de456ff1a371a43241dba3b47be7dcd80bf8f70
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empaquetar e implementar recursos en aplicaciones de escritorio
 Las aplicaciones se basan en el Administrador de recursos de .NET Framework, representado por la clase <xref:System.Resources.ResourceManager>, para recuperar recursos localizados. El Administrador de recursos da por supuesto que se usa un modelo de concentrador y radio para empaquetar e implementar los recursos. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación. Se trata de la referencia cultural cuyos recursos se usarán si no se encuentran recursos localizados. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural, pero no contiene código.  
@@ -63,7 +64,7 @@ Las aplicaciones se basan en el Administrador de recursos de .NET Framework, rep
  Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Vea la lista completa de nombres de referencia cultural en [National Language Support (NLS) API Reference](http://go.microsoft.com/fwlink/?LinkId=200048) (Referencia de la API de compatibilidad con el idioma nacional [NLS]) en el Centro de desarrolladores Go Global.  
   
 > [!NOTE]
->  Para obtener información sobre cómo crear archivos de recursos, vea [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) (Crear archivos de recursos) y [Creating Satellite Assemblies](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) (Crear ensamblados satélite) en MSDN Library.  
+>  Para obtener información acerca de cómo crear archivos de recursos, consulte [crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) y [crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
   
 <a name="cpconpackagingdeployingresourcesanchor1"></a>   
 ## <a name="the-resource-fallback-process"></a>El proceso de reserva de recursos  
@@ -84,7 +85,7 @@ Las aplicaciones se basan en el Administrador de recursos de .NET Framework, rep
   
 3.  Después, el tiempo de ejecución consulta Windows Installer para determinar si el ensamblado satélite se va a instalar a petición. Si es así, controla la instalación, carga el ensamblado y busca en él el recurso solicitado. Si encuentra el recurso en el ensamblado, lo usará. Si no encuentra el recurso, seguirá con la búsqueda.  
   
-4.  El tiempo de ejecución genera el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> para indicar que no ha podido encontrar el ensamblado satélite. Si opta por controlar el evento, el controlador de eventos puede devolver una referencia al ensamblado satélite cuyos recursos se usarán para la búsqueda. En caso contrario, el controlador de eventos devuelve `null` y continúa la búsqueda.  
+4.  El tiempo de ejecución genera el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para indicar que no ha podido encontrar el ensamblado satélite. Si opta por controlar el evento, el controlador de eventos puede devolver una referencia al ensamblado satélite cuyos recursos se usarán para la búsqueda. En caso contrario, el controlador de eventos devuelve `null` y continúa la búsqueda.  
   
 5.  Luego, el tiempo de ejecución busca de nuevo en la caché global de ensamblados el ensamblado principal de la referencia cultural solicitada. Si el ensamblado principal existe en la caché global de ensamblados, el tiempo de ejecución busca en el ensamblado el recurso solicitado.  
   
@@ -94,9 +95,9 @@ Las aplicaciones se basan en el Administrador de recursos de .NET Framework, rep
   
 7.  Después, el tiempo de ejecución consulta Windows Installer para determinar si el ensamblado satélite principal se va a instalar a petición. Si es así, controla la instalación, carga el ensamblado y busca en él el recurso solicitado. Si encuentra el recurso en el ensamblado, lo usará. Si no encuentra el recurso, seguirá con la búsqueda.  
   
-8.  El tiempo de ejecución genera el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> para indicar que no ha podido encontrar un recurso de reserva apropiado. Si opta por controlar el evento, el controlador de eventos puede devolver una referencia al ensamblado satélite cuyos recursos se usarán para la búsqueda. En caso contrario, el controlador de eventos devuelve `null` y continúa la búsqueda.  
+8.  El tiempo de ejecución genera el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para indicar que no ha podido encontrar un recurso de reserva apropiado. Si opta por controlar el evento, el controlador de eventos puede devolver una referencia al ensamblado satélite cuyos recursos se usarán para la búsqueda. En caso contrario, el controlador de eventos devuelve `null` y continúa la búsqueda.  
   
-9. Después, el tiempo de ejecución busca ensamblados principales, como en los tres pasos anteriores, en varios niveles posibles. Cada referencia cultural tiene un solo elemento principal, que se define mediante la propiedad <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=fullName>, pero un elemento principal puede tener su propio elemento principal. La búsqueda de referencias culturales principales se detiene cuando la propiedad <xref:System.Globalization.CultureInfo.Parent%2A> de una referencia cultural devuelve <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>. Para la reserva de recursos, la referencia cultural invariable no se considera una referencia cultural principal ni una referencia cultural que pueda tener recursos.  
+9. Después, el tiempo de ejecución busca ensamblados principales, como en los tres pasos anteriores, en varios niveles posibles. Cada referencia cultural tiene un solo elemento principal, que se define mediante la propiedad <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, pero un elemento principal puede tener su propio elemento principal. La búsqueda de referencias culturales principales se detiene cuando la propiedad <xref:System.Globalization.CultureInfo.Parent%2A> de una referencia cultural devuelve <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Para la reserva de recursos, la referencia cultural invariable no se considera una referencia cultural principal ni una referencia cultural que pueda tener recursos.  
   
 10. Si se ha buscado en la referencia cultural especificada inicialmente y en todos los elementos principales y el recurso sigue sin encontrarse, se usa el recurso de la referencia cultural predeterminada (de reserva). Normalmente, los recursos de la referencia cultural predeterminada se incluyen en el ensamblado de la aplicación principal. Aun así, puede especificar un valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> para la propiedad <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> del atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para indicar que la ubicación de reserva definitiva para los recursos es un ensamblado satélite, en lugar del ensamblado principal.  
   
@@ -115,7 +116,7 @@ Las aplicaciones se basan en el Administrador de recursos de .NET Framework, rep
   
 -   Los ensamblados satélite no se instalan a petición.  
   
--   El código de la aplicación no controla el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   El código de la aplicación no controla el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
  Para optimizar el sondeo de ensamblados satélite, incluya el elemento [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) y establezca su atributo `enabled` en `true` en el archivo de configuración de la aplicación, como se muestra en el ejemplo siguiente.  
   
@@ -133,10 +134,10 @@ Las aplicaciones se basan en el Administrador de recursos de .NET Framework, rep
   
 -   El tiempo de ejecución no consulta Windows Installer para la instalación a petición de ensamblados satélite.  
   
--   Si se produce un error en el sondeo de un ensamblado de recurso en particular, el tiempo de ejecución no genera el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   Si se produce un error en el sondeo de un ensamblado de recurso en particular, el tiempo de ejecución no genera el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Reserva definitiva en ensamblado satélite  
- Como alternativa, puede quitar recursos del ensamblado principal y especificar que el tiempo de ejecución debe cargar los recursos de reserva definitiva de un ensamblado satélite correspondiente a una referencia cultural específica. Para controlar el proceso de reserva, use el constructor <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=fullName> y proporcione un valor para el parámetro <xref:System.Resources.UltimateResourceFallbackLocation> que especifique si el Administrador de recursos debe extraer los recursos de reserva del ensamblado principal o de un ensamblado satélite.  
+ Como alternativa, puede quitar recursos del ensamblado principal y especificar que el tiempo de ejecución debe cargar los recursos de reserva definitiva de un ensamblado satélite correspondiente a una referencia cultural específica. Para controlar el proceso de reserva, use el constructor <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> y proporcione un valor para el parámetro <xref:System.Resources.UltimateResourceFallbackLocation> que especifique si el Administrador de recursos debe extraer los recursos de reserva del ensamblado principal o de un ensamblado satélite.  
   
  En el ejemplo siguiente se usa el atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para almacenar los recursos de reserva de una aplicación en un ensamblado satélite para el idioma francés (fr).  El ejemplo tiene dos archivos de recursos basados en texto que definen un recurso de cadena única denominado `Greeting`. El primero, resources.fr.txt, contiene un recurso de idioma francés.  
   
@@ -168,7 +169,8 @@ Greeting=Добрый день
   
  El código fuente de la aplicación reside en un archivo denominado Example1.cs o Example1.vb. Incluye el atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para indicar que el recurso de aplicación predeterminado se encuentra en el subdirectorio fr. Crea una instancia del Administrador de recursos, recupera el valor del recurso `Greeting` y lo muestra en la consola.  
   
- [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)] [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+ [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]  
   
  Después, puede compilar código fuente de C# desde la línea de comandos de la manera siguiente:  
   
@@ -190,8 +192,7 @@ Bon jour!
  Las restricciones de tiempo o de presupuesto podrían impedir la creación de un conjunto de recursos para cada una de las referencias culturales secundarias que admite la aplicación. En su lugar, puede crear un único ensamblado satélite para la referencia cultural principal que todas las referencias culturales secundarias relacionadas puedan usar. Por ejemplo, puede proporcionar un único ensamblado satélite en inglés (en) para que lo recuperen los usuarios que soliciten recursos en inglés específicos de una región y un único ensamblado satélite en alemán (de) para los usuarios que soliciten recursos en alemán específicos de una región. Por ejemplo, las solicitudes de alemán de Alemania (de-DE), Austria (de-AT) y Suiza (de-CH) recurrirán al ensamblado satélite en alemán (de). Los recursos predeterminados constituyen la reserva final y, por tanto, deben ser los recursos que solicitará la mayoría de los usuarios de la aplicación, por lo que debe elegir cuidadosamente estos recursos. Este método implementa recursos menos específicos de la referencia cultural, pero puede reducir considerablemente los costos de localización de la aplicación.  
   
 ## <a name="see-also"></a>Vea también  
- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)   
- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)   
- [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
+ [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)  
+ [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)  
+ [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
  [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-

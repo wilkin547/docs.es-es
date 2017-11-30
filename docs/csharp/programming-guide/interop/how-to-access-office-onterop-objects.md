@@ -1,12 +1,9 @@
 ---
 title: "Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - optional parameters [C#], Office programming
 - named and optional arguments [C#], Office programming
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 25e83195d5f0d8a49e402a5a32e61940960b052a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ed3716e5c0d8cd143148522a2fb3aed5ec433ab
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
 Visual C# tiene nuevas características que simplifican el acceso a objetos de la API de Office. Las nuevas características incluyen argumentos con nombre y opcionales, un nuevo tipo llamado `dynamic` y la capacidad de pasar argumentos a parámetros de referencia en los métodos COM como si fueran parámetros de valor.  
@@ -82,17 +64,17 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 2.  Agregue las directivas `using` siguientes a la parte superior del archivo de código.  
   
-     [!code-cs[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>Para crear una lista de las cuentas bancarias  
   
 1.  Pegue la definición de clase siguiente en **Program.cs**, bajo la clase `Program`.  
   
-     [!code-cs[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
   
 2.  Agregue el código siguiente al método `Main` para crear una lista `bankAccounts` lista que contenga dos cuentas.  
   
-     [!code-cs[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
   
 ### <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Para declarar un método que exporta información de cuentas a Excel  
   
@@ -100,23 +82,23 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
      El método [Add](http://go.microsoft.com/fwlink/?LinkId=210910) tiene un parámetro opcional para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el código siguiente no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
-     [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
 2.  Agregue el siguiente código al final de `DisplayInExcel`. El código inserta valores en las dos primeras columnas de la primera fila de la hoja de cálculo.  
   
-     [!code-cs[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
   
 3.  Agregue el siguiente código al final de `DisplayInExcel`. El bucle `foreach` coloca la información de la lista de cuentas en las dos primeras columnas de filas sucesivas de la hoja de cálculo.  
   
-     [!code-cs[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
   
 4.  Agregue el código siguiente al final de `DisplayInExcel` para ajustar los anchos de columna a fin de adaptarlos al contenido.  
   
-     [!code-cs[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
      Las versiones anteriores de C# requieren una conversión explícita para estas operaciones, ya que `ExcelApp.Columns[1]` devuelve un `Object`, y `AutoFit` es un método de [rango](http://go.microsoft.com/fwlink/?LinkId=210911) de Excel. Las siguientes líneas muestran la conversión.  
   
-     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
      [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] —y versiones posteriores— convierte automáticamente el `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.  
   
@@ -124,7 +106,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 1.  Agregue la línea siguiente al final de `Main`.  
   
-     [!code-cs[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
   
 2.  Presione CTRL+F5.  
   
@@ -140,19 +122,19 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
      El método `PasteSpecial` inserta el contenido del Portapapeles. El método tiene siete parámetros de referencia, todos ellos opcionales. El siguiente código especifica los argumentos para dos de ellos: `Link`, para crear un vínculo con el origen del contenido del Portapapeles, y `DisplayAsIcon`, para mostrar el vínculo como un icono. En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], puede usar argumentos con nombre para esos dos y omitir los demás. Aunque se trata de parámetros de referencia, no es necesario utilizar la palabra clave `ref` ni crear variables para enviarlas como argumentos. Puede enviar los valores directamente. En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] y versiones anteriores, debe enviar un argumento de variable para cada parámetro de referencia.  
   
-     [!code-cs[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
   
      En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versiones anteriores del lenguaje, es necesario el código siguiente, más complejo.  
   
-     [!code-cs[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
   
 2.  Agregue la siguiente instrucción al final de `Main`.  
   
-     [!code-cs[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
   
 3.  Agregue la siguiente instrucción al final de `DisplayInExcel`. El método `Copy` agrega la hoja de cálculo en el Portapapeles.  
   
-     [!code-cs[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
   
 4.  Presione CTRL+F5.  
   
@@ -166,7 +148,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
      En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], el comportamiento predeterminado es insertar información de tipos en lugar de utilizar los PIA. Debido a ese comportamiento predeterminado, algunos de los ejemplos anteriores se simplifican dado que no es necesaria la conversión explícita. Por ejemplo, la declaración de `worksheet` en `DisplayInExcel` se escribe como `Excel._Worksheet workSheet = excelApp.ActiveSheet` en lugar de `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Las llamadas a `AutoFit` en el mismo método también requerirían conversión explícita sin el valor predeterminado, porque `ExcelApp.Columns[1]` devuelve un `Object` y `AutoFit` es un método de Excel. En el código siguiente se muestra la conversión.  
   
-     [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
 2.  Para cambiar el valor predeterminado y usar los PIA en lugar de insertar información de tipos, expanda el nodo **Referencias** del **Explorador de soluciones** y, después, seleccione **Microsoft.Office.Interop.Excel** o **Microsoft.Office.Interop.Word**.  
   
@@ -178,27 +160,26 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 1.  Reemplace las dos llamadas a `AutoFit` en `DisplayInExcel` con la siguiente instrucción.  
   
-     [!code-cs[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
      El método [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) tiene siete parámetros de referencia, todos ellos opcionales. Los argumentos con nombre y los argumentos opcionales permiten proporcionar argumentos para ninguno, algunos o todos ellos. En la instrucción anterior, se proporciona un argumento para uno solo de los parámetros, `Format`. Puesto que `Format` es el primer parámetro de la lista de parámetros, no es necesario proporcionar el nombre de parámetro. Sin embargo, la instrucción sería más fácil de entender si se incluyese el nombre del parámetro, como se muestra en el código siguiente.  
   
-     [!code-cs[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
 2.  Presione CTRL+F5 para ver el resultado. Otros formatos se enumeran en la enumeración [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967).  
   
 3.  Compare la instrucción del paso 1 con el siguiente código, que muestra los argumentos necesarios en [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versiones anteriores.  
   
-     [!code-cs[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
   
 ## <a name="example"></a>Ejemplo  
  En el código siguiente se muestra el ejemplo completo.  
   
- [!code-cs[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
+ [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Type.Missing?displayProperty=fullName>   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
+ <xref:System.Type.Missing?displayProperty=nameWithType>  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+ [Uso de tipo dinámico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-

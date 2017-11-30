@@ -4,20 +4,18 @@ description: "La publicación crea el conjunto de archivos que se necesitan para
 keywords: ".NET, .NET Core, aplicación de consola, publicación, implementación"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
+ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 025e132cd5b6a44e98a1270e24ba6b2f9f12812c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/13/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publicación de la aplicación Hola a todos con Visual Studio 2017
 
 En [Compilación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017](with-visual-studio.md) o [Compilación de una aplicación Hola a todos en Visual Basic con .NET Core en Visual Studio 2017](vb-with-visual-studio.md), ha compilado una aplicación de consola Hola a todos. En [Depuración de la aplicación Hola a todos en C# con Visual Studio 2017](debugging-with-visual-studio.md), la ha probado con el depurador de Visual Studio. Ahora que está seguro de que funciona como se esperaba, puede publicarla para que otros usuarios puedan ejecutarla. Al realizar la publicación, se crea el conjunto de archivos necesarios para ejecutar la aplicación; y puede implementarlos mediante su copia en un equipo de destino.
@@ -40,15 +38,23 @@ Para publicar y ejecutar la aplicación:
 1. Vaya a la aplicación publicada en el subdirectorio `bin\release\PublishOutput` del directorio del proyecto de la aplicación. Como se muestra en la ilustración siguiente, el resultado publicado incluye los siguientes cuatro archivos:
 
       * *HelloWorld.deps.json*
+
+         Archivo de dependencias de tiempo de ejecución de la aplicación. Define los componentes principales de .NET y las bibliotecas (incluida la biblioteca de vínculos dinámicos que contiene la aplicación) necesitan para ejecutar la aplicación. Para obtener más información, consulte [archivos de configuración en tiempo de ejecución](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+ 
       * *HelloWorld.dll*
+
+         El archivo que contiene la aplicación. Es una biblioteca de vínculos dinámicos que se pueden ejecutar mediante la especificación de la `dotnet HelloWorld.dll` comando en una ventana de consola. 
+
       * *HelloWorld.pdb* (opcional para la implementación)
+
+         Un archivo que contiene los símbolos de depuración. No necesita implementar este archivo junto con su aplicación, aunque se debe guardar en caso de que necesite depurar la versión publicada de la aplicación.
+
       * *HelloWorld.runtimeconfig.json*
 
-   El archivo *HelloWorld.pdb* contiene símbolos de depuración. No necesita implementar este archivo junto con su aplicación, aunque se debe guardar en caso de que necesite depurar la versión publicada de la aplicación.
+         Archivo de configuración de la aplicación en tiempo de ejecución. Identifica la versión de .NET Core que la aplicación se ha compilado. Para obtener más información, consulte [archivos de configuración en tiempo de ejecución](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
 
    ![Ventana de la consola que muestra los archivos publicados](media/publishing-with-visual-studio/publishedfiles.png)
 
 El proceso de publicación crea una implementación dependiente del marco, que es un tipo de implementación donde la aplicación publicada se ejecutará en cualquier plataforma compatible con .NET Core con .NET Core instalado en el sistema. Los usuarios pueden ejecutar la aplicación mediante la emisión del comando `dotnet HelloWorld.dll` desde una ventana de consola.
 
 Para más información sobre cómo publicar e implementar aplicaciones de .NET Core, consulte [Implementación de aplicaciones .NET Core](../../core/deploying/index.md).
-

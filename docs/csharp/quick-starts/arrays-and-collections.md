@@ -9,25 +9,26 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 51b190fba32186cb4c52ccd773274d9ae22c8efb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="c-quick-start-collections"></a>Inicio rápido de C#: colecciones #
 
-En este tutorial se proporciona una introducción al lenguaje C# y se exponen los conceptos básicos de la clase <xref:System.Collections.Generic.List%601>.
+Este inicio rápido proporciona una introducción al lenguaje C# y los conceptos básicos de la <xref:System.Collections.Generic.List%601> clase.
 
-## <a name="a-simple-list-example"></a>A continuación, se presenta un ejemplo de lista sencillo.
+Este inicio rápido en el que se espera que debe disponer de una máquina que se puede usar para el desarrollo. El tema de .NET [empezar a trabajar en 10 minutos](https://www.microsoft.com/net/core) tiene instrucciones sobre cómo configurar el entorno de desarrollo local en Linux, Mac o PC.
 
-> [!NOTE]
-> Si va a empezar a partir del código que escribió en [dot.net](https://dot.net/), ya tendrá el código que se indica en esta sección. Vaya a la sección [Modificación del contenido de las listas](#modify-list-contents).
-
-En esta lección se da por supuesto que ha completado los inicios rápidos en línea y ha instalado el [SDK de .NET Core](http://dot.net/core) y [Visual Studio Code](https://code.visualstudio.com/). 
+## <a name="a-basic-list-example"></a>Un ejemplo de lista básica.
 
 Cree un directorio denominado **inicio rápido-lista**. Conviértalo en el directorio actual y ejecute `dotnet new console`.
 
+> [!NOTE]
+> Si acaba de completar [Introducción a .NET en 10 minutos](https://www.microsoft.com/net), puede seguir usando la aplicación myApp que acaba de crear.
+ 
 Abra **Program.cs** en su editor favorito y reemplace el código existente por el siguiente:
 
 ```csharp
@@ -213,10 +214,10 @@ Trate de recopilar los conocimientos que ha aprendido en esta lección y en las 
 
 ## <a name="complete-challenge"></a>Desafío completo
 
-Puede ver un ejemplo de solución si [consulta el ejemplo de código terminado en GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs).
+Puede ver un ejemplo de solución si [consulta el ejemplo de código terminado en GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23).
 
 Con cada iteración del bucle, se obtienen los dos últimos enteros de la lista, se suman y se agrega el valor resultante a la lista. El bucle se repite hasta que se hayan agregado veinte elementos a la lista.
 
-Enhorabuena, ha completado el tutorial sobre las listas.
+Enhorabuena, ha completado el inicio rápido de la lista. Puede continuar con la [Introducción a las clases](introduction-to-classes.md) inicio rápido en su propio entorno de desarrollo.
 
 Puede obtener más información sobre cómo trabajar con el tipo `List` en el tema de la [Guía de .NET](../../standard/index.md) que trata sobre las [colecciones](../../standard/collections/index.md). Ahí también podrá conocer muchos otros tipos de colecciones.

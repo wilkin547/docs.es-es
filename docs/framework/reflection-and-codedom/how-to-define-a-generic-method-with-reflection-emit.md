@@ -5,25 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - generics [.NET Framework], reflection emit
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f894d032527611c036e41fff783b31920c354778
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 655ec9d5c53de10e6044cacc0eb8239fefe36489
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Cómo: Definir un método genérico con emisión de reflexión
 El primer procedimiento explica cómo crear un método genérico simple con dos parámetros de tipo y cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo.  
@@ -37,41 +38,50 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
   
 ### <a name="to-define-a-generic-method"></a>Para definir un método genérico  
   
-1.  Antes de comenzar, resulta de utilidad examinar cómo aparece el método genérico cuando se escribe utilizando un lenguaje de alto nivel. El código siguiente se incluye en el código de ejemplo de este tema, junto con el código para llamar al método genérico. El método tiene dos parámetros de tipo, `TInput` y `TOutput`, el segundo de los cuales debe ser de un tipo de referencia (`class`), tener un constructor sin parámetros (`new`) e implementar `ICollection(Of TInput)` (`ICollection<TInput>` en C#). Esta restricción de interfaz garantiza que el método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=fullName> se puede utilizar para agregar los elementos a la colección `TOutput` que crea el método. El método tiene un parámetro formal, `input`, que es una matriz de `TInput`. El método crea una colección de tipo `TOutput` y copia los elementos de `input` en la colección.  
+1.  Antes de comenzar, resulta de utilidad examinar cómo aparece el método genérico cuando se escribe utilizando un lenguaje de alto nivel. El código siguiente se incluye en el código de ejemplo de este tema, junto con el código para llamar al método genérico. El método tiene dos parámetros de tipo, `TInput` y `TOutput`, el segundo de los cuales debe ser de un tipo de referencia (`class`), tener un constructor sin parámetros (`new`) e implementar `ICollection(Of TInput)` (`ICollection<TInput>` en C#). Esta restricción de interfaz garantiza que el método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> se puede utilizar para agregar los elementos a la colección `TOutput` que crea el método. El método tiene un parámetro formal, `input`, que es una matriz de `TInput`. El método crea una colección de tipo `TOutput` y copia los elementos de `input` en la colección.  
   
-     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]  [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]  
+     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
+     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]  
   
-2.  Defina un ensamblado dinámico y un módulo dinámico para contener el tipo al que pertenece el método genérico. En este caso, el ensamblado sólo tiene un módulo, denominado `DemoMethodBuilder1`, y el nombre del módulo es el mismo que el nombre del ensamblado más una extensión. En este ejemplo, el ensamblado se guarda en el disco y se ejecuta, por lo que se especifica <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=fullName>. Puede usar [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar DemoMethodBuilder1.dll y compararlo con el lenguaje intermedio de Microsoft (MSIL) para el método que se muestra en el paso 1.  
+2.  Defina un ensamblado dinámico y un módulo dinámico para contener el tipo al que pertenece el método genérico. En este caso, el ensamblado sólo tiene un módulo, denominado `DemoMethodBuilder1`, y el nombre del módulo es el mismo que el nombre del ensamblado más una extensión. En este ejemplo, el ensamblado se guarda en el disco y se ejecuta, por lo que se especifica <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>. Puede usar [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar DemoMethodBuilder1.dll y compararlo con el lenguaje intermedio de Microsoft (MSIL) para el método que se muestra en el paso 1.  
   
-     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]  [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]  
+     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
+     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]  
   
 3.  Defina el tipo al que pertenece la definición de método genérico. No es necesario que el tipo sea genérico. Una definición de método genérico puede pertenecer tanto a un tipo genérico como no genérico. En este ejemplo, el tipo es una clase, no es genérico y se denomina `DemoType`.  
   
-     [!code-csharp[GenericMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#3)]  [!code-vb[GenericMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#3)]  
+     [!code-csharp[GenericMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#3)]
+     [!code-vb[GenericMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#3)]  
   
 4.  Defina el método genérico. Si los tipos de los parámetros formales de un método genérico se especifican mediante los parámetros de tipo genérico del método genérico, utilice la sobrecarga del método <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%28System.String%2CSystem.Reflection.MethodAttributes%29> para definir el método. Los parámetros de tipo genérico del método todavía no están definidos, por lo que no puede especificar los tipos de los parámetros formales del método en la llamada a <xref:System.Reflection.Emit.TypeBuilder.DefineMethod%2A>. En este ejemplo, el método se denomina `Factory`. El método es público y `static` (`Shared` en Visual Basic).  
   
-     [!code-csharp[GenericMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#4)]  [!code-vb[GenericMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#4)]  
+     [!code-csharp[GenericMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#4)]
+     [!code-vb[GenericMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#4)]  
   
-5.  Defina los parámetros de tipo genérico de `DemoMethod` pasando una matriz de cadenas que contienen los nombres de los parámetros al método <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A?displayProperty=fullName>. Esto hace que el método sea un método genérico. El código siguiente hace que `Factory` sea un método genérico con parámetros de tipo `TInput` y `TOutput`. Para facilitar la lectura del código, se crean variables con estos nombres para contener los objetos <xref:System.Reflection.Emit.GenericTypeParameterBuilder> que representan los dos parámetros de tipo.  
+5.  Defina los parámetros de tipo genérico de `DemoMethod` pasando una matriz de cadenas que contienen los nombres de los parámetros al método <xref:System.Reflection.Emit.MethodBuilder.DefineGenericParameters%2A?displayProperty=nameWithType>. Esto hace que el método sea un método genérico. El código siguiente hace que `Factory` sea un método genérico con parámetros de tipo `TInput` y `TOutput`. Para facilitar la lectura del código, se crean variables con estos nombres para contener los objetos <xref:System.Reflection.Emit.GenericTypeParameterBuilder> que representan los dos parámetros de tipo.  
   
-     [!code-csharp[GenericMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#5)]  [!code-vb[GenericMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#5)]  
+     [!code-csharp[GenericMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#5)]
+     [!code-vb[GenericMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#5)]  
   
 6.  También tiene la opción de agregar restricciones especiales a los parámetros de tipo. Las restricciones especiales se agregan utilizando el método <xref:System.Reflection.Emit.GenericTypeParameterBuilder.SetGenericParameterAttributes%2A>. En este ejemplo, `TOutput` está restringido a ser un tipo de referencia y tener un constructor sin parámetros.  
   
-     [!code-csharp[GenericMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#6)]  [!code-vb[GenericMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#6)]  
+     [!code-csharp[GenericMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#6)]
+     [!code-vb[GenericMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#6)]  
   
 7.  También tiene la opción de agregar restricciones de clase y de interfaz a los parámetros de tipo. En este ejemplo, el parámetro de tipo `TOutput` está restringido a tipos que implementan la interfaz `ICollection(Of TInput)` (`ICollection<TInput>` en C#). Esto garantiza que el método <xref:System.Collections.Generic.ICollection%601.Add%2A> se puede utilizar para agregar elementos.  
   
-     [!code-csharp[GenericMethodHowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#7)]  [!code-vb[GenericMethodHowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#7)]  
+     [!code-csharp[GenericMethodHowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#7)]
+     [!code-vb[GenericMethodHowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#7)]  
   
 8.  Defina los parámetros formales del método utilizando el método <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A>. En este ejemplo, el método `Factory` tiene un parámetro, una matriz de `TInput`. Este tipo se crea llamando al método <xref:System.Type.MakeArrayType%2A> de <xref:System.Reflection.Emit.GenericTypeParameterBuilder> que representa `TInput`. El argumento de <xref:System.Reflection.Emit.MethodBuilder.SetParameters%2A> es una matriz de objetos <xref:System.Type>.  
   
-     [!code-csharp[GenericMethodHowTo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#8)]  [!code-vb[GenericMethodHowTo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#8)]  
+     [!code-csharp[GenericMethodHowTo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#8)]
+     [!code-vb[GenericMethodHowTo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#8)]  
   
 9. Defina el tipo de valor devuelto para el método utilizando el método <xref:System.Reflection.Emit.MethodBuilder.SetReturnType%2A>. En este ejemplo se devuelve una instancia de `TOutput`.  
   
-     [!code-csharp[GenericMethodHowTo#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#9)]   [!code-vb[GenericMethodHowTo#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#9)]  
+     [!code-csharp[GenericMethodHowTo#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#9)]
+     [!code-vb[GenericMethodHowTo#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#9)]  
   
 10. Emita el cuerpo del método utilizando <xref:System.Reflection.Emit.ILGenerator>. Para obtener detalles, vea el procedimiento que lo acompaña para emitir el cuerpo del método.  
   
@@ -80,7 +90,8 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
   
 11. Finalice el tipo que contiene el método y guarde el ensamblado. El procedimiento de acompañamiento para invocar el método genérico muestra dos maneras de invocar el método completado.  
   
-     [!code-csharp[GenericMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#14)]  [!code-vb[GenericMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#14)]  
+     [!code-csharp[GenericMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#14)]
+     [!code-vb[GenericMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#14)]  
   
 <a name="procedureSection1"></a>   
 ### <a name="to-emit-the-method-body"></a>Para emitir el cuerpo del método  
@@ -89,48 +100,58 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
   
      Lo primero que hace el método es cargar su argumento utilizando el código de operación <xref:System.Reflection.Emit.OpCodes.Ldarg_0> y almacenándolo en la variable local `input` mediante el código de operación <xref:System.Reflection.Emit.OpCodes.Stloc_S>.  
   
-     [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]  [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
+     [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]
+     [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
   
-2.  Emita el código para crear una instancia de `TOutput`, utilizando la sobrecarga de método genérico del método <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>. Utilizar esta sobrecarga requiere que el tipo especificado tenga un constructor sin parámetros, que es la razón para agregar esa restricción a `TOutput`. Cree el método genérico construido pasando `TOutput` a <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Después de emitir el código para llamar al método, emita el código para almacenarlo en la variable local `retVal` utilizando <xref:System.Reflection.Emit.OpCodes.Stloc_S>.  
+2.  Emita el código para crear una instancia de `TOutput`, utilizando la sobrecarga de método genérico del método <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>. Utilizar esta sobrecarga requiere que el tipo especificado tenga un constructor sin parámetros, que es la razón para agregar esa restricción a `TOutput`. Cree el método genérico construido pasando `TOutput` a <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. Después de emitir el código para llamar al método, emita el código para almacenarlo en la variable local `retVal` utilizando <xref:System.Reflection.Emit.OpCodes.Stloc_S>.  
   
-     [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]  [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  
+     [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]
+     [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  
   
 3.  Emita el código para convertir el nuevo objeto `TOutput` a `ICollection(Of TInput)` y almacenarlo en la variable local `ic`.  
   
-     [!code-csharp[GenericMethodHowTo#31](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#31)]  [!code-vb[GenericMethodHowTo#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#31)]  
+     [!code-csharp[GenericMethodHowTo#31](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#31)]
+     [!code-vb[GenericMethodHowTo#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#31)]  
   
-4.  Obtenga la información <xref:System.Reflection.MethodInfo> que representa el método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=fullName>. El método actúa en una interfaz `ICollection(Of TInput)` (`ICollection<TInput>` en C#), por lo que es necesario obtener el método `Add` específico de ese tipo construido. El método <xref:System.Type.GetMethod%2A> no se puede obtener para obtener esta <xref:System.Reflection.MethodInfo> directamente desde `icollOfTInput` porque no se admite <xref:System.Type.GetMethod%2A> en tipos que se hayan construido con un <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. En su lugar, llame a <xref:System.Type.GetMethod%2A> de `icoll`, que contiene la definición de tipo genérico para la interfaz genérica <xref:System.Collections.Generic.ICollection%601>. A continuación, utilice el método <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>`static` para generar <xref:System.Reflection.MethodInfo> para el tipo construido. El código siguiente muestra cómo hacerlo.  
+4.  Obtenga la información <xref:System.Reflection.MethodInfo> que representa el método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>. El método actúa en una interfaz `ICollection(Of TInput)` (`ICollection<TInput>` en C#), por lo que es necesario obtener el método `Add` específico de ese tipo construido. El método <xref:System.Type.GetMethod%2A> no se puede obtener para obtener esta <xref:System.Reflection.MethodInfo> directamente desde `icollOfTInput` porque no se admite <xref:System.Type.GetMethod%2A> en tipos que se hayan construido con un <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. En su lugar, llame a <xref:System.Type.GetMethod%2A> de `icoll`, que contiene la definición de tipo genérico para la interfaz genérica <xref:System.Collections.Generic.ICollection%601>. A continuación, utilice el método <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>`static` para generar <xref:System.Reflection.MethodInfo> para el tipo construido. El código siguiente muestra cómo hacerlo.  
   
-     [!code-csharp[GenericMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#12)]  [!code-vb[GenericMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#12)]  
+     [!code-csharp[GenericMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#12)]
+     [!code-vb[GenericMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#12)]  
   
 5.  Emita el código para inicializar la variable `index`, cargando un entero 0 de 32 bits y almacenándolo en la variable. Emita el código para bifurcar a la etiqueta `enterLoop`. Esta etiqueta no está marcada todavía, porque se encuentra dentro del bucle. El código del bucle se emite en el siguiente paso.  
   
-     [!code-csharp[GenericMethodHowTo#32](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#32)]  [!code-vb[GenericMethodHowTo#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#32)]  
+     [!code-csharp[GenericMethodHowTo#32](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#32)]
+     [!code-vb[GenericMethodHowTo#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#32)]  
   
-6.  Emita el código para el bucle. El primer paso es marcar el principio del bucle, llamando a <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> con la etiqueta `loopAgain`. Las instrucciones de bifurcación que utilicen la etiqueta señalarán ahora a este punto del código. El paso siguiente es colocar en la pila el objeto `TOutput`, convertido a `ICollection(Of TInput)`. No se necesita inmediatamente, pero debe estar en posición para llamar al método `Add`. A continuación, se inserta la matriz de entrada en la pila y, después, en la matriz se inserta la variable `index` que contiene el índice actual. El código de operación <xref:System.Reflection.Emit.OpCodes.Ldelem> extrae de la pila el índice y la matriz e inserta en la pila el elemento de matriz indizado. Ahora la pila está lista para la llamada al método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=fullName>, que extrae de la pila la colección y el nuevo elemento, y agrega el elemento a la colección.  
+6.  Emita el código para el bucle. El primer paso es marcar el principio del bucle, llamando a <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> con la etiqueta `loopAgain`. Las instrucciones de bifurcación que utilicen la etiqueta señalarán ahora a este punto del código. El paso siguiente es colocar en la pila el objeto `TOutput`, convertido a `ICollection(Of TInput)`. No se necesita inmediatamente, pero debe estar en posición para llamar al método `Add`. A continuación, se inserta la matriz de entrada en la pila y, después, en la matriz se inserta la variable `index` que contiene el índice actual. El código de operación <xref:System.Reflection.Emit.OpCodes.Ldelem> extrae de la pila el índice y la matriz e inserta en la pila el elemento de matriz indizado. Ahora la pila está lista para la llamada al método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>, que extrae de la pila la colección y el nuevo elemento, y agrega el elemento a la colección.  
   
      El resto del código del bucle incrementa el índice y comprueba si ha terminado el bucle: en la pila se insertan y se agregan el índice y un entero 1 de 32 bits, dejando la suma en la pila; la suma se almacena en `index`. Se invoca <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> para establecer este punto como punto de entrada del bucle. Se vuelve a cargar el índice. La matriz de entrada se inserta en la pila y se emite <xref:System.Reflection.Emit.OpCodes.Ldlen> para obtener su longitud. Ahora en la pila están el índice y la longitud, y se emite <xref:System.Reflection.Emit.OpCodes.Clt> para compararlos. Si el índice es menor que la longitud, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> se vuelve a bifurcar hasta el principio del bucle.  
   
-     [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]  [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
+     [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
+     [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
   
-7.  Emita el código para insertar el objeto `TOutput` en la pila y volver del método. Ambas variables locales, `retVal` e `ic`, contienen referencias al nuevo `TOutput`; `ic` sólo se utiliza para tener acceso al método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=fullName>.  
+7.  Emita el código para insertar el objeto `TOutput` en la pila y volver del método. Ambas variables locales, `retVal` e `ic`, contienen referencias al nuevo `TOutput`; `ic` sólo se utiliza para tener acceso al método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>.  
   
-     [!code-csharp[GenericMethodHowTo#33](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#33)]  [!code-vb[GenericMethodHowTo#33](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#33)]  
+     [!code-csharp[GenericMethodHowTo#33](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#33)]
+     [!code-vb[GenericMethodHowTo#33](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#33)]  
   
 <a name="procedureSection2"></a>   
 ### <a name="to-invoke-the-generic-method"></a>Para invocar el método genérico  
   
 1.  `Factory` es una definición de método genérico. Para invocarlo, debe asignar los tipos a sus parámetros de tipo genérico. Para ello, utilice el método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>. El código siguiente crea un método genérico construido, especifica <xref:System.String> para `TInput` y `List(Of String)` (`List<string>` en C#) para `TOutput`, y muestra una representación de cadena del método.  
   
-     [!code-csharp[GenericMethodHowTo#21](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#21)]  [!code-vb[GenericMethodHowTo#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#21)]  
+     [!code-csharp[GenericMethodHowTo#21](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#21)]
+     [!code-vb[GenericMethodHowTo#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#21)]  
   
 2.  Para invocar el método enlazado en tiempo de ejecución, utilice el método <xref:System.Reflection.MethodBase.Invoke%2A>. El código siguiente crea una matriz de <xref:System.Object>, que contiene como único elemento una matriz de cadenas, y lo pasa como la lista de argumentos para el método genérico. El primer parámetro de <xref:System.Reflection.MethodBase.Invoke%2A> es una referencia nula porque el método es `static`. El valor devuelto se convierte a `List(Of String)` y se muestra su primer elemento.  
   
-     [!code-csharp[GenericMethodHowTo#22](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#22)]  [!code-vb[GenericMethodHowTo#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#22)]  
+     [!code-csharp[GenericMethodHowTo#22](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#22)]
+     [!code-vb[GenericMethodHowTo#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#22)]  
   
-3.  Para invocar el método mediante un delegado, debe tener un delegado que coincida con la firma del método genérico construido. Una manera fácil de hacerlo es crear un delegado genérico. El código siguiente crea una instancia del delegado genérico `D` definido en el código de ejemplo utilizando la sobrecarga del método <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29?displayProperty=fullName> e invoca el delegado. El rendimiento de los delegados es mejor que el de las llamadas enlazadas en tiempo de ejecución.  
+3.  Para invocar el método mediante un delegado, debe tener un delegado que coincida con la firma del método genérico construido. Una manera fácil de hacerlo es crear un delegado genérico. El código siguiente crea una instancia del delegado genérico `D` definido en el código de ejemplo utilizando la sobrecarga del método <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType> e invoca el delegado. El rendimiento de los delegados es mejor que el de las llamadas enlazadas en tiempo de ejecución.  
   
-     [!code-csharp[GenericMethodHowTo#23](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#23)]  [!code-vb[GenericMethodHowTo#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#23)]  
+     [!code-csharp[GenericMethodHowTo#23](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#23)]
+     [!code-vb[GenericMethodHowTo#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#23)]  
   
 4.  También se puede llamar al método emitido desde un programa que haga referencia al ensamblado guardado.  
   
@@ -146,7 +167,8 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
   
  El ejemplo de código incluye código fuente que es equivalente al método emitido. El método emitido se invoca enlazado en tiempo de ejecución y también utilizando un delegado genérico declarado en el ejemplo de código.  
   
- [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)] [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
+ [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
+ [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
@@ -157,6 +179,5 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
 -   Compile el código en la línea de comandos mediante csc.exe, vbc.exe o cl.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Reflection.Emit.MethodBuilder>   
+ <xref:System.Reflection.Emit.MethodBuilder>  
  [Definición de un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
-

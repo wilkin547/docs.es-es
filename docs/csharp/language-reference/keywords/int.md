@@ -1,41 +1,22 @@
 ---
 title: int (Referencia de C#)
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - int_CSharpKeyword
 - int
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- int keyword [C#]
+helpviewer_keywords: int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7acb8bb482ebf8f5c2b508e7cfd45b5b64aae3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 935428cc9442a3e1d15eeb8942176c237bff4e22
-ms.openlocfilehash: 6e87893bcd9800b61297e71b782028fec5116479
-ms.contentlocale: es-es
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="int-c-reference"></a>int (Referencia de C#)
 
@@ -43,22 +24,26 @@ ms.lasthandoff: 08/22/2017
   
 |Tipo|Intervalo|Tamaño|Tipo de .NET Framework|Default Value|  
 |----------|-----------|----------|-------------------------|-------------------|  
-|`int`|De -2.147.483.648 a 2.147.483.647|Entero de 32 bits con signo|<xref:System.Int32?displayProperty=fullName>|0|  
+|`int`|De -2.147.483.648 a 2.147.483.647|Entero de 32 bits con signo|<xref:System.Int32?displayProperty=nameWithType>|0|  
   
 ## <a name="literals"></a>Literales  
  
-Puede declarar e inicializar una variable `int` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario.  Si el literal entero está fuera del intervalo de `int` (es decir, si es inferior a <xref:System.Int32.MinValue?displayProperty=fullName> o mayor que <xref:System.Int32.MaxValue?displayProperty=fullName>), se produce un error de compilación. 
+Puede declarar e inicializar una variable `int` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario.  Si el literal entero está fuera del intervalo de `int` (es decir, si es inferior a <xref:System.Int32.MinValue?displayProperty=nameWithType> o mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>), se produce un error de compilación. 
 
 En el ejemplo siguiente, los enteros que equivalen a 90 946 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `int`.  
   
-[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
+[!code-csharp[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
 
 > [!NOTE] 
 > Use el prefijo `0x` o `0X` para denotar un literal hexadecimal y el prefijo `0b` o `0B` para denotar un literal binario. Los literales decimales no tienen prefijo. 
 
-A partir de C# 7, también puede usar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como se muestra en el ejemplo siguiente.
+A partir de C# 7, se han agregado un par de características mejorar la legibilidad. 
+ - C# 7.0 permite el uso del carácter de subrayado, `_`, como un separador de dígito.
+ - 7.2 C# permite `_` para usarse como un separador de dígitos de un literal binario o hexadecimal, después del prefijo. Un literal decimal no está permitido que tengan un carácter de subrayado inicial.
 
-[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
+A continuación se muestran algunos ejemplos.
+
+[!code-csharp[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
  
  Los literales enteros también pueden incluir un sufijo que denote el tipo, aunque no existe ningún sufijo que denote el tipo `int`. Si un literal entero no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor: 
 
@@ -98,12 +83,11 @@ int y = (int)3.0;    // OK: explicit conversion.
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Int32>   
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.Int32>  
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
+ms.openlocfilehash: 6851e7059ca60430e761cebed4fd5040a6a3ee08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 9c38237a8e729155c443298814f4c98bec61016b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="framework-libraries"></a>Bibliotecas de Framework
 
 .NET tiene un amplio conjunto estándar de bibliotecas, a las que se hace referencia como bibliotecas de clases base (conjunto básico) o bibliotecas de clases de marco de trabajo (conjunto completo). Estas bibliotecas proporcionan implementaciones para muchos tipos generales y específicos de las aplicaciones, algoritmos y funcionalidad de la utilidad. Las bibliotecas comerciales y las comunitarias se basan en las bibliotecas de clases de marco de trabajo, ya que ofrecen bibliotecas estándar fáciles de usar para un amplio conjunto de tareas informáticas.
@@ -32,15 +30,15 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 
 .NET incluye un conjunto de tipos primitivos, que se usan (en distintos grados) en todos los programas. Estos tipos contienen datos, como números, cadenas, bytes y objetos arbitrarios. El lenguaje C# incluye palabras clave para estos tipos. A continuación se muestra un conjunto de ejemplo de estos tipos, con las palabras clave de C# correspondientes.
 
-* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)): la clase base fundamental en el sistema de tipos de CLR. Es la raíz de la jerarquía de tipos.
-* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)): tipo entero con signo de 16 bits. También existe el valor <xref:System.UInt16> sin signo.
-* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)): tipo entero con signo de 32 bits. También existe el valor [UInt32](../csharp/language-reference/keywords/uint.md) sin firmar.
-* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)): tipo de punto flotante de 32 bits.
-* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)): tipo decimal de 128 bits.
-* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)): entero sin signo de 8 bits que representa un byte de memoria.
-* <xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)): tipo booleano que representa `true` o `false`.
-* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)): tipo numérico de 16 bits que representa un carácter Unicode.
-* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)): representa una serie de caracteres. Diferente de `char[]`, pero permite la indexación en cada `char` individual en `string`.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): la clase base fundamental en el sistema de tipos de CLR. Es la raíz de la jerarquía de tipos.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)): tipo entero con signo de 16 bits. También existe el valor <xref:System.UInt16> sin signo.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)): tipo entero con signo de 32 bits. También existe el valor [UInt32](../csharp/language-reference/keywords/uint.md) sin firmar.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): tipo de punto flotante de 32 bits.
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): tipo decimal de 128 bits.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)): entero sin signo de 8 bits que representa un byte de memoria.
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): tipo booleano que representa `true` o `false`.
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): tipo numérico de 16 bits que representa un carácter Unicode.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): representa una serie de caracteres. Diferente de `char[]`, pero permite la indexación en cada `char` individual en `string`.
 
 ## <a name="data-structures"></a>Estructuras de datos
 
@@ -65,4 +63,3 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 Hay muchos modelos de aplicaciones que pueden usarse con .NET, proporcionados por varias empresas.
 
 *   [ASP.NET](http://asp.net): proporciona un marco de trabajo web para la creación de sitios Web y servicios. Es compatible con Windows, Linux y macOS (depende de la versión de ASP.NET).
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
+ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 468c86f36fe71558dcd7a9150337f5a3cce066b8
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/08/2017
 ---
-
 # <a name="indexers"></a>Indizadores
 
 Los *indizadores* son similares a las propiedades. Muchas veces, los indizadores se basan en las mismas características del lenguaje que las [propiedades](properties.md). Los indizadores permiten las propiedades *indizadas*: propiedades a las que se hace referencia mediante uno o más argumentos. Estos argumentos proporcionan un índice en alguna colección de valores.
@@ -41,7 +39,7 @@ public int this[string key]
 }
 ```
 
-En este ejemplo inicial puede ver la relación existente entre la sintaxis de las propiedades y los indizadores. Esta analogía lleva a cabo la mayoría de las reglas de sintaxis de los indizadores. Los indizadores pueden tener cualquier modificador de acceso válido (público, interno protegido, protegido, interno o privado). Pueden ser sellados, virtuales o abstractos. Al igual que con las propiedades, puede especificar distintos modificadores de acceso para los descriptores de acceso get y set en un indizador.
+En este ejemplo inicial puede ver la relación existente entre la sintaxis de las propiedades y los indizadores. Esta analogía lleva a cabo la mayoría de las reglas de sintaxis de los indizadores. Los indizadores pueden tener modificadores de acceso válido (público, protegido interno, protegido, interno, privado o privado protegido). Pueden ser sellados, virtuales o abstractos. Al igual que con las propiedades, puede especificar distintos modificadores de acceso para los descriptores de acceso get y set en un indizador.
 También puede especificar indizadores de solo lectura (omitiendo el descriptor de acceso set) o indizadores de solo escritura (omitiendo el descriptor de acceso get).
 
 Puede aplicar a los indizadores casi todo lo que aprenda al trabajar con propiedades. La única excepción a esta regla son las *propiedades implementadas automáticamente*. El compilador no siempre puede generar el almacenamiento correcto para un indizador.
@@ -335,4 +333,3 @@ Los desarrolladores usan el tipo `DateTime`, aunque emplean la propiedad `Date` 
 
 Debe crear indizadores siempre que tenga un elemento de propiedad en la clase, en la que dicha propiedad no representa un valor único, sino una serie de valores donde cada elemento se identifica mediante un conjunto de argumentos. Estos argumentos únicamente pueden identificar el elemento al que se debe hacer referencia en la colección.
 Los indizadores amplían el concepto de las [propiedades](properties.md), en las que un miembro se trata como un elemento de datos desde fuera de la clase, pero se trata como un método en el lado. Los indizadores permiten que los argumentos busquen un solo elemento en una propiedad que representa un conjunto de elementos.
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
+ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
-ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
-ms.contentlocale: es-es
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-glossary"></a>Glosario de .NET
 
 El objetivo principal de este glosario es aclarar los significados de algunos de los términos y acrónimos que aparecen frecuentemente en la documentación de .NET sin definiciones.
@@ -31,15 +29,15 @@ Similar a [JIT](#jit), este compilador también convierte [IL](#il) en código d
 
 La implementación original de ASP.NET que se distribuye con .NET Framework.
 
-A veces, ASP.NET es un término genérico que hace referencia a ambas implementaciones de ASP.NET, incluido ASP.NET Core. El significado que lleva el término en una instancia específica se determina según el contexto. 
+A veces, ASP.NET es un término genérico que hace referencia a ambas implementaciones de ASP.NET, incluido ASP.NET Core. El significado que lleva el término en una instancia específica se determina según el contexto. Hacer referencia a ASP.NET 4.x cuando desee dejar claro que no usa ASP.NET para indicar ambas implementaciones. 
 
-Vea [ASP.NET](/aspnet/#pivot=aspnet).
+Vea [documentación de ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Una implementación multiplataforma, de alto rendimiento y de código abierto de ASP.NET compilada en .NET Core.
 
-Vea [ASP.NET Core](/aspnet/#pivot=core).
+Vea [documentación principal de ASP.NET](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>ensamblado
 
@@ -278,5 +276,4 @@ Una implementación de .NET que se usa para compilar aplicaciones Windows modern
 [Núcleo de .NET](../core/index.md)  
 [ASP.NET Overview](/aspnet/index#pivot=aspnet) (Información general de ASP.NET)  
 [ASP.NET Core Overview](/aspnet/index#pivot=core) (Información general de ASP.NET Core)  
-
 

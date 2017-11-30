@@ -16,16 +16,15 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a47761acfabd3de77d65483d50fbe7a77f96e076
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf4234f36745fdc13635ab2c6394f49aefabf7a8
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a>proceso de ejecución administrada
 <a name="introduction"></a> El proceso de ejecución administrada incluye los pasos siguientes, que se describen en detalle más adelante en este tema:  
@@ -116,13 +115,12 @@ ms.lasthandoff: 08/21/2017
  [Volver al principio](#introduction)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general](../../docs/framework/get-started/overview.md)   
- [Independencia del lenguaje y componentes independientes del lenguaje](../../docs/standard/language-independence-and-language-independent-components.md)   
- [Metadatos y componentes autodescriptivos](../../docs/standard/metadata-and-self-describing-components.md)   
- [Ilasm.exe (Ensamblador de IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)   
- [Seguridad](../../docs/standard/security/index.md)   
- [Interoperar con código no administrado](../../docs/framework/interop/index.md)   
- [Implementación](../../docs/framework/deployment/net-framework-applications.md)   
- [Ensamblados en Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
+ [Información general](../../docs/framework/get-started/overview.md)  
+ [Independencia del lenguaje y componentes independientes del lenguaje](../../docs/standard/language-independence-and-language-independent-components.md)  
+ [Metadatos y componentes autodescriptivos](../../docs/standard/metadata-and-self-describing-components.md)  
+ [Ilasm.exe (Ensamblador de IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+ [Seguridad](../../docs/standard/security/index.md)  
+ [Interoperating with Unmanaged Code](../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
+ [Implementación](../../docs/framework/deployment/net-framework-applications.md)  
+ [Ensamblados en Common Language Runtime](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Dominios de aplicación](../../docs/framework/app-domains/application-domains.md)
-

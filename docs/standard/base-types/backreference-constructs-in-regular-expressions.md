@@ -1,126 +1,132 @@
 ---
-title: "Construcciones de referencia inversa en expresiones regulares | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "expresiones regulares de .NET Framework, construcciones de referencia inversa"
-  - "referencias inversas"
-  - "construcciones, referencia inversa"
-  - "expresiones regulares, construcciones de referencia inversa"
+title: Construcciones de referencia inversa en expresiones regulares
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- backreferences
+- constructs, backreference
+- .NET Framework regular expressions, backreference constructs
+- regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Construcciones de referencia inversa en expresiones regulares
-Las referencias inversas proporcionan una manera conveniente de identificar un carácter o subcadena repetido dentro de una cadena.  Por ejemplo, si la cadena de entrada contiene varias veces la misma subcadena arbitraria, puede asociar la primera aparición con un grupo de captura y, a continuación, utilizar una referencia inversa para hacerla coincidir con las siguientes apariciones de la subcadena.  
+# <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
+Las referencias inversas proporcionan una forma cómoda de identificar un carácter o subcadena repetidos dentro de una cadena. Por ejemplo, si la cadena de entrada contiene varias apariciones de una subcadena arbitraria, puede buscar una coincidencia con la primera aparición con un grupo de captura y después usar una referencia inversa para buscar una coincidencia con las siguientes apariciones de la subcadena.  
   
 > [!NOTE]
->  Una sintaxis independiente se utiliza para hacer referencia a grupos de captura con nombre y número en cadenas de reemplazo.  Para obtener más información, vea [Sustituciones](../../../docs/standard/base-types/substitutions-in-regular-expressions.md).  
+>  Se usa una sintaxis independiente para hacer referencia a los grupos de captura con numeración y con nombre de las cadenas de reemplazo. Para obtener más información, consulta [Substitutions](substitutions-in-regular-expressions.md).  
   
- .NET Framework define distintos elementos del lenguaje para hacer referencia a grupos de captura numerados y con nombre.  Para obtener más información sobre los grupos de capturas, vea [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ .NET define elementos del lenguaje independientes para hacer referencia a los grupos de captura con numeración y con nombre. Para obtener más información acerca de grupos de captura, consulte [construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-## Referencias inversas numeradas  
- Una referencia inversa numerada usa la siguiente sintaxis:  
+## <a name="numbered-backreferences"></a>Referencias inversas con numeración  
+ Una referencia inversa con numeración usa la siguiente sintaxis:  
   
- `\` *number*  
+ `\` *número*  
   
- donde es la posición ordinal *number* del grupo de captura en la expresión regular.  Por ejemplo, `\4` coincide con el contenido del cuarto grupo de capturas.  Si *number* no se define en la expresión regular, un error de análisis aparece, y el motor de expresiones regulares produce <xref:System.ArgumentException>.  Por ejemplo, la expresión regular `\b(\w+)\s\1` es válida porque `(\w+)` es el primer y único grupo de capturas de la expresión.  Por otro lado, `\b(\w+)\s\2` no es válido e inicia una excepción de argumento porque no hay ningún grupo de capturas con el número `\2`.  
+ donde *número* es la posición ordinal del grupo de captura en la expresión regular. Por ejemplo, `\4` coincide con el contenido del cuarto grupo de captura. Si *número* no es definido en el patrón de expresión regular, se produce un error de análisis y el motor de expresiones regulares produce una <xref:System.ArgumentException>. Por ejemplo, la expresión regular `\b(\w+)\s\1` es válida, porque `(\w+)` es el primer y único grupo de captura de la expresión. Por otro lado, `\b(\w+)\s\2` no es válida y produce una excepción de argumento porque no hay ningún grupo de captura con numeración `\2`.  
   
- Observe la ambigüedad entre los códigos de escape octales \(como `\16`\) y referencias inversas de `\`*number* que utilizan la misma notación.  Esta ambigüedad se resuelve como sigue:  
+ Tenga en cuenta la ambigüedad existente entre códigos de escape octales (como `\16`) y `\` *número* referencias inversas que utilizan la misma notación. Esta ambigüedad se resuelve de la siguiente forma:  
   
--   Las expresiones `\1` a `\9` siempre se interpretan como referencias inversas, no como códigos octales.  
+-   Las expresiones `\1` a `\9` siempre se interpretan como referencias inversas y no como códigos octales.  
   
--   Si el primer dígito de una expresión con varios dígitos es 8 ó 9 \(como `\80` o `\91`\), se interpretará la expresión como un literal.  
+-   Si el primer dígito de una expresión con varios dígitos es 8 o 9 (como `\80` o `\91`), la expresión se interpreta como un literal.  
   
--   Las expresiones de `\10` y mayores están consideradas referencias inversas si hay una referencia inversa que corresponde a ese número; de lo contrario, se interpretan como códigos octales.  
+-   Las expresiones a partir de `\10` y superiores se consideran referencias inversas si hay una referencia inversa que se corresponda con ese número; en caso contrario, se interpretan como códigos octales.  
   
--   Si una expresión regular contiene una referencia inversa a un número de grupo indefinido, se produce un error de análisis y el motor de expresiones regulares inicia una excepción <xref:System.ArgumentException>.  
+-   Si una expresión regular contiene una referencia inversa a un número de grupo indefinido, se produce un error de análisis y el motor de expresiones regulares produce una <xref:System.ArgumentException>.  
   
- Si la ambigüedad es un problema, puede utilizar la notación de `\k<`*name*`>` , que no es ambigua y no se puede confundir con códigos de carácter octales.  De forma similar, los códigos hexadecimales como `\xdd` son inequívocos y no se pueden confundir con referencias inversas.  
+ Si la ambigüedad constituye un problema, puede usar el `\k<` *nombre* `>` notación, que es ambiguo y no debe confundirse con códigos de caracteres octales. De forma similar, los códigos hexadecimales como `\xdd` son inequívocos y no se pueden confundir con las referencias inversas.  
   
- El ejemplo siguiente busca caracteres de palabra duplicados en una cadena.  Define una expresión regular, `(\w)\1`, que se compone de los siguientes elementos.  
+ En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(\w)\1`, que consta de los siguientes elementos.  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|`(\w)`|Busca una coincidencia con un carácter de palabra y la asigna al primero grupo de capturas.|  
-|`\1`|Busca una coincidencia con el siguiente carácter que sea igual que el valor del primer grupo de capturas.|  
+|-------------|-----------------|  
+|`(\w)`|Coincide con un carácter que se usa para formar palabras y se lo asigna al primer grupo de captura.|  
+|`\1`|Coincide con el siguiente carácter que sea igual que el valor del primer grupo de captura.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference1.cs#1)]
  [!code-vb[RegularExpressions.Language.Backreferences#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference1.vb#1)]  
   
-## Referencias inversas con nombre  
- Una referencia inversa con nombre se define con la sintaxis siguiente:  
+## <a name="named-backreferences"></a>Referencias inversas con nombre  
+ Una referencia inversa con nombre se define mediante la sintaxis siguiente:  
   
  `\k<` *name* `>`  
   
  O bien  
   
- `\k'` *name* `'`  
+ `\k'` *nombre* `'`  
   
- donde es el nombre *name* de un grupo de captura definido en la expresión regular.  Si *name* no se define en la expresión regular, un error de análisis aparece, y el motor de expresiones regulares produce <xref:System.ArgumentException>.  
+ donde *nombre* es el nombre de un grupo de captura definido en el patrón de expresión regular. Si *nombre* no es definido en el patrón de expresión regular, se produce un error de análisis y el motor de expresiones regulares produce una <xref:System.ArgumentException>.  
   
- El ejemplo siguiente busca caracteres de palabra duplicados en una cadena.  Define una expresión regular, `(?<char>\w)\k<char>`, que se compone de los siguientes elementos.  
+ En el ejemplo siguiente, se buscan caracteres de palabra duplicados en una cadena. Define una expresión regular, `(?<char>\w)\k<char>`, que consta de los siguientes elementos.  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|`(?<char>\w)`|Busca una coincidencia con un carácter de palabra y la asigna a un grupo de capturas denominado `char`.|  
-|`\k<char>`|Busca una coincidencia con el siguiente carácter que sea igual que el valor del grupo de capturas `char`.|  
+|-------------|-----------------|  
+|`(?<char>\w)`|Coincide con un carácter de palabra y asignarla a un grupo de captura denominado `char`.|  
+|`\k<char>`|Coincide con el siguiente carácter que es el mismo que el valor de la `char` grupo de captura.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
   
- Observe que *name* también puede ser la representación de cadena de un número.  En el siguiente ejemplo, se utiliza la expresión regular `(?<2>\w)\k<2>` para buscar caracteres de palabra duplicados en una cadena.  
+ Tenga en cuenta que *nombre* también puede ser la representación de cadena de un número. Por ejemplo, en el ejemplo siguiente, se usa la expresión regular `(?<2>\w)\k<2>` para buscar caracteres de palabra duplicados en una cadena.  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
   
-## Qué coincidencias buscan las referencias inversas  
- Una referencia inversa constituye la definición más reciente de un grupo \(la definición que se encuentra más a la izquierda, cuando la búsqueda de coincidencias es de izquierda a derecha\).  Cuando un grupo realiza varias capturas, una referencia inversa se corresponde con la captura más reciente.  
+## <a name="what-backreferences-match"></a>Con qué coinciden las referencias inversas  
+ Una referencia inversa constituye la definición más reciente de un grupo (la definición más inmediatamente a la izquierda, al coincidir de izquierda a derecha). Cuando un grupo realiza varias capturas, una referencia inversa se refiere a la captura más reciente.  
   
- En el siguiente ejemplo se incluye un modelo de expresión regular, `(?<1>a)(?<1>\1b)*`, que vuelve a definir el grupo con nombre \\1.  La tabla siguiente describe cada modelo de la expresión regular.  
+ En el ejemplo siguiente, se incluye un patrón de expresión regular, `(?<1>a)(?<1>\1b)*`, que redefine el grupo con nombre \1. En la tabla siguiente, se describe cada patrón de la expresión regular.  
   
 |Modelo|Descripción|  
-|------------|-----------------|  
-|`(?<1>a)`|Busca una coincidencia con el carácter "a" y asigna el resultado al grupo de capturas denominado `1`.|  
-|`(?<1>\1b)*`|Busca 0 ó 1 coincidencia con el grupo denominado `1` junto con una "b" y asigna el resultado al grupo de capturas denominado `1`.|  
+|-------------|-----------------|  
+|`(?<1>a)`|Coincide con el carácter "a" y asignar el resultado al grupo de captura denominado `1`.|  
+|`(?<1>\1b)*`|Aparición de coincidencia 0 ó 1 del grupo de denominado `1` junto con un "b" y asigna el resultado al grupo de captura denominado `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
- Al comparar la expresión regular con la cadena de entrada \("aababb"\), el motor de expresiones regulares realiza las siguientes operaciones:  
+ Al comparar la expresión regular con la cadena de entrada ("aababb"), el motor de expresiones regulares realiza las siguientes operaciones:  
   
-1.  Comienza al principio de la cadena y hace coincidir "a" con la expresión `(?<1>a)`.  El valor del grupo `1` es ahora "a".  
+1.  Comienza al principio de la cadena y hace que "a" coincida correctamente con la expresión `(?<1>a)`. El valor de la `1` grupo es ahora "a".  
   
-2.  Avanza hasta el segundo carácter y hace coincidir correctamente la cadena "ab" con la expresión `\1b` o "ab".  A continuación, asigna el resultado, "ab", a `\1`.  
+2.  Se desplaza hasta el segundo carácter y hace que la cadena "ab" coincida correctamente con la expresión `\1b`, o "ab". Después, asigna el resultado "ab" a `\1`.  
   
-3.  Avanza hasta el cuarto carácter.  La expresión `(?<1>\1b)` va a coincidir cero o más veces, de modo que coincida correctamente la cadena "abb" con la expresión `\1b`.  Vuelve a asignar el resultado, "abb", a `\1`.  
+3.  Se desplaza hasta el cuarto carácter. La expresión `(?<1>\1b)` puede coincidir cero o más veces, así que la cadena "abb" coincide correctamente con la expresión `\1b`. Vuelve a asignar el resultado, "abb", a `\1`.  
   
- En este ejemplo, `*` es un cuantificador de bucle: se evalúa repetidas veces hasta que el motor de expresiones regulares no encuentre coincidencias con el modelo definido.  Los cuantificadores de bucle no borran las definiciones de grupo.  
+ En este ejemplo, `*` es un cuantificador de bucle: se evalúa repetidas veces hasta que el motor de expresiones regulares no puede coincidir con el patrón que define. Los cuantificadores de bucle no borran las definiciones de grupo.  
   
- Si un grupo no captura ninguna subcadena, la referencia inversa a ese grupo no está definida y nunca coincide con ninguna cadena.  Esto se ilustra mediante el modelo de expresión regular `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, que se define como sigue:  
+ Si un grupo no ha capturado ninguna subcadena, no se define una referencia inversa a ese grupo y no coincide nunca. Esto se muestra con el patrón de expresión regular `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, que se define como sigue:  
   
 |Modelo|Descripción|  
-|------------|-----------------|  
+|-------------|-----------------|  
 |`\b`|Comienza la búsqueda de coincidencias en un límite de palabras.|  
-|`(\p{Lu}{2})`|Busca una coincidencia con dos letras mayúsculas.  Éste es el primer grupo de captura.|  
-|`(\d{2})?`|Busca cero o una coincidencia con dos dígitos decimales.  Éste es el segundo grupo de captura.|  
-|`(\p{Lu}{2})`|Busca una coincidencia con dos letras mayúsculas.  Éste es el tercer grupo de captura.|  
+|`(\p{Lu}{2})`|Coincide con dos letras mayúsculas. Este es el primer grupo de captura.|  
+|`(\d{2})?`|Coincide con una o ninguna aparición de dos dígitos decimales. Este es el segundo grupo de captura.|  
+|`(\p{Lu}{2})`|Coincide con dos letras mayúsculas. Éste es el tercer grupo de captura.|  
 |`\b`|Finalizar la búsqueda de coincidencias en un límite de palabras.|  
   
- Una cadena de entrada puede coincidir con esta expresión regular aun cuando los dos dígitos decimales que son definidos por el segundo grupo capturador no están presentes.  El ejemplo siguiente muestra que aunque la coincidencia es correcta, hay un grupo capturador vacío entre dos grupos capturadores correctos.  
+ Una cadena de entrada puede coincidir con esta expresión regular aunque no estén presentes los dos dígitos decimales que define el segundo grupo de captura. En el ejemplo siguiente, se muestra que, aunque la coincidencia es correcta, hay un grupo de captura vacío entre dos grupos de captura correctos.  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
   
-## Vea también  
- [Lenguaje de expresiones regulares \- Referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

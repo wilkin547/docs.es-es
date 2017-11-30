@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47932ce3-2ba5-476f-a26b-3ddfd5226f27
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: 1e4fd15013f10667b397e010fff56b7bc6a0f641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9c6d0bdfd21f431ae6da38e3868386f91d5b725b
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-the-game1-class"></a>Crear la clase Game1
 Igual que con todos los proyectos de Microsoft XNA, la clase Game1 deriva de la clase [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx), que proporciona funciones básicas de inicialización de dispositivos de gráficos, lógica de juego y código de representación para juegos de XNA. La clase Game1 es bastante simple porque la mayor parte del trabajo se realiza en las clases GamePiece y GamePieceCollection.  
@@ -46,9 +44,8 @@ Igual que con todos los proyectos de Microsoft XNA, la clase Game1 deriva de la 
  [!code-csharp[ManipulationXNA#_Game1_DrawGame](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_drawgame)]  
   
 ## <a name="see-also"></a>Vea también  
- [Manipulaciones e inercia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [Usar manipulaciones e inercia en una aplicación XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [Crear la clase GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
- [Crear la clase GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
+ [Manipulaciones e inercia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [Usar manipulaciones e inercia en una aplicación XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [Crear la clase GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
+ [Crear la clase GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [Listas de código completas](../../../docs/framework/common-client-technologies/full-code-listings.md)
-

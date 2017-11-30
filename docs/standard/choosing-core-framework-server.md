@@ -6,12 +6,11 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
+ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: fe2c7ff4055779a000b68a68333f3e4d06381410
-ms.openlocfilehash: aa06ff8253f22c5c867d4ba12c0a132269e04a97
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 
@@ -40,7 +39,7 @@ En las siguientes secciones, se explican de manera más detallada las razones in
 
 Si la aplicación (web/servicio) tiene que ejecutarse en varias plataformas (Windows, Linux y macOS), use .NET Core.
 
-.NET Core admite los sistemas operativos mencionados anteriormente como estación de trabajo de desarrollo. Visual Studio proporciona un entorno de desarrollo integrado (IDE) para Windows y Mac. También puede usar Visual Studio Code, que se ejecuta en macOS, Linux y Windows. Visual Studio Code es compatible con .NET Core, incluidos IntelliSense y la depuración. La mayoría de los editores de terceros, como Sublime, Emacs y VI, funcionan con .NET Core. Estos editores de terceros obtienen el editor de IntelliSense mediante [Omnisharp](http://www.omnisharp.net/). También puede evitar el uso de un editor de código y usar directamente las [herramientas de la interfaz de la línea de comandos de .NET Core](../core/tools/index.md), disponibles para todas las plataformas compatibles.
+.NET Core admite los sistemas operativos mencionados anteriormente como estación de trabajo de desarrollo. Visual Studio proporciona un entorno de desarrollo integrado (IDE) para Windows y Mac OS. También puede usar Visual Studio Code, que se ejecuta en macOS, Linux y Windows. Visual Studio Code es compatible con .NET Core, incluidos IntelliSense y la depuración. La mayoría de los editores de terceros, como Sublime, Emacs y VI, funcionan con .NET Core. Estos editores de terceros obtienen el editor de IntelliSense mediante [Omnisharp](http://www.omnisharp.net/). También puede evitar el uso de un editor de código y usar directamente las [herramientas de la interfaz de la línea de comandos de .NET Core](../core/tools/index.md), disponibles para todas las plataformas compatibles.
 
 ### <a name="microservices-architecture"></a>Arquitectura de microservicios
 
@@ -107,10 +106,9 @@ Además del mapa de ruta oficial, hay otros marcos de trabajo para migrar a .NET
 Algunas plataformas de terceros o de Microsoft no son compatibles con .NET Core. Por ejemplo, algunos servicios de Azure, como Service Fabric Stateful Reliable Services y Service Fabric Reliable Actors requieren .NET Framework. Otros servicios proporcionan un SDK que aún no se encuentra disponible para consumo en .NET Core. Esta es una circunstancia transitoria, dado que todos los servicios de Azure usan .NET Core. Mientras tanto, siempre puede utilizar la API de REST equivalente en lugar del SDK de cliente.
 
 ## <a name="see-also"></a>Vea también
- [Choose between ASP.NET and ASP.NET Core](/aspnet/core/choose-aspnet-framework)  (Elegir entre ASP.NET y ASP.NET Core)  
- [Guía de .NET Core](../core/index.md)   
- [Portabilidad a .NET Core desde .NET Framework](../core/porting/index.md)   
- [Guía de .NET Framework en Docker](../framework/docker/index.md)   
- [Introducción a los componentes de .NET](components.md)   
+ [Elija entre ASP.NET y ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
+ [Guía de .NET Core](../core/index.md)  
+ [Portabilidad de .NET Framework a .NET Core](../core/porting/index.md)  
+ [Guía de .NET Framework en Docker](../framework/docker/index.md)  
+ [Introducción a los componentes de .NET](components.md)  
  [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor)
-

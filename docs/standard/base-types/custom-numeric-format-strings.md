@@ -1,34 +1,41 @@
 ---
-title: "Cadenas con formato num&#233;rico personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cadenas de formato numérico personalizado"
-  - "especificadores de formato, cadenas de formato numérico personalizado"
-  - "especificadores de formato, numéricas"
-  - "cadenas de formato"
-  - "dar formato [.NET Framework], números"
-  - "dar formato a números [.NET Framework]"
-  - "números [.NET Framework], aplicar formato"
-  - "cadenas de formato numérico [.NET Framework]"
+title: "Cadenas con formato numérico personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- format strings
+- custom numeric format strings
+- numbers [.NET Framework], formatting
+- format specifiers, numeric
+- formatting numbers [.NET Framework]
+- format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: 54
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 54
+caps.latest.revision: "54"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Cadenas con formato num&#233;rico personalizado
+# <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 Puede crear una cadena de formato numérico personalizado, formada por uno o varios especificadores numéricos personalizados, para definir cómo debe darse formato a los datos numéricos. Una cadena de formato numérico personalizado es cualquier cadena que no sea una [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten las cadenas de formato numérico personalizado. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32>. La [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md) de .NET Framework, que utilizan algunos métodos `Write` y `WriteLine` de las clases <xref:System.Console> y <xref:System.IO.StreamWriter>, el método <xref:System.String.Format%2A?displayProperty=fullName> y el método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=fullName>, admite también cadenas de formato numérico personalizado.  
+ Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten las cadenas de formato numérico personalizado. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . Cadenas de formato numérico personalizado también son compatibles con .NET [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md), que utilizan algunos `Write` y `WriteLine` métodos de la <xref:System.Console> y <xref:System.IO.StreamWriter> clases, el <xref:System.String.Format%2A?displayProperty=nameWithType>(método) y el <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> método.  
   
 > [!TIP]
 >  Puede descargar la [Utilidad de formato](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
@@ -36,23 +43,23 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.  
   
 |Especificador de formato|Name|Descripción|Ejemplos|  
-|------------------------------|----------|-----------------|--------------|  
-|"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "0"](#Specifier0).|1234.5678 \("00000"\) \-\> 01235<br /><br /> 0.45678 \("0.00", en\-US\) \-\> 0.46<br /><br /> 0.45678 \("0.00", fr\-FR\) \-\> 0,46|  
-|"\#"|Marcador de posición de dígito.|Reemplaza el símbolo "\#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 \("\#\#\#\#"\) \-\> 3.<br /><br /> Más información: [El especificador personalizado "\#"](#SpecifierD).|1234.5678 \("\#\#\#\#\#"\) \-\> 1235<br /><br /> 0.45678 \("\#.\#\#", en\-US\) \-\> .46<br /><br /> 0.45678 \("\#.\#\#", fr\-FR\) \-\> ,46|  
-|"."|Separador decimal|Determina la ubicación del separador decimal en la cadena de resultado.<br /><br /> Más información: [El "." Especificador personalizado](#SpecifierPt).|0.45678 \("0.00", en\-US\) \-\> 0.46<br /><br /> 0.45678 \("0.00", fr\-FR\) \-\> 0,46|  
-|","|Separador de grupos y escala numérica|Actúa como separador de grupos y como especificador de escala numérica. Como separador de grupos, inserta un carácter separador de grupos adaptado entre cada grupo. Como especificador de escala numérica, divide un número por 1000 por cada coma especificada.<br /><br /> Más información: [El especificador personalizado ","](#SpecifierTh).|Especificador de separador de grupos:<br /><br /> 2147483647 \("\#\#,\#", en\-US\) \-\> 2,147,483,647<br /><br /> 2147483647 \("\#\#,\#", es\-ES\) \-\> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 \("\#,\#,,", en\-US\) \-\> 2,147<br /><br /> 2147483647 \("\#,\#,,", es\-ES\) \-\> 2.147|  
-|"%"|Marcador de posición de porcentaje.|Multiplica un número por 100 e inserta un símbolo de porcentaje adaptado en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "%"](#SpecifierPct).|0.3697 \("%\#0.00", en\-US\) \-\> %36.97<br /><br /> 0.3697 \("%\#0.00", el\-GR\) \-\> %36,97<br /><br /> 0.3697 \("\#\#.0 %", en\-US\) \-\> 37.0 %<br /><br /> 0.3697 \("\#\#.0 %", el\-GR\) \-\> 37,0 %|  
-|"‰"|Marcador de posición de "por mil"|Multiplica un número por 1000 e inserta un símbolo de "por mil" adaptado en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "‰"](#SpecifierPerMille).|0.03697 \("\#0.00‰", en\-US\) \-\> 36.97‰<br /><br /> 0.03697 \("\#0.00‰", ru\-RU\) \-\> 36,97‰|  
-|"E0"<br /><br /> "E\+0"<br /><br /> "E\-0"<br /><br /> "e0"<br /><br /> "e\+0"<br /><br /> "e\-0"|Notación exponencial|Si va seguido al menos de un 0 \(cero\), da formato al resultado usando notación exponencial. El modelo de mayúsculas de "E" o "e" indica el modelo de mayúsculas del símbolo de exponente en la cadena de resultado. El número de ceros que siguen al carácter "E" o "e" determina el número mínimo de dígitos en el exponente. Un signo más \(\+\) indica que un carácter de signo precede siempre al exponente. Un signo menos \(\-\) indica que un carácter de signo solo precede a los exponentes negativos.<br /><br /> Más información: [Los especificadores personalizados "E" y "e"](#SpecifierExponent).|987654 \("\#0.0e0"\) \-\> 98.8e4<br /><br /> 1503.92311 \("0.0\#\#e\+00"\) \-\> 1.504e\+03<br /><br /> 1.8901385E\-16 \("0.0e\+00"\) \-\> 1.9e\-16|  
-|\\|Carácter de escape|Hace que el carácter siguiente se interprete como un literal en lugar de como un especificador de formato personalizado.<br /><br /> Más información: [El carácter de escape "\\"](#SpecifierEscape).|987654 \("\\\#\#\#00\\\#"\) \-\> \#987654\#|  
-|'*string*'<br /><br /> "*string*"|Delimitador de cadena literal|Indica que los caracteres que encierra se deben copiar en la cadena de resultado sin modificar.|68 \("\# ' grados'"\) \-\> 68 grados<br /><br /> 68 \("\# ' grados'"\) \-\> 68 grados|  
-|;|Separador de secciones|Define secciones con cadenas de formato diferentes para los números positivos, negativos y cero.<br /><br /> Más información: [El separador de sección ";"](#SectionSeparator).|12.345 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> 12.35<br /><br /> 0 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> \-0\-<br /><br /> \-12.345 \("\#0.0\#;\(\#0.0\#\);\-\\0\-"\) \-\> \(12.35\)<br /><br /> 12.345 \("\#0.0\#;\(\#0.0\#\)"\) \-\> 12.35<br /><br /> 0 \("\#0.0\#;\(\#0.0\#\)"\) \-\> 0.0<br /><br /> \-12.345 \("\#0.0\#;\(\#0.0\#\)"\) \-\> \(12.35\)|  
-|Otros|Todos los demás caracteres|El carácter se copia en la cadena de resultado sin modificar.|68 \("\# °"\) \-\> 68 °|  
+|----------------------|----------|-----------------|--------------|  
+|"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|"#"|Marcador de posición de dígito.|Reemplaza el símbolo "#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 ("####") -> 3.<br /><br /> Más información: [El especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
+|"."|Separador decimal|Determina la ubicación del separador decimal en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "."](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
+|","|Separador de grupos y escala numérica|Actúa como separador de grupos y como especificador de escala numérica. Como separador de grupos, inserta un carácter separador de grupos adaptado entre cada grupo. Como especificador de escala numérica, divide un número por 1000 por cada coma especificada.<br /><br /> Más información: [El especificador personalizado ","](#SpecifierTh).|Especificador de separador de grupos:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|  
+|"%"|Marcador de posición de porcentaje.|Multiplica un número por 100 e inserta un símbolo de porcentaje adaptado en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
+|"‰"|Marcador de posición de "por mil"|Multiplica un número por 1000 e inserta un símbolo de "por mil" adaptado en la cadena de resultado.<br /><br /> Más información: [El especificador personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
+|"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notación exponencial|Si va seguido al menos de un 0 (cero), da formato al resultado usando notación exponencial. El modelo de mayúsculas de "E" o "e" indica el modelo de mayúsculas del símbolo de exponente en la cadena de resultado. El número de ceros que siguen al carácter "E" o "e" determina el número mínimo de dígitos en el exponente. Un signo más (+) indica que un carácter de signo precede siempre al exponente. Un signo menos (-) indica que un carácter de signo solo precede a los exponentes negativos.<br /><br /> Más información: [Los especificadores personalizados "E" y "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
+|"\\"|Carácter de escape|Hace que el carácter siguiente se interprete como un literal en lugar de como un especificador de formato personalizado.<br /><br /> Obtener más información: [el "\\" carácter de Escape](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
+|'*string*'<br /><br /> "*string*"|Delimitador de cadena literal|Indica que los caracteres que encierra se deben copiar en la cadena de resultado sin modificar.|68 ("# ' grados'") -> 68 grados<br /><br /> 68 ("# ' grados'") -> 68 grados|  
+|;|Separador de secciones|Define secciones con cadenas de formato diferentes para los números positivos, negativos y cero.<br /><br /> Más información: [El separador de sección ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
+|Otros|Todos los demás caracteres|El carácter se copia en la cadena de resultado sin modificar.|68 ("# °") -> 68 °|  
   
  En las secciones siguientes se proporciona información detallada sobre cada uno de los especificadores de formato numérico personalizado.  
   
 <a name="Specifier0"></a>   
-## El especificador personalizado "0"  
+## <a name="the-0-custom-specifier"></a>El especificador personalizado "0"  
  El especificador de formato personalizado "0" actúa como un símbolo de marcador de posición cero. Si el valor al que se está dando formato tiene un dígito en la posición donde aparece el cero en la cadena de formato, se copia ese dígito a la cadena de resultado; de lo contrario, aparecerá un cero en la cadena de resultado. La posición del cero que aparece más a la izquierda antes del separador decimal y la del cero que está más a la derecha después del separador decimal determinan el intervalo de dígitos que están siempre presentes en la cadena de resultado.  
   
  El especificador "00" hace que el valor se redondee al dígito más próximo que precede al decimal, donde siempre se utiliza el redondeo para evitar el cero. Por ejemplo, al aplicar el formato a 34.5 con "00" el resultado del valor es 35.  
@@ -66,12 +73,12 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SpecifierD"></a>   
-## El especificador personalizado "\#"  
- El especificador de formato personalizado "\#" actúa como un símbolo de marcador de posición de dígitos. Si el valor al que se está dando formato tiene un dígito en la posición donde aparece el símbolo "\#" en la cadena de formato, ese dígito se copia a la cadena de resultado. En caso contrario, no se almacena nada en esa posición de la cadena de resultado.  
+## <a name="the--custom-specifier"></a>El especificador personalizado "#"  
+ El especificador de formato personalizado "#" actúa como un símbolo de marcador de posición de dígitos. Si el valor al que se está dando formato tiene un dígito en la posición donde aparece el símbolo "#" en la cadena de formato, ese dígito se copia a la cadena de resultado. En caso contrario, no se almacena nada en esa posición de la cadena de resultado.  
   
  Tenga en cuenta que este especificador nunca muestra un cero que no sea un dígito significativo, incluso aunque el cero sea el único dígito de la cadena. Solo mostrará cero si es un dígito significativo del número que se está mostrando.  
   
- La cadena de formato "\#\#" hace que el valor se redondee al dígito más próximo que precede al decimal, donde siempre se utiliza el redondeo para evitar el cero. Por ejemplo, al aplicar el formato a 34.5 con "\#\#" el resultado del valor es 35.  
+ La cadena de formato "##" hace que el valor se redondee al dígito más próximo que precede al decimal, donde siempre se utiliza el redondeo para evitar el cero. Por ejemplo, al aplicar el formato a 34.5 con "##" el resultado del valor es 35.  
   
  En el ejemplo siguiente se muestran varios valores a los que se les ha aplicado cadenas de formato personalizado que incluyen marcadores de posición de dígitos.  
   
@@ -88,7 +95,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SpecifierPt"></a>   
-## El especificador personalizado "."  
+## <a name="the--custom-specifier"></a>El especificador personalizado "."  
  El especificador de formato personalizado "." inserta un separador decimal localizado en la cadena del resultado. El primer punto de la cadena de formato determina la ubicación del separador decimal en el valor con formato y se omite cualquier punto adicional.  
   
  El carácter que se usa como separador decimal en la cadena de resultado no es siempre un punto; viene determinado por la propiedad <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> del objeto <xref:System.Globalization.NumberFormatInfo> que controla la aplicación de formato.  
@@ -102,16 +109,16 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SpecifierTh"></a>   
-## El especificador personalizado ","  
+## <a name="the--custom-specifier"></a>El especificador personalizado ","  
  El carácter "," actúa como separador de grupos y como especificador de escala numérica.  
   
--   Separador de grupos: si se especifican una o varias comas dos marcadores de posición de dígitos \(0 ó \#\) que dan formato a los dígitos enteros de un número, se insertará un carácter separador de grupos entre cada grupo de números en la parte entera de la salida.  
+-   Separador de grupos: si se especifican una o varias comas dos marcadores de posición de dígitos (0 ó #) que dan formato a los dígitos enteros de un número, se insertará un carácter separador de grupos entre cada grupo de números en la parte entera de la salida.  
   
-     Las propiedades <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> y <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> del objeto <xref:System.Globalization.NumberFormatInfo> actual determinan el carácter utilizado como separador de grupos de números y el tamaño de cada grupo de números. Por ejemplo, si se utiliza la cadena "\#,\#" y la referencia cultural de todos los idiomas para dar formato al número 1000, el resultado será "1,000".  
+     Las propiedades <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> y <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> del objeto <xref:System.Globalization.NumberFormatInfo> actual determinan el carácter utilizado como separador de grupos de números y el tamaño de cada grupo de números. Por ejemplo, si se utiliza la cadena "#,#" y la referencia cultural de todos los idiomas para dar formato al número 1000, el resultado será "1,000".  
   
 -   Especificador de escala numérica: si se especifican una o varias comas inmediatamente a la izquierda del punto decimal explícito o implícito, el número al que se va a dar formato se divide por 1000 por cada coma. Por ejemplo, si se utiliza la cadena "0,," para dar formato al número 100 millones, el resultado será "100".  
   
- Puede usar especificadores de separador de grupos y de escala numérica en la misma cadena de formato. Por ejemplo, si se utiliza la cadena "\#,0,," y la referencia cultural de todos los idiomas para dar formato al número mil millones, el resultado será "1,000".  
+ Puede usar especificadores de separador de grupos y de escala numérica en la misma cadena de formato. Por ejemplo, si se utiliza la cadena "#,0,," y la referencia cultural de todos los idiomas para dar formato al número mil millones, el resultado será "1,000".  
   
  En el ejemplo siguiente se muestra el uso de la coma como separador de grupos.  
   
@@ -128,8 +135,8 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SpecifierPct"></a>   
-## El especificador personalizado "%"  
- Un signo de porcentaje \(%\) en una cadena de formato hace que se multiplique un número por 100 antes de darle formato. El símbolo de porcentaje adaptado se inserta en el número en la ubicación donde aparece % en la cadena de formato. La propiedad <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> del objeto <xref:System.Globalization.NumberFormatInfo> actual define el carácter de porcentaje empleado.  
+## <a name="the--custom-specifier"></a>El especificador personalizado "%"  
+ Un signo de porcentaje (%) en una cadena de formato hace que se multiplique un número por 100 antes de darle formato. El símbolo de porcentaje adaptado se inserta en el número en la ubicación donde aparece % en la cadena de formato. La propiedad <xref:System.Globalization.NumberFormatInfo.PercentSymbol%2A> del objeto <xref:System.Globalization.NumberFormatInfo> actual define el carácter de porcentaje empleado.  
   
  En el ejemplo siguiente se definen varias cadenas de formato personalizado que incluyen el especificador personalizado "%".  
   
@@ -140,8 +147,8 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SpecifierPerMille"></a>   
-## El especificador personalizado "‰"  
- Un carácter de "por mil" \(‰ o \\u2030\) en una cadena de formato hace que un número se multiplique por 1000 antes de darle formato. El símbolo de "por mil" adecuado se inserta en la cadena devuelta, en la ubicación de la cadena de formato en la que aparece el símbolo ‰. La propiedad <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=fullName> del objeto que proporciona la información de formato específica de la referencia cultural es la que determina el carácter de "por mil" que se utiliza.  
+## <a name="the--custom-specifier"></a>El especificador personalizado "‰"  
+ Un carácter de "por mil" (‰ o \u2030) en una cadena de formato hace que un número se multiplique por 1000 antes de darle formato. El símbolo de "por mil" adecuado se inserta en la cadena devuelta, en la ubicación de la cadena de formato en la que aparece el símbolo ‰. La propiedad <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> del objeto que proporciona la información de formato específica de la referencia cultural es la que determina el carácter de "por mil" que se utiliza.  
   
  En el ejemplo siguiente se define una cadena de formato personalizado que incluye el especificador personalizado "‰".  
   
@@ -152,8 +159,8 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SpecifierExponent"></a>   
-## Los especificadores personalizados "E" y "e"  
- Si alguna de las cadenas "E", "E\+", "E\-", "e", "e\+", o "e\-" está presente en la cadena de formato y va seguida inmediatamente de al menos un cero, se da formato al número mediante notación científica con una 'E' o una 'e' insertadas entre el número y el exponente. El número de ceros que hay a continuación del indicador de notación científica determina el número mínimo de dígitos para el exponente. Los formatos 'E\+' y 'e\+' indican que un signo más o un signo menos debe preceder siempre al exponente. Los formatos 'E', 'E\-', 'e' o 'e\-' indican que un carácter de signo debe preceder solo a exponentes negativos.  
+## <a name="the-e-and-e-custom-specifiers"></a>Los especificadores personalizados "E" y "e"  
+ Si alguna de las cadenas "E", "E+", "E-", "e", "e+", o "e-" está presente en la cadena de formato y va seguida inmediatamente de al menos un cero, se da formato al número mediante notación científica con una 'E' o una 'e' insertadas entre el número y el exponente. El número de ceros que hay a continuación del indicador de notación científica determina el número mínimo de dígitos para el exponente. Los formatos 'E+' y 'e+' indican que un signo más o un signo menos debe preceder siempre al exponente. Los formatos 'E', 'E-', 'e' o 'e-' indican que un carácter de signo debe preceder solo a exponentes negativos.  
   
  En el ejemplo siguiente se da formato a varios valores numéricos utilizando los especificadores de notación científica.  
   
@@ -164,17 +171,17 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SpecifierEscape"></a>   
-## El carácter de escape "\\"  
- Los símbolos "\#", "0", ".", ",", "%" y "‰" en una cadena de formato se interpretan como especificadores de formato en lugar de como caracteres literales. Dependiendo de su posición en una cadena de formato personalizado, la "E" en mayúsculas y minúsculas así como los símbolos \+ y \- también se pueden interpretar como especificadores de formato.  
+## <a name="the--escape-character"></a>El "\\" carácter de Escape  
+ Los símbolos "#", "0", ".", ",", "%" y "‰" en una cadena de formato se interpretan como especificadores de formato en lugar de como caracteres literales. Dependiendo de su posición en una cadena de formato personalizado, la "E" en mayúsculas y minúsculas así como los símbolos + y - también se pueden interpretar como especificadores de formato.  
   
  Para evitar que un carácter se interprete como un especificador de formato, puede precederlo con una barra diagonal inversa, que es el carácter de escape. El carácter de escape significa que el siguiente carácter es un carácter literal que se debe incluir en la cadena de resultado sin modificar.  
   
- Para incluir una barra diagonal inversa en una cadena de resultado, debe indicar su secuencia de escape con otra barra diagonal inversa \(`\\`\).  
+ Para incluir una barra diagonal inversa en una cadena de resultado, debe indicar su secuencia de escape con otra barra diagonal inversa (`\\`).  
   
 > [!NOTE]
->  Algunos compiladores, como los compiladores de C\# y C\+\+, también pueden interpretar un único carácter de barra diagonal inversa como un carácter de escape. Para asegurarse de que una cadena se interpreta correctamente al darle formato, puede usar el carácter literal de cadena textual \(el carácter @\) antes de la cadena en C\# o puede agregar otro carácter de barra diagonal inversa delante de cada barra diagonal inversa en C\# y C\+\+. En el siguiente ejemplo de C\# se muestran ambos enfoques.  
+>  Algunos compiladores, como los compiladores de C# y C++, también pueden interpretar un único carácter de barra diagonal inversa como un carácter de escape. Para asegurarse de que una cadena se interpreta correctamente al darle formato, puede usar el carácter literal de cadena textual (el carácter @) antes de la cadena en C# o puede agregar otro carácter de barra diagonal inversa delante de cada barra diagonal inversa en C# y C++. En el siguiente ejemplo de C# se muestran ambos enfoques.  
   
- En el ejemplo siguiente se usa el carácter de escape para evitar que la operación de formato interprete los caracteres "\#", "0" y "\\" como caracteres de escape o especificadores de formato. En el ejemplo de C\# se usa una barra diagonal inversa adicional para asegurarse de que una barra diagonal inversa se interprete como un carácter literal.  
+ En el ejemplo siguiente se usa el carácter de escape para evitar que la operación de formato interprete el "#", "0" y "\\" caracteres como caracteres de escape o especificadores de formato. En el ejemplo de C# se usa una barra diagonal inversa adicional para asegurarse de que una barra diagonal inversa se interprete como un carácter literal.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -183,14 +190,14 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="SectionSeparator"></a>   
-## El separador de secciones ";"  
- El punto y coma \(;\) es un especificador de formato condicional que aplica distinto formato a un número dependiendo de si su valor es positivo, negativo o cero. Para generar este comportamiento, una cadena de formato personalizado puede contener hasta tres secciones separadas por signos de punto y coma. Estas secciones se describen en la siguiente tabla.  
+## <a name="the--section-separator"></a>El separador de sección ";"  
+ El punto y coma (;) es un especificador de formato condicional que aplica distinto formato a un número dependiendo de si su valor es positivo, negativo o cero. Para generar este comportamiento, una cadena de formato personalizado puede contener hasta tres secciones separadas por signos de punto y coma. Estas secciones se describen en la siguiente tabla.  
   
 |Número de secciones|Descripción|  
-|-------------------------|-----------------|  
+|------------------------|-----------------|  
 |Una sección|La cadena de formato se aplica a todos los valores.|  
 |Dos secciones|La primera sección se aplica a valores positivos y ceros, y la segunda, sólo a valores negativos.<br /><br /> Si el número al que se va a dar formato es negativo, pero se convierte en cero después de redondearlo según el formato de la segunda sección, se da formato al cero resultante según la primera sección.|  
-|Tres secciones.|La primera sección se aplica a valores positivos y ceros, la segunda, sólo a valores negativos, y la tercera, a ceros.<br /><br /> La segunda sección se puede dejar vacía \(no dejando nada entre los signos de punto y coma\) y, en ese caso, la primera sección se aplica a los valores distintos de cero.<br /><br /> Si el número al que se va a dar formato es distinto de cero, pero se convierte en cero después de redondearlo según el formato de la primera o la segunda sección, se da formato al cero resultante según la tercera sección.|  
+|Tres secciones.|La primera sección se aplica a valores positivos y ceros, la segunda, sólo a valores negativos, y la tercera, a ceros.<br /><br /> La segunda sección se puede dejar vacía (no dejando nada entre los signos de punto y coma) y, en ese caso, la primera sección se aplica a los valores distintos de cero.<br /><br /> Si el número al que se va a dar formato es distinto de cero, pero se convierte en cero después de redondearlo según el formato de la primera o la segunda sección, se da formato al cero resultante según la tercera sección.|  
   
  Los separadores de sección omiten cualquier formato preexistente asociado a un número al dar formato al valor final. Por ejemplo, los valores negativos se muestran siempre con signo menos cuando se utilizan separadores de sección. Si se desea que el valor con formato final tenga un signo menos, debe incluir explícitamente el signo menos como parte del especificador de formato personalizado.  
   
@@ -203,24 +210,24 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  [Volver a la tabla](#table)  
   
 <a name="NotesCustomFormatting"></a>   
-## Notas  
+## <a name="notes"></a>Notas  
   
-### Infinitos de punto flotante y NaN  
- Independientemente de la cadena de formato, si el valor de un tipo de punto flotante <xref:System.Single> o <xref:System.Double> es infinito positivo, infinito negativo o NaN \(Not a Number, no es un número\), la cadena con formato será el valor de la propiedad <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A> o <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> respectiva especificada por el objeto <xref:System.Globalization.NumberFormatInfo> aplicable actualmente.  
+### <a name="floating-point-infinities-and-nan"></a>Infinitos de punto flotante y NaN  
+ Independientemente de la cadena de formato, si el valor de un tipo de punto flotante <xref:System.Single> o <xref:System.Double> es infinito positivo, infinito negativo o NaN (Not a Number, no es un número), la cadena con formato será el valor de la propiedad <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>o <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> respectiva especificada por el objeto <xref:System.Globalization.NumberFormatInfo> aplicable actualmente.  
   
-### Configuración del Panel de control  
+### <a name="control-panel-settings"></a>Configuración del Panel de control  
  Los valores de configuración del elemento **Configuración regional y de idioma** del Panel de control influyen en la cadena de resultado generada por una operación de formato. Estos valores de configuración se utilizan para inicializar el objeto <xref:System.Globalization.NumberFormatInfo> asociado a la referencia cultural del subproceso actual, y la referencia cultural del subproceso actual proporciona valores que se utilizan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.  
   
- Asimismo, si se usa el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=fullName> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo>. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=fullName> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
+ Además, si usas el <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructor para crear instancias de un nuevo <xref:System.Globalization.CultureInfo> objeto que representa la misma referencia cultural que la actual referencia cultural del sistema, cualquier personalización establecida por el **Configuración Regional e idioma** elemento en el Panel de Control se aplicará al nuevo <xref:System.Globalization.CultureInfo> objeto. Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.  
   
-### Cadenas de formato de punto fijo y redondeo  
- Para las cadenas de formato de punto fijo \(es decir, las cadenas de formato que no contienen caracteres de formato de notación científica\), los números se redondean hasta tantos decimales como marcadores de posición de dígitos haya a la derecha del separador decimal. Si la cadena de formato no contiene ningún separador decimal, el número se redondea al entero más próximo. Si el número tiene más dígitos que marcadores de posición de dígitos a la izquierda del separador decimal, los dígitos adicionales se copian en la cadena de resultado justo antes del primer marcador de posición de dígitos.  
+### <a name="rounding-and-fixed-point-format-strings"></a>Cadenas de formato de punto fijo y redondeo  
+ Para las cadenas de formato de punto fijo (es decir, las cadenas de formato que no contienen caracteres de formato de notación científica), los números se redondean hasta tantos decimales como marcadores de posición de dígitos haya a la derecha del separador decimal. Si la cadena de formato no contiene ningún separador decimal, el número se redondea al entero más próximo. Si el número tiene más dígitos que marcadores de posición de dígitos a la izquierda del separador decimal, los dígitos adicionales se copian en la cadena de resultado justo antes del primer marcador de posición de dígitos.  
   
  [Volver a la tabla](#table)  
   
 <a name="example"></a>   
-## Ejemplo  
- En el siguiente ejemplo se muestran dos cadenas de formato numérico personalizado. En ambos casos, el marcador de posición de dígitos \(`#`\) muestra los datos numéricos, y todos los demás caracteres se copian en la cadena de resultado.  
+## <a name="example"></a>Ejemplo  
+ En el siguiente ejemplo se muestran dos cadenas de formato numérico personalizado. En ambos casos, el marcador de posición de dígitos (`#`) muestra los datos numéricos, y todos los demás caracteres se copian en la cadena de resultado.  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
  [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
@@ -228,9 +235,9 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
   
  [Volver a la tabla](#table)  
   
-## Vea también  
- <xref:System.Globalization.NumberFormatInfo>   
- [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md)   
- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)   
- [Cómo: Rellenar un número con ceros iniciales](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Globalization.NumberFormatInfo>  
+ [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+ [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [Rellenar un número con ceros a la izquierda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
  [Ejemplo: Utilidad de formato de .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

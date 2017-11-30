@@ -15,28 +15,27 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0f23a69a8e2493e018b0a37628762247c0e33430
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sorted-collection-types"></a>Tipos de colecciones ordenadas
-La clase <xref:System.Collections.SortedList?displayProperty=fullName>, la clase genérica <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> y la clase genérica <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> son similares a la clase <xref:System.Collections.Hashtable> y a la clase genérica <xref:System.Collections.Generic.Dictionary%602> en que implementan la interfaz <xref:System.Collections.IDictionary>, pero mantienen sus elementos en el criterio de ordenación mediante la clave, y no tienen la inserción O(1) y la característica de recuperación de las tablas hash. Las tres clases tienen varias características en común:  
+La clase <xref:System.Collections.SortedList?displayProperty=nameWithType>, la clase genérica <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> y la clase genérica <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> son similares a la clase <xref:System.Collections.Hashtable> y a la clase genérica <xref:System.Collections.Generic.Dictionary%602> en que implementan la interfaz <xref:System.Collections.IDictionary>, pero mantienen sus elementos en el criterio de ordenación mediante la clave, y no tienen la inserción O(1) y la característica de recuperación de las tablas hash. Las tres clases tienen varias características en común:  
   
--   Las tres clases implementan la interfaz <xref:System.Collections.IDictionary?displayProperty=fullName>. Las dos clases genéricas también implementan la interfaz genérica <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>.  
+-   Las tres clases implementan la interfaz <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Las dos clases genéricas también implementan la interfaz genérica <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>.  
   
 -   Cada elemento es un par de clave y valor para propósitos de enumeración.  
   
     > [!NOTE]
     >  La clase <xref:System.Collections.SortedList> no genérica devuelve objetos <xref:System.Collections.DictionaryEntry> cuando se enumera, aunque los dos tipos genéricos devuelven objetos <xref:System.Collections.Generic.KeyValuePair%602>.  
   
--   Los elementos se ordenan según una implementación <xref:System.Collections.IComparer?displayProperty=fullName> (para <xref:System.Collections.SortedList> no genérico) o una implementación <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> (para las dos clases genéricas).  
+-   Los elementos se ordenan según una implementación <xref:System.Collections.IComparer?displayProperty=nameWithType> (para <xref:System.Collections.SortedList> no genérico) o una implementación <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> (para las dos clases genéricas).  
   
 -   Cada clase proporciona propiedades que devuelven colecciones que contienen solo las claves o solo los valores.  
   
@@ -57,8 +56,7 @@ La clase <xref:System.Collections.SortedList?displayProperty=fullName>, la clase
  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la clase <xref:System.Collections.Generic.SortedSet%601> proporciona un árbol que mantiene los datos ordenados después de las inserciones, eliminaciones y búsquedas. Esta clase y la clase <xref:System.Collections.Generic.HashSet%601> implementan la interfaz <xref:System.Collections.Generic.ISet%601>.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Collections.IDictionary?displayProperty=fullName>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
  [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)
-

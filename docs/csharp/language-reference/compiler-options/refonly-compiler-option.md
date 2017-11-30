@@ -1,30 +1,24 @@
 ---
 title: -refonly (Opciones del compilador de C#)
-ms.date: 2017-07-08
+ms.date: 07/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refonly
-dev_langs:
-- CSharp
+f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: af99f7565a43dd28b6271611bc8690e7a2e51482
-ms.contentlocale: es-es
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refonly-c-compiler-options"></a>/refonly (Opciones del compilador de C#)
 
-**/refonly** La opción /refonly indica que un ensamblado de referencia debe mostrarse en lugar de un ensamblado de implementación, como el resultado principal. El parámetro `/refonly` deshabilita de forma automática la generación de archivos PDB, ya que los ensamblados de referencia no pueden ejecutarse.
+El **/refonly** opción indica que un ensamblado de referencia deben mostrarse en lugar de un ensamblado de implementación, como el resultado principal. El parámetro `/refonly` deshabilita de forma automática la generación de archivos PDB, ya que los ensamblados de referencia no pueden ejecutarse.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,6 +43,5 @@ Los ensamblados de referencia también quitan los metadatos (miembros privados) 
 Las opciones `/refonly` y [`/refout`](refout-compiler-option.md) son mutuamente excluyentes.
 
 ## <a name="see-also"></a>Vea también
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
-

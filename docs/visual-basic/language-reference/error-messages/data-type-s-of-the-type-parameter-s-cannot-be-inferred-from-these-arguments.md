@@ -1,41 +1,40 @@
 ---
-title: "Los tipos de datos de los par&#225;metros de tipo no se pueden inferir de estos argumentos | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36644"
-  - "bc36647"
-  - "vbc36647"
-  - "vbc36644"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36644"
-  - "BC36647"
+title: "Los tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36644
+- bc36647
+- vbc36647
+- vbc36644
+helpviewer_keywords:
+- BC36644
+- BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b290c25286dce2236823919e8287db9abefc0dd7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Los tipos de datos de los par&#225;metros de tipo no se pueden inferir de estos argumentos
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Los tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos.Al especificar los tipos de datos explícitamente, se podría corregir este error.  
+# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Los tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos
+Tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos. Especificar los tipos de datos explícitamente puede corregir este error.  
   
- Este error aparece al producirse un error en la resolución de sobrecarga.  Se produce como un mensaje subordinado que indica por qué se ha eliminado un candidato de sobrecarga determinado.  El mensaje de error explica que el compilador no puede utilizar la inferencia de tipos para buscar tipos de datos para los parámetros de tipo.  
+ Este error se produce cuando en caso de error en la resolución de sobrecarga. Se produce como un mensaje subordinado que indica por qué se ha eliminado un candidato de sobrecarga determinado. El mensaje de error explica que el compilador no puede usar la inferencia de tipos para buscar tipos de datos para los parámetros de tipo.  
   
 > [!NOTE]
->  Cuando la especificación de argumentos no es una opción \(por ejemplo, para operadores de consulta en expresiones de consulta\), el mensaje de error aparece sin la segunda frase.  
+>  Al especificar argumentos no es una opción (por ejemplo, para operadores de consulta en expresiones de consulta), el mensaje de error aparece sin la segunda oración.  
   
  El código siguiente muestra el error.  
   
-```vb#  
+```vb  
 Module Module1  
   
     Sub Main()  
@@ -61,11 +60,11 @@ End Interface
   
  **Id. de error:** BC36647 y BC36644  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Es posible que pueda especificar un tipo de datos para los parámetros de tipo en lugar de basarse en la inferencia de tipos.  
+-   Es posible que pueda especificar un tipo de datos para el parámetro o parámetros de tipo en lugar de confiar en la inferencia de tipo.  
   
-## Vea también  
- [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Procedimientos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
+## <a name="see-also"></a>Vea también  
+ [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [Procedimientos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [Conversiones de tipos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

@@ -1,37 +1,18 @@
 ---
 title: -target:winmdobj (Opciones del compilador de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f690591b79159a0196a1637903f2cc53442976e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3967f7f9326652271ce55aa286e9f42f94dee775
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (Opciones del compilador de C#)
 Si usa la opción del compilador **/target:winmdobj**, el compilador crea un archivo .winmdobj intermedio que puede convertir en un archivo binario de Windows Runtime (.winmd). A continuación, pueden usar el archivo .winmd programas de JavaScript y C++, además de los programas de lenguajes administrados.  
@@ -71,6 +52,5 @@ csc /target:winmdobj filename.cs
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [/target (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  (/target [Opciones del compilador de C#])  
+ [/target (opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-

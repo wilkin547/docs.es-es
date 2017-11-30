@@ -6,12 +6,11 @@ ms.author: wiwagn
 ms.date: 09/08/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 6e986e89d47ba4de9b8563f1a95cb1ae89accc89
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 89657d766771bc73777a62c14e10cde3b4f6f75f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Prueba unitaria de C# en .NET Core mediante pruebas de dotnet y xUnit
 
@@ -157,5 +156,6 @@ if (candidate < 2)
 
 Puede continuar recorriendo en iteración agregando más pruebas, más teorías y más código en la biblioteca principal. Ya tiene la [versión terminada de las pruebas](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) y la [implementación completa de la biblioteca](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).
 
-Ha creado una biblioteca pequeña y un conjunto de pruebas unitarias para esa biblioteca. Ha estructurado la solución, por lo que agregar pruebas y paquetes nuevos sigue el flujo de trabajo actual. Ha centrado la mayor parte del tiempo y del esfuerzo en resolver los objetivos de la aplicación.
+### <a name="additional-resources"></a>Recursos adicionales
 
+[Probar la lógica del controlador en ASP.NET Core](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)

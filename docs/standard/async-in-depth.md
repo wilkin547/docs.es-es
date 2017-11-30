@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
 ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
-ms.contentlocale: es-es
-ms.lasthandoff: 08/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-in-depth"></a>Async en profundidad
 
 La escritura de código asincrónico enlazado a E/S y CPU es sencilla al usar el modelo asincrónico basado en tareas de .NET. El modelo se expone mediante los tipos `Task` y `Task<T>` y las palabras claves `async` y `await` en C# y Visual Basic. (Los recursos específicos del idioma se encuentran en la sección [Vea también](#see-also)). En este artículo, se explica cómo usar Async de .NET y se proporciona información sobre el marco de trabajo de Async usado en segundo plano.
@@ -154,4 +152,3 @@ Una vez se encuentra `await`, la ejecución de `CalculateResult()` se cede a su 
 [Programación asincrónica en C#](~/docs/csharp/async.md)   
 [Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)  (Programación asincrónica en F#)  
 [Programación asincrónica con Async y Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-

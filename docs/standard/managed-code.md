@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="what-is-managed-code"></a>¿Qué es el "código administrado"?
 
 Al trabajar con .NET Framework, a menudo se encontrará con el término "código administrado". En este documento se explica el significado de este término y otra información relacionada.
@@ -47,4 +45,3 @@ De modo parecido, C# es un lenguaje que permite usar construcciones no administr
 *   [Información general acerca de .NET Framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [Código no seguro y punteros](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [Interoperabilidad (Guía de programación de C#)](https://msdn.microsoft.com/library/ms173184.aspx)
-

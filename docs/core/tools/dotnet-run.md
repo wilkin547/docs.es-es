@@ -3,22 +3,21 @@ title: 'Comando dotnet run: CLI de .NET Core'
 description: "El comando dotnet run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: es-es
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
 `dotnet run`: ejecuta el código fuente sin comandos explícitos de compilación o inicio.
 
@@ -74,6 +73,10 @@ Define la configuración de compilación. El valor predeterminado es `Debug`.
 
 Compila y ejecuta la aplicación con el [marco](../../standard/frameworks.md) especificado. El marco debe especificarse en el archivo de proyecto.
 
+`--force`
+
+Fuerza la resolución de todas las dependencias, incluso si la última restauración se realizó correctamente. Esto es equivalente a eliminar *project.assets.json*.
+
 `-h|--help`
 
 Imprime una corta ayuda para el comando.
@@ -85,6 +88,10 @@ El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicaci�
 `--no-build`
 
 No compila el proyecto antes de ejecutarlo.
+
+`--no-dependencies`
+
+Al restaurar un proyecto con referencias de proyecto a proyecto (P2P), se restaura el proyecto raíz y no las referencias.
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ Ejecución del proyecto especificado:
 Ejecute el proyecto en el directorio actual (el argumento `--help` en este ejemplo se pasa a la aplicación, dado que se usó el argumento `--`):
 
 `dotnet run --configuration Release -- --help`
-

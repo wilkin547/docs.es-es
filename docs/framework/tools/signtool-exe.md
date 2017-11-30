@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
@@ -91,7 +84,7 @@ signtool [command] [options] [file_name | ...]
 |`/csp`  *CSPName*|Especifica el proveedor de servicios criptográficos (CSP) que contiene el contenedor de claves privadas.|  
 |`/d`  *Desc*|Especifica una descripción del contenido firmado.|  
 |`/du`  *URL*|Especifica el localizador uniforme de recursos (URL) de la descripción ampliada del contenido firmado.|  
-|`/f`  *SignCertFile*|Especifica el certificado de firma en un archivo. Si el archivo está en formato de intercambio de información personal (PFX) y protegido por una contraseña, utilice la opción `/p` para especificar la contraseña. Si el archivo no contiene claves privadas, utilice las opciones `/csp` y `/k` para especificar el CSP y el nombre de contenedor de claves privadas, respectivamente.|  
+|`/f`  *SignCertFile*|Especifica el certificado de firma en un archivo. Si el archivo está en formato de intercambio de información personal (PFX) y protegido por una contraseña, utilice la opción `/p` para especificar la contraseña. Si el archivo no contiene claves privadas, utilice las opciones `/csp` y `/kc` para especificar el CSP y el nombre de contenedor de claves privadas, respectivamente.|  
 |`/fd`|Especifica el algoritmo de resumen de archivo que se va a usar para crear signaturas de archivo. El valor predeterminado es SHA1.|  
 |`/i`  *IssuerName*|Especifica el nombre del emisor del certificado de firma. Este valor puede corresponder a una subcadena del nombre del emisor completo.|  
 |`/kc`  *PrivKeyContainerName*|Especifica el nombre del contenedor de claves privadas.|  
@@ -225,6 +218,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)   
+ [Herramientas](../../../docs/framework/tools/index.md)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

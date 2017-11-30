@@ -17,16 +17,15 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizar y localizar aplicaciones de .NET Framework
 El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.com/goglobal/bb978433.aspx), incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.  
@@ -67,7 +66,7 @@ El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.co
  Describe los procedimientos recomendados que se deben seguir para la globalización, localización y desarrollo de aplicaciones de ASP.NET de uso internacional.  
   
 ## <a name="reference"></a>Referencia  
- Espacio de nombres <xref:System.Globalization?displayProperty=fullName>  
+ Espacio de nombres <xref:System.Globalization?displayProperty=nameWithType>  
  Contiene clases que definen datos relativos a la referencia cultural, tales como idioma, país o región, calendario, formatos de fecha, divisa y números, así como el criterio de ordenación para cadenas.  
   
  Espacio de nombres <xref:System.Resources>  
@@ -81,4 +80,3 @@ El desarrollo de una [aplicación de uso internacional](http://msdn.microsoft.co
   
  [Winres.exe (Editor de recursos de Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Describe cómo usar Winres.exe para localizar formularios de Windows Forms.
-

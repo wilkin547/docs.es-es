@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
+ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 16c99ec5d1c120f1ab079940459cdb7716471353
-ms.contentlocale: es-es
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="types-variables-and-values"></a>Tipos, variables y valores  
 C# es un lenguaje fuertemente tipado. Todas las variables y constantes tienen un tipo, al igual que todas las expresiones que se evalúan como un valor. Cada una de las firmas de método especifica un tipo para cada parámetro de entrada y para el valor devuelto. La biblioteca de clases .NET Framework define un conjunto de tipos numéricos integrados, así como tipos más complejos que representan una amplia variedad de construcciones lógicas, como el sistema de archivos, conexiones de red, colecciones y matrices de objetos, y fechas. Los programas de C# típicos usan tipos de la biblioteca de clases, así como tipos definidos por el usuario que modelan los conceptos que son específicos del dominio del problema del programa.  
   
@@ -64,7 +62,7 @@ C# proporciona un conjunto estándar de tipos numéricos integrados para represe
 Las construcciones [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) y [enum](language-reference/keywords/enum.md) se usan para crear sus propios tipos personalizados. La biblioteca de clases .NET Framework es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente. 
   
 ## <a name="generic-types"></a>Tipos genéricos  
-Los tipos se pueden declarar con uno o varios *parámetros de tipo* que actúan como un marcador de posición para el tipo real (el *tipo concreto*) que proporcionará el código de cliente cuando cree una instancia del tipo. Estos tipos se denominan *tipos genéricos*. Por ejemplo, el tipo de .NET Framework @System.Collections.Generic.List%601 tiene un parámetro de tipo al que, por convención, se denomina *T*. Cuando crea una instancia del tipo, especifica el tipo de los objetos que contendrá la lista, por ejemplo, la cadena:  
+Los tipos se pueden declarar con uno o varios *parámetros de tipo* que actúan como un marcador de posición para el tipo real (el *tipo concreto*) que proporcionará el código de cliente cuando cree una instancia del tipo. Estos tipos se denominan *tipos genéricos*. Por ejemplo, el tipo de .NET Framework <xref:System.Collections.Generic.List%601> tiene un parámetro de tipo al que, por convención, se le denomina *T*. Cuando crea una instancia del tipo, especifica el tipo de los objetos que contendrá la lista, por ejemplo, la cadena:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)] 
   
@@ -80,7 +78,7 @@ Es habitual querer devolver más de un valor de un método. Puede crear *tipos d
 ## <a name="the-common-type-system"></a>Common Type System  
 Es importante entender dos aspectos fundamentales sobre el sistema de tipos en .NET Framework:  
   
--   Es compatible con el principio de herencia. Los tipos pueden derivarse de otros tipos, denominados *tipos base*. El tipo derivado hereda (con algunas restricciones), los métodos, las propiedades y otros miembros del tipo base. A su vez, el tipo base puede derivarse de algún otro tipo, en cuyo caso el tipo derivado hereda los miembros de ambos tipos base en su jerarquía de herencia. Todos los tipos, incluidos los tipos numéricos integrados como @System.Int32 (palabra clave de C#: `int`), se derivan en última instancia de un único tipo base, que es @System.Object (palabra clave de C#: `object`). Esta jerarquía de tipos unificada se denomina [Common Type System](../standard/common-type-system.md) (CTS). Para obtener más información sobre la herencia en C#, consulte [Herencia](programming-guide/classes-and-structs/inheritance.md).  
+-   Es compatible con el principio de herencia. Los tipos pueden derivarse de otros tipos, denominados *tipos base*. El tipo derivado hereda (con algunas restricciones), los métodos, las propiedades y otros miembros del tipo base. A su vez, el tipo base puede derivarse de algún otro tipo, en cuyo caso el tipo derivado hereda los miembros de ambos tipos base en su jerarquía de herencia. Todos los tipos, incluidos los tipos numéricos integrados como <xref:System.Int32> (palabra clave de C#: `int`), se derivan en última instancia de un único tipo base, que es <xref:System.Object> (palabra clave de C#: `object`). Esta jerarquía de tipos unificada se denomina [Common Type System](../standard/common-type-system.md) (CTS). Para obtener más información sobre la herencia en C#, consulte [Herencia](programming-guide/classes-and-structs/inheritance.md).  
   
 -   En CTS, cada tipo se define como un *tipo de valor* o un *tipo de referencia*. Esto incluye todos los tipos personalizados de la biblioteca de clases .NET Framework y también sus propios tipos definidos por el usuario. Los tipos que se definen mediante el uso de la palabra clave [struct](language-reference/keywords/struct.md) son tipos de valor; todos los tipos numéricos integrados son **structs**. Para obtener más información sobre los tipos de valor, consulte [Structs](structs.md). Los tipos que se definen mediante el uso de la palabra clave [class](language-reference/keywords/class.md) son tipos de referencia. Para obtener más información sobre los tipos de referencia, consulte [Classes](classes.md) (Clases). Los tipos de referencia y los tipos de valor tienen distintas reglas de tiempo de compilación y distintos comportamientos de tiempo de ejecución.
  
@@ -88,4 +86,3 @@ Es importante entender dos aspectos fundamentales sobre el sistema de tipos en .
 ## <a name="see-also"></a>Vea también
 [Structs](structs.md)
 [clases](classes.md)
-

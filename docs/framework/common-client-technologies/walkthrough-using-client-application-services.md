@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Tutorial: Usar servicios de aplicaciones cliente
 En este tema se describe cómo crear una aplicación de Windows que usa los servicios de aplicaciones cliente para autenticar usuarios y recuperar la configuración y los roles de usuario.  
@@ -250,11 +251,12 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 3.  En el editor de código, agregue las instrucciones siguientes al principio del archivo Form1.  
   
-     [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)] [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
+     [!code-csharp[ClientApplicationServices#001](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#001)]
+     [!code-vb[ClientApplicationServices#001](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#001)]  
   
 4.  En el **Explorador de soluciones**, haga doble clic en Form1 para mostrar el diseñador.  
   
-5.  En el diseñador, haga doble clic en la superficie del formulario para generar un controlador de eventos <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> denominado `Form1_Load`.  
+5.  En el diseñador, haga doble clic en la superficie del formulario para generar un controlador de eventos <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType> denominado `Form1_Load`.  
   
      Aparece el editor de código con el cursor en el método `Form1_Load` .  
   
@@ -262,9 +264,10 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      Este código deniega el acceso a los usuarios no autenticados y sale de la aplicación. Como alternativa, puede permitir que los usuarios no autenticados accedan al formulario, pero denegándoles el acceso a alguna funcionalidad específica. Normalmente, no seguirá este procedimiento para codificar de forma rígida el nombre de usuario y la contraseña, pero resulta útil para realizar pruebas. En la siguiente sección, reemplazará este código por un código más sólido que muestra un cuadro de diálogo de inicio de sesión e incluye control de excepciones.  
   
-     Tenga en cuenta que el método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> está en [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]. Este método delega su trabajo en el proveedor de autenticación configurado y devuelve `true` si la autenticación se realiza correctamente. La aplicación no requiere una referencia directa al proveedor de autenticación del cliente.  
+     Tenga en cuenta que el método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> está en [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]. Este método delega su trabajo en el proveedor de autenticación configurado y devuelve `true` si la autenticación se realiza correctamente. La aplicación no requiere una referencia directa al proveedor de autenticación del cliente.  
   
-     [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)] [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
+     [!code-csharp[ClientApplicationServices#300](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#300)]
+     [!code-vb[ClientApplicationServices#300](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#300)]  
   
  Ahora puede presionar F5 para ejecutar la aplicación y, puesto que proporcionó un nombre de usuario y una contraseña correctos, verá el formulario.  
   
@@ -294,15 +297,17 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      Este código muestra un mensaje de bienvenida y, a continuación, llama al método `ValidateUsingCredentialsProvider` que agregará en el paso siguiente. Si el usuario no está autenticado, el método `ValidateUsingCredentialsProvider` devuelve `false` y se devuelve el método `Form1_Load` . Esto impide la ejecución de código adicional antes de salir de la aplicación. El mensaje de bienvenida es útil para indicar cuándo se reinicia la aplicación. Agregará código para reiniciar la aplicación al implementar el cierre de sesión más adelante en este tutorial.  
   
-     [!code-csharp[ClientApplicationServices#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)] [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
+     [!code-csharp[ClientApplicationServices#011](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#011)]
+     [!code-vb[ClientApplicationServices#011](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#011)]  
   
 4.  Agregue el método siguiente después del método `Form1_Load` .  
   
-     Este método pasa cadenas vacías al método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> , que hace que aparezca el cuadro de diálogo de inicio de sesión. Si el servicio de autenticación no está disponible, el método <xref:System.Web.Security.Membership.ValidateUser%2A> producirá una <xref:System.Net.WebException>. En este caso, el método `ValidateUsingCredentialsProvider` muestra un mensaje de advertencia y pregunta al usuario si desea volver a intentarlo en modo sin conexión. Esta funcionalidad requiere la característica **Guardar hash de contraseña para permitir el inicio de sesión sin conexión** que se describe en [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Esta característica está habilitada de manera predeterminada para los proyectos nuevos.  
+     Este método pasa cadenas vacías al método `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> , que hace que aparezca el cuadro de diálogo de inicio de sesión. Si el servicio de autenticación no está disponible, el método <xref:System.Web.Security.Membership.ValidateUser%2A> producirá una <xref:System.Net.WebException>. En este caso, el método `ValidateUsingCredentialsProvider` muestra un mensaje de advertencia y pregunta al usuario si desea volver a intentarlo en modo sin conexión. Esta funcionalidad requiere la característica **Guardar hash de contraseña para permitir el inicio de sesión sin conexión** que se describe en [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Esta característica está habilitada de manera predeterminada para los proyectos nuevos.  
   
      Si no se valida el usuario, el método `ValidateUsingCredentialsProvider` muestra un mensaje de error y sale de la aplicación. Por último, este método devuelve el resultado del intento de autenticación.  
   
-     [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)] [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
+     [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]
+     [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
 ### <a name="creating-a-login-form"></a>Crear un formulario de inicio de sesión  
  Un proveedor de credenciales es una clase que implementa la interfaz <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> . Esta interfaz tiene un método único denominado <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> que devuelve un objeto <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> . Los procedimientos siguientes describen cómo crear un cuadro de diálogo de inicio de sesión que implementa <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> para que aparezca y devuelva las credenciales especificadas por el usuario.  
@@ -329,7 +334,7 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      [!code-vb[ClientApplicationServices#101](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Login.vb#101)]  
   
-8.  Modifique la firma de la clase de modo que la clase implemente la interfaz <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>.  
+8.  Modifique la firma de la clase de modo que la clase implemente la interfaz <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> .  
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
@@ -379,20 +384,22 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      Este código llama al método `DisplayButtonForManagerRole` que agregará en el paso siguiente.  
   
-     [!code-csharp[ClientApplicationServices#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)] [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
+     [!code-csharp[ClientApplicationServices#012](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#012)]
+     [!code-vb[ClientApplicationServices#012](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#012)]  
   
 5.  Agregue el siguiente método al final de la clase Form1.  
   
-     Este método llama al método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> del objeto <xref:System.Security.Principal.IPrincipal> devuelto por la propiedad `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> . Para las aplicaciones configuradas para usar servicios de aplicaciones cliente, esta propiedad devuelve <xref:System.Web.ClientServices.ClientRolePrincipal>. Dado que esta clase implementa la interfaz <xref:System.Security.Principal.IPrincipal> , no es necesario hacer referencia a esta explícitamente.  
+     Este método llama al método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> del objeto <xref:System.Security.Principal.IPrincipal> devuelto por la propiedad `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> . Para las aplicaciones configuradas para usar servicios de aplicaciones cliente, esta propiedad devuelve <xref:System.Web.ClientServices.ClientRolePrincipal>. Dado que esta clase implementa la interfaz <xref:System.Security.Principal.IPrincipal> , no es necesario hacer referencia a esta explícitamente.  
   
      Si el usuario tiene el rol de administrador, el método `DisplayButtonForManagerRole` establece la propiedad <xref:System.Windows.Forms.Control.Visible%2A> de `managerOnlyButton` en `true`. Este método también muestra un mensaje de error si se produce una <xref:System.Net.WebException> , lo que indica que el servicio de roles no está disponible.  
   
     > [!NOTE]
-    >  El método <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> siempre devolverá `false` si el inicio de sesión de usuario expiró. Esto no sucederá si la aplicación llama al método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> poco después de la autenticación, como se muestra en el código de ejemplo de este tutorial. Si la aplicación debe recuperar los roles de usuario en otras ocasiones, conviene agregar código para volver a validar a los usuarios cuyo inicio de sesión haya expirado. Si todos los usuarios válidos están asignados a roles, puede determinar si el inicio de sesión expiró llamando al método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> . Si no se devuelve ningún rol, el inicio de sesión expiró. Para obtener un ejemplo de esta funcionalidad, consulte el método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Esta funcionalidad solo es necesaria si seleccionó **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor** en la configuración de la aplicación. Para obtener más información, consulta [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+    >  El método <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> siempre devolverá `false` si el inicio de sesión de usuario expiró. Esto no sucederá si la aplicación llama al método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> poco después de la autenticación, como se muestra en el código de ejemplo de este tutorial. Si la aplicación debe recuperar los roles de usuario en otras ocasiones, conviene agregar código para volver a validar a los usuarios cuyo inicio de sesión haya expirado. Si todos los usuarios válidos están asignados a roles, puede determinar si el inicio de sesión expiró llamando al método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> . Si no se devuelve ningún rol, el inicio de sesión expiró. Para obtener un ejemplo de esta funcionalidad, consulte el método <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Esta funcionalidad solo es necesaria si seleccionó **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor** en la configuración de la aplicación. Para obtener más información, consulta [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
-     [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)] [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
+     [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
+     [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- Si la autenticación es correcta, el proveedor de autenticación del cliente establece la propiedad <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> en una instancia de la clase <xref:System.Web.ClientServices.ClientRolePrincipal>. Esta clase implementa el método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> para que el trabajo se delegue en el proveedor de roles configurado. Al igual que antes, el código de aplicación no requiere una referencia directa al proveedor de servicios.  
+ Si la autenticación es correcta, el proveedor de autenticación del cliente establece la propiedad <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> en una instancia de la clase <xref:System.Web.ClientServices.ClientRolePrincipal>. Esta clase implementa el método <xref:System.Security.Principal.IPrincipal.IsInRole%2A> para que el trabajo se delegue en el proveedor de roles configurado. Al igual que antes, el código de aplicación no requiere una referencia directa al proveedor de servicios.  
   
  Ahora puede ejecutar la aplicación e iniciar sesión como empleado para comprobar que el botón no aparece y, a continuación, iniciar sesión como administrador para ver el botón.  
   
@@ -425,18 +432,21 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
      Este código llama al método `BindWebSettingsTestTextBox` que agregará en el paso siguiente.  
   
-     [!code-csharp[ClientApplicationServices#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)] [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
+     [!code-csharp[ClientApplicationServices#013](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#013)]
+     [!code-vb[ClientApplicationServices#013](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#013)]  
   
 9. Agregue el siguiente método al final de la clase Form1.  
   
-     Este método enlaza la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> de `webSettingsTestTextBox` con la propiedad `WebSettingsTestText` de la clase `Settings` generada anteriormente en este procedimiento. Este método también muestra un mensaje de error si se produce una <xref:System.Net.WebException>, lo que indica que el servicio de configuración web no está disponible.  
+     Este método enlaza la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> de `webSettingsTestTextBox` con la propiedad `WebSettingsTestText` de la clase `Settings` generada anteriormente en este procedimiento. Este método también muestra un mensaje de error si se produce una <xref:System.Net.WebException> , lo que indica que el servicio de configuración web no está disponible.  
   
-     [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)] [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
+     [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]
+     [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
   
     > [!NOTE]
     >  Normalmente, usará el enlace de datos para habilitar la comunicación bidireccional automática entre un control y una configuración web. Sin embargo, también puede acceder a la configuración web directamente, tal como se muestra en el ejemplo siguiente:  
   
-     [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)] [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
+     [!code-csharp[ClientApplicationServices#322](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Class1.cs#322)]
+     [!code-vb[ClientApplicationServices#322](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#322)]  
   
 10. En el diseñador, seleccione el formulario y, en la ventana **Propiedades** , haga clic en el botón **Eventos** .  
   
@@ -444,21 +454,23 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 12. Reemplace el método generado con el código siguiente.  
   
-     El controlador de eventos <xref:System.Windows.Forms.Form.FormClosing> llama al método `SaveSettings` , que la funcionalidad de cierre de sesión que agregará en la sección siguiente también usa. El método `SaveSettings` confirma primero que el usuario no cerró sesión. Esto lo hace comprobando la propiedad <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> del objeto <xref:System.Security.Principal.IIdentity> devuelto por la entidad de seguridad actual. La entidad de seguridad actual se recupera mediante la propiedad `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> . Si el usuario se autenticó para los servicios de aplicaciones cliente, el tipo de autenticación será "ClientForms". El método `SaveSettings` no puede comprobar la propiedad <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> porque el usuario podría tener una identidad de Windows válida después de cerrar la sesión.  
+     El controlador de eventos <xref:System.Windows.Forms.Form.FormClosing> llama al método `SaveSettings` , que la funcionalidad de cierre de sesión que agregará en la sección siguiente también usa. El método `SaveSettings` confirma primero que el usuario no cerró sesión. Esto lo hace comprobando la propiedad <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> del objeto <xref:System.Security.Principal.IIdentity> devuelto por la entidad de seguridad actual. La entidad de seguridad actual se recupera mediante la propiedad `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> . Si el usuario se autenticó para los servicios de aplicaciones cliente, el tipo de autenticación será "ClientForms". El método `SaveSettings` no puede comprobar la propiedad <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> porque el usuario podría tener una identidad de Windows válida después de cerrar la sesión.  
   
      Si el usuario no cerró la sesión, el método `SaveSettings` llama al método <xref:System.Configuration.ApplicationSettingsBase.Save%2A> de la clase `Settings` generada anteriormente en este procedimiento. Este método puede producir una <xref:System.Net.WebException> si la cookie de autenticación expiró. Esto sucede únicamente si seleccionó **Exigir que los usuarios vuelvan a iniciar sesión cuando expire la cookie del servidor** en la configuración de la aplicación. Para obtener más información, consulta [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). El método `SaveSettings` controla la expiración de la cookie llamando a <xref:System.Web.Security.Membership.ValidateUser%2A> para mostrar el cuadro de diálogo de inicio de sesión. Si el usuario inicia sesión correctamente, el método `SaveSettings` intenta guardar la configuración de nuevo llamándose a sí mismo.  
   
      Al igual que en el código anterior, el método `SaveSettings` muestra un mensaje de error si el servicio remoto no está disponible. Si el proveedor de configuración no puede acceder al servicio remoto, la configuración sigue guardándose en la memoria caché local y se vuelve a cargar cuando se reinicia la aplicación.  
   
-     [!code-csharp[ClientApplicationServices#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)] [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
+     [!code-csharp[ClientApplicationServices#050](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#050)]
+     [!code-vb[ClientApplicationServices#050](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#050)]  
   
 13. Agregue el siguiente método al final de la clase Form1.  
   
-     Este código controla el evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> y muestra una advertencia si no se pudo guardar alguno de los valores de configuración. El evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> no se produce si el servicio de configuración no está disponible o si la cookie de autenticación expiró. El evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> se producirá, por ejemplo, cuando el usuario ya haya cerrado la sesión. Puede probar este controlador de eventos agregando código de cierre de sesión al método `SaveSettings` directamente antes de la llamada al método <xref:System.Configuration.ApplicationSettingsBase.Save%2A> . El código de cierre de sesión que puede usar se describe en la sección siguiente.  
+     Este código controla el evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> y muestra una advertencia si no se pudo guardar alguno de los valores de configuración. El evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> no se produce si el servicio de configuración no está disponible o si la cookie de autenticación expiró. El evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> se producirá, por ejemplo, cuando el usuario ya haya cerrado la sesión. Puede probar este controlador de eventos agregando código de cierre de sesión al método `SaveSettings` directamente antes de la llamada al método <xref:System.Configuration.ApplicationSettingsBase.Save%2A> . El código de cierre de sesión que puede usar se describe en la sección siguiente.  
   
-     [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)] [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
+     [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]
+     [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
   
-14. En el caso de C#, agregue el código siguiente al final del método `Form1_Load` . Este código asocia el método que agregó en el último paso con el evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved>.  
+14. En el caso de C#, agregue el código siguiente al final del método `Form1_Load` . Este código asocia el método que agregó en el último paso con el evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> .  
   
      [!code-csharp[ClientApplicationServices#015](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#015)]  
   
@@ -479,16 +491,17 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 4.  Reemplace el método `logoutButton_Click` generado con el código siguiente.  
   
-     Este controlador de eventos llama primero al método `SaveSettings` que agregó en la sección anterior. A continuación, el controlador de eventos llama al método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName> . Si el servicio de autenticación no está disponible, el método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> producirá una <xref:System.Net.WebException>. En este caso, el método `logoutButton_Click` muestra un mensaje de advertencia y pasa temporalmente al modo sin conexión para cerrar la sesión del usuario. El modo sin conexión se describe en la sección siguiente.  
+     Este controlador de eventos llama primero al método `SaveSettings` que agregó en la sección anterior. A continuación, el controlador de eventos llama al método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=nameWithType> . Si el servicio de autenticación no está disponible, el método <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> producirá una <xref:System.Net.WebException>. En este caso, el método `logoutButton_Click` muestra un mensaje de advertencia y pasa temporalmente al modo sin conexión para cerrar la sesión del usuario. El modo sin conexión se describe en la sección siguiente.  
   
      El cierre de sesión elimina la cookie de autenticación local para que vuelva a solicitarse el inicio de sesión cuando se reinicie la aplicación. Después de cerrar la sesión, el controlador de eventos reinicia la aplicación. Cuando se reinicia la aplicación, muestra el mensaje de bienvenida seguido del cuadro de diálogo de inicio de sesión. El mensaje de bienvenida deja claro que se reinició la aplicación. Esto evita una posible confusión si el usuario debe iniciar sesión para guardar la configuración y, a continuación, debe volver a iniciar sesión porque la aplicación se reinició.  
   
-     [!code-csharp[ClientApplicationServices#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)] [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
+     [!code-csharp[ClientApplicationServices#070](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#070)]
+     [!code-vb[ClientApplicationServices#070](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#070)]  
   
  Para probar la funcionalidad de cierre de sesión, ejecute la aplicación y seleccione **Recordar mi cuenta** en el cuadro de diálogo de inicio de sesión. A continuación, cierre y reinicie la aplicación para confirmar que ya no debe iniciar sesión. Por último, reinicie la aplicación haciendo clic en Cerrar sesión.  
   
 ## <a name="enabling-offline-mode"></a>Habilitar el modo sin conexión  
- En el siguiente procedimiento, agregará una casilla al formulario para que el usuario pueda entrar en modo sin conexión. La aplicación indica el modo sin conexión estableciendo la propiedad `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> en `true`. El estado sin conexión se almacena en el disco duro local en la ubicación indicada por la propiedad <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> . Esto significa que el estado sin conexión se almacena por usuario y aplicación.  
+ En el siguiente procedimiento, agregará una casilla al formulario para que el usuario pueda entrar en modo sin conexión. La aplicación indica el modo sin conexión estableciendo la propiedad `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=nameWithType> en `true`. El estado sin conexión se almacena en el disco duro local en la ubicación indicada por la propiedad <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> . Esto significa que el estado sin conexión se almacena por usuario y aplicación.  
   
  En el modo sin conexión, todas las solicitudes de servicio de aplicaciones cliente recuperan datos de la memoria caché local, en lugar de intentar acceder a los servicios. En la configuración predeterminada, los datos locales incluyen un formulario cifrado con la contraseña del usuario. Esto permite al usuario iniciar sesión mientras la aplicación está en modo sin conexión. Para obtener más información, consulta [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
@@ -506,18 +519,20 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
   
 6.  Reemplace el método generado con el código siguiente.  
   
-     Este código actualiza el valor <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> y vuelve a validar al usuario de forma automática cuando regresa al modo en línea. El método <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=fullName> usa las credenciales almacenadas en caché para que el usuario no tenga que iniciar sesión explícitamente. Si el servicio de autenticación no está disponible, aparece un mensaje de advertencia y la aplicación se queda sin conexión.  
+     Este código actualiza el valor <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> y vuelve a validar al usuario de forma automática cuando regresa al modo en línea. El método <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A?displayProperty=nameWithType> usa las credenciales almacenadas en caché para que el usuario no tenga que iniciar sesión explícitamente. Si el servicio de autenticación no está disponible, aparece un mensaje de advertencia y la aplicación se queda sin conexión.  
   
     > [!NOTE]
     >  El método <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> es solo para su comodidad. Dado que no tiene un valor devuelto, no puede indicar si hubo un error de validación. La revalidación puede producir un error, por ejemplo, si las credenciales del usuario cambiaron en el servidor. En este caso, quizás desee incluir código que valida explícitamente a los usuarios después de que se produzca un error en una llamada al servicio. Para obtener más información, vea la sección Acceder a la configuración web anteriormente en este tutorial.  
   
      Después de la revalidación, este código guarda cualquier cambio en la configuración web local llamando al método `SaveSettings` que agregó anteriormente. A continuación, recupera los valores nuevos del servidor llamando al método <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> de la clase `Settings` del proyecto (a la que se accede como `Properties.Settings.Default` en C# y como `My.Settings` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
   
-     [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)] [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
+     [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
+     [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
   
 7.  Agregue el código siguiente al final del método `Form1_Load` para asegurarse de que la casilla muestra el estado de conexión actual.  
   
-     [!code-csharp[ClientApplicationServices#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)] [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
+     [!code-csharp[ClientApplicationServices#014](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#014)]
+     [!code-vb[ClientApplicationServices#014](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#014)]  
   
  Con esto finaliza la aplicación del ejemplo. Para probar la funcionalidad sin conexión, ejecute la aplicación, inicie sesión como empleado o como administrador y seleccione **Trabajar sin conexión**. Modifique el valor del cuadro de texto y, a continuación, cierre la aplicación. Reinicie la aplicación. Antes de iniciar sesión, haga clic con el botón derecho en el icono del servidor de desarrollo de ASP.NET en el área de notificación de la barra de tareas y, después, haga clic en **Detener**. A continuación, inicie sesión como lo haría normalmente. Incluso si no se está ejecutando el servidor, podrá iniciar sesión. Modifique el valor del cuadro de texto, salga y reinicie para ver el valor modificado.  
   
@@ -530,10 +545,9 @@ En este tema se describe cómo crear una aplicación de Windows que usa los serv
  Para aumentar la seguridad de su aplicación, asegúrese de probar exhaustivamente la aplicación y el servidor antes de la implementación.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de aplicación cliente](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [Cómo: Configurar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   
- [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)   
- [Crear y configurar la base de datos de servicios de la aplicación para SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)   
+ [Servicios de aplicación cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Cómo: Configurar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Herramienta de administración de sitios Web ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Crear y configurar la base de datos de servicios de la aplicación para SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Tutorial: Usar servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
-

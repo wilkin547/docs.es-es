@@ -1,64 +1,71 @@
 ---
-title: "Creating Threads and Passing Data at Start Time | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], creating"
-  - "threading [.NET Framework], passing data to threads"
-  - "threading [.NET Framework], retrieving data from threads"
+title: Crear subprocesos y analizar los datos en el inicio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- threading [.NET Framework], creating
+- threading [.NET Framework], passing data to threads
+- threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 61808dc804cc627ab368a5250414dfcc5f54c87e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Creating Threads and Passing Data at Start Time
-Al crear un proceso del sistema operativo, éste introduce un subproceso para ejecutar el código de dicho proceso, incluido cualquier dominio de aplicación original.  A partir de ese punto, pueden crearse y destruirse dominios de aplicación sin que necesariamente se cree o destruya ningún subproceso del sistema operativo.  Si el código que se ejecuta es administrado, puede obtenerse un objeto <xref:System.Threading.Thread> para el subproceso que se ejecuta en el dominio de aplicación actual si se recupera la propiedad estática <xref:System.Threading.Thread.CurrentThread%2A> de tipo <xref:System.Threading.Thread>.  En este tema se describe la creación de subprocesos y se analizan las alternativas para pasar datos al procedimiento de subproceso.  
+# <a name="creating-threads-and-passing-data-at-start-time"></a>Crear subprocesos y analizar los datos en el inicio
+Cuando se crea un proceso de sistema operativo, el sistema operativo inserta un subproceso para ejecutar el código en dicho proceso, incluido cualquier dominio de aplicación original. Desde ese momento, los dominios de aplicación se pueden crear y destruir sin ningún subproceso del sistema operativo necesariamente que se crea o se destruye. Si se administra el código que se ejecuta código, un <xref:System.Threading.Thread> objeto para el subproceso que se ejecuta en el dominio de aplicación actual se puede obtener mediante la recuperación estático <xref:System.Threading.Thread.CurrentThread%2A> propiedad de tipo <xref:System.Threading.Thread>. En este tema se describe la creación de subprocesos y se analiza las alternativas para pasar datos al procedimiento de subproceso.  
   
-## Crear un subproceso  
- Al crear un nuevo objeto <xref:System.Threading.Thread> se crea un nuevo subproceso administrado.  La clase <xref:System.Threading.Thread> dispone de constructores que toman un delegado <xref:System.Threading.ThreadStart> o <xref:System.Threading.ParameterizedThreadStart>; el delegado contiene el método al que invoca el nuevo subproceso cuando se llama al método <xref:System.Threading.Thread.Start%2A>.  Si se llama a <xref:System.Threading.Thread.Start%2A> más de una vez, se produce una excepción <xref:System.Threading.ThreadStateException>.  
+## <a name="creating-a-thread"></a>Crear un subproceso  
+ Crear un nuevo <xref:System.Threading.Thread> objeto crea un nuevo subproceso administrado. El <xref:System.Threading.Thread> clase tiene constructores que toman un <xref:System.Threading.ThreadStart> delegar o un <xref:System.Threading.ParameterizedThreadStart> delegar; el delegado ajusta el método que se invoca el nuevo subproceso cuando se llama a la <xref:System.Threading.Thread.Start%2A> método. Al llamar a <xref:System.Threading.Thread.Start%2A> hace más de una vez un <xref:System.Threading.ThreadStateException> que se produzca.  
   
- El método <xref:System.Threading.Thread.Start%2A> devuelve un resultado inmediatamente, con frecuencia antes de que el nuevo subproceso se haya iniciado realmente.  Puede utilizar las propiedades <xref:System.Threading.Thread.ThreadState%2A> y <xref:System.Threading.Thread.IsAlive%2A> para determinar el estado del subproceso en cualquier momento, pero estas propiedades no deben utilizarse nunca para sincronizar las actividades de los subprocesos.  
+ El <xref:System.Threading.Thread.Start%2A> método devuelve inmediatamente, a menudo antes de que se haya iniciado realmente el nuevo subproceso. Puede usar el <xref:System.Threading.Thread.ThreadState%2A> y <xref:System.Threading.Thread.IsAlive%2A> las propiedades para determinar el estado del subproceso en cualquier momento, pero estas propiedades nunca deben utilizarse para sincronizar las actividades de subprocesos.  
   
 > [!NOTE]
->  Una vez iniciado un subproceso, no es necesario conservar una referencia al objeto <xref:System.Threading.Thread>.  El subproceso se continúa ejecutando hasta que el procedimiento del mismo finaliza.  
+>  Una vez que se inicia un subproceso, no es necesario conservar una referencia a la <xref:System.Threading.Thread> objeto. El subproceso continúa ejecutándose hasta que finaliza el procedimiento de subproceso.  
   
- En el ejemplo de código siguiente se crean dos subprocesos nuevos para llamar a métodos estáticos y una instancia de otro objeto.  
+ En el ejemplo de código siguiente se crea dos subprocesos nuevos para llamar a métodos estáticos e instancia en otro objeto.  
   
  [!code-cpp[System.Threading.ThreadStart2#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.ThreadStart2#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source2.cs#2)]
  [!code-vb[System.Threading.ThreadStart2#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source2.vb#2)]  
   
-## Pasar datos a subprocesos y recuperar datos de subprocesos  
- En la versión 2.0 de .NET Framework, el delegado <xref:System.Threading.ParameterizedThreadStart> proporciona una forma sencilla de pasar un objeto que contiene datos a un subproceso cuando se llama a la sobrecarga del método <xref:System.Threading.Thread.Start%2A?displayProperty=fullName>.  Vea <xref:System.Threading.ParameterizedThreadStart> para obtener un ejemplo de código.  
+## <a name="passing-data-to-threads-and-retrieving-data-from-threads"></a>Pasar datos a subprocesos y recuperar datos de subprocesos  
+ En .NET Framework versión 2.0, el <xref:System.Threading.ParameterizedThreadStart> delegado proporciona una manera sencilla para pasar un objeto que contiene datos a un subproceso cuando se llama a la <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> sobrecarga del método. Vea <xref:System.Threading.ParameterizedThreadStart> para obtener código muestra.  
   
- El uso del delegado <xref:System.Threading.ParameterizedThreadStart> no constituye un modo con seguridad de tipos para pasar los datos, dado que la sobrecarga del método <xref:System.Threading.Thread.Start%2A?displayProperty=fullName> acepta cualquier objeto.  Una alternativa consiste en encapsular el procedimiento de subproceso y los datos en una clase auxiliar y utilizar el delegado <xref:System.Threading.ThreadStart> para ejecutar el procedimiento de subproceso.  Esta técnica se muestra en los dos ejemplos de código siguientes.  
+ Mediante el <xref:System.Threading.ParameterizedThreadStart> delegado no es una forma de seguridad de tipos para pasar datos, porque el <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> sobrecarga del método acepta cualquier objeto. Una alternativa consiste en encapsular el procedimiento de subproceso y los datos en una clase auxiliar y utilizar el <xref:System.Threading.ThreadStart> delegado para ejecutar el procedimiento de subproceso. Esta técnica se muestra en los dos ejemplos de código siguientes.  
   
- Ninguno de estos delegados presenta un valor devuelto, porque no hay ningún lugar donde devolver los datos de una llamada asincrónica.  Para recuperar los resultados de un método de subproceso, puede utilizar un método de respuesta, como se muestra en el segundo ejemplo de código.  
+ Ninguno de estos delegados tiene un valor devuelto, porque no hay ningún lugar para devolver los datos de una llamada asincrónica. Para recuperar los resultados de un método de subproceso, puede utilizar un método de devolución de llamada, como se muestra en el segundo ejemplo de código.  
   
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]
  [!code-vb[System.Threading.ThreadStart2#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source3.vb#3)]  
   
-### Recuperar datos con métodos de devolución de llamada  
- En el siguiente ejemplo se muestra un método de respuesta que recupera datos de un subproceso.  El constructor de la clase que contiene los datos y el método del subproceso también acepta un delegado que representa el método de devolución de llamada; antes de finalizar, el método del subproceso invoca al delegado de devolución de llamada.  
+### <a name="retrieving-data-with-callback-methods"></a>Recuperar datos con métodos de devolución de llamada  
+ En el ejemplo siguiente se muestra un método de devolución de llamada que recupera datos de un subproceso. El constructor de la clase que contiene los datos y el método del subproceso también acepta a un delegado que representa el método de devolución de llamada; antes de que finalice el método del subproceso, invoca al delegado de devolución de llamada.  
   
  [!code-cpp[System.Threading.ThreadStart2#4](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source4.cpp#4)]
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]
  [!code-vb[System.Threading.ThreadStart2#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source4.vb#4)]  
   
-## Vea también  
- <xref:System.Threading.Thread>   
- <xref:System.Threading.ThreadStart>   
- <xref:System.Threading.ParameterizedThreadStart>   
- <xref:System.Threading.Thread.Start%2A?displayProperty=fullName>   
- [Threading](../../../docs/standard/threading/index.md)   
- [Using Threads and Threading](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.ThreadStart>  
+ <xref:System.Threading.ParameterizedThreadStart>  
+ <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
+ [Subprocesamiento](../../../docs/standard/threading/index.md)  
+ [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)

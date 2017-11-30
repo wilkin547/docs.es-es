@@ -1,53 +1,53 @@
 ---
-title: "Convertir cadenas en tipos de datos de .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Convertir cadenas en tipos de datos de .NET Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ce594234e601cd8feb4723bbc383db9e3ed40522
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Convertir cadenas en tipos de datos de .NET Framework
-Si desea convertir una cadena en un tipo de datos de .NET Framework, utilice el método **XmlConvert** que cumple los requisitos de la aplicación.  Para obtener una lista de los métodos de conversión disponibles en la clase **XmlConvert**, vea [XmlConvert Members\)](frlrfSystemXmlXmlConvertMembersTopic).  
+# <a name="converting-strings-to-net-framework-data-types"></a>Convertir cadenas en tipos de datos de .NET Framework
+Si desea convertir una cadena en un tipo de datos de .NET Framework, use la **XmlConvert** método que se adapte a los requisitos de aplicación. Para obtener una lista de todos los métodos de conversión disponibles en la **XmlConvert** de clases, consulte <xref:System.Xml.XmlConvert>.  
   
- La cadena que devuelve el método **ToString** es una versión de cadena de los datos que se le pasan.  Hay además, varios tipos de .NET Framework que realizan la conversión mediante la clase **XmlConvert**, pero no utilizan los métodos de la clase **System.Convert**.  La clase **XmlConvert** sigue la especificación de tipos de datos de los esquemas XML \(XSD\) y tiene un tipo de datos que se puede asignar en **XmlConvert**.  
+ La cadena devuelta de la **ToString** método es una versión de cadena de los datos que se pasan. Además, hay varios tipos de .NET Framework que realizan la conversión mediante la **XmlConvert** clase, pero no utilizan los métodos de la **System.Convert** clase. El **XmlConvert** clase sigue la especificación de tipo de datos de esquemas XML (XSD) y tienen un tipo que el **XmlConvert** puede asignar a.  
   
- En la tabla siguiente se enumeran los tipos de datos de .NET Framework y los tipos de cadena que se devuelven mediante la asignación de tipos de datos de los esquemas XML \(XSD\).  Estos tipos de .NET Framework no se pueden procesar mediante **System.Convert**.  
+ En la tabla siguiente se enumeran los tipos de datos de .NET Framework y los tipos de cadena que se devuelven mediante la asignación de tipos de datos de los esquemas XML (XSD). No se puede procesar estos tipos de .NET Framework mediante **System.Convert**.  
   
 |Tipo de .NET Framework|Cadena devuelta|  
-|----------------------------|---------------------|  
+|-------------------------|---------------------|  
 |Boolean|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
-|Single.NegativeInfinity|"\-INF"|  
+|Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
-|Double.NegativeInfinity|"\-INF"|  
-|DateTime|El formato es "aaaa\-MM\-ddTHH:mm:sszzzzzz" y sus subconjuntos.|  
+|Double.NegativeInfinity|"-INF"|  
+|DateTime|El formato es "aaaa-MM-ddTHH:mm:sszzzzzz" y sus subconjuntos.|  
 |Timespan|El formato es PnYnMnTnHnMnS, es decir, `P2Y10M15DT10H30M20S` corresponde a una duración de 2 años, 10 meses, 15 días, 10 horas, 30 minutos y 20 segundos.|  
   
 > [!NOTE]
->  Si se convierte uno de los tipos de .NET Framework enumerados en la tabla en una cadena mediante el método **ToString**, la cadena devuelta no será el tipo base, sino el tipo de cadena de esquema XML \(XSD\).  
+>  Si se convierte uno de los tipos de .NET Framework enumerados en la tabla en una cadena mediante el **ToString** método, la cadena devuelta no es el tipo base, pero el tipo de cadena de esquema XML (XSD).  
   
- Los tipos de valor de **DateTime** y **Timespan** difieren en que **DateTime** representa un instante en el tiempo, mientras que **TimeSpan** representa un intervalo de tiempo.  Los formatos de **DateTime** y **Timespan** se describen en la especificación de tipos de datos de XSD.  Por ejemplo:  
+ El **DateTime** y **Timespan** difiere del tipo de valor en el que un **DateTime** representa un instante de tiempo, mientras que un **TimeSpan** Representa un intervalo de tiempo. El **DateTime** y **Timespan** formatos se especifican en la especificación de tipos de datos de esquemas XML (XSD). Por ejemplo:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
 Dim [date] As New DateTime(2001, 8, 4)  
 writer.WriteElementString("Date", XmlConvert.ToString([date]))  
-  
 ```  
   
 ```csharp  
@@ -66,7 +66,6 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
 Dim value As Int32 = 200  
 writer.WriteElementString("Number", XmlConvert.ToString(value))  
-  
 ```  
   
 ```csharp  
@@ -79,13 +78,13 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- Sin embargo, si se convierte una cadena en un tipo **Boolean**, **Single**, o **Double**, el tipo de .NET Framework que se devuelve no es el mismo que el devuelto al utilizar la clase **System.Convert**.  
+ Sin embargo, si va a convertir una cadena a **booleano**, **único**, o **doble**, el tipo de .NET Framework que se devuelve no es el mismo que el tipo devuelto al utilizar la **System.Convert** clase.  
   
-## Conversión de cadenas en Boolean  
- En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas al convertir una cadena en **Boolean** mediante el método **ToBoolean**.  
+## <a name="string-to-boolean"></a>Conversión de cadenas en Boolean  
+ En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas, al convertir una cadena en **booleano** mediante la **ToBoolean** método.  
   
 |Parámetro de entrada de cadena válido|Tipo de salida de .NET Framework|  
-|-------------------------------------------|--------------------------------------|  
+|----------------------------------|--------------------------------|  
 |"true"|Boolean.True|  
 |"1"|Boolean.True|  
 |"false"|Boolean.False|  
@@ -95,18 +94,17 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  **Entrada**  
   
-```  
+```xml  
 <Boolean>true</Boolean>  
 <Boolean>1</Boolean>   
 ```  
   
- El código siguiente puede entender ambas líneas y **bvalue** es **System.Boolean.True**:  
+ El código siguiente pueden entender ambas y **bvalue** es **System.Boolean.True**:  
   
 ```vb  
 Dim bvalue As Boolean = _  
    XmlConvert.ToBoolean(reader.ReadElementString())  
 Console.WriteLine(bvalue)  
-  
 ```  
   
 ```csharp  
@@ -114,28 +112,27 @@ Boolean bvalue = XmlConvert.ToBoolean(reader.ReadElementString());
 Console.WriteLine(bvalue);  
 ```  
   
-## Conversión de cadenas en Single  
- En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas, al convertir una cadena en **Single** mediante el método **ToSingle**.  
+## <a name="string-to-single"></a>Conversión de cadenas en Single  
+ En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas, al convertir una cadena en un **único** mediante la **ToSingle** método.  
   
 |Parámetro de entrada de cadena válido|Tipo de salida de .NET Framework|  
-|-------------------------------------------|--------------------------------------|  
+|----------------------------------|--------------------------------|  
 |"INF"|Single.PositiveInfinity|  
-|"\-INF"|Single.NegativeInfinity|  
+|"-INF"|Single.NegativeInfinity|  
   
-## Conversión de cadenas en Double  
- En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas, al convertir una cadena en **Single** mediante el método **ToDouble**.  
+## <a name="string-to-double"></a>Conversión de cadenas en Double  
+ En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas, al convertir una cadena en un **único** mediante la **ToDouble** método.  
   
 |Parámetro de entrada de cadena válido|Tipo de salida de .NET Framework|  
-|-------------------------------------------|--------------------------------------|  
+|----------------------------------|--------------------------------|  
 |"INF"|Double.PositiveInfinity|  
-|"\-INF"|Double.NegativeInfinity|  
+|"-INF"|Double.NegativeInfinity|  
   
  El código siguiente escribe `<Infinity>INF</Infinity>`:  
   
 ```vb  
 Dim value As Double = Double.PositiveInfinity  
 writer.WriteElementString("Infinity", XmlConvert.ToString(value))  
-  
 ```  
   
 ```csharp  
@@ -143,6 +140,6 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## Vea también  
- [Conversión de tipos de datos XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)   
+## <a name="see-also"></a>Vea también  
+ [Conversión de tipos de datos XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
  [Convertir tipos de .NET Framework en cadenas](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

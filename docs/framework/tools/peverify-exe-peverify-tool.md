@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - portable executable files, PEVerify
 - verifying MSIL and metadata
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 855a1122eb4507912adca80878f78258b37d202d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01606ede139ef370817926df1dd82bcbfcbabafd
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Herramienta PEVerify)
 La herramienta PEVerify ayuda a los desarrolladores que generan lenguaje intermedio de Microsoft (MSIL) (como autores de compiladores, desarrolladores de motores de scripts, etc.) a determinar si el código MSIL y los metadatos asociados satisfacen los requisitos de seguridad de tipos. Algunos compiladores solo generan código con seguridad de tipos comprobable si se evita el uso de determinadas construcciones de lenguaje. Si, como desarrollador, está utilizando un compilador con estas características, puede que desee comprobar que no ha puesto en peligro la seguridad de tipos del código. Para ello, ejecute la herramienta PEVerify en los archivos con el fin de comprobar el lenguaje MSIL y los metadatos.  
@@ -136,8 +129,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)   
- [NO ESTÁ EN LA COMPILACIÓN: Escribir código seguro comprobable](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)   
- [Seguridad y protección de tipos](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)   
+ [Herramientas](../../../docs/framework/tools/index.md)  
+ [NIB: Escribir código de seguridad de tipos comprobable](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
+ [Seguridad de tipos y seguridad](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

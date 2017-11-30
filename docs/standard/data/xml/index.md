@@ -8,22 +8,16 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88d993122bf1498b08d2e523a71f7f1bed505c9a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 .NET Framework proporciona un conjunto de clases completo e integrado que permiten crear, de forma sencilla, aplicaciones preparadas para XML. Las clases de los espacios de nombres siguientes admiten análisis y escritura XML, edición de datos XML en memoria, validación de datos y transformación XSLT.  
@@ -42,13 +36,13 @@ ms.lasthandoff: 09/05/2017
   
  Las clases de estos espacios de nombres admiten las recomendaciones del World Wide Web Consortium (W3C). Por ejemplo:  
   
--   La clase <xref:System.Xml.XmlDocument?displayProperty=fullName> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](http://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](http://www.w3.org/TR/DOM-Level-2-Core/) del W3C.  
+-   La clase <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](http://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](http://www.w3.org/TR/DOM-Level-2-Core/) del W3C.  
   
--   Las clases <xref:System.Xml.XmlReader?displayProperty=fullName> y <xref:System.Xml.XmlWriter?displayProperty=fullName> admiten las recomendaciones del W3C sobre [XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](http://www.w3.org/TR/REC-xml-names/).  
+-   Las clases <xref:System.Xml.XmlReader?displayProperty=nameWithType> y <xref:System.Xml.XmlWriter?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](http://www.w3.org/TR/REC-xml-names/).  
   
--   Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> admiten las recomendaciones del W3C sobre [estructuras del esquema XML (parte 1)](http://www.w3.org/TR/xmlschema-1/) y [tipos de datos del esquema XML (parte 2)](http://www.w3.org/TR/xmlschema-2/).  
+-   Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [estructuras del esquema XML (parte 1)](http://www.w3.org/TR/xmlschema-1/) y [tipos de datos del esquema XML (parte 2)](http://www.w3.org/TR/xmlschema-2/).  
   
--   Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=fullName> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](http://www.w3.org/TR/xslt).  
+-   Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=nameWithType> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](http://www.w3.org/TR/xslt).  
   
  Las clases XML de .NET Framework proporcionan estas ventajas:  
   
@@ -101,4 +95,3 @@ ms.lasthandoff: 09/05/2017
   
  [Centro para desarrolladores de XML](http://go.microsoft.com/fwlink/?linkid=42458)  
  Proporciona información técnica adicional, descargas, grupos de noticias y otros recursos para desarrolladores de XML.
-

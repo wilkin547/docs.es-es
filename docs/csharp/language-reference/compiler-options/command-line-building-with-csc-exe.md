@@ -1,39 +1,21 @@
 ---
 title: "Compilar la línea de comandos con csc.exe"
-ms.date: 2017-04-19
+ms.date: 04/19/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dd47544e11222dfb0035f37196abcdf5654d5537
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilar la línea de comandos con csc.exe
 Puede invocar el compilador de C# escribiendo el nombre de su archivo ejecutable (*csc.exe*) en un símbolo del sistema.
@@ -119,12 +101,11 @@ csc /target:library /out:Something.xyz *.cs
 No se crean archivos objeto (*.obj*) como resultado de invocar el compilador de C#; se crean directamente archivos de salida. Como consecuencia de ello, el compilador de C# no requiere un vinculador.
 
 ## <a name="see-also"></a>Vea también
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  (Opciones del compilador de C#, por orden alfabético)  
- [C# Compiler Options Listed by Category](../../../csharp/language-reference/compiler-options/listed-by-category.md)  (Opciones del compilador de C#, por categoría)  
- [Main() y argumentos de línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)   
- [Cómo: Mostrar argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [Cómo: Obtener acceso a argumentos de la línea de comandos mediante foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+ [Opciones del compilador de C#, por orden alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [Opciones del compilador de C#, por categoría](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Main() y argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md)  
+ [Argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
+ [Cómo: Mostrar argumentos de línea de comandos](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [Cómo: Obtener acceso a argumentos de la línea de comandos utilizando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Valores devueltos de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-

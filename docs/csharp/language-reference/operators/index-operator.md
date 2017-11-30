@@ -1,43 +1,24 @@
 ---
 title: Operador [] (Referencia de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '[]_CSharpKeyword'
-dev_langs:
-- CSharp
+f1_keywords: '[]_CSharpKeyword'
 helpviewer_keywords:
 - subscript operator [C#]
 - square brackets [ ] operator [C#]
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 03664f5604bb7d7dce9e8ae2ff0ec045c6a203b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b49d41af0dd4dc34b1b74c62ce8779aa31d69f77
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>Operador [] (Referencia de C#)
 Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se pueden usar con punteros.  
@@ -45,11 +26,11 @@ Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se
 ## <a name="remarks"></a>Comentarios  
  El tipo de matriz es un tipo seguido de `[]`:  
   
- [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
+ [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
  Para acceder a un elemento de una matriz, el índice del elemento deseado se encierra entre corchetes:  
   
- [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
+ [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
  Se produce una excepción si el índice de una matriz está fuera del intervalo.  
   
@@ -57,15 +38,15 @@ Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se
   
  Por ejemplo, .NET Framework define un tipo `Hashtable` que asocia claves y valores de tipo arbitrario:  
   
- [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
+ [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
  Los corchetes también se usan para especificar [atributos](../../../csharp/programming-guide/concepts/attributes/index.md):  
   
- [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
+ [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
  Puede usar corchetes para indexar fuera de un puntero:  
   
- [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
+ [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  No se realiza ninguna comprobación de límites.  
   
@@ -73,11 +54,10 @@ Los corchetes (`[]`) se usan para matrices, indexadores y atributos. También se
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Operadores de C#](../../../csharp/language-reference/operators/index.md)   
- [Arrays](../../../csharp/programming-guide/arrays/index.md)  (Matrices)  
- [Indexers](../../../csharp/programming-guide/indexers/index.md)  (Indexadores)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Operadores de C#](../../../csharp/language-reference/operators/index.md)  
+ [Matrices](../../../csharp/programming-guide/arrays/index.md)  
+ [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
  [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)
-

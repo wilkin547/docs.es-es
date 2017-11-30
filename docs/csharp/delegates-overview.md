@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: dd4c68fb4f960d0c2d5cbdc9e699650070cacaf1
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="introduction-to-delegates"></a>Introducción a los delegados
 
 [Anterior](delegates-events.md)
@@ -55,4 +53,3 @@ En resumen, constatará que los delegados son una parte integral de la programac
 Comencemos.
 
 [Siguiente](delegate-class.md)
-

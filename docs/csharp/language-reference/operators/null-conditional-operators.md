@@ -1,36 +1,18 @@
 ---
 title: Operadores condicionales null (C# y Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c95b4079cf4e71c0ef9cd436ec230337f512229a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
-ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>Operadores condicionales null (C# y Visual Basic)
 Se utiliza para probar si hay valores null antes de realizar una operación de acceso a miembros (`?.`) o índice (`?[`).  Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.  
@@ -93,9 +75,8 @@ PropertyChanged?.Invoke(e)
  Para obtener más información, vea [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md).  
   
 ## <a name="see-also"></a>Vea también  
- [?? (operador de uso combinado de NULL)](null-conditional-operator.md)   
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)   
+ [?? (operador de uso combinado de null)](null-conditional-operator.md)  
+ [Referencia de C#](../../../csharp/language-reference/index.md)  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+ [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
  [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)
-

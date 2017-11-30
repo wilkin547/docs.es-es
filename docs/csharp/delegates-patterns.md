@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="common-patterns-for-delegates"></a>Patrones comunes para delegados
 
 [Anterior](delegates-strongly-typed.md)
@@ -245,4 +243,3 @@ Ha observado los comienzos de un componente de registro que puede expandirse con
 La clase de registrador puede realizar cualquier número de cambios o mejoras sin producir cambios importantes. Como cualquier clase, no puede modificar la API pública sin el riesgo de que se produzcan cambios importantes. Pero, como el acoplamiento entre el registrador y cualquier motor de salida se realiza solo mediante el delegado, ningún otro tipo (como interfaces o clases base) está involucrado. El acoplamiento es lo más pequeño posible.
 
 [Siguiente](events-overview.md)
-

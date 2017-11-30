@@ -1,51 +1,33 @@
 ---
 title: Acceso a archivos con Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - file access
-- files, input and output
+- files [Visual Basic], input and output
 - file access, Visual Basic
-- files, I/O
+- files [Visual Basic], I/O
 - file I/O classes
 - data [Visual Basic], accessing from files
-- files, accessing
+- files [Visual Basic], accessing
 - file access, using components
 - My.Computer.FileSystem object, accessing files
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9929061feeccee31028056bc93f0f0a2f119eb4e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 71e941bf33c3b1051c22c8170b327df9fae7d4b9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="file-access-with-visual-basic"></a>Acceso a archivos con Visual Basic
 El objeto `My.Computer.FileSystem` proporciona herramientas para trabajar con archivos y carpetas. Sus propiedades, métodos y eventos permiten crear, copiar, mover, investigar y eliminar archivos y carpetas. `My.Computer.FileSystem` ofrece un mejor rendimiento que las funciones heredadas (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, etc.) proporcionadas por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para compatibilidad con versiones anteriores.  
@@ -71,4 +53,3 @@ El objeto `My.Computer.FileSystem` proporciona herramientas para trabajar con ar
   
  [Solución de problemas: Leer y escribir en archivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  Enumera problemas habituales detectados al leer y escribir en archivos de texto y sugiere soluciones para cada uno.
-
