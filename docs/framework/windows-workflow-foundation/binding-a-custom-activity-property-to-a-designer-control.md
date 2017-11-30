@@ -1,29 +1,33 @@
 ---
-title: "Enlazar una propiedad de actividad personalizada a un control de dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Enlazar una propiedad de actividad personalizada a un control de diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9edc168dc6e4111e5f2d58a62c2b0341f74aa04
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enlazar una propiedad de actividad personalizada a un control de dise&#241;ador
-La operación de enlazar un control de diseñador de cuadro de texto a un argumento de actividad es bastante sencillo; sin embargo, la operación de enlazar un control de diseñador complejo \(como un cuadro combinado\) a un argumento de actividad puede presentar desafíos.En este tema se analiza la forma de enlazar un argumento de actividad a un control de cuadro combinado en un diseñador de actividad personalizado.  
+# <a name="binding-a-custom-activity-property-to-a-designer-control"></a><span data-ttu-id="e2b87-102">Enlazar una propiedad de actividad personalizada a un control de diseñador</span><span class="sxs-lookup"><span data-stu-id="e2b87-102">Binding a custom activity property to a designer control</span></span>
+<span data-ttu-id="e2b87-103">La operación de enlazar un control de diseñador de cuadro de texto a un argumento de actividad es bastante sencillo; sin embargo, la operación de enlazar un control de diseñador complejo (como un cuadro combinado) a un argumento de actividad puede presentar desafíos.</span><span class="sxs-lookup"><span data-stu-id="e2b87-103">Binding a text box designer control to an activity argument is fairly straightforward; binding a complex designer control (such as a combo box) to an activity argument may present challenges, however.</span></span> <span data-ttu-id="e2b87-104">En este tema se analiza la forma de enlazar un argumento de actividad a un control de cuadro combinado en un diseñador de actividad personalizado.</span><span class="sxs-lookup"><span data-stu-id="e2b87-104">This topic discusses how to bind an activity argument to a combo box control on a custom activity designer.</span></span>  
   
-#### Crear el convertidor de elemento de cuadro combinado  
+#### <a name="creating-the-combo-box-item-converter"></a><span data-ttu-id="e2b87-105">Crear el convertidor de elemento de cuadro combinado</span><span class="sxs-lookup"><span data-stu-id="e2b87-105">Creating the combo box item converter</span></span>  
   
-1.  Cree una nueva solución vacía en Visual Studio denominada CustomProperty.  
+1.  <span data-ttu-id="e2b87-106">Cree una nueva solución vacía en Visual Studio denominada CustomProperty.</span><span class="sxs-lookup"><span data-stu-id="e2b87-106">Create a new empty solution in Visual Studio called CustomProperty.</span></span>  
   
-2.  Cree una nueva clase denominada ComboBoxItemConverter.Agregue una referencia a System.Windows.Data y haga que la clase derive de <xref:System.Windows.Data.IValueConverter>.Haga que Visual Studio implemente la interfaz para generar códigos auxiliares para <xref:System.Windows.Data.IValueConverter.Convert%2A> y <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>.  
+2.  <span data-ttu-id="e2b87-107">Cree una nueva clase denominada ComboBoxItemConverter.</span><span class="sxs-lookup"><span data-stu-id="e2b87-107">Create a new class called ComboBoxItemConverter.</span></span> <span data-ttu-id="e2b87-108">Agregue una referencia a System.Windows.Data y haga que la clase derive de <xref:System.Windows.Data.IValueConverter>.</span><span class="sxs-lookup"><span data-stu-id="e2b87-108">Add a reference to System.Windows.Data, and have the class derive from <xref:System.Windows.Data.IValueConverter>.</span></span> <span data-ttu-id="e2b87-109">Haga que Visual Studio implemente la interfaz para generar códigos auxiliares para `Convert` y `ConvertBack`.</span><span class="sxs-lookup"><span data-stu-id="e2b87-109">Have Visual Studio implement the interface to generate stubs for `Convert` and `ConvertBack`.</span></span>  
   
-3.  Agregue el código siguiente al método <xref:System.Windows.Data.IValueConverter.Convert%2A>.Este código convierte el <xref:System.Activities.InArgument%601> de tipo <xref:System.String> de la actividad en el valor que se va a colocar en el diseñador.  
+3.  <span data-ttu-id="e2b87-110">Agregue el código siguiente al método `Convert`.</span><span class="sxs-lookup"><span data-stu-id="e2b87-110">Add the following code to the `Convert` method.</span></span> <span data-ttu-id="e2b87-111">Este código convierte el <xref:System.Activities.InArgument%601> de tipo <xref:System.String> de la actividad en el valor que se va a colocar en el diseñador.</span><span class="sxs-lookup"><span data-stu-id="e2b87-111">This code converts the activity's <xref:System.Activities.InArgument%601> of type <xref:System.String> to the value to be placed in the designer.</span></span>  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -48,10 +52,9 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
         }  
     }  
     return null;  
-  
     ```  
   
-     La expresión del fragmento de código anterior también se puede crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en vez de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
+     <span data-ttu-id="e2b87-112">La expresión del fragmento de código anterior también se pueden crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span><span class="sxs-lookup"><span data-stu-id="e2b87-112">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -76,10 +79,9 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
         }  
     }  
     return null;  
-  
     ```  
   
-4.  Agregue el código siguiente al método <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>.Este código vuelve a convertir el elemento de cuadro combinado de entrada en un <xref:System.Activities.InArgument%601>.  
+4.  <span data-ttu-id="e2b87-113">Agregue el código siguiente al método `ConvertBack`.</span><span class="sxs-lookup"><span data-stu-id="e2b87-113">Add the following code to the `ConvertBack` method.</span></span> <span data-ttu-id="e2b87-114">Este código vuelve a convertir el elemento de cuadro combinado de entrada en un <xref:System.Activities.InArgument%601>.</span><span class="sxs-lookup"><span data-stu-id="e2b87-114">This code converts the incoming combo box item back to an <xref:System.Activities.InArgument%601>.</span></span>  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -87,10 +89,9 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
                 VisualBasicValue<string> vbArgument = new VisualBasicValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(vbArgument);  
                 return inArgument;  
-  
     ```  
   
-     La expresión del fragmento de código anterior también se puede crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en vez de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
+     <span data-ttu-id="e2b87-115">La expresión del fragmento de código anterior también se pueden crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span><span class="sxs-lookup"><span data-stu-id="e2b87-115">The expression in the above code snippet can also be created using <xref:Microsoft.CSharp.Activities.CSharpValue%601> instead of <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.</span></span>  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -98,16 +99,15 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
                 CSharpValue<string> csArgument = new CSharpValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(csArgument);  
                 return inArgument;  
-  
     ```  
   
-#### Agregar ComboBoxItemConverter al diseñador personalizado de una actividad  
+#### <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a><span data-ttu-id="e2b87-116">Agregar ComboBoxItemConverter al diseñador personalizado de una actividad</span><span class="sxs-lookup"><span data-stu-id="e2b87-116">Adding the ComboBoxItemConverter to the custom designer of an activity</span></span>  
   
-1.  Agregue un nuevo elemento al proyecto.En el cuadro de diálogo Nuevo elemento, seleccione el nodo de flujo de trabajo y seleccione Diseñador de actividad como tipo del nuevo elemento.Asigne al elemento el nombre CustomPropertyDesigner.  
+1.  <span data-ttu-id="e2b87-117">Agregue un nuevo elemento al proyecto.</span><span class="sxs-lookup"><span data-stu-id="e2b87-117">Add a new item to the project.</span></span> <span data-ttu-id="e2b87-118">En el cuadro de diálogo Nuevo elemento, seleccione el nodo de flujo de trabajo y seleccione Diseñador de actividad como tipo del nuevo elemento.</span><span class="sxs-lookup"><span data-stu-id="e2b87-118">In the New Item dialog, select the Workflow node and select Activity Designer as the type of the new item.</span></span> <span data-ttu-id="e2b87-119">Asigne al elemento el nombre CustomPropertyDesigner.</span><span class="sxs-lookup"><span data-stu-id="e2b87-119">Name the item CustomPropertyDesigner.</span></span>  
   
-2.  Agregue un cuadro combinado al nuevo diseñador.En la propiedad Items, agregue un par de elementos al cuadro combinado, con valores de "Item1" y "Item2" para Content.  
+2.  <span data-ttu-id="e2b87-120">Agregue un cuadro combinado al nuevo diseñador.</span><span class="sxs-lookup"><span data-stu-id="e2b87-120">Add a Combo Box to the new designer.</span></span> <span data-ttu-id="e2b87-121">En la propiedad Items, agregue un par de elementos al cuadro combinado, con valores de "Item1" y "Item2" para Content.</span><span class="sxs-lookup"><span data-stu-id="e2b87-121">In the Items property, add a couple of items to the combo box, with Content values of "Item1" and 'Item2".</span></span>  
   
-3.  Modifique el XAML del cuadro combinado para agregar el nuevo convertidor de elemento como el convertidor de elemento que se va a utilizar para el cuadro combinado.El convertidor se agrega como un recurso en el segmento ActivityDesigner.Resources y especifica el convertidor en el atributo Converter para <xref:System.Windows.Controls.ComboBox>.Observe que el espacio de nombres del proyecto se especifica en los atributos de espacios de nombres para el diseñador de actividad; si el diseñador se va a utilizar en un proyecto diferente, será necesario cambiar este espacio de nombres.  
+3.  <span data-ttu-id="e2b87-122">Modifique el XAML del cuadro combinado para agregar el nuevo convertidor de elemento como el convertidor de elemento que se va a utilizar para el cuadro combinado.</span><span class="sxs-lookup"><span data-stu-id="e2b87-122">Modify the XAML of the combo box to add the new item converter as the item converter to be used for the combo box.</span></span> <span data-ttu-id="e2b87-123">El convertidor se agrega como un recurso en el segmento ActivityDesigner.Resources y especifica el convertidor en el atributo Converter para <xref:System.Windows.Controls.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="e2b87-123">The converter is added as a resource in the ActivityDesigner.Resources segment, and specifies the converter in the Converter attribute for the <xref:System.Windows.Controls.ComboBox>.</span></span> <span data-ttu-id="e2b87-124">Observe que el espacio de nombres del proyecto se especifica en los atributos de espacios de nombres para el diseñador de actividad; si el diseñador se va a utilizar en un proyecto diferente, será necesario cambiar este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="e2b87-124">Note that the namespace of the project is specified in the namespaces attributes for the activity designer; if the designer is to be used in a different project, this namespace will need to be changed.</span></span>  
   
     ```  
     <sap:ActivityDesigner x:Class="CustomProperty.CustomPropertyDesigner"  
@@ -129,18 +129,16 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
             </ComboBox>  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
-4.  Cree un nuevo elemento de tipo <xref:System.Activities.CodeActivity>.El código predeterminado creado por el IDE para la actividad será suficiente en este ejemplo.  
+4.  <span data-ttu-id="e2b87-125">Cree un nuevo elemento de tipo <xref:System.Activities.CodeActivity>.</span><span class="sxs-lookup"><span data-stu-id="e2b87-125">Create a new item of type <xref:System.Activities.CodeActivity>.</span></span> <span data-ttu-id="e2b87-126">El código predeterminado creado por el IDE para la actividad será suficiente en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="e2b87-126">The default code created by the IDE for the activity will be sufficient for this example.</span></span>  
   
-5.  Agregue el atributo siguiente a la definición de clase:  
+5.  <span data-ttu-id="e2b87-127">Agregue el atributo siguiente a la definición de clase:</span><span class="sxs-lookup"><span data-stu-id="e2b87-127">Add the following attribute to the class definition:</span></span>  
   
     ```  
     [Designer(typeof(CustomPropertyDesigner))]  
-  
     ```  
   
-     Esta línea asocia el nuevo diseñador a la nueva clase.  
+     <span data-ttu-id="e2b87-128">Esta línea asocia el nuevo diseñador a la nueva clase.</span><span class="sxs-lookup"><span data-stu-id="e2b87-128">This line associates the new designer with the new class.</span></span>  
   
- La nueva actividad debe estar asociada ahora al diseñador.Para probar la nueva actividad, agréguela a un flujo de trabajo y establezca el cuadro combinado en los dos valores.La ventana Propiedades debe actualizarse para reflejar el valor de cuadro combinado.
+ <span data-ttu-id="e2b87-129">La nueva actividad debe estar asociada ahora al diseñador.</span><span class="sxs-lookup"><span data-stu-id="e2b87-129">The new activity should now be associated with the designer.</span></span> <span data-ttu-id="e2b87-130">Para probar la nueva actividad, agréguela a un flujo de trabajo y establezca el cuadro combinado en los dos valores.</span><span class="sxs-lookup"><span data-stu-id="e2b87-130">To test the new activity, add it to a workflow, and set the combo box to the two values.</span></span> <span data-ttu-id="e2b87-131">La ventana Propiedades debe actualizarse para reflejar el valor de cuadro combinado.</span><span class="sxs-lookup"><span data-stu-id="e2b87-131">The properties window should update to reflect the combo box value.</span></span>

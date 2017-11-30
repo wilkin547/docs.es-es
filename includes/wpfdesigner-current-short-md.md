@@ -1,1 +1,1 @@
-WPF Designer
+<span data-ttu-id="aacd7-101">WPF Designer</span><span class="sxs-lookup"><span data-stu-id="aacd7-101">WPF Designer</span></span>

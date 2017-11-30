@@ -1,36 +1,34 @@
 ---
-title: "La instrucci&#243;n no es v&#225;lida en un espacio de nombres | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30001"
-  - "bc30001"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30001"
+title: "La instrucción no es válida en un espacio de nombres"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30001
+- bc30001
+helpviewer_keywords: BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b3146f8abe781b69c05f02b2a734698611ee8343
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# La instrucci&#243;n no es v&#225;lida en un espacio de nombres
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-No puede aparecer esta instrucción en el nivel de un espacio de nombres.  Las únicas declaraciones permitas en el nivel de espacio de nombres son las declaraciones de módulo, interfaz, clase, delegado, enumeración y estructura.  
+# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="0370a-102">La instrucción no es válida en un espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="0370a-102">Statement is not valid in a namespace</span></span>
+<span data-ttu-id="0370a-103">La instrucción no puede aparecer en el nivel de un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="0370a-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="0370a-104">Las declaraciones sola que se permite en el nivel de espacio de nombres son módulo, interfaz, clase, delegado, enumeración y declaraciones de estructura.</span><span class="sxs-lookup"><span data-stu-id="0370a-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
   
- **Identificador de error:** BC30001  
+ <span data-ttu-id="0370a-105">**Id. de error:** BC30001</span><span class="sxs-lookup"><span data-stu-id="0370a-105">**Error ID:** BC30001</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0370a-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="0370a-106">To correct this error</span></span>  
   
--   Mueva la instrucción a una ubicación dentro de una definición de módulo, clase, interfaz, estructura, enumeración o delegado.  
+-   <span data-ttu-id="0370a-107">Mueva la instrucción a una ubicación dentro de un módulo, clase, interfaz, estructura, enumeración o definición de delegado.</span><span class="sxs-lookup"><span data-stu-id="0370a-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
   
-## Vea también  
- [Ámbito en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="0370a-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="0370a-108">See Also</span></span>  
+ [<span data-ttu-id="0370a-109">Ámbito en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0370a-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="0370a-110">Espacios de nombres en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0370a-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)

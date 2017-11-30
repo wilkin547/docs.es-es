@@ -1,98 +1,90 @@
 ---
-title: Atributos comunes (Visual Basic) | Documentos de Microsoft
+title: Atributos comunes (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f470e6ff3e316076d71a34346f741cc4504471a3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4781e7ee60017455796d460d8d7bddb9f7c49676
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="common-attributes-visual-basic"></a>Atributos comunes (Visual Basic)
-En este tema se describe los atributos que se utilizan normalmente en programas de Visual Basic.  
+# <a name="common-attributes-visual-basic"></a><span data-ttu-id="205f2-102">Atributos comunes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="205f2-102">Common Attributes (Visual Basic)</span></span>
+<span data-ttu-id="205f2-103">En este tema se describe los atributos que se usan normalmente en programas de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="205f2-103">This topic describes the attributes that are most commonly used in Visual Basic programs.</span></span>  
   
--   [Atributos globales](#Global)  
+-   [<span data-ttu-id="205f2-104">Atributos globales</span><span class="sxs-lookup"><span data-stu-id="205f2-104">Global Attributes</span></span>](#Global)  
   
--   [Obsolete (atributo)](#Obsolete)  
+-   [<span data-ttu-id="205f2-105">Atributo Obsolete</span><span class="sxs-lookup"><span data-stu-id="205f2-105">Obsolete Attribute</span></span>](#Obsolete)  
   
--   [Atributo condicional](#Conditional)  
+-   [<span data-ttu-id="205f2-106">Atributo Conditional</span><span class="sxs-lookup"><span data-stu-id="205f2-106">Conditional Attribute</span></span>](#Conditional)  
   
--   [Atributos de información del llamador](#CallerInfo)  
+-   [<span data-ttu-id="205f2-107">Atributos de información del llamador</span><span class="sxs-lookup"><span data-stu-id="205f2-107">Caller Info Attributes</span></span>](#CallerInfo)  
   
--   [Atributos de Visual Basic](#VB)  
+-   [<span data-ttu-id="205f2-108">Atributos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="205f2-108">Visual Basic Attributes</span></span>](#VB)  
   
-##  <a name="Global"></a>Atributos globales  
- Mayoría de los atributos se aplica a elementos específicos del lenguaje, como clases o métodos; Sin embargo, algunos atributos son globales, se aplican a todo un ensamblado o módulo. Por ejemplo, el <xref:System.Reflection.AssemblyVersionAttribute>atributo puede utilizarse para incrustar información de versión en un ensamblado, como esta:</xref:System.Reflection.AssemblyVersionAttribute>  
+##  <span data-ttu-id="205f2-109"><a name="Global"></a> Atributos globales</span><span class="sxs-lookup"><span data-stu-id="205f2-109"><a name="Global"></a> Global Attributes</span></span>  
+ <span data-ttu-id="205f2-110">La mayoría de los atributos se aplican a elementos específicos del lenguaje, como las clases o los métodos, aunque algunos atributos son globales (se aplican a todo un ensamblado o módulo).</span><span class="sxs-lookup"><span data-stu-id="205f2-110">Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module.</span></span> <span data-ttu-id="205f2-111">Por ejemplo, el atributo <xref:System.Reflection.AssemblyVersionAttribute> se puede usar para insertar información de versión en un ensamblado, como en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="205f2-111">For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:</span></span>  
   
 ```vb  
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- Los atributos globales aparecen en el código fuente después de cualquier nivel superior`Imports` instrucciones y antes de las declaraciones de espacio de nombres, módulo o tipo. Los atributos globales pueden aparecer en varios archivos de origen, pero los archivos se deben compilar en un paso de compilación único. Para los proyectos de Visual Basic, los atributos globales se colocan generalmente en el archivo AssemblyInfo.vb (el archivo se crea automáticamente cuando se crea un proyecto en Visual Studio).  
+ <span data-ttu-id="205f2-112">Los atributos globales aparecen en el código fuente después de un nivel superior `Imports` instrucciones y antes de cualquier declaración de tipo, módulo o espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="205f2-112">Global attributes appear in the source code after any top-level `Imports` statements and before any type, module, or namespace declarations.</span></span> <span data-ttu-id="205f2-113">Los atributos globales pueden aparecer en varios archivos de código fuente, pero estos archivos se deben compilar en un solo paso de compilación.</span><span class="sxs-lookup"><span data-stu-id="205f2-113">Global attributes can appear in multiple source files, but the files must be compiled in a single compilation pass.</span></span> <span data-ttu-id="205f2-114">Para los proyectos de Visual Basic, los atributos globales se colocan generalmente en el archivo AssemblyInfo.vb (el archivo se crea automáticamente cuando se crea un proyecto en Visual Studio).</span><span class="sxs-lookup"><span data-stu-id="205f2-114">For Visual Basic projects, global attributes are generally put in the AssemblyInfo.vb file (the file is created automatically when you create a project in Visual Studio).</span></span>  
   
- Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado. Se dividen en las siguientes categorías:  
+ <span data-ttu-id="205f2-115">Los atributos de ensamblado son valores que proporcionan información sobre un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-115">Assembly attributes are values that provide information about an assembly.</span></span> <span data-ttu-id="205f2-116">Se dividen en las siguientes categorías:</span><span class="sxs-lookup"><span data-stu-id="205f2-116">They fall into the following categories:</span></span>  
   
--   Atributos de identidad de ensamblado  
+-   <span data-ttu-id="205f2-117">Atributos de identidad del ensamblado</span><span class="sxs-lookup"><span data-stu-id="205f2-117">Assembly identity attributes</span></span>  
   
--   Atributos de información  
+-   <span data-ttu-id="205f2-118">Atributos informativos</span><span class="sxs-lookup"><span data-stu-id="205f2-118">Informational attributes</span></span>  
   
--   Atributos de manifiesto del ensamblado  
+-   <span data-ttu-id="205f2-119">Atributos de manifiesto del ensamblado</span><span class="sxs-lookup"><span data-stu-id="205f2-119">Assembly manifest attributes</span></span>  
   
-### <a name="assembly-identity-attributes"></a>Atributos de identidad del ensamblado  
- Tres atributos (con un nombre seguro, si es aplicable) determinan la identidad de un ensamblado: nombre, versión y referencia cultural. Estos atributos forman el nombre completo del ensamblado y son necesarios cuando se hace referencia en el código. Puede establecer la versión y la referencia cultural utilizando los atributos de un ensamblado. Sin embargo, se establece el valor de nombre por el compilador, el IDE de Visual Studio en el [cuadro de diálogo de información de ensamblado](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box), o la herramienta Assembly Linker (Al.exe) cuando se crea el ensamblado, basándose en el archivo que contiene el manifiesto del ensamblado. El <xref:System.Reflection.AssemblyFlagsAttribute>atributo especifica si pueden coexistir varias copias del ensamblado.</xref:System.Reflection.AssemblyFlagsAttribute>  
+### <a name="assembly-identity-attributes"></a><span data-ttu-id="205f2-120">Atributos de identidad del ensamblado</span><span class="sxs-lookup"><span data-stu-id="205f2-120">Assembly Identity Attributes</span></span>  
+ <span data-ttu-id="205f2-121">Tres atributos, con un nombre seguro (si procede), determinan la identidad de un ensamblado: nombre, versión y referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="205f2-121">Three attributes (with a strong name, if applicable) determine the identity of an assembly: name, version, and culture.</span></span> <span data-ttu-id="205f2-122">Estos atributos forman el nombre completo del ensamblado y son necesarios cuando se hace referencia a este en el código.</span><span class="sxs-lookup"><span data-stu-id="205f2-122">These attributes form the full name of the assembly and are required when you reference it in code.</span></span> <span data-ttu-id="205f2-123">Puede establecer la versión y la referencia cultural de un ensamblado mediante atributos,</span><span class="sxs-lookup"><span data-stu-id="205f2-123">You can set an assembly's version and culture using attributes.</span></span> <span data-ttu-id="205f2-124">pero el valor de nombre lo establece el compilador, el IDE de Visual Studio en el [cuadro de diálogo de información de ensamblado](/visualstudio/ide/reference/assembly-information-dialog-box) o la herramienta Assembly Linker (Al.exe) cuando se crea el ensamblado, a partir del archivo que contiene el manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-124">However, the name value is set by the compiler, the Visual Studio IDE in the [Assembly Information Dialog Box](/visualstudio/ide/reference/assembly-information-dialog-box), or the Assembly Linker (Al.exe) when the assembly is created, based on the file that contains the assembly manifest.</span></span> <span data-ttu-id="205f2-125">El atributo <xref:System.Reflection.AssemblyFlagsAttribute> especifica si pueden coexistir varias copias del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-125">The <xref:System.Reflection.AssemblyFlagsAttribute> attribute specifies whether multiple copies of the assembly can coexist.</span></span>  
   
- La siguiente tabla muestra los atributos de identidad.  
+ <span data-ttu-id="205f2-126">En la siguiente tabla se muestran los atributos de identidad.</span><span class="sxs-lookup"><span data-stu-id="205f2-126">The following table shows the identity attributes.</span></span>  
   
-|Atributo|Propósito|  
+|<span data-ttu-id="205f2-127">Atributo</span><span class="sxs-lookup"><span data-stu-id="205f2-127">Attribute</span></span>|<span data-ttu-id="205f2-128">Propósito</span><span class="sxs-lookup"><span data-stu-id="205f2-128">Purpose</span></span>|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyName></xref:System.Reflection.AssemblyName>|Describe completamente la identidad de un ensamblado.|  
-|<xref:System.Reflection.AssemblyVersionAttribute></xref:System.Reflection.AssemblyVersionAttribute>|Especifica la versión de un ensamblado.|  
-|<xref:System.Reflection.AssemblyCultureAttribute></xref:System.Reflection.AssemblyCultureAttribute>|Especifica la cultura que admite el ensamblado.|  
-|<xref:System.Reflection.AssemblyFlagsAttribute></xref:System.Reflection.AssemblyFlagsAttribute>|Especifica si un ensamblado admite la ejecución en paralelo en el mismo equipo, en el mismo proceso o en el mismo dominio de aplicación.|  
+|<xref:System.Reflection.AssemblyName>|<span data-ttu-id="205f2-129">Describe completamente la identidad de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-129">Fully describes the identity of an assembly.</span></span>|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|<span data-ttu-id="205f2-130">Especifica la versión de un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-130">Specifies the version of an assembly.</span></span>|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|<span data-ttu-id="205f2-131">Especifica la cultura que admite el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-131">Specifies which culture the assembly supports.</span></span>|  
+|<xref:System.Reflection.AssemblyFlagsAttribute>|<span data-ttu-id="205f2-132">Especifica si un ensamblado admite la ejecución en paralelo en el mismo equipo, en el mismo proceso o en el mismo dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="205f2-132">Specifies whether an assembly supports side-by-side execution on the same computer, in the same process, or in the same application domain.</span></span>|  
   
-### <a name="informational-attributes"></a>Atributos informativos  
- Puede utilizar atributos informativos para proporcionar información adicional de la compañía o de producto para un ensamblado. La siguiente tabla muestra los atributos de información definidos en el <xref:System.Reflection?displayProperty=fullName>espacio de nombres.</xref:System.Reflection?displayProperty=fullName>  
+### <a name="informational-attributes"></a><span data-ttu-id="205f2-133">Atributos informativos</span><span class="sxs-lookup"><span data-stu-id="205f2-133">Informational Attributes</span></span>  
+ <span data-ttu-id="205f2-134">Puede utilizar atributos informativos para proporcionar información adicional de la compañía o de producto para un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-134">You can use informational attributes to provide additional company or product information for an assembly.</span></span> <span data-ttu-id="205f2-135">En la tabla siguiente se muestran los atributos informativos definidos en el espacio de nombres <xref:System.Reflection?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="205f2-135">The following table shows the informational attributes defined in the <xref:System.Reflection?displayProperty=nameWithType> namespace.</span></span>  
   
-|Atributo|Propósito|  
+|<span data-ttu-id="205f2-136">Atributo</span><span class="sxs-lookup"><span data-stu-id="205f2-136">Attribute</span></span>|<span data-ttu-id="205f2-137">Propósito</span><span class="sxs-lookup"><span data-stu-id="205f2-137">Purpose</span></span>|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyProductAttribute></xref:System.Reflection.AssemblyProductAttribute>|Define un atributo personalizado que especifica un nombre de producto para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyTrademarkAttribute></xref:System.Reflection.AssemblyTrademarkAttribute>|Define un atributo personalizado que especifica una marca comercial para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute></xref:System.Reflection.AssemblyInformationalVersionAttribute>|Define un atributo personalizado que especifica una versión informativa para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyCompanyAttribute></xref:System.Reflection.AssemblyCompanyAttribute>|Define un atributo personalizado que especifica un nombre de compañía para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyCopyrightAttribute></xref:System.Reflection.AssemblyCopyrightAttribute>|Define un atributo personalizado que especifica un copyright para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyFileVersionAttribute></xref:System.Reflection.AssemblyFileVersionAttribute>|Indica al compilador que use un número de versión específico para el recurso de versión de archivo Win32.|  
-|<xref:System.CLSCompliantAttribute></xref:System.CLSCompliantAttribute>|Indica si el ensamblado es compatible con Common Language Specification (CLS).|  
+|<xref:System.Reflection.AssemblyProductAttribute>|<span data-ttu-id="205f2-138">Define un atributo personalizado que especifica un nombre de producto para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-138">Defines a custom attribute that specifies a product name for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyTrademarkAttribute>|<span data-ttu-id="205f2-139">Define un atributo personalizado que especifica una marca comercial para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-139">Defines a custom attribute that specifies a trademark for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|<span data-ttu-id="205f2-140">Define un atributo personalizado que especifica una versión informativa para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-140">Defines a custom attribute that specifies an informational version for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyCompanyAttribute>|<span data-ttu-id="205f2-141">Define un atributo personalizado que especifica un nombre de compañía para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-141">Defines a custom attribute that specifies a company name for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyCopyrightAttribute>|<span data-ttu-id="205f2-142">Define un atributo personalizado que especifica un copyright para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-142">Defines a custom attribute that specifies a copyright for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyFileVersionAttribute>|<span data-ttu-id="205f2-143">Indica al compilador que use un número de versión específico para el recurso de versión de archivo Win32.</span><span class="sxs-lookup"><span data-stu-id="205f2-143">Instructs the compiler to use a specific version number for the Win32 file version resource.</span></span>|  
+|<xref:System.CLSCompliantAttribute>|<span data-ttu-id="205f2-144">Indica si el ensamblado es compatible con Common Language Specification (CLS).</span><span class="sxs-lookup"><span data-stu-id="205f2-144">Indicates whether the assembly is compliant with the Common Language Specification (CLS).</span></span>|  
   
-### <a name="assembly-manifest-attributes"></a>Atributos de manifiesto del ensamblado  
- Puede utilizar atributos de manifiesto del ensamblado para proporcionar información en el manifiesto del ensamblado. Esto incluye el título, descripción, alias predeterminado y configuración. La siguiente tabla muestra los atributos del manifiesto de ensamblado definen en el <xref:System.Reflection?displayProperty=fullName>espacio de nombres.</xref:System.Reflection?displayProperty=fullName>  
+### <a name="assembly-manifest-attributes"></a><span data-ttu-id="205f2-145">Atributos de manifiesto del ensamblado</span><span class="sxs-lookup"><span data-stu-id="205f2-145">Assembly Manifest Attributes</span></span>  
+ <span data-ttu-id="205f2-146">Puede usar los atributos de manifiesto del ensamblado para proporcionar información en el manifiesto del ensamblado</span><span class="sxs-lookup"><span data-stu-id="205f2-146">You can use assembly manifest attributes to provide information in the assembly manifest.</span></span> <span data-ttu-id="205f2-147">(título, descripción, alias predeterminado y configuración).</span><span class="sxs-lookup"><span data-stu-id="205f2-147">This includes title, description, default alias, and configuration.</span></span> <span data-ttu-id="205f2-148">En la tabla siguiente se muestran los atributos de manifiesto del ensamblado definidos en el espacio de nombres <xref:System.Reflection?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="205f2-148">The following table shows the assembly manifest attributes defined in the <xref:System.Reflection?displayProperty=nameWithType> namespace.</span></span>  
   
-|Atributo|Propósito|  
+|<span data-ttu-id="205f2-149">Atributo</span><span class="sxs-lookup"><span data-stu-id="205f2-149">Attribute</span></span>|<span data-ttu-id="205f2-150">Propósito</span><span class="sxs-lookup"><span data-stu-id="205f2-150">Purpose</span></span>|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyTitleAttribute></xref:System.Reflection.AssemblyTitleAttribute>|Define un atributo personalizado que especifica un título de ensamblado para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyDescriptionAttribute></xref:System.Reflection.AssemblyDescriptionAttribute>|Define un atributo personalizado que especifica una descripción de ensamblado para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyConfigurationAttribute></xref:System.Reflection.AssemblyConfigurationAttribute>|Define un atributo personalizado que especifica una configuración de ensamblado (como versión comercial o de depuración) para un manifiesto de ensamblado.|  
-|<xref:System.Reflection.AssemblyDefaultAliasAttribute></xref:System.Reflection.AssemblyDefaultAliasAttribute>|Define un alias predeterminado descriptivo para un manifiesto de ensamblado|  
+|<xref:System.Reflection.AssemblyTitleAttribute>|<span data-ttu-id="205f2-151">Define un atributo personalizado que especifica un título de ensamblado para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-151">Defines a custom attribute that specifies an assembly title for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyDescriptionAttribute>|<span data-ttu-id="205f2-152">Define un atributo personalizado que especifica una descripción de ensamblado para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-152">Defines a custom attribute that specifies an assembly description for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|<span data-ttu-id="205f2-153">Define un atributo personalizado que especifica una configuración de ensamblado (por ejemplo, comercial o depuración) para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-153">Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|<span data-ttu-id="205f2-154">Define un alias descriptivo predeterminado para un manifiesto del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="205f2-154">Defines a friendly default alias for an assembly manifest</span></span>|  
   
-##  <a name="Obsolete"></a>Obsolete (atributo)  
- El `Obsolete` atributo marca una entidad del programa como uno que ya no se recomienda para su uso. Cada uso de una entidad marcada obsoleta generará posteriormente una advertencia o un error, según cómo esté configurado el atributo. Por ejemplo:  
+##  <span data-ttu-id="205f2-155"><a name="Obsolete"></a> Atributo Obsolete</span><span class="sxs-lookup"><span data-stu-id="205f2-155"><a name="Obsolete"></a> Obsolete Attribute</span></span>  
+ <span data-ttu-id="205f2-156">El atributo `Obsolete` marca una entidad del programa como una entidad cuyo uso ya no se recomienda.</span><span class="sxs-lookup"><span data-stu-id="205f2-156">The `Obsolete` attribute marks a program entity as one that is no longer recommended for use.</span></span> <span data-ttu-id="205f2-157">Cada uso de una entidad marcada como obsoleta generará posteriormente una advertencia o un error, en función de la configuración del atributo.</span><span class="sxs-lookup"><span data-stu-id="205f2-157">Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured.</span></span> <span data-ttu-id="205f2-158">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="205f2-158">For example:</span></span>  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -111,9 +103,9 @@ Class B
 End Class  
 ```  
   
- En este ejemplo el `Obsolete` atributo se aplica a la clase `A` y al método `B.OldMethod`. Dado que el segundo argumento del constructor del atributo aplicado a `B.OldMethod` está establecido en `true`, este método producirá un error del compilador, mientras que el uso de la clase `A` le solo generan una advertencia. Llamar a `B.NewMethod`, sin embargo, se genera ninguna advertencia o error.  
+ <span data-ttu-id="205f2-159">En este ejemplo, el atributo `Obsolete` se aplica a la clase `A` y al método `B.OldMethod`.</span><span class="sxs-lookup"><span data-stu-id="205f2-159">In this example the `Obsolete` attribute is applied to class `A` and to method `B.OldMethod`.</span></span> <span data-ttu-id="205f2-160">Dado que el segundo argumento del constructor de atributos aplicado a `B.OldMethod` está establecido en `true`, este método producirá un error del compilador, mientras que, si se usa la clase `A`, solo se generará una advertencia.</span><span class="sxs-lookup"><span data-stu-id="205f2-160">Because the second argument of the attribute constructor applied to `B.OldMethod` is set to `true`, this method will cause a compiler error, whereas using class `A` will just produce a warning.</span></span> <span data-ttu-id="205f2-161">En cambio, si se llama a `B.NewMethod`, no se generará ninguna advertencia o error.</span><span class="sxs-lookup"><span data-stu-id="205f2-161">Calling `B.NewMethod`, however, produces no warning or error.</span></span>  
   
- La cadena proporcionada como primer argumento al constructor de atributos se mostrará como parte de la advertencia o error. Por ejemplo, cuando se utiliza con las definiciones anteriores, el código siguiente genera dos advertencias y un error:  
+ <span data-ttu-id="205f2-162">La cadena proporcionada como primer argumento al constructor de atributos se mostrará como parte de la advertencia o error.</span><span class="sxs-lookup"><span data-stu-id="205f2-162">The string provided as the first argument to attribute constructor will be displayed as part of the warning or error.</span></span> <span data-ttu-id="205f2-163">Por ejemplo, al usarla con las definiciones anteriores, el código siguiente genera dos advertencias y un error:</span><span class="sxs-lookup"><span data-stu-id="205f2-163">For example, when you use it with the previous definitions, the following code generates two warnings and one error:</span></span>  
   
 ```vb  
 ' Generates 2 warnings:  
@@ -127,16 +119,16 @@ b.NewMethod()
 ' b.OldMethod()  
 ```  
   
- Dos advertencias para la clase `A` se generan: uno para la declaración de la referencia de clase y otro para el constructor de clase.  
+ <span data-ttu-id="205f2-164">Se generan dos advertencias para la clase `A`: una para la declaración de la referencia de clase y otra para el constructor de clases.</span><span class="sxs-lookup"><span data-stu-id="205f2-164">Two warnings for class `A` are generated: one for the declaration of the class reference, and one for the class constructor.</span></span>  
   
- El `Obsolete` atributo se puede utilizar sin argumentos, pero incluyendo una explicación de por qué el elemento está obsoleto y lo que se debe utilizar en su lugar, se recomienda.  
+ <span data-ttu-id="205f2-165">El atributo `Obsolete` se puede usar sin argumentos, aunque se recomienda incluir una explicación de por qué el elemento está obsoleto y qué se debe usar en su lugar.</span><span class="sxs-lookup"><span data-stu-id="205f2-165">The `Obsolete` attribute can be used without arguments, but including an explanation of why the item is obsolete and what to use instead is recommended.</span></span>  
   
- El `Obsolete` atributo es un atributo de uso único y se puede aplicar a cualquier entidad que permita atributos. `Obsolete`es un alias para <xref:System.ObsoleteAttribute>.</xref:System.ObsoleteAttribute>  
+ <span data-ttu-id="205f2-166">El atributo `Obsolete` es un atributo de uso único y se puede aplicar a cualquier entidad que admita atributos.</span><span class="sxs-lookup"><span data-stu-id="205f2-166">The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes.</span></span> <span data-ttu-id="205f2-167">`Obsolete` es un alias de <xref:System.ObsoleteAttribute>.</span><span class="sxs-lookup"><span data-stu-id="205f2-167">`Obsolete` is an alias for <xref:System.ObsoleteAttribute>.</span></span>  
   
-##  <a name="Conditional"></a>Atributo condicional  
- El `Conditional` atributo hace que la ejecución de un método depende de un identificador de preprocesamiento. El `Conditional` atributo es un alias para <xref:System.Diagnostics.ConditionalAttribute>y se puede aplicar a un método o una clase de atributo</xref:System.Diagnostics.ConditionalAttribute>  
+##  <span data-ttu-id="205f2-168"><a name="Conditional"></a> Atributo Conditional</span><span class="sxs-lookup"><span data-stu-id="205f2-168"><a name="Conditional"></a> Conditional Attribute</span></span>  
+ <span data-ttu-id="205f2-169">El atributo `Conditional` hace que la ejecución de un método dependa de un identificador de preprocesamiento.</span><span class="sxs-lookup"><span data-stu-id="205f2-169">The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier.</span></span> <span data-ttu-id="205f2-170">El atributo `Conditional` es un alias de <xref:System.Diagnostics.ConditionalAttribute> y se puede aplicar a un método o a una clase de atributo.</span><span class="sxs-lookup"><span data-stu-id="205f2-170">The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.</span></span>  
   
- En este ejemplo, `Conditional` se aplica a un método para habilitar o deshabilitar la presentación de información de diagnóstico específica del programa:  
+ <span data-ttu-id="205f2-171">En este ejemplo, `Conditional` se aplica a un método para habilitar o deshabilitar la visualización de información de diagnóstico específica del programa:</span><span class="sxs-lookup"><span data-stu-id="205f2-171">In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:</span></span>  
   
 ```vb  
 #Const TRACE_ON = True  
@@ -158,9 +150,9 @@ Module TestConditionalAttribute
 End Module  
 ```  
   
- Si el `TRACE_ON` identificador no está definido, no se mostrará ningún resultado del seguimiento.  
+ <span data-ttu-id="205f2-172">Si el identificador `TRACE_ON` no está definido, no se mostrará ningún resultado del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="205f2-172">If the `TRACE_ON` identifier is not defined, no trace output will be displayed.</span></span>  
   
- El `Conditional` a menudo se usa el atributo con el `DEBUG` identificador para habilitar el seguimiento y registro características para compilaciones de depuración pero no en lanzamiento, como esta:  
+ <span data-ttu-id="205f2-173">El atributo `Conditional` se suele usar con el identificador `DEBUG` para habilitar las funciones de seguimiento y de registro para las compilaciones de depuración (pero no en las compilaciones de versión), como en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="205f2-173">The `Conditional` attribute is often used with the `DEBUG` identifier to enable trace and logging features for debug builds but not in release builds, like this:</span></span>  
   
 ```vb  
 <Conditional("DEBUG")>   
@@ -169,7 +161,7 @@ Shared Sub DebugMethod()
 End Sub  
 ```  
   
- Cuando se llama a un método marcado como condicional, la presencia o ausencia del símbolo de preprocesamiento especificado determina si la llamada se incluye o se omite. Si el símbolo está definido, la llamada se incluye; de lo contrario, se omite la llamada. Usando `Conditional` es un limpiador alternativa más elegante y menos propensa a errores que agregar métodos dentro `#if…#endif` bloques, similar al siguiente:  
+ <span data-ttu-id="205f2-174">Al llamar a un método marcado como condicional, la presencia o ausencia del símbolo de preprocesamiento especificado determina si se incluye o se omite la llamada.</span><span class="sxs-lookup"><span data-stu-id="205f2-174">When a method marked as conditional is called, the presence or absence of the specified preprocessing symbol determines whether the call is included or omitted.</span></span> <span data-ttu-id="205f2-175">Si el símbolo está definido, se incluye la llamada; de lo contrario, se omite la llamada.</span><span class="sxs-lookup"><span data-stu-id="205f2-175">If the symbol is defined, the call is included; otherwise, the call is omitted.</span></span> <span data-ttu-id="205f2-176">Usar `Conditional` es una alternativa más limpia, más elegante y menos propensa a generar errores para agregar métodos dentro de los bloques `#if…#endif`, como en el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="205f2-176">Using `Conditional` is a cleaner, more elegant, and less error-prone alternative to enclosing methods inside `#if…#endif` blocks, like this:</span></span>  
   
 ```vb  
 #If DEBUG Then  
@@ -178,10 +170,10 @@ End Sub
 #End If  
 ```  
   
- Un método condicional debe ser un método en una declaración de clase o struct y no debe tener un valor devuelto.  
+ <span data-ttu-id="205f2-177">Los métodos condicionales deben ser métodos de una declaración de clase o struct y no deben tener ningún valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="205f2-177">A conditional method must be a method in a class or struct declaration and must not have a return value.</span></span>  
   
-### <a name="using-multiple-identifiers"></a>Usar varios identificadores  
- Si un método tiene varios `Conditional` atributos, se incluye una llamada al método si al menos uno de los símbolos condicionales está definido (es decir, los símbolos son lógicamente vinculados entre sí mediante el operador OR). En este ejemplo, la presencia de uno de ellos `A` o `B` dará como resultado de una llamada al método:  
+### <a name="using-multiple-identifiers"></a><span data-ttu-id="205f2-178">Usar varios identificadores</span><span class="sxs-lookup"><span data-stu-id="205f2-178">Using Multiple Identifiers</span></span>  
+ <span data-ttu-id="205f2-179">Si un método tiene varios atributos `Conditional`, se incluye una llamada al método si al menos uno de los símbolos condicionales está definido (es decir, si los símbolos están vinculados lógicamente entre sí mediante el operador OR).</span><span class="sxs-lookup"><span data-stu-id="205f2-179">If a method has multiple `Conditional` attributes, a call to the method is included if at least one of the conditional symbols is defined (in other words, the symbols are logically linked together by using the OR operator).</span></span> <span data-ttu-id="205f2-180">En este ejemplo, la presencia de `A` o de `B` dará como resultado una llamada al método:</span><span class="sxs-lookup"><span data-stu-id="205f2-180">In this example, the presence of either `A` or `B` will result in a method call:</span></span>  
   
 ```vb  
 <Conditional("A"), Conditional("B")>   
@@ -190,7 +182,7 @@ Shared Sub DoIfAorB()
 End Sub  
 ```  
   
- Para lograr el efecto de vinculación lógica de símbolos mediante el operador AND, puede definir métodos condicionales en serie. Por ejemplo, el segundo método se ejecutará sólo si ambos `A` y `B` se definen:  
+ <span data-ttu-id="205f2-181">Para lograr el efecto de una vinculación lógica de símbolos mediante el operador AND, puede definir métodos condicionales en serie.</span><span class="sxs-lookup"><span data-stu-id="205f2-181">To achieve the effect of logically linking symbols by using the AND operator, you can define serial conditional methods.</span></span> <span data-ttu-id="205f2-182">Por ejemplo, el segundo método que se muestra a continuación solo se ejecutará si tanto `A` como `B` están definidos:</span><span class="sxs-lookup"><span data-stu-id="205f2-182">For example, the second method below will execute only if both `A` and `B` are defined:</span></span>  
   
 ```vb  
 <Conditional("A")>   
@@ -204,8 +196,8 @@ Shared Sub DoIfAandB()
 End Sub  
 ```  
   
-### <a name="using-conditional-with-attribute-classes"></a>Uso de Conditional con clases de atributos  
- El `Conditional` atributo también se puede aplicar a una definición de clase de atributo. En este ejemplo, el atributo personalizado `Documentation` sólo agregar información a los metadatos si se define DEBUG.  
+### <a name="using-conditional-with-attribute-classes"></a><span data-ttu-id="205f2-183">Usar Conditional con clases de atributos</span><span class="sxs-lookup"><span data-stu-id="205f2-183">Using Conditional with Attribute Classes</span></span>  
+ <span data-ttu-id="205f2-184">El atributo `Conditional` también se puede aplicar a una definición de clase de atributo.</span><span class="sxs-lookup"><span data-stu-id="205f2-184">The `Conditional` attribute can also be applied to an attribute class definition.</span></span> <span data-ttu-id="205f2-185">En este ejemplo, el atributo personalizado `Documentation` solo agregará información a los metadatos si se define DEBUG.</span><span class="sxs-lookup"><span data-stu-id="205f2-185">In this example, the custom attribute `Documentation` will only add information to the metadata if DEBUG is defined.</span></span>  
   
 ```vb  
 <Conditional("DEBUG")>   
@@ -226,37 +218,37 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a>Atributos de información del llamador  
- Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso del código fuente, el número de línea en el código fuente y el nombre del miembro del llamador.  
+##  <span data-ttu-id="205f2-186"><a name="CallerInfo"></a> Atributos de información del llamador</span><span class="sxs-lookup"><span data-stu-id="205f2-186"><a name="CallerInfo"></a> Caller Info Attributes</span></span>  
+ <span data-ttu-id="205f2-187">Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método.</span><span class="sxs-lookup"><span data-stu-id="205f2-187">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="205f2-188">Puede obtener la ruta de acceso al código fuente, el número de línea del código fuente y el nombre del miembro del llamador.</span><span class="sxs-lookup"><span data-stu-id="205f2-188">You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.</span></span>  
   
- Para obtener información del autor de la llamada de miembros, use los atributos que se aplican a los parámetros opcionales. Cada parámetro opcional especifica un valor predeterminado. En la tabla siguiente se enumera los atributos de información del llamador que se definen en el <xref:System.Runtime.CompilerServices?displayProperty=fullName>espacio de nombres:</xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ <span data-ttu-id="205f2-189">Para obtener la información del llamador del miembro, use los atributos que se aplican a los parámetros opcionales.</span><span class="sxs-lookup"><span data-stu-id="205f2-189">To obtain member caller information, you use attributes that are applied to optional parameters.</span></span> <span data-ttu-id="205f2-190">Cada parámetro opcional especifica un valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="205f2-190">Each optional parameter specifies a default value.</span></span> <span data-ttu-id="205f2-191">En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="205f2-191">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  
   
-|Atributo|Descripción|Tipo|  
+|<span data-ttu-id="205f2-192">Atributo</span><span class="sxs-lookup"><span data-stu-id="205f2-192">Attribute</span></span>|<span data-ttu-id="205f2-193">Descripción</span><span class="sxs-lookup"><span data-stu-id="205f2-193">Description</span></span>|<span data-ttu-id="205f2-194">Tipo</span><span class="sxs-lookup"><span data-stu-id="205f2-194">Type</span></span>|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute></xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute></xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea en el archivo de origen desde el que se llama al método.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute></xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o propiedad del llamador. Para obtener más información, consulte [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|<span data-ttu-id="205f2-195">Ruta de acceso completa del archivo de código fuente que contiene el llamador.</span><span class="sxs-lookup"><span data-stu-id="205f2-195">Full path of the source file that contains the caller.</span></span> <span data-ttu-id="205f2-196">Esta es la ruta de acceso en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="205f2-196">This is the path at compile time.</span></span>|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|<span data-ttu-id="205f2-197">Número de línea del archivo de código fuente desde el que se llama al método.</span><span class="sxs-lookup"><span data-stu-id="205f2-197">Line number in the source file from which the method is called.</span></span>|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|<span data-ttu-id="205f2-198">Nombre de método o de propiedad del llamador.</span><span class="sxs-lookup"><span data-stu-id="205f2-198">Method name or property name of the caller.</span></span> <span data-ttu-id="205f2-199">Para obtener más información, consulte [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span><span class="sxs-lookup"><span data-stu-id="205f2-199">For more information, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span></span>|`String`|  
   
- Para obtener más información acerca de los atributos de información del llamador, consulte [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ <span data-ttu-id="205f2-200">Para obtener más información acerca de los atributos de información del llamador, consulte [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span><span class="sxs-lookup"><span data-stu-id="205f2-200">For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span></span>  
   
-##  <a name="VB"></a>Atributos de Visual Basic  
- En la tabla siguiente se enumera los atributos que son específicos de Visual Basic.  
+##  <span data-ttu-id="205f2-201"><a name="VB"></a>Atributos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="205f2-201"><a name="VB"></a> Visual Basic Attributes</span></span>  
+ <span data-ttu-id="205f2-202">En la tabla siguiente se enumera los atributos que son específicos de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="205f2-202">The following table lists the attributes that are specific to Visual Basic.</span></span>  
   
-|Atributo|Propósito|  
+|<span data-ttu-id="205f2-203">Atributo</span><span class="sxs-lookup"><span data-stu-id="205f2-203">Attribute</span></span>|<span data-ttu-id="205f2-204">Propósito</span><span class="sxs-lookup"><span data-stu-id="205f2-204">Purpose</span></span>|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute></xref:Microsoft.VisualBasic.ComClassAttribute>|Indica al compilador que la clase debe exponerse como un objeto COM.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute></xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Permite a los miembros de módulo tener acceso utilizando sólo la calificación necesaria para el módulo.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute></xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Especifica el tamaño de una cadena de longitud fija en una estructura para utilizarla con el archivo de entrada y salida funciones.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute></xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Especifica el tamaño de una matriz fija en una estructura para utilizarla con el archivo de entrada y salida funciones.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|<span data-ttu-id="205f2-205">Indica al compilador que la clase debe exponerse como un objeto COM.</span><span class="sxs-lookup"><span data-stu-id="205f2-205">Indicates to the compiler that the class should be exposed as a COM object.</span></span>|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|<span data-ttu-id="205f2-206">Permite a los miembros de módulo tener acceso utilizando únicamente la calificación necesaria para el módulo.</span><span class="sxs-lookup"><span data-stu-id="205f2-206">Allows module members to be accessed using only the qualification needed for the module.</span></span>|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|<span data-ttu-id="205f2-207">Especifica el tamaño de una cadena de longitud fija en una estructura para su uso con el archivo de entrada y salida funciones.</span><span class="sxs-lookup"><span data-stu-id="205f2-207">Specifies the size of a fixed-length string in a structure for use with file input and output functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|<span data-ttu-id="205f2-208">Especifica el tamaño de una matriz fija en una estructura para su uso con el archivo de entrada y salida funciones.</span><span class="sxs-lookup"><span data-stu-id="205f2-208">Specifies the size of a fixed array in a structure for use with file input and output functions.</span></span>|  
   
-### <a name="comclassattribute"></a>COMClassAttribute  
- Use `COMClassAttribute` para simplificar el proceso de creación de componentes COM desde Visual Basic. Los objetos COM son considerablemente distintos de los ensamblados de .NET Framework y sin `COMClassAttribute`, deberá seguir una serie de pasos para generar un objeto COM desde Visual Basic. Para las clases marcadas con `COMClassAttribute`, el compilador realiza muchos de estos pasos automáticamente.  
+### <a name="comclassattribute"></a><span data-ttu-id="205f2-209">COMClassAttribute</span><span class="sxs-lookup"><span data-stu-id="205f2-209">COMClassAttribute</span></span>  
+ <span data-ttu-id="205f2-210">Use `COMClassAttribute` para simplificar el proceso de creación de componentes COM desde Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="205f2-210">Use `COMClassAttribute` to simplify the process of creating COM components from Visual Basic.</span></span> <span data-ttu-id="205f2-211">Los objetos COM son considerablemente distintos de los ensamblados de .NET Framework y sin `COMClassAttribute`, debe seguir una serie de pasos para generar un objeto COM de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="205f2-211">COM objects are considerably different from .NET Framework assemblies, and without `COMClassAttribute`, you need to follow a number of steps to generate a COM object from Visual Basic.</span></span> <span data-ttu-id="205f2-212">Para las clases marcadas con `COMClassAttribute`, el compilador realiza muchos de estos pasos automáticamente.</span><span class="sxs-lookup"><span data-stu-id="205f2-212">For classes marked with `COMClassAttribute`, the compiler performs many of these steps automatically.</span></span>  
   
-### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- Use `HideModuleNameAttribute` para permitir que los miembros de módulo obtenerse utilizando sólo la calificación necesaria para el módulo.  
+### <a name="hidemodulenameattribute"></a><span data-ttu-id="205f2-213">HideModuleNameAttribute</span><span class="sxs-lookup"><span data-stu-id="205f2-213">HideModuleNameAttribute</span></span>  
+ <span data-ttu-id="205f2-214">Use `HideModuleNameAttribute` para permitir a los miembros de módulo tener acceso utilizando sólo la calificación necesaria para el módulo.</span><span class="sxs-lookup"><span data-stu-id="205f2-214">Use `HideModuleNameAttribute` to allow module members to be accessed by using only the qualification needed for the module.</span></span>  
   
-### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- Use `VBFixedStringAttribute` para forzar a que Visual Basic para crear una cadena de longitud fija. Las cadenas son de longitud variable de forma predeterminada y este atributo es útil cuando se almacenan cadenas en archivos. El código siguiente se muestra cómo hacerlo:  
+### <a name="vbfixedstringattribute"></a><span data-ttu-id="205f2-215">VBFixedStringAttribute</span><span class="sxs-lookup"><span data-stu-id="205f2-215">VBFixedStringAttribute</span></span>  
+ <span data-ttu-id="205f2-216">Use `VBFixedStringAttribute` para forzar a que Visual Basic para crear una cadena de longitud fija.</span><span class="sxs-lookup"><span data-stu-id="205f2-216">Use `VBFixedStringAttribute` to force Visual Basic to create a fixed-length string.</span></span> <span data-ttu-id="205f2-217">Las cadenas son de longitud variable de forma predeterminada, y este atributo es útil cuando se almacenan cadenas en archivos.</span><span class="sxs-lookup"><span data-stu-id="205f2-217">Strings are of variable length by default, and this attribute is useful when storing strings to files.</span></span> <span data-ttu-id="205f2-218">El código siguiente se muestra cómo hacerlo:</span><span class="sxs-lookup"><span data-stu-id="205f2-218">The following code demonstrates this:</span></span>  
   
 ```vb  
 Structure Worker  
@@ -268,13 +260,13 @@ Structure Worker
 End Structure  
 ```  
   
-### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- Use `VBFixedArrayAttribute` para declarar matrices de tamaño fijo. Como las cadenas de Visual Basic, las matrices son de longitud variable de forma predeterminada. Este atributo es útil cuando se serializa o escribir datos en archivos.  
+### <a name="vbfixedarrayattribute"></a><span data-ttu-id="205f2-219">VBFixedArrayAttribute</span><span class="sxs-lookup"><span data-stu-id="205f2-219">VBFixedArrayAttribute</span></span>  
+ <span data-ttu-id="205f2-220">Use `VBFixedArrayAttribute` para declarar matrices que tienen un tamaño fijo.</span><span class="sxs-lookup"><span data-stu-id="205f2-220">Use `VBFixedArrayAttribute` to declare arrays that are fixed in size.</span></span> <span data-ttu-id="205f2-221">Como cadenas en Visual Basic, las matrices son de longitud variable de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="205f2-221">Like Visual Basic strings, arrays are of variable length by default.</span></span> <span data-ttu-id="205f2-222">Este atributo es útil cuando se serializa o escribir datos en archivos.</span><span class="sxs-lookup"><span data-stu-id="205f2-222">This attribute is useful when serializing or writing data to files.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Guía de programación de Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Acceso a atributos mediante reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a><span data-ttu-id="205f2-223">Vea también</span><span class="sxs-lookup"><span data-stu-id="205f2-223">See Also</span></span>  
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [<span data-ttu-id="205f2-224">Guía de programación en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="205f2-224">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="205f2-225">Atributos</span><span class="sxs-lookup"><span data-stu-id="205f2-225">Attributes</span></span>](https://msdn.microsoft.com/library/5x6cd29c)  
+ [<span data-ttu-id="205f2-226">Reflexión (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="205f2-226">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ <span data-ttu-id="205f2-227">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="205f2-227">[Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>

@@ -1,63 +1,55 @@
 ---
-title: LINQ to Objects (Visual Basic) | Documentos de Microsoft
+title: LINQ to Objects (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d2bc048fea9affd4998430783d20b978317f3897
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8de6308726ffeca8d4fa675f164037dc1fd967a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
-Consulta el término "LINQ to Objects" se refiere al uso de LINQ con cualquier <xref:System.Collections.IEnumerable>o <xref:System.Collections.Generic.IEnumerable%601>colección directamente, sin usar un proveedor LINQ intermedio o una API como [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) o [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.IEnumerable> Puede usar LINQ para consultar cualquier colección enumerable, como <xref:System.Collections.Generic.List%601>, <xref:System.Array>, o <xref:System.Collections.Generic.Dictionary%602>.</xref:System.Collections.Generic.Dictionary%602> </xref:System.Array> </xref:System.Collections.Generic.List%601> La colección puede ser definida por el usuario o puede devolver una API de .NET Framework.  
+# <a name="linq-to-objects-visual-basic"></a><span data-ttu-id="2994e-102">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2994e-102">LINQ to Objects (Visual Basic)</span></span>
+<span data-ttu-id="2994e-103">El término "LINQ to Objects" se refiere al uso de consultas LINQ con cualquier colección <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> directamente, sin usar un proveedor o una API de LINQ intermedios como [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) o [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span><span class="sxs-lookup"><span data-stu-id="2994e-103">The term "LINQ to Objects" refers to the use of LINQ queries with any <xref:System.Collections.IEnumerable> or <xref:System.Collections.Generic.IEnumerable%601> collection directly, without the use of an intermediate LINQ provider or API such as [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) or [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span></span> <span data-ttu-id="2994e-104">Puede usar LINQ para consultar cualquier colección enumerable, como <xref:System.Collections.Generic.List%601>, <xref:System.Array> o <xref:System.Collections.Generic.Dictionary%602>.</span><span class="sxs-lookup"><span data-stu-id="2994e-104">You can use LINQ to query any enumerable collections such as <xref:System.Collections.Generic.List%601>, <xref:System.Array>, or <xref:System.Collections.Generic.Dictionary%602>.</span></span> <span data-ttu-id="2994e-105">La colección puede ser definida por el usuario o haber sido devuelta por una API de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2994e-105">The collection may be user-defined or may be returned by a .NET Framework API.</span></span>  
   
- Básicamente, LINQ to Objects representa un nuevo enfoque a colecciones. En el sistema antiguo, tenía que escribir complejos bucles `For Each` que especificaban cómo recuperar los datos de una colección. En el enfoque LINQ, se escribe código declarativo que describe lo que desea recuperar.  
+ <span data-ttu-id="2994e-106">Básicamente, LINQ to Objects representa un nuevo enfoque para las colecciones.</span><span class="sxs-lookup"><span data-stu-id="2994e-106">In a basic sense, LINQ to Objects represents a new approach to collections.</span></span> <span data-ttu-id="2994e-107">En el sistema antiguo, tenía que escribir complejos bucles `For Each` que especificaban cómo recuperar los datos de una colección.</span><span class="sxs-lookup"><span data-stu-id="2994e-107">In the old way, you had to write complex `For Each` loops that specified how to retrieve data from a collection.</span></span> <span data-ttu-id="2994e-108">En el enfoque de LINQ, se escribe código declarativo que describe qué se quiere recuperar.</span><span class="sxs-lookup"><span data-stu-id="2994e-108">In the LINQ approach, you write declarative code that describes what you want to retrieve.</span></span>  
   
- Además, las consultas LINQ ofrecen tres ventajas principales respecto a tradicional `For Each` bucles:  
+ <span data-ttu-id="2994e-109">Además, las consultas LINQ ofrecen tres ventajas principales respecto a los bucles `For Each` tradicionales:</span><span class="sxs-lookup"><span data-stu-id="2994e-109">In addition, LINQ queries offer three main advantages over traditional `For Each` loops:</span></span>  
   
-1.  Son más concisas y legibles, especialmente cuando se filtran varias condiciones.  
+1.  <span data-ttu-id="2994e-110">Son más concisas y legibles, especialmente cuando se filtran varias condiciones.</span><span class="sxs-lookup"><span data-stu-id="2994e-110">They are more concise and readable, especially when filtering multiple conditions.</span></span>  
   
-2.  Proporcionan funcionalidades eficaces para filtrar, ordenar y agrupar con un código de aplicación mínimo.  
+2.  <span data-ttu-id="2994e-111">Proporcionan funcionalidades eficaces para filtrar, ordenar y agrupar con un código de aplicación mínimo.</span><span class="sxs-lookup"><span data-stu-id="2994e-111">They provide powerful filtering, ordering, and grouping capabilities with a minimum of application code.</span></span>  
   
-3.  Se pueden migrar a otros orígenes de datos con muy poca o ninguna modificación.  
+3.  <span data-ttu-id="2994e-112">Se pueden migrar a otros orígenes de datos con muy poca o ninguna modificación.</span><span class="sxs-lookup"><span data-stu-id="2994e-112">They can be ported to other data sources with little or no modification.</span></span>  
   
- En general, cuanto más compleja es la operación que desea realizar en los datos, más ventajas que obtendrá al usar LINQ en lugar de las técnicas de iteración tradicionales.  
+ <span data-ttu-id="2994e-113">Por lo general, cuanto más compleja sea la operación que quiere realizar en los datos, más ventajas obtendrá al usar LINQ en lugar de las técnicas de iteración tradicionales.</span><span class="sxs-lookup"><span data-stu-id="2994e-113">In general, the more complex the operation you want to perform on the data, the more benefit you will realize by using LINQ instead of traditional iteration techniques.</span></span>  
   
- El propósito de esta sección es demostrar el enfoque LINQ con algunos ejemplos seleccionados. No pretende ser exhaustiva.  
+ <span data-ttu-id="2994e-114">El propósito de esta sección es mostrar el enfoque de LINQ con algunos ejemplos seleccionados.</span><span class="sxs-lookup"><span data-stu-id="2994e-114">The purpose of this section is to demonstrate the LINQ approach with some select examples.</span></span> <span data-ttu-id="2994e-115">No pretende ser exhaustiva.</span><span class="sxs-lookup"><span data-stu-id="2994e-115">It is not intended to be exhaustive.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- Explica cómo se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas. También incluye vínculos a temas que muestran estos principios.  
+## <a name="in-this-section"></a><span data-ttu-id="2994e-116">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2994e-116">In This Section</span></span>  
+ [<span data-ttu-id="2994e-117">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2994e-117">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ <span data-ttu-id="2994e-118">Explica cómo se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas.</span><span class="sxs-lookup"><span data-stu-id="2994e-118">Explains how LINQ can be used to query and transform strings and collections of strings.</span></span> <span data-ttu-id="2994e-119">También incluye vínculos a temas que muestran estos principios.</span><span class="sxs-lookup"><span data-stu-id="2994e-119">Also includes links to topics that demonstrate these principles.</span></span>  
   
- [LINQ y reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
- Vínculos a un ejemplo que muestra cómo LINQ usa la reflexión.  
+ [<span data-ttu-id="2994e-120">LINQ y reflexión (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2994e-120">LINQ and Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
+ <span data-ttu-id="2994e-121">Vincula a un ejemplo que muestra cómo usa LINQ la reflexión.</span><span class="sxs-lookup"><span data-stu-id="2994e-121">Links to a sample that demonstrates how LINQ uses reflection.</span></span>  
   
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
- Explica cómo se puede usar LINQ para interactuar con sistemas de archivos. También incluye vínculos a temas que muestran estos conceptos.  
+ [<span data-ttu-id="2994e-122">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2994e-122">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ <span data-ttu-id="2994e-123">Explica cómo se puede usar LINQ para interactuar con sistemas de archivos.</span><span class="sxs-lookup"><span data-stu-id="2994e-123">Explains how LINQ can be used to interact with file systems.</span></span> <span data-ttu-id="2994e-124">También incluye vínculos a temas que muestran estos conceptos.</span><span class="sxs-lookup"><span data-stu-id="2994e-124">Also includes links to topics that demonstrate these concepts.</span></span>  
   
- [Cómo: consultar un objeto ArrayList con LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
- Muestra cómo consultar un objeto ArrayList en C#.  
+ [<span data-ttu-id="2994e-125">Cómo: consultar un objeto ArrayList con LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2994e-125">How to: Query an ArrayList with LINQ (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ <span data-ttu-id="2994e-126">Muestra cómo consultar un objeto ArrayList en C#.</span><span class="sxs-lookup"><span data-stu-id="2994e-126">Demonstrates how to query an ArrayList in C#.</span></span>  
   
- [Cómo: agregar métodos personalizados para las consultas LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
- Explica cómo extender el conjunto de métodos que puede usar para las consultas LINQ agregando métodos de extensión para el <xref:System.Collections.Generic.IEnumerable%601>interfaz.</xref:System.Collections.Generic.IEnumerable%601>  
+ [<span data-ttu-id="2994e-127">Cómo: agregar métodos personalizados para las consultas LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2994e-127">How to: Add Custom Methods for LINQ Queries (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ <span data-ttu-id="2994e-128">Explica cómo extender el conjunto de métodos que puede usar para consultas LINQ agregando métodos de extensión a la interfaz <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="2994e-128">Explains how to extend the set of methods that you can use for LINQ queries by adding extension methods to the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span>  
   
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Proporciona vínculos a temas que explican LINQ y se proporcionan ejemplos de código que realizan las consultas.
+ [<span data-ttu-id="2994e-129">Language-Integrated Query (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2994e-129">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ <span data-ttu-id="2994e-130">Proporciona vínculos a temas que explican LINQ y que proporcionan ejemplos de código que realizan consultas.</span><span class="sxs-lookup"><span data-stu-id="2994e-130">Provides links to topics that explain LINQ and provide examples of code that perform queries.</span></span>

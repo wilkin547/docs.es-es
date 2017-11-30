@@ -1,121 +1,104 @@
 ---
-title: Estructuras y clases (Visual Basic) | Documentos de Microsoft
+title: Estructuras y clases (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
-- structures
+- structures [Visual Basic]
 - classes [Visual Basic]
-- structures, compared to classes
-- structures, structure variables
-- structure variables
+- structures [Visual Basic], compared to classes
+- structures [Visual Basic], structure variables
+- structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e7402ec0fcfc279470d39a4919d3b5ec8b5d9dff
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="structures-and-classes-visual-basic"></a>Estructuras y clases (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]unifica la sintaxis de estructuras y clases, con lo que ambas entidades admiten prácticamente las mismas características. Sin embargo, también hay diferencias importantes entre las estructuras y clases.  
+# <a name="structures-and-classes-visual-basic"></a><span data-ttu-id="b3e55-102">Estructuras y clases (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b3e55-102">Structures and Classes (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="b3e55-103">unifica la sintaxis de estructuras y clases, con lo que ambas entidades admiten la mayoría de las mismas características.</span><span class="sxs-lookup"><span data-stu-id="b3e55-103"> unifies the syntax for structures and classes, with the result that both entities support most of the same features.</span></span> <span data-ttu-id="b3e55-104">Sin embargo, también hay diferencias importantes entre las estructuras y clases.</span><span class="sxs-lookup"><span data-stu-id="b3e55-104">However, there are also important differences between structures and classes.</span></span>  
   
- Las clases tienen la ventaja de ser tipos de referencia: pasar una referencia es más eficiente que pasar una variable de estructura con todos sus datos. Por otro lado, las estructuras no requieren la asignación de memoria en el montón global.  
+ <span data-ttu-id="b3e55-105">Las clases tienen la ventaja de ser tipos de referencia: pasar una referencia es más eficaz que se pasa una variable de estructura con todos sus datos.</span><span class="sxs-lookup"><span data-stu-id="b3e55-105">Classes have the advantage of being reference types — passing a reference is more efficient than passing a structure variable with all its data.</span></span> <span data-ttu-id="b3e55-106">Por otro lado, las estructuras no requieren la asignación de memoria en el montón global.</span><span class="sxs-lookup"><span data-stu-id="b3e55-106">On the other hand, structures do not require allocation of memory on the global heap.</span></span>  
   
- Porque no se puede heredar de una estructura, estructuras deben usarse sólo para objetos que no se necesite ampliar. Utilice estructuras cuando el objeto que se va a crear tiene un tamaño de instancia pequeña y tener en cuenta las características de rendimiento de las clases y estructuras.  
+ <span data-ttu-id="b3e55-107">Dado que no se puede heredar de una estructura, estructuras de deben usarse solo para los objetos que no es necesario ampliar.</span><span class="sxs-lookup"><span data-stu-id="b3e55-107">Because you cannot inherit from a structure, structures should be used only for objects that do not need to be extended.</span></span> <span data-ttu-id="b3e55-108">Utilice estructuras cuando el objeto que se va a crear tiene un tamaño de instancia pequeña y tener en cuenta las características de rendimiento de las clases y estructuras.</span><span class="sxs-lookup"><span data-stu-id="b3e55-108">Use structures when the object you wish to create has a small instance size, and take into account the performance characteristics of classes versus structures.</span></span>  
   
-## <a name="similarities"></a>Similitudes  
- Estructuras y clases son similares en los siguientes aspectos:  
+## <a name="similarities"></a><span data-ttu-id="b3e55-109">Similitudes</span><span class="sxs-lookup"><span data-stu-id="b3e55-109">Similarities</span></span>  
+ <span data-ttu-id="b3e55-110">Estructuras y clases son similares en los siguientes aspectos:</span><span class="sxs-lookup"><span data-stu-id="b3e55-110">Structures and classes are similar in the following respects:</span></span>  
   
--   Ambos son *contenedor* tipos, lo que significa que contienen otros tipos como miembros.  
+-   <span data-ttu-id="b3e55-111">Ambos son *contenedor* tipos, lo que significa que contienen otros tipos como miembros.</span><span class="sxs-lookup"><span data-stu-id="b3e55-111">Both are *container* types, meaning that they contain other types as members.</span></span>  
   
--   Ambas tienen miembros, que pueden incluir constructores, métodos, propiedades, campos, constantes, enumeraciones, eventos y controladores de eventos. Sin embargo, no confunda estos miembros con el declarado *elementos* de una estructura.  
+-   <span data-ttu-id="b3e55-112">Ambas tienen miembros, que pueden incluir constructores, métodos, propiedades, campos, constantes, enumeraciones, eventos y controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="b3e55-112">Both have members, which can include constructors, methods, properties, fields, constants, enumerations, events, and event handlers.</span></span> <span data-ttu-id="b3e55-113">Sin embargo, es importante no confundir estos miembros con el declarado *elementos* de una estructura.</span><span class="sxs-lookup"><span data-stu-id="b3e55-113">However, do not confuse these members with the declared *elements* of a structure.</span></span>  
   
--   Los miembros de ambas pueden haber niveles de acceso individualizados. Por ejemplo, un miembro puede declararse `Public` y otra `Private`.  
+-   <span data-ttu-id="b3e55-114">Los miembros de ambos pueden haber niveles de acceso individualizados.</span><span class="sxs-lookup"><span data-stu-id="b3e55-114">Members of both can have individualized access levels.</span></span> <span data-ttu-id="b3e55-115">Por ejemplo, un miembro puede declararse `Public` y otra `Private`.</span><span class="sxs-lookup"><span data-stu-id="b3e55-115">For example, one member can be declared `Public` and another `Private`.</span></span>  
   
--   Ambas pueden implementar interfaces.  
+-   <span data-ttu-id="b3e55-116">Ambas pueden implementar interfaces.</span><span class="sxs-lookup"><span data-stu-id="b3e55-116">Both can implement interfaces.</span></span>  
   
--   Ambas pueden tener constructores compartidos, con o sin parámetros.  
+-   <span data-ttu-id="b3e55-117">Ambos pueden tener constructores compartidos, con o sin parámetros.</span><span class="sxs-lookup"><span data-stu-id="b3e55-117">Both can have shared constructors, with or without parameters.</span></span>  
   
--   Ambas pueden exponer una *propiedad predeterminada*, siempre que la propiedad tiene al menos un parámetro.  
+-   <span data-ttu-id="b3e55-118">Ambas pueden exponer una *propiedad predeterminada*, siempre que la propiedad tiene al menos un parámetro.</span><span class="sxs-lookup"><span data-stu-id="b3e55-118">Both can expose a *default property*, provided that property takes at least one parameter.</span></span>  
   
--   Ambos pueden declarar y provocar eventos y ambas pueden declarar a delegados.  
+-   <span data-ttu-id="b3e55-119">Ambos pueden declarar y provocar eventos y ambas pueden declarar a delegados.</span><span class="sxs-lookup"><span data-stu-id="b3e55-119">Both can declare and raise events, and both can declare delegates.</span></span>  
   
-## <a name="differences"></a>Diferencias  
- Estructuras y clases difieren de las indicaciones siguientes:  
+## <a name="differences"></a><span data-ttu-id="b3e55-120">Diferencias</span><span class="sxs-lookup"><span data-stu-id="b3e55-120">Differences</span></span>  
+ <span data-ttu-id="b3e55-121">Estructuras y clases son distintas de las indicaciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="b3e55-121">Structures and classes differ in the following particulars:</span></span>  
   
--   Las estructuras son *los tipos de valor*; son clases *tipos de referencia*. Una variable de un tipo de estructura contiene los datos de la estructura, en lugar que contiene una referencia a los datos como un tipo de clase.  
+-   <span data-ttu-id="b3e55-122">Las estructuras son *los tipos de valor*; las clases son *hacen referencia a tipos*.</span><span class="sxs-lookup"><span data-stu-id="b3e55-122">Structures are *value types*; classes are *reference types*.</span></span> <span data-ttu-id="b3e55-123">Una variable de un tipo de estructura contiene datos de la estructura, en lugar de hacerse que contiene una referencia a los datos como un tipo de clase.</span><span class="sxs-lookup"><span data-stu-id="b3e55-123">A variable of a structure type contains the structure's data, rather than containing a reference to the data as a class type does.</span></span>  
   
--   Estructuras de utilicen asignación de la pila; las clases utilizan asignación del montón.  
+-   <span data-ttu-id="b3e55-124">Estructuras de utilicen asignación de pila; las clases utilizan asignación del montón.</span><span class="sxs-lookup"><span data-stu-id="b3e55-124">Structures use stack allocation; classes use heap allocation.</span></span>  
   
--   Todos los elementos de estructura son `Public` de forma predeterminada, la clase variables y constantes son `Private` de forma predeterminada, mientras que otros miembros de clase son `Public` de forma predeterminada. Este comportamiento para los miembros de la clase proporciona compatibilidad con el sistema de Visual Basic 6.0 de valores predeterminados.  
+-   <span data-ttu-id="b3e55-125">Todos los elementos de estructura son `Public` de forma predeterminada; clase variables y constantes son `Private` de forma predeterminada, mientras que otros miembros de clase son `Public` de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="b3e55-125">All structure elements are `Public` by default; class variables and constants are `Private` by default, while other class members are `Public` by default.</span></span> <span data-ttu-id="b3e55-126">Este comportamiento para los miembros de la clase proporciona compatibilidad con el sistema de Visual Basic 6.0 de valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="b3e55-126">This behavior for class members provides compatibility with the Visual Basic 6.0 system of defaults.</span></span>  
   
--   Una estructura debe tener al menos una no compartido variable o no compartido y no personalizado elemento de evento; una clase puede estar completamente vacía.  
+-   <span data-ttu-id="b3e55-127">Una estructura debe tener al menos una no compartido no compartida, o variable no personalizado event, elemento; una clase puede estar completamente vacía.</span><span class="sxs-lookup"><span data-stu-id="b3e55-127">A structure must have at least one nonshared variable or nonshared, noncustom event element; a class can be completely empty.</span></span>  
   
--   Elementos de estructura no pueden declararse como `Protected`; pueden miembros de clase.  
+-   <span data-ttu-id="b3e55-128">Elementos de estructura no se pueden declarar como `Protected`; los miembros de clase pueden.</span><span class="sxs-lookup"><span data-stu-id="b3e55-128">Structure elements cannot be declared as `Protected`; class members can.</span></span>  
   
--   Un procedimiento de estructura puede controlar eventos si es un [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procedimiento y sólo por medio de la [AddHandler (instrucción)](../../../../visual-basic/language-reference/statements/addhandler-statement.md); cualquier procedimiento de clase puede controlar eventos, mediante la [controla](../../../../visual-basic/language-reference/statements/handles-clause.md) palabra clave o el `AddHandler` instrucción. Para obtener más información, consulte [eventos](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+-   <span data-ttu-id="b3e55-129">Un procedimiento de estructura puede controlar eventos si es un [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procedimiento y solo por medio de la [AddHandler (instrucción)](../../../../visual-basic/language-reference/statements/addhandler-statement.md); cualquier procedimiento de clase puede controlar eventos, mediante cualquier la [ Controla](../../../../visual-basic/language-reference/statements/handles-clause.md) palabra clave o el `AddHandler` instrucción.</span><span class="sxs-lookup"><span data-stu-id="b3e55-129">A structure procedure can handle events only if it is a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure, and only by means of the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md); any class procedure can handle events, using either the [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) keyword or the `AddHandler` statement.</span></span> <span data-ttu-id="b3e55-130">Para más información, vea [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="b3e55-130">For more information, see [Events](../../../../visual-basic/programming-guide/language-features/events/index.md).</span></span>  
   
--   Declaraciones de variables de estructura no pueden especificar inicializadores o tamaños iniciales para matrices; las declaraciones de variable de clase pueden.  
+-   <span data-ttu-id="b3e55-131">Declaraciones de variables de estructura no pueden especificar inicializadores o tamaños iniciales para matrices; las declaraciones de variable de clase pueden.</span><span class="sxs-lookup"><span data-stu-id="b3e55-131">Structure variable declarations cannot specify initializers or initial sizes for arrays; class variable declarations can.</span></span>  
   
--   Las estructuras heredan implícitamente de la <xref:System.ValueType?displayProperty=fullName>de clase y no puede heredar de cualquier otro tipo, las clases pueden heredar de cualquier clase o clases que no sean <xref:System.ValueType?displayProperty=fullName>.</xref:System.ValueType?displayProperty=fullName> </xref:System.ValueType?displayProperty=fullName>  
+-   <span data-ttu-id="b3e55-132">Las estructuras heredan implícitamente de la <xref:System.ValueType?displayProperty=nameWithType> clase y no puede heredar de cualquier otro tipo; las clases pueden heredar de cualquier clase o clases distinto de <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b3e55-132">Structures implicitly inherit from the <xref:System.ValueType?displayProperty=nameWithType> class and cannot inherit from any other type; classes can inherit from any class or classes other than <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
--   Las estructuras no son heredables; las clases son.  
+-   <span data-ttu-id="b3e55-133">Las estructuras no son heredables; las clases son.</span><span class="sxs-lookup"><span data-stu-id="b3e55-133">Structures are not inheritable; classes are.</span></span>  
   
--   Las estructuras no se terminan nunca, por lo que common language runtime (CLR) nunca llama el <xref:System.Object.Finalize%2A>método en una estructura; las clases se terminan por el recolector de elementos no utilizados (GC), que llama a <xref:System.Object.Finalize%2A>en una clase cuando no detecta que quedan referencias activas.</xref:System.Object.Finalize%2A> </xref:System.Object.Finalize%2A>  
+-   <span data-ttu-id="b3e55-134">Estructuras no se terminan nunca, por ello, common language runtime (CLR) no llama nunca la <xref:System.Object.Finalize%2A> método en una estructura; las clases se terminan por el recolector de elementos no utilizados (GC), que llama a <xref:System.Object.Finalize%2A> en una clase cuando detecta que no hay referencias activas restantes.</span><span class="sxs-lookup"><span data-stu-id="b3e55-134">Structures are never terminated, so the common language runtime (CLR) never calls the <xref:System.Object.Finalize%2A> method on any structure; classes are terminated by the garbage collector (GC), which calls <xref:System.Object.Finalize%2A> on a class when it detects there are no active references remaining.</span></span>  
   
--   Una estructura no requiere un constructor; realiza una clase.  
+-   <span data-ttu-id="b3e55-135">Una estructura no requiere un constructor; realiza una clase.</span><span class="sxs-lookup"><span data-stu-id="b3e55-135">A structure does not require a constructor; a class does.</span></span>  
   
--   Las estructuras pueden tener constructores no compartidos únicamente si toman parámetros; las clases pueden tenerlos con o sin parámetros.  
+-   <span data-ttu-id="b3e55-136">Las estructuras pueden tener constructores no compartidos únicamente si toman parámetros; las clases pueden tenerlos con o sin parámetros.</span><span class="sxs-lookup"><span data-stu-id="b3e55-136">Structures can have nonshared constructors only if they take parameters; classes can have them with or without parameters.</span></span>  
   
- Cada estructura tiene un constructor público implícito sin parámetros. Este constructor inicializa los elementos de datos de la de la estructura con sus valores predeterminados. No se puede volver a definir este comportamiento.  
+ <span data-ttu-id="b3e55-137">Cada estructura tiene un constructor público implícito sin parámetros.</span><span class="sxs-lookup"><span data-stu-id="b3e55-137">Every structure has an implicit public constructor without parameters.</span></span> <span data-ttu-id="b3e55-138">Este constructor inicializa los elementos de datos de la de la estructura con sus valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="b3e55-138">This constructor initializes all the structure's data elements to their default values.</span></span> <span data-ttu-id="b3e55-139">No se puede volver a definir este comportamiento.</span><span class="sxs-lookup"><span data-stu-id="b3e55-139">You cannot redefine this behavior.</span></span>  
   
-## <a name="instances-and-variables"></a>Instancias y Variables  
- Dado que las estructuras son tipos de valor, cada variable de estructura permanentemente está enlazado a una instancia de estructura individual. Pero las clases son tipos de referencia y una variable de objeto puede hacer referencia a varias instancias de clase en distintos momentos. Esta distinción afecta al uso de estructuras y clases de las maneras siguientes:  
+## <a name="instances-and-variables"></a><span data-ttu-id="b3e55-140">Instancias y Variables</span><span class="sxs-lookup"><span data-stu-id="b3e55-140">Instances and Variables</span></span>  
+ <span data-ttu-id="b3e55-141">Dado que las estructuras son tipos de valor, cada variable de estructura permanentemente se enlaza a una instancia de estructura individual.</span><span class="sxs-lookup"><span data-stu-id="b3e55-141">Because structures are value types, each structure variable is permanently bound to an individual structure instance.</span></span> <span data-ttu-id="b3e55-142">Pero las clases son tipos de referencia y una variable de objeto puede hacer referencia a varias instancias de clase en momentos diferentes.</span><span class="sxs-lookup"><span data-stu-id="b3e55-142">But classes are reference types, and an object variable can refer to various class instances at different times.</span></span> <span data-ttu-id="b3e55-143">Esta distinción afecta al uso de estructuras y clases de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="b3e55-143">This distinction affects your usage of structures and classes in the following ways:</span></span>  
   
--   **Inicialización.** Una variable de estructura incluye implícitamente una inicialización de los elementos mediante el constructor sin parámetros de la estructura. Por lo tanto, `Dim s As struct1` es equivalente a `Dim s As struct1 = New struct1()`.  
+-   <span data-ttu-id="b3e55-144">**Inicialización.**</span><span class="sxs-lookup"><span data-stu-id="b3e55-144">**Initialization.**</span></span> <span data-ttu-id="b3e55-145">Una variable de estructura incluye implícitamente una inicialización de los elementos mediante el constructor sin parámetros de la estructura.</span><span class="sxs-lookup"><span data-stu-id="b3e55-145">A structure variable implicitly includes an initialization of the elements using the structure's parameterless constructor.</span></span> <span data-ttu-id="b3e55-146">Por lo tanto, `Dim s As struct1` es equivalente a `Dim s As struct1 = New struct1()`.</span><span class="sxs-lookup"><span data-stu-id="b3e55-146">Therefore, `Dim s As struct1` is equivalent to `Dim s As struct1 = New struct1()`.</span></span>  
   
--   **Asignación de Variables.** Al asignar una variable de estructura a otra o pasar una instancia de estructura a un argumento de procedimiento, se copian los valores actuales de todos los elementos de variable en la nueva estructura. Al asignar una variable de objeto a otra o pasar una variable de objeto a un procedimiento, se copia el puntero de referencia.  
+-   <span data-ttu-id="b3e55-147">**Asignación de Variables.**</span><span class="sxs-lookup"><span data-stu-id="b3e55-147">**Assigning Variables.**</span></span> <span data-ttu-id="b3e55-148">Al asignar una variable de estructura a otra o pasar una instancia de estructura a un argumento de procedimiento, se copian los valores actuales de todos los elementos de la variable a la nueva estructura.</span><span class="sxs-lookup"><span data-stu-id="b3e55-148">When you assign one structure variable to another, or pass a structure instance to a procedure argument, the current values of all the variable elements are copied to the new structure.</span></span> <span data-ttu-id="b3e55-149">Al asignar una variable de objeto a otro, o pasar una variable de objeto a un procedimiento, se copia el puntero de referencia.</span><span class="sxs-lookup"><span data-stu-id="b3e55-149">When you assign one object variable to another, or pass an object variable to a procedure, only the reference pointer is copied.</span></span>  
   
--   **Asignar nada.** Puede asignar el valor [nada](../../../../visual-basic/language-reference/nothing.md) a una estructura variable, pero la instancia sigue siendo asociado a la variable. Puede llamar a sus métodos y tener acceso a sus elementos de datos, aunque se reinicializan elementos variables mediante la asignación.  
+-   <span data-ttu-id="b3e55-150">**Asignar nada.**</span><span class="sxs-lookup"><span data-stu-id="b3e55-150">**Assigning Nothing.**</span></span> <span data-ttu-id="b3e55-151">Puede asignar el valor [nada](../../../../visual-basic/language-reference/nothing.md) a una estructura de variable, pero la instancia continúa estando asociado a la variable.</span><span class="sxs-lookup"><span data-stu-id="b3e55-151">You can assign the value [Nothing](../../../../visual-basic/language-reference/nothing.md) to a structure variable, but the instance continues to be associated with the variable.</span></span> <span data-ttu-id="b3e55-152">Puede llamar a sus métodos y obteniendo acceso a sus elementos de datos, aunque se reinicializan elementos variables por la asignación.</span><span class="sxs-lookup"><span data-stu-id="b3e55-152">You can still call its methods and access its data elements, although variable elements are reinitialized by the assignment.</span></span>  
   
-     En cambio, si establece una variable de objeto en `Nothing`, elimina su asociación con cualquier instancia de clase y no se puede obtener acceso a todos los miembros a través de la variable hasta que asigne otra instancia.  
+     <span data-ttu-id="b3e55-153">En cambio, si establece una variable de objeto en `Nothing`, desasocia desde cualquier instancia de clase y no se puede tener acceso a los miembros a través de la variable hasta que asigne otra instancia.</span><span class="sxs-lookup"><span data-stu-id="b3e55-153">In contrast, if you set an object variable to `Nothing`, you dissociate it from any class instance, and you cannot access any members through the variable until you assign another instance to it.</span></span>  
   
--   **Varias instancias.** Una variable de objeto puede tener distintas instancias de clase asignados en momentos distintos y varias variables de objeto pueden hacer referencia a la misma instancia de clase al mismo tiempo. Cambios realizados en los valores de miembros de clase afectan a dichos miembros cuando se tiene acceso a través de otra variable que apunta a la misma instancia.  
+-   <span data-ttu-id="b3e55-154">**Varias instancias.**</span><span class="sxs-lookup"><span data-stu-id="b3e55-154">**Multiple Instances.**</span></span> <span data-ttu-id="b3e55-155">Una variable de objeto puede tener distintas instancias de clase asignados a él en momentos diferentes y varias variables de objeto pueden hacer referencia a la misma instancia de clase al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="b3e55-155">An object variable can have different class instances assigned to it at different times, and several object variables can refer to the same class instance at the same time.</span></span> <span data-ttu-id="b3e55-156">Cambios realizados en los valores de los miembros de clase afectan a dichos miembros cuando se tiene acceso a través de otra variable que apunta a la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="b3e55-156">Changes you make to the values of class members affect those members when accessed through another variable pointing to the same instance.</span></span>  
   
-     Elementos de estructura, sin embargo, están aislados dentro de su propia instancia. Cambios en sus valores no se reflejan en ninguna otra variable de estructura, incluso en otras instancias del mismo `Structure` declaración.  
+     <span data-ttu-id="b3e55-157">Elementos de estructura, sin embargo, están aislados dentro de su propia instancia.</span><span class="sxs-lookup"><span data-stu-id="b3e55-157">Structure elements, however, are isolated within their own instance.</span></span> <span data-ttu-id="b3e55-158">Cambios en sus valores no se reflejan en ninguna otra variable de estructura, incluso en otras instancias de la misma `Structure` declaración.</span><span class="sxs-lookup"><span data-stu-id="b3e55-158">Changes to their values are not reflected in any other structure variables, even in other instances of the same `Structure` declaration.</span></span>  
   
--   **Igualdad.** Comprobar la igualdad de dos estructuras debe realizarse con una elemento por elemento prueba. Se pueden comparar dos variables de objeto mediante la <xref:System.Object.Equals%2A>método.</xref:System.Object.Equals%2A> <xref:System.Object.Equals%2A>indica si las dos variables apuntan a la misma instancia.</xref:System.Object.Equals%2A>  
+-   <span data-ttu-id="b3e55-159">**Igualdad.**</span><span class="sxs-lookup"><span data-stu-id="b3e55-159">**Equality.**</span></span> <span data-ttu-id="b3e55-160">Comprobar la igualdad de dos estructuras debe realizarse con una prueba de elemento a elemento.</span><span class="sxs-lookup"><span data-stu-id="b3e55-160">Equality testing of two structures must be performed with an element-by-element test.</span></span> <span data-ttu-id="b3e55-161">Se pueden comparar dos variables de objeto mediante la <xref:System.Object.Equals%2A> método.</span><span class="sxs-lookup"><span data-stu-id="b3e55-161">Two object variables can be compared using the <xref:System.Object.Equals%2A> method.</span></span> <span data-ttu-id="b3e55-162"><xref:System.Object.Equals%2A>indica si las dos variables apuntan a la misma instancia.</span><span class="sxs-lookup"><span data-stu-id="b3e55-162"><xref:System.Object.Equals%2A> indicates whether the two variables point to the same instance.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Estructuras y otros elementos de programación](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
- [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="b3e55-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="b3e55-163">See Also</span></span>  
+ [<span data-ttu-id="b3e55-164">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="b3e55-164">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="b3e55-165">Tipos de datos compuestos</span><span class="sxs-lookup"><span data-stu-id="b3e55-165">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="b3e55-166">Tipos de valores y tipos de referencias</span><span class="sxs-lookup"><span data-stu-id="b3e55-166">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="b3e55-167">Estructuras</span><span class="sxs-lookup"><span data-stu-id="b3e55-167">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="b3e55-168">Solución de problemas de tipos de datos</span><span class="sxs-lookup"><span data-stu-id="b3e55-168">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="b3e55-169">Estructuras y otros elementos de programación</span><span class="sxs-lookup"><span data-stu-id="b3e55-169">Structures and Other Programming Elements</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [<span data-ttu-id="b3e55-170">Objetos y clases</span><span class="sxs-lookup"><span data-stu-id="b3e55-170">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

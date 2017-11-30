@@ -1,1 +1,1 @@
-Modelo de objetos de documento (DOM) XML
+<span data-ttu-id="ec383-101">Modelo de objetos de documento (DOM) XML</span><span class="sxs-lookup"><span data-stu-id="ec383-101">XML Document Object Model (DOM)</span></span>

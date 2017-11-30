@@ -1,27 +1,29 @@
 ---
-title: "Divisi&#243;n por cero (error en tiempo de ejecuci&#243;n de Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID11"
+title: "División por cero (error en tiempo de ejecución de Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID11
 ms.assetid: 5b9bc5d6-792e-48bc-a974-012e07ad95f3
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9a913e3b55b38430c0908f77aac79cb342e78719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Divisi&#243;n por cero (error en tiempo de ejecuci&#243;n de Visual Basic)
-Una expresión que se está usando como divisor tiene un valor de cero.  
+# <a name="division-by-zero-visual-basic-run-time-error"></a><span data-ttu-id="13291-102">División por cero (error en tiempo de ejecución de Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="13291-102">Division by zero (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="13291-103">Una expresión que se está usando como divisor tiene un valor de cero.</span><span class="sxs-lookup"><span data-stu-id="13291-103">An expression being used as a divisor has a value of zero.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="13291-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="13291-104">To correct this error</span></span>  
   
-1.  Compruebe la ortografía de las variables de la expresión. Un nombre de variable mal escrito puede crear implícitamente una variable numérica que se inicialice en cero.  
+1.  <span data-ttu-id="13291-105">Compruebe la ortografía de las variables de la expresión.</span><span class="sxs-lookup"><span data-stu-id="13291-105">Check the spelling of variables in the expression.</span></span> <span data-ttu-id="13291-106">Un nombre de variable mal escrito puede crear implícitamente una variable numérica que se inicialice en cero.</span><span class="sxs-lookup"><span data-stu-id="13291-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
   
-2.  Compruebe las operaciones anteriores en las variables de la expresión, especialmente las que se pasaron al procedimiento como argumentos de otros procedimientos.  
+2.  <span data-ttu-id="13291-107">Compruebe las operaciones anteriores en las variables de la expresión, especialmente las que se pasaron al procedimiento como argumentos de otros procedimientos.</span><span class="sxs-lookup"><span data-stu-id="13291-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
   
-## Vea también  
- [Pasar argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Parameter Passing Mechanism Changes in Visual Basic](http://msdn.microsoft.com/es-es/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+## <a name="see-also"></a><span data-ttu-id="13291-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="13291-108">See Also</span></span>  
+ [<span data-ttu-id="13291-109">Paso de argumentos por valor y por referencia</span><span class="sxs-lookup"><span data-stu-id="13291-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="13291-110">Cambios en el mecanismo de paso en Visual Basic de parámetros</span><span class="sxs-lookup"><span data-stu-id="13291-110">Parameter Passing Mechanism Changes in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)

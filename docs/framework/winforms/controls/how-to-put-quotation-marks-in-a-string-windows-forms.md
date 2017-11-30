@@ -1,50 +1,53 @@
 ---
-title: "C&#243;mo: Insertar comillas en una cadena (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "comillas"
-  - "comillas, agregar a cadenas en cuadros de texto"
-  - "TextBox (control) [Windows Forms], mostrar comillas"
+title: "Cómo: Insertar comillas en una cadena (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- quotation marks
+- TextBox control [Windows Forms], displaying quotation marks
+- quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Insertar comillas en una cadena (formularios Windows Forms)
-En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de texto.  Por ejemplo:  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="b0d04-102">Cómo: Insertar comillas en una cadena (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="b0d04-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
+<span data-ttu-id="b0d04-103">A veces querrá poner comillas ("") en una cadena de texto.</span><span class="sxs-lookup"><span data-stu-id="b0d04-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="b0d04-104">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="b0d04-104">For example:</span></span>  
   
- Julia dijo: "¡Te invito a cenar\!"  
+ <span data-ttu-id="b0d04-105">Me dijo: "¡Te mereces un regalo!"</span><span class="sxs-lookup"><span data-stu-id="b0d04-105">She said, "You deserve a treat!"</span></span>  
   
- Como alternativa, puede utilizar también el campo <xref:Microsoft.VisualBasic.ControlChars.Quote> como una constante.  
+ <span data-ttu-id="b0d04-106">Como alternativa, también puede utilizar el <xref:Microsoft.VisualBasic.ControlChars.Quote> campo como una constante.</span><span class="sxs-lookup"><span data-stu-id="b0d04-106">As an alternative, you can also use the <xref:Microsoft.VisualBasic.ControlChars.Quote> field as a constant.</span></span>  
   
-### Para colocar comillas en una cadena mediante programación  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a><span data-ttu-id="b0d04-107">Para colocar comillas en una cadena en el código</span><span class="sxs-lookup"><span data-stu-id="b0d04-107">To place quotation marks in a string in your code</span></span>  
   
-1.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], inserte dos comillas seguidas en una fila para representar una comilla incrustada.  En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\" como una comilla incrustada.  Por ejemplo, para crear la cadena anterior, utilice el código siguiente:  
+1.  <span data-ttu-id="b0d04-108">En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], inserte dos comillas en una fila como una comilla incrustada.</span><span class="sxs-lookup"><span data-stu-id="b0d04-108">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], insert two quotation marks in a row as an embedded quotation mark.</span></span> <span data-ttu-id="b0d04-109">En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\"como una comilla incrustada.</span><span class="sxs-lookup"><span data-stu-id="b0d04-109">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark.</span></span> <span data-ttu-id="b0d04-110">Por ejemplo, para crear la cadena anterior, utilice el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="b0d04-110">For example, to create the preceding string, use the following code.</span></span>  
   
     ```vb  
     Private Sub InsertQuote()  
        TextBox1.Text = "She said, ""You deserve a treat!"" "  
     End Sub  
-  
     ```  
   
     ```csharp  
     private void InsertQuote(){  
        textBox1.Text = "She said, \"You deserve a treat!\" ";  
     }  
-  
     ```  
   
     ```cpp  
@@ -55,15 +58,14 @@ En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de t
        }  
     ```  
   
-     O bien  
+     <span data-ttu-id="b0d04-111">O bien</span><span class="sxs-lookup"><span data-stu-id="b0d04-111">-or-</span></span>  
   
-2.  Inserte el carácter ASCII o Unicode de las comillas.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], utilice el carácter ASCII \(34\).  En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], utilice el carácter Unicode \(\\u0022\).  
+2.  <span data-ttu-id="b0d04-112">Inserte el carácter ASCII o Unicode de una comilla.</span><span class="sxs-lookup"><span data-stu-id="b0d04-112">Insert the ASCII or Unicode character for a quotation mark.</span></span> <span data-ttu-id="b0d04-113">En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], use el carácter ASCII (34).</span><span class="sxs-lookup"><span data-stu-id="b0d04-113">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], use the ASCII character (34).</span></span> <span data-ttu-id="b0d04-114">En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], use el carácter Unicode ( \u0022).</span><span class="sxs-lookup"><span data-stu-id="b0d04-114">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], use the Unicode character (\u0022).</span></span>  
   
     ```vb  
     Private Sub InsertAscii()  
        TextBox1.Text = "She said, " & Chr(34) & "You deserve a treat!" & Chr(34)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -73,22 +75,20 @@ En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de t
     ```  
   
     > [!NOTE]
-    >  En este ejemplo, no se puede utilizar \\u0022 porque no se puede utilizar un nombre de carácter universal que designe un carácter de un juego de caracteres básico.  De lo contrario, se produce el error C3851.  Para obtener más información, vea [Error del compilador C3851](../Topic/Compiler%20Error%20C3851.md).  
+    >  <span data-ttu-id="b0d04-115">En este ejemplo, no puede utilizar \u0022 porque no puede utilizar un nombre de carácter universal que designe un carácter en el juego de caracteres básico.</span><span class="sxs-lookup"><span data-stu-id="b0d04-115">In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set.</span></span> <span data-ttu-id="b0d04-116">De lo contrario, se produce el error C3851.</span><span class="sxs-lookup"><span data-stu-id="b0d04-116">Otherwise, you produce C3851.</span></span> <span data-ttu-id="b0d04-117">Para más información, consulte [Error del compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span><span class="sxs-lookup"><span data-stu-id="b0d04-117">For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span></span>  
   
-     O bien  
+     <span data-ttu-id="b0d04-118">O bien</span><span class="sxs-lookup"><span data-stu-id="b0d04-118">-or-</span></span>  
   
-3.  También puede definir una constante para el carácter y utilizarla donde sea necesario.  
+3.  <span data-ttu-id="b0d04-119">También puede definir una constante para el carácter y utilizarla donde sea necesario.</span><span class="sxs-lookup"><span data-stu-id="b0d04-119">You can also define a constant for the character, and use it where needed.</span></span>  
   
     ```vb  
     Const quote As String = """"  
     TextBox1.Text = "She said, " & quote & "You deserve a treat!" & quote  
-  
     ```  
   
     ```csharp  
     const string quote = "\"";  
     textBox1.Text = "She said, " + quote +  "You deserve a treat!"+ quote ;  
-  
     ```  
   
     ```cpp  
@@ -98,13 +98,13 @@ En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de t
        const_cast<String^>(quote));  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.TextBox>   
- <xref:Microsoft.VisualBasic.ControlChars.Quote>   
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
- [TextBox \(Control\)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b0d04-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="b0d04-120">See Also</span></span>  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:Microsoft.VisualBasic.ControlChars.Quote>  
+ [<span data-ttu-id="b0d04-121">Información general sobre el control TextBox</span><span class="sxs-lookup"><span data-stu-id="b0d04-121">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="b0d04-122">Controlar el punto de inserción en un control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0d04-122">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="b0d04-123">Crear un cuadro de texto de contraseña con el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0d04-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="b0d04-124">Crear un cuadro de texto de sólo lectura</span><span class="sxs-lookup"><span data-stu-id="b0d04-124">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [<span data-ttu-id="b0d04-125">Seleccionar texto en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0d04-125">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="b0d04-126">Ver múltiples líneas en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0d04-126">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="b0d04-127">Control TextBox</span><span class="sxs-lookup"><span data-stu-id="b0d04-127">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

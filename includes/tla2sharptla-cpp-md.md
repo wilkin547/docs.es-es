@@ -1,1 +1,1 @@
-C++
+<span data-ttu-id="f7b61-101">C++</span><span class="sxs-lookup"><span data-stu-id="f7b61-101">C++</span></span>

@@ -1,1 +1,1 @@
-Convenciones de empaquetado abierto (OPC)
+<span data-ttu-id="a5db3-101">Convenciones de empaquetado abierto (OPC)</span><span class="sxs-lookup"><span data-stu-id="a5db3-101">Open Packaging Conventions (OPC)</span></span>

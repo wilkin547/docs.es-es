@@ -1,49 +1,32 @@
 ---
-title: Referencias a elementos declarados (Visual Basic) | Documentos de Microsoft
+title: Referencias a elementos declarados (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- declared elements
-- references, declared elements
-- qualified names
+- declared elements [Visual Basic]
+- references [Visual Basic], declared elements
+- qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 48a04f81075accc073b0d1f5b7a61006bef807ae
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="references-to-declared-elements-visual-basic"></a>Referencias a elementos declarados (Visual Basic)
-Cuando el código hace referencia a un elemento declarado, el [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador coincide con el nombre de la referencia con la declaración pertinente del nombre. Si más de un elemento se declara con el mismo nombre, puede controlar cuáles de esos elementos se haga referencia a *calificación* su nombre.  
+# <a name="references-to-declared-elements-visual-basic"></a><span data-ttu-id="268df-102">Referencias a elementos declarados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="268df-102">References to Declared Elements (Visual Basic)</span></span>
+<span data-ttu-id="268df-103">Cuando el código hace referencia a un elemento declarado, el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador coincide con el nombre de la referencia con la declaración pertinente de ese nombre.</span><span class="sxs-lookup"><span data-stu-id="268df-103">When your code refers to a declared element, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler matches the name in your reference to the appropriate declaration of that name.</span></span> <span data-ttu-id="268df-104">Si más de un elemento se declara con el mismo nombre, se puede controlar cuál de los elementos se haga referencia a *aplicables* su nombre.</span><span class="sxs-lookup"><span data-stu-id="268df-104">If more than one element is declared with the same name, you can control which of those elements is to be referenced by *qualifying* its name.</span></span>  
   
- El compilador intenta hacer coincidir una referencia de nombre con una declaración de nombre con el *ámbito más restringido*. Esto significa que comienza con el código que hace la referencia y se mueve hacia afuera a través de los niveles sucesivos de elementos contenedores.  
+ <span data-ttu-id="268df-105">El compilador intenta hacer coincidir una referencia de nombre con una declaración de nombre con el *ámbito más restringido*.</span><span class="sxs-lookup"><span data-stu-id="268df-105">The compiler attempts to match a name reference to a name declaration with the *narrowest scope*.</span></span> <span data-ttu-id="268df-106">Esto significa se inicia con el código que hace la referencia y hacia afuera funciona a través de niveles sucesivos de elementos contenedores.</span><span class="sxs-lookup"><span data-stu-id="268df-106">This means it starts with the code making the reference and works outward through successive levels of containing elements.</span></span>  
   
- El ejemplo siguiente muestra las referencias a dos variables con el mismo nombre. En el ejemplo se declara dos variables, cada uno denominado `totalCount`, en diferentes niveles de ámbito en el módulo `container`. Cuando el procedimiento `showCount` muestra `totalCount` sin calificación, el [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador resuelve la referencia a la declaración con el ámbito más restringido, concretamente la declaración local dentro de `showCount`. Cuando califica `totalCount` con el módulo contenedor `container`, el compilador resuelve la referencia a la declaración con el ámbito más amplio.  
+ <span data-ttu-id="268df-107">El ejemplo siguiente muestra las referencias a dos variables con el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="268df-107">The following example shows references to two variables with the same name.</span></span> <span data-ttu-id="268df-108">En el ejemplo se declara dos variables, cada uno denominado `totalCount`, con distintos niveles de ámbito en el módulo `container`.</span><span class="sxs-lookup"><span data-stu-id="268df-108">The example declares two variables, each named `totalCount`, at different levels of scope in module `container`.</span></span> <span data-ttu-id="268df-109">Cuando el procedimiento `showCount` muestra `totalCount` sin calificación, el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador resuelve la referencia a la declaración con el ámbito más restringido, concretamente la declaración local dentro de `showCount`.</span><span class="sxs-lookup"><span data-stu-id="268df-109">When the procedure `showCount` displays `totalCount` without qualification, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler resolves the reference to the declaration with the narrowest scope, namely the local declaration inside `showCount`.</span></span> <span data-ttu-id="268df-110">Cuando califica `totalCount` con el módulo contenedor `container`, el compilador resuelve la referencia a la declaración con el ámbito más amplio.</span><span class="sxs-lookup"><span data-stu-id="268df-110">When it qualifies `totalCount` with the containing module `container`, the compiler resolves the reference to the declaration with the broader scope.</span></span>  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -66,16 +49,16 @@ Module callingModule
 End Module  
 ```  
   
-## <a name="qualifying-an-element-name"></a>Calificar un nombre de elemento  
- Si desea invalidar este proceso de búsqueda y especificar un nombre declarado en un ámbito más amplio, debe *calificar* el nombre con el elemento contenedor del ámbito más amplio. En algunos casos, es posible que deba calificar el elemento contenedor.  
+## <a name="qualifying-an-element-name"></a><span data-ttu-id="268df-111">Calificar un nombre de elemento</span><span class="sxs-lookup"><span data-stu-id="268df-111">Qualifying an Element Name</span></span>  
+ <span data-ttu-id="268df-112">Si desea invalidar este proceso de búsqueda y especificar un nombre declarado en un ámbito más amplio, debe *calificar* el nombre con el elemento contenedor del ámbito más amplio.</span><span class="sxs-lookup"><span data-stu-id="268df-112">If you want to override this search process and specify a name declared in a broader scope, you must *qualify* the name with the containing element of the broader scope.</span></span> <span data-ttu-id="268df-113">En algunos casos, también tendrá que calificar el elemento contenedor.</span><span class="sxs-lookup"><span data-stu-id="268df-113">In some cases, you might also have to qualify the containing element.</span></span>  
   
- Calificar un nombre significa que precede en la instrucción de origen con la información que identifica dónde se define el elemento de destino. Esta información se denomina un *cadena de calificación*. Puede incluir uno o más espacios de nombres y un módulo, clase o estructura.  
+ <span data-ttu-id="268df-114">Calificar un nombre significa que precede en la instrucción de origen con la información que identifica donde se define el elemento de destino.</span><span class="sxs-lookup"><span data-stu-id="268df-114">Qualifying a name means preceding it in your source statement with information that identifies where the target element is defined.</span></span> <span data-ttu-id="268df-115">Esta información se denomina un *cadena de calificación*.</span><span class="sxs-lookup"><span data-stu-id="268df-115">This information is called a *qualification string*.</span></span> <span data-ttu-id="268df-116">Puede incluir uno o más espacios de nombres y un módulo, clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="268df-116">It can include one or more namespaces and a module, class, or structure.</span></span>  
   
- La cadena de calificación debe especificar de forma inequívoca el módulo, clase o estructura que contiene el elemento de destino. El contenedor a su vez puede estar ubicado en otro elemento contenedor, normalmente un espacio de nombres. Debe incluir varios elementos contenedores en la cadena de calificación.  
+ <span data-ttu-id="268df-117">La cadena de calificación debe especificar de forma inequívoca el módulo, clase o estructura que contiene el elemento de destino.</span><span class="sxs-lookup"><span data-stu-id="268df-117">The qualification string should unambiguously specify the module, class, or structure containing the target element.</span></span> <span data-ttu-id="268df-118">El contenedor a su vez podría encontrarse en otro elemento contenedor, normalmente un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="268df-118">The container might in turn be located in another containing element, usually a namespace.</span></span> <span data-ttu-id="268df-119">Debe incluir varios elementos contenedores en la cadena de calificación.</span><span class="sxs-lookup"><span data-stu-id="268df-119">You might need to include several containing elements in the qualification string.</span></span>  
   
-#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Para obtener acceso a un elemento declarado mediante la calificación de su nombre  
+#### <a name="to-access-a-declared-element-by-qualifying-its-name"></a><span data-ttu-id="268df-120">Para obtener acceso a un elemento declarado mediante la calificación de su nombre</span><span class="sxs-lookup"><span data-stu-id="268df-120">To access a declared element by qualifying its name</span></span>  
   
-1.  Determinar la ubicación en la que se ha definido el elemento. Esto puede incluir un espacio de nombres o incluso una jerarquía de espacios de nombres. En el espacio de nombres de nivel inferior, el elemento debe estar contenido en un módulo, clase o estructura.  
+1.  <span data-ttu-id="268df-121">Determinar la ubicación en la que se ha definido el elemento.</span><span class="sxs-lookup"><span data-stu-id="268df-121">Determine the location in which the element has been defined.</span></span> <span data-ttu-id="268df-122">Esto podría incluir un espacio de nombres o incluso una jerarquía de espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="268df-122">This might include a namespace, or even a hierarchy of namespaces.</span></span> <span data-ttu-id="268df-123">En el espacio de nombres de nivel inferior, el elemento debe incluirse en un módulo, clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="268df-123">Within the lowest-level namespace, the element must be contained in a module, class, or structure.</span></span>  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -91,23 +74,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Determinar una ruta de acceso de calificación basada en la ubicación del elemento de destino. Comience con el espacio de nombres de nivel superior, continúe con el espacio de nombres de nivel más bajo y termina con el módulo, clase o estructura que contiene el elemento de destino. Cada elemento de la ruta de acceso debe contener el elemento que le sigue.  
+2.  <span data-ttu-id="268df-124">Determinar una ruta de acceso de calificación basado en la ubicación del elemento de destino.</span><span class="sxs-lookup"><span data-stu-id="268df-124">Determine a qualification path based on the target element's location.</span></span> <span data-ttu-id="268df-125">Comience con el espacio de nombres de nivel superior, continúe con el espacio de nombres de nivel inferior y finalizar con el módulo, clase o estructura que contiene el elemento de destino.</span><span class="sxs-lookup"><span data-stu-id="268df-125">Start with the highest-level namespace, proceed to the lowest-level namespace, and end with the module, class, or structure containing the target element.</span></span> <span data-ttu-id="268df-126">Cada elemento de la ruta de acceso debe incluir el elemento que lo sigue.</span><span class="sxs-lookup"><span data-stu-id="268df-126">Each element in the path must contain the element that follows it.</span></span>  
   
-     `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
+     <span data-ttu-id="268df-127">`outerSpace` → `innerSpace` → `holdsTotals` → `totals`</span><span class="sxs-lookup"><span data-stu-id="268df-127">`outerSpace` → `innerSpace` → `holdsTotals` → `totals`</span></span>  
   
-3.  Prepare la cadena de calificación para el elemento de destino. Coloque un punto (`.`) después de cada elemento de la ruta de acceso. La aplicación debe tener acceso a cada elemento de la cadena de calificación.  
+3.  <span data-ttu-id="268df-128">Prepare la cadena de calificación para el elemento de destino.</span><span class="sxs-lookup"><span data-stu-id="268df-128">Prepare the qualification string for the target element.</span></span> <span data-ttu-id="268df-129">Coloque un punto (`.`) después de cada elemento de la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="268df-129">Place a period (`.`) after every element in the path.</span></span> <span data-ttu-id="268df-130">La aplicación debe tener acceso a todos los elementos de la cadena de calificación.</span><span class="sxs-lookup"><span data-stu-id="268df-130">Your application must have access to every element in your qualification string.</span></span>  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Escriba la expresión o instrucción de asignación que hace referencia al elemento de destino de la manera normal.  
+4.  <span data-ttu-id="268df-131">Escribir la expresión o instrucción de asignación que hace referencia al elemento de destino de la forma habitual.</span><span class="sxs-lookup"><span data-stu-id="268df-131">Write the expression or assignment statement referring to the target element in the normal way.</span></span>  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Delante del nombre del elemento de destino con la cadena de calificación. El nombre debe seguir inmediatamente el período (`.`) que sigue el módulo, clase o estructura que contiene el elemento.  
+5.  <span data-ttu-id="268df-132">Delante del nombre de elemento de destino con la cadena de calificación.</span><span class="sxs-lookup"><span data-stu-id="268df-132">Precede the target element name with the qualification string.</span></span> <span data-ttu-id="268df-133">El nombre debe seguir inmediatamente el período (`.`) que sigue el módulo, clase o estructura que contiene el elemento.</span><span class="sxs-lookup"><span data-stu-id="268df-133">The name should immediately follow the period (`.`) that follows the module, class, or structure that contains the element.</span></span>  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -118,9 +101,9 @@ End Module
     End Module  
     ```  
   
-6.  El compilador utiliza la cadena de calificación para encontrar una declaración clara e inequívoca a la que puede coincidir con la referencia de elemento de destino.  
+6.  <span data-ttu-id="268df-134">El compilador utiliza la cadena de calificación para encontrar una declaración clara y no ambigua, que puede coincidir con la referencia de elemento de destino.</span><span class="sxs-lookup"><span data-stu-id="268df-134">The compiler uses the qualification string to find a clear, unambiguous declaration to which it can match the target element reference.</span></span>  
   
- También podría tener que calificar una referencia de nombre si su aplicación tiene acceso a más de un elemento de programación que tiene el mismo nombre. Por ejemplo, el <xref:System.Windows.Forms>y <xref:System.Web.UI.WebControls>espacios de nombres contienen un `Label` clase (<xref:System.Windows.Forms.Label?displayProperty=fullName> y <xref:System.Web.UI.WebControls.Label?displayProperty=fullName>).</xref:System.Web.UI.WebControls.Label?displayProperty=fullName> </xref:System.Windows.Forms.Label?displayProperty=fullName> </xref:System.Web.UI.WebControls> </xref:System.Windows.Forms> Si su aplicación utiliza los dos o si define su propio `Label` (clase), debe distinguir los diferentes `Label` objetos. Incluir el alias del espacio de nombres o la importación en la declaración de variable. En el ejemplo siguiente se utiliza el alias de importación.  
+ <span data-ttu-id="268df-135">También podría tener que calificar una referencia de nombre si la aplicación tiene acceso a más de un elemento de programación que tiene el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="268df-135">You might also have to qualify a name reference if your application has access to more than one programming element that has the same name.</span></span> <span data-ttu-id="268df-136">Por ejemplo, el <xref:System.Windows.Forms> y <xref:System.Web.UI.WebControls> espacios de nombres ambos contienen una `Label` clase (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> y <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="268df-136">For example, the <xref:System.Windows.Forms> and <xref:System.Web.UI.WebControls> namespaces both contain a `Label` class (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> and <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>).</span></span> <span data-ttu-id="268df-137">Si la aplicación utiliza ambos, o si define su propio `Label` (clase), debe distinguir los diferentes `Label` objetos.</span><span class="sxs-lookup"><span data-stu-id="268df-137">If your application uses both, or if it defines its own `Label` class, you must distinguish the different `Label` objects.</span></span> <span data-ttu-id="268df-138">Incluir el alias de espacio de nombres o importar en la declaración de variable.</span><span class="sxs-lookup"><span data-stu-id="268df-138">Include the namespace or import alias in the variable declaration.</span></span> <span data-ttu-id="268df-139">En el ejemplo siguiente se utiliza el alias de importación.</span><span class="sxs-lookup"><span data-stu-id="268df-139">The following example uses the import alias.</span></span>  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -129,21 +112,21 @@ Imports win = System.Windows.Forms, web = System.Web.UI.WebControls
 Dim winLabel As New win.Label()  
 ```  
   
-## <a name="members-of-other-containing-elements"></a>Miembros de otros elementos que contiene  
- Cuando se utiliza un miembro no compartido de otra clase o estructura, primero debe calificar el nombre de miembro con una variable o expresión que señale a una instancia de la clase o estructura. En el ejemplo siguiente, `demoClass` es una instancia de una clase denominada `class1`.  
+## <a name="members-of-other-containing-elements"></a><span data-ttu-id="268df-140">Miembros de otros elementos que contiene</span><span class="sxs-lookup"><span data-stu-id="268df-140">Members of Other Containing Elements</span></span>  
+ <span data-ttu-id="268df-141">Cuando se utiliza un miembro no compartido de otra clase o estructura, primero debe calificar el nombre del miembro con una variable o expresión que apunta a una instancia de la clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="268df-141">When you use a nonshared member of another class or structure, you must first qualify the member name with a variable or expression that points to an instance of the class or structure.</span></span> <span data-ttu-id="268df-142">En el ejemplo siguiente, `demoClass` es una instancia de una clase denominada `class1`.</span><span class="sxs-lookup"><span data-stu-id="268df-142">In the following example, `demoClass` is an instance of a class named `class1`.</span></span>  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- No puede utilizar el nombre de la clase para calificar a un miembro que no sea [Shared](../../../../visual-basic/language-reference/modifiers/shared.md). Primero debe crear una instancia en una variable de objeto (en este caso `demoClass`) y, a continuación, hacer referencia a ella por el nombre de variable.  
+ <span data-ttu-id="268df-143">No se puede usar el nombre de la clase para calificar a un miembro que no sea [Shared](../../../../visual-basic/language-reference/modifiers/shared.md).</span><span class="sxs-lookup"><span data-stu-id="268df-143">You cannot use the class name itself to qualify a member that is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md).</span></span> <span data-ttu-id="268df-144">Primero debe crear una instancia en una variable de objeto (en este caso `demoClass`) y, a continuación, hacer referencia a él mediante el nombre de variable.</span><span class="sxs-lookup"><span data-stu-id="268df-144">You must first create an instance in an object variable (in this case `demoClass`) and then reference it by the variable name.</span></span>  
   
- Si una clase o estructura tiene un `Shared` miembro, puede calificar ese miembro con el nombre de clase o estructura o con una variable o expresión que señale a una instancia.  
+ <span data-ttu-id="268df-145">Si una clase o estructura tiene un `Shared` miembro, puede calificar ese miembro con el nombre de clase o estructura o con una variable o expresión que apunta a una instancia.</span><span class="sxs-lookup"><span data-stu-id="268df-145">If a class or structure has a `Shared` member, you can qualify that member either with the class or structure name or with a variable or expression that points to an instance.</span></span>  
   
- Un módulo no tiene ninguna instancia separada y todos sus miembros son `Shared` de forma predeterminada. Por lo tanto, califica a un miembro de módulo con el nombre del módulo.  
+ <span data-ttu-id="268df-146">Un módulo no tiene ninguna instancia separada y todos sus miembros son `Shared` de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="268df-146">A module does not have any separate instances, and all its members are `Shared` by default.</span></span> <span data-ttu-id="268df-147">Por lo tanto, califica a un miembro de módulo con el nombre del módulo.</span><span class="sxs-lookup"><span data-stu-id="268df-147">Therefore, you qualify a module member with the module name.</span></span>  
   
- El ejemplo siguiente muestra referencias calificadas a procedimientos de miembros de módulo. El ejemplo declara dos `Sub` procedimientos, con el nombre `perform`, en módulos diferentes de un proyecto. Cada uno de ellos puede especificarse sin calificación en su propio módulo, pero debe ser completo si se hace referencia desde cualquier otro lugar. Dado que la última referencia en `module3` no cumple los requisitos `perform`, el compilador no puede resolver esa referencia.  
+ <span data-ttu-id="268df-148">En el ejemplo siguiente se muestra referencias completas a los procedimientos de miembros de módulo.</span><span class="sxs-lookup"><span data-stu-id="268df-148">The following example shows qualified references to module member procedures.</span></span> <span data-ttu-id="268df-149">El ejemplo declara dos `Sub` procedimientos, ambos denominados `perform`, en módulos diferentes de un proyecto.</span><span class="sxs-lookup"><span data-stu-id="268df-149">The example declares two `Sub` procedures, both named `perform`, in different modules in a project.</span></span> <span data-ttu-id="268df-150">Cada uno de ellos puede especificarse sin calificación en su propio módulo, pero debe ser completo si se hace referencia desde cualquier otro lugar.</span><span class="sxs-lookup"><span data-stu-id="268df-150">Each one can be specified without qualification within its own module but must be qualified if referenced from anywhere else.</span></span> <span data-ttu-id="268df-151">Dado que la última referencia en `module3` no cumple los requisitos `perform`, el compilador no puede resolver esa referencia.</span><span class="sxs-lookup"><span data-stu-id="268df-151">Because the final reference in `module3` does not qualify `perform`, the compiler cannot resolve that reference.</span></span>  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -174,10 +157,10 @@ Module module3
 End Module  
 ```  
   
-## <a name="references-to-projects"></a>Referencias a proyectos  
- Usar [público](../../../../visual-basic/language-reference/modifiers/public.md) elementos definidos en otro proyecto, primero debe establecer una *referencia* a la biblioteca del proyecto de ensamblado o tipo. Para establecer una referencia, haga clic en **Agregar referencia** en el **proyecto** menú o use la [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opción del compilador de línea de comandos.  
+## <a name="references-to-projects"></a><span data-ttu-id="268df-152">Referencias a proyectos</span><span class="sxs-lookup"><span data-stu-id="268df-152">References to Projects</span></span>  
+ <span data-ttu-id="268df-153">Usar [público](../../../../visual-basic/language-reference/modifiers/public.md) elementos definidos en otro proyecto, primero debe establecer un *referencia* del ese proyecto ensamblado o biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="268df-153">To use [Public](../../../../visual-basic/language-reference/modifiers/public.md) elements defined in another project, you must first set a *reference* to that project's assembly or type library.</span></span> <span data-ttu-id="268df-154">Para establecer una referencia, haga clic en **Agregar referencia** en el **proyecto** menú o use la [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opción del compilador de línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="268df-154">To set a reference, click **Add Reference** on the **Project** menu, or use the [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) command-line compiler option.</span></span>  
   
- Por ejemplo, puede utilizar el modelo de objetos XML de la [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Si establece una referencia a la <xref:System.Xml>espacio de nombres, puede declarar y utilizar cualquiera de sus clases, como <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument> </xref:System.Xml> En el ejemplo siguiente se utiliza <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument>  
+ <span data-ttu-id="268df-155">Por ejemplo, puede usar el modelo de objetos XML de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="268df-155">For example, you can use the XML object model of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="268df-156">Si establece una referencia a la <xref:System.Xml> espacio de nombres, puede declarar y utilizar cualquiera de sus clases, como <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="268df-156">If you set a reference to the <xref:System.Xml> namespace, you can declare and use any of its classes, such as <xref:System.Xml.XmlDocument>.</span></span> <span data-ttu-id="268df-157">En el ejemplo siguiente se utiliza <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="268df-157">The following example uses <xref:System.Xml.XmlDocument>.</span></span>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -185,8 +168,8 @@ End Module
 Dim xDoc As System.Xml.XmlDocument  
 ```  
   
-## <a name="importing-containing-elements"></a>Importar elementos contenedores  
- Puede usar el [Imports (instrucción Namespace .NET y tipo)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) a *importar* los espacios de nombres que contienen los módulos o clases que desea utilizar. Esto permite hacer referencia a los elementos definidos en un espacio de nombres importado sin calificar por completo sus nombres. En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para importar el <xref:System.Xml>espacio de nombres.</xref:System.Xml>  
+## <a name="importing-containing-elements"></a><span data-ttu-id="268df-158">Importar elementos contenedores</span><span class="sxs-lookup"><span data-stu-id="268df-158">Importing Containing Elements</span></span>  
+ <span data-ttu-id="268df-159">Puede usar el [Imports (instrucción Namespace de .NET y tipo)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) a *importar* los espacios de nombres que contienen los módulos o clases que desea utilizar.</span><span class="sxs-lookup"><span data-stu-id="268df-159">You can use the [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to *import* the namespaces that contain the modules or classes that you want to use.</span></span> <span data-ttu-id="268df-160">Esto permite hacer referencia a los elementos definidos en un espacio de nombres importado sin calificar por completo sus nombres.</span><span class="sxs-lookup"><span data-stu-id="268df-160">This enables you to refer to the elements defined in an imported namespace without fully qualifying their names.</span></span> <span data-ttu-id="268df-161">En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para importar el <xref:System.Xml> espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="268df-161">The following example rewrites the previous example to import the <xref:System.Xml> namespace.</span></span>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -196,7 +179,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- Además, el `Imports` instrucción puede definir un *alias de importación* para cada espacio de nombres importado. Esto puede hacer que el código fuente más corto y fácil de leer. En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para utilizar `xD` como un alias para el <xref:System.Xml>espacio de nombres.</xref:System.Xml>  
+ <span data-ttu-id="268df-162">Además, el `Imports` instrucción puede definir un *alias de importación* para cada espacio de nombres importado.</span><span class="sxs-lookup"><span data-stu-id="268df-162">In addition, the `Imports` statement can define an *import alias* for each imported namespace.</span></span> <span data-ttu-id="268df-163">Esto puede hacer que el código fuente más corto y fácil de leer.</span><span class="sxs-lookup"><span data-stu-id="268df-163">This can make the source code shorter and easier to read.</span></span> <span data-ttu-id="268df-164">En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para usar `xD` como un alias para el <xref:System.Xml> espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="268df-164">The following example rewrites the previous example to use `xD` as an alias for the <xref:System.Xml> namespace.</span></span>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -206,23 +189,23 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- El `Imports` no hace que los elementos de otros proyectos disponibles para la aplicación. Es decir, no tiene lugar de la configuración de una referencia. Importar un espacio de nombres sólo quita la necesidad de calificar los nombres definidos en ese espacio de nombres.  
+ <span data-ttu-id="268df-165">El `Imports` instrucción no hace que estén disponibles para la aplicación de elementos de otros proyectos.</span><span class="sxs-lookup"><span data-stu-id="268df-165">The `Imports` statement does not make elements from other projects available to your application.</span></span> <span data-ttu-id="268df-166">Es decir, no tienen el lugar de establecer una referencia.</span><span class="sxs-lookup"><span data-stu-id="268df-166">That is, it does not take the place of setting a reference.</span></span> <span data-ttu-id="268df-167">Importar un espacio de nombres solo elimina el requisito para calificar los nombres definidos en ese espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="268df-167">Importing a namespace just removes the requirement to qualify the names defined in that namespace.</span></span>  
   
- También puede utilizar el `Imports` instrucción para importar módulos, clases, estructuras y enumeraciones. A continuación, puede utilizar a los miembros de estos elementos importados sin calificación. Sin embargo, debe calificar siempre los miembros no compartidos de clases y estructuras con una variable o expresión que se evalúa como una instancia de la clase o estructura.  
+ <span data-ttu-id="268df-168">También puede usar el `Imports` statement para importar módulos, clases, estructuras y enumeraciones.</span><span class="sxs-lookup"><span data-stu-id="268df-168">You can also use the `Imports` statement to import modules, classes, structures, and enumerations.</span></span> <span data-ttu-id="268df-169">A continuación, puede utilizar a los miembros de estos elementos importados sin calificación.</span><span class="sxs-lookup"><span data-stu-id="268df-169">You can then use the members of such imported elements without qualification.</span></span> <span data-ttu-id="268df-170">Sin embargo, debe calificar siempre los miembros no compartidos de clases y estructuras con una variable o expresión que se evalúa como una instancia de la clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="268df-170">However, you must always qualify nonshared members of classes and structures with a variable or expression that evaluates to an instance of the class or structure.</span></span>  
   
-## <a name="naming-guidelines"></a>Instrucciones de nomenclatura  
- Cuando se definen dos o más elementos de programación que tienen el mismo nombre, un *ambigüedad de nombres* puede producirse cuando el compilador intenta resolver una referencia a ese nombre. Si hay más de una definición en el ámbito, o si ninguna definición está en ámbito, la referencia es irresoluble. Para obtener un ejemplo, vea "Ejemplo de referencia calificada" en esta página de ayuda.  
+## <a name="naming-guidelines"></a><span data-ttu-id="268df-171">Instrucciones de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="268df-171">Naming Guidelines</span></span>  
+ <span data-ttu-id="268df-172">Cuando se definen dos o más elementos de programación que tienen el mismo nombre, un *ambigüedad de nombres* se pueden producir cuando el compilador intenta resolver una referencia a ese nombre.</span><span class="sxs-lookup"><span data-stu-id="268df-172">When you define two or more programming elements that have the same name, a *name ambiguity* can result when the compiler attempts to resolve a reference to that name.</span></span> <span data-ttu-id="268df-173">Si hay más de una definición en el ámbito, o si ninguna definición está en el ámbito, la referencia es irresoluble.</span><span class="sxs-lookup"><span data-stu-id="268df-173">If more than one definition is in scope, or if no definition is in scope, the reference is irresolvable.</span></span> <span data-ttu-id="268df-174">Para obtener un ejemplo, vea "Ejemplo de referencia calificada" en esta página de ayuda.</span><span class="sxs-lookup"><span data-stu-id="268df-174">For an example, see "Qualified Reference Example" on this Help page.</span></span>  
   
- Para evitar la ambigüedad de nombres proporcionando nombres únicos a todos los elementos. A continuación, puede hacer referencia a cualquier elemento sin tener que calificar su nombre con un espacio de nombres, módulo o clase. También se reduce la posibilidad de hacer referencia accidentalmente a un elemento equivocado.  
+ <span data-ttu-id="268df-175">Puede evitar la ambigüedad de nombre dando a todos los elementos nombres únicos.</span><span class="sxs-lookup"><span data-stu-id="268df-175">You can avoid name ambiguity by giving all your elements unique names.</span></span> <span data-ttu-id="268df-176">A continuación, puede hacer referencia a cualquier elemento sin tener que calificar su nombre con un espacio de nombres, módulo o clase.</span><span class="sxs-lookup"><span data-stu-id="268df-176">Then you can make reference to any element without having to qualify its name with a namespace, module, or class.</span></span> <span data-ttu-id="268df-177">También se reduce la posibilidad de hacer referencia accidentalmente al elemento incorrecto.</span><span class="sxs-lookup"><span data-stu-id="268df-177">You also reduce the chances of accidentally referring to the wrong element.</span></span>  
   
-## <a name="shadowing"></a>Sombrear  
- Si dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *instantáneas*, otro. Un elemento sombreado no está disponible como referencia; en su lugar, cuando el código utiliza el nombre del elemento sombreado, el [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador resuelve en el elemento de sombreado. Para obtener una explicación más detallada con ejemplos, vea [sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+## <a name="shadowing"></a><span data-ttu-id="268df-178">Sombrear</span><span class="sxs-lookup"><span data-stu-id="268df-178">Shadowing</span></span>  
+ <span data-ttu-id="268df-179">Si dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *instantáneas*, el otro se.</span><span class="sxs-lookup"><span data-stu-id="268df-179">When two programming elements share the same name, one of them can hide, or *shadow*, the other one.</span></span> <span data-ttu-id="268df-180">Un elemento reemplazado no está disponible como referencia; en su lugar, cuando el código utiliza el nombre de elemento reemplazado el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador lo resuelve como el elemento reemplazado.</span><span class="sxs-lookup"><span data-stu-id="268df-180">A shadowed element is not available for reference; instead, when your code uses the shadowed element name, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler resolves it to the shadowing element.</span></span> <span data-ttu-id="268df-181">Para obtener una explicación más detallada con ejemplos, vea [sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span><span class="sxs-lookup"><span data-stu-id="268df-181">For a more detailed explanation with examples, see [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [NIB Cómo: modificar las propiedades de proyecto y opciones de configuración](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)   
- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a><span data-ttu-id="268df-182">Vea también</span><span class="sxs-lookup"><span data-stu-id="268df-182">See Also</span></span>  
+ [<span data-ttu-id="268df-183">Nombres de elementos declarados</span><span class="sxs-lookup"><span data-stu-id="268df-183">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="268df-184">Características de los elementos declarados</span><span class="sxs-lookup"><span data-stu-id="268df-184">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="268df-185">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="268df-185">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
+ [<span data-ttu-id="268df-186">Variables</span><span class="sxs-lookup"><span data-stu-id="268df-186">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="268df-187">Imports (instrucción), espacio de nombres y tipo .NET</span><span class="sxs-lookup"><span data-stu-id="268df-187">Imports Statement (.NET Namespace and Type)</span></span>](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [<span data-ttu-id="268df-188">New (operador)</span><span class="sxs-lookup"><span data-stu-id="268df-188">New Operator</span></span>](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [<span data-ttu-id="268df-189">Public</span><span class="sxs-lookup"><span data-stu-id="268df-189">Public</span></span>](../../../../visual-basic/language-reference/modifiers/public.md)

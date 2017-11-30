@@ -1,53 +1,159 @@
 ---
-title: "Cómo: transmitir por secuencias fragmentos XML de XmlReader (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: transmitir por secuencias fragmentos XML desde un objeto XmlReader (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c9c60bb4730ef6569390f76f63c40a2cbd1c9524
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f18c922208fb52ffa775bd36e76c74f04d60f3b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Cómo: transmitir por secuencias fragmentos XML de XmlReader (Visual Basic)
-Cuando deba procesar archivos XML grandes quizás no sea factible cargar la totalidad del árbol XML en memoria. Este tema muestra cómo transmitir por secuencias fragmentos usando un <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader>  
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a><span data-ttu-id="4337a-102">Cómo: transmitir por secuencias fragmentos XML desde un objeto XmlReader (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4337a-102">How to: Stream XML Fragments from an XmlReader (Visual Basic)</span></span>
+<span data-ttu-id="4337a-103">Cuando deba procesar archivos XML grandes quizás no sea factible cargar la totalidad del árbol XML en memoria.</span><span class="sxs-lookup"><span data-stu-id="4337a-103">When you have to process large XML files, it might not be feasible to load the whole XML tree into memory.</span></span> <span data-ttu-id="4337a-104">En este tema se muestra cómo transmitir por secuencias fragmentos usando <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="4337a-104">This topic shows how to stream fragments using an <xref:System.Xml.XmlReader>.</span></span>  
   
- Una de las formas más efectivas de usar un <xref:System.Xml.XmlReader>leer <xref:System.Xml.Linq.XElement>objetos es escribir su propio método de eje personalizado.</xref:System.Xml.Linq.XElement> </xref:System.Xml.XmlReader> Un método de eje suele devolver una recopilación como <xref:System.Collections.Generic.IEnumerable%601>de <xref:System.Xml.Linq.XElement>, como se muestra en el ejemplo de este tema.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> En el método de eje personalizado, tras crear el fragmento XML llamando el <xref:System.Xml.Linq.XNode.ReadFrom%2A>método, devuelva la recopilación usando `yield return`.</xref:System.Xml.Linq.XNode.ReadFrom%2A> Esto proporciona semántica de ejecución aplazada al método de eje personalizado.  
+ <span data-ttu-id="4337a-105">Una de las formas más efectivas de usar <xref:System.Xml.XmlReader> para leer objetos <xref:System.Xml.Linq.XElement> es escribir un método de eje personalizado propio.</span><span class="sxs-lookup"><span data-stu-id="4337a-105">One of the most effective ways to use an <xref:System.Xml.XmlReader> to read <xref:System.Xml.Linq.XElement> objects is to write your own custom axis method.</span></span> <span data-ttu-id="4337a-106">Un método de eje suele devolver una recopilación como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, tal y como se muestra en el ejemplo de este tema.</span><span class="sxs-lookup"><span data-stu-id="4337a-106">An axis method typically returns a collection such as <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, as shown in the example in this topic.</span></span> <span data-ttu-id="4337a-107">En el método de eje personalizado, tras crear el fragmento XML llamando al método <xref:System.Xml.Linq.XNode.ReadFrom%2A>, devuelva la recopilación usando `yield return`.</span><span class="sxs-lookup"><span data-stu-id="4337a-107">In the custom axis method, after you create the XML fragment by calling the <xref:System.Xml.Linq.XNode.ReadFrom%2A> method, return the collection using `yield return`.</span></span> <span data-ttu-id="4337a-108">Esto proporciona semántica de ejecución aplazada al método de eje personalizado.</span><span class="sxs-lookup"><span data-stu-id="4337a-108">This provides deferred execution semantics to your custom axis method.</span></span>  
   
- Cuando se crea un árbol XML desde un <xref:System.Xml.XmlReader>objeto, el <xref:System.Xml.XmlReader>debe estar posicionado en un elemento.</xref:System.Xml.XmlReader> </xref:System.Xml.XmlReader> El <xref:System.Xml.Linq.XNode.ReadFrom%2A>método no devuelve hasta que ha leído la etiqueta de cierre del elemento.</xref:System.Xml.Linq.XNode.ReadFrom%2A>  
+ <span data-ttu-id="4337a-109">Cuando crea un árbol XML de un objeto <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlReader> debe estar posicionado en un elemento.</span><span class="sxs-lookup"><span data-stu-id="4337a-109">When you create an XML tree from an <xref:System.Xml.XmlReader> object, the <xref:System.Xml.XmlReader> must be positioned on an element.</span></span> <span data-ttu-id="4337a-110">El método <xref:System.Xml.Linq.XNode.ReadFrom%2A> no vuelve hasta que ha leído la etiqueta de cierre del elemento.</span><span class="sxs-lookup"><span data-stu-id="4337a-110">The <xref:System.Xml.Linq.XNode.ReadFrom%2A> method does not return until it has read the close tag of the element.</span></span>  
   
- Si desea crear un árbol parcial, puede crear instancias de un <xref:System.Xml.XmlReader>, sitúe el lector en el nodo que desea convertir en un <xref:System.Xml.Linq.XElement>de árbol y, a continuación, cree la <xref:System.Xml.Linq.XElement>objeto.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement> </xref:System.Xml.XmlReader>  
+ <span data-ttu-id="4337a-111">Si desea crear un árbol parcial, puede crear una instancia de un <xref:System.Xml.XmlReader>, colocar el lector en el nodo que desea convertir a un árbol <xref:System.Xml.Linq.XElement> y después crear el objeto <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="4337a-111">If you want to create a partial tree, you can instantiate an <xref:System.Xml.XmlReader>, position the reader on the node that you want to convert to an <xref:System.Xml.Linq.XElement> tree, and then create the <xref:System.Xml.Linq.XElement> object.</span></span>  
   
- El tema [Cómo: transmitir por secuencias fragmentos de XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contiene información y un ejemplo sobre cómo transmitir un documento más complejo.  
+ <span data-ttu-id="4337a-112">El tema [Cómo: transmitir por secuencias fragmentos de XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contiene información y un ejemplo sobre cómo transmitir por secuencias un documento más complejo.</span><span class="sxs-lookup"><span data-stu-id="4337a-112">The topic [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) contains information and an example on how to stream a more complex document.</span></span>  
   
- El tema [Cómo: realizar Streaming transformación de documentos XML grandes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un ejemplo del uso de LINQ to XML para transformar documentos XML extremadamente grandes manteniendo una superficie de memoria pequeña.  
+ <span data-ttu-id="4337a-113">El tema [Cómo: realizar la transmisión por secuencias transformación de documentos XML grandes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contiene un ejemplo del uso de LINQ to XML para transformar documentos XML sumamente grandes manteniendo una superficie de memoria pequeña.</span><span class="sxs-lookup"><span data-stu-id="4337a-113">The topic [How to: Perform Streaming Transform of Large XML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) contains an example of using LINQ to XML to transform extremely large XML documents while maintaining a small memory footprint.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo crea un método de eje personalizado. Puede consultarlo usando una consulta de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. El método de eje personalizado, `StreamRootChildDoc`, es un método que está específicamente diseñado para leer un documento que tiene un elemento `Child` que se repite.  
+## <a name="example"></a><span data-ttu-id="4337a-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4337a-114">Example</span></span>  
+ <span data-ttu-id="4337a-115">Este ejemplo crea un método de eje personalizado.</span><span class="sxs-lookup"><span data-stu-id="4337a-115">This example creates a custom axis method.</span></span> <span data-ttu-id="4337a-116">Puede consultarlo usando una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4337a-116">You can query it by using a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.</span></span> <span data-ttu-id="4337a-117">El método de eje personalizado, `StreamRootChildDoc`, es un método que está específicamente diseñado para leer un documento que tiene un elemento `Child` que se repite.</span><span class="sxs-lookup"><span data-stu-id="4337a-117">The custom axis method, `StreamRootChildDoc`, is a method that is designed specifically to read a document that has a repeating `Child` element.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Este ejemplo produce el siguiente resultado:  
+```vb  
+Module Module1  
+    Sub Main()  
+        Dim markup = "<Root>" &  
+                     "  <Child Key=""01"">" &  
+                     "    <GrandChild>aaa</GrandChild>" &  
+                     "  </Child>" &  
+                     "  <Child Key=""02"">" &  
+                     "    <GrandChild>bbb</GrandChild>" &  
+                     "  </Child>" &  
+                     "  <Child Key=""03"">" &  
+                     "    <GrandChild>ccc</GrandChild>" &  
+                     "  </Child>" &  
+                     "</Root>"  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
- En este ejemplo el documento de origen es muy pequeño. No obstante, aunque hubiera millones de elementos `Child`, este ejemplo seguiría teniendo una superficie de memoria pequeña.  
+        Dim grandChildData =  
+             From el In New StreamRootChildDoc(New IO.StringReader(markup))  
+             Where CInt(el.@Key) > 1  
+             Select el.<GrandChild>.Value  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Implementar IEnumerable(Of T) en Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)   
- [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+        For Each s In grandChildData  
+            Console.WriteLine(s)  
+        Next  
+    End Sub  
+End Module  
+  
+Public Class StreamRootChildDoc  
+    Implements IEnumerable(Of XElement)  
+  
+    Private _stringReader As IO.StringReader  
+  
+    Public Sub New(ByVal stringReader As IO.StringReader)  
+        _stringReader = stringReader  
+    End Sub  
+  
+    Public Function GetEnumerator() As IEnumerator(Of XElement) Implements IEnumerable(Of XElement).GetEnumerator  
+        Return New StreamChildEnumerator(_stringReader)  
+    End Function  
+  
+    Public Function GetEnumerator1() As IEnumerator Implements IEnumerable.GetEnumerator  
+        Return Me.GetEnumerator()  
+    End Function  
+End Class  
+  
+Public Class StreamChildEnumerator  
+    Implements IEnumerator(Of XElement)  
+  
+    Private _current As XElement  
+    Private _reader As Xml.XmlReader  
+    Private _stringReader As IO.StringReader  
+  
+    Public Sub New(ByVal stringReader As IO.StringReader)  
+        _stringReader = stringReader  
+        _reader = Xml.XmlReader.Create(_stringReader)  
+        _reader.MoveToContent()  
+    End Sub  
+  
+    Public ReadOnly Property Current As XElement Implements IEnumerator(Of XElement).Current  
+        Get  
+            Return _current  
+        End Get  
+    End Property  
+  
+    Public ReadOnly Property Current1 As Object Implements IEnumerator.Current  
+        Get  
+            Return Me.Current  
+        End Get  
+    End Property  
+  
+    Public Function MoveNext() As Boolean Implements IEnumerator.MoveNext  
+        While _reader.Read()  
+            Select Case _reader.NodeType  
+                Case Xml.XmlNodeType.Element  
+                    Dim el = TryCast(XElement.ReadFrom(_reader), XElement)  
+                    If el IsNot Nothing Then  
+                        _current = el  
+                        Return True  
+                    End If  
+            End Select  
+        End While  
+  
+        Return False  
+    End Function  
+  
+    Public Sub Reset() Implements IEnumerator.Reset  
+        _reader = Xml.XmlReader.Create(_stringReader)  
+        _reader.MoveToContent()  
+    End Sub  
+  
+#Region "IDisposable Support"  
+    Private disposedValue As Boolean ' To detect redundant calls  
+  
+    ' IDisposable  
+    Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
+        If Not Me.disposedValue Then  
+            If disposing Then  
+                _reader.Close()  
+            End If  
+        End If  
+        Me.disposedValue = True  
+    End Sub  
+  
+    Public Sub Dispose() Implements IDisposable.Dispose  
+        Dispose(True)  
+        GC.SuppressFinalize(Me)  
+    End Sub  
+#End Region  
+  
+End Class  
+```  
+  
+ <span data-ttu-id="4337a-118">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="4337a-118">This example produces the following output:</span></span>  
+  
+```  
+bbb  
+ccc  
+```  
+  
+ <span data-ttu-id="4337a-119">En este ejemplo el documento de origen es muy pequeño.</span><span class="sxs-lookup"><span data-stu-id="4337a-119">In this example, the source document is very small.</span></span> <span data-ttu-id="4337a-120">No obstante, aunque hubiera millones de elementos `Child`, este ejemplo seguiría teniendo una superficie de memoria pequeña.</span><span class="sxs-lookup"><span data-stu-id="4337a-120">However, even if there were millions of `Child` elements, this example would still have a small memory footprint.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4337a-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="4337a-121">See Also</span></span>  
+ [<span data-ttu-id="4337a-122">Tutorial: Implementar IEnumerable(Of T) en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4337a-122">Walkthrough: Implementing IEnumerable(Of T) in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
+ [<span data-ttu-id="4337a-123">Analizar XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4337a-123">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

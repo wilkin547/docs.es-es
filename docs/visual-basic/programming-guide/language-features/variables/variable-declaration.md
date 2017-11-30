@@ -1,85 +1,67 @@
 ---
-title: "Declaración de variable en Visual Basic | Documentos de Microsoft"
+title: "Declaración de variable en Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic], declaring
-- member variables, declarations
-- Dim statement, variable declaration
-- declaring variables
+- member variables [Visual Basic], declarations
+- Dim statement [Visual Basic], variable declaration
+- declaring variables [Visual Basic]
 - variables [Visual Basic], scope
 - variables [Visual Basic], data types
 - data types [Visual Basic], variable declarations
-- lifetime, variables
+- lifetime [Visual Basic], variables
 - variables [Visual Basic], lifetime
-- access levels, variables
-- scope, declaration statements
+- access levels [Visual Basic], variables
+- scope [Visual Basic], declaration statements
 - variables [Visual Basic], access level
-- local variables, declarations
-- scope, variables
+- local variables [Visual Basic], declarations
+- scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8cabb2d319288653c80099c816e46e822429d6ec
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
-Declare una variable para especificar su nombre y sus características. La instrucción de declaración para variables es el [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md). Su ubicación y contenido determinan las características de la variable.  
+# <a name="variable-declaration-in-visual-basic"></a><span data-ttu-id="e4953-102">Declaración de variable en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e4953-102">Variable Declaration in Visual Basic</span></span>
+<span data-ttu-id="e4953-103">Declare una variable para especificar su nombre y sus características.</span><span class="sxs-lookup"><span data-stu-id="e4953-103">You declare a variable to specify its name and characteristics.</span></span> <span data-ttu-id="e4953-104">La instrucción de declaración para variables es el [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md).</span><span class="sxs-lookup"><span data-stu-id="e4953-104">The declaration statement for variables is the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).</span></span> <span data-ttu-id="e4953-105">Su ubicación y contenido determinan las características de la variable.</span><span class="sxs-lookup"><span data-stu-id="e4953-105">Its location and contents determine the variable's characteristics.</span></span>  
   
- Para las reglas de nomenclaturas de variables y consideraciones, consulte [nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ <span data-ttu-id="e4953-106">Para las reglas de nomenclaturas de variables y consideraciones, consulte [nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="e4953-106">For variable naming rules and considerations, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
   
-## <a name="declaration-levels"></a>Niveles de declaración  
+## <a name="declaration-levels"></a><span data-ttu-id="e4953-107">Niveles de declaración</span><span class="sxs-lookup"><span data-stu-id="e4953-107">Declaration Levels</span></span>  
   
-### <a name="local-and-member-variables"></a>Local y Variables de miembro  
- Un *variable local* es aquella que se declara dentro de un procedimiento. Un *variable miembro* es un miembro de un [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] tipo; se declara en el nivel de módulo, dentro de una clase, estructura o módulo, pero no dentro de ningún procedimiento interno de esa clase, estructura o módulo.  
+### <a name="local-and-member-variables"></a><span data-ttu-id="e4953-108">Local y Variables de miembro</span><span class="sxs-lookup"><span data-stu-id="e4953-108">Local and Member Variables</span></span>  
+ <span data-ttu-id="e4953-109">A *variable local* es aquella que se declara dentro de un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="e4953-109">A *local variable* is one that is declared within a procedure.</span></span> <span data-ttu-id="e4953-110">A *variable miembro* es un miembro de un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] escriba; se declara en el nivel de módulo, dentro de una clase, estructura o módulo, pero no dentro de cualquier procedimiento interno de esa clase, estructura o módulo.</span><span class="sxs-lookup"><span data-stu-id="e4953-110">A *member variable* is a member of a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] type; it is declared at module level, inside a class, structure, or module, but not within any procedure internal to that class, structure, or module.</span></span>  
   
-### <a name="shared-and-instance-variables"></a>Compartir y las Variables de instancia  
- En una clase o estructura, depende de la categoría de una variable miembro o no se comparte. Si se declara con la [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) (palabra clave), es un *variable compartida*, y existe en una única copia compartida por todas las instancias de la clase o estructura.  
+### <a name="shared-and-instance-variables"></a><span data-ttu-id="e4953-111">Compartido y las Variables de instancia</span><span class="sxs-lookup"><span data-stu-id="e4953-111">Shared and Instance Variables</span></span>  
+ <span data-ttu-id="e4953-112">En una clase o estructura, la categoría de una variable miembro depende de si no se comparte.</span><span class="sxs-lookup"><span data-stu-id="e4953-112">In a class or structure, the category of a member variable depends on whether or not it is shared.</span></span> <span data-ttu-id="e4953-113">Si se declara con el [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) palabra clave, es un *variable compartida*, y existe en una única copia compartida entre todas las instancias de la clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="e4953-113">If it is declared with the [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) keyword, it is a *shared variable*, and it exists in a single copy shared among all instances of the class or structure.</span></span>  
   
- De lo contrario, es un *variable de instancia*, y se crea una copia independiente de ella para cada instancia de la clase o estructura. Una copia determinada de una variable de instancia está disponible sólo para la instancia de la clase o estructura en la que se creó. Es independiente de una copia de la variable de instancia en cualquier otra instancia de la clase o estructura.  
+ <span data-ttu-id="e4953-114">En caso contrario, es un *variable de instancia*, y se crea una copia independiente de ella para cada instancia de la clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="e4953-114">Otherwise it is an *instance variable*, and a separate copy of it is created for each instance of the class or structure.</span></span> <span data-ttu-id="e4953-115">Una copia de una variable de instancia determinada solo está disponible para la instancia de la clase o estructura en la que se creó.</span><span class="sxs-lookup"><span data-stu-id="e4953-115">A given copy of an instance variable is available only to the instance of the class or structure in which it was created.</span></span> <span data-ttu-id="e4953-116">Es independiente de una copia de la variable de instancia de cualquier otra instancia de la clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="e4953-116">It is independent of a copy of the instance variable in any other instance of the class or structure.</span></span>  
   
-## <a name="declaring-data-type"></a>Declaración de tipo de datos  
- El [como](../../../../visual-basic/language-reference/statements/as-clause.md) cláusula en la instrucción de declaración permite definir el tipo de datos o el tipo de objeto de la variable que se está declarando. Puede especificar cualquiera de los siguientes tipos de variable:  
+## <a name="declaring-data-type"></a><span data-ttu-id="e4953-117">Declaración de tipo de datos</span><span class="sxs-lookup"><span data-stu-id="e4953-117">Declaring Data Type</span></span>  
+ <span data-ttu-id="e4953-118">El [como](../../../../visual-basic/language-reference/statements/as-clause.md) cláusula en la instrucción de declaración permite definir el tipo de datos o el tipo de objeto de la variable que se está declarando.</span><span class="sxs-lookup"><span data-stu-id="e4953-118">The [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause in the declaration statement allows you to define the data type or object type of the variable you are declaring.</span></span> <span data-ttu-id="e4953-119">Puede especificar cualquiera de los siguientes tipos de una variable:</span><span class="sxs-lookup"><span data-stu-id="e4953-119">You can specify any of the following types for a variable:</span></span>  
   
--   Escriba un datos básicos, como `Boolean`, `Long`, o`Decimal`  
+-   <span data-ttu-id="e4953-120">Escriba un datos básicos, como `Boolean`, `Long`, o`Decimal`</span><span class="sxs-lookup"><span data-stu-id="e4953-120">An elementary data type, such as `Boolean`, `Long`, or `Decimal`</span></span>  
   
--   Un tipo de datos compuesto, como una matriz o una estructura  
+-   <span data-ttu-id="e4953-121">Un tipo de datos compuestos, como una matriz o una estructura</span><span class="sxs-lookup"><span data-stu-id="e4953-121">A composite data type, such as an array or structure</span></span>  
   
--   Un tipo de objeto o clase, definido en la aplicación o en otra aplicación  
+-   <span data-ttu-id="e4953-122">Un tipo de objeto o clase, definido en la aplicación o en otra aplicación</span><span class="sxs-lookup"><span data-stu-id="e4953-122">An object type, or class, defined either in your application or in another application</span></span>  
   
--   Un [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] de clase, como <xref:System.Windows.Forms.Label>o <xref:System.Windows.Forms.TextBox></xref:System.Windows.Forms.TextBox> </xref:System.Windows.Forms.Label>  
+-   <span data-ttu-id="e4953-123">A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] de la clase, como <xref:System.Windows.Forms.Label> o<xref:System.Windows.Forms.TextBox></span><span class="sxs-lookup"><span data-stu-id="e4953-123">A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class, such as <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.TextBox></span></span>  
   
--   Tipo de una interfaz, como <xref:System.IComparable>o <xref:System.IDisposable></xref:System.IDisposable> </xref:System.IComparable>  
+-   <span data-ttu-id="e4953-124">Tipo de una interfaz, como <xref:System.IComparable> o<xref:System.IDisposable></span><span class="sxs-lookup"><span data-stu-id="e4953-124">An interface type, such as <xref:System.IComparable> or <xref:System.IDisposable></span></span>  
   
- Puede declarar varias variables en una instrucción sin tener que repetir el tipo de datos. En las instrucciones siguientes, las variables `i`, `j`, y `k` se declaran como tipo `Integer`, `l` y `m` como `Long`, y `x` y `y` como `Single`:  
+ <span data-ttu-id="e4953-125">Puede declarar varias variables en una instrucción sin tener que repetir el tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="e4953-125">You can declare several variables in one statement without having to repeat the data type.</span></span> <span data-ttu-id="e4953-126">En las instrucciones siguientes, las variables `i`, `j`, y `k` se declaran como tipo `Integer`, `l` y `m` como `Long`, y `x` y `y` como `Single`:</span><span class="sxs-lookup"><span data-stu-id="e4953-126">In the following statements, the variables `i`, `j`, and `k` are declared as type `Integer`, `l` and `m` as `Long`, and `x` and `y` as `Single`:</span></span>  
   
 ```  
 Dim i, j, k As Integer  
@@ -88,29 +70,29 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Para obtener más información sobre los tipos de datos, consulte [tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Para obtener más información sobre objetos, consulte [objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) y [programación con componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+ <span data-ttu-id="e4953-127">Para obtener más información sobre los tipos de datos, vea [tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="e4953-127">For more information on data types, see [Data Types](../../../../visual-basic/programming-guide/language-features/data-types/index.md).</span></span> <span data-ttu-id="e4953-128">Para obtener más información sobre objetos, consulte [objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) y [programar con componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span><span class="sxs-lookup"><span data-stu-id="e4953-128">For more information on objects, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Programming with Components](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span></span>  
   
-## <a name="local-type-inference"></a>Inferencia de tipo de variable local  
- *Inferencia de tipo* se usa para determinar los tipos de datos de variables locales declaradas sin un `As` cláusula. El compilador deduce el tipo de la variable del tipo de la expresión de inicialización. Esto permite declarar variables sin especificar explícitamente un tipo. En el siguiente ejemplo, ambos `num1` y `num2` están fuertemente tipados como enteros.  
+## <a name="local-type-inference"></a><span data-ttu-id="e4953-129">Inferencia de tipo de variable local</span><span class="sxs-lookup"><span data-stu-id="e4953-129">Local Type Inference</span></span>  
+ <span data-ttu-id="e4953-130">*Inferencia de tipo* se usa para determinar los tipos de datos de variable local declarada sin una `As` cláusula.</span><span class="sxs-lookup"><span data-stu-id="e4953-130">*Type inference* is used to determine the data types of local variables declared without an `As` clause.</span></span> <span data-ttu-id="e4953-131">El compilador deduce el tipo de la variable del tipo de la expresión de inicialización.</span><span class="sxs-lookup"><span data-stu-id="e4953-131">The compiler infers the type of the variable from the type of the initialization expression.</span></span> <span data-ttu-id="e4953-132">Esto permite declarar variables sin especificar explícitamente un tipo.</span><span class="sxs-lookup"><span data-stu-id="e4953-132">This enables you to declare variables without explicitly stating a type.</span></span> <span data-ttu-id="e4953-133">En el ejemplo siguiente, ambos `num1` y `num2` están fuertemente tipados como enteros.</span><span class="sxs-lookup"><span data-stu-id="e4953-133">In the following example, both `num1` and `num2` are strongly typed as integers.</span></span>  
   
- [!code-vb[1 VbVbalrTypeInference](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   
- Si desea utilizar la inferencia de tipo local, `Option Infer` debe establecerse en `On`. Para obtener más información, consulte [inferencia de tipo Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) y [Option Infer instrucción](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ <span data-ttu-id="e4953-134">Si desea usar la inferencia de tipo local, `Option Infer` debe establecerse en `On`.</span><span class="sxs-lookup"><span data-stu-id="e4953-134">If you want to use local type inference, `Option Infer` must be set to `On`.</span></span> <span data-ttu-id="e4953-135">Para obtener más información, vea [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) (Inferencia de tipo de variable local) y [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) (Instrucción Option Infer).</span><span class="sxs-lookup"><span data-stu-id="e4953-135">For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) and [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).</span></span>  
   
-## <a name="characteristics-of-declared-variables"></a>Características de las Variables declaradas  
- El *duración* de una variable es el período de tiempo durante el cual está disponible para su uso. En general, una variable existe mientras el elemento que lo declara (como un procedimiento o clase) siga existiendo. Si la variable no necesita seguir existiendo más allá de la duración de su elemento contenedor, no necesitará hacer nada especial en la declaración. Si la variable debe seguir existiendo durante más tiempo que su elemento contenedor, puede incluir la `Static` o `Shared` palabra clave en su `Dim` instrucción. Para obtener más información, consulte [duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+## <a name="characteristics-of-declared-variables"></a><span data-ttu-id="e4953-136">Características de las Variables declaradas</span><span class="sxs-lookup"><span data-stu-id="e4953-136">Characteristics of Declared Variables</span></span>  
+ <span data-ttu-id="e4953-137">El *duración* de una variable es el período de tiempo durante el cual está disponible para su uso.</span><span class="sxs-lookup"><span data-stu-id="e4953-137">The *lifetime* of a variable is the period of time during which it is available for use.</span></span> <span data-ttu-id="e4953-138">En general, existe una variable como el elemento que lo declara (por ejemplo, un procedimiento o clase) sigue existiendo.</span><span class="sxs-lookup"><span data-stu-id="e4953-138">In general, a variable exists as long as the element that declares it (such as a procedure or class) continues to exist.</span></span> <span data-ttu-id="e4953-139">Si la variable no necesita seguir existiendo más allá de la duración de su elemento contenedor, no es necesario hacer nada especial en la declaración.</span><span class="sxs-lookup"><span data-stu-id="e4953-139">If the variable does not need to continue existing beyond the lifetime of its containing element, you do not need to do anything special in the declaration.</span></span> <span data-ttu-id="e4953-140">Si la variable debe seguir existiendo durante más tiempo que su elemento contenedor, puede incluir la `Static` o `Shared` palabra clave en su `Dim` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e4953-140">If the variable needs to continue to exist longer than its containing element, you can include the `Static` or `Shared` keyword in its `Dim` statement.</span></span> <span data-ttu-id="e4953-141">Para obtener más información, consulte [duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span><span class="sxs-lookup"><span data-stu-id="e4953-141">For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
- El *ámbito* de una variable es el conjunto de código que puede hacer referencia sin calificar su nombre. El ámbito de una variable depende de dónde se declara. Código que se encuentra en una región determinada puede utilizar las variables definidas en dicha región sin tener que calificar sus nombres. Para obtener más información, consulte [ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ <span data-ttu-id="e4953-142">El *ámbito* de una variable es el conjunto de todo el código que puede hacer referencia sin calificar su nombre.</span><span class="sxs-lookup"><span data-stu-id="e4953-142">The *scope* of a variable is the set of all code that can refer to it without qualifying its name.</span></span> <span data-ttu-id="e4953-143">Se determina el ámbito de una variable donde se declara.</span><span class="sxs-lookup"><span data-stu-id="e4953-143">A variable's scope is determined by where it is declared.</span></span> <span data-ttu-id="e4953-144">Código que se encuentra en una región determinada puede utilizar las variables definidas en dicha región sin tener que calificar sus nombres.</span><span class="sxs-lookup"><span data-stu-id="e4953-144">Code located in a given region can use the variables defined in that region without having to qualify their names.</span></span> <span data-ttu-id="e4953-145">Para obtener más información, consulte [ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span><span class="sxs-lookup"><span data-stu-id="e4953-145">For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).</span></span>  
   
- Una variable *nivel de acceso* es la extensión de código que tiene permiso de acceso. Esto viene determinado por el modificador de acceso (como [público](../../../../visual-basic/language-reference/modifiers/public.md) o [privada](../../../../visual-basic/language-reference/modifiers/private.md)) que se utilizan en el `Dim` instrucción. Para obtener más información, consulte [niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ <span data-ttu-id="e4953-146">Una variable *nivel de acceso* es la extensión del código que tenga permiso para tener acceso a él.</span><span class="sxs-lookup"><span data-stu-id="e4953-146">A variable's *access level* is the extent of code that has permission to access it.</span></span> <span data-ttu-id="e4953-147">Esto viene determinado por el modificador de acceso (como [público](../../../../visual-basic/language-reference/modifiers/public.md) o [privada](../../../../visual-basic/language-reference/modifiers/private.md)) que se utilizan en el `Dim` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e4953-147">This is determined by the access modifier (such as [Public](../../../../visual-basic/language-reference/modifiers/public.md) or [Private](../../../../visual-basic/language-reference/modifiers/private.md)) that you use in the `Dim` statement.</span></span> <span data-ttu-id="e4953-148">Para obtener más información, consulte [tener acceso a niveles en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="e4953-148">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: crear una nueva Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)   
- [Cómo: mover datos hacia y desde una Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Protegido](../../../../visual-basic/language-reference/modifiers/protected.md)   
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)   
- [Estático](../../../../visual-basic/language-reference/modifiers/static.md)   
- [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Inferencia de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Option Infer (instrucción)](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a><span data-ttu-id="e4953-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="e4953-149">See Also</span></span>  
+ [<span data-ttu-id="e4953-150">Crear una variable nueva</span><span class="sxs-lookup"><span data-stu-id="e4953-150">How to: Create a New Variable</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
+ [<span data-ttu-id="e4953-151">Introducir y extraer los datos de una variable</span><span class="sxs-lookup"><span data-stu-id="e4953-151">How to: Move Data Into and Out of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
+ [<span data-ttu-id="e4953-152">Tipos de datos</span><span class="sxs-lookup"><span data-stu-id="e4953-152">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="e4953-153">Protected</span><span class="sxs-lookup"><span data-stu-id="e4953-153">Protected</span></span>](../../../../visual-basic/language-reference/modifiers/protected.md)  
+ [<span data-ttu-id="e4953-154">Friend</span><span class="sxs-lookup"><span data-stu-id="e4953-154">Friend</span></span>](../../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="e4953-155">Static</span><span class="sxs-lookup"><span data-stu-id="e4953-155">Static</span></span>](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="e4953-156">Características de los elementos declarados</span><span class="sxs-lookup"><span data-stu-id="e4953-156">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="e4953-157">Inferencia de tipo de variable local</span><span class="sxs-lookup"><span data-stu-id="e4953-157">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="e4953-158">Option Infer (instrucción)</span><span class="sxs-lookup"><span data-stu-id="e4953-158">Option Infer Statement</span></span>](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

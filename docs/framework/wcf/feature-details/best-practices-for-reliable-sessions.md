@@ -1,82 +1,92 @@
 ---
-title: "Procedimientos recomendados para lograr sesiones confiables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Procedimientos recomendados para lograr sesiones confiables
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6e20b5cf02e7aef31127bb88e27e21965a192a6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Procedimientos recomendados para lograr sesiones confiables
-En esta sección se discuten los procedimientos recomendados para obtener sesiones confiables.  
-  
-## Establecimiento de MaxTransferWindowSize  
- Las sesiones confiables en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizan una ventana de transferencia para retener los mensajes en el cliente y el servicio.  La propiedad configurable <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica cuántos mensajes puede contener la ventana de transferencia.  
-  
- En el remitente esto indica cuántos mensajes puede contener la ventana de transferencia mientras espera las confirmaciones; en el receptor indica cuántos mensajes almacenar en búfer para el servicio.  
-  
- La elección del tamaño adecuado afecta al nivel de eficacia de uso de la red y a la capacidad óptima en la que se ejecuta el servicio.  Las siguientes secciones describen qué es necesario tener en cuenta al elegir un valor para esta propiedad y el impacto de ese valor.  
-  
- El tamaño predeterminado de la ventana de transferencia es de 8 mensajes.  
-  
-### Uso eficaz de la red  
- Aquí, el término *red* corresponde a todo lo que hay entre un cliente \(remitente\) y un servicio \(receptor\) utilizado como la base de comunicación.  Esto incluye las conexiones de transporte y cualquier intermediario o puentes que haya en medio, incluidos los enrutadores SOAP o proxys HTTP\/firewalls.  
-  
- El uso eficaz de la red garantiza el uso total de la capacidad de la red.  La cantidad de datos que se pueden transferir por segundo sobre la red \(denominada *velocidad de datos*\) y el tiempo que tarda en transferir los datos desde el remitente hasta el receptor \(denominado *latencia*\) afectan a la eficacia de uso de la red.  
-  
- En el remitente, la propiedad <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica cuántos mensajes puede contener su ventana de transferencia mientras espera las confirmaciones.  Por consiguiente, si la latencia de red es alta, para garantizar un remitente que responda y una utilización eficaz de la red, debería aumentar el tamaño de la ventana de la transferencia.  
-  
- Por ejemplo, aun cuando el remitente se mantenga al ritmo de la velocidad de datos, la latencia podría ser alta si existen varios intermediarios entre el remitente y el receptor o un intermediario o red con pérdidas.  Por consiguiente, el remitente tiene que esperar las confirmaciones de los mensajes en su ventana de transferencia antes de aceptar nuevos mensajes que enviar a través de la conexión.  Mientras menos sea el búfer con una latencia alta, menos eficaz será el uso de la red.  Por otro lado, un tamaño demasiado grande de la ventana de la transferencia puede afectar al servicio, porque puede que éste tenga que alcanzar la alta velocidad de envío del cliente.  
-  
-### Ejecución del servicio a máxima capacidad  
- Todo lo eficazmente que se use la red, idealmente querrá que el servicio se ejecute a su capacidad óptima.  La propiedad de tamaño de la ventana de transferencia en el receptor indica cuántos mensajes puede almacenar en búfer el receptor.  Este almacenamiento en búfer de mensajes no solo ayuda al control del flujo de la red, sino también permite al servicio ejecutarse a capacidad completa.  Por ejemplo, si el búfer es 1 y los mensajes llegan antes de que el servicio pueda procesarlos, la red podría perder mensajes y podría sobre\- o infrautilizarse la capacidad de la red.  
-  
- El uso de un búfer aumenta la disponibilidad del servicio, puesto que recibe y almacena en búfer el mensaje de manera concurrente, al mismo tiempo que procesa los mensajes recibidos anteriormente.  
-  
- Se recomienda que utilice el mismo `MaxTransferWindowSize` en el remitente y receptor.  
-  
-### Permitir el control de flujo  
- El control de flujo es un mecanismo que asegura que el remitente y el receptor mantienen el ritmo del otro, es decir, que los mensajes se utilizan y se actúa sobre ellos según se generan.  El tamaño de la ventana de transferencia en el cliente y el servicio asegura que el remitente y receptor se encuentran dentro de una ventana razonable de sincronización.  
-  
- Se recomienda encarecidamente que establezca la propiedad <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> en true al utilizar una sesión confiable entre un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
-  
-## Establecimiento de MaxPendingChannels  
- Al escribir un servicio que habilita la comunicación de sesión confiable desde clientes diferentes, es posible hacer que muchos clientes establezcan una sesión confiable en el servicio al mismo tiempo.  La respuesta del servicio en estas situaciones depende de la propiedad `MaxPendingChannels`.  
-  
- Cuando el remitente crea un canal de sesión confiable en un receptor, un protocolo de enlace entre ellos establece una sesión confiable.  Una vez establecida la sesión confiable, el canal se coloca en una cola de canales pendientes para que el servicio los acepte.  La propiedad `MaxPendingChannels` indica cuántos canales pueden estar en este estado.  
-  
- Es posible que el servicio esté en un estado donde no pueda aceptar más canales.  Si la cola está llena, se rechaza un intento de establecer una sesión confiable y el cliente tiene que reintentarlo.  
-  
- También es posible que los canales pendientes de la cola permanezcan en la cola durante más tiempo.  Entretanto, el tiempo de espera de inactividad en la sesión confiable puede aparecer, produciendo que el canal pase a un estado de error.  
-  
- Por consiguiente, al escribir un servicio que se ocupa simultáneamente de varios clientes, debería establecer un valor que sea conveniente para sus necesidades.  Establecer un valor demasiado alto para la propiedad `MaxPendingChannels` afectará a su espacio de trabajo.  
-  
- El valor predeterminado para <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> es 4.  
-  
-## Hospedaje y sesiones confiables  
- Cuando se hospeda un servicio mediante web que utiliza sesiones confiables, debería tener en cuenta las siguientes consideraciones de importancia:  
-  
--   Las sesiones confiables tienen estado y el estado se mantiene en el AppDomain.  Esto significa que todos los mensajes que forman parte de una sesión confiable se deben procesar en el mismo AppDomain.  Las granjas y jardines de servidores web donde el tamaño de la granja o el jardín sea \> 1 no podrán respetar esta restricción.  
-  
--   Las sesiones confiables que usan canales HTTP duales \(por ejemplo, mediante `WsDualHttpBinding`\) pueden requerir más de las 2 conexiones HTTP predeterminadas por cliente.  Esto significa que una sesión dúplex confiable puede requerir hasta 2 conexiones por cada lado, puesto que se pueden transferir mensajes de protocolos y aplicaciones simultáneos en cualquier dirección en cualquier momento dado.  Esto significa que, bajo ciertas condiciones, dependiendo del patrón de intercambio de mensajes del servicio, es posible interbloquear un servicio hospedado por web utilizando sesiones confiables y HTTP dual.  Para aumentar el número de conexiones HTTP permitidas por cliente, agregue lo siguiente al archivo de configuración pertinente \(por ejemplo, web.config del servicio en cuestión\):  
-  
-```  
-<configuration>  
-   <system.net>  
-      <connectionManagement>  
-         <add name = "*" maxconnection = "XX" />  
-      </connectionManagement>  
-   </system.net>  
-</configuration>  
-```  
-  
- Donde "XX" es el número de conexiones necesarias.  El mínimo en este caso debería ser 4.
+# <a name="best-practices-for-reliable-sessions"></a><span data-ttu-id="b67b2-102">Procedimientos recomendados para lograr sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="b67b2-102">Best Practices for Reliable Sessions</span></span>
+
+<span data-ttu-id="b67b2-103">En este tema se describe los procedimientos recomendados para las sesiones confiables.</span><span class="sxs-lookup"><span data-stu-id="b67b2-103">This topic discusses best practices for reliable sessions.</span></span>
+
+## <a name="setting-maxtransferwindowsize"></a><span data-ttu-id="b67b2-104">Establecimiento de MaxTransferWindowSize</span><span class="sxs-lookup"><span data-stu-id="b67b2-104">Setting MaxTransferWindowSize</span></span>
+
+<span data-ttu-id="b67b2-105">Las sesiones confiables en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilizan una ventana de transferencia para retener los mensajes en el cliente y el servicio.</span><span class="sxs-lookup"><span data-stu-id="b67b2-105">Reliable sessions in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] use a transfer window to hold messages on the client and service.</span></span> <span data-ttu-id="b67b2-106">La propiedad configurable <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica cuántos mensajes puede contener la ventana de transferencia.</span><span class="sxs-lookup"><span data-stu-id="b67b2-106">The configurable property <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indicates how many messages the transfer window can hold.</span></span>
+
+<span data-ttu-id="b67b2-107">En el remitente, esto indica cuántos mensajes puede contener la ventana de transferencia mientras espera las confirmaciones; en el receptor indica cuántos mensajes para almacenar en búfer para el servicio.</span><span class="sxs-lookup"><span data-stu-id="b67b2-107">On the sender, this indicates how many messages the transfer window can hold while waiting for acknowledgements; on the receiver, it indicates how many messages to buffer for the service.</span></span>
+
+<span data-ttu-id="b67b2-108">Elección del tamaño adecuado afecta a la eficacia de la red y la capacidad óptima del servicio.</span><span class="sxs-lookup"><span data-stu-id="b67b2-108">Choosing the right size impacts the efficiency of the network and the optimal capacity of the service.</span></span> <span data-ttu-id="b67b2-109">Las secciones siguientes detallan lo que debe considerar al elegir un valor para esta propiedad y el impacto del valor.</span><span class="sxs-lookup"><span data-stu-id="b67b2-109">The following sections detail what to consider when choosing a value for this property and the impact of the value.</span></span>
+
+<span data-ttu-id="b67b2-110">El tamaño de ventana de transferencia predeterminado es ocho mensajes.</span><span class="sxs-lookup"><span data-stu-id="b67b2-110">The default transfer window size is eight messages.</span></span>
+
+### <a name="efficient-use-of-the-network"></a><span data-ttu-id="b67b2-111">Uso eficaz de la red</span><span class="sxs-lookup"><span data-stu-id="b67b2-111">Efficient use of the network</span></span>
+
+<span data-ttu-id="b67b2-112">En este contexto, el término *red* corresponde a todo lo que se utiliza como la base de la comunicación entre un cliente (remitente) y un servicio (receptor).</span><span class="sxs-lookup"><span data-stu-id="b67b2-112">In this context, the term *network* corresponds to everything used as the basis of communication between a client (sender) and a service (receiver).</span></span> <span data-ttu-id="b67b2-113">Esto incluye las conexiones de transporte y cualquier intermediario o puentes entre ellas, incluidos los enrutadores SOAP o proxys HTTP/firewalls.</span><span class="sxs-lookup"><span data-stu-id="b67b2-113">This includes the transport connections and any intermediary or bridges in between, including SOAP routers or HTTP proxies/firewalls.</span></span>
+
+<span data-ttu-id="b67b2-114">El uso eficaz de la red garantiza el uso total de la capacidad de la red.</span><span class="sxs-lookup"><span data-stu-id="b67b2-114">Efficient use of the network ensures that network capacity is fully used.</span></span> <span data-ttu-id="b67b2-115">La cantidad de datos que se pueden transferir por segundo a través de la red (*velocidad de datos*) y el tiempo necesario para transferir datos desde el remitente al receptor (*latencia*) afecta a la eficacia con la red se utiliza.</span><span class="sxs-lookup"><span data-stu-id="b67b2-115">Both the amount of data that can be transferred per second over the network (*data rate*) and the time it takes to transfer data from the sender to the receiver (*latency*) impact how effectively the network is utilized.</span></span>
+
+<span data-ttu-id="b67b2-116">En el remitente, la propiedad <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indica cuántos mensajes puede contener su ventana de transferencia mientras espera las confirmaciones.</span><span class="sxs-lookup"><span data-stu-id="b67b2-116">On the sender, the property <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indicates how many messages its transfer window can hold while waiting for acknowledgements.</span></span> <span data-ttu-id="b67b2-117">Si la latencia de red es alta y para garantizar un remitente que responda y el uso eficaz de la red, debe aumentar el tamaño de la ventana de transferencia.</span><span class="sxs-lookup"><span data-stu-id="b67b2-117">If the network latency is high and in order to ensure a responsive sender and effective network utilization, you should increase the transfer window size.</span></span>
+
+<span data-ttu-id="b67b2-118">Por ejemplo incluso si el remitente se mantenga con velocidad de datos, la latencia puede ser alta si existen varios intermediarios entre el remitente y receptor o los datos deben pasar a través de un intermediario de pérdida de datos o una red.</span><span class="sxs-lookup"><span data-stu-id="b67b2-118">For example even if the sender keeps up with data rate, latency could be high if several intermediaries exist between the sender and receiver or the data must pass through a lossy intermediary or network.</span></span> <span data-ttu-id="b67b2-119">Por lo tanto, el remitente tiene que esperar las confirmaciones para los mensajes en su ventana de transferencia antes de aceptar nuevos mensajes para enviar en la conexión.</span><span class="sxs-lookup"><span data-stu-id="b67b2-119">Thus, the sender has to wait for acknowledgements for the messages in its transfer window before accepting new messages to send on the wire.</span></span> <span data-ttu-id="b67b2-120">Cuanto menor sea el búfer con latencia alta, menos efectivos la utilización de la red.</span><span class="sxs-lookup"><span data-stu-id="b67b2-120">The smaller the buffer with high latency, the less effective the network utilization.</span></span> <span data-ttu-id="b67b2-121">Por otro lado, demasiado alto un tamaño de ventana de transferencia puede afectar el servicio porque el servicio puede necesitar tener acceso a la alta velocidad de los datos enviados por el cliente.</span><span class="sxs-lookup"><span data-stu-id="b67b2-121">On the other hand, too high a transfer window size may impact the service because the service may need to catch up to the high rate of data sent by the client.</span></span>
+
+### <a name="running-the-service-to-capacity"></a><span data-ttu-id="b67b2-122">Ejecuta el servicio de capacidad</span><span class="sxs-lookup"><span data-stu-id="b67b2-122">Running the service to capacity</span></span>
+
+<span data-ttu-id="b67b2-123">Como la red se usa de forma eficaz, lo ideal es que también desea que el servicio para ejecutarse a capacidad óptima.</span><span class="sxs-lookup"><span data-stu-id="b67b2-123">As much as the network is used efficiently, ideally you also want the service to run at optimal capacity.</span></span> <span data-ttu-id="b67b2-124">La propiedad de tamaño de la ventana de transferencia en el receptor indica cuántos mensajes puede almacenar en búfer el receptor.</span><span class="sxs-lookup"><span data-stu-id="b67b2-124">The transfer window size property on the receiver indicates how many messages the receiver can buffer.</span></span> <span data-ttu-id="b67b2-125">Este almacenamiento en búfer de mensajes no solo ayuda al control del flujo de la red, sino también permite al servicio ejecutarse a capacidad completa.</span><span class="sxs-lookup"><span data-stu-id="b67b2-125">This message buffering helps not only the network flow control but also enables the service to run to full capacity.</span></span> <span data-ttu-id="b67b2-126">Por ejemplo, si el búfer es un mensaje y los mensajes llegan antes de que el servicio pueda procesarlos, a continuación, la red podría colocar mensajes y podría sobre- o infrautilizado capacidad.</span><span class="sxs-lookup"><span data-stu-id="b67b2-126">For example if the buffer is one message and messages arrive faster than the service can process them, then the network might drop messages and capacity might be wasted or underutilized.</span></span>
+
+<span data-ttu-id="b67b2-127">Mediante un búfer aumenta la disponibilidad del servicio tal y como lo recibe y almacena en búfer un mensaje durante el procesamiento de los mensajes recibidos anteriormente simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="b67b2-127">Using a buffer increases the availability of the service as it concurrently receives and buffers a message while processing the previously received messages.</span></span>
+
+<span data-ttu-id="b67b2-128">Se recomienda usar el mismo `MaxTransferWindowSize` en el remitente y el receptor.</span><span class="sxs-lookup"><span data-stu-id="b67b2-128">We recommended that you use the same `MaxTransferWindowSize` on both the sender and receiver.</span></span>
+
+### <a name="enabling-flow-control"></a><span data-ttu-id="b67b2-129">Al habilitar el control de flujo</span><span class="sxs-lookup"><span data-stu-id="b67b2-129">Enabling flow control</span></span>
+
+<span data-ttu-id="b67b2-130">*Control de flujo* es un mecanismo que asegura que el remitente y receptor mantienen el ritmo entre sí, es decir, los mensajes son consumidos y actúa sobre ellos está generan.</span><span class="sxs-lookup"><span data-stu-id="b67b2-130">*Flow control* is a mechanism that ensures that the sender and receiver keep pace with each other, that is, the messages are consumed and acted upon as fast as they're produced.</span></span> <span data-ttu-id="b67b2-131">El tamaño de la ventana de transferencia en el cliente y el servicio asegura que el remitente y receptor se encuentran dentro de una ventana razonable de sincronización.</span><span class="sxs-lookup"><span data-stu-id="b67b2-131">The transfer window size on the client and service ensures that the sender and receiver are within a reasonable window of synchronization.</span></span>
+
+<span data-ttu-id="b67b2-132">Se recomienda encarecidamente que establezca la propiedad <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> a `true` cuando se utiliza una sesión confiable entre un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] cliente y un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio.</span><span class="sxs-lookup"><span data-stu-id="b67b2-132">We highly recommended that you set the property <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> to `true` when you're using a reliable session between a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>
+
+## <a name="setting-maxpendingchannels"></a><span data-ttu-id="b67b2-133">Establecimiento de MaxPendingChannels</span><span class="sxs-lookup"><span data-stu-id="b67b2-133">Setting MaxPendingChannels</span></span>
+
+<span data-ttu-id="b67b2-134">Al escribir un servicio que habilita la comunicación de sesión confiable desde clientes diferentes, es posible que muchos clientes establezcan una sesión confiable en el servicio al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="b67b2-134">When writing a service that enables reliable session communication from different clients, it's possible to have many clients establish a reliable session to the service at the same time.</span></span> <span data-ttu-id="b67b2-135">La respuesta del servicio en estas situaciones depende de la propiedad `MaxPendingChannels`.</span><span class="sxs-lookup"><span data-stu-id="b67b2-135">The response of the service in these situations depends on the `MaxPendingChannels` property.</span></span>
+
+<span data-ttu-id="b67b2-136">Cuando el remitente crea un canal de sesión confiable en un receptor, un protocolo de enlace entre ellos establece una sesión confiable.</span><span class="sxs-lookup"><span data-stu-id="b67b2-136">When the sender creates a reliable session channel to a receiver, a handshake between them establishes a reliable session.</span></span> <span data-ttu-id="b67b2-137">Una vez establecida la sesión confiable, el canal se coloca en una cola de canales pendientes para que el servicio los acepte.</span><span class="sxs-lookup"><span data-stu-id="b67b2-137">After the reliable session is established, the channel is put in a pending channel queue for acceptance by the service.</span></span> <span data-ttu-id="b67b2-138">La propiedad `MaxPendingChannels` indica cuántos canales pueden estar en este estado.</span><span class="sxs-lookup"><span data-stu-id="b67b2-138">The `MaxPendingChannels` property indicates how many channels can be in this state.</span></span>
+
+<span data-ttu-id="b67b2-139">Es posible que el servicio debe estar en un estado donde no puede aceptar más canales.</span><span class="sxs-lookup"><span data-stu-id="b67b2-139">It's possible for the service to be in a state where it can't accept more channels.</span></span> <span data-ttu-id="b67b2-140">Si la cola está llena, se rechaza un intento para establecer una sesión confiable y el cliente debe volver a intentarlo.</span><span class="sxs-lookup"><span data-stu-id="b67b2-140">If the queue is full, an attempt to establish a reliable session is rejected, and the client must retry.</span></span>
+
+<span data-ttu-id="b67b2-141">También es posible que los canales pendientes de la cola permanecen en la cola durante mucho tiempo.</span><span class="sxs-lookup"><span data-stu-id="b67b2-141">It's also possible that the pending channels in the queue remain in the queue for a longer duration.</span></span> <span data-ttu-id="b67b2-142">Mientras tanto, puede producirse un tiempo de espera de inactividad en la sesión confiable, haciendo que el canal pase a un estado de error.</span><span class="sxs-lookup"><span data-stu-id="b67b2-142">In the meantime, an inactivity timeout on the reliable session may occur, causing the channel to transition to a faulted state.</span></span>
+
+<span data-ttu-id="b67b2-143">Al escribir un servicio que atiende a varios clientes simultáneamente, debe establecer un valor que es adecuado para sus necesidades.</span><span class="sxs-lookup"><span data-stu-id="b67b2-143">When writing a service that services multiple clients simultaneously, you should set a value that's suitable for your needs.</span></span> <span data-ttu-id="b67b2-144">Establecer un valor demasiado alto para el `MaxPendingChannels` propiedad afecta a su espacio de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b67b2-144">Setting too high a value for the `MaxPendingChannels` property impacts your working set.</span></span>
+
+<span data-ttu-id="b67b2-145">El valor predeterminado de <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> es cuatro canales.</span><span class="sxs-lookup"><span data-stu-id="b67b2-145">The default value for <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> is four channels.</span></span>
+
+## <a name="reliable-sessions-and-hosting"></a><span data-ttu-id="b67b2-146">Hospedaje y sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="b67b2-146">Reliable sessions and hosting</span></span>
+
+<span data-ttu-id="b67b2-147">Web al hospedar un servicio que utiliza sesiones confiables, debe mantener las siguientes consideraciones importantes en cuenta:</span><span class="sxs-lookup"><span data-stu-id="b67b2-147">When web hosting a service that uses reliable sessions, you should keep the following important considerations in mind:</span></span>
+
+- <span data-ttu-id="b67b2-148">Las sesiones confiables tienen estado y el estado se mantiene en el AppDomain.</span><span class="sxs-lookup"><span data-stu-id="b67b2-148">Reliable sessions are stateful, and state is maintained in the AppDomain.</span></span> <span data-ttu-id="b67b2-149">Esto significa que todos los mensajes que forman parte de una sesión confiable se deben procesar en el mismo AppDomain.</span><span class="sxs-lookup"><span data-stu-id="b67b2-149">This means that all messages that are part of a reliable session must be processed in the same AppDomain.</span></span> <span data-ttu-id="b67b2-150">Granjas de servidores Web y jardines de servidores web donde el tamaño de la granja de servidores o el jardín es mayor que un nodo no pueden garantizar esta restricción.</span><span class="sxs-lookup"><span data-stu-id="b67b2-150">Web farms and web gardens where the size of the farm or garden is greater than one node can't guarantee this constraint.</span></span>
+
+- <span data-ttu-id="b67b2-151">Las sesiones confiables que usan canales HTTP duales (por ejemplo, si se usa `WsDualHttpBinding`) puede requerir más que el valor predeterminado de dos conexiones HTTP por cliente.</span><span class="sxs-lookup"><span data-stu-id="b67b2-151">Reliable sessions using dual HTTP channels (for example, using `WsDualHttpBinding`) can require more than the default of two HTTP connections per-client.</span></span> <span data-ttu-id="b67b2-152">Esto significa que una sesión dúplex confiable puede requerir hasta dos conexiones cada forma porque los mensajes de protocolos y aplicaciones simultáneos que pueden transferir cada forma en un momento dado.</span><span class="sxs-lookup"><span data-stu-id="b67b2-152">This means a duplex reliable session can require up to two connections each way because concurrent application and protocol messages may be transferring each way at any given time.</span></span> <span data-ttu-id="b67b2-153">Bajo ciertas condiciones según el patrón de intercambio de mensajes del servicio, esto significa que es posible interbloquear un servicio hospedado en web utilizando sesiones confiables y HTTP dual.</span><span class="sxs-lookup"><span data-stu-id="b67b2-153">Under certain conditions depending on the message exchange pattern of the service, this means that it's possible to deadlock a web-hosted service using dual HTTP and reliable sessions.</span></span> <span data-ttu-id="b67b2-154">Para aumentar el número de conexiones HTTP permitidas por cliente, agregue lo siguiente al archivo de configuración pertinente (por ejemplo, *web.config* del servicio en cuestión):</span><span class="sxs-lookup"><span data-stu-id="b67b2-154">To increase the number of allowable HTTP connections per client, add the following to the relevant configuration file (for example, *web.config* of the service in question):</span></span>
+
+  ```xml
+  <configuration>
+    <system.net>
+      <connectionManagement>
+        <add name="*" maxconnection="4" />
+      </connectionManagement>
+    </system.net>
+  </configuration>
+  ```
+
+  <span data-ttu-id="b67b2-155">El valor de la `maxconnection` atributo es el número de conexiones necesarias.</span><span class="sxs-lookup"><span data-stu-id="b67b2-155">The value of the `maxconnection` attribute is the number of connections needed.</span></span> <span data-ttu-id="b67b2-156">En este caso, el mínimo debe ser cuatro conexiones.</span><span class="sxs-lookup"><span data-stu-id="b67b2-156">The minimum in this case should be four connections.</span></span>

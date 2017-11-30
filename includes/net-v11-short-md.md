@@ -1,1 +1,1 @@
-.NET Framework 1.1
+<span data-ttu-id="c8d0a-101">.NET Framework 1.1</span><span class="sxs-lookup"><span data-stu-id="c8d0a-101">.NET Framework 1.1</span></span>

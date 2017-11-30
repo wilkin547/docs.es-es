@@ -1,1 +1,1 @@
-interfaces de usuario (UI)
+<span data-ttu-id="99127-101">interfaces de usuario (UI)</span><span class="sxs-lookup"><span data-stu-id="99127-101">user interfaces (UIs)</span></span>

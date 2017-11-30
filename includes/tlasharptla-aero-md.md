@@ -1,1 +1,1 @@
-Aero de Windows
+<span data-ttu-id="811a6-101">Aero de Windows</span><span class="sxs-lookup"><span data-stu-id="811a6-101">Windows Aero</span></span>

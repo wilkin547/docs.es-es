@@ -1,68 +1,78 @@
 ---
-title: "&lt;x509SecurityTokenHandlerRequirement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;x509SecurityTokenHandlerRequirement&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
-caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 66d4e0d6a121f807f5f372b3f39577b0bb3c4ca6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;x509SecurityTokenHandlerRequirement&gt;
-Proporciona la configuración opcional para la clase o clases derivadas de <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> .  
+# <a name="ltx509securitytokenhandlerrequirementgt"></a><span data-ttu-id="af19f-102">&lt;x509SecurityTokenHandlerRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="af19f-102">&lt;x509SecurityTokenHandlerRequirement&gt;</span></span>
+<span data-ttu-id="af19f-103">Proporciona una configuración opcional para la <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> clase o clases derivadas.</span><span class="sxs-lookup"><span data-stu-id="af19f-103">Provides optional configuration for the <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> class or derived classes.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="af19f-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="af19f-104">\<system.identityModel></span></span>  
+<span data-ttu-id="af19f-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="af19f-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="af19f-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="af19f-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="af19f-107">\<add></span><span class="sxs-lookup"><span data-stu-id="af19f-107">\<add></span></span>  
+<span data-ttu-id="af19f-108">\<x509SecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="af19f-108">\<x509SecurityTokenHandlerRequirement></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="af19f-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="af19f-109">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
-        <x509SecurityTokenHandlerRequirement>  
-          mapToWindows=xs:boolean  
-          certificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
-          certificateValidator="Namespace.Class, Assembly"  
-          revocationMode="NoCheck||Offline||Online"  
-          trustedStoreLocation="CurrentUser||LocalMachine"  
-        </x509SecurityTokenHandlerRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
+        <x509SecurityTokenHandlerRequirement>  
+          mapToWindows=xs:boolean  
+          certificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
+          certificateValidator="Namespace.Class, Assembly"  
+          revocationMode="NoCheck||Offline||Online"  
+          trustedStoreLocation="CurrentUser||LocalMachine"  
+        </x509SecurityTokenHandlerRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Atributos y elementos  
- En las próximas secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="af19f-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="af19f-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="af19f-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="af19f-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="af19f-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="af19f-112">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|certificateValidationMode|Un valor de <xref:System.ServiceModel.Security.X509CertificateValidationMode> que especifica el modo de validación para utilizar para el certificado X.509.  El valor predeterminado es “PeerOrChainTrust”.|  
-|mapToWindows|Especifica si el controlador del token debe asignar el token que valida una cuenta de Windows mediante la petición de entrada de UPN.  El valor predeterminado es “false”.|  
-|revocationMode|Un valor de <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> que especifica el modo de inversión para utilizar para el certificado X.509.  El valor predeterminado es “conectado”.|  
-|trustedStoreLocation|Un valor de <xref:System.Security.Cryptography.X509Certificates.StoreLocation> que especifica el almacén de certificados X.509.  El valor predeterminado es “LocalMachine”.|  
-|certificateValidator|Un tipo personalizado que deriva de <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  Si el atributo de `certificateValidationMode` es “custom”, una instancia de este tipo se utiliza para la validación del certificado del emisor.|  
+|<span data-ttu-id="af19f-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="af19f-113">Attribute</span></span>|<span data-ttu-id="af19f-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="af19f-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="af19f-115">certificateValidationMode</span><span class="sxs-lookup"><span data-stu-id="af19f-115">certificateValidationMode</span></span>|<span data-ttu-id="af19f-116">Un <xref:System.ServiceModel.Security.X509CertificateValidationMode> valor que especifica el modo de validación que se utilizará para el certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="af19f-116">An <xref:System.ServiceModel.Security.X509CertificateValidationMode> value that specifies the validation mode to use for the X.509 certificate.</span></span> <span data-ttu-id="af19f-117">El valor predeterminado es "PeerOrChainTrust".</span><span class="sxs-lookup"><span data-stu-id="af19f-117">The default value is "PeerOrChainTrust".</span></span>|  
+|<span data-ttu-id="af19f-118">mapToWindows</span><span class="sxs-lookup"><span data-stu-id="af19f-118">mapToWindows</span></span>|<span data-ttu-id="af19f-119">Especifica si el controlador de token debe asignar el token de validación a una cuenta de Windows mediante la notificación UPN entrante.</span><span class="sxs-lookup"><span data-stu-id="af19f-119">Specifies whether the token handler should map the validating token to a Windows account by using the incoming UPN claim.</span></span> <span data-ttu-id="af19f-120">El valor predeterminado es "false".</span><span class="sxs-lookup"><span data-stu-id="af19f-120">The default is "false".</span></span>|  
+|<span data-ttu-id="af19f-121">revocationMode</span><span class="sxs-lookup"><span data-stu-id="af19f-121">revocationMode</span></span>|<span data-ttu-id="af19f-122">Un <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valor que especifica el modo de revocación que se usará para el certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="af19f-122">An <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> value that specifies the revocation mode to use for the X.509 certificate.</span></span> <span data-ttu-id="af19f-123">El valor predeterminado es "Online".</span><span class="sxs-lookup"><span data-stu-id="af19f-123">The default value is "Online".</span></span>|  
+|<span data-ttu-id="af19f-124">trustedStoreLocation</span><span class="sxs-lookup"><span data-stu-id="af19f-124">trustedStoreLocation</span></span>|<span data-ttu-id="af19f-125">Un <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica el almacén de certificados X.509.</span><span class="sxs-lookup"><span data-stu-id="af19f-125">A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> value that specifies the X.509 certificate store.</span></span> <span data-ttu-id="af19f-126">El valor predeterminado es "LocalMachine".</span><span class="sxs-lookup"><span data-stu-id="af19f-126">The default value is "LocalMachine".</span></span>|  
+|<span data-ttu-id="af19f-127">certificateValidator</span><span class="sxs-lookup"><span data-stu-id="af19f-127">certificateValidator</span></span>|<span data-ttu-id="af19f-128">Un tipo personalizado que deriva de <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span><span class="sxs-lookup"><span data-stu-id="af19f-128">A custom type that derives from <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span></span> <span data-ttu-id="af19f-129">Si el `certificateValidationMode` atributo es "Custom", se utiliza una instancia de este tipo de validación de certificados de emisor.</span><span class="sxs-lookup"><span data-stu-id="af19f-129">If the `certificateValidationMode` attribute is "Custom", an instance of this type is used for issuer certificate validation.</span></span>|  
   
-### Elementos secundarios  
- None  
+### <a name="child-elements"></a><span data-ttu-id="af19f-130">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="af19f-130">Child Elements</span></span>  
+ <span data-ttu-id="af19f-131">Ninguna</span><span class="sxs-lookup"><span data-stu-id="af19f-131">None</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="af19f-132">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="af19f-132">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Agrega el controlador especificado de token de seguridad a la colección de controlador de token.|  
+|<span data-ttu-id="af19f-133">Elemento</span><span class="sxs-lookup"><span data-stu-id="af19f-133">Element</span></span>|<span data-ttu-id="af19f-134">Descripción</span><span class="sxs-lookup"><span data-stu-id="af19f-134">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="af19f-135">\<add></span><span class="sxs-lookup"><span data-stu-id="af19f-135">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="af19f-136">Agrega el controlador de token de seguridad especificado a la colección de controlador de token.</span><span class="sxs-lookup"><span data-stu-id="af19f-136">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="af19f-137">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="af19f-137">Example</span></span>  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
     <x509SecurityTokenHandlerRequirement mapToWindows="true"   
                                          certificateValidationMode="PeerOrChainTrust"   

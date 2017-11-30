@@ -1,48 +1,46 @@
 ---
-title: "Distinct (Cl&#225;usula, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryDistinct"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Distinct (cláusula)"
-  - "Distinct (instrucción)"
-  - "consultas [Visual Basic], Distinct"
+title: "Distinct (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryDistinct
+helpviewer_keywords:
+- Distinct clause [Visual Basic]
+- Distinct statement [Visual Basic]
+- queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6ed92d5d601c1ec329728346ac881c4fa2bad8aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Distinct (Cl&#225;usula, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Restringe los valores de la variable de rango actual para eliminar los valores duplicados en las cláusulas de consulta subsiguientes.  
+# <a name="distinct-clause-visual-basic"></a><span data-ttu-id="6ba6e-102">Distinct (Cláusula, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ba6e-102">Distinct Clause (Visual Basic)</span></span>
+<span data-ttu-id="6ba6e-103">Restringe los valores de la variable de rango actual para eliminar los valores duplicados en las cláusulas de consulta subsiguientes.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-103">Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="6ba6e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6ba6e-104">Syntax</span></span>  
   
 ```  
 Distinct  
 ```  
   
-## Comentarios  
- Puede usar la cláusula `Distinct` para que se devuelva una lista de elementos únicos.  La cláusula `Distinct` hace que la consulta omita los resultados duplicados.  La cláusula `Distinct` se aplica a los valores duplicados de todos los campos devueltos que la cláusula `Select` especifica.  Si no se especifica ninguna cláusula `Select`, la cláusula `Distinct` se aplica a la variable de rango de la consulta identificada en la cláusula `From`.  Si la variable de rango no es un tipo inmutable, la consulta omitirá únicamente un resultado si todos los miembros del tipo coinciden con un resultado de consulta existente.  
+## <a name="remarks"></a><span data-ttu-id="6ba6e-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6ba6e-105">Remarks</span></span>  
+ <span data-ttu-id="6ba6e-106">Puede usar el `Distinct` cláusula para devolver una lista de elementos únicos.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-106">You can use the `Distinct` clause to return a list of unique items.</span></span> <span data-ttu-id="6ba6e-107">El `Distinct` cláusula hace que la consulta pasar por alto los resultados de consulta duplicada.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-107">The `Distinct` clause causes the query to ignore duplicate query results.</span></span> <span data-ttu-id="6ba6e-108">El `Distinct` cláusula se aplica a valores duplicados para todos los devueltos de los campos especificados por el `Select` cláusula.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-108">The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause.</span></span> <span data-ttu-id="6ba6e-109">Si no hay ningún `Select` se especifica la cláusula, el `Distinct` cláusula se aplica a la variable de rango de la consulta identificada en el `From` cláusula.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-109">If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause.</span></span> <span data-ttu-id="6ba6e-110">Si la variable de rango no es un tipo inmutable, la consulta omitirá únicamente un resultado de consulta si todos los miembros del tipo coinciden con un resultado de consulta existente.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-110">If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.</span></span>  
   
-## Ejemplo  
- La expresión de consulta siguiente combina una lista de clientes y una lista de pedidos de los clientes.  Se incluye la cláusula `Distinct` para que se devuelva una lista de nombres de cliente y fechas de pedido únicos.  
+## <a name="example"></a><span data-ttu-id="6ba6e-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6ba6e-111">Example</span></span>  
+ <span data-ttu-id="6ba6e-112">La siguiente expresión de consulta combina una lista de clientes y una lista de pedidos de cliente.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-112">The following query expression joins a list of customers and a list of customer orders.</span></span> <span data-ttu-id="6ba6e-113">El `Distinct` cláusula se incluye para devolver una lista de nombres de cliente único y las fechas de pedidos.</span><span class="sxs-lookup"><span data-stu-id="6ba6e-113">The `Distinct` clause is included to return a list of unique customer names and order dates.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
-## Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)   
- [From \(Cláusula\)](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Select \(Cláusula\)](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Where \(Cláusula\)](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a><span data-ttu-id="6ba6e-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="6ba6e-114">See Also</span></span>  
+ [<span data-ttu-id="6ba6e-115">Introducción a LINQ en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6ba6e-115">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="6ba6e-116">Consultas</span><span class="sxs-lookup"><span data-stu-id="6ba6e-116">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="6ba6e-117">From (cláusula)</span><span class="sxs-lookup"><span data-stu-id="6ba6e-117">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="6ba6e-118">Select (cláusula)</span><span class="sxs-lookup"><span data-stu-id="6ba6e-118">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="6ba6e-119">Where (cláusula)</span><span class="sxs-lookup"><span data-stu-id="6ba6e-119">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

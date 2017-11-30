@@ -1,48 +1,51 @@
 ---
-title: "Perfil seguro confiable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Perfil seguro confiable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 6b73565409e26456ad09067066455ef2459b2e3c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Perfil seguro confiable
-En este ejemplo se muestra cómo crear [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y un [perfil de protección confiable](http://go.microsoft.com/fwlink/?LinkId=178140)\(RSP\).En este ejemplo se muestra la implementación de un canal de [Establecer conexión](http://go.microsoft.com/fwlink/?LinkId=178141) que se puede crear junto con Mensajería de confianza y, opcionalmente, un canal seguro para crear un enlace de protección confiable basado en la especificación RSP.  
+# <a name="reliable-secure-profile"></a><span data-ttu-id="7f1a9-102">Perfil seguro confiable</span><span class="sxs-lookup"><span data-stu-id="7f1a9-102">Reliable Secure Profile</span></span>
+<span data-ttu-id="7f1a9-103">En este ejemplo se muestra cómo crear [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y [perfil de protección confiable](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP).</span><span class="sxs-lookup"><span data-stu-id="7f1a9-103">This sample demonstrates how to compose [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP).</span></span> <span data-ttu-id="7f1a9-104">Este ejemplo muestra la implementación de un [establecer conexión](http://go.microsoft.com/fwlink/?LinkId=178141) canal que se puede formular junto con la mensajería de confianza y, opcionalmente, un canal seguro para crear un enlace seguro confiable basado en la especificación de RSP.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-104">This sample demonstrates the implementation of a [Make Connection](http://go.microsoft.com/fwlink/?LinkId=178141) channel which can be composed together with Reliable Messaging and optionally a secure channel to create a Reliable Secure Binding based on the RSP specification.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="7f1a9-105">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7f1a9-106">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="7f1a9-107">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="7f1a9-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7f1a9-108">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-108">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
-## Análisis  
- En este ejemplo se muestra un escenario de intercambio de mensajes bidireccional asincrónico confiable.El servicio tiene un contrato dúplex y el cliente implementa el contrato de devolución de llamadas dúplex.El cliente inicia una solicitud a un servicio, para el que se espera una respuesta en una conexión independiente.El mensaje de solicitud se envía de forma confiable.El cliente no desea abrir un extremo para realizar escuchas hasta el fin.Por tanto, sondea el servicio con solicitudes de 'Establecer conexión' para el servicio de modo que la respuesta se devuelva en el canal secundario de esta solicitud de 'Establecer conexión'.En este ejemplo se muestra cómo conseguir una comunicación dúplex, confiable y segura a través de HTTP sin que el cliente exponga un extremo para realizar escuchas \(y cree una excepción de firewall\).  
+## <a name="discussion"></a><span data-ttu-id="7f1a9-109">Explicación</span><span class="sxs-lookup"><span data-stu-id="7f1a9-109">Discussion</span></span>  
+ <span data-ttu-id="7f1a9-110">En este ejemplo se muestra un escenario de intercambio de mensajes bidireccional asincrónico confiable.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-110">This sample demonstrates a reliable asynchronous two-way message exchange scenario.</span></span> <span data-ttu-id="7f1a9-111">El servicio tiene un contrato dúplex y el cliente implementa el contrato de devolución de llamadas dúplex.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-111">The service has a duplex contract and the client implements the duplex callback contract.</span></span> <span data-ttu-id="7f1a9-112">El cliente inicia una solicitud a un servicio, para el que se espera una respuesta en una conexión independiente.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-112">The client initiates a request to a service, for which a response is expected on a separate connection.</span></span> <span data-ttu-id="7f1a9-113">El mensaje de solicitud se envía de forma confiable.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-113">The request message is sent reliably.</span></span> <span data-ttu-id="7f1a9-114">El cliente no desea abrir un extremo para realizar escuchas hasta el fin.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-114">The client does not want to open a listening endpoint at its end.</span></span> <span data-ttu-id="7f1a9-115">Por tanto, sondea el servicio con solicitudes de 'Establecer conexión' para el servicio de modo que la respuesta se devuelva en el canal secundario de esta solicitud de 'Establecer conexión'.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-115">Thus, it polls the service with ‘Make Connection’ requests for the service to send back the response on the back channel of this ‘Make Connection’ request.</span></span> <span data-ttu-id="7f1a9-116">En este ejemplo se muestra cómo conseguir una comunicación dúplex, confiable y segura a través de HTTP sin que el cliente exponga un extremo para realizar escuchas (y cree una excepción de firewall).</span><span class="sxs-lookup"><span data-stu-id="7f1a9-116">This sample demonstrates how to have secure reliable duplex communication over HTTP without the client exposing a listening endpoint (and creating a firewall exception).</span></span>  
   
-## Para configurar, compilar y ejecutar el ejemplo  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="7f1a9-117">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="7f1a9-117">To set up, build, and run the sample</span></span>  
   
-1.  Abra la solución **ReliableSecureProfile**.  
+1.  <span data-ttu-id="7f1a9-118">Abra la **ReliableSecureProfile** solución.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-118">Open the **ReliableSecureProfile** solution.</span></span>  
   
-2.  Haga clic con el botón secundario en el proyecto **Servicio** en el **Explorador de soluciones** y seleccione **Depurar** e **Iniciar nueva instancia** en el menú contextual.De esta forma se inicia el host de servicio.  
+2.  <span data-ttu-id="7f1a9-119">Haga clic con el **servicio** proyecto **el Explorador de soluciones**, seleccione **depurar**, **Iniciar nueva instancia** en el menú contextual.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-119">Right click the **Service** project in **Solution Explorer**, select **Debug**, **Start new instance** from the context menu.</span></span> <span data-ttu-id="7f1a9-120">De esta forma se inicia el host de servicio.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-120">This starts up the service host.</span></span>  
   
-3.  Haga clic con el botón secundario en el proyecto **Cliente** en el **Explorador de soluciones** y seleccione **Depurar** e **Iniciar nueva instancia** en el menú contextual.De esta forma se inicia el cliente.  
+3.  <span data-ttu-id="7f1a9-121">Haga clic con el **cliente** proyecto **el Explorador de soluciones**, seleccione **depurar**, **Iniciar nueva instancia** en el menú contextual.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-121">Right click the **Client** project in **Solution Explorer**, select **Debug**, **Start new instance** from the context menu.</span></span> <span data-ttu-id="7f1a9-122">De esta forma se inicia el cliente.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-122">This starts up the client.</span></span>  
   
-4.  Escriba una cadena en el símbolo del sistema de la ventana de la consola del cliente y haga clic en ENTRAR. De este modo se envía la cadena de entrada al servicio, que calcula un valor hash de la misma.  
+4.  <span data-ttu-id="7f1a9-123">Escriba una cadena en el símbolo del sistema de la ventana de la consola del cliente y haga clic en ENTRAR. De este modo se envía la cadena de entrada al servicio, que calcula un valor hash de la misma.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-123">Type in any string in the prompt on the client console window and click ENTER.This sends the input string to the service, which computes a hash of this string.</span></span>  
   
-5.  Vea el resultado en las ventanas de cliente cuando el servicio llama de nuevo a la operación de contrato de devolución de llamada dúplex para mostrar el resultado en la ventana de la consola del cliente.Hay un retraso intencionado en el servicio para simular una operación que tarda en ejecutarse y procesa los datos.  
+5.  <span data-ttu-id="7f1a9-124">Vea el resultado en las ventanas de cliente cuando el servicio llama de nuevo a la operación de contrato de devolución de llamada dúplex para mostrar el resultado en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-124">View the result on the client windows when the service calls back the duplex callback contract operation to display the result on the client console window.</span></span> <span data-ttu-id="7f1a9-125">Hay un retraso intencionado en el servicio para simular una operación que tarda en ejecutarse y procesa los datos.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-125">There is an intentional delay on the service to simulate a long running operation of processing the data.</span></span>  
   
-6.  Al supervisar el tráfico HTTP \(mediante alguna de las herramientas de supervisión de red en línea, como Monitor de red, Fiddler, etc.\), se muestra que se establece una secuencia para la comunicación entre el cliente y el servicio que el Perfil de protección confiable rechaza, y cómo sondea el cliente dicho servicio con las solicitudes 'Establecer conexión'.Cuando el servicio está preparado para devolver la respuesta procesada, utiliza el canal secundario de la última solicitud 'Establecer conexión' para enviar de vuelta los resultados.  
+6.  <span data-ttu-id="7f1a9-126">Al supervisar el tráfico HTTP (mediante alguna de las herramientas de supervisión de red en línea, como Monitor de red, Fiddler, etc.), se muestra que se establece una secuencia para la comunicación entre el cliente y el servicio que el Perfil de protección confiable rechaza, y cómo sondea el cliente dicho servicio con las solicitudes 'Establecer conexión'.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-126">Monitoring the HTTP traffic (by any of the online network monitoring tools like Network Monitor, Fiddler and so on) shows that a sequence for communication is established between the client and the service as laid down by the Reliable Secure Profile, and how the client polls the service with ‘Make Connection’ requests.</span></span> <span data-ttu-id="7f1a9-127">Cuando el servicio está preparado para devolver la respuesta procesada, utiliza el canal secundario de la última solicitud 'Establecer conexión' para enviar de vuelta los resultados.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-127">When the service gets ready to send back the processed response, it uses the back channel of the last ‘Make Connection’ request to send back the results.</span></span>  
   
-7.  Presione ENTRAR en la ventana de la consola del servicio para cerrar el servicio.Presione ENTRAR en la ventana de la consola de cliente para cerrar el cliente.
+7.  <span data-ttu-id="7f1a9-128">Presione ENTRAR en la ventana de la consola del servicio para cerrar el servicio.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-128">Press ENTER on the service console window to close the service.</span></span> <span data-ttu-id="7f1a9-129">Presione ENTRAR en la ventana de la consola de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="7f1a9-129">Press ENTER on the client console window to close the client.</span></span>

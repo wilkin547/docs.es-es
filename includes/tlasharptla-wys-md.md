@@ -1,1 +1,1 @@
-"lo que ve es lo que imprime" (WYSIWYG)
+<span data-ttu-id="f0dc7-101">"lo que ve es lo que imprime" (WYSIWYG)</span><span class="sxs-lookup"><span data-stu-id="f0dc7-101">"what you see is what you get" (WYSIWYG)</span></span>

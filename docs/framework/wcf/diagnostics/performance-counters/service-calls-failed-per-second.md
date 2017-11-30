@@ -1,36 +1,39 @@
 ---
-title: "Servicio: Errores en llamadas por segundo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Servicio: Errores en llamadas por segundo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2072a686d5d424f90ac2f32cf5fc11564b07542c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Servicio: Errores en llamadas por segundo
-Nombre del contador: Errores de llamadas por segundo.  
+# <a name="service-calls-failed-per-second"></a><span data-ttu-id="b8706-102">Servicio: Errores en llamadas por segundo</span><span class="sxs-lookup"><span data-stu-id="b8706-102">Service: Calls Failed Per Second</span></span>
+<span data-ttu-id="b8706-103">Nombre del contador: Errores de llamadas por segundo.</span><span class="sxs-lookup"><span data-stu-id="b8706-103">Counter Name: Calls Failed Per Second.</span></span>  
   
-## Descripción  
- Número de llamadas que tienen excepciones no controladas y que son recibidas por este servicio en un segundo.  
+## <a name="description"></a><span data-ttu-id="b8706-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="b8706-104">Description</span></span>  
+ <span data-ttu-id="b8706-105">Número de llamadas que tienen excepciones no controladas y que son recibidas por este servicio en un segundo.</span><span class="sxs-lookup"><span data-stu-id="b8706-105">Number of calls that have unhandled exceptions, and are received by this service in a second.</span></span>  
   
- Este contador es un tipo de contador de rendimiento [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula mediante la fórmula siguiente.  
+ <span data-ttu-id="b8706-106">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.</span><span class="sxs-lookup"><span data-stu-id="b8706-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)  
+ <span data-ttu-id="b8706-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="b8706-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- En código administrado, las excepciones se inician al producirse condiciones de error.  
+ <span data-ttu-id="b8706-108">En código administrado, las excepciones se inician al producirse condiciones de error.</span><span class="sxs-lookup"><span data-stu-id="b8706-108">In managed code, exceptions are thrown when error conditions occur.</span></span>  
   
- En código administrado, las excepciones se inician al producirse condiciones de error.  
+ <span data-ttu-id="b8706-109">En código administrado, las excepciones se inician al producirse condiciones de error.</span><span class="sxs-lookup"><span data-stu-id="b8706-109">In managed code, exceptions are thrown when error conditions occur.</span></span>  
   
- El contador se incrementa cada vez que hay una excepción no atendida en este servicio.  
+ <span data-ttu-id="b8706-110">El contador se incrementa cada vez que hay una excepción no atendida en este servicio.</span><span class="sxs-lookup"><span data-stu-id="b8706-110">This counter is incremented every time there is an unhandled exception in this service.</span></span>  
   
-## Vea también  
- [Especificación y administración de errores en contratos y servicios](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="b8706-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8706-111">See Also</span></span>  
+ [<span data-ttu-id="b8706-112">Especificación y gestión de errores en contratos y servicios</span><span class="sxs-lookup"><span data-stu-id="b8706-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

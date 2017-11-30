@@ -1,29 +1,32 @@
 ---
-title: "C&#243;mo: Recuperar metadatos mediante un enlace que no sea MEX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Recuperar metadatos mediante un enlace que no sea MEX"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f214c45ea09c96d5cb77646f31b7c53338761621
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Recuperar metadatos mediante un enlace que no sea MEX
-En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un enlace que no sea MEX.El código de este ejemplo está basado en el ejemplo [Extremo personalizado de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="04ef9-102">Cómo: Recuperar metadatos mediante un enlace que no sea MEX</span><span class="sxs-lookup"><span data-stu-id="04ef9-102">How to: Retrieve Metadata Over a non-MEX Binding</span></span>
+<span data-ttu-id="04ef9-103">En este tema se describe cómo recuperar metadatos de un punto de conexión MEX mediante un enlace que no sea MEX.</span><span class="sxs-lookup"><span data-stu-id="04ef9-103">This topic describes how to retrieve metadata from a MEX endpoint over a non-MEX binding.</span></span> <span data-ttu-id="04ef9-104">El código en este ejemplo se basa en el [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="04ef9-104">The code in this sample is based on the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample.</span></span>  
   
-### Para recuperar metadatos mediante un enlace que no sea MEX  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a><span data-ttu-id="04ef9-105">Para recuperar metadatos mediante un enlace que no sea MEX</span><span class="sxs-lookup"><span data-stu-id="04ef9-105">To retrieve metadata over a non-MEX binding</span></span>  
   
-1.  Determine el enlace utilizado por el extremo MEX.Para los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], puede determinar el enlace MEX obteniendo acceso al archivo de configuración del servicio.En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
+1.  <span data-ttu-id="04ef9-106">Determine el enlace utilizado por el extremo MEX.</span><span class="sxs-lookup"><span data-stu-id="04ef9-106">Determine the binding used by the MEX endpoint.</span></span> <span data-ttu-id="04ef9-107">Para los servicios de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], puede determinar el enlace MEX obteniendo acceso al archivo de configuración del servicio.</span><span class="sxs-lookup"><span data-stu-id="04ef9-107">For [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services, you can determine the MEX binding by accessing the service's configuration file.</span></span> <span data-ttu-id="04ef9-108">En este caso, el enlace de MEX se define en la configuración de servicio siguiente.</span><span class="sxs-lookup"><span data-stu-id="04ef9-108">In this case, the MEX binding is defined in the following service configuration.</span></span>  
   
-    ```  
+    ```xml  
     <services>  
         <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
                 behaviorConfiguration="CalculatorServiceBehavior">  
@@ -55,9 +58,9 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
      </bindings>  
     ```  
   
-2.  En el archivo de configuración del cliente, configure el mismo enlace personalizado.Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del extremo MEX.Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del extremo MEX al archivo de configuración para Svcutil.exe \(Svcutil.exe.config\) y el nombre de la configuración del extremo debería coincidir con el esquema del URI de la dirección del extremo MEX, tal y como se muestra en el código siguiente:  
+2.  <span data-ttu-id="04ef9-109">En el archivo de configuración del cliente, configure el mismo enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="04ef9-109">In the client configuration file, configure the same custom binding.</span></span> <span data-ttu-id="04ef9-110">Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del extremo MEX.</span><span class="sxs-lookup"><span data-stu-id="04ef9-110">Here the client also defines a `clientCredentials` behavior to provide a certificate to use to authenticate to the service when requesting metadata from the MEX endpoint.</span></span> <span data-ttu-id="04ef9-111">Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del extremo MEX al archivo de configuración para Svcutil.exe (Svcutil.exe.config) y el nombre de la configuración del extremo debería coincidir con el esquema del URI de la dirección del extremo MEX, tal y como se muestra en el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="04ef9-111">When using Svcutil.exe to request metadata over a custom binding, you should add the MEX endpoint configuration to the configuration file for Svcutil.exe (Svcutil.exe.config), and the name of the endpoint configuration should match the URI scheme of the address of the MEX endpoint, as shown in the following code.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <client>  
         <endpoint name="http"  
@@ -90,7 +93,7 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
     </system.serviceModel>  
     ```  
   
-3.  Cree un `MetadataExchangeClient` y llame a `GetMetadata`:Hay dos maneras de hacerlo: puede especificar el enlace personalizado mediante configuración o puede especificarlo mediante código, tal y como se muestra en el ejemplo siguiente:  
+3.  <span data-ttu-id="04ef9-112">Cree un `MetadataExchangeClient` y llame a `GetMetadata`:</span><span class="sxs-lookup"><span data-stu-id="04ef9-112">Create a `MetadataExchangeClient` and call `GetMetadata`.</span></span> <span data-ttu-id="04ef9-113">Hay dos maneras de hacerlo: puede especificar el enlace personalizado mediante configuración o puede especificarlo mediante código, tal y como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="04ef9-113">There are two ways to do this: you can specify the custom binding in configuration, or you can specify the custom binding in code, as shown in the following example.</span></span>  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -121,14 +124,14 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  Cree una clase `WsdlImporter` y llame a `ImportAllEndpoints`, como se muestra en el código siguiente.  
+4.  <span data-ttu-id="04ef9-114">Cree una clase `WsdlImporter` y llame a `ImportAllEndpoints`, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="04ef9-114">Create a `WsdlImporter` and call `ImportAllEndpoints`, as shown in the following code.</span></span>  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  En este punto, tiene una colección de extremos de servicio.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo importar metadatos, vea [Cómo: Importar metadatos en extremos de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  <span data-ttu-id="04ef9-115">En este punto, tiene una colección de puntos de conexión de servicio.</span><span class="sxs-lookup"><span data-stu-id="04ef9-115">At this point, you have a collection of service endpoints.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="04ef9-116">importación de metadatos, vea [Cómo: importar metadatos en los extremos de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span><span class="sxs-lookup"><span data-stu-id="04ef9-116"> importing metadata, see [How to: Import Metadata into Service Endpoints](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).</span></span>  
   
-## Vea también  
- [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a><span data-ttu-id="04ef9-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="04ef9-117">See Also</span></span>  
+ [<span data-ttu-id="04ef9-118">Metadatos</span><span class="sxs-lookup"><span data-stu-id="04ef9-118">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)

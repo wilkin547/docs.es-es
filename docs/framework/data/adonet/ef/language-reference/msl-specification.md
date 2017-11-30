@@ -1,26 +1,25 @@
 ---
-title: "Especificaci&#243;n MSL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Especificación MSL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 168c895d-b1d3-43cd-8efa-412dae16da6d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ee4ddc0e224674287bec27ef82e974f361727efc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Especificaci&#243;n MSL
-El sitio [msdn.microsoft.com\/data\/ef](http://msdn.microsoft.com/data/ef) es ahora la ubicación principal para el contenido de Entity Framework.  
+# <a name="msl-specification"></a><span data-ttu-id="85a4f-102">Especificación MSL</span><span class="sxs-lookup"><span data-stu-id="85a4f-102">MSL Specification</span></span>
+<span data-ttu-id="85a4f-103">El [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) sitio ahora es la ubicación principal para el contenido de Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="85a4f-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- El contenido de este tema está disponible en la página siguiente: [Especificación de MSL](http://msdn.microsoft.com/data/jj652027).
+ <span data-ttu-id="85a4f-104">El contenido de este tema está disponible en la página siguiente: [especificación de MSL](http://msdn.microsoft.com/data/jj652027).</span><span class="sxs-lookup"><span data-stu-id="85a4f-104">The content for this topic is now available on the following page: [MSL Specification](http://msdn.microsoft.com/data/jj652027).</span></span>

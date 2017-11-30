@@ -1,50 +1,42 @@
 ---
-title: "Cómo: determinar si un archivo es un ensamblado (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: determinar si un archivo es un ensamblado (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e58363369ae4420879310bf09ed89cdd4f5b5cc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9b69a40bd11425b7e481dc28fddc560c41df3962
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Cómo: determinar si un archivo es un ensamblado (Visual Basic)
-Un archivo es un ensamblado si y solo si se administra y contiene una entrada de ensamblado en sus metadatos. Para obtener más información sobre ensamblados y metadatos, vea el tema [manifiesto del ensamblado](https://msdn.microsoft.com/library/1w45z383).  
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a><span data-ttu-id="be9ac-102">Cómo: determinar si un archivo es un ensamblado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be9ac-102">How to: Determine If a File Is an Assembly (Visual Basic)</span></span>
+<span data-ttu-id="be9ac-103">Un archivo es un ensamblado únicamente si está administrado y contiene una entrada de ensamblado en sus metadatos.</span><span class="sxs-lookup"><span data-stu-id="be9ac-103">A file is an assembly if and only if it is managed, and contains an assembly entry in its metadata.</span></span> <span data-ttu-id="be9ac-104">Para más información sobre ensamblados y metadatos, vea el tema [Manifiesto del ensamblado](https://msdn.microsoft.com/library/1w45z383).</span><span class="sxs-lookup"><span data-stu-id="be9ac-104">For more information on assemblies and metadata, see the topic [Assembly Manifest](https://msdn.microsoft.com/library/1w45z383).</span></span>  
   
-## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Cómo determinar manualmente si un archivo es un ensamblado  
+## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="be9ac-105">Cómo determinar manualmente si un archivo es un ensamblado</span><span class="sxs-lookup"><span data-stu-id="be9ac-105">How to manually determine if a file is an assembly</span></span>  
   
-1.  Iniciar el [Ildasm.exe (Desensamblador IL)](https://msdn.microsoft.com/library/f7dy01k1).  
+1.  <span data-ttu-id="be9ac-106">Inicie [Ildasm.exe (el desensamblador de lenguaje intermedio)](https://msdn.microsoft.com/library/f7dy01k1).</span><span class="sxs-lookup"><span data-stu-id="be9ac-106">Start the [Ildasm.exe (IL Disassembler)](https://msdn.microsoft.com/library/f7dy01k1).</span></span>  
   
-2.  Cargar el archivo que desea probar.  
+2.  <span data-ttu-id="be9ac-107">Cargue el archivo que quiere probar.</span><span class="sxs-lookup"><span data-stu-id="be9ac-107">Load the file you wish to test.</span></span>  
   
-3.  Si **ILDASM** informes que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado. Para obtener más información, vea el tema [Cómo: ver el contenido de ensamblado](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709).  
+3.  <span data-ttu-id="be9ac-108">Si **ILDASM** notifica que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="be9ac-108">If **ILDASM** reports that the file is not a portable executable (PE) file, then it is not an assembly.</span></span> <span data-ttu-id="be9ac-109">Para obtener más información, vea el tema [Cómo: Ver el contenido de un ensamblado](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span><span class="sxs-lookup"><span data-stu-id="be9ac-109">For more information, see the topic [How to: View Assembly Contents](../../../../framework/app-domains/how-to-view-assembly-contents.md).</span></span>  
   
-## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Cómo determinar mediante programación si un archivo es un ensamblado  
+## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a><span data-ttu-id="be9ac-110">Cómo determinar mediante programación si un archivo es un ensamblado</span><span class="sxs-lookup"><span data-stu-id="be9ac-110">How to programmatically determine if a file is an assembly</span></span>  
   
-1.  Llame a la <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>método, pasando la ruta de acceso completa y el nombre del archivo que se está probando.</xref:System.Reflection.AssemblyName.GetAssemblyName%2A>  
+1.  <span data-ttu-id="be9ac-111">Llame al método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>; para ello, pase el nombre y la ruta de acceso de archivo completa del archivo que está probando.</span><span class="sxs-lookup"><span data-stu-id="be9ac-111">Call the <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method, passing the full file path and name of the file you are testing.</span></span>  
   
-2.  Si un <xref:System.BadImageFormatException>excepción, el archivo no es un ensamblado.</xref:System.BadImageFormatException>  
+2.  <span data-ttu-id="be9ac-112">Si se genera una excepción <xref:System.BadImageFormatException>, el archivo no es un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="be9ac-112">If a <xref:System.BadImageFormatException> exception is thrown, the file is not an assembly.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En este ejemplo se prueba un archivo DLL para ver si es un ensamblado.  
+## <a name="example"></a><span data-ttu-id="be9ac-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="be9ac-113">Example</span></span>  
+ <span data-ttu-id="be9ac-114">En este ejemplo se prueba un archivo DLL para ver si es un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="be9ac-114">This example tests a DLL to see if it is an assembly.</span></span>  
   
 ```vb  
 Module Module1  
@@ -67,9 +59,9 @@ End Module
 '        Yes, the file is an Assembly.  
 ```
   
- El <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>método carga el archivo de prueba y, a continuación, lo libera una vez que se lee la información.</xref:System.Reflection.AssemblyName.GetAssemblyName%2A>  
+ <span data-ttu-id="be9ac-115">El método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carga el archivo de prueba y, después, lo libera cuando se lee la información.</span><span class="sxs-lookup"><span data-stu-id="be9ac-115">The <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> method loads the test file, and then releases it once the information is read.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection.AssemblyName></xref:System.Reflection.AssemblyName>   
- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)   
- [Ensamblados y caché Global de ensamblados (Visual Basic)](index.md)
+## <a name="see-also"></a><span data-ttu-id="be9ac-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="be9ac-116">See Also</span></span>  
+ <xref:System.Reflection.AssemblyName>  
+ [<span data-ttu-id="be9ac-117">Conceptos de programación</span><span class="sxs-lookup"><span data-stu-id="be9ac-117">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="be9ac-118">Ensamblados y caché global de ensamblados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be9ac-118">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](index.md)

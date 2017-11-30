@@ -1,70 +1,69 @@
 ---
-title: "Diferencias entre sombrear y reemplazar (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "reemplazar, sombrear"
-  - "sombrear, reemplazar"
+title: Diferencias entre sombrear y reemplazar (Visual Basic)
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- shadowing, vs. overriding
+- overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Diferencias entre sombrear y reemplazar (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Cuando define una clase que hereda de una clase base, a veces desea volver a definir uno o más elementos de la clase base en la clase derivada.  El sombreado y el reemplazo están ambos disponibles para esta finalidad.  
+# <a name="differences-between-shadowing-and-overriding-visual-basic"></a><span data-ttu-id="36717-102">Diferencias entre sombrear y reemplazar (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36717-102">Differences Between Shadowing and Overriding (Visual Basic)</span></span>
+<span data-ttu-id="36717-103">Cuando se define una clase que hereda de una clase base, a veces desea volver a definir uno o varios de los elementos de la clase base en la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="36717-103">When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class.</span></span> <span data-ttu-id="36717-104">Sombrear y reemplazar están disponibles para este propósito.</span><span class="sxs-lookup"><span data-stu-id="36717-104">Shadowing and overriding are both available for this purpose.</span></span>  
   
-## Comparación  
- El sombreado y el reemplazo se utilizan cuando una clase derivada hereda de una clase base y ambos vuelven a definir un elemento declarado con otro.  No obstante, existen diferencias significativas entre ambos.  
+## <a name="comparison"></a><span data-ttu-id="36717-105">Comparación</span><span class="sxs-lookup"><span data-stu-id="36717-105">Comparison</span></span>  
+ <span data-ttu-id="36717-106">Sombrear y reemplazar se usan cuando una clase derivada hereda de una clase base y ambos vuelven a definir un elemento declarado con otro.</span><span class="sxs-lookup"><span data-stu-id="36717-106">Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another.</span></span> <span data-ttu-id="36717-107">Pero hay diferencias significativas entre los dos.</span><span class="sxs-lookup"><span data-stu-id="36717-107">But there are significant differences between the two.</span></span>  
   
- La siguiente tabla compara sombrear y reemplazar.  
+ <span data-ttu-id="36717-108">En la siguiente tabla compara sombrear y reemplazar.</span><span class="sxs-lookup"><span data-stu-id="36717-108">The following table compares shadowing with overriding.</span></span>  
   
 ||||  
-|-|-|-|  
-|Punto de comparación|Sombrear|Reemplazar|  
-|Propósito|Protege frente a una modificación posterior de clase base que introduce un miembro ya definido en la clase derivada|Logra el polimorfismo mediante la definición de una implementación distinta de un procedimiento o propiedad con la misma secuencia de llamada<sup>1</sup>|  
-|Elemento redefinido|Cualquier tipo de elemento declarado|Sólo un procedimiento \(`Function`, `Sub` o `Operator`\) o propiedad|  
-|Elemento de redefinición|Cualquier tipo de elemento declarado|Sólo un procedimiento o propiedad con la secuencia de llamada idéntica<sup>1</sup>|  
-|Nivel de acceso de elemento de redefinición|Cualquier nivel de acceso|No se puede cambiar el nivel de acceso de elemento reemplazado|  
-|Lectura y escritura de elemento de redefinición|Cualquier combinación|No puede cambiar la capacidad de lectura o de escritura de la propiedad reemplazada|  
-|Control sobre redefinición|El elemento de clase base no puede cumplir o prohibir el sombreado|El elemento de clase base puede especificar `MustOverride`, `NotOverridable` u `Overridable`|  
-|Utilización de palabras clave|Con las clases derivadas se recomienda el uso de `Shadows`; en caso de que no se especifique `Shadows` ni `Overrides`, se utilizará `Shadows` como predeterminada<sup>2</sup>|En una clase base se requiere `Overridable` o `MustOverride` y en una clase derivada se requiere `Overrides`.|  
-|Herencia de elementos de redefinición mediante clases derivadas procedentes de una clase derivada en particular|El elemento de sombreado será heredado por clases derivadas posteriores, mientras que el elemento sombreado permanecerá oculto<sup>3</sup>|El elemento que reemplaza a otro será heredado por clases derivadas posteriores; mientras que el elemento reemplazado permanecerá en el mismo estado.|  
+|---|---|---|  
+|<span data-ttu-id="36717-109">Punto de comparación</span><span class="sxs-lookup"><span data-stu-id="36717-109">Point of comparison</span></span>|<span data-ttu-id="36717-110">Sombrear</span><span class="sxs-lookup"><span data-stu-id="36717-110">Shadowing</span></span>|<span data-ttu-id="36717-111">Reemplazar</span><span class="sxs-lookup"><span data-stu-id="36717-111">Overriding</span></span>|  
+|<span data-ttu-id="36717-112">Finalidad</span><span class="sxs-lookup"><span data-stu-id="36717-112">Purpose</span></span>|<span data-ttu-id="36717-113">Protege frente a una modificación posterior de clase base que introduce a un miembro que ya se ha definido en la clase derivada</span><span class="sxs-lookup"><span data-stu-id="36717-113">Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class</span></span>|<span data-ttu-id="36717-114">Logra polimorfismo mediante la definición de una implementación diferente de un procedimiento o propiedad con la misma secuencia que realiza la llamada<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="36717-114">Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="36717-115">Elemento redefinido</span><span class="sxs-lookup"><span data-stu-id="36717-115">Redefined element</span></span>|<span data-ttu-id="36717-116">Cualquier tipo de elemento declarado</span><span class="sxs-lookup"><span data-stu-id="36717-116">Any declared element type</span></span>|<span data-ttu-id="36717-117">Sólo un procedimiento (`Function`, `Sub`, o `Operator`) o una propiedad</span><span class="sxs-lookup"><span data-stu-id="36717-117">Only a procedure (`Function`, `Sub`, or `Operator`) or property</span></span>|  
+|<span data-ttu-id="36717-118">Elemento de redefinición</span><span class="sxs-lookup"><span data-stu-id="36717-118">Redefining element</span></span>|<span data-ttu-id="36717-119">Cualquier tipo de elemento declarado</span><span class="sxs-lookup"><span data-stu-id="36717-119">Any declared element type</span></span>|<span data-ttu-id="36717-120">Sólo un procedimiento o propiedad con la secuencia de llamada idéntica<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="36717-120">Only a procedure or property with the identical calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="36717-121">Nivel de acceso de elemento de redefinición</span><span class="sxs-lookup"><span data-stu-id="36717-121">Access level of redefining element</span></span>|<span data-ttu-id="36717-122">Cualquier nivel de acceso</span><span class="sxs-lookup"><span data-stu-id="36717-122">Any access level</span></span>|<span data-ttu-id="36717-123">No se puede cambiar el nivel de acceso de elemento invalidado</span><span class="sxs-lookup"><span data-stu-id="36717-123">Cannot change access level of overridden element</span></span>|  
+|<span data-ttu-id="36717-124">Lectura y escritura de elemento de redefinición</span><span class="sxs-lookup"><span data-stu-id="36717-124">Readability and writability of redefining element</span></span>|<span data-ttu-id="36717-125">Cualquier combinación</span><span class="sxs-lookup"><span data-stu-id="36717-125">Any combination</span></span>|<span data-ttu-id="36717-126">No se puede cambiar de lectura o escritura de la propiedad reemplazada</span><span class="sxs-lookup"><span data-stu-id="36717-126">Cannot change readability or writability of overridden property</span></span>|  
+|<span data-ttu-id="36717-127">Control sobre redefinición</span><span class="sxs-lookup"><span data-stu-id="36717-127">Control over redefining</span></span>|<span data-ttu-id="36717-128">Elemento de la clase base no puede cumplir o prohibir el sombreado</span><span class="sxs-lookup"><span data-stu-id="36717-128">Base class element cannot enforce or prohibit shadowing</span></span>|<span data-ttu-id="36717-129">Puede especificar el elemento de la clase base `MustOverride`, `NotOverridable`, o`Overridable`</span><span class="sxs-lookup"><span data-stu-id="36717-129">Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`</span></span>|  
+|<span data-ttu-id="36717-130">Uso de la palabra clave</span><span class="sxs-lookup"><span data-stu-id="36717-130">Keyword usage</span></span>|<span data-ttu-id="36717-131">`Shadows`se recomienda en una clase derivada; `Shadows` supone si ninguna de ellas `Shadows` ni `Overrides` especificada<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="36717-131">`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup></span></span>|<span data-ttu-id="36717-132">`Overridable`o `MustOverride` necesarios en la clase base; `Overrides` necesarios en una clase derivada</span><span class="sxs-lookup"><span data-stu-id="36717-132">`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class</span></span>|  
+|<span data-ttu-id="36717-133">Herencia de elemento de redefinición mediante clases derivadas de la clase derivada</span><span class="sxs-lookup"><span data-stu-id="36717-133">Inheritance of redefining element by classes deriving from your derived class</span></span>|<span data-ttu-id="36717-134">Sombrear elemento heredada por clases derivadas posteriores, elemento sombreado permanecen oculto<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="36717-134">Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup></span></span>|<span data-ttu-id="36717-135">Reemplace el elemento heredado por clases derivadas posteriores, elemento invalidado que todavía se reemplaza</span><span class="sxs-lookup"><span data-stu-id="36717-135">Overriding element inherited by further derived classes; overridden element still overridden</span></span>|  
   
- <sup>1</sup> La *secuencia de llamada* se compone de tipo de elemento \(`Function`, `Sub`, `Operator` o `Property`\), nombre, lista de parámetros y tipo de valor devuelto.  No se puede reemplazar un procedimiento con una propiedad o viceversa.  No puede reemplazar un tipo de procedimiento \(`Function`, `Sub` u `Operator`\) con otro tipo.  
+ <span data-ttu-id="36717-136"><sup>1</sup> el *secuencia de llamada* está formada por el tipo de elemento (`Function`, `Sub`, `Operator`, o `Property`), nombre, lista de parámetros y tipo de valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="36717-136"><sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type.</span></span> <span data-ttu-id="36717-137">No se puede reemplazar un procedimiento con una propiedad o al revés.</span><span class="sxs-lookup"><span data-stu-id="36717-137">You cannot override a procedure with a property, or the other way around.</span></span> <span data-ttu-id="36717-138">No se puede reemplazar un tipo de procedimiento (`Function`, `Sub`, o `Operator`) con otro tipo.</span><span class="sxs-lookup"><span data-stu-id="36717-138">You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.</span></span>  
   
- <sup>2</sup> si no especifica `Shadows` u `Overrides`, el compilador emite un mensaje de advertencia para ayudarle a asegurarse del tipo de redefinición que desea utilizar.  Si omite la advertencia, se utiliza el mecanismo de sombreado.  
+ <span data-ttu-id="36717-139"><sup>2</sup> si no se especifica cualquiera `Shadows` o `Overrides`, el compilador emite un mensaje de advertencia que le ayudarán a estar seguro de qué tipo de redefinición que desea utilizar.</span><span class="sxs-lookup"><span data-stu-id="36717-139"><sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use.</span></span> <span data-ttu-id="36717-140">Si omite la advertencia, se utiliza el mecanismo de sombreado.</span><span class="sxs-lookup"><span data-stu-id="36717-140">If you ignore the warning, the shadowing mechanism is used.</span></span>  
   
- <sup>3</sup> Si el elemento de sombreado no está accesible en una clase derivada posterior, dicho sombreado no se hereda.  Por ejemplo, si se declara como `Private` el elemento de sombreado, cualquier clase que se derive de la clase derivada hereda el elemento original en lugar del elemento de sombreado.  
+ <span data-ttu-id="36717-141"><sup>3</sup> si el elemento reemplazado es inaccesible en una clase derivada posterior, dicho sombreado no se hereda.</span><span class="sxs-lookup"><span data-stu-id="36717-141"><sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited.</span></span> <span data-ttu-id="36717-142">Por ejemplo, si se declara el elemento reemplazado como `Private`, una clase que deriva de la clase derivada hereda el elemento original en lugar del elemento reemplazado.</span><span class="sxs-lookup"><span data-stu-id="36717-142">For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.</span></span>  
   
-## Instrucciones  
- Normalmente, el reemplazo se utiliza en los casos siguientes:  
+## <a name="guidelines"></a><span data-ttu-id="36717-143">Instrucciones</span><span class="sxs-lookup"><span data-stu-id="36717-143">Guidelines</span></span>  
+ <span data-ttu-id="36717-144">Normalmente, se utiliza reemplazar en los casos siguientes:</span><span class="sxs-lookup"><span data-stu-id="36717-144">You normally use overriding in the following cases:</span></span>  
   
--   Cuando está definiendo las clases derivadas polimórficas.  
+-   <span data-ttu-id="36717-145">Define las clases derivadas polimórficas.</span><span class="sxs-lookup"><span data-stu-id="36717-145">You are defining polymorphic derived classes.</span></span>  
   
--   Cuando quiere tener la seguridad de que el compilador cumpla el tipo de elemento idéntico y la secuencia de llamada.  
+-   <span data-ttu-id="36717-146">Desea que la seguridad de que el compilador aplicar el tipo de elemento idéntico y la secuencia de llamada.</span><span class="sxs-lookup"><span data-stu-id="36717-146">You want the safety of having the compiler enforce the identical element type and calling sequence.</span></span>  
   
- Normalmente, el sombreado se utiliza en los casos siguientes:  
+ <span data-ttu-id="36717-147">Normalmente, se utiliza sombrear en los casos siguientes:</span><span class="sxs-lookup"><span data-stu-id="36717-147">You normally use shadowing in the following cases:</span></span>  
   
--   Cuando prevé que se podría modificar su clase base y define un elemento utilizando el mismo nombre que el suyo.  
+-   <span data-ttu-id="36717-148">Se prevé que la clase base podría modificarse y define un elemento con el mismo nombre que el suyo.</span><span class="sxs-lookup"><span data-stu-id="36717-148">You anticipate that your base class might be modified and define an element using the same name as yours.</span></span>  
   
--   Cuando quiere tener la libertad de cambiar el tipo de elemento o la secuencia de llamada.  
+-   <span data-ttu-id="36717-149">Desea que la libertad de cambiar el tipo de elemento o secuencia de llamada.</span><span class="sxs-lookup"><span data-stu-id="36717-149">You want the freedom of changing the element type or calling sequence.</span></span>  
   
-## Vea también  
- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Cómo: Ocultar una variable con el mismo nombre que su variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [Cómo: Ocultar una variable heredada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Cómo: Obtener acceso a una variable que oculta una clase derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+## <a name="see-also"></a><span data-ttu-id="36717-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="36717-150">See Also</span></span>  
+ [<span data-ttu-id="36717-151">Referencias a elementos declarados</span><span class="sxs-lookup"><span data-stu-id="36717-151">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="36717-152">Sombrear en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="36717-152">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="36717-153">Ocultar una variable con el mismo nombre que su variable</span><span class="sxs-lookup"><span data-stu-id="36717-153">How to: Hide a Variable with the Same Name as Your Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [<span data-ttu-id="36717-154">Ocultar una variable heredada</span><span class="sxs-lookup"><span data-stu-id="36717-154">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="36717-155">Obtener acceso a una variable que oculta una clase derivada</span><span class="sxs-lookup"><span data-stu-id="36717-155">How to: Access a Variable Hidden by a Derived Class</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [<span data-ttu-id="36717-156">Shadows</span><span class="sxs-lookup"><span data-stu-id="36717-156">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="36717-157">Overrides</span><span class="sxs-lookup"><span data-stu-id="36717-157">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)

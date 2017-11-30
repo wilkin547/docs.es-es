@@ -1,1 +1,1 @@
-Escritor de documentos XPS de Microsoft
+<span data-ttu-id="9c059-101">Escritor de documentos XPS de Microsoft</span><span class="sxs-lookup"><span data-stu-id="9c059-101">Microsoft XPS Document Writer</span></span>

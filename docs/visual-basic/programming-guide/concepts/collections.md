@@ -1,73 +1,65 @@
 ---
-title: Colecciones (Visual Basic) | Documentos de Microsoft
+title: Colecciones (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: 6
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b3c8de3e22075d576f86bcd4eb599946740ebe16
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="collections-visual-basic"></a>Colecciones (Visual Basic)
-Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
+# <a name="collections-visual-basic"></a><span data-ttu-id="c08af-102">Colecciones (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c08af-102">Collections (Visual Basic)</span></span>
+<span data-ttu-id="c08af-103">Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados.</span><span class="sxs-lookup"><span data-stu-id="c08af-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="c08af-104">Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.</span><span class="sxs-lookup"><span data-stu-id="c08af-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  
   
- Las matrices son muy útiles para crear y trabajar con un número fijo de objetos fuertemente tipados. Para obtener información acerca de las matrices, vea [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ <span data-ttu-id="c08af-105">Las matrices son muy útiles para crear y trabajar con un número fijo de objetos fuertemente tipados.</span><span class="sxs-lookup"><span data-stu-id="c08af-105">Arrays are most useful for creating and working with a fixed number of strongly-typed objects.</span></span> <span data-ttu-id="c08af-106">Para obtener información sobre las matrices, vea [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="c08af-106">For information about arrays, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
- Las colecciones proporcionan una manera más flexible de trabajar con grupos de objetos. A diferencia de las matrices, el grupo de objetos con el que trabaja puede aumentar y reducirse de manera dinámica a medida que cambian las necesidades de la aplicación. Para algunas colecciones, puede asignar una clave a cualquier objeto que incluya en la colección para, de este modo, recuperar rápidamente el objeto con la clave.  
+ <span data-ttu-id="c08af-107">Las colecciones proporcionan una manera más flexible de trabajar con grupos de objetos.</span><span class="sxs-lookup"><span data-stu-id="c08af-107">Collections provide a more flexible way to work with groups of objects.</span></span> <span data-ttu-id="c08af-108">A diferencia de las matrices, el grupo de objetos con el que trabaja puede aumentar y reducirse de manera dinámica a medida que cambian las necesidades de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="c08af-108">Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change.</span></span> <span data-ttu-id="c08af-109">Para algunas colecciones, puede asignar una clave a cualquier objeto que incluya en la colección para, de este modo, recuperar rápidamente el objeto con la clave.</span><span class="sxs-lookup"><span data-stu-id="c08af-109">For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.</span></span>  
   
- Una colección es una clase, por lo que debe declarar una instancia de la clase para poder agregar elementos a dicha colección.  
+ <span data-ttu-id="c08af-110">Una colección es una clase, por lo que debe declarar una instancia de la clase para poder agregar elementos a dicha colección.</span><span class="sxs-lookup"><span data-stu-id="c08af-110">A collection is a class, so you must declare an instance of the class before you can add elements to that collection.</span></span>  
   
- Si la colección contiene elementos de un solo tipo de datos, puede utilizar una de las clases en el <xref:System.Collections.Generic?displayProperty=fullName>espacio de nombres.</xref:System.Collections.Generic?displayProperty=fullName> Una colección genérica cumple la seguridad de tipos para que ningún otro tipo de datos se pueda agregar a ella. Cuando recupera un elemento de una colección genérica, no tiene que determinar su tipo de datos ni convertirlo.  
+ <span data-ttu-id="c08af-111">Si la colección contiene elementos de un solo tipo de datos, puede usar una de las clases del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c08af-111">If your collection contains elements of only one data type, you can use one of the classes in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="c08af-112">Una colección genérica cumple la seguridad de tipos para que ningún otro tipo de datos se pueda agregar a ella.</span><span class="sxs-lookup"><span data-stu-id="c08af-112">A generic collection enforces type safety so that no other data type can be added to it.</span></span> <span data-ttu-id="c08af-113">Cuando recupera un elemento de una colección genérica, no tiene que determinar su tipo de datos ni convertirlo.</span><span class="sxs-lookup"><span data-stu-id="c08af-113">When you retrieve an element from a generic collection, you do not have to determine its data type or convert it.</span></span>  
   
 > [!NOTE]
->  En los ejemplos de este tema, se incluyen [importaciones](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instrucciones para el `System.Collections.Generic` y `System.Linq` los espacios de nombres.  
+>  <span data-ttu-id="c08af-114">En los ejemplos de este tema, incluyen [importaciones](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instrucciones para la `System.Collections.Generic` y `System.Linq` los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="c08af-114">For the examples in this topic, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections.Generic` and `System.Linq` namespaces.</span></span>  
   
- **En este tema**  
+ <span data-ttu-id="c08af-115">**En este tema**</span><span class="sxs-lookup"><span data-stu-id="c08af-115">**In this topic**</span></span>  
   
--   [Uso de una colección Simple](#BKMK_SimpleCollection)  
+-   [<span data-ttu-id="c08af-116">Uso de una colección Simple</span><span class="sxs-lookup"><span data-stu-id="c08af-116">Using a Simple Collection</span></span>](#BKMK_SimpleCollection)  
   
--   [Tipos de colecciones](#BKMK_KindsOfCollections)  
+-   [<span data-ttu-id="c08af-117">Tipos de colecciones</span><span class="sxs-lookup"><span data-stu-id="c08af-117">Kinds of Collections</span></span>](#BKMK_KindsOfCollections)  
   
-    -   [Clases System.Collections.Generic](#BKMK_Generic)  
+    -   [<span data-ttu-id="c08af-118">Clases System.Collections.Generic</span><span class="sxs-lookup"><span data-stu-id="c08af-118">System.Collections.Generic Classes</span></span>](#BKMK_Generic)  
   
-    -   [Clases de System.Collections.Concurrent](#BKMK_Concurrent)  
+    -   [<span data-ttu-id="c08af-119">Clases System.Collections.Concurrent</span><span class="sxs-lookup"><span data-stu-id="c08af-119">System.Collections.Concurrent Classes</span></span>](#BKMK_Concurrent)  
   
-    -   [Clases System.Collections](#BKMK_Collections)  
+    -   [<span data-ttu-id="c08af-120">Clases System.Collections</span><span class="sxs-lookup"><span data-stu-id="c08af-120">System.Collections Classes</span></span>](#BKMK_Collections)  
   
-    -   [Clase de colección de Visual Basic](#BKMK_VisualBasic)  
+    -   [<span data-ttu-id="c08af-121">Clase de colección de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c08af-121">Visual Basic Collection Class</span></span>](#BKMK_VisualBasic)  
   
--   [Implementar una colección de pares clave/valor](#BKMK_KeyValuePairs)  
+-   [<span data-ttu-id="c08af-122">Implementación de una colección de pares de clave/valor</span><span class="sxs-lookup"><span data-stu-id="c08af-122">Implementing a Collection of Key/Value Pairs</span></span>](#BKMK_KeyValuePairs)  
   
--   [Uso de LINQ para tener acceso a una colección](#BKMK_LINQ)  
+-   [<span data-ttu-id="c08af-123">Uso de LINQ para tener acceso a una colección</span><span class="sxs-lookup"><span data-stu-id="c08af-123">Using LINQ to Access a Collection</span></span>](#BKMK_LINQ)  
   
--   [Ordenar una colección](#BKMK_Sorting)  
+-   [<span data-ttu-id="c08af-124">Ordenar una colección</span><span class="sxs-lookup"><span data-stu-id="c08af-124">Sorting a Collection</span></span>](#BKMK_Sorting)  
   
--   [Definir una colección personalizada](#BKMK_CustomCollection)  
+-   [<span data-ttu-id="c08af-125">Definición de una colección personalizada</span><span class="sxs-lookup"><span data-stu-id="c08af-125">Defining a Custom Collection</span></span>](#BKMK_CustomCollection)  
   
--   [Iteradores](#BKMK_Iterators)  
+-   [<span data-ttu-id="c08af-126">Iteradores</span><span class="sxs-lookup"><span data-stu-id="c08af-126">Iterators</span></span>](#BKMK_Iterators)  
   
 <a name="BKMK_SimpleCollection"></a>
-## <a name="using-a-simple-collection"></a>Uso de una colección Simple  
- Los ejemplos de esta sección utilizan genérica <xref:System.Collections.Generic.List%601>clase, que le permite trabajar con una lista de objetos fuertemente tipados.</xref:System.Collections.Generic.List%601>  
+## <a name="using-a-simple-collection"></a><span data-ttu-id="c08af-127">Uso de una colección Simple</span><span class="sxs-lookup"><span data-stu-id="c08af-127">Using a Simple Collection</span></span>  
+ <span data-ttu-id="c08af-128">Los ejemplos de esta sección usan la clase genérica <xref:System.Collections.Generic.List%601>, que le permite trabajar con una lista de objetos fuertemente tipados.</span><span class="sxs-lookup"><span data-stu-id="c08af-128">The examples in this section use the generic <xref:System.Collections.Generic.List%601> class, which enables you to work with a strongly typed list of objects.</span></span>  
   
- En el ejemplo siguiente se crea una lista de cadenas y, a continuación, recorre en iteración las cadenas mediante el uso de un [For Each... Siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrucción.  
+ <span data-ttu-id="c08af-129">En el ejemplo siguiente se crea una lista de cadenas y, a continuación, recorre en iteración las cadenas mediante un [For Each... Siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrucción.</span><span class="sxs-lookup"><span data-stu-id="c08af-129">The following example creates a list of strings and then iterates through the strings by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement.</span></span>  
   
 ```vb  
 ' Create a list of strings.  
@@ -84,9 +76,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Si el contenido de una colección se conoce de antemano, puede usar un *inicializador de colección* para inicializar la colección. Para obtener más información, consulte [inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+ <span data-ttu-id="c08af-130">Si el contenido de una colección se conoce de antemano, puede usar un *inicializador de colección* para inicializar la colección.</span><span class="sxs-lookup"><span data-stu-id="c08af-130">If the contents of a collection are known in advance, you can use a *collection initializer* to initialize the collection.</span></span> <span data-ttu-id="c08af-131">Para obtener más información, vea [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).</span><span class="sxs-lookup"><span data-stu-id="c08af-131">For more information, see [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).</span></span>  
   
- El ejemplo siguiente es el mismo que el ejemplo anterior, excepto que se usa un inicializador de colección para agregar elementos a la colección.  
+ <span data-ttu-id="c08af-132">El ejemplo siguiente es el mismo que el ejemplo anterior, excepto que se usa un inicializador de colección para agregar elementos a la colección.</span><span class="sxs-lookup"><span data-stu-id="c08af-132">The following example is the same as the previous example, except a collection initializer is used to add elements to the collection.</span></span>  
   
 ```vb  
 ' Create a list of strings by using a  
@@ -100,9 +92,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Puede utilizar un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) instrucción en lugar de un `For Each` instrucción para recorrer en iteración una colección. Esto se consigue con el acceso a los elementos de la colección mediante la posición de índice. El índice de los elementos comienza en 0 y termina en el número de elementos menos 1.  
+ <span data-ttu-id="c08af-133">Puede usar un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) instrucción en lugar de un `For Each` instrucción para recorrer en iteración una colección.</span><span class="sxs-lookup"><span data-stu-id="c08af-133">You can use a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) statement instead of a `For Each` statement to iterate through a collection.</span></span> <span data-ttu-id="c08af-134">Esto se consigue con el acceso a los elementos de la colección mediante la posición de índice.</span><span class="sxs-lookup"><span data-stu-id="c08af-134">You accomplish this by accessing the collection elements by the index position.</span></span> <span data-ttu-id="c08af-135">El índice de los elementos comienza en 0 y termina en el número de elementos menos 1.</span><span class="sxs-lookup"><span data-stu-id="c08af-135">The index of the elements starts at 0 and ends at the element count minus 1.</span></span>  
   
- En el ejemplo siguiente se recorre en iteración los elementos de una colección mediante el uso de `For…Next` en lugar de `For Each`.  
+ <span data-ttu-id="c08af-136">El ejemplo siguiente recorre en iteración los elementos de una colección mediante `For…Next` en lugar de `For Each`.</span><span class="sxs-lookup"><span data-stu-id="c08af-136">The following example iterates through the elements of a collection by using `For…Next` instead of `For Each`.</span></span>  
   
 ```vb  
 Dim salmons As New List(Of String) From  
@@ -114,7 +106,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- El ejemplo siguiente quita un elemento de la colección especificando el objeto que se quitará.  
+ <span data-ttu-id="c08af-137">El ejemplo siguiente quita un elemento de la colección especificando el objeto que se quitará.</span><span class="sxs-lookup"><span data-stu-id="c08af-137">The following example removes an element from the collection by specifying the object to remove.</span></span>  
   
 ```vb  
 ' Create a list of strings by using a  
@@ -132,7 +124,7 @@ Next
 'Output: chinook pink sockeye  
 ```  
   
- El ejemplo siguiente quita elementos de una lista genérica. En lugar de un `For Each` (instrucción), un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) se utiliza la instrucción que itera en orden descendente. Esto es porque el <xref:System.Collections.Generic.List%601.RemoveAt%2A>método hace que los elementos después de un elemento eliminado para tener un valor de índice inferior.</xref:System.Collections.Generic.List%601.RemoveAt%2A>  
+ <span data-ttu-id="c08af-138">El ejemplo siguiente quita elementos de una lista genérica.</span><span class="sxs-lookup"><span data-stu-id="c08af-138">The following example removes elements from a generic list.</span></span> <span data-ttu-id="c08af-139">En lugar de un `For Each` (instrucción), un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) se utiliza la instrucción que procesa una iteración en orden descendente.</span><span class="sxs-lookup"><span data-stu-id="c08af-139">Instead of a `For Each` statement, a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) statement that iterates in descending order is used.</span></span> <span data-ttu-id="c08af-140">Esto es porque el método <xref:System.Collections.Generic.List%601.RemoveAt%2A> hace que los elementos después de un elemento quitado tengan un valor de índice inferior.</span><span class="sxs-lookup"><span data-stu-id="c08af-140">This is because the <xref:System.Collections.Generic.List%601.RemoveAt%2A> method causes elements after a removed element to have a lower index value.</span></span>  
   
 ```vb  
 Dim numbers As New List(Of Integer) From  
@@ -155,7 +147,7 @@ numbers.ForEach(
 ' Output: 0 2 4 6 8  
 ```  
   
- Para el tipo de elementos <xref:System.Collections.Generic.List%601>también puede definir su propia clase.</xref:System.Collections.Generic.List%601> En el ejemplo siguiente, la `Galaxy` clase que es utilizada por la <xref:System.Collections.Generic.List%601>se define en el código.</xref:System.Collections.Generic.List%601>  
+ <span data-ttu-id="c08af-141">Para el tipo de elementos de <xref:System.Collections.Generic.List%601>, también puede definir su propia clase.</span><span class="sxs-lookup"><span data-stu-id="c08af-141">For the type of elements in the <xref:System.Collections.Generic.List%601>, you can also define your own class.</span></span> <span data-ttu-id="c08af-142">En el ejemplo siguiente, la clase `Galaxy` que usa <xref:System.Collections.Generic.List%601> se define en el código.</span><span class="sxs-lookup"><span data-stu-id="c08af-142">In the following example, the `Galaxy` class that is used by the <xref:System.Collections.Generic.List%601> is defined in the code.</span></span>  
   
 ```vb  
 Private Sub IterateThroughList()  
@@ -187,78 +179,78 @@ End Class
 ```  
   
 <a name="BKMK_KindsOfCollections"></a>
-## <a name="kinds-of-collections"></a>Tipos de colecciones   
- .NET Framework proporciona muchas colecciones comunes. Cada tipo de colección está diseñado para un fin específico.  
+## <a name="kinds-of-collections"></a><span data-ttu-id="c08af-143">Tipos de colecciones</span><span class="sxs-lookup"><span data-stu-id="c08af-143">Kinds of Collections</span></span>   
+ <span data-ttu-id="c08af-144">.NET Framework proporciona muchas colecciones comunes.</span><span class="sxs-lookup"><span data-stu-id="c08af-144">Many common collections are provided by the .NET Framework.</span></span> <span data-ttu-id="c08af-145">Cada tipo de colección está diseñado para un fin específico.</span><span class="sxs-lookup"><span data-stu-id="c08af-145">Each type of collection is designed for a specific purpose.</span></span>  
   
- En esta sección se describen algunas de las clases de colecciones comunes:  
+ <span data-ttu-id="c08af-146">En esta sección se describen algunas de las clases de colecciones comunes:</span><span class="sxs-lookup"><span data-stu-id="c08af-146">Some of the common collection classes are described in this section:</span></span>  
   
--   @System.Collections.Genericclases  
+-   <span data-ttu-id="c08af-147">Clases <xref:System.Collections.Generic></span><span class="sxs-lookup"><span data-stu-id="c08af-147"><xref:System.Collections.Generic> classes</span></span>  
   
--   @System.Collections.Concurrentclases  
+-   <span data-ttu-id="c08af-148">Clases <xref:System.Collections.Concurrent></span><span class="sxs-lookup"><span data-stu-id="c08af-148"><xref:System.Collections.Concurrent> classes</span></span>  
   
--   @System.Collectionsclases  
+-   <span data-ttu-id="c08af-149">Clases <xref:System.Collections></span><span class="sxs-lookup"><span data-stu-id="c08af-149"><xref:System.Collections> classes</span></span>  
   
--   Visual Basic `Collection` (clase)  
+-   <span data-ttu-id="c08af-150">Visual Basic `Collection` (clase)</span><span class="sxs-lookup"><span data-stu-id="c08af-150">Visual Basic `Collection` class</span></span>  
   
 <a name="BKMK_Generic"></a>
-### <a name="systemcollectionsgeneric-classes"></a>Clases System.Collections.Generic  
+### <a name="systemcollectionsgeneric-classes"></a><span data-ttu-id="c08af-151">Clases System.Collections.Generic</span><span class="sxs-lookup"><span data-stu-id="c08af-151">System.Collections.Generic Classes</span></span>  
 
- Puede crear una colección genérica mediante una de las clases en el <xref:System.Collections.Generic>espacio de nombres.</xref:System.Collections.Generic> Una colección genérica es útil cuando todos los elementos de la colección tienen el mismo tipo. Una colección genérica exige el establecimiento de fuertes tipos al permitir agregar solo los tipos de datos deseados.  
+ <span data-ttu-id="c08af-152">Puede crear una colección genérica mediante una de las clases del espacio de nombres <xref:System.Collections.Generic>.</span><span class="sxs-lookup"><span data-stu-id="c08af-152">You can create a generic collection by using one of the classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="c08af-153">Una colección genérica es útil cuando todos los elementos de la colección tienen el mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="c08af-153">A generic collection is useful when every item in the collection has the same data type.</span></span> <span data-ttu-id="c08af-154">Una colección genérica exige el establecimiento de fuertes tipos al permitir agregar solo los tipos de datos deseados.</span><span class="sxs-lookup"><span data-stu-id="c08af-154">A generic collection enforces strong typing by allowing only the desired data type to be added.</span></span>  
   
- La tabla siguiente enumeran algunas de las clases utilizadas con frecuencia de la <xref:System.Collections.Generic?displayProperty=fullName>espacio de nombres:</xref:System.Collections.Generic?displayProperty=fullName>  
+ <span data-ttu-id="c08af-155">En la tabla siguiente se enumeran algunas de las clases usadas con frecuencia del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="c08af-155">The following table lists some of the frequently used classes of the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace:</span></span>  
   
-|Clase|Descripción|  
+|<span data-ttu-id="c08af-156">Clase</span><span class="sxs-lookup"><span data-stu-id="c08af-156">Class</span></span>|<span data-ttu-id="c08af-157">Descripción</span><span class="sxs-lookup"><span data-stu-id="c08af-157">Description</span></span>|  
 |---|---|  
-|<xref:System.Collections.Generic.Dictionary%602></xref:System.Collections.Generic.Dictionary%602>|Representa una colección de pares de clave y valor que se organizan según la clave.|  
-|<xref:System.Collections.Generic.List%601></xref:System.Collections.Generic.List%601>|Representa una lista de objetos a los que puede tener acceso el índice. Proporciona métodos para buscar, ordenar y modificar listas.|  
-|<xref:System.Collections.Generic.Queue%601></xref:System.Collections.Generic.Queue%601>|Representa una colección de objetos de primeras entradas, primeras salidas (FIFO).|  
-|<xref:System.Collections.Generic.SortedList%602></xref:System.Collections.Generic.SortedList%602>|Representa una colección de pares clave-valor que se ordenan por claves según asociado <xref:System.Collections.Generic.IComparer%601>implementación.</xref:System.Collections.Generic.IComparer%601>|  
-|<xref:System.Collections.Generic.Stack%601></xref:System.Collections.Generic.Stack%601>|Representa una colección de objetos de últimas entradas, primeras salidas (LIFO).|  
+|<xref:System.Collections.Generic.Dictionary%602>|<span data-ttu-id="c08af-158">Representa una colección de pares de clave y valor que se organizan según la clave.</span><span class="sxs-lookup"><span data-stu-id="c08af-158">Represents a collection of key/value pairs that are organized based on the key.</span></span>|  
+|<xref:System.Collections.Generic.List%601>|<span data-ttu-id="c08af-159">Representa una lista de objetos a los que puede tener acceso el índice.</span><span class="sxs-lookup"><span data-stu-id="c08af-159">Represents a list of objects that can be accessed by index.</span></span> <span data-ttu-id="c08af-160">Proporciona métodos para buscar, ordenar y modificar listas.</span><span class="sxs-lookup"><span data-stu-id="c08af-160">Provides methods to search, sort, and modify lists.</span></span>|  
+|<xref:System.Collections.Generic.Queue%601>|<span data-ttu-id="c08af-161">Representa una colección de objetos de primeras entradas, primeras salidas (FIFO).</span><span class="sxs-lookup"><span data-stu-id="c08af-161">Represents a first in, first out (FIFO) collection of objects.</span></span>|  
+|<xref:System.Collections.Generic.SortedList%602>|<span data-ttu-id="c08af-162">Representa una colección de pares clave-valor que se ordenan por claves según la implementación de <xref:System.Collections.Generic.IComparer%601> asociada.</span><span class="sxs-lookup"><span data-stu-id="c08af-162">Represents a collection of key/value pairs that are sorted by key based on the associated <xref:System.Collections.Generic.IComparer%601> implementation.</span></span>|  
+|<xref:System.Collections.Generic.Stack%601>|<span data-ttu-id="c08af-163">Representa una colección de objetos de últimas entradas, primeras salidas (LIFO).</span><span class="sxs-lookup"><span data-stu-id="c08af-163">Represents a last in, first out (LIFO) collection of objects.</span></span>|  
   
- Para obtener más información, consulte [utiliza tipos de colección normalmente](http://msdn.microsoft.com/library/f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55), [seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md)y <xref:System.Collections.Generic?displayProperty=fullName>.</xref:System.Collections.Generic?displayProperty=fullName>  
+ <span data-ttu-id="c08af-164">Para obtener más información, vea [Tipos de colección utilizados normalmente](../../../standard/collections/commonly-used-collection-types.md), [Seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md) y <xref:System.Collections.Generic?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c08af-164">For additional information, see [Commonly Used Collection Types](../../../standard/collections/commonly-used-collection-types.md), [Selecting a Collection Class](../../../standard/collections/selecting-a-collection-class.md), and <xref:System.Collections.Generic?displayProperty=nameWithType>.</span></span>  
   
 <a name="BKMK_Concurrent"></a>
-### <a name="systemcollectionsconcurrent-classes"></a>Clases System.Collections.Concurrent   
- En .NET Framework 4 o posterior, las colecciones en el <xref:System.Collections.Concurrent>espacio de nombres proporcionan operaciones eficaces de subprocesos para obtener acceso a elementos de la colección desde varios subprocesos.</xref:System.Collections.Concurrent>  
+### <a name="systemcollectionsconcurrent-classes"></a><span data-ttu-id="c08af-165">Clases System.Collections.Concurrent</span><span class="sxs-lookup"><span data-stu-id="c08af-165">System.Collections.Concurrent Classes</span></span>   
+ <span data-ttu-id="c08af-166">En .NET Framework 4 o posterior, las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos con el fin de obtener acceso a los elementos de la colección desde varios subprocesos.</span><span class="sxs-lookup"><span data-stu-id="c08af-166">In the .NET Framework 4 or newer, the collections in the <xref:System.Collections.Concurrent> namespace provide efficient thread-safe operations for accessing collection items from multiple threads.</span></span>  
   
- Las clases en el <xref:System.Collections.Concurrent>espacio de nombres debe utilizarse en lugar de los tipos correspondientes de la <xref:System.Collections.Generic?displayProperty=fullName>y <xref:System.Collections?displayProperty=fullName>los espacios de nombres siempre que varios subprocesos obtiene acceso a la colección simultáneamente.</xref:System.Collections?displayProperty=fullName> </xref:System.Collections.Generic?displayProperty=fullName> </xref:System.Collections.Concurrent> Para obtener más información, consulte [colecciones seguras para subprocesos](../../../standard/collections/threadsafe/index.md) y <xref:System.Collections.Concurrent>.</xref:System.Collections.Concurrent>  
+ <span data-ttu-id="c08af-167">Las clases del espacio de nombres <xref:System.Collections.Concurrent> deben usarse en lugar de los tipos correspondientes de los espacios de nombres <xref:System.Collections.Generic?displayProperty=nameWithType> y <xref:System.Collections?displayProperty=nameWithType> cada vez que varios subprocesos tengan acceso de manera simultánea a la colección.</span><span class="sxs-lookup"><span data-stu-id="c08af-167">The classes in the <xref:System.Collections.Concurrent> namespace should be used instead of the corresponding types in the <xref:System.Collections.Generic?displayProperty=nameWithType> and <xref:System.Collections?displayProperty=nameWithType> namespaces whenever multiple threads are accessing the collection concurrently.</span></span> <span data-ttu-id="c08af-168">Para obtener más información, vea [Colecciones seguras para subprocesos](../../../standard/collections/thread-safe/index.md) y <xref:System.Collections.Concurrent>.</span><span class="sxs-lookup"><span data-stu-id="c08af-168">For more information, see [Thread-Safe Collections](../../../standard/collections/thread-safe/index.md) and <xref:System.Collections.Concurrent>.</span></span>  
   
- Algunas clases incluidas en el <xref:System.Collections.Concurrent>nombres <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>y <xref:System.Collections.Concurrent.ConcurrentStack%601>.</xref:System.Collections.Concurrent.ConcurrentStack%601> </xref:System.Collections.Concurrent.ConcurrentQueue%601> </xref:System.Collections.Concurrent.ConcurrentDictionary%602> </xref:System.Collections.Concurrent.BlockingCollection%601> </xref:System.Collections.Concurrent>  
+ <span data-ttu-id="c08af-169">Algunas clases incluidas en el espacio de nombres <xref:System.Collections.Concurrent> son <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> y <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span><span class="sxs-lookup"><span data-stu-id="c08af-169">Some classes included in the <xref:System.Collections.Concurrent> namespace are <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, and <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span>  
   
 <a name="BKMK_Collections"></a>
-### <a name="systemcollections-classes"></a>Clases System.Collections    
- Las clases en el <xref:System.Collections?displayProperty=fullName>espacio de nombres no almacenan los elementos como objetos con tipo concreto, sino como objetos de tipo `Object`.</xref:System.Collections?displayProperty=fullName>  
+### <a name="systemcollections-classes"></a><span data-ttu-id="c08af-170">Clases System.Collections</span><span class="sxs-lookup"><span data-stu-id="c08af-170">System.Collections Classes</span></span>    
+ <span data-ttu-id="c08af-171">Las clases del espacio de nombres <xref:System.Collections?displayProperty=nameWithType> no almacenan los elementos como objetos de tipo específico, sino como objetos del tipo `Object`.</span><span class="sxs-lookup"><span data-stu-id="c08af-171">The classes in the <xref:System.Collections?displayProperty=nameWithType> namespace do not store elements as specifically typed objects, but as objects of type `Object`.</span></span>  
   
- Siempre que sea posible, debe usar las colecciones genéricas en el <xref:System.Collections.Generic?displayProperty=fullName>espacio de nombres o la <xref:System.Collections.Concurrent>espacio de nombres en lugar de los tipos heredados del `System.Collections` espacio de nombres.</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ <span data-ttu-id="c08af-172">Siempre que sea posible, debe usar las colecciones genéricas del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType> o del espacio de nombres <xref:System.Collections.Concurrent> en lugar de los tipos heredados del espacio de nombres `System.Collections`.</span><span class="sxs-lookup"><span data-stu-id="c08af-172">Whenever possible, you should use the generic collections in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace or the <xref:System.Collections.Concurrent> namespace instead of the legacy types in the `System.Collections` namespace.</span></span>  
   
- La tabla siguiente enumeran algunas de las clases utilizadas en el `System.Collections` espacio de nombres:  
+ <span data-ttu-id="c08af-173">En la siguiente tabla se enumeran algunas de las clases usadas con frecuencia en el espacio de nombres `System.Collections`:</span><span class="sxs-lookup"><span data-stu-id="c08af-173">The following table lists some of the frequently used classes in the `System.Collections` namespace:</span></span>  
   
-|Clase|Descripción|  
+|<span data-ttu-id="c08af-174">Clase</span><span class="sxs-lookup"><span data-stu-id="c08af-174">Class</span></span>|<span data-ttu-id="c08af-175">Descripción</span><span class="sxs-lookup"><span data-stu-id="c08af-175">Description</span></span>|  
 |---|---|  
-|<xref:System.Collections.ArrayList></xref:System.Collections.ArrayList>|Representa una matriz cuyo tamaño aumenta dinámicamente cuando es necesario.|  
-|<xref:System.Collections.Hashtable></xref:System.Collections.Hashtable>|Representa una colección de pares de clave y valor que se organizan por código hash de la clave.|  
-|<xref:System.Collections.Queue></xref:System.Collections.Queue>|Representa una colección de objetos de primeras entradas, primeras salidas (FIFO).|  
-|<xref:System.Collections.Stack></xref:System.Collections.Stack>|Representa una colección de objetos de últimas entradas, primeras salidas (LIFO).|  
+|<xref:System.Collections.ArrayList>|<span data-ttu-id="c08af-176">Representa una matriz cuyo tamaño aumenta dinámicamente cuando es necesario.</span><span class="sxs-lookup"><span data-stu-id="c08af-176">Represents an array of objects whose size is dynamically increased as required.</span></span>|  
+|<xref:System.Collections.Hashtable>|<span data-ttu-id="c08af-177">Representa una colección de pares de clave y valor que se organizan por código hash de la clave.</span><span class="sxs-lookup"><span data-stu-id="c08af-177">Represents a collection of key/value pairs that are organized based on the hash code of the key.</span></span>|  
+|<xref:System.Collections.Queue>|<span data-ttu-id="c08af-178">Representa una colección de objetos de primeras entradas, primeras salidas (FIFO).</span><span class="sxs-lookup"><span data-stu-id="c08af-178">Represents a first in, first out (FIFO) collection of objects.</span></span>|  
+|<xref:System.Collections.Stack>|<span data-ttu-id="c08af-179">Representa una colección de objetos de últimas entradas, primeras salidas (LIFO).</span><span class="sxs-lookup"><span data-stu-id="c08af-179">Represents a last in, first out (LIFO) collection of objects.</span></span>|  
   
- El <xref:System.Collections.Specialized>espacio de nombres proporciona clases de colección especializadas y fuertemente tipadas, como colecciones de sólo cadena y diccionarios híbridos y de lista vinculada.</xref:System.Collections.Specialized>  
+ <span data-ttu-id="c08af-180">El espacio de nombres <xref:System.Collections.Specialized> proporciona clases de colección especializadas y fuertemente tipadas como, por ejemplo, colecciones de solo cadena y diccionarios híbridos y de lista vinculada.</span><span class="sxs-lookup"><span data-stu-id="c08af-180">The <xref:System.Collections.Specialized> namespace provides specialized and strongly typed collection classes, such as string-only collections and linked-list and hybrid dictionaries.</span></span>  
 
 <a name="BKMK_VisualBasic"></a> 
-###  <a name="visual-basic-collection-class"></a>Clase de colección de Visual Basic  
- Puede usar Visual Basic <xref:Microsoft.VisualBasic.Collection>de clases para tener acceso a una colección de elementos mediante un índice numérico o un `String` clave.</xref:Microsoft.VisualBasic.Collection> Puede agregar elementos a un objeto de colección especificando o sin especificar clave. Si agrega un elemento sin clave, debe usar su índice numérico para tener acceso a dicho elemento.  
+###  <a name="visual-basic-collection-class"></a><span data-ttu-id="c08af-181">Clase de colección de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c08af-181">Visual Basic Collection Class</span></span>  
+ <span data-ttu-id="c08af-182">Puede usar Visual Basic <xref:Microsoft.VisualBasic.Collection> clase para tener acceso a una colección de elementos mediante un índice numérico o una `String` clave.</span><span class="sxs-lookup"><span data-stu-id="c08af-182">You can use the Visual Basic <xref:Microsoft.VisualBasic.Collection> class to access a collection item by using either a numeric index or a `String` key.</span></span> <span data-ttu-id="c08af-183">Puede agregar elementos a un objeto de colección especificando o sin especificar clave.</span><span class="sxs-lookup"><span data-stu-id="c08af-183">You can add items to a collection object either with or without specifying a key.</span></span> <span data-ttu-id="c08af-184">Si agrega un elemento sin clave, debe usar su índice numérico para tener acceso a dicho elemento.</span><span class="sxs-lookup"><span data-stu-id="c08af-184">If you add an item without a key, you must use its numeric index to access it.</span></span>  
   
- Visual Basic `Collection` clase almacena todos sus elementos como de tipo `Object`, por lo que puede agregar un elemento de cualquier tipo de datos. No hay ningún método de protección contra los tipos de datos inadecuados agregados.  
+ <span data-ttu-id="c08af-185">Visual Basic `Collection` clase almacena todos sus elementos como de tipo `Object`, por lo que puede agregar un elemento de cualquier tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="c08af-185">The Visual Basic `Collection` class stores all its elements as type `Object`, so you can add an item of any data type.</span></span> <span data-ttu-id="c08af-186">No hay ningún método de protección contra los tipos de datos inadecuados agregados.</span><span class="sxs-lookup"><span data-stu-id="c08af-186">There is no safeguard against inappropriate data types being added.</span></span>  
   
- Cuando se usa Visual Basic `Collection` (clase), el primer elemento de una colección tiene un índice de 1. Esto difiere de las clases de colección de .NET Framework, para las cuales el índice inicial es 0.  
+ <span data-ttu-id="c08af-187">Cuando se usa Visual Basic `Collection` (clase), el primer elemento de una colección tiene un índice de 1.</span><span class="sxs-lookup"><span data-stu-id="c08af-187">When you use the Visual Basic `Collection` class, the first item in a collection has an index of 1.</span></span> <span data-ttu-id="c08af-188">Esto difiere de las clases de colección de .NET Framework, para las cuales el índice inicial es 0.</span><span class="sxs-lookup"><span data-stu-id="c08af-188">This differs from the .NET Framework collection classes, for which the starting index is 0.</span></span>  
   
- Siempre que sea posible, debe usar las colecciones genéricas en el <xref:System.Collections.Generic?displayProperty=fullName>espacio de nombres o la <xref:System.Collections.Concurrent>espacio de nombres en lugar de Visual Basic `Collection` clase</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ <span data-ttu-id="c08af-189">Siempre que sea posible, debe usar las colecciones genéricas en el <xref:System.Collections.Generic?displayProperty=nameWithType> espacio de nombres o la <xref:System.Collections.Concurrent> espacio de nombres en lugar de Visual Basic `Collection` clase.</span><span class="sxs-lookup"><span data-stu-id="c08af-189">Whenever possible, you should use the generic collections in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace or the <xref:System.Collections.Concurrent> namespace instead of the Visual Basic `Collection` class.</span></span>  
   
- Para obtener más información, consulte <xref:Microsoft.VisualBasic.Collection>.</xref:Microsoft.VisualBasic.Collection>  
+ <span data-ttu-id="c08af-190">Para obtener más información, consulta <xref:Microsoft.VisualBasic.Collection>.</span><span class="sxs-lookup"><span data-stu-id="c08af-190">For more information, see <xref:Microsoft.VisualBasic.Collection>.</span></span>  
   
 <a name="BKMK_KeyValuePairs"></a>
-## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Implementación de una colección de pares de clave/valor   
- El <xref:System.Collections.Generic.Dictionary%602>colección genérica le permite tener acceso a los elementos de una colección mediante la clave de cada elemento.</xref:System.Collections.Generic.Dictionary%602> Cada adición al diccionario consta de un valor y de su clave asociada. Recuperar un valor utilizando su clave es rápido porque la `Dictionary` clase se implementa como una tabla hash.  
+## <a name="implementing-a-collection-of-keyvalue-pairs"></a><span data-ttu-id="c08af-191">Implementación de una colección de pares de clave/valor</span><span class="sxs-lookup"><span data-stu-id="c08af-191">Implementing a Collection of Key/Value Pairs</span></span>   
+ <span data-ttu-id="c08af-192">La colección genérica <xref:System.Collections.Generic.Dictionary%602> le permite tener acceso a los elementos de una colección con la clave de cada elemento.</span><span class="sxs-lookup"><span data-stu-id="c08af-192">The <xref:System.Collections.Generic.Dictionary%602> generic collection enables you to access to elements in a collection by using the key of each element.</span></span> <span data-ttu-id="c08af-193">Cada adición al diccionario consta de un valor y de su clave asociada.</span><span class="sxs-lookup"><span data-stu-id="c08af-193">Each addition to the dictionary consists of a value and its associated key.</span></span> <span data-ttu-id="c08af-194">Recuperar un valor usando su clave es rápido porque la clase `Dictionary` se implementa como una tabla hash.</span><span class="sxs-lookup"><span data-stu-id="c08af-194">Retrieving a value by using its key is fast because the `Dictionary` class is implemented as a hash table.</span></span>  
   
- En el ejemplo siguiente se crea un `Dictionary` colección y se recorre en iteración el diccionario utilizando un `For Each` instrucción.  
+ <span data-ttu-id="c08af-195">En el ejemplo siguiente se crea una colección `Dictionary` y se recorre en iteración el diccionario usando una instrucción `For Each`.</span><span class="sxs-lookup"><span data-stu-id="c08af-195">The following example creates a `Dictionary` collection and iterates through the dictionary by using a `For Each` statement.</span></span>  
   
 ```vb  
 Private Sub IterateThroughDictionary()  
@@ -304,7 +296,7 @@ Public Class Element
 End Class  
 ```  
   
- En su lugar, usar un inicializador de colección para crear el `Dictionary` colección, puede reemplazar el `BuildDictionary` y `AddToDictionary` métodos con el método siguiente.  
+ <span data-ttu-id="c08af-196">Para usar un inicializador de colección para compilar la colección `Dictionary`, puede reemplazar los métodos `BuildDictionary` y `AddToDictionary` por el método siguiente.</span><span class="sxs-lookup"><span data-stu-id="c08af-196">To instead use a collection initializer to build the `Dictionary` collection, you can replace the `BuildDictionary` and `AddToDictionary` methods with the following method.</span></span>  
   
 ```vb  
 Private Function BuildDictionary2() As Dictionary(Of String, Element)  
@@ -322,7 +314,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- En el ejemplo siguiente se utiliza la <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>(método) y el <xref:System.Collections.Generic.Dictionary%602.Item%2A>propiedad de `Dictionary` para encontrar rápidamente un elemento clave.</xref:System.Collections.Generic.Dictionary%602.Item%2A> </xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> El `Item` propiedad permite obtener acceso a un elemento en el `elements` colección utilizando la `elements(symbol)` código en Visual Basic.  
+ <span data-ttu-id="c08af-197">En el ejemplo siguiente se usa el método <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> y la propiedad <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` para encontrar rápidamente un elemento por clave.</span><span class="sxs-lookup"><span data-stu-id="c08af-197">The following example uses the <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> method and the <xref:System.Collections.Generic.Dictionary%602.Item%2A> property of `Dictionary` to quickly find an item by key.</span></span> <span data-ttu-id="c08af-198">El `Item` propiedad le permite tener acceso a un elemento en el `elements` colección utilizando la `elements(symbol)` código en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c08af-198">The `Item` property enables you to access an item in the `elements` collection by using the `elements(symbol)` code in Visual Basic.</span></span>  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -337,7 +329,7 @@ Private Sub FindInDictionary(ByVal symbol As String)
 End Sub  
 ```  
   
- El ejemplo siguiente se utiliza en su lugar el <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>método encontrar rápidamente un elemento clave.</xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>  
+ <span data-ttu-id="c08af-199">En el ejemplo siguiente se usa en su lugar el método <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> para encontrar rápidamente un elemento por clave.</span><span class="sxs-lookup"><span data-stu-id="c08af-199">The following example instead uses the <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> method quickly find an item by key.</span></span>  
   
 ```vb  
 Private Sub FindInDictionary2(ByVal symbol As String)  
@@ -353,10 +345,10 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>Uso de LINQ para tener acceso a una colección  
- LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, consulte [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+##  <a name="using-linq-to-access-a-collection"></a><span data-ttu-id="c08af-200">Uso de LINQ para tener acceso a una colección</span><span class="sxs-lookup"><span data-stu-id="c08af-200">Using LINQ to Access a Collection</span></span>  
+ <span data-ttu-id="c08af-201">LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones.</span><span class="sxs-lookup"><span data-stu-id="c08af-201">LINQ (Language-Integrated Query) can be used to access collections.</span></span> <span data-ttu-id="c08af-202">Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación.</span><span class="sxs-lookup"><span data-stu-id="c08af-202">LINQ queries provide filtering, ordering, and grouping capabilities.</span></span> <span data-ttu-id="c08af-203">Para obtener más información, consulte [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).</span><span class="sxs-lookup"><span data-stu-id="c08af-203">For more information, see [Getting Started with LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).</span></span>  
   
- En el ejemplo siguiente se ejecuta una consulta LINQ en un tipo genérico `List`. La consulta LINQ devuelve otra colección que contiene los resultados.  
+ <span data-ttu-id="c08af-204">El ejemplo siguiente ejecuta una consulta LINQ en una `List` genérica.</span><span class="sxs-lookup"><span data-stu-id="c08af-204">The following example runs a LINQ query against a generic `List`.</span></span> <span data-ttu-id="c08af-205">La consulta LINQ devuelve otra colección que contiene los resultados.</span><span class="sxs-lookup"><span data-stu-id="c08af-205">The LINQ query returns a different collection that contains the results.</span></span>  
   
 ```vb  
 Private Sub ShowLINQ()  
@@ -399,12 +391,12 @@ End Class
 ```  
   
  <a name="BKMK_Sorting"></a> 
-## <a name="sorting-a-collection"></a>Ordenar una colección  
- En el ejemplo siguiente se muestra un procedimiento para ordenar una colección. El ejemplo ordena las instancias de la `Car` clase que se almacenan en un <xref:System.Collections.Generic.List%601>.</xref:System.Collections.Generic.List%601> El `Car` la clase implementa la <xref:System.IComparable%601>interfaz, que requiere que el <xref:System.IComparable%601.CompareTo%2A>método implementarse.</xref:System.IComparable%601.CompareTo%2A> </xref:System.IComparable%601>  
+## <a name="sorting-a-collection"></a><span data-ttu-id="c08af-206">Ordenar una colección</span><span class="sxs-lookup"><span data-stu-id="c08af-206">Sorting a Collection</span></span>  
+ <span data-ttu-id="c08af-207">En el ejemplo siguiente se muestra un procedimiento para ordenar una colección.</span><span class="sxs-lookup"><span data-stu-id="c08af-207">The following example illustrates a procedure for sorting a collection.</span></span> <span data-ttu-id="c08af-208">El ejemplo ordena las instancias de la clase `Car` que se almacenan en un <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="c08af-208">The example sorts instances of the `Car` class that are stored in a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="c08af-209">La clase `Car` implementa la interfaz <xref:System.IComparable%601>, que requiere implementar el método <xref:System.IComparable%601.CompareTo%2A>.</span><span class="sxs-lookup"><span data-stu-id="c08af-209">The `Car` class implements the <xref:System.IComparable%601> interface, which requires that the <xref:System.IComparable%601.CompareTo%2A> method be implemented.</span></span>  
   
- Cada llamada a la <xref:System.IComparable%601.CompareTo%2A>este método realiza una comparación única que se utiliza para ordenar.</xref:System.IComparable%601.CompareTo%2A> Código escrito por el usuario en el `CompareTo` método devuelve un valor de comparación del objeto actual con otro objeto. El valor devuelto es menor que cero si el objeto actual es menor que el otro objeto, mayor que cero si el objeto actual es mayor que el otro objeto y cero si son iguales. Esto permite definir en el código los criterios de mayor que, menor que e igual.  
+ <span data-ttu-id="c08af-210">Cada llamada al método <xref:System.IComparable%601.CompareTo%2A> realiza una comparación única que se usa para la ordenación.</span><span class="sxs-lookup"><span data-stu-id="c08af-210">Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that is used for sorting.</span></span> <span data-ttu-id="c08af-211">El código escrito por el usuario en el método `CompareTo` devuelve un valor para cada comparación del objeto actual con otro objeto.</span><span class="sxs-lookup"><span data-stu-id="c08af-211">User-written code in the `CompareTo` method returns a value for each comparison of the current object with another object.</span></span> <span data-ttu-id="c08af-212">El valor devuelto es menor que cero si el objeto actual es menor que el otro objeto, mayor que cero si el objeto actual es mayor que el otro objeto y cero si son iguales.</span><span class="sxs-lookup"><span data-stu-id="c08af-212">The value returned is less than zero if the current object is less than the other object, greater than zero if the current object is greater than the other object, and zero if they are equal.</span></span> <span data-ttu-id="c08af-213">Esto permite definir en el código los criterios de mayor que, menor que e igual.</span><span class="sxs-lookup"><span data-stu-id="c08af-213">This enables you to define in code the criteria for greater than, less than, and equal.</span></span>  
   
- En el `ListCars` (método), el `cars.Sort()` instrucción ordena la lista. Esta llamada a la <xref:System.Collections.Generic.List%601.Sort%2A>método de la <xref:System.Collections.Generic.List%601>hace que el `CompareTo` método al que llamar automáticamente para la `Car` objetos en la `List`.</xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.List%601.Sort%2A>  
+ <span data-ttu-id="c08af-214">En el método `ListCars`, la instrucción `cars.Sort()` ordena la lista.</span><span class="sxs-lookup"><span data-stu-id="c08af-214">In the `ListCars` method, the `cars.Sort()` statement sorts the list.</span></span> <span data-ttu-id="c08af-215">Esta llamada al método <xref:System.Collections.Generic.List%601.Sort%2A> de <xref:System.Collections.Generic.List%601> hace que se llame automáticamente al método `CompareTo` para los objetos `Car` de `List`.</span><span class="sxs-lookup"><span data-stu-id="c08af-215">This call to the <xref:System.Collections.Generic.List%601.Sort%2A> method of the <xref:System.Collections.Generic.List%601> causes the `CompareTo` method to be called automatically for the `Car` objects in the `List`.</span></span>  
   
 ```vb  
 Public Sub ListCars()  
@@ -477,14 +469,14 @@ End Class
 ```  
   
 <a name="BKMK_CustomCollection"></a> 
-## <a name="defining-a-custom-collection"></a>Definición de una colección personalizada  
- Puede definir una colección mediante la implementación de la <xref:System.Collections.Generic.IEnumerable%601>o <xref:System.Collections.IEnumerable>interfaz.</xref:System.Collections.IEnumerable> </xref:System.Collections.Generic.IEnumerable%601> Para obtener más información, consulte [enumerar una colección](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
+## <a name="defining-a-custom-collection"></a><span data-ttu-id="c08af-216">Definición de una colección personalizada</span><span class="sxs-lookup"><span data-stu-id="c08af-216">Defining a Custom Collection</span></span>  
+ <span data-ttu-id="c08af-217">Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="c08af-217">You can define a collection by implementing the <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Collections.IEnumerable> interface.</span></span> <span data-ttu-id="c08af-218">Para obtener más información, consulte [enumerar una colección](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).</span><span class="sxs-lookup"><span data-stu-id="c08af-218">For additional information, see [Enumerating a Collection](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).</span></span>  
   
- Aunque puede definir una colección personalizada, es mejor usar en su lugar las recopilaciones que se incluyen en .NET Framework, que se describen en [tipos de colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) anteriormente en este tema.  
+ <span data-ttu-id="c08af-219">Aunque puede definir una colección personalizada, es mejor usar las colecciones incluidas en .NET Framework. Estas colecciones se describen en la sección [Tipos de colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) de este tema.</span><span class="sxs-lookup"><span data-stu-id="c08af-219">Although you can define a custom collection, it is usually better to instead use the collections that are included in the .NET Framework, which are described in [Kinds of Collections](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) earlier in this topic.</span></span>  
   
- En el ejemplo siguiente se define una clase de colección personalizada denominada `AllColors`. Esta clase implementa la <xref:System.Collections.IEnumerable>interfaz, que requiere que el <xref:System.Collections.IEnumerable.GetEnumerator%2A>método implementarse.</xref:System.Collections.IEnumerable.GetEnumerator%2A> </xref:System.Collections.IEnumerable>  
+ <span data-ttu-id="c08af-220">En el siguiente ejemplo se define una clase de colección personalizada denominada `AllColors`.</span><span class="sxs-lookup"><span data-stu-id="c08af-220">The following example defines a custom collection class named `AllColors`.</span></span> <span data-ttu-id="c08af-221">Esta clase implementa la interfaz <xref:System.Collections.IEnumerable> que requiere implementar el método <xref:System.Collections.IEnumerable.GetEnumerator%2A>.</span><span class="sxs-lookup"><span data-stu-id="c08af-221">This class implements the <xref:System.Collections.IEnumerable> interface, which requires that the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method be implemented.</span></span>  
   
- El `GetEnumerator` método devuelve una instancia de la `ColorEnumerator` clase. `ColorEnumerator`implementa el <xref:System.Collections.IEnumerator>interfaz, que requiere que el <xref:System.Collections.IEnumerator.Current%2A>propiedad, <xref:System.Collections.IEnumerator.MoveNext%2A>(método), y <xref:System.Collections.IEnumerator.Reset%2A>método implementarse.</xref:System.Collections.IEnumerator.Reset%2A> </xref:System.Collections.IEnumerator.MoveNext%2A> </xref:System.Collections.IEnumerator.Current%2A> </xref:System.Collections.IEnumerator>  
+ <span data-ttu-id="c08af-222">El método `GetEnumerator` devuelve una instancia de la clase `ColorEnumerator`.</span><span class="sxs-lookup"><span data-stu-id="c08af-222">The `GetEnumerator` method returns an instance of the `ColorEnumerator` class.</span></span> <span data-ttu-id="c08af-223">`ColorEnumerator` implementa la interfaz <xref:System.Collections.IEnumerator>, que requiere que la propiedad <xref:System.Collections.IEnumerator.Current%2A>, el método <xref:System.Collections.IEnumerator.MoveNext%2A> y el método <xref:System.Collections.IEnumerator.Reset%2A> estén implementados.</span><span class="sxs-lookup"><span data-stu-id="c08af-223">`ColorEnumerator` implements the <xref:System.Collections.IEnumerator> interface, which requires that the <xref:System.Collections.IEnumerator.Current%2A> property, <xref:System.Collections.IEnumerator.MoveNext%2A> method, and <xref:System.Collections.IEnumerator.Reset%2A> method be implemented.</span></span>  
   
 ```vb  
 Public Sub ListColors()  
@@ -555,14 +547,14 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iteradores  
- Un *iterador* se usa para realizar una iteración personalizada sobre una colección. Un iterador puede ser un método o una `get` descriptor de acceso. Un iterador se usa un [producen](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección a la vez.  
+##  <a name="iterators"></a><span data-ttu-id="c08af-224">Iteradores</span><span class="sxs-lookup"><span data-stu-id="c08af-224">Iterators</span></span>  
+ <span data-ttu-id="c08af-225">Los *iteradores* se usan para efectuar una iteración personalizada en una colección.</span><span class="sxs-lookup"><span data-stu-id="c08af-225">An *iterator* is used to perform a custom iteration over a collection.</span></span> <span data-ttu-id="c08af-226">Un iterador puede ser un método o un descriptor de acceso `get`.</span><span class="sxs-lookup"><span data-stu-id="c08af-226">An iterator can be a method or a `get` accessor.</span></span> <span data-ttu-id="c08af-227">Un iterador utiliza un [producen](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección a la vez.</span><span class="sxs-lookup"><span data-stu-id="c08af-227">An iterator uses a [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element of the collection one at a time.</span></span>  
   
- Puede llamar a un iterador con un [For Each... Siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrucción. Cada iteración de la `For Each` bucle llama el iterador. Cuando un `Yield` se alcanza la instrucción en el iterador, se devuelve una expresión y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.  
+ <span data-ttu-id="c08af-228">Llamar a un iterador mediante un [For Each... Siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrucción.</span><span class="sxs-lookup"><span data-stu-id="c08af-228">You call an iterator by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement.</span></span> <span data-ttu-id="c08af-229">Cada iteración del bucle `For Each` llama al iterador.</span><span class="sxs-lookup"><span data-stu-id="c08af-229">Each iteration of the `For Each` loop calls the iterator.</span></span> <span data-ttu-id="c08af-230">Cuando se alcanza una instrucción `Yield` en el iterador, se devuelve una expresión y se conserva la ubicación actual en el código.</span><span class="sxs-lookup"><span data-stu-id="c08af-230">When a `Yield` statement is reached in the iterator, an expression is returned, and the current location in code is retained.</span></span> <span data-ttu-id="c08af-231">La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.</span><span class="sxs-lookup"><span data-stu-id="c08af-231">Execution is restarted from that location the next time that the iterator is called.</span></span>  
   
- Para obtener más información, consulte [iteradores (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).  
+ <span data-ttu-id="c08af-232">Para obtener más información, consulte [iteradores (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).</span><span class="sxs-lookup"><span data-stu-id="c08af-232">For more information, see [Iterators (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).</span></span>  
   
- El siguiente ejemplo usa el método del iterador. El método de iterador tiene un `Yield` instrucción que se encuentra dentro de un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) bucle. En el `ListEvenNumbers` método, cada iteración de la `For Each` cuerpo de instrucción crea una llamada al método iterador, que se dirige a la siguiente `Yield` instrucción.  
+ <span data-ttu-id="c08af-233">El siguiente ejemplo usa el método del iterador.</span><span class="sxs-lookup"><span data-stu-id="c08af-233">The following example uses an iterator method.</span></span> <span data-ttu-id="c08af-234">El método de iterador tiene una `Yield` que esté dentro de un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) bucle.</span><span class="sxs-lookup"><span data-stu-id="c08af-234">The iterator method has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop.</span></span> <span data-ttu-id="c08af-235">En el método `ListEvenNumbers`, cada iteración del cuerpo de la instrucción `For Each` crea una llamada al método iterador, que continúa con la siguiente instrucción `Yield`.</span><span class="sxs-lookup"><span data-stu-id="c08af-235">In the `ListEvenNumbers` method, each iteration of the `For Each` statement body creates a call to the iterator method, which proceeds to the next `Yield` statement.</span></span>  
   
 ```vb  
 Public Sub ListEvenNumbers()  
@@ -586,14 +578,14 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [Conceptos de programación (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)   
- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Parallel LINQ (PLINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
- [Colecciones y estructuras de datos](../../../standard/collections/index.md)   
- [Crear y manipular colecciones](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
- [Seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md)   
- [Las comparaciones y ordenaciones en colecciones](../../../standard/collections/comparisons-and-sorts-within-collections.md)   
- [Cuándo utilizar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)
+## <a name="see-also"></a><span data-ttu-id="c08af-236">Vea también</span><span class="sxs-lookup"><span data-stu-id="c08af-236">See Also</span></span>  
+ [<span data-ttu-id="c08af-237">Inicializadores de colección</span><span class="sxs-lookup"><span data-stu-id="c08af-237">Collection Initializers</span></span>](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ <span data-ttu-id="c08af-238">[Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md) (Conceptos de programación (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="c08af-238">[Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)</span></span>  
+ [<span data-ttu-id="c08af-239">Option Strict (instrucción)</span><span class="sxs-lookup"><span data-stu-id="c08af-239">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="c08af-240">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c08af-240">LINQ to Objects (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="c08af-241">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="c08af-241">Parallel LINQ (PLINQ)</span></span>](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+ [<span data-ttu-id="c08af-242">Colecciones y estructuras de datos</span><span class="sxs-lookup"><span data-stu-id="c08af-242">Collections and Data Structures</span></span>](../../../standard/collections/index.md)  
+ [<span data-ttu-id="c08af-243">Crear y manipular colecciones</span><span class="sxs-lookup"><span data-stu-id="c08af-243">Creating and Manipulating Collections</span></span>](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [<span data-ttu-id="c08af-244">Seleccionar una clase de colección</span><span class="sxs-lookup"><span data-stu-id="c08af-244">Selecting a Collection Class</span></span>](../../../standard/collections/selecting-a-collection-class.md)  
+ [<span data-ttu-id="c08af-245">Comparaciones y ordenaciones en colecciones</span><span class="sxs-lookup"><span data-stu-id="c08af-245">Comparisons and Sorts Within Collections</span></span>](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+ [<span data-ttu-id="c08af-246">Cuándo utilizar colecciones genéricas</span><span class="sxs-lookup"><span data-stu-id="c08af-246">When to Use Generic Collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)

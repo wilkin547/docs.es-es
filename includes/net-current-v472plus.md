@@ -1,0 +1,1 @@
+<span data-ttu-id="4dead-101">Disponible desde 4.7.2</span><span class="sxs-lookup"><span data-stu-id="4dead-101">Available since 4.7.2</span></span>

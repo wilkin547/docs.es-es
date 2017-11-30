@@ -1,44 +1,48 @@
 ---
-title: "C&#243;mo: Utilizar SystemParameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases, SystemParameters"
-  - "SystemParameters (clase)"
+title: "Cómo: Utilizar SystemParameters"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f4b2ee3956017e10da8adda52fa9a0ec31cb19ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Utilizar SystemParameters
-En este ejemplo se muestra cómo obtener acceso a las propiedades de <xref:System.Windows.SystemParameters> y utilizarlas para aplicar un estilo a un botón o personalizarlo.  
+# <a name="how-to-use-systemparameters"></a><span data-ttu-id="93f59-102">Cómo: Utilizar SystemParameters</span><span class="sxs-lookup"><span data-stu-id="93f59-102">How to: Use SystemParameters</span></span>
+<span data-ttu-id="93f59-103">Este ejemplo muestra cómo obtener acceso y utilizar las propiedades de <xref:System.Windows.SystemParameters> para aplicar estilo a un botón o personalizarlo.</span><span class="sxs-lookup"><span data-stu-id="93f59-103">This example shows how to access and use the properties of <xref:System.Windows.SystemParameters> in order to style or customize a button.</span></span>  
   
-## Ejemplo  
- Los recursos del sistema exponen diversos valores del sistema como recursos, a fin de ayudarle a crear efectos visuales coherentes con la configuración del sistema.  <xref:System.Windows.SystemParameters> es una clase que contiene tanto propiedades de los valores de los parámetros del sistema como claves de recurso que se enlazan a los valores.  Por ejemplo, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> es un valor de propiedad <xref:System.Windows.SystemParameters> y <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> es la clave de recurso correspondiente.  
+## <a name="example"></a><span data-ttu-id="93f59-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="93f59-104">Example</span></span>  
+ <span data-ttu-id="93f59-105">Los recursos del sistema exponen varias configuraciones basadas en el sistema como recursos para ayudarle a crear objetos visuales coherentes con la configuración del sistema.</span><span class="sxs-lookup"><span data-stu-id="93f59-105">System resources expose several system based settings as resources in order to help you create visuals that are consistent with system settings.</span></span> <span data-ttu-id="93f59-106"><xref:System.Windows.SystemParameters>es una clase que contiene propiedades de valor del parámetro de sistema y las claves de recursos que se enlazan a los valores.</span><span class="sxs-lookup"><span data-stu-id="93f59-106"><xref:System.Windows.SystemParameters> is a class that contains both system parameter value properties, and resource keys that bind to the values.</span></span> <span data-ttu-id="93f59-107">Por ejemplo, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> es un <xref:System.Windows.SystemParameters> valor de propiedad y <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> es la clave de recurso correspondiente.</span><span class="sxs-lookup"><span data-stu-id="93f59-107">For example, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> is a <xref:System.Windows.SystemParameters> property value and <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> is the corresponding resource key.</span></span>  
   
- En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], puede utilizar los miembros de <xref:System.Windows.SystemParameters> como propiedades estáticas o como referencias de recurso dinámicas \(donde se use como clave el valor de propiedad estática\).  Utilice una referencia dinámica a un recurso si desea que el valor del sistema se actualice automáticamente mientras se ejecuta la aplicación; de lo contrario, utilice una referencia estática.  Las claves de recurso tienen el sufijo `Key` anexado al nombre de propiedad.  
+ <span data-ttu-id="93f59-108">En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], puede utilizar los miembros de <xref:System.Windows.SystemParameters> como el uso de una propiedad estática o referencias de recurso dinámicas (con el valor de propiedad estática como la clave).</span><span class="sxs-lookup"><span data-stu-id="93f59-108">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you can use the members of <xref:System.Windows.SystemParameters> as either a static property usage, or a dynamic resource references (with the static property value as the key).</span></span> <span data-ttu-id="93f59-109">Use una referencia de recursos dinámicos si quiere que el valor basado en el sistema se actualice automáticamente mientras se ejecuta la aplicación. De lo contrario, use un recurso estático.</span><span class="sxs-lookup"><span data-stu-id="93f59-109">Use a dynamic resource reference if you want the system based value to update automatically while the application runs; otherwise, use a static reference.</span></span> <span data-ttu-id="93f59-110">Las claves de recurso tienen el sufijo `Key` anexado al nombre de propiedad.</span><span class="sxs-lookup"><span data-stu-id="93f59-110">Resource keys have the suffix `Key` appended to the property name.</span></span>  
   
- En el ejemplo siguiente se muestra cómo obtener acceso a los valores estáticos de <xref:System.Windows.SystemParameters> y utilizarlos para aplicar un estilo a un botón o personalizarlo.  En este de código de marcado de ejemplo se ajusta el tamaño del botón aplicándole valores de <xref:System.Windows.SystemParameters>.  
+ <span data-ttu-id="93f59-111">En el ejemplo siguiente se muestra cómo obtener acceso y utilizar los valores estáticos de <xref:System.Windows.SystemParameters> para aplicar estilo a un botón o personalizarlo.</span><span class="sxs-lookup"><span data-stu-id="93f59-111">The following example shows how to access and use the static values of <xref:System.Windows.SystemParameters> to style or customize a button.</span></span> <span data-ttu-id="93f59-112">Este ejemplo de marcado se cambia el tamaño de un botón mediante la aplicación <xref:System.Windows.SystemParameters> valores a un botón.</span><span class="sxs-lookup"><span data-stu-id="93f59-112">This markup example sizes a button by applying <xref:System.Windows.SystemParameters> values to a button.</span></span>  
   
- [!code-xml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
- Para utilizar los valores de <xref:System.Windows.SystemParameters> en el código, no tiene que utilizar referencias estáticas o referencias de recurso dinámicas.  En su lugar, utilice los valores de la clase <xref:System.Windows.SystemParameters>.  Aunque en apariencia las propiedades que no son claves se definen como propiedades estáticas, el comportamiento en tiempo de ejecución de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cuando está hospedado en el sistema hace que se vuelvan a evaluar las propiedades en tiempo real y que se reflejen correctamente los cambios a los valores del sistema controlados por el usuario. En el ejemplo siguiente se muestra cómo establecer el ancho y el alto de un botón mediante los valores de <xref:System.Windows.SystemParameters>.  
+ <span data-ttu-id="93f59-113">Para usar los valores de <xref:System.Windows.SystemParameters> en el código, no es necesario utilizar referencias estáticas o referencias de recursos dinámicos.</span><span class="sxs-lookup"><span data-stu-id="93f59-113">To use the values of <xref:System.Windows.SystemParameters> in code, you do not have to use either static references or dynamic resource references.</span></span> <span data-ttu-id="93f59-114">En su lugar, use los valores de la <xref:System.Windows.SystemParameters> clase.</span><span class="sxs-lookup"><span data-stu-id="93f59-114">Instead, use the values of the <xref:System.Windows.SystemParameters> class.</span></span> <span data-ttu-id="93f59-115">Aunque las propiedades de clave no aparentemente se definen como propiedades estáticas, el comportamiento en tiempo de ejecución de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cuando está hospedado en el sistema se vuelve a evaluar las propiedades en tiempo real, y de correctamente explicar los cambios controlados por el usuario a valores del sistema.</span><span class="sxs-lookup"><span data-stu-id="93f59-115">Although the non-key properties are apparently defined as static properties, the runtime behavior of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] as hosted by the system will reevaluate the properties in realtime, and will properly account for user-driven changes to system values.</span></span> <span data-ttu-id="93f59-116">En el ejemplo siguiente se muestra cómo establecer el ancho y alto de un botón mediante el uso de <xref:System.Windows.SystemParameters> valores.</span><span class="sxs-lookup"><span data-stu-id="93f59-116">The following example shows how to set the width and height of a button by using <xref:System.Windows.SystemParameters> values.</span></span>  
   
  [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
  [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
-## Vea también  
- <xref:System.Windows.SystemParameters>   
- [Pintar un área con un pincel del sistema](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
- [Utilizar SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)   
- [Utilizar claves de parámetros del sistema](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="93f59-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="93f59-117">See Also</span></span>  
+ <xref:System.Windows.SystemParameters>  
+ [<span data-ttu-id="93f59-118">Pintar un área con un pincel del sistema</span><span class="sxs-lookup"><span data-stu-id="93f59-118">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="93f59-119">Usar SystemFonts</span><span class="sxs-lookup"><span data-stu-id="93f59-119">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [<span data-ttu-id="93f59-120">Usar claves de parámetros del sistema</span><span class="sxs-lookup"><span data-stu-id="93f59-120">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [<span data-ttu-id="93f59-121">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="93f59-121">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

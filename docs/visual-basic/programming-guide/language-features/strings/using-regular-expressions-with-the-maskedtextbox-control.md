@@ -1,88 +1,71 @@
 ---
-title: Utilizar expresiones regulares con el Control MaskedTextBox en Visual Basic | Documentos de Microsoft
+title: Utilizar expresiones regulares con el control MaskedTextBox en Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 15d8f131aa834321fcf7e8ca633929385c666e6a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizar expresiones regulares con el control MaskedTextBox en Visual Basic
-En este ejemplo se muestra cómo convertir las expresiones regulares simples para trabajar con el <xref:System.Windows.Forms.MaskedTextBox>control.</xref:System.Windows.Forms.MaskedTextBox>  
+# <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a><span data-ttu-id="a22d3-102">Utilizar expresiones regulares con el control MaskedTextBox en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a22d3-102">Using Regular Expressions with the MaskedTextBox Control in Visual Basic</span></span>
+<span data-ttu-id="a22d3-103">En este ejemplo se muestra cómo convertir las expresiones regulares simples para trabajar con el <xref:System.Windows.Forms.MaskedTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="a22d3-103">This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
-## <a name="description-of-the-masking-language"></a>Descripción del lenguaje de enmascaramiento  
- El estándar <xref:System.Windows.Forms.MaskedTextBox>lenguaje de enmascaramiento se basa en el usado por el `Masked Edit` del control de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 6.0 y debe resultarle familiar a los usuarios que migren desde esa plataforma.</xref:System.Windows.Forms.MaskedTextBox>  
+## <a name="description-of-the-masking-language"></a><span data-ttu-id="a22d3-104">Descripción del lenguaje de enmascaramiento</span><span class="sxs-lookup"><span data-stu-id="a22d3-104">Description of the Masking Language</span></span>  
+ <span data-ttu-id="a22d3-105">El estándar <xref:System.Windows.Forms.MaskedTextBox> lenguaje de enmascaramiento se basa en el utilizado por una la `Masked Edit` controlar en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 y debe resultarle familiar a los usuarios que migren desde esa plataforma.</span><span class="sxs-lookup"><span data-stu-id="a22d3-105">The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 and should be familiar to users migrating from that platform.</span></span>  
   
- El <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>propiedad de la <xref:System.Windows.Forms.MaskedTextBox>control especifica qué máscara de entrada que utilice.</xref:System.Windows.Forms.MaskedTextBox> </xref:System.Windows.Forms.MaskedTextBox.Mask%2A> La máscara debe ser una cadena compuesta de uno o varios de los elementos de enmascaramiento de la tabla siguiente.  
+ <span data-ttu-id="a22d3-106">El <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad de la <xref:System.Windows.Forms.MaskedTextBox> control especifica qué máscara de entrada para usar.</span><span class="sxs-lookup"><span data-stu-id="a22d3-106">The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use.</span></span> <span data-ttu-id="a22d3-107">La máscara debe ser una cadena compuesta de uno o varios de los elementos de enmascaramiento de la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="a22d3-107">The mask must be a string composed of one or more of the masking elements from the following table.</span></span>  
   
-|Elemento de enmascaramiento|Descripción|Elemento de expresión regular|  
+|<span data-ttu-id="a22d3-108">Elemento de enmascaramiento</span><span class="sxs-lookup"><span data-stu-id="a22d3-108">Masking element</span></span>|<span data-ttu-id="a22d3-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="a22d3-109">Description</span></span>|<span data-ttu-id="a22d3-110">Elemento de expresión regular</span><span class="sxs-lookup"><span data-stu-id="a22d3-110">Regular expression element</span></span>|  
 |---------------------|-----------------|--------------------------------|  
-|0|Cualquier dígito único entre 0 y 9. Entrada requerida.|\d|  
-|9|Dígito o espacio. Entrada opcional.|[ \d]?|  
-|#|Dígito o espacio. Entrada opcional. Si esta posición está en blanco en la máscara, se representará como un espacio. Signo más (+) y menos (-) se permiten signos.|[ \d+-]?|  
-|L|Letra ASCII. Entrada requerida.|[a-zA-Z]|  
-|?|Letra ASCII. Entrada opcional.|¿[a-zA-Z]?|  
-|&|Carácter. Entrada requerida.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo]}|  
-|C|Carácter. Entrada opcional.|¿[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|A|Alfanumérico. Entrada opcional.|\W|  
-|.|Marcador de posición decimal adecuado para la referencia cultural.|No está disponible.|  
-|,|Marcador de posición de miles adecuado para la referencia cultural.|No está disponible.|  
-|:|Separador de hora adecuado para la referencia cultural.|No está disponible.|  
-|/|Separador de fecha adecuado para la referencia cultural.|No está disponible.|  
-|$|Símbolo de moneda adecuado para la referencia cultural.|No está disponible.|  
-|\<|Convierte todos los caracteres que siguen a minúsculas.|No está disponible.|  
-|>|Convierte todos los caracteres que siguen a mayúsculas.|No está disponible.|  
-|&#124;|Deshace un cambio anterior de mayúsculas o minúsculas.|No está disponible.|  
-|\|Convierte un carácter de máscara, convirtiéndolo en un literal. "\\\\" es la secuencia de escape para una barra diagonal inversa.|\|  
-|Todos los demás caracteres.|Literales. Todos los elementos no enmascarados aparecerán como ellos mismos <xref:System.Windows.Forms.MaskedTextBox>.</xref:System.Windows.Forms.MaskedTextBox>|Todos los demás caracteres.|  
+|<span data-ttu-id="a22d3-111">0</span><span class="sxs-lookup"><span data-stu-id="a22d3-111">0</span></span>|<span data-ttu-id="a22d3-112">Cualquier dígito comprendido entre 0 y 9.</span><span class="sxs-lookup"><span data-stu-id="a22d3-112">Any single digit between 0 and 9.</span></span> <span data-ttu-id="a22d3-113">Entrada requerida.</span><span class="sxs-lookup"><span data-stu-id="a22d3-113">Entry required.</span></span>|<span data-ttu-id="a22d3-114">\d</span><span class="sxs-lookup"><span data-stu-id="a22d3-114">\d</span></span>|  
+|<span data-ttu-id="a22d3-115">9</span><span class="sxs-lookup"><span data-stu-id="a22d3-115">9</span></span>|<span data-ttu-id="a22d3-116">Dígito o espacio.</span><span class="sxs-lookup"><span data-stu-id="a22d3-116">Digit or space.</span></span> <span data-ttu-id="a22d3-117">Entrada opcional.</span><span class="sxs-lookup"><span data-stu-id="a22d3-117">Entry optional.</span></span>|<span data-ttu-id="a22d3-118">¿[\d]?</span><span class="sxs-lookup"><span data-stu-id="a22d3-118">[ \d]?</span></span>|  
+|#|<span data-ttu-id="a22d3-119">Dígito o espacio.</span><span class="sxs-lookup"><span data-stu-id="a22d3-119">Digit or space.</span></span> <span data-ttu-id="a22d3-120">Entrada opcional.</span><span class="sxs-lookup"><span data-stu-id="a22d3-120">Entry optional.</span></span> <span data-ttu-id="a22d3-121">Si esta posición se deja en blanco en la máscara, se representará como un espacio.</span><span class="sxs-lookup"><span data-stu-id="a22d3-121">If this position is left blank in the mask, it will be rendered as a space.</span></span> <span data-ttu-id="a22d3-122">Signo más (+) y menos (-) se permiten signos.</span><span class="sxs-lookup"><span data-stu-id="a22d3-122">Plus (+) and minus (-) signs are allowed.</span></span>|<span data-ttu-id="a22d3-123">¿[\d+-]?</span><span class="sxs-lookup"><span data-stu-id="a22d3-123">[ \d+-]?</span></span>|  
+|<span data-ttu-id="a22d3-124">L</span><span class="sxs-lookup"><span data-stu-id="a22d3-124">L</span></span>|<span data-ttu-id="a22d3-125">Letra ASCII.</span><span class="sxs-lookup"><span data-stu-id="a22d3-125">ASCII letter.</span></span> <span data-ttu-id="a22d3-126">Entrada requerida.</span><span class="sxs-lookup"><span data-stu-id="a22d3-126">Entry required.</span></span>|<span data-ttu-id="a22d3-127">[a-zA-Z]</span><span class="sxs-lookup"><span data-stu-id="a22d3-127">[a-zA-Z]</span></span>|  
+|<span data-ttu-id="a22d3-128">?</span><span class="sxs-lookup"><span data-stu-id="a22d3-128">?</span></span>|<span data-ttu-id="a22d3-129">Letra ASCII.</span><span class="sxs-lookup"><span data-stu-id="a22d3-129">ASCII letter.</span></span> <span data-ttu-id="a22d3-130">Entrada opcional.</span><span class="sxs-lookup"><span data-stu-id="a22d3-130">Entry optional.</span></span>|<span data-ttu-id="a22d3-131">¿[a-zA-Z]?</span><span class="sxs-lookup"><span data-stu-id="a22d3-131">[a-zA-Z]?</span></span>|  
+|&|<span data-ttu-id="a22d3-132">Carácter.</span><span class="sxs-lookup"><span data-stu-id="a22d3-132">Character.</span></span> <span data-ttu-id="a22d3-133">Entrada requerida.</span><span class="sxs-lookup"><span data-stu-id="a22d3-133">Entry required.</span></span>|<span data-ttu-id="a22d3-134">[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]</span><span class="sxs-lookup"><span data-stu-id="a22d3-134">[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]</span></span>|  
+|<span data-ttu-id="a22d3-135">C</span><span class="sxs-lookup"><span data-stu-id="a22d3-135">C</span></span>|<span data-ttu-id="a22d3-136">Carácter.</span><span class="sxs-lookup"><span data-stu-id="a22d3-136">Character.</span></span> <span data-ttu-id="a22d3-137">Entrada opcional.</span><span class="sxs-lookup"><span data-stu-id="a22d3-137">Entry optional.</span></span>|<span data-ttu-id="a22d3-138">¿[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?</span><span class="sxs-lookup"><span data-stu-id="a22d3-138">[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?</span></span>|  
+|<span data-ttu-id="a22d3-139">A</span><span class="sxs-lookup"><span data-stu-id="a22d3-139">A</span></span>|<span data-ttu-id="a22d3-140">Alfanumérico.</span><span class="sxs-lookup"><span data-stu-id="a22d3-140">Alphanumeric.</span></span> <span data-ttu-id="a22d3-141">Entrada opcional.</span><span class="sxs-lookup"><span data-stu-id="a22d3-141">Entry optional.</span></span>|<span data-ttu-id="a22d3-142">\W</span><span class="sxs-lookup"><span data-stu-id="a22d3-142">\W</span></span>|  
+|<span data-ttu-id="a22d3-143">.</span><span class="sxs-lookup"><span data-stu-id="a22d3-143">.</span></span>|<span data-ttu-id="a22d3-144">Marcador de posición decimal adecuado para la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="a22d3-144">Culture-appropriate decimal placeholder.</span></span>|<span data-ttu-id="a22d3-145">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-145">Not available.</span></span>|  
+|<span data-ttu-id="a22d3-146">,</span><span class="sxs-lookup"><span data-stu-id="a22d3-146">,</span></span>|<span data-ttu-id="a22d3-147">Marcador de posición de miles adecuado para la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="a22d3-147">Culture-appropriate thousands placeholder.</span></span>|<span data-ttu-id="a22d3-148">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-148">Not available.</span></span>|  
+|<span data-ttu-id="a22d3-149">:</span><span class="sxs-lookup"><span data-stu-id="a22d3-149">:</span></span>|<span data-ttu-id="a22d3-150">Separador de hora adecuado para la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="a22d3-150">Culture-appropriate time separator.</span></span>|<span data-ttu-id="a22d3-151">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-151">Not available.</span></span>|  
+|/|<span data-ttu-id="a22d3-152">Separador de fecha adecuado para la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="a22d3-152">Culture-appropriate date separator.</span></span>|<span data-ttu-id="a22d3-153">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-153">Not available.</span></span>|  
+|$|<span data-ttu-id="a22d3-154">Símbolo de moneda adecuado para la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="a22d3-154">Culture-appropriate currency symbol.</span></span>|<span data-ttu-id="a22d3-155">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-155">Not available.</span></span>|  
+|\<|<span data-ttu-id="a22d3-156">Convierte todos los caracteres que siguen a minúsculas.</span><span class="sxs-lookup"><span data-stu-id="a22d3-156">Converts all characters that follow to lowercase.</span></span>|<span data-ttu-id="a22d3-157">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-157">Not available.</span></span>|  
+|>|<span data-ttu-id="a22d3-158">Convierte todos los caracteres que siguen a mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="a22d3-158">Converts all characters that follow to uppercase.</span></span>|<span data-ttu-id="a22d3-159">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-159">Not available.</span></span>|  
+|<span data-ttu-id="a22d3-160">&#124;</span><span class="sxs-lookup"><span data-stu-id="a22d3-160">&#124;</span></span>|<span data-ttu-id="a22d3-161">Deshace un cambio anterior una o desplazar hacia abajo.</span><span class="sxs-lookup"><span data-stu-id="a22d3-161">Undoes a previous shift up or shift down.</span></span>|<span data-ttu-id="a22d3-162">No está disponible.</span><span class="sxs-lookup"><span data-stu-id="a22d3-162">Not available.</span></span>|  
+|\|<span data-ttu-id="a22d3-163">Convierte un carácter de máscara, convirtiéndolo en un literal.</span><span class="sxs-lookup"><span data-stu-id="a22d3-163">Escapes a mask character, turning it into a literal.</span></span> <span data-ttu-id="a22d3-164">"\\\\" es la secuencia de escape para una barra diagonal inversa.</span><span class="sxs-lookup"><span data-stu-id="a22d3-164">"\\\\" is the escape sequence for a backslash.</span></span>|\|  
+|<span data-ttu-id="a22d3-165">Todos los demás caracteres.</span><span class="sxs-lookup"><span data-stu-id="a22d3-165">All other characters.</span></span>|<span data-ttu-id="a22d3-166">Literales.</span><span class="sxs-lookup"><span data-stu-id="a22d3-166">Literals.</span></span> <span data-ttu-id="a22d3-167">Todos los elementos de la máscara no aparecerán como ellos mismos en <xref:System.Windows.Forms.MaskedTextBox>.</span><span class="sxs-lookup"><span data-stu-id="a22d3-167">All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.</span></span>|<span data-ttu-id="a22d3-168">Todos los demás caracteres.</span><span class="sxs-lookup"><span data-stu-id="a22d3-168">All other characters.</span></span>|  
   
- El separador decimal (.), miles (,), hora (:), fecha (/) y predeterminada de símbolos de moneda ($) para mostrar los símbolos de acuerdo con la referencia cultural de la aplicación. Puede forzar que muestren los símbolos de otra referencia cultural utilizando el <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>propiedad.</xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>  
+ <span data-ttu-id="a22d3-169">El separador decimal (.), miles (,), hora (:), fecha (/) y predeterminada de símbolos de moneda ($) para mostrar esos símbolos tal como se define en la referencia cultural de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a22d3-169">The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture.</span></span> <span data-ttu-id="a22d3-170">Puede forzar que se muestren símbolos para otra referencia cultural utilizando el <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="a22d3-170">You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.</span></span>  
   
-## <a name="regular-expressions-and-masks"></a>Expresiones regulares y máscaras  
- Aunque puede utilizar expresiones regulares y máscaras para validar la entrada del usuario, no son totalmente equivalentes. Las expresiones regulares pueden expresar modelos más complejos de máscaras, pero máscaras pueden expresar la misma información de forma más concisa y en un formato de referencia cultural correspondiente.  
+## <a name="regular-expressions-and-masks"></a><span data-ttu-id="a22d3-171">Expresiones regulares y máscaras</span><span class="sxs-lookup"><span data-stu-id="a22d3-171">Regular Expressions and Masks</span></span>  
+ <span data-ttu-id="a22d3-172">Aunque puede usar expresiones regulares y máscaras para validar entrada de usuario, no son totalmente equivalentes.</span><span class="sxs-lookup"><span data-stu-id="a22d3-172">Although you can use regular expressions and masks to validate user input, they are not completely equivalent.</span></span> <span data-ttu-id="a22d3-173">Las expresiones regulares pueden expresar modelos más complejos de máscaras, pero máscaras pueden expresar la misma información más sucinta y en un formato de referencia cultural relevante.</span><span class="sxs-lookup"><span data-stu-id="a22d3-173">Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.</span></span>  
   
- La tabla siguiente compara cuatro expresiones regulares y la máscara equivalente para cada uno.  
+ <span data-ttu-id="a22d3-174">En la tabla siguiente compara cuatro expresiones regulares y la máscara equivalente para cada uno.</span><span class="sxs-lookup"><span data-stu-id="a22d3-174">The following table compares four regular expressions and the equivalent mask for each.</span></span>  
   
-|Expresión regular|Máscara|Notas|  
+|<span data-ttu-id="a22d3-175">Expresión regular</span><span class="sxs-lookup"><span data-stu-id="a22d3-175">Regular Expression</span></span>|<span data-ttu-id="a22d3-176">Máscara</span><span class="sxs-lookup"><span data-stu-id="a22d3-176">Mask</span></span>|<span data-ttu-id="a22d3-177">Notas</span><span class="sxs-lookup"><span data-stu-id="a22d3-177">Notes</span></span>|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|El `/` de la máscara es un separador de fecha lógico y aparecerá al usuario como el separador de fecha adecuado para la referencia cultural actual de la aplicación.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Una fecha (día, abreviatura del mes y año) en formato de Estados Unidos en el que se muestra la abreviatura del mes de tres letras con una letra mayúscula inicial seguida de dos letras en minúsculas.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Número de teléfono de Estados Unidos, código de área opcional. Si el usuario no desea escribir los caracteres opcionales, ella puede escribir espacios o colocar el puntero del mouse directamente en la posición de la máscara representada por el primer 0.|  
-|`$\d{6}.00`|`$999,999.00`|Valor de moneda en el intervalo de 0 a 999999. La moneda y milésima caracteres decimales se sustituirán en tiempo de ejecución con sus equivalentes específicos de la referencia cultural.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|<span data-ttu-id="a22d3-178">El `/` carácter en la máscara es un separador de fecha lógico y aparecerá al usuario como el separador de fecha apropiado para la referencia cultural actual de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a22d3-178">The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.</span></span>|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|<span data-ttu-id="a22d3-179">Una fecha (día, abreviatura del mes y año) en formato de Estados Unidos en el que se muestra la abreviatura del mes de tres letras con una letra mayúscula inicial seguida de dos letras en minúsculas.</span><span class="sxs-lookup"><span data-stu-id="a22d3-179">A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.</span></span>|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|<span data-ttu-id="a22d3-180">Número de teléfono de Estados Unidos, código de área opcional.</span><span class="sxs-lookup"><span data-stu-id="a22d3-180">United States phone number, area code optional.</span></span> <span data-ttu-id="a22d3-181">Si el usuario no desea escribir los caracteres opcionales, puede escribir espacios o colocar el puntero del mouse directamente en la posición de la máscara representada por el primer 0.</span><span class="sxs-lookup"><span data-stu-id="a22d3-181">If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.</span></span>|  
+|`$\d{6}.00`|`$999,999.00`|<span data-ttu-id="a22d3-182">Un valor de moneda en el intervalo de 0 a 999999.</span><span class="sxs-lookup"><span data-stu-id="a22d3-182">A currency value in the range of 0 to 999999.</span></span> <span data-ttu-id="a22d3-183">La moneda, milésima de segundo y caracteres decimales se sustituirán en tiempo de ejecución con sus equivalentes específicos de la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="a22d3-183">The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A></xref:System.Windows.Forms.MaskedTextBox.Mask%2A>   
- <xref:System.Windows.Forms.MaskedTextBox></xref:System.Windows.Forms.MaskedTextBox>   
- [Validar cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)   
- [MaskedTextBox (Control)](http://msdn.microsoft.com/library/235d6121-027d-481d-8d59-4f6794d15d0c)
+## <a name="see-also"></a><span data-ttu-id="a22d3-184">Vea también</span><span class="sxs-lookup"><span data-stu-id="a22d3-184">See Also</span></span>  
+ <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
+ <xref:System.Windows.Forms.MaskedTextBox>  
+ [<span data-ttu-id="a22d3-185">Validar cadenas en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a22d3-185">Validating Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ [<span data-ttu-id="a22d3-186">MaskedTextBox (control)</span><span class="sxs-lookup"><span data-stu-id="a22d3-186">MaskedTextBox Control</span></span>](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

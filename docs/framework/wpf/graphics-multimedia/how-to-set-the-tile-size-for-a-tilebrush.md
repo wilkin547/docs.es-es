@@ -1,51 +1,54 @@
 ---
-title: "C&#243;mo: Establecer el tama&#241;o del mosaico de un TileBrush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TileBrush, tamaño de los mosaicos"
-  - "Viewport (propiedad de TileBrush)"
+title: "Cómo: Establecer el tamaño del mosaico de un TileBrush"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TileBrush [WPF], size of tilepropertys
+- Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 484419c05c3d607212ea6d565777cf49cbfdbc19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer el tama&#241;o del mosaico de un TileBrush
-En este ejemplo se muestra cómo establecer el tamaño del mosaico para <xref:System.Windows.Media.TileBrush>.  De manera predeterminada, <xref:System.Windows.Media.TileBrush> genera un mosaico único que rellena completamente el área que se está pintando.  Puede invalidar este comportamiento estableciendo las propiedades <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.  
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a><span data-ttu-id="da58d-102">Cómo: Establecer el tamaño del mosaico de un TileBrush</span><span class="sxs-lookup"><span data-stu-id="da58d-102">How to: Set the Tile Size for a TileBrush</span></span>
+<span data-ttu-id="da58d-103">Este ejemplo muestra cómo establecer el tamaño del mosaico para un <xref:System.Windows.Media.TileBrush>.</span><span class="sxs-lookup"><span data-stu-id="da58d-103">This example shows how to set the tile size for a <xref:System.Windows.Media.TileBrush>.</span></span> <span data-ttu-id="da58d-104">De forma predeterminada, un <xref:System.Windows.Media.TileBrush> genera un mosaico único que rellena completamente el área que se está pintando.</span><span class="sxs-lookup"><span data-stu-id="da58d-104">By default, a <xref:System.Windows.Media.TileBrush> produces a single tile that completely fills the area that you are painting.</span></span> <span data-ttu-id="da58d-105">Puede invalidar este comportamiento estableciendo el <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedades.</span><span class="sxs-lookup"><span data-stu-id="da58d-105">You can override this behavior by setting the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> properties.</span></span>  
   
- La propiedad <xref:System.Windows.Media.TileBrush.Viewport%2A> especifica el tamaño del mosaico para <xref:System.Windows.Media.TileBrush>.  De manera predeterminada, el valor de la propiedad <xref:System.Windows.Media.TileBrush.Viewport%2A> es relativo al tamaño del área que se está pintando.  Para que la propiedad <xref:System.Windows.Media.TileBrush.Viewport%2A> especifique un tamaño del mosaico absoluto, establezca la propiedad <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> en <xref:System.Windows.Media.BrushMappingMode>.  
+ <span data-ttu-id="da58d-106">El <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad especifica el tamaño del mosaico para un <xref:System.Windows.Media.TileBrush>.</span><span class="sxs-lookup"><span data-stu-id="da58d-106">The <xref:System.Windows.Media.TileBrush.Viewport%2A> property specifies the tile size for a <xref:System.Windows.Media.TileBrush>.</span></span> <span data-ttu-id="da58d-107">De forma predeterminada, el valor de la <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad es relativo al tamaño del área que se está pintando.</span><span class="sxs-lookup"><span data-stu-id="da58d-107">By default, the value of the <xref:System.Windows.Media.TileBrush.Viewport%2A> property is relative to the size of the area being painted.</span></span> <span data-ttu-id="da58d-108">Para realizar la <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad especifique un tamaño de icono absoluta, establecer el <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedad <xref:System.Windows.Media.BrushMappingMode.Absolute>.</span><span class="sxs-lookup"><span data-stu-id="da58d-108">To make the <xref:System.Windows.Media.TileBrush.Viewport%2A> property specify an absolute tile size, set the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> property to <xref:System.Windows.Media.BrushMappingMode.Absolute>.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza <xref:System.Windows.Media.ImageBrush>, un tipo de <xref:System.Windows.Media.TileBrush>, para pintar un rectángulo con mosaicos.  En el ejemplo se establece el área de salida de cada mosaico en el 50% del alto y del ancho \(el rectángulo\).  Como resultado, el rectángulo se pintado con cuatro proyecciones de la imagen.  
+## <a name="example"></a><span data-ttu-id="da58d-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="da58d-109">Example</span></span>  
+ <span data-ttu-id="da58d-110">En el ejemplo siguiente se usa un <xref:System.Windows.Media.ImageBrush>, un tipo de <xref:System.Windows.Media.TileBrush>, para dibujar un rectángulo con mosaicos.</span><span class="sxs-lookup"><span data-stu-id="da58d-110">The following example uses an <xref:System.Windows.Media.ImageBrush>, a type of <xref:System.Windows.Media.TileBrush>, to paint a rectangle with tiles.</span></span> <span data-ttu-id="da58d-111">El ejemplo establece cada mosaico en un área de salida de 50 por 50 (el rectángulo).</span><span class="sxs-lookup"><span data-stu-id="da58d-111">The example sets each tile to  50 percent by 50 percent of the output area (the rectangle).</span></span> <span data-ttu-id="da58d-112">Como resultado, el rectángulo se pinta con cuatro proyecciones de la imagen.</span><span class="sxs-lookup"><span data-stu-id="da58d-112">As a result, the rectangle is painted with four projections of the image.</span></span>  
   
- En la ilustración siguiente se muestra el resultado de aplicar el ejemplo.  
+ <span data-ttu-id="da58d-113">La siguiente ilustración muestra el resultado que genera el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="da58d-113">The following illustration shows the output that the example produces.</span></span>
   
- ![Ejemplo de disposición en mosaico con un pincel de imagen](../../../../docs/framework/wpf/graphics-multimedia/media/0.png "0")  
+ <span data-ttu-id="da58d-114">![Ejemplo de la disposición en mosaico con un pincel de imagen](../../../../docs/framework/wpf/graphics-multimedia/media/0.png "0")</span><span class="sxs-lookup"><span data-stu-id="da58d-114">![Example of tiling with an image brush](../../../../docs/framework/wpf/graphics-multimedia/media/0.png "0")</span></span>  
   
  [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]  
   
- En el ejemplo siguiente se crea <xref:System.Windows.Media.ImageBrush>, se establece <xref:System.Windows.Media.TileBrush.Viewport%2A> en `0,0,25,25` y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> en <xref:System.Windows.Media.BrushMappingMode>, y se lo utiliza para pintar otro rectángulo.  Como resultado, el pincel genera mosaicos que tienen un ancho de 25 [píxeles](GTMT) y un alto de 25 [píxeles](GTMT).  
+ <span data-ttu-id="da58d-115">En el ejemplo siguiente se crea un <xref:System.Windows.Media.ImageBrush>, establece su <xref:System.Windows.Media.TileBrush.Viewport%2A> a `0,0,25,25` y su <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> a <xref:System.Windows.Media.BrushMappingMode.Absolute>y se utiliza para dibujar un rectángulo.</span><span class="sxs-lookup"><span data-stu-id="da58d-115">The next example creates an <xref:System.Windows.Media.ImageBrush>, sets its <xref:System.Windows.Media.TileBrush.Viewport%2A> to `0,0,25,25` and its <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> to <xref:System.Windows.Media.BrushMappingMode.Absolute>, and uses it to paint another rectangle.</span></span> <span data-ttu-id="da58d-116">Como resultado, el pincel genera iconos que tienen un ancho de 25 píxeles y un alto de 25 píxeles.</span><span class="sxs-lookup"><span data-stu-id="da58d-116">As a result, the brush produces tiles that have a width of 25  pixels and a height of 25 pixels .</span></span>  
   
- En la ilustración siguiente se muestra el resultado de aplicar el ejemplo.  
+ <span data-ttu-id="da58d-117">La siguiente ilustración muestra el resultado que genera el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="da58d-117">The following illustration shows the output that the example produces.</span></span>  
   
- ![TileBrush en mosaico con una ventanilla de 0,0,0.25,0.25](../../../../docs/framework/wpf/graphics-multimedia/media/25x25viewport.png "25x25viewport")  
+ <span data-ttu-id="da58d-118">![TileBrush en mosaico con una ventanilla de 0,0,0,25,0,25](../../../../docs/framework/wpf/graphics-multimedia/media/25x25viewport.png "25x25viewport")</span><span class="sxs-lookup"><span data-stu-id="da58d-118">![A tiled TileBrush with a Viewport of 0,0,0.25,0.25](../../../../docs/framework/wpf/graphics-multimedia/media/25x25viewport.png "25x25viewport")</span></span>  
   
  [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]  
   
- Los ejemplos anteriores forman parte de un ejemplo mayor.  Para obtener el ejemplo completo, vea [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005).  
+ <span data-ttu-id="da58d-119">Los ejemplos anteriores forman parte de un ejemplo mayor.</span><span class="sxs-lookup"><span data-stu-id="da58d-119">The preceding examples are part of a larger sample.</span></span> <span data-ttu-id="da58d-120">Para obtener un ejemplo completo, vea [ejemplo ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005).</span><span class="sxs-lookup"><span data-stu-id="da58d-120">For the complete sample, see [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005).</span></span>  
   
- Aunque en este ejemplo se utiliza la clase <xref:System.Windows.Media.ImageBrush>, las propiedades <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> se comportan exactamente igual para los demás objetos <xref:System.Windows.Media.TileBrush>, es decir, para <xref:System.Windows.Media.DrawingBrush> y <xref:System.Windows.Media.VisualBrush>.  Para obtener más información sobre <xref:System.Windows.Media.ImageBrush> y los demás objetos <xref:System.Windows.Media.TileBrush>, consulte [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ <span data-ttu-id="da58d-121">Aunque en este ejemplo se usa el <xref:System.Windows.Media.ImageBrush> (clase), el <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedades se comportan exactamente igual para los demás <xref:System.Windows.Media.TileBrush> objetos, es decir, para <xref:System.Windows.Media.DrawingBrush> y <xref:System.Windows.Media.VisualBrush>.</span><span class="sxs-lookup"><span data-stu-id="da58d-121">Although this example uses the <xref:System.Windows.Media.ImageBrush> class, the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> properties behave identically for the other <xref:System.Windows.Media.TileBrush> objects, that is, for <xref:System.Windows.Media.DrawingBrush> and <xref:System.Windows.Media.VisualBrush>.</span></span> <span data-ttu-id="da58d-122">Para obtener más información acerca de <xref:System.Windows.Media.ImageBrush> y el otro <xref:System.Windows.Media.TileBrush> los objetos, vea [pintar con imágenes, gráficos y objetos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span><span class="sxs-lookup"><span data-stu-id="da58d-122">For more information about <xref:System.Windows.Media.ImageBrush> and the other <xref:System.Windows.Media.TileBrush> objects, see [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Media.TileBrush>   
- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [Crear patrones de mosaico diferentes con un objeto TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a><span data-ttu-id="da58d-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="da58d-123">See Also</span></span>  
+ <xref:System.Windows.Media.TileBrush>  
+ [<span data-ttu-id="da58d-124">Pintar con imágenes, dibujos y elementos visuales</span><span class="sxs-lookup"><span data-stu-id="da58d-124">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="da58d-125">Crear patrones de mosaico diferentes con un objeto TileBrush</span><span class="sxs-lookup"><span data-stu-id="da58d-125">Create Different Tile Patterns with a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
