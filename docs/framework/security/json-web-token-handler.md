@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="json-web-token-handler"></a>Controlador de token web de JSON
 La extensión del controlador de token web JSON para Windows Identity Foundation permite crear y validar tokens web JSON (JWT) en las aplicaciones. El controlador de token JWT se puede configurar para ejecutarse en la canalización de WIF igual que otros controladores de tokens de seguridad integrados, pero también se puede usar de forma independiente para validar tokens en aplicaciones ligeras. El controlador de token JWT es especialmente útil cuando se usa un esquema de token portador de OAuth 2.0, como la autenticación en Microsoft Azure Active Directory.  
@@ -39,4 +37,3 @@ La extensión del controlador de token web JSON para Windows Identity Foundation
 -   **Validar un token JWT**: los tokens JWT pueden validarse fácilmente mediante la lógica de validación del controlador de token, ya sea como parte de la canalización WIF de la aplicación o al llamarse con independencia de WIF.  
   
 -   **Crear un token JWT**: el controlador de token JWT se puede usar para crear tokens JWT con fines de autorización en servicios descendentes.
-

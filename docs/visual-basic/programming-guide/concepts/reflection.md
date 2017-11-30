@@ -1,34 +1,26 @@
 ---
-title: "Reflexión (Visual Basic) | Documentos de Microsoft"
+title: "Reflexión (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ae042933575849e105d7b681634a61319c1d6ee
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b7b94e25d2ca9563cd50f454c94092f18e295863
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-visual-basic"></a>Reflexión (Visual Basic)
-La reflexión proporciona objetos (de tipo <xref:System.Type>) que describen los ensamblados, módulos y tipos.</xref:System.Type> Puede usar la reflexión para dinámicamente crea una instancia de un tipo, enlazar el tipo a un objeto existente, obtener el tipo de un objeto existente e invocar sus métodos o tener acceso a sus campos y propiedades. Si utiliza atributos en el código, la reflexión permite tener acceso a ellos. Para obtener más información, consulte [atributos](https://msdn.microsoft.com/library/5x6cd29c).  
+La reflexión proporciona objetos (de tipo <xref:System.Type>) que describen los ensamblados, módulos y tipos. Puede usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente e invocar sus métodos, o acceder a sus campos y propiedades. Si usa atributos en el código, la reflexión le permite acceder a ellos. Para obtener más información, consulte [Attributes](https://msdn.microsoft.com/library/5x6cd29c) (Atributos).  
   
- Este es un ejemplo simple de reflexión que utiliza el método estático `GetType` , heredada por todos los tipos de la `Object` clase - para obtener el tipo de una variable de base:  
+ Este es un ejemplo simple de reflexión que usa el método estático `GetType`, heredado por todos los tipos de la clase base `Object`, para obtener el tipo de una variable:  
   
 ```vb  
 ' Using GetType to obtain type information:  
@@ -37,11 +29,11 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- El resultado es:  
+ El resultado es el siguiente:  
   
  `System.Int32`  
   
- En el ejemplo siguiente se utiliza la reflexión para obtener el nombre completo del ensamblado cargado.  
+ En el ejemplo siguiente se usa la reflexión para obtener el nombre completo del ensamblado cargado.  
   
 ```vb  
 ' Using Reflection to get information from an Assembly:  
@@ -49,34 +41,34 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- El resultado es:  
+ El resultado es el siguiente:  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
 ## <a name="reflection-overview"></a>Información general de la reflexión  
- La reflexión resulta útil en las situaciones siguientes:  
+ La reflexión resulta útil en las siguientes situaciones:  
   
--   Cuando tenga que obtener acceso a atributos en los metadatos del programa. Para obtener más información, consulte [recuperar información almacenada en atributos](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c).  
+-   Cuando tenga que acceder a atributos en los metadatos del programa. Para obtener más información, consulte [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos).  
   
 -   Para examinar y crear instancias de tipos en un ensamblado.  
   
--   Para generar nuevos tipos en tiempo de ejecución. Usar las clases en <xref:System.Reflection.Emit>.</xref:System.Reflection.Emit>  
+-   Para generar nuevos tipos en tiempo de ejecución. Usar clases en <xref:System.Reflection.Emit>.  
   
--   Para realizar el enlace, acceso a métodos en tipos creados en tiempo de ejecución. Vea el tema [cargar y utilizar tipos dinámicamente](http://msdn.microsoft.com/library/db985bec-5942-40ec-b13a-771ae98623dc).  
+-   Para llevar a cabo métodos de acceso de enlace en tiempo de ejecución en tipos creados en tiempo de ejecución. Consulte el tema [Dynamically Loading and Using Types](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md) (Cargar y usar tipos dinámicamente).  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  Para obtener más información:  
   
--   [Reflexión](http://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775)  
+-   [Reflexión](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Ver información de tipos](http://msdn.microsoft.com/library/7e7303a9-4064-4738-b4e7-b75974ed70d2)  
+-   [Viewing Type Information](../../../framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)  
   
--   [Reflexión y tipos genéricos](http://msdn.microsoft.com/library/f7180fc5-dd41-42d4-8a8e-1b34288e06de)  
+-   [Reflection and Generic Types](../../../framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)  
   
--   <xref:System.Reflection.Emit></xref:System.Reflection.Emit>  
+-   <xref:System.Reflection.Emit>  
   
--   [Recuperar información almacenada en atributos](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)  
+-   [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de programación de Visual Basic](../../../visual-basic/programming-guide/index.md)   
+ [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)  
  [Ensamblados en Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)

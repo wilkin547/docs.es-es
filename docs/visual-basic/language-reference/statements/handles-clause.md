@@ -1,43 +1,24 @@
 ---
-title: "Handles (cláusula, Visual Basic) | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Handles (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Handles
 - vb.Handles
-dev_langs:
-- VB
-helpviewer_keywords:
-- Handles keyword
+helpviewer_keywords: Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c79935e7f15f31abca7efddbc443239d5db2f58
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a23b3d96052ad179ea25150bb570461a9e764977
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handles-clause-visual-basic"></a>Handles (Cláusula, Visual Basic)
 Declara que un procedimiento controla un evento especificado.  
@@ -60,30 +41,29 @@ proceduredeclaration Handles eventlist
   
  La palabra clave `Handles` y la instrucción `AddHandler` permiten especificar que determinados procedimientos controlen eventos determinados, pero hay diferencias. Use la palabra clave `Handles` al definir un procedimiento para especificar que controla un evento determinado. La instrucción `AddHandler` conecta los procedimientos a los eventos en tiempo de ejecución. Para obtener más información, consulte [AddHandler (instrucción)](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
   
- Para los eventos personalizados, la aplicación invoca al descriptor de acceso `AddHandler` del evento cuando agrega el procedimiento como un controlador de eventos. Para obtener más información sobre los eventos personalizados, vea [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md).  
+ Para los eventos personalizados, la aplicación invoca al descriptor de acceso `AddHandler` del evento cuando agrega el procedimiento como un controlador de eventos. Para obtener más información sobre eventos personalizados, vea [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-vb[VbVbalrEvents&#2;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
+ [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
   
  En el siguiente ejemplo se demuestra cómo una clase derivada puede usar la instrucción `Handles` para controlar un evento de una clase base.  
   
- [!code-vb[VbVbalrEvents&3;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
+ [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente contiene dos controladores de eventos para un **aplicación WPF** proyecto.  
+ El ejemplo siguiente contiene dos controladores de eventos de botón para un **aplicación WPF** proyecto.  
   
- [!code-vb[VbVbalrEvents nº&41;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
+ [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo es equivalente al ejemplo anterior. El `eventlist` en la cláusula `Handles` contiene los eventos de ambos botones.  
   
- [!code-vb[VbVbalrEvents&#42;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
+ [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
   
 ## <a name="see-also"></a>Vea también  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)   
- [AddHandler (instrucción)](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [RemoveHandler (instrucción)](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)   
- [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
+ [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [AddHandler (instrucción)](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [RemoveHandler (instrucción)](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
  [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
-

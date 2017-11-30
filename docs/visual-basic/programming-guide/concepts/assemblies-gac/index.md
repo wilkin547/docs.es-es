@@ -1,31 +1,22 @@
 ---
 title: "Ensamblados y caché global de ensamblados (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 8a53a153851973c735a430056520b01c27b1ef59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Ensamblados y caché global de ensamblados (Visual Basic)
 Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación basada en .NET. Los ensamblados adoptan la forma de un archivo ejecutable (.exe) o de un archivo de biblioteca de vínculos dinámicos (.dll) y son bloques de compilación de .NET Framework. Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Puede pensar en un ensamblado como si fuera una colección de tipos y recursos que forman una unidad lógica de funcionalidad y se compilan para funcionar en conjunto.  
@@ -51,7 +42,7 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
   
 -   Una tabla de archivos que describe todos los demás archivos que componen el ensamblado, por ejemplo, cualquier otro ensamblado creado en que se basan los archivos .exe o .dll, o incluso archivos de mapa de bits o Léame.  
   
--   Una *lista de referencia de ensamblado*, que es una lista de todas las dependencias externas, archivos .dll u otros archivos que la aplicación necesita que alguien puede haber creado. Las referencias de ensamblado contienen referencias a objetos globales y privados. Los objetos globales residen en la caché global de ensamblados, un área disponible para otras aplicaciones, parecida al directorio System32. El espacio de nombres <xref:Microsoft.VisualBasic?displayProperty=fullName> es un ejemplo de un ensamblado en la caché global de ensamblados. Los objetos privados deben estar en un directorio del mismo nivel o debajo del directorio en el que se instala la aplicación.  
+-   Una *lista de referencia de ensamblado*, que es una lista de todas las dependencias externas, archivos .dll u otros archivos que la aplicación necesita que alguien puede haber creado. Las referencias de ensamblado contienen referencias a objetos globales y privados. Los objetos globales residen en la caché global de ensamblados, un área disponible para otras aplicaciones, parecida al directorio System32. El espacio de nombres <xref:Microsoft.VisualBasic?displayProperty=nameWithType> es un ejemplo de un ensamblado en la caché global de ensamblados. Los objetos privados deben estar en un directorio del mismo nivel o debajo del directorio en el que se instala la aplicación.  
   
  Dado que los ensamblados contienen información sobre contenido, control de versiones y dependencias, las aplicaciones creadas con Visual Basic no dependen de los valores del Registro de Windows para funcionar correctamente. Los ensamblados reducen los conflictos de .dll y hacen las aplicaciones más confiables y fáciles de implementar. En muchos casos, puede instalar una aplicación basada en .NET con tan solo copiar sus archivos en el equipo de destino.  
   
@@ -67,12 +58,11 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
 >  Para compilar un ensamblado en Visual Studio, en el menú **Compilar**, seleccione **Compilar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Ensamblados en Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)   
- [Ensamblados de confianza (Visual Basic)](friend-assemblies.md)   
- [Uso compartido de un ensamblado con otras aplicaciones (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)   
- [Carga y descarga de ensamblados (Visual Basic)](how-to-load-and-unload-assemblies.md)   
- [Determinar si un archivo es un ensamblado (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)   
- [Creación y uso de ensamblados con la línea de comandos (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
- [Tutorial: inserción de tipos a partir de ensamblados administrados en Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
+ [Ensamblados en Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)  
+ [Ensamblados de confianza (Visual Basic)](friend-assemblies.md)  
+ [Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
+ [Cómo: cargar y descargar ensamblados (Visual Basic)](how-to-load-and-unload-assemblies.md)  
+ [Cómo: determinar si un archivo es un ensamblado (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [Cómo: crear y utilizar ensamblados desde la línea de comandos (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  [Tutorial: inserción de información de tipos desde ensamblados de Microsoft Office en Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
-

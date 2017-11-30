@@ -1,42 +1,41 @@
 ---
-title: "Overloads (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Overloads"
-  - "Overloads"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ocultar mediante signatura"
-  - "Overloads (palabra clave)"
-  - "Shadows (palabra clave)"
-  - "signatura, ocultar mediante"
+title: Overloads (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Overloads
+- Overloads
+helpviewer_keywords:
+- Overloads keyword [Visual Basic]
+- hiding by signature
+- Shadows keyword [Visual Basic]
+- signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a23a6b91681cbd814ac96464e1c340be99a0ecf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Overloads (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Especifica que una propiedad o procedimiento vuelve a declarar una o varias propiedades o procedimientos existentes con el mismo nombre.  
   
-## Comentarios  
- *Sobrecarga* es la práctica de proporcionar más de una definición para un nombre de propiedad o procedimiento dado en el mismo ámbito.  Volver a declarar una propiedad o un procedimiento con otra firma se denomina a veces *ocultar mediante signatura*.  
+## <a name="remarks"></a>Comentarios  
+ *Sobrecarga* es la práctica de proporcionar más de una definición para un nombre de propiedad o un procedimiento determinado en el mismo ámbito. Volver a declarar una propiedad o procedimiento con otra firma se denomina *ocultar mediante signatura*.  
   
-## Reglas  
+## <a name="rules"></a>Reglas  
   
--   **Contexto de declaración**. Puede usar `Overloads` únicamente en una instrucción de declaración de procedimiento o propiedad.  
+-   **Contexto de la declaración.** Puede usar `Overloads` únicamente en una instrucción de declaración de procedimiento o propiedad.  
   
--   **Modificadores combinados**. No es posible especificar `Overloads` junto con [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) en la misma declaración de procedimiento.  
+-   **Modificadores combinados.** No se puede especificar `Overloads` junto con [sombras](../../../visual-basic/language-reference/modifiers/shadows.md) en la misma declaración de procedimiento.  
   
--   **Diferencias requeridas**. La *firma* de esta declaración debe ser diferente a la de cada propiedad o procedimiento que sobrecarga.  La firma incluye el nombre de propiedad o procedimiento más lo siguiente:  
+-   **Diferencias requeridas.** El *firma* en esta declaración debe ser diferente de la firma de cada propiedad o procedimiento que sobrecarga. La firma incluye el nombre de propiedad o procedimiento más lo siguiente:  
   
     -   el número de parámetros  
   
@@ -44,45 +43,45 @@ Especifica que una propiedad o procedimiento vuelve a declarar una o varias prop
   
     -   los tipos de datos de los parámetros  
   
-    -   el número de parámetros de tipo \(para un procedimiento genérico\)  
+    -   el número de parámetros de tipo (para un procedimiento genérico)  
   
-    -   el tipo de valor devuelto \(solo para un procedimiento de operador de conversión\)  
+    -   el tipo de valor devuelto (solo para un procedimiento de operador de conversión)  
   
-     Todas las sobrecargas deben tener el mismo nombre, pero cada una debe diferir de todas las demás en uno o varios de los aspectos anteriores.  Esto permite al compilador distinguir qué versión debe utilizar cuando el código llama a la propiedad o el procedimiento.  
+     Todas las sobrecargas deben tener el mismo nombre, pero cada una debe diferir de todas las demás en uno o varios de los aspectos anteriores. Esto permite al compilador distinguir qué versión debe utilizar cuando el código llama a la propiedad o el procedimiento.  
   
--   **Diferencias no permitidas**. El cambio de uno o varios de los siguientes aspectos no es válido para sobrecargar una propiedad o un procedimiento, porque no forman parte de la firma:  
+-   **Diferencias no permitidas.** El cambio de uno o varios de los siguientes aspectos no es válido para sobrecargar una propiedad o un procedimiento, porque no forman parte de la firma:  
   
-    -   si devuelve o no un valor \(para un procedimiento\)  
+    -   si devuelve o no un valor (para un procedimiento)  
   
-    -   el tipo de datos del valor devuelto \(excepto para un operador de conversión\)  
+    -   el tipo de datos del valor devuelto (excepto para un operador de conversión)  
   
     -   los nombres de los parámetros o parámetros de tipo  
   
-    -   las restricciones en los parámetros de tipo \(para un procedimiento genérico\)  
+    -   las restricciones en los parámetros de tipo (para un procedimiento genérico)  
   
-    -   palabras clave de modificador de parámetro \(como `ByRef` o `Optional`\)  
+    -   palabras clave de modificador de parámetro (como `ByRef` o `Optional`)  
   
-    -   palabras clave de modificador de propiedad o procedimiento \(como `Public` o `Shared`\)  
+    -   palabras clave de modificador de propiedad o procedimiento (como `Public` o `Shared`)  
   
--   **Modificador opcional**. No es necesario usar el modificador `Overloads` al definir varias propiedades o procedimientos sobrecargados en la misma clase.  Sin embargo, si utiliza `Overloads` en una de las declaraciones, debe utilizarlo en todas ellas.  
+-   **Modificador opcional.** No es necesario usar el modificador `Overloads` al definir varias propiedades o procedimientos sobrecargados en la misma clase. Sin embargo, si utiliza `Overloads` en una de las declaraciones, debe utilizarlo en todas ellas.  
   
--   **Sombreado y sobrecarga**. `Overloads` también puede utilizarse para sombrear un miembro existente o un conjunto de miembros sobrecargados en una clase base.  Al utilizar `Overloads` de esta forma, declara la propiedad o el método con el mismo nombre y la misma lista de parámetros que el miembro de clase base y no proporciona la palabra clave `Shadows`.  
+-   **Sombreado y sobrecarga.** `Overloads`También puede utilizarse para sombrear un miembro existente o un conjunto de miembros sobrecargados, en una clase base. Al utilizar `Overloads` de esta forma, declara la propiedad o el método con el mismo nombre y la misma lista de parámetros que el miembro de clase base y no proporciona la palabra clave `Shadows`.  
   
- Si usa `Overrides`, el compilador agrega de forma implícita `Overloads` para que las API de la biblioteca trabajen más fácilmente con C\#.  
+ Si usa `Overrides`, el compilador agrega de forma implícita `Overloads` para que las API de la biblioteca trabajen más fácilmente con C#.  
   
- El modificador `Overloads` se puede utilizar en los siguientes contextos:  
+ El modificador `Overloads` se puede utilizar en los contextos siguientes:  
   
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Operator \(Instrucción\)](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Property \(Instrucción\)](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vea también  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Sobrecarga de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Procedimientos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Cómo: Definir un operador de conversión](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>Vea también  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Sobrecarga de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
+ [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [Procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
+ [Definir un operador de conversión](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

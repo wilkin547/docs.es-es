@@ -1,68 +1,71 @@
 ---
-title: "x:ClassModifier Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xClassModifier"
-  - "x:ClassModifier"
-  - "ClassModifier"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:ClassModifier attribute"
-  - "x:ClassModifier attribute [XAML Services]"
-  - "ClassModifier attribute in XAML [XAML Services]"
+title: x:ClassModifier (Directiva)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xClassModifier
+- x:ClassModifier
+- ClassModifier
+helpviewer_keywords:
+- XAML [XAML Services], x:ClassModifier attribute
+- x:ClassModifier attribute [XAML Services]
+- ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-caps.latest.revision: 22
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 111c4a6ed78a908ae3b171dc9349a3c9b81750de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# x:ClassModifier Directive
-Modifica el comportamiento de compilación de XAML si se proporciona también `x:Class`.  En concreto, en lugar de crear una `class` parcial con nivel de acceso `Public` \(valor predeterminado\), el objeto `x:Class` proporcionado se crea con un nivel de acceso `NotPublic`.  Este comportamiento afecta al nivel de acceso de la clase en los ensamblados generados.  
+# <a name="xclassmodifier-directive"></a>x:ClassModifier (Directiva)
+Modifica el comportamiento de compilación de XAML cuando `x:Class` también se proporciona. En concreto, en lugar de crear un parcial `class` que tiene un `Public` (valor predeterminado), nivel de acceso proporcionado `x:Class` se crea con un `NotPublic` nivel de acceso. Este comportamiento afecta al nivel de acceso para la clase en los ensamblados generados.  
   
-## Uso de atributos XAML  
+## <a name="xaml-attribute-usage"></a>Uso de atributos XAML  
   
 ```  
-<object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
+<object x:Class="namespace.classname" x:ClassModifier="NotPublic">  
    ...  
 </object>  
 ```  
   
-## Valores XAML  
+## <a name="xaml-values"></a>Valores XAML  
   
 |||  
 |-|-|  
-|*NotPublic*|La cadena exacta que se debe pasar para especificar el valor <xref:System.Reflection.TypeAttributes?displayProperty=fullName> en lugar de <xref:System.Reflection.TypeAttributes?displayProperty=fullName> varía en función del lenguaje de programación subyacente que se utilice.  Vea la sección Comentarios.|  
+|*NotPublic*|La cadena exacta debe pasar para especificar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> frente a <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varía según el lenguaje de programación de código subyacente que usa. Vea la sección Comentarios.|  
   
-## Dependencias  
- [x:Class](../../../docs/framework/xaml-services/x-class-directive.md) también se debe proporcionar para el mismo elemento, que debe ser el elemento raíz de una página.  Para obtener más información, vea [\[MS\-XAML\] sección 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).  
+## <a name="dependencies"></a>Dependencias  
+ [x: Class](../../../docs/framework/xaml-services/x-class-directive.md) también se debe proporcionar en el mismo elemento, y ese elemento debe ser el elemento raíz en una página. Para obtener más información, consulte [ \[MS-XAML\] sección 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
-## Comentarios  
- El valor de `x:ClassModifier` al usarlo en los servicios XAML de .NET Framework varía en función del lenguaje de programación.  La cadena que hay que utilizar depende de cómo implementa cada lenguaje su <xref:System.CodeDom.Compiler.CodeDomProvider> y de los convertidores de tipos que devuelve para definir los significados de <xref:System.Reflection.TypeAttributes?displayProperty=fullName> y <xref:System.Reflection.TypeAttributes?displayProperty=fullName>, y de si el lenguaje distingue entre mayúsculas y minúsculas.  
+## <a name="remarks"></a>Comentarios  
+ El valor de `x:ClassModifier` en los servicios XAML de .NET Framework uso varía según el lenguaje de programación. La cadena que se va a utilizar depende de cómo cada lenguaje implementa su <xref:System.CodeDom.Compiler.CodeDomProvider> y los convertidores de tipos que devuelve para definir los significados de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> y <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, y si ese idioma distingue mayúsculas de minúsculas.  
   
--   Para [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], la cadena que se debe pasar para designar <xref:System.Reflection.TypeAttributes?displayProperty=fullName> es `internal`.  
+-   Para [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], la cadena para pasar para designar <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> es `internal`.  
   
--   Para [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)], la cadena que se debe pasar para designar <xref:System.Reflection.TypeAttributes?displayProperty=fullName> es `Friend`.  
+-   Para [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)], la cadena para pasar para designar <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> es `Friend`.  
   
--   Para [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], no existen destinos compatibles con la compilación XAML, por consiguiente, el valor para pasar no está especificado.  
+-   Para [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], ningún destino existe compatibles con la compilación XAML; por lo tanto, el valor para pasar no está especificado.  
   
- También puede especificar <xref:System.Reflection.TypeAttributes?displayProperty=fullName> \(`public` en [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Public` en [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]\); sin embargo, <xref:System.Reflection.TypeAttributes?displayProperty=fullName> no se especifica con frecuencia, porque <xref:System.Reflection.TypeAttributes?displayProperty=fullName> ya es el comportamiento predeterminado.  
+ También puede especificar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` en [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], `Public` en [!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]); sin embargo, especificar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> con poca frecuencia se hace así porque <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ya es el comportamiento predeterminado.  
   
- Otros valores con restricciones de nivel de acceso de código de usuario equivalentes, tales como `private` en [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], no son pertinentes para `x:ClassModifier`, porque las referencias de clase anidadas no se admiten en XAML y, en consecuencia, el modificador <xref:System.Reflection.TypeAttributes?displayProperty=fullName> tiene el mismo efecto.  
+ Otros valores con el código de usuario equivalente-nivel de acceso de las restricciones, como `private` en [!INCLUDE[TLA2#tla_cshrp](../../../includes/tla2sharptla-cshrp-md.md)], no son relevantes para `x:ClassModifier` porque no se admiten referencias de clase anidada en XAML y por lo tanto, la <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> modificador tiene el mismo efecto.  
   
-## Notas de seguridad  
- El nivel de acceso tal y como se declara en `x:ClassModifier` todavía está sujeto a la interpretación por marcos determinados y sus capacidades.  WPF incluye las funciones para cargar y crear instancias de los tipos donde `x:ClassModifier` es `internal`, si se hace referencia a esa clase desde un recurso WPF a través de una referencia al indicador pack URI.  Como consecuencia de este caso y posiblemente otros casos como él, no confíe exclusivamente en `x:ClassModifier` para bloquear todos los intentos posibles de creación de instancias.  
+## <a name="security-notes"></a>Notas de seguridad  
+ El nivel de acceso, tal y como declara en `x:ClassModifier` sigue estando sujeto a interpretación por marcos determinados y sus capacidades. WPF incluye funciones para cargar y crear instancias de tipos donde `x:ClassModifier` es `internal`, si se hace referencia a esa clase desde un recurso WPF a través de una referencia de URI de paquete. Como consecuencia de este caso y potencialmente otros similares implementado por otros marcos, no debe confiar exclusivamente en `x:ClassModifier` para bloquear la creación de instancias de todas las posibles intentos.  
   
-## Vea también  
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [Código subyacente y XAML en WPF](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
- [x:FieldModifier Directive](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)   
- [Seguridad \(WPF\)](../../../ocs/framework/wpf/security-wpf.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Vea también  
+ [x:Class (Directiva)](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [Código subyacente y XAML en WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [x:FieldModifier (Directiva)](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
+ [Seguridad (WPF)](../../../docs/framework/wpf/security-wpf.md)  
+ [Tipos migrados de WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

@@ -1,47 +1,50 @@
 ---
-title: "C&#243;mo: Animar el color o la opacidad de un objeto SolidColorBrush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, color de SolidColorBrush"
-  - "animación, opacidad de SolidColorBrush"
-  - "colores, animar"
-  - "opacidad, animar"
-  - "SolidColorBrush, animar el color de"
-  - "SolidColorBrush, animar la opacidad de"
+title: "Cómo: Animar el color o la opacidad de un objeto SolidColorBrush"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SolidColorBrush [WPF], animating color of
+- colors [WPF], animating
+- opacity [WPF], animating
+- animation [WPF], color of SolidColorBrush
+- animation [WPF], opacity of SolidColorBrush
+- SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 03052cdf68a5a8564d5a24c91521749c10afa6cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Animar el color o la opacidad de un objeto SolidColorBrush
-En este ejemplo se muestra cómo animar las propiedades <xref:System.Windows.Media.SolidColorBrush.Color%2A> y <xref:System.Windows.Media.Brush.Opacity%2A> de un objeto <xref:System.Windows.Media.SolidColorBrush>.  
+# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Cómo: Animar el color o la opacidad de un objeto SolidColorBrush
+Este ejemplo muestra cómo animar la <xref:System.Windows.Media.SolidColorBrush.Color%2A> y <xref:System.Windows.Media.Brush.Opacity%2A> de un <xref:System.Windows.Media.SolidColorBrush>.  
   
-## Ejemplo  
- En el ejemplo siguiente se utilizan tres animaciones para animar las propiedades <xref:System.Windows.Media.SolidColorBrush.Color%2A> y <xref:System.Windows.Media.Brush.Opacity%2A> de un objeto <xref:System.Windows.Media.SolidColorBrush>.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se utiliza tres animaciones para animar la <xref:System.Windows.Media.SolidColorBrush.Color%2A> y <xref:System.Windows.Media.Brush.Opacity%2A> de un <xref:System.Windows.Media.SolidColorBrush>.  
   
--   La primera animación, <xref:System.Windows.Media.Animation.ColorAnimation>, cambia el color del pincel a <xref:System.Windows.Media.Colors.Gray%2A> cuando el mouse entra en el rectángulo.  
+-   La primera animación, un <xref:System.Windows.Media.Animation.ColorAnimation>, cambia el color del pincel a <xref:System.Windows.Media.Colors.Gray%2A> cuando el mouse entra en el rectángulo.  
   
--   La animación siguiente, <xref:System.Windows.Media.Animation.ColorAnimation>, cambia el color del pincel a <xref:System.Windows.Media.Colors.Orange%2A> cuando el mouse sale del rectángulo.  
+-   La siguiente animación, otro <xref:System.Windows.Media.Animation.ColorAnimation>, cambia el color del pincel a <xref:System.Windows.Media.Colors.Orange%2A> cuando el mouse sale del rectángulo.  
   
--   La última animación, <xref:System.Windows.Media.Animation.DoubleAnimation>, cambia la opacidad del pincel a 0.0 cuando se presiona el botón primario del mouse.  
+-   La última animación, un <xref:System.Windows.Media.Animation.DoubleAnimation>, cambia la opacidad del pincel a 0.0 cuando se presiona el botón primario del mouse.  
   
  [!code-csharp[brushanimations_snip#SolidColorBrushAnimationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushanimations_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushanimationexample)]  
   
- Para obtener un ejemplo más completo, que muestra cómo animar tipos diferentes de pinceles, vea [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973).  Para obtener más información acerca de la animación, vea [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Para obtener un ejemplo más completo, que muestra cómo animar tipos diferentes de pinceles, consulte la [ejemplo pinceles](http://go.microsoft.com/fwlink/?LinkID=159973). Para obtener más información acerca de la animación, consulte el [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
- Para ofrecer coherencia con otros ejemplos de animación, en las versiones de código de este ejemplo se utiliza un objeto <xref:System.Windows.Media.Animation.Storyboard> para aplicar sus animaciones.  Sin embargo, al aplicar una animación única en código, es más fácil para utilizar el método <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> en lugar de utilizar un objeto <xref:System.Windows.Media.Animation.Storyboard>.  Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+ Para mantener la coherencia con otros ejemplos de animación, en las versiones de código de este ejemplo utiliza un <xref:System.Windows.Media.Animation.Storyboard> objeto que se va a aplicar sus animaciones. Sin embargo, al aplicar una animación única en código, es más fácil utilizar el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método en lugar de usar un <xref:System.Windows.Media.Animation.Storyboard>. Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Información general sobre objetos Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [Ejemplo Brushes](http://go.microsoft.com/fwlink/?LinkID=159973)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Información general sobre objetos Storyboard ](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [Ejemplo de pinceles](http://go.microsoft.com/fwlink/?LinkID=159973)

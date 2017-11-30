@@ -1,68 +1,73 @@
 ---
-title: "&lt;compositeDuplex&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;compositeDuplex&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f9f82d4b6ac69e0edc0a2ad2cddfd89ee6ac72db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;compositeDuplex&gt;
-Define el elemento de enlace que se usa cuando el cliente debe exponer un extremo para que el servicio devuelva los mensajes al cliente.  
+# <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
+Define el elemento de enlace que se usa cuando el cliente debe exponer un punto de conexión para que el servicio devuelva los mensajes al cliente.  
   
-## Sintaxis  
+ \<system.serviceModel >  
+\<enlaces >  
+\<customBinding >  
+\<enlace >  
+\<compositeDuplex >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <compositeDuplex clientBaseAddress="URI" />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|clientBaseAddress|Un URI que establece la dirección del canal secundario en modo de dúplex.  El servicio usa esta dirección para hacer contacto y establecer una conexión con el cliente.<br /><br /> Si no se establece este atributo, se genera una dirección predeterminada "`full qualified name+default port\TemporaryIndigoAddress\guid`".  De manera predeterminada, es `null`.|  
+|---------------|-----------------|  
+|clientBaseAddress|Un URI que establece la dirección del canal secundario en modo de dúplex. El servicio usa esta dirección para hacer contacto y establecer una conexión con el cliente.<br /><br /> Si este atributo no se establece, una dirección predeterminada "`full qualified name+default port\TemporaryIndigoAddress\guid`" se genera. De manera predeterminada, es `null`.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<enlace\>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|-------------|-----------------|  
+|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## Comentarios  
- Este elemento de configuración se utiliza con los transportes que no permiten nativamente las comunicaciones dúplex, por ejemplo, HTTP.  TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.  
+## <a name="remarks"></a>Comentarios  
+ Este elemento de configuración se utiliza con los transportes que no permiten nativamente las comunicaciones dúplex, por ejemplo, HTTP. TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.  
   
- El cliente debe exponer una dirección para que el servicio haga contacto y establezca una conexión.  El atributo `clientBaseAddress` proporciona esta dirección del cliente.  Observe que Windows Communication Foundation \(WCF\) genera automáticamente una ClientBaseAddress, si el usuario no establece explícitamente una.  
+ El cliente debe exponer una dirección para que el servicio haga contacto y establezca una conexión. El atributo `clientBaseAddress` proporciona esta dirección del cliente. Observe que Windows Communication Foundation (WCF) genera automáticamente una ClientBaseAddress, si el usuario no establece explícitamente una.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```xml  
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.CompositeDuplexElement>   
- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.Configuration.CompositeDuplexElement>  
+ <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
+ [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

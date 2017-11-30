@@ -1,33 +1,25 @@
 ---
-title: AttributeUsage (Visual Basic) | Documentos de Microsoft
+title: AttributeUsage (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf56f40033f9d1547d63fccd25e3c0561bb62cb1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: aef00d201c3dea82f67395bee0d85f8989afa01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
-Determina cómo se puede usar una clase de atributo personalizado. `AttributeUsage`es un atributo que se puede aplicar a definiciones de atributo personalizado para controlar cómo se aplica el nuevo atributo. La configuración predeterminada este aspecto cuando se aplica explícitamente:  
+Determina cómo se puede usar una clase de atributo personalizado. `AttributeUsage` es un atributo que se puede aplicar a definiciones de atributos personalizados para controlar cómo se aplica el nuevo atributo. La configuración predeterminada presenta este aspecto cuando se aplica explícitamente:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -38,9 +30,9 @@ Class NewAttribute
 End Class  
 ```  
   
- En este ejemplo, el `NewAttribute` clase se puede aplicar a cualquier entidad de código con atributo, pero se puede aplicar una sola vez a cada entidad. Que es heredada por las clases derivadas, cuando se aplica a una clase base.  
+ En este ejemplo, la clase `NewAttribute` se puede aplicar a cualquier entidad de código atribuible, pero solo se puede aplicar una vez a cada entidad. Las clases derivadas la heredan cuando se aplica a una clase base.  
   
- El `AllowMultiple` y `Inherited` los argumentos son opcionales, por lo que este código tiene el mismo efecto:  
+ Los argumentos `AllowMultiple` y `Inherited` son opcionales, por lo que este código tiene el mismo efecto:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -49,7 +41,7 @@ Class NewAttribute
 End Class  
 ```  
   
- La primera `AttributeUsage` el argumento debe ser uno o más elementos de la <xref:System.AttributeTargets>enumeración.</xref:System.AttributeTargets> Varios tipos de destino se pueden vincular junto con el operador OR, como esta:  
+ El primer argumento `AttributeUsage` debe ser uno o varios elementos de la enumeración <xref:System.AttributeTargets>. Se pueden vincular diversos tipos de destino con el operador OR, de esta forma:  
   
 ```vb  
 Imports System  
@@ -62,7 +54,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- Si el `AllowMultiple` argumento se establece en `true`, a continuación, el atributo resultante se puede aplicar más de una vez en una única entidad, similar al siguiente:  
+ Si el argumento `AllowMultiple` se establece en `true`, el atributo resultante se puede aplicar más de una vez a cada una de las entidades, del siguiente modo:  
   
 ```vb  
 Imports System  
@@ -79,9 +71,9 @@ Class Class1
 End Class  
 ```  
   
- En este caso `MultiUseAttr` se puede aplicar varias veces porque `AllowMultiple` está establecido en `true`. Ambos formatos para aplicar varios atributos son válidos.  
+ En este caso, `MultiUseAttr` se puede aplicar varias veces porque `AllowMultiple` está establecido en `true`. Los dos formatos mostrados para aplicar varios atributos son válidos.  
   
- Si `Inherited` se establece en `false`, a continuación, el atributo no es heredado por las clases que se derivan de una clase que tiene el atributo. Por ejemplo:  
+ Si `Inherited` se establece en `false`, las clases que se derivan de una clase con atributos no heredan el atributo. Por ejemplo:  
   
 ```vb  
 Imports System  
@@ -103,15 +95,15 @@ Class DClass
 End Class  
 ```  
   
- En este caso `Attr1` no se aplica a `DClass` a través de la herencia.  
+ En este caso, `Attr1` no se aplica a `DClass` a través de la herencia.  
   
 ## <a name="remarks"></a>Comentarios  
- El `AttributeUsage` es un atributo de uso único, no se puede aplicar más de una vez a la misma clase. `AttributeUsage`es un alias para <xref:System.AttributeUsageAttribute>.</xref:System.AttributeUsageAttribute>  
+ `AttributeUsage` es un atributo de uso único; no se puede aplicar más de una vez a la misma clase. `AttributeUsage` es un alias de <xref:System.AttributeUsageAttribute>.  
   
- Para obtener más información, consulte [acceso a atributos mediante reflexión usando (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+ Para más información, vea [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic]).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el efecto de la `Inherited` y `AllowMultiple` argumentos para el `AttributeUsage` atributo y cómo se pueden enumerar los atributos personalizados aplicados a una clase.  
+ En el ejemplo siguiente se muestra el efecto de los argumentos `Inherited` y `AllowMultiple` en el atributo `AttributeUsage` y cómo se pueden enumerar los atributos personalizados aplicados a una clase.  
   
 ```vb  
 Imports System  
@@ -179,11 +171,11 @@ A2
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Attribute></xref:System.Attribute>   
- <xref:System.Reflection></xref:System.Reflection>   
- [Guía de programación de Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [Crear atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [Acceso a atributos mediante reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Atributos](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])  
+ [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])

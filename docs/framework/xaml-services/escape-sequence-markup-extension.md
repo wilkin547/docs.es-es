@@ -1,69 +1,72 @@
 ---
-title: "{} Escape Sequence / Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "{}"
-helpviewer_keywords: 
-  - "XAML [XAML Services], quotation mark (")"
-  - "{} escape sequence [XAML Services]"
-  - "XAML [XAML Services], {} escape sequence"
-  - "XAML [XAML Services], escape sequence"
-  - "quotation mark (") [XAML Services]"
-  - "escape sequence [XAML Services]"
+title: "Secuencia de escape {}: extensión de marcado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '{}'
+helpviewer_keywords:
+- XAML [XAML Services], quotation mark (")
+- '{} escape sequence [XAML Services]'
+- XAML [XAML Services], {} escape sequence
+- XAML [XAML Services], escape sequence
+- quotation mark (") [XAML Services]
+- escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-caps.latest.revision: 21
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
+caps.latest.revision: "21"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: befbf9960afffcd30bc96863dcc00b4acad2c21a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# {} Escape Sequence / Markup Extension
-Proporciona la secuencia de escape en XAML para los valores de atributo.  La secuencia de escape permite que los valores subsiguientes del atributo se interpreten como un literal.  
+# <a name="-escape-sequence--markup-extension"></a>Secuencia de escape / extensión de marcado {}
+Proporciona la secuencia de escape XAML para los valores de atributo. La secuencia de escape permite los valores siguientes en el atributo debe interpretarse como un literal.  
   
-## Uso de atributos XAML  
+## <a name="xaml-attribute-usage"></a>Uso de atributos XAML  
   
+```xml  
+<object property="{} literalValue" .../>  
 ```  
-<object property="{} literalValue" .../>  
-```  
   
-## Uso de elementos de propiedad XAML  
+## <a name="xaml-property-element-usage"></a>Uso de elementos de propiedad XAML  
   
 ```  
 <object>  
-  <object.property>  
-    {} literalValue  
-  </object.property>  
+  <object.property>  
+    {} literalValue  
+  </object.property>  
 </object>  
 ```  
   
-## Valores XAML  
+## <a name="xaml-values"></a>Valores XAML  
   
 |||  
 |-|-|  
-|**literalValue**|Cadena literal que sigue a la secuencia de escape.  Esta cadena normalmente contiene una llave de apertura o de cierre \({ o }\).|  
+|*literalValue*|La cadena literal que sigue la secuencia de escape. Normalmente, esta cadena contiene una llave de abrir o cerrar ({o}).|  
   
-## Comentarios  
- La secuencia de escape \({}\) se utiliza para poder usar una llave de apertura \({\) como un carácter literal en XAML.  
+## <a name="remarks"></a>Comentarios  
+ La secuencia de escape ({}) se utiliza para que pueda usarse una llave de apertura ({}) como un carácter literal en XAML.  
   
- Los lectores XAML utilizan normalmente la llave de apertura \({\) para indicar el punto de entrada de una extensión de marcado; sin embargo, primero comprueban el carácter siguiente para determinar si es o no una llave de cierre \(}\).  Las dos llaves \({}\) se consideran una secuencia de escape solamente cuando son adyacentes.  
+ Los lectores XAML normalmente use la llave de apertura ({}) para indicar el punto de entrada de una extensión de marcado; sin embargo, primero compruebe el siguiente carácter para determinar si se trata de una llave de cierre (}). Solo si las dos llaves ({}) son adyacentes, se consideran que una secuencia de escape.  
   
- Si se encuentra la secuencia de escape, el lector XAML debe procesar el resto de la cadena como una cadena.  Sin embargo, si la secuencia de escape se aplica a un miembro que tiene un convertidor de tipos, la cadena podría experimentar la conversión de tipos cuando se va a interpretar por un sistema de escritura XAML.  
+ Si se encuentra la secuencia de escape, el lector XAML debería procesar el resto de la cadena como una cadena. Sin embargo, si la secuencia de escape se aplica a un miembro que tenga un convertidor de tipos, la cadena podría someterse a una conversión de tipos cuando se interpreta mediante un escritor de XAML.  
   
- La secuencia de escape no es una extensión de marcado y no está respaldada por una clase.  Sin embargo, es una convención que los lectores de XAML \(incluidos los lectores personalizados\) deben respetar.  
+ La secuencia de escape no es una extensión de marcado y no está respaldada por una clase. Sin embargo, es una convención que deben respetar los lectores XAML (incluidos los lectores XAML personalizados).  
   
- Las comillas dobles \("\) no se pueden utilizar como secuencia de escape de esta manera.  Si necesita establecer comillas como un valor de propiedad sin contenido, utilice la sintaxis de elementos de propiedad y coloque las comillas como una cadena dentro del elemento de propiedad, o bien utilice una entidad de caracteres XML.  Para una propiedad de contenido, las comillas pueden constituir la totalidad del contenido.  
+ No se puede usar un signo de comillas (") como una secuencia de escape de esta manera. Si tiene que establecer un signo de comillas como un valor de propiedad para una propiedad sin contenido, usar la sintaxis de elemento de propiedad y coloque las comillas como una cadena dentro del elemento de propiedad o usar una entidad de caracteres XML. Para una propiedad de contenido, las comillas pueden ser todo el contenido.  
   
- La secuencia de escape \({}\) suele requerirse al especificar un tipo XML que debe incluir un calificador del espacio de nombres en una ubicación donde pueda aparecer la extensión de marcado XAML.  Esto incluye el principio de un valor de atributo XAML y, en una extensión de marcado, inmediatamente después de un signo igual \(\=\).  En el ejemplo siguiente se muestran las secuencias de escape para un espacio de nombres XML que aparece al principio de un valor de atributo XAML.  
+ La secuencia de escape ({}) se suele ser necesaria cuando se especifica un tipo XML que debe incluir un calificador de espacio de nombres en una ubicación donde puede aparecer una extensión de marcado XAML. Esto incluye el inicio de un valor de atributo XAML y en una extensión de marcado, inmediatamente después de un signo igual (=). El ejemplo siguiente muestra las secuencias de escape para un espacio de nombres XML que aparece al principio de un valor de atributo XAML.  
   
- [!code-xml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+ [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
-## Vea también  
- [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)   
- [XML Character Entities and XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+## <a name="see-also"></a>Vea también  
+ [Convertidores de tipos y extensiones de marcado para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
+ [Entidades de caracteres XML y XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)

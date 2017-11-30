@@ -1,58 +1,55 @@
 ---
-title: "In (Modificador gen&#233;rico) (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.VarianceIn"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "contravarianza, In (palabra clave) [Visual Basic]"
-  - "In (palabra clave) [Visual Basic]"
+title: "In (Modificador genérico) (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.VarianceIn
+helpviewer_keywords:
+- contravariance, In keyword [Visual Basic]
+- In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# In (Modificador gen&#233;rico) (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-En los parámetros de tipo genérico, la palabra clave `In` especifica que el parámetro de tipo es contravariante.  
+# <a name="in-generic-modifier-visual-basic"></a>In (Modificador genérico) (Visual Basic)
+Para los parámetros de tipo genérico, la palabra clave `In` especifica que el parámetro de tipo es contravariante.  
   
-## Comentarios  
- La contravarianza permite usar un tipo menos derivado que el especificado por el parámetro genérico.  Esto permite la conversión implícita de las clases que implementan interfaces variantes y de los tipos delegados.  
+## <a name="remarks"></a>Comentarios  
+ La contravarianza permite usar un tipo menos derivado que el que se especifica en el parámetro genérico. Esto permite la conversión implícita de las clases que implementan interfaces variantes y la conversión implícita de los tipos de delegado.  
   
- Para obtener más información, vea [Covarianza y contravarianza](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md).  
+ Para obtener más información, vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
-## Reglas  
- Puede usar la palabra clave `In` en delegados e interfaces genéricos.  
+## <a name="rules"></a>Reglas  
+ Puede usar la palabra clave `In` en las interfaces y delegados genéricos.  
   
- Un parámetro de tipo se puede declarar como contravariante en una interfaz o un delegado genérico si solamente se usa como tipo de los argumentos de método y no como tipo devuelto por un método.  Los parámetros `ByRef` no pueden ser covariantes o contravariantes.  
+ Un parámetro de tipo puede declararse contravariante en una interfaz genérica o de delegado si se usa solo como un tipo de argumentos de método y no se utiliza como un tipo de valor devuelto del método. `ByRef`parámetros no pueden estar covariantes ni contravariante.  
   
- La covarianza y contravarianza son compatibles con los tipos de referencia y no con los tipos de valor.  
+ Covarianza y contravarianza son compatibles con los tipos de referencia y no se admite para los tipos de valor.  
   
- En Visual Basic, no se pueden declarar eventos en interfaces contravariantes sin especificar el tipo de delegado.  Además, una interfaz contravariante no puede tener clases, enumeraciones o estructuras anidadas, pero sí interfaces anidadas.  
+ En Visual Basic, no puede declarar eventos en interfaces contravariantes sin especificar el tipo de delegado. Además, contravariante interfaces no pueden tener clases, enumeraciones o estructuras anidadas, pero puede haber interfaces anidadas.  
   
-## Comportamiento  
- Una interfaz que tiene un parámetro de tipo contravariante permite que sus métodos acepten argumentos de tipos menos derivados que los especificados por el parámetro de tipo de interfaz.  Por ejemplo, dado que en .NET Framework 4, en la interfaz <xref:System.Collections.Generic.IComparer%601>, el tipo T es contravariante, puede asignar un objeto del tipo `IComparer(Of Person)` a otro objeto del tipo `IComparer(Of Employee)` sin usar ningún método de conversión especial si `Person` hereda `Employee`.  
+## <a name="behavior"></a>Comportamiento  
+ Una interfaz que tiene un parámetro de tipo contravariante permite que sus métodos acepten argumentos de tipos menos derivados que los que se especifican en el parámetro de tipo de interfaz. Por ejemplo, dado que en la interfaz <xref:System.Collections.Generic.IComparer%601> de .NET Framework 4 el tipo T es contravariante, puede asignar un objeto de tipo `IComparer(Of Person)` a un objeto de tipo `IComparer(Of Employee)` sin tener que usar ningún método de conversión especial si `Person` hereda `Employee`.  
   
  A un delegado contravariante se le puede asignar otro delegado del mismo tipo, pero con un parámetro de tipo genérico menos derivado.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica contravariante.  También se muestra cómo se puede usar la conversión implícita para las clases que implementan dicha interfaz.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica contravariante. También se muestra cómo puede usar la conversión implícita para las clases que implementan esta interfaz.  
   
  [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico contravariante.  También se muestra cómo se puede convertir un tipo de delegado implícitamente.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo declarar e invocar un delegado genérico contravariante, y crear instancias de este. También se muestra cómo puede convertir implícitamente un tipo de delegado.  
   
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
-## Vea también  
- [Varianza en interfaces genéricas](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>Vea también  
+ [Varianza en interfaces genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

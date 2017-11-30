@@ -1,76 +1,75 @@
 ---
-title: "Resume (Instrucci&#243;n) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Resume"
-  - "vb.ResumeNext"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Error (instrucción), y Resume (instrucción)"
-  - "errores [Visual Basic], reanudar cuando"
-  - "ejecución"
-  - "ejecución, reanudar"
-  - "Next (instrucción), Resume"
-  - "Resume Next (instrucción)"
-  - "Resume (instrucción)"
-  - "Resume (instrucción), sintaxis"
-  - "errores en tiempo de ejecución, reanudar cuando"
+title: "Resume (Instrucción)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Resume
+- vb.ResumeNext
+helpviewer_keywords:
+- Next statement [Visual Basic], Resume
+- Resume Next statement [Visual Basic]
+- execution [Visual Basic], resuming
+- run-time errors [Visual Basic], resuming after
+- Resume statement [Visual Basic], syntax
+- errors [Visual Basic], resuming after
+- Error statement [Visual Basic], and Resume statement
+- execution
+- Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Resume (Instrucci&#243;n)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Reanuda la ejecución cuando finaliza una rutina de control de errores.  
+# <a name="resume-statement"></a>Resume (Instrucción)
+Reanuda la ejecución una vez finalizada una rutina de control de errores.  
   
- Recomendamos que utilice el control de excepciones estructurado en el código siempre que sea posible, en lugar de utilizar el control no estructurado de excepciones y las instrucciones de `On Error` y de `Resume` .  Para obtener más información, vea [Try...Catch...Finally \(Instrucción\)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Se recomienda que utilice el control de excepciones estructurado en el código siempre que sea posible, en lugar de utilizar el control estructurado de excepciones y el `On Error` y `Resume` las instrucciones. Para obtener más información, vea [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Resume [ Next | line ]  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
  `Resume`  
- Obligatorio.  Si el error se produjo en el mismo procedimiento que el controlador de errores, la ejecución continúa con la instrucción que causó el error.  Si se produjo en un procedimiento llamado, la ejecución continúa en la última instrucción que realizó una llamada al exterior del procedimiento que contiene la rutina de control de errores.  
+ Obligatorio. Si el error se produjo en el mismo procedimiento que el controlador de errores, se reanuda la ejecución con la instrucción que produjo el error. Si el error se produjo en un procedimiento llamado, la ejecución se reanuda en la instrucción que llame por última vez fuera del procedimiento que contiene la rutina de control de errores.  
   
  `Next`  
- Opcional.  Si el error se produjo en el mismo procedimiento que el controlador de errores, la ejecución continúa con la instrucción siguiente a la que causó el error.  Si el error se produjo en un procedimiento llamado, la ejecución continúa en la instrucción siguiente a la que realizó por última vez la llamada fuera del procedimiento que contiene la rutina de control de errores \(o la instrucción `On Error Resume Next`\).  
+ Opcional. Si el error se produjo en el mismo procedimiento que el controlador de errores, se reanuda la ejecución con la instrucción inmediatamente posterior a la instrucción que produjo el error. Si el error se produjo en un procedimiento llamado, la ejecución continúa con la instrucción inmediatamente posterior a la instrucción que llame por última vez fuera del procedimiento que contiene la rutina de control de errores (o `On Error Resume Next` instrucción).  
   
  `line`  
- Opcional.  La ejecución continúa en la línea especificada en el argumento `line` requerido.  El argumento `line` es una etiqueta de línea o un número de línea, y debe estar en el mismo procedimiento que el controlador de errores.  
+ Opcional. La ejecución se reanuda en la línea especificada en la sección necesario `line` argumento. El `line` argumento es una etiqueta de línea o un número de línea y debe estar en el mismo procedimiento que el controlador de errores.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Se recomienda usar el control estructurado de excepciones en el código siempre que sea posible, en lugar de utilizar el control no estructurado de excepciones y las instrucciones de `On Error` y de `Resume` .  Para obtener más información, vea [Try...Catch...Finally \(Instrucción\)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+>  Se recomienda que use el control de excepciones estructurado en el código siempre que sea posible, en lugar de utilizar el control estructurado de excepciones y el `On Error` y `Resume` las instrucciones. Para obtener más información, vea [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).  
   
- Si se utiliza una instrucción `Resume` fuera de una rutina de controlador de errores, se producirá un error.  
+ Si utiliza un `Resume` instrucción en cualquier lugar distinto en una rutina de control de errores, que se produce un error.  
   
- La instrucción `Resume` no se puede utilizar en un procedimiento que contenga una instrucción `Try...Catch...Finally`.  
+ El `Resume` no se puede usar la instrucción en un procedimiento que contenga una `Try...Catch...Finally` instrucción.  
   
-## Ejemplo  
- En este ejemplo se utiliza la instrucción `Resume` para finalizar el controlador de errores en un procedimiento y, a continuación, reanudar la ejecución con la instrucción que provocó el error.  Para ilustrar el uso de la instrucción `Resume` se genera el error número 55.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se utiliza la `Resume` instrucción que se debe terminar en un procedimiento de control de errores y, a continuación, reanudar la ejecución con la instrucción que produjo el error. Se genera el error número 55 para ilustrar el uso de la `Resume` instrucción.  
   
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
-## Requisitos  
- **Espacio de nombres:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>Requisitos  
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Ensamblado:** biblioteca en tiempo de ejecución de Visual Basic \(en Microsoft.VisualBasic.dll\)  
+ **Ensamblado:** biblioteca de tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## Vea también  
- [Try...Catch...Finally \(Instrucción\)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Error \(Instrucción\)](../../../visual-basic/language-reference/statements/error-statement.md)   
- [On Error \(Instrucción\)](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Error (instrucción)](../../../visual-basic/language-reference/statements/error-statement.md)  
+ [On Error (instrucción)](../../../visual-basic/language-reference/statements/on-error-statement.md)
