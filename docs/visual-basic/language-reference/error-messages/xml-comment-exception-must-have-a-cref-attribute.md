@@ -1,41 +1,39 @@
 ---
-title: "La excepci&#243;n del comentario XML debe tener un atributo &#39;cref&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42319"
-  - "vbc42319"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42319"
+title: "La excepción del comentario XML debe tener un &#39; cref &#39; atributo"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42319
+- vbc42319
+helpviewer_keywords: BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c0c22c9cd9415faf17d027c3751d166662a92b50
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# La excepci&#243;n del comentario XML debe tener un atributo &#39;cref&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-La etiqueta \< exception \> proporciona una manera de documentar las excepciones que puede producir un método.  El atributo `cref` necesario designa el nombre de un miembro, que comprueba el generador de la documentación.  Si el miembro existe, se convierte al nombre de elemento canónico en el archivo de documentación.  
+# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>La excepción del comentario XML debe tener un &#39; cref &#39; atributo
+El \<excepción > etiqueta proporciona un medio para documentar las excepciones que se pueden iniciar mediante un método. Requerido `cref` atributo designa el nombre de un miembro, que comprueba el generador de documentación. Si el miembro existe, se traduce al nombre de elemento canónico en el archivo de documentación.  
   
- **Identificador de error:** BC42319  
+ **Id. de error:** BC42319  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Agregue el atributo `cref` a la excepción como sigue:  
+-   Agregar el `cref` atributo a la excepción como sigue:  
   
     ```  
     '''<exception cref="member">description</exception>  
     ```  
   
-## Vea también  
- [\<exception\>](../../../visual-basic/language-reference/xmldoc/exception.md)   
- [Cómo: Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)   
+## <a name="see-also"></a>Vea también  
+ [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)  
+ [Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

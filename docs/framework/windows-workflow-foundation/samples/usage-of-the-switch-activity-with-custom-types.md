@@ -1,23 +1,27 @@
 ---
-title: "Usar la actividad Switch con tipos personalizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Usar la actividad Switch con tipos personalizados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a8a4418c582d00f1163305ce5d63c63c198dbc30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Usar la actividad Switch con tipos personalizados
-En este ejemplo se describe cómo habilitar una actividad <xref:System.Activities.> Statements.Switch`1?qualifyHint=False&autoUpgrade=True para evaluar un tipo complejo definido por el usuario en tiempo de ejecución.En los lenguajes de programación orientados a procedimientos más tradicionales, una instrucción [switch](http://go.microsoft.com/fwlink/?LinkId=180521) selecciona una lógica de ejecución basada en la evaluación condicional de una variable.Tradicionalmente, una instrucción `switch` funciona en una expresión que se puede evaluar estáticamente.Por ejemplo, en C\# esto significa que solo se admiten los tipos primitivos, como <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, y los tipos de enumeración.  
+# <a name="usage-of-the-switch-activity-with-custom-types"></a>Usar la actividad Switch con tipos personalizados
+Este ejemplo describe cómo habilitar una <!--zz <xref:System.Activities. Statements.Switch`1>--> `xref:System.Activities` Statements.Switch`1?qualifyHint=False&autoUpgrade=True activity to evaluate a user-defined complex type at runtime. In most traditional procedural programming languages, a [switch](http://go.microsoft.com/fwlink/?LinkId=180521) statement selects an execution logic based on the conditional evaluation of a variable. Traditionally, a `cambiar ' instrucción funciona en una expresión que se puede evaluar estáticamente. Por ejemplo, en C# esto significa que solo se admiten los tipos primitivos, como <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, y los tipos de enumeración.  
   
- Para habilitar el cambio en una clase personalizada, se debe implementar lógica que evalúe los valores del tipo complejo personalizado en tiempo de ejecución.En este ejemplo se muestra cómo habilitar el cambio en un tipo complejo personalizado denominado `Person`.  
+ Para habilitar el cambio en una clase personalizada, se debe implementar lógica que evalúe los valores del tipo complejo personalizado en tiempo de ejecución. En este ejemplo se muestra cómo habilitar el cambio en un tipo complejo personalizado denominado `Person`.  
   
 -   En la clase `Person` personalizada, se declara un atributo <xref:System.ComponentModel.TypeConverter> con el nombre de la clase <xref:System.ComponentModel.TypeConverter> personalizada.  
   
@@ -28,7 +32,6 @@ En este ejemplo se describe cómo habilitar una actividad <xref:System.Activitie
        public string Name { get; set; }  
        public int Age { get; set; }  
     ...  
-  
     ```  
   
 -   En la clase `Person` personalizada, se invalidan los métodos <xref:System.Object.Equals%2A> y <xref:System.Object.GetHashCode%2A>.  
@@ -55,7 +58,6 @@ En este ejemplo se describe cómo habilitar una actividad <xref:System.Activitie
   
         return 0;  
     }  
-  
     ```  
   
 -   Se implementa una clase <xref:System.ComponentModel.TypeConverter> personalizada que realiza la conversión de una instancia de la clase personalizada a una cadena y una cadena a una instancia de una clase personalizada.  
@@ -112,30 +114,30 @@ En este ejemplo se describe cómo habilitar una actividad <xref:System.Activitie
   
  Este ejemplo incluye los siguientes archivos.  
   
--   **Person.cs**: define la clase `Person`.  
+-   **Person.cs**: define la `Person` clase.  
   
--   **PersonConverter.cs**: el convertidor de tipos de la clase `Person`.  
+-   **PersonConverter.cs**: el convertidor de tipos para la `Person` clase.  
   
--   **Sequence.xaml**: flujo de trabajo que cambia el tipo de `Person`.  
+-   **Sequence.XAML**: un flujo de trabajo que cambia el `Person` tipo.  
   
--   **Program.cs**: la función principal que ejecuta el flujo de trabajo.  
+-   **Program.cs**: la función principal que se ejecuta el flujo de trabajo.  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
 1.  Cargue Switch.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Presione Ctrl\+MAYÚS\+B para compilar la solución.  
+2.  Presione Ctrl+MAYÚS+B para compilar la solución.  
   
-3.  Presione CTRL \+ F5 para ejecutar el ejemplo.  
+3.  Presione CTRL + F5 para ejecutar el ejemplo.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   
-## Vea también  
- [Biblioteca de actividades integrada](../../../../docs/framework/windows-workflow-foundation//net-framework-4-5-built-in-activity-library.md)
+## <a name="see-also"></a>Vea también  
+ [Biblioteca de actividades integrada](../../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)

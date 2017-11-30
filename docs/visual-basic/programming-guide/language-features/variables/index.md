@@ -1,43 +1,25 @@
 ---
 title: Variables en Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2fdc670bf4f17000809e75e32c32edb39abf0fed
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: a7a47ad7e4ade9f15159c27ac672aeb937a05493
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="variables-in-visual-basic"></a>Variables en Visual Basic
 A menudo tiene que almacenar valores al realizar cálculos con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Por ejemplo, tal vez le interese calcular varios valores, compararlos y realizar diversas operaciones con ellos, según el resultado de la comparación. Para poder compararlos, debe conservar los valores.  
@@ -61,10 +43,9 @@ A menudo tiene que almacenar valores al realizar cálculos con [!INCLUDE[vbprvb]
  Al igual que una variable, una *propiedad* representa un valor al que se puede tener acceso, pero es más compleja que una variable. Una propiedad usa bloques de código que controlan cómo establecer y recuperar su valor. Para obtener más información, vea [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md) (Diferencias entre propiedades y variables en Visual Basic).  
   
 ## <a name="see-also"></a>Vea también  
- [Declaración de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Solución de problemas de variables](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)   
- [Cómo: Introducir y extraer los datos de una variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
- [Diferencias entre propiedades y variables en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
+ [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [Solución de problemas de variables](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)  
+ [Introducir y extraer los datos de una variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
+ [Diferencias entre propiedades y Variables en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)  
  [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-

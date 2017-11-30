@@ -1,36 +1,34 @@
 ---
-title: "Definici&#243;n de tipos an&#243;nimos (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "tipos anónimos [Visual Basic], definición de tipo"
+title: "Definición de tipos anónimos (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8b5b7eba55d719c1482b7224ecffc78b776feb00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Definici&#243;n de tipos an&#243;nimos (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-En respuesta a la declaración de una instancia de un tipo anónimo, el compilador crea una nueva definición de clase que contiene las propiedades especificadas del tipo.  
+# <a name="anonymous-type-definition-visual-basic"></a>Definición de tipos anónimos (Visual Basic)
+En respuesta a la declaración de una instancia de un tipo anónimo, el compilador crea una nueva definición de clase que contiene las propiedades especificadas para el tipo.  
   
-## Código generado por compilador  
- En la siguiente definición de `product`, el compilador crea una nueva definición de clase que contiene las propiedades `Name`, `Price` y `OnHand`.  
+## <a name="compiler-generated-code"></a>Código generado por el compilador  
+ En la siguiente definición de `product`, el compilador crea una nueva definición de clase que contiene propiedades `Name`, `Price`, y `OnHand`.  
   
  [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
   
- La definición de clase contiene definiciones de propiedad similares a la siguiente.  Observe que no hay ningún método `Set` para las propiedades de clave.  Los valores de las propiedades de clave son de sólo lectura.  
+ La definición de clase contiene definiciones de propiedad similares al siguiente. Tenga en cuenta que no hay ningún `Set` método para las propiedades de clave. Los valores de las propiedades de clave son de sólo lectura.  
   
-```vb#  
+```vb  
 Public Class $Anonymous1  
     Private _name As String  
     Private _price As Double  
@@ -59,37 +57,37 @@ Public Class $Anonymous1
 End Class  
 ```  
   
- Además, las definiciones de tipos anónimos contienen un constructor predeterminado.  No se permiten los constructores que requieran parámetros.  
+ Además, las definiciones de tipos anónimos contienen un constructor predeterminado. No se permiten constructores que requieren parámetros.  
   
- Si una declaración de tipos anónimos contiene al menos una propiedad de clave, la definición de tipos invalida tres miembros heredados de <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A> y <xref:System.Object.ToString%2A>.  Si no se declara ninguna propiedad de clave, sólo se invalida <xref:System.Object.ToString%2A>.  Las invalidaciones proporcionan la funcionalidad siguiente:  
+ Si una declaración de tipo anónimo contiene al menos una propiedad de clave, la definición de tipo invalida tres miembros heredados de <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, y <xref:System.Object.ToString%2A>. Si no se declara ninguna propiedad clave, solo <xref:System.Object.ToString%2A> se invalida. Las invalidaciones proporcionan la funcionalidad siguiente:  
   
--   `Equals` devuelve `True` si dos instancias de tipo anónimo son la misma instancia o si cumplen las condiciones siguientes:  
+-   `Equals`Devuelve `True` si dos instancias de tipo anónimo son la misma instancia o si cumplen las condiciones siguientes:  
   
     -   Tienen el mismo número de propiedades.  
   
-    -   Las propiedades se declaran en el mismo orden, con los mismos nombres y los mismos tipos deducidos.  Las comparaciones de nombres no distinguen mayúsculas de minúsculas.  
+    -   Las propiedades se declaran en el mismo orden, con los mismos nombres y los mismos tipos deducidos. Las comparaciones de nombres no distinguen mayúsculas de minúsculas.  
   
-    -   Al menos una de las propiedades es una propiedad de clave y la palabra clave `Key` se aplica a las mismas propiedades.  
+    -   Al menos una de las propiedades es una propiedad clave y el `Key` palabra clave se aplica a las mismas propiedades.  
   
-    -   La comparación de cada par correspondiente de propiedades de clave devuelve `True`.  
+    -   Comparación de cada par correspondiente de propiedades de clave devuelve `True`.  
   
-     Por ejemplo, en los ejemplos siguientes, `Equals` devuelve `True` sólo para `employee01` y `employee08`.  El comentario situado delante de que cada línea especifica la razón por la que la nueva instancia no coincide con `employee01`.  
+     Por ejemplo, en los ejemplos siguientes, `Equals` devuelve `True` sólo para `employee01` y `employee08`. El comentario que precede a cada línea especifica la razón por qué no coincide con la nueva instancia `employee01`.  
   
      [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode` proporciona un algoritmo GetHashCode único correctamente.  El algoritmo utiliza sólo las propiedades de clave para calcular el código hash.  
+-   `GetHashcode`Proporciona un algoritmo GetHashCode único correctamente. El algoritmo utiliza sólo las propiedades de clave para calcular el código hash.  
   
--   `ToString` devuelve una cadena de valores de propiedad concatenados, como se muestra en el ejemplo siguiente.  Se incluyen tanto las propiedades de clave como las que no lo son.  
+-   `ToString`Devuelve una cadena de valores de propiedad concatenados, como se muestra en el ejemplo siguiente. Clave y propiedades de clave no se incluyen.  
   
      [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
- Explícitamente las propiedades con nombre de un tipo anónimo no pueden estar en conflicto con estos métodos generados.  Es decir, no puede utilizar `.Equals`, `.GetHashCode`ni `.ToString` para asignar un nombre a una propiedad.  
+ Propiedades con nombre explícito de un tipo anónimo no se pueden entrar en conflicto con estos métodos generados. Es decir, no puede usar `.Equals`, `.GetHashCode`, o `.ToString` a un nombre de propiedad.  
   
- Las definiciones de tipo anónimas que incluyen por lo menos una propiedad de clave también implementan la interfaz <xref:System.IEquatable%601?displayProperty=fullName>, donde `T` es el tipo del tipo anónimo.  
+ Las definiciones de tipo anónimo que incluyen al menos una propiedad clave también implementan la <xref:System.IEquatable%601?displayProperty=nameWithType> interfaz, donde `T` es el tipo del tipo anónimo.  
   
 > [!NOTE]
->  Las declaraciones de tipos anónimas crean el mismo tipo anónimo sólo si producen en el mismo ensamblado, sus propiedades tienen los mismos nombres y los mismos tipos deducidos, las propiedades se declaran en el mismo orden y se marcan las mismas propiedades como propiedades de clave.  
+>  Declaraciones de tipos anónimos crear el mismo tipo anónimo sólo si se producen en el mismo ensamblado, sus propiedades tienen los mismos nombres y los mismos tipos deducidos, las propiedades se declaran en el mismo orden y se marcan las mismas propiedades como propiedades de clave.  
   
-## Vea también  
- [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Cómo: Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+## <a name="see-also"></a>Vea también  
+ [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

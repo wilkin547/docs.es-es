@@ -1,42 +1,24 @@
 ---
-title: "Opciones del compilador de Visual Basic alfabético | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Opciones del compilador de Visual Basic, por orden alfabético"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93246b3a38002955234a7a93529d05b71ab4e580
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0bcb3b182ee224457165be2177dd90ad48b00e56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic Compiler Options Listed Alphabetically
-El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] se ofrece como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]. La siguiente es una lista de las opciones de línea de comandos del compilador [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] ordenadas alfabéticamente.  
+# <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opciones del compilador de Visual Basic, por orden alfabético
+El compilador de línea de comandos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se ofrece como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. La siguiente es una lista de las opciones de línea de comandos del compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ordenadas alfabéticamente.  
   
 |Opción|Propósito|  
 |------------|-------------|  
@@ -53,20 +35,20 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programmin
 |[/define](../../../visual-basic/reference/command-line-compiler/define.md)|Define símbolos de compilación condicional.|  
 |[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Especifica si el ensamblado estará firmado total o parcialmente.|  
 |[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Procesa los comentarios de documentación generando un archivo XML.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Especifica cómo debe documentar el compilador [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] los errores internos del compilador.|  
+|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Especifica cómo debe documentar el compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] los errores internos del compilador.|  
 |[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Especifica dónde se alinean las secciones del archivo de salida.|  
-|[/Help](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `/?`. No se produce ninguna compilación.|  
+|[/help](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `/?`. No se produce ninguna compilación.|  
 |[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Indica si un archivo ejecutable determinado admite selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía.|  
 |[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importa un espacio de nombres desde un ensamblado especificado.|  
 |[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Especifica un nombre de contenedor de claves para un par de claves que asigna un nombre seguro al ensamblado.|  
 |[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Especifica un archivo que contiene una clave o un par de claves para asignar un nombre seguro al ensamblado.|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especificar la versión de idioma: 9 | 9.0 | 10 | 10.0 | 11 | 11.0.|  
+|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especificar versión de lenguaje: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0.|  
 |[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Especifica la ubicación de ensamblados al que hace referencia el [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) opción.|  
 |[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Crea un vínculo a un recurso administrado.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica la clase que contiene el `Sub``Main` procedimiento para usar durante el inicio.|  
+|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica la clase que contiene el `Sub Main` procedimiento que se utilizará en el inicio.|  
 |[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Especifica el nombre del ensamblado del que un módulo formará parte.|  
 |`/modulename:<string>`|Especifica el nombre del módulo de origen.|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador con destino en [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].|  
+|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|No compila con Vbc.rsp.|  
 |[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Suprime la información de titular del compilador.|  
 |[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Hace que el compilador no haga referencia a las bibliotecas estándar.|  
@@ -100,7 +82,7 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programmin
 |[/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Inserta un recurso Win32 en el archivo de salida.|  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de Visual Basic, por categoría](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)   
- [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [Opciones del compilador de C# alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
+ [Opciones del compilador de Visual Basic, por categoría](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+ [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Opciones del compilador de C#, por orden alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Opciones del compilador de C#, por categoría](../../../csharp/language-reference/compiler-options/listed-by-category.md)

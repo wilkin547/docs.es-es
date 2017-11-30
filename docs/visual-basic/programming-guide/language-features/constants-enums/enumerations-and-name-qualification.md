@@ -1,70 +1,69 @@
 ---
-title: "Enumeraciones y calificaci&#243;n de nombres (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "nombres ambiguos, enumeraciones"
-  - "declaraciones, enumeraciones"
-  - "declaraciones, espacios de nombres"
-  - "declarar enumeraciones"
-  - "declarar espacios de nombres, enumeraciones"
-  - "enumeraciones [Visual Basic], calificación de nombres"
-  - "Imports (instrucción), declaraciones de espacios de nombres"
-  - "conflictos de nombres"
-  - "nombres, evitar conflictos"
-  - "espacios de nombres, declarar"
-  - "conflictos de nomenclatura, enumeraciones"
-  - "conflictos de nomenclatura, calificar nombres"
-  - "convenciones de nomenclatura, conflictos de nomenclatura"
-  - "referencias, miembros de enumeración"
+title: "Enumeraciones y calificación de nombres (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declarations [Visual Basic], enumerations
+- Imports statement [Visual Basic], namespace declarations
+- declaring namespaces [Visual Basic], enumerations
+- name collisions
+- ambiguous names [Visual Basic], enumerations
+- enumerations [Visual Basic], name qualification
+- names [Visual Basic], avoiding conflicts
+- namespaces [Visual Basic], declaring
+- naming conflicts, enumerations
+- naming conflicts, qualifying names
+- declaring enumerations
+- references [Visual Basic], enumeration members
+- naming conventions [Visual Basic], naming conflicts
+- declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3cb97d6a8f4b7e81f2b759010214e200ec63ff21
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Enumeraciones y calificaci&#243;n de nombres (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Normalmente, cuando se hace referencia a un miembro de una enumeración, es necesario calificarlo con el nombre de la enumeración.  Por ejemplo, para hacer referencia al miembro `Sunday` de la enumeración `Days`, se utilizaría la siguiente sintaxis:  
+# <a name="enumerations-and-name-qualification-visual-basic"></a>Enumeraciones y calificación de nombres (Visual Basic)
+Normalmente, cuando se hace referencia a un miembro de una enumeración, debe calificar el nombre de miembro con el nombre de la enumeración. Por ejemplo, para hacer referencia a la `Sunday` miembro de su `Days` enumeración, se utilizaría la siguiente sintaxis:  
   
  [!code-vb[VbEnumsTask#18](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_1.vb)]  
   
-## Utilizar la instrucción Imports  
- Se puede evitar la utilización de nombres completos agregando la instrucción `Imports` a la sección de declaraciones de espacios de nombres del código, como en el ejemplo siguiente:  
+## <a name="using-the-imports-statement"></a>Mediante la instrucción Imports  
+ Puede evitar el uso de nombres completos agregando un `Imports` instrucción a la sección de declaraciones de espacio de nombres del código, como en el ejemplo siguiente:  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
- Una instrucción `Imports` importa nombres de espacios de nombres de proyectos y ensamblados a los que se hace referencia y de dentro del mismo proyecto como el módulo en el que aparece la instrucción.  Una vez agregada esta instrucción, podría hacer referencia a los miembros de la enumeración sin calificación, como se muestra a continuación:  
+ Un `Imports` instrucción importa los espacios de nombres de ensamblados y proyectos que se hace referencia y desde el mismo proyecto que el módulo en el que aparece la instrucción. Una vez agregada esta instrucción, puede hacer referencia a los miembros de enumeración sin calificación, como en el ejemplo siguiente:  
   
  [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_3.vb)]  
   
- Mediante la organización de conjuntos de constantes relacionadas en enumeraciones, se pueden utilizar los mismos nombres de constantes en diferentes contextos.  Por ejemplo, puede utilizar los mismos nombres de las constantes de días de la semana en las enumeraciones `Days` y `WorkDays`.  Si utiliza la instrucción `Imports` con las enumeraciones, debe evitar referencias ambiguas.  Considere el ejemplo siguiente:  
+ Si organiza los conjuntos de constantes relacionadas en enumeraciones, puede usar los mismos nombres de constantes en diferentes contextos. Por ejemplo, puede usar los mismos nombres para las constantes de día de la semana en el `Days` y `WorkDays` enumeraciones. Si usas el `Imports` instrucción con las enumeraciones, debe tener cuidado para evitar referencias ambiguas. Considere el ejemplo siguiente:  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
  [!code-vb[VbEnumsTask#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_4.vb)]  
   
- Suponiendo que `Monday` sea un miembro de las enumeraciones `Days` y `Workdays`, este código generará un error del compilador.  Para evitar las referencias ambiguas a una constante individual, debe calificar el nombre de la constante con su enumeración.  El siguiente código hace referencia a las constantes `Saturday` en las enumeraciones `Days` y `WorkDays`.  
+ Suponiendo que `Monday` es un miembro de la `Days` enumeración y `Workdays` enumeración, este código genera un error del compilador. Para evitar referencias ambiguas Cuando se hace referencia a una constante individual, nombre de la constante con su enumeración. El código siguiente hace referencia a la `Saturday` constantes en el `Days` y `WorkDays` enumeraciones.  
   
  [!code-vb[VbEnumsTask#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_5.vb)]  
   
-## Vea también  
- [Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)   
- [Cómo: Declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
- [Cómo: Hacer referencia al miembro de una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Cómo: Recorrer en iteración una enumeración en Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
- [Cómo: Determinar la cadena asociada a un valor de enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [Cuándo se debe utilizar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [Tipos de datos constantes y literales](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)   
- [Enum \(Instrucción\)](../../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Instrucción Imports \(Tipo y espacio de nombres de .NET\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
+## <a name="see-also"></a>Vea también  
+ [Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [Cómo: declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
+ [Hacer referencia al miembro de una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [Cómo: recorrer en iteración una enumeración en Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
+ [Determinar la cadena asociada a un valor de enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [Cuándo se debe utilizar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [Tipos de datos constantes y literales](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [Enum (instrucción)](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Imports (instrucción), espacio de nombres y tipo .NET](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)

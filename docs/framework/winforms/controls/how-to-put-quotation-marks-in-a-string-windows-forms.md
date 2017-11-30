@@ -1,50 +1,53 @@
 ---
-title: "C&#243;mo: Insertar comillas en una cadena (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "comillas"
-  - "comillas, agregar a cadenas en cuadros de texto"
-  - "TextBox (control) [Windows Forms], mostrar comillas"
+title: "Cómo: Insertar comillas en una cadena (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- quotation marks
+- TextBox control [Windows Forms], displaying quotation marks
+- quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Insertar comillas en una cadena (formularios Windows Forms)
-En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de texto.  Por ejemplo:  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Cómo: Insertar comillas en una cadena (formularios Windows Forms)
+A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:  
   
- Julia dijo: "¡Te invito a cenar\!"  
+ Me dijo: "¡Te mereces un regalo!"  
   
- Como alternativa, puede utilizar también el campo <xref:Microsoft.VisualBasic.ControlChars.Quote> como una constante.  
+ Como alternativa, también puede utilizar el <xref:Microsoft.VisualBasic.ControlChars.Quote> campo como una constante.  
   
-### Para colocar comillas en una cadena mediante programación  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Para colocar comillas en una cadena en el código  
   
-1.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], inserte dos comillas seguidas en una fila para representar una comilla incrustada.  En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\" como una comilla incrustada.  Por ejemplo, para crear la cadena anterior, utilice el código siguiente:  
+1.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], inserte dos comillas en una fila como una comilla incrustada. En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserte la secuencia de escape \\"como una comilla incrustada. Por ejemplo, para crear la cadena anterior, utilice el código siguiente.  
   
     ```vb  
     Private Sub InsertQuote()  
        TextBox1.Text = "She said, ""You deserve a treat!"" "  
     End Sub  
-  
     ```  
   
     ```csharp  
     private void InsertQuote(){  
        textBox1.Text = "She said, \"You deserve a treat!\" ";  
     }  
-  
     ```  
   
     ```cpp  
@@ -57,13 +60,12 @@ En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de t
   
      O bien  
   
-2.  Inserte el carácter ASCII o Unicode de las comillas.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], utilice el carácter ASCII \(34\).  En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], utilice el carácter Unicode \(\\u0022\).  
+2.  Inserte el carácter ASCII o Unicode de una comilla. En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], use el carácter ASCII (34). En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], use el carácter Unicode ( \u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
        TextBox1.Text = "She said, " & Chr(34) & "You deserve a treat!" & Chr(34)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -73,7 +75,7 @@ En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de t
     ```  
   
     > [!NOTE]
-    >  En este ejemplo, no se puede utilizar \\u0022 porque no se puede utilizar un nombre de carácter universal que designe un carácter de un juego de caracteres básico.  De lo contrario, se produce el error C3851.  Para obtener más información, vea [Error del compilador C3851](../Topic/Compiler%20Error%20C3851.md).  
+    >  En este ejemplo, no puede utilizar \u0022 porque no puede utilizar un nombre de carácter universal que designe un carácter en el juego de caracteres básico. De lo contrario, se produce el error C3851. Para más información, consulte [Error del compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
      O bien  
   
@@ -82,13 +84,11 @@ En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de t
     ```vb  
     Const quote As String = """"  
     TextBox1.Text = "She said, " & quote & "You deserve a treat!" & quote  
-  
     ```  
   
     ```csharp  
     const string quote = "\"";  
     textBox1.Text = "She said, " + quote +  "You deserve a treat!"+ quote ;  
-  
     ```  
   
     ```cpp  
@@ -98,13 +98,13 @@ En algunas ocasiones es necesario colocar las comillas \(""\) en una cadena de t
        const_cast<String^>(quote));  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.TextBox>   
- <xref:Microsoft.VisualBasic.ControlChars.Quote>   
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
- [TextBox \(Control\)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:Microsoft.VisualBasic.ControlChars.Quote>  
+ [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [Controlar el punto de inserción en un control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [Crear un cuadro de texto de contraseña con el control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Seleccionar texto en el control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Ver múltiples líneas en el control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [Control TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

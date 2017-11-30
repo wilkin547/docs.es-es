@@ -1,41 +1,24 @@
 ---
-title: /nowarn | Documentos de Microsoft
-ms.date: 2015-07-20
+title: /nowarn
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - nowarn compiler option [Visual Basic]
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 61b145a9eb95f5357c7aa2983a96c31e8f2cef6a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8da27ea2f9f0a4d370928d70cda1a796b822d97c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nowarn"></a>/nowarn
 Suprime la capacidad del compilador para generar advertencias.  
@@ -50,21 +33,21 @@ Suprime la capacidad del compilador para generar advertencias.
   
 |Término|Definición|  
 |---|---|  
-|`numberList`|Opcional. Lista delimitada por comas de los números de identificador de advertencia que el compilador debe suprimir. Si no se especifican identificadores de advertencia, se eliminarán todas las advertencias.|  
+|`numberList`|Opcional. Lista delimitada por comas de los números de Id. de advertencia que el compilador debería suprimir. Si no se especifican identificadores de advertencia, se suprimen todas las advertencias.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `/nowarn` opción hace que el compilador no genere advertencias. Para suprimir una determinada advertencia, proporcione el identificador de advertencia para el `/nowarn` opción después de los dos puntos. Separe varios números de advertencia con comas.  
+ El `/nowarn` opción hace que el compilador no genere advertencias. Para suprimir una advertencia individual, proporcione el identificador de advertencia para el `/nowarn` opción después de los dos puntos. Separe varios números de advertencia con comas.  
   
- Debe especificar la parte numérica del identificador de advertencia. Por ejemplo, si desea suprimir BC42024, la advertencia para las variables locales no utilizadas, especifique `/nowarn:42024`.  
+ Debe especificar solo la parte numérica del identificador de advertencia. Por ejemplo, si desea suprimir BC42024, la advertencia para las variables locales no usadas, especifique `/nowarn:42024`.  
   
- Para obtener más información sobre los números de Id. de advertencia, consulte [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Para obtener más información sobre los números de Id. de advertencia, consulte [configurar advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-|Para establecer /nowarn en Visual Studio de entorno de desarrollo integrado|  
+|Para establecer /nowarn en Visual Studio integra el entorno de desarrollo|  
 |---|  
-|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en el **compilar** ficha.<br />3.  Seleccione el **deshabilitar todas las advertencias** casilla de verificación para deshabilitar todas las advertencias.<br />     o bien<br />     Para deshabilitar una advertencia determinada, haga clic en **ninguno** desde la lista desplegable situada junto a la advertencia.|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Seleccione el **deshabilitar todas las advertencias** casilla de verificación para deshabilitar todas las advertencias.<br />     o bien<br />     Para deshabilitar una advertencia concreta, haga clic en **ninguno** desde la lista desplegable situada junto a la advertencia.|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código compila `T2.vb` y no muestra ninguna advertencia.  
+ El siguiente código compila `T2.vb` y no muestra las advertencias.  
   
 ```  
 vbc /nowarn t2.vb  
@@ -78,6 +61,6 @@ vbc /nowarn:42024 t2.vb
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)
+ [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [Configurar advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

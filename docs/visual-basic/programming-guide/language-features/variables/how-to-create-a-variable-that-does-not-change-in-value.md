@@ -1,59 +1,57 @@
 ---
-title: "C&#243;mo: Crear una variable que no cambia de valor (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic], valor constante"
-  - "variables [Visual Basic], solo lectura"
+title: "Cómo: Crear una variable que no cambia de valor (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], read-only
+- variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d1475553e64fef92ec3f3bb7e1b4fbfb357dbec8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear una variable que no cambia de valor (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-La noción de una variable que no cambia de valor podría parecer contradictoria.  Pero hay situaciones en las que una constante no es factible y es útil tener una variable con un valor fijo.  En tal caso puede definir una variable miembro con la palabra clave [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md).  
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Cómo: Crear una variable que no cambia de valor (Visual Basic)
+La noción de una variable que no cambia su valor podría parecer contradictoria. Pero hay ocasiones una constante no es factible y resulta útil disponer de una variable con un valor fijo. En tal caso puede definir una variable miembro con la [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palabra clave.  
   
- No puede utilizar [Const \(Instrucción\)](../../../../visual-basic/language-reference/statements/const-statement.md) para declarar y asignar un valor constante en las circunstancias siguientes:  
+ No se puede utilizar el [instrucción Const](../../../../visual-basic/language-reference/statements/const-statement.md) para declarar y asignar un valor constante en las circunstancias siguientes:  
   
--   La instrucción `Const` no acepta el tipo de datos que desea utilizar.  
+-   El `Const` instrucción no acepta el tipo de datos que desea usar  
   
--   No conoce el valor en tiempo de compilación.  
+-   No se conoce el valor en tiempo de compilación  
   
--   No puede calcular el valor constante en tiempo de compilación.  
+-   No puede calcular el valor constante en tiempo de compilación  
   
-### Para crear una variable que no cambia de valor  
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Para crear una variable que no cambia de valor  
   
-1.  En el nivel de módulo, declare una variable miembro con [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md) e incluya la palabra clave [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)  
+1.  En el nivel de módulo, declare una variable de miembro con el [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)e incluyen el [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palabra clave.  
   
     ```  
-  
     Dim ReadOnly timeStarted  
     ```  
   
-     Sólo puede especificar `ReadOnly` en una variable miembro.  Esto significa que debe definir la variable en el nivel de módulo, fuera de cualquier procedimiento.  
+     Puede especificar `ReadOnly` solo en una variable de miembro. Esto significa que debe definir la variable en el nivel de módulo, fuera de cualquier procedimiento.  
   
-2.  Si puede calcular el valor en una instrucción única en el momento de la compilación, utilice una cláusula de inicialización en la instrucción `Dim`.  Agregue detrás de la cláusula [As](../../../../visual-basic/language-reference/statements/as-clause.md) un signo igual \(`=`\), seguido de una expresión.  Asegúrese de que el compilador puede evaluar esta expresión en un valor constante.  
+2.  Si puede calcular el valor en una única instrucción en tiempo de compilación, use una cláusula de inicialización en el `Dim` instrucción. Siga el [como](../../../../visual-basic/language-reference/statements/as-clause.md) cláusula con un signo igual (`=`), seguido de una expresión. Asegúrese de que el compilador puede evaluar esta expresión en un valor constante.  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  
     ```  
   
-     Sólo puede asignar una vez un valor a una variable `ReadOnly`.  Una vez hecho esto, ningún código podrá cambiar nunca su valor.  
+     Puede asignar un valor a un `ReadOnly` variable sólo una vez. Una vez hecho esto, ningún código puede cambiar alguna vez a su valor.  
   
-     Si no conoce el valor o no puede calcularlo en una instrucción única en tiempo de compilación, puede asignarlo durante el tiempo de ejecución en un constructor.  Para ello, debe declarar la variable `ReadOnly` en la clase o nivel de estructura.  En el constructor para esa clase o estructura, calcule el valor fijo de la variable y asígnelo a la variable antes de que vuelva del constructor.  
+     Si no conoce el valor en tiempo de compilación, o lo que no se puede calcular en tiempo de compilación en una sola instrucción, se puede asignar en tiempo de ejecución en un constructor. Para ello, debe declarar la `ReadOnly` variable en el nivel de clase o estructura. En el constructor para esa clase o estructura, valor fijo de la variable de proceso y asignarlo a la variable antes de devolver desde el constructor.  
   
-## Vea también  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)   
- [Const \(Instrucción\)](../../../../visual-basic/language-reference/statements/const-statement.md)
+## <a name="see-also"></a>Vea también  
+ [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)

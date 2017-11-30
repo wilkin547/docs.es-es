@@ -1,34 +1,30 @@
 ---
-title: "Cómo: controlar el tipo de una proyección (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: controlar el tipo de una proyección (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1dd461b51c661121497f9c641d64124f8aee44cb
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 32c2c747fd2f1137fbf2ead28886669c041d065c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Cómo: controlar el tipo de una proyección (Visual Basic)
-La proyección es el proceso de tomar un conjunto de datos, filtrarlo, cambiar su forma e incluso cambiar su tipo. La mayoría de las expresiones de consulta realizan proyecciones. La mayoría de las expresiones de consulta se muestra en esta sección se evalúa como <xref:System.Collections.Generic.IEnumerable%601>de <xref:System.Xml.Linq.XElement>, pero se puede controlar el tipo de proyección para crear colecciones de otros tipos.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> En este tema se explica cómo hacerlo.  
+La proyección es el proceso de tomar un conjunto de datos, filtrarlo, cambiar su forma e incluso cambiar su tipo. La mayoría de las expresiones de consulta realizan proyecciones. La mayor parte de las expresiones de consulta de esta sección se evalúan como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, aunque puede controlar el tipo de proyección para crear colecciones de otros tipos. En este tema se explica cómo hacerlo.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se define un nuevo tipo, `Customer`. La expresión de consulta crea una instancia de nuevos objetos `Customer` en la cláusula `Select`. Esto hace que el tipo de la expresión de consulta sea <xref:System.Collections.Generic.IEnumerable%601>de `Customer`.</xref:System.Collections.Generic.IEnumerable%601>  
+ En el ejemplo siguiente, se define un nuevo tipo, `Customer`. La expresión de consulta crea una instancia de nuevos objetos `Customer` en la cláusula `Select`. Esto hace que el tipo de la expresión de consulta sea <xref:System.Collections.Generic.IEnumerable%601> de `Customer`.  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de ejemplo: clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Public Class Customer  
@@ -88,7 +84,6 @@ Sub Main()
         Console.WriteLine(cust)  
     Next  
 End Sub  
-  
 ```  
   
  Este código genera el siguiente resultado:  
@@ -101,5 +96,5 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
+ <xref:System.Linq.Enumerable.Select%2A>  
  [Proyecciones y transformaciones (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

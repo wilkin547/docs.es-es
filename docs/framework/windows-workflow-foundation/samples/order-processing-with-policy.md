@@ -1,49 +1,53 @@
 ---
-title: "Procesar pedidos con directiva | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Procesar pedidos con directiva
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b479e6129cc5ba158549294acf25d4b8f71a3ff4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Procesar pedidos con directiva
-El ejemplo de directiva de procesamiento de orden muestra algunas de las características clave introducidas en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de Windows Workflow Foundation \(WF\).La funcionalidad siguiente es nueva para el motor de reglas de WF:  
+# <a name="order-processing-with-policy"></a>Procesar pedidos con directiva
+El ejemplo de directiva de procesamiento de orden muestra algunas de las características clave introducidas en [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de Windows Workflow Foundation (WF). La funcionalidad siguiente es nueva para el motor de reglas de WF:  
   
 -   Admisión de sobrecarga del operador.  
   
 -   Compatibilidad para el operador `new`, permitiendo a los usuarios crear nuevos objetos y matrices a partir de las reglas de WF.  
   
--   Compatibilidad para los métodos de extensión para que el usuario experimente llamando a métodos de extensión desde las reglas de WF compatibles con los estilos de codificación C\#.  
+-   Compatibilidad para los métodos de extensión para que el usuario experimente llamando a métodos de extensión desde las reglas de WF compatibles con los estilos de codificación C#.  
   
 > [!NOTE]
->  Este ejemplo necesita que [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] esté instalado para compilarse y ejecutarse.[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] es necesario para abrir los archivos de proyecto y de solución.  
+>  Este ejemplo necesita que [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] esté instalado para compilarse y ejecutarse. [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] es necesario para abrir los archivos de proyecto y de solución.  
   
- El ejemplo muestra un proyecto `OrderProcessingPolicy` donde se escribe un pedido de cliente, que está compuesto por una lista numerada de artículos disponibles y un código postal.La orden se procesa correctamente si ambas entradas son correctas; de lo contrario, la directiva crea los objetos de error, utilizando un operador `+` sobrecargado y un método de extensión predefinido para informar al usuario de los errores.  
+ El ejemplo muestra un proyecto `OrderProcessingPolicy` donde se introduce una orden de cliente, que está compuesta de una lista numerada de elementos disponibles, y un código postal. La orden se procesa correctamente si ambas entradas son correctas; de lo contrario, la directiva crea los objetos de error, utilizando un operador `+` sobrecargado y un método de extensión predefinido para informar al usuario de los errores.  
   
 > [!NOTE]
->  Para métodos de extensión [!INCLUDE[crabout](../../../../includes/crabout-md.md)], vea [C\# Especificación de versión 3.0](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]métodos de extensión, vea [C# versión 3.0 especificación](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  El ejemplo consta de los proyectos siguientes:  
   
 -   `OrderErrorLibrary`  
   
-     `OrderErrorLibrary` es una biblioteca de clases que define las clases `OrderError` y `OrderErrorCollection`.Se crea una instancia `OrderError` cuando se escribe una entrada no válida.La biblioteca también proporciona un método de extensión en la clase `OrderErrorCollection` que genera la propiedad `ErrorText` en todos los objetos `OrderError` en `OrderErrorCollection`.  
+     `OrderErrorLibrary` es una biblioteca de clases que define las clases `OrderError` y `OrderErrorCollection`. Se crea una instancia `OrderError` cuando se escribe una entrada no válida. La biblioteca también proporciona un método de extensión en la clase `OrderErrorCollection` que genera la propiedad `ErrorText` en todos los objetos `OrderError` en `OrderErrorCollection`.  
   
 -   `OrderProcessingPolicy`  
   
-     El proyecto `OrderProcessingPolicy` es una aplicación de consola de WF que define una actividad `PolicyFromFile` única.La actividad tiene las siguientes reglas:  
+     El proyecto `OrderProcessingPolicy` es una aplicación de consola de WF que define una actividad `PolicyFromFile` única. La actividad tiene las siguientes reglas:  
   
     -   `invalidItemNum`  
   
-         Esta regla valida que el número del elemento esté entre 1 y 6, incluido.Si el número del elemento está dentro del intervalo válido, la regla no hace nada \(excepto imprimir en la consola\).Si el número del elemento no está entre 1 y 6, la regla `invalidItemNum` hace lo siguiente:  
+         Esta regla valida que el número del elemento esté entre 1 y 6, incluido. Si el número del elemento está dentro del intervalo válido, la regla no hace nada (excepto imprimir en la consola). Si el número del elemento no está entre 1 y 6, la regla `invalidItemNum` hace lo siguiente:  
   
         1.  Crea un nuevo objeto `OrderError`, pasándole el número del elemento introducido y establece las propiedades `ErrorText` y `CustomerName` en el objeto.  
   
@@ -55,7 +59,7 @@ El ejemplo de directiva de procesamiento de orden muestra algunas de las caracte
   
     -   `invalidZip`  
   
-         Esta regla valida que el código postal tiene 5 dígitos y que se sitúa dentro del intervalo 600 a 99998.Si el código postal está dentro del intervalo válido, la regla no hace nada \(excepto imprimir en la consola\).Si la longitud del código postal es menor que 5 o el código postal no está entre 00600 y 99998, la regla `invalidZip` hace lo siguiente:  
+         Esta regla valida que el código postal tiene 5 dígitos y que se sitúa dentro del intervalo 600 a 99998. Si el código postal está dentro del intervalo válido, la regla no hace nada (excepto imprimir en la consola). Si la longitud del código postal es menor que 5 o el código postal no está entre 00600 y 99998, la regla `invalidZip` hace lo siguiente:  
   
         1.  Crea un objeto `OrderError`, pasándole el código postal introducido y establece las propiedades `ErrorText` y l`CustomerName` en el objeto.  
   
@@ -67,17 +71,17 @@ El ejemplo de directiva de procesamiento de orden muestra algunas de las caracte
   
     -   `displayErrors`  
   
-         Esta regla comprueba si las dos reglas anteriores han agregado errores en los dos objetos `OrderErrorCollection``invalidItemNumErrorCollection` y `invalidIZipCodeErrorCollection`.Si hay errores \( `invalidItemNumErrorCollection` o `invalidZipCodeErrorCollection` no es `null`\), la regla hace lo siguiente:  
+         Esta regla comprueba si las dos reglas anteriores han agregado errores en los dos objetos `OrderErrorCollection``invalidItemNumErrorCollection` y `invalidIZipCodeErrorCollection`. Si hay errores ( `invalidItemNumErrorCollection` o `invalidZipCodeErrorCollection` no es `null`), la regla hace lo siguiente:  
   
-        1.  Llama al operador `+` sobrecargado para copiar el contenido de `invalidItemNumErrorCollection` y `invalidZipCodeErrorCollection` en una instancia `invalidOrdersCollection``OrderErrorCollection`.  
+        1.  Llama a sobrecargado `+` operador que se va a copiar el contenido de `invalidItemNumErrorCollection` y `invalidZipCodeErrorCollection` a una `invalidOrdersCollection``OrderErrorCollection` instancia.  
   
         2.  Llama al método de extensión `PrintOrderErrors` en `invalidOrdersCollection` y genera la propiedad `ErrorText` en todos los objetos `orderError` en `invalidOrdersCollection`.  
   
- El operador `+` sobrecargado en `OrderErrorCollection` se define en la clase `OrderErrorCollection`, en el proyecto `OrderErrorLibrary`.Toma dos objetos `OrderErrorCollection` y los combina en un objeto `OrderErrorCollection`.  
+ El operador `+` sobrecargado en `OrderErrorCollection` se define en la clase `OrderErrorCollection`, en el proyecto `OrderErrorLibrary`. Toma dos objetos `OrderErrorCollection` y los combina en un objeto `OrderErrorCollection`.  
   
- El método de extensión `PrintOrderErrors` también se define en el proyecto `OrderErrorLibrary`.Los métodos de extensión son una nueva característica de C\# que permite a los programadores agregar nuevos métodos al contrato público de un tipo CLR existente, sin tener que derivar una clase del mismo o recompilar el tipo original.  
+ El método de extensión `PrintOrderErrors` también se define en el proyecto `OrderErrorLibrary`. Los métodos de extensión son una nueva característica de C# que permite a los programadores agregar nuevos métodos al contrato público de un tipo CLR existente, sin tener que derivar una clase del mismo o recompilar el tipo original.  
   
- Al ejecutar el ejemplo se le pide que escriba un nombre, el número del elemento del elemento que se va a comprar y un código postal.Las reglas definidas en la actividad de directiva comprueban a continuación esta información.A continuación, puede ver un resultado de ejemplo del programa.  
+ Al ejecutar el ejemplo se le pide que escriba un nombre, el número del elemento del elemento que se va a comprar y un código postal. Las reglas definidas en la actividad de directiva comprueban a continuación esta información. A continuación, puede ver un resultado de ejemplo del programa.  
   
 ```  
 Please enter your name: John  
@@ -130,23 +134,23 @@ Workflow Completed
 Another Order? (Y/N): n  
 ```  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
 1.  Abra el archivo de proyecto OrderProcessingPolicy.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Hay dos proyectos diferentes en la solución: `OrderErrorLibrary` y `OrderProcessingPolicy`.El proyecto `OrderProcessingPolicy` utiliza clases y métodos definidos en `OrderErrorLibrary`.  
+2.  Hay dos proyectos diferentes en la solución: `OrderErrorLibrary` y `OrderProcessingPolicy`. El proyecto `OrderProcessingPolicy` utiliza clases y métodos definidos en `OrderErrorLibrary`.  
   
 3.  Compile todos los proyectos.  
   
-4.  Haga clic en **Ejecutar**.  
+4.  Haga clic en **ejecutar**.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar:  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar:  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio:  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio:  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

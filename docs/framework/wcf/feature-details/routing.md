@@ -1,33 +1,36 @@
 ---
-title: "Enrutamiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enrutar [WCF]"
-  - "WCF [WCF], enrutar"
-  - "Windows Communication Foundation [WCF], enrutar"
+title: Enrutamiento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- routing [WCF]
+- WCF [WCF], routing
+- Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enrutamiento
-Los temas de esta sección explican el servicio de enrutamiento.  El servicio de enrutamiento es un intermediario de SOAP configurable genérico que permite configurar el enrutamiento basado en contenido, preparar puentes protocolares, administrar errores de comunicaciones, así como actualizar dinámicamente la lógica de enrutamiento durante el tiempo de ejecución.  
+# <a name="routing"></a>Enrutamiento
+Los temas de esta sección explican el servicio de enrutamiento. El servicio de enrutamiento es un intermediario de SOAP configurable genérico que permite configurar el enrutamiento basado en contenido, preparar puentes protocolares, administrar errores de comunicaciones, así como actualizar dinámicamente la lógica de enrutamiento durante el tiempo de ejecución.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Servicio de enrutamiento](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Proporciona una introducción a las características del servicio de enrutamiento.  
   
- [Routing Service](http://msdn.microsoft.com/es-es/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Servicio de enrutamiento](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  Describe las características del servicio de enrutamiento.  
   
  [Introducción al enrutamiento](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

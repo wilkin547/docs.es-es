@@ -1,33 +1,34 @@
 ---
-title: "Propiedades de los controles de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms], propiedades"
-  - "controles personalizados [Windows Forms], información general sobre propiedades (utilizando el código)"
-  - "propiedades [Windows Forms]"
+title: Propiedades de los controles de formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], properties overview (using code)
+- controls [Windows Forms], properties
+- properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5de09635fb92b46a2c0f89427ad03449de6bd53
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Propiedades de los controles de formularios Windows Forms
-Un control de formularios Windows Forms hereda muchas propiedades de la clase base <xref:System.Windows.Forms.Control?displayProperty=fullName>.  Entre estas se incluyen propiedades como: <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A> y muchas otras.  Para obtener detalles sobre propiedades heredadas, vea <xref:System.Windows.Forms.Control?displayProperty=fullName>.  
+# <a name="properties-in-windows-forms-controls"></a>Propiedades de los controles de formularios Windows Forms
+Un control de formularios Windows Forms hereda muchas formulario de propiedades de la clase base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Incluyen propiedades como <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>y muchas otras. Para obtener más información acerca de las propiedades heredadas, vea <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
- Se pueden reemplazar las propiedades heredadas en un control así como definir propiedades nuevas.  
+ Se pueden reemplazar las propiedades heredadas en un control, así como definir propiedades nuevas.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Definir una propiedad](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
  Muestra cómo implementar una propiedad para un control o componente personalizado y cómo integrar la propiedad en el entorno de diseño.  
   
@@ -43,22 +44,22 @@ Un control de formularios Windows Forms hereda muchas propiedades de la clase ba
  [Implementación de métodos en controles personalizados](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
  Describe cómo implementar métodos en controles y componentes personalizados.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.UserControl>  
  Documenta la clase base para implementar controles compuestos.  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- Documenta el atributo que especifica el <xref:System.ComponentModel.TypeConverter> que se va a utilizar para un tipo de propiedad personalizado.  
+ Documenta el atributo que especifica el <xref:System.ComponentModel.TypeConverter> que se usará para un tipo de propiedad personalizada.  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Documenta el atributo que especifica el <xref:System.Drawing.Design.UITypeEditor> que se va a utilizar para una propiedad personalizada.  
+ Documenta el atributo que especifica el <xref:System.Drawing.Design.UITypeEditor> que se usará para una propiedad personalizada.  
   
-## Secciones relacionadas  
- [Atributos en controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- Describe los atributos que puede aplicar a propiedades u otros miembros de los controles y componentes personalizados.  
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Atributos en controles de Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ Describe los atributos que se puede aplicar a propiedades u otros miembros de los controles y componentes personalizados.  
   
- [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md)  
- Ofrece una lista de los atributos de metadatos que se deben aplicar a los componentes y controles para que los diseñadores visuales los muestren correctamente en tiempo de diseño.  
+ [Atributos en tiempo de diseño para componentes](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ Enumera los atributos de metadatos que se deben aplicar a componentes y controles para que se muestren correctamente en tiempo de diseño en diseñadores visuales.  
   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)  
- Describe cómo se implementan las clases, como los editores y diseñadores, que proporcionan compatibilidad en tiempo de diseño.
+ [Ampliar compatibilidad en tiempo de diseño](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ Describe cómo implementar clases, como editores y diseñadores, que proporcionan compatibilidad en tiempo de diseño.

@@ -1,29 +1,32 @@
 ---
-title: "C&#243;mo: Implementar una aplicaci&#243;n cliente que utiliza el proxy de detecci&#243;n para buscar un servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar una aplicaci&#243;n cliente que utiliza el proxy de detecci&#243;n para buscar un servicio
-Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección.En el tema anterior, [Cómo: Implementar un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementó un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que se registra con el proxy de detección.En este tema, creará un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usará el proxy de detección para encontrar el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio
+Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), que implementa un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio que se registra con el proxy de detección. En este tema, creará un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que usará el proxy de detección para encontrar el servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-### Implementar el cliente  
+### <a name="implement-the-client"></a>Implementar el cliente  
   
 1.  Agregue un nuevo proyecto de aplicación de consola a la solución `DiscoveryProxyExample` denominada `Client`.  
   
-2.  Agregue referencias a los ensamblados siguientes:  
+2.  Agregue referencias a los siguientes ensamblados:  
   
     1.  System.ServiceModel  
   
@@ -32,9 +35,9 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
 3.  Agregue al proyecto GeneratedClient.cs, que se encuentra en la parte inferior de este tema.  
   
     > [!NOTE]
-    >  Este archivo se suele generar mediante una herramienta como Svcutil.exe.Dicha herramienta se proporciona en este tema para simplificar la tarea.  
+    >  Este archivo se suele generar mediante una herramienta como Svcutil.exe. Dicha herramienta se proporciona en este tema para simplificar la tarea.  
   
-4.  Abra el archivo Program.cs y agregue el siguiente método.Este método toma una dirección del extremo y lo utiliza para inicializar el cliente del servicio \(proxy\).  
+4.  Abra el archivo Program.cs y agregue el siguiente método. Este método toma una dirección del extremo y lo utiliza para inicializar el cliente del servicio (proxy).  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -67,7 +70,6 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
                 // Closing the client gracefully closes the connection and cleans up resources  
                 client.Close();  
             }  
-  
     ```  
   
 5.  Agregue el código siguiente al método `Main`.  
@@ -107,12 +109,11 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
                 Console.WriteLine("Press <ENTER> to exit.");  
                 Console.ReadLine();  
             }  
-  
     ```  
   
- Ha completado la implementación de la aplicación cliente.Continúe en [Cómo: Probar el proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ Ha completado la implementación de la aplicación cliente. Ir a [Cómo: probar el Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Esta es la lista de códigos completa de este tema.  
   
 ```  
@@ -205,7 +206,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -291,7 +291,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## Vea también  
- [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Cómo: Implementar un proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [Cómo: Implementar un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre la detección WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Cómo: implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -1,41 +1,40 @@
 ---
-title: "#If...Then...#Else (Directivas) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.#EndIf"
-  - "#End If"
-  - "#Then"
-  - "#ElseIf"
-  - "vb.#ElseIf"
-  - "vb.#Else"
-  - "vb.#If"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "#Else (directiva) [Visual Basic]"
-  - "#End if (directiva) [Visual Basic]"
-  - "#If (directiva) [Visual Basic]"
-  - "compilación condicional, directivas"
-  - "else: directiva (#else)"
-  - "compilación selectiva"
-  - "código de Visual Basic, compilar"
+title: '#<a name="ifthenelse-directives"></a>If... Then... #Else directivas'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.#EndIf
+- '#End If'
+- '#Then'
+- '#ElseIf'
+- vb.#ElseIf
+- vb.#Else
+- vb.#If
+helpviewer_keywords:
+- Visual Basic code, compiling
+- '#If directive [Visual Basic]'
+- conditional compilation [Visual Basic], directives
+- '#End if directive [Visual Basic]'
+- selective compiling
+- else directive (#else)
+- '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 77757e441ae937aa86122f237e839d1005644409
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# #If...Then...#Else (Directivas)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Compila de forma condicional bloques de código seleccionados de Visual Basic.  
+# <a name="ifthenelse-directives"></a>#If...Then...#Else (Directivas)
+Compila condicionalmente bloques de código de Visual Basic seleccionados.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #If expression Then  
@@ -50,32 +49,32 @@ Compila de forma condicional bloques de código seleccionados de Visual Basic.
 #End If  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
  `expression`  
- Requerida para las instrucciones `#If` y `#ElseIf`; en caso contrario, opcional.  Cualquier expresión formada exclusivamente por una o más constantes de compilación condicional, literales y operadores, que se evalúa como `True` o `False`.  
+ Necesario para `#If` y `#ElseIf` instrucciones, opcionales en otro lugar. Cualquier expresión, que consta únicamente de una o más constantes de compilación condicional, literales y operadores, que se evalúa como `True` o `False`.  
   
  `statements`  
- Requerida para el bloque de instrucción `#If`; en caso contrario, opcional.  Líneas de programa de Visual Basic o directivas de compilación que se compilan si la expresión asociada se evalúa como `True`.  
+ Necesario para `#If` bloque de instrucción, opcional en otro lugar. Líneas de programa de Visual Basic o directivas de compilación que se compilan si la expresión asociada se evalúa como `True`.  
   
  `#End If`  
- Termina el bloque de instrucción `#If`.  
+ Finaliza el `#If` bloque de instrucciones.  
   
-## Comentarios  
- Aparentemente, el comportamiento de las directivas `#If...Then...#Else` es el mismo que el de las instrucciones `If...Then...Else`.  Sin embargo, las directivas `#If...Then...#Else` evalúan lo compilado por el compilador, mientras que las instrucciones `If...Then...Else` evalúan las condiciones en tiempo de ejecución.  
+## <a name="remarks"></a>Comentarios  
+ En la superficie, el comportamiento de la `#If...Then...#Else` Else es el mismo que el de la `If...Then...Else` las instrucciones. Sin embargo, el `#If...Then...#Else` Else evalúan lo que compila el compilador, mientras que la `If...Then...Else` instrucciones evalúan las condiciones en tiempo de ejecución.  
   
- La compilación condicional se utiliza habitualmente para compilar el mismo programa para plataformas distintas.  También se utiliza para evitar que el código de depuración aparezca en los archivos ejecutables.  El código excluido durante una compilación condicional se omite completamente en el archivo ejecutable final, de modo que no tiene ningún efecto en el tamaño ni en el rendimiento.  
+ Compilación condicional se utiliza normalmente para compilar el mismo programa para diferentes plataformas. También se utiliza para evitar que código de depuración aparezca en un archivo ejecutable. Código excluido durante la compilación condicional se omite por completo desde el archivo ejecutable final, por lo que no tiene ningún efecto en el tamaño o el rendimiento.  
   
- Independientemente del resultado de la evaluación, todas las expresiones se evalúan utilizando `Option Compare Binary`.  La instrucción `Option Compare` no afecta a las expresiones de las instrucciones `#If` y `#ElseIf`.  
+ Independientemente del resultado de la evaluación, todas las expresiones se evalúan utilizando `Option Compare Binary`. El `Option Compare` instrucción no afecta a las expresiones en `#If` y `#ElseIf` las instrucciones.  
   
 > [!NOTE]
->  No existe ningún formulario de línea única de las directivas `#If`, `#Else`, `#ElseIf` y `#End If`.  No puede aparecer otro código en la misma línea que cualquiera de las directivas.  
+>  No hay ningún formulario de línea de la `#If`, `#Else`, `#ElseIf`, y `#End If` directivas existe. Ningún otro código puede aparecer en la misma línea que cualquiera de las directivas.  
   
-## Ejemplo  
- En el siguiente ejemplo se utiliza el constructor `#If...Then...#Else` para determinar si se compilan ciertas instrucciones.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se utiliza la `#If...Then...#Else` construcción para determinar si se compilan ciertas instrucciones.  
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
-## Vea también  
- [\#Const \(Directiva\)](../../../visual-basic/language-reference/directives/const-directive.md)   
- [If...Then...Else \(Instrucción\)](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
+## <a name="see-also"></a>Vea también  
+ [#Const (directiva)](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [If...Then...Else (instrucción)](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
  [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

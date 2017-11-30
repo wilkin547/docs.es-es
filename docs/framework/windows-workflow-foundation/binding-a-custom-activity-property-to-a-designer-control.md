@@ -1,29 +1,33 @@
 ---
-title: "Enlazar una propiedad de actividad personalizada a un control de dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Enlazar una propiedad de actividad personalizada a un control de diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2e8061ea-10f5-407c-a31f-d0d74ce12f27
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9edc168dc6e4111e5f2d58a62c2b0341f74aa04
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enlazar una propiedad de actividad personalizada a un control de dise&#241;ador
-La operación de enlazar un control de diseñador de cuadro de texto a un argumento de actividad es bastante sencillo; sin embargo, la operación de enlazar un control de diseñador complejo \(como un cuadro combinado\) a un argumento de actividad puede presentar desafíos.En este tema se analiza la forma de enlazar un argumento de actividad a un control de cuadro combinado en un diseñador de actividad personalizado.  
+# <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Enlazar una propiedad de actividad personalizada a un control de diseñador
+La operación de enlazar un control de diseñador de cuadro de texto a un argumento de actividad es bastante sencillo; sin embargo, la operación de enlazar un control de diseñador complejo (como un cuadro combinado) a un argumento de actividad puede presentar desafíos. En este tema se analiza la forma de enlazar un argumento de actividad a un control de cuadro combinado en un diseñador de actividad personalizado.  
   
-#### Crear el convertidor de elemento de cuadro combinado  
+#### <a name="creating-the-combo-box-item-converter"></a>Crear el convertidor de elemento de cuadro combinado  
   
 1.  Cree una nueva solución vacía en Visual Studio denominada CustomProperty.  
   
-2.  Cree una nueva clase denominada ComboBoxItemConverter.Agregue una referencia a System.Windows.Data y haga que la clase derive de <xref:System.Windows.Data.IValueConverter>.Haga que Visual Studio implemente la interfaz para generar códigos auxiliares para <xref:System.Windows.Data.IValueConverter.Convert%2A> y <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>.  
+2.  Cree una nueva clase denominada ComboBoxItemConverter. Agregue una referencia a System.Windows.Data y haga que la clase derive de <xref:System.Windows.Data.IValueConverter>. Haga que Visual Studio implemente la interfaz para generar códigos auxiliares para `Convert` y `ConvertBack`.  
   
-3.  Agregue el código siguiente al método <xref:System.Windows.Data.IValueConverter.Convert%2A>.Este código convierte el <xref:System.Activities.InArgument%601> de tipo <xref:System.String> de la actividad en el valor que se va a colocar en el diseñador.  
+3.  Agregue el código siguiente al método `Convert`. Este código convierte el <xref:System.Activities.InArgument%601> de tipo <xref:System.String> de la actividad en el valor que se va a colocar en el diseñador.  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -48,10 +52,9 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
         }  
     }  
     return null;  
-  
     ```  
   
-     La expresión del fragmento de código anterior también se puede crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en vez de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
+     La expresión del fragmento de código anterior también se pueden crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
   
     ```  
     ModelItem modelItem = value as ModelItem;  
@@ -76,10 +79,9 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
         }  
     }  
     return null;  
-  
     ```  
   
-4.  Agregue el código siguiente al método <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>.Este código vuelve a convertir el elemento de cuadro combinado de entrada en un <xref:System.Activities.InArgument%601>.  
+4.  Agregue el código siguiente al método `ConvertBack`. Este código vuelve a convertir el elemento de cuadro combinado de entrada en un <xref:System.Activities.InArgument%601>.  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -87,10 +89,9 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
                 VisualBasicValue<string> vbArgument = new VisualBasicValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(vbArgument);  
                 return inArgument;  
-  
     ```  
   
-     La expresión del fragmento de código anterior también se puede crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en vez de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
+     La expresión del fragmento de código anterior también se pueden crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
   
     ```  
     // Convert combo box value to InArgument<string>  
@@ -98,16 +99,15 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
                 CSharpValue<string> csArgument = new CSharpValue<string>(itemContent);  
                 InArgument<string> inArgument = new InArgument<string>(csArgument);  
                 return inArgument;  
-  
     ```  
   
-#### Agregar ComboBoxItemConverter al diseñador personalizado de una actividad  
+#### <a name="adding-the-comboboxitemconverter-to-the-custom-designer-of-an-activity"></a>Agregar ComboBoxItemConverter al diseñador personalizado de una actividad  
   
-1.  Agregue un nuevo elemento al proyecto.En el cuadro de diálogo Nuevo elemento, seleccione el nodo de flujo de trabajo y seleccione Diseñador de actividad como tipo del nuevo elemento.Asigne al elemento el nombre CustomPropertyDesigner.  
+1.  Agregue un nuevo elemento al proyecto. En el cuadro de diálogo Nuevo elemento, seleccione el nodo de flujo de trabajo y seleccione Diseñador de actividad como tipo del nuevo elemento. Asigne al elemento el nombre CustomPropertyDesigner.  
   
-2.  Agregue un cuadro combinado al nuevo diseñador.En la propiedad Items, agregue un par de elementos al cuadro combinado, con valores de "Item1" y "Item2" para Content.  
+2.  Agregue un cuadro combinado al nuevo diseñador. En la propiedad Items, agregue un par de elementos al cuadro combinado, con valores de "Item1" y "Item2" para Content.  
   
-3.  Modifique el XAML del cuadro combinado para agregar el nuevo convertidor de elemento como el convertidor de elemento que se va a utilizar para el cuadro combinado.El convertidor se agrega como un recurso en el segmento ActivityDesigner.Resources y especifica el convertidor en el atributo Converter para <xref:System.Windows.Controls.ComboBox>.Observe que el espacio de nombres del proyecto se especifica en los atributos de espacios de nombres para el diseñador de actividad; si el diseñador se va a utilizar en un proyecto diferente, será necesario cambiar este espacio de nombres.  
+3.  Modifique el XAML del cuadro combinado para agregar el nuevo convertidor de elemento como el convertidor de elemento que se va a utilizar para el cuadro combinado. El convertidor se agrega como un recurso en el segmento ActivityDesigner.Resources y especifica el convertidor en el atributo Converter para <xref:System.Windows.Controls.ComboBox>. Observe que el espacio de nombres del proyecto se especifica en los atributos de espacios de nombres para el diseñador de actividad; si el diseñador se va a utilizar en un proyecto diferente, será necesario cambiar este espacio de nombres.  
   
     ```  
     <sap:ActivityDesigner x:Class="CustomProperty.CustomPropertyDesigner"  
@@ -129,18 +129,16 @@ La operación de enlazar un control de diseñador de cuadro de texto a un argume
             </ComboBox>  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
-4.  Cree un nuevo elemento de tipo <xref:System.Activities.CodeActivity>.El código predeterminado creado por el IDE para la actividad será suficiente en este ejemplo.  
+4.  Cree un nuevo elemento de tipo <xref:System.Activities.CodeActivity>. El código predeterminado creado por el IDE para la actividad será suficiente en este ejemplo.  
   
 5.  Agregue el atributo siguiente a la definición de clase:  
   
     ```  
     [Designer(typeof(CustomPropertyDesigner))]  
-  
     ```  
   
      Esta línea asocia el nuevo diseñador a la nueva clase.  
   
- La nueva actividad debe estar asociada ahora al diseñador.Para probar la nueva actividad, agréguela a un flujo de trabajo y establezca el cuadro combinado en los dos valores.La ventana Propiedades debe actualizarse para reflejar el valor de cuadro combinado.
+ La nueva actividad debe estar asociada ahora al diseñador. Para probar la nueva actividad, agréguela a un flujo de trabajo y establezca el cuadro combinado en los dos valores. La ventana Propiedades debe actualizarse para reflejar el valor de cuadro combinado.

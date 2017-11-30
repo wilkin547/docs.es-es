@@ -1,53 +1,35 @@
 ---
-title: "Dado que esta llamada no se espera, el método actual continúa ejecutándose antes de que se complete la llamada | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Como esta llamada no es \"awaited\", la ejecución del método actual continuará antes de que se complete la llamada."
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
-helpviewer_keywords:
-- BC42358
+helpviewer_keywords: BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta llamada no es "awaited", la ejecución del método actual continuará antes de que se complete la llamada.
 Dado que no se esperaba esta llamada, la ejecución del método actual continuará antes de que se complete la llamada. Considere la posibilidad de aplicar el operador "Await" al resultado de la llamada.  
   
- El método actual llama a un método asincrónico que devuelve un <xref:System.Threading.Tasks.Task>o <xref:System.Threading.Tasks.Task%601>y no se aplica el [Await](../../../visual-basic/language-reference/operators/await-operator.md) al resultado.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> La llamada al método asincrónico inicia una tarea asincrónica. Pero, dado que no se aplica un operador `Await` , el programa continúa sin esperar a que se complete la tarea. En la mayoría de los casos, no se espera ese comportamiento. Normalmente otros aspectos del método de llamada dependen de los resultados de la llamada o, como mínimo, se espera que el método llamado se complete antes de volver del método que contiene la llamada.  
+ El método actual llama a un método asincrónico que devuelve un valor <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> y no aplica el operador [Await](../../../visual-basic/language-reference/operators/await-operator.md) al resultado. La llamada al método asincrónico inicia una tarea asincrónica. Pero, dado que no se aplica un operador `Await` , el programa continúa sin esperar a que se complete la tarea. En la mayoría de los casos, no se espera ese comportamiento. Normalmente otros aspectos del método de llamada dependen de los resultados de la llamada o, como mínimo, se espera que el método llamado se complete antes de volver del método que contiene la llamada.  
   
- Otro problema igual de importante es lo que sucede con las excepciones que se producen en el método asincrónico llamado. Una excepción que se produce en un método que devuelve un <xref:System.Threading.Tasks.Task>o <xref:System.Threading.Tasks.Task%601>se almacena en la tarea devuelta.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Si no espera la tarea o comprueba explícitamente las excepciones, se perderá la excepción. Si espera la tarea, su excepción se volverá a producir.  
+ Otro problema igual de importante es lo que sucede con las excepciones que se producen en el método asincrónico llamado. Una excepción que aparece en un método que devuelve un valor <xref:System.Threading.Tasks.Task> o  <xref:System.Threading.Tasks.Task%601> se almacena en la tarea devuelta. Si no espera la tarea o comprueba explícitamente las excepciones, se perderá la excepción. Si espera la tarea, su excepción se volverá a producir.  
   
  El procedimiento recomendado es esperar siempre la llamada.  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener más información acerca de cómo ocultar las advertencias o tratar las advertencias como errores, vea [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [configurar advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identificador de error:** BC42358  
   
@@ -141,7 +123,7 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
   
      En la vista **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un botón y un cuadro de texto.  
   
-     Para obtener más información acerca del Diseñador de XAML, vea [crear una interfaz de usuario mediante el Diseñador XAML](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obtener información sobre cómo crear su propia interfaz de usuario simple, consulte la "para crear una aplicación de WPF" y "para diseñar un MainWindow simple de WPF" secciones de [Tutorial: obtener acceso a la Web mediante el uso de Async y Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Para obtener más información sobre el Diseñador XAML, vea [Tutorial: Crear una IU usando el Diseñador XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obtener información sobre cómo crear su propia interfaz de usuario simple, vea las secciones "To create a WPF application" (Para crear una aplicación WPF) y "To design a simple WPF MainWindow" (Para diseñar una ventana MainWindow simple de WPF) de [Walkthrough: Accessing the Web by Using Async and Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042) (Tutorial: Acceso a la web usando async y await).  
   
 4.  Reemplace el código en el archivo MainWindow.xaml.vb por el código siguiente.  
   
@@ -228,6 +210,5 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
      La salida esperada aparece al final del código.  
   
 ## <a name="see-also"></a>Vea también  
- [Await (operador)](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Await (operador)](../../../visual-basic/language-reference/operators/await-operator.md)  
  [Programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md)
-

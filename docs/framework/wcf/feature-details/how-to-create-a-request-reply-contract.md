@@ -1,25 +1,28 @@
 ---
-title: "Creaci&#243;n de un contrato de solicitud-respuesta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creación de un contrato de solicitud-respuesta"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1ad32807227844e379dd44e63c61b3ff15d2a2ef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Creaci&#243;n de un contrato de solicitud-respuesta
-Un contrato de solicitud\-respuesta especifica un método que devuelve una respuesta.La respuesta se debe enviar y correlacionar con la solicitud según las condiciones de este contrato.Incluso si el método no devuelve ninguna respuesta \(`void` en C\#, o `Sub` en Visual Basic\), la infraestructura crea y envía un mensaje vacío al autor de la llamada.Para evitar que se envíe un mensaje de respuesta vacío, use un contrato unidireccional para la operación.  
+# <a name="how-to-create-a-request-reply-contract"></a>Creación de un contrato de solicitud-respuesta
+Un contrato de solicitud-respuesta especifica un método que devuelve una respuesta. La respuesta se debe enviar y correlacionar con la solicitud según las condiciones de este contrato. Incluso si el método no devuelve ninguna respuesta (`void` en C#, o `Sub` en Visual Basic), la infraestructura crea y envía un mensaje vacío al autor de la llamada. Para evitar que se envíe un mensaje de respuesta vacío, use un contrato unidireccional para la operación.  
   
-### Creación de un contrato de solicitud\-respuesta  
+### <a name="to-create-a-request-reply-contract"></a>Creación de un contrato de solicitud-respuesta  
   
 1.  Cree una interfaz en el lenguaje de programación elegido.  
   
@@ -27,34 +30,34 @@ Un contrato de solicitud\-respuesta especifica un método que devuelve una respu
   
 3.  Aplique el atributo <xref:System.ServiceModel.OperationContractAttribute> a cada uno de los métodos que pueden invocar los clientes.  
   
-4.  Parámetro opcional.Establezca el valor de la propiedad <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> en `true` para evitar que se envíe un mensaje de respuesta vacío.De forma predeterminada, todas las operaciones son contratos de solicitud\-respuesta.  
+4.  Opcional. Establezca el valor de la propiedad <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> en `true` para evitar que se envíe un mensaje de respuesta vacío. De forma predeterminada, todas las operaciones son contratos de solicitud-respuesta.  
   
-## Ejemplo  
- El siguiente ejemplo define un contrato para un servicio de calculadora que proporciona métodos `Add` y `Subtract`.El método `Multiply` no es parte del contrato, porque no está marcado por la clase <xref:System.ServiceModel.OperationContractAttribute> y, por tanto, los clientes no pueden acceder a él.  
+## <a name="example"></a>Ejemplo  
+ El siguiente ejemplo define un contrato para un servicio de calculadora que proporciona métodos `Add` y `Subtract`. El método `Multiply` no es parte del contrato, porque no está marcado por la clase <xref:System.ServiceModel.OperationContractAttribute> y, por tanto, los clientes no pueden acceder a él.  
   
-```  
-using System.ServiceModel;   
-  
-[ServiceContract]   
-public interface ICalculator   
-{   
-[OperationContract]   
-// It would be equivalent to write explicitly:  
-// [OperationContract(IsOneWay=false)]   
-int Add(int a, int b);   
-  
-[OperationContract]   
-int Subtract(int a, int b);   
-  
-int Multiply(int a, int b)  
-}  
-```  
+```
+using System.ServiceModel;
+
+[ServiceContract]
+public interface ICalculator
+{
+    [OperationContract]
+    // It would be equivalent to write explicitly:
+    // [OperationContract(IsOneWay=false)]
+    int Add(int a, int b);
+    
+    [OperationContract]
+    int Subtract(int a, int b);
+    
+    int Multiply(int a, int b)
+}
+```
   
 -   [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo especificar los contratos de operación, vea la clase <xref:System.ServiceModel.OperationContractAttribute> y la propiedad <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>.  
   
--   La aplicación de los atributos <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> permite la generación automática de definiciones de contrato de servicio en un Lenguaje de descripción de servicios Web \(WSDL\).El documento se descarga agregando `?wsdl` a la dirección base HTTP del servicio.Por ejemplo, `http://microsoft/CalculatorService?wsdl`.  
+-   La aplicación de los atributos <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> permite la generación automática de definiciones de contrato de servicio en un Lenguaje de descripción de servicios Web (WSDL). El documento se descarga agregando `?wsdl` a la dirección base HTTP del servicio. Por ejemplo, `http://microsoft/CalculatorService?wsdl`.  
   
-## Vea también  
- <xref:System.ServiceModel.OperationContractAttribute>   
- [Diseño de contratos de servicios](../../../../docs/framework/wcf/designing-service-contracts.md)   
- [Creación de un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.OperationContractAttribute>  
+ [Diseño de contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md)  
+ [Cómo: crear un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

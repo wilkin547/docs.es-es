@@ -1,35 +1,34 @@
 ---
-title: "C&#243;mo: Asignar una matriz a otra (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "matrices [Visual Basic], asignar"
-  - "matrices [Visual Basic], covarianza"
-  - "covarianza, matrices"
+title: "Cómo: Asignar una matriz a otra (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- covariance, arrays
+- arrays [Visual Basic], assigning
+- arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0dd2d678bbfdeaa6b12b5b5a4f69d0fbca8c1944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Asignar una matriz a otra (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Puesto que las matrices son objetos, puede utilizarlas en instrucciones de asignación como cualquier otro tipo de objeto.  Una variable de matriz contiene un puntero a los datos que constituyen los elementos de matriz, y a la información de rango y longitud; una asignación copia sólo este puntero.  
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Cómo: Asignar una matriz a otra (Visual Basic)
+Dado que las matrices son objetos, se puede usar en instrucciones de asignación como otros tipos de objeto. Una variable de matriz contiene un puntero a los datos que constituyen los elementos de matriz y la información de rango y longitud, y una asignación de copia solo this (puntero).  
   
-### Para asignar una matriz a otra  
+### <a name="to-assign-one-array-to-another-array"></a>Para asignar una matriz a otra  
   
-1.  Asegúrese de que las dos matrices tienen el mismo rango \(número de dimensiones\) y tipos de datos de elementos compatibles.  
+1.  Asegúrese de que las dos matrices tienen el mismo rango (número de dimensiones) y tipos de datos de elementos compatibles.  
   
-2.  Utilice una instrucción de asignación estándar para asignar la matriz de origen a la matriz de destino.  No agregue paréntesis detrás del nombre de las matrices.  
+2.  Utilice una instrucción de asignación estándar para asignar la matriz de origen a la matriz de destino. No siga cualquier nombre de matriz con paréntesis.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -37,22 +36,22 @@ Puesto que las matrices son objetos, puede utilizarlas en instrucciones de asign
     controlArray = formArray  
     ```  
   
- En la asignación de una matriz a otra, se aplican las siguientes reglas:  
+ Al asignar una matriz a otra, se aplican las reglas siguientes:  
   
--   **Rangos iguales.** El rango \(número de dimensiones\) de la matriz de destino debe coincidir con el de la matriz de origen.  
+-   **Rangos iguales.** El rango (número de dimensiones) de la matriz de destino debe ser el mismo que el de la matriz de origen.  
   
-     Siempre que los rangos de las dos matrices sean iguales, no es necesario que las dimensiones sean iguales.  El número de elementos de una dimensión dada puede cambiar durante la asignación.  
+     Siempre que los rangos de las dos matrices son iguales, las dimensiones no es necesario que son iguales. Puede cambiar el número de elementos de una dimensión determinada durante la asignación.  
   
--   **Tipos de elementos.** Ambas matrices deben tener elementos de *tipo de referencia* o bien ambas matrices deben tener elementos de *tipo de valor*.  Para obtener más información, vea [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Tipos de elemento.** Cualquier ambas matrices deben tener *tipo de referencia* elementos o ambas matrices deben tener *tipo de valor* elementos. Para obtener más información, consulte [tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
-    -   Si ambas matrices tienen elementos de tipo de valor, los tipos de datos deben coincidir exactamente.  La única excepción a esto es que puede asignar una matriz de elementos `Enum` a una matriz del tipo base de esta `Enum`.  
+    -   Si ambas matrices tienen elementos de tipo de valor, los tipos de elemento de datos deben ser exactamente el mismo. La única excepción a esto es que puede asignar una matriz de `Enum` elementos en una matriz del tipo base del que `Enum`.  
   
-    -   Si ambas matrices tienen elementos de tipo de referencia, el tipo de elemento de origen debe derivar del tipo de elemento de destino.  Cuando éste es el caso, las dos matrices tienen la misma relación de herencia que sus elementos.  Esto se denomina *covarianza de matriz*.  
+    -   Si ambas matrices tienen referencia de elementos de tipo, el tipo de elemento de origen debe derivar del tipo de elemento de destino. Cuando esto ocurre, las dos matrices tienen la misma relación de herencia que sus elementos. Esto se denomina *covarianza de matrices*.  
   
- El compilador notifica un error si las reglas anteriores no se cumplen, por ejemplo, si los tipos de datos no son compatibles o si los rangos no son iguales.  Se puede incluir control de errores en el código para comprobar si las matrices son compatibles antes de intentar realizar la asignación.  También puede utilizar la palabra clave [TryCast \(Operador\)](../../../../visual-basic/language-reference/operators/trycast-operator.md) si desea evitar que se produzca una excepción.  
+ El compilador informa de un error si se infringen las reglas anteriores, por ejemplo, si los tipos de datos no son compatibles o si los rangos no son iguales. Puede agregar al código para asegurarse de que las matrices son compatibles antes de intentar realizar la asignación de control de errores. También puede usar el [TryCast (operador)](../../../../visual-basic/language-reference/operators/trycast-operator.md) palabra clave si desea evitar que se produzca una excepción.  
   
-## Vea también  
- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Solucionar problemas de matrices](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Enum \(Instrucción\)](../../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Conversiones de matrices](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+## <a name="see-also"></a>Vea también  
+ [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Solución de problemas de matrices](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [Enum (instrucción)](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Conversiones de matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

@@ -1,23 +1,26 @@
 ---
-title: "Generador de canales y almacenamiento en memoria cach&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Generador de canales y almacenamiento en memoria caché"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 137696547619477dd68ead5ecfa3f3de7af44727
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Generador de canales y almacenamiento en memoria cach&#233;
-Las aplicaciones cliente de WCF usan la clase <xref:System.ServiceModel.ChannelFactory%601> para crear un canal de comunicación con un servicio WCF.Crear instancias de <xref:System.ServiceModel.ChannelFactory%601> incurre en una sobrecarga porque implica las siguientes operaciones:  
+# <a name="channel-factory-and-caching"></a>Generador de canales y almacenamiento en memoria caché
+Las aplicaciones cliente de WCF usan la clase <xref:System.ServiceModel.ChannelFactory%601> para crear un canal de comunicación con un servicio WCF.  La crear de instancias de <xref:System.ServiceModel.ChannelFactory%601> genera sobrecarga porque implica las siguientes operaciones:  
   
 -   Construir el árbol <xref:System.ServiceModel.Description.ContractDescription>  
   
@@ -27,20 +30,20 @@ Las aplicaciones cliente de WCF usan la clase <xref:System.ServiceModel.ChannelF
   
 -   Desechar recursos  
   
- Para ayudar a reducir esta sobrecarga, WCF puede almacenar en memoria caché los generadores de canales cuando se usa un proxy de cliente de WCF.  
+ Para ayudar a reducir esta sobrecarga, WCF puede almacenar en caché los generadores de canal cuando se usa un proxy de cliente de WCF.  
   
 > [!TIP]
 >  Tiene el control directo sobre la creación del generador de canales cuando usa la clase <xref:System.ServiceModel.ChannelFactory%601> directamente.  
   
- Los servidores proxy de cliente WCF generados con [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) se derivan de <xref:System.ServiceModel.ClientBase%601>.<xref:System.ServiceModel.ClientBase%601> define una propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> estática que define el comportamiento de almacenamiento en memoria caché del generador de canales.Los valores de la memoria caché se crean para un tipo específico.Por ejemplo, establecer `ClientBase<ITest>.CacheSettings` en uno de los valores definidos debajo solo afectará al proxy\/ClientBase de tipo `ITest`.La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy\/ClientBase.  
+ Los servidores proxy de cliente WCF generados con [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derivadas de <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> define una propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> estática que define el comportamiento de almacenamiento en memoria caché del generador de canales. Los valores de la memoria caché se crean para un tipo específico. Por ejemplo, si se establece `ClientBase<ITest>.CacheSettings` a uno de los valores definidos debajo afectará solo proxy/ClientBase de tipo `ITest`. La configuración de almacenamiento en memoria caché para un <xref:System.ServiceModel.ClientBase%601> determinado es inmutable en cuanto se crea la primera instancia de proxy/ClientBase.  
   
-## Especificar el comportamiento de almacenamiento en memoria caché  
+## <a name="specifying-caching-behavior"></a>Especificar el comportamiento de almacenamiento en memoria caché  
  El comportamiento de almacenamiento en memoria caché se especifica estableciendo la propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting> en uno de los siguientes valores.  
   
 |Valor de configuración de caché|Descripción|  
-|-------------------------------------|-----------------|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Todas las instancias de <xref:System.ServiceModel.ClientBase%601> dentro del dominio de aplicación pueden participar en el almacenamiento en memoria caché.El desarrollador ha determinado que no hay implicaciones adversas de seguridad para almacenar en memoria caché.El almacenamiento en caché no se desactivará aunque se tenga acceso a las propiedades “que afectan a la seguridad” en <xref:System.ServiceModel.ClientBase%601>.Las propiedades “que afectan a la seguridad” de <xref:System.ServiceModel.ClientBase%601> son <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> y <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
-|<xref:System.ServiceModel.CacheSetting.Default>|Solo las instancias de <xref:System.ServiceModel.ClientBase%601> creadas desde extremos definidos en archivos de configuración participan en el almacenamiento en memoria caché dentro del dominio de aplicación.Cualquier instancia de <xref:System.ServiceModel.ClientBase%601> creada mediante programación dentro de ese dominio de aplicación no participará en el almacenamiento en memoria caché.Además, el almacenamiento en memoria caché se deshabilitará para una instancia de <xref:System.ServiceModel.ClientBase%601> una vez que se tenga acceso a cualquiera de sus propiedades “que afectan a la seguridad”.|  
+|-------------------------|-----------------|  
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Todas las instancias de <xref:System.ServiceModel.ClientBase%601> dentro del dominio de aplicación pueden participar en el almacenamiento en memoria caché. El desarrollador ha determinado que no hay implicaciones adversas de seguridad para almacenar en memoria caché. Almacenamiento en caché no se desactivará propiedades incluso si "seguridad" <xref:System.ServiceModel.ClientBase%601> se tiene acceso. Las propiedades de "seguridad" de <xref:System.ServiceModel.ClientBase%601> son <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> y <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
+|<xref:System.ServiceModel.CacheSetting.Default>|Solo las instancias de <xref:System.ServiceModel.ClientBase%601> creadas desde extremos definidos en archivos de configuración participan en el almacenamiento en memoria caché dentro del dominio de aplicación. Cualquier instancia de <xref:System.ServiceModel.ClientBase%601> creada mediante programación dentro de ese dominio de aplicación no participará en el almacenamiento en memoria caché. Además, el almacenamiento en caché se deshabilitará para una instancia de <xref:System.ServiceModel.ClientBase%601> una vez que se tiene acceso a cualquiera de sus propiedades de "seguridad".|  
 |<xref:System.ServiceModel.CacheSetting.AlwaysOff>|El almacenamiento en caché está desactivado para todas las instancias de <xref:System.ServiceModel.ClientBase%601> de un tipo determinado dentro del dominio de aplicación en cuestión.|  
   
  Los fragmentos de código siguientes muestran cómo usar la propiedad <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>.  
@@ -64,7 +67,6 @@ class Program
 }  
 // Generated by SvcUtil.exe     
 public partial class TestClient : System.ServiceModel.ClientBase, ITest { }  
-  
 ```  
   
  En el código anterior, todas las instancias de `TestClient` usarán el mismo generador de canales.  
@@ -78,7 +80,7 @@ class Program
       int i = 1;   
       foreach (string msg in messages)   
       {   
-         using (TestClient proxy = new TestClient (“MyEndpoint”, new EndpointAddress(address)))   
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
          {   
             if (i == 4)   
             {   
@@ -95,7 +97,7 @@ class Program
 public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
 ```  
   
- En el ejemplo anterior, todas las instancias de `TestClient` usarían el mismo generador de canales excepto la instancia nº 4.La instancia nº 4 usaría un generador de canales que se crea específicamente para su uso.Este valor funcionaría para escenarios donde un extremo determinado necesita diferentes configuraciones de seguridad que los demás extremos del mismo tipo de generador de canales \(en este caso `ITest`\).  
+ En el ejemplo anterior, todas las instancias de `TestClient` usarían el mismo generador de canales excepto la instancia nº 4. La instancia nº 4 usaría un generador de canales que se crea específicamente para su uso. Este valor funcionaría para escenarios donde un extremo determinado necesita diferentes configuraciones de seguridad que los demás extremos del mismo tipo de generador de canales (en este caso `ITest`).  
   
 ```  
 class Program   
@@ -105,7 +107,7 @@ class Program
       ClientBase.CacheSettings = CacheSettings.AlwaysOff;   
       foreach (string msg in messages)   
       {   
-         using (TestClient proxy = new TestClient (“MyEndpoint”, new EndpointAddress(address)))   
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
          {   
             proxy.Test(msg);   
          }           
@@ -117,11 +119,11 @@ class Program
 public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
 ```  
   
- En el ejemplo anterior, todas las instancias de `TestClient` usarían diferentes generadores de canales.Esto es útil cuando cada extremo tiene distintos requisitos de seguridad y no tiene sentido almacenar en memoria caché.  
+ En el ejemplo anterior, todas las instancias de `TestClient` usarían diferentes generadores de canales. Esto es útil cuando cada punto de conexión tiene distintos requisitos de seguridad y no tiene sentido almacenar en memoria caché.  
   
-## Vea también  
- <xref:System.ServiceModel.ClientBase%601>   
- [Creación de clientes](../../../../docs/framework/wcf/building-clients.md)   
- [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)   
- [Acceso a los servicios mediante un cliente WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)   
- [Cómo utilizar ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.ClientBase%601>  
+ [Creación de clientes](../../../../docs/framework/wcf/building-clients.md)  
+ [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)  
+ [Acceso a los servicios mediante un cliente WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
+ [Cómo: utilizar ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

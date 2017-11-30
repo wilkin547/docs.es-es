@@ -1,35 +1,33 @@
 ---
-title: "La variable &#39;&lt;nombredevariable&gt;&#39; oculta una variable en un bloque de inclusi&#243;n | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30616"
-  - "bc30616"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30616"
+title: "Variable &#39; &lt;variablename&gt;&#39; oculta una variable en un bloque de inclusión"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30616
+- bc30616
+helpviewer_keywords: BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2af570cd002b4be4e15a7c03b0ffc2ff84ba3982
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# La variable &#39;&lt;nombredevariable&gt;&#39; oculta una variable en un bloque de inclusi&#243;n
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>Variable &#39; &lt;variablename&gt;&#39; oculta una variable en un bloque de inclusión
 Una variable incluida en un bloque tiene el mismo nombre que otra variable local.  
   
- **Identificador de error:** BC30616  
+ **Id. de error:** BC30616  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Cambie el nombre de la variable del bloque contenedor para que sea diferente de cualquier otra variable local.  Por ejemplo:  
+-   Cambiar el nombre de la variable del bloque contenedor para que no sea igual que cualquier otra variable local. Por ejemplo:  
   
     ```  
     Dim a, b, x As Integer  
@@ -38,10 +36,10 @@ Una variable incluida en un bloque tiene el mismo nombre que otra variable local
     End If  
     ```  
   
--   Una de las causas comunes que pueden producir este error es el uso de `Catch e As Exception` dentro de un controlador de eventos.  Si este es el caso, asigne el nombre `ex` en lugar de `e` a la variable del bloque `Catch`.  
+-   Una causa común de este error es el uso de `Catch e As Exception` dentro de un controlador de eventos. Si este es el caso, el nombre del `Catch` variable de bloque `ex` en lugar de `e`.  
   
--   Otro motivo por el cual puede producirse este error es un intento de obtener acceso a una variable local declarada dentro de un bloque `Try` en un bloque `Catch` separado.  Para corregir este error, declare la variable fuera de la estructura `Try...Catch...Finally`.  
+-   Otra fuente común de este error es un intento para tener acceso a una variable local declarada dentro de un `Try` bloquear en otro `Catch` bloque. Para corregir este error, declare la variable fuera de la `Try...Catch...Finally` estructura.  
   
-## Vea también  
- [Try...Catch...Finally \(Instrucción\)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Declaración de variable](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Vea también  
+ [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Declaración de variables](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

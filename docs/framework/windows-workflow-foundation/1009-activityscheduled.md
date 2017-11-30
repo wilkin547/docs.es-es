@@ -1,39 +1,43 @@
 ---
-title: "1009 - ActivityScheduled | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1009 - ActivityScheduled
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 307e38b6-d47e-47a4-9708-e74d8314b1a1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d9463fbf2e7f2ac3424488dc3fca322a91d11126
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 1009 - ActivityScheduled
-## Propiedades  
+# <a name="1009---activityscheduled"></a>1009 - ActivityScheduled
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|1009|  
 |Palabras clave|WFRuntime|  
 |Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Indica que una actividad se está programando para ejecutarse.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  Parent Activity '%1', DisplayName: '%2', InstanceId: '%3' scheduled child Activity '%4', DisplayName: '%5', InstanceId: '%6'.  
   
-## Detalles  
+## <a name="details"></a>Detalles  
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |ParentActivity|xs:string|Nombre del tipo de la actividad principal.|  
 |ParentDisplayName|xs:string|Identificación y nombre para mostrar de la actividad principal.|  
 |ParentInstanceId|xs:string|Identificador de instancia de la actividad principal.|  

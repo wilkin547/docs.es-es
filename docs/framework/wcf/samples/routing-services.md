@@ -1,29 +1,32 @@
 ---
-title: "Servicios de enrutamiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Servicios de enrutamiento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a430b4c-46eb-4d15-afbc-8834f0e985ab
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 25a3aab2e9470b9d9e96e882b90ed154c4e89558
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Servicios de enrutamiento
+# <a name="routing-services"></a>Servicios de enrutamiento
 En esta sección se incluyen ejemplos que muestran cómo utilizar el Enrutador de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## En esta sección  
- ["Hola mundo" con el Servicio de enrutamiento](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Hola a todos con el servicio de enrutamiento](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
  Muestra cómo utilizar el Enrutador de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Tratamiento de errores y puentes](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)  
+ [Protocolo de puente y el control de errores](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)  
  Muestra el modo en que se usa el servicio de enrutamiento de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para puentear la comunicación entre un cliente y un servicio que utilizan enlaces diferentes.  
   
  [Filtros avanzados](../../../../docs/framework/wcf/samples/advanced-filters.md)  

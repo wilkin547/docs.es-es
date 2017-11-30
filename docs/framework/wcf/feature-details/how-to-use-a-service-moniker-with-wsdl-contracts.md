@@ -1,29 +1,32 @@
 ---
-title: "C&#243;mo: Utilizar un moniker de servicio con contratos WSDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Utilizar un moniker de servicio con contratos WSDL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9d98fb82984fec4acbb8b95d4bc4667468804ff9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Utilizar un moniker de servicio con contratos WSDL
-Hay situaciones en las que usted querrá tener un cliente de Interoperabilidad COM completamente autónomo.Puede que el servicio que quiere llamar no exponga un extremo MEX y puede que la DLL cliente de WCF no se registre para la interoperabilidad COM.En estos casos, puede crear un archivo WSDL que describe el servicio y lo pasa en el moniker del servicio WCF.Este tema describe cómo llamar al ejemplo de WCF Introducción utilizando un moniker WSDL de WCF.  
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Cómo: Utilizar un moniker de servicio con contratos WSDL
+Hay situaciones en las que usted querrá tener un cliente de Interoperabilidad COM completamente autónomo. Puede que el servicio que quiere llamar no exponga un extremo MEX y puede que la DLL cliente de WCF no se registre para la interoperabilidad COM. En estos casos, puede crear un archivo WSDL que describe el servicio y lo pasa en el moniker del servicio WCF. Este tema describe cómo llamar al ejemplo de WCF Introducción utilizando un moniker WSDL de WCF.  
   
-### Utilizar el moniker de servicio WSDL  
+### <a name="using-the-wsdl-service-moniker"></a>Utilizar el moniker de servicio WSDL  
   
 1.  Abra y compile la solución de ejemplo GettingStarted.  
   
-2.  Abra Internet Explorer y vaya a http:\/\/localhost\/ServiceModelSamples\/Service.svc para asegurarse de que el servicio está funcionando.  
+2.  Abra Internet Explorer y vaya a http://localhost/ServiceModelSamples/Service.svc para asegurarse de que el servicio está funcionando.  
   
 3.  En el archivo Service.cs, agregue el atributo siguiente en la clase CalculatorService:  
   
@@ -33,9 +36,9 @@ Hay situaciones en las que usted querrá tener un cliente de Interoperabilidad C
   
   
   
-5.  Cree un archivo WSDL para que lo lea la aplicación.Dado que los espacios de nombres se agregaron en los pasos 3 y 4, puede utilizar IE para consultar la descripción WSDL completa del servicio yendo a http:\/\/localhost\/ServiceModelSamples\/Service.svc?wsdl.Puede guardar a continuación el archivo desde Internet Explorer como serviceWSDL.xml.Si no especifica los espacios de nombres en los pasos 3 y 4, el documento WSDL devuelto de la consulta a la dirección URL anterior no será el WSDL completo.El documento WSDL devuelto incluirá varias instrucciones de importación que importan otros documentos WSDL.Tendrá que pasar por cada instrucción de importación y crear el documento WSDL completo, combinando el WSDL devuelto desde el servicio con el WSDL importado.  
+5.  Cree un archivo WSDL para que lo lea la aplicación. Dado que los espacios de nombres se agregaron en los pasos 3 y 4, puede utilizar IE para consultar la descripción WSDL completa del servicio yendo a http://localhost/ServiceModelSamples/Service.svc?wsdl. Puede guardar a continuación el archivo desde Internet Explorer como serviceWSDL.xml. Si no especifica los espacios de nombres en los pasos 3 y 4, el documento WSDL devuelto de la consulta a la dirección URL anterior no será el WSDL completo. El documento WSDL devuelto incluirá varias instrucciones de importación que importan otros documentos WSDL. Tendrá que pasar por cada instrucción de importación y crear el documento WSDL completo, combinando el WSDL devuelto desde el servicio con el WSDL importado.  
   
-6.  Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar.Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:  
+6.  Abra Visual Basic 6.0 y cree un nuevo archivo .exe estándar. Agregue un botón al formulario y haga doble clic en él para agregar el código siguiente al controlador de clic:  
   
     ```  
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
@@ -59,10 +62,10 @@ Hay situaciones en las que usted querrá tener un cliente de Interoperabilidad C
     ```  
   
     > [!NOTE]
-    >  Si el moniker es incorrecto o si el servicio no está disponible la llamada a `GetObject` devolverá un error que dirá "Sintaxis no válida."Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.  
+    >  Si el moniker es incorrecto o si el servicio no está disponible la llamada a `GetObject` devolverá un error que dirá "Sintaxis no válida."  Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.  
   
-7.  Ejecutar aplicación de Visual BasicSe mostrará un cuadro de mensaje con los resultados de llamar a Subtract \(145, 76.54\).  
+7.  Ejecutar aplicación de Visual Basic Se mostrará un cuadro de mensaje con los resultados de llamar a Subtract (145, 76.54).  
   
-## Vea también  
- [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [Integración con la información general de las aplicaciones COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Vea también  
+ [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Integración con la introducción a las aplicaciones COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

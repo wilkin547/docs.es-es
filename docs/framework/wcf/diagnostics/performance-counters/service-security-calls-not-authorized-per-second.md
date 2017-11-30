@@ -1,29 +1,32 @@
 ---
-title: "Servicio: Llamadas de seguridad no autorizadas por segundo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Servicio: Llamadas de seguridad no autorizadas por segundo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1eeade5a-ea62-4757-b1f9-1b1b1746abd1
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: ad28d6afe26537e7a3eface8be70bcecf15b7aa8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Servicio: Llamadas de seguridad no autorizadas por segundo
+# <a name="service-security-calls-not-authorized-per-second"></a>Servicio: Llamadas de seguridad no autorizadas por segundo
 Nombre de contador: Llamadas de seguridad no autorizadas por segundo  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Número de mensajes entrantes en un segundo, que son de un usuario válido y protegidos correctamente, pero el usuario no está autorizado para realizar tareas específicas.  
   
  Este contador se incrementa cuando el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> devuelve `false`.  
   
- Éste es un tipo de contador de rendimiento [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkId=94649), cuyo valor se calcula mediante la formula siguiente.  
+ Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkId=94649), cuyo valor se calcula con la siguiente fórmula.  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)
+ (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)
