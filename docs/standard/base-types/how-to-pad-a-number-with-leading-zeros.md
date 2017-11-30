@@ -1,100 +1,106 @@
 ---
-title: "C&#243;mo: Rellenar un n&#250;mero con ceros iniciales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dar formato [.NET Framework], números"
-  - "dar formato a números [.NET Framework]"
-  - "números [.NET Framework], cadenas de formato"
-  - "cadenas de formato numérico [.NET Framework]"
+title: "Cómo: Rellenar un número con ceros iniciales"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- number formatting [.NET Framework]
+- numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6266807a01e8119ae1410a1ba09cab55c788b4d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Rellenar un n&#250;mero con ceros iniciales
-Si desea agregar ceros a la izquierda de un entero, puede hacerlo mediante la [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)“D” con un especificador de precisión.  Para agregar ceros a la izquierda tanto de enteros como de números de punto flotante, use una [cadena de formato numérico estándar](../../../docs/standard/base-types/custom-numeric-format-strings.md).  En este tema se explica cómo usar ambos métodos para rellenar un número con ceros a la izquierda.  
+# <a name="how-to-pad-a-number-with-leading-zeros"></a><span data-ttu-id="1eec7-102">Cómo: Rellenar un número con ceros iniciales</span><span class="sxs-lookup"><span data-stu-id="1eec7-102">How to: Pad a Number with Leading Zeros</span></span>
+<span data-ttu-id="1eec7-103">Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un especificador de precisión.</span><span class="sxs-lookup"><span data-stu-id="1eec7-103">You can add leading zeros to an integer by using the "D" [standard numeric format string](../../../docs/standard/base-types/standard-numeric-format-strings.md) with a precision specifier.</span></span> <span data-ttu-id="1eec7-104">Para agregar ceros a la izquierda tanto de enteros como de números de punto flotante, use una [cadena de formato numérico personalizada](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="1eec7-104">You can add leading zeros to both integer and floating-point numbers by using a [custom numeric format string](../../../docs/standard/base-types/custom-numeric-format-strings.md).</span></span> <span data-ttu-id="1eec7-105">En este tema se explica cómo usar ambos métodos para rellenar un número con ceros a la izquierda.</span><span class="sxs-lookup"><span data-stu-id="1eec7-105">This topic shows how to use both methods to pad a number with leading zeros.</span></span>  
   
-### Para rellenar un entero con ceros a la izquierda hasta una longitud concreta  
+### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a><span data-ttu-id="1eec7-106">Para rellenar un entero con ceros a la izquierda hasta una longitud concreta</span><span class="sxs-lookup"><span data-stu-id="1eec7-106">To pad an integer with leading zeros to a specific length</span></span>  
   
-1.  Determine el número mínimo de dígitos que desea que muestre el valor entero.  Incluya los dígitos a la izquierda en este número.  
+1.  <span data-ttu-id="1eec7-107">Determine el número mínimo de dígitos que desea que muestre el valor entero.</span><span class="sxs-lookup"><span data-stu-id="1eec7-107">Determine the minimum number of digits you want the integer value to display.</span></span> <span data-ttu-id="1eec7-108">Incluya los dígitos a la izquierda en este número.</span><span class="sxs-lookup"><span data-stu-id="1eec7-108">Include any leading digits in this number.</span></span>  
   
-2.  Determine si desea mostrar el entero como valor decimal o hexadecimal.  
+2.  <span data-ttu-id="1eec7-109">Determine si desea mostrar el entero como valor decimal o hexadecimal.</span><span class="sxs-lookup"><span data-stu-id="1eec7-109">Determine whether you want to display the integer as a decimal value or a hexadecimal value.</span></span>  
   
-    -   Para mostrar el entero como valor decimal, llame a su método `ToString(String)` y pase la cadena “D*n*” como valor del parámetro `format`, donde *n* representa la longitud mínima de la cadena.  
+    -   <span data-ttu-id="1eec7-110">Para mostrar el entero como un valor decimal, llame a su `ToString(String)` método y pase la cadena "d.*n*" como el valor de la `format` parámetro, donde  *n*  representa la longitud mínima de la cadena.</span><span class="sxs-lookup"><span data-stu-id="1eec7-110">To display the integer as a decimal value, call its `ToString(String)` method, and pass the string "D*n*" as the value of the `format` parameter, where *n* represents the minimum length of the string.</span></span>  
   
-    -   Para mostrar el entero como valor hexadecimal, llame a su método `ToString(String)` y pase la cadena “X*n*” como valor del parámetro `format`, donde *n* representa la longitud mínima de la cadena.  
+    -   <span data-ttu-id="1eec7-111">Para mostrar el entero como un valor hexadecimal, llame a su `ToString(String)` método y pase la cadena "X*n*" como el valor de la `format` parámetro, donde  *n*  representa la longitud mínima de la cadena.</span><span class="sxs-lookup"><span data-stu-id="1eec7-111">To display the integer as a hexadecimal value, call its `ToString(String)` method and pass the string "X*n*" as the value of the `format` parameter, where *n* represents the minimum length of the string.</span></span>  
   
-     También puede usar la cadena de formato en un método como, por ejemplo, <xref:System.String.Format%2A> o <xref:System.Console.WriteLine%2A>, que usan [formato compuesto](../../../docs/standard/base-types/composite-formatting.md).  
+     <span data-ttu-id="1eec7-112">También puede utilizar la cadena de formato en un método, como <xref:System.String.Format%2A> o <xref:System.Console.WriteLine%2A>, que utiliza [formatos compuestos](../../../docs/standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="1eec7-112">You can also use the format string in a method, such as <xref:System.String.Format%2A> or <xref:System.Console.WriteLine%2A>, that uses [composite formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span>  
   
- En el ejemplo siguiente se aplica formato a varios valores enteros con ceros a la izquierda de modo que la longitud mínima total del número con formato sea de ocho caracteres.  
+ <span data-ttu-id="1eec7-113">En el ejemplo siguiente se aplica formato a varios valores enteros con ceros a la izquierda de modo que la longitud mínima total del número con formato sea de ocho caracteres.</span><span class="sxs-lookup"><span data-stu-id="1eec7-113">The following example formats several integer values with leading zeros so that the total length of the formatted number is at least eight characters.</span></span>  
   
  [!code-csharp[Formatting.HowTo.PadNumber#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#1)]
  [!code-vb[Formatting.HowTo.PadNumber#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#1)]  
   
-### Para rellenar un entero con una determinada cantidad de ceros a la izquierda  
+### <a name="to-pad-an-integer-with-a-specific-number-of-leading-zeros"></a><span data-ttu-id="1eec7-114">Para rellenar un entero con una determinada cantidad de ceros a la izquierda</span><span class="sxs-lookup"><span data-stu-id="1eec7-114">To pad an integer with a specific number of leading zeros</span></span>  
   
-1.  Determine cuántos ceros a la izquierda desea que muestre el valor entero.  
+1.  <span data-ttu-id="1eec7-115">Determine cuántos ceros a la izquierda desea que muestre el valor entero.</span><span class="sxs-lookup"><span data-stu-id="1eec7-115">Determine how many leading zeros you want the integer value to display.</span></span>  
   
-2.  Determine si desea mostrar el entero como valor decimal o hexadecimal.  Para aplicar el formato de valor decimal hay que usar el especificador de formato estándar “D”, mientras que para el valor hexadecimal hay que usar el especificador de formato estándar “X”.  
+2.  <span data-ttu-id="1eec7-116">Determine si desea mostrar el entero como valor decimal o hexadecimal.</span><span class="sxs-lookup"><span data-stu-id="1eec7-116">Determine whether you want to display the integer as a decimal value or a hexadecimal value.</span></span> <span data-ttu-id="1eec7-117">Para aplicar el formato de valor decimal hay que usar el especificador de formato estándar “D”, mientras que para el valor hexadecimal hay que usar el especificador de formato estándar “X”.</span><span class="sxs-lookup"><span data-stu-id="1eec7-117">Formatting it as a decimal value requires that you use the "D" standard format specifier; formatting it as a hexadecimal value requires that you use the "X" standard format specifier.</span></span>  
   
-3.  Determine la longitud de la cadena numérica sin rellenar mediante una llamada a los métodos `ToString("D").Length` o `ToString("X").Length` del valor entero.  
+3.  <span data-ttu-id="1eec7-118">Determine la longitud de la cadena numérica sin rellenar mediante una llamada a los métodos `ToString("D").Length` o `ToString("X").Length` del valor entero.</span><span class="sxs-lookup"><span data-stu-id="1eec7-118">Determine the length of the unpadded numeric string by calling the integer value's `ToString("D").Length` or `ToString("X").Length` method.</span></span>  
   
-4.  Agregue el número de ceros a la izquierda que desea incluir en la cadena con formato a la longitud de la cadena numérica sin rellenar.  Esto define la longitud total de la cadena rellenada.  
+4.  <span data-ttu-id="1eec7-119">Agregue el número de ceros a la izquierda que desea incluir en la cadena con formato a la longitud de la cadena numérica sin rellenar.</span><span class="sxs-lookup"><span data-stu-id="1eec7-119">Add the number of leading zeros that you want to include in the formatted string to the length of the unpadded numeric string.</span></span> <span data-ttu-id="1eec7-120">Esto define la longitud total de la cadena rellenada.</span><span class="sxs-lookup"><span data-stu-id="1eec7-120">This defines the total length of the padded string.</span></span>  
   
-5.  Llame al método `ToString(String)` del valor entero y pase la cadena “D*n*” para cadenas decimales y “X*n*” para cadenas hexadecimales, donde *n* representa la longitud total de la cadena rellenada.  También puede usar la cadena de formato “D*n*” o “X*n*” en un método que admita formato compuesto.  
+5.  <span data-ttu-id="1eec7-121">Llamar al valor de entero `ToString(String)` método y pase la cadena "d.*n*" para cadenas decimales y "X*n*" para cadenas hexadecimales, donde  *n*  representa la longitud total de la cadena rellenada.</span><span class="sxs-lookup"><span data-stu-id="1eec7-121">Call the integer value's `ToString(String)` method, and pass the string "D*n*" for decimal strings and "X*n*" for hexadecimal strings, where *n* represents the total length of the padded string.</span></span> <span data-ttu-id="1eec7-122">También puede utilizar el "d.*n*" o "X*n*" cadena de formato de un método que admita formato compuesto.</span><span class="sxs-lookup"><span data-stu-id="1eec7-122">You can also use the "D*n*" or "X*n*" format string in a method that supports composite formatting.</span></span>  
   
- En el ejemplo siguiente se rellena un valor entero con cinco ceros a la izquierda.  
+ <span data-ttu-id="1eec7-123">En el ejemplo siguiente se rellena un valor entero con cinco ceros a la izquierda.</span><span class="sxs-lookup"><span data-stu-id="1eec7-123">The following example pads an integer value with five leading zeros.</span></span>  
   
  [!code-csharp[Formatting.HowTo.PadNumber#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#2)]
  [!code-vb[Formatting.HowTo.PadNumber#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#2)]  
   
-### Para rellenar un valor numérico con ceros a la izquierda hasta una longitud concreta  
+### <a name="to-pad-a-numeric-value-with-leading-zeros-to-a-specific-length"></a><span data-ttu-id="1eec7-124">Para rellenar un valor numérico con ceros a la izquierda hasta una longitud concreta</span><span class="sxs-lookup"><span data-stu-id="1eec7-124">To pad a numeric value with leading zeros to a specific length</span></span>  
   
-1.  Determine con cuántos dígitos a la izquierda del decimal desea que se represente la cadena del número.  Incluya los ceros a la izquierda en este número total de dígitos.  
+1.  <span data-ttu-id="1eec7-125">Determine con cuántos dígitos a la izquierda del decimal desea que se represente la cadena del número.</span><span class="sxs-lookup"><span data-stu-id="1eec7-125">Determine how many digits to the left of the decimal you want the string representation of the number to have.</span></span> <span data-ttu-id="1eec7-126">Incluya los ceros a la izquierda en este número total de dígitos.</span><span class="sxs-lookup"><span data-stu-id="1eec7-126">Include any leading zeros in this total number of digits.</span></span>  
   
-2.  Defina una cadena de formato numérico personalizado en la que se use el marcador de posición cero \(“0”\) para representar el número mínimo de ceros.  
+2.  <span data-ttu-id="1eec7-127">Defina una cadena de formato numérico personalizado en la que se use el marcador de posición cero (“0”) para representar el número mínimo de ceros.</span><span class="sxs-lookup"><span data-stu-id="1eec7-127">Define a custom numeric format string that uses the zero placeholder ("0") to represent the minimum number of zeros.</span></span>  
   
-3.  Llame al método `ToString(String)` del número y pase la cadena de formato personalizado.  También puede usar la cadena de formato personalizado con un método que admita formato compuesto.  
+3.  <span data-ttu-id="1eec7-128">Llame al método `ToString(String)` del número y pase la cadena de formato personalizado.</span><span class="sxs-lookup"><span data-stu-id="1eec7-128">Call the number's `ToString(String)` method and pass it the custom format string.</span></span> <span data-ttu-id="1eec7-129">También puede usar la cadena de formato personalizado con un método que admita formato compuesto.</span><span class="sxs-lookup"><span data-stu-id="1eec7-129">You can also use the custom format string with a method that supports composite formatting.</span></span>  
   
- En el ejemplo siguiente se aplica formato a varios valores numéricos con ceros a la izquierda de modo que la longitud total del número con formato sea de al menos ocho dígitos a la izquierda del decimal.  
+ <span data-ttu-id="1eec7-130">En el ejemplo siguiente se aplica formato a varios valores numéricos con ceros a la izquierda de modo que la longitud total del número con formato sea de al menos ocho dígitos a la izquierda del decimal.</span><span class="sxs-lookup"><span data-stu-id="1eec7-130">The following example formats several numeric values with leading zeros so that the total length of the formatted number is at least eight digits to the left of the decimal.</span></span>  
   
  [!code-csharp[Formatting.HowTo.PadNumber#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#3)]
  [!code-vb[Formatting.HowTo.PadNumber#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#3)]  
   
-### Para rellenar un valor numérico con una determinada cantidad de ceros a la izquierda  
+### <a name="to-pad-a-numeric-value-with-a-specific-number-of-leading-zeros"></a><span data-ttu-id="1eec7-131">Para rellenar un valor numérico con una determinada cantidad de ceros a la izquierda</span><span class="sxs-lookup"><span data-stu-id="1eec7-131">To pad a numeric value with a specific number of leading zeros</span></span>  
   
-1.  Determine cuántos ceros a la izquierda desea que tenga el valor numérico.  
+1.  <span data-ttu-id="1eec7-132">Determine cuántos ceros a la izquierda desea que tenga el valor numérico.</span><span class="sxs-lookup"><span data-stu-id="1eec7-132">Determine how many leading zeros you want the numeric value to have.</span></span>  
   
-2.  Determine el número de dígitos a la izquierda del decimal que tendrá la cadena numérica sin rellenar.  Para hacerlo:  
+2.  <span data-ttu-id="1eec7-133">Determine el número de dígitos a la izquierda del decimal que tendrá la cadena numérica sin rellenar.</span><span class="sxs-lookup"><span data-stu-id="1eec7-133">Determine the number of digits to the left of the decimal in the unpadded numeric string.</span></span> <span data-ttu-id="1eec7-134">Para hacerlo:</span><span class="sxs-lookup"><span data-stu-id="1eec7-134">To do this:</span></span>  
   
-    1.  Determine si la representación de cadena de un número incluye un símbolo de separador decimal.  
+    1.  <span data-ttu-id="1eec7-135">Determine si la representación de cadena de un número incluye un símbolo de separador decimal.</span><span class="sxs-lookup"><span data-stu-id="1eec7-135">Determine whether the string representation of a number includes a decimal point symbol.</span></span>  
   
-    2.  Si incluye un símbolo de separador decimal, determine el número de caracteres a la izquierda del separador decimal.  
+    2.  <span data-ttu-id="1eec7-136">Si incluye un símbolo de separador decimal, determine el número de caracteres a la izquierda del separador decimal.</span><span class="sxs-lookup"><span data-stu-id="1eec7-136">If it does include a decimal point symbol, determine the number of characters to the left of the decimal point.</span></span>  
   
-         O bien  
+         <span data-ttu-id="1eec7-137">O bien</span><span class="sxs-lookup"><span data-stu-id="1eec7-137">-or-</span></span>  
   
-         Si no incluye un símbolo de separador decimal, determine la longitud de la cadena.  
+         <span data-ttu-id="1eec7-138">Si no incluye un símbolo de separador decimal, determine la longitud de la cadena.</span><span class="sxs-lookup"><span data-stu-id="1eec7-138">If it does not include a decimal point symbol, determine the string's length.</span></span>  
   
-3.  Cree una cadena de formato personalizado en la que se use el marcador de posición cero \(“0”\) para cada uno de los ceros a la izquierda que aparecen en la cadena, y en la que se use también el marcador de posición cero o el marcador de posición de dígitos \(“\#”\) para representar cada uno de los dígitos de la cadena predeterminada.  
+3.  <span data-ttu-id="1eec7-139">Cree una cadena de formato personalizado en la que se use el marcador de posición cero (“0”) para cada uno de los ceros a la izquierda que aparecen en la cadena, y en la que se use también el marcador de posición cero o el marcador de posición de dígitos (“#”) para representar cada uno de los dígitos de la cadena predeterminada.</span><span class="sxs-lookup"><span data-stu-id="1eec7-139">Create a custom format string that uses the zero placeholder ("0") for each of the leading zeros to appear in the string, and that uses either the zero placeholder or the digit placeholder ("#") to represent each digit in the default string.</span></span>  
   
-4.  Proporcione la cadena de formato personalizado como un parámetro bien al método `ToString(String)` del número, bien a un método que admita el formato compuesto.  
+4.  <span data-ttu-id="1eec7-140">Proporcione la cadena de formato personalizado como un parámetro bien al método `ToString(String)` del número, bien a un método que admita el formato compuesto.</span><span class="sxs-lookup"><span data-stu-id="1eec7-140">Supply the custom format string as a parameter either to the number's `ToString(String)` method or to a method that supports composite formatting.</span></span>  
   
- En el ejemplo siguiente se rellenan dos valores <xref:System.Double> con cinco ceros a la izquierda.  
+ <span data-ttu-id="1eec7-141">En el ejemplo siguiente se rellenan dos valores <xref:System.Double> con cinco ceros a la izquierda.</span><span class="sxs-lookup"><span data-stu-id="1eec7-141">The following example pads two <xref:System.Double> values with five leading zeros.</span></span>  
   
  [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
  [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]  
   
-## Vea también  
- [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)   
- [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md)   
- [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a><span data-ttu-id="1eec7-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="1eec7-142">See Also</span></span>  
+ [<span data-ttu-id="1eec7-143">Custom Numeric Format Strings</span><span class="sxs-lookup"><span data-stu-id="1eec7-143">Custom Numeric Format Strings</span></span>](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+ [<span data-ttu-id="1eec7-144">Standard Numeric Format Strings</span><span class="sxs-lookup"><span data-stu-id="1eec7-144">Standard Numeric Format Strings</span></span>](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [<span data-ttu-id="1eec7-145">Formatos compuestos</span><span class="sxs-lookup"><span data-stu-id="1eec7-145">Composite Formatting</span></span>](../../../docs/standard/base-types/composite-formatting.md)

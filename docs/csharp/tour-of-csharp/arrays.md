@@ -1,6 +1,6 @@
 ---
 title: 'Matrices de C#: un paseo por el lenguaje C#'
-description: "Las matrices son el tipo más básico de colección en el lenguaje C#."
+description: "Las matrices son el tipo de colección más básico en el lenguaje C#"
 keywords: ".NET, csharp, matriz, colección"
 author: BillWagner
 ms.author: wiwagn
@@ -10,48 +10,46 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
+ms.openlocfilehash: d7d5ae9f99ba1629a6f0aec57bebf74853cab27f
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 82362a3675c431423a99d3d728fb8dd1da58c9c7
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/02/2017
 ---
+# <a name="arrays"></a><span data-ttu-id="7e8c5-104">Matrices</span><span class="sxs-lookup"><span data-stu-id="7e8c5-104">Arrays</span></span>
 
-# <a name="arrays"></a>Matrices
+<span data-ttu-id="7e8c5-105">Una ***matriz*** es una estructura de datos que contiene un número de variables a las que se accede mediante índices calculados.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-105">An ***array*** is a data structure that contains a number of variables that are accessed through computed indices.</span></span> <span data-ttu-id="7e8c5-106">Las variables contenidas en una matriz, denominadas también ***elementos*** de la matriz, son todas del mismo tipo y este tipo se conoce como ***tipo de elemento*** de la matriz.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-106">The variables contained in an array, also called the ***elements*** of the array, are all of the same type, and this type is called the ***element type*** of the array.</span></span>
 
-Una ***matriz*** es una estructura de datos que contiene un número de variables a las que se accede mediante índices calculados. Las variables contenidas en una matriz, denominadas también ***elementos*** de la matriz, son todas del mismo tipo y este tipo se conoce como ***tipo de elemento*** de la matriz.
+<span data-ttu-id="7e8c5-107">Los tipos de matriz son tipos de referencia, y la declaración de una variable de matriz simplemente establece un espacio reservado para una referencia a una instancia de matriz.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-107">Array types are reference types, and the declaration of an array variable simply sets aside space for a reference to an array instance.</span></span> <span data-ttu-id="7e8c5-108">Las instancias de matriz reales se crean dinámicamente en tiempo de ejecución mediante el nuevo operador.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-108">Actual array instances are created dynamically at runtime using the new operator.</span></span> <span data-ttu-id="7e8c5-109">La nueva operación especifica la ***longitud*** de la nueva instancia de matriz, que luego se fija para la vigencia de la instancia.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-109">The new operation specifies the ***length*** of the new array instance, which is then fixed for the lifetime of the instance.</span></span> <span data-ttu-id="7e8c5-110">Los índices de los elementos de una matriz van de `0` a `Length - 1`.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-110">The indices of the elements of an array range from `0` to `Length - 1`.</span></span> <span data-ttu-id="7e8c5-111">El operador `new` inicializa automáticamente los elementos de una matriz a su valor predeterminado, que, por ejemplo, es cero para todos los tipos numéricos y `null` para todos los tipos de referencias.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-111">The `new` operator automatically initializes the elements of an array to their default value, which, for example, is zero for all numeric types and `null` for all reference types.</span></span>
 
-Los tipos de matriz son tipos de referencia, y la declaración de una variable de matriz simplemente establece un espacio reservado para una referencia a una instancia de matriz. Las instancias de matriz reales se crean dinámicamente en tiempo de ejecución mediante el nuevo operador. La nueva operación especifica la ***longitud*** de la nueva instancia de matriz, que luego se fija para la vigencia de la instancia. Los índices de los elementos de una matriz van de `0` a `Length - 1`. El operador `new` inicializa automáticamente los elementos de una matriz a su valor predeterminado, que, por ejemplo, es cero para todos los tipos numéricos y `null` para todos los tipos de referencias.
-
-En el ejemplo siguiente se crea una matriz de elementos `int`, se inicializa la matriz y se imprime el contenido de la matriz.
+<span data-ttu-id="7e8c5-112">En el ejemplo siguiente se crea una matriz de elementos `int`, se inicializa la matriz y se imprime el contenido de la matriz.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-112">The following example creates an array of `int` elements, initializes the array, and prints out the contents of the array.</span></span>
 
 [!code-csharp[ArraySample](../../../samples/snippets/csharp/tour/arrays/Program.cs#L3-L18)]
 
-Este ejemplo se crea y se pone en funcionamiento en una ***matriz unidimensional***. C# también admite ***matrices multidimensionales***. El número de dimensiones de un tipo de matriz, conocido también como ***rango*** del tipo de matriz, es una más el número de comas escritas entre los corchetes del tipo de matriz. En el ejemplo siguiente se asignan una matriz unidimensional, multidimensional y tridimensional, respectivamente.
+<span data-ttu-id="7e8c5-113">Este ejemplo se crea y se pone en funcionamiento en una ***matriz unidimensional***.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-113">This example creates and operates on a ***single-dimensional array***.</span></span> <span data-ttu-id="7e8c5-114">C# también admite ***matrices multidimensionales***.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-114">C# also supports ***multi-dimensional arrays***.</span></span> <span data-ttu-id="7e8c5-115">El número de dimensiones de un tipo de matriz, conocido también como ***rango*** del tipo de matriz, es una más el número de comas escritas entre los corchetes del tipo de matriz.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-115">The number of dimensions of an array type, also known as the ***rank*** of the array type, is one plus the number of commas written between the square brackets of the array type.</span></span> <span data-ttu-id="7e8c5-116">En el ejemplo siguiente se asignan una matriz unidimensional, multidimensional y tridimensional, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-116">The following example allocates a single-dimensional, a two-dimensional, and a three-dimensional array, respectively.</span></span>
 
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
-La matriz `a1` contiene 10 elementos, la matriz `a2` 50 (10 × 5) elementos y la matriz `a3` 100 (10 × 5 × 2) elementos.
-El tipo de elemento de una matriz puede ser cualquiera, incluido un tipo de matriz. Una matriz con elementos de un tipo de matriz a veces se conoce como ***matriz escalonada*** porque las longitudes de las matrices de elementos no tienen que ser iguales. En el ejemplo siguiente se asigna una matriz de matrices de `int`:
+<span data-ttu-id="7e8c5-117">La matriz `a1` contiene 10 elementos, la matriz `a2` 50 (10 × 5) elementos y la matriz `a3` 100 (10 × 5 × 2) elementos.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-117">The `a1` array contains 10 elements, the `a2` array contains 50 (10 × 5) elements, and the `a3` array contains 100 (10 × 5 × 2) elements.</span></span>
+<span data-ttu-id="7e8c5-118">El tipo de elemento de una matriz puede ser cualquiera, incluido un tipo de matriz.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-118">The element type of an array can be any type, including an array type.</span></span> <span data-ttu-id="7e8c5-119">Una matriz con elementos de un tipo de matriz a veces se conoce como ***matriz escalonada*** porque las longitudes de las matrices de elementos no tienen que ser iguales.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-119">An array with elements of an array type is sometimes called a ***jagged array*** because the lengths of the element arrays do not all have to be the same.</span></span> <span data-ttu-id="7e8c5-120">En el ejemplo siguiente se asigna una matriz de matrices de `int`:</span><span class="sxs-lookup"><span data-stu-id="7e8c5-120">The following example allocates an array of arrays of `int`:</span></span>
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
-La primera línea crea una matriz con tres elementos, cada uno de tipo `int[]` y cada uno con un valor inicial de `null`. Las líneas posteriores inicializan entonces los tres elementos con referencias a instancias de matriz individuales de longitud variable.
+<span data-ttu-id="7e8c5-121">La primera línea crea una matriz con tres elementos, cada uno de tipo `int[]` y cada uno con un valor inicial de `null`.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-121">The first line creates an array with three elements, each of type `int[]` and each with an initial value of `null`.</span></span> <span data-ttu-id="7e8c5-122">Las líneas posteriores inicializan entonces los tres elementos con referencias a instancias de matriz individuales de longitud variable.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-122">The subsequent lines then initialize the three elements with references to individual array instances of varying lengths.</span></span>
 
-El nuevo operador permite especificar los valores iniciales de los elementos de matriz mediante un ***inicializador de matriz***, que es una lista de las expresiones escritas entre los delimitadores `{` y `}`. En el ejemplo siguiente se asigna e inicializa un tipo `int[]` con tres elementos.
+<span data-ttu-id="7e8c5-123">El nuevo operador permite especificar los valores iniciales de los elementos de matriz mediante un ***inicializador de matriz***, que es una lista de las expresiones escritas entre los delimitadores `{` y `}`.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-123">The new operator permits the initial values of the array elements to be specified using an ***array initializer***, which is a list of expressions written between the delimiters `{` and `}`.</span></span> <span data-ttu-id="7e8c5-124">En el ejemplo siguiente se asigna e inicializa un tipo `int[]` con tres elementos.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-124">The following example allocates and initializes an `int[]` with three elements.</span></span>
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-Tenga en cuenta que la longitud de la matriz se deduce del número de expresiones entre { y }. Las declaraciones de variable local y campo se pueden acortar más para que así no sea necesario reformular el tipo de matriz.
+<span data-ttu-id="7e8c5-125">Tenga en cuenta que la longitud de la matriz se deduce del número de expresiones entre { y }.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-125">Note that the length of the array is inferred from the number of expressions between { and }.</span></span> <span data-ttu-id="7e8c5-126">Las declaraciones de variable local y campo se pueden acortar más para que así no sea necesario reformular el tipo de matriz.</span><span class="sxs-lookup"><span data-stu-id="7e8c5-126">Local variable and field declarations can be shortened further such that the array type does not have to be restated.</span></span>
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-Los dos ejemplos anteriores son equivalentes a lo siguiente:
+<span data-ttu-id="7e8c5-127">Los dos ejemplos anteriores son equivalentes a lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="7e8c5-127">Both of the previous examples are equivalent to the following:</span></span>
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
-[Anterior](structs.md)
-[Siguiente](interfaces.md)
-
+<span data-ttu-id="7e8c5-128">[Anterior](structs.md)
+[Siguiente](interfaces.md)</span><span class="sxs-lookup"><span data-stu-id="7e8c5-128">[Previous](structs.md)
+[Next](interfaces.md)</span></span>

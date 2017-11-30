@@ -10,19 +10,18 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
+ms.openlocfilehash: c285e768d64d1da7e428e29fc67838e87575500c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e3e860729ca9267d29ba105ac03ebe22a70b1762
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="join-by-using-composite-keys"></a>Realizar una unión usando claves compuestas
+# <a name="join-by-using-composite-keys"></a><span data-ttu-id="d34a2-104">Realizar una unión usando claves compuestas</span><span class="sxs-lookup"><span data-stu-id="d34a2-104">Join by using composite keys</span></span>
 
-En este ejemplo se muestra cómo realizar operaciones de combinación en las que se quiere usar más de una clave para definir a una coincidencia. Esto se logra mediante una clave compuesta. Una clave compuesta se crea como un tipo anónimo o un nombre con tipo con los valores que se quieren comparar. Si la variable de consulta se pasará a través de límites de método, use un tipo con nombre que invalida <xref:System.Object.Equals%2A> y <xref:System.Object.GetHashCode%2A> para la clave. Los nombres de las propiedades y el orden en que aparecen deben ser idénticos en cada clave.  
+<span data-ttu-id="d34a2-105">En este ejemplo se muestra cómo realizar operaciones de combinación en las que se quiere usar más de una clave para definir a una coincidencia.</span><span class="sxs-lookup"><span data-stu-id="d34a2-105">This example shows how to perform join operations in which you want to use more than one key to define a match.</span></span> <span data-ttu-id="d34a2-106">Esto se logra mediante una clave compuesta.</span><span class="sxs-lookup"><span data-stu-id="d34a2-106">This is accomplished by using a composite key.</span></span> <span data-ttu-id="d34a2-107">Una clave compuesta se crea como un tipo anónimo o un nombre con tipo con los valores que se quieren comparar.</span><span class="sxs-lookup"><span data-stu-id="d34a2-107">You create a composite key as an anonymous type or named typed with the values that you want to compare.</span></span> <span data-ttu-id="d34a2-108">Si la variable de consulta se pasará a través de límites de método, use un tipo con nombre que invalida <xref:System.Object.Equals%2A> y <xref:System.Object.GetHashCode%2A> para la clave.</span><span class="sxs-lookup"><span data-stu-id="d34a2-108">If the query variable will be passed across method boundaries, use a named type that overrides <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> for the key.</span></span> <span data-ttu-id="d34a2-109">Los nombres de las propiedades y el orden en que aparecen deben ser idénticos en cada clave.</span><span class="sxs-lookup"><span data-stu-id="d34a2-109">The names of the properties, and the order in which they occur, must be identical in each key.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar una clave compuesta para combinar datos de tres tablas:  
+## <a name="example"></a><span data-ttu-id="d34a2-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d34a2-110">Example</span></span>  
+ <span data-ttu-id="d34a2-111">En el ejemplo siguiente se muestra cómo usar una clave compuesta para combinar datos de tres tablas:</span><span class="sxs-lookup"><span data-stu-id="d34a2-111">The following example demonstrates how to use a composite key to join data from three tables:</span></span>  
   
 ```csharp  
 var query = from o in db.Orders  
@@ -33,17 +32,16 @@ var query = from o in db.Orders
         select new {o.OrderID, p.ProductID, d.UnitPrice};  
 ```  
   
- La inferencia de tipos en las claves compuestas depende de los nombres de las propiedades de las claves y el orden en que aparecen. Si las propiedades de las secuencias de origen no tienen los mismos nombres, deberá asignar nuevos nombres en las claves. Por ejemplo, si la tabla `Orders` y la tabla `OrderDetails` usan nombres diferentes para las columnas, se podrían crear claves compuestas asignando nombres idénticos a los tipos anónimos:  
+ <span data-ttu-id="d34a2-112">La inferencia de tipos en las claves compuestas depende de los nombres de las propiedades de las claves y el orden en que aparecen.</span><span class="sxs-lookup"><span data-stu-id="d34a2-112">Type inference on composite keys depends on the names of the properties in the keys, and the order in which they occur.</span></span> <span data-ttu-id="d34a2-113">Si las propiedades de las secuencias de origen no tienen los mismos nombres, deberá asignar nuevos nombres en las claves.</span><span class="sxs-lookup"><span data-stu-id="d34a2-113">If the properties in the source sequences do not have the same names, you must assign new names in the keys.</span></span> <span data-ttu-id="d34a2-114">Por ejemplo, si la tabla `Orders` y la tabla `OrderDetails` usan nombres diferentes para las columnas, se podrían crear claves compuestas asignando nombres idénticos a los tipos anónimos:</span><span class="sxs-lookup"><span data-stu-id="d34a2-114">For example, if the `Orders` table and `OrderDetails` table each used different names for their columns, you could create composite keys by assigning identical names in the anonymous types:</span></span>  
   
 ```csharp  
 join...on new {Name = o.CustomerName, ID = o.CustID} equals   
     new {Name = d.CustName, ID = d.CustID }  
 ```  
   
- Las claves compuestas también se pueden usar en una cláusula `group`.  
+ <span data-ttu-id="d34a2-115">Las claves compuestas también se pueden usar en una cláusula `group`.</span><span class="sxs-lookup"><span data-stu-id="d34a2-115">Composite keys can be also used in a `group` clause.</span></span>  
 
-## <a name="see-also"></a>Vea también  
- [Expresiones de consulta LINQ](index.md)   
- [join (cláusula)](../language-reference/keywords/join-clause.md)   
- [group (cláusula)](../language-reference/keywords/group-clause.md)
-
+## <a name="see-also"></a><span data-ttu-id="d34a2-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="d34a2-116">See also</span></span>  
+ [<span data-ttu-id="d34a2-117">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="d34a2-117">LINQ query expressions</span></span>](index.md)  
+ [<span data-ttu-id="d34a2-118">join (cláusula)</span><span class="sxs-lookup"><span data-stu-id="d34a2-118">join clause</span></span>](../language-reference/keywords/join-clause.md)  
+ [<span data-ttu-id="d34a2-119">group (cláusula)</span><span class="sxs-lookup"><span data-stu-id="d34a2-119">group clause</span></span>](../language-reference/keywords/group-clause.md)

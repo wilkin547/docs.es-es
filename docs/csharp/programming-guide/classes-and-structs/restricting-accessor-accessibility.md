@@ -1,12 +1,9 @@
 ---
 title: "Restringir la accesibilidad del descriptor de acceso (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -15,80 +12,64 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 347fffa4f612c5cb674a6529e46c0b1785670c95
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="restricting-accessor-accessibility-c-programming-guide"></a>Restringir la accesibilidad del descriptor de acceso (Guía de programación de C#)
-Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*. De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso: los de la propiedad o el indexador al que pertenecen. Para obtener más información, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso. Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente. Por ejemplo:  
+# <a name="restricting-accessor-accessibility-c-programming-guide"></a><span data-ttu-id="0e71f-102">Restringir la accesibilidad del descriptor de acceso (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="0e71f-102">Restricting Accessor Accessibility (C# Programming Guide)</span></span>
+<span data-ttu-id="0e71f-103">Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*.</span><span class="sxs-lookup"><span data-stu-id="0e71f-103">The [get](../../../csharp/language-reference/keywords/get.md) and [set](../../../csharp/language-reference/keywords/set.md) portions of a property or indexer are called *accessors*.</span></span> <span data-ttu-id="0e71f-104">De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso: los de la propiedad o el indexador al que pertenecen.</span><span class="sxs-lookup"><span data-stu-id="0e71f-104">By default these accessors have the same visibility, or access level: that of the property or indexer to which they belong.</span></span> <span data-ttu-id="0e71f-105">Para obtener más información, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="0e71f-105">For more information, see [accessibility levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> <span data-ttu-id="0e71f-106">En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso.</span><span class="sxs-lookup"><span data-stu-id="0e71f-106">However, it is sometimes useful to restrict access to one of these accessors.</span></span> <span data-ttu-id="0e71f-107">Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente.</span><span class="sxs-lookup"><span data-stu-id="0e71f-107">Typically, this involves restricting the accessibility of the `set` accessor, while keeping the `get` accessor publicly accessible.</span></span> <span data-ttu-id="0e71f-108">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="0e71f-108">For example:</span></span>  
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
- En este ejemplo, una propiedad denominada `Name` define un descriptor de acceso `get` y `set`. El descriptor de acceso `get` recibe el nivel de accesibilidad de la propiedad, `public` en este caso, mientras que el descriptor de acceso `set` se restringe explícitamente al aplicar el modificador de acceso [protected](../../../csharp/language-reference/keywords/protected.md) al propio descriptor de acceso.  
+ <span data-ttu-id="0e71f-109">En este ejemplo, una propiedad denominada `Name` define un descriptor de acceso `get` y `set`.</span><span class="sxs-lookup"><span data-stu-id="0e71f-109">In this example, a property called `Name` defines a `get` and `set` accessor.</span></span> <span data-ttu-id="0e71f-110">El descriptor de acceso `get` recibe el nivel de accesibilidad de la propiedad, `public` en este caso, mientras que el descriptor de acceso `set` se restringe explícitamente al aplicar el modificador de acceso [protected](../../../csharp/language-reference/keywords/protected.md) al propio descriptor de acceso.</span><span class="sxs-lookup"><span data-stu-id="0e71f-110">The `get` accessor receives the accessibility level of the property itself, `public` in this case, while the `set` accessor is explicitly restricted by applying the [protected](../../../csharp/language-reference/keywords/protected.md) access modifier to the accessor itself.</span></span>  
   
-## <a name="restrictions-on-access-modifiers-on-accessors"></a>Restricciones en los modificadores de acceso en descriptores de acceso  
- Usar los modificadores de descriptor de acceso en propiedades o indexadores está sujeto a estas condiciones:  
+## <a name="restrictions-on-access-modifiers-on-accessors"></a><span data-ttu-id="0e71f-111">Restricciones en los modificadores de acceso en descriptores de acceso</span><span class="sxs-lookup"><span data-stu-id="0e71f-111">Restrictions on Access Modifiers on Accessors</span></span>  
+ <span data-ttu-id="0e71f-112">Usar los modificadores de descriptor de acceso en propiedades o indexadores está sujeto a estas condiciones:</span><span class="sxs-lookup"><span data-stu-id="0e71f-112">Using the accessor modifiers on properties or indexers is subject to these conditions:</span></span>  
   
--   No puede usar los modificadores de descriptor de acceso en una interfaz o en una implementación explícita del miembro [interface](../../../csharp/language-reference/keywords/interface.md).  
+-   <span data-ttu-id="0e71f-113">No puede usar los modificadores de descriptor de acceso en una interfaz o en una implementación explícita del miembro [interface](../../../csharp/language-reference/keywords/interface.md).</span><span class="sxs-lookup"><span data-stu-id="0e71f-113">You cannot use accessor modifiers on an interface or an explicit [interface](../../../csharp/language-reference/keywords/interface.md) member implementation.</span></span>  
   
--   Puede usar modificadores de descriptor de acceso solo si la propiedad o el indexador tienen los descriptores de acceso `set` y `get`. En este caso, se permite el modificador solo en uno de los dos descriptores de acceso.  
+-   <span data-ttu-id="0e71f-114">Puede usar modificadores de descriptor de acceso solo si la propiedad o el indexador tienen los descriptores de acceso `set` y `get`.</span><span class="sxs-lookup"><span data-stu-id="0e71f-114">You can use accessor modifiers only if the property or indexer has both `set` and `get` accessors.</span></span> <span data-ttu-id="0e71f-115">En este caso, se permite el modificador solo en uno de los dos descriptores de acceso.</span><span class="sxs-lookup"><span data-stu-id="0e71f-115">In this case, the modifier is permitted on one only of the two accessors.</span></span>  
   
--   Si la propiedad o el indexador tienen un modificador [override](../../../csharp/language-reference/keywords/override.md), el modificador de descriptor de acceso debe coincidir con el descriptor de acceso del descriptor de acceso invalidado, si lo hay.  
+-   <span data-ttu-id="0e71f-116">Si la propiedad o el indexador tienen un modificador [override](../../../csharp/language-reference/keywords/override.md), el modificador de descriptor de acceso debe coincidir con el descriptor de acceso del descriptor de acceso invalidado, si lo hay.</span><span class="sxs-lookup"><span data-stu-id="0e71f-116">If the property or indexer has an [override](../../../csharp/language-reference/keywords/override.md) modifier, the accessor modifier must match the accessor of the overridden accessor, if any.</span></span>  
   
--   El nivel de accesibilidad del descriptor de acceso debe ser más restrictivo que el nivel de accesibilidad de la propiedad o el indexador.  
+-   <span data-ttu-id="0e71f-117">El nivel de accesibilidad del descriptor de acceso debe ser más restrictivo que el nivel de accesibilidad de la propiedad o el indexador.</span><span class="sxs-lookup"><span data-stu-id="0e71f-117">The accessibility level on the accessor must be more restrictive than the accessibility level on the property or indexer itself.</span></span>  
   
-## <a name="access-modifiers-on-overriding-accessors"></a>Modificadores de acceso en descriptores de acceso de invalidación  
- Al invalidar una propiedad o un indexador, los descriptores de acceso invalidados deben ser accesibles para el código de invalidación. Además, el nivel de accesibilidad de la propiedad y el indexador (y el de los descriptores de acceso) debe coincidir con la propiedad y el indexador invalidados correspondientes y los descriptores de acceso. Por ejemplo:  
+## <a name="access-modifiers-on-overriding-accessors"></a><span data-ttu-id="0e71f-118">Modificadores de acceso en descriptores de acceso de invalidación</span><span class="sxs-lookup"><span data-stu-id="0e71f-118">Access Modifiers on Overriding Accessors</span></span>  
+ <span data-ttu-id="0e71f-119">Al invalidar una propiedad o un indexador, los descriptores de acceso invalidados deben ser accesibles para el código de invalidación.</span><span class="sxs-lookup"><span data-stu-id="0e71f-119">When you override a property or indexer, the overridden accessors must be accessible to the overriding code.</span></span> <span data-ttu-id="0e71f-120">Además, el nivel de accesibilidad de la propiedad y el indexador (y el de los descriptores de acceso) debe coincidir con la propiedad y el indexador invalidados correspondientes y los descriptores de acceso.</span><span class="sxs-lookup"><span data-stu-id="0e71f-120">Also, the accessibility level of both the property/indexer, and that of the accessors must match the corresponding overridden property/indexer and the accessors.</span></span> <span data-ttu-id="0e71f-121">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="0e71f-121">For example:</span></span>  
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
-## <a name="implementing-interfaces"></a>Implementar interfaces  
- Al usar un descriptor de acceso para implementar una interfaz, este no puede tener un modificador de acceso. En cambio, si implementa la interfaz con un descriptor de acceso, como `get`, el otro descriptor de acceso puede tener un modificador de acceso, como en el ejemplo siguiente:  
+## <a name="implementing-interfaces"></a><span data-ttu-id="0e71f-122">Implementar interfaces</span><span class="sxs-lookup"><span data-stu-id="0e71f-122">Implementing Interfaces</span></span>  
+ <span data-ttu-id="0e71f-123">Al usar un descriptor de acceso para implementar una interfaz, este no puede tener un modificador de acceso.</span><span class="sxs-lookup"><span data-stu-id="0e71f-123">When you use an accessor to implement an interface, the accessor may not have an access modifier.</span></span> <span data-ttu-id="0e71f-124">En cambio, si implementa la interfaz con un descriptor de acceso, como `get`, el otro descriptor de acceso puede tener un modificador de acceso, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="0e71f-124">However, if you implement the interface using one accessor, such as `get`, the other accessor can have an access modifier, as in the following example:</span></span>  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
-## <a name="accessor-accessibility-domain"></a>Dominio de accesibilidad de descriptor de acceso  
- Si usa un modificador de acceso en el descriptor de acceso, el [dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md) del descriptor de acceso viene determinado por este modificador.  
+## <a name="accessor-accessibility-domain"></a><span data-ttu-id="0e71f-125">Dominio de accesibilidad de descriptor de acceso</span><span class="sxs-lookup"><span data-stu-id="0e71f-125">Accessor Accessibility Domain</span></span>  
+ <span data-ttu-id="0e71f-126">Si usa un modificador de acceso en el descriptor de acceso, el [dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md) del descriptor de acceso viene determinado por este modificador.</span><span class="sxs-lookup"><span data-stu-id="0e71f-126">If you use an access modifier on the accessor, the [accessibility domain](../../../csharp/language-reference/keywords/accessibility-domain.md) of the accessor is determined by this modifier.</span></span>  
   
- Si no ha usado un modificador de acceso en el descriptor de acceso, el dominio de accesibilidad del descriptor de acceso viene determinado por el nivel de accesibilidad de la propiedad o el indexador.  
+ <span data-ttu-id="0e71f-127">Si no ha usado un modificador de acceso en el descriptor de acceso, el dominio de accesibilidad del descriptor de acceso viene determinado por el nivel de accesibilidad de la propiedad o el indexador.</span><span class="sxs-lookup"><span data-stu-id="0e71f-127">If you did not use an access modifier on the accessor, the accessibility domain of the accessor is determined by the accessibility level of the property or indexer.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se incluyen tres clases: `BaseClass`, `DerivedClass` y `MainClass`. Hay dos propiedades en `BaseClass`, `Name` y `Id` en ambas clases. En el ejemplo, se muestra cómo la propiedad `Id` en `DerivedClass` se puede ocultar con la propiedad `Id` en `BaseClass` al usar un modificador de acceso restrictivo como [protected](../../../csharp/language-reference/keywords/protected.md) o [private](../../../csharp/language-reference/keywords/private.md). Por tanto, cuando asigna valores a esta propiedad, se llama en su lugar a la propiedad en la clase `BaseClass`. Si se reemplaza el modificador de acceso por [public](../../../csharp/language-reference/keywords/public.md), la propiedad será accesible.  
+## <a name="example"></a><span data-ttu-id="0e71f-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0e71f-128">Example</span></span>  
+ <span data-ttu-id="0e71f-129">En el ejemplo siguiente, se incluyen tres clases: `BaseClass`, `DerivedClass` y `MainClass`.</span><span class="sxs-lookup"><span data-stu-id="0e71f-129">The following example contains three classes, `BaseClass`, `DerivedClass`, and `MainClass`.</span></span> <span data-ttu-id="0e71f-130">Hay dos propiedades en `BaseClass`, `Name` y `Id` en ambas clases.</span><span class="sxs-lookup"><span data-stu-id="0e71f-130">There are two properties on the `BaseClass`, `Name` and `Id` on both classes.</span></span> <span data-ttu-id="0e71f-131">En el ejemplo, se muestra cómo la propiedad `Id` en `DerivedClass` se puede ocultar con la propiedad `Id` en `BaseClass` al usar un modificador de acceso restrictivo como [protected](../../../csharp/language-reference/keywords/protected.md) o [private](../../../csharp/language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="0e71f-131">The example demonstrates how the property `Id` on `DerivedClass` can be hidden by the property `Id` on `BaseClass` when you use a restrictive access modifier such as [protected](../../../csharp/language-reference/keywords/protected.md) or [private](../../../csharp/language-reference/keywords/private.md).</span></span> <span data-ttu-id="0e71f-132">Por tanto, cuando asigna valores a esta propiedad, se llama en su lugar a la propiedad en la clase `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="0e71f-132">Therefore, when you assign values to this property, the property on the `BaseClass` class is called instead.</span></span> <span data-ttu-id="0e71f-133">Si se reemplaza el modificador de acceso por [public](../../../csharp/language-reference/keywords/public.md), la propiedad será accesible.</span><span class="sxs-lookup"><span data-stu-id="0e71f-133">Replacing the access modifier by [public](../../../csharp/language-reference/keywords/public.md) will make the property accessible.</span></span>  
   
- En el ejemplo, también se muestra que un modificador de acceso restrictivo, como `private` o `protected`, en el descriptor de acceso `set` de la propiedad `Name` en `DerivedClass` impide el acceso al descriptor de acceso y genera un error al asignárselo.  
+ <span data-ttu-id="0e71f-134">En el ejemplo, también se muestra que un modificador de acceso restrictivo, como `private` o `protected`, en el descriptor de acceso `set` de la propiedad `Name` en `DerivedClass` impide el acceso al descriptor de acceso y genera un error al asignárselo.</span><span class="sxs-lookup"><span data-stu-id="0e71f-134">The example also demonstrates that a restrictive access modifier, such as `private` or `protected`, on the `set` accessor of the `Name` property in `DerivedClass` prevents access to the accessor and generates an error when you assign to it.</span></span>  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
-## <a name="comments"></a>Comentarios  
- Tenga en cuenta que, si reemplaza la declaración `new private string Id` por `new public string Id`, obtendrá el resultado:  
+## <a name="comments"></a><span data-ttu-id="0e71f-135">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0e71f-135">Comments</span></span>  
+ <span data-ttu-id="0e71f-136">Tenga en cuenta que, si reemplaza la declaración `new private string Id` por `new public string Id`, obtendrá el resultado:</span><span class="sxs-lookup"><span data-stu-id="0e71f-136">Notice that if you replace the declaration `new private string Id` by `new public string Id`, you get the output:</span></span>  
   
  `Name and ID in the base class: Name-BaseClass, ID-BaseClass`  
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Indexers](../../../csharp/programming-guide/indexers/index.md)  (Indexadores)  
- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-
+## <a name="see-also"></a><span data-ttu-id="0e71f-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="0e71f-137">See Also</span></span>  
+ [<span data-ttu-id="0e71f-138">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="0e71f-138">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="0e71f-139">Propiedades</span><span class="sxs-lookup"><span data-stu-id="0e71f-139">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="0e71f-140">Indizadores</span><span class="sxs-lookup"><span data-stu-id="0e71f-140">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="0e71f-141">Modificadores de acceso</span><span class="sxs-lookup"><span data-stu-id="0e71f-141">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)

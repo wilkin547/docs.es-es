@@ -1,14 +1,10 @@
 ---
 title: -filealign (Opciones del compilador de C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /filealign
-dev_langs:
-- CSharp
+f1_keywords: /filealign
 helpviewer_keywords:
 - /alignment compiler option [C#]
 - filealign compiler option [C#]
@@ -22,63 +18,47 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: fe2d1df6d88baa2957068514abe728f29cb74636
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b13dee0a221bc0b97349be5897a04188304ff16
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="filealign-c-compiler-options"></a>/filealign (Opciones del compilador de C#)
-La opción **/filealign** permite especificar el tamaño de las secciones en el archivo de salida.  
+# <a name="filealign-c-compiler-options"></a><span data-ttu-id="ba75b-102">/filealign (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="ba75b-102">/filealign (C# Compiler Options)</span></span>
+<span data-ttu-id="ba75b-103">La opción **/filealign** permite especificar el tamaño de las secciones en el archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="ba75b-103">The **/filealign** option lets you specify the size of sections in your output file.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="ba75b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ba75b-104">Syntax</span></span>  
   
 ```console  
 /filealign:number  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a><span data-ttu-id="ba75b-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="ba75b-105">Arguments</span></span>  
  `number`  
- Un valor que especifica el tamaño de las secciones del archivo de salida. Los valores válidos son 512, 1024, 2048, 4096 y 8192. Estos valores están en bytes.  
+ <span data-ttu-id="ba75b-106">Un valor que especifica el tamaño de las secciones del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="ba75b-106">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="ba75b-107">Los valores válidos son 512, 1024, 2048, 4096 y 8192.</span><span class="sxs-lookup"><span data-stu-id="ba75b-107">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="ba75b-108">Estos valores están en bytes.</span><span class="sxs-lookup"><span data-stu-id="ba75b-108">These values are in bytes.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Cada sección se alineará en un límite que es un múltiplo del valor **/filealign**. No hay ningún valor predeterminado fijo. Si no se especifica **/filealign**, el Common Language Runtime elige un valor predeterminado en tiempo de compilación.  
+## <a name="remarks"></a><span data-ttu-id="ba75b-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ba75b-109">Remarks</span></span>  
+ <span data-ttu-id="ba75b-110">Cada sección se alineará en un límite que es un múltiplo del valor **/filealign**.</span><span class="sxs-lookup"><span data-stu-id="ba75b-110">Each section will be aligned on a boundary that is a multiple of the **/filealign** value.</span></span> <span data-ttu-id="ba75b-111">No hay ningún valor predeterminado fijo.</span><span class="sxs-lookup"><span data-stu-id="ba75b-111">There is no fixed default.</span></span> <span data-ttu-id="ba75b-112">Si no se especifica **/filealign**, el Common Language Runtime elige un valor predeterminado en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="ba75b-112">If **/filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
   
- Al especificar el tamaño de la sección, el tamaño del archivo de salida se ve afectado. Modificar el tamaño de la sección puede ser útil para los programas que se ejecutan en dispositivos más pequeños.  
+ <span data-ttu-id="ba75b-113">Al especificar el tamaño de la sección, el tamaño del archivo de salida se ve afectado.</span><span class="sxs-lookup"><span data-stu-id="ba75b-113">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="ba75b-114">Modificar el tamaño de la sección puede ser útil para los programas que se ejecutan en dispositivos más pequeños.</span><span class="sxs-lookup"><span data-stu-id="ba75b-114">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
   
- Use [DUMPBIN](/cpp/build/reference/dumpbin-options) para ver información sobre las secciones en el archivo de salida.  
+ <span data-ttu-id="ba75b-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) para ver información sobre las secciones en el archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="ba75b-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="ba75b-116">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ba75b-116">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1.  <span data-ttu-id="ba75b-117">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="ba75b-117">Open the project's **Properties** page.</span></span>  
   
-2.  Haga clic en la página de propiedades de **Compilar**.  
+2.  <span data-ttu-id="ba75b-118">Haga clic en la página de propiedades de **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="ba75b-118">Click the **Build** property page.</span></span>  
   
-3.  Haga clic en el botón **Avanzada** .  
+3.  <span data-ttu-id="ba75b-119">Haga clic en el botón **Avanzada** .</span><span class="sxs-lookup"><span data-stu-id="ba75b-119">Click the **Advanced** button.</span></span>  
   
-4.  Modifique la propiedad **Alineación de archivo**.  
+4.  <span data-ttu-id="ba75b-120">Modifique la propiedad **Alineación de archivo**.</span><span class="sxs-lookup"><span data-stu-id="ba75b-120">Modify the **File Alignment** property.</span></span>  
   
- Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
+ <span data-ttu-id="ba75b-121">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span><span class="sxs-lookup"><span data-stu-id="ba75b-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="ba75b-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="ba75b-122">See Also</span></span>  
+ [<span data-ttu-id="ba75b-123">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="ba75b-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="ba75b-124">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="ba75b-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

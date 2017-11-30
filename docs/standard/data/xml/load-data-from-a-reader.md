@@ -1,42 +1,40 @@
 ---
-title: "Carga de datos desde un sistema de lectura | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Carga de datos desde un sistema de lectura
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Carga de datos desde un sistema de lectura
-Si se carga un documento XML utilizando el método <xref:System.Xml.XmlDocument.Load%2A> y un parámetro de <xref:System.Xml.XmlReader>, existen diferencias en el comportamiento que se produce cuando se compara con el comportamiento derivado de la carga de datos desde otros formatos.  Si el sistema de lectura está en su estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consume todo el contenido del sistema de lectura y compila el Modelo de objetos de documento \(DOM\) XML a partir de todos los datos del sistema de lectura.  
+# <a name="load-data-from-a-reader"></a><span data-ttu-id="f92a6-102">Carga de datos desde un sistema de lectura</span><span class="sxs-lookup"><span data-stu-id="f92a6-102">Load Data from a Reader</span></span>
+<span data-ttu-id="f92a6-103">Si se carga un documento XML utilizando el método <xref:System.Xml.XmlDocument.Load%2A> y un parámetro de <xref:System.Xml.XmlReader>, existen diferencias en el comportamiento que se produce cuando se compara con el comportamiento derivado de la carga de datos desde otros formatos.</span><span class="sxs-lookup"><span data-stu-id="f92a6-103">If an XML document is loaded using the <xref:System.Xml.XmlDocument.Load%2A> method and a parameter of an <xref:System.Xml.XmlReader>, there are differences in the behavior that occurs when compared to the behavior of loading data from the other formats.</span></span> <span data-ttu-id="f92a6-104">Si el sistema de lectura está en su estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consume todo el contenido del sistema de lectura y compila el Modelo de objetos de documento (DOM) XML a partir de todos los datos del sistema de lectura.</span><span class="sxs-lookup"><span data-stu-id="f92a6-104">If the reader is in its initial state, <xref:System.Xml.XmlDocument.Load%2A> consumes the entire contents from the reader and builds the XML Document Object Model (DOM) from all the data in the reader.</span></span>  
   
- Si el sistema de lectura ya se encuentra situado en un nodo en algún lugar del documento y, a continuación, se pasa al método <xref:System.Xml.XmlDocument.Load%2A>, <xref:System.Xml.XmlDocument.Load%2A> intenta leer el nodo actual y todos sus nodos relacionados hasta la etiqueta final que cierra el nivel de profundidad actual en la memoria.  El resultado correcto del intento de <xref:System.Xml.XmlDocument.Load%2A> depende del nodo en el que se encuentre el sistema de lectura cuando se intente realizar la carga, ya que <xref:System.Xml.XmlDocument.Load%2A> comprueba que el XML del sistema de lectura es correcto.  Si el XML no es correcto, <xref:System.Xml.XmlDocument.Load%2A> inicia una excepción.  Por ejemplo, el siguiente conjunto de nodos contiene dos elementos a nivel raíz, el XML no es correcto y <xref:System.Xml.XmlDocument.Load%2A> inicia una excepción.  
+ <span data-ttu-id="f92a6-105">Si el sistema de lectura ya se encuentra situado en un nodo en algún lugar del documento y, a continuación, se pasa al método <xref:System.Xml.XmlDocument.Load%2A>, <xref:System.Xml.XmlDocument.Load%2A> intenta leer el nodo actual y todos sus nodos relacionados hasta la etiqueta final que cierra el nivel de profundidad actual en la memoria.</span><span class="sxs-lookup"><span data-stu-id="f92a6-105">If the reader is already positioned on a node somewhere in the document, and the reader is then passed to the <xref:System.Xml.XmlDocument.Load%2A> method, <xref:System.Xml.XmlDocument.Load%2A> attempts to read the current node and all of its siblings, up to the end tag that closes the current depth into memory.</span></span> <span data-ttu-id="f92a6-106">El resultado correcto del intento de <xref:System.Xml.XmlDocument.Load%2A> depende del nodo en el que se encuentre el sistema de lectura cuando se intente realizar la carga, ya que <xref:System.Xml.XmlDocument.Load%2A> comprueba que el XML del sistema de lectura es correcto.</span><span class="sxs-lookup"><span data-stu-id="f92a6-106">The success of the attempted <xref:System.Xml.XmlDocument.Load%2A> depends on the node that the reader is on when the load is attempted, as <xref:System.Xml.XmlDocument.Load%2A> verifies that the XML from the reader is well-formed.</span></span> <span data-ttu-id="f92a6-107">Si el XML no es correcto, <xref:System.Xml.XmlDocument.Load%2A> inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="f92a6-107">If the XML is not well-formed, the <xref:System.Xml.XmlDocument.Load%2A> throws an exception.</span></span> <span data-ttu-id="f92a6-108">Por ejemplo, el siguiente conjunto de nodos contiene dos elementos a nivel raíz, el XML no es correcto y <xref:System.Xml.XmlDocument.Load%2A> inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="f92a6-108">For example, the following set of nodes contain two root-level elements, the XML is not well-formed, and <xref:System.Xml.XmlDocument.Load%2A> throws an exception.</span></span>  
   
--   Nodo Comment, seguido de un nodo Element, seguido de otro nodo Element, seguido de un nodo EndElement.  
+-   <span data-ttu-id="f92a6-109">Nodo Comment, seguido de un nodo Element, seguido de otro nodo Element, seguido de un nodo EndElement.</span><span class="sxs-lookup"><span data-stu-id="f92a6-109">Comment node, followed by an Element node, followed by an Element node, followed by an EndElement node.</span></span>  
   
- El siguiente conjunto de nodos crea un DOM incompleto porque no hay ningún elemento a nivel raíz.  
+ <span data-ttu-id="f92a6-110">El siguiente conjunto de nodos crea un DOM incompleto porque no hay ningún elemento a nivel raíz.</span><span class="sxs-lookup"><span data-stu-id="f92a6-110">The following set of nodes creates an incomplete DOM, because there is no root-level element.</span></span>  
   
--   Nodo Comment seguido de un nodo ProcessingInstruction, seguido de un nodo Comment, seguido de un nodo EndElement.  
+-   <span data-ttu-id="f92a6-111">Nodo Comment seguido de un nodo ProcessingInstruction, seguido de un nodo Comment, seguido de un nodo EndElement.</span><span class="sxs-lookup"><span data-stu-id="f92a6-111">Comment node followed by a ProcessingInstruction node followed by a Comment node followed by an EndElement node.</span></span>  
   
- Esto no inicia una excepción y los datos se cargan.  Puede agregar un elemento raíz por encima de estos nodos y crear XML correcto que se pueda guardar sin errores.  
+ <span data-ttu-id="f92a6-112">Esto no inicia una excepción y los datos se cargan.</span><span class="sxs-lookup"><span data-stu-id="f92a6-112">This does not throw an exception, and the data is loaded.</span></span> <span data-ttu-id="f92a6-113">Puede agregar un elemento raíz por encima de estos nodos y crear XML correcto que se pueda guardar sin errores.</span><span class="sxs-lookup"><span data-stu-id="f92a6-113">You can add a root element to the top of these nodes and create well-formed XML that can be saved without error.</span></span>  
   
- Si el sistema de lectura se encuentra situado en un nodo hoja que no es válido para el nivel raíz de un documento \(por ejemplo, un nodo de atributos o espacios en blanco\), el sistema de lectura continúa leyendo hasta estar situado en un nodo que se pueda utilizar para el nivel raíz.  El documento comienza a cargarse en este punto.  
+ <span data-ttu-id="f92a6-114">Si el sistema de lectura se encuentra situado en un nodo hoja que no es válido para el nivel raíz de un documento (por ejemplo, un nodo de atributos o espacios en blanco), el sistema de lectura continúa leyendo hasta estar situado en un nodo que se pueda utilizar para el nivel raíz.</span><span class="sxs-lookup"><span data-stu-id="f92a6-114">If the reader is positioned on a leaf node that is invalid for the root level of a document (for example, a white space or attribute node), the reader continues to read until it is positioned on a node that can be used for the root.</span></span> <span data-ttu-id="f92a6-115">El documento comienza a cargarse en este punto.</span><span class="sxs-lookup"><span data-stu-id="f92a6-115">The document begins loading at this point.</span></span>  
   
- De manera predeterminada, <xref:System.Xml.XmlDocument.Load%2A> no comprueba si el XML es válido utilizando la definición de tipo de documento \(DTD\) o la validación de esquemas.  Sólo comprueba si el XML es correcto.  Para que se produzca la validación, tiene que crear un <xref:System.Xml.XmlReader> utilizando la clase <xref:System.Xml.XmlReaderSettings>.  La clase <xref:System.Xml.XmlReader> puede exigir la validación con una DTD o un esquema del lenguaje de definición de esquemas \(XSD\).  La propiedad <xref:System.Xml.ValidationType> de la clase <xref:System.Xml.XmlReaderSettings> determina si la instancia de <xref:System.Xml.XmlReader> exige la validación.  Para obtener más información acerca de la validación de datos XML, vea la sección Comentarios de la página de referencia de <xref:System.Xml.XmlReader>.  
+ <span data-ttu-id="f92a6-116">De manera predeterminada, <xref:System.Xml.XmlDocument.Load%2A> no comprueba si el XML es válido utilizando la definición de tipo de documento (DTD) o la validación de esquemas.</span><span class="sxs-lookup"><span data-stu-id="f92a6-116">By default, <xref:System.Xml.XmlDocument.Load%2A> does not verify whether the XML is valid using document type definition (DTD) or schema validation.</span></span> <span data-ttu-id="f92a6-117">Sólo comprueba si el XML es correcto.</span><span class="sxs-lookup"><span data-stu-id="f92a6-117">It only verifies whether the XML is well-formed.</span></span> <span data-ttu-id="f92a6-118">Para que se produzca la validación, tiene que crear un <xref:System.Xml.XmlReader> utilizando la clase <xref:System.Xml.XmlReaderSettings>.</span><span class="sxs-lookup"><span data-stu-id="f92a6-118">In order for validation to occur, you need to create an <xref:System.Xml.XmlReader> using the <xref:System.Xml.XmlReaderSettings> class.</span></span> <span data-ttu-id="f92a6-119">La clase <xref:System.Xml.XmlReader> puede exigir la validación con una DTD o un esquema del lenguaje de definición de esquemas (XSD).</span><span class="sxs-lookup"><span data-stu-id="f92a6-119">The <xref:System.Xml.XmlReader> class can enforce validation using a DTD or Schema definition language (XSD) schema.</span></span> <span data-ttu-id="f92a6-120">La propiedad <xref:System.Xml.ValidationType> de la clase <xref:System.Xml.XmlReaderSettings> determina si la instancia de <xref:System.Xml.XmlReader> exige la validación.</span><span class="sxs-lookup"><span data-stu-id="f92a6-120">The <xref:System.Xml.ValidationType> property on the <xref:System.Xml.XmlReaderSettings> class determines whether the <xref:System.Xml.XmlReader> instance enforces validation.</span></span> <span data-ttu-id="f92a6-121">Para obtener más información acerca de la validación de datos XML, vea la sección Comentarios de la página de referencia de <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="f92a6-121">For more information about validating XML data, see the Remarks section of the <xref:System.Xml.XmlReader> reference page.</span></span>  
   
-## Vea también  
- [Modelo de objetos de documento XML \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="f92a6-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="f92a6-122">See Also</span></span>  
+ [<span data-ttu-id="f92a6-123">Modelo de objetos de documento (DOM) de XML</span><span class="sxs-lookup"><span data-stu-id="f92a6-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

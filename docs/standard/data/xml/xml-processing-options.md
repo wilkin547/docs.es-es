@@ -1,48 +1,46 @@
 ---
-title: "Opciones de procesamiento XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Opciones de procesamiento XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 18f8f9c76a1842517340eaa3f74b4778f869403e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Opciones de procesamiento XML
-Consulte las tablas siguientes para obtener una lista de tecnologías de Microsoft que puede usar para procesar los datos XML.  
+# <a name="xml-processing-options"></a><span data-ttu-id="01f87-102">Opciones de procesamiento XML</span><span class="sxs-lookup"><span data-stu-id="01f87-102">XML Processing Options</span></span>
+<span data-ttu-id="01f87-103">Consulte las tablas siguientes para obtener una lista de tecnologías de Microsoft que puede usar para procesar los datos XML.</span><span class="sxs-lookup"><span data-stu-id="01f87-103">See the following tables for a list of Microsoft technologies you can use to process XML data.</span></span>  
   
-## Opciones de .NET Framework  
+## <a name="net-framework-options"></a><span data-ttu-id="01f87-104">Opciones de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="01f87-104">.NET Framework Options</span></span>  
   
-|**Opción**|**Tipo de procesamiento**|**Descripción**|  
-|----------------|-------------------------------|---------------------|  
-|[LINQ to XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br /> \(\(Espacio de nombres <xref:System.Xml.Linq>\)|En memoria|-   Basado en la tecnología Language\-Integrated Query \(LINQ\) de .NET Framework.<br />-   Proporciona una experiencia de consulta similar a SQL para objetos datos relacionales y datos XML.<br />-   Proporciona intuitivas funciones de creación y transformación de documentos.<br />-   Use esta opción si va a escribir código nuevo.|  
-|<xref:System.Xml.XmlReader?displayProperty=fullName>|Basado en streaming|-   Proporciona un modo rápido, solo hacia delante y sin almacenamiento en caché de acceso a los datos XML.<br />-   Puede crear objetos mediante el método <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> y especificar el conjunto de características para habilitar en el objeto mediante la clase <xref:System.Xml.XmlReaderSettings>.|  
-|<xref:System.Xml.XmlWriter?displayProperty=fullName>|Basado en streaming|-   Proporciona un modo rápido, solo hacia delante y sin almacenamiento en caché para generar los datos XML.<br />-   Puede crear objetos mediante el método <xref:System.Xml.XmlWriter.Create%2A?displayProperty=fullName> y especificar el conjunto de características para habilitar en el objeto mediante la clase <xref:System.Xml.XmlWriterSettings>.|  
-|<xref:System.Xml.XmlDocument?displayProperty=fullName>|En memoria|-   Implementa las recomendaciones del [nivel 1 principal del Modelo de objetos de documento \(DOM\) del W3C](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) y del [nivel 2 principal de DOM](http://www.w3.org/TR/DOM-Level-2-Core/).<br />-   Puede crear, insertar, quitar y modificar los nodos mediante métodos y propiedades basándose en modelos DOM familiares.<br />-   Use esta opción si va a modificar el código existente que usa el DOM del W3C.|  
-|<xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>|En memoria|-   Ofrece varias opciones de edición y navegación mediante un modelo de cursores.<br />-   Los documentos XML pueden estar contenidos en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.<br />-   Proporciona un excelente rendimiento para el procesamiento de solo lectura de XML.<br />-   Use esta opción si va a modificar el código existente con consultas XPath o transformaciones XSLT.|  
-|<xref:System.Xml.Xsl.XslCompiledTransform>|En memoria|-   Proporciona opciones para transformar los datos XML mediante transformaciones XSL.<br />-   [Compilador XSLT \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) permite hacer referencia a las transformaciones precompiladas de la aplicación.|  
+|<span data-ttu-id="01f87-105">**Opción**</span><span class="sxs-lookup"><span data-stu-id="01f87-105">**Option**</span></span>|<span data-ttu-id="01f87-106">**Tipo de procesamiento**</span><span class="sxs-lookup"><span data-stu-id="01f87-106">**Processing type**</span></span>|<span data-ttu-id="01f87-107">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="01f87-107">**Description**</span></span>|  
+|----------------|-------------------------|---------------------|  
+|[<span data-ttu-id="01f87-108">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="01f87-108">LINQ to XML</span></span>](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br /><span data-ttu-id="01f87-109">(Espacio de nombres <xref:System.Xml.Linq>)</span><span class="sxs-lookup"><span data-stu-id="01f87-109">(<xref:System.Xml.Linq> namespace)</span></span>|<span data-ttu-id="01f87-110">En memoria</span><span class="sxs-lookup"><span data-stu-id="01f87-110">In-memory</span></span>|<span data-ttu-id="01f87-111">-Se basa en la tecnología Integrated Query (LINQ).</span><span class="sxs-lookup"><span data-stu-id="01f87-111">-   Based on the .NET Framework Language-Integrated Query (LINQ) technology.</span></span><br /><span data-ttu-id="01f87-112">: Proporciona la experiencia de consulta similar a SQL para objetos, datos relacionales y datos XML.</span><span class="sxs-lookup"><span data-stu-id="01f87-112">-   Provides query experience that is similar to SQL for objects, relational data, and XML data.</span></span><br /><span data-ttu-id="01f87-113">-Proporciona intuitivas funciones de creación y transformación de documentos.</span><span class="sxs-lookup"><span data-stu-id="01f87-113">-   Provides inituive document creation and transformation capabilities.</span></span><br /><span data-ttu-id="01f87-114">: Use esta opción si va a escribir código nuevo.</span><span class="sxs-lookup"><span data-stu-id="01f87-114">-   Use this option if you're writing new code.</span></span>|  
+|<xref:System.Xml.XmlReader?displayProperty=nameWithType>|<span data-ttu-id="01f87-115">Basado en streaming</span><span class="sxs-lookup"><span data-stu-id="01f87-115">Stream-based</span></span>|<span data-ttu-id="01f87-116">: Proporciona un modo rápido, sin almacenamiento en caché de solo avance para acceder a los datos XML.</span><span class="sxs-lookup"><span data-stu-id="01f87-116">-   Provides a fast, non-cached, forward-only way to access XML data.</span></span><br /><span data-ttu-id="01f87-117">-Puede crear objetos mediante el uso de la <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> (método) y especificar el conjunto de características para habilitar en el objeto mediante la <xref:System.Xml.XmlReaderSettings> clase.</span><span class="sxs-lookup"><span data-stu-id="01f87-117">-   You can create objects by using the <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> method, and specify the set of features to enable on the object by using the <xref:System.Xml.XmlReaderSettings> class.</span></span>|  
+|<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|<span data-ttu-id="01f87-118">Basado en streaming</span><span class="sxs-lookup"><span data-stu-id="01f87-118">Stream-based</span></span>|<span data-ttu-id="01f87-119">: Proporciona un modo rápido, sin almacenamiento en caché de solo avance para generar datos XML.</span><span class="sxs-lookup"><span data-stu-id="01f87-119">-   Provides a fast, non-cached, forward-only way to generate XML data.</span></span><br /><span data-ttu-id="01f87-120">-Puede crear objetos mediante el uso de la <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> (método) y especificar el conjunto de características para habilitar en el objeto mediante la <xref:System.Xml.XmlWriterSettings> clase.</span><span class="sxs-lookup"><span data-stu-id="01f87-120">-   You can create objects by using the <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> method, and specify the set of features to enable on the object by using the <xref:System.Xml.XmlWriterSettings> class.</span></span>|  
+|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|<span data-ttu-id="01f87-121">En memoria</span><span class="sxs-lookup"><span data-stu-id="01f87-121">In-memory</span></span>|<span data-ttu-id="01f87-122">-Implementa el [nivel 1 principal del modelo de objetos de documento (DOM) de W3C](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) y [nivel 2 principal del DOM](http://www.w3.org/TR/DOM-Level-2-Core/) recomendaciones.</span><span class="sxs-lookup"><span data-stu-id="01f87-122">-   Implements the [W3C Document Object Model (DOM) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) and [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) recommendations.</span></span><br /><span data-ttu-id="01f87-123">-Se puede crear, insertar, quitar y modificar nodos mediante el uso de métodos y propiedades basados en modelos DOM familiares.</span><span class="sxs-lookup"><span data-stu-id="01f87-123">-   You can create, insert, remove, and modify nodes by using methods and properties based on the familiar DOM model.</span></span><br /><span data-ttu-id="01f87-124">: Use esta opción si va a modificar el código existente que usa el DOM del W3C.</span><span class="sxs-lookup"><span data-stu-id="01f87-124">-   Use this option if you're modifying existing code that utilizes the W3C DOM.</span></span>|  
+|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|<span data-ttu-id="01f87-125">En memoria</span><span class="sxs-lookup"><span data-stu-id="01f87-125">In-memory</span></span>|<span data-ttu-id="01f87-126">-Ofrece varias opciones de edición y capacidades de navegación utilizando un modelo de cursor.</span><span class="sxs-lookup"><span data-stu-id="01f87-126">-   Offers several editing options and navigation capabilities using a cursor model.</span></span><br /><span data-ttu-id="01f87-127">-Documentos XML pueden incluirse en un <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> objeto.</span><span class="sxs-lookup"><span data-stu-id="01f87-127">-   XML documents can be contained in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object.</span></span><br /><span data-ttu-id="01f87-128">: Proporciona un excelente rendimiento para el procesamiento de solo lectura de XML.</span><span class="sxs-lookup"><span data-stu-id="01f87-128">-   Provides excellent performance for read-only processing of XML.</span></span><br /><span data-ttu-id="01f87-129">: Use esta opción si va a modificar el código existente con consultas XPath o transformaciones XSLT.</span><span class="sxs-lookup"><span data-stu-id="01f87-129">-   Use this option if you're modifying existing code with XPath queries or XSLT transformations.</span></span>|  
+|<xref:System.Xml.Xsl.XslCompiledTransform>|<span data-ttu-id="01f87-130">En memoria</span><span class="sxs-lookup"><span data-stu-id="01f87-130">In-memory</span></span>|<span data-ttu-id="01f87-131">: Proporciona opciones para transformar los datos XML mediante transformaciones XSL.</span><span class="sxs-lookup"><span data-stu-id="01f87-131">-   Provides options for transforming XML data using XSL transformations.</span></span><br /><span data-ttu-id="01f87-132">-El [compilador XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) permite que se hace referencia a compila previamente las transformaciones en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="01f87-132">-   The [XSLT Compiler (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) lets you reference pre-compiled transformations in your app.</span></span>|  
   
-## Opciones basadas en Win32 y en COM  
+## <a name="win32-and-com-based-options"></a><span data-ttu-id="01f87-133">Opciones basadas en Win32 y en COM</span><span class="sxs-lookup"><span data-stu-id="01f87-133">Win32 and COM-based Options</span></span>  
   
-|**Opción**|**Descripción**|  
+|<span data-ttu-id="01f87-134">**Opción**</span><span class="sxs-lookup"><span data-stu-id="01f87-134">**Option**</span></span>|<span data-ttu-id="01f87-135">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="01f87-135">**Description**</span></span>|  
 |----------------|---------------------|  
-|[XmlLite](http://go.microsoft.com/fwlink/?LinkId=93723)|-   Analizador XML rápido, seguro, sin almacenamiento en caché y de solo avance que permite compilar aplicaciones XML de alto rendimiento.<br />-   Funciona con cualquier lenguaje capaz de usar bibliotecas de vínculos dinámicos \(DLL\), aunque recomendamos usar C\+\+.|  
-|[MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)|-   Tecnología basada en COM usada para procesar XML y que se incluye con el sistema operativo Windows.<br />-   Ofrece una implementación nativa de DOM, que es compatible con XPath y XSLT.<br />-   Contiene el analizador basado en eventos SAX2.|  
+|[<span data-ttu-id="01f87-136">XmlLite</span><span class="sxs-lookup"><span data-stu-id="01f87-136">XmlLite</span></span>](http://go.microsoft.com/fwlink/?LinkId=93723)|<span data-ttu-id="01f87-137">-Una rápida y segura, sin almacenamiento en caché, es compilar alto rendimiento del analizador XML de solo avance que le ayuda a aplicaciones XML.</span><span class="sxs-lookup"><span data-stu-id="01f87-137">-   A fast, secure, non-caching, forward-only XML parser that helps you build high-performance XML apps.</span></span><br /><span data-ttu-id="01f87-138">-Funciona con cualquier lenguaje que puede utilizar bibliotecas de vínculos dinámicos (DLL); se recomienda utilizar C++.</span><span class="sxs-lookup"><span data-stu-id="01f87-138">-   Works with any language that can use dynamic link libraries (DLLs); we recommend using C++.</span></span>|  
+|[<span data-ttu-id="01f87-139">MSXML</span><span class="sxs-lookup"><span data-stu-id="01f87-139">MSXML</span></span>](http://go.microsoft.com/fwlink/?LinkId=93722)|<span data-ttu-id="01f87-140">COM basada en tecnología de procesamiento de XML que se incluye con el sistema operativo Windows.</span><span class="sxs-lookup"><span data-stu-id="01f87-140">-   COM-based technology for processing XML that is included with the Windows operating system.</span></span><br /><span data-ttu-id="01f87-141">: Proporciona una implementación nativa de DOM, compatible con XPath y XSLT.</span><span class="sxs-lookup"><span data-stu-id="01f87-141">-   Provides a native implementation of the DOM with support for XPath and XSLT.</span></span><br /><span data-ttu-id="01f87-142">-Contiene el analizador basado en eventos SAX2.</span><span class="sxs-lookup"><span data-stu-id="01f87-142">-   Contains the SAX2 event-based parser.</span></span>|  
   
-## Vea también  
- [Procesamiento de datos XML con el modelo DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)   
- [Procesamiento de datos XML con el modelo de datos XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Compilador XSLT \(xsltc.exe\)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
+## <a name="see-also"></a><span data-ttu-id="01f87-143">Vea también</span><span class="sxs-lookup"><span data-stu-id="01f87-143">See Also</span></span>  
+ [<span data-ttu-id="01f87-144">Procesamiento de datos XML con el modelo DOM</span><span class="sxs-lookup"><span data-stu-id="01f87-144">Process XML Data Using the DOM Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [<span data-ttu-id="01f87-145">Procesamiento de datos XML con el modelo de datos XPath</span><span class="sxs-lookup"><span data-stu-id="01f87-145">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="01f87-146">Compilador XSLT (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="01f87-146">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

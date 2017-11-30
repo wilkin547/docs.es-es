@@ -1,94 +1,101 @@
 ---
-title: "Recortar y quitar caracteres de cadenas en .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Remove (método)"
-  - "quitar caracteres"
-  - "cadenas [.NET Framework], quitar caracteres"
-  - "Trim (método)"
-  - "TrimEnd (método)"
-  - "recortar caracteres"
-  - "TrimStart (método)"
+title: Recortar y quitar caracteres de cadenas en .NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- strings [.NET Framework], removing characters
+- Remove method
+- TrimEnd method
+- Trim method
+- trimming characters
+- TrimStart method
+- removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: fde24a97234d275d3d599f13bfc4063af939507b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Recortar y quitar caracteres de cadenas en .NET Framework
-Si va a analizar una frase en las palabras que la forman, el resultado pueden ser palabras con espacios en blanco delante y detrás.  En este caso, puede usar uno de los métodos de recorte de la clase **System.String** para quitar espacios u otros caracteres de una posición especificada de la cadena.  En la tabla siguiente se describen los métodos de recorte disponibles.  
+# <a name="trimming-and-removing-characters-from-strings-in-net"></a><span data-ttu-id="e1d49-102">Recortar y quitar caracteres de cadenas en .NET</span><span class="sxs-lookup"><span data-stu-id="e1d49-102">Trimming and Removing Characters from Strings in .NET</span></span>
+<span data-ttu-id="e1d49-103">Si va a analizar una frase en las palabras que la forman, el resultado pueden ser palabras con espacios en blanco delante y detrás.</span><span class="sxs-lookup"><span data-stu-id="e1d49-103">If you are parsing a sentence into individual words, you might end up with words that have blank spaces (also called white spaces) on either end of the word.</span></span> <span data-ttu-id="e1d49-104">En este caso, puede usar uno de los métodos de recorte de la clase **System.String** para quitar espacios u otros caracteres de una posición especificada de la cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-104">In this situation, you can use one of the trim methods in the **System.String** class to remove any number of spaces or other characters from a specified position in the string.</span></span> <span data-ttu-id="e1d49-105">En la tabla siguiente se describen los métodos de recorte disponibles.</span><span class="sxs-lookup"><span data-stu-id="e1d49-105">The following table describes the available trim methods.</span></span>  
   
-|Nombre del método|Utilice|  
-|-----------------------|-------------|  
-|<xref:System.String.Trim%2A?displayProperty=fullName>|Quita del comienzo y del final de una cadena los espacios en blanco o los caracteres especificados en una matriz de caracteres.|  
-|<xref:System.String.TrimEnd%2A?displayProperty=fullName>|Quita los caracteres especificados de una matriz de caracteres del final de una cadena.|  
-|<xref:System.String.TrimStart%2A?displayProperty=fullName>|Quita los caracteres especificados de una matriz de caracteres del comienzo de una cadena.|  
-|<xref:System.String.Remove%2A?displayProperty=fullName>|Quita un número especificado de caracteres de una posición de índice especificada de una cadena.|  
+|<span data-ttu-id="e1d49-106">Nombre del método</span><span class="sxs-lookup"><span data-stu-id="e1d49-106">Method name</span></span>|<span data-ttu-id="e1d49-107">Uso</span><span class="sxs-lookup"><span data-stu-id="e1d49-107">Use</span></span>|  
+|-----------------|---------|  
+|<xref:System.String.Trim%2A?displayProperty=nameWithType>|<span data-ttu-id="e1d49-108">Quita del comienzo y del final de una cadena los espacios en blanco o los caracteres especificados en una matriz de caracteres.</span><span class="sxs-lookup"><span data-stu-id="e1d49-108">Removes white spaces or characters specified in an array of characters from the beginning and end of a string.</span></span>|  
+|<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|<span data-ttu-id="e1d49-109">Quita los caracteres especificados de una matriz de caracteres del final de una cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-109">Removes characters specified in an array of characters from the end of a string.</span></span>|  
+|<xref:System.String.TrimStart%2A?displayProperty=nameWithType>|<span data-ttu-id="e1d49-110">Quita los caracteres especificados de una matriz de caracteres del comienzo de una cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-110">Removes characters specified in an array of characters from the beginning of a string.</span></span>|  
+|<xref:System.String.Remove%2A?displayProperty=nameWithType>|<span data-ttu-id="e1d49-111">Quita un número especificado de caracteres de una posición de índice especificada de una cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-111">Removes a specified number of characters from a specified index position in a string.</span></span>|  
   
-## Trim  
- Los espacios en blanco situados delante y detrás de una cadena se pueden quitar fácilmente con el método <xref:System.String.Trim%2A?displayProperty=fullName>, como se muestra en el ejemplo siguiente.  
+## <a name="trim"></a><span data-ttu-id="e1d49-112">Trim</span><span class="sxs-lookup"><span data-stu-id="e1d49-112">Trim</span></span>  
+ <span data-ttu-id="e1d49-113">Los espacios en blanco situados delante y detrás de una cadena se pueden quitar fácilmente con el método <xref:System.String.Trim%2A?displayProperty=nameWithType>, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="e1d49-113">You can easily remove white spaces from both ends of a string by using the <xref:System.String.Trim%2A?displayProperty=nameWithType> method, as shown in the following example.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#17)]
  [!code-csharp[Conceptual.String.BasicOps#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#17)]
  [!code-vb[Conceptual.String.BasicOps#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#17)]  
   
- También se pueden quitar del principio y el final de una cadena los caracteres especificados en una matriz de caracteres.  En el ejemplo siguiente se quitan los caracteres de espacio en blanco, los puntos y asteriscos.  
+ <span data-ttu-id="e1d49-114">También se pueden quitar del principio y el final de una cadena los caracteres especificados en una matriz de caracteres.</span><span class="sxs-lookup"><span data-stu-id="e1d49-114">You can also remove characters that you specify in a character array from the beginning and end of a string.</span></span> <span data-ttu-id="e1d49-115">En el ejemplo siguiente se quitan los caracteres de espacio en blanco, los puntos y asteriscos.</span><span class="sxs-lookup"><span data-stu-id="e1d49-115">The following example removes white-space characters, periods, and asterisks.</span></span>  
   
  [!code-csharp[Conceptual.String.BasicOps#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trim2.cs#22)]
  [!code-vb[Conceptual.String.BasicOps#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trim2.vb#22)]  
   
-## TrimEnd  
- El método **String.TrimEnd** quita caracteres del final de una cadena, creando un nuevo objeto de cadena.  A este método se le pasa una matriz de caracteres para especificar los caracteres que se van a quitar.  El orden de los elementos en la matriz de caracteres no afecta a la operación de recorte.  El recorte se detiene cuando se encuentra un carácter no especificado en la matriz.  
+## <a name="trimend"></a><span data-ttu-id="e1d49-116">TrimEnd</span><span class="sxs-lookup"><span data-stu-id="e1d49-116">TrimEnd</span></span>  
+ <span data-ttu-id="e1d49-117">El método **String.TrimEnd** quita caracteres del final de una cadena, creando un nuevo objeto de cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-117">The **String.TrimEnd** method removes characters from the end of a string, creating a new string object.</span></span> <span data-ttu-id="e1d49-118">A este método se le pasa una matriz de caracteres para especificar los caracteres que se van a quitar.</span><span class="sxs-lookup"><span data-stu-id="e1d49-118">An array of characters is passed to this method to specify the characters to be removed.</span></span> <span data-ttu-id="e1d49-119">El orden de los elementos en la matriz de caracteres no afecta a la operación de recorte.</span><span class="sxs-lookup"><span data-stu-id="e1d49-119">The order of the elements in the character array does not affect the trim operation.</span></span> <span data-ttu-id="e1d49-120">El recorte se detiene cuando se encuentra un carácter no especificado en la matriz.</span><span class="sxs-lookup"><span data-stu-id="e1d49-120">The trim stops when a character not specified in the array is found.</span></span>  
   
- En el ejemplo siguiente se quitan las últimas letras de una cadena con el método **TrimEnd**.  En este ejemplo, se invierte la posición de los caracteres `'r'` y `'W'` para ilustrar que el orden de los caracteres en la matriz no tiene importancia.  Observe que este código quita la última palabra de `MyString` y parte de la primera.  
+ <span data-ttu-id="e1d49-121">En el ejemplo siguiente se quita las últimas letras de una cadena con el **TrimEnd** método.</span><span class="sxs-lookup"><span data-stu-id="e1d49-121">The following example removes the last letters of a string using the **TrimEnd** method.</span></span> <span data-ttu-id="e1d49-122">En este ejemplo, se invierte la posición de los caracteres `'r'` y `'W'` para ilustrar que el orden de los caracteres en la matriz no tiene importancia.</span><span class="sxs-lookup"><span data-stu-id="e1d49-122">In this example, the position of the `'r'` character and the `'W'` character are reversed to illustrate that the order of characters in the array does not matter.</span></span> <span data-ttu-id="e1d49-123">Observe que este código quita la última palabra de `MyString` y parte de la primera.</span><span class="sxs-lookup"><span data-stu-id="e1d49-123">Notice that this code removes the last word of `MyString` plus part of the first.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
  [!code-vb[Conceptual.String.BasicOps#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#18)]  
   
- Con este código se muestra `He` en la consola.  
+ <span data-ttu-id="e1d49-124">Con este código se muestra `He` en la consola.</span><span class="sxs-lookup"><span data-stu-id="e1d49-124">This code displays `He` to the console.</span></span>  
   
- En el ejemplo siguiente se quita la última palabra de una cadena con el método **TrimEnd**.  En este código hay una coma después de `Hello` y, como la coma no está especificada en la matriz de caracteres que se deben recortar, la operación se detiene en la coma.  
+ <span data-ttu-id="e1d49-125">En el ejemplo siguiente se quita la última palabra de una cadena con el método **TrimEnd**.</span><span class="sxs-lookup"><span data-stu-id="e1d49-125">The following example removes the last word of a string using the **TrimEnd** method.</span></span> <span data-ttu-id="e1d49-126">En este código hay una coma después de `Hello` y, como la coma no está especificada en la matriz de caracteres que se deben recortar, la operación se detiene en la coma.</span><span class="sxs-lookup"><span data-stu-id="e1d49-126">In this code, a comma follows the word `Hello` and, because the comma is not specified in the array of characters to trim, the trim ends at the comma.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#19)]
  [!code-csharp[Conceptual.String.BasicOps#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#19)]
  [!code-vb[Conceptual.String.BasicOps#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#19)]  
   
- Con este código se muestra `Hello,` en la consola.  
+ <span data-ttu-id="e1d49-127">Con este código se muestra `Hello,` en la consola.</span><span class="sxs-lookup"><span data-stu-id="e1d49-127">This code displays `Hello,` to the console.</span></span>  
   
-## TrimStart  
- El método **String.TrimStart** es parecido al método **String.TrimEnd**, con la diferencia de que crea una nueva cadena quitando caracteres del comienzo de un objeto de cadena existente.  Al método **TrimStart** se le pasa una matriz de caracteres para especificar los caracteres que se van a quitar.  Lo mismo que en el método **TrimEnd**, el orden de los elementos en la matriz de caracteres no afecta a la operación de recorte.  El recorte se detiene cuando se encuentra un carácter no especificado en la matriz.  
+## <a name="trimstart"></a><span data-ttu-id="e1d49-128">TrimStart</span><span class="sxs-lookup"><span data-stu-id="e1d49-128">TrimStart</span></span>  
+ <span data-ttu-id="e1d49-129">El método **String.TrimStart** es parecido al método **String.TrimEnd**, con la diferencia de que crea una nueva cadena quitando caracteres del comienzo de un objeto de cadena existente.</span><span class="sxs-lookup"><span data-stu-id="e1d49-129">The **String.TrimStart** method is similar to the **String.TrimEnd** method except that it creates a new string by removing characters from the beginning of an existing string object.</span></span> <span data-ttu-id="e1d49-130">Al método **TrimStart** se le pasa una matriz de caracteres para especificar los caracteres que se van a quitar.</span><span class="sxs-lookup"><span data-stu-id="e1d49-130">An array of characters is passed to the **TrimStart** method to specify the characters to be removed.</span></span> <span data-ttu-id="e1d49-131">Lo mismo que en el método **TrimEnd**, el orden de los elementos en la matriz de caracteres no afecta a la operación de recorte.</span><span class="sxs-lookup"><span data-stu-id="e1d49-131">As with the **TrimEnd** method, the order of the elements in the character array does not affect the trim operation.</span></span> <span data-ttu-id="e1d49-132">El recorte se detiene cuando se encuentra un carácter no especificado en la matriz.</span><span class="sxs-lookup"><span data-stu-id="e1d49-132">The trim stops when a character not specified in the array is found.</span></span>  
   
- En el siguiente ejemplo se quita la primera palabra de una cadena.  En este ejemplo, se invierte la posición de los caracteres `'l'` y `'H'` para ilustrar que el orden de los caracteres en la matriz no tiene importancia.  
+ <span data-ttu-id="e1d49-133">En el siguiente ejemplo se quita la primera palabra de una cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-133">The following example removes the first word of a string.</span></span> <span data-ttu-id="e1d49-134">En este ejemplo, se invierte la posición de los caracteres `'l'` y `'H'` para ilustrar que el orden de los caracteres en la matriz no tiene importancia.</span><span class="sxs-lookup"><span data-stu-id="e1d49-134">In this example, the position of the `'l'` character and the `'H'` character are reversed to illustrate that the order of characters in the array does not matter.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#20)]
  [!code-csharp[Conceptual.String.BasicOps#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#20)]
  [!code-vb[Conceptual.String.BasicOps#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#20)]  
   
- Con este código se muestra `World!` en la consola.  
+ <span data-ttu-id="e1d49-135">Con este código se muestra `World!` en la consola.</span><span class="sxs-lookup"><span data-stu-id="e1d49-135">This code displays `World!` to the console.</span></span>  
   
-## Remove  
- El método <xref:System.String.Remove%2A?displayProperty=fullName> quita un número especificado de caracteres, comenzando en una posición especificada de una cadena existente.  Este método utiliza un índice basado en cero.  
+## <a name="remove"></a><span data-ttu-id="e1d49-136">Quitar</span><span class="sxs-lookup"><span data-stu-id="e1d49-136">Remove</span></span>  
+ <span data-ttu-id="e1d49-137">El método <xref:System.String.Remove%2A?displayProperty=nameWithType> quita un número especificado de caracteres, comenzando en una posición especificada de una cadena existente.</span><span class="sxs-lookup"><span data-stu-id="e1d49-137">The <xref:System.String.Remove%2A?displayProperty=nameWithType> method removes a specified number of characters that begin at a specified position in an existing string.</span></span> <span data-ttu-id="e1d49-138">Este método utiliza un índice basado en cero.</span><span class="sxs-lookup"><span data-stu-id="e1d49-138">This method assumes a zero-based index.</span></span>  
   
- En el ejemplo siguiente se quitan diez caracteres de una cadena, comenzando en la posición cinco de un índice de base cero de la cadena.  
+ <span data-ttu-id="e1d49-139">En el ejemplo siguiente se quitan diez caracteres de una cadena, comenzando en la posición cinco de un índice de base cero de la cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-139">The following example removes ten characters from a string beginning at position five of a zero-based index of the string.</span></span>  
   
  [!code-cpp[Conceptual.String.BasicOps#21](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#21)]
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
- También puede quitar un carácter o una subcadena de una cadena llamando al método <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=fullName> y especificando una cadena vacía \(<xref:System.String.Empty?displayProperty=fullName>\) como reemplazo.  En el ejemplo siguiente se quitan todas las comas de una cadena.  
+ <span data-ttu-id="e1d49-140">También puede quitar un carácter o una subcadena de una cadena llamando al método <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> y especificando una cadena vacía (<xref:System.String.Empty?displayProperty=nameWithType>) como reemplazo.</span><span class="sxs-lookup"><span data-stu-id="e1d49-140">You can also remove a specified character or substring from a string by calling the <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> method and specifying an empty string (<xref:System.String.Empty?displayProperty=nameWithType>) as the replacement.</span></span> <span data-ttu-id="e1d49-141">En el ejemplo siguiente se quitan todas las comas de una cadena.</span><span class="sxs-lookup"><span data-stu-id="e1d49-141">The following example removes all commas from a string.</span></span>  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## Vea también  
- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)
+## <a name="see-also"></a><span data-ttu-id="e1d49-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="e1d49-142">See Also</span></span>  
+ [<span data-ttu-id="e1d49-143">Operaciones básicas de cadenas</span><span class="sxs-lookup"><span data-stu-id="e1d49-143">Basic String Operations</span></span>](../../../docs/standard/base-types/basic-string-operations.md)

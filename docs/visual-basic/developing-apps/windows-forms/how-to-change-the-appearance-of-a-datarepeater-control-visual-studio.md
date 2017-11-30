@@ -1,59 +1,61 @@
 ---
-title: "C&#243;mo: Cambiar la apariencia de un control DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, cambiar la apariencia en tiempo de ejecución"
-  - "DataRepeater, personalizar"
+title: "Cómo: Cambiar la apariencia de un control DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, customizing
+- DataRepeater, changing run time appearance
 ms.assetid: 2af6dfce-760b-489e-b863-8da967f315c3
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 585ff4c942185f3199fe6e9e47a4ebd9f1f0a478
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Cambiar la apariencia de un control DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Puede cambiar la apariencia de un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, en tiempo de diseño, estableciendo las propiedades o, en tiempo de ejecución, administrando el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>.  
+# <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a><span data-ttu-id="e9ad0-102">Cómo: Cambiar la apariencia de un control DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="e9ad0-102">How to: Change the Appearance of a DataRepeater Control (Visual Studio)</span></span>
+<span data-ttu-id="e9ad0-103">Puede cambiar la apariencia de un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control en tiempo de diseño estableciendo las propiedades o en tiempo de ejecución controlando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> eventos.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-103">You can change the appearance of a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control at design time by setting properties or at run time by handling the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event.</span></span>  
   
- Las propiedades que establece en tiempo de diseño cuando está seleccionada la sección de plantilla de elementos del control se repetirán para cada <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> en tiempo de ejecución.  Las propiedades relacionadas con la apariencia del propio control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> únicamente estarán visibles en tiempo de ejecución si una parte del contenedor queda descubierto \(por ejemplo, si la propiedad <xref:System.Windows.Forms.Control.Padding%2A> está establecida en un valor grande\).  
+ <span data-ttu-id="e9ad0-104">Propiedades que establecen en tiempo de diseño cuando se selecciona la sección de la plantilla de elemento del control se repetirá para cada <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-104">Properties that you set at design time when the item template section of the control is selected will be repeated for each <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> at run time.</span></span> <span data-ttu-id="e9ad0-105">Propiedades relacionadas con la apariencia de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> propio control será visible en tiempo de ejecución si solo una parte del contenedor se deja detectado (por ejemplo, si la <xref:System.Windows.Forms.Control.Padding%2A> propiedad está establecida en un valor grande).</span><span class="sxs-lookup"><span data-stu-id="e9ad0-105">Appearance-related properties of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control itself will be visible at run time only if a part of the container is left uncovered (for example, if the <xref:System.Windows.Forms.Control.Padding%2A> property is set to a large value).</span></span>  
   
- En tiempo de ejecución, las propiedades relacionadas con la apariencia se pueden establecer basándose en condiciones.  Por ejemplo, en una aplicación de programación, se puede cambiar el color de fondo de un elemento para advertir a los usuarios del vencimiento de un elemento.  En el controlador de eventos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>, si establece una propiedad en una instrucción condicional, como `If…Then`, también deberá usar una cláusula `Else` para especificar la apariencia en caso de que no se cumpla la condición.  
+ <span data-ttu-id="e9ad0-106">Propiedades relacionadas con la apariencia de en tiempo de ejecución, pueden establecerse según las condiciones.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-106">At run time, appearance-related properties can be set based on conditions.</span></span> <span data-ttu-id="e9ad0-107">Por ejemplo, en una aplicación de programación, puede cambiar el color de fondo de un elemento para advertir a los usuarios cuando un elemento está vencido.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-107">For example, in a scheduling application, you might change the background color of an item to warn users when an item is past due.</span></span> <span data-ttu-id="e9ad0-108">En el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> controlador de eventos, si se establece una propiedad en una instrucción condicional como `If…Then`, también debe usar un `Else` cláusula para especificar la apariencia cuando no se cumple la condición.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-108">In the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event handler, if you set a property in a conditional statement such as `If…Then`, you must also use an `Else` clause to specify the appearance when the condition is not met.</span></span>  
   
-### Para cambiar la apariencia en tiempo de diseño  
+### <a name="to-change-the-appearance-at-design-time"></a><span data-ttu-id="e9ad0-109">Para cambiar la apariencia en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="e9ad0-109">To change the appearance at design time</span></span>  
   
-1.  En el Diseñador de Windows Forms, seleccione la región de plantilla de elementos \(superior\) del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+1.  <span data-ttu-id="e9ad0-110">En el Diseñador de Windows Forms, seleccione la región de plantilla (superior) del elemento de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-110">In the Windows Forms Designer, select the item template (upper) region of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  
   
-2.  En la ventana Propiedades, seleccione una propiedad y cambie el valor.  Entre las propiedades comunes que afectan a la apariencia se incluyen <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Panel.BorderStyle%2A> y <xref:System.Windows.Forms.Control.ForeColor%2A>.  
+2.  <span data-ttu-id="e9ad0-111">En la ventana Propiedades, seleccione una propiedad y cambie el valor.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-111">In the Properties window, select a property and change the value.</span></span> <span data-ttu-id="e9ad0-112">Propiedades comunes que afectan a la apariencia incluyen <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Panel.BorderStyle%2A>, y <xref:System.Windows.Forms.Control.ForeColor%2A>.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-112">Common properties that affect appearance include <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Panel.BorderStyle%2A>, and <xref:System.Windows.Forms.Control.ForeColor%2A>.</span></span>  
   
-### Para cambiar la apariencia en tiempo de ejecución  
+### <a name="to-change-the-appearance-at-run-time"></a><span data-ttu-id="e9ad0-113">Para cambiar la apariencia en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="e9ad0-113">To change the appearance at run time</span></span>  
   
-1.  En el Editor de código, en la lista desplegable de eventos, haga clic en **DrawItem**.  
+1.  <span data-ttu-id="e9ad0-114">En el Editor de código, en la lista desplegable de eventos, haga clic en **DrawItem**.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-114">In the Code Editor, in the Event drop-down list, click **DrawItem**.</span></span>  
   
-2.  En el controlador de eventos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>, agregue código para establecer las propiedades:  
+2.  <span data-ttu-id="e9ad0-115">En el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> controlador de eventos, agregue código para establecer las propiedades:</span><span class="sxs-lookup"><span data-stu-id="e9ad0-115">In the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event handler, add code to set the properties:</span></span>  
   
-     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.vb)]  
   
-## Ejemplo  
- Entre las personalizaciones más comunes del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> están la de mostrar las filas en colores alternos y la de cambiar el color de un campo en función de una condición.  En el ejemplo siguiente se muestra cómo llevar a cabo estas personalizaciones.  En este ejemplo, se supone que tiene un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> enlazado a la tabla Products de la base de datos Northwind.  
+## <a name="example"></a><span data-ttu-id="e9ad0-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e9ad0-116">Example</span></span>  
+ <span data-ttu-id="e9ad0-117">Algunas personalizaciones comunes para la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control incluyen mostrar las filas en colores alternos y cambiar el color de un campo en función de una condición.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-117">Some common customizations for the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control include displaying the rows in alternating colors and changing the color of a field based on a condition.</span></span> <span data-ttu-id="e9ad0-118">En el ejemplo siguiente se muestra cómo realizar estas personalizaciones.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-118">The following example shows how to perform these customizations.</span></span> <span data-ttu-id="e9ad0-119">En este ejemplo se da por supuesto que tiene un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control que está enlazado a la tabla Products de la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-119">This example assumes that you have a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control that is bound to the Products table in the Northwind database.</span></span>  
   
  [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.vb)]
- [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
+ [!code-csharp[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
   
- Observe que para ambas personalizaciones, debe proporcionar código a fin de establecer las propiedades para ambos lados de la condición.  Si no especifica la condición `Else`, verá resultados inesperados en tiempo de ejecución.  
+ <span data-ttu-id="e9ad0-120">Tenga en cuenta que en ambas de estas personalizaciones, debe proporcionar código para establecer las propiedades de ambos lados de la condición.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-120">Note that for both of these customizations, you must provide code to set the properties for both sides of the condition.</span></span> <span data-ttu-id="e9ad0-121">Si no se especifica la `Else` condición, verá resultados inesperados en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="e9ad0-121">If you do not specify the `Else` condition, you will see unexpected results at run time.</span></span>  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>   
- [Introducción al control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Solución de problemas del control DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)   
- [Cómo: Mostrar los datos enlazados en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [Cómo: Mostrar controles no enlazados en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)   
- [Cómo: Mostrar los encabezados de los elementos en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="e9ad0-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9ad0-122">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>  
+ [<span data-ttu-id="e9ad0-123">Introducción al control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="e9ad0-123">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e9ad0-124">Solución de problemas del control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="e9ad0-124">Troubleshooting the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e9ad0-125">Mostrar los datos enlazados en un control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="e9ad0-125">How to: Display Bound Data in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e9ad0-126">Mostrar controles no enlazados en un control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="e9ad0-126">How to: Display Unbound Controls in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="e9ad0-127">Mostrar los encabezados de los elementos en un control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="e9ad0-127">How to: Display Item Headers in a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)

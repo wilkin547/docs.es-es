@@ -1,33 +1,38 @@
 ---
-title: "How to: Measure PLINQ Query Performance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, how to measure performance"
+title: "Cómo: Medir el rendimiento de consultas PLINQ"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, how to measure performance
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 03432e70454cb6203e55e340111a6cb7efe62dc4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Measure PLINQ Query Performance
-En este ejemplo se muestra cómo usar la clase <xref:System.Diagnostics.Stopwatch> para medir el tiempo que tarda en ejecutarse una consulta PLINQ.  
+# <a name="how-to-measure-plinq-query-performance"></a><span data-ttu-id="85aa2-102">Cómo: Medir el rendimiento de consultas PLINQ</span><span class="sxs-lookup"><span data-stu-id="85aa2-102">How to: Measure PLINQ Query Performance</span></span>
+<span data-ttu-id="85aa2-103">En este ejemplo se muestra cómo utilizar la <xref:System.Diagnostics.Stopwatch> clase para medir el tiempo que tarda en ejecutarse una consulta PLINQ.</span><span class="sxs-lookup"><span data-stu-id="85aa2-103">This example shows how use the <xref:System.Diagnostics.Stopwatch> class to measure the time it takes for a PLINQ query to execute.</span></span>  
   
-## Ejemplo  
- En este ejemplo se usa un bucle `foreach` vacío \(`For Each` en Visual Basic\) para medir el tiempo que tarda en ejecutarse la consulta.  En el código real, normalmente, el bucle contiene pasos de procesamiento adicionales que aumentan el tiempo de ejecución total de la consulta.  Observe que el cronómetro se inicia justo antes del bucle, porque es en ese momento cuando comienza la ejecución de la consulta.  Si necesita una medición más exacta, puede usar la propiedad `ElapsedTicks` en lugar de `ElapsedMilliseconds`.  
+## <a name="example"></a><span data-ttu-id="85aa2-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="85aa2-104">Example</span></span>  
+ <span data-ttu-id="85aa2-105">Este ejemplo utiliza un bucle `foreach` vacío (`For Each` en Visual Basic) para medir el tiempo que tarda en ejecutarse la consulta.</span><span class="sxs-lookup"><span data-stu-id="85aa2-105">This example uses an empty `foreach` loop (`For Each` in Visual Basic) to measure the time it takes for the query to execute.</span></span> <span data-ttu-id="85aa2-106">En el código real, el bucle normalmente contiene pasos de procesamiento adicional que se agregan al tiempo de ejecución de consulta total.</span><span class="sxs-lookup"><span data-stu-id="85aa2-106">In real-world code, the loop typically contains additional processing steps that add to the total query execution time.</span></span> <span data-ttu-id="85aa2-107">Observe que el cronómetro no se inicie hasta justo antes del bucle, porque ese es el momento en el que comienza la ejecución de las consultas.</span><span class="sxs-lookup"><span data-stu-id="85aa2-107">Notice that the stopwatch is not started until just before the loop, because that is when the query execution begins.</span></span> <span data-ttu-id="85aa2-108">Si necesita una medición más específica, puede utilizar la propiedad `ElapsedTicks` en lugar de `ElapsedMilliseconds`.</span><span class="sxs-lookup"><span data-stu-id="85aa2-108">If you require more fine-grained measurement, you can use the `ElapsedTicks` property instead of `ElapsedMilliseconds`.</span></span>  
   
  [!code-csharp[PLINQ#19](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/measure2.cs#19)]
  [!code-vb[PLINQ#19](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/measure2.vb#19)]  
   
- El tiempo de ejecución total es una medida útil cuando se prueban implementaciones de consultas, pero no siempre lo dice todo.  Para obtener una vista más detallada y completa de la interacción de los subprocesos de consulta entre sí y con otros procesos en ejecución, use el visualizador de simultaneidad.  Para obtener más información, vea [Visualizador de simultaneidad](../Topic/Concurrency%20Visualizer.md).  
+ <span data-ttu-id="85aa2-109">El tiempo de ejecución total es una métrica útil cuando se experimenta con implementaciones de consulta, pero no siempre muestra todo el panorama.</span><span class="sxs-lookup"><span data-stu-id="85aa2-109">The total execution time is a useful metric when you are experimenting with query implementations, but it does not always tell the whole story.</span></span> <span data-ttu-id="85aa2-110">Para obtener una vista más detallada y completa de la interacción de los subprocesos de consulta entre sí y con otros procesos en ejecución, use el visualizador de simultaneidad.</span><span class="sxs-lookup"><span data-stu-id="85aa2-110">To get a deeper and richer view of the interaction of the query threads with one another and with other running processes, use the Concurrency Visualizer.</span></span> <span data-ttu-id="85aa2-111">Para más información, consulte [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer).</span><span class="sxs-lookup"><span data-stu-id="85aa2-111">For more information, see [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).</span></span>  
   
-## Vea también  
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="85aa2-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="85aa2-112">See Also</span></span>  
+ [<span data-ttu-id="85aa2-113">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="85aa2-113">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -1,48 +1,28 @@
 ---
 title: "Características de C# compatibles con LINQ"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- LINQ [C#], features supporting LINQ
+helpviewer_keywords: LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2f5accb188e54e0d3e2b941832637ec33afc26b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01db44482ee3230d15af5ce8e0373fb15a769609
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
-La siguiente sección presenta las nuevas construcciones de lenguaje incluidas en C# 3.0. Aunque estas nuevas características se usan hasta cierto punto con consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no se limitan a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y se pueden usar en cualquier contexto en las que se consideren de utilidad.  
+# <a name="c-features-that-support-linq"></a><span data-ttu-id="373d6-102">Características de C# compatibles con LINQ</span><span class="sxs-lookup"><span data-stu-id="373d6-102">C# Features That Support LINQ</span></span>
+<span data-ttu-id="373d6-103">La siguiente sección presenta las nuevas construcciones de lenguaje incluidas en C# 3.0.</span><span class="sxs-lookup"><span data-stu-id="373d6-103">The following section introduces new language constructs introduced in C# 3.0.</span></span> <span data-ttu-id="373d6-104">Aunque estas nuevas características se usan hasta cierto punto con consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no se limitan a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y se pueden usar en cualquier contexto en las que se consideren de utilidad.</span><span class="sxs-lookup"><span data-stu-id="373d6-104">Although these new features are all used to a degree with [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, they are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] and can be used in any context where you find them useful.</span></span>  
   
-## <a name="query-expressions"></a>Expresiones de consulta  
- Las expresiones de consulta usan una sintaxis declarativa similar a SQL o XQuery para consultar colecciones de IEnumerable. En tiempo de compilación, la sintaxis de consulta se convierte en llamadas de método a la implementación de un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] de los métodos de extensión de operador de consulta estándar. Las aplicaciones controlan los operadores de consulta estándar que están en el ámbito al especificar el espacio de nombres adecuado con una directiva `using`. La siguiente expresión de consulta toma una matriz de cadenas, las agrupa por el primer carácter de la cadena y ordena los grupos.  
+## <a name="query-expressions"></a><span data-ttu-id="373d6-105">Expresiones de consulta</span><span class="sxs-lookup"><span data-stu-id="373d6-105">Query Expressions</span></span>  
+ <span data-ttu-id="373d6-106">Las expresiones de consulta usan una sintaxis declarativa similar a SQL o XQuery para consultar colecciones de IEnumerable.</span><span class="sxs-lookup"><span data-stu-id="373d6-106">Queries expressions use a declarative syntax similar to SQL or XQuery to query over IEnumerable collections.</span></span> <span data-ttu-id="373d6-107">En tiempo de compilación, la sintaxis de consulta se convierte en llamadas de método a la implementación de un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] de los métodos de extensión de operador de consulta estándar.</span><span class="sxs-lookup"><span data-stu-id="373d6-107">At compile time query syntax is converted to method calls to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider's implementation of the standard query operator extension methods.</span></span> <span data-ttu-id="373d6-108">Las aplicaciones controlan los operadores de consulta estándar que están en el ámbito al especificar el espacio de nombres adecuado con una directiva `using`.</span><span class="sxs-lookup"><span data-stu-id="373d6-108">Applications control the standard query operators that are in scope by specifying the appropriate namespace with a `using` directive.</span></span> <span data-ttu-id="373d6-109">La siguiente expresión de consulta toma una matriz de cadenas, las agrupa por el primer carácter de la cadena y ordena los grupos.</span><span class="sxs-lookup"><span data-stu-id="373d6-109">The following query expression takes an array of strings, groups them according to the first character in the string, and orders the groups.</span></span>  
   
 ```  
 var query = from str in stringArray  
@@ -51,10 +31,10 @@ var query = from str in stringArray
             select stringGroup;  
 ```  
   
- Para obtener más información, vea [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md).  
+ <span data-ttu-id="373d6-110">Para obtener más información, vea [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md).</span><span class="sxs-lookup"><span data-stu-id="373d6-110">For more information, see [LINQ Query Expressions](../../../../csharp/programming-guide/linq-query-expressions/index.md).</span></span>  
   
-## <a name="implicitly-typed-variables-var"></a>Variables con asignación implícita de tipos (var)  
- En lugar de especificar explícitamente un tipo al declarar e inicializar una variable, se puede usar el modificador [var](../../../../csharp/language-reference/keywords/var.md) para indicar al compilador que deduzca y asigne el tipo, como se muestra aquí:  
+## <a name="implicitly-typed-variables-var"></a><span data-ttu-id="373d6-111">Variables con asignación implícita de tipos (var)</span><span class="sxs-lookup"><span data-stu-id="373d6-111">Implicitly Typed Variables (var)</span></span>  
+ <span data-ttu-id="373d6-112">En lugar de especificar explícitamente un tipo al declarar e inicializar una variable, se puede usar el modificador [var](../../../../csharp/language-reference/keywords/var.md) para indicar al compilador que deduzca y asigne el tipo, como se muestra aquí:</span><span class="sxs-lookup"><span data-stu-id="373d6-112">Instead of explicitly specifying a type when you declare and initialize a variable, you can use the [var](../../../../csharp/language-reference/keywords/var.md) modifier to instruct the compiler to infer and assign the type, as shown here:</span></span>  
   
 ```  
 var number = 5;  
@@ -64,53 +44,52 @@ var query = from str in stringArray
             select str;  
 ```  
   
- Las variables declaradas como `var` son tan fuertemente tipadas como las variables cuyo tipo se especifica explícitamente. El uso de `var` hace posible crear tipos anónimos, pero se puede usar para cualquier variable local. También se pueden declarar matrices con asignación implícita de tipos.  
+ <span data-ttu-id="373d6-113">Las variables declaradas como `var` son tan fuertemente tipadas como las variables cuyo tipo se especifica explícitamente.</span><span class="sxs-lookup"><span data-stu-id="373d6-113">Variables declared as `var` are just as strongly-typed as variables whose type you specify explicitly.</span></span> <span data-ttu-id="373d6-114">El uso de `var` hace posible crear tipos anónimos, pero se puede usar para cualquier variable local.</span><span class="sxs-lookup"><span data-stu-id="373d6-114">The use of `var` makes it possible to create anonymous types, but it can be used for any local variable.</span></span> <span data-ttu-id="373d6-115">También se pueden declarar matrices con asignación implícita de tipos.</span><span class="sxs-lookup"><span data-stu-id="373d6-115">Arrays can also be declared with implicit typing.</span></span>  
   
- Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ <span data-ttu-id="373d6-116">Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="373d6-116">For more information, see [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
   
-## <a name="object-and-collection-initializers"></a>Inicializadores de objeto y colección  
- Los inicializadores de objeto y colección permiten inicializar objetos sin llamar explícitamente a un constructor para el objeto. Los inicializadores normalmente se usan en expresiones de consulta cuando proyectan los datos de origen en un nuevo tipo de datos. Suponiendo que hay una clase denominada `Customer` con las propiedades públicas `Name` y `Phone`, el inicializador de objeto se puede usar como en el código siguiente:  
+## <a name="object-and-collection-initializers"></a><span data-ttu-id="373d6-117">Inicializadores de objeto y colección</span><span class="sxs-lookup"><span data-stu-id="373d6-117">Object and Collection Initializers</span></span>  
+ <span data-ttu-id="373d6-118">Los inicializadores de objeto y colección permiten inicializar objetos sin llamar explícitamente a un constructor para el objeto.</span><span class="sxs-lookup"><span data-stu-id="373d6-118">Object and collection initializers make it possible to initialize objects without explicitly calling a constructor for the object.</span></span> <span data-ttu-id="373d6-119">Los inicializadores normalmente se usan en expresiones de consulta cuando proyectan los datos de origen en un nuevo tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="373d6-119">Initializers are typically used in query expressions when they project the source data into a new data type.</span></span> <span data-ttu-id="373d6-120">Suponiendo que hay una clase denominada `Customer` con las propiedades públicas `Name` y `Phone`, el inicializador de objeto se puede usar como en el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="373d6-120">Assuming a class named `Customer` with public `Name` and `Phone` properties, the object initializer can be used as in the following code:</span></span>  
   
 ```  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
- Para obtener más información, vea [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ <span data-ttu-id="373d6-121">Para obtener más información, vea [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span><span class="sxs-lookup"><span data-stu-id="373d6-121">For more information, see [Object and Collection Initializers](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>  
   
-## <a name="anonymous-types"></a>Tipos anónimos  
- Un tipo anónimo se construye por el compilador y el nombre del tipo solo está disponible para el compilador. Los tipos anónimos son una manera cómoda de agrupar un conjunto de propiedades temporalmente en un resultado de consulta sin tener que definir un tipo con nombre independiente. Los tipos anónimos se inicializan con una nueva expresión y un inicializador de objeto, como se muestra aquí:  
+## <a name="anonymous-types"></a><span data-ttu-id="373d6-122">Tipos anónimos</span><span class="sxs-lookup"><span data-stu-id="373d6-122">Anonymous Types</span></span>  
+ <span data-ttu-id="373d6-123">Un tipo anónimo se construye por el compilador y el nombre del tipo solo está disponible para el compilador.</span><span class="sxs-lookup"><span data-stu-id="373d6-123">An anonymous type is constructed by the compiler and the type name is only available to the compiler.</span></span> <span data-ttu-id="373d6-124">Los tipos anónimos son una manera cómoda de agrupar un conjunto de propiedades temporalmente en un resultado de consulta sin tener que definir un tipo con nombre independiente.</span><span class="sxs-lookup"><span data-stu-id="373d6-124">Anonymous types provide a convenient way to group a set of properties temporarily in a query result without having to define a separate named type.</span></span> <span data-ttu-id="373d6-125">Los tipos anónimos se inicializan con una nueva expresión y un inicializador de objeto, como se muestra aquí:</span><span class="sxs-lookup"><span data-stu-id="373d6-125">Anonymous types are initialized with a new expression and an object initializer, as shown here:</span></span>  
   
 ```  
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
- Para obtener más información, vea [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ <span data-ttu-id="373d6-126">Para obtener más información, vea [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="373d6-126">For more information, see [Anonymous Types](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
-## <a name="extension-methods"></a>métodos de extensión.  
- Un método de extensión es un método estático que se puede asociar con un tipo, por lo que puede llamarse como si fuera un método de instancia en el tipo. Esta característica permite, en efecto, "agregar" nuevos métodos a los tipos existentes sin tener que modificarlos realmente. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan funciones de consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
+## <a name="extension-methods"></a><span data-ttu-id="373d6-127">métodos de extensión.</span><span class="sxs-lookup"><span data-stu-id="373d6-127">Extension Methods</span></span>  
+ <span data-ttu-id="373d6-128">Un método de extensión es un método estático que se puede asociar con un tipo, por lo que puede llamarse como si fuera un método de instancia en el tipo.</span><span class="sxs-lookup"><span data-stu-id="373d6-128">An extension method is a static method that can be associated with a type, so that it can be called as if it were an instance method on the type.</span></span> <span data-ttu-id="373d6-129">Esta característica permite, en efecto, "agregar" nuevos métodos a los tipos existentes sin tener que modificarlos realmente.</span><span class="sxs-lookup"><span data-stu-id="373d6-129">This feature enables you to, in effect, "add" new methods to existing types without actually modifying them.</span></span> <span data-ttu-id="373d6-130">Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan funciones de consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="373d6-130">The standard query operators are a set of extension methods that provide [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span>  
   
- Para más información, vea [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+ <span data-ttu-id="373d6-131">Para más información, vea [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="373d6-131">For more information, see [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span>  
   
-## <a name="lambda-expressions"></a>Expresiones lambda  
- Una expresión lambda es una función insertada que usa el operador => para separar los parámetros de entrada del cuerpo de la función y que se puede convertir en tiempo de compilación en un delegado o un árbol de expresión. En la programación de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], encontrará expresiones lambda al realizar llamadas de método directas a los operadores de consulta estándar.  
+## <a name="lambda-expressions"></a><span data-ttu-id="373d6-132">Expresiones lambda</span><span class="sxs-lookup"><span data-stu-id="373d6-132">Lambda Expressions</span></span>  
+ <span data-ttu-id="373d6-133">Una expresión lambda es una función insertada que usa el operador => para separar los parámetros de entrada del cuerpo de la función y que se puede convertir en tiempo de compilación en un delegado o un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="373d6-133">A lambda expression is an inline function that uses the => operator to separate input parameters from the function body and can be converted at compile time to a delegate or an expression tree.</span></span> <span data-ttu-id="373d6-134">En la programación de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], encontrará expresiones lambda al realizar llamadas de método directas a los operadores de consulta estándar.</span><span class="sxs-lookup"><span data-stu-id="373d6-134">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] programming, you will encounter lambda expressions when you make direct method calls to the standard query operators.</span></span>  
   
- Para obtener más información, consulte:  
+ <span data-ttu-id="373d6-135">Para obtener más información, consulte:</span><span class="sxs-lookup"><span data-stu-id="373d6-135">For more information, see:</span></span>  
   
--   [Funciones anónimas](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
+-   [<span data-ttu-id="373d6-136">Funciones anónimas</span><span class="sxs-lookup"><span data-stu-id="373d6-136">Anonymous Functions</span></span>](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
   
--   [Expresiones lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+-   [<span data-ttu-id="373d6-137">Expresiones lambda</span><span class="sxs-lookup"><span data-stu-id="373d6-137">Lambda Expressions</span></span>](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
--   [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+-   [<span data-ttu-id="373d6-138">Árboles de expresión (C#)</span><span class="sxs-lookup"><span data-stu-id="373d6-138">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
   
-## <a name="auto-implemented-properties"></a>Propiedades autoimplementadas  
- Las propiedades implementadas automáticamente hacen que la declaración de propiedades sea más concisa. Cuando se declara una propiedad tal como se muestra en el ejemplo siguiente, el compilador crea un campo de respaldo privado y anónimo al que solo se puede tener acceso con el captador y el establecedor de la propiedad.  
+## <a name="auto-implemented-properties"></a><span data-ttu-id="373d6-139">Propiedades autoimplementadas</span><span class="sxs-lookup"><span data-stu-id="373d6-139">Auto-Implemented Properties</span></span>  
+ <span data-ttu-id="373d6-140">Las propiedades implementadas automáticamente hacen que la declaración de propiedades sea más concisa.</span><span class="sxs-lookup"><span data-stu-id="373d6-140">Auto-implemented properties make property-declaration more concise.</span></span> <span data-ttu-id="373d6-141">Cuando se declara una propiedad tal como se muestra en el ejemplo siguiente, el compilador crea un campo de respaldo privado y anónimo al que solo se puede tener acceso con el captador y el establecedor de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="373d6-141">When you declare a property as shown in the following example, the compiler will create a private, anonymous backing field that is not accessible except through the property getter and setter.</span></span>  
   
 ```  
 public string Name {get; set;}  
 ```  
   
- Para obtener más información, vea [Propiedades implementadas automáticamente](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
+ <span data-ttu-id="373d6-142">Para obtener más información, vea [Propiedades implementadas automáticamente](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="373d6-142">For more information, see [Auto-Implemented Properties](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="373d6-143">Vea también</span><span class="sxs-lookup"><span data-stu-id="373d6-143">See Also</span></span>  
+ [<span data-ttu-id="373d6-144">Language Integrated Query (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="373d6-144">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)

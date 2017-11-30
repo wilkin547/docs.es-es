@@ -8,25 +8,19 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88d993122bf1498b08d2e523a71f7f1bed505c9a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="xml-documents-and-data"></a>Documentos y datos XML
-.NET Framework proporciona un conjunto de clases completo e integrado que permiten crear, de forma sencilla, aplicaciones preparadas para XML. Las clases de los espacios de nombres siguientes admiten análisis y escritura XML, edición de datos XML en memoria, validación de datos y transformación XSLT.  
+# <a name="xml-documents-and-data"></a><span data-ttu-id="c34b0-102">Documentos y datos XML</span><span class="sxs-lookup"><span data-stu-id="c34b0-102">XML Documents and Data</span></span>
+<span data-ttu-id="c34b0-103">.NET Framework proporciona un conjunto de clases completo e integrado que permiten crear, de forma sencilla, aplicaciones preparadas para XML.</span><span class="sxs-lookup"><span data-stu-id="c34b0-103">The .NET Framework provides a comprehensive and integrated set of classes that enable you to build XML-aware apps easily.</span></span> <span data-ttu-id="c34b0-104">Las clases de los espacios de nombres siguientes admiten análisis y escritura XML, edición de datos XML en memoria, validación de datos y transformación XSLT.</span><span class="sxs-lookup"><span data-stu-id="c34b0-104">The classes in the following namespaces support parsing and writing XML, editing XML data in memory, data validation, and XSLT transformation.</span></span>  
   
 -   <xref:System.Xml>  
   
@@ -38,67 +32,66 @@ ms.lasthandoff: 09/05/2017
   
 -   <xref:System.Xml.Linq>  
   
- Para obtener una lista completa, vea la página web [Espacios de nombres System.Xml](http://msdn.microsoft.com/library/gg145036.aspx).  
+ <span data-ttu-id="c34b0-105">Para obtener una lista completa, vea la página web [Espacios de nombres System.Xml](http://msdn.microsoft.com/library/gg145036.aspx).</span><span class="sxs-lookup"><span data-stu-id="c34b0-105">For a full list, see the [System.Xml Namespaces](http://msdn.microsoft.com/library/gg145036.aspx) webpage.</span></span>  
   
- Las clases de estos espacios de nombres admiten las recomendaciones del World Wide Web Consortium (W3C). Por ejemplo:  
+ <span data-ttu-id="c34b0-106">Las clases de estos espacios de nombres admiten las recomendaciones del World Wide Web Consortium (W3C).</span><span class="sxs-lookup"><span data-stu-id="c34b0-106">The classes in these namespaces support World Wide Web Consortium (W3C) recommendations.</span></span> <span data-ttu-id="c34b0-107">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="c34b0-107">For example:</span></span>  
   
--   La clase <xref:System.Xml.XmlDocument?displayProperty=fullName> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](http://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](http://www.w3.org/TR/DOM-Level-2-Core/) del W3C.  
+-   <span data-ttu-id="c34b0-108">La clase <xref:System.Xml.XmlDocument?displayProperty=nameWithType> implementa las recomendaciones de la [parte principal del nivel 1 de Document Object Model (DOM)](http://www.w3.org/TR/REC-DOM-Level-1/) y de la [parte principal del nivel 2 de DOM](http://www.w3.org/TR/DOM-Level-2-Core/) del W3C.</span><span class="sxs-lookup"><span data-stu-id="c34b0-108">The <xref:System.Xml.XmlDocument?displayProperty=nameWithType> class implements the [W3C Document Object Model (DOM) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/) and [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) recommendations.</span></span>  
   
--   Las clases <xref:System.Xml.XmlReader?displayProperty=fullName> y <xref:System.Xml.XmlWriter?displayProperty=fullName> admiten las recomendaciones del W3C sobre [XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](http://www.w3.org/TR/REC-xml-names/).  
+-   <span data-ttu-id="c34b0-109">Las clases <xref:System.Xml.XmlReader?displayProperty=nameWithType> y <xref:System.Xml.XmlWriter?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) y los [espacios de nombres de XML](http://www.w3.org/TR/REC-xml-names/).</span><span class="sxs-lookup"><span data-stu-id="c34b0-109">The <xref:System.Xml.XmlReader?displayProperty=nameWithType> and <xref:System.Xml.XmlWriter?displayProperty=nameWithType> classes support the [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) and the [Namespaces in XML](http://www.w3.org/TR/REC-xml-names/) recommendations.</span></span>  
   
--   Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> admiten las recomendaciones del W3C sobre [estructuras del esquema XML (parte 1)](http://www.w3.org/TR/xmlschema-1/) y [tipos de datos del esquema XML (parte 2)](http://www.w3.org/TR/xmlschema-2/).  
+-   <span data-ttu-id="c34b0-110">Los esquemas de la clase <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> admiten las recomendaciones del W3C sobre [estructuras del esquema XML (parte 1)](http://www.w3.org/TR/xmlschema-1/) y [tipos de datos del esquema XML (parte 2)](http://www.w3.org/TR/xmlschema-2/).</span><span class="sxs-lookup"><span data-stu-id="c34b0-110">Schemas in the <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> class support the [W3C XML Schema Part 1: Structures](http://www.w3.org/TR/xmlschema-1/) and [XML Schema Part 2: Datatypes](http://www.w3.org/TR/xmlschema-2/) recommendations.</span></span>  
   
--   Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=fullName> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](http://www.w3.org/TR/xslt).  
+-   <span data-ttu-id="c34b0-111">Las clases del espacio de nombres <xref:System.Xml.Xsl?displayProperty=nameWithType> admiten transformaciones XSLT compatibles con las recomendaciones del W3C sobre [XSLT versión 1.0](http://www.w3.org/TR/xslt).</span><span class="sxs-lookup"><span data-stu-id="c34b0-111">Classes in the <xref:System.Xml.Xsl?displayProperty=nameWithType> namespace support XSLT transformations that conform to the [W3C XSLT 1.0](http://www.w3.org/TR/xslt) recommendation.</span></span>  
   
- Las clases XML de .NET Framework proporcionan estas ventajas:  
+ <span data-ttu-id="c34b0-112">Las clases XML de .NET Framework proporcionan estas ventajas:</span><span class="sxs-lookup"><span data-stu-id="c34b0-112">The XML classes in the .NET Framework provide these benefits:</span></span>  
   
--   **Productividad.** Gracias a [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.  
+-   <span data-ttu-id="c34b0-113">**Productividad.**</span><span class="sxs-lookup"><span data-stu-id="c34b0-113">**Productivity.**</span></span> <span data-ttu-id="c34b0-114">Gracias a [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.</span><span class="sxs-lookup"><span data-stu-id="c34b0-114">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) makes it easier to program with XML and provides a query experience that is similar to SQL.</span></span>  
   
--   **Extensibilidad.** Las clases XML en .NET Framework se pueden extender mediante el uso de clases base abstractas y métodos virtuales. Por ejemplo, puede crear una clase derivada de la clase <xref:System.Xml.XmlUrlResolver> que almacene el flujo caché en el disco local.  
+-   <span data-ttu-id="c34b0-115">**Extensibilidad.**</span><span class="sxs-lookup"><span data-stu-id="c34b0-115">**Extensibility.**</span></span> <span data-ttu-id="c34b0-116">Las clases XML en .NET Framework se pueden extender mediante el uso de clases base abstractas y métodos virtuales.</span><span class="sxs-lookup"><span data-stu-id="c34b0-116">The XML classes in the .NET Framework are extensible through the use of abstract base classes and virtual methods.</span></span> <span data-ttu-id="c34b0-117">Por ejemplo, puede crear una clase derivada de la clase <xref:System.Xml.XmlUrlResolver> que almacene el flujo caché en el disco local.</span><span class="sxs-lookup"><span data-stu-id="c34b0-117">For example, you can create a derived class of the <xref:System.Xml.XmlUrlResolver> class that stores the cache stream to the local disk.</span></span>  
   
--   **Arquitectura conectable.** .NET Framework proporciona una arquitectura en la que los componentes se pueden usar unos con otros y se puede hacer streaming de los datos entre componentes. Por ejemplo, un almacén de datos, como un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>, se puede transformar con la clase <xref:System.Xml.Xsl.XslCompiledTransform> y, posteriormente, se pueden hacer streaming de los resultados a otro almacén o devolverse como flujo desde un servicio web.  
+-   <span data-ttu-id="c34b0-118">**Arquitectura conectable.**</span><span class="sxs-lookup"><span data-stu-id="c34b0-118">**Pluggable architecture.**</span></span> <span data-ttu-id="c34b0-119">.NET Framework proporciona una arquitectura en la que los componentes se pueden usar unos con otros y se puede hacer streaming de los datos entre componentes.</span><span class="sxs-lookup"><span data-stu-id="c34b0-119">The .NET Framework provides an architecture in which components can utilize one another, and data can be streamed between components.</span></span> <span data-ttu-id="c34b0-120">Por ejemplo, un almacén de datos, como un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>, se puede transformar con la clase <xref:System.Xml.Xsl.XslCompiledTransform> y, posteriormente, se pueden hacer streaming de los resultados a otro almacén o devolverse como flujo desde un servicio web.</span><span class="sxs-lookup"><span data-stu-id="c34b0-120">For example, a data store, such as an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object, can be transformed with the <xref:System.Xml.Xsl.XslCompiledTransform> class, and the output can then be streamed either into another store or returned as a stream from a web service.</span></span>  
   
--   **Rendimiento.** Para obtener un mejor rendimiento de la aplicación, algunas de las clases XML de .NET Framework admiten un modelo basado en streaming con las características siguientes:  
+-   <span data-ttu-id="c34b0-121">**Rendimiento.**</span><span class="sxs-lookup"><span data-stu-id="c34b0-121">**Performance.**</span></span> <span data-ttu-id="c34b0-122">Para obtener un mejor rendimiento de la aplicación, algunas de las clases XML de .NET Framework admiten un modelo basado en streaming con las características siguientes:</span><span class="sxs-lookup"><span data-stu-id="c34b0-122">For better app performance, some of the XML classes in the .NET Framework support a streaming-based model with the following characteristics:</span></span>  
   
-    -   Almacenamiento en caché mínimo para el análisis de modelos de extracción solo hacia delante (<xref:System.Xml.XmlReader>).  
+    -   <span data-ttu-id="c34b0-123">Almacenamiento en caché mínimo para el análisis de modelos de extracción solo hacia delante (<xref:System.Xml.XmlReader>).</span><span class="sxs-lookup"><span data-stu-id="c34b0-123">Minimal caching for forward-only, pull-model parsing (<xref:System.Xml.XmlReader>).</span></span>  
   
-    -   Validación solo hacia delante con (<xref:System.Xml.XmlReader>).  
+    -   <span data-ttu-id="c34b0-124">Validación solo hacia delante con (<xref:System.Xml.XmlReader>).</span><span class="sxs-lookup"><span data-stu-id="c34b0-124">Forward-only validation (<xref:System.Xml.XmlReader>).</span></span>  
   
-    -   Navegación al estilo de cursores que reduce la creación de nodos a un único nodo virtual, a la vez que proporciona acceso aleatorio al documento (<xref:System.Xml.XPath.XPathNavigator>).  
+    -   <span data-ttu-id="c34b0-125">Navegación al estilo de cursores que reduce la creación de nodos a un único nodo virtual, a la vez que proporciona acceso aleatorio al documento (<xref:System.Xml.XPath.XPathNavigator>).</span><span class="sxs-lookup"><span data-stu-id="c34b0-125">Cursor style navigation that minimizes node creation to a single virtual node while providing random access to the document (<xref:System.Xml.XPath.XPathNavigator>).</span></span>  
   
-     Para obtener un mejor rendimiento cuando se requiera un procesamiento XSLT, puede usar la clase <xref:System.Xml.XPath.XPathDocument>, que es un almacén optimizado de solo lectura para consultas XPath diseñadas para funcionar, de forma eficiente, con la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  
+     <span data-ttu-id="c34b0-126">Para obtener un mejor rendimiento cuando se requiera un procesamiento XSLT, puede usar la clase <xref:System.Xml.XPath.XPathDocument>, que es un almacén optimizado de solo lectura para consultas XPath diseñadas para funcionar, de forma eficiente, con la clase <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="c34b0-126">For better performance whenever XSLT processing is required, you can use the <xref:System.Xml.XPath.XPathDocument> class, which is an optimized, read-only store for XPath queries designed to work efficiently with the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
   
--   **Integración con ADO.NET.** Las clases XML y [ADO.NET](../../../../docs/framework/data/adonet/index.md) están estrechamente integradas para reunir datos relacionales y XML. La clase <xref:System.Data.DataSet> es una caché almacenada en memoria de datos devueltos desde una base de datos. La clase <xref:System.Data.DataSet> puede leer y escribir XML mediante las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>, con el fin de almacenar su estructura de esquema relacional interna como esquemas XML (XSD) y para deducir la estructura de esquema de un documento XML.  
+-   <span data-ttu-id="c34b0-127">**Integración con ADO.NET.**</span><span class="sxs-lookup"><span data-stu-id="c34b0-127">**Integration with ADO.NET.**</span></span> <span data-ttu-id="c34b0-128">Las clases XML y [ADO.NET](../../../../docs/framework/data/adonet/index.md) están estrechamente integradas para reunir datos relacionales y XML.</span><span class="sxs-lookup"><span data-stu-id="c34b0-128">The XML classes and [ADO.NET](../../../../docs/framework/data/adonet/index.md) are tightly integrated to bring together relational data and XML.</span></span> <span data-ttu-id="c34b0-129">La clase <xref:System.Data.DataSet> es una caché almacenada en memoria de datos devueltos desde una base de datos.</span><span class="sxs-lookup"><span data-stu-id="c34b0-129">The <xref:System.Data.DataSet> class is an in-memory cache of data retrieved from a database.</span></span> <span data-ttu-id="c34b0-130">La clase <xref:System.Data.DataSet> puede leer y escribir XML mediante las clases <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>, con el fin de almacenar su estructura de esquema relacional interna como esquemas XML (XSD) y para deducir la estructura de esquema de un documento XML.</span><span class="sxs-lookup"><span data-stu-id="c34b0-130">The <xref:System.Data.DataSet> class has the ability to read and write XML by using the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> classes, to persist its internal relational schema structure as XML schemas (XSD), and to infer the schema structure of an XML document.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Opciones de procesamiento XML](../../../../docs/standard/data/xml/xml-processing-options.md)  
- Trata sobre las opciones disponibles para procesar datos XML.  
+## <a name="in-this-section"></a><span data-ttu-id="c34b0-131">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c34b0-131">In This Section</span></span>  
+ [<span data-ttu-id="c34b0-132">Opciones de procesamiento XML</span><span class="sxs-lookup"><span data-stu-id="c34b0-132">XML Processing Options</span></span>](../../../../docs/standard/data/xml/xml-processing-options.md)  
+ <span data-ttu-id="c34b0-133">Trata sobre las opciones disponibles para procesar datos XML.</span><span class="sxs-lookup"><span data-stu-id="c34b0-133">Discusses options for processing XML data.</span></span>  
   
- [Procesamiento de datos XML en memoria](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- Trata acerca de los tres modelos para procesar datos XML en memoria. [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), la clase <xref:System.Xml.XPath.XPathDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XmlDocument> (basada en el modelo de datos XPath).  
+ [<span data-ttu-id="c34b0-134">Procesamiento de datos XML en memoria</span><span class="sxs-lookup"><span data-stu-id="c34b0-134">Processing XML Data In-Memory</span></span>](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
+ <span data-ttu-id="c34b0-135">Trata acerca de los tres modelos para procesar datos XML en memoria.</span><span class="sxs-lookup"><span data-stu-id="c34b0-135">Discusses the three models for processing XML data in-memory.</span></span> <span data-ttu-id="c34b0-136">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), la clase <xref:System.Xml.XPath.XPathDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XmlDocument> (basada en el modelo de datos XPath).</span><span class="sxs-lookup"><span data-stu-id="c34b0-136">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), the <xref:System.Xml.XmlDocument> class (based on the W3C Document Object Model), and the <xref:System.Xml.XPath.XPathDocument> class (based on the XPath data model).</span></span>  
   
- [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- Describe cómo utilizar el procesador XSLT.  
+ [<span data-ttu-id="c34b0-137">Transformaciones XSLT</span><span class="sxs-lookup"><span data-stu-id="c34b0-137">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ <span data-ttu-id="c34b0-138">Describe cómo utilizar el procesador XSLT.</span><span class="sxs-lookup"><span data-stu-id="c34b0-138">Describes how to use the XSLT processor.</span></span>  
   
- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- Describe las clases que se usan para crear y tratar esquemas XML (XSD) mediante una clase <xref:System.Xml.Schema.XmlSchema> que carga y modifica un esquema.  
+ [<span data-ttu-id="c34b0-139">Modelo de objetos de esquema XML (SOM)</span><span class="sxs-lookup"><span data-stu-id="c34b0-139">XML Schema Object Model (SOM)</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ <span data-ttu-id="c34b0-140">Describe las clases que se usan para crear y tratar esquemas XML (XSD) mediante una clase <xref:System.Xml.Schema.XmlSchema> que carga y modifica un esquema.</span><span class="sxs-lookup"><span data-stu-id="c34b0-140">Describes the classes used for building and manipulating XML Schemas (XSD) by providing an <xref:System.Xml.Schema.XmlSchema> class to load and edit a schema.</span></span>  
   
- [Integración de XML con datos relacionales y ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
- Describe cómo habilita .NET Framework el acceso sincrónico en tiempo real a las representaciones relacional y jerárquica de los datos mediante los objetos <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument>.  
+ [<span data-ttu-id="c34b0-141">Integración de XML con datos relacionales y ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c34b0-141">XML Integration with Relational Data and ADO.NET</span></span>](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
+ <span data-ttu-id="c34b0-142">Describe cómo habilita .NET Framework el acceso sincrónico en tiempo real a las representaciones relacional y jerárquica de los datos mediante los objetos <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument>.</span><span class="sxs-lookup"><span data-stu-id="c34b0-142">Describes how the .NET Framework enables real-time, synchronous access to both the relational and hierarchical representations of data through the <xref:System.Data.DataSet> object and the <xref:System.Xml.XmlDataDocument> object.</span></span>  
   
- [Administrar espacios de nombres en un documento XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
- Describe cómo se usa la clase <xref:System.Xml.XmlNamespaceManager> para almacenar y mantener la información sobre espacios de nombres.  
+ [<span data-ttu-id="c34b0-143">Administrar espacios de nombres en un documento XML</span><span class="sxs-lookup"><span data-stu-id="c34b0-143">Managing Namespaces in an XML Document</span></span>](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
+ <span data-ttu-id="c34b0-144">Describe cómo se usa la clase <xref:System.Xml.XmlNamespaceManager> para almacenar y mantener la información sobre espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="c34b0-144">Describes how the <xref:System.Xml.XmlNamespaceManager> class is used to store and maintain namespace information.</span></span>  
   
- [Compatibilidad de tipos en las clases System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
- Describe cómo se asignan los tipos de datos XML a los tipos CLR, cómo se convierten los tipos de datos XML y otras características de compatibilidad de tipos de las clases <xref:System.Xml>.  
+ [<span data-ttu-id="c34b0-145">Compatibilidad de tipos en las clases System.Xml</span><span class="sxs-lookup"><span data-stu-id="c34b0-145">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+ <span data-ttu-id="c34b0-146">Describe cómo se asignan los tipos de datos XML a los tipos CLR, cómo se convierten los tipos de datos XML y otras características de compatibilidad de tipos de las clases <xref:System.Xml>.</span><span class="sxs-lookup"><span data-stu-id="c34b0-146">Describes how XML data types map to CLR types, how to convert XML data types, and other type support features in the <xref:System.Xml> classes.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- Proporciona información sobre cómo acceder a los datos mediante ADO.NET.  
+## <a name="related-sections"></a><span data-ttu-id="c34b0-147">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c34b0-147">Related Sections</span></span>  
+ [<span data-ttu-id="c34b0-148">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c34b0-148">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)  
+ <span data-ttu-id="c34b0-149">Proporciona información sobre cómo acceder a los datos mediante ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="c34b0-149">Provides information on how to access data using ADO.NET.</span></span>  
   
- [Seguridad](../../../../docs/standard/security/index.md)  
- Ofrece información general sobre todo el sistema de seguridad de .NET Framework.  
+ [<span data-ttu-id="c34b0-150">Seguridad</span><span class="sxs-lookup"><span data-stu-id="c34b0-150">Security</span></span>](../../../../docs/standard/security/index.md)  
+ <span data-ttu-id="c34b0-151">Ofrece información general sobre todo el sistema de seguridad de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c34b0-151">Provides an overview of the .NET Framework security system.</span></span>  
   
- [Centro para desarrolladores de XML](http://go.microsoft.com/fwlink/?linkid=42458)  
- Proporciona información técnica adicional, descargas, grupos de noticias y otros recursos para desarrolladores de XML.
-
+ [<span data-ttu-id="c34b0-152">Centro para desarrolladores de XML</span><span class="sxs-lookup"><span data-stu-id="c34b0-152">XML Developer Center</span></span>](http://go.microsoft.com/fwlink/?linkid=42458)  
+ <span data-ttu-id="c34b0-153">Proporciona información técnica adicional, descargas, grupos de noticias y otros recursos para desarrolladores de XML.</span><span class="sxs-lookup"><span data-stu-id="c34b0-153">Provides additional technical information, downloads, newsgroups, and other resources for XML developers.</span></span>

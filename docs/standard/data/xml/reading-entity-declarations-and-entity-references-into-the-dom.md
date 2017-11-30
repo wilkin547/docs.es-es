@@ -1,67 +1,65 @@
 ---
-title: "Leer declaraciones de entidad y referencias de entidad en DOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Leer declaraciones de entidad y referencias de entidad en DOM
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 6370db06cbe7ff8d46258b0315059f5c37587fea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Leer declaraciones de entidad y referencias de entidad en DOM
-Una entidad es una declaración que establece un nombre que se va a utilizar en el código XML en lugar de contenido o marcado.  Para las entidades hay dos partes.  En primer lugar, se debe asociar un nombre al contenido de reemplazo, utilizando una declaración de entidad.  Una declaración de entidad se crea mediante la sintaxis `<!ENTITY name "value">` incluida o en una DTD o esquema XML.  En segundo lugar, el nombre definido en la declaración de entidad se utiliza posteriormente en el XML.  Al utilizarlo en el código XML, se conoce como referencia de entidad.  Por ejemplo, en la declaración de entidad siguiente se declara una entidad del nombre `publisher` que está asociada al contenido de "Microsoft Press".  
+# <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a><span data-ttu-id="f1a95-102">Leer declaraciones de entidad y referencias de entidad en DOM</span><span class="sxs-lookup"><span data-stu-id="f1a95-102">Reading Entity Declarations and Entity References into the DOM</span></span>
+<span data-ttu-id="f1a95-103">Una entidad es una declaración que establece un nombre que se va a utilizar en el código XML en lugar de contenido o marcado.</span><span class="sxs-lookup"><span data-stu-id="f1a95-103">An entity is a declaration that states a name to be used in the XML in place of content or markup.</span></span> <span data-ttu-id="f1a95-104">Para las entidades hay dos partes.</span><span class="sxs-lookup"><span data-stu-id="f1a95-104">There are two parts to entities.</span></span> <span data-ttu-id="f1a95-105">En primer lugar, se debe asociar un nombre al contenido de reemplazo, utilizando una declaración de entidad.</span><span class="sxs-lookup"><span data-stu-id="f1a95-105">First, you must tie a name to the replacement content using an entity declaration.</span></span> <span data-ttu-id="f1a95-106">Una declaración de entidad se crea mediante la sintaxis `<!ENTITY name "value">` incluida o en una DTD o esquema XML.</span><span class="sxs-lookup"><span data-stu-id="f1a95-106">An entity declaration is created by using the `<!ENTITY name "value">` syntax in a document type definition (DTD) or XML schema.</span></span> <span data-ttu-id="f1a95-107">En segundo lugar, el nombre definido en la declaración de entidad se utiliza posteriormente en el XML.</span><span class="sxs-lookup"><span data-stu-id="f1a95-107">Secondly, the name defined in the entity declaration is subsequently used in the XML.</span></span> <span data-ttu-id="f1a95-108">Al utilizarlo en el código XML, se conoce como referencia de entidad.</span><span class="sxs-lookup"><span data-stu-id="f1a95-108">When used in the XML, it is called an entity reference.</span></span> <span data-ttu-id="f1a95-109">Por ejemplo, en la declaración de entidad siguiente se declara una entidad del nombre `publisher` que está asociada al contenido de "Microsoft Press".</span><span class="sxs-lookup"><span data-stu-id="f1a95-109">For example, the following entity declaration declares an entity of the name `publisher` being associated with the content of "Microsoft Press".</span></span>  
   
-```  
+```xml  
 <!ENTITY publisher "Microsoft Press">  
 ```  
   
- En el ejemplo siguiente se muestra el uso de esta declaración de entidad en XML como una referencia de entidad.  
+ <span data-ttu-id="f1a95-110">En el ejemplo siguiente se muestra el uso de esta declaración de entidad en XML como una referencia de entidad.</span><span class="sxs-lookup"><span data-stu-id="f1a95-110">The following example shows the use of this entity declaration in XML as an entity reference.</span></span>  
   
-```  
+```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- Algunos analizadores expanden las entidades automáticamente al cargar un documento en la memoria.  Por tanto, cuando se lee el XML en la memoria, se recuerdan y guardan las declaraciones de entidad.  Cuando el analizador encuentra posteriormente caracteres `&;`, que identifican una referencia de entidad general, el analizador busca dicho nombre en una tabla de declaraciones de entidad.  La referencia, `&publisher;`, se reemplaza por el contenido que representa.  Con el siguiente código XML,  
+ <span data-ttu-id="f1a95-111">Algunos analizadores expanden las entidades automáticamente al cargar un documento en la memoria.</span><span class="sxs-lookup"><span data-stu-id="f1a95-111">Some parsers automatically expand entities when a document is loaded into memory.</span></span> <span data-ttu-id="f1a95-112">Por tanto, cuando se lee el XML en la memoria, se recuerdan y guardan las declaraciones de entidad.</span><span class="sxs-lookup"><span data-stu-id="f1a95-112">Therefore, when the XML is being read into memory, entity declarations are remembered and saved.</span></span> <span data-ttu-id="f1a95-113">Cuando el analizador encuentra posteriormente caracteres `&;`, que identifican una referencia de entidad general, el analizador busca dicho nombre en una tabla de declaraciones de entidad.</span><span class="sxs-lookup"><span data-stu-id="f1a95-113">When the parser subsequently encounters `&;` characters, which identify a general entity reference, the parser looks up that name in an entity declaration table.</span></span> <span data-ttu-id="f1a95-114">La referencia, `&publisher;`, se reemplaza por el contenido que representa.</span><span class="sxs-lookup"><span data-stu-id="f1a95-114">The reference, `&publisher;` is replaced by the content that it represents.</span></span> <span data-ttu-id="f1a95-115">Con el siguiente código XML,</span><span class="sxs-lookup"><span data-stu-id="f1a95-115">Using the following XML,</span></span>  
   
-```  
+```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- que expande la referencia de entidad y se reemplaza `&publisher;` por el contenido de Microsoft Press, se proporciona el siguiente código XML expandido.  
+ <span data-ttu-id="f1a95-116">que expande la referencia de entidad y se reemplaza `&publisher;` por el contenido de Microsoft Press, se proporciona el siguiente código XML expandido.</span><span class="sxs-lookup"><span data-stu-id="f1a95-116">expanding the entity reference and replacing the `&publisher;` with the Microsoft Press content gives the following expanded XML.</span></span>  
   
- **Salida**  
+ <span data-ttu-id="f1a95-117">**Salida**</span><span class="sxs-lookup"><span data-stu-id="f1a95-117">**Output**</span></span>  
   
-```  
+```xml  
 <author>Fred</author>  
 <pubinfo>Published by Microsoft Press</pubinfo>  
 ```  
   
- Hay muchos tipos de entidades.  En el diagrama siguiente se muestra la división de los tipos de entidades y terminología.  
+ <span data-ttu-id="f1a95-118">Hay muchos tipos de entidades.</span><span class="sxs-lookup"><span data-stu-id="f1a95-118">There are many kinds of entities.</span></span> <span data-ttu-id="f1a95-119">En el diagrama siguiente se muestra la división de los tipos de entidades y terminología.</span><span class="sxs-lookup"><span data-stu-id="f1a95-119">The following diagram shows the breakdown of entity types and terminology.</span></span>  
   
- ![diagrama de flujo de jerarquía de tipos de entidad](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity\_hierarchy")  
+ <span data-ttu-id="f1a95-120">![diagrama de flujo de jerarquía de tipos de entidad](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")</span><span class="sxs-lookup"><span data-stu-id="f1a95-120">![flow chart of entity type hierarchy](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")</span></span>  
   
- La forma predeterminada para la implementación Microsoft .NET Framework del Modelo de objeto de documentos XML \(DOM\) es preservar las referencias de entidades y no expandir las entidades cuando se carga XML.  Esto implica que, al cargar un documento en DOM, se crea un nodo **XmlEntityReference** que contiene la variable de referencia `&publisher;` con nodos secundarios que representan el contenido de la entidad declarado en la DTD.  
+ <span data-ttu-id="f1a95-121">El valor predeterminado para la implementación de Microsoft .NET Framework de XML Document Object Model (DOM) es preservar las referencias de entidades y no expandir las entidades cuando se carga XML.</span><span class="sxs-lookup"><span data-stu-id="f1a95-121">The default for the Microsoft .NET Framework implementation of the XML Document Object Model (DOM) is to preserve the entities references and not expand the entities when the XML is loaded.</span></span> <span data-ttu-id="f1a95-122">La implicación de esto es que, tal y como se carga un documento en DOM, un **XmlEntityReference** nodo que contiene la variable de referencia `&publisher;` está creado, con nodos secundarios que representan el contenido de la entidad declarado en la DTD.</span><span class="sxs-lookup"><span data-stu-id="f1a95-122">The implication of this is that as a document is loaded in the DOM, an **XmlEntityReference** node containing the reference variable `&publisher;` is created, with child nodes representing the content in the entity declared in the DTD.</span></span>  
   
- El diagrama siguiente muestra los nodos `<!ENTITY publisher "Microsoft Press">`XmlEntity y **XmlText** creados a partir de la declaración de entidad **.**  
+ <span data-ttu-id="f1a95-123">Mediante el `<!ENTITY publisher "Microsoft Press">` declaración de entidad, el siguiente diagrama muestra la **XmlEntity** y **XmlText** nodos creados a partir de esta declaración.</span><span class="sxs-lookup"><span data-stu-id="f1a95-123">Using the `<!ENTITY publisher "Microsoft Press">` entity declaration, the following diagram shows the **XmlEntity** and **XmlText** nodes created from this declaration.</span></span>  
   
- ![Nodos creados a partir de la declaración de entidad](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml\_entitydeclaration\_node2")  
+ <span data-ttu-id="f1a95-124">![nodos creados a partir de la declaración de entidad](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")</span><span class="sxs-lookup"><span data-stu-id="f1a95-124">![nodes created from entity declaration](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")</span></span>  
   
- Las diferencias existentes al expandir o no referencias de entidad determinan los nodos generados en el árbol DOM, en la memoria.  Las diferencias en los nodos generados se explican en los temas [Se preservan las referencias de entidad](../../../../docs/standard/data/xml/entity-references-are-preserved.md) y [Se expanden las referencias de entidad pero no se preservan](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
+ <span data-ttu-id="f1a95-125">Las diferencias existentes al expandir o no referencias de entidad determinan los nodos generados en el árbol DOM, en la memoria.</span><span class="sxs-lookup"><span data-stu-id="f1a95-125">The differences when entity references are expanded and when they are not makes a difference in what nodes are generated in the DOM tree, in memory.</span></span> <span data-ttu-id="f1a95-126">La diferencia en los nodos generados se explica en los temas [se preservan las referencias de entidad](../../../../docs/standard/data/xml/entity-references-are-preserved.md) y [las referencias de entidad son expandida y no conserva](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).</span><span class="sxs-lookup"><span data-stu-id="f1a95-126">The difference in the nodes that are generated is explained in the topics [Entity References are Preserved](../../../../docs/standard/data/xml/entity-references-are-preserved.md) and [Entity References are Expanded and Not Preserved](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).</span></span>  
   
-## Vea también  
- [Modelo de objetos de documento XML \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="f1a95-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="f1a95-127">See Also</span></span>  
+ [<span data-ttu-id="f1a95-128">Modelo de objetos de documento (DOM) de XML</span><span class="sxs-lookup"><span data-stu-id="f1a95-128">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

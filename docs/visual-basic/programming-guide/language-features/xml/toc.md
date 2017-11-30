@@ -17,6 +17,3 @@
 ### [Acceso a elementos secundarios XML](how-to-access-xml-child-elements.md)
 ### [Acceso a atributos XML](how-to-access-xml-attributes.md)
 ### [Declarar y usar prefijos de espacio de nombres XML](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [IntelliSense XML](xml-intellisense.md)
-### [Habilitar IntelliSense XML](how-to-enable-xml-intellisense.md)
-### [Asistente XML a esquema](xml-to-schema-wizard.md)

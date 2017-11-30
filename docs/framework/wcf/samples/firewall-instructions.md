@@ -1,100 +1,100 @@
 ---
-title: "Instrucciones de firewall | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: Instrucciones de firewall
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: 32
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 32
+caps.latest.revision: "32"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0aac3a161b0482bad1a32f5223d2031402a632cc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Instrucciones de firewall
-Debe habilitar varios puertos o programas en el firewall para que los ejemplos [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puedan funcionar.Muchos de los ejemplos se comunican utilizando los puertos del intervalo 8000\-8003 y el puerto 9000.El firewall se activa de forma predeterminada y evita el acceso a estos puertos.Para habilitar el firewall para los ejemplos, complete uno de los procedimientos siguientes, dependiendo de sus requisitos y entorno de seguridad:  
+# <a name="firewall-instructions"></a><span data-ttu-id="a61c7-102">Instrucciones de firewall</span><span class="sxs-lookup"><span data-stu-id="a61c7-102">Firewall Instructions</span></span>
+<span data-ttu-id="a61c7-103">Debe habilitar varios puertos o programas en el firewall para que los ejemplos [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puedan funcionar.</span><span class="sxs-lookup"><span data-stu-id="a61c7-103">You must enable several ports or programs in the firewall so that the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples can function.</span></span> <span data-ttu-id="a61c7-104">Muchos de los ejemplos se comunican utilizando los puertos del intervalo 8000-8003 y el puerto 9000.</span><span class="sxs-lookup"><span data-stu-id="a61c7-104">Many of the samples communicate by using ports in the range 8000-8003, and port 9000.</span></span> <span data-ttu-id="a61c7-105">El firewall se activa de forma predeterminada y evita el acceso a estos puertos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-105">The firewall is turned on by default and prevents access to these ports.</span></span> <span data-ttu-id="a61c7-106">Para habilitar el firewall para los ejemplos, complete uno de los procedimientos siguientes, dependiendo de sus requisitos y entorno de seguridad:</span><span class="sxs-lookup"><span data-stu-id="a61c7-106">To enable the firewall for the samples, complete one of the following procedures, depending on your requirements and security environment:</span></span>  
   
--   Opción 1: Habilite de forma interactiva los ejemplos mientras se ejecutan.No realice ningún cambio de antemano en su configuración del firewall y proceda a iniciar la compilación y la ejecución de los ejemplos.Cuando se ejecuta un ejemplo, aparece un cuadro de diálogo **Alerta de seguridad de Windows**.El programa de ejemplo en cuestión se puede agregar a continuación a una lista desbloqueada de forma interactiva.Con este procedimiento, quizá tenga que reiniciar el ejemplo.  
+-   <span data-ttu-id="a61c7-107">Opción 1: Habilite de forma interactiva los ejemplos mientras se ejecutan.</span><span class="sxs-lookup"><span data-stu-id="a61c7-107">Option 1: Interactively enable samples while running.</span></span> <span data-ttu-id="a61c7-108">No realice ningún cambio de antemano en su configuración del firewall y proceda a iniciar la compilación y la ejecución de los ejemplos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-108">Make no advance changes to your firewall configuration and proceed to start building and running the samples.</span></span> <span data-ttu-id="a61c7-109">Cuando se ejecuta un ejemplo, un **alerta de seguridad de Windows** aparece el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="a61c7-109">When a sample is run, a **Windows Security Alert** dialog box appears.</span></span> <span data-ttu-id="a61c7-110">El programa de ejemplo en cuestión se puede agregar a continuación a una lista desbloqueada de forma interactiva.</span><span class="sxs-lookup"><span data-stu-id="a61c7-110">The sample program in question can then be added interactively to an unblocked list.</span></span> <span data-ttu-id="a61c7-111">Con este procedimiento, quizá tenga que reiniciar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="a61c7-111">With this procedure, you may have to then restart the sample.</span></span>  
   
--   Opción 2: Habilite de antemano los programas de ejemplo.Inicie el applet **Panel de control del firewall de Windows** y habilite los programas de ejemplo que piensa ejecutarse.Debe compilar primero los programas para que existan los archivos ejecutables.Encontrará instrucciones más detalladas en el procedimiento siguiente.  
+-   <span data-ttu-id="a61c7-112">Opción 2: Habilite de antemano los programas de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="a61c7-112">Option 2: Enable sample programs in advance.</span></span> <span data-ttu-id="a61c7-113">Iniciar el **Panel de Control de Firewall de Windows** applet y habilitar los programas de ejemplo que piensa ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="a61c7-113">Start the **Windows Firewall Control Panel** applet and enable the sample programs you plan to run.</span></span> <span data-ttu-id="a61c7-114">Debe compilar primero los programas para que existan los archivos ejecutables.</span><span class="sxs-lookup"><span data-stu-id="a61c7-114">You must build the programs first so the executable files exist.</span></span> <span data-ttu-id="a61c7-115">Encontrará instrucciones más detalladas en el procedimiento siguiente.</span><span class="sxs-lookup"><span data-stu-id="a61c7-115">You can find more detailed instructions in the following procedure.</span></span>  
   
--   Opción 3: Habilite de antemano un intervalo del puerto.Inicie el applet **Panel de control** del **firewall de Windows** y habilite los puertos 80, 443, 8000\-8003 y 9000, utilizados por los ejemplos.Encontrará instrucciones más detalladas en el procedimiento siguiente.Esta opción es menos segura que las otras porque permite que cualquier programa utilice estos puertos, no solamente los ejemplos.  
+-   <span data-ttu-id="a61c7-116">Opción 3: Habilite de antemano un intervalo del puerto.</span><span class="sxs-lookup"><span data-stu-id="a61c7-116">Option 3: Enable a port range in advance.</span></span> <span data-ttu-id="a61c7-117">Iniciar el **Firewall de Windows** **el Panel de Control** applet y habilite los puertos 80, 443, 8000-8003 y 9000, utilizados por los ejemplos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-117">Start the **Windows Firewall** **Control Panel** applet and enable ports 80, 443, 8000-8003 and 9000, which are used by the samples.</span></span> <span data-ttu-id="a61c7-118">Encontrará instrucciones más detalladas en el procedimiento siguiente.</span><span class="sxs-lookup"><span data-stu-id="a61c7-118">You can find more detailed instructions in the following procedure.</span></span> <span data-ttu-id="a61c7-119">Esta opción es menos segura que las otras porque permite que cualquier programa utilice estos puertos, no solamente los ejemplos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-119">This option is less secure than the others because it allows any program to use these ports, not just the samples.</span></span>  
   
- Si no está seguro de qué procedimiento utilizar, elija la primera opción.Si está ejecutando un firewall procedente de otro proveedor, quizá necesite realizar modificaciones similares.  
+ <span data-ttu-id="a61c7-120">Si no está seguro de qué procedimiento utilizar, elija la primera opción.</span><span class="sxs-lookup"><span data-stu-id="a61c7-120">If you are unsure of which procedure to use, choose the first option.</span></span> <span data-ttu-id="a61c7-121">Si está ejecutando un firewall procedente de otro proveedor, quizá necesite realizar modificaciones similares.</span><span class="sxs-lookup"><span data-stu-id="a61c7-121">If you are running a firewall from another vendor, you might need to make similar changes.</span></span>  
   
 > [!IMPORTANT]
->  Cambiar su configuración del firewall afecta a su seguridad.Se recomienda que grabe los cambios que efectúa y los quite cuando termine de trabajar con los ejemplos.  
+>  <span data-ttu-id="a61c7-122">Cambiar su configuración del firewall afecta a su seguridad.</span><span class="sxs-lookup"><span data-stu-id="a61c7-122">Changing your firewall configuration affects your security.</span></span> <span data-ttu-id="a61c7-123">Se recomienda que grabe los cambios que efectúa y los quite cuando termine de trabajar con los ejemplos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-123">It is recommended that you record the changes you make and remove them when you are finished working with the samples.</span></span>  
   
-### Para habilitar de antemano los programas de ejemplo  
+### <a name="to-enable-samples-programs-in-advance"></a><span data-ttu-id="a61c7-124">Para habilitar de antemano los programas de ejemplo</span><span class="sxs-lookup"><span data-stu-id="a61c7-124">To enable samples programs in advance</span></span>  
   
-1.  Compilar el ejemplo.  
+1.  <span data-ttu-id="a61c7-125">Compilar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="a61c7-125">Build the sample.</span></span>  
   
-2.  Haga clic en **Inicio**, haga clic en **Ejecutar** y escriba `firewall.cpl`.De esta forma se abre el applet **Panel de control del Firewall de Windows**.  
+2.  <span data-ttu-id="a61c7-126">Haga clic en **iniciar**, haga clic en **ejecutar**y el tipo de `firewall.cpl`.</span><span class="sxs-lookup"><span data-stu-id="a61c7-126">Click **Start**, click **Run**, and type `firewall.cpl`.</span></span> <span data-ttu-id="a61c7-127">Se abrirá la **Panel de Control de Firewall de Windows** applet.</span><span class="sxs-lookup"><span data-stu-id="a61c7-127">This opens the **Windows Firewall Control Panel** applet.</span></span>  
   
     > [!NOTE]
-    >  Debe tener permiso para cambiar los valores del Firewall para ejecutar los ejemplos que requieren la capacidad de comunicarse a través de Firewall de Windows.Si algunas configuraciones de firewall no están disponibles y su equipo está conectado a un dominio, el administrador del sistema podría estar controlando estos valores a través de Directiva de grupo.  
+    >  <span data-ttu-id="a61c7-128">Debe tener permiso para cambiar los valores del Firewall para ejecutar los ejemplos que requieren la capacidad de comunicarse a través de Firewall de Windows.</span><span class="sxs-lookup"><span data-stu-id="a61c7-128">You must have permission to change the Firewall settings to run samples that require the ability to communicate through the Windows Firewall.</span></span> <span data-ttu-id="a61c7-129">Si algunas configuraciones de firewall no están disponibles y su equipo está conectado a un dominio, el administrador del sistema podría estar controlando estos valores a través de Directiva de grupo.</span><span class="sxs-lookup"><span data-stu-id="a61c7-129">If some firewall settings are unavailable and your computer is connected to a domain, your system administrator might be controlling these settings through Group Policy.</span></span>  
   
-3.  Complete uno de los siguientes pasos concretos para permitir que un programa pase a través del Firewall de Windows:  
+3.  <span data-ttu-id="a61c7-130">Complete uno de los siguientes pasos concretos para permitir que un programa pase a través del Firewall de Windows:</span><span class="sxs-lookup"><span data-stu-id="a61c7-130">Complete one of the following operating specific steps to allow a program through the Windows Firewall:</span></span>  
   
-    -   En Windows 7 o Windows Server 2008 R2, haga clic en **Permitir un programa o característica a través de Firewall de Windows**.Haga clic en **Cambiar configuración**, Permitir **otro programa...**.  
+    -   <span data-ttu-id="a61c7-131">En Windows 7 o Windows Server 2008 r2, haga clic en **permitir un programa o una característica a través de Firewall de Windows**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-131">On Windows 7 or Windows Server 2008 r2, click **Allow a program or feature through Windows Firewall**.</span></span> <span data-ttu-id="a61c7-132">Haga clic en **cambiar la configuración de**, permitir **otro programa...** .</span><span class="sxs-lookup"><span data-stu-id="a61c7-132">Click **Change Settings**, Allow **Another Program…**.</span></span>  
   
-    -   En [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], haga clic en **Permitir un programa a través del Firewall de Windows**.  
+    -   <span data-ttu-id="a61c7-133">En [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], haga clic en **permitir un programa a través de Firewall de Windows**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-133">On [!INCLUDE[wv](../../../../includes/wv-md.md)] or [!INCLUDE[lserver](../../../../includes/lserver-md.md)], click **Allow a program through Windows Firewall**.</span></span>  
   
-4.  En la pestaña **Excepciones**, haga clic en **Agregar programa**.  
+4.  <span data-ttu-id="a61c7-134">En el **excepciones** , haga clic en **Agregar programa**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-134">On the **Exceptions** tab, click **Add Program**.</span></span>  
   
-5.  Haga clic en el botón **Examinar** y seleccione el archivo ejecutable del ejemplo que piensa ejecutar.  
+5.  <span data-ttu-id="a61c7-135">Haga clic en el **examinar** botón y seleccione el archivo ejecutable de ejemplo que piensa ejecutar.</span><span class="sxs-lookup"><span data-stu-id="a61c7-135">Click the **Browse** button and select the executable file of the sample you plan to run.</span></span>  
   
-6.  Repita los pasos 4 y 5 hasta que haya agregado los archivos ejecutables de todos los ejemplos que piensa ejecutar.  
+6.  <span data-ttu-id="a61c7-136">Repita los pasos 4 y 5 hasta que haya agregado los archivos ejecutables de todas las muestras que se va a ejecutar.</span><span class="sxs-lookup"><span data-stu-id="a61c7-136">Repeat steps 4 and 5 until you have added the executable files of all the samples you plan to run.</span></span>  
   
-7.  Haga clic en **Aceptar** para cerrar el applet del firewall.  
+7.  <span data-ttu-id="a61c7-137">Haga clic en **Aceptar** para cerrar el applet del firewall.</span><span class="sxs-lookup"><span data-stu-id="a61c7-137">Click **OK** to close the firewall applet.</span></span>  
   
-### Para habilitar de antemano un intervalo de puertos  
+### <a name="to-enable-a-port-range-in-advance"></a><span data-ttu-id="a61c7-138">Para habilitar de antemano un intervalo de puertos</span><span class="sxs-lookup"><span data-stu-id="a61c7-138">To enable a port range in advance</span></span>  
   
-1.  Haga clic en **Inicio**, haga clic en **Ejecutar** y escriba `firewall.cpl`.De esta forma se abre el applet **Panel de control del Firewall de Windows**.  
+1.  <span data-ttu-id="a61c7-139">Haga clic en **iniciar**, haga clic en **ejecutar**y el tipo de `firewall.cpl`.</span><span class="sxs-lookup"><span data-stu-id="a61c7-139">Click **Start**, click **Run**, and type `firewall.cpl`.</span></span> <span data-ttu-id="a61c7-140">Se abrirá la **Panel de Control de Firewall de Windows** applet.</span><span class="sxs-lookup"><span data-stu-id="a61c7-140">This opens the **Windows Firewall Control Panel** applet.</span></span>  
   
-2.  En Windows 7 o Windows Server 2008 R2, siga estos pasos.  
+2.  <span data-ttu-id="a61c7-141">En Windows 7 o Windows Server 2008 R2, siga estos pasos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-141">On Windows 7 or Windows Server 2008 R2, follow these steps.</span></span>  
   
-    1.  Haga clic en **Configuración avanzada** en la columna izquierda de la ventana de Firewall de Windows.  
+    1.  <span data-ttu-id="a61c7-142">Haga clic en **configuración avanzada** en la columna izquierda de la ventana de Firewall de Windows.</span><span class="sxs-lookup"><span data-stu-id="a61c7-142">Click **Advanced settings** in the left column of the Windows Firewall window.</span></span>  
   
-    2.  Haga clic en **Reglas de entrada** en la columna de la izquierda.  
+    2.  <span data-ttu-id="a61c7-143">Haga clic en **reglas de entrada** en la columna izquierda.</span><span class="sxs-lookup"><span data-stu-id="a61c7-143">Click **Inbound Rules** in the left column.</span></span>  
   
-    3.  Haga clic en **Nuevas reglas** en la columna de la derecha.  
+    3.  <span data-ttu-id="a61c7-144">Haga clic en **nuevas reglas** en la columna derecha.</span><span class="sxs-lookup"><span data-stu-id="a61c7-144">Click **New Rules** in the right column.</span></span>  
   
-    4.  Seleccione **Puerto** y haga clic en **Siguiente**.  
+    4.  <span data-ttu-id="a61c7-145">Seleccione **puerto** y haga clic en **siguiente**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-145">Select **Port** and click **next**.</span></span>  
   
-    5.  Seleccione **TCP** y escriba `8000, 8001, 8002, 8003, 9000, 80, 443` en el campo **Puertos locales específicos**.  
+    5.  <span data-ttu-id="a61c7-146">Seleccione **TCP** y escriba `8000, 8001, 8002, 8003, 9000, 80, 443` en el **puertos locales específicos** campo.</span><span class="sxs-lookup"><span data-stu-id="a61c7-146">Select **TCP** and enter `8000, 8001, 8002, 8003, 9000, 80, 443` in the **Specific local ports** field.</span></span>  
   
-    6.  Haga clic en **Siguiente**.  
+    6.  <span data-ttu-id="a61c7-147">Haga clic en **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-147">Click **Next**.</span></span>  
   
-    7.  Seleccione **Permitir la conexión** y haga clic en **Siguiente**.  
+    7.  <span data-ttu-id="a61c7-148">Seleccione **permitir la conexión**y haga clic en **siguiente** .</span><span class="sxs-lookup"><span data-stu-id="a61c7-148">Select **Allow the connection**, and click **Next** .</span></span>  
   
-    8.  Seleccione **Dominio** y **Privado**, y haga clic en **Siguiente**.  
+    8.  <span data-ttu-id="a61c7-149">Seleccione **dominio** y **privada**y haga clic en **siguiente**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-149">Select **Domain** and **Private**, and click **Next**.</span></span>  
   
-    9. Denomine a esta regla `Ejemplos de WCF WF 4.0` y haga clic en **Finalizar**.  
+    9. <span data-ttu-id="a61c7-150">Denomine a esta regla `WCF-WF 4.0 Samples`y haga clic en **finalizar**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-150">Name this rule `WCF-WF 4.0 Samples`, and click **Finish**.</span></span>  
   
-    10. Haga clic en **Reglas de salida** y repita los pasos c a h.  
+    10. <span data-ttu-id="a61c7-151">Haga clic en **reglas de salida** y repita los pasos c a h.</span><span class="sxs-lookup"><span data-stu-id="a61c7-151">Click **Outbound Rules** and repeat steps c to h.</span></span>  
   
-3.  En [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estos pasos.  
+3.  <span data-ttu-id="a61c7-152">En [!INCLUDE[wv](../../../../includes/wv-md.md)] o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estos pasos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-152">On [!INCLUDE[wv](../../../../includes/wv-md.md)] or [!INCLUDE[lserver](../../../../includes/lserver-md.md)], follow these steps.</span></span>  
   
-    1.  Haga clic en **Permitir un programa a través del Firewall de Windows**.  
+    1.  <span data-ttu-id="a61c7-153">Haga clic en **permitir un programa a través de Firewall de Windows**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-153">Click **Allow a program through Windows Firewall**.</span></span>  
   
-    2.  En la pestaña **Excepciones**, haga clic en **Agregar puerto**.  
+    2.  <span data-ttu-id="a61c7-154">En el **excepciones** , haga clic en **agregar puerto**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-154">On the **Exceptions** tab, click **Add Port**.</span></span>  
   
-    3.  Escriba un nombre, escriba el número de puerto 8000 y seleccione la opción **TCP**.  
+    3.  <span data-ttu-id="a61c7-155">Escriba un nombre, escriba 8000 como el número de puerto y seleccione el **TCP** opción.</span><span class="sxs-lookup"><span data-stu-id="a61c7-155">Enter a name, enter 8000 as the port number, and select the **TCP** option.</span></span>  
   
-    4.  Haga clic en el botón **Cambiar ámbito**, seleccione la opción solo **Mi Red** \(subred\) y haga clic en **Aceptar**.  
+    4.  <span data-ttu-id="a61c7-156">Haga clic en el **Cambiar ámbito** botón, seleccione la **mi red** opción única (subred) y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="a61c7-156">Click the **Change Scope** button, select the **My Network** (subnet) only option, and click **OK**.</span></span>  
   
-    5.  Repita los pasos b a d con los puertos 8001, 8002, 8003, 9000, 80 y 443.  
+    5.  <span data-ttu-id="a61c7-157">Repita los pasos b a d con los puertos 8001, 8002, 8003, 9000, 80 y 443.</span><span class="sxs-lookup"><span data-stu-id="a61c7-157">Repeat steps b to d for ports 8001, 8002, 8003, 9000, 80, and 443.</span></span>  
   
-4.  Haga clic en **Aceptar** para cerrar el applet del firewall.  
+4.  <span data-ttu-id="a61c7-158">Haga clic en **Aceptar** para cerrar el applet del firewall.</span><span class="sxs-lookup"><span data-stu-id="a61c7-158">Click **OK** to close the firewall applet.</span></span>  
   
 > [!NOTE]
->  Quite cualquier excepción de firewall cuando termine de trabajar con los ejemplos.Para hacerlo, abra el applet **Panel de control del firewall de Windows** y quite todas las entradas de programa o puerto agregadas por los procedimientos anteriores.
+>  <span data-ttu-id="a61c7-159">Quite cualquier excepción de firewall cuando acabe de trabajar con los ejemplos.</span><span class="sxs-lookup"><span data-stu-id="a61c7-159">Remove any firewall exceptions when you are finished working with the samples.</span></span> <span data-ttu-id="a61c7-160">Para ello, abra el **Panel de Control de Firewall de Windows** applet y quite cualquier programa o puerto entradas que se agregaron mediante los procedimientos anteriores.</span><span class="sxs-lookup"><span data-stu-id="a61c7-160">To do so, open the **Windows Firewall Control Panel** applet and remove any programs or port entries that were added by the previous procedures.</span></span>

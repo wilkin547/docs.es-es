@@ -1,50 +1,48 @@
 ---
-title: "Trabajo con esquemas XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Trabajo con esquemas XML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e21d402dce02ecb332d041f0cda651df911979ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Trabajo con esquemas XML
-Para definir la estructura de un documento XML, así como las relaciones de sus elementos, tipos de datos y restricciones de contenido, se utiliza una definición de tipo de documento \(DTD\) o esquema del lenguaje de definición de esquemas \(XSD\).  Aunque se considera que un documento XML es correcto si cumple todos los requisitos sintácticos que define la recomendación del Lenguaje de marcado extensible \(XML\) 1.0 del W3C \(World Wide Web Consortium\), no se considera válido a menos que sea correcto y además cumpla las restricciones que define su DTD o esquema.  Por lo tanto, aunque todos los documentos XML válidos sean correctos, no todos los documentos XML correctos son válidos.  
+# <a name="working-with-xml-schemas"></a><span data-ttu-id="a45d5-102">Trabajo con esquemas XML</span><span class="sxs-lookup"><span data-stu-id="a45d5-102">Working with XML Schemas</span></span>
+<span data-ttu-id="a45d5-103">Para definir la estructura de un documento XML, así como las relaciones de sus elementos, tipos de datos y restricciones de contenido, se utiliza una definición de tipo de documento (DTD) o esquema del lenguaje de definición de esquemas (XSD).</span><span class="sxs-lookup"><span data-stu-id="a45d5-103">To define the structure of an XML document, as well as its element relationships, data types, and content constraints, you use a document type definition (DTD) or XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="a45d5-104">Aunque se considera que un documento XML es correcto si cumple todos los requisitos sintácticos que define la recomendación del Lenguaje de marcado extensible (XML) 1.0 del W3C (World Wide Web Consortium), no se considera válido a menos que sea correcto y además cumpla las restricciones que define su DTD o esquema.</span><span class="sxs-lookup"><span data-stu-id="a45d5-104">Although an XML document is considered to be well-formed if it meets all the syntactical requirements defined by the World Wide Web Consortium (W3C) Extensible Markup Language (XML) 1.0 Recommendation, it is not considered valid unless it is both well-formed and conforms to the constraints defined by its DTD or schema.</span></span> <span data-ttu-id="a45d5-105">Por lo tanto, aunque todos los documentos XML válidos sean correctos, no todos los documentos XML correctos son válidos.</span><span class="sxs-lookup"><span data-stu-id="a45d5-105">Therefore, although all valid XML documents are well-formed, not all well-formed XML documents are valid.</span></span>  
   
- Para obtener más información acerca de XML, vea la [recomendación W3C XML 1.0](http://go.microsoft.com/fwlink/?linkid=7269).  Para obtener más información acerca del esquema XML, vea la [recomendación del esquema XML de W3C, parte 1: estructuras](http://go.microsoft.com/fwlink/?linkid=48881) y la [recomendación del esquema XML de W3C, parte 2: tipos de datos](http://go.microsoft.com/fwlink/?linkid=17392).  
+ <span data-ttu-id="a45d5-106">Para obtener más información acerca de XML, vea el [recomendación XML 1.0 del W3C](http://go.microsoft.com/fwlink/?linkid=7269).</span><span class="sxs-lookup"><span data-stu-id="a45d5-106">For more information about XML, see the [W3C XML 1.0 Recommendation](http://go.microsoft.com/fwlink/?linkid=7269).</span></span> <span data-ttu-id="a45d5-107">Para obtener más información sobre el esquema XML, vea el [W3C XML Schema Part 1: recomendación de estructuras](http://go.microsoft.com/fwlink/?linkid=48881) y [W3C XML Schema Part 2: Datatypes Recommendation](http://go.microsoft.com/fwlink/?linkid=17392) recomendaciones.</span><span class="sxs-lookup"><span data-stu-id="a45d5-107">For more information about XML Schema, see the [W3C XML Schema Part 1: Structures Recommendation](http://go.microsoft.com/fwlink/?linkid=48881) and the [W3C XML Schema Part 2: Datatypes Recommendation](http://go.microsoft.com/fwlink/?linkid=17392) recommendations.</span></span>  
   
-## En esta sección  
- [Modelo de objetos de esquema XML \(SOM\)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- Describe el Modelo de objetos de esquema \(SOM\) del espacio de nombres <xref:System.Xml.Schema?displayProperty=fullName> que incluye un conjunto de clases que le permiten leer un esquema del lenguaje de definición de esquemas \(XSD\) desde un archivo o crear un esquema en memoria mediante programación.  
+## <a name="in-this-section"></a><span data-ttu-id="a45d5-108">En esta sección</span><span class="sxs-lookup"><span data-stu-id="a45d5-108">In This Section</span></span>  
+ [<span data-ttu-id="a45d5-109">Modelo de objetos de esquema XML (SOM)</span><span class="sxs-lookup"><span data-stu-id="a45d5-109">XML Schema Object Model (SOM)</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ <span data-ttu-id="a45d5-110">Describe el Modelo de objetos de esquema (SOM) del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que incluye un conjunto de clases que le permiten leer un esquema del lenguaje de definición de esquemas (XSD) desde un archivo o crear un esquema en memoria mediante programación.</span><span class="sxs-lookup"><span data-stu-id="a45d5-110">Discusses the Schema Object Model (SOM) in the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace that provides a set of classes that allows you to read a Schema definition language (XSD) schema from a file or programmatically create a schema in-memory.</span></span>  
   
- [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- Describe la clase <xref:System.Xml.Schema.XmlSchemaSet> que es una caché en la que se pueden almacenar y validar esquemas XSD.  
+ [<span data-ttu-id="a45d5-111">XmlSchemaSet para compilación de esquemas</span><span class="sxs-lookup"><span data-stu-id="a45d5-111">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ <span data-ttu-id="a45d5-112">Describe la clase <xref:System.Xml.Schema.XmlSchemaSet> que es una caché en la que se pueden almacenar y validar esquemas XSD.</span><span class="sxs-lookup"><span data-stu-id="a45d5-112">Discusses the <xref:System.Xml.Schema.XmlSchemaSet> class that is a cache where XSD schemas can be stored and validated.</span></span>  
   
- [Validación basada en inserción de XmlSchemaValidator](../../../../docs/standard/data/xml/xmlschemavalidator-push-based-validation.md)  
- Describe la clase <xref:System.Xml.Schema.XmlSchemaValidator> que incluye un mecanismo eficiente y de alto rendimiento para validar datos XML con esquemas XSD mediante inserción.  
+ [<span data-ttu-id="a45d5-113">Validación basada en inserción de XmlSchemaValidator</span><span class="sxs-lookup"><span data-stu-id="a45d5-113">XmlSchemaValidator Push-Based Validation</span></span>](../../../../docs/standard/data/xml/xmlschemavalidator-push-based-validation.md)  
+ <span data-ttu-id="a45d5-114">Describe la clase <xref:System.Xml.Schema.XmlSchemaValidator> que incluye un mecanismo eficiente y de alto rendimiento para validar datos XML con esquemas XSD mediante inserción.</span><span class="sxs-lookup"><span data-stu-id="a45d5-114">Discusses the <xref:System.Xml.Schema.XmlSchemaValidator> class that provides an efficient, high-performance mechanism to validate XML data against XSD schemas in a push-based manner.</span></span>  
   
- [Deducción de esquema XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- Describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un esquema XSD de la estructura de un documento XML.  
+ [<span data-ttu-id="a45d5-115">Deducción de esquema XML</span><span class="sxs-lookup"><span data-stu-id="a45d5-115">Inferring an XML Schema</span></span>](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+ <span data-ttu-id="a45d5-116">Describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un esquema XSD de la estructura de un documento XML.</span><span class="sxs-lookup"><span data-stu-id="a45d5-116">Discusses how to use the <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XSD schema from the structure of an XML document.</span></span>  
   
-## Referencia  
- <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
+## <a name="reference"></a><span data-ttu-id="a45d5-117">Referencia</span><span class="sxs-lookup"><span data-stu-id="a45d5-117">Reference</span></span>  
+ <span data-ttu-id="a45d5-118"><xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="a45d5-118"><xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader></span></span>  
   
-## Secciones relacionadas  
- [Validación de un documento XML en el DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
- Describe cómo validar el XML en el Modelo de objetos de documento \(DOM\).  Puede validarlo a medida que se carga en el DOM o validar un documento XML no validado previamente en el DOM.  
+## <a name="related-sections"></a><span data-ttu-id="a45d5-119">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="a45d5-119">Related Sections</span></span>  
+ [<span data-ttu-id="a45d5-120">Validación de un documento XML en el DOM</span><span class="sxs-lookup"><span data-stu-id="a45d5-120">Validating an XML Document in the DOM</span></span>](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
+ <span data-ttu-id="a45d5-121">Describe cómo validar el XML en el Modelo de objetos de documento (DOM).</span><span class="sxs-lookup"><span data-stu-id="a45d5-121">Discusses how to validate the XML in the Document Object Model (DOM).</span></span> <span data-ttu-id="a45d5-122">Puede validarlo a medida que se carga en el DOM o validar un documento XML no validado previamente en el DOM.</span><span class="sxs-lookup"><span data-stu-id="a45d5-122">You can validate the XML as it is loaded into the DOM, or validate a previously unvalidated XML document in the DOM.</span></span>  
   
- [Validación de esquemas con XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
- Describe cómo validar el XML que se está editando y por el que se está navegando utilizando la clase <xref:System.Xml.XPath.XPathNavigator>.
+ [<span data-ttu-id="a45d5-123">Validación de esquemas con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="a45d5-123">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
+ <span data-ttu-id="a45d5-124">Describe cómo validar el XML que se está editando y por el que se está navegando utilizando la clase <xref:System.Xml.XPath.XPathNavigator>.</span><span class="sxs-lookup"><span data-stu-id="a45d5-124">Discusses how to validate XML being navigated and edited using the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>

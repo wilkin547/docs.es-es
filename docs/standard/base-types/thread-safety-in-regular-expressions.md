@@ -1,35 +1,38 @@
 ---
-title: "Seguridad para subprocesos en expresiones regulares | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "expresiones regulares de .NET Framework, subprocesos"
-  - "analizar texto con expresiones regulares, subprocesos"
-  - "coincidencia de patrones con expresiones regulares, subprocesos"
-  - "expresiones regulares, subprocesos"
-  - "buscar con expresiones regulares, subprocesos"
+title: Seguridad para subprocesos en expresiones regulares
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework regular expressions, threads
+- regular expressions, threads
+- searching with regular expressions, threads
+- parsing text with regular expressions, threads
+- pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b4cfa24da8083eac01275ad76f5c2db974b39a25
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Seguridad para subprocesos en expresiones regulares
-La clase <xref:System.Text.RegularExpressions.Regex> en sí es segura para la ejecución de subprocesos e inmutable \(de sólo lectura\).  Es decir, se pueden crear objetos **Regex** en un subproceso cualquiera y pueden compartirse entre varios subprocesos; se puede llamar a los métodos de búsqueda de coincidencias desde un subproceso cualquiera, y no modificar nunca ningún estado global.  
+# <a name="thread-safety-in-regular-expressions"></a><span data-ttu-id="adc4c-102">Seguridad para subprocesos en expresiones regulares</span><span class="sxs-lookup"><span data-stu-id="adc4c-102">Thread Safety in Regular Expressions</span></span>
+<span data-ttu-id="adc4c-103">El <xref:System.Text.RegularExpressions.Regex> propia clase es subprocesos seguro e inmutable (de solo lectura).</span><span class="sxs-lookup"><span data-stu-id="adc4c-103">The <xref:System.Text.RegularExpressions.Regex> class itself is thread safe and immutable (read-only).</span></span> <span data-ttu-id="adc4c-104">Es decir, se pueden crear objetos **Regex** en cualquier subproceso y compartirlos entre varios subprocesos; los métodos de coincidencia pueden llamarse desde cualquier subproceso y no modifican nunca el estado global.</span><span class="sxs-lookup"><span data-stu-id="adc4c-104">That is, **Regex** objects can be created on any thread and shared between threads; matching methods can be called from any thread and never alter any global state.</span></span>  
   
- No obstante, los objetos de resultados \(**Match** y **MatchCollection**\) devueltos por **Regex** deben utilizarse en un único subproceso.  Aunque muchos de estos objetos son lógicamente inmutables, sus implementaciones pueden retrasar el cálculo de algunos resultados para mejorar el rendimiento y, en consecuencia, los llamadores deberán serializar el acceso a ellos.  
+ <span data-ttu-id="adc4c-105">Sin embargo, los objetos de resultado (**coincidencia** y **MatchCollection**) devuelto por **Regex** debe utilizarse en un único subproceso.</span><span class="sxs-lookup"><span data-stu-id="adc4c-105">However, result objects (**Match** and **MatchCollection**) returned by **Regex** should be used on a single thread.</span></span> <span data-ttu-id="adc4c-106">Aunque muchos de estos objetos son lógicamente inmutables, sus implementaciones pueden retrasar el cálculo de algunos resultados para mejorar el rendimiento y, en consecuencia, los llamadores deben serializar el acceso a ellos.</span><span class="sxs-lookup"><span data-stu-id="adc4c-106">Although many of these objects are logically immutable, their implementations could delay computation of some results to improve performance, and as a result, callers must serialize access to them.</span></span>  
   
- Si es necesario que varios subprocesos compartan los objetos de resultados de **Regex**, estos objetos pueden convertirse en instancias seguras para la ejecución de subprocesos llamando a sus métodos sincronizados.  A excepción de los enumeradores, todas las clases de expresiones regulares son seguras para la ejecución de subprocesos o pueden convertirse en objetos seguros para la ejecución de subprocesos mediante un método sincronizado.  
+ <span data-ttu-id="adc4c-107">Si es necesario compartir objetos de resultado de **Regex** en varios subprocesos, estos objetos se pueden convertir en instancias seguras para subprocesos llamando a sus métodos sincronizados.</span><span class="sxs-lookup"><span data-stu-id="adc4c-107">If there is a need to share **Regex** result objects on multiple threads, these objects can be converted to thread-safe instances by calling their synchronized methods.</span></span> <span data-ttu-id="adc4c-108">A excepción de los enumeradores, todas las clases de expresiones regulares son seguras para subprocesos o pueden convertirse en objetos seguros para subprocesos mediante un método sincronizado.</span><span class="sxs-lookup"><span data-stu-id="adc4c-108">With the exception of enumerators, all regular expression classes are thread safe or can be converted into thread-safe objects by a synchronized method.</span></span>  
   
- Los enumeradores son la única excepción.  Una aplicación debe serializar las llamadas a enumeradores de colecciones.  La regla establece que si una colección puede enumerarse simultáneamente en más de un subproceso, los métodos de los enumeradores deben sincronizarse en el objeto raíz de la colección que recorre el enumerador.  
+ <span data-ttu-id="adc4c-109">Los enumeradores son la única excepción.</span><span class="sxs-lookup"><span data-stu-id="adc4c-109">Enumerators are the only exception.</span></span> <span data-ttu-id="adc4c-110">Las aplicaciones debe serializar las llamadas a enumeradores de colecciones.</span><span class="sxs-lookup"><span data-stu-id="adc4c-110">An application must serialize calls to collection enumerators.</span></span> <span data-ttu-id="adc4c-111">La regla es que, si una colección puede enumerarse simultáneamente en más de un subproceso, se deben sincronizar los métodos de enumerador en el objeto raíz de la colección que recorre el enumerador.</span><span class="sxs-lookup"><span data-stu-id="adc4c-111">The rule is that if a collection can be enumerated on more than one thread simultaneously, you should synchronize enumerator methods on the root object of the collection traversed by the enumerator.</span></span>  
   
-## Vea también  
- [Expresiones regulares de .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="adc4c-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="adc4c-112">See Also</span></span>  
+ [<span data-ttu-id="adc4c-113">Expresiones regulares de .NET</span><span class="sxs-lookup"><span data-stu-id="adc4c-113">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)

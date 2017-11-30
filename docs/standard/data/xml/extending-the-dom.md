@@ -1,41 +1,42 @@
 ---
-title: "Extender DOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Extender DOM
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Extender DOM
-.NET Framework de Microsoft incluye un conjunto básico de clases que proporcionan una implementación del modelo de objetos de documento \(DOM\).  <xref:System.Xml.XmlNode> y sus clases derivadas proporcionan métodos y propiedades que permiten navegar, consultar y modificar el contenido y la estructura de un documento XML.  
+# <a name="extending-the-dom"></a><span data-ttu-id="96629-102">Extender DOM</span><span class="sxs-lookup"><span data-stu-id="96629-102">Extending the DOM</span></span>
+<span data-ttu-id="96629-103">Microsoft .NET Framework incluye un conjunto de clases base que proporciona una implementación de Document Object Model (DOM) XML.</span><span class="sxs-lookup"><span data-stu-id="96629-103">The Microsoft .NET Framework includes a base set of classes that provides an implementation of the XML Document Object Model (DOM).</span></span> <span data-ttu-id="96629-104"><xref:System.Xml.XmlNode> y sus clases derivadas proporcionan métodos y propiedades que permiten navegar, consultar y modificar el contenido y la estructura de un documento XML.</span><span class="sxs-lookup"><span data-stu-id="96629-104">The <xref:System.Xml.XmlNode>, and its derived classes, provides methods and properties that allow you to navigate, query, and modify the content and structure of an XML document.</span></span>  
   
- Cuando se carga el contenido XML en la memoria mediante DOM, los nodos creados contienen información como el nombre y el tipo de nodo, entre otros datos.  Puede haber ocasiones en las que necesite información de nodo específica que no proporcionan las clases base.  Por ejemplo, es posible que desee conocer el número de línea y posición del nodo.  En este caso, puede derivar clases nuevas de las clases DOM existentes y agregar funcionalidad adicional.  
+ <span data-ttu-id="96629-105">Cuando se carga el contenido XML en la memoria mediante DOM, los nodos creados contienen información como el nombre y el tipo de nodo, entre otros datos.</span><span class="sxs-lookup"><span data-stu-id="96629-105">When XML content is loaded into memory using the DOM, the nodes created contain information such as node name, node type, and so on.</span></span> <span data-ttu-id="96629-106">Puede haber ocasiones en las que necesite información de nodo específica que no proporcionan las clases base.</span><span class="sxs-lookup"><span data-stu-id="96629-106">There may be occasions where you require specific node information that the base classes do not provide.</span></span> <span data-ttu-id="96629-107">Por ejemplo, es posible que desee conocer el número de línea y posición del nodo.</span><span class="sxs-lookup"><span data-stu-id="96629-107">For example, you may want to see the line number and position of the node.</span></span> <span data-ttu-id="96629-108">En este caso, puede derivar clases nuevas de las clases DOM existentes y agregar funcionalidad adicional.</span><span class="sxs-lookup"><span data-stu-id="96629-108">In this case, you can derive new classes from the existing DOM classes and add additional functionality.</span></span>  
   
- Al derivar clases nuevas hay que seguir dos directrices generales:  
+ <span data-ttu-id="96629-109">Al derivar clases nuevas hay que seguir dos directrices generales:</span><span class="sxs-lookup"><span data-stu-id="96629-109">There are two general guidelines when deriving new classes:</span></span>  
   
--   Se recomienda no derivar nunca desde la clase <xref:System.Xml.XmlNode>.  En su lugar, se aconseja derivar clases desde la clase que corresponda al tipo de nodo en el que esté interesado.  Por ejemplo, si desea devolver información adicional sobre nodos de atributo, puede derivar desde la clase <xref:System.Xml.XmlAttribute>.  
+-   <span data-ttu-id="96629-110">Se recomienda no derivar nunca desde la clase <xref:System.Xml.XmlNode>.</span><span class="sxs-lookup"><span data-stu-id="96629-110">It is recommended that you never derive from the <xref:System.Xml.XmlNode> class.</span></span> <span data-ttu-id="96629-111">En su lugar, se aconseja derivar clases desde la clase que corresponda al tipo de nodo en el que esté interesado.</span><span class="sxs-lookup"><span data-stu-id="96629-111">Instead, it is recommended that you derive classes from the class corresponding to the node type that you are interested in.</span></span> <span data-ttu-id="96629-112">Por ejemplo, si desea devolver información adicional sobre nodos de atributo, puede derivar desde la clase <xref:System.Xml.XmlAttribute>.</span><span class="sxs-lookup"><span data-stu-id="96629-112">For example, if you want to return additional information on attribute nodes, you can derive from the <xref:System.Xml.XmlAttribute> class.</span></span>  
   
--   Excepto en los métodos de creación de nodos, se recomienda que al invalidar una función, llame siempre a la versión base de la misma y, a continuación, agregue el procesamiento adicional.  
+-   <span data-ttu-id="96629-113">Excepto en los métodos de creación de nodos, se recomienda que al invalidar una función, llame siempre a la versión base de la misma y, a continuación, agregue el procesamiento adicional.</span><span class="sxs-lookup"><span data-stu-id="96629-113">Except for the node creation methods, it is recommended that when overriding a function, you should always call the base version of the function and then add any additional processing.</span></span>  
   
-## Crear sus propias instancias de nodo  
- La clase <xref:System.Xml.XmlDocument> contiene métodos de creación de nodos.  Cuando se carga un archivo XML, se llama a estos métodos para crear los nodos.  Se pueden invalidar los métodos de forma que sus instancias de nodo se creen al cargar un documento.  Por ejemplo, si ha extendido la clase <xref:System.Xml.XmlElement>, heredará la clase <xref:System.Xml.XmlDocument> e invalidará el método <xref:System.Xml.XmlDocument.CreateElement%2A>.  
+## <a name="creating-your-own-node-instances"></a><span data-ttu-id="96629-114">Crear sus propias instancias de nodo</span><span class="sxs-lookup"><span data-stu-id="96629-114">Creating Your Own Node Instances</span></span>  
+ <span data-ttu-id="96629-115">La clase <xref:System.Xml.XmlDocument> contiene métodos de creación de nodos.</span><span class="sxs-lookup"><span data-stu-id="96629-115">The <xref:System.Xml.XmlDocument> class contains node creation methods.</span></span> <span data-ttu-id="96629-116">Cuando se carga un archivo XML, se llama a estos métodos para crear los nodos.</span><span class="sxs-lookup"><span data-stu-id="96629-116">When an XML file is loaded, these methods are called to create the nodes.</span></span> <span data-ttu-id="96629-117">Se pueden invalidar los métodos de forma que sus instancias de nodo se creen al cargar un documento.</span><span class="sxs-lookup"><span data-stu-id="96629-117">You can override these methods so that your node instances are created when a document is loaded.</span></span> <span data-ttu-id="96629-118">Por ejemplo, si ha extendido la clase <xref:System.Xml.XmlElement>, heredará la clase <xref:System.Xml.XmlDocument> e invalidará el método <xref:System.Xml.XmlDocument.CreateElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="96629-118">For example, if you have extended the <xref:System.Xml.XmlElement> class, you would inherit the <xref:System.Xml.XmlDocument> class and override the <xref:System.Xml.XmlDocument.CreateElement%2A> method.</span></span>  
   
- En el ejemplo siguiente se muestra cómo invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A>para devolver su implementación de la clase <xref:System.Xml.XmlElement>.  
+ <span data-ttu-id="96629-119">En el ejemplo siguiente se muestra cómo invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A>para devolver su implementación de la clase <xref:System.Xml.XmlElement>.</span><span class="sxs-lookup"><span data-stu-id="96629-119">The following example shows how to override the <xref:System.Xml.XmlDocument.CreateElement%2A> method to return your implementation of the <xref:System.Xml.XmlElement> class.</span></span>  
   
 ```vb  
 Class LineInfoDocument  
@@ -55,10 +56,10 @@ class LineInfoDocument : XmlDocument {
   }  
 ```  
   
-## Extender una clase  
- Para extender una clase, derive su clase de una de las clases DOM existentes.  Se puede invalidar cualquiera de los métodos virtuales o propiedades de la clase base, o bien agregar los suyos propios.  
+## <a name="extending-a-class"></a><span data-ttu-id="96629-120">Extender una clase</span><span class="sxs-lookup"><span data-stu-id="96629-120">Extending a Class</span></span>  
+ <span data-ttu-id="96629-121">Para extender una clase, derive su clase de una de las clases DOM existentes.</span><span class="sxs-lookup"><span data-stu-id="96629-121">To extend a class, derive your class from one of the existing DOM classes.</span></span> <span data-ttu-id="96629-122">Se puede invalidar cualquiera de los métodos virtuales o propiedades de la clase base, o bien agregar los suyos propios.</span><span class="sxs-lookup"><span data-stu-id="96629-122">You can then override any of the virtual methods or properties in the base class, or add your own.</span></span>  
   
- En el ejemplo siguiente se crea una clase nueva, que implementa la clase <xref:System.Xml.XmlElement> y la interfaz <xref:System.Xml.IXmlLineInfo>.  Se definen métodos y propiedades adicionales que permiten a los usuarios recopilar información de línea.  
+ <span data-ttu-id="96629-123">En el ejemplo siguiente se crea una clase nueva, que implementa la clase <xref:System.Xml.XmlElement> y la interfaz <xref:System.Xml.IXmlLineInfo>.</span><span class="sxs-lookup"><span data-stu-id="96629-123">In the following example, a new class is created, which implements the <xref:System.Xml.XmlElement> class and the <xref:System.Xml.IXmlLineInfo> interface.</span></span> <span data-ttu-id="96629-124">Se definen métodos y propiedades adicionales que permiten a los usuarios recopilar información de línea.</span><span class="sxs-lookup"><span data-stu-id="96629-124">Additional methods and properties are defined which allows users to gather line information.</span></span>  
   
 ```vb  
 Class LineInfoElement  
@@ -122,8 +123,8 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.  
 ```  
   
-### Ejemplo  
- En el ejemplo siguiente se cuenta el número de elementos de un documento XML.  
+### <a name="example"></a><span data-ttu-id="96629-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="96629-125">Example</span></span>  
+ <span data-ttu-id="96629-126">En el ejemplo siguiente se cuenta el número de elementos de un documento XML.</span><span class="sxs-lookup"><span data-stu-id="96629-126">The following example counts the number of elements in an XML document.</span></span>  
   
 ```vb  
 Imports System  
@@ -164,7 +165,7 @@ Class LineInfoElement
       CType(doc, LineInfoDocument).IncrementElementCount()  
    End Sub 'New  
 End Class 'LineInfoElement  
- _ 'End LineInfoElement class.   
+ _ 'End LineInfoElement class.  
   
 Public Class Test  
   
@@ -225,10 +226,10 @@ public class Test {
 }   
 ```  
   
-##### Entrada  
- book.xml  
+##### <a name="input"></a><span data-ttu-id="96629-127">Entrada</span><span class="sxs-lookup"><span data-stu-id="96629-127">Input</span></span>  
+ <span data-ttu-id="96629-128">book.xml</span><span class="sxs-lookup"><span data-stu-id="96629-128">book.xml</span></span>  
   
-```  
+```xml  
 <!--sample XML fragment-->  
 <book genre='novel' ISBN='1-861001-57-5' misc='sale-item'>  
   <title>The Handmaid's Tale</title>  
@@ -236,23 +237,23 @@ public class Test {
 </book>  
 ```  
   
-##### Salida  
+##### <a name="output"></a><span data-ttu-id="96629-129">Salida</span><span class="sxs-lookup"><span data-stu-id="96629-129">Output</span></span>  
   
 ```  
 Number of elements in book.xml: 3  
 ```  
   
- Para obtener un ejemplo en el que se muestre cómo extender las clases DOM XML \(System.Xml\), consulte www.gotdotnet.com\/userfiles\/XMLDom\/extendDOM.zip.  
+ <span data-ttu-id="96629-130">Para obtener un ejemplo en el que se muestre cómo extender las clases DOM XML (System.Xml), consulte www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip.</span><span class="sxs-lookup"><span data-stu-id="96629-130">For an example showing how to extend the XML DOM classes (System.Xml), see www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip.</span></span>  
   
-## Controlador de eventos de nodo  
- La implementación .NET Framework de DOM incluye también un sistema de eventos que permite recibir y controlar eventos cuando se cambian nodos en un documento XML.  Mediante las clases <xref:System.Xml.XmlNodeChangedEventHandler> y <xref:System.Xml.XmlNodeChangedEventArgs>, puede capturar los eventos `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, y `NodeRemoving`.  
+## <a name="node-event-handler"></a><span data-ttu-id="96629-131">Controlador de eventos de nodo</span><span class="sxs-lookup"><span data-stu-id="96629-131">Node Event Handler</span></span>  
+ <span data-ttu-id="96629-132">La implementación .NET Framework de DOM incluye también un sistema de eventos que permite recibir y controlar eventos cuando se cambian nodos en un documento XML.</span><span class="sxs-lookup"><span data-stu-id="96629-132">The .NET Framework implementation of the DOM also includes an event system that enables you to receive and handle events when nodes in an XML document change.</span></span> <span data-ttu-id="96629-133">Mediante las clases <xref:System.Xml.XmlNodeChangedEventHandler> y <xref:System.Xml.XmlNodeChangedEventArgs>, puede capturar los eventos `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, y `NodeRemoving`.</span><span class="sxs-lookup"><span data-stu-id="96629-133">Using the <xref:System.Xml.XmlNodeChangedEventHandler> and <xref:System.Xml.XmlNodeChangedEventArgs> classes, you can capture `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, and `NodeRemoving` events.</span></span>  
   
- El proceso de control de eventos funciona exactamente igual en las clases derivadas que en las clases DOM originales.  
+ <span data-ttu-id="96629-134">El proceso de control de eventos funciona exactamente igual en las clases derivadas que en las clases DOM originales.</span><span class="sxs-lookup"><span data-stu-id="96629-134">The event-handling process works exactly the same in derived classes as it would in the original DOM classes.</span></span>  
   
- Para obtener más información acerca del control de eventos de nodo, vea [Eventos](../../../../docs/standard/events/index.md) y [XmlNodeChangedEventHandler \(Delegado\)](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ <span data-ttu-id="96629-135">Para obtener más información acerca del control de eventos de nodo, vea [eventos](../../../../docs/standard/events/index.md) y <xref:System.Xml.XmlNodeChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="96629-135">For more information regarding node event handling, see [Events](../../../../docs/standard/events/index.md) and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## Atributos predeterminados y el método CreateElement  
- Si va a invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A> en una clase derivada, los atributos predeterminados no se agregan al crear elementos nuevos mientras se edita el documento.  Esto solo constituye un problema durante la edición.  Puesto que el método <xref:System.Xml.XmlDocument.CreateElement%2A> es responsable de la adición de atributos predeterminados a un <xref:System.Xml.XmlDocument>, debe codificar esta funcionalidad en dicho método <xref:System.Xml.XmlDocument.CreateElement%2A>.  Si va a cargar un <xref:System.Xml.XmlDocument> que incluye atributos predeterminados, se controlarán correctamente.  Para obtener más información acerca de atributos predeterminados, vea [Crear nuevos atributos para elementos en DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+## <a name="default-attributes-and-the-createelement-method"></a><span data-ttu-id="96629-136">Atributos predeterminados y el método CreateElement</span><span class="sxs-lookup"><span data-stu-id="96629-136">Default Attributes and the CreateElement Method</span></span>  
+ <span data-ttu-id="96629-137">Si va a invalidar el método <xref:System.Xml.XmlDocument.CreateElement%2A> en una clase derivada, los atributos predeterminados no se agregan al crear elementos nuevos mientras se edita el documento.</span><span class="sxs-lookup"><span data-stu-id="96629-137">If you are overriding the <xref:System.Xml.XmlDocument.CreateElement%2A> method in a derived class, default attributes are not added when you are creating new elements while editing the document.</span></span> <span data-ttu-id="96629-138">Esto solo constituye un problema durante la edición.</span><span class="sxs-lookup"><span data-stu-id="96629-138">This is only an issue while editing.</span></span> <span data-ttu-id="96629-139">Puesto que el método <xref:System.Xml.XmlDocument.CreateElement%2A> es responsable de la adición de atributos predeterminados a un <xref:System.Xml.XmlDocument>, debe codificar esta funcionalidad en dicho método <xref:System.Xml.XmlDocument.CreateElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="96629-139">Because the <xref:System.Xml.XmlDocument.CreateElement%2A> method is responsible for adding default attributes to an <xref:System.Xml.XmlDocument>, you must code this functionality in the <xref:System.Xml.XmlDocument.CreateElement%2A> method.</span></span> <span data-ttu-id="96629-140">Si va a cargar un <xref:System.Xml.XmlDocument> que incluye atributos predeterminados, se controlarán correctamente.</span><span class="sxs-lookup"><span data-stu-id="96629-140">If you are loading an <xref:System.Xml.XmlDocument> that includes default attributes, they will be handled correctly.</span></span> <span data-ttu-id="96629-141">Para obtener más información acerca de atributos predeterminados, consulte [crear nuevos atributos para elementos en DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).</span><span class="sxs-lookup"><span data-stu-id="96629-141">For more information on default attributes, see [Creating New Attributes for Elements in the DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).</span></span>  
   
-## Vea también  
- [Modelo de objetos de documento XML \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="96629-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="96629-142">See Also</span></span>  
+ [<span data-ttu-id="96629-143">Modelo de objetos de documento (DOM) de XML</span><span class="sxs-lookup"><span data-stu-id="96629-143">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

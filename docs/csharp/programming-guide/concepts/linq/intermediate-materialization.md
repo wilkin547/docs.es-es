@@ -1,31 +1,27 @@
 ---
 title: "Materialización intermedia (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 46d347921e24bc5504c69534d7b5c087818a6c7f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3faf721dd4dd9cdda2f7d5f2d440c8d3c6623968
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="intermediate-materialization-c"></a>Materialización intermedia (C#)
-Si no tiene cuidado, en algunas situaciones puede alterar drásticamente el perfil de memoria y rendimiento de su aplicación causando una materialización prematura de las recopilaciones de sus consultas. Algunos operadores de consulta estándar provocan la materialización de su recopilación de origen antes de producir un elemento único. Por ejemplo, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=fullName> primero recorre en iteración toda la recopilación de origen, después ordena todos los elementos y finalmente produce el primer elemento. Esto significa que resulta caro obtener el primer elemento de una recopilación ordenada; cada elemento posterior no es caro. Esto tiene sentido: sería imposible que el operador de consulta hiciera lo contrario.  
+# <a name="intermediate-materialization-c"></a><span data-ttu-id="6615a-102">Materialización intermedia (C#)</span><span class="sxs-lookup"><span data-stu-id="6615a-102">Intermediate Materialization (C#)</span></span>
+<span data-ttu-id="6615a-103">Si no tiene cuidado, en algunas situaciones puede alterar drásticamente el perfil de memoria y rendimiento de su aplicación causando una materialización prematura de las recopilaciones de sus consultas.</span><span class="sxs-lookup"><span data-stu-id="6615a-103">If you are not careful, in some situations you can drastically alter the memory and performance profile of your application by causing premature materialization of collections in your queries.</span></span> <span data-ttu-id="6615a-104">Algunos operadores de consulta estándar provocan la materialización de su recopilación de origen antes de producir un elemento único.</span><span class="sxs-lookup"><span data-stu-id="6615a-104">Some standard query operators cause materialization of their source collection before yielding a single element.</span></span> <span data-ttu-id="6615a-105">Por ejemplo, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> primero recorre en iteración toda la recopilación de origen, después ordena todos los elementos y finalmente produce el primer elemento.</span><span class="sxs-lookup"><span data-stu-id="6615a-105">For example, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> first iterates through its entire source collection, then sorts all items, and then finally yields the first item.</span></span> <span data-ttu-id="6615a-106">Esto significa que resulta caro obtener el primer elemento de una recopilación ordenada; cada elemento posterior no es caro.</span><span class="sxs-lookup"><span data-stu-id="6615a-106">This means that it is expensive to get the first item of an ordered collection; each item thereafter is not expensive.</span></span> <span data-ttu-id="6615a-107">Esto tiene sentido: sería imposible que el operador de consulta hiciera lo contrario.</span><span class="sxs-lookup"><span data-stu-id="6615a-107">This makes sense: It would be impossible for that query operator to do otherwise.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo altera el ejemplo anterior. El método `AppendString` llama a <xref:System.Linq.Enumerable.ToList%2A> antes de recorrer en iteración el origen. Esto provoca la materialización.  
+## <a name="example"></a><span data-ttu-id="6615a-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6615a-108">Example</span></span>  
+ <span data-ttu-id="6615a-109">Este ejemplo altera el ejemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="6615a-109">This example alters the previous example.</span></span> <span data-ttu-id="6615a-110">El método `AppendString` llama a <xref:System.Linq.Enumerable.ToList%2A> antes de recorrer en iteración el origen.</span><span class="sxs-lookup"><span data-stu-id="6615a-110">The `AppendString` method calls <xref:System.Linq.Enumerable.ToList%2A> before iterating through the source.</span></span> <span data-ttu-id="6615a-111">Esto provoca la materialización.</span><span class="sxs-lookup"><span data-stu-id="6615a-111">This causes materialization.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -76,7 +72,7 @@ class Program
 }  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="6615a-112">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="6615a-112">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -92,12 +88,11 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- En este ejemplo puede ver que la llamada a <xref:System.Linq.Enumerable.ToList%2A> hace que `AppendString` enumere todo su origen antes de producir el primer elemento. Si el origen fuera una matriz grande, alteraría significativamente el perfil de memoria de la aplicación.  
+ <span data-ttu-id="6615a-113">En este ejemplo puede ver que la llamada a <xref:System.Linq.Enumerable.ToList%2A> hace que `AppendString` enumere todo su origen antes de producir el primer elemento.</span><span class="sxs-lookup"><span data-stu-id="6615a-113">In this example, you can see that the call to <xref:System.Linq.Enumerable.ToList%2A> causes `AppendString` to enumerate its entire source before yielding the first item.</span></span> <span data-ttu-id="6615a-114">Si el origen fuera una matriz grande, alteraría significativamente el perfil de memoria de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6615a-114">If the source were a large array, this would significantly alter the memory profile of the application.</span></span>  
   
- Los operadores de consulta estándar también se pueden encadenar juntos. Esto se ilustra en el tema final de este tutorial.  
+ <span data-ttu-id="6615a-115">Los operadores de consulta estándar también se pueden encadenar juntos.</span><span class="sxs-lookup"><span data-stu-id="6615a-115">Standard query operators can also be chained together.</span></span> <span data-ttu-id="6615a-116">Esto se ilustra en el tema final de este tutorial.</span><span class="sxs-lookup"><span data-stu-id="6615a-116">The final topic in this tutorial illustrates this.</span></span>  
   
--   [Chaining Standard Query Operators Together (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md) (Encadenar juntos operadores de consulta estándar [C#])  
+-   <span data-ttu-id="6615a-117">[Chaining Standard Query Operators Together (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md) (Encadenar juntos operadores de consulta estándar [C#])</span><span class="sxs-lookup"><span data-stu-id="6615a-117">[Chaining Standard Query Operators Together (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Encadenar consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-
+## <a name="see-also"></a><span data-ttu-id="6615a-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="6615a-118">See Also</span></span>  
+ [<span data-ttu-id="6615a-119">Tutorial: Encadenar consultas juntas (C#)</span><span class="sxs-lookup"><span data-stu-id="6615a-119">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

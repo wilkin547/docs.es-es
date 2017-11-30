@@ -1,79 +1,60 @@
 ---
 title: "Utilizar estructuras (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- structs [C#], using
+helpviewer_keywords: structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 94181c42ce913dc76c9a074e4bcbb8240764c896
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67fa4f764e6e40041e4b8e37eccbd1adb2b509d3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-structs-c-programming-guide"></a>Utilizar estructuras (Guía de programación de C#)
-El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`. Aunque es igual de válido representar un punto como un elemento [class](../../../csharp/language-reference/keywords/class.md) con [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), seguramente un [struct](../../../csharp/language-reference/keywords/struct.md) sea más eficaz en algunos escenarios. Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso. Como [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contiene un objeto denominado <xref:System.Drawing.Point>, denominaremos el struct de este ejemplo "CoOrds".  
+# <a name="using-structs-c-programming-guide"></a><span data-ttu-id="9d5c3-102">Utilizar estructuras (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="9d5c3-102">Using Structs (C# Programming Guide)</span></span>
+<span data-ttu-id="9d5c3-103">El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-103">The `struct` type is suitable for representing lightweight objects such as `Point`, `Rectangle`, and `Color`.</span></span> <span data-ttu-id="9d5c3-104">Aunque es igual de válido representar un punto como un elemento [class](../../../csharp/language-reference/keywords/class.md) con [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), seguramente un [struct](../../../csharp/language-reference/keywords/struct.md) sea más eficaz en algunos escenarios.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-104">Although it is just as convenient to represent a point as a [class](../../../csharp/language-reference/keywords/class.md) with [Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), a [struct](../../../csharp/language-reference/keywords/struct.md) might be more efficient in some scenarios.</span></span> <span data-ttu-id="9d5c3-105">Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-105">For example, if you declare an array of 1000 `Point` objects, you will allocate additional memory for referencing each object; in this case, a struct would be less expensive.</span></span> <span data-ttu-id="9d5c3-106">Como [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contiene un objeto denominado <xref:System.Drawing.Point>, denominaremos el struct de este ejemplo "CoOrds".</span><span class="sxs-lookup"><span data-stu-id="9d5c3-106">Because the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contains an object called <xref:System.Drawing.Point>, the struct in this example is named "CoOrds" instead.</span></span>  
   
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- Definir un constructor (sin parámetros) predeterminado para un struct es un error, como también lo es inicializar un campo de instancia en el cuerpo de un struct. Los miembros del struct solo se pueden inicializar mediante un constructor con parámetros, o bien teniendo acceso individualmente a cada miembro una vez declarado el struct. Los miembros privados o inaccesibles por cualquier otro motivo solo se pueden inicializar en un constructor.  
+ <span data-ttu-id="9d5c3-107">Definir un constructor (sin parámetros) predeterminado para un struct es un error,</span><span class="sxs-lookup"><span data-stu-id="9d5c3-107">It is an error to define a default (parameterless) constructor for a struct.</span></span> <span data-ttu-id="9d5c3-108">como también lo es inicializar un campo de instancia en el cuerpo de un struct.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-108">It is also an error to initialize an instance field in a struct body.</span></span> <span data-ttu-id="9d5c3-109">Puede inicializar los miembros de struct accesible desde el exterior solo mediante un constructor parametrizado, implícito, constructor predeterminado, un [inicializador de objeto](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), o mediante el acceso a los miembros individualmente una vez declarado el struct.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-109">You can initialize externally accessible struct members only by using a parameterized constructor, the implicit, default constructor, an [object initializer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), or by accessing the members individually after the struct is declared.</span></span> <span data-ttu-id="9d5c3-110">Los miembros privados o inaccesibles requieren el uso de constructores exclusivamente.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-110">Any private or otherwise inaccessible members require the use of constructors exclusively.</span></span>
   
- Cuando se crea un objeto de struct mediante el operador [new](../../../csharp/language-reference/keywords/new.md) , el objeto se crea y se llama al constructor apropiado. A diferencia de las clases, se pueden crear instancias de structs sin usar el operador `new` . En tal caso, no hay ninguna llamada de constructor, con lo cual la asignación es más eficaz. Pero los campos seguirán sin asignar y el objeto no se podrá usar hasta que todos los campos se inicialicen.  
+ <span data-ttu-id="9d5c3-111">Cuando se crea un objeto de struct mediante el [nueva](../../../csharp/language-reference/keywords/new.md) (operador), se crea y se llama al constructor adecuado según la [firma del constructor](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax).</span><span class="sxs-lookup"><span data-stu-id="9d5c3-111">When you create a struct object using the [new](../../../csharp/language-reference/keywords/new.md) operator, it gets created and the appropriate constructor is called according to the [constructor's signature](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax).</span></span> <span data-ttu-id="9d5c3-112">A diferencia de las clases, se pueden crear instancias de structs sin usar el operador `new` .</span><span class="sxs-lookup"><span data-stu-id="9d5c3-112">Unlike classes, structs can be instantiated without using the `new` operator.</span></span> <span data-ttu-id="9d5c3-113">En tal caso, no hay ninguna llamada de constructor, con lo cual la asignación es más eficaz.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-113">In such a case, there is no constructor call, which makes the allocation more efficient.</span></span> <span data-ttu-id="9d5c3-114">Pero los campos seguirán sin asignar y el objeto no se podrá usar hasta que todos los campos se inicialicen.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-114">However, the fields will remain unassigned and the object cannot be used until all of the fields are initialized.</span></span> <span data-ttu-id="9d5c3-115">Esto incluye la incapacidad para obtener o establecer los valores a través de las propiedades implementadas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-115">This includes the inability to get or set values through auto-implemented properties.</span></span>
+ 
+ <span data-ttu-id="9d5c3-116">Si crea una instancia de un objeto de struct mediante el valor predeterminado, el constructor sin parámetros, todos los miembros se asignan según sus [valores predeterminados](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="9d5c3-116">If you instantiate a struct object using the default, parameterless constructor, all members are assigned according to their [default values](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).</span></span>
   
- Cuando un struct contiene un tipo de referencia como miembro, se debe invocar explícitamente el constructor predeterminado de ese miembro, ya que, de lo contrario, el miembro seguirá sin asignar y el struct no se podrá usar (esto genera el error del compilador CS0171).  
+ <span data-ttu-id="9d5c3-117">Al escribir un constructor con parámetros para un struct, debe inicializar explícitamente todos los miembros; en caso contrario, uno o más miembros permanecen sin asignar y no se puede usar la estructura, que produce el error del compilador CS0171.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-117">When writing a constructor with parameters for a struct, you must explicitly initialize all members; otherwise one or more members remain unassigned and the struct cannot be used, producing compiler error CS0171.</span></span>  
   
- En los structs no existe el concepto de herencia que sí hay en las clases. Así, un struct no puede heredar de otra clase o de otro struct, como tampoco puede ser la base de una clase. Pero los structs sí heredan de la clase base <xref:System.Object>. Un struct puede implementar interfaces y lo hace exactamente igual que las clases.  
+ <span data-ttu-id="9d5c3-118">En los structs no existe el concepto de herencia que sí hay en las clases.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-118">There is no inheritance for structs as there is for classes.</span></span> <span data-ttu-id="9d5c3-119">Así, un struct no puede heredar de otra clase o de otro struct, como tampoco puede ser la base de una clase.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-119">A struct cannot inherit from another struct or class, and it cannot be the base of a class.</span></span> <span data-ttu-id="9d5c3-120">Pero los structs sí heredan de la clase base <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-120">Structs, however, inherit from the base class <xref:System.Object>.</span></span> <span data-ttu-id="9d5c3-121">Un struct puede implementar interfaces y lo hace exactamente igual que las clases.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-121">A struct can implement interfaces, and it does that exactly as classes do.</span></span>  
   
- No se puede declarar una clase mediante la palabra clave `struct`. En C#, las clases y los structs son distintos semánticamente. Un struct es un tipo de valor, mientras que una clase es un tipo de referencia. Para obtener más información, vea [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md).  
+ <span data-ttu-id="9d5c3-122">No se puede declarar una clase mediante la palabra clave `struct`.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-122">You cannot declare a class using the keyword `struct`.</span></span> <span data-ttu-id="9d5c3-123">En C#, las clases y los structs son distintos semánticamente.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-123">In C#, classes and structs are semantically different.</span></span> <span data-ttu-id="9d5c3-124">Un struct es un tipo de valor, mientras que una clase es un tipo de referencia.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-124">A struct is a value type, while a class is a reference type.</span></span> <span data-ttu-id="9d5c3-125">Para obtener más información, vea [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md).</span><span class="sxs-lookup"><span data-stu-id="9d5c3-125">For more information, see [Value Types](../../../csharp/language-reference/keywords/value-types.md).</span></span>  
   
- A menos que necesite una semántica de tipo de referencia, es probable que el sistema controle una clase pequeña más eficazmente si se declara como un struct.  
+ <span data-ttu-id="9d5c3-126">A menos que necesite una semántica de tipo de referencia, es probable que el sistema controle una clase pequeña más eficazmente si se declara como un struct.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-126">Unless you need reference-type semantics, a small class may be more efficiently handled by the system if you declare it as a struct instead.</span></span>  
   
-## <a name="example-1"></a>Ejemplo 1  
+## <a name="example-1"></a><span data-ttu-id="9d5c3-127">Ejemplo 1</span><span class="sxs-lookup"><span data-stu-id="9d5c3-127">Example 1</span></span>  
   
-### <a name="description"></a>Descripción  
- En este ejemplo se muestra la inicialización de `struct` mediante constructores predeterminados y constructores con parámetros.  
+### <a name="description"></a><span data-ttu-id="9d5c3-128">Descripción</span><span class="sxs-lookup"><span data-stu-id="9d5c3-128">Description</span></span>  
+ <span data-ttu-id="9d5c3-129">En este ejemplo se muestra la inicialización de `struct` mediante constructores predeterminados y constructores con parámetros.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-129">This example demonstrates `struct` initialization using both default and parameterized constructors.</span></span>  
   
-### <a name="code"></a>Código  
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+### <a name="code"></a><span data-ttu-id="9d5c3-130">Código</span><span class="sxs-lookup"><span data-stu-id="9d5c3-130">Code</span></span>  
+ [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- [!code-cs[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_2.cs)]  
+ [!code-csharp[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_2.cs)]  
   
-## <a name="example-2"></a>Ejemplo 2  
+## <a name="example-2"></a><span data-ttu-id="9d5c3-131">Ejemplo 2</span><span class="sxs-lookup"><span data-stu-id="9d5c3-131">Example 2</span></span>  
   
-### <a name="description"></a>Descripción  
- En este ejemplo se muestra una característica única de los structs. Se crea un objeto CoOrds sin usar el operador `new` . Si reemplaza la palabra `struct` por la palabra `class`, el programa no se compilará.  
+### <a name="description"></a><span data-ttu-id="9d5c3-132">Descripción</span><span class="sxs-lookup"><span data-stu-id="9d5c3-132">Description</span></span>  
+ <span data-ttu-id="9d5c3-133">En este ejemplo se muestra una característica única de los structs.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-133">This example demonstrates a feature that is unique to structs.</span></span> <span data-ttu-id="9d5c3-134">Se crea un objeto CoOrds sin usar el operador `new` .</span><span class="sxs-lookup"><span data-stu-id="9d5c3-134">It creates a CoOrds object without using the `new` operator.</span></span> <span data-ttu-id="9d5c3-135">Si reemplaza la palabra `struct` por la palabra `class`, el programa no se compilará.</span><span class="sxs-lookup"><span data-stu-id="9d5c3-135">If you replace the word `struct` with the word `class`, the program will not compile.</span></span>  
   
-### <a name="code"></a>Código  
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
+### <a name="code"></a><span data-ttu-id="9d5c3-136">Código</span><span class="sxs-lookup"><span data-stu-id="9d5c3-136">Code</span></span>  
+ [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- [!code-cs[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
+ [!code-csharp[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Clases y estructuras](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)
-
+## <a name="see-also"></a><span data-ttu-id="9d5c3-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d5c3-137">See Also</span></span>  
+ [<span data-ttu-id="9d5c3-138">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9d5c3-138">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9d5c3-139">Clases y structs</span><span class="sxs-lookup"><span data-stu-id="9d5c3-139">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="9d5c3-140">Estructuras</span><span class="sxs-lookup"><span data-stu-id="9d5c3-140">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)

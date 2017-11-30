@@ -1,110 +1,91 @@
 ---
 title: "Procesar el archivo XML (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 610f3ac5c88fb41a4b55f2990fecdc4c13074e19
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Procesar el archivo XML (Guía de programación de C#)
-El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.  
+# <a name="processing-the-xml-file-c-programming-guide"></a><span data-ttu-id="75428-102">Procesar el archivo XML (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="75428-102">Processing the XML File (C# Programming Guide)</span></span>
+<span data-ttu-id="75428-103">El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación.</span><span class="sxs-lookup"><span data-stu-id="75428-103">The compiler generates an ID string for each construct in your code that is tagged to generate documentation.</span></span> <span data-ttu-id="75428-104">(Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva.</span><span class="sxs-lookup"><span data-stu-id="75428-104">(For information about how to tag your code, see [Recommended Tags for Documentation Comments](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) The ID string uniquely identifies the construct.</span></span> <span data-ttu-id="75428-105">Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.</span><span class="sxs-lookup"><span data-stu-id="75428-105">Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item that the documentation applies to.</span></span>  
   
- El archivo XML no es una representación jerárquica del código; se trata de una lista plana que tiene un identificador generado para cada elemento.  
+ <span data-ttu-id="75428-106">El archivo XML no es una representación jerárquica del código; se trata de una lista plana que tiene un identificador generado para cada elemento.</span><span class="sxs-lookup"><span data-stu-id="75428-106">The XML file is not a hierarchical representation of your code; it is a flat list that has a generated ID for each element.</span></span>  
   
- El compilador cumple las siguientes reglas cuando genera las cadenas de identificador:  
+ <span data-ttu-id="75428-107">El compilador cumple las siguientes reglas cuando genera las cadenas de identificador:</span><span class="sxs-lookup"><span data-stu-id="75428-107">The compiler observes the following rules when it generates the ID strings:</span></span>  
   
--   En la cadena no debe haber ningún espacio en blanco.  
+-   <span data-ttu-id="75428-108">En la cadena no debe haber ningún espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="75428-108">No whitespace is in the string.</span></span>  
   
--   La primera parte de la cadena de identificador identifica el tipo de miembro identificado, mediante un carácter único seguido de dos puntos. Se utilizan los siguientes tipos de miembros:  
+-   <span data-ttu-id="75428-109">La primera parte de la cadena de identificador identifica el tipo de miembro identificado, mediante un carácter único seguido de dos puntos.</span><span class="sxs-lookup"><span data-stu-id="75428-109">The first part of the ID string identifies the kind of member being identified, by way of a single character followed by a colon.</span></span> <span data-ttu-id="75428-110">Se utilizan los siguientes tipos de miembros:</span><span class="sxs-lookup"><span data-stu-id="75428-110">The following member types are used:</span></span>  
   
-    |Carácter|Descripción|  
+    |<span data-ttu-id="75428-111">Carácter</span><span class="sxs-lookup"><span data-stu-id="75428-111">Character</span></span>|<span data-ttu-id="75428-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="75428-112">Description</span></span>|  
     |---------------|-----------------|  
-    |N|namespace<br /><br /> No puede agregar comentarios de documentación a un espacio de nombres, pero sí puede hacer referencias cruzadas a ellos, en caso de que se admitan.|  
-    |T|tipo: clase, interfaz, estructura, enumeración y delegado|  
-    |F|campo|  
-    |P|propiedad (incluidos indizadores u otras propiedades indizadas)|  
-    |M|método (incluidos métodos especiales como constructores, operadores, etc.)|  
-    |E|evento|  
-    |!|cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de C# genera información de error para vínculos que no se puede resolver.|  
+    |<span data-ttu-id="75428-113">N</span><span class="sxs-lookup"><span data-stu-id="75428-113">N</span></span>|<span data-ttu-id="75428-114">namespace</span><span class="sxs-lookup"><span data-stu-id="75428-114">namespace</span></span><br /><br /> <span data-ttu-id="75428-115">No puede agregar comentarios de documentación a un espacio de nombres, pero sí puede hacer referencias cruzadas a ellos, en caso de que se admitan.</span><span class="sxs-lookup"><span data-stu-id="75428-115">You cannot add documentation comments to a namespace, but you can make cref references to them, where supported.</span></span>|  
+    |<span data-ttu-id="75428-116">T</span><span class="sxs-lookup"><span data-stu-id="75428-116">T</span></span>|<span data-ttu-id="75428-117">tipo: clase, interfaz, estructura, enumeración y delegado</span><span class="sxs-lookup"><span data-stu-id="75428-117">type: class, interface, struct, enum, delegate</span></span>|  
+    |<span data-ttu-id="75428-118">F</span><span class="sxs-lookup"><span data-stu-id="75428-118">F</span></span>|<span data-ttu-id="75428-119">campo</span><span class="sxs-lookup"><span data-stu-id="75428-119">field</span></span>|  
+    |<span data-ttu-id="75428-120">P</span><span class="sxs-lookup"><span data-stu-id="75428-120">P</span></span>|<span data-ttu-id="75428-121">propiedad (incluidos indizadores u otras propiedades indizadas)</span><span class="sxs-lookup"><span data-stu-id="75428-121">property (including indexers or other indexed properties)</span></span>|  
+    |<span data-ttu-id="75428-122">M</span><span class="sxs-lookup"><span data-stu-id="75428-122">M</span></span>|<span data-ttu-id="75428-123">método (incluidos métodos especiales como constructores, operadores, etc.)</span><span class="sxs-lookup"><span data-stu-id="75428-123">method (including such special methods as constructors, operators, and so forth)</span></span>|  
+    |<span data-ttu-id="75428-124">E</span><span class="sxs-lookup"><span data-stu-id="75428-124">E</span></span>|<span data-ttu-id="75428-125">evento</span><span class="sxs-lookup"><span data-stu-id="75428-125">event</span></span>|  
+    |<span data-ttu-id="75428-126">!</span><span class="sxs-lookup"><span data-stu-id="75428-126">!</span></span>|<span data-ttu-id="75428-127">cadena de error</span><span class="sxs-lookup"><span data-stu-id="75428-127">error string</span></span><br /><br /> <span data-ttu-id="75428-128">El resto de la cadena proporciona información sobre el error.</span><span class="sxs-lookup"><span data-stu-id="75428-128">The rest of the string provides information about the error.</span></span> <span data-ttu-id="75428-129">El compilador de C# genera información de error para vínculos que no se puede resolver.</span><span class="sxs-lookup"><span data-stu-id="75428-129">The C# compiler generates error information for links that cannot be resolved.</span></span>|  
   
--   La segunda parte de la cadena es el nombre completo del elemento, que empieza por la raíz del espacio de nombres. El nombre del elemento, sus tipos envolventes y el espacio de nombres están separados por puntos. Si el nombre del elemento ya contiene puntos, estos se reemplazan por el signo hash ("#"). Se supone que ningún elemento tiene un signo hash directamente en su nombre. Por ejemplo, el nombre completo del constructor de String sería "System.String.#ctor".  
+-   <span data-ttu-id="75428-130">La segunda parte de la cadena es el nombre completo del elemento, que empieza por la raíz del espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="75428-130">The second part of the string is the fully qualified name of the item, starting at the root of the namespace.</span></span> <span data-ttu-id="75428-131">El nombre del elemento, sus tipos envolventes y el espacio de nombres están separados por puntos.</span><span class="sxs-lookup"><span data-stu-id="75428-131">The name of the item, its enclosing type(s), and namespace are separated by periods.</span></span> <span data-ttu-id="75428-132">Si el nombre del elemento ya contiene puntos, estos se reemplazan por el signo hash ("#").</span><span class="sxs-lookup"><span data-stu-id="75428-132">If the name of the item itself has periods, they are replaced by the hash-sign ('#').</span></span> <span data-ttu-id="75428-133">Se supone que ningún elemento tiene un signo hash directamente en su nombre.</span><span class="sxs-lookup"><span data-stu-id="75428-133">It is assumed that no item has a hash-sign directly in its name.</span></span> <span data-ttu-id="75428-134">Por ejemplo, el nombre completo del constructor de String sería "System.String.#ctor".</span><span class="sxs-lookup"><span data-stu-id="75428-134">For example, the fully qualified name of the String constructor would be "System.String.#ctor".</span></span>  
   
--   Para propiedades y métodos, si hay argumentos para el método, sigue la lista de argumentos entre paréntesis. Si no hay ningún argumento, tampoco habrá paréntesis. Los argumentos están separados por comas. La codificación de cada argumento indica directamente cómo se codifica en una firma de .NET Framework:  
+-   <span data-ttu-id="75428-135">Para propiedades y métodos, si hay argumentos para el método, sigue la lista de argumentos entre paréntesis.</span><span class="sxs-lookup"><span data-stu-id="75428-135">For properties and methods, if there are arguments to the method, the argument list enclosed in parentheses follows.</span></span> <span data-ttu-id="75428-136">Si no hay ningún argumento, tampoco habrá paréntesis.</span><span class="sxs-lookup"><span data-stu-id="75428-136">If there are no arguments, no parentheses are present.</span></span> <span data-ttu-id="75428-137">Los argumentos están separados por comas.</span><span class="sxs-lookup"><span data-stu-id="75428-137">The arguments are separated by commas.</span></span> <span data-ttu-id="75428-138">La codificación de cada argumento indica directamente cómo se codifica en una firma de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="75428-138">The encoding of each argument follows directly how it is encoded in a .NET Framework signature:</span></span>  
   
-    -   Tipos base. Los tipos habituales (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) se representan como el nombre completo del tipo.  
+    -   <span data-ttu-id="75428-139">Tipos base.</span><span class="sxs-lookup"><span data-stu-id="75428-139">Base types.</span></span> <span data-ttu-id="75428-140">Los tipos habituales (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) se representan como el nombre completo del tipo.</span><span class="sxs-lookup"><span data-stu-id="75428-140">Regular types (ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE) are represented as the fully qualified name of the type.</span></span>  
   
-    -   Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente. Por ejemplo, System.Int32 o System.TypedReference.  
+    -   <span data-ttu-id="75428-141">Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF</span><span class="sxs-lookup"><span data-stu-id="75428-141">Intrinsic types (for example, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF.</span></span> <span data-ttu-id="75428-142">y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente.</span><span class="sxs-lookup"><span data-stu-id="75428-142">and ELEMENT_TYPE_VOID) are represented as the fully qualified name of the corresponding full type.</span></span> <span data-ttu-id="75428-143">Por ejemplo, System.Int32 o System.TypedReference.</span><span class="sxs-lookup"><span data-stu-id="75428-143">For example, System.Int32 or System.TypedReference.</span></span>  
   
-    -   ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.  
+    -   <span data-ttu-id="75428-144">ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.</span><span class="sxs-lookup"><span data-stu-id="75428-144">ELEMENT_TYPE_PTR is represented as a '*' following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_BYREF se representa como "@" después del tipo modificado.  
+    -   <span data-ttu-id="75428-145">ELEMENT_TYPE_BYREF se representa como "@" después del tipo modificado.</span><span class="sxs-lookup"><span data-stu-id="75428-145">ELEMENT_TYPE_BYREF is represented as a '@' following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_PINNED se representa como "^" después del tipo modificado. El compilador de C# nunca genera este resultado.  
+    -   <span data-ttu-id="75428-146">ELEMENT_TYPE_PINNED se representa como "^" después del tipo modificado.</span><span class="sxs-lookup"><span data-stu-id="75428-146">ELEMENT_TYPE_PINNED is represented as a '^' following the modified type.</span></span> <span data-ttu-id="75428-147">El compilador de C# nunca genera este resultado.</span><span class="sxs-lookup"><span data-stu-id="75428-147">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_CMOD_REQ se representa como "&#124;" y el nombre completo de la clase modificadora, después del tipo modificado. El compilador de C# nunca genera este resultado.  
+    -   <span data-ttu-id="75428-148">ELEMENT_TYPE_CMOD_REQ se representa como "&#124;" y el nombre completo de la clase modificadora, después del tipo modificado.</span><span class="sxs-lookup"><span data-stu-id="75428-148">ELEMENT_TYPE_CMOD_REQ is represented as a '&#124;' and the fully qualified name of the modifier class, following the modified type.</span></span> <span data-ttu-id="75428-149">El compilador de C# nunca genera este resultado.</span><span class="sxs-lookup"><span data-stu-id="75428-149">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_CMOD_OPT se representa como "!" y el nombre completo de la clase modificadora, después del tipo modificado.  
+    -   <span data-ttu-id="75428-150">ELEMENT_TYPE_CMOD_OPT se representa como "!" y el nombre completo de la clase modificadora, después del tipo modificado.</span><span class="sxs-lookup"><span data-stu-id="75428-150">ELEMENT_TYPE_CMOD_OPT is represented as a '!' and the fully qualified name of the modifier class, following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_SZARRAY se representa como "[]" después del tipo de elemento de la matriz.  
+    -   <span data-ttu-id="75428-151">ELEMENT_TYPE_SZARRAY se representa como "[]" después del tipo de elemento de la matriz.</span><span class="sxs-lookup"><span data-stu-id="75428-151">ELEMENT_TYPE_SZARRAY is represented as "[]" following the element type of the array.</span></span>  
   
-    -   ELEMENT_TYPE_GENERICARRAY se representa como "[?]" después del tipo de elemento de la matriz. El compilador de C# nunca genera este resultado.  
+    -   <span data-ttu-id="75428-152">ELEMENT_TYPE_GENERICARRAY se representa como "[?]" después del tipo de elemento de la matriz.</span><span class="sxs-lookup"><span data-stu-id="75428-152">ELEMENT_TYPE_GENERICARRAY is represented as "[?]" following the element type of the array.</span></span> <span data-ttu-id="75428-153">El compilador de C# nunca genera este resultado.</span><span class="sxs-lookup"><span data-stu-id="75428-153">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_ARRAY se representa como [*límite inferior*:`size`,*límite inferior*:`size`], donde el número de comas es la clasificación - 1, y los límites inferiores y el tamaño de cada dimensión, si se conocen, se representan en decimales. Si no se especifican un límite inferior ni un tamaño, simplemente se omiten. Si se omiten el límite inferior y el tamaño de una dimensión determinada, también se omite ":". Por ejemplo, una matriz de dos dimensiones con 1 como los límites inferiores y tamaños no especificados es [1:,1:].  
+    -   <span data-ttu-id="75428-154">ELEMENT_TYPE_ARRAY se representa como [*límite inferior*:`size`,*límite inferior*:`size`], donde el número de comas es la clasificación - 1, y los límites inferiores y el tamaño de cada dimensión, si se conocen, se representan en decimales.</span><span class="sxs-lookup"><span data-stu-id="75428-154">ELEMENT_TYPE_ARRAY is represented as [*lowerbound*:`size`,*lowerbound*:`size`] where the number of commas is the rank - 1, and the lower bounds and size of each dimension, if known, are represented in decimal.</span></span> <span data-ttu-id="75428-155">Si no se especifican un límite inferior ni un tamaño, simplemente se omiten.</span><span class="sxs-lookup"><span data-stu-id="75428-155">If a lower bound or size is not specified, it is simply omitted.</span></span> <span data-ttu-id="75428-156">Si se omiten el límite inferior y el tamaño de una dimensión determinada, también se omite ":".</span><span class="sxs-lookup"><span data-stu-id="75428-156">If the lower bound and size for a particular dimension are omitted, the ':' is omitted as well.</span></span> <span data-ttu-id="75428-157">Por ejemplo, una matriz de dos dimensiones con 1 como los límites inferiores y tamaños no especificados es [1:,1:].</span><span class="sxs-lookup"><span data-stu-id="75428-157">For example, a 2-dimensional array with 1 as the lower bounds and unspecified sizes is [1:,1:].</span></span>  
   
-    -   ELEMENT_TYPE_FNPTR se representa como "=FUNC:`type`(*signature*)", donde `type` es el tipo de valor devuelto y *signature* se corresponde con los argumentos del método. Si no hay ningún argumento, se omiten los paréntesis. El compilador de C# nunca genera este resultado.  
+    -   <span data-ttu-id="75428-158">ELEMENT_TYPE_FNPTR se representa como "=FUNC:`type`(*signature*)", donde `type` es el tipo de valor devuelto y *signature* se corresponde con los argumentos del método.</span><span class="sxs-lookup"><span data-stu-id="75428-158">ELEMENT_TYPE_FNPTR is represented as "=FUNC:`type`(*signature*)", where `type` is the return type, and *signature* is the arguments of the method.</span></span> <span data-ttu-id="75428-159">Si no hay ningún argumento, se omiten los paréntesis.</span><span class="sxs-lookup"><span data-stu-id="75428-159">If there are no arguments, the parentheses are omitted.</span></span> <span data-ttu-id="75428-160">El compilador de C# nunca genera este resultado.</span><span class="sxs-lookup"><span data-stu-id="75428-160">The C# compiler never generates this.</span></span>  
   
-     Los siguientes componentes de la firma no se representan porque nunca se usan para diferenciar métodos sobrecargados:  
+     <span data-ttu-id="75428-161">Los siguientes componentes de la firma no se representan porque nunca se usan para diferenciar métodos sobrecargados:</span><span class="sxs-lookup"><span data-stu-id="75428-161">The following signature components are not represented because they are never used for differentiating overloaded methods:</span></span>  
   
-    -   Convención de llamada  
+    -   <span data-ttu-id="75428-162">Convención de llamada</span><span class="sxs-lookup"><span data-stu-id="75428-162">calling convention</span></span>  
   
-    -   Tipo de valor devuelto  
+    -   <span data-ttu-id="75428-163">Tipo de valor devuelto</span><span class="sxs-lookup"><span data-stu-id="75428-163">return type</span></span>  
   
-    -   ELEMENT_TYPE_SENTINEL  
+    -   <span data-ttu-id="75428-164">ELEMENT_TYPE_SENTINEL</span><span class="sxs-lookup"><span data-stu-id="75428-164">ELEMENT_TYPE_SENTINEL</span></span>  
   
--   Solo para los operadores de conversión (op_Implicit y op_Explicit), el valor devuelto del método se codifica como "~" seguido de un tipo de valor devuelto, como se ha codificado anteriormente.  
+-   <span data-ttu-id="75428-165">Solo para los operadores de conversión (op_Implicit y op_Explicit), el valor devuelto del método se codifica como "~" seguido de un tipo de valor devuelto, como se ha codificado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="75428-165">For conversion operators only (op_Implicit and op_Explicit), the return value of the method is encoded as a '~' followed by the return type, as encoded above.</span></span>  
   
--   Para tipos genéricos, el nombre del tipo irá seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico.  Por ejemplo,  
+-   <span data-ttu-id="75428-166">Para tipos genéricos, el nombre del tipo irá seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="75428-166">For generic types, the name of the type will be followed by a back tick and then a number that indicates the number of generic type parameters.</span></span>  <span data-ttu-id="75428-167">Por ejemplo,</span><span class="sxs-lookup"><span data-stu-id="75428-167">For example,</span></span>  
   
-     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
+     <span data-ttu-id="75428-168">`<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>\`.</span><span class="sxs-lookup"><span data-stu-id="75428-168">`<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>\`.</span></span>  
   
-     Para los métodos que usan tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0,`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.  
+     <span data-ttu-id="75428-169">Para los métodos que usan tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0,`1).</span><span class="sxs-lookup"><span data-stu-id="75428-169">For methods taking generic types as parameters, the generic type parameters are specified as numbers prefaced with back ticks (for example \`0,`1).</span></span>  <span data-ttu-id="75428-170">Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.</span><span class="sxs-lookup"><span data-stu-id="75428-170">Each number representing a zero-based array notation for the type's generic parameters.</span></span>  
   
-## <a name="examples"></a>Ejemplos  
- En los ejemplos siguientes se muestra cómo se generarían las cadenas de identificador para una clase y sus miembros:  
+## <a name="examples"></a><span data-ttu-id="75428-171">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="75428-171">Examples</span></span>  
+ <span data-ttu-id="75428-172">En los ejemplos siguientes se muestra cómo se generarían las cadenas de identificador para una clase y sus miembros:</span><span class="sxs-lookup"><span data-stu-id="75428-172">The following examples show how the ID strings for a class and its members would be generated:</span></span>  
   
- [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [/doc (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
- [Comentarios de documentación XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="75428-173">Vea también</span><span class="sxs-lookup"><span data-stu-id="75428-173">See Also</span></span>  
+ [<span data-ttu-id="75428-174">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="75428-174">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="75428-175">/doc (opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="75428-175">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [<span data-ttu-id="75428-176">Comentarios de documentación XML</span><span class="sxs-lookup"><span data-stu-id="75428-176">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

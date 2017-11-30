@@ -1,51 +1,56 @@
 ---
-title: "How to: Control Ordering in a PLINQ Query | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, how to control ordering"
+title: "Cómo: Controlar la ordenación en una consulta PLINQ"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b9e29aa825a68154e32a34a23ca170258092b88a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Control Ordering in a PLINQ Query
-En estos ejemplos, se muestra cómo se controla el orden en una consulta PLINQ usando el método de extensión <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
+# <a name="how-to-control-ordering-in-a-plinq-query"></a><span data-ttu-id="ade1e-102">Cómo: Controlar la ordenación en una consulta PLINQ</span><span class="sxs-lookup"><span data-stu-id="ade1e-102">How to: Control Ordering in a PLINQ Query</span></span>
+<span data-ttu-id="ade1e-103">Estos ejemplos muestra cómo controlar la ordenación en una consulta PLINQ usando el <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> método de extensión.</span><span class="sxs-lookup"><span data-stu-id="ade1e-103">These examples show how to control the ordering in a PLINQ query by using the <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> extension method.</span></span>  
   
 > [!WARNING]
->  Estos ejemplos sirven principalmente para mostrar el uso y podría no ejecutarse más rápidamente que la consulta secuencial equivalente de LINQ to Objects.  
+>  <span data-ttu-id="ade1e-104">Estos ejemplos están pensados principalmente para mostrar el uso y pueden o no pueden ejecutarse más rápido que LINQ secuencial equivalente a las consultas de objetos.</span><span class="sxs-lookup"><span data-stu-id="ade1e-104">These examples are primarily intended to demonstrate usage, and may or may not run faster than the equivalent sequential LINQ to Objects queries.</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo se mantiene el orden de la secuencia de origen.  A veces esto resulta necesario, por ejemplo, cuando algunos operadores de consulta necesitan una secuencia de origen ordenada para generar los resultados correctos.  
+## <a name="example"></a><span data-ttu-id="ade1e-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ade1e-105">Example</span></span>  
+ <span data-ttu-id="ade1e-106">En el ejemplo siguiente se conserva el orden de la secuencia de origen.</span><span class="sxs-lookup"><span data-stu-id="ade1e-106">The following example preserves the ordering of the source sequence.</span></span> <span data-ttu-id="ade1e-107">Esto a veces es necesario; Por ejemplo, algunos operadores de consulta requieren una secuencia de origen ordenadas para generar resultados correctos.</span><span class="sxs-lookup"><span data-stu-id="ade1e-107">This is sometimes necessary; for example some query operators require an ordered source sequence to produce correct results.</span></span>  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
-## Ejemplo  
- En el siguiente ejemplo se muestran algunos operadores de consulta cuya secuencia de origen es muy probable que esté ordenada.  Estos operadores pueden funcionar en secuencias no ordenadas, aunque pueden generar resultados inesperados.  
+## <a name="example"></a><span data-ttu-id="ade1e-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ade1e-108">Example</span></span>  
+ <span data-ttu-id="ade1e-109">El ejemplo siguiente muestra algunas cuya secuencia de origen es muy probable que se ordenan de operadores de consulta.</span><span class="sxs-lookup"><span data-stu-id="ade1e-109">The following example shows some query operators whose source sequence is probably expected to be ordered.</span></span> <span data-ttu-id="ade1e-110">Estos operadores pueden funcionar en secuencias no ordenadas, pero podría producir resultados inesperados.</span><span class="sxs-lookup"><span data-stu-id="ade1e-110">These operators will work on unordered sequences, but they might produce unexpected results.</span></span>  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- Para ejecutar este método, péguelo en la clase PLINQDataSample del proyecto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) y presione F5.  
+ <span data-ttu-id="ade1e-111">Para ejecutar este método, péguelo en la clase PLINQDataSample el [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) del proyecto y presione F5.</span><span class="sxs-lookup"><span data-stu-id="ade1e-111">To run this method, paste it into the PLINQDataSample class in the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project and press F5.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo se mantiene el orden en la primera parte de una consulta, cómo se quita el orden para aumentar el rendimiento de una cláusula de combinación y cómo se aplica de nuevo el orden a la secuencia del resultado final.  
+## <a name="example"></a><span data-ttu-id="ade1e-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ade1e-112">Example</span></span>  
+ <span data-ttu-id="ade1e-113">En el ejemplo siguiente se muestra cómo se conserva el orden de la primera parte de una consulta, a continuación, quita el orden para aumentar el rendimiento de una cláusula de combinación y, a continuación, volver a aplicar el orden de la secuencia del resultado final.</span><span class="sxs-lookup"><span data-stu-id="ade1e-113">The following example shows how to preserve ordering for the first part of a query, then remove the ordering to increase the performance of a join clause, and then reapply ordering to the final result sequence.</span></span>  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- Para ejecutar este método, péguelo en la clase PLINQDataSample del proyecto [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) y presione F5.  
+ <span data-ttu-id="ade1e-114">Para ejecutar este método, péguelo en la clase PLINQDataSample el [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) del proyecto y presione F5.</span><span class="sxs-lookup"><span data-stu-id="ade1e-114">To run this method, paste it into the PLINQDataSample class in the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project and press F5.</span></span>  
   
-## Vea también  
- <xref:System.Linq.ParallelEnumerable>   
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="ade1e-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="ade1e-115">See Also</span></span>  
+ <xref:System.Linq.ParallelEnumerable>  
+ [<span data-ttu-id="ade1e-116">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="ade1e-116">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

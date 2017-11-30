@@ -1,47 +1,53 @@
 ---
-title: "Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parámetro de referencia cultural"
-  - "operaciones de cadena que no tienen en cuenta la referencia cultural, comparaciones"
-  - "comparación de cadenas [.NET Framework], sin tener en cuenta la referencia cultural"
-  - "String.Compare (método)"
-  - "String.CompareTo (método)"
-  - "cadenas [.NET Framework], comparar"
+title: Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- String.CompareTo method
+- String.Compare method
+- string comparison [.NET Framework], culture-insensitive
+- strings [.NET Framework], comparing
+- culture-insensitive string operations, comparisons
+- culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-caps.latest.revision: 23
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 980b4ac515deaaedb1ab7e240e8f110a5fd0d51c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales
-De manera predeterminada, el método <xref:System.String.Compare%2A?displayProperty=fullName> realiza comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas.  Este método también incluye varias sobrecargas que proporcionan un parámetro `culture` que permite especificar la referencia cultural que se va a utilizar y un parámetro `comparisonType` que permite especificar las reglas de comparación que se van a usar.  Al llamar a estos métodos en lugar de a la sobrecarga predeterminada, se quita cualquier ambigüedad sobre las reglas que se utilizan en una determinada llamada al método y se establece claramente si una determinada comparación tiene en cuenta o no la referencia cultural.  
+# <a name="performing-culture-insensitive-string-comparisons"></a><span data-ttu-id="b5626-102">Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales</span><span class="sxs-lookup"><span data-stu-id="b5626-102">Performing Culture-Insensitive String Comparisons</span></span>
+<span data-ttu-id="b5626-103">De manera predeterminada, el método <xref:System.String.Compare%2A?displayProperty=nameWithType> realiza comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas.</span><span class="sxs-lookup"><span data-stu-id="b5626-103">By default, the <xref:System.String.Compare%2A?displayProperty=nameWithType> method performs culture-sensitive and case-sensitive comparisons.</span></span> <span data-ttu-id="b5626-104">Este método también incluye varias sobrecargas que proporcionan un parámetro `culture` que permite especificar la referencia cultural que se va a utilizar y un parámetro `comparisonType` que permite especificar las reglas de comparación que se van a usar.</span><span class="sxs-lookup"><span data-stu-id="b5626-104">This method also includes several overloads that provide a `culture` parameter that lets you specify the culture to use, and a `comparisonType` parameter that lets you specify the comparison rules to use.</span></span> <span data-ttu-id="b5626-105">Al llamar a estos métodos en lugar de a la sobrecarga predeterminada, se quita cualquier ambigüedad sobre las reglas que se utilizan en una determinada llamada al método y se establece claramente si una determinada comparación tiene en cuenta o no la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="b5626-105">Calling these methods instead of the default overload removes any ambiguity about the rules used in a particular method call, and makes it clear whether a particular comparison is culture-sensitive or culture-insensitive.</span></span>  
   
 > [!NOTE]
->  Las dos sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=fullName> realizan comparaciones que tienen en cuenta la referencia cultural y que distinguen mayúsculas de minúsculas, así que no puede usar este método para realizar comparaciones que no tengan en cuenta la referencia cultural.  Para lograr claridad en el código, recomendamos utilizar el método <xref:System.String.Compare%2A?displayProperty=fullName> en su lugar.  
+>  <span data-ttu-id="b5626-106">Las dos sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> realizan comparaciones que tienen en cuenta la referencia cultural y que distinguen mayúsculas de minúsculas, así que no puede usar este método para realizar comparaciones que no tengan en cuenta la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="b5626-106">Both overloads of the <xref:System.String.CompareTo%2A?displayProperty=nameWithType> method perform culture-sensitive and case-sensitive comparisons; you cannot use this method to perform culture-insensitive comparisons.</span></span> <span data-ttu-id="b5626-107">Para lograr claridad en el código, recomendamos utilizar el método <xref:System.String.Compare%2A?displayProperty=nameWithType> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="b5626-107">For code clarity, we recommend that you use the <xref:System.String.Compare%2A?displayProperty=nameWithType> method instead.</span></span>  
   
- En operaciones que tienen en cuenta las referencias culturales, especifique el valor de enumeración <xref:System.StringComparison?displayProperty=fullName> o <xref:System.StringComparison?displayProperty=fullName> como parámetro `comparisonType`.  Si desea realizar una comparación que tenga en cuenta la referencia cultural utilizando una referencia cultural designada distinta de la referencia cultural actual, especifique el objeto <xref:System.Globalization.CultureInfo> que representa esa referencia cultural como parámetro `culture` .  
+ <span data-ttu-id="b5626-108">En operaciones que tienen en cuenta las referencias culturales, especifique el valor de enumeración <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`.</span><span class="sxs-lookup"><span data-stu-id="b5626-108">For culture-sensitive operations, specify the <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> or <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> enumeration value as the `comparisonType` parameter.</span></span> <span data-ttu-id="b5626-109">Si desea realizar una comparación de la referencia cultural utilizando una referencia cultural designada distinta de la referencia cultural actual, especifique la <xref:System.Globalization.CultureInfo> objeto que representa esa referencia cultural como el `culture` parámetro.</span><span class="sxs-lookup"><span data-stu-id="b5626-109">If you want to perform a culture-sensitive comparison using a designated culture other than the current culture, specify the <xref:System.Globalization.CultureInfo> object that represents that culture as the `culture` parameter.</span></span>  
   
- Las comparaciones de cadenas que no tienen en cuenta la referencia cultural admitidas por el método <xref:System.String.Compare%2A?displayProperty=fullName> pueden ser lingüísticas \(se basan en las convenciones de ordenación de la referencia cultural de todos los idiomas\) o no lingüísticas \(se basan en el valor ordinal de los caracteres de la cadena\).  La mayoría de las comparaciones de cadenas que no tienen en cuenta la referencia cultural son no lingüísticas.  En estas comparaciones, especifique el valor de enumeración <xref:System.StringComparison?displayProperty=fullName> u <xref:System.StringComparison?displayProperty=fullName> como parámetro `comparisonType`.  Por ejemplo, si una decisión de seguridad \(como una comparación de nombre de usuario o contraseña\) está basada en el resultado de una comparación de cadenas, la operación no debe tener en cuenta la referencia cultural y debe ser no lingüística para garantizar que el resultado no se ve afectado por las convenciones de una determinada referencia cultural o idioma.  
+ <span data-ttu-id="b5626-110">Las comparaciones de cadenas que no tienen en cuenta la referencia cultural admitidas por el método <xref:System.String.Compare%2A?displayProperty=nameWithType> pueden ser lingüísticas (se basan en las convenciones de ordenación de la referencia cultural de todos los idiomas) o no lingüísticas (se basan en el valor ordinal de los caracteres de la cadena).</span><span class="sxs-lookup"><span data-stu-id="b5626-110">The culture-insensitive string comparisons supported by the <xref:System.String.Compare%2A?displayProperty=nameWithType> method are either linguistic (based on the sorting conventions of the invariant culture) or non-linguistic (based on the ordinal value of the characters in the string).</span></span> <span data-ttu-id="b5626-111">La mayoría de las comparaciones de cadenas que no tienen en cuenta la referencia cultural son no lingüísticas.</span><span class="sxs-lookup"><span data-stu-id="b5626-111">Most culture-insensitive string comparisons are non-linguistic.</span></span> <span data-ttu-id="b5626-112">En estas comparaciones, especifique el valor de enumeración <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> u <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`.</span><span class="sxs-lookup"><span data-stu-id="b5626-112">For these comparisons, specify the <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> or <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> enumeration value as the `comparisonType` parameter.</span></span> <span data-ttu-id="b5626-113">Por ejemplo, si una decisión de seguridad (como una comparación de nombre de usuario o contraseña) está basada en el resultado de una comparación de cadenas, la operación no debe tener en cuenta la referencia cultural y debe ser no lingüística para garantizar que el resultado no se ve afectado por las convenciones de una determinada referencia cultural o idioma.</span><span class="sxs-lookup"><span data-stu-id="b5626-113">For example, if a security decision (such as a user name or password comparison) is based on the result of a string comparison, the operation should be culture-insensitive and non-linguistic to ensure that the result is not affected by the conventions of a particular culture or language.</span></span>  
   
- Utilice una comparación de cadenas de tipo lingüística y que tenga en cuenta la referencia cultural si desea administrar lingüísticamente las cadenas pertinentes de varias referencias culturales de forma coherente.  Por ejemplo, si la aplicación muestra palabras que utilizan varios juegos de caracteres en un cuadro de lista, tal vez desee mostrar las palabras en el mismo orden sin tener en cuenta la referencia cultural actual.  En las comparaciones lingüísticas que no tienen en cuenta la referencia cultural, .NET Framework define una referencia cultural de todos los idiomas que está basada en las convenciones lingüísticas del inglés.  Para realizar una comparación lingüística que no tenga en cuenta la referencia cultural, especifique <xref:System.StringComparison?displayProperty=fullName> o <xref:System.StringComparison?displayProperty=fullName> como parámetro `comparisonType`.  
+ <span data-ttu-id="b5626-114">Utilice una comparación de cadenas de tipo lingüística y que tenga en cuenta la referencia cultural si desea administrar lingüísticamente las cadenas pertinentes de varias referencias culturales de forma coherente.</span><span class="sxs-lookup"><span data-stu-id="b5626-114">Use culture-insensitive linguistic string comparison if you want to handle linguistically relevant strings from multiple cultures in a consistent way.</span></span> <span data-ttu-id="b5626-115">Por ejemplo, si la aplicación muestra palabras que utilizan varios juegos de caracteres en un cuadro de lista, tal vez desee mostrar las palabras en el mismo orden sin tener en cuenta la referencia cultural actual.</span><span class="sxs-lookup"><span data-stu-id="b5626-115">For example, if your application displays words that use multiple character sets in a list box, you might want to display words in the same order regardless of the current culture.</span></span> <span data-ttu-id="b5626-116">En las comparaciones lingüísticas que no tienen en cuenta la referencia cultural, .NET Framework define una referencia cultural de todos los idiomas que está basada en las convenciones lingüísticas del inglés.</span><span class="sxs-lookup"><span data-stu-id="b5626-116">For culture-insensitive linguistic comparisons, the .NET Framework defines an invariant culture that is based on the linguistic conventions of English.</span></span> <span data-ttu-id="b5626-117">Para realizar una comparación lingüística que no tenga en cuenta la referencia cultural, especifique <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> o <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`.</span><span class="sxs-lookup"><span data-stu-id="b5626-117">To perform a culture-insensitive linguistic comparison, specify <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> or <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> as the `comparisonType` parameter.</span></span>  
   
- En el siguiente ejemplo se realizan dos comparaciones de cadenas no lingüísticas que no tienen en cuenta la referencia cultural.  La primera comparación distingue mayúsculas de minúsculas, pero la segunda no.  
+ <span data-ttu-id="b5626-118">En el siguiente ejemplo se realizan dos comparaciones de cadenas no lingüísticas que no tienen en cuenta la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="b5626-118">The following example performs two culture-insensitive, non-linguistic string comparisons.</span></span> <span data-ttu-id="b5626-119">La primera comparación distingue mayúsculas de minúsculas, pero la segunda no.</span><span class="sxs-lookup"><span data-stu-id="b5626-119">The first is case-sensitive, but the second is not.</span></span>  
   
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
   
-## Vea también  
- <xref:System.String.Compare%2A?displayProperty=fullName>   
- <xref:System.String.CompareTo%2A?displayProperty=fullName>   
- [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)   
- [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a><span data-ttu-id="b5626-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="b5626-120">See Also</span></span>  
+ <xref:System.String.Compare%2A?displayProperty=nameWithType>  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="b5626-121">Realizar operaciones de cadenas que no distinguen entre referencias culturales</span><span class="sxs-lookup"><span data-stu-id="b5626-121">Performing Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+ [<span data-ttu-id="b5626-122">Procedimientos recomendados para el uso de cadenas</span><span class="sxs-lookup"><span data-stu-id="b5626-122">Best Practices for Using Strings</span></span>](../../../docs/standard/base-types/best-practices-strings.md)

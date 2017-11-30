@@ -1,1 +1,1 @@
-Tienda Windows
+<span data-ttu-id="a4e95-101">Tienda Windows</span><span class="sxs-lookup"><span data-stu-id="a4e95-101">Windows Store</span></span>

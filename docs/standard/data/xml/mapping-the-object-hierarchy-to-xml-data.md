@@ -1,53 +1,54 @@
 ---
-title: "Asignar la jerarqu&#237;a de objetos a datos XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Asignar la jerarquía de objetos a datos XML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Asignar la jerarqu&#237;a de objetos a datos XML
-Cuando un documento XML está en la memoria, la representación conceptual es un árbol.  Al programar, hay una jerarquía de objetos para tener acceso a los nodos del árbol.  En el ejemplo siguiente se muestra cómo se convierte el contenido XML en nodos.  
+# <a name="mapping-the-object-hierarchy-to-xml-data"></a><span data-ttu-id="83d2d-102">Asignar la jerarquía de objetos a datos XML</span><span class="sxs-lookup"><span data-stu-id="83d2d-102">Mapping the Object Hierarchy to XML Data</span></span>
+<span data-ttu-id="83d2d-103">Cuando un documento XML está en la memoria, la representación conceptual es un árbol.</span><span class="sxs-lookup"><span data-stu-id="83d2d-103">When an XML document is in memory, the conceptual representation is a tree.</span></span> <span data-ttu-id="83d2d-104">Al programar, hay una jerarquía de objetos para tener acceso a los nodos del árbol.</span><span class="sxs-lookup"><span data-stu-id="83d2d-104">For programming, you have an object hierarchy to access the nodes of the tree.</span></span> <span data-ttu-id="83d2d-105">En el ejemplo siguiente se muestra cómo se convierte el contenido XML en nodos.</span><span class="sxs-lookup"><span data-stu-id="83d2d-105">The following example shows you how the XML content becomes nodes.</span></span>  
   
- A medida que el contenido XML se lee en el modelo de objetos de documento \(DOM\), las partes se traducen en nodos, que mantienen metadatos adicionales acerca de sí mismos, como su tipo y valores.  El tipo de nodo es su objeto y es lo que determina qué acciones pueden realizarse y qué propiedades pueden establecerse o recuperarse.  
+ <span data-ttu-id="83d2d-106">A medida que el contenido XML se lee en el modelo de objetos de documento (DOM), las partes se traducen en nodos, que mantienen metadatos adicionales acerca de sí mismos, como su tipo y valores.</span><span class="sxs-lookup"><span data-stu-id="83d2d-106">As the XML is read into the XML Document Object Model (DOM), the pieces are translated into nodes, and these nodes retain additional metadata about themselves, such as their node type and values.</span></span> <span data-ttu-id="83d2d-107">El tipo de nodo es su objeto y es lo que determina qué acciones pueden realizarse y qué propiedades pueden establecerse o recuperarse.</span><span class="sxs-lookup"><span data-stu-id="83d2d-107">The node type is its object and is what determines what actions can be performed and what properties can be set or retrieved.</span></span>  
   
- Si tiene el siguiente contenido XML simple:  
+ <span data-ttu-id="83d2d-108">Si tiene el siguiente contenido XML simple:</span><span class="sxs-lookup"><span data-stu-id="83d2d-108">If you have the following simple XML:</span></span>  
   
- **Entrada**  
+ <span data-ttu-id="83d2d-109">**Entrada**</span><span class="sxs-lookup"><span data-stu-id="83d2d-109">**Input**</span></span>  
   
-```  
+```xml  
 <book>  
     <title>The Handmaid's Tale</title>  
 </book>  
 ```  
   
- La entrada se representa en la memoria como el siguiente árbol de nodos con la propiedad de tipo de nodo asignada:  
+ <span data-ttu-id="83d2d-110">La entrada se representa en la memoria como el siguiente árbol de nodos con la propiedad de tipo de nodo asignada:</span><span class="sxs-lookup"><span data-stu-id="83d2d-110">The input is represented in memory as the following node tree with the assigned node type property:</span></span>  
   
- ![Ejemplo de árbol de nodos](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple\_XML")  
-Representación de árbol de nodo de libro y título  
+ <span data-ttu-id="83d2d-111">![ejemplo de árbol de nodo](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")</span><span class="sxs-lookup"><span data-stu-id="83d2d-111">![example node tree](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")</span></span>  
+<span data-ttu-id="83d2d-112">Representación de árbol de nodo de libro y título</span><span class="sxs-lookup"><span data-stu-id="83d2d-112">Book and title node tree representation</span></span>  
   
- El elemento `book` se convierte en un objeto **XmlElement**, el siguiente elemento, `title`, también se convierte en un objeto **XmlElement**, mientras que el contenido del elemento se convierte en un objeto **XmlText**.  Al observar los métodos y propiedades del objeto **XmlElement**, éstos difieren de los disponibles en un objeto **XmlText**.  Por tanto, es fundamental saber en qué tipo de nodo se convierte el marcado XML, puesto que determina las acciones que se pueden realizar.  
+ <span data-ttu-id="83d2d-113">El `book` elemento se convierte en una **XmlElement** (objeto), el siguiente elemento, `title`, también se convierte en una **XmlElement**, mientras que el contenido del elemento se convierte en un **XmlText** objeto.</span><span class="sxs-lookup"><span data-stu-id="83d2d-113">The `book` element becomes an **XmlElement** object, the next element, `title`, also becomes an **XmlElement**, while the element content becomes an **XmlText** object.</span></span> <span data-ttu-id="83d2d-114">Observar el **XmlElement** métodos y propiedades, los métodos y propiedades son diferentes de los métodos y propiedades disponibles en un **XmlText** objeto.</span><span class="sxs-lookup"><span data-stu-id="83d2d-114">In looking at the **XmlElement** methods and properties, the methods and properties are different than the methods and properties available on an **XmlText** object.</span></span> <span data-ttu-id="83d2d-115">Por tanto, es fundamental saber en qué tipo de nodo se convierte el marcado XML, puesto que determina las acciones que se pueden realizar.</span><span class="sxs-lookup"><span data-stu-id="83d2d-115">So knowing what node type the XML markup becomes is vital, as its node type determines the actions that can be performed.</span></span>  
   
- En el ejemplo siguiente se leen datos XML y se escribe texto diferente, en función del tipo de nodo.  Se usa el siguiente archivo de datos XML como entrada, **items.xml**:  
+ <span data-ttu-id="83d2d-116">En el ejemplo siguiente se leen datos XML y se escribe texto diferente, en función del tipo de nodo.</span><span class="sxs-lookup"><span data-stu-id="83d2d-116">The following example reads in XML data and writes out different text, depending on the node type.</span></span> <span data-ttu-id="83d2d-117">Con el siguiente archivo de datos XML como entrada, **items.xml**:</span><span class="sxs-lookup"><span data-stu-id="83d2d-117">Using the following XML data file as input, **items.xml**:</span></span>  
   
- **Entrada**  
+ <span data-ttu-id="83d2d-118">**Entrada**</span><span class="sxs-lookup"><span data-stu-id="83d2d-118">**Input**</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <!-- This is a sample XML document -->  
 <!DOCTYPE Items [<!ENTITY number "123">]>  
@@ -61,7 +62,7 @@ Representación de árbol de nodo de libro y título
 </Items>  
 ```  
   
- En el ejemplo de código siguiente se lee el archivo **items.xml** y se presenta información para cada tipo de nodo.  
+ <span data-ttu-id="83d2d-119">El siguiente ejemplo de código lee la **items.xml** de archivo y muestra información para cada tipo de nodo.</span><span class="sxs-lookup"><span data-stu-id="83d2d-119">The following code example reads the **items.xml** file and displays information for each node type.</span></span>  
   
 ```vb  
 Imports System  
@@ -182,50 +183,49 @@ public class Sample
 } // End class  
 ```  
   
- La salida del ejemplo revela la asignación de los datos a los tipos de nodo.  
+ <span data-ttu-id="83d2d-120">La salida del ejemplo revela la asignación de los datos a los tipos de nodo.</span><span class="sxs-lookup"><span data-stu-id="83d2d-120">The output from the example reveals the mapping of the data to the node types.</span></span>  
   
- **Resultado**  
+ <span data-ttu-id="83d2d-121">**Salida**</span><span class="sxs-lookup"><span data-stu-id="83d2d-121">**Output**</span></span>  
   
-```  
-  
+```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
 ```  
   
- Si se toma una línea de la entrada cada vez y se utiliza la salida generada por el código, se puede utilizar la tabla siguiente para analizar qué prueba de nodo genera qué línea de salida y, por tanto, se puede comprender en qué tipo de nodo se convierten los datos XML.  
+ <span data-ttu-id="83d2d-122">Si se toma una línea de la entrada cada vez y se utiliza la salida generada por el código, se puede utilizar la tabla siguiente para analizar qué prueba de nodo genera qué línea de salida y, por tanto, se puede comprender en qué tipo de nodo se convierten los datos XML.</span><span class="sxs-lookup"><span data-stu-id="83d2d-122">Taking the input one line at a time and using the output generated from the code, you can use the following table to analyze what node test generated which lines of output, thereby understanding what XML data became what kind of node type.</span></span>  
   
-|Entrada|Salida|Prueba de tipo de nodo|  
-|-------------|------------|----------------------------|  
-|\<?xml version\="1.0"?\>|\<?xml version\='1.0'?\>|XmlNodeType.XmlDeclaration|  
-|\<\!\-\- Este es un ejemplo de documento XML \-\-\>|\<\!\-\- Este es un ejemplo de documento XML \-\-\>|XmlNodeType.Comment|  
-|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]\>|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]|XmlNodeType.DocumentType|  
-|\<Items\>|\<Items\>|XmlNodeType.Element|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Prueba con una entidad: &number;|Prueba con una entidad: 123|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmNodeType.Element|  
-|prueba con un elemento secundario|prueba con un elemento secundario|XmlNodeType.Text|  
-|\<more\>|\<more\>|XmlNodeType.Element|  
-|stuff|stuff|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|prueba con una sección CDATA|prueba con una sección CDATA|XmlTest.Text|  
-|\<\!\[CDATA\[\<456\>\]\]\>|\<\!\[CDATA\[\<456\>\]\]\>|XmlTest.CDATA|  
-|def|def|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Prueba con una entidad de carácter: &\#65;|Prueba con una entidad de carácter: A|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\!\-\- Catorce caracteres en este elemento.\-\-\>|\<\-\- Catorce caracteres en este elemento.\-\-\>|XmlNodeType.Comment|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\/Items\>|\<\/Items\>|XmlNodeType.EndElement|  
+|<span data-ttu-id="83d2d-123">Entrada</span><span class="sxs-lookup"><span data-stu-id="83d2d-123">Input</span></span>|<span data-ttu-id="83d2d-124">Salida</span><span class="sxs-lookup"><span data-stu-id="83d2d-124">Output</span></span>|<span data-ttu-id="83d2d-125">Prueba de tipo de nodo</span><span class="sxs-lookup"><span data-stu-id="83d2d-125">Node Type Test</span></span>|  
+|-----------|------------|--------------------|  
+|<span data-ttu-id="83d2d-126">\<? versión xml = "1.0"? ></span><span class="sxs-lookup"><span data-stu-id="83d2d-126">\<?xml version="1.0"?></span></span>|<span data-ttu-id="83d2d-127">\<? xml versión ='1.0 '? ></span><span class="sxs-lookup"><span data-stu-id="83d2d-127">\<?xml version='1.0'?></span></span>|<span data-ttu-id="83d2d-128">XmlNodeType.XmlDeclaration</span><span class="sxs-lookup"><span data-stu-id="83d2d-128">XmlNodeType.XmlDeclaration</span></span>|  
+|<span data-ttu-id="83d2d-129">\<!--Este es un documento XML de ejemplo--></span><span class="sxs-lookup"><span data-stu-id="83d2d-129">\<!-- This is a sample XML document --></span></span>|<span data-ttu-id="83d2d-130">\<!--Este es un documento XML de ejemplo--></span><span class="sxs-lookup"><span data-stu-id="83d2d-130">\<!--This is a sample XML document --></span></span>|<span data-ttu-id="83d2d-131">XmlNodeType.Comment</span><span class="sxs-lookup"><span data-stu-id="83d2d-131">XmlNodeType.Comment</span></span>|  
+|<span data-ttu-id="83d2d-132">\<! Elementos de tipo de documento [\<! Número de entidades "123" >] ></span><span class="sxs-lookup"><span data-stu-id="83d2d-132">\<!DOCTYPE Items [\<!ENTITY number "123">]></span></span>|<span data-ttu-id="83d2d-133">\<! Elementos de tipo de documento [\<! Número de entidades "123" >]</span><span class="sxs-lookup"><span data-stu-id="83d2d-133">\<!DOCTYPE Items [\<!ENTITY number "123">]</span></span>|<span data-ttu-id="83d2d-134">XmlNodeType.DocumentType</span><span class="sxs-lookup"><span data-stu-id="83d2d-134">XmlNodeType.DocumentType</span></span>|  
+|<span data-ttu-id="83d2d-135">\<Elementos ></span><span class="sxs-lookup"><span data-stu-id="83d2d-135">\<Items></span></span>|<span data-ttu-id="83d2d-136">\<Elementos ></span><span class="sxs-lookup"><span data-stu-id="83d2d-136">\<Items></span></span>|<span data-ttu-id="83d2d-137">XmlNodeType.Element</span><span class="sxs-lookup"><span data-stu-id="83d2d-137">XmlNodeType.Element</span></span>|  
+|<span data-ttu-id="83d2d-138">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-138">\<Item></span></span>|<span data-ttu-id="83d2d-139">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-139">\<Item></span></span>|<span data-ttu-id="83d2d-140">XmlNodeType.Element</span><span class="sxs-lookup"><span data-stu-id="83d2d-140">XmlNodeType.Element</span></span>|  
+|<span data-ttu-id="83d2d-141">Prueba con una entidad:&number;</span><span class="sxs-lookup"><span data-stu-id="83d2d-141">Test with an entity: &number;</span></span>|<span data-ttu-id="83d2d-142">Prueba con una entidad: 123</span><span class="sxs-lookup"><span data-stu-id="83d2d-142">Test with an entity: 123</span></span>|<span data-ttu-id="83d2d-143">XmlNodeType.Text</span><span class="sxs-lookup"><span data-stu-id="83d2d-143">XmlNodeType.Text</span></span>|  
+|<span data-ttu-id="83d2d-144">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-144">\</Item></span></span>|<span data-ttu-id="83d2d-145">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-145">\</Item></span></span>|<span data-ttu-id="83d2d-146">XmlNodeType.EndElement</span><span class="sxs-lookup"><span data-stu-id="83d2d-146">XmlNodeType.EndElement</span></span>|  
+|<span data-ttu-id="83d2d-147">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-147">\<Item></span></span>|<span data-ttu-id="83d2d-148">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-148">\<Item></span></span>|<span data-ttu-id="83d2d-149">XmNodeType.Element</span><span class="sxs-lookup"><span data-stu-id="83d2d-149">XmNodeType.Element</span></span>|  
+|<span data-ttu-id="83d2d-150">prueba con un elemento secundario</span><span class="sxs-lookup"><span data-stu-id="83d2d-150">test with a child element</span></span>|<span data-ttu-id="83d2d-151">prueba con un elemento secundario</span><span class="sxs-lookup"><span data-stu-id="83d2d-151">test with a child element</span></span>|<span data-ttu-id="83d2d-152">XmlNodeType.Text</span><span class="sxs-lookup"><span data-stu-id="83d2d-152">XmlNodeType.Text</span></span>|  
+|<span data-ttu-id="83d2d-153">\<más ></span><span class="sxs-lookup"><span data-stu-id="83d2d-153">\<more></span></span>|<span data-ttu-id="83d2d-154">\<más ></span><span class="sxs-lookup"><span data-stu-id="83d2d-154">\<more></span></span>|<span data-ttu-id="83d2d-155">XmlNodeType.Element</span><span class="sxs-lookup"><span data-stu-id="83d2d-155">XmlNodeType.Element</span></span>|  
+|<span data-ttu-id="83d2d-156">stuff</span><span class="sxs-lookup"><span data-stu-id="83d2d-156">stuff</span></span>|<span data-ttu-id="83d2d-157">stuff</span><span class="sxs-lookup"><span data-stu-id="83d2d-157">stuff</span></span>|<span data-ttu-id="83d2d-158">XmlNodeType.Text</span><span class="sxs-lookup"><span data-stu-id="83d2d-158">XmlNodeType.Text</span></span>|  
+|<span data-ttu-id="83d2d-159">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-159">\</Item></span></span>|<span data-ttu-id="83d2d-160">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-160">\</Item></span></span>|<span data-ttu-id="83d2d-161">XmlNodeType.EndElement</span><span class="sxs-lookup"><span data-stu-id="83d2d-161">XmlNodeType.EndElement</span></span>|  
+|<span data-ttu-id="83d2d-162">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-162">\<Item></span></span>|<span data-ttu-id="83d2d-163">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-163">\<Item></span></span>|<span data-ttu-id="83d2d-164">XmlNodeType.Element</span><span class="sxs-lookup"><span data-stu-id="83d2d-164">XmlNodeType.Element</span></span>|  
+|<span data-ttu-id="83d2d-165">prueba con una sección CDATA</span><span class="sxs-lookup"><span data-stu-id="83d2d-165">test with a CDATA section</span></span>|<span data-ttu-id="83d2d-166">prueba con una sección CDATA</span><span class="sxs-lookup"><span data-stu-id="83d2d-166">test with a CDATA section</span></span>|<span data-ttu-id="83d2d-167">XmlTest.Text</span><span class="sxs-lookup"><span data-stu-id="83d2d-167">XmlTest.Text</span></span>|  
+|<span data-ttu-id="83d2d-168"><! [CDATA [\<456 >]]\></span><span class="sxs-lookup"><span data-stu-id="83d2d-168"><![CDATA[\<456>]]\></span></span>|<span data-ttu-id="83d2d-169"><! [CDATA [\<456 >]]\></span><span class="sxs-lookup"><span data-stu-id="83d2d-169"><![CDATA[\<456>]]\></span></span>|<span data-ttu-id="83d2d-170">XmlTest.CDATA</span><span class="sxs-lookup"><span data-stu-id="83d2d-170">XmlTest.CDATA</span></span>|  
+|<span data-ttu-id="83d2d-171">def</span><span class="sxs-lookup"><span data-stu-id="83d2d-171">def</span></span>|<span data-ttu-id="83d2d-172">def</span><span class="sxs-lookup"><span data-stu-id="83d2d-172">def</span></span>|<span data-ttu-id="83d2d-173">XmlNodeType.Text</span><span class="sxs-lookup"><span data-stu-id="83d2d-173">XmlNodeType.Text</span></span>|  
+|<span data-ttu-id="83d2d-174">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-174">\</Item></span></span>|<span data-ttu-id="83d2d-175">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-175">\</Item></span></span>|<span data-ttu-id="83d2d-176">XmlNodeType.EndElement</span><span class="sxs-lookup"><span data-stu-id="83d2d-176">XmlNodeType.EndElement</span></span>|  
+|<span data-ttu-id="83d2d-177">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-177">\<Item></span></span>|<span data-ttu-id="83d2d-178">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-178">\<Item></span></span>|<span data-ttu-id="83d2d-179">XmlNodeType.Element</span><span class="sxs-lookup"><span data-stu-id="83d2d-179">XmlNodeType.Element</span></span>|  
+|<span data-ttu-id="83d2d-180">Prueba con una entidad de carácter: &\#65;</span><span class="sxs-lookup"><span data-stu-id="83d2d-180">Test with a char entity: &\#65;</span></span>|<span data-ttu-id="83d2d-181">Prueba con una entidad de carácter: A</span><span class="sxs-lookup"><span data-stu-id="83d2d-181">Test with a char entity: A</span></span>|<span data-ttu-id="83d2d-182">XmlNodeType.Text</span><span class="sxs-lookup"><span data-stu-id="83d2d-182">XmlNodeType.Text</span></span>|  
+|<span data-ttu-id="83d2d-183">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-183">\</Item></span></span>|<span data-ttu-id="83d2d-184">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-184">\</Item></span></span>|<span data-ttu-id="83d2d-185">XmlNodeType.EndElement</span><span class="sxs-lookup"><span data-stu-id="83d2d-185">XmlNodeType.EndElement</span></span>|  
+|<span data-ttu-id="83d2d-186">\<!--Catorce caracteres en este elemento.--></span><span class="sxs-lookup"><span data-stu-id="83d2d-186">\<!-- Fourteen chars in this element.--></span></span>|<span data-ttu-id="83d2d-187">\<----> Catorce caracteres en este elemento.</span><span class="sxs-lookup"><span data-stu-id="83d2d-187">\<--Fourteen chars in this element.--></span></span>|<span data-ttu-id="83d2d-188">XmlNodeType.Comment</span><span class="sxs-lookup"><span data-stu-id="83d2d-188">XmlNodeType.Comment</span></span>|  
+|<span data-ttu-id="83d2d-189">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-189">\<Item></span></span>|<span data-ttu-id="83d2d-190">\<Item></span><span class="sxs-lookup"><span data-stu-id="83d2d-190">\<Item></span></span>|<span data-ttu-id="83d2d-191">XmlNodeType.Element</span><span class="sxs-lookup"><span data-stu-id="83d2d-191">XmlNodeType.Element</span></span>|  
+|<span data-ttu-id="83d2d-192">1234567890ABCD</span><span class="sxs-lookup"><span data-stu-id="83d2d-192">1234567890ABCD</span></span>|<span data-ttu-id="83d2d-193">1234567890ABCD</span><span class="sxs-lookup"><span data-stu-id="83d2d-193">1234567890ABCD</span></span>|<span data-ttu-id="83d2d-194">XmlNodeType.Text</span><span class="sxs-lookup"><span data-stu-id="83d2d-194">XmlNodeType.Text</span></span>|  
+|<span data-ttu-id="83d2d-195">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-195">\</Item></span></span>|<span data-ttu-id="83d2d-196">\</ Item ></span><span class="sxs-lookup"><span data-stu-id="83d2d-196">\</Item></span></span>|<span data-ttu-id="83d2d-197">XmlNodeType.EndElement</span><span class="sxs-lookup"><span data-stu-id="83d2d-197">XmlNodeType.EndElement</span></span>|  
+|<span data-ttu-id="83d2d-198">\</ Elementos ></span><span class="sxs-lookup"><span data-stu-id="83d2d-198">\</Items></span></span>|<span data-ttu-id="83d2d-199">\</ Elementos ></span><span class="sxs-lookup"><span data-stu-id="83d2d-199">\</Items></span></span>|<span data-ttu-id="83d2d-200">XmlNodeType.EndElement</span><span class="sxs-lookup"><span data-stu-id="83d2d-200">XmlNodeType.EndElement</span></span>|  
   
- Debe saber qué tipo de nodo se asigna, puesto que controla qué clase de acciones son válidas y qué clase de propiedades se pueden establecer y recuperar.  
+ <span data-ttu-id="83d2d-201">Debe saber qué tipo de nodo se asigna, puesto que controla qué clase de acciones son válidas y qué clase de propiedades se pueden establecer y recuperar.</span><span class="sxs-lookup"><span data-stu-id="83d2d-201">You must know what node type is assigned, as the node type controls what kinds of actions are valid and what kind of properties you can set and retrieve.</span></span>  
   
- La creación de nodos para espacios en blanco se controla al cargar los datos en DOM mediante la marca **PreserveWhitespace**.  Para obtener más información, consulte [Control de espacios en blanco y de espacios en blanco significativos al cargar DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ <span data-ttu-id="83d2d-202">Creación de nodos para espacios en blanco se controla cuando se cargan los datos en DOM mediante el **PreserveWhitespace** marca.</span><span class="sxs-lookup"><span data-stu-id="83d2d-202">Node creation for white space is controlled when the data is loaded into the DOM by the **PreserveWhitespace** flag.</span></span> <span data-ttu-id="83d2d-203">Para obtener más información, consulte [espacio en blanco y control de espacios en blanco significativos al cargar DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).</span><span class="sxs-lookup"><span data-stu-id="83d2d-203">For more information, see [White Space and Significant White Space Handling when Loading the DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).</span></span>  
   
- Para agregar nuevos nodos a DOM, vea [Insertar nodos en un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  Para quitar nodos de DOM, vea [Cómo quitar nodos, contenido y valores de un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  Para modificar el contenido de nodos en DOM, vea [Modificar nodos, contenido y valores en un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ <span data-ttu-id="83d2d-204">Para agregar nuevos nodos a DOM, vea [insertar nodos en un documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="83d2d-204">To add new nodes to the DOM, see [Inserting Nodes into an XML Document](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).</span></span> <span data-ttu-id="83d2d-205">Para quitar nodos de DOM, vea [cómo quitar nodos, contenido y valores de un documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="83d2d-205">To remove nodes from the DOM, see [Removing Nodes, Content, and Values from an XML Document](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).</span></span> <span data-ttu-id="83d2d-206">Para modificar el contenido de nodos en el DOM, vea [modificar nodos, contenido y valores en un documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="83d2d-206">To modify the content of nodes in the DOM, see [Modifying Nodes, Content, and Values in an XML Document](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).</span></span>  
   
-## Vea también  
- [Modelo de objetos de documento XML \(DOM\)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="83d2d-207">Vea también</span><span class="sxs-lookup"><span data-stu-id="83d2d-207">See Also</span></span>  
+ [<span data-ttu-id="83d2d-208">Modelo de objetos de documento (DOM) de XML</span><span class="sxs-lookup"><span data-stu-id="83d2d-208">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

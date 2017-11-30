@@ -1,61 +1,67 @@
 ---
-title: "Ejemplo de expresiones regulares: Buscar etiquetas HREF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "buscar con expresiones regulares, ejemplos"
-  - "analizar texto con expresiones regulares, ejemplos"
-  - "expresiones regulares, ejemplos"
-  - "expresiones regulares de .NET Framework, ejemplos"
-  - "expresiones regulares [.NET Framework], ejemplos"
-  - "coincidencia de patrones con expresiones regulares, ejemplos"
+title: 'Ejemplo de expresiones regulares: Buscar etiquetas HREF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- searching with regular expressions, examples
+- parsing text with regular expressions, examples
+- regular expressions, examples
+- .NET Framework regular expressions, examples
+- regular expressions [.NET Framework], examples
+- pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2bc9db7317c7a73f70a2cb83322b8b3a4c3771b9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de expresiones regulares: Buscar etiquetas HREF
-El ejemplo siguiente busca una cadena de entrada y muestra todo el href\=”…” valores y sus posiciones en la cadena.  
+# <a name="regular-expression-example-scanning-for-hrefs"></a><span data-ttu-id="05b3b-102">Ejemplo de expresiones regulares: Buscar etiquetas HREF</span><span class="sxs-lookup"><span data-stu-id="05b3b-102">Regular Expression Example: Scanning for HREFs</span></span>
+<span data-ttu-id="05b3b-103">En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.</span><span class="sxs-lookup"><span data-stu-id="05b3b-103">The following example searches an input string and displays all the href="…" values and their locations in the string.</span></span>  
   
-## El objeto Regex  
- Puesto que el método `DumpHRefs` puede invocarse varias veces desde el código de usuario, se emplea el método `static` \(`Shared` en Visual Basic\) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=fullName>.  De este modo, el motor de expresiones regulares puede almacenar en memoria caché la expresión regular y evitar la sobrecarga que supone crear una instancia de un nuevo objeto <xref:System.Text.RegularExpressions.Regex> cada vez que se llama al método.  A continuación, se utiliza un objeto <xref:System.Text.RegularExpressions.Match> para recorrer en iteración todas las coincidencias de la cadena.  
+## <a name="the-regex-object"></a><span data-ttu-id="05b3b-104">El objeto Regex</span><span class="sxs-lookup"><span data-stu-id="05b3b-104">The Regex Object</span></span>  
+ <span data-ttu-id="05b3b-105">Dado que la `DumpHRefs` método puede llamarse varias veces desde el código de usuario, usa el `static` (`Shared` en Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="05b3b-105">Because the `DumpHRefs` method can be called multiple times from user code, it uses the `static` (`Shared` in Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="05b3b-106">Esto permite que el motor de expresiones regulares para almacenar en caché la expresión regular y evita la sobrecarga de crear instancias de un nuevo <xref:System.Text.RegularExpressions.Regex> objeto cada vez que se llama al método.</span><span class="sxs-lookup"><span data-stu-id="05b3b-106">This enables the regular expression engine to cache the regular expression and avoids the overhead of instantiating a new <xref:System.Text.RegularExpressions.Regex> object each time the method is called.</span></span> <span data-ttu-id="05b3b-107">Un <xref:System.Text.RegularExpressions.Match> objeto, a continuación, se usa para recorrer en iteración todas las coincidencias en la cadena.</span><span class="sxs-lookup"><span data-stu-id="05b3b-107">A <xref:System.Text.RegularExpressions.Match> object is then used to iterate through all matches in the string.</span></span>  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
  [!code-vb[RegularExpressions.Examples.HREF#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#1)]  
   
- En el siguiente ejemplo se muestra una llamada al método `DumpHRefs`.  
+ <span data-ttu-id="05b3b-108">En el ejemplo siguiente se muestra la llamada al método `DumpHRefs`.</span><span class="sxs-lookup"><span data-stu-id="05b3b-108">The following example then illustrates a call to the `DumpHRefs` method.</span></span>  
   
  [!code-csharp[RegularExpressions.Examples.HREF#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#2)]
  [!code-vb[RegularExpressions.Examples.HREF#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#2)]  
   
- El patrón de expresión regular `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` se interpreta como se muestra en la tabla siguiente.  
+ <span data-ttu-id="05b3b-109">El patrón de la expresión regular `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` se interpreta como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="05b3b-109">The regular expression pattern `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` is interpreted as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`href`|Busca coincidencias con la cadena literal "href".  La búsqueda no distingue entre mayúsculas y minúsculas.|  
-|`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
-|`=`|Busca coincidencias con el signo de igualdad.|  
-|`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|Busca coincidencias con uno de los siguientes elementos sin asignar el resultado a un grupo capturado:<br /><br /> -   Una comilla o apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o un apóstrofo, seguido por una comilla o un apóstrofo.  Este modelo incluye el grupo denominado `1`.<br />-   Uno o más caracteres que no sean un espacio en blanco.  Este modelo incluye el grupo denominado `1`.|  
-|`(?<1>[^"']*)`|Asigna cero o más apariciones de cualquier carácter distinto de una comilla o un apóstrofo al grupo de captura denominado `1`.|  
-|`"(?<1>\S+)`|Asigna uno o más caracteres que no sean un espacio en blanco al grupo de captura denominado `1`.|  
+|<span data-ttu-id="05b3b-110">Modelo</span><span class="sxs-lookup"><span data-stu-id="05b3b-110">Pattern</span></span>|<span data-ttu-id="05b3b-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="05b3b-111">Description</span></span>|  
+|-------------|-----------------|  
+|`href`|<span data-ttu-id="05b3b-112">Coincide con la cadena literal "href".</span><span class="sxs-lookup"><span data-stu-id="05b3b-112">Match the literal string "href".</span></span> <span data-ttu-id="05b3b-113">La búsqueda no distingue entre mayúsculas y minúsculas.</span><span class="sxs-lookup"><span data-stu-id="05b3b-113">The match is case-insensitive.</span></span>|  
+|`\s*`|<span data-ttu-id="05b3b-114">Busca coincidencias con cero o más caracteres de espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="05b3b-114">Match zero or more white-space characters.</span></span>|  
+|`=`|<span data-ttu-id="05b3b-115">Coincide con el signo igual.</span><span class="sxs-lookup"><span data-stu-id="05b3b-115">Match the equals sign.</span></span>|  
+|`\s*`|<span data-ttu-id="05b3b-116">Busca coincidencias con cero o más caracteres de espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="05b3b-116">Match zero or more white-space characters.</span></span>|  
+|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|<span data-ttu-id="05b3b-117">Coincidir con uno de los siguientes valores sin asignar el resultado a un grupo capturado:</span><span class="sxs-lookup"><span data-stu-id="05b3b-117">Match one of the following without assigning the result to a captured group:</span></span><br /><br /> <span data-ttu-id="05b3b-118">-Un signo de comillas o apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o apóstrofo, seguido por un signo de comillas o apóstrofo.</span><span class="sxs-lookup"><span data-stu-id="05b3b-118">-   A quotation mark or apostrophe, followed by zero or more occurrences of any character other than a quotation mark or apostrophe, followed by a quotation mark or apostrophe.</span></span> <span data-ttu-id="05b3b-119">El grupo con nombre `1` se incluye en este patrón.</span><span class="sxs-lookup"><span data-stu-id="05b3b-119">The group named `1` is included in this pattern.</span></span><br /><span data-ttu-id="05b3b-120">-Uno o varios caracteres de espacios en blanco.</span><span class="sxs-lookup"><span data-stu-id="05b3b-120">-   One or more non-white-space characters.</span></span> <span data-ttu-id="05b3b-121">El grupo con nombre `1` se incluye en este patrón.</span><span class="sxs-lookup"><span data-stu-id="05b3b-121">The group named `1` is included in this pattern.</span></span>|  
+|`(?<1>[^"']*)`|<span data-ttu-id="05b3b-122">Asigna cero o más apariciones de cualquier carácter que no sea apóstrofo o comilla al grupo de captura con nombre `1`.</span><span class="sxs-lookup"><span data-stu-id="05b3b-122">Assign zero or more occurrences of any character other than a quotation mark or apostrophe to the capturing group named `1`.</span></span>|  
+|`"(?<1>\S+)`|<span data-ttu-id="05b3b-123">Asigna uno o varios caracteres que no sean un espacio en blanco al grupo de captura con nombre `1`.</span><span class="sxs-lookup"><span data-stu-id="05b3b-123">Assign one or more non-white-space characters to the capturing group named `1`.</span></span>|  
   
-## Clase de resultados Match  
- Los resultados de una búsqueda se almacenan en la clase <xref:System.Text.RegularExpressions.Match>, que proporciona acceso a todas las subcadenas extraídas por la búsqueda.  Esta clase también recuerda la cadena buscada y la expresión regular utilizada, por lo que puede llamar al método <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=fullName> para realizar otra búsqueda, que comenzará donde terminó la última.  
+## <a name="match-result-class"></a><span data-ttu-id="05b3b-124">Clase de resultado Match</span><span class="sxs-lookup"><span data-stu-id="05b3b-124">Match Result Class</span></span>  
+ <span data-ttu-id="05b3b-125">Los resultados de la búsqueda se almacenan en la <xref:System.Text.RegularExpressions.Match> (clase), que proporciona acceso a todas las subcadenas extraídas por la búsqueda.</span><span class="sxs-lookup"><span data-stu-id="05b3b-125">The results of a search are stored in the <xref:System.Text.RegularExpressions.Match> class, which provides access to all the substrings extracted by the search.</span></span> <span data-ttu-id="05b3b-126">Esta clase recuerda también la cadena buscada y la expresión regular que se va a utilizar, por lo que puede llamar a la <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> método para realizar otra búsqueda, que comenzará donde finalizó la última de ellas.</span><span class="sxs-lookup"><span data-stu-id="05b3b-126">It also remembers the string being searched and the regular expression being used, so it can call the <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> method to perform another search starting where the last one ended.</span></span>  
   
-## Capturas con nombre explícito  
- En las expresiones regulares tradicionales, los paréntesis de captura se numeran automáticamente de forma secuencial.  Esto implica dos problemas.  En primer lugar, si se modifica una expresión regular al insertar o quitar un grupo de paréntesis, todo el código que hace referencia a las capturas numeradas debe reescribirse para que la nueva numeración quede reflejada.  En segundo lugar, dado que a menudo se utilizan grupos de paréntesis distintos con el fin de proporcionar expresiones alternativas para la búsqueda de una coincidencia aceptable, puede resultar difícil determinar cual de las dos expresiones ha devuelto en realidad un resultado.  
+## <a name="explicitly-named-captures"></a><span data-ttu-id="05b3b-127">Capturas con nombre explícito</span><span class="sxs-lookup"><span data-stu-id="05b3b-127">Explicitly Named Captures</span></span>  
+ <span data-ttu-id="05b3b-128">En las expresiones regulares tradicionales, los paréntesis de captura se numeran secuencialmente de forma automática.</span><span class="sxs-lookup"><span data-stu-id="05b3b-128">In traditional regular expressions, capturing parentheses are automatically numbered sequentially.</span></span> <span data-ttu-id="05b3b-129">Esto origina dos problemas.</span><span class="sxs-lookup"><span data-stu-id="05b3b-129">This leads to two problems.</span></span> <span data-ttu-id="05b3b-130">En primer lugar, si se modifica una expresión regular al insertar o quitar un conjunto de paréntesis, se debe reescribir todo el código que hace referencia a las capturas numeradas para reflejar la nueva numeración.</span><span class="sxs-lookup"><span data-stu-id="05b3b-130">First, if a regular expression is modified by inserting or removing a set of parentheses, all code that refers to the numbered captures must be rewritten to reflect the new numbering.</span></span> <span data-ttu-id="05b3b-131">En segundo lugar, puesto que a menudo se usan diferentes conjuntos de paréntesis para proporcionar expresiones alternativas para una coincidencia aceptable, puede resultar difícil determinar cuál de las dos expresiones devolvió realmente un resultado.</span><span class="sxs-lookup"><span data-stu-id="05b3b-131">Second, because different sets of parentheses often are used to provide two alternative expressions for an acceptable match, it might be difficult to determine which of the two expressions actually returned a result.</span></span>  
   
- Para solucionar estos problemas, la clase <xref:System.Text.RegularExpressions.Regex> admite la sintaxis `(?<name>…)` para capturar una coincidencia en una ranura especificada \(puede asignarle un nombre a la ranura usando una cadena o un entero, aunque resulta más sencillo recordar enteros\).  De esta forma, todas las coincidencias alternativas de la misma cadena pueden dirigirse al mismo lugar.  En caso de conflicto, la última coincidencia situada en una ranura es la coincidencia correcta. Sin embargo, se puede disponer de una lista completa de varias coincidencias para una única ranura.  Vea la colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName> para obtener información detallada.  
+ <span data-ttu-id="05b3b-132">Para resolver estos problemas, el <xref:System.Text.RegularExpressions.Regex> clase es compatible con la sintaxis `(?<name>…)` para capturar una coincidencia en una ranura especificada (un nombre a la ranura utilizando una cadena o un entero recordar enteros pueden recuperarse más rápidamente).</span><span class="sxs-lookup"><span data-stu-id="05b3b-132">To address these problems, the <xref:System.Text.RegularExpressions.Regex> class supports the syntax `(?<name>…)` for capturing a match into a specified slot (the slot can be named using a string or an integer; integers can be recalled more quickly).</span></span> <span data-ttu-id="05b3b-133">Así, las coincidencias alternativas para la misma cadena se pueden dirigir todas al mismo lugar.</span><span class="sxs-lookup"><span data-stu-id="05b3b-133">Thus, alternative matches for the same string all can be directed to the same place.</span></span> <span data-ttu-id="05b3b-134">En caso de conflicto, la última coincidencia situada en la ranura es la coincidencia correcta.</span><span class="sxs-lookup"><span data-stu-id="05b3b-134">In case of a conflict, the last match dropped into a slot is the successful match.</span></span> <span data-ttu-id="05b3b-135">(Pero está disponible una lista completa de varias coincidencias para una única ranura.</span><span class="sxs-lookup"><span data-stu-id="05b3b-135">(However, a complete list of multiple matches for a single slot is available.</span></span> <span data-ttu-id="05b3b-136">Consulte la <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> colección para obtener más información.)</span><span class="sxs-lookup"><span data-stu-id="05b3b-136">See the <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> collection for details.)</span></span>  
   
-## Vea también  
- [Expresiones regulares de .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="05b3b-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="05b3b-137">See Also</span></span>  
+ [<span data-ttu-id="05b3b-138">Expresiones regulares de .NET</span><span class="sxs-lookup"><span data-stu-id="05b3b-138">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)

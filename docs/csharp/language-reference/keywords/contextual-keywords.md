@@ -1,63 +1,43 @@
 ---
 title: Palabras clave contextuales (Referencia de C#)
-ms.date: 2017-03-07
+ms.date: 03/07/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- contextual keywords [C#]
+helpviewer_keywords: contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a6268e09b8063f95aa11fc1563f0b5b5d5d96a08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 57209c7554e7fb53ef946ad9a78a088a3dd49453
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="contextual-keywords-c-reference"></a>Palabras clave contextuales (Referencia de C#)
-Las palabras clave contextuales se usan para proporcionar un significado específico en el código, pero no son una palabra reservada en C#. En esta sección se presentan las siguientes palabras clave contextuales:  
+# <a name="contextual-keywords-c-reference"></a><span data-ttu-id="9334b-102">Palabras clave contextuales (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9334b-102">Contextual Keywords (C# Reference)</span></span>
+<span data-ttu-id="9334b-103">Las palabras clave contextuales se usan para proporcionar un significado específico en el código, pero no son una palabra reservada en C#.</span><span class="sxs-lookup"><span data-stu-id="9334b-103">A contextual keyword is used to provide a specific meaning in the code, but it is not a reserved word in C#.</span></span> <span data-ttu-id="9334b-104">En esta sección se presentan las siguientes palabras clave contextuales:</span><span class="sxs-lookup"><span data-stu-id="9334b-104">The following contextual keywords are introduced in this section:</span></span>  
   
-|Palabra clave|Descripción|  
+|<span data-ttu-id="9334b-105">Palabra clave</span><span class="sxs-lookup"><span data-stu-id="9334b-105">Keyword</span></span>|<span data-ttu-id="9334b-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="9334b-106">Description</span></span>|  
 |-------------|-----------------|  
-|[add](../../../csharp/language-reference/keywords/add.md)|Define un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe al evento.|  
-|[async](../../../csharp/language-reference/keywords/async.md)|Indica que el método modificado, una expresión lambda o un método anónimo es asincrónico.|  
-|[await](../../../csharp/language-reference/keywords/await.md)|Suspende un método asincrónico hasta que finalice una tarea en espera.|  
-|[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Define un tipo de referencia que permite que las operaciones en las que tiene lugar omitan la comprobación de tipos en tiempo de compilación.|  
-|[get](../../../csharp/language-reference/keywords/get.md)|Define un método de descriptor de acceso para una propiedad o un indizador.|  
-|[global](../../../csharp/language-reference/keywords/global.md)|Especifica el espacio de nombres global predeterminado, que de lo contrario no tiene nombre.|  
-|[partial](../../../csharp/language-reference/keywords/partial-type.md)|Define clases parciales, structs e interfaces a lo largo de la misma unidad de compilación.|  
-|[remove](../../../csharp/language-reference/keywords/remove.md)|Define un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente cancela la suscripción al evento.|  
-|[set](../../../csharp/language-reference/keywords/set.md)|Define un método de descriptor de acceso para una propiedad o un indizador.|  
-|[value](../../../csharp/language-reference/keywords/value.md)|Se usa para establecer descriptores de acceso y para agregar o quitar controladores de eventos.|  
-|[var](../../../csharp/language-reference/keywords/var.md)|Permite que el compilador determine el tipo de una variable declarada en el ámbito del método.|  
-|[when](when.md)|Especifica una condición de filtro para un bloque `catch` o la etiqueta `case` de una instrucción `switch`.|
-|[where](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|Agrega restricciones a una declaración genérica (vea también [where](../../../csharp/language-reference/keywords/where-clause.md)).|  
-|[yield](../../../csharp/language-reference/keywords/yield.md)|Se usa en un bloque de iteradores para devolver un valor al objeto enumerador o para señalar el final de la iteración.|  
+|[<span data-ttu-id="9334b-107">add</span><span class="sxs-lookup"><span data-stu-id="9334b-107">add</span></span>](../../../csharp/language-reference/keywords/add.md)|<span data-ttu-id="9334b-108">Define un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe al evento.</span><span class="sxs-lookup"><span data-stu-id="9334b-108">Defines a custom event accessor that is invoked when client code subscribes to the event.</span></span>|  
+|[<span data-ttu-id="9334b-109">async</span><span class="sxs-lookup"><span data-stu-id="9334b-109">async</span></span>](../../../csharp/language-reference/keywords/async.md)|<span data-ttu-id="9334b-110">Indica que el método modificado, una expresión lambda o un método anónimo es asincrónico.</span><span class="sxs-lookup"><span data-stu-id="9334b-110">Indicates that the modified method, lambda expression, or anonymous method is asynchronous.</span></span>|  
+|[<span data-ttu-id="9334b-111">await</span><span class="sxs-lookup"><span data-stu-id="9334b-111">await</span></span>](../../../csharp/language-reference/keywords/await.md)|<span data-ttu-id="9334b-112">Suspende un método asincrónico hasta que finalice una tarea en espera.</span><span class="sxs-lookup"><span data-stu-id="9334b-112">Suspends an async method until an awaited task is completed.</span></span>|  
+|[<span data-ttu-id="9334b-113">dynamic</span><span class="sxs-lookup"><span data-stu-id="9334b-113">dynamic</span></span>](../../../csharp/language-reference/keywords/dynamic.md)|<span data-ttu-id="9334b-114">Define un tipo de referencia que permite que las operaciones en las que tiene lugar omitan la comprobación de tipos en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="9334b-114">Defines a reference type that enables operations in which it occurs to bypass compile-time type checking.</span></span>|  
+|[<span data-ttu-id="9334b-115">get</span><span class="sxs-lookup"><span data-stu-id="9334b-115">get</span></span>](../../../csharp/language-reference/keywords/get.md)|<span data-ttu-id="9334b-116">Define un método de descriptor de acceso para una propiedad o un indizador.</span><span class="sxs-lookup"><span data-stu-id="9334b-116">Defines an accessor method for a property or an indexer.</span></span>|  
+|[<span data-ttu-id="9334b-117">global</span><span class="sxs-lookup"><span data-stu-id="9334b-117">global</span></span>](../../../csharp/language-reference/keywords/global.md)|<span data-ttu-id="9334b-118">Especifica el espacio de nombres global predeterminado, que de lo contrario no tiene nombre.</span><span class="sxs-lookup"><span data-stu-id="9334b-118">Specifies the default global namespace, which is otherwise unnamed.</span></span>|  
+|[<span data-ttu-id="9334b-119">partial</span><span class="sxs-lookup"><span data-stu-id="9334b-119">partial</span></span>](../../../csharp/language-reference/keywords/partial-type.md)|<span data-ttu-id="9334b-120">Define clases parciales, structs e interfaces a lo largo de la misma unidad de compilación.</span><span class="sxs-lookup"><span data-stu-id="9334b-120">Defines partial classes, structs, and interfaces throughout the same compilation unit.</span></span>|  
+|[<span data-ttu-id="9334b-121">remove</span><span class="sxs-lookup"><span data-stu-id="9334b-121">remove</span></span>](../../../csharp/language-reference/keywords/remove.md)|<span data-ttu-id="9334b-122">Define un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente cancela la suscripción al evento.</span><span class="sxs-lookup"><span data-stu-id="9334b-122">Defines a custom event accessor that is invoked when client code unsubscribes from the event.</span></span>|  
+|[<span data-ttu-id="9334b-123">set</span><span class="sxs-lookup"><span data-stu-id="9334b-123">set</span></span>](../../../csharp/language-reference/keywords/set.md)|<span data-ttu-id="9334b-124">Define un método de descriptor de acceso para una propiedad o un indizador.</span><span class="sxs-lookup"><span data-stu-id="9334b-124">Defines an accessor method for a property or an indexer.</span></span>|  
+|[<span data-ttu-id="9334b-125">value</span><span class="sxs-lookup"><span data-stu-id="9334b-125">value</span></span>](../../../csharp/language-reference/keywords/value.md)|<span data-ttu-id="9334b-126">Se usa para establecer descriptores de acceso y para agregar o quitar controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="9334b-126">Used to set accessors and to add or remove event handlers.</span></span>|  
+|[<span data-ttu-id="9334b-127">var</span><span class="sxs-lookup"><span data-stu-id="9334b-127">var</span></span>](../../../csharp/language-reference/keywords/var.md)|<span data-ttu-id="9334b-128">Permite que el compilador determine el tipo de una variable declarada en el ámbito del método.</span><span class="sxs-lookup"><span data-stu-id="9334b-128">Enables the type of a variable declared at method scope to be determined by the compiler.</span></span>|  
+|[<span data-ttu-id="9334b-129">when</span><span class="sxs-lookup"><span data-stu-id="9334b-129">when</span></span>](when.md)|<span data-ttu-id="9334b-130">Especifica una condición de filtro para un bloque `catch` o la etiqueta `case` de una instrucción `switch`.</span><span class="sxs-lookup"><span data-stu-id="9334b-130">Specifies a filter condition for a `catch` block or the `case` label of a `switch` statement.</span></span>|
+|[<span data-ttu-id="9334b-131">where</span><span class="sxs-lookup"><span data-stu-id="9334b-131">where</span></span>](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|<span data-ttu-id="9334b-132">Agrega restricciones a una declaración genérica</span><span class="sxs-lookup"><span data-stu-id="9334b-132">Adds constraints to a generic declaration.</span></span> <span data-ttu-id="9334b-133">(vea también [where](../../../csharp/language-reference/keywords/where-clause.md)).</span><span class="sxs-lookup"><span data-stu-id="9334b-133">(See also [where](../../../csharp/language-reference/keywords/where-clause.md)).</span></span>|  
+|[<span data-ttu-id="9334b-134">yield</span><span class="sxs-lookup"><span data-stu-id="9334b-134">yield</span></span>](../../../csharp/language-reference/keywords/yield.md)|<span data-ttu-id="9334b-135">Se usa en un bloque de iteradores para devolver un valor al objeto enumerador o para señalar el final de la iteración.</span><span class="sxs-lookup"><span data-stu-id="9334b-135">Used in an iterator block to return a value to the enumerator object or to signal the end of iteration.</span></span>|  
   
- Todas las palabras clave de consulta introducidas en C# 3.0 también son contextuales. Para obtener más información, vea [Palabras clave para consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md).  
+ <span data-ttu-id="9334b-136">Todas las palabras clave de consulta introducidas en C# 3.0 también son contextuales.</span><span class="sxs-lookup"><span data-stu-id="9334b-136">All query keywords introduced in C# 3.0 are also contextual.</span></span> <span data-ttu-id="9334b-137">Para obtener más información, vea [Palabras clave para consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="9334b-137">For more information, see [Query Keywords (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="9334b-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="9334b-138">See Also</span></span>  
+ [<span data-ttu-id="9334b-139">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="9334b-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="9334b-140">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9334b-140">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9334b-141">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="9334b-141">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

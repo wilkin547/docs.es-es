@@ -1,292 +1,295 @@
 ---
-title: "Garbage Collection and Performance | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, troubleshooting"
-  - "garbage collection, performance"
+title: "Recolección de elementos no utilizados y rendimiento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, troubleshooting
+- garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 35
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "35"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Garbage Collection and Performance
-En este tema se describen los problemas relacionados con la recolección de elementos no utilizados y el uso de memoria.  Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones.  Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
+# <a name="garbage-collection-and-performance"></a><span data-ttu-id="aef92-102">Recolección de elementos no utilizados y rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-102">Garbage Collection and Performance</span></span>
+<span data-ttu-id="aef92-103"><a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria.</span><span class="sxs-lookup"><span data-stu-id="aef92-103"><a name="top"></a> This topic describes issues related to garbage collection and memory usage.</span></span> <span data-ttu-id="aef92-104">Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="aef92-104">It addresses issues that pertain to the managed heap and explains how to minimize the effect of garbage collection on your applications.</span></span> <span data-ttu-id="aef92-105">Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.</span><span class="sxs-lookup"><span data-stu-id="aef92-105">Each issue has links to procedures that you can use to investigate problems.</span></span>  
   
- Este tema contiene las siguientes secciones:  
+ <span data-ttu-id="aef92-106">Este tema contiene las siguientes secciones:</span><span class="sxs-lookup"><span data-stu-id="aef92-106">This topic contains the following sections:</span></span>  
   
--   [Herramientas de análisis de rendimiento](#performance_analysis_tools)  
+-   [<span data-ttu-id="aef92-107">Herramientas de análisis de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-107">Performance Analysis Tools</span></span>](#performance_analysis_tools)  
   
--   [Solucionar problemas de rendimiento](#troubleshooting_performance_issues)  
+-   [<span data-ttu-id="aef92-108">Solucionar problemas de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-108">Troubleshooting Performance Issues</span></span>](#troubleshooting_performance_issues)  
   
--   [Instrucciones para la solución de problemas](#troubleshooting_guidelines)  
+-   [<span data-ttu-id="aef92-109">Instrucciones para la solución de problemas</span><span class="sxs-lookup"><span data-stu-id="aef92-109">Troubleshooting Guidelines</span></span>](#troubleshooting_guidelines)  
   
--   [Procedimientos para comprobar el rendimiento](#performance_check_procedures)  
+-   [<span data-ttu-id="aef92-110">Procedimientos para comprobar el rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-110">Performance Check Procedures</span></span>](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
-## Herramientas de análisis de rendimiento  
- En las próximas siguientes se describen las herramientas disponibles para investigar los problemas de uso de memoria y de recolección de elementos no utilizados.  Los [procedimientos](#performance_check_procedures) que se muestran más adelante en este tema hacen referencia a estas herramientas.  
+## <a name="performance-analysis-tools"></a><span data-ttu-id="aef92-111">Herramientas de análisis de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-111">Performance Analysis Tools</span></span>  
+ <span data-ttu-id="aef92-112">En las próximas siguientes se describen las herramientas disponibles para investigar los problemas de uso de memoria y de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-112">The following sections describe the tools that are available for investigating memory usage and garbage collection issues.</span></span> <span data-ttu-id="aef92-113">Los [procedimientos](#performance_check_procedures) que se muestran más adelante en este tema hacen referencia a estas herramientas.</span><span class="sxs-lookup"><span data-stu-id="aef92-113">The [procedures](#performance_check_procedures) provided later in this topic refer to these tools.</span></span>  
   
 <a name="perf_counters"></a>   
-### Contadores de rendimiento de memoria  
- Puede usar contadores de rendimiento para recopilar datos de rendimiento.  Para obtener instrucciones, consulte [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md).  La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), proporciona información sobre el recolector de elementos no utilizados.  
+### <a name="memory-performance-counters"></a><span data-ttu-id="aef92-114">Contadores de rendimiento de memoria</span><span class="sxs-lookup"><span data-stu-id="aef92-114">Memory Performance Counters</span></span>  
+ <span data-ttu-id="aef92-115">Puede usar contadores de rendimiento para recopilar datos de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="aef92-115">You can use performance counters to gather performance data.</span></span> <span data-ttu-id="aef92-116">Para obtener instrucciones, vea [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Generación de perfiles en tiempo de ejecución).</span><span class="sxs-lookup"><span data-stu-id="aef92-116">For instructions, see [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md).</span></span> <span data-ttu-id="aef92-117">La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) (Contadores de rendimiento de .NET Framework), ofrece información sobre el recolector de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-117">The .NET CLR Memory category of performance counters, as described in [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), provides information about the garbage collector.</span></span>  
   
 <a name="sos"></a>   
-### Depurar con SOS  
- Puede usar el [depurador de Windows \(WinDbg\)](http://go.microsoft.com/fwlink/?LinkId=186482) para inspeccionar los objetos del montón administrado.  
+### <a name="debugging-with-sos"></a><span data-ttu-id="aef92-118">Depurar con SOS</span><span class="sxs-lookup"><span data-stu-id="aef92-118">Debugging with SOS</span></span>  
+ <span data-ttu-id="aef92-119">Puede usar el [depurador de Windows (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) para inspeccionar objetos del montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-119">You can use the [Windows Debugger (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) to inspect objects on the managed heap.</span></span>  
   
- Para instalar WinDbg, instale las herramientas de depuración para Windows desde el [sitio web de herramientas de desarrollo y WDK](http://go.microsoft.com/fwlink/?LinkID=103787).  
+ <span data-ttu-id="aef92-120">Para instalar WinDbg, instale las herramientas de depuración para Windows desde el [sitio web de herramientas de desarrollo y WDK](http://go.microsoft.com/fwlink/?LinkID=103787).</span><span class="sxs-lookup"><span data-stu-id="aef92-120">To install WinDbg, install Debugging Tools for Windows from the [WDK and Developer Tools Web site](http://go.microsoft.com/fwlink/?LinkID=103787).</span></span>  
   
 <a name="etw"></a>   
-### Eventos ETW de recolección de elementos no utilizados  
- El seguimiento de eventos para Windows \(ETW\) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework.  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico.  Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:  
+### <a name="garbage-collection-etw-events"></a><span data-ttu-id="aef92-121">Eventos ETW de recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="aef92-121">Garbage Collection ETW Events</span></span>  
+ <span data-ttu-id="aef92-122">El seguimiento de eventos para Windows (ETW) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="aef92-122">Event tracing for Windows (ETW) is a tracing system that supplements the profiling and debugging support provided by the .NET Framework.</span></span> <span data-ttu-id="aef92-123">A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico.</span><span class="sxs-lookup"><span data-stu-id="aef92-123">Starting with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md) capture useful information for analyzing the managed heap from a statistical point of view.</span></span> <span data-ttu-id="aef92-124">Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:</span><span class="sxs-lookup"><span data-stu-id="aef92-124">For example, the `GCStart_V1` event, which is raised when a garbage collection is about to occur, provides the following information:</span></span>  
   
--   La generación de objetos que se recolecta.  
+-   <span data-ttu-id="aef92-125">La generación de objetos que se recolecta.</span><span class="sxs-lookup"><span data-stu-id="aef92-125">Which generation of objects is being collected.</span></span>  
   
--   Lo que desencadenó la recolección de elementos no utilizados.  
+-   <span data-ttu-id="aef92-126">Lo que desencadenó la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-126">What triggered the garbage collection.</span></span>  
   
--   Tipo de recolección de elementos no utilizados \(simultánea o no simultánea\).  
+-   <span data-ttu-id="aef92-127">Tipo de recolección de elementos no utilizados (simultánea o no simultánea).</span><span class="sxs-lookup"><span data-stu-id="aef92-127">Type of garbage collection (concurrent or not concurrent).</span></span>  
   
- El registro de eventos ETW es eficaz y no enmascara ningún problema de rendimiento asociado a la recolección de elementos no utilizados.  Un proceso puede proporcionar sus propios eventos junto con los eventos ETW.  Cuando se registran, tanto los eventos de la aplicación como los eventos de la recolección de elementos no utilizados se pueden poner en correlación para determinar cómo y cuándo se producen problemas de pila.  Por ejemplo, una aplicación de servidor puede proporcionar eventos al comienzo y al final de una solicitud de cliente.  
+ <span data-ttu-id="aef92-128">El registro de eventos ETW es eficaz y no enmascara ningún problema de rendimiento asociado a la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-128">ETW event logging is efficient and will not mask any performance problems associated with garbage collection.</span></span> <span data-ttu-id="aef92-129">Un proceso puede proporcionar sus propios eventos junto con los eventos ETW.</span><span class="sxs-lookup"><span data-stu-id="aef92-129">A process can provide its own events in conjunction with ETW events.</span></span> <span data-ttu-id="aef92-130">Cuando se registran, tanto los eventos de la aplicación como los eventos de la recolección de elementos no utilizados se pueden poner en correlación para determinar cómo y cuándo se producen problemas de pila.</span><span class="sxs-lookup"><span data-stu-id="aef92-130">When logged, both the application's events and the garbage collection events can be correlated to determine how and when heap problems occur.</span></span> <span data-ttu-id="aef92-131">Por ejemplo, una aplicación de servidor puede proporcionar eventos al comienzo y al final de una solicitud de cliente.</span><span class="sxs-lookup"><span data-stu-id="aef92-131">For example, a server application could provide events at the start and end of a client request.</span></span>  
   
 <a name="profiling_api"></a>   
-### La API de generación de perfiles  
- Las interfaces de generación de perfiles de Common Language Runtime \(CLR\) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados.  Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados.  Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación.  Para obtener más información, consulte [Información general sobre la generación de perfiles](../../../ocs/framework/unmanaged-api/profiling/profiling-overview.md).  
+### <a name="the-profiling-api"></a><span data-ttu-id="aef92-132">La API de generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="aef92-132">The Profiling API</span></span>  
+ <span data-ttu-id="aef92-133">Las interfaces de generación de perfiles de Common Language Runtime (CLR) proporcionan información detallada sobre los objetos que se vieron afectados durante la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-133">The common language runtime (CLR) profiling interfaces provide detailed information about the objects that were affected during garbage collection.</span></span> <span data-ttu-id="aef92-134">Un generador de perfiles puede recibir una notificación cuando se inicia y finaliza una recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-134">A profiler can be notified when a garbage collection starts and ends.</span></span> <span data-ttu-id="aef92-135">Puede proporcionar informes sobre los objetos del montón administrado, incluida una identificación de los objetos de cada generación.</span><span class="sxs-lookup"><span data-stu-id="aef92-135">It can provide reports about the objects on the managed heap, including an identification of objects in each generation.</span></span> <span data-ttu-id="aef92-136">Para más información, consulte [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md) (Información general sobre generación de perfiles).</span><span class="sxs-lookup"><span data-stu-id="aef92-136">For more information, see [Profiling Overview](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).</span></span>  
   
- Los generadores de perfiles pueden proporcionar información completa.  Sin embargo, los generadores de perfiles complejos pueden modificar el comportamiento de una aplicación.  
+ <span data-ttu-id="aef92-137">Los generadores de perfiles pueden proporcionar información completa.</span><span class="sxs-lookup"><span data-stu-id="aef92-137">Profilers can provide comprehensive information.</span></span> <span data-ttu-id="aef92-138">Sin embargo, los generadores de perfiles complejos pueden modificar el comportamiento de una aplicación.</span><span class="sxs-lookup"><span data-stu-id="aef92-138">However, complex profilers can potentially modify an application's behavior.</span></span>  
   
-### Supervisión de recursos de dominio de aplicación  
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la supervisión de recursos de dominio de aplicación \(ARM\) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación.  Para obtener más información, consulte [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
+### <a name="application-domain-resource-monitoring"></a><span data-ttu-id="aef92-139">Supervisión de recursos de dominio de aplicación</span><span class="sxs-lookup"><span data-stu-id="aef92-139">Application Domain Resource Monitoring</span></span>  
+ <span data-ttu-id="aef92-140">A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la supervisión de recursos de dominio de aplicación (ARM) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="aef92-140">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Application domain resource monitoring (ARM) enables hosts to monitor CPU and memory usage by application domain.</span></span> <span data-ttu-id="aef92-141">Para más información, consulte [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md) (Supervisión de recursos de dominio de aplicación).</span><span class="sxs-lookup"><span data-stu-id="aef92-141">For more information, see [Application Domain Resource Monitoring](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).</span></span>  
   
- [Volver al principio](#top)  
+ [<span data-ttu-id="aef92-142">Volver al principio</span><span class="sxs-lookup"><span data-stu-id="aef92-142">Back to top</span></span>](#top)  
   
 <a name="troubleshooting_performance_issues"></a>   
-## Solucionar problemas de rendimiento  
- El primer paso consiste en [determinar si el problema es realmente la recolección de elementos no utilizados](#IsGC).  Si determina que lo es, seleccione un elemento de la lista siguiente para solucionar el problema.  
+## <a name="troubleshooting-performance-issues"></a><span data-ttu-id="aef92-143">Solucionar problemas de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-143">Troubleshooting Performance Issues</span></span>  
+ <span data-ttu-id="aef92-144">El primer paso consiste en [determinar si el problema es realmente la recolección de elementos no utilizados](#IsGC).</span><span class="sxs-lookup"><span data-stu-id="aef92-144">The first step is to [determine whether the issue is actually garbage collection](#IsGC).</span></span> <span data-ttu-id="aef92-145">Si determina que lo es, seleccione un elemento de la lista siguiente para solucionar el problema.</span><span class="sxs-lookup"><span data-stu-id="aef92-145">If you determine that it is, select from the following list to troubleshoot the problem.</span></span>  
   
--   [Se produce una excepción de memoria insuficiente](#Issue_OOM)  
+-   [<span data-ttu-id="aef92-146">Se inicia una excepción de memoria insuficiente</span><span class="sxs-lookup"><span data-stu-id="aef92-146">An out-of-memory exception is thrown</span></span>](#Issue_OOM)  
   
--   [El proceso usa demasiada memoria](#Issue_TooMuchMemory)  
+-   [<span data-ttu-id="aef92-147">El proceso usa demasiada memoria</span><span class="sxs-lookup"><span data-stu-id="aef92-147">The process uses too much memory</span></span>](#Issue_TooMuchMemory)  
   
--   [El recolector de elementos no utilizados no recupera los objetos con la rapidez suficiente](#Issue_NotFastEnough)  
+-   [<span data-ttu-id="aef92-148">El recolector de elementos no utilizados no recupera los objetos con la rapidez suficiente</span><span class="sxs-lookup"><span data-stu-id="aef92-148">The garbage collector does not reclaim objects fast enough</span></span>](#Issue_NotFastEnough)  
   
--   [El montón administrado está demasiado fragmentado](#Issue_Fragmentation)  
+-   [<span data-ttu-id="aef92-149">El montón administrado está demasiado fragmentado</span><span class="sxs-lookup"><span data-stu-id="aef92-149">The managed heap is too fragmented</span></span>](#Issue_Fragmentation)  
   
--   [Las pausas de la recolección de elementos no utilizados son demasiado largas](#Issue_LongPauses)  
+-   [<span data-ttu-id="aef92-150">Las pausas de la recolección de elementos no utilizados son demasiado largas</span><span class="sxs-lookup"><span data-stu-id="aef92-150">Garbage collection pauses are too long</span></span>](#Issue_LongPauses)  
   
--   [La generación 0 es demasiado grande](#Issue_Gen0)  
+-   [<span data-ttu-id="aef92-151">La generación 0 es demasiado grande</span><span class="sxs-lookup"><span data-stu-id="aef92-151">Generation 0 is too big</span></span>](#Issue_Gen0)  
   
--   [El uso de CPU durante una recolección de elementos no utilizados es demasiado alto](#Issue_HighCPU)  
+-   [<span data-ttu-id="aef92-152">El uso de CPU durante una recolección de elementos no utilizados es demasiado alto</span><span class="sxs-lookup"><span data-stu-id="aef92-152">CPU usage during a garbage collection is too high</span></span>](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### Problema: Se produce una excepción de memoria insuficiente  
- Hay dos casos justificados para que se produzca una excepción <xref:System.OutOfMemoryException> administrada:  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a><span data-ttu-id="aef92-153">Problema: Se produce una excepción de memoria insuficiente</span><span class="sxs-lookup"><span data-stu-id="aef92-153">Issue: An Out-of-Memory Exception Is Thrown</span></span>  
+ <span data-ttu-id="aef92-154">Hay dos casos justificados para que se produzca una excepción <xref:System.OutOfMemoryException> administrada:</span><span class="sxs-lookup"><span data-stu-id="aef92-154">There are two legitimate cases for a managed <xref:System.OutOfMemoryException> to be thrown:</span></span>  
   
--   La escasez de memoria virtual.  
+-   <span data-ttu-id="aef92-155">La escasez de memoria virtual.</span><span class="sxs-lookup"><span data-stu-id="aef92-155">Running out of virtual memory.</span></span>  
   
-     El recolector de elementos no utilizados asigna memoria del sistema en segmentos de un tamaño predeterminado.  Si una asignación necesita un segmento adicional, pero no queda ningún bloque libre contiguo en el espacio de memoria virtual del proceso, se producirá un error en la asignación del montón administrado.  
+     <span data-ttu-id="aef92-156">El recolector de elementos no utilizados asigna memoria del sistema en segmentos de un tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="aef92-156">The garbage collector allocates memory from the system in segments of a pre-determined size.</span></span> <span data-ttu-id="aef92-157">Si una asignación necesita un segmento adicional, pero no queda ningún bloque libre contiguo en el espacio de memoria virtual del proceso, se producirá un error en la asignación del montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-157">If an allocation requires an additional segment, but there is no contiguous free block left in the process's virtual memory space, the allocation for the managed heap will fail.</span></span>  
   
--   No tener suficiente memoria física para asignar.  
+-   <span data-ttu-id="aef92-158">No tener suficiente memoria física para asignar.</span><span class="sxs-lookup"><span data-stu-id="aef92-158">Not having enough physical memory to allocate.</span></span>  
   
-|Comprobaciones de rendimiento|  
-|-----------------------------------|  
-|[Determine si la excepción de memoria insuficiente está administrada.](#OOMIsManaged)<br /><br /> [Determine cuánta memoria virtual se puede reservar.](#GetVM)<br /><br /> [Determine si hay suficiente memoria física.](#Physical)|  
+|<span data-ttu-id="aef92-159">Comprobaciones de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-159">Performance checks</span></span>|  
+|------------------------|  
+|[<span data-ttu-id="aef92-160">Determine si la excepción de memoria insuficiente está administrada.</span><span class="sxs-lookup"><span data-stu-id="aef92-160">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)<br /><br /> [<span data-ttu-id="aef92-161">Determine cuánta memoria virtual se puede reservar.</span><span class="sxs-lookup"><span data-stu-id="aef92-161">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="aef92-162">Determine si hay suficiente memoria física.</span><span class="sxs-lookup"><span data-stu-id="aef92-162">Determine whether there is enough physical memory.</span></span>](#Physical)|  
   
- Si determina que la excepción no es legítima, póngase en contacto con el servicio de atención al cliente y soporte técnico de Microsoft, y proporcione la información siguiente:  
+ <span data-ttu-id="aef92-163">Si determina que la excepción no es legítima, póngase en contacto con el servicio de atención al cliente y soporte técnico de Microsoft, y proporcione la información siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-163">If you determine that the exception is not legitimate, contact Microsoft Customer Service and Support with the following information:</span></span>  
   
--   La pila con la excepción administrada de memoria insuficiente.  
+-   <span data-ttu-id="aef92-164">La pila con la excepción administrada de memoria insuficiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-164">The stack with the managed out-of-memory exception.</span></span>  
   
--   Un volcado de memoria completo.  
+-   <span data-ttu-id="aef92-165">Un volcado de memoria completo.</span><span class="sxs-lookup"><span data-stu-id="aef92-165">Full memory dump.</span></span>  
   
--   Los datos que demuestran que no es una excepción legítima de memoria insuficiente, incluidos los datos que muestran que la memoria virtual o la memoria física no supone ningún problema.  
+-   <span data-ttu-id="aef92-166">Los datos que demuestran que no es una excepción legítima de memoria insuficiente, incluidos los datos que muestran que la memoria virtual o la memoria física no supone ningún problema.</span><span class="sxs-lookup"><span data-stu-id="aef92-166">Data that proves that it is not a legitimate out-of-memory exception, including data that shows that virtual or physical memory is not an issue.</span></span>  
   
 <a name="Issue_TooMuchMemory"></a>   
-### Problema: El proceso usa demasiada memoria  
- Un supuesto común es que la presentación del uso de memoria en la pestaña **Rendimiento** del Administrador de tareas de Windows puede indicar cuándo se está usando demasiada memoria.  Sin embargo, esa información pertenece al espacio de trabajo; no proporciona información sobre el uso de memoria virtual.  
+### <a name="issue-the-process-uses-too-much-memory"></a><span data-ttu-id="aef92-167">Problema: El proceso usa demasiada memoria</span><span class="sxs-lookup"><span data-stu-id="aef92-167">Issue: The Process Uses Too Much Memory</span></span>  
+ <span data-ttu-id="aef92-168">Un supuesto común es que el uso de memoria que aparece en la pestaña **Rendimiento** del Administrador de tareas de Windows puede indicar cuándo se está usando demasiada memoria.</span><span class="sxs-lookup"><span data-stu-id="aef92-168">A common assumption is that the memory usage display on the **Performance** tab of Windows Task Manager can indicate when too much memory is being used.</span></span> <span data-ttu-id="aef92-169">Sin embargo, esa información pertenece al espacio de trabajo; no proporciona información sobre el uso de memoria virtual.</span><span class="sxs-lookup"><span data-stu-id="aef92-169">However, that display pertains to the working set; it does not provide information about virtual memory usage.</span></span>  
   
- Si determina que el problema está provocado por el montón administrado, debe medir el montón administrado a lo largo del tiempo para determinar cualquier patrón.  
+ <span data-ttu-id="aef92-170">Si determina que el problema está provocado por el montón administrado, debe medir el montón administrado a lo largo del tiempo para determinar cualquier patrón.</span><span class="sxs-lookup"><span data-stu-id="aef92-170">If you determine that the issue is caused by the managed heap, you must measure the managed heap over time to determine any patterns.</span></span>  
   
- Si determina que el problema no está provocado por el montón administrado, debe usar la depuración nativa.  
+ <span data-ttu-id="aef92-171">Si determina que el problema no está provocado por el montón administrado, debe usar la depuración nativa.</span><span class="sxs-lookup"><span data-stu-id="aef92-171">If you determine that the problem is not caused by the managed heap, you must use native debugging.</span></span>  
   
-|Comprobaciones de rendimiento|  
-|-----------------------------------|  
-|[Determine cuánta memoria virtual se puede reservar.](#GetVM)<br /><br /> [Determine cuánta memoria está confirmando el montón administrado.](#ManagedHeapCommit)<br /><br /> [Determine cuánta memoria reserva el montón administrado.](#ManagedHeapReserve)<br /><br /> [Determine los objetos grandes de la generación 2.](#ExamineGen2)<br /><br /> [Determine las referencias a objetos.](#ObjRef)|  
+|<span data-ttu-id="aef92-172">Comprobaciones de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-172">Performance checks</span></span>|  
+|------------------------|  
+|[<span data-ttu-id="aef92-173">Determine cuánta memoria virtual se puede reservar.</span><span class="sxs-lookup"><span data-stu-id="aef92-173">Determine how much virtual memory can be reserved.</span></span>](#GetVM)<br /><br /> [<span data-ttu-id="aef92-174">Determine cuánta memoria está confirmando el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-174">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)<br /><br /> [<span data-ttu-id="aef92-175">Determine cuánta memoria reserva el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-175">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)<br /><br /> [<span data-ttu-id="aef92-176">Determine los objetos grandes de la generación 2.</span><span class="sxs-lookup"><span data-stu-id="aef92-176">Determine large objects in generation 2.</span></span>](#ExamineGen2)<br /><br /> [<span data-ttu-id="aef92-177">Determine las referencias a objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-177">Determine references to objects.</span></span>](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### Problema: El recolector de elementos no utilizados no recupera los objetos con la rapidez suficiente  
- Cuando parezca que la recolección de elementos no utilizados no está recuperando los objetos según lo esperado, debe determinar si hay alguna referencia segura a esos objetos.  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a><span data-ttu-id="aef92-178">Problema: El recolector de elementos no utilizados no recupera los objetos con la rapidez suficiente</span><span class="sxs-lookup"><span data-stu-id="aef92-178">Issue: The Garbage Collector Does Not Reclaim Objects Fast Enough</span></span>  
+ <span data-ttu-id="aef92-179">Cuando parezca que la recolección de elementos no utilizados no está recuperando los objetos según lo esperado, debe determinar si hay alguna referencia segura a esos objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-179">When it appears as if objects are not being reclaimed as expected for garbage collection, you must determine if there are any strong references to those objects.</span></span>  
   
- También puede encontrar este problema si no se ha producido ninguna recolección de elementos no utilizados para la generación que contiene un objeto muerto, lo que indica que el finalizador del objeto muerto no se ha ejecutado.  Por ejemplo, esto puede ocurrir cuando se ejecuta una aplicación de contenedor uniproceso \(STA\) y el subproceso que atiende a la cola del finalizador no la puede llamar.  
+ <span data-ttu-id="aef92-180">También puede encontrar este problema si no se ha producido ninguna recolección de elementos no utilizados para la generación que contiene un objeto muerto, lo que indica que el finalizador del objeto muerto no se ha ejecutado.</span><span class="sxs-lookup"><span data-stu-id="aef92-180">You may also encounter this issue if there has been no garbage collection for the generation that contains a dead object, which indicates that the finalizer for the dead object has not been run.</span></span> <span data-ttu-id="aef92-181">Por ejemplo, esto puede ocurrir cuando se ejecuta una aplicación de contenedor uniproceso (STA) y el subproceso que atiende a la cola del finalizador no la puede llamar.</span><span class="sxs-lookup"><span data-stu-id="aef92-181">For example, this is possible when you are running a single-threaded apartment (STA) application and the thread that services the finalizer queue cannot call into it.</span></span>  
   
-|Comprobaciones de rendimiento|  
-|-----------------------------------|  
-|[Compruebe las referencias a objetos.](#ObjRef)<br /><br /> [Determine si se ha ejecutado un finalizador.](#Induce)<br /><br /> [Determine si hay objetos en espera de finalización.](#Finalize)|  
+|<span data-ttu-id="aef92-182">Comprobaciones de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-182">Performance checks</span></span>|  
+|------------------------|  
+|[<span data-ttu-id="aef92-183">Compruebe las referencias a objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-183">Check references to objects.</span></span>](#ObjRef)<br /><br /> [<span data-ttu-id="aef92-184">Determine si se ha ejecutado un finalizador.</span><span class="sxs-lookup"><span data-stu-id="aef92-184">Determine whether a finalizer has been run.</span></span>](#Induce)<br /><br /> [<span data-ttu-id="aef92-185">Determine si hay objetos en espera de finalización.</span><span class="sxs-lookup"><span data-stu-id="aef92-185">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### Problema: El montón administrado está demasiado fragmentado  
- El nivel de fragmentación se calcula como la proporción de espacio disponible con respecto a la memoria total asignada para la generación.  Para la generación 2, un nivel aceptable de fragmentación es inferior al 20%.  Puesto que la generación 2 puede llegar a ser muy grande, la proporción de fragmentación es más importante que el valor absoluto.  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a><span data-ttu-id="aef92-186">Problema: El montón administrado está demasiado fragmentado</span><span class="sxs-lookup"><span data-stu-id="aef92-186">Issue: The Managed Heap Is Too fragmented</span></span>  
+ <span data-ttu-id="aef92-187">El nivel de fragmentación se calcula como la proporción de espacio disponible con respecto a la memoria total asignada para la generación.</span><span class="sxs-lookup"><span data-stu-id="aef92-187">The fragmentation level is calculated as the ratio of free space over the total allocated memory for the generation.</span></span> <span data-ttu-id="aef92-188">Para la generación 2, un nivel aceptable de fragmentación es inferior al 20%.</span><span class="sxs-lookup"><span data-stu-id="aef92-188">For generation 2, an acceptable level of fragmentation is no more than 20%.</span></span> <span data-ttu-id="aef92-189">Puesto que la generación 2 puede llegar a ser muy grande, la proporción de fragmentación es más importante que el valor absoluto.</span><span class="sxs-lookup"><span data-stu-id="aef92-189">Because generation 2 can get very big, the ratio of fragmentation is more important than the absolute value.</span></span>  
   
- El hecho de tener mucho espacio disponible en la generación 0 no supone ningún problema porque esta es la generación donde se asignan nuevos objetos.  
+ <span data-ttu-id="aef92-190">El hecho de tener mucho espacio disponible en la generación 0 no supone ningún problema porque esta es la generación donde se asignan nuevos objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-190">Having lots of free space in generation 0 is not a problem because this is the generation where new objects are allocated.</span></span>  
   
- Siempre se produce fragmentación en el montón de objetos grandes porque no se compacta.  Los objetos libres adyacentes se contraen de forma natural en un único espacio para satisfacer las solicitudes de asignación de objetos grandes.  
+ <span data-ttu-id="aef92-191">Siempre se produce fragmentación en el montón de objetos grandes porque no se compacta.</span><span class="sxs-lookup"><span data-stu-id="aef92-191">Fragmentation always occurs in the large object heap because it is not compacted.</span></span> <span data-ttu-id="aef92-192">Los objetos libres adyacentes se contraen de forma natural en un único espacio para satisfacer las solicitudes de asignación de objetos grandes.</span><span class="sxs-lookup"><span data-stu-id="aef92-192">Free objects that are adjacent are naturally collapsed into a single space to satisfy large object allocation requests.</span></span>  
   
- La fragmentación puede convertirse en un problema en las generaciones 1 y 2.  Si estas generaciones tienen una gran cantidad de espacio disponible después de una recolección de elementos no utilizados, el uso de objetos de una aplicación puede necesitar modificaciones y debe considerar la posibilidad de volver a evaluar la duración de los objetos de larga duración.  
+ <span data-ttu-id="aef92-193">La fragmentación puede convertirse en un problema en las generaciones 1 y 2.</span><span class="sxs-lookup"><span data-stu-id="aef92-193">Fragmentation can become a problem in generation 1 and generation 2.</span></span> <span data-ttu-id="aef92-194">Si estas generaciones tienen una gran cantidad de espacio disponible después de una recolección de elementos no utilizados, el uso de objetos de una aplicación puede necesitar modificaciones y debe considerar la posibilidad de volver a evaluar la duración de los objetos de larga duración.</span><span class="sxs-lookup"><span data-stu-id="aef92-194">If these generations have a large amount of free space after a garbage collection, an application's object usage may need modification, and you should consider re-evaluating the lifetime of long-term objects.</span></span>  
   
- El anclaje excesivo de objetos puede aumentar la fragmentación.  Si la fragmentación es elevada, puede que haya demasiados objetos anclados.  
+ <span data-ttu-id="aef92-195">El anclaje excesivo de objetos puede aumentar la fragmentación.</span><span class="sxs-lookup"><span data-stu-id="aef92-195">Excessive pinning of objects can increase fragmentation.</span></span> <span data-ttu-id="aef92-196">Si la fragmentación es elevada, puede que haya demasiados objetos anclados.</span><span class="sxs-lookup"><span data-stu-id="aef92-196">If fragmentation is high, too many objects could be pinned.</span></span>  
   
- Si la fragmentación de la memoria virtual está impidiendo que el recolector de elementos no utilizados agregue segmentos, puede deberse a una de las causas siguientes:  
+ <span data-ttu-id="aef92-197">Si la fragmentación de la memoria virtual está impidiendo que el recolector de elementos no utilizados agregue segmentos, puede deberse a una de las causas siguientes:</span><span class="sxs-lookup"><span data-stu-id="aef92-197">If fragmentation of virtual memory is preventing the garbage collector from adding segments, the causes could be one of the following:</span></span>  
   
--   Carga y descarga frecuentes de muchos ensamblados pequeños.  
+-   <span data-ttu-id="aef92-198">Carga y descarga frecuentes de muchos ensamblados pequeños.</span><span class="sxs-lookup"><span data-stu-id="aef92-198">Frequent loading and unloading of many small assemblies.</span></span>  
   
--   Almacenamiento de demasiadas referencias a objetos COM al interoperar con código no administrado.  
+-   <span data-ttu-id="aef92-199">Almacenamiento de demasiadas referencias a objetos COM al interoperar con código no administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-199">Holding too many references to COM objects when interoperating with unmanaged code.</span></span>  
   
--   Creación de objetos grandes transitorios, lo que hace que el montón de objetos grandes asigne y libere segmentos del montón con frecuencia.  
+-   <span data-ttu-id="aef92-200">Creación de objetos grandes transitorios, lo que hace que el montón de objetos grandes asigne y libere segmentos del montón con frecuencia.</span><span class="sxs-lookup"><span data-stu-id="aef92-200">Creation of large transient objects, which causes the large object heap to allocate and free heap segments frequently.</span></span>  
   
-     Al hospedar el CLR, una aplicación puede solicitar que el recolector de elementos no utilizados conserve sus segmentos.  Esto reduce la frecuencia de las asignaciones de segmentos.  Esto se logra usando la marca STARTUP\_HOARD\_GC\_VM en la [STARTUP\_FLAGS \(Enumeración\)](../../../ocs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
+     <span data-ttu-id="aef92-201">Al hospedar el CLR, una aplicación puede solicitar que el recolector de elementos no utilizados conserve sus segmentos.</span><span class="sxs-lookup"><span data-stu-id="aef92-201">When hosting the CLR, an application can request that the garbage collector retain its segments.</span></span> <span data-ttu-id="aef92-202">Esto reduce la frecuencia de las asignaciones de segmentos.</span><span class="sxs-lookup"><span data-stu-id="aef92-202">This reduces the frequency of segment allocations.</span></span> <span data-ttu-id="aef92-203">Para ello se emplea la marca STARTUP_HOARD_GC_VM en la [enumeración STARTUP_FLAGS](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="aef92-203">This is accomplished by using the STARTUP_HOARD_GC_VM flag in the [STARTUP_FLAGS Enumeration](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).</span></span>  
   
-|Comprobaciones de rendimiento|  
-|-----------------------------------|  
-|[Determine la cantidad de espacio disponible en el montón administrado.](#Fragmented)<br /><br /> [Determine el número de objetos anclados.](#Pinned)|  
+|<span data-ttu-id="aef92-204">Comprobaciones de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-204">Performance checks</span></span>|  
+|------------------------|  
+|[<span data-ttu-id="aef92-205">Determine la cantidad de espacio disponible en el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-205">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)<br /><br /> [<span data-ttu-id="aef92-206">Determine el número de objetos anclados.</span><span class="sxs-lookup"><span data-stu-id="aef92-206">Determine the number of pinned objects.</span></span>](#Pinned)|  
   
- Si cree que no hay ninguna causa que justifique la fragmentación, póngase en contacto con el servicio de atención al cliente y soporte técnico de Microsoft.  
+ <span data-ttu-id="aef92-207">Si cree que no hay ninguna causa que justifique la fragmentación, póngase en contacto con el servicio de atención al cliente y soporte técnico de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="aef92-207">If you think that there is no legitimate cause for the fragmentation, contact Microsoft Customer Service and Support.</span></span>  
   
 <a name="Issue_LongPauses"></a>   
-### Problema: Las pausas de la recolección de elementos no utilizados son demasiado largas  
- La recolección de elementos no utilizados funciona en tiempo real flexible, por lo que una aplicación debe poder tolerar algunas pausas.  Un criterio para el tiempo real flexible es que el 95% de las operaciones debe finalizar a tiempo.  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a><span data-ttu-id="aef92-208">Problema: Las pausas de la recolección de elementos no utilizados son demasiado largas</span><span class="sxs-lookup"><span data-stu-id="aef92-208">Issue: Garbage Collection Pauses Are Too Long</span></span>  
+ <span data-ttu-id="aef92-209">La recolección de elementos no utilizados funciona en tiempo real flexible, por lo que una aplicación debe poder tolerar algunas pausas.</span><span class="sxs-lookup"><span data-stu-id="aef92-209">Garbage collection operates in soft real time, so an application must be able to tolerate some pauses.</span></span> <span data-ttu-id="aef92-210">Un criterio para el tiempo real flexible es que el 95% de las operaciones debe finalizar a tiempo.</span><span class="sxs-lookup"><span data-stu-id="aef92-210">A criterion for soft real time is that 95% of the operations must finish on time.</span></span>  
   
- En la recolección de elementos no utilizados simultánea, se permite la ejecución de subprocesos administrados durante una recolección, lo que significa que las pausas son mínimas.  
+ <span data-ttu-id="aef92-211">En la recolección de elementos no utilizados simultánea, se permite la ejecución de subprocesos administrados durante una recolección, lo que significa que las pausas son mínimas.</span><span class="sxs-lookup"><span data-stu-id="aef92-211">In concurrent garbage collection, managed threads are allowed to run during a collection, which means that pauses are very minimal.</span></span>  
   
- Las recolecciones de elementos no utilizados efímeras \(las generaciones 0 y 1\) solo duran algunos milisegundos, por lo que no suele ser viable reducir las pausas.  Sin embargo, puede reducir las pausas en las recolecciones de la generación 2 cambiando el modelo de las solicitudes de asignación de una aplicación.  
+ <span data-ttu-id="aef92-212">Las recolecciones de elementos no utilizados efímeras (las generaciones 0 y 1) solo duran algunos milisegundos, por lo que no suele ser viable reducir las pausas.</span><span class="sxs-lookup"><span data-stu-id="aef92-212">Ephemeral garbage collections (generations 0 and 1) last only a few milliseconds, so decreasing pauses is usually not feasible.</span></span> <span data-ttu-id="aef92-213">Sin embargo, puede reducir las pausas en las recolecciones de la generación 2 cambiando el modelo de las solicitudes de asignación de una aplicación.</span><span class="sxs-lookup"><span data-stu-id="aef92-213">However, you can decrease the pauses in generation 2 collections by changing the pattern of allocation requests by an application.</span></span>  
   
- Otro método más preciso consiste en usar [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md).  Puede averiguar los controles de tiempo para las recolecciones si suma las diferencias de marca de tiempo para una secuencia de eventos.  La secuencia de recolección completa incluye la suspensión del motor de ejecución, la recolección de elementos no utilizados propiamente dicha y la reanudación del motor de ejecución.  
+ <span data-ttu-id="aef92-214">Otro método más preciso consiste en usar [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md).</span><span class="sxs-lookup"><span data-stu-id="aef92-214">Another, more accurate, method is to use [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md).</span></span> <span data-ttu-id="aef92-215">Puede averiguar los controles de tiempo para las recolecciones si suma las diferencias de marca de tiempo para una secuencia de eventos.</span><span class="sxs-lookup"><span data-stu-id="aef92-215">You can find the timings for collections by adding the time stamp differences for a sequence of events.</span></span> <span data-ttu-id="aef92-216">La secuencia de recolección completa incluye la suspensión del motor de ejecución, la recolección de elementos no utilizados propiamente dicha y la reanudación del motor de ejecución.</span><span class="sxs-lookup"><span data-stu-id="aef92-216">The whole collection sequence includes suspension of the execution engine, the garbage collection itself, and the resumption of the execution engine.</span></span>  
   
- Puede usar [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md) para determinar si en un servidor se va a realizar una recolección de generación 2 y si redirigir las solicitudes a otro servidor podría solucionar los problemas de las pausas.  
+ <span data-ttu-id="aef92-217">Puede usar [notificaciones de recolección de elementos no utilizados](../../../docs/standard/garbage-collection/notifications.md) para determinar si se va a realizar una recolección de generación 2 en un servidor y si redirigir las solicitudes a otro servidor podría solucionar los problemas de las pausas.</span><span class="sxs-lookup"><span data-stu-id="aef92-217">You can use [Garbage Collection Notifications](../../../docs/standard/garbage-collection/notifications.md) to determine whether a server is about to have a generation 2 collection, and whether rerouting requests to another server could ease any problems with pauses.</span></span>  
   
-|Comprobaciones de rendimiento|  
-|-----------------------------------|  
-|[Determine la duración de una recolección de elementos no utilizados.](#TimeInGC)<br /><br /> [Determine qué produjo una recolección de elementos no utilizados.](#Triggered)|  
+|<span data-ttu-id="aef92-218">Comprobaciones de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-218">Performance checks</span></span>|  
+|------------------------|  
+|[<span data-ttu-id="aef92-219">Determine la duración de una recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-219">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)<br /><br /> [<span data-ttu-id="aef92-220">Determine lo que desencadenó una recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-220">Determine what caused a garbage collection.</span></span>](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### Problema: La generación 0 es demasiado grande  
- Es probable que la generación 0 tenga un número mayor de objetos en un sistema de 64 bits, sobre todo cuando se usa la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo.  Esto se debe a que el umbral para desencadenar una recolección de elementos no utilizados de generación 0 es más alto en estos entornos y las recolecciones de generación 0 pueden llegar a ser mucho mayores.  El rendimiento mejora cuando una aplicación asigna más memoria antes de que se desencadene una recolección de elementos no utilizados.  
+### <a name="issue-generation-0-is-too-big"></a><span data-ttu-id="aef92-221">Problema: La generación 0 es demasiado grande</span><span class="sxs-lookup"><span data-stu-id="aef92-221">Issue: Generation 0 Is Too Big</span></span>  
+ <span data-ttu-id="aef92-222">Es probable que la generación 0 tenga un número mayor de objetos en un sistema de 64 bits, sobre todo cuando se usa la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo.</span><span class="sxs-lookup"><span data-stu-id="aef92-222">Generation 0 is likely to have a larger number of objects on a 64-bit system, especially when you use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="aef92-223">Esto se debe a que el umbral para desencadenar una recolección de elementos no utilizados de generación 0 es más alto en estos entornos y las recolecciones de generación 0 pueden llegar a ser mucho mayores.</span><span class="sxs-lookup"><span data-stu-id="aef92-223">This is because the threshold to trigger a generation 0 garbage collection is higher in these environments, and generation 0 collections can get much bigger.</span></span> <span data-ttu-id="aef92-224">El rendimiento mejora cuando una aplicación asigna más memoria antes de que se desencadene una recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-224">Performance is improved when an application allocates more memory before a garbage collection is triggered.</span></span>  
   
 <a name="Issue_HighCPU"></a>   
-### Problema: El uso de CPU durante una recolección de elementos no utilizados es demasiado alto  
- El uso de CPU será elevado durante una recolección de elementos no utilizados.  Si se dedica una cantidad significativa de tiempo de proceso a una recolección de elementos no utilizados, el número de recolecciones es demasiado frecuente o la recolección está durando demasiado.  Una proporción de asignación de objetos mayor en el montón administrado hace que la recolección de elementos no utilizados se realice con más frecuencia.  Al disminuir la proporción de asignación se reduce la frecuencia de las recolecciones de elementos no utilizados.  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a><span data-ttu-id="aef92-225">Problema: El uso de CPU durante una recolección de elementos no utilizados es demasiado alto</span><span class="sxs-lookup"><span data-stu-id="aef92-225">Issue: CPU Usage During a Garbage Collection Is Too High</span></span>  
+ <span data-ttu-id="aef92-226">El uso de CPU será elevado durante una recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-226">CPU usage will be high during a garbage collection.</span></span> <span data-ttu-id="aef92-227">Si se dedica una cantidad significativa de tiempo de proceso a una recolección de elementos no utilizados, el número de recolecciones es demasiado frecuente o la recolección está durando demasiado.</span><span class="sxs-lookup"><span data-stu-id="aef92-227">If a significant amount of process time is spent in a garbage collection, the number of collections is too frequent or the collection is lasting too long.</span></span> <span data-ttu-id="aef92-228">Una proporción de asignación de objetos mayor en el montón administrado hace que la recolección de elementos no utilizados se realice con más frecuencia.</span><span class="sxs-lookup"><span data-stu-id="aef92-228">An increased allocation rate of objects on the managed heap causes garbage collection to occur more frequently.</span></span> <span data-ttu-id="aef92-229">Al disminuir la proporción de asignación se reduce la frecuencia de las recolecciones de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-229">Decreasing the allocation rate reduces the frequency of garbage collections.</span></span>  
   
- Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`.  Para obtener más información, consulte [Contadores de rendimiento en .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+ <span data-ttu-id="aef92-230">Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`.</span><span class="sxs-lookup"><span data-stu-id="aef92-230">You can monitor allocation rates by using the `Allocated Bytes/second` performance counter.</span></span> <span data-ttu-id="aef92-231">Para más información, consulte [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md) (Contadores de rendimiento de .NET Framework).</span><span class="sxs-lookup"><span data-stu-id="aef92-231">For more information, see [Performance Counters in the .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md).</span></span>  
   
- La duración de una recolección suele depender del número de objetos que sobrevivan después de la asignación.  El recolector de elementos no utilizados debe pasar por una gran cantidad de memoria si hay que recolectar muchos objetos.  El trabajo para compactar los supervivientes lleva mucho tiempo.  Para determinar cuántos objetos se controlaron durante una recolección, establezca un punto de interrupción en el depurador al final de una recolección de elementos no utilizados para una generación especificada.  
+ <span data-ttu-id="aef92-232">La duración de una recolección suele depender del número de objetos que sobrevivan después de la asignación.</span><span class="sxs-lookup"><span data-stu-id="aef92-232">The duration of a collection is primarily a factor of the number of objects that survive after allocation.</span></span> <span data-ttu-id="aef92-233">El recolector de elementos no utilizados debe pasar por una gran cantidad de memoria si hay que recolectar muchos objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-233">The garbage collector must go through a large amount of memory if many objects remain to be collected.</span></span> <span data-ttu-id="aef92-234">El trabajo para compactar los supervivientes lleva mucho tiempo.</span><span class="sxs-lookup"><span data-stu-id="aef92-234">The work to compact the survivors is time-consuming.</span></span> <span data-ttu-id="aef92-235">Para determinar cuántos objetos se controlaron durante una recolección, establezca un punto de interrupción en el depurador al final de una recolección de elementos no utilizados para una generación especificada.</span><span class="sxs-lookup"><span data-stu-id="aef92-235">To determine how many objects were handled during a collection, set a breakpoint in the debugger at the end of a garbage collection for a specified generation.</span></span>  
   
-|Comprobaciones de rendimiento|  
-|-----------------------------------|  
-|[Determine si el uso elevado de CPU está provocado por la recolección de elementos no utilizados.](#HighCPU)<br /><br /> [Establezca un punto de interrupción al final de la recolección de elementos no utilizados.](#GenBreak)|  
+|<span data-ttu-id="aef92-236">Comprobaciones de rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-236">Performance checks</span></span>|  
+|------------------------|  
+|[<span data-ttu-id="aef92-237">Determine si el uso elevado de CPU está provocado por la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-237">Determine if high CPU usage is caused by garbage collection.</span></span>](#HighCPU)<br /><br /> [<span data-ttu-id="aef92-238">Establezca un punto de interrupción al final de la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-238">Set a breakpoint at the end of garbage collection.</span></span>](#GenBreak)|  
   
- [Volver al principio](#top)  
+ [<span data-ttu-id="aef92-239">Volver al principio</span><span class="sxs-lookup"><span data-stu-id="aef92-239">Back to top</span></span>](#top)  
   
 <a name="troubleshooting_guidelines"></a>   
-## Instrucciones para la solución de problemas  
- En esta sección se describen instrucciones debe tener en cuenta cuando empiece las investigaciones.  
+## <a name="troubleshooting-guidelines"></a><span data-ttu-id="aef92-240">Instrucciones para la solución de problemas</span><span class="sxs-lookup"><span data-stu-id="aef92-240">Troubleshooting Guidelines</span></span>  
+ <span data-ttu-id="aef92-241">En esta sección se describen instrucciones debe tener en cuenta cuando empiece las investigaciones.</span><span class="sxs-lookup"><span data-stu-id="aef92-241">This section describes guidelines that you should consider as you begin your investigations.</span></span>  
   
-### Recolección de elementos no utilizados de estación de trabajo o de servidor  
- Determine si está usando el tipo correcto de recolección de elementos no utilizados.  Si la aplicación emplea varios subprocesos e instancias de objeto, use la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo.  La recolección de elementos no utilizados de servidor funciona en varios subprocesos, mientras que la de estación de trabajo necesita que varias instancias de una aplicación ejecuten sus propios subprocesos de recolección de elementos no utilizados y compitan por el tiempo de CPU.  
+### <a name="workstation-or-server-garbage-collection"></a><span data-ttu-id="aef92-242">Recolección de elementos no utilizados de estación de trabajo o de servidor</span><span class="sxs-lookup"><span data-stu-id="aef92-242">Workstation or Server Garbage Collection</span></span>  
+ <span data-ttu-id="aef92-243">Determine si está usando el tipo correcto de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-243">Determine if you are using the correct type of garbage collection.</span></span> <span data-ttu-id="aef92-244">Si la aplicación emplea varios subprocesos e instancias de objeto, use la recolección de elementos no utilizados de servidor en lugar de la de estación de trabajo.</span><span class="sxs-lookup"><span data-stu-id="aef92-244">If your application uses multiple threads and object instances, use server garbage collection instead of workstation garbage collection.</span></span> <span data-ttu-id="aef92-245">La recolección de elementos no utilizados de servidor funciona en varios subprocesos, mientras que la de estación de trabajo necesita que varias instancias de una aplicación ejecuten sus propios subprocesos de recolección de elementos no utilizados y compitan por el tiempo de CPU.</span><span class="sxs-lookup"><span data-stu-id="aef92-245">Server garbage collection operates on multiple threads, whereas workstation garbage collection requires multiple instances of an application to run their own garbage collection threads and compete for CPU time.</span></span>  
   
- Una aplicación que tenga una carga baja y realice tareas con poca frecuencia en segundo plano, como un servicio, puede usar la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados deshabilitada.  
+ <span data-ttu-id="aef92-246">Una aplicación que tenga una carga baja y realice tareas con poca frecuencia en segundo plano, como un servicio, puede usar la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="aef92-246">An application that has a low load and that performs tasks infrequently in the background, such as a service, could use workstation garbage collection with concurrent garbage collection disabled.</span></span>  
   
-### Cuándo medir el tamaño del montón administrado  
- A menos que esté usando un generador de perfiles, tendrá que establecer un modelo de medida coherente para diagnosticar eficazmente los problemas de rendimiento.  Tenga en cuenta lo siguiente a la hora de establecer una programación:  
+### <a name="when-to-measure-the-managed-heap-size"></a><span data-ttu-id="aef92-247">Cuándo medir el tamaño del montón administrado</span><span class="sxs-lookup"><span data-stu-id="aef92-247">When to Measure the Managed Heap Size</span></span>  
+ <span data-ttu-id="aef92-248">A menos que esté usando un generador de perfiles, tendrá que establecer un modelo de medida coherente para diagnosticar eficazmente los problemas de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="aef92-248">Unless you are using a profiler, you will have to establish a consistent measuring pattern to effectively diagnose performance issues.</span></span> <span data-ttu-id="aef92-249">Tenga en cuenta lo siguiente a la hora de establecer una programación:</span><span class="sxs-lookup"><span data-stu-id="aef92-249">Consider the following points to establish a schedule:</span></span>  
   
--   Si mide después de una recolección de elementos no utilizados de generación 2, todo el montón administrado estará libre de elementos no utilizados \(objetos muertos\).  
+-   <span data-ttu-id="aef92-250">Si mide después de una recolección de elementos no utilizados de generación 2, todo el montón administrado estará libre de elementos no utilizados (objetos muertos).</span><span class="sxs-lookup"><span data-stu-id="aef92-250">If you measure after a generation 2 garbage collection, the entire managed heap will be free of garbage (dead objects).</span></span>  
   
--   Si mide inmediatamente después de una recolección de elementos no utilizados de generación 0, los objetos de las generaciones 1 y 2 no se recolectarán todavía.  
+-   <span data-ttu-id="aef92-251">Si mide inmediatamente después de una recolección de elementos no utilizados de generación 0, los objetos de las generaciones 1 y 2 no se recolectarán todavía.</span><span class="sxs-lookup"><span data-stu-id="aef92-251">If you measure immediately after a generation 0 garbage collection, the objects in generations 1 and 2 will not be collected yet.</span></span>  
   
--   Si mide inmediatamente antes de una recolección de elementos no utilizados, se medirá toda la asignación posible antes de que comience dicha recolección.  
+-   <span data-ttu-id="aef92-252">Si mide inmediatamente antes de una recolección de elementos no utilizados, se medirá toda la asignación posible antes de que comience dicha recolección.</span><span class="sxs-lookup"><span data-stu-id="aef92-252">If you measure immediately before a garbage collection, you will measure as much allocation as possible before the garbage collection starts.</span></span>  
   
--   La medición durante una recolección de elementos no utilizados es problemática, ya que las estructuras de datos del recolector de elementos no utilizados no están en un estado válido para el cruce seguro y quizás no se obtengan resultados completos.  Esto es intencionado.  
+-   <span data-ttu-id="aef92-253">La medición durante una recolección de elementos no utilizados es problemática, ya que las estructuras de datos del recolector de elementos no utilizados no están en un estado válido para el cruce seguro y quizás no se obtengan resultados completos.</span><span class="sxs-lookup"><span data-stu-id="aef92-253">Measuring during a garbage collection is problematic, because the garbage collector data structures are not in a valid state for traversal and may not be able to give you the complete results.</span></span> <span data-ttu-id="aef92-254">Esto es intencionado.</span><span class="sxs-lookup"><span data-stu-id="aef92-254">This is by design.</span></span>  
   
--   Cuando se usa la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados, los objetos recuperados no se compactan, por lo que el tamaño del montón puede ser igual o mayor \(la fragmentación puede hacer que parezca mayor\).  
+-   <span data-ttu-id="aef92-255">Cuando se usa la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados, los objetos recuperados no se compactan, por lo que el tamaño del montón puede ser igual o mayor (la fragmentación puede hacer que parezca mayor).</span><span class="sxs-lookup"><span data-stu-id="aef92-255">When you are using workstation garbage collection with concurrent garbage collection, the reclaimed objects are not compacted, so the heap size can be the same or larger (fragmentation can make it appear to be larger).</span></span>  
   
--   La recolección de elementos no utilizados simultánea en la generación 2 se retrasa cuando la carga de memoria física es demasiado alta.  
+-   <span data-ttu-id="aef92-256">La recolección de elementos no utilizados simultánea en la generación 2 se retrasa cuando la carga de memoria física es demasiado alta.</span><span class="sxs-lookup"><span data-stu-id="aef92-256">Concurrent garbage collection on generation 2 is delayed when the physical memory load is too high.</span></span>  
   
- En el procedimiento siguiente se describe cómo establecer un punto de interrupción para que pueda medir el montón administrado.  
+ <span data-ttu-id="aef92-257">En el procedimiento siguiente se describe cómo establecer un punto de interrupción para que pueda medir el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-257">The following procedure describes how to set a breakpoint so that you can measure the managed heap.</span></span>  
   
 <a name="GenBreak"></a>   
-##### Para establecer un punto de interrupción al final de la recolección de elementos no utilizados  
+##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a><span data-ttu-id="aef92-258">Para establecer un punto de interrupción al final de la recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="aef92-258">To set a breakpoint at the end of garbage collection</span></span>  
   
--   En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
+-   <span data-ttu-id="aef92-259">En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-259">In WinDbg with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     **bp mscorwks\!WKS::GCHeap::RestartEE "j \(dwo\(mscorwks\!WKS::GCHeap::GcCondemnedGeneration\)\=\=2\) 'kb';'g'"**  
+     <span data-ttu-id="aef92-260">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span><span class="sxs-lookup"><span data-stu-id="aef92-260">**bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**</span></span>  
   
-     donde **GcCondemnedGeneration** se establece en la generación deseada.  Este comando necesita símbolos privados.  
+     <span data-ttu-id="aef92-261">donde **GcCondemnedGeneration** se establece en la generación que se prefiera.</span><span class="sxs-lookup"><span data-stu-id="aef92-261">where **GcCondemnedGeneration** is set to the desired generation.</span></span> <span data-ttu-id="aef92-262">Este comando necesita símbolos privados.</span><span class="sxs-lookup"><span data-stu-id="aef92-262">This command requires private symbols.</span></span>  
   
-     Este comando fuerza una interrupción si se ejecuta **RestartEE** después de que se hayan recuperado los objetos de la generación 2 para la recolección de elementos no utilizados.  
+     <span data-ttu-id="aef92-263">Este comando fuerza una interrupción si **RestartEE** se ejecuta una vez recuperados los objetos de generación 2 para la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-263">This command forces a break if **RestartEE** is executed after generation 2 objects have been reclaimed for garbage collection.</span></span>  
   
-     En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE**, por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.  
+     <span data-ttu-id="aef92-264">En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE**, por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.</span><span class="sxs-lookup"><span data-stu-id="aef92-264">In server garbage collection, only one thread calls **RestartEE**, so the breakpoint will occur only once during a generation 2 garbage collection.</span></span>  
   
- [Volver al principio](#top)  
+ [<span data-ttu-id="aef92-265">Volver al principio</span><span class="sxs-lookup"><span data-stu-id="aef92-265">Back to top</span></span>](#top)  
   
 <a name="performance_check_procedures"></a>   
-## Procedimientos para comprobar el rendimiento  
- En esta sección se describen los procedimientos siguientes para aislar la causa del problema de rendimiento:  
+## <a name="performance-check-procedures"></a><span data-ttu-id="aef92-266">Procedimientos para comprobar el rendimiento</span><span class="sxs-lookup"><span data-stu-id="aef92-266">Performance Check Procedures</span></span>  
+ <span data-ttu-id="aef92-267">En esta sección se describen los procedimientos siguientes para aislar la causa del problema de rendimiento:</span><span class="sxs-lookup"><span data-stu-id="aef92-267">This section describes the following procedures to isolate the cause of your performance issue:</span></span>  
   
--   [Determine si el problema está provocado por la recolección de elementos no utilizados.](#IsGC)  
+-   [<span data-ttu-id="aef92-268">Determine si el problema está provocado por la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-268">Determine whether the problem is caused by garbage collection.</span></span>](#IsGC)  
   
--   [Determine si la excepción de memoria insuficiente está administrada.](#OOMIsManaged)  
+-   [<span data-ttu-id="aef92-269">Determine si la excepción de memoria insuficiente está administrada.</span><span class="sxs-lookup"><span data-stu-id="aef92-269">Determine whether the out-of-memory exception is managed.</span></span>](#OOMIsManaged)  
   
--   [Determine cuánta memoria virtual se puede reservar.](#GetVM)  
+-   [<span data-ttu-id="aef92-270">Determine cuánta memoria virtual se puede reservar.</span><span class="sxs-lookup"><span data-stu-id="aef92-270">Determine how much virtual memory can be reserved.</span></span>](#GetVM)  
   
--   [Determine si hay suficiente memoria física.](#Physical)  
+-   [<span data-ttu-id="aef92-271">Determine si hay suficiente memoria física.</span><span class="sxs-lookup"><span data-stu-id="aef92-271">Determine whether there is enough physical memory.</span></span>](#Physical)  
   
--   [Determine cuánta memoria está confirmando el montón administrado.](#ManagedHeapCommit)  
+-   [<span data-ttu-id="aef92-272">Determine cuánta memoria está confirmando el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-272">Determine how much memory the managed heap is committing.</span></span>](#ManagedHeapCommit)  
   
--   [Determine cuánta memoria reserva el montón administrado.](#ManagedHeapReserve)  
+-   [<span data-ttu-id="aef92-273">Determine cuánta memoria reserva el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-273">Determine how much memory the managed heap reserves.</span></span>](#ManagedHeapReserve)  
   
--   [Determine los objetos grandes de la generación 2.](#ExamineGen2)  
+-   [<span data-ttu-id="aef92-274">Determine los objetos grandes de la generación 2.</span><span class="sxs-lookup"><span data-stu-id="aef92-274">Determine large objects in generation 2.</span></span>](#ExamineGen2)  
   
--   [Determine las referencias a objetos.](#ObjRef)  
+-   [<span data-ttu-id="aef92-275">Determine las referencias a objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-275">Determine references to objects.</span></span>](#ObjRef)  
   
--   [Determine si se ha ejecutado un finalizador.](#Induce)  
+-   [<span data-ttu-id="aef92-276">Determine si se ha ejecutado un finalizador.</span><span class="sxs-lookup"><span data-stu-id="aef92-276">Determine whether a finalizer has been run.</span></span>](#Induce)  
   
--   [Determine si hay objetos en espera de finalización.](#Finalize)  
+-   [<span data-ttu-id="aef92-277">Determine si hay objetos en espera de finalización.</span><span class="sxs-lookup"><span data-stu-id="aef92-277">Determine whether there are objects waiting to be finalized.</span></span>](#Finalize)  
   
--   [Determine la cantidad de espacio disponible en el montón administrado.](#Fragmented)  
+-   [<span data-ttu-id="aef92-278">Determine la cantidad de espacio disponible en el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-278">Determine the amount of free space in the managed heap.</span></span>](#Fragmented)  
   
--   [Determine el número de objetos anclados.](#Pinned)  
+-   [<span data-ttu-id="aef92-279">Determine el número de objetos anclados.</span><span class="sxs-lookup"><span data-stu-id="aef92-279">Determine the number of pinned objects.</span></span>](#Pinned)  
   
--   [Determine la duración de una recolección de elementos no utilizados.](#TimeInGC)  
+-   [<span data-ttu-id="aef92-280">Determine la duración de una recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-280">Determine the length of time in a garbage collection.</span></span>](#TimeInGC)  
   
--   [Determine qué desencadenó una recolección de elementos no utilizados.](#Triggered)  
+-   [<span data-ttu-id="aef92-281">Determine lo que desencadenó una recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-281">Determine what triggered a garbage collection.</span></span>](#Triggered)  
   
--   [Determine si el uso elevado de CPU está provocado por la recolección de elementos no utilizados.](#HighCPU)  
+-   [<span data-ttu-id="aef92-282">Determine si el uso elevado de CPU está provocado por la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-282">Determine whether high CPU usage is caused by garbage collection.</span></span>](#HighCPU)  
   
 <a name="IsGC"></a>   
-##### Para determinar si el problema está provocado por la recolección de elementos no utilizados  
+##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a><span data-ttu-id="aef92-283">Para determinar si el problema está provocado por la recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="aef92-283">To determine whether the problem is caused by garbage collection</span></span>  
   
--   Examine los dos contadores de rendimiento de memoria siguientes:  
+-   <span data-ttu-id="aef92-284">Examine los dos contadores de rendimiento de memoria siguientes:</span><span class="sxs-lookup"><span data-stu-id="aef92-284">Examine the following two memory performance counters:</span></span>  
   
-    -   **% de tiempo del GC**.  Muestra el porcentaje de tiempo transcurrido que se dedicó a realizar una recolección de elementos no utilizados después del último ciclo de recolección.  Use este contador para determinar si el recolector de elementos no utilizados está dedicando demasiado tiempo a hacer que haya espacio disponible en el montón administrado.  Si el tiempo dedicado a la recolección de elementos no utilizados es relativamente bajo, podría indicar un problema de recursos fuera del montón administrado.  Puede que este contador no sea exacto cuando se invoca una recolección de elementos no utilizados simultánea o en segundo plano.  
+    -   <span data-ttu-id="aef92-285">**% de tiempo de la GC**.</span><span class="sxs-lookup"><span data-stu-id="aef92-285">**% Time in GC**.</span></span> <span data-ttu-id="aef92-286">Muestra el porcentaje de tiempo transcurrido que se dedicó a realizar una recolección de elementos no utilizados después del último ciclo de recolección.</span><span class="sxs-lookup"><span data-stu-id="aef92-286">Displays the percentage of elapsed time that was spent performing a garbage collection after the last garbage collection cycle.</span></span> <span data-ttu-id="aef92-287">Use este contador para determinar si el recolector de elementos no utilizados está dedicando demasiado tiempo a hacer que haya espacio disponible en el montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-287">Use this counter to determine whether the garbage collector is spending too much time to make managed heap space available.</span></span> <span data-ttu-id="aef92-288">Si el tiempo dedicado a la recolección de elementos no utilizados es relativamente bajo, podría indicar un problema de recursos fuera del montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-288">If the time spent in garbage collection is relatively low, that could indicate a resource problem outside the managed heap.</span></span> <span data-ttu-id="aef92-289">Puede que este contador no sea exacto cuando se invoca una recolección de elementos no utilizados simultánea o en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="aef92-289">This counter may not be accurate when concurrent or background garbage collection is involved.</span></span>  
   
-    -   **Número de bytes totales confirmados**.  Muestra la cantidad de memoria virtual confirmada actualmente por el recolector de elementos no utilizados.  Use este contador para determinar si la memoria usada por el recolector de elementos no utilizados es una parte excesiva de la memoria que su aplicación emplea.  
+    -   <span data-ttu-id="aef92-290">**Número de bytes totales confirmados**.</span><span class="sxs-lookup"><span data-stu-id="aef92-290">**# Total committed Bytes**.</span></span> <span data-ttu-id="aef92-291">Muestra la cantidad de memoria virtual confirmada actualmente por el recolector de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-291">Displays the amount of virtual memory currently committed by the garbage collector.</span></span> <span data-ttu-id="aef92-292">Use este contador para determinar si la memoria usada por el recolector de elementos no utilizados es una parte excesiva de la memoria que su aplicación emplea.</span><span class="sxs-lookup"><span data-stu-id="aef92-292">Use this counter to determine whether the memory consumed by the garbage collector is an excessive portion of the memory that your application uses.</span></span>  
   
-     La mayoría de los contadores de rendimiento de memoria se actualizan al final de cada recolección de elementos no utilizados.  Por tanto, puede que no reflejen las condiciones actuales sobre las que desea obtener información.  
+     <span data-ttu-id="aef92-293">La mayoría de los contadores de rendimiento de memoria se actualizan al final de cada recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-293">Most of the memory performance counters are updated at the end of each garbage collection.</span></span> <span data-ttu-id="aef92-294">Por tanto, puede que no reflejen las condiciones actuales sobre las que desea obtener información.</span><span class="sxs-lookup"><span data-stu-id="aef92-294">Therefore, they may not reflect the current conditions that you want information about.</span></span>  
   
 <a name="OOMIsManaged"></a>   
-##### Para determinar si la excepción de memoria insuficiente está administrada  
+##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a><span data-ttu-id="aef92-295">Para determinar si la excepción de memoria insuficiente está administrada</span><span class="sxs-lookup"><span data-stu-id="aef92-295">To determine whether the out-of-memory exception is managed</span></span>  
   
-1.  En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de imprimir excepción \(**pe**\):  
+1.  <span data-ttu-id="aef92-296">En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones (**pe**):</span><span class="sxs-lookup"><span data-stu-id="aef92-296">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the print exception (**pe**) command:</span></span>  
   
-     **\!pe**  
+     <span data-ttu-id="aef92-297">**!pe**</span><span class="sxs-lookup"><span data-stu-id="aef92-297">**!pe**</span></span>  
   
-     Si la excepción es administrada, se mostrará <xref:System.OutOfMemoryException> como el tipo de excepción, como se muestra en el ejemplo siguiente.  
+     <span data-ttu-id="aef92-298">Si la excepción es administrada, se mostrará <xref:System.OutOfMemoryException> como el tipo de excepción, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-298">If the exception is managed, <xref:System.OutOfMemoryException> is displayed as the exception type, as shown in the following example.</span></span>  
   
     ```  
     Exception object: 39594518  
@@ -296,44 +299,44 @@ En este tema se describen los problemas relacionados con la recolección de elem
     StackTrace (generated):  
     ```  
   
-2.  Si el resultado no especifica ninguna excepción, tiene que determinar de qué subproceso procede la excepción de memoria insuficiente.  Escriba el comando siguiente en el depurador para mostrar todos los subprocesos con sus pilas de llamadas:  
+2.  <span data-ttu-id="aef92-299">Si el resultado no especifica ninguna excepción, tiene que determinar de qué subproceso procede la excepción de memoria insuficiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-299">If the output does not specify an exception, you have to determine which thread the out-of-memory exception is from.</span></span> <span data-ttu-id="aef92-300">Escriba el comando siguiente en el depurador para mostrar todos los subprocesos con sus pilas de llamadas:</span><span class="sxs-lookup"><span data-stu-id="aef92-300">Type the following command in the debugger to show all the threads with their call stacks:</span></span>  
   
-     **~\*kb**  
+     <span data-ttu-id="aef92-301">**~\*KB**</span><span class="sxs-lookup"><span data-stu-id="aef92-301">**~\*kb**</span></span>  
   
-     El argumento `RaiseTheException` indica el subproceso con la pila que tiene llamadas de excepción.  Este es el objeto de excepción administrado.  
+     <span data-ttu-id="aef92-302">El argumento `RaiseTheException` indica el subproceso con la pila que tiene llamadas de excepción.</span><span class="sxs-lookup"><span data-stu-id="aef92-302">The thread with the stack that has exception calls is indicated by the `RaiseTheException` argument.</span></span> <span data-ttu-id="aef92-303">Este es el objeto de excepción administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-303">This is the managed exception object.</span></span>  
   
     ```  
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  Puede usar el comando siguiente para volcar las excepciones anidadas.  
+3.  <span data-ttu-id="aef92-304">Puede usar el comando siguiente para volcar las excepciones anidadas.</span><span class="sxs-lookup"><span data-stu-id="aef92-304">You can use the following command to dump nested exceptions.</span></span>  
   
-     **\!pe \-nested**  
+     <span data-ttu-id="aef92-305">**!pe -nested**</span><span class="sxs-lookup"><span data-stu-id="aef92-305">**!pe -nested**</span></span>  
   
-     Si no encuentra ninguna excepción, la excepción de memoria insuficiente se originó desde código no administrado.  
+     <span data-ttu-id="aef92-306">Si no encuentra ninguna excepción, la excepción de memoria insuficiente se originó desde código no administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-306">If you do not find any exceptions, the out-of-memory exception originated from unmanaged code.</span></span>  
   
 <a name="GetVM"></a>   
-##### Para determinar cuánta memoria virtual se puede reservar  
+##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a><span data-ttu-id="aef92-307">Para determinar cuánta memoria virtual se puede reservar</span><span class="sxs-lookup"><span data-stu-id="aef92-307">To determine how much virtual memory can be reserved</span></span>  
   
--   En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para obtener la mayor región disponible:  
+-   <span data-ttu-id="aef92-308">En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para obtener la mayor región disponible:</span><span class="sxs-lookup"><span data-stu-id="aef92-308">In WinDbg with the SOS debugger extension loaded, type the following command to get the largest free region:</span></span>  
   
-     **\!address \-summary**  
+     <span data-ttu-id="aef92-309">**!address -summary**</span><span class="sxs-lookup"><span data-stu-id="aef92-309">**!address -summary**</span></span>  
   
-     La mayor región disponible se muestra como en el resultado siguiente.  
+     <span data-ttu-id="aef92-310">La mayor región disponible se muestra como en el resultado siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-310">The largest free region is displayed as shown in the following output.</span></span>  
   
     ```  
     Largest free region: Base 54000000 - Size 0003A980  
     ```  
   
-     En este ejemplo, el tamaño de la mayor región disponible es de aproximadamente 24000 KB \(3A980 en hexadecimal\).  Esta región es mucho menor que cuando el recolector de elementos no utilizados necesita un segmento.  
+     <span data-ttu-id="aef92-311">En este ejemplo, el tamaño de la mayor región disponible es de aproximadamente 24000 KB (3A980 en hexadecimal).</span><span class="sxs-lookup"><span data-stu-id="aef92-311">In this example, the size of the largest free region is approximately 24000 KB (3A980 in hexadecimal).</span></span> <span data-ttu-id="aef92-312">Esta región es mucho menor que cuando el recolector de elementos no utilizados necesita un segmento.</span><span class="sxs-lookup"><span data-stu-id="aef92-312">This region is much smaller than what the garbage collector needs for a segment.</span></span>  
   
-     O bien  
+     <span data-ttu-id="aef92-313">O bien</span><span class="sxs-lookup"><span data-stu-id="aef92-313">-or-</span></span>  
   
--   Use el comando **vmstat**:  
+-   <span data-ttu-id="aef92-314">Use el comando **vmstat**:</span><span class="sxs-lookup"><span data-stu-id="aef92-314">Use the **vmstat** command:</span></span>  
   
-     **\!vmstat**  
+     <span data-ttu-id="aef92-315">**!vmstat**</span><span class="sxs-lookup"><span data-stu-id="aef92-315">**!vmstat**</span></span>  
   
-     La mayor región disponible es el valor mayor de la columna MAXIMUM, como se muestra en el resultado siguiente.  
+     <span data-ttu-id="aef92-316">La mayor región disponible es el valor mayor de la columna MAXIMUM, como se muestra en el resultado siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-316">The largest free region is the largest value in the MAXIMUM column, as shown in the following output.</span></span>  
   
     ```  
     TYPE        MINIMUM   MAXIMUM     AVERAGE   BLK COUNT   TOTAL  
@@ -346,37 +349,37 @@ En este tema se describen los problemas relacionados con la recolección de elem
     ```  
   
 <a name="Physical"></a>   
-##### Para determinar si hay suficiente memoria física  
+##### <a name="to-determine-whether-there-is-enough-physical-memory"></a><span data-ttu-id="aef92-317">Para determinar si hay suficiente memoria física</span><span class="sxs-lookup"><span data-stu-id="aef92-317">To determine whether there is enough physical memory</span></span>  
   
-1.  Inicie el Administrador de tareas de Windows.  
+1.  <span data-ttu-id="aef92-318">Inicie el Administrador de tareas de Windows.</span><span class="sxs-lookup"><span data-stu-id="aef92-318">Start Windows Task Manager.</span></span>  
   
-2.  En la pestaña **Rendimiento**, examine el valor confirmado.  \(En Windows 7, busque **Asignación \(KB\)** en el grupo **Sistema**.\)  
+2.  <span data-ttu-id="aef92-319">En la pestaña **Rendimiento**, busque el valor confirmado.</span><span class="sxs-lookup"><span data-stu-id="aef92-319">On the **Performance** tab, look at the committed value.</span></span> <span data-ttu-id="aef92-320">(En Windows 7, busque **Asignación (KB)** en el grupo **Sistema**).</span><span class="sxs-lookup"><span data-stu-id="aef92-320">(In Windows 7, look at **Commit (KB)** in the **System group**.)</span></span>  
   
-     Si el **Total** está cerca del **Límite**, hay poca memoria física.  
+     <span data-ttu-id="aef92-321">Si el **Total** se aproxima al **Límite** hay poca memoria física.</span><span class="sxs-lookup"><span data-stu-id="aef92-321">If the **Total** is close to the **Limit**, you are running low on physical memory.</span></span>  
   
 <a name="ManagedHeapCommit"></a>   
-##### Para determinar cuánta memoria está confirmando el montón administrado  
+##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a><span data-ttu-id="aef92-322">Para determinar cuánta memoria está confirmando el montón administrado</span><span class="sxs-lookup"><span data-stu-id="aef92-322">To determine how much memory the managed heap is committing</span></span>  
   
--   Use el contador de rendimiento de memoria `# Total committed bytes` para obtener el número de bytes que el montón administrado está confirmando.  El recolector de elementos no utilizados confirma fragmentos de un segmento a medida que son necesarios, no todos al mismo tiempo.  
+-   <span data-ttu-id="aef92-323">Use el contador de rendimiento de memoria `# Total committed bytes` para obtener el número de bytes que el montón administrado está confirmando.</span><span class="sxs-lookup"><span data-stu-id="aef92-323">Use the `# Total committed bytes` memory performance counter to get the number of bytes that the managed heap is committing.</span></span> <span data-ttu-id="aef92-324">El recolector de elementos no utilizados confirma fragmentos de un segmento a medida que son necesarios, no todos al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="aef92-324">The garbage collector commits chunks on a segment as needed, not all at the same time.</span></span>  
   
     > [!NOTE]
-    >  No use el contador de rendimiento `# Bytes in all Heaps`, ya que no representa el uso de memoria real por parte del montón administrado.  En este valor se incluye el tamaño de una generación y es realmente su tamaño umbral; es decir, el tamaño que induce una recolección de elementos no utilizados si la generación se llena de objetos.  Por tanto, este valor suele ser cero.  
+    >  <span data-ttu-id="aef92-325">No use el contador de rendimiento `# Bytes in all Heaps`, ya que no representa el uso de memoria real por parte del montón administrado.</span><span class="sxs-lookup"><span data-stu-id="aef92-325">Do not use the `# Bytes in all Heaps` performance counter, because it does not represent actual memory usage by the managed heap.</span></span> <span data-ttu-id="aef92-326">En este valor se incluye el tamaño de una generación y es realmente su tamaño umbral; es decir, el tamaño que induce una recolección de elementos no utilizados si la generación se llena de objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-326">The size of a generation is included in this value and is actually its threshold size, that is, the size that induces a garbage collection if the generation is filled with objects.</span></span> <span data-ttu-id="aef92-327">Por tanto, este valor suele ser cero.</span><span class="sxs-lookup"><span data-stu-id="aef92-327">Therefore, this value is usually zero.</span></span>  
   
 <a name="ManagedHeapReserve"></a>   
-##### Para determinar cuánta memoria reserva el montón administrado  
+##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a><span data-ttu-id="aef92-328">Para determinar cuánta memoria reserva el montón administrado</span><span class="sxs-lookup"><span data-stu-id="aef92-328">To determine how much memory the managed heap reserves</span></span>  
   
--   Use el contador de rendimiento de memoria `# Total reserved bytes`.  
+-   <span data-ttu-id="aef92-329">Use el contador de rendimiento de memoria `# Total reserved bytes`.</span><span class="sxs-lookup"><span data-stu-id="aef92-329">Use the `# Total reserved bytes` memory performance counter.</span></span>  
   
-     El recolector de elementos no utilizados reserva memoria en segmentos y puede determinar dónde comienza un segmento mediante el comando **eeheap**.  
+     <span data-ttu-id="aef92-330">El recolector de elementos no utilizados reserva memoria en segmentos y puede determinar dónde comienza un segmento mediante el comando **eeheap**.</span><span class="sxs-lookup"><span data-stu-id="aef92-330">The garbage collector reserves memory in segments, and you can determine where a segment starts by using the **eeheap** command.</span></span>  
   
     > [!IMPORTANT]
-    >  Aunque puede determinar la cantidad de memoria que el recolector de elementos no utilizados asigna a cada segmento, el tamaño del segmento es específico de la implementación y está sujeto a cambios en cualquier momento, incluso en las actualizaciones periódicas.  La aplicación nunca debe realizar suposiciones sobre el tamaño de un sector determinado ni depender de él, y tampoco debe intentar configurar la cantidad de memoria disponible para las asignaciones de segmentos.  
+    >  <span data-ttu-id="aef92-331">Aunque puede determinar la cantidad de memoria que el recolector de elementos no utilizados asigna a cada segmento, el tamaño del segmento es específico de la implementación y está sujeto a cambios en cualquier momento, incluso en las actualizaciones periódicas.</span><span class="sxs-lookup"><span data-stu-id="aef92-331">Although you can determine the amount of memory the garbage collector allocates for each segment, segment size is implementation-specific and is subject to change at any time, including in periodic updates.</span></span> <span data-ttu-id="aef92-332">La aplicación nunca debe realizar suposiciones sobre el tamaño de un sector determinado ni depender de él, y tampoco debe intentar configurar la cantidad de memoria disponible para las asignaciones de segmentos.</span><span class="sxs-lookup"><span data-stu-id="aef92-332">Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.</span></span>  
   
--   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
+-   <span data-ttu-id="aef92-333">En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-333">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     **\!eeheap \-gc**  
+     <span data-ttu-id="aef92-334">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="aef92-334">**!eeheap -gc**</span></span>  
   
-     El resultado es el siguiente.  
+     <span data-ttu-id="aef92-335">El resultado es el siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-335">The result is as follows.</span></span>  
   
     ```  
     Number of GC Heaps: 2  
@@ -408,18 +411,18 @@ En este tema se describen los problemas relacionados con la recolección de elem
     GC Heap Size   0x24db8(150968)  
     ```  
   
-     Las direcciones indicadas por "segment" son las direcciones iniciales de los segmentos.  
+     <span data-ttu-id="aef92-336">Las direcciones indicadas por "segment" son las direcciones iniciales de los segmentos.</span><span class="sxs-lookup"><span data-stu-id="aef92-336">The addresses indicated by "segment" are the starting addresses of the segments.</span></span>  
   
 <a name="ExamineGen2"></a>   
-##### Para determinar los objetos grandes de la generación 2  
+##### <a name="to-determine-large-objects-in-generation-2"></a><span data-ttu-id="aef92-337">Para determinar los objetos grandes de la generación 2</span><span class="sxs-lookup"><span data-stu-id="aef92-337">To determine large objects in generation 2</span></span>  
   
--   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
+-   <span data-ttu-id="aef92-338">En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-338">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     **\!dumpheap –stat**  
+     <span data-ttu-id="aef92-339">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="aef92-339">**!dumpheap –stat**</span></span>  
   
-     Si el montón administrado es grande, **dumpheap** puede tardar bastante tiempo en finalizar.  
+     <span data-ttu-id="aef92-340">Si el montón administrado es grande, **dumpheap** puede tardar bastante en finalizar.</span><span class="sxs-lookup"><span data-stu-id="aef92-340">If the managed heap is big, **dumpheap** may take a while to finish.</span></span>  
   
-     Puede empezar el análisis por las últimas líneas del resultado, ya que muestran los objetos que usan la mayor parte del espacio.  Por ejemplo:  
+     <span data-ttu-id="aef92-341">Puede empezar el análisis por las últimas líneas del resultado, ya que muestran los objetos que usan la mayor parte del espacio.</span><span class="sxs-lookup"><span data-stu-id="aef92-341">You can start analyzing from the last few lines of the output, because they list the objects that use the most space.</span></span> <span data-ttu-id="aef92-342">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="aef92-342">For example:</span></span>  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -435,11 +438,11 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 8454945 objects  
     ```  
   
-     El último objeto mostrado es una cadena y es el que ocupa más espacio.  Puede examinar la aplicación para ver cómo se pueden optimizar los objetos de cadena.  Para ver las cadenas comprendidas entre 150 y 200 bytes, escriba lo siguiente:  
+     <span data-ttu-id="aef92-343">El último objeto mostrado es una cadena y es el que ocupa más espacio.</span><span class="sxs-lookup"><span data-stu-id="aef92-343">The last object listed is a string and occupies the most space.</span></span> <span data-ttu-id="aef92-344">Puede examinar la aplicación para ver cómo se pueden optimizar los objetos de cadena.</span><span class="sxs-lookup"><span data-stu-id="aef92-344">You can examine your application to see how your string objects can be optimized.</span></span> <span data-ttu-id="aef92-345">Para ver las cadenas comprendidas entre 150 y 200 bytes, escriba lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-345">To see strings that are between 150 and 200 bytes, type the following:</span></span>  
   
-     **\!dumpheap \-type System.String \-min 150 \-max 200**  
+     <span data-ttu-id="aef92-346">**!dumpheap -type System.String -min 150 -max 200**</span><span class="sxs-lookup"><span data-stu-id="aef92-346">**!dumpheap -type System.String -min 150 -max 200**</span></span>  
   
-     A continuación se muestra un ejemplo de los resultados.  
+     <span data-ttu-id="aef92-347">A continuación se muestra un ejemplo de los resultados.</span><span class="sxs-lookup"><span data-stu-id="aef92-347">An example of the results is as follows.</span></span>  
   
     ```  
     Address  MT           Size  Gen  
@@ -447,22 +450,22 @@ En este tema se describen los problemas relacionados con la recolección de elem
     …  
     ```  
   
-     Puede ser más eficaz usar un entero en lugar de una cadena para un identificador.  Si la misma cadena se está repitiendo miles de veces, considere la posibilidad de asignación al grupo interno de cadenas.  Para obtener más información sobre la asignación al grupo interno de cadenas, vea el tema de referencia sobre el método <xref:System.String.Intern%2A?displayProperty=fullName>.  
+     <span data-ttu-id="aef92-348">Puede ser más eficaz usar un entero en lugar de una cadena para un identificador.</span><span class="sxs-lookup"><span data-stu-id="aef92-348">Using an integer instead of a string for an ID can be more efficient.</span></span> <span data-ttu-id="aef92-349">Si la misma cadena se está repitiendo miles de veces, considere la posibilidad de asignación al grupo interno de cadenas.</span><span class="sxs-lookup"><span data-stu-id="aef92-349">If the same string is being repeated thousands of times, consider string interning.</span></span> <span data-ttu-id="aef92-350">Para obtener más información sobre la asignación al grupo interno de cadenas, vea el tema de referencia sobre el método <xref:System.String.Intern%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="aef92-350">For more information about string interning, see the reference topic for the <xref:System.String.Intern%2A?displayProperty=nameWithType> method.</span></span>  
   
 <a name="ObjRef"></a>   
-##### Para determinar las referencias a objetos  
+##### <a name="to-determine-references-to-objects"></a><span data-ttu-id="aef92-351">Para determinar las referencias a objetos</span><span class="sxs-lookup"><span data-stu-id="aef92-351">To determine references to objects</span></span>  
   
--   En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar las referencias a objetos:  
+-   <span data-ttu-id="aef92-352">En WinDbg con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar las referencias a objetos:</span><span class="sxs-lookup"><span data-stu-id="aef92-352">In WinDbg with the SOS debugger extension loaded, type the following command to list references to objects:</span></span>  
   
-     **\!gcroot**  
+     <span data-ttu-id="aef92-353">**!gcroot**</span><span class="sxs-lookup"><span data-stu-id="aef92-353">**!gcroot**</span></span>  
   
      `-or-`  
   
--   Para determinar las referencias para un objeto concreto, incluya la dirección:  
+-   <span data-ttu-id="aef92-354">Para determinar las referencias para un objeto concreto, incluya la dirección:</span><span class="sxs-lookup"><span data-stu-id="aef92-354">To determine the references for a specific object, include the address:</span></span>  
   
-     **\!gcroot 1c37b2ac**  
+     <span data-ttu-id="aef92-355">**!gcroot 1c37b2ac**</span><span class="sxs-lookup"><span data-stu-id="aef92-355">**!gcroot 1c37b2ac**</span></span>  
   
-     Las raíces encontradas en pilas pueden ser falsos positivos.  Para obtener más información, use el comando `!help gcroot`.  
+     <span data-ttu-id="aef92-356">Las raíces encontradas en pilas pueden ser falsos positivos.</span><span class="sxs-lookup"><span data-stu-id="aef92-356">Roots found on stacks may be false positives.</span></span> <span data-ttu-id="aef92-357">Para obtener más información, use el comando `!help gcroot`.</span><span class="sxs-lookup"><span data-stu-id="aef92-357">For more information, use the command `!help gcroot`.</span></span>  
   
     ```  
     ebx:Root:19011c5c(System.Windows.Forms.Application+ThreadContext)->  
@@ -480,12 +483,12 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Scan Thread 6 OSTHread 484  
     ```  
   
-     El comando **gcroot** puede tardar mucho tiempo en finalizar.  Todo objeto no reclamado en la recolección de elementos no utilizados es un objeto activo.  Esto significa que alguna raíz se está almacenando directa o indirectamente en el objeto, por lo que **gcroot** debe devolver información de ruta de acceso al objeto.  Debe examinar los gráficos devueltos y ver por qué todavía se hace referencia a estos objetos.  
+     <span data-ttu-id="aef92-358">El comando **gcroot** puede tardar mucho en finalizar.</span><span class="sxs-lookup"><span data-stu-id="aef92-358">The **gcroot** command can take a long time to finish.</span></span> <span data-ttu-id="aef92-359">Todo objeto no reclamado en la recolección de elementos no utilizados es un objeto activo.</span><span class="sxs-lookup"><span data-stu-id="aef92-359">Any object that is not reclaimed by garbage collection is a live object.</span></span> <span data-ttu-id="aef92-360">Esto implica que alguna raíz se almacena directa o indirectamente en el objeto, por lo que **gcroot** debe devolver información de ruta de acceso al objeto.</span><span class="sxs-lookup"><span data-stu-id="aef92-360">This means that some root is directly or indirectly holding onto the object, so **gcroot** should return path information to the object.</span></span> <span data-ttu-id="aef92-361">Debe examinar los gráficos devueltos y ver por qué todavía se hace referencia a estos objetos.</span><span class="sxs-lookup"><span data-stu-id="aef92-361">You should examine the graphs returned and see why these objects are still referenced.</span></span>  
   
 <a name="Induce"></a>   
-##### Para determinar si se ha ejecutado un finalizador  
+##### <a name="to-determine-whether-a-finalizer-has-been-run"></a><span data-ttu-id="aef92-362">Para determinar si se ha ejecutado un finalizador</span><span class="sxs-lookup"><span data-stu-id="aef92-362">To determine whether a finalizer has been run</span></span>  
   
--   Ejecute un programa de prueba que contenga el código siguiente:  
+-   <span data-ttu-id="aef92-363">Ejecute un programa de prueba que contenga el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-363">Run a test program that contains the following code:</span></span>  
   
     ```  
     GC.Collect();  
@@ -493,22 +496,22 @@ En este tema se describen los problemas relacionados con la recolección de elem
     GC.Collect();  
     ```  
   
-     Si la prueba resuelve el problema, significa que el recolector de elementos no utilizados no estaba recuperando objetos porque los finalizadores de esos objetos se habían suspendido.  El método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=fullName> permite que los finalizadores completen sus tareas y corrige el problema.  
+     <span data-ttu-id="aef92-364">Si la prueba resuelve el problema, significa que el recolector de elementos no utilizados no estaba recuperando objetos porque los finalizadores de esos objetos se habían suspendido.</span><span class="sxs-lookup"><span data-stu-id="aef92-364">If the test resolves the problem, this means that the garbage collector was not reclaiming objects, because the finalizers for those objects had been suspended.</span></span> <span data-ttu-id="aef92-365">El método <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> permite que los finalizadores completen sus tareas y corrige el problema.</span><span class="sxs-lookup"><span data-stu-id="aef92-365">The <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> method enables the finalizers to complete their tasks, and fixes the problem.</span></span>  
   
 <a name="Finalize"></a>   
-##### Para determinar si hay objetos en espera de finalización  
+##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a><span data-ttu-id="aef92-366">Para determinar si hay objetos en espera de finalización</span><span class="sxs-lookup"><span data-stu-id="aef92-366">To determine whether there are objects waiting to be finalized</span></span>  
   
-1.  En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
+1.  <span data-ttu-id="aef92-367">En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-367">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     **\!finalizequeue**  
+     <span data-ttu-id="aef92-368">**!finalizequeue**</span><span class="sxs-lookup"><span data-stu-id="aef92-368">**!finalizequeue**</span></span>  
   
-     Observe el número de objetos que están listos para la finalización.  Si el número es elevado, debe examinar por qué estos finalizadores no pueden progresar en absoluto o con la rapidez suficiente.  
+     <span data-ttu-id="aef92-369">Observe el número de objetos que están listos para la finalización.</span><span class="sxs-lookup"><span data-stu-id="aef92-369">Look at the number of objects that are ready for finalization.</span></span> <span data-ttu-id="aef92-370">Si el número es elevado, debe examinar por qué estos finalizadores no pueden progresar en absoluto o con la rapidez suficiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-370">If the number is high, you must examine why these finalizers cannot progress at all or cannot progress fast enough.</span></span>  
   
-2.  Para obtener un resultado de subprocesos, escriba el comando siguiente:  
+2.  <span data-ttu-id="aef92-371">Para obtener un resultado de subprocesos, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-371">To get an output of threads, type the following command:</span></span>  
   
-     **threads \-special**  
+     <span data-ttu-id="aef92-372">**threads -special**</span><span class="sxs-lookup"><span data-stu-id="aef92-372">**threads -special**</span></span>  
   
-     Este comando proporciona resultados como el siguiente.  
+     <span data-ttu-id="aef92-373">Este comando proporciona resultados como el siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-373">This command provides output such as the following.</span></span>  
   
     ```  
        OSID     Special thread type  
@@ -517,16 +520,16 @@ En este tema se describen los problemas relacionados con la recolección de elem
     4    df0    GC SuspendEE   
     ```  
   
-     El subproceso finalizador indica qué finalizador, si hay alguno, se está ejecutando actualmente.  Cuando un subproceso finalizador no está ejecutando ningún finalizador, está esperando un evento para indicarle que haga su trabajo.  La mayoría de las veces verá el subproceso finalizador en este estado porque se ejecuta en THREAD\_HIGHEST\_PRIORITY y se presupone que termina de ejecutar los finalizadores, si hay alguno, muy rápidamente.  
+     <span data-ttu-id="aef92-374">El subproceso finalizador indica qué finalizador, si hay alguno, se está ejecutando actualmente.</span><span class="sxs-lookup"><span data-stu-id="aef92-374">The finalizer thread indicates which finalizer, if any, is currently being run.</span></span> <span data-ttu-id="aef92-375">Cuando un subproceso finalizador no está ejecutando ningún finalizador, está esperando un evento para indicarle que haga su trabajo.</span><span class="sxs-lookup"><span data-stu-id="aef92-375">When a finalizer thread is not running any finalizers, it is waiting for an event to tell it to do its work.</span></span> <span data-ttu-id="aef92-376">La mayoría de las veces verá el subproceso finalizador en este estado porque se ejecuta en THREAD_HIGHEST_PRIORITY y se presupone que termina de ejecutar los finalizadores, si hay alguno, muy rápidamente.</span><span class="sxs-lookup"><span data-stu-id="aef92-376">Most of the time you will see the finalizer thread in this state because it runs at THREAD_HIGHEST_PRIORITY and is supposed to finish running finalizers, if any, very quickly.</span></span>  
   
 <a name="Fragmented"></a>   
-##### Para determinar la cantidad de espacio disponible en el montón administrado  
+##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a><span data-ttu-id="aef92-377">Para determinar la cantidad de espacio disponible en el montón administrado</span><span class="sxs-lookup"><span data-stu-id="aef92-377">To determine the amount of free space in the managed heap</span></span>  
   
--   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
+-   <span data-ttu-id="aef92-378">En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-378">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     **\!dumpheap \-type Free \-stat**  
+     <span data-ttu-id="aef92-379">**!dumpheap -type Free -stat**</span><span class="sxs-lookup"><span data-stu-id="aef92-379">**!dumpheap -type Free -stat**</span></span>  
   
-     Este comando muestra el tamaño total de todos los objetos disponibles en el montón administrado, como se muestra en el ejemplo siguiente.  
+     <span data-ttu-id="aef92-380">Este comando muestra el tamaño total de todos los objetos disponibles en el montón administrado, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-380">This command displays the total size of all the free objects on the managed heap, as shown in the following example.</span></span>  
   
     ```  
     total 230 objects  
@@ -536,11 +539,11 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 230 objects  
     ```  
   
--   Para determinar el espacio disponible en la generación 0, escriba el comando siguiente para obtener información sobre el consumo de memoria por generación:  
+-   <span data-ttu-id="aef92-381">Para determinar el espacio disponible en la generación 0, escriba el comando siguiente para obtener información sobre el consumo de memoria por generación:</span><span class="sxs-lookup"><span data-stu-id="aef92-381">To determine the free space in generation 0, type the following command for memory consumption information by generation:</span></span>  
   
-     **\!eeheap \-gc**  
+     <span data-ttu-id="aef92-382">**!eeheap -gc**</span><span class="sxs-lookup"><span data-stu-id="aef92-382">**!eeheap -gc**</span></span>  
   
-     Este comando muestra un resultado similar al siguiente.  La última línea muestra el segmento efímero.  
+     <span data-ttu-id="aef92-383">Este comando muestra un resultado similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-383">This command displays output similar to the following.</span></span> <span data-ttu-id="aef92-384">La última línea muestra el segmento efímero.</span><span class="sxs-lookup"><span data-stu-id="aef92-384">The last line shows the ephemeral segment.</span></span>  
   
     ```  
     Heap 0 (0015ad08)  
@@ -556,21 +559,21 @@ En este tema se describen los problemas relacionados con la recolección de elem
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   Calcule el espacio usado por la generación 0:  
+-   <span data-ttu-id="aef92-385">Calcule el espacio usado por la generación 0:</span><span class="sxs-lookup"><span data-stu-id="aef92-385">Calculate the space used by generation 0:</span></span>  
   
-     **?  49e05d04\-0x49521f8c**  
+     <span data-ttu-id="aef92-386">**? 49e05d04-0x49521f8c**</span><span class="sxs-lookup"><span data-stu-id="aef92-386">**? 49e05d04-0x49521f8c**</span></span>  
   
-     El resultado es el siguiente.  La generación 0 ocupa aproximadamente 9 MB.  
+     <span data-ttu-id="aef92-387">El resultado es el siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-387">The result is as follows.</span></span> <span data-ttu-id="aef92-388">La generación 0 ocupa aproximadamente 9 MB.</span><span class="sxs-lookup"><span data-stu-id="aef92-388">Generation 0 is approximately 9 MB.</span></span>  
   
     ```  
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   El comando siguiente vuelca el espacio disponible dentro del intervalo de la generación 0:  
+-   <span data-ttu-id="aef92-389">El comando siguiente vuelca el espacio disponible dentro del intervalo de la generación 0:</span><span class="sxs-lookup"><span data-stu-id="aef92-389">The following command dumps the free space within the generation 0 range:</span></span>  
   
-     **\!dumpheap \-type Free \-stat 0x49521f8c 49e05d04**  
+     <span data-ttu-id="aef92-390">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span><span class="sxs-lookup"><span data-stu-id="aef92-390">**!dumpheap -type Free -stat 0x49521f8c 49e05d04**</span></span>  
   
-     El resultado es el siguiente.  
+     <span data-ttu-id="aef92-391">El resultado es el siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-391">The result is as follows.</span></span>  
   
     ```  
     ------------------------------  
@@ -593,16 +596,16 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 409 objects  
     ```  
   
-     Este resultado muestra que la parte de la generación 0 del montón está usando 9 MB de espacio para los objetos y tiene 7 MB disponibles.  Este análisis muestra hasta qué punto la generación 0 contribuye a la fragmentación.  Esta cantidad de uso del montón se debe descontar de la cantidad total como la causa de fragmentación por parte de los objetos de larga duración.  
+     <span data-ttu-id="aef92-392">Este resultado muestra que la parte de la generación 0 del montón está usando 9 MB de espacio para los objetos y tiene 7 MB disponibles.</span><span class="sxs-lookup"><span data-stu-id="aef92-392">This output shows that the generation 0 portion of the heap is using 9 MB of space for objects and has 7 MB free.</span></span> <span data-ttu-id="aef92-393">Este análisis muestra hasta qué punto la generación 0 contribuye a la fragmentación.</span><span class="sxs-lookup"><span data-stu-id="aef92-393">This analysis shows the extent to which generation 0 contributes to fragmentation.</span></span> <span data-ttu-id="aef92-394">Esta cantidad de uso del montón se debe descontar de la cantidad total como la causa de fragmentación por parte de los objetos de larga duración.</span><span class="sxs-lookup"><span data-stu-id="aef92-394">This amount of heap usage should be discounted from the total amount as the cause of fragmentation by long-term objects.</span></span>  
   
 <a name="Pinned"></a>   
-##### Para determinar el número de objetos anclados  
+##### <a name="to-determine-the-number-of-pinned-objects"></a><span data-ttu-id="aef92-395">Para determinar el número de objetos anclados</span><span class="sxs-lookup"><span data-stu-id="aef92-395">To determine the number of pinned objects</span></span>  
   
--   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:  
+-   <span data-ttu-id="aef92-396">En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-396">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command:</span></span>  
   
-     **\!gchandles**  
+     <span data-ttu-id="aef92-397">**!gchandles**</span><span class="sxs-lookup"><span data-stu-id="aef92-397">**!gchandles**</span></span>  
   
-     Las estadísticas mostradas incluyen el número de identificadores anclados, como se muestra en el ejemplo siguiente.  
+     <span data-ttu-id="aef92-398">Las estadísticas mostradas incluyen el número de identificadores anclados, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-398">The statistics displayed includes the number of pinned handles, as the following example shows.</span></span>  
   
     ```  
     GC Handle Statistics:  
@@ -611,15 +614,15 @@ En este tema se describen los problemas relacionados con la recolección de elem
     ```  
   
 <a name="TimeInGC"></a>   
-##### Para determinar la duración de una recolección de elementos no utilizados  
+##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a><span data-ttu-id="aef92-399">Para determinar la duración de una recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="aef92-399">To determine the length of time in a garbage collection</span></span>  
   
--   Examine el contador de rendimiento de memoria `% Time in GC`.  
+-   <span data-ttu-id="aef92-400">Examine el contador de rendimiento de memoria `% Time in GC`.</span><span class="sxs-lookup"><span data-stu-id="aef92-400">Examine the `% Time in GC` memory performance counter.</span></span>  
   
-     El valor se calcula usando un tiempo de intervalo de muestra.  Como los contadores se actualizan al final de cada recolección de elementos no utilizados, el ejemplo actual tendrá el mismo valor que el ejemplo anterior si no se realizó ninguna recolección durante el intervalo.  
+     <span data-ttu-id="aef92-401">El valor se calcula usando un tiempo de intervalo de muestra.</span><span class="sxs-lookup"><span data-stu-id="aef92-401">The value is calculated by using a sample interval time.</span></span> <span data-ttu-id="aef92-402">Como los contadores se actualizan al final de cada recolección de elementos no utilizados, el ejemplo actual tendrá el mismo valor que el ejemplo anterior si no se realizó ninguna recolección durante el intervalo.</span><span class="sxs-lookup"><span data-stu-id="aef92-402">Because the counters are updated at the end of each garbage collection, the current sample will have the same value as the previous sample if no collections occurred during the interval.</span></span>  
   
-     Tiempo de recolección se obtiene multiplicando el tiempo de intervalo de muestra por el valor de porcentaje.  
+     <span data-ttu-id="aef92-403">Tiempo de recolección se obtiene multiplicando el tiempo de intervalo de muestra por el valor de porcentaje.</span><span class="sxs-lookup"><span data-stu-id="aef92-403">Collection time is obtained by multiplying the sample interval time with the percentage value.</span></span>  
   
-     Los datos siguientes muestran cuatro intervalos de muestreo de dos segundos para un estudio de 8 segundos.  Las columnas `Gen0`, `Gen1` y `Gen2` muestran el número de recolecciones de elementos no utilizados que se produjeron durante ese intervalo para esa generación.  
+     <span data-ttu-id="aef92-404">Los datos siguientes muestran cuatro intervalos de muestreo de dos segundos para un estudio de 8 segundos.</span><span class="sxs-lookup"><span data-stu-id="aef92-404">The following data shows four sampling intervals of two seconds, for an 8-second study.</span></span> <span data-ttu-id="aef92-405">Las columnas `Gen0`, `Gen1` y `Gen2` muestran el número de recolecciones de elementos no utilizados que se produjeron durante ese intervalo para esa generación.</span><span class="sxs-lookup"><span data-stu-id="aef92-405">The `Gen0`, `Gen1`, and `Gen2` columns show the number of garbage collections that occurred during that interval for that generation.</span></span>  
   
     ```  
     Interval    Gen0    Gen1    Gen2    % Time in GC  
@@ -629,9 +632,9 @@ En este tema se describen los problemas relacionados con la recolección de elem
            4      11       3       1               3  
     ```  
   
-     Esta información no indica cuándo se produjo la recolección de elementos no utilizados, pero puede determinar el número de recolecciones de elementos no utilizados que se produjeron en un intervalo de tiempo.  Suponiendo el caso peor, la décima recolección de elementos no utilizados de generación 0 terminó al principio del segundo intervalo y la undécima recolección de elementos no utilizados de generación 0 terminó al final del quinto intervalo.  El tiempo transcurrido entre el final de la décima recolección de elementos no utilizados y el final de la undécima recolección de elementos no utilizados es de aproximadamente 2 segundos y el contador de rendimiento muestra un 3%, por lo que la duración de la undécima recolección de elementos no utilizados de generación 0 fue de \(2 segundos \* 3% \= 60 ms\).  
+     <span data-ttu-id="aef92-406">Esta información no indica cuándo se produjo la recolección de elementos no utilizados, pero puede determinar el número de recolecciones de elementos no utilizados que se produjeron en un intervalo de tiempo.</span><span class="sxs-lookup"><span data-stu-id="aef92-406">This information does not show when the garbage collection occurred, but you can determine the number of garbage collections that occurred in an interval of time.</span></span> <span data-ttu-id="aef92-407">Suponiendo el caso peor, la décima recolección de elementos no utilizados de generación 0 terminó al principio del segundo intervalo y la undécima recolección de elementos no utilizados de generación 0 terminó al final del quinto intervalo.</span><span class="sxs-lookup"><span data-stu-id="aef92-407">Assuming the worst case, the tenth generation 0 garbage collection finished at the start of the second interval, and the eleventh generation 0 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="aef92-408">El tiempo transcurrido entre el final de la décima recolección de elementos no utilizados y el final de la undécima recolección de elementos no utilizados es de aproximadamente 2 segundos y el contador de rendimiento muestra un 3%, por lo que la duración de la undécima recolección de elementos no utilizados de generación 0 fue de (2 segundos * 3% = 60 ms).</span><span class="sxs-lookup"><span data-stu-id="aef92-408">The time between the end of the tenth and the end of the eleventh garbage collection is about 2 seconds, and the performance counter shows 3%, so the duration of the eleventh generation 0 garbage collection was (2 seconds * 3% = 60ms).</span></span>  
   
-     En este ejemplo, hay 5 periodos.  
+     <span data-ttu-id="aef92-409">En este ejemplo, hay 5 periodos.</span><span class="sxs-lookup"><span data-stu-id="aef92-409">In this example, there are 5 periods.</span></span>  
   
     ```  
     Interval    Gen0    Gen1    Gen2     % Time in GC  
@@ -642,11 +645,11 @@ En este tema se describen los problemas relacionados con la recolección de elem
            5      11       4       2               20  
     ```  
   
-     La segunda recolección de elementos no utilizados de generación 2 se inició durante el tercer intervalo y terminó en el quinto intervalo.  Suponiendo el caso peor, la última recolección de elementos no utilizados fue de una generación 0 que terminó al principio del segundo intervalo y la recolección de elementos no utilizados de generación 2 terminó al final del quinto intervalo.  Por tanto, el tiempo transcurrido entre el final de la recolección de elementos no utilizados de generación 0 y el final de la recolección de elementos no utilizados de generación 2 es de 4 segundos.  Puesto que el contador `% Time in GC` muestra un 20%, el tiempo máximo que la recolección de elementos no utilizados de generación 2 podría haber tardado es \(4 segundos \* 20% \= 800 ms\).  
+     <span data-ttu-id="aef92-410">La segunda recolección de elementos no utilizados de generación 2 se inició durante el tercer intervalo y terminó en el quinto intervalo.</span><span class="sxs-lookup"><span data-stu-id="aef92-410">The second generation 2 garbage collection started during the third interval and finished at the fifth interval.</span></span> <span data-ttu-id="aef92-411">Suponiendo el caso peor, la última recolección de elementos no utilizados fue de una generación 0 que terminó al principio del segundo intervalo y la recolección de elementos no utilizados de generación 2 terminó al final del quinto intervalo.</span><span class="sxs-lookup"><span data-stu-id="aef92-411">Assuming the worst case, the last garbage collection was for a generation 0 collection that finished at the start of the second interval, and the generation 2 garbage collection finished at the end of the fifth interval.</span></span> <span data-ttu-id="aef92-412">Por tanto, el tiempo transcurrido entre el final de la recolección de elementos no utilizados de generación 0 y el final de la recolección de elementos no utilizados de generación 2 es de 4 segundos.</span><span class="sxs-lookup"><span data-stu-id="aef92-412">Therefore, the time between the end of the generation 0 garbage collection and the end of the generation 2 garbage collection is 4 seconds.</span></span> <span data-ttu-id="aef92-413">Puesto que el contador `% Time in GC` muestra un 20%, el tiempo máximo que la recolección de elementos no utilizados de generación 2 podría haber tardado es (4 segundos * 20% = 800 ms).</span><span class="sxs-lookup"><span data-stu-id="aef92-413">Because the `% Time in GC` counter is 20%, the maximum amount of time the generation 2 garbage collection could have taken is (4 seconds * 20% = 800ms).</span></span>  
   
--   También puede determinar la duración de una recolección de elementos no utilizados mediante [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) y analizar la información para averiguar la duración de la recolección de elementos no utilizados.  
+-   <span data-ttu-id="aef92-414">También puede determinar la duración de una recolección de elementos no utilizados mediante [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) y analizar la información para averiguar la duración de la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-414">Alternatively, you can determine the length of a garbage collection by using [garbage collection ETW events](../../../docs/framework/performance/garbage-collection-etw-events.md), and analyze the information to determine the duration of garbage collection.</span></span>  
   
-     Por ejemplo, los datos siguiente muestran una secuencia de eventos que se produjo durante una recolección de elementos no utilizados no simultánea.  
+     <span data-ttu-id="aef92-415">Por ejemplo, los datos siguiente muestran una secuencia de eventos que se produjo durante una recolección de elementos no utilizados no simultánea.</span><span class="sxs-lookup"><span data-stu-id="aef92-415">For example, the following data shows an event sequence that occurred during a non-concurrent garbage collection.</span></span>  
   
     ```  
     Timestamp    Event name  
@@ -659,13 +662,13 @@ En este tema se describen los problemas relacionados con la recolección de elem
     517918        GCRestartEEEnd  
     ```  
   
-     La suspensión del subproceso administrado tardó 26 us \(`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`\).  
+     <span data-ttu-id="aef92-416">La suspensión del subproceso administrado tardó 26 us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`).</span><span class="sxs-lookup"><span data-stu-id="aef92-416">Suspending the managed thread took 26us (`GCSuspendEEEnd` – `GCSuspendEEBegin_V1`).</span></span>  
   
-     La recolección de elementos no utilizados real tardó 4,8 ms \(`GCEnd_V1` – `GCStart_V1`\).  
+     <span data-ttu-id="aef92-417">La recolección de elementos no utilizados real tardó 4,8 ms (`GCEnd_V1` – `GCStart_V1`).</span><span class="sxs-lookup"><span data-stu-id="aef92-417">The actual garbage collection took 4.8ms (`GCEnd_V1` – `GCStart_V1`).</span></span>  
   
-     La reanudación de los subprocesos administrados tardó 21 us \(`GCRestartEEEnd` – `GCRestartEEBegin`\).  
+     <span data-ttu-id="aef92-418">La reanudación de los subprocesos administrados tardó 21 us (`GCRestartEEEnd` – `GCRestartEEBegin`).</span><span class="sxs-lookup"><span data-stu-id="aef92-418">Resuming the managed threads took 21us (`GCRestartEEEnd` – `GCRestartEEBegin`).</span></span>  
   
-     El resultado siguiente proporciona un ejemplo de recolección de elementos no utilizados en segundo plano, e incluye los campos de proceso, subproceso y evento.  \(No se muestra todos los datos.\)  
+     <span data-ttu-id="aef92-419">El resultado siguiente proporciona un ejemplo de recolección de elementos no utilizados en segundo plano, e incluye los campos de proceso, subproceso y evento.</span><span class="sxs-lookup"><span data-stu-id="aef92-419">The following output provides an example for background garbage collection, and includes the process, thread, and event fields.</span></span> <span data-ttu-id="aef92-420">(No se muestra todos los datos.)</span><span class="sxs-lookup"><span data-stu-id="aef92-420">(Not all data is shown.)</span></span>  
   
     ```  
     timestamp(us)    event name            process    thread    event field  
@@ -685,26 +688,26 @@ En este tema se describen los problemas relacionados con la recolección de elem
     89931464        GCHeapStats            Test.exe    4372          
     ```  
   
-     El evento `GCStart_V1` en 42504816 indica que se trata de una recolección de elementos no utilizados en segundo plano, ya que el último campo es `1`.  Esta se convierte en la recolección de elementos no utilizados número  102019.  
+     <span data-ttu-id="aef92-421">El evento `GCStart_V1` en 42504816 indica que se trata de una recolección de elementos no utilizados en segundo plano, ya que el último campo es `1`.</span><span class="sxs-lookup"><span data-stu-id="aef92-421">The `GCStart_V1` event at 42504816 indicates that this is a background garbage collection, because the last field is `1`.</span></span> <span data-ttu-id="aef92-422">Esta se convierte en la recolección de elementos no utilizados número</span><span class="sxs-lookup"><span data-stu-id="aef92-422">This becomes garbage collection No.</span></span> <span data-ttu-id="aef92-423">102019.</span><span class="sxs-lookup"><span data-stu-id="aef92-423">102019.</span></span>  
   
-     El evento `GCStart` se produce porque se necesita una recolección de elementos no utilizados efímera antes de iniciar una recolección de elementos no utilizados en segundo plano.  Esta se convierte en la recolección de elementos no utilizados número  102020.  
+     <span data-ttu-id="aef92-424">El evento `GCStart` se produce porque se necesita una recolección de elementos no utilizados efímera antes de iniciar una recolección de elementos no utilizados en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="aef92-424">The `GCStart` event occurs because there is a need for an ephemeral garbage collection before you start a background garbage collection.</span></span> <span data-ttu-id="aef92-425">Esta se convierte en la recolección de elementos no utilizados número</span><span class="sxs-lookup"><span data-stu-id="aef92-425">This becomes garbage collection No.</span></span> <span data-ttu-id="aef92-426">102020.</span><span class="sxs-lookup"><span data-stu-id="aef92-426">102020.</span></span>  
   
-     En 42514170, la recolección de elementos no utilizados número  102020 finaliza.  Los subprocesos administrados se reinician en este momento.  Esto se completa en el subproceso 4372, que desencadenó esta recolección de elementos no utilizados en segundo plano.  
+     <span data-ttu-id="aef92-427">En 42514170, la recolección de elementos no utilizados número</span><span class="sxs-lookup"><span data-stu-id="aef92-427">At 42514170, garbage collection No.</span></span> <span data-ttu-id="aef92-428">102020 finaliza.</span><span class="sxs-lookup"><span data-stu-id="aef92-428">102020 finishes.</span></span> <span data-ttu-id="aef92-429">Los subprocesos administrados se reinician en este momento.</span><span class="sxs-lookup"><span data-stu-id="aef92-429">The managed threads are restarted at this point.</span></span> <span data-ttu-id="aef92-430">Esto se completa en el subproceso 4372, que desencadenó esta recolección de elementos no utilizados en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="aef92-430">This is completed on thread 4372, which triggered this background garbage collection.</span></span>  
   
-     En el subproceso 4744, se produce una suspensión.  Esta es la última vez que la recolección de elementos no utilizados en segundo plano tiene que suspender subprocesos administrados.  Esta duración es de aproximadamente 99 ms \(\(63784407\-63685394\)\/1000\).  
+     <span data-ttu-id="aef92-431">En el subproceso 4744, se produce una suspensión.</span><span class="sxs-lookup"><span data-stu-id="aef92-431">On thread 4744, a suspension occurs.</span></span> <span data-ttu-id="aef92-432">Esta es la última vez que la recolección de elementos no utilizados en segundo plano tiene que suspender subprocesos administrados.</span><span class="sxs-lookup"><span data-stu-id="aef92-432">This is the only time at which the background garbage collection has to suspend managed threads.</span></span> <span data-ttu-id="aef92-433">Esta duración es de aproximadamente 99 ms ((63784407-63685394)/1000).</span><span class="sxs-lookup"><span data-stu-id="aef92-433">This duration is approximately 99ms ((63784407-63685394)/1000).</span></span>  
   
-     El evento `GCEnd` para la recolección de elementos no utilizados en segundo plano está en 89931423.  Esto significa que la recolección de elementos no utilizados en segundo plano duró alrededor de 47 segundos \(\(89931423\-42504816\)\/1000\).  
+     <span data-ttu-id="aef92-434">El evento `GCEnd` para la recolección de elementos no utilizados en segundo plano está en 89931423.</span><span class="sxs-lookup"><span data-stu-id="aef92-434">The `GCEnd` event for the background garbage collection is at 89931423.</span></span> <span data-ttu-id="aef92-435">Esto significa que la recolección de elementos no utilizados en segundo plano duró alrededor de 47 segundos ((89931423-42504816)/1000).</span><span class="sxs-lookup"><span data-stu-id="aef92-435">This means that the background garbage collection lasted for about 47seconds ((89931423-42504816)/1000).</span></span>  
   
-     Mientras los subprocesos administrados se están ejecutando, puede producirse cualquier número de recolecciones de elementos no utilizados efímeras.  
+     <span data-ttu-id="aef92-436">Mientras los subprocesos administrados se están ejecutando, puede producirse cualquier número de recolecciones de elementos no utilizados efímeras.</span><span class="sxs-lookup"><span data-stu-id="aef92-436">While the managed threads are running, you can see any number of ephemeral garbage collections occurring.</span></span>  
   
 <a name="Triggered"></a>   
-##### Para determinar qué desencadenó una recolección de elementos no utilizados  
+##### <a name="to-determine-what-triggered-a-garbage-collection"></a><span data-ttu-id="aef92-437">Para determinar qué desencadenó una recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="aef92-437">To determine what triggered a garbage collection</span></span>  
   
--   En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar todos los subprocesos con sus pilas de llamadas:  
+-   <span data-ttu-id="aef92-438">En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando siguiente para mostrar todos los subprocesos con sus pilas de llamadas:</span><span class="sxs-lookup"><span data-stu-id="aef92-438">In the WinDbg or Visual Studio debugger with the SOS debugger extension loaded, type the following command to show all the threads with their call stacks:</span></span>  
   
-     **~\*kb**  
+     <span data-ttu-id="aef92-439">**~\*KB**</span><span class="sxs-lookup"><span data-stu-id="aef92-439">**~\*kb**</span></span>  
   
-     Este comando muestra un resultado similar al siguiente.  
+     <span data-ttu-id="aef92-440">Este comando muestra un resultado similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="aef92-440">This command displays output similar to the following.</span></span>  
   
     ```  
     0012f3b0 79ff0bf8 mscorwks!WKS::GCHeap::GarbageCollect   
@@ -712,9 +715,9 @@ En este tema se describen los problemas relacionados con la recolección de elem
     0012f490 79fa22bd fragment_ni!request.Main(System.String[])+0x48  
     ```  
   
-     Si la recolección de elementos no utilizados se produjo por una notificación de memoria insuficiente del sistema operativo, la pila de llamadas es similar, salvo que el subproceso es el subproceso finalizador.  El subproceso finalizador obtiene una notificación asincrónica de memoria insuficiente e induce la recolección de elementos no utilizados.  
+     <span data-ttu-id="aef92-441">Si la recolección de elementos no utilizados se produjo por una notificación de memoria insuficiente del sistema operativo, la pila de llamadas es similar, salvo que el subproceso es el subproceso finalizador.</span><span class="sxs-lookup"><span data-stu-id="aef92-441">If the garbage collection was caused by a low memory notification from the operating system, the call stack is similar, except that the thread is the finalizer thread.</span></span> <span data-ttu-id="aef92-442">El subproceso finalizador obtiene una notificación asincrónica de memoria insuficiente e induce la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="aef92-442">The finalizer thread gets an asynchronous low memory notification and induces the garbage collection.</span></span>  
   
-     Si la recolección de elementos no utilizados se produjo por la asignación de memoria, la pila aparece de la manera siguiente:  
+     <span data-ttu-id="aef92-443">Si la recolección de elementos no utilizados se produjo por la asignación de memoria, la pila aparece de la manera siguiente:</span><span class="sxs-lookup"><span data-stu-id="aef92-443">If the garbage collection was caused by memory allocation, the stack appears as follows:</span></span>  
   
     ```  
     0012f230 7a07c551 mscorwks!WKS::GCHeap::GarbageCollectGeneration  
@@ -728,13 +731,13 @@ En este tema se describen los problemas relacionados con la recolección de elem
     0000002a 79fa22bd fragment_ni!request.Main(System.String[])+0x153  
     ```  
   
-     Un código auxiliar Just\-In\-Time \(`JIT_New*`\) llama finalmente a `GCHeap::GarbageCollectGeneration`.  Si determina que las recolecciones de elementos no utilizados de generación 2 se deben a asignaciones, debe averiguar qué objetos recolecta una recolección de elementos no utilizados de generación 2 y cómo evitarlas.  Es decir, debe determinar la diferencia entre el inicio y el final de una recolección de elementos no utilizados de generación 2 y los objetos que causaron la recolección de generación 2.  
+     <span data-ttu-id="aef92-444">Un código auxiliar Just-In-Time (`JIT_New*`) llama finalmente a `GCHeap::GarbageCollectGeneration`.</span><span class="sxs-lookup"><span data-stu-id="aef92-444">A just-in-time helper (`JIT_New*`) eventually calls `GCHeap::GarbageCollectGeneration`.</span></span> <span data-ttu-id="aef92-445">Si determina que las recolecciones de elementos no utilizados de generación 2 se deben a asignaciones, debe averiguar qué objetos recolecta una recolección de elementos no utilizados de generación 2 y cómo evitarlas.</span><span class="sxs-lookup"><span data-stu-id="aef92-445">If you determine that generation 2 garbage collections are caused by allocations, you must determine which objects are collected by a generation 2 garbage collection and how to avoid them.</span></span> <span data-ttu-id="aef92-446">Es decir, debe determinar la diferencia entre el inicio y el final de una recolección de elementos no utilizados de generación 2 y los objetos que causaron la recolección de generación 2.</span><span class="sxs-lookup"><span data-stu-id="aef92-446">That is, you want to determine the difference between the start and the end of a generation 2 garbage collection, and the objects that caused the generation 2 collection.</span></span>  
   
-     Por ejemplo, escriba el comando siguiente en el depurador para mostrar el comienzo de una recolección de generación 2:  
+     <span data-ttu-id="aef92-447">Por ejemplo, escriba el comando siguiente en el depurador para mostrar el comienzo de una recolección de generación 2:</span><span class="sxs-lookup"><span data-stu-id="aef92-447">For example, type the following command in the debugger to show the beginning of a generation 2 collection:</span></span>  
   
-     **\!dumpheap –stat**  
+     <span data-ttu-id="aef92-448">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="aef92-448">**!dumpheap –stat**</span></span>  
   
-     Resultado de ejemplo \(abreviado para mostrar los objetos que usan más espacio\):  
+     <span data-ttu-id="aef92-449">Resultado de ejemplo (abreviado para mostrar los objetos que usan más espacio):</span><span class="sxs-lookup"><span data-stu-id="aef92-449">Example output (abridged to show the objects that use the most space):</span></span>  
   
     ```  
     79124228    31857      9862328 System.Object[]  
@@ -752,11 +755,11 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 6471774 objects  
     ```  
   
-     Repita el comando al final de la generación 2:  
+     <span data-ttu-id="aef92-450">Repita el comando al final de la generación 2:</span><span class="sxs-lookup"><span data-stu-id="aef92-450">Repeat the command at the end of generation 2:</span></span>  
   
-     **\!dumpheap –stat**  
+     <span data-ttu-id="aef92-451">**!dumpheap –stat**</span><span class="sxs-lookup"><span data-stu-id="aef92-451">**!dumpheap –stat**</span></span>  
   
-     Resultado de ejemplo \(abreviado para mostrar los objetos que usan más espacio\):  
+     <span data-ttu-id="aef92-452">Resultado de ejemplo (abreviado para mostrar los objetos que usan más espacio):</span><span class="sxs-lookup"><span data-stu-id="aef92-452">Example output (abridged to show the objects that use the most space):</span></span>  
   
     ```  
     79124228    26648      9314256 System.Object[]  
@@ -773,14 +776,14 @@ En este tema se describen los problemas relacionados con la recolección de elem
     Total 6417525 objects  
     ```  
   
-     Los objetos `double[]` desaparecieron del final del resultado, lo que significa que se recopilaron.  Estos objetos ocupan aproximadamente 70 MB.  Los objetos restantes no cambiaron mucho.  Por tanto, estos objetos `double[]` eran la razón por la que se produjo esta recolección de elementos no utilizados de generación 2.  El paso siguiente consiste en determinar por qué están allí los objetos `double[]` y por qué murieron.  Puede preguntar al desarrollador del código el origen de estos objetos o puede usar el comando **gcroot**.  
+     <span data-ttu-id="aef92-453">Los objetos `double[]` desaparecieron del final del resultado, lo que significa que se recopilaron.</span><span class="sxs-lookup"><span data-stu-id="aef92-453">The `double[]` objects disappeared from the end of the output, which means that they were collected.</span></span> <span data-ttu-id="aef92-454">Estos objetos ocupan aproximadamente 70 MB.</span><span class="sxs-lookup"><span data-stu-id="aef92-454">These objects account for approximately 70 MB.</span></span> <span data-ttu-id="aef92-455">Los objetos restantes no cambiaron mucho.</span><span class="sxs-lookup"><span data-stu-id="aef92-455">The remaining objects did not change much.</span></span> <span data-ttu-id="aef92-456">Por tanto, estos objetos `double[]` eran la razón por la que se produjo esta recolección de elementos no utilizados de generación 2.</span><span class="sxs-lookup"><span data-stu-id="aef92-456">Therefore, these `double[]` objects were the reason why this generation 2 garbage collection occurred.</span></span> <span data-ttu-id="aef92-457">El paso siguiente consiste en determinar por qué están allí los objetos `double[]` y por qué murieron.</span><span class="sxs-lookup"><span data-stu-id="aef92-457">Your next step is to determine why the `double[]` objects are there and why they died.</span></span> <span data-ttu-id="aef92-458">Puede preguntar al desarrollador del código la procedencia de estos objetos o puede usar el comando **gcroot**.</span><span class="sxs-lookup"><span data-stu-id="aef92-458">You can ask the code developer where these objects came from, or you can use the **gcroot** command.</span></span>  
   
 <a name="HighCPU"></a>   
-##### Para determinar si el uso elevado de CPU está provocado por la recolección de elementos no utilizados  
+##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a><span data-ttu-id="aef92-459">Para determinar si el uso elevado de CPU está provocado por la recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="aef92-459">To determine whether high CPU usage is caused by garbage collection</span></span>  
   
--   Correlacione el valor del contador de rendimiento de memoria `% Time in GC` con el tiempo de proceso.  
+-   <span data-ttu-id="aef92-460">Correlacione el valor del contador de rendimiento de memoria `% Time in GC` con el tiempo de proceso.</span><span class="sxs-lookup"><span data-stu-id="aef92-460">Correlate the `% Time in GC` memory performance counter value with the process time.</span></span>  
   
-     Si el valor de `% Time in GC` tiene un pico a la vez que el tiempo de proceso, la recolección de elementos no utilizados está provocando un uso de CPU elevado.  De lo contrario, genere un perfil de la aplicación para averiguar dónde se está produciendo el uso elevado.  
+     <span data-ttu-id="aef92-461">Si el valor de `% Time in GC` tiene un pico a la vez que el tiempo de proceso, la recolección de elementos no utilizados está provocando un uso de CPU elevado.</span><span class="sxs-lookup"><span data-stu-id="aef92-461">If the `% Time in GC` value spikes at the same time as process time, garbage collection is causing a high CPU usage.</span></span> <span data-ttu-id="aef92-462">De lo contrario, genere un perfil de la aplicación para averiguar dónde se está produciendo el uso elevado.</span><span class="sxs-lookup"><span data-stu-id="aef92-462">Otherwise, profile the application to find where the high usage is occurring.</span></span>  
   
-## Vea también  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="aef92-463">Vea también</span><span class="sxs-lookup"><span data-stu-id="aef92-463">See Also</span></span>  
+ [<span data-ttu-id="aef92-464">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="aef92-464">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

@@ -8,71 +8,80 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: be2d8a2fd77d65b82574efde3b9922a1176ad2f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: d81091bf09d690f5d57ad9a30b5f16de1358ede6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Abordar la complejidad empresarial en un microservicio con patrones DDD y CQRS
+# <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a><span data-ttu-id="2162b-104">Abordar la complejidad empresarial en un microservicio con patrones DDD y CQRS</span><span class="sxs-lookup"><span data-stu-id="2162b-104">Tackling Business Complexity in a Microservice with DDD and CQRS Patterns</span></span>
 
-*Diseñe un modelo de dominio para cada microservicio o contexto limitado que refleje un conocimiento del ámbito empresarial.*
+<span data-ttu-id="2162b-105">*Diseñe un modelo de dominio para cada microservicio o contexto limitado que refleje un conocimiento del ámbito empresarial.*</span><span class="sxs-lookup"><span data-stu-id="2162b-105">*Design a domain model for each microservice or Bounded Context that reflects understanding of the business domain.*</span></span>
 
-Esta sección se centra en microservicios más avanzados que se implementan cuando se deben abordar subsistemas complejos y en microservicios derivados de los conocimientos de expertos en el dominio con reglas de negocios cambiantes. Los patrones de arquitectura que se usan en esta sección se basan en enfoques de diseño guiado por el dominio (DDD) y separación de la responsabilidad de comandos y consultas (CQRS), como se muestra en la figura 9-1.
+<span data-ttu-id="2162b-106">Esta sección se centra en microservicios más avanzados que se implementan cuando se deben abordar subsistemas complejos y en microservicios derivados de los conocimientos de expertos en el dominio con reglas de negocios cambiantes.</span><span class="sxs-lookup"><span data-stu-id="2162b-106">This section focuses on more advanced microservices that you implement when you need to tackle complex subsystems, or microservices derived from the knowledge of domain experts with ever-changing business rules.</span></span> <span data-ttu-id="2162b-107">Los patrones de arquitectura que se usan en esta sección se basan en enfoques de diseño guiado por el dominio (DDD) y separación de la responsabilidad de comandos y consultas (CQRS), como se muestra en la figura 9-1.</span><span class="sxs-lookup"><span data-stu-id="2162b-107">The architecture patterns used in this section are based on domain-driven design (DDD) and Command and Query Responsibility Segregation (CQRS) approaches, as illustrated in Figure 9-1.</span></span>
 
 ![](./media/image1.png)
 
-**Figura 9-1**. Arquitectura de microservicios externa frente a patrones de arquitectura interna para cada microservicio.
+<span data-ttu-id="2162b-108">**Figura 9-1**.</span><span class="sxs-lookup"><span data-stu-id="2162b-108">**Figure 9-1**.</span></span> <span data-ttu-id="2162b-109">Arquitectura de microservicios externa frente a patrones de arquitectura interna para cada microservicio.</span><span class="sxs-lookup"><span data-stu-id="2162b-109">External microservice architecture versus internal architecture patterns for each microservice</span></span>
 
-Pero la mayoría de las técnicas para microservicios controlados por datos (por ejemplo, cómo implementar un servicio ASP.NET Core Web API o cómo exponer metadatos de Swagger con Swashbuckle) también son aplicables a los microservicios más avanzados que se implementan internamente con patrones DDD. Esta sección es una ampliación de las secciones anteriores, ya que la mayoría de las prácticas explicadas anteriormente también se aplican aquí o a cualquier tipo de microservicio.
+<span data-ttu-id="2162b-110">Pero la mayoría de las técnicas para microservicios controlados por datos (por ejemplo, cómo implementar un servicio ASP.NET Core Web API o cómo exponer metadatos de Swagger con Swashbuckle) también son aplicables a los microservicios más avanzados que se implementan internamente con patrones DDD.</span><span class="sxs-lookup"><span data-stu-id="2162b-110">However, most of the techniques for data driven microservices, such as how to implement an ASP.NET Core Web API service or how to expose Swagger metadata with Swashbuckle, are also applicable to the more advanced microservices implemented internally with DDD patterns.</span></span> <span data-ttu-id="2162b-111">Esta sección es una ampliación de las secciones anteriores, ya que la mayoría de las prácticas explicadas anteriormente también se aplican aquí o a cualquier tipo de microservicio.</span><span class="sxs-lookup"><span data-stu-id="2162b-111">This section is an extension of the previous sections, because most of the practices explained earlier also apply here or for any kind of microservice.</span></span>
 
-Esta sección proporciona en primer lugar detalles sobre los patrones CQRS simplificados que se usan en la aplicación de referencia eShopOnContainers. Más adelante, obtendrá información general sobre las técnicas DDD que le permiten encontrar patrones comunes que puede volver a usar en sus aplicaciones.
+<span data-ttu-id="2162b-112">Esta sección proporciona en primer lugar detalles sobre los patrones CQRS simplificados que se usan en la aplicación de referencia eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="2162b-112">This section first provides details on the simplified CQRS patterns used in the eShopOnContainers reference application.</span></span> <span data-ttu-id="2162b-113">Más adelante, obtendrá información general sobre las técnicas DDD que le permiten encontrar patrones comunes que puede volver a usar en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2162b-113">Later, you will get an overview of the DDD techniques that enable you to find common patterns that you can reuse in your applications.</span></span>
 
-DDD es un tema amplio con numerosos recursos para obtener más información. Puede empezar con libros como [Domain-Driven Design](https://domainlanguage.com/ddd/) (Diseño guiado por el dominio), de Eric Evans, y materiales adicionales de Vaughn Vernon, Jimmy Nilsson, Greg Young, Udi Dahan, Jimmy Bogard y muchos otros expertos en DDD y CQRS. Pero, sobre todo, para aprender a aplicar técnicas DDD, debe recurrir a conversaciones, pizarras interactivas y sesiones de modelado de dominio con expertos de su ámbito empresarial específico.
+<span data-ttu-id="2162b-114">DDD es un tema amplio con numerosos recursos para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="2162b-114">DDD is a large topic with a rich set of resources for learning.</span></span> <span data-ttu-id="2162b-115">Puede empezar con libros como [Domain-Driven Design](https://domainlanguage.com/ddd/) (Diseño guiado por el dominio), de Eric Evans, y materiales adicionales de Vaughn Vernon, Jimmy Nilsson, Greg Young, Udi Dahan, Jimmy Bogard y muchos otros expertos en DDD y CQRS.</span><span class="sxs-lookup"><span data-stu-id="2162b-115">You can start with books like [Domain-Driven Design](https://domainlanguage.com/ddd/) by Eric Evans and additional materials from Vaughn Vernon, Jimmy Nilsson, Greg Young, Udi Dahan, Jimmy Bogard, and many other DDD/CQRS experts.</span></span> <span data-ttu-id="2162b-116">Pero, sobre todo, para aprender a aplicar técnicas DDD, debe recurrir a conversaciones, pizarras interactivas y sesiones de modelado de dominio con expertos de su ámbito empresarial específico.</span><span class="sxs-lookup"><span data-stu-id="2162b-116">But most of all you need to try to learn how to apply DDD techniques from the conversations, whiteboarding, and domain modeling sessions with the experts in your concrete business domain.</span></span>
 
-#### <a name="additional-resources"></a>Recursos adicionales
+#### <a name="additional-resources"></a><span data-ttu-id="2162b-117">Recursos adicionales</span><span class="sxs-lookup"><span data-stu-id="2162b-117">Additional resources</span></span>
 
-##### <a name="ddd-domain-driven-design"></a>DDD (diseño guiado por el dominio)
+##### <a name="ddd-domain-driven-design"></a><span data-ttu-id="2162b-118">DDD (diseño guiado por el dominio)</span><span class="sxs-lookup"><span data-stu-id="2162b-118">DDD (Domain-Driven Design)</span></span>
 
--   **Eric Evans. Sitio web Domain Language**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+-   <span data-ttu-id="2162b-119">**Eric Evans. Sitio web Domain Language**
+    [*http://domainlanguage.com/*](http://domainlanguage.com/)</span><span class="sxs-lookup"><span data-stu-id="2162b-119">**Eric Evans. Domain Language**
+[*http://domainlanguage.com/*](http://domainlanguage.com/)</span></span>
 
--   **Martin Fowler. Artículos con la etiqueta "domain-driven design" (diseño guiado por el dominio)**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+-   <span data-ttu-id="2162b-120">**Martin Fowler. Artículos con la etiqueta "domain-driven design" (diseño guiado por el dominio)**
+    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)</span><span class="sxs-lookup"><span data-stu-id="2162b-120">**Martin Fowler. Domain-Driven Design**
+[*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)</span></span>
 
--   **Jimmy Bogard. Strengthening your domain: a primer (Manual sobre cómo fortalecer el dominio)**
-    [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
+-   <span data-ttu-id="2162b-121">**Jimmy Bogard. Strengthening your domain: a primer (Manual sobre cómo fortalecer el dominio)**
+    [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)</span><span class="sxs-lookup"><span data-stu-id="2162b-121">**Jimmy Bogard. Strengthening your domain: a primer**
+[*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)</span></span>
 
-##### <a name="ddd-books"></a>Libros sobre DDD
+##### <a name="ddd-books"></a><span data-ttu-id="2162b-122">Libros sobre DDD</span><span class="sxs-lookup"><span data-stu-id="2162b-122">DDD books</span></span>
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software**
-    [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   <span data-ttu-id="2162b-123">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software**
+    [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span><span class="sxs-lookup"><span data-stu-id="2162b-123">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software**
+[*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span></span>
 
--   **Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries**
-    [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
+-   <span data-ttu-id="2162b-124">**Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries**
+    [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)</span><span class="sxs-lookup"><span data-stu-id="2162b-124">**Eric Evans. Domain-Driven Design Reference: Definitions and Pattern Summaries**
+[*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)</span></span>
 
--   **Vaughn Vernon. Implementing Domain-Driven Design**
-    [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+-   <span data-ttu-id="2162b-125">**Vaughn Vernon. Implementing Domain-Driven Design**
+    [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="2162b-125">**Vaughn Vernon. Implementing Domain-Driven Design**
+[*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span></span>
 
--   **Vaughn Vernon. Domain-Driven Design Distilled**
-    [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
+-   <span data-ttu-id="2162b-126">**Vaughn Vernon. Domain-Driven Design Distilled**
+    [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)</span><span class="sxs-lookup"><span data-stu-id="2162b-126">**Vaughn Vernon. Domain-Driven Design Distilled**
+[*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)</span></span>
 
--   **Jimmy Nilsson. Applying Domain-Driven Design and Patterns**
-    [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
+-   <span data-ttu-id="2162b-127">**Jimmy Nilsson. Applying Domain-Driven Design and Patterns**
+    [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)</span><span class="sxs-lookup"><span data-stu-id="2162b-127">**Jimmy Nilsson. Applying Domain-Driven Design and Patterns**
+[*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)</span></span>
 
--   **Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET**
-    [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
+-   <span data-ttu-id="2162b-128">**Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET**
+    [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)</span><span class="sxs-lookup"><span data-stu-id="2162b-128">**Cesar de la Torre. N-Layered Domain-Oriented Architecture Guide with .NET**
+[*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)</span></span>
 
--   **Abel Avram y Floyd Marinescu. Domain-Driven Design Quickly**
-    [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
+-   <span data-ttu-id="2162b-129">**Abel Avram y Floyd Marinescu. Domain-Driven Design Quickly**
+    [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)</span><span class="sxs-lookup"><span data-stu-id="2162b-129">**Abel Avram and Floyd Marinescu. Domain-Driven Design Quickly**
+[*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)</span></span>
 
-Aprendizaje de DDD
+<span data-ttu-id="2162b-130">Aprendizaje de DDD</span><span class="sxs-lookup"><span data-stu-id="2162b-130">DDD training</span></span>
 
--   **Julie Lerman y Steve Smith. Curso "Domain-Driven Design Fundamentals" (Conceptos fundamentales sobre el diseño guiado por el dominio)**
-    [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
+-   <span data-ttu-id="2162b-131">**Julie Lerman y Steve Smith. Curso "Domain-Driven Design Fundamentals" (Conceptos fundamentales sobre el diseño guiado por el dominio)**
+    [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)</span><span class="sxs-lookup"><span data-stu-id="2162b-131">**Julie Lerman and Steve Smith. Domain-Driven Design Fundamentals**
+[*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)</span></span>
 
 
 >[!div class="step-by-step"]
-[Anterior] (../multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md) [Siguiente] (apply-simplified-microservice-cqrs-ddd-patterns.md)
-
+<span data-ttu-id="2162b-132">[Anterior] (../multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md) [Siguiente] (apply-simplified-microservice-cqrs-ddd-patterns.md)</span><span class="sxs-lookup"><span data-stu-id="2162b-132">[Previous] (../multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md) [Next] (apply-simplified-microservice-cqrs-ddd-patterns.md)</span></span>

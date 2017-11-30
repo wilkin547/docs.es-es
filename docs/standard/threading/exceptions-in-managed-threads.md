@@ -1,86 +1,89 @@
 ---
-title: "Exceptions in Managed Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "unhandled exceptions,in managed threads"
-  - "threading [.NET Framework],unhandled exceptions"
-  - "threading [.NET Framework],exceptions in managed threads"
-  - "managed threading"
+title: Excepciones en subprocesos administrados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unhandled exceptions,in managed threads
+- threading [.NET Framework],unhandled exceptions
+- threading [.NET Framework],exceptions in managed threads
+- managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Exceptions in Managed Threads
-A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos avancen naturalmente.  En la mayor parte de los casos, esto significa que la excepción no controlada hace que finalice la aplicación.  
+# <a name="exceptions-in-managed-threads"></a><span data-ttu-id="b32f6-102">Excepciones en subprocesos administrados</span><span class="sxs-lookup"><span data-stu-id="b32f6-102">Exceptions in Managed Threads</span></span>
+<span data-ttu-id="b32f6-103">A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente.</span><span class="sxs-lookup"><span data-stu-id="b32f6-103">Starting with the .NET Framework version 2.0, the common language runtime allows most unhandled exceptions in threads to proceed naturally.</span></span> <span data-ttu-id="b32f6-104">En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="b32f6-104">In most cases this means that the unhandled exception causes the application to terminate.</span></span>  
   
 > [!NOTE]
->  Este hecho supone un cambio significativo respecto a las versiones 1.0 y 1.1 de .NET Framework, que proporcionaban parada para muchas excepciones no controladas, por ejemplo, las excepciones no controladas en subprocesos ThreadPool.  Vea más adelante el apartado [Cambiar desde versiones anteriores](#ChangeFromPreviousVersions) de este tema.  
+>  <span data-ttu-id="b32f6-105">Se trata de un cambio significativo con respecto a las versiones 1.0 y 1.1 de .NET Framework, que ofrecen un mecanismo de seguridad para muchas excepciones no controladas; por ejemplo, excepciones no controladas en subprocesos de grupo.</span><span class="sxs-lookup"><span data-stu-id="b32f6-105">This is a significant change from the .NET Framework versions 1.0 and 1.1, which provide a backstop for many unhandled exceptions — for example, unhandled exceptions in thread pool threads.</span></span> <span data-ttu-id="b32f6-106">Vea [Cambio con respecto a las versiones anteriores](#ChangeFromPreviousVersions) más adelante en este tema.</span><span class="sxs-lookup"><span data-stu-id="b32f6-106">See [Change from Previous Versions](#ChangeFromPreviousVersions) later in this topic.</span></span>  
   
- Common Language Runtime proporciona parada para ciertas excepciones no controladas que se utilizan para controlar el flujo del programa:  
+ <span data-ttu-id="b32f6-107">Common Language Runtime ofrece un mecanismo de seguridad para determinadas excepciones no controladas que se usan para controlar el flujo del programa:</span><span class="sxs-lookup"><span data-stu-id="b32f6-107">The common language runtime provides a backstop for certain unhandled exceptions that are used for controlling program flow:</span></span>  
   
--   Se produce una excepción <xref:System.Threading.ThreadAbortException> en un subproceso porque se llamó a <xref:System.Threading.Thread.Abort%2A>.  
+-   <span data-ttu-id="b32f6-108">A <xref:System.Threading.ThreadAbortException> se produce en un subproceso porque <xref:System.Threading.Thread.Abort%2A> se llamó.</span><span class="sxs-lookup"><span data-stu-id="b32f6-108">A <xref:System.Threading.ThreadAbortException> is thrown in a thread because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   Se inicia una excepción <xref:System.AppDomainUnloadedException> en un subproceso porque se descarga el dominio de aplicación en el que se está ejecutando el subproceso.  
+-   <span data-ttu-id="b32f6-109">Un <xref:System.AppDomainUnloadedException> se produce en un subproceso porque se está descargando el dominio de aplicación en el que se está ejecutando el subproceso.</span><span class="sxs-lookup"><span data-stu-id="b32f6-109">An <xref:System.AppDomainUnloadedException> is thrown in a thread because the application domain in which the thread is executing is being unloaded.</span></span>  
   
--   Common Language Runtime o un proceso del host finaliza el subproceso iniciando una excepción interna.  
+-   <span data-ttu-id="b32f6-110">Common Language Runtime o un proceso de host finalizan el subproceso iniciando una excepción interna.</span><span class="sxs-lookup"><span data-stu-id="b32f6-110">The common language runtime or a host process terminates the thread by throwing an internal exception.</span></span>  
   
- Si cualquiera de estas excepciones no se controlan en los subprocesos creados por Common Language Runtime, la excepción finaliza el subproceso, pero Common Language Runtime no permite que la excepción continúe posteriormente.  
+ <span data-ttu-id="b32f6-111">Si alguna de estas excepciones no se controla en subprocesos que Common Language Runtime crea, la excepción finaliza el subproceso, pero Common Language Runtime no permite la excepción continúe.</span><span class="sxs-lookup"><span data-stu-id="b32f6-111">If any of these exceptions are unhandled in threads created by the common language runtime, the exception terminates the thread, but the common language runtime does not allow the exception to proceed further.</span></span>  
   
- Si no se controlan estas excepciones en el subproceso principal o en subprocesos que entraron en el tiempo de ejecución desde código no administrado, continúan normalmente, lo que hace que finalice la aplicación.  
+ <span data-ttu-id="b32f6-112">Si no se controlan en el subproceso principal o en subprocesos que especifiquen el runtime desde código no administrado, estas excepciones continúan normalmente, lo que se traduce en la finalización de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="b32f6-112">If these exceptions are unhandled in the main thread, or in threads that entered the runtime from unmanaged code, they proceed normally, resulting in termination of the application.</span></span>  
   
 > [!NOTE]
->  Ahora el motor en tiempo de ejecución puede iniciar una excepción no controlada antes de que cualquier código administrado haya tenido oportunidad de instalar un controlador de excepciones.  Aunque el código administrado no tuviera ninguna oportunidad para controlar este tipo de excepción, la excepción puede continuar naturalmente.  
+>  <span data-ttu-id="b32f6-113">Es posible que el runtime inicie una excepción no controlada antes de que un código administrado haya tenido ocasión de instalar un controlador de excepciones.</span><span class="sxs-lookup"><span data-stu-id="b32f6-113">It is possible for the runtime to throw an unhandled exception before any managed code has had a chance to install an exception handler.</span></span> <span data-ttu-id="b32f6-114">Aunque el código administrado no tuviera ninguna oportunidad de controlar la excepción, esta puede continuar normalmente.</span><span class="sxs-lookup"><span data-stu-id="b32f6-114">Even though managed code had no chance to handle such an exception, the exception is allowed to proceed naturally.</span></span>  
   
-## Exponer problemas de subprocesamiento durante el desarrollo  
- Cuando se permite que los subprocesos tengan errores no indicados, sin finalizar la aplicación, los problemas de programación serios pueden quedar sin detectar.  Éste es un problema concreto para los servicios y otras aplicaciones que se ejecutan durante períodos prolongados.  Cuando se producen errores en los subprocesos, el estado del programa se va dañando gradualmente.  El rendimiento de la aplicación se puede degradar o la aplicación podría no responder.  
+## <a name="exposing-threading-problems-during-development"></a><span data-ttu-id="b32f6-115">Exponer problemas de subprocesamiento durante el desarrollo</span><span class="sxs-lookup"><span data-stu-id="b32f6-115">Exposing Threading Problems During Development</span></span>  
+ <span data-ttu-id="b32f6-116">Cuando se permite que los subprocesos se interrumpan silenciosamente, sin finalizar la aplicación, graves problemas de programación pueden pasar inadvertidos.</span><span class="sxs-lookup"><span data-stu-id="b32f6-116">When threads are allowed to fail silently, without terminating the application, serious programming problems can go undetected.</span></span> <span data-ttu-id="b32f6-117">Se trata de un problema concreto de servicios y otras aplicaciones que se ejecutan durante períodos prolongados.</span><span class="sxs-lookup"><span data-stu-id="b32f6-117">This is a particular problem for services and other applications which run for extended periods.</span></span> <span data-ttu-id="b32f6-118">A medida que los subprocesos dejan de ejecutarse, el estado del programa se daña gradualmente.</span><span class="sxs-lookup"><span data-stu-id="b32f6-118">As threads fail, program state gradually becomes corrupted.</span></span> <span data-ttu-id="b32f6-119">Puede que el rendimiento de la aplicación se degrade o que la aplicación deje de responder.</span><span class="sxs-lookup"><span data-stu-id="b32f6-119">Application performance may degrade, or the application might hang.</span></span>  
   
- Permitir que las excepciones no controladas en subprocesos continúen naturalmente, hasta que el sistema operativo finalice el programa, expone tales problemas durante las fases de desarrollo y pruebas.  Los informes de errores creados al cerrarse los programas ayudan en las tareas de depuración.  
+ <span data-ttu-id="b32f6-120">Si se permite que las excepciones no controladas en subprocesos continúen naturalmente hasta que el sistema operativo finalice el programa, estos problemas se exponen durante el desarrollo y pruebas.</span><span class="sxs-lookup"><span data-stu-id="b32f6-120">Allowing unhandled exceptions in threads to proceed naturally, until the operating system terminates the program, exposes such problems during development and testing.</span></span> <span data-ttu-id="b32f6-121">Los informes de errores en la finalización de programas admiten la depuración.</span><span class="sxs-lookup"><span data-stu-id="b32f6-121">Error reports on program terminations support debugging.</span></span>  
   
 <a name="ChangeFromPreviousVersions"></a>   
-## Cambiar desde versiones anteriores  
- El cambio más significativo se refiere a los subprocesos administrados.  En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime proporciona una parada para las excepciones no controladas en las situaciones siguientes:  
+## <a name="change-from-previous-versions"></a><span data-ttu-id="b32f6-122">Cambio con respecto a las versiones anteriores</span><span class="sxs-lookup"><span data-stu-id="b32f6-122">Change from Previous Versions</span></span>  
+ <span data-ttu-id="b32f6-123">El cambio más significativo está relacionado con los subprocesos administrados.</span><span class="sxs-lookup"><span data-stu-id="b32f6-123">The most significant change pertains to managed threads.</span></span> <span data-ttu-id="b32f6-124">En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime ofrece un mecanismo de seguridad para las excepciones no controladas en las situaciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="b32f6-124">In the .NET Framework versions 1.0 and 1.1, the common language runtime provides a backstop for unhandled exceptions in the following situations:</span></span>  
   
--   No hay una excepción no controlada en un subproceso ThreadPool.  Cuando una tarea inicia una excepción que no controla, el motor en tiempo de ejecución imprime el seguimiento de pila de excepción en la consola y luego devuelve el subproceso al grupo de subprocesos.  
+-   <span data-ttu-id="b32f6-125">No hay ninguna excepción no controlada en un subproceso de grupo.</span><span class="sxs-lookup"><span data-stu-id="b32f6-125">There is no such thing as an unhandled exception on a thread pool thread.</span></span> <span data-ttu-id="b32f6-126">Cuando una tarea inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego devuelve el subproceso al grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="b32f6-126">When a task throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then returns the thread to the thread pool.</span></span>  
   
--   No hay ninguna excepción no controlada en un subproceso creado con el método <xref:System.Threading.Thread.Start%2A> de la clase <xref:System.Threading.Thread>.  Cuando el código que se ejecuta en un subproceso así inicia una excepción que no controla, el motor en tiempo de ejecución imprime el seguimiento de pila de la excepción en la consola y luego finaliza el subproceso sin problemas.  
+-   <span data-ttu-id="b32f6-127">No hay nada como una excepción no controlada en un subproceso creado con el <xref:System.Threading.Thread.Start%2A> método de la <xref:System.Threading.Thread> clase.</span><span class="sxs-lookup"><span data-stu-id="b32f6-127">There is no such thing as an unhandled exception on a thread created with the <xref:System.Threading.Thread.Start%2A> method of the <xref:System.Threading.Thread> class.</span></span> <span data-ttu-id="b32f6-128">Cuando un código que se ejecuta en ese tipo de subproceso inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego finaliza correctamente el subproceso.</span><span class="sxs-lookup"><span data-stu-id="b32f6-128">When code running on such a thread throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then gracefully terminates the thread.</span></span>  
   
--   No hay ninguna excepción no controlada en el subproceso finalizador.  Cuando un subproceso finalizador inicia una excepción que no controla, el motor en tiempo de ejecución imprime el seguimiento de pila de excepción en la consola y luego devuelve el subproceso finalizador para reanudar los subprocesos finalizadores en ejecución.  
+-   <span data-ttu-id="b32f6-129">No hay ninguna excepción no controlada en un subproceso el subproceso del finalizador.</span><span class="sxs-lookup"><span data-stu-id="b32f6-129">There is no such thing as an unhandled exception on the finalizer thread.</span></span> <span data-ttu-id="b32f6-130">Cuando un finalizador inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego permite que el subproceso de finalizador reanude la ejecución de finalizadores.</span><span class="sxs-lookup"><span data-stu-id="b32f6-130">When a finalizer throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then allows the finalizer thread to resume running finalizers.</span></span>  
   
- El estado de primer plano o de segundo plano de un subproceso administrado no afecta a este comportamiento.  
+ <span data-ttu-id="b32f6-131">El estado en primer plano o en segundo plano de un subproceso administrado no afecta a este comportamiento.</span><span class="sxs-lookup"><span data-stu-id="b32f6-131">The foreground or background status of a managed thread does not affect this behavior.</span></span>  
   
- Para las excepciones no controladas en subprocesos que se originan en código no administrado, la diferencia es más sutil.  El cuadro de diálogo de asociación JIT en tiempo de ejecución se apropia del cuadro de diálogo de sistema operativo para excepciones administradas o excepciones nativas en subprocesos que han pasado por el código nativo.  El proceso finaliza en todos los casos.  
+ <span data-ttu-id="b32f6-132">En el caso de excepciones no controladas en subprocesos que se originan en código no administrado, la diferencia es más sutil.</span><span class="sxs-lookup"><span data-stu-id="b32f6-132">For unhandled exceptions on threads originating in unmanaged code, the difference is more subtle.</span></span> <span data-ttu-id="b32f6-133">El cuadro de diálogo de adjuntos JIT del runtime -se adelanta al cuadro de diálogo del sistema operativo en el caso de excepciones no controladas en subprocesos que han pasado por código nativo.</span><span class="sxs-lookup"><span data-stu-id="b32f6-133">The runtime JIT-attach dialog preempts the operating system dialog for managed exceptions or native exceptions on threads that have passed through native code.</span></span> <span data-ttu-id="b32f6-134">El proceso finaliza siempre.</span><span class="sxs-lookup"><span data-stu-id="b32f6-134">The process terminates in all cases.</span></span>  
   
-### Migrar código  
- En general, el cambio expondrá los problemas de programación previamente no reconocidos para que se puedan corregir.  En algunos casos, sin embargo, los programadores podrían haber aprovechado la parada en tiempo de ejecución para, por ejemplo, finalizar subprocesos.  Dependiendo de la situación, deberían plantearse una de las estrategias de migración siguientes:  
+### <a name="migrating-code"></a><span data-ttu-id="b32f6-135">Migrar código</span><span class="sxs-lookup"><span data-stu-id="b32f6-135">Migrating Code</span></span>  
+ <span data-ttu-id="b32f6-136">En general, el cambio expondrá problemas de programación anteriormente no reconocidos para que se puedan corregir.</span><span class="sxs-lookup"><span data-stu-id="b32f6-136">In general, the change will expose previously unrecognized programming problems so that they can be fixed.</span></span> <span data-ttu-id="b32f6-137">Pero, en algunos casos, los programadores podrían haber aprovechado el mecanismo de seguridad de runtime; por ejemplo, para finalizar subprocesos.</span><span class="sxs-lookup"><span data-stu-id="b32f6-137">In some cases, however, programmers might have taken advantage of the runtime backstop, for example to terminate threads.</span></span> <span data-ttu-id="b32f6-138">Según la situación, deben plantearse una de las estrategias de migración siguientes:</span><span class="sxs-lookup"><span data-stu-id="b32f6-138">Depending on the situation, they should consider one of the following migration strategies:</span></span>  
   
--   Reestructurar el código para que el subproceso finalice sin problemas cuando se recibe una señal.  
+-   <span data-ttu-id="b32f6-139">Reestructurar el código para que el subproceso salga correctamente cuando se reciba una señal.</span><span class="sxs-lookup"><span data-stu-id="b32f6-139">Restructure the code so the thread exits gracefully when a signal is received.</span></span>  
   
--   Utilizar el método <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> para anular el subproceso.  
+-   <span data-ttu-id="b32f6-140">Use la <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método para anular el subproceso.</span><span class="sxs-lookup"><span data-stu-id="b32f6-140">Use the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method to abort the thread.</span></span>  
   
--   Si se debe detener un subproceso para que pueda continuar la finalización de procesos, convierta el subproceso en un subproceso de segundo plano para que finalice automáticamente al salir del proceso.  
+-   <span data-ttu-id="b32f6-141">Si es preciso detener un subproceso para que la finalización del proceso pueda continuar, convierta el subproceso en un subproceso en segundo plano para que finalice automáticamente al salir del proceso.</span><span class="sxs-lookup"><span data-stu-id="b32f6-141">If a thread must be stopped so that process termination can proceed, make the thread a background thread so that it is automatically terminated on process exit.</span></span>  
   
- En todos los casos, la estrategia debería seguir las instrucciones de diseño para las excepciones.  Vea [Instrucciones de diseño para excepciones](../../../docs/standard/design-guidelines/exceptions.md).  
+ <span data-ttu-id="b32f6-142">En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones.</span><span class="sxs-lookup"><span data-stu-id="b32f6-142">In all cases, the strategy should follow the design guidelines for exceptions.</span></span> <span data-ttu-id="b32f6-143">Vea [Design Guidelines for Exceptions](../../../docs/standard/design-guidelines/exceptions.md) (Instrucciones de diseño de excepciones).</span><span class="sxs-lookup"><span data-stu-id="b32f6-143">See [Design Guidelines for Exceptions](../../../docs/standard/design-guidelines/exceptions.md).</span></span>  
   
-### Marcador de compatibilidad de aplicaciones  
- Como una medida de compatibilidad temporal, los administradores pueden colocar un marcador de compatibilidad en la sección `<runtime>` del archivo de configuración de la aplicación.  Esto hace que Common Language Runtime revierta al comportamiento de las versiones 1.0 y 1.1.  
+### <a name="application-compatibility-flag"></a><span data-ttu-id="b32f6-144">Marca de compatibilidad de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="b32f6-144">Application Compatibility Flag</span></span>  
+ <span data-ttu-id="b32f6-145">Como medida temporal de compatibilidad, los administradores pueden colocar una marca de compatibilidad en la sección `<runtime>` del archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="b32f6-145">As a temporary compatibility measure, administrators can place a compatibility flag in the `<runtime>` section of the application configuration file.</span></span> <span data-ttu-id="b32f6-146">De ese modo, Common Language Runtime revierte al comportamiento de las versiones 1.0 y 1.1.</span><span class="sxs-lookup"><span data-stu-id="b32f6-146">This causes the common language runtime to revert to the behavior of versions 1.0 and 1.1.</span></span>  
   
-```  
+```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
-## Reemplazo de host  
- En la versión 2.0 de .NET Framework, un host no administrado puede utilizar la interfaz [ICLRPolicyManager](../../../ocs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) de la API de hospedaje para invalidar la directiva predeterminada de excepciones no controladas de Common Language Runtime.  La función [ICLRPolicyManager::SetUnhandledExceptionPolicy](../Topic/ICLRPolicyManager::SetUnhandledExceptionPolicy%20Method.md) se utiliza para establecer la directiva para las excepciones no controladas.  
+## <a name="host-override"></a><span data-ttu-id="b32f6-147">Invalidación de host</span><span class="sxs-lookup"><span data-stu-id="b32f6-147">Host Override</span></span>  
+ <span data-ttu-id="b32f6-148">En la versión 2.0 de .NET Framework, un host no administrado puede usar la interfaz [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) de la API de hospedaje para invalidar la directiva de excepciones no controladas predeterminada de Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="b32f6-148">In the .NET Framework version 2.0, an unmanaged host can use the [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interface in the Hosting API to override the default unhandled exception policy of the common language runtime.</span></span> <span data-ttu-id="b32f6-149">Se usa la función [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) para establecer la directiva de excepciones no controladas.</span><span class="sxs-lookup"><span data-stu-id="b32f6-149">The [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) function is used to set the policy for unhandled exceptions.</span></span>  
   
-## Vea también  
- [Managed Threading Basics](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a><span data-ttu-id="b32f6-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="b32f6-150">See Also</span></span>  
+ [<span data-ttu-id="b32f6-151">Principios básicos del subprocesamiento administrado</span><span class="sxs-lookup"><span data-stu-id="b32f6-151">Managed Threading Basics</span></span>](../../../docs/standard/threading/managed-threading-basics.md)

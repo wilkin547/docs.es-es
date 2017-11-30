@@ -1,111 +1,118 @@
 ---
-title: "Tipos de aislamiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "almacenar datos mediante almacenamiento aislado, acceso al almacenamiento aislado"
-  - "almacenar datos mediante almacenamiento aislado, tipos de aislamiento"
-  - "autenticación [.NET Framework], almacenamiento aislado"
-  - "ensamblados [.NET Framework], identidad"
-  - "almacenamiento aislado, acceso"
-  - "almacenamiento de datos mediante almacenamiento aislado, tipos de aislamiento"
-  - "almacenamiento de datos mediante almacenamiento aislado, acceso al almacenamiento aislado"
-  - "identidad de dominio"
-  - "almacenamiento aislado, tipos"
-  - "autenticación de usuario, almacenamiento aislado"
+title: Tipos de aislamiento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- storing data using isolated storage, accessing isolated storage
+- storing data using isolated storage, isolation types
+- authentication [.NET Framework], isolated storage
+- assemblies [.NET Framework], identity
+- isolated storage, accessing
+- data storage using isolated storage, isolation types
+- data storage using isolated storage, accessing isolated storage
+- domain identity
+- isolated storage, types
+- user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-caps.latest.revision: 16
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 6b07c090a381925f5330a820214126a121d3790b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tipos de aislamiento
-El acceso al almacenamiento aislado se restringe siempre al usuario que lo creó.  Para implementar este tipo de aislamiento, Common Language Runtime usa el mismo concepto de identidad de usuario que reconoce el sistema operativo, es decir, la identidad asociada al proceso en que se está ejecutando código cuando se abre el almacén.  Esta identidad es una identidad de usuario autenticada, pero la suplantación puede hacer que la identidad del usuario actual cambie dinámicamente.  
+# <a name="types-of-isolation"></a><span data-ttu-id="c9706-102">Tipos de aislamiento</span><span class="sxs-lookup"><span data-stu-id="c9706-102">Types of Isolation</span></span>
+<span data-ttu-id="c9706-103">Acceso al almacenamiento aislado siempre está restringido al usuario que lo creó.</span><span class="sxs-lookup"><span data-stu-id="c9706-103">Access to isolated storage is always restricted to the user who created it.</span></span> <span data-ttu-id="c9706-104">Para implementar este tipo de aislamiento, common language runtime usa el mismo concepto de identidad de usuario que reconoce el sistema operativo, que es la identidad asociada con el proceso en el que se ejecuta el código cuando se abre el almacén.</span><span class="sxs-lookup"><span data-stu-id="c9706-104">To implement this type of isolation, the common language runtime uses the same notion of user identity that the operating system recognizes, which is the identity associated with the process in which the code is running when the store is opened.</span></span> <span data-ttu-id="c9706-105">Esta identidad es una identidad de usuario autenticado, pero la suplantación puede hacer que la identidad del usuario actual para cambiar dinámicamente.</span><span class="sxs-lookup"><span data-stu-id="c9706-105">This identity is an authenticated user identity, but impersonation can cause the identity of the current user to change dynamically.</span></span>  
   
- El acceso al almacenamiento aislado también se restringe por la identidad asociada al dominio de la aplicación y al ensamblado, o por la del ensamblado sólo.  El motor en tiempo de ejecución obtiene estas tres identidades de las siguientes maneras:  
+ <span data-ttu-id="c9706-106">Acceso al almacenamiento aislado también está restringido por la identidad asociada con el dominio y el ensamblado de la aplicación, o con el ensamblado independiente.</span><span class="sxs-lookup"><span data-stu-id="c9706-106">Access to isolated storage is also restricted according to the identity associated with the application's domain and assembly, or with the assembly alone.</span></span> <span data-ttu-id="c9706-107">El tiempo de ejecución obtiene estas tres identidades de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="c9706-107">The runtime obtains these identities in the following ways:</span></span>  
   
--   La identidad de dominio representa la prueba de la aplicación, que en el caso de una aplicación web podría ser la dirección URL completa.  Para código hospedado en el shell, la identidad de dominio se debe basar en la ruta de acceso del directorio de la aplicación.  Por ejemplo, si el archivo ejecutable se ejecuta desde C:\\Office\\MyApp.exe, la identidad de dominio sería C:\\Office\\MyApp.exe.  
+-   <span data-ttu-id="c9706-108">Identidad de dominio representa la evidencia de la aplicación, que en el caso de una aplicación web podría ser la dirección URL completa.</span><span class="sxs-lookup"><span data-stu-id="c9706-108">Domain identity represents the evidence of the application, which in the case of a web application might be the full URL.</span></span> <span data-ttu-id="c9706-109">Para el código hospedado en el shell, la identidad de dominio podría basarse en la ruta de acceso del directorio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="c9706-109">For shell-hosted code, the domain identity might be based on the application directory path.</span></span> <span data-ttu-id="c9706-110">Por ejemplo, si se ejecuta el ejecutable de la ruta de acceso C:\Office\MyApp.exe, la identidad de dominio sería C:\Office\MyApp.exe.</span><span class="sxs-lookup"><span data-stu-id="c9706-110">For example, if the executable runs from the path C:\Office\MyApp.exe, the domain identity would be C:\Office\MyApp.exe.</span></span>  
   
--   La identidad de ensamblado es la prueba del ensamblado.  Puede proceder de una firma digital criptográfica, que puede ser el [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md) del ensamblado, la compañía de software del ensamblado o su identidad de dirección URL.  Si un ensamblado tiene un nombre seguro y una identidad de compañía de software, se usa ésta última.  Si el ensamblado procede de Internet y no está firmado, se usa la identidad de dirección URL.  Para obtener más información sobre ensamblados y nombres seguros, vea [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+-   <span data-ttu-id="c9706-111">Identidad del ensamblado es la evidencia del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c9706-111">Assembly identity is the evidence of the assembly.</span></span> <span data-ttu-id="c9706-112">Esto podría deberse a una firma digital criptográfica, que puede ser el ensamblado [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md), el Editor de software del ensamblado o su identidad de dirección URL.</span><span class="sxs-lookup"><span data-stu-id="c9706-112">This might come from a cryptographic digital signature, which can be the assembly's [strong name](../../../docs/framework/app-domains/strong-named-assemblies.md), the software publisher of the assembly, or its URL identity.</span></span> <span data-ttu-id="c9706-113">Si un ensamblado tiene un nombre seguro y una identidad de publicador de software, se utiliza la identidad del publicador de software.</span><span class="sxs-lookup"><span data-stu-id="c9706-113">If an assembly has both a strong name and a software publisher identity, then the software publisher identity is used.</span></span> <span data-ttu-id="c9706-114">Si el ensamblado procede de Internet y no está firmado, se utiliza la identidad de dirección URL.</span><span class="sxs-lookup"><span data-stu-id="c9706-114">If the assembly comes from the Internet and is unsigned, the URL identity is used.</span></span> <span data-ttu-id="c9706-115">Para obtener más información sobre los ensamblados y nombres seguros, vea [programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="c9706-115">For more information about assemblies and strong names, see [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md).</span></span>  
   
--   Los almacenes móviles se trasladan con un usuario que tenga un perfil de usuario móvil.  Los archivos se escriben en un directorio de red y se descargan en cualquier equipo en que el usuario inicie la sesión.  Para obtener más información sobre los perfiles de usuario móvil, vea <xref:System.IO.IsolatedStorage.IsolatedStorageScope?displayProperty=fullName>.  
+-   <span data-ttu-id="c9706-116">Almacenes móviles se trasladan con un usuario que tenga un perfil de usuario móvil.</span><span class="sxs-lookup"><span data-stu-id="c9706-116">Roaming stores move with a user that has a roaming user profile.</span></span> <span data-ttu-id="c9706-117">Los archivos se escriben en un directorio de red y se descargan en cualquier equipo que el usuario inicia sesión en.</span><span class="sxs-lookup"><span data-stu-id="c9706-117">Files are written to a network directory and are downloaded to any computer the user logs into.</span></span> <span data-ttu-id="c9706-118">Para obtener más información sobre los perfiles de usuario móviles, consulte <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c9706-118">For more information about roaming user profiles, see <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.</span></span>  
   
- Combinando los conceptos de usuario, dominio e identidad de ensamblado, el almacenamiento aislado puede aislar datos de las maneras siguientes, cada una de las cuales tiene sus propios escenarios de uso:  
+ <span data-ttu-id="c9706-119">Mediante la combinación de los conceptos del usuario, dominio y la identidad del ensamblado, el almacenamiento aislado puede aislar datos de las maneras siguientes, cada uno de los cuales tiene sus propios escenarios de uso:</span><span class="sxs-lookup"><span data-stu-id="c9706-119">By combining the concepts of user, domain, and assembly identity, isolated storage can isolate data in the following ways, each of which has its own usage scenarios:</span></span>  
   
--   [Aislamiento por usuario y ensamblado](#UserAssembly)  
+-   [<span data-ttu-id="c9706-120">Aislamiento por usuario y ensamblado</span><span class="sxs-lookup"><span data-stu-id="c9706-120">Isolation by user and assembly</span></span>](#UserAssembly)  
   
--   [Aislamiento por el usuario, el dominio y el ensamblado](#UserDomainAssembly)  
+-   [<span data-ttu-id="c9706-121">Aislamiento por usuario, dominio y ensamblado</span><span class="sxs-lookup"><span data-stu-id="c9706-121">Isolation by user, domain, and assembly</span></span>](#UserDomainAssembly)  
   
- Cualquiera de estos aislamientos se puede combinar con un perfil de usuario móvil.  Para obtener más información, consulte la sección [Almacenamiento aislado y Movilidad](#Roaming).  
+ <span data-ttu-id="c9706-122">Cualquiera de estos aislamientos se puede combinar con un perfil de usuario móvil.</span><span class="sxs-lookup"><span data-stu-id="c9706-122">Either of these isolations can be combined with a roaming user profile.</span></span> <span data-ttu-id="c9706-123">Para obtener más información, vea la sección [almacenamiento aislado y movilidad](#Roaming).</span><span class="sxs-lookup"><span data-stu-id="c9706-123">For more information, see the section [Isolated Storage and Roaming](#Roaming).</span></span>  
   
- En la siguiente ilustración se muestra cómo se aíslan los almacenes en distintos ámbitos.  
+ <span data-ttu-id="c9706-124">En la siguiente ilustración se muestra cómo se aíslan los almacenes en distintos ámbitos.</span><span class="sxs-lookup"><span data-stu-id="c9706-124">The following illustration demonstrates how stores are isolated in different scopes.</span></span>  
   
- ![Aislamiento por usuario y ensamblado](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Tipos de almacenamiento aislado  
+ <span data-ttu-id="c9706-125">![Aislamiento por usuario y ensamblado](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")</span><span class="sxs-lookup"><span data-stu-id="c9706-125">![Isolation by user and assembly](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")</span></span>  
+<span data-ttu-id="c9706-126">Tipos de almacenamiento aislado</span><span class="sxs-lookup"><span data-stu-id="c9706-126">Types of isolated storage</span></span>  
   
- Hay que tener en cuenta que excepto para los almacenes móviles, el equipo aísla siempre de manera implícita el almacenamiento aislado porque utiliza el almacenamiento local de un equipo determinado.  
+ <span data-ttu-id="c9706-127">Tenga en cuenta que excepto para los almacenes móviles, el almacenamiento aislado es siempre aislado de forma implícita por equipo porque utiliza los medios de almacenamiento locales para un equipo determinado.</span><span class="sxs-lookup"><span data-stu-id="c9706-127">Note that except for roaming stores, isolated storage is always implicitly isolated by computer because it uses the storage facilities that are local to a given computer.</span></span>  
   
 > [!IMPORTANT]
->  El almacenamiento aislado no está disponible para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  En su lugar, se pueden usar las clases de datos de la aplicación del espacio de nombres `Windows.Storage` incluidas en la API de [!INCLUDE[wrt](../../../includes/wrt-md.md)] para almacenar archivos y datos locales.  Para obtener más información, vea [Acceder a datos de aplicaciones con Windows en tiempo de ejecución](http://go.microsoft.com/fwlink/?LinkId=229175) en el Centro de desarrollo de Windows.  
+>  <span data-ttu-id="c9706-128">El almacenamiento aislado no está disponible para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c9706-128">Isolated storage is not available for [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="c9706-129">En su lugar, se pueden usar las clases de datos de la aplicación del espacio de nombres `Windows.Storage` incluidas en la API de [!INCLUDE[wrt](../../../includes/wrt-md.md)] para almacenar archivos y datos locales.</span><span class="sxs-lookup"><span data-stu-id="c9706-129">Instead, use the application data classes in the `Windows.Storage` namespaces included in the [!INCLUDE[wrt](../../../includes/wrt-md.md)] API to store local data and files.</span></span> <span data-ttu-id="c9706-130">Para más información, vea [Datos de aplicación](http://go.microsoft.com/fwlink/?LinkId=229175) en el Centro de desarrollo de Windows.</span><span class="sxs-lookup"><span data-stu-id="c9706-130">For more information, see [Application data](http://go.microsoft.com/fwlink/?LinkId=229175) in the Windows Dev Center.</span></span>  
   
 <a name="UserAssembly"></a>   
-## Aislamiento por usuario y por ensamblado  
- Cuando el ensamblado que utiliza el almacén de datos deba estar accesible desde el dominio de cualquier aplicación, el aislamiento por usuario y por ensamblado es adecuado.  Normalmente, en esta situación, el almacenamiento aislado se usa para guardar datos que afectan a varias aplicaciones y no están unidos a ninguna en concreto, como el nombre del usuario o la información de licencia.  Para tener acceso a almacenamiento aislado por usuario y ensamblado, el código debe ser de confianza para que transfiera información entre las aplicaciones.  Por lo general, el aislamiento por usuario y ensamblado se permite en intranets, pero no en Internet.  Si se llama al método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=fullName> de <xref:System.IO.IsolatedStorage.IsolatedStorageScope> y se pasa un usuario y un ensamblado, se obtiene el almacenamiento con este tipo de aislamiento.  
+## <a name="isolation-by-user-and-assembly"></a><span data-ttu-id="c9706-131">Aislamiento por usuario y ensamblado</span><span class="sxs-lookup"><span data-stu-id="c9706-131">Isolation by User and Assembly</span></span>  
+ <span data-ttu-id="c9706-132">Cuando el ensamblado que utiliza los datos almacena debe ser accesible desde el dominio de la aplicación, el aislamiento por usuario y ensamblado es adecuado.</span><span class="sxs-lookup"><span data-stu-id="c9706-132">When the assembly that uses the data store needs to be accessible from any application's domain, isolation by user and assembly is appropriate.</span></span> <span data-ttu-id="c9706-133">Normalmente, en esta situación, el almacenamiento aislado se usa para almacenar los datos que se aplica en varias aplicaciones y no está asociados a cualquier aplicación determinada, como el nombre del usuario o información de licencia.</span><span class="sxs-lookup"><span data-stu-id="c9706-133">Typically, in this situation, isolated storage is used to store data that applies across multiple applications and is not tied to any particular application, such as the user's name or license information.</span></span> <span data-ttu-id="c9706-134">Para tener acceso al almacenamiento aislado por usuario y ensamblado, código debe ser de confianza para transferir información entre aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="c9706-134">To access storage isolated by user and assembly, code must be trusted to transfer information between applications.</span></span> <span data-ttu-id="c9706-135">Por lo general, se permite el aislamiento por usuario y ensamblado en intranets, pero no en Internet.</span><span class="sxs-lookup"><span data-stu-id="c9706-135">Typically, isolation by user and assembly is allowed on intranets but not on the Internet.</span></span> <span data-ttu-id="c9706-136">Al llamar a estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> método y pasando un usuario y un ensamblado <xref:System.IO.IsolatedStorage.IsolatedStorageScope> , se obtiene almacenamiento con este tipo de aislamiento.</span><span class="sxs-lookup"><span data-stu-id="c9706-136">Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> method and passing in a user and an assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.</span></span>  
   
- El siguiente ejemplo de código recupera un almacén aislado por usuario y ensamblado.  Se puede obtener acceso al almacén mediante el objeto `isoFile` .  
+ <span data-ttu-id="c9706-137">En el ejemplo de código siguiente se recupera un almacén aislado por usuario y ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c9706-137">The following code example retrieves a store that is isolated by user and assembly.</span></span> <span data-ttu-id="c9706-138">El almacén puede tener acceso mediante el `isoFile` objeto.</span><span class="sxs-lookup"><span data-stu-id="c9706-138">The store can be accessed through the `isoFile` object.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#17)]
  [!code-csharp[Conceptual.IsolatedStorage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#17)]
  [!code-vb[Conceptual.IsolatedStorage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#17)]  
   
- Para obtener un ejemplo sobre el uso de parámetros de prueba, consulte <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
+ <span data-ttu-id="c9706-139">Para obtener un ejemplo que utiliza los parámetros de prueba, consulte <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.</span><span class="sxs-lookup"><span data-stu-id="c9706-139">For an example that uses the evidence parameters, see <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.</span></span>  
   
- También se puede utilizar el método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> como método abreviado, tal como se muestra en el ejemplo de código siguiente.  Este método abreviado no se puede usar para abrir almacenes móviles; en estos casos, use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
+ <span data-ttu-id="c9706-140">El <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> método está disponible como un método abreviado, tal como se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="c9706-140">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> method is available as a shortcut, as shown in the following code example.</span></span> <span data-ttu-id="c9706-141">Este acceso directo no se puede usar para abrir almacenes que son capaces de itinerancia; usar <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> en esos casos.</span><span class="sxs-lookup"><span data-stu-id="c9706-141">This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#18)]
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
 <a name="UserDomainAssembly"></a>   
-## Aislamiento por usuario, dominio y ensamblado  
- Si la aplicación usa un ensamblado de terceros que requiere un almacén de datos privado, se puede utilizar el almacenamiento aislado para guardar los datos privados.  El aislamiento por usuario, dominio y ensamblado garantiza que sólo el código de un determinado ensamblado pueda tener acceso a los datos, sólo cuando el ensamblado esté siendo utilizado por la aplicación que se estaba ejecutando en el momento en que el ensamblado creó el almacén, y sólo cuando quien ejecuta la aplicación es el usuario para el que se creó el almacén.  El aislamiento por usuario, dominio y ensamblado impide que un ensamblado de terceros filtre datos a otras aplicaciones.  Este tipo de aislamiento se debe usar como predeterminado si se desea usar almacenamiento aislado pero no se está seguro de qué tipo de aislamiento usar.  Si se llama al método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> de <xref:System.IO.IsolatedStorage.IsolatedStorageFile> y se pasa un usuario, dominio y ensamblado, <xref:System.IO.IsolatedStorage.IsolatedStorageScope> devuelve un almacenamiento con este tipo de aislamiento.  
+## <a name="isolation-by-user-domain-and-assembly"></a><span data-ttu-id="c9706-142">Aislamiento por usuario, dominio y ensamblado</span><span class="sxs-lookup"><span data-stu-id="c9706-142">Isolation by User, Domain, and Assembly</span></span>  
+ <span data-ttu-id="c9706-143">Si la aplicación usa un ensamblado de terceros que requiera un almacén de datos privados, puede usar el almacenamiento aislado para almacenar los datos privados.</span><span class="sxs-lookup"><span data-stu-id="c9706-143">If your application uses a third-party assembly that requires a private data store, you can use isolated storage to store the private data.</span></span> <span data-ttu-id="c9706-144">Aislamiento por usuario, dominio y ensamblado garantiza que solo código en un ensamblado determinado puede tener acceso a los datos y únicamente cuando el ensamblado se usa por la aplicación que se estaba ejecutando cuando el ensamblado creó el almacén, y solo cuando se ejecuta el usuario para el que se creó el almacén de la  aplicación.</span><span class="sxs-lookup"><span data-stu-id="c9706-144">Isolation by user, domain, and assembly ensures that only code in a given assembly can access the data, and only when the assembly is used by the application that was running when the assembly created the store, and only when the user for whom the store was created runs the application.</span></span> <span data-ttu-id="c9706-145">Aislamiento por usuario, dominio y ensamblado mantiene el ensamblado de terceros de pérdida de datos a otras aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="c9706-145">Isolation by user, domain, and assembly keeps the third-party assembly from leaking data to other applications.</span></span> <span data-ttu-id="c9706-146">Este tipo de aislamiento debe ser la opción predeterminada si sabe que desea usar el almacenamiento aislado, pero no está seguro de qué tipo de aislamiento usar.</span><span class="sxs-lookup"><span data-stu-id="c9706-146">This isolation type should be your default choice if you know that you want to use isolated storage but are not sure which type of isolation to use.</span></span> <span data-ttu-id="c9706-147">Al llamar a estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> método de <xref:System.IO.IsolatedStorage.IsolatedStorageFile> y pasar de un usuario, dominio y ensamblado <xref:System.IO.IsolatedStorage.IsolatedStorageScope> , se obtiene almacenamiento con este tipo de aislamiento.</span><span class="sxs-lookup"><span data-stu-id="c9706-147">Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> method of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> and passing in a user, domain, and assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.</span></span>  
   
- El siguiente ejemplo de código recupera un almacén aislado por usuario, dominio y ensamblado.  Se puede obtener acceso al almacén mediante el objeto `isoFile`.  
+ <span data-ttu-id="c9706-148">En el ejemplo de código siguiente se recupera un almacén aislado por usuario, dominio y ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c9706-148">The following code example retrieves a store isolated by user, domain, and assembly.</span></span> <span data-ttu-id="c9706-149">El almacén puede tener acceso mediante el `isoFile` objeto.</span><span class="sxs-lookup"><span data-stu-id="c9706-149">The store can be accessed through the `isoFile` object.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#14)]
  [!code-csharp[Conceptual.IsolatedStorage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#14)]
  [!code-vb[Conceptual.IsolatedStorage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#14)]  
   
- Existe otro método abreviado que también se puede usar, tal como se muestra en el ejemplo de código siguiente.  Pero no se puede usar para abrir almacenes móviles; en estos casos, use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
+ <span data-ttu-id="c9706-150">Otro método está disponible como un método abreviado, tal como se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="c9706-150">Another method is available as a shortcut, as shown in the following code example.</span></span> <span data-ttu-id="c9706-151">Este acceso directo no se puede usar para abrir almacenes que son capaces de itinerancia; usar <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> en esos casos.</span><span class="sxs-lookup"><span data-stu-id="c9706-151">This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#15)]
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>   
-## Aislamiento aislado y movilidad  
- Los perfiles de usuario móvil son una característica de Windows que permite que un usuario configure una identidad en una red y utilizar esa identidad para registrarse en cualquier equipo de red, transportando todas las configuraciones personalizadas.  Un ensamblado que usa almacenamiento aislado puede especificar que el almacenamiento aislado del usuario se traslade junto al perfil del usuario móvil.  La movilidad se puede usar junto con el aislamiento por usuario y ensamblado o el aislamiento por usuario, dominio y ensamblado.  Si no se usa el ámbito de la movilidad, los almacenes no se trasladarán aunque se use un perfil de usuario móvil.  
+## <a name="isolated-storage-and-roaming"></a><span data-ttu-id="c9706-152">Almacenamiento aislado y movilidad</span><span class="sxs-lookup"><span data-stu-id="c9706-152">Isolated Storage and Roaming</span></span>  
+ <span data-ttu-id="c9706-153">Perfiles de usuario móviles son una característica de Windows que permite a un usuario configure una identidad en una red y utilizar esa identidad para iniciar sesión en cualquier equipo de la red, conservando toda la configuración personalizada.</span><span class="sxs-lookup"><span data-stu-id="c9706-153">Roaming user profiles are a Windows feature that enables a user to set up an identity on a network and use that identity to log into any network computer, carrying over all personalized settings.</span></span> <span data-ttu-id="c9706-154">Un ensamblado que usa almacenamiento aislado puede especificar que debe mover el almacenamiento aislado del usuario con perfil móvil del usuario.</span><span class="sxs-lookup"><span data-stu-id="c9706-154">An assembly that uses isolated storage can specify that the user's isolated storage should move with the roaming user profile.</span></span> <span data-ttu-id="c9706-155">Movilidad puede utilizarse junto con el aislamiento por usuario y ensamblado o el aislamiento por usuario, dominio y ensamblado.</span><span class="sxs-lookup"><span data-stu-id="c9706-155">Roaming can be used in conjunction with isolation by user and assembly or with isolation by user, domain, and assembly.</span></span> <span data-ttu-id="c9706-156">Si no se utiliza un ámbito de la movilidad, los almacenes no se trasladarán aunque se use un perfil de usuario móvil.</span><span class="sxs-lookup"><span data-stu-id="c9706-156">If a roaming scope is not used, stores will not roam even if a roaming user profile is used.</span></span>  
   
- El siguiente ejemplo de código recupera un almacén aislado por usuario y ensamblado móvil.  Se puede obtener acceso al almacén mediante el objeto `isoFile` .  
+ <span data-ttu-id="c9706-157">En el ejemplo de código siguiente se recupera un almacén aislado por usuario y ensamblado móvil.</span><span class="sxs-lookup"><span data-stu-id="c9706-157">The following code example retrieves a roaming store isolated by user and assembly.</span></span> <span data-ttu-id="c9706-158">El almacén puede tener acceso mediante el `isoFile` objeto.</span><span class="sxs-lookup"><span data-stu-id="c9706-158">The store can be accessed through the `isoFile` object.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#11)]
  [!code-csharp[Conceptual.IsolatedStorage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#11)]
  [!code-vb[Conceptual.IsolatedStorage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#11)]  
   
- Se puede agregar un ámbito de dominio para crear un almacén aislado por usuario, dominio y aplicación móvil.  En el siguiente ejemplo de código se muestra este caso.  
+ <span data-ttu-id="c9706-159">Un ámbito de dominio se puede agregar para crear un almacén aislado por usuario, dominio y aplicación móvil.</span><span class="sxs-lookup"><span data-stu-id="c9706-159">A domain scope can be added to create a roaming store isolated by user, domain, and application.</span></span> <span data-ttu-id="c9706-160">En el ejemplo de código siguiente se muestra cómo hacerlo.</span><span class="sxs-lookup"><span data-stu-id="c9706-160">The following code example demonstrates this.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#12)]
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## Vea también  
- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>   
- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a><span data-ttu-id="c9706-161">Vea también</span><span class="sxs-lookup"><span data-stu-id="c9706-161">See Also</span></span>  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+ [<span data-ttu-id="c9706-162">Almacenamiento aislado</span><span class="sxs-lookup"><span data-stu-id="c9706-162">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

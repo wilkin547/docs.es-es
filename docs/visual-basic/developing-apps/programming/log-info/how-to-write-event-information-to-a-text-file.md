@@ -1,74 +1,56 @@
 ---
 title: "Cómo: Escribir información de eventos en un archivo de texto (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
-- text files, writing event information to a text file
+- text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 944d874de5c3872f9efe5e287e5354c94c792b95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8008f25198928e0bf2bd7e1c0caee8118b8fec9
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Cómo: Escribir información de eventos en un archivo de texto (Visual Basic)
-Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. En este ejemplo se muestra cómo usar el método `My.Application.Log.WriteEntry` para registrar información de seguimiento en un archivo de registro.  
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a><span data-ttu-id="1864e-102">Cómo: Escribir información de eventos en un archivo de texto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1864e-102">How to: Write Event Information to a Text File (Visual Basic)</span></span>
+<span data-ttu-id="1864e-103">Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación.</span><span class="sxs-lookup"><span data-stu-id="1864e-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span> <span data-ttu-id="1864e-104">En este ejemplo se muestra cómo usar el método `My.Application.Log.WriteEntry` para registrar información de seguimiento en un archivo de registro.</span><span class="sxs-lookup"><span data-stu-id="1864e-104">This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.</span></span>  
   
-### <a name="to-add-and-configure-the-file-log-listener"></a>Para agregar y configurar el agente de escucha de registro de archivos  
+### <a name="to-add-and-configure-the-file-log-listener"></a><span data-ttu-id="1864e-105">Para agregar y configurar el agente de escucha de registro de archivos</span><span class="sxs-lookup"><span data-stu-id="1864e-105">To add and configure the file log listener</span></span>  
   
-1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
+1.  <span data-ttu-id="1864e-106">Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="1864e-106">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
   
-     \- o -  
+     <span data-ttu-id="1864e-107">\- o -</span><span class="sxs-lookup"><span data-stu-id="1864e-107">\- or -</span></span>  
   
-     Si no hay ningún archivo app.config:  
+     <span data-ttu-id="1864e-108">Si no hay ningún archivo app.config:</span><span class="sxs-lookup"><span data-stu-id="1864e-108">If there is no app.config file:</span></span>  
   
-    1.  En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
+    1.  <span data-ttu-id="1864e-109">En el menú **Proyecto** , elija **Agregar nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="1864e-109">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
+    2.  <span data-ttu-id="1864e-110">En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.</span><span class="sxs-lookup"><span data-stu-id="1864e-110">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  Haga clic en **Agregar**.  
+    3.  <span data-ttu-id="1864e-111">Haga clic en **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="1864e-111">Click **Add**.</span></span>  
   
-2.  Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.  
+2.  <span data-ttu-id="1864e-112">Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="1864e-112">Locate the `<listeners>` section in the application configuration file.</span></span>  
   
-     Encontrará la sección \<listeners> en la sección \<source> con el atributo de nombre "DefaultSource", que está anidada bajo la sección \<system.diagnostics>, anidada bajo la sección de nivel superior \<configuration>.  
+     <span data-ttu-id="1864e-113">Encontrará la sección \<listeners> en la sección \<source> con el atributo de nombre "DefaultSource", que está anidada bajo la sección \<system.diagnostics>, anidada bajo la sección de nivel superior \<configuration>.</span><span class="sxs-lookup"><span data-stu-id="1864e-113">You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.</span></span>  
   
-3.  Agregue este elemento a dicha sección `<listeners>` :  
+3.  <span data-ttu-id="1864e-114">Agregue este elemento a dicha sección `<listeners>` :</span><span class="sxs-lookup"><span data-stu-id="1864e-114">Add this element to that `<listeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  Busque la sección `<sharedListeners>`, en la sección `<system.diagnostics>`, anidada en la sección de nivel superior `<configuration>`.  
+4.  <span data-ttu-id="1864e-115">Busque la sección `<sharedListeners>`, en la sección `<system.diagnostics>`, anidada en la sección de nivel superior `<configuration>`.</span><span class="sxs-lookup"><span data-stu-id="1864e-115">Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.</span></span>  
   
-5.  Agregue este elemento a dicha sección `<sharedListeners>` :  
+5.  <span data-ttu-id="1864e-116">Agregue este elemento a dicha sección `<sharedListeners>` :</span><span class="sxs-lookup"><span data-stu-id="1864e-116">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="FileLogListener"   
@@ -80,21 +62,20 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
         customlocation="c:\temp\" />  
     ```  
   
-     Cambie el valor del atributo `customlocation` al directorio de registro.  
+     <span data-ttu-id="1864e-117">Cambie el valor del atributo `customlocation` al directorio de registro.</span><span class="sxs-lookup"><span data-stu-id="1864e-117">Change the value of the `customlocation` attribute to the log directory.</span></span>  
   
     > [!NOTE]
-    >  Para establecer el valor de una propiedad de agente de escucha, use un atributo que tenga el mismo nombre que la propiedad, con todas las letras del nombre en minúscula. Por ejemplo, los atributos `location` y `customlocation` establecen los valores de las propiedades <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> y <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.  
+    >  <span data-ttu-id="1864e-118">Para establecer el valor de una propiedad de agente de escucha, use un atributo que tenga el mismo nombre que la propiedad, con todas las letras del nombre en minúscula.</span><span class="sxs-lookup"><span data-stu-id="1864e-118">To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase.</span></span> <span data-ttu-id="1864e-119">Por ejemplo, los atributos `location` y `customlocation` establecen los valores de las propiedades <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> y <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.</span><span class="sxs-lookup"><span data-stu-id="1864e-119">For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.</span></span>  
   
-### <a name="to-write-event-information-to-the-file-log"></a>Para escribir información de eventos en el registro de archivo  
+### <a name="to-write-event-information-to-the-file-log"></a><span data-ttu-id="1864e-120">Para escribir información de eventos en el registro de archivo</span><span class="sxs-lookup"><span data-stu-id="1864e-120">To write event information to the file log</span></span>  
   
--   Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de archivo. Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+-   <span data-ttu-id="1864e-121">Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de archivo.</span><span class="sxs-lookup"><span data-stu-id="1864e-121">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log.</span></span> <span data-ttu-id="1864e-122">Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="1864e-122">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
   
-     Después de configurar el agente de escucha de registro de archivo para un ensamblado, este recibe todos los mensajes que `My.Application.Log` escribe desde ese ensamblado.  
+     <span data-ttu-id="1864e-123">Después de configurar el agente de escucha de registro de archivo para un ensamblado, este recibe todos los mensajes que `My.Application.Log` escribe desde ese ensamblado.</span><span class="sxs-lookup"><span data-stu-id="1864e-123">After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
- <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
- [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-
+## <a name="see-also"></a><span data-ttu-id="1864e-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="1864e-124">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>  
+ [<span data-ttu-id="1864e-125">Trabajar con registros de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="1864e-125">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [<span data-ttu-id="1864e-126">Registrar excepciones</span><span class="sxs-lookup"><span data-stu-id="1864e-126">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

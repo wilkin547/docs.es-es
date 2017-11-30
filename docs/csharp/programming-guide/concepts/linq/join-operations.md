@@ -1,61 +1,51 @@
 ---
 title: "Operaciones de combinación (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 158d035985dae0d1c1daf0f276a9df7b913f2263
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df2f88f2988a4c91730bcfc4e39f10e3471e4ddf
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="join-operations-c"></a>Operaciones de combinación (C#)
-Una *combinación* de dos orígenes de datos es la asociación de objetos de un origen de datos con los objetos que comparten un atributo común en otro origen de datos.  
+# <a name="join-operations-c"></a><span data-ttu-id="45cba-102">Operaciones de combinación (C#)</span><span class="sxs-lookup"><span data-stu-id="45cba-102">Join Operations (C#)</span></span>
+<span data-ttu-id="45cba-103">Una *combinación* de dos orígenes de datos es la asociación de objetos de un origen de datos con los objetos que comparten un atributo común en otro origen de datos.</span><span class="sxs-lookup"><span data-stu-id="45cba-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  
   
- La combinación es una operación importante en las consultas destinadas a orígenes de datos cuyas relaciones entre sí no se puede seguir directamente. En la programación orientada a objetos, esto podría significar una correlación entre objetos que no está modelada, como el sentido contrario de una relación unidireccional. Un ejemplo de una relación unidireccional es una clase Cliente que tiene una propiedad de tipo Ciudad, pero la clase Ciudad no tiene una propiedad que sea una colección de objetos Cliente. Si tiene una lista de objetos Ciudad y quiere encontrar todos los clientes en cada ciudad, podría usar una operación de combinación para encontrarlos.  
+ <span data-ttu-id="45cba-104">La combinación es una operación importante en las consultas destinadas a orígenes de datos cuyas relaciones entre sí no se puede seguir directamente.</span><span class="sxs-lookup"><span data-stu-id="45cba-104">Joining is an important operation in queries that target data sources whose relationships to each other cannot be followed directly.</span></span> <span data-ttu-id="45cba-105">En la programación orientada a objetos, esto podría significar una correlación entre objetos que no está modelada, como el sentido contrario de una relación unidireccional.</span><span class="sxs-lookup"><span data-stu-id="45cba-105">In object-oriented programming, this could mean a correlation between objects that is not modeled, such as the backwards direction of a one-way relationship.</span></span> <span data-ttu-id="45cba-106">Un ejemplo de una relación unidireccional es una clase Cliente que tiene una propiedad de tipo Ciudad, pero la clase Ciudad no tiene una propiedad que sea una colección de objetos Cliente.</span><span class="sxs-lookup"><span data-stu-id="45cba-106">An example of a one-way relationship is a Customer class that has a property of type City, but the City class does not have a property that is a collection of Customer objects.</span></span> <span data-ttu-id="45cba-107">Si tiene una lista de objetos Ciudad y quiere encontrar todos los clientes en cada ciudad, podría usar una operación de combinación para encontrarlos.</span><span class="sxs-lookup"><span data-stu-id="45cba-107">If you have a list of City objects and you want to find all the customers in each city, you could use a join operation to find them.</span></span>  
   
- Los métodos de combinación que se han proporcionado en el marco de LINQ son <xref:System.Linq.Enumerable.Join%2A> y <xref:System.Linq.Enumerable.GroupJoin%2A>. Estos métodos efectúan combinaciones de igualdad, o combinaciones que hacen corresponder dos orígenes de datos en función de la igualdad de sus claves. (Para comparar, Transact-SQL admite otros operadores de combinación aparte de 'igual', por ejemplo, 'menor que'). En términos de base de datos relacional, <xref:System.Linq.Enumerable.Join%2A> implementa una combinación interna, un tipo de combinación en la que solo se devuelven los objetos que tienen una correspondencia en el otro conjunto de datos. El método <xref:System.Linq.Enumerable.GroupJoin%2A> no tiene equivalente directo en términos de bases de datos relacionales; pero implementa un superconjunto de combinaciones internas y combinaciones externas izquierdas. Una combinación externa izquierda es una combinación que devuelve cada elemento del primer origen de datos (izquierda), aunque no tenga elementos correlacionados en el otro origen de datos.  
+ <span data-ttu-id="45cba-108">Los métodos de combinación que se han proporcionado en el marco de LINQ son <xref:System.Linq.Enumerable.Join%2A> y <xref:System.Linq.Enumerable.GroupJoin%2A>.</span><span class="sxs-lookup"><span data-stu-id="45cba-108">The join methods provided in the LINQ framework are <xref:System.Linq.Enumerable.Join%2A> and <xref:System.Linq.Enumerable.GroupJoin%2A>.</span></span> <span data-ttu-id="45cba-109">Estos métodos efectúan combinaciones de igualdad, o combinaciones que hacen corresponder dos orígenes de datos en función de la igualdad de sus claves.</span><span class="sxs-lookup"><span data-stu-id="45cba-109">These methods perform equijoins, or joins that match two data sources based on equality of their keys.</span></span> <span data-ttu-id="45cba-110">(Para comparar, Transact-SQL admite otros operadores de combinación aparte de 'igual', por ejemplo, 'menor que'). En términos de base de datos relacional, <xref:System.Linq.Enumerable.Join%2A> implementa una combinación interna, un tipo de combinación en la que solo se devuelven los objetos que tienen una correspondencia en el otro conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="45cba-110">(For comparison, Transact-SQL supports join operators other than 'equals', for example the 'less than' operator.) In relational database terms, <xref:System.Linq.Enumerable.Join%2A> implements an inner join, a type of join in which only those objects that have a match in the other data set are returned.</span></span> <span data-ttu-id="45cba-111">El método <xref:System.Linq.Enumerable.GroupJoin%2A> no tiene equivalente directo en términos de bases de datos relacionales; pero implementa un superconjunto de combinaciones internas y combinaciones externas izquierdas.</span><span class="sxs-lookup"><span data-stu-id="45cba-111">The <xref:System.Linq.Enumerable.GroupJoin%2A> method has no direct equivalent in relational database terms, but it implements a superset of inner joins and left outer joins.</span></span> <span data-ttu-id="45cba-112">Una combinación externa izquierda es una combinación que devuelve cada elemento del primer origen de datos (izquierda), aunque no tenga elementos correlacionados en el otro origen de datos.</span><span class="sxs-lookup"><span data-stu-id="45cba-112">A left outer join is a join that returns each element of the first (left) data source, even if it has no correlated elements in the other data source.</span></span>  
   
- En la ilustración siguiente se muestra una vista conceptual de dos conjuntos y los elementos de esos conjuntos que se incluyen en una combinación interna o en una combinación externa izquierda.  
+ <span data-ttu-id="45cba-113">En la ilustración siguiente se muestra una vista conceptual de dos conjuntos y los elementos de esos conjuntos que se incluyen en una combinación interna o en una combinación externa izquierda.</span><span class="sxs-lookup"><span data-stu-id="45cba-113">The following illustration shows a conceptual view of two sets and the elements within those sets that are included in either an inner join or a left outer join.</span></span>  
   
- ![Dos círculos superpuestos que muestran el interior y el exterior.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ <span data-ttu-id="45cba-114">![Dos círculos superpuestos que muestran el interior y el exterior.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span><span class="sxs-lookup"><span data-stu-id="45cba-114">![Two overlapping circles showing inner&#47;outer.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span></span>  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a><span data-ttu-id="45cba-115">Métodos</span><span class="sxs-lookup"><span data-stu-id="45cba-115">Methods</span></span>  
   
-|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
+|<span data-ttu-id="45cba-116">Nombre del método</span><span class="sxs-lookup"><span data-stu-id="45cba-116">Method Name</span></span>|<span data-ttu-id="45cba-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="45cba-117">Description</span></span>|<span data-ttu-id="45cba-118">Sintaxis de la expresión de consulta de C#</span><span class="sxs-lookup"><span data-stu-id="45cba-118">C# Query Expression Syntax</span></span>|<span data-ttu-id="45cba-119">Más información</span><span class="sxs-lookup"><span data-stu-id="45cba-119">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Join|Combina dos secuencias según las funciones de selector de claves y extrae pares de valores.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
-|GroupJoin|Combina dos secuencias según las funciones de selector de claves y agrupa los resultados coincidentes para cada elemento.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="45cba-120">Join</span><span class="sxs-lookup"><span data-stu-id="45cba-120">Join</span></span>|<span data-ttu-id="45cba-121">Combina dos secuencias según las funciones de selector de claves y extrae pares de valores.</span><span class="sxs-lookup"><span data-stu-id="45cba-121">Joins two sequences based on key selector functions and extracts pairs of values.</span></span>|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="45cba-122">GroupJoin</span><span class="sxs-lookup"><span data-stu-id="45cba-122">GroupJoin</span></span>|<span data-ttu-id="45cba-123">Combina dos secuencias según las funciones de selector de claves y agrupa los resultados coincidentes para cada elemento.</span><span class="sxs-lookup"><span data-stu-id="45cba-123">Joins two sequences based on key selector functions and groups the resulting matches for each element.</span></span>|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq>   
- [Información general sobre operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
- [Cómo: Formular combinaciones y consultas entre productos](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)   
- [Join (Cláusula)](../../../../csharp/language-reference/keywords/join-clause.md)   
- [Cómo: Realizar una unión usando claves compuestas](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)   
- [Cómo: Ordenar los resultados de una cláusula join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [Cómo: Realizar operaciones de combinación personalizadas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)   
- [Cómo: Realizar combinaciones agrupadas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [Cómo: Realizar combinaciones internas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [Cómo: Realizar operaciones de combinación externa izquierda](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="45cba-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="45cba-124">See Also</span></span>  
+ <xref:System.Linq>  
+ <span data-ttu-id="45cba-125">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))</span><span class="sxs-lookup"><span data-stu-id="45cba-125">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)</span></span>  
+ [<span data-ttu-id="45cba-126">Tipos anónimos</span><span class="sxs-lookup"><span data-stu-id="45cba-126">Anonymous Types</span></span>](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+ [<span data-ttu-id="45cba-127">Formular combinaciones y consultas de varios productos</span><span class="sxs-lookup"><span data-stu-id="45cba-127">Formulate Joins and Cross-Product Queries</span></span>](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [<span data-ttu-id="45cba-128">join (cláusula)</span><span class="sxs-lookup"><span data-stu-id="45cba-128">join clause</span></span>](../../../../csharp/language-reference/keywords/join-clause.md)  
+ [<span data-ttu-id="45cba-129">Cómo: Realizar una unión usando claves compuestas</span><span class="sxs-lookup"><span data-stu-id="45cba-129">How to: Join by Using Composite Keys</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [<span data-ttu-id="45cba-130">Cómo: Combinar contenido de archivos no similares (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="45cba-130">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [<span data-ttu-id="45cba-131">Cómo: Ordenar los resultados de una cláusula join</span><span class="sxs-lookup"><span data-stu-id="45cba-131">How to: Order the Results of a Join Clause</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [<span data-ttu-id="45cba-132">Cómo: Realizar operaciones de combinación personalizadas</span><span class="sxs-lookup"><span data-stu-id="45cba-132">How to: Perform Custom Join Operations</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
+ [<span data-ttu-id="45cba-133">Cómo: Realizar combinaciones agrupadas</span><span class="sxs-lookup"><span data-stu-id="45cba-133">How to: Perform Grouped Joins</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [<span data-ttu-id="45cba-134">Cómo: Realizar combinaciones internas</span><span class="sxs-lookup"><span data-stu-id="45cba-134">How to: Perform Inner Joins</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [<span data-ttu-id="45cba-135">Cómo: Realizar operaciones de combinación externa izquierda</span><span class="sxs-lookup"><span data-stu-id="45cba-135">How to: Perform Left Outer Joins</span></span>](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [<span data-ttu-id="45cba-136">Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="45cba-136">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

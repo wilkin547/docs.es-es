@@ -1,43 +1,38 @@
 ---
 title: "Técnicas de consulta avanzadas (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 5898813d5773f13fa2c969b065e5ab1412726e9e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 91460ed99854edda829503d451728c4274d7ba2b
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="advanced-query-techniques-linq-to-xml-c"></a>Técnicas de consulta avanzadas (LINQ to XML) (C#)
-En esta sección se proporcionan ejemplos de técnicas de consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] más avanzadas.  
+# <a name="advanced-query-techniques-linq-to-xml-c"></a><span data-ttu-id="191b3-102">Técnicas de consulta avanzadas (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="191b3-102">Advanced Query Techniques (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="191b3-103">En esta sección se proporcionan ejemplos de técnicas de consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] más avanzadas.</span><span class="sxs-lookup"><span data-stu-id="191b3-103">This section provides examples of more advanced [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query techniques.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a><span data-ttu-id="191b3-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="191b3-104">In This Section</span></span>  
   
-|Tema|Descripción|  
+|<span data-ttu-id="191b3-105">Tema</span><span class="sxs-lookup"><span data-stu-id="191b3-105">Topic</span></span>|<span data-ttu-id="191b3-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="191b3-106">Description</span></span>|  
 |-----------|-----------------|  
-|[How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md) (Cómo: Combinar dos colecciones (LINQ to XML) [C#])|Muestra cómo utilizar la cláusula `Join` para aprovechar las relaciones de los datos XML.|  
-|[How to: Create Hierarchy Using Grouping (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md) (Cómo: Crear una jerarquía mediante la agrupación [C#])|Muestra cómo agrupar datos y después generar XML basado en la agrupación.|  
-|[How to: Query LINQ to XML Using XPath (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md) (Cómo: Consultar LINQ to XML mediante XPath [C#])|Muestra cómo recuperar las recopilaciones basadas en consultas XPath.|  
-|[How to: Write a LINQ to XML Axis Method (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md) (Cómo: Escribir un método de eje de LINQ to XML [C#])|Muestra cómo escribir un método de eje de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[How to: Perform Streaming Transformations of Text to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md) (Cómo: Efectuar transformaciones en streaming de texto en XML [C#])|Muestra cómo transformar archivos de texto muy grandes en XML manteniendo una superficie de memoria pequeña.|  
-|[How to: List All Nodes in a Tree (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md) (Cómo: Mostrar todos los nodos de un árbol [C#])|Presenta un método de utilidad que enumera todos los nodos de un árbol XML. Esto es útil para el código de depuración que modifica un árbol XML.|  
-|[How to: Retrieve Paragraphs from an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md) (Cómo: Recuperar párrafos de un documento de Office Open XML [C#])|Presenta código que abre un documento XML abierto de Office, recupera el párrafo en una colección de objetos XElement, el texto y el estilo de los párrafos.|  
-|[How to: Modify an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md) (Cómo: Modificar un documento de Office Open XML [C#])|Presenta código que abre, modifica y guarda un documento XML abierto de Office.|  
-|[How to: Populate an XML Tree from the File System (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md) (Cómo: Rellenar un árbol XML desde el sistema de archivos [C#])|Presenta código que crea un árbol XML a partir del sistema de archivos.|  
+|<span data-ttu-id="191b3-107">[How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md) (Cómo: Combinar dos colecciones (LINQ to XML) [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-107">[How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)</span></span>|<span data-ttu-id="191b3-108">Muestra cómo utilizar la cláusula `Join` para aprovechar las relaciones de los datos XML.</span><span class="sxs-lookup"><span data-stu-id="191b3-108">Shows how to use the `Join` clause to take advantage of relationships in XML data.</span></span>|  
+|<span data-ttu-id="191b3-109">[How to: Create Hierarchy Using Grouping (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md) (Cómo: Crear una jerarquía mediante la agrupación [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-109">[How to: Create Hierarchy Using Grouping (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)</span></span>|<span data-ttu-id="191b3-110">Muestra cómo agrupar datos y después generar XML basado en la agrupación.</span><span class="sxs-lookup"><span data-stu-id="191b3-110">Shows how to group data, and then generate XML based on the grouping.</span></span>|  
+|<span data-ttu-id="191b3-111">[How to: Query LINQ to XML Using XPath (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md) (Cómo: Consultar LINQ to XML mediante XPath [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-111">[How to: Query LINQ to XML Using XPath (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)</span></span>|<span data-ttu-id="191b3-112">Muestra cómo recuperar las recopilaciones basadas en consultas XPath.</span><span class="sxs-lookup"><span data-stu-id="191b3-112">Shows how to retrieve collections based on XPath queries.</span></span>|  
+|<span data-ttu-id="191b3-113">[How to: Write a LINQ to XML Axis Method (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md) (Cómo: Escribir un método de eje de LINQ to XML [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-113">[How to: Write a LINQ to XML Axis Method (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)</span></span>|<span data-ttu-id="191b3-114">Muestra cómo escribir un método de eje de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="191b3-114">Shows how to write a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axis method.</span></span>|  
+|<span data-ttu-id="191b3-115">[How to: Perform Streaming Transformations of Text to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md) (Cómo: Efectuar transformaciones en streaming de texto en XML [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-115">[How to: Perform Streaming Transformations of Text to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md)</span></span>|<span data-ttu-id="191b3-116">Muestra cómo transformar archivos de texto muy grandes en XML manteniendo una superficie de memoria pequeña.</span><span class="sxs-lookup"><span data-stu-id="191b3-116">Shows how to transform very large text files into XML while maintaining a small memory footprint.</span></span>|  
+|<span data-ttu-id="191b3-117">[How to: List All Nodes in a Tree (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md) (Cómo: Mostrar todos los nodos de un árbol [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-117">[How to: List All Nodes in a Tree (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)</span></span>|<span data-ttu-id="191b3-118">Presenta un método de utilidad que enumera todos los nodos de un árbol XML.</span><span class="sxs-lookup"><span data-stu-id="191b3-118">Presents a utility method that lists all nodes in an XML tree.</span></span> <span data-ttu-id="191b3-119">Esto es útil para el código de depuración que modifica un árbol XML.</span><span class="sxs-lookup"><span data-stu-id="191b3-119">This is useful for debugging code that modifies an XML tree.</span></span>|  
+|<span data-ttu-id="191b3-120">[How to: Retrieve Paragraphs from an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md) (Cómo: Recuperar párrafos de un documento de Office Open XML [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-120">[How to: Retrieve Paragraphs from an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)</span></span>|<span data-ttu-id="191b3-121">Presenta código que abre un documento XML abierto de Office, recupera el párrafo en una colección de objetos XElement, el texto y el estilo de los párrafos.</span><span class="sxs-lookup"><span data-stu-id="191b3-121">Presents code that opens an Office Open XML Document, retrieves the paragraphs in a collection of XElement objects, the text of the paragraphs, and the style of the paragraphs.</span></span>|  
+|<span data-ttu-id="191b3-122">[How to: Modify an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md) (Cómo: Modificar un documento de Office Open XML [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-122">[How to: Modify an Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)</span></span>|<span data-ttu-id="191b3-123">Presenta código que abre, modifica y guarda un documento XML abierto de Office.</span><span class="sxs-lookup"><span data-stu-id="191b3-123">Presents code that opens, modifies, and saves an Office Open XML Document.</span></span>|  
+|<span data-ttu-id="191b3-124">[How to: Populate an XML Tree from the File System (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md) (Cómo: Rellenar un árbol XML desde el sistema de archivos [C#])</span><span class="sxs-lookup"><span data-stu-id="191b3-124">[How to: Populate an XML Tree from the File System (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)</span></span>|<span data-ttu-id="191b3-125">Presenta código que crea un árbol XML a partir del sistema de archivos.</span><span class="sxs-lookup"><span data-stu-id="191b3-125">Presents code that creates an XML tree from the file system.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
-
+## <a name="see-also"></a><span data-ttu-id="191b3-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="191b3-126">See Also</span></span>  
+ [<span data-ttu-id="191b3-127">Consultar árboles XML (C#)</span><span class="sxs-lookup"><span data-stu-id="191b3-127">Querying XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

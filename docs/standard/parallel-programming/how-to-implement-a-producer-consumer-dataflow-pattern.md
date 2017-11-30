@@ -1,57 +1,63 @@
 ---
-title: "How to: Implement a Producer-Consumer Dataflow Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TPL dataflow library, implementing producer-consumer pattern"
-  - "Task Parallel Library, dataflows"
-  - "producer-consumer patterns, implementing [TPL]"
+title: "Cómo: Implementar un modelo de flujo de datos productor-consumidor"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TPL dataflow library, implementing producer-consumer pattern
+- Task Parallel Library, dataflows
+- producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e1aba08e8364d8a21f70ab480d58041115a4849e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Implement a Producer-Consumer Dataflow Pattern
-En este documento se describe cómo utilizar la biblioteca de TPL Dataflow para implementar un modelo productor\-consumidor.  En este modelo, el *productor* envía mensajes a un bloque de mensajes y el *consumidor* lee los mensajes de este bloque.  
+# <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a><span data-ttu-id="1ffa8-102">Cómo: Implementar un modelo de flujo de datos productor-consumidor</span><span class="sxs-lookup"><span data-stu-id="1ffa8-102">How to: Implement a Producer-Consumer Dataflow Pattern</span></span>
+<span data-ttu-id="1ffa8-103">Este documento describe cómo utilizar la biblioteca de flujos de datos TPL para implementar un modelo productor-consumidor.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-103">This document describes how to use the TPL Dataflow Library to implement a producer-consumer pattern.</span></span> <span data-ttu-id="1ffa8-104">En este modelo, el *productor* envía mensajes a un bloque de mensajes y el *consumidor* lee los mensajes de este bloque.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-104">In this pattern, the *producer* sends messages to a message block, and the *consumer* reads messages from that block.</span></span>  
   
 > [!TIP]
->  La biblioteca de flujos de datos TPL \(espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Para instalar el espacio de nombres <xref:System.Threading.Tasks.Dataflow>, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **Administrar paquetes NuGet** en el menú Proyecto, y busque en línea el paquete `Microsoft.Tpl.Dataflow`.  
+>  <span data-ttu-id="1ffa8-105">La biblioteca de flujos de datos TPL (espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1ffa8-105">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="1ffa8-106">Para instalar el <xref:System.Threading.Tasks.Dataflow> espacio de nombres, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **administrar paquetes de NuGet** en el menú proyecto y busque en línea el `Microsoft.Tpl.Dataflow` paquete.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-106">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra un modelo básico de consumidor\-productor que utilice flujo de datos.  El método de `Produce` escribe las matrices que contienen bytes aleatorios de datos a un objeto de <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=fullName> y el método de `Consume` lee bytes de un objeto de <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=fullName> .  Actuando en las interfaces de <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> y de <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> , en lugar de sus tipos derivados, puede escribir código reutilizable que puede representar en una variedad de tipos de bloques de flujo de datos.  Este ejemplo utiliza la clase de <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> .  Dado que actúa la clase de <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> mientras un origen y como bloque de destino, el productor y el consumidor pueden utilizar un objeto compartido a los datos de transferencia.  
+## <a name="example"></a><span data-ttu-id="1ffa8-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1ffa8-107">Example</span></span>  
+ <span data-ttu-id="1ffa8-108">En el ejemplo siguiente se muestra un modelo productor-consumidor básico que usa el flujo de datos.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-108">The following example demonstrates a basic producer- consumer model that uses dataflow.</span></span> <span data-ttu-id="1ffa8-109">El `Produce` método escribe matrices que contienen los bytes aleatorios de datos a un <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> objeto y el `Consume` método lee los bytes de un <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> objeto.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-109">The `Produce` method writes arrays that contain random bytes of data to a <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> object and the `Consume` method reads bytes from a <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> object.</span></span> <span data-ttu-id="1ffa8-110">Al actuar en el <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> y <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> interfaces en lugar de sus tipos derivados, puede escribir código reutilizable que puede actuar en una variedad de tipos de bloques de flujo de datos.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-110">By acting on the <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> and <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> interfaces, instead of their derived types, you can write reusable code that can act on a variety of dataflow block types.</span></span> <span data-ttu-id="1ffa8-111">Este ejemplo se utiliza la <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> clase.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-111">This example uses the <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> class.</span></span> <span data-ttu-id="1ffa8-112">Dado que el <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> bloquear clase actúa como origen y como un bloque de destino, el productor y el consumidor pueden utilizar un objeto compartido para transferir datos.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-112">Because the <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> class acts as both a source block and as a target block, the producer and the consumer can use a shared object to transfer data.</span></span>  
   
- Las llamadas al método de `Produce` el método de <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> en un bucle para escribir sincrónicamente datos al bloque de destino.  Después de que el método de `Produce` escriba todos los datos al bloque de destino, llama al método de <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> para indicar que el bloque nunca tendrá datos adicionales disponibles.  El método de `Consume` usan operadores de [async](../Topic/async%20\(C%23%20Reference\).md) y de [espera](../Topic/await%20\(C%23%20Reference\).md) \([Async](../Topic/Async%20\(Visual%20Basic\).md) y [Espera](../Topic/Await%20Operator%20\(Visual%20Basic\).md) en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) de forma asincrónica para calcular el número total de bytes que se reciben del objeto de <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> .  Para representar de forma asincrónica, las llamadas al método de `Consume` el método de <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> para recibir una notificación cuando el bloque de origen tiene datos disponibles y cuando el bloque de origen nunca tendrá datos adicionales disponibles.  
+ <span data-ttu-id="1ffa8-113">El `Produce` llamadas al método el <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> método en un bucle para escribir datos en el bloque de destino de forma sincrónica.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-113">The `Produce` method calls the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> method in a loop to synchronously write data to the target block.</span></span> <span data-ttu-id="1ffa8-114">Después de la `Produce` método escribe todos los datos al bloque de destino, llama a la <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> método para indicar que el bloque nunca tendrá datos adicionales disponibles.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-114">After the `Produce` method writes all data to the target block, it calls the <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> method to indicate that the block will never have additional data available.</span></span> <span data-ttu-id="1ffa8-115">El `Consume` método usa la [async](~/docs/csharp/language-reference/keywords/async.md) y [await](~/docs/csharp/language-reference/keywords/await.md) operadores ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) y [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) a calcular de forma asincrónica el número total de bytes que se reciben desde la <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> objeto.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-115">The `Consume` method uses the [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) operators ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) to asynchronously compute the total number of bytes that are received from the <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> object.</span></span> <span data-ttu-id="1ffa8-116">Para que actúe de forma asincrónica, el `Consume` llamadas al método el <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> método para recibir una notificación cuando el bloque de origen tiene datos disponibles y cuando el bloque de origen nunca tendrá datos adicionales disponibles.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-116">To act asynchronously, the `Consume` method calls the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> method to receive a notification when the source block has data available and when the source block will never have additional data available.</span></span>  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#1)]
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
-## Compilar el código  
- Copie el código de ejemplo y péguelo en un proyecto de Visual Studio, o péguelo en un archivo denominado `DataflowProducerConsumer.cs` \(`DataflowProducerConsumer.vb` para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\), y ejecutar el siguiente comando en una ventana de símbolo del sistema de Visual Studio.  
+## <a name="compiling-the-code"></a><span data-ttu-id="1ffa8-117">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="1ffa8-117">Compiling the Code</span></span>  
+ <span data-ttu-id="1ffa8-118">Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o en un archivo denominado `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-118">Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `DataflowProducerConsumer.cs` (`DataflowProducerConsumer.vb` for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), and then run the following command in a Visual Studio Command Prompt window.</span></span>  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.cs**  
+ <span data-ttu-id="1ffa8-119">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.cs**</span><span class="sxs-lookup"><span data-stu-id="1ffa8-119">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.cs**</span></span>  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.vb**  
+ <span data-ttu-id="1ffa8-120">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.vb**</span><span class="sxs-lookup"><span data-stu-id="1ffa8-120">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowProducerConsumer.vb**</span></span>  
   
-## Programación eficaz  
- Este ejemplo utiliza un solo un consumidor para procesar los datos de origen.  Si tiene varios consumidores en la aplicación, utilice el método de <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> para leer datos de bloque de origen, como se muestra en el ejemplo siguiente.  
+## <a name="robust-programming"></a><span data-ttu-id="1ffa8-121">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="1ffa8-121">Robust Programming</span></span>  
+ <span data-ttu-id="1ffa8-122">Este ejemplo utiliza un solo consumidor para procesar los datos de origen.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-122">This example uses just one consumer to process the source data.</span></span> <span data-ttu-id="1ffa8-123">Si tiene varios consumidores en la aplicación, use la <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> método para leer datos desde el bloque de origen, tal como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-123">If you have multiple consumers in your application, use the <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> method to read data from the source block, as shown in the following example.</span></span>  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#2)]
  [!code-vb[TPLDataflow_ProducerConsumer#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#2)]  
   
- El método de <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> devuelve `False` cuando no hay datos disponibles.  Cuando son varios consumidores deben tener acceso al origen bloqueado en paralelo, las garantías de este mecanismo que los datos aún está disponible después de la llamada al <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A>.  
+ <span data-ttu-id="1ffa8-124">El <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> método `False` cuando no hay datos disponibles.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-124">The <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> method returns `False` when no data is available.</span></span> <span data-ttu-id="1ffa8-125">Cuando varios consumidores deben acceder simultáneamente al bloque de origen, este mecanismo garantiza que los datos son estando disponibles después de llamar a <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A>.</span><span class="sxs-lookup"><span data-stu-id="1ffa8-125">When multiple consumers must access the source block concurrently, this mechanism guarantees that data is still available after the call to <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A>.</span></span>  
   
-## Vea también  
- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="1ffa8-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="1ffa8-126">See Also</span></span>  
+ [<span data-ttu-id="1ffa8-127">Flujo de datos</span><span class="sxs-lookup"><span data-stu-id="1ffa8-127">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

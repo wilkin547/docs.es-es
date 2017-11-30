@@ -1,114 +1,116 @@
 ---
 title: "Cómo: Determinar qué versiones de .NET Framework están instaladas"
-ms.date: 08/09/2017
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+ms.custom: updateeachrelease
 helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-caps.latest.revision: 62
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: edd5a8e8cc32037d45d95d544f6eae5097d0c468
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: afb01fd47ed2ce3b9c5838f3a8f61c8d34147378
-ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Cómo: Determinar qué versiones de .NET Framework están instaladas
-Los usuarios pueden instalar y ejecutar varias versiones de .NET Framework en sus equipos. Al desarrollar o implementar una aplicación, puede que necesite conocer las versiones de .NET Framework que están instaladas en el equipo del usuario. .NET Framework está formado por dos componentes principales con versiones separadas:  
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a><span data-ttu-id="0551b-102">Cómo: Determinar qué versiones de .NET Framework están instaladas</span><span class="sxs-lookup"><span data-stu-id="0551b-102">How to: Determine Which .NET Framework Versions Are Installed</span></span>
+<span data-ttu-id="0551b-103">Los usuarios pueden instalar y ejecutar varias versiones de .NET Framework en sus equipos.</span><span class="sxs-lookup"><span data-stu-id="0551b-103">Users can install and run multiple versions of the .NET Framework on their computers.</span></span> <span data-ttu-id="0551b-104">Al desarrollar o implementar una aplicación, puede que necesite conocer las versiones de .NET Framework que están instaladas en el equipo del usuario.</span><span class="sxs-lookup"><span data-stu-id="0551b-104">When you develop or deploy your app, you might need to know which .NET Framework versions are installed on the user’s computer.</span></span> <span data-ttu-id="0551b-105">.NET Framework está formado por dos componentes principales con versiones separadas:</span><span class="sxs-lookup"><span data-stu-id="0551b-105">Note that the .NET Framework consists of two main components, which are versioned separately:</span></span>  
   
--   Un conjunto de ensamblados, que son colecciones de tipos y recursos que proporcionan funciones a las aplicaciones. .NET Framework y los ensamblados comparten el mismo número de versión.  
+-   <span data-ttu-id="0551b-106">Un conjunto de ensamblados, que son colecciones de tipos y recursos que proporcionan funciones a las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="0551b-106">A set of assemblies, which are collections of types and resources that provide the functionality for your apps.</span></span> <span data-ttu-id="0551b-107">.NET Framework y los ensamblados comparten el mismo número de versión.</span><span class="sxs-lookup"><span data-stu-id="0551b-107">The .NET Framework and assemblies share the same version number.</span></span>  
   
--   Common Language Runtime (CLR), que administra y ejecuta el código de la aplicación. El CLR se identifica mediante su propio número de versión (consulte [Versiones y dependencias](~/docs/framework/migration-guide/versions-and-dependencies.md)).  
+-   <span data-ttu-id="0551b-108">Common Language Runtime (CLR), que administra y ejecuta el código de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="0551b-108">The common language runtime (CLR), which manages and executes your app's code.</span></span> <span data-ttu-id="0551b-109">El CLR se identifica mediante su propio número de versión (consulte [Versiones y dependencias](~/docs/framework/migration-guide/versions-and-dependencies.md)).</span><span class="sxs-lookup"><span data-stu-id="0551b-109">The CLR is identified by its own version number (see [Versions and Dependencies](~/docs/framework/migration-guide/versions-and-dependencies.md)).</span></span>  
   
- Para obtener una lista precisa de las versiones de .NET Framework instaladas en un equipo, visualice el Registro o consúltelo mediante código:  
+ <span data-ttu-id="0551b-110">Para obtener una lista precisa de las versiones de .NET Framework instaladas en un equipo, visualice el Registro o consúltelo mediante código:</span><span class="sxs-lookup"><span data-stu-id="0551b-110">To get an accurate list of the .NET Framework versions installed on a computer, you can view the registry or query the registry in code:</span></span>  
   
- [Ver el Registro (versiones 1 a 4)](#net_a)  
- [Ver el Registro (versión 4.5 y posteriores)](#net_b)  
- [Consultar el Registro mediante código (versiones 1 a 4)](#net_c)  
- [Consultar el Registro mediante código (versión 4.5 y posteriores)](#net_d)  
- [Consultar el Registro mediante PowerShell (versión 4.5 y posteriores)](#ps_a)  
+ [<span data-ttu-id="0551b-111">Ver el Registro (versiones 1 a 4)</span><span class="sxs-lookup"><span data-stu-id="0551b-111">Viewing the registry (versions 1-4)</span></span>](#net_a)  
+ [<span data-ttu-id="0551b-112">Ver el Registro (versión 4.5 y posteriores)</span><span class="sxs-lookup"><span data-stu-id="0551b-112">Viewing the registry (version 4.5 and later)</span></span>](#net_b)  
+ [<span data-ttu-id="0551b-113">Consultar el Registro mediante código (versiones 1 a 4)</span><span class="sxs-lookup"><span data-stu-id="0551b-113">Using code to query the registry (versions 1-4)</span></span>](#net_c)  
+ [<span data-ttu-id="0551b-114">Consultar el Registro mediante código (versión 4.5 y posteriores)</span><span class="sxs-lookup"><span data-stu-id="0551b-114">Using code to query the registry (version 4.5 and later)</span></span>](#net_d)  
+ [<span data-ttu-id="0551b-115">Consultar el Registro mediante PowerShell (versión 4.5 y posteriores)</span><span class="sxs-lookup"><span data-stu-id="0551b-115">Using PowerShell to query the registry (version 4.5 and later)</span></span>](#ps_a)  
   
- Para identificar la versión de CRL puede usar una herramienta o código:  
+ <span data-ttu-id="0551b-116">Para identificar la versión de CRL puede usar una herramienta o código:</span><span class="sxs-lookup"><span data-stu-id="0551b-116">To find the CLR version, you can use a tool or code:</span></span>  
   
- [Uso de la herramienta Clrver](#clr_a)  
- [Uso de código para consultar la clase System.Environment](#clr_b)  
+ [<span data-ttu-id="0551b-117">Uso de la herramienta Clrver</span><span class="sxs-lookup"><span data-stu-id="0551b-117">Using the Clrver tool</span></span>](#clr_a)  
+ [<span data-ttu-id="0551b-118">Uso de código para consultar la clase System.Environment</span><span class="sxs-lookup"><span data-stu-id="0551b-118">Using code to query the System.Environment class</span></span>](#clr_b)  
   
- Para obtener información sobre cómo detectar las actualizaciones instaladas de cada versión de .NET Framework, vea [Cómo: Determinar qué actualizaciones de .NET Framework están instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Para obtener información sobre cómo instalar .NET Framework, consulte [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Instalar .NET Framework para desarrolladores).  
+ <span data-ttu-id="0551b-119">Para obtener información sobre cómo detectar las actualizaciones instaladas de cada versión de .NET Framework, vea [Cómo: Determinar qué actualizaciones de .NET Framework están instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).</span><span class="sxs-lookup"><span data-stu-id="0551b-119">For information about detecting the installed updates for each version of the .NET Framework, see [How to: Determine Which .NET Framework Updates Are Installed](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).</span></span> <span data-ttu-id="0551b-120">Para obtener información sobre cómo instalar .NET Framework, consulte [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Instalar .NET Framework para desarrolladores).</span><span class="sxs-lookup"><span data-stu-id="0551b-120">For information about installing the .NET Framework, see [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md).</span></span>  
   
 <a name="net_a"></a>   
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Para identificar las versiones de .NET Framework mediante la visualización del Registro (.NET Framework 1 a 4)  
+#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a><span data-ttu-id="0551b-121">Para identificar las versiones de .NET Framework mediante la visualización del Registro (.NET Framework 1 a 4)</span><span class="sxs-lookup"><span data-stu-id="0551b-121">To find .NET Framework versions by viewing the registry (.NET Framework 1-4)</span></span>  
   
-1.  En el menú **Inicio**, elija **Ejecutar**.  
+1.  <span data-ttu-id="0551b-122">En el menú **Inicio**, elija **Ejecutar**.</span><span class="sxs-lookup"><span data-stu-id="0551b-122">On the **Start** menu, choose **Run**.</span></span>  
   
-2.  En el cuadro **Abrir**, escriba **regedit.exe**.  
+2.  <span data-ttu-id="0551b-123">En el cuadro **Abrir**, escriba **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="0551b-123">In the **Open** box, enter **regedit.exe**.</span></span>  
   
-     Debe tener credenciales de administrador para ejecutar regedit.exe.  
+     <span data-ttu-id="0551b-124">Debe tener credenciales de administrador para ejecutar regedit.exe.</span><span class="sxs-lookup"><span data-stu-id="0551b-124">You must have administrative credentials to run regedit.exe.</span></span>  
   
-3.  En el Editor del Registro, abra la subclave siguiente:  
+3.  <span data-ttu-id="0551b-125">En el Editor del Registro, abra la subclave siguiente:</span><span class="sxs-lookup"><span data-stu-id="0551b-125">In the Registry Editor, open the following subkey:</span></span>  
   
      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`  
   
-     Las versiones instaladas se muestran bajo la subclave NDP. El número de versión se indica en la entrada **Versión**. En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la entrada **Versión** está en la subclave Client o Full (en NDP), o en ambas subclaves.  
+     <span data-ttu-id="0551b-126">Las versiones instaladas se muestran bajo la subclave NDP.</span><span class="sxs-lookup"><span data-stu-id="0551b-126">The installed versions are listed under the NDP subkey.</span></span> <span data-ttu-id="0551b-127">El número de versión se indica en la entrada **Versión**.</span><span class="sxs-lookup"><span data-stu-id="0551b-127">The version number is stored in the **Version** entry.</span></span> <span data-ttu-id="0551b-128">En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la entrada **Versión** está en la subclave Client o Full (en NDP), o en ambas subclaves.</span><span class="sxs-lookup"><span data-stu-id="0551b-128">For the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] the **Version** entry is under the Client or Full subkey (under NDP), or under both subkeys.</span></span>  
   
 
     > [!NOTE]
-    > La carpeta “NET Framework Setup” del Registro no comienza con un punto.
+    > <span data-ttu-id="0551b-129">La carpeta “NET Framework Setup” del Registro no comienza con un punto.</span><span class="sxs-lookup"><span data-stu-id="0551b-129">The "NET Framework Setup" folder in the registry does not begin with a period.</span></span>
 
 <a name="net_b"></a> 
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a>Para identificar las versiones de .NET Framework mediante la visualización del Registro (.NET Framework 4.5 y posterior)
+#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a><span data-ttu-id="0551b-130">Para identificar las versiones de .NET Framework mediante la visualización del Registro (.NET Framework 4.5 y posterior)</span><span class="sxs-lookup"><span data-stu-id="0551b-130">To find .NET Framework versions by viewing the registry (.NET Framework 4.5 and later)</span></span>
 
-1. En el menú **Inicio**, elija **Ejecutar**.
+1. <span data-ttu-id="0551b-131">En el menú **Inicio**, elija **Ejecutar**.</span><span class="sxs-lookup"><span data-stu-id="0551b-131">On the **Start** menu, choose **Run**.</span></span>
 
-2. En el cuadro **Abrir**, escriba **regedit.exe**.
+2. <span data-ttu-id="0551b-132">En el cuadro **Abrir**, escriba **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="0551b-132">In the **Open** box, enter **regedit.exe**.</span></span>
 
-     Debe tener credenciales de administrador para ejecutar regedit.exe.
+     <span data-ttu-id="0551b-133">Debe tener credenciales de administrador para ejecutar regedit.exe.</span><span class="sxs-lookup"><span data-stu-id="0551b-133">You must have administrative credentials to run regedit.exe.</span></span>
 
-3. En el Editor del Registro, abra la subclave siguiente:
+3. <span data-ttu-id="0551b-134">En el Editor del Registro, abra la subclave siguiente:</span><span class="sxs-lookup"><span data-stu-id="0551b-134">In the Registry Editor, open the following subkey:</span></span>
 
      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`
 
-     Tenga en cuenta que la ruta de acceso a la subclave `Full` incluye la subclave `Net Framework` en lugar de la `.NET Framework`.
+     <span data-ttu-id="0551b-135">Tenga en cuenta que la ruta de acceso a la subclave `Full` incluye la subclave `Net Framework` en lugar de la `.NET Framework`.</span><span class="sxs-lookup"><span data-stu-id="0551b-135">Note that the path to the `Full` subkey includes the subkey `Net Framework` rather than `.NET Framework`.</span></span>
 
     > [!NOTE]
-    > Si la subclave `Full` no está presente, significa que .NET Framework 4.5 (o una versión posterior) no está instalado.
+    > <span data-ttu-id="0551b-136">Si la subclave `Full` no está presente, significa que .NET Framework 4.5 (o una versión posterior) no está instalado.</span><span class="sxs-lookup"><span data-stu-id="0551b-136">If the `Full` subkey is not present, then you do not have the .NET Framework 4.5 or later installed.</span></span>
 
-     Compruebe si existe un valor DWORD denominado `Release`. La existencia de un valor DWORD `Release` indica que en ese equipo está instalado [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una versión anterior.
+     <span data-ttu-id="0551b-137">Compruebe si existe un valor DWORD denominado `Release`.</span><span class="sxs-lookup"><span data-stu-id="0551b-137">Check for a DWORD value named `Release`.</span></span> <span data-ttu-id="0551b-138">La existencia de un valor DWORD `Release` indica que en ese equipo está instalado [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una versión anterior.</span><span class="sxs-lookup"><span data-stu-id="0551b-138">The existence of the `Release` DWORD indicates that the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] or newer has been installed on that computer.</span></span>
 
-     ![Entrada del Registro para .NET Framework 4.5](../../../docs/framework/migration-guide/media/clr-installdir.png "CLR_InstallDir")
+     <span data-ttu-id="0551b-139">![Entrada del Registro para .NET Framework 4.5](../../../docs/framework/migration-guide/media/clr-installdir.png "CLR_InstallDir")</span><span class="sxs-lookup"><span data-stu-id="0551b-139">![The registry entry for the .NET Framework 4.5.](../../../docs/framework/migration-guide/media/clr-installdir.png "CLR_InstallDir")</span></span>
 
-     El valor DWORD `Release` indica qué versión de .NET Framework está instalada.
+     <span data-ttu-id="0551b-140">El valor DWORD `Release` indica qué versión de .NET Framework está instalada.</span><span class="sxs-lookup"><span data-stu-id="0551b-140">The value of the `Release` DWORD indicates which version of the .NET Framework is installed.</span></span>
 
-    |Valor DWORD de la versión|Versión|
+    |<span data-ttu-id="0551b-141">Valor DWORD de la versión</span><span class="sxs-lookup"><span data-stu-id="0551b-141">Value of the Release DWORD</span></span>|<span data-ttu-id="0551b-142">Versión</span><span class="sxs-lookup"><span data-stu-id="0551b-142">Version</span></span>|
     |--------------------------------|-------------|
-    |378389|.NET Framework 4.5|
-    |378675|.NET Framework 4.5.1 instalado con Windows 8.1 o Windows Server 2012 R2|
-    |378758|.NET Framework 4.5.1 instalado en Windows 8, Windows 7 SP1 o Windows Vista SP2|
-    |379893|.NET Framework 4.5.2|
-    |En sistemas Windows 10: 393295<br /><br /> En las demás versiones de sistema operativo: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |En sistemas con la actualización de noviembre de Windows 10: 394254<br /><br /> En las demás versiones del sistema operativo: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |En la actualización de aniversario de Windows 10: 394802<br /><br /> En las demás versiones del sistema operativo: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |En Windows 10 Creators Update: 460798<br/><br/> En las demás versiones de sistema operativo: 460805 | .NET Framework 4.7 |
-
+    |<span data-ttu-id="0551b-143">378389</span><span class="sxs-lookup"><span data-stu-id="0551b-143">378389</span></span>|<span data-ttu-id="0551b-144">.NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="0551b-144">.NET Framework 4.5</span></span>|
+    |<span data-ttu-id="0551b-145">378675</span><span class="sxs-lookup"><span data-stu-id="0551b-145">378675</span></span>|<span data-ttu-id="0551b-146">.NET Framework 4.5.1 instalado con Windows 8.1 o Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="0551b-146">.NET Framework 4.5.1 installed with Windows 8.1 or Windows Server 2012 R2</span></span>|
+    |<span data-ttu-id="0551b-147">378758</span><span class="sxs-lookup"><span data-stu-id="0551b-147">378758</span></span>|<span data-ttu-id="0551b-148">.NET Framework 4.5.1 instalado en Windows 8, Windows 7 SP1 o Windows Vista SP2</span><span class="sxs-lookup"><span data-stu-id="0551b-148">.NET Framework 4.5.1 installed on Windows 8, Windows 7 SP1, or Windows Vista SP2</span></span>|
+    |<span data-ttu-id="0551b-149">379893</span><span class="sxs-lookup"><span data-stu-id="0551b-149">379893</span></span>|<span data-ttu-id="0551b-150">.NET Framework 4.5.2</span><span class="sxs-lookup"><span data-stu-id="0551b-150">.NET Framework 4.5.2</span></span>|
+    |<span data-ttu-id="0551b-151">En sistemas Windows 10: 393295</span><span class="sxs-lookup"><span data-stu-id="0551b-151">On Windows 10 systems: 393295</span></span><br /><br /> <span data-ttu-id="0551b-152">En las demás versiones de sistema operativo: 393297</span><span class="sxs-lookup"><span data-stu-id="0551b-152">On all other OS versions: 393297</span></span>|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |<span data-ttu-id="0551b-153">En sistemas con la actualización de noviembre de Windows 10: 394254</span><span class="sxs-lookup"><span data-stu-id="0551b-153">On Windows 10 November Update systems: 394254</span></span><br /><br /> <span data-ttu-id="0551b-154">En las demás versiones del sistema operativo: 394271</span><span class="sxs-lookup"><span data-stu-id="0551b-154">On all other OS versions: 394271</span></span>|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |<span data-ttu-id="0551b-155">En la actualización de aniversario de Windows 10: 394802</span><span class="sxs-lookup"><span data-stu-id="0551b-155">On Windows 10 Anniversary Update: 394802</span></span><br /><br /> <span data-ttu-id="0551b-156">En las demás versiones del sistema operativo: 394806</span><span class="sxs-lookup"><span data-stu-id="0551b-156">On all other OS versions: 394806</span></span>|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |<span data-ttu-id="0551b-157">En Windows 10 Creators Update: 460798</span><span class="sxs-lookup"><span data-stu-id="0551b-157">On Windows 10 Creators Update: 460798</span></span><br/><br/> <span data-ttu-id="0551b-158">En las demás versiones de sistema operativo: 460805</span><span class="sxs-lookup"><span data-stu-id="0551b-158">On all other OS versions: 460805</span></span> | <span data-ttu-id="0551b-159">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="0551b-159">.NET Framework 4.7</span></span> |
+    |<span data-ttu-id="0551b-160">En Windows 10 se dividen creadores Update: 461308</span><span class="sxs-lookup"><span data-stu-id="0551b-160">On Windows 10 Fall Creators Update: 461308</span></span><br/><br/> <span data-ttu-id="0551b-161">En las demás versiones de sistema operativo: 461310</span><span class="sxs-lookup"><span data-stu-id="0551b-161">On all other OS versions: 461310</span></span> | <span data-ttu-id="0551b-162">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="0551b-162">.NET Framework 4.7.1</span></span> |
 <a name="net_c"></a> 
-#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Para identificar las versiones de .NET Framework con consultas en el Registro mediante código (.NET Framework 1 a 4)
+#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a><span data-ttu-id="0551b-163">Para identificar las versiones de .NET Framework con consultas en el Registro mediante código (.NET Framework 1 a 4)</span><span class="sxs-lookup"><span data-stu-id="0551b-163">To find .NET Framework versions by querying the registry in code (.NET Framework 1-4)</span></span>
 
-- Utilice la clase <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> para tener acceso a la subclave Software\Microsoft\NET Framework Setup\NDP\ en HKEY_LOCAL_MACHINE en el Registro de Windows.
+- <span data-ttu-id="0551b-164">Utilice la clase <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> para tener acceso a la subclave Software\Microsoft\NET Framework Setup\NDP\ en HKEY_LOCAL_MACHINE en el Registro de Windows.</span><span class="sxs-lookup"><span data-stu-id="0551b-164">Use the <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> class to access the Software\Microsoft\NET Framework Setup\NDP\ subkey under HKEY_LOCAL_MACHINE in the Windows registry.</span></span>
 
-     El código siguiente ilustra un ejemplo de esta consulta.
+     <span data-ttu-id="0551b-165">El código siguiente ilustra un ejemplo de esta consulta.</span><span class="sxs-lookup"><span data-stu-id="0551b-165">The following code shows an example of this query.</span></span>
 
     > [!NOTE]
-    > En este código no se muestra cómo detectar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o versiones posteriores. Compruebe el valor DWORD `Release` para detectar estas versiones, tal y como se describe en la sección anterior. Puede consultar el código que sí detecta [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o versiones posteriores en la sección siguiente de este artículo.
+    > <span data-ttu-id="0551b-166">En este código no se muestra cómo detectar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="0551b-166">This code does not show how to detect the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] or later.</span></span> <span data-ttu-id="0551b-167">Compruebe el valor DWORD `Release` para detectar estas versiones, tal y como se describe en la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="0551b-167">Check the `Release` DWORD to detect those versions, as described in the previous section.</span></span> <span data-ttu-id="0551b-168">Puede consultar el código que sí detecta [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o versiones posteriores en la sección siguiente de este artículo.</span><span class="sxs-lookup"><span data-stu-id="0551b-168">For code that does detect the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] or later versions, see the next section in this article.</span></span>
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
+     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-     El ejemplo genera un resultado similar al siguiente:
+     <span data-ttu-id="0551b-169">El ejemplo genera un resultado similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="0551b-169">The example produces output that's similar to the following:</span></span>
 
     ```
     v2.0.50727  2.0.50727.4016  SP2
@@ -120,64 +122,68 @@ Los usuarios pueden instalar y ejecutar varias versiones de .NET Framework en s
     ```
 
 <a name="net_d"></a> 
-#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>Para identificar las versiones de .NET Framework con consultas en el Registro mediante código (.NET Framework 4.5 y posterior)
+#### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a><span data-ttu-id="0551b-170">Para identificar las versiones de .NET Framework con consultas en el Registro mediante código (.NET Framework 4.5 y posterior)</span><span class="sxs-lookup"><span data-stu-id="0551b-170">To find .NET Framework versions by querying the registry in code (.NET Framework 4.5 and later)</span></span>
 
-1. La existencia de un valor DWORD `Release` indica que ya se ha instalado .NET Framework 4.5 o posterior en un equipo. El valor de la palabra clave indica la versión instalada. Para comprobar esta palabra clave, use los métodos <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> y <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> de la clase <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> para obtener acceso a la subclave Software\Microsoft\NET Framework Setup\NDP\v4\Full, en HKEY_LOCAL_MACHINE, del Registro de Windows.
+1. <span data-ttu-id="0551b-171">La existencia de un valor DWORD `Release` indica que ya se ha instalado .NET Framework 4.5 o posterior en un equipo.</span><span class="sxs-lookup"><span data-stu-id="0551b-171">The existence of the `Release` DWORD indicates that the .NET Framework 4.5 or later has been installed on a computer.</span></span> <span data-ttu-id="0551b-172">El valor de la palabra clave indica la versión instalada.</span><span class="sxs-lookup"><span data-stu-id="0551b-172">The value of the keyword indicates the installed version.</span></span> <span data-ttu-id="0551b-173">Para comprobar esta palabra clave, use los métodos <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> y <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> de la clase <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> para obtener acceso a la subclave Software\Microsoft\NET Framework Setup\NDP\v4\Full, en HKEY_LOCAL_MACHINE, del Registro de Windows.</span><span class="sxs-lookup"><span data-stu-id="0551b-173">To check this keyword, use the <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> and <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> methods of the <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> class to access the Software\Microsoft\NET Framework Setup\NDP\v4\Full subkey under HKEY_LOCAL_MACHINE in the Windows registry.</span></span>
 
-2. Compruebe el valor de la palabra clave `Release` para determinar la versión instalada. Para que sea compatible con el reenvío, puede buscar un valor mayor o igual que los valores que se muestran en la tabla. Estas son las versiones de .NET Framework y las palabras clave de `Release` asociadas.
+2. <span data-ttu-id="0551b-174">Compruebe el valor de la palabra clave `Release` para determinar la versión instalada.</span><span class="sxs-lookup"><span data-stu-id="0551b-174">Check the value of the `Release` keyword to determine the installed version.</span></span> <span data-ttu-id="0551b-175">Para que sea compatible con el reenvío, puede buscar un valor mayor o igual que los valores que se muestran en la tabla.</span><span class="sxs-lookup"><span data-stu-id="0551b-175">To be forward-compatible, you can check for a value greater than or equal to the values listed in the table.</span></span> <span data-ttu-id="0551b-176">Estas son las versiones de .NET Framework y las palabras clave de `Release` asociadas.</span><span class="sxs-lookup"><span data-stu-id="0551b-176">Here are the .NET Framework versions and associated `Release` keywords.</span></span>
 
-    |Versión|Valor DWORD de la versión|
+    |<span data-ttu-id="0551b-177">Versión</span><span class="sxs-lookup"><span data-stu-id="0551b-177">Version</span></span>|<span data-ttu-id="0551b-178">Valor DWORD de la versión</span><span class="sxs-lookup"><span data-stu-id="0551b-178">Value of the Release DWORD</span></span>|
     |-------------|--------------------------------|
-    |.NET Framework 4.5|378389|
-    |.NET Framework 4.5.1 instalado con Windows 8.1|378675|
-    |.NET Framework 4.5.1 instalado en Windows 8, Windows 7 SP1 o Windows Vista SP2|378758|
-    |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado con Windows 10|393295|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado en las demás versiones del sistema operativo Windows|393297|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en Windows 10|394254|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en las demás versiones del sistema operativo Windows|394271|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en la actualización de aniversario de Windows 10|394802|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en las demás versiones del sistema operativo Windows|394806|
-    |.NET Framework 4.7 instalado en Windows 10 Creators Update|460798|
-    |.NET Framework 4.7 instalado en las demás versiones del sistema operativo Windows|460805|
+    |<span data-ttu-id="0551b-179">.NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="0551b-179">.NET Framework 4.5</span></span>|<span data-ttu-id="0551b-180">378389</span><span class="sxs-lookup"><span data-stu-id="0551b-180">378389</span></span>|
+    |<span data-ttu-id="0551b-181">.NET Framework 4.5.1 instalado con Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="0551b-181">.NET Framework 4.5.1 installed with Windows 8.1</span></span>|<span data-ttu-id="0551b-182">378675</span><span class="sxs-lookup"><span data-stu-id="0551b-182">378675</span></span>|
+    |<span data-ttu-id="0551b-183">.NET Framework 4.5.1 instalado en Windows 8, Windows 7 SP1 o Windows Vista SP2</span><span class="sxs-lookup"><span data-stu-id="0551b-183">.NET Framework 4.5.1 installed on Windows 8, Windows 7 SP1, or Windows Vista SP2</span></span>|<span data-ttu-id="0551b-184">378758</span><span class="sxs-lookup"><span data-stu-id="0551b-184">378758</span></span>|
+    |<span data-ttu-id="0551b-185">.NET Framework 4.5.2</span><span class="sxs-lookup"><span data-stu-id="0551b-185">.NET Framework 4.5.2</span></span>|<span data-ttu-id="0551b-186">379893</span><span class="sxs-lookup"><span data-stu-id="0551b-186">379893</span></span>|
+    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<span data-ttu-id="0551b-187"> instalado con Windows 10</span><span class="sxs-lookup"><span data-stu-id="0551b-187"> installed with Windows 10</span></span>|<span data-ttu-id="0551b-188">393295</span><span class="sxs-lookup"><span data-stu-id="0551b-188">393295</span></span>|
+    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<span data-ttu-id="0551b-189"> instalado en las demás versiones del sistema operativo Windows</span><span class="sxs-lookup"><span data-stu-id="0551b-189"> installed on all other Windows OS versions</span></span>|<span data-ttu-id="0551b-190">393297</span><span class="sxs-lookup"><span data-stu-id="0551b-190">393297</span></span>|
+    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<span data-ttu-id="0551b-191"> instalado en Windows 10</span><span class="sxs-lookup"><span data-stu-id="0551b-191"> installed on Windows 10</span></span>|<span data-ttu-id="0551b-192">394254</span><span class="sxs-lookup"><span data-stu-id="0551b-192">394254</span></span>|
+    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<span data-ttu-id="0551b-193"> instalado en las demás versiones del sistema operativo Windows</span><span class="sxs-lookup"><span data-stu-id="0551b-193"> installed on all other Windows OS versions</span></span>|<span data-ttu-id="0551b-194">394271</span><span class="sxs-lookup"><span data-stu-id="0551b-194">394271</span></span>|
+    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<span data-ttu-id="0551b-195"> instalado en la actualización de aniversario de Windows 10</span><span class="sxs-lookup"><span data-stu-id="0551b-195"> installed on Windows 10 Anniversary Update</span></span>|<span data-ttu-id="0551b-196">394802</span><span class="sxs-lookup"><span data-stu-id="0551b-196">394802</span></span>|
+    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<span data-ttu-id="0551b-197"> instalado en las demás versiones del sistema operativo Windows</span><span class="sxs-lookup"><span data-stu-id="0551b-197"> installed on all other Windows OS versions</span></span>|<span data-ttu-id="0551b-198">394806</span><span class="sxs-lookup"><span data-stu-id="0551b-198">394806</span></span>|
+    |<span data-ttu-id="0551b-199">.NET Framework 4.7 instalado en Windows 10 Creators Update</span><span class="sxs-lookup"><span data-stu-id="0551b-199">.NET Framework 4.7 installed on Windows 10 Creators Update</span></span>|<span data-ttu-id="0551b-200">460798</span><span class="sxs-lookup"><span data-stu-id="0551b-200">460798</span></span>|
+    |<span data-ttu-id="0551b-201">.NET Framework 4.7 instalado en las demás versiones del sistema operativo Windows</span><span class="sxs-lookup"><span data-stu-id="0551b-201">.NET Framework 4.7 installed on all other Windows OS versions</span></span>|<span data-ttu-id="0551b-202">460805</span><span class="sxs-lookup"><span data-stu-id="0551b-202">460805</span></span>|
+    |<span data-ttu-id="0551b-203">.NET framework 4.7.1 instalado en Windows 10 otoño creadores de actualización</span><span class="sxs-lookup"><span data-stu-id="0551b-203">.NET Framework 4.7.1 installed on Windows 10 Fall Creators Update</span></span>|<span data-ttu-id="0551b-204">461308</span><span class="sxs-lookup"><span data-stu-id="0551b-204">461308</span></span>|
+    |<span data-ttu-id="0551b-205">.NET framework 4.7.1 instalado en todas las demás versiones de sistema operativo Windows</span><span class="sxs-lookup"><span data-stu-id="0551b-205">.NET Framework 4.7.1 installed on all other Windows OS versions</span></span>|<span data-ttu-id="0551b-206">461310</span><span class="sxs-lookup"><span data-stu-id="0551b-206">461310</span></span>|
 
-     El ejemplo siguiente comprueba el valor `Release` en el Registro para determinar si [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una versión posterior de .NET Framework está instalada.
+     <span data-ttu-id="0551b-207">El ejemplo siguiente comprueba el valor `Release` en el Registro para determinar si [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una versión posterior de .NET Framework está instalada.</span><span class="sxs-lookup"><span data-stu-id="0551b-207">The following example checks the `Release` value in the registry to determine whether the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] or a later version of the .NET Framework is installed.</span></span>
 
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]   [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
+     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
 
-     Este ejemplo sigue la práctica recomendada para la comprobación de versión:
+     <span data-ttu-id="0551b-208">Este ejemplo sigue la práctica recomendada para la comprobación de versión:</span><span class="sxs-lookup"><span data-stu-id="0551b-208">This example follows the recommended practice for version checking:</span></span>
 
-    - Comprueba si el valor de la entrada `Release` es *mayor o igual que* el valor de las claves conocidas de versión.
+    - <span data-ttu-id="0551b-209">Comprueba si el valor de la entrada `Release` es *mayor o igual que* el valor de las claves conocidas de versión.</span><span class="sxs-lookup"><span data-stu-id="0551b-209">It checks whether the value of the `Release` entry is *greater than or equal to* the value of the known release keys.</span></span>
 
-    - Realiza la comprobación en orden, desde la versión más reciente hasta la más antigua.
+    - <span data-ttu-id="0551b-210">Realiza la comprobación en orden, desde la versión más reciente hasta la más antigua.</span><span class="sxs-lookup"><span data-stu-id="0551b-210">It checks in order from most recent version to earliest version.</span></span>
 
 <a name="ps_a"></a> 
-#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>Comprobación de una versión mínima requerida de .NET Framework realizando una consulta al registro en PowerShell (.NET Framework 4.5 y posteriores)
+#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a><span data-ttu-id="0551b-211">Comprobación de una versión mínima requerida de .NET Framework realizando una consulta al registro en PowerShell (.NET Framework 4.5 y posteriores)</span><span class="sxs-lookup"><span data-stu-id="0551b-211">To check for a minimum-required .NET Framework version by querying the registry in PowerShell (.NET Framework 4.5 and later)</span></span>
 
-- En el ejemplo siguiente se comprueba el valor de la palabra clave `Release` para determinar si .NET Framework 4.6.2 o posterior está instalado, independientemente de la versión del sistema operativo Windows (se devolverá `True` si es así o `False` en caso contrario).
+- <span data-ttu-id="0551b-212">En el ejemplo siguiente se comprueba el valor de la palabra clave `Release` para determinar si .NET Framework 4.6.2 o posterior está instalado, independientemente de la versión del sistema operativo Windows (se devolverá `True` si es así o `False` en caso contrario).</span><span class="sxs-lookup"><span data-stu-id="0551b-212">The following example checks the value of the `Release` keyword to determine whether .NET Framework 4.6.2 or higher is installed, regardless of Windows OS version (returning `True` if it is and `False` otherwise).</span></span>
 
     ```PowerShell
-    Get-ChildItem "hklm:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | % { $_ -ge 394802 } 
+    Get-ChildItem "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | ForEach-Object { $_ -ge 394802 } 
     ```
 
-    Puede reemplazar `394802` en el ejemplo anterior con otro valor de la tabla siguiente para comprobar si hay otra versión de .NET Framework mínima requerida.
+    <span data-ttu-id="0551b-213">Puede reemplazar `394802` en el ejemplo anterior con otro valor de la tabla siguiente para comprobar si hay otra versión de .NET Framework mínima requerida.</span><span class="sxs-lookup"><span data-stu-id="0551b-213">You can replace `394802` in the previous example with another value from the following table to check for a different minimum-required .NET Framework version.</span></span>
   
-    |Versión|Valor mínimo de DWORD de la versión|
+    |<span data-ttu-id="0551b-214">Versión</span><span class="sxs-lookup"><span data-stu-id="0551b-214">Version</span></span>|<span data-ttu-id="0551b-215">Valor mínimo de DWORD de la versión</span><span class="sxs-lookup"><span data-stu-id="0551b-215">Minimum value of the Release DWORD</span></span>|
     |-------------|--------------------------------|
-    |.NET Framework 4.5|378389|
-    |.NET Framework 4.5.1|378675|
-    |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
-    |.NET Framework 4.7|460798|
-
+    |<span data-ttu-id="0551b-216">.NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="0551b-216">.NET Framework 4.5</span></span>|<span data-ttu-id="0551b-217">378389</span><span class="sxs-lookup"><span data-stu-id="0551b-217">378389</span></span>|
+    |<span data-ttu-id="0551b-218">.NET Framework 4.5.1</span><span class="sxs-lookup"><span data-stu-id="0551b-218">.NET Framework 4.5.1</span></span>|<span data-ttu-id="0551b-219">378675</span><span class="sxs-lookup"><span data-stu-id="0551b-219">378675</span></span>|
+    |<span data-ttu-id="0551b-220">.NET Framework 4.5.2</span><span class="sxs-lookup"><span data-stu-id="0551b-220">.NET Framework 4.5.2</span></span>|<span data-ttu-id="0551b-221">379893</span><span class="sxs-lookup"><span data-stu-id="0551b-221">379893</span></span>|
+    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|<span data-ttu-id="0551b-222">393295</span><span class="sxs-lookup"><span data-stu-id="0551b-222">393295</span></span>|
+    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|<span data-ttu-id="0551b-223">394254</span><span class="sxs-lookup"><span data-stu-id="0551b-223">394254</span></span>|
+    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|<span data-ttu-id="0551b-224">394802</span><span class="sxs-lookup"><span data-stu-id="0551b-224">394802</span></span>|
+    |<span data-ttu-id="0551b-225">.NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="0551b-225">.NET Framework 4.7</span></span>|<span data-ttu-id="0551b-226">460798</span><span class="sxs-lookup"><span data-stu-id="0551b-226">460798</span></span>|
+    |<span data-ttu-id="0551b-227">.NET framework 4.7.1</span><span class="sxs-lookup"><span data-stu-id="0551b-227">.NET Framework 4.7.1</span></span>|<span data-ttu-id="0551b-228">461308</span><span class="sxs-lookup"><span data-stu-id="0551b-228">461308</span></span>|
+    
 <a name="clr_a"></a> 
-#### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Para identificar la versión de runtime actual mediante la herramienta Clrver
+#### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a><span data-ttu-id="0551b-229">Para identificar la versión de runtime actual mediante la herramienta Clrver</span><span class="sxs-lookup"><span data-stu-id="0551b-229">To find the current runtime version by using the Clrver tool</span></span>
 
-- Use la herramienta de versión de CLR (Clrver.exe) para determinar qué versiones de Common Language Runtime (CLR) están instaladas en un equipo.
+- <span data-ttu-id="0551b-230">Use la herramienta de versión de CLR (Clrver.exe) para determinar qué versiones de Common Language Runtime (CLR) están instaladas en un equipo.</span><span class="sxs-lookup"><span data-stu-id="0551b-230">Use the CLR Version Tool (Clrver.exe) to determine which versions of the common language runtime are installed on a computer.</span></span>
 
-     En un símbolo del sistema de Visual Studio, escriba `clrver`. Este comando produce un resultado similar al siguiente:
+     <span data-ttu-id="0551b-231">En un símbolo del sistema de Visual Studio, escriba `clrver`.</span><span class="sxs-lookup"><span data-stu-id="0551b-231">From a Visual Studio Command Prompt, enter `clrver`.</span></span> <span data-ttu-id="0551b-232">Este comando produce un resultado similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="0551b-232">This command produces output similar to the following:</span></span>
 
     ```
     Versions installed on the machine:
@@ -185,30 +191,30 @@ Los usuarios pueden instalar y ejecutar varias versiones de .NET Framework en s
     v4.0.30319
     ```
 
-     Para obtener más información sobre el uso de esta herramienta, consulte [Clrver.exe (herramienta de versión de CLR)](~/docs/framework/tools/clrver-exe-clr-version-tool.md).
+     <span data-ttu-id="0551b-233">Para obtener más información sobre el uso de esta herramienta, consulte [Clrver.exe (herramienta de versión de CLR)](~/docs/framework/tools/clrver-exe-clr-version-tool.md).</span><span class="sxs-lookup"><span data-stu-id="0551b-233">For more information about using this tool, see [Clrver.exe (CLR Version Tool)](~/docs/framework/tools/clrver-exe-clr-version-tool.md).</span></span>
 
 <a name="clr_b"></a> 
-#### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Para buscar la versión de runtime actual consultando la clase Environment en el código
+#### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a><span data-ttu-id="0551b-234">Para buscar la versión de runtime actual consultando la clase Environment en el código</span><span class="sxs-lookup"><span data-stu-id="0551b-234">To find the current runtime version by querying the Environment class in code</span></span>
 
-- Consulte la propiedad <xref:System.Environment.Version%2A?displayProperty=fullName> para recuperar un objeto <xref:System.Version> que identifique la versión de tiempo de ejecución que está ejecutando el código. Puede utilizar la propiedad <xref:System.Version.Major%2A?displayProperty=fullName> para obtener el identificador de versión principal (por ejemplo, "4" para la versión 4,0), la propiedad <xref:System.Version.Minor%2A?displayProperty=fullName> para obtener el identificador de versión secundaria (por ejemplo, "0" para la versión 4,0) o el método <xref:System.Object.ToString%2A?displayProperty=fullName> para obtener la cadena completa de la versión (por ejemplo, "4.0.30319.18010", como se muestra en el código siguiente). Esta propiedad devuelve un valor único que refleja la versión del runtime que está ejecutando el código actualmente; no devuelve versiones de ensamblado ni otras versiones del runtime que se hayan podido instalar en el equipo.
+- <span data-ttu-id="0551b-235">Consulte la propiedad <xref:System.Environment.Version%2A?displayProperty=nameWithType> para recuperar un objeto <xref:System.Version> que identifique la versión de tiempo de ejecución que está ejecutando el código.</span><span class="sxs-lookup"><span data-stu-id="0551b-235">Query the <xref:System.Environment.Version%2A?displayProperty=nameWithType> property to retrieve a <xref:System.Version> object that identifies the version of the runtime that is currently executing the code.</span></span> <span data-ttu-id="0551b-236">Puede utilizar la propiedad <xref:System.Version.Major%2A?displayProperty=nameWithType> para obtener el identificador de versión principal (por ejemplo, "4" para la versión 4,0), la propiedad <xref:System.Version.Minor%2A?displayProperty=nameWithType> para obtener el identificador de versión secundaria (por ejemplo, "0" para la versión 4,0) o el método <xref:System.Object.ToString%2A?displayProperty=nameWithType> para obtener la cadena completa de la versión (por ejemplo, "4.0.30319.18010", como se muestra en el código siguiente).</span><span class="sxs-lookup"><span data-stu-id="0551b-236">You can use the <xref:System.Version.Major%2A?displayProperty=nameWithType> property to get the major release identifier (for example, "4" for version 4.0), the <xref:System.Version.Minor%2A?displayProperty=nameWithType> property to get the minor release identifier (for example, "0" for version 4.0), or the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to get the entire version string (for example, "4.0.30319.18010", as shown in the following code).</span></span> <span data-ttu-id="0551b-237">Esta propiedad devuelve un valor único que refleja la versión del runtime que está ejecutando el código actualmente; no devuelve versiones de ensamblado ni otras versiones del runtime que se hayan podido instalar en el equipo.</span><span class="sxs-lookup"><span data-stu-id="0551b-237">This property returns a single value that reflects the version of the runtime that is currently executing the code; it does not return assembly versions or other versions of the runtime that may have been installed on the computer.</span></span>
 
-     Para las versiones 4, 4.5, 4.5.1 y 4.5.2 de .NET Framework, la propiedad <xref:System.Environment.Version%2A?displayProperty=fullName> devuelve un objeto <xref:System.Version> cuya representación de cadena tiene la forma `4.0.30319.xxxxx`. Para .NET Framework 4.6 y posterior, tiene la forma `4.0.30319.42000`.
+     <span data-ttu-id="0551b-238">Para las versiones 4, 4.5, 4.5.1 y 4.5.2 de .NET Framework, la propiedad <xref:System.Environment.Version%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Version> cuya representación de cadena tiene la forma `4.0.30319.xxxxx`.</span><span class="sxs-lookup"><span data-stu-id="0551b-238">For the .NET Framework Versions 4, 4.5, 4.5.1, and 4.5.2, the <xref:System.Environment.Version%2A?displayProperty=nameWithType> property returns a <xref:System.Version> object whose string representation has the form `4.0.30319.xxxxx`.</span></span> <span data-ttu-id="0551b-239">Para .NET Framework 4.6 y posterior, tiene la forma `4.0.30319.42000`.</span><span class="sxs-lookup"><span data-stu-id="0551b-239">For the .NET Framework 4.6 and later, it has the form `4.0.30319.42000`.</span></span>
 
     > [!IMPORTANT]
-    > Para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y versiones posteriores, no se recomienda usar la propiedad <xref:System.Environment.Version%2A?displayProperty=fullName> para detectar la versión del tiempo de ejecución. En su lugar, se recomienda consultar el Registro, como se describe en la sección anterior de este artículo [Para identificar las versiones de .NET Framework con consultas en el Registro mediante código (.NET Framework 4.5 y posterior)](#net_d).
+    > <span data-ttu-id="0551b-240">Para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y versiones posteriores, no se recomienda usar la propiedad <xref:System.Environment.Version%2A?displayProperty=nameWithType> para detectar la versión del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="0551b-240">For the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] and later, we do not recommend using the  <xref:System.Environment.Version%2A?displayProperty=nameWithType> property to detect the version of the runtime.</span></span> <span data-ttu-id="0551b-241">En su lugar, se recomienda consultar el Registro, como se describe en la sección anterior de este artículo [Para identificar las versiones de .NET Framework con consultas en el Registro mediante código (.NET Framework 4.5 y posterior)](#net_d).</span><span class="sxs-lookup"><span data-stu-id="0551b-241">Instead, we recommend that you query the registry, as described in the [To find .NET Framework versions by querying the registry in code (.NET Framework 4.5 and later)](#net_d) section earlier in this article.</span></span>
 
-     A continuación se muestra un ejemplo de cómo consultar la propiedad <xref:System.Environment.Version%2A?displayProperty=fullName> para obtener información de la versión del runtime:
+     <span data-ttu-id="0551b-242">A continuación se muestra un ejemplo de cómo consultar la propiedad <xref:System.Environment.Version%2A?displayProperty=nameWithType> para obtener información de la versión del runtime:</span><span class="sxs-lookup"><span data-stu-id="0551b-242">Here's an example of querying the <xref:System.Environment.Version%2A?displayProperty=nameWithType> property for runtime version information:</span></span>
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
+     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
-     El ejemplo genera un resultado similar al siguiente:
+     <span data-ttu-id="0551b-243">El ejemplo genera un resultado similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="0551b-243">The example produces output that's similar to the following:</span></span>
 
     ```
     Version: 4.0.30319.18010
     ```
 
-## <a name="see-also"></a>Vea también
- [Cómo: Determinar qué actualizaciones de .NET Framework están instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)   
- [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md)  (Instalar .NET Framework para desarrolladores)  
- [Versiones y dependencias](~/docs/framework/migration-guide/versions-and-dependencies.md)
-
+## <a name="see-also"></a><span data-ttu-id="0551b-244">Vea también</span><span class="sxs-lookup"><span data-stu-id="0551b-244">See Also</span></span>
+ [<span data-ttu-id="0551b-245">Determinar qué actualizaciones de .NET Framework están instaladas</span><span class="sxs-lookup"><span data-stu-id="0551b-245">How to: Determine Which .NET Framework Updates Are Installed</span></span>](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+ [<span data-ttu-id="0551b-246">Instalar .NET Framework para desarrolladores</span><span class="sxs-lookup"><span data-stu-id="0551b-246">Install the .NET Framework for developers</span></span>](../../../docs/framework/install/guide-for-developers.md)  
+ [<span data-ttu-id="0551b-247">Versiones y dependencias</span><span class="sxs-lookup"><span data-stu-id="0551b-247">Versions and Dependencies</span></span>](~/docs/framework/migration-guide/versions-and-dependencies.md)

@@ -5,23 +5,23 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.topic: article
+dev_langs: vb
 ms.prod: .net-core
+ms.openlocfilehash: b656ae4746691f2e72eaa666542e98d4abc91069
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 1f642678f15e05d24ee770adc1291b26eed6367c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y MSTest
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a><span data-ttu-id="9c2dc-103">Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y MSTest</span><span class="sxs-lookup"><span data-stu-id="9c2dc-103">Unit testing Visual Basic .NET Core libraries using dotnet test and MStest</span></span>
 
-Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias. Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-mstest/) antes de comenzar. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+<span data-ttu-id="9c2dc-104">Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="9c2dc-105">Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-mstest/) antes de comenzar.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-mstest/) before you begin.</span></span> <span data-ttu-id="9c2dc-106">Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="9c2dc-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="creating-the-source-project"></a>Crear el proyecto de origen
+## <a name="creating-the-source-project"></a><span data-ttu-id="9c2dc-107">Crear el proyecto de origen</span><span class="sxs-lookup"><span data-stu-id="9c2dc-107">Creating the source project</span></span>
 
-Abra una ventana del Shell. Cree un directorio denominado *unit-testing-using-dotnet-test* que contenga la solución.
-En este directorio nuevo, ejecute [`dotnet new sln`](../tools/dotnet-new.md) para crear una solución nueva. Esta práctica permite facilitar la administración de la biblioteca de clases y del proyecto de prueba unitaria.
-En el directorio de la solución, cree un directorio *PrimeService*. Hasta el momento, esta es la estructura de directorios y archivos:
+<span data-ttu-id="9c2dc-108">Abra una ventana del Shell.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-108">Open a shell window.</span></span> <span data-ttu-id="9c2dc-109">Cree un directorio denominado *unit-testing-using-dotnet-test* que contenga la solución.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-109">Create a directory called *unit-testing-using-dotnet-test* to hold the solution.</span></span>
+<span data-ttu-id="9c2dc-110">En este directorio nuevo, ejecute [`dotnet new sln`](../tools/dotnet-new.md) para crear una solución nueva.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-110">Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution.</span></span> <span data-ttu-id="9c2dc-111">Esta práctica permite facilitar la administración de la biblioteca de clases y del proyecto de prueba unitaria.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-111">This practice makes it easier to manage both the class library and the unit test project.</span></span>
+<span data-ttu-id="9c2dc-112">En el directorio de la solución, cree un directorio *PrimeService*.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-112">Inside the solution directory, create a *PrimeService* directory.</span></span> <span data-ttu-id="9c2dc-113">Hasta el momento, esta es la estructura de directorios y archivos:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-113">You have the following directory and file structure thus far:</span></span>
 
 ```
 /unit-testing-vb-using-mstest
@@ -29,7 +29,7 @@ En el directorio de la solución, cree un directorio *PrimeService*. Hasta el mo
     /PrimeService
 ```
 
-Convierta *PrimeService* en el directorio actual y ejecute [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) para crear el proyecto de origen. Cambie el nombre de *Class1.VB* a *PrimeService.VB*. Para usar el desarrollo controlado por pruebas (TDD), tiene que crear una implementación de errores de la clase `PrimeService`:
+<span data-ttu-id="9c2dc-114">Convierta *PrimeService* en el directorio actual y ejecute [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) para crear el proyecto de origen.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-114">Make *PrimeService* the current directory and run [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) to create the source project.</span></span> <span data-ttu-id="9c2dc-115">Cambie el nombre de *Class1.VB* a *PrimeService.VB*.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-115">Rename *Class1.VB* to *PrimeService.VB*.</span></span> <span data-ttu-id="9c2dc-116">Para usar el desarrollo controlado por pruebas (TDD), tiene que crear una implementación de errores de la clase `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-116">To use test-driven development (TDD), you create a failing implementation of the `PrimeService` class:</span></span>
 
 ```vb
 Imports System
@@ -43,11 +43,11 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Cambien nuevamente el directorio al directorio *unit-testing-vb-using-stest*. Ejecute [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) para agregar el proyecto de biblioteca de clases a la solución.
+<span data-ttu-id="9c2dc-117">Cambien nuevamente el directorio al directorio *unit-testing-vb-using-stest*.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-117">Change the directory back to the *unit-testing-vb-using-stest* directory.</span></span> <span data-ttu-id="9c2dc-118">Ejecute [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) para agregar el proyecto de biblioteca de clases a la solución.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-118">Run [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) to add the class library project to the solution.</span></span>
 
-## <a name="creating-the-test-project"></a>Crear el proyecto de prueba
+## <a name="creating-the-test-project"></a><span data-ttu-id="9c2dc-119">Crear el proyecto de prueba</span><span class="sxs-lookup"><span data-stu-id="9c2dc-119">Creating the test project</span></span>
 
-A continuación, cree el directorio *PrimeService.Tests*. En el esquema siguiente se muestra la estructura de directorios:
+<span data-ttu-id="9c2dc-120">A continuación, cree el directorio *PrimeService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-120">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="9c2dc-121">En el esquema siguiente se muestra la estructura de directorios:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-121">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-vb-using-mstest
@@ -58,7 +58,7 @@ A continuación, cree el directorio *PrimeService.Tests*. En el esquema siguient
     /PrimeService.Tests
 ```
 
-Convierta el directorio *PrimeService.Tests* en el directorio actual y cree un proyecto nuevo con [`dotnet new mstest -lang VB`](../tools/dotnet-new.md). Este comando crea un proyecto de prueba que usa xUnit como biblioteca de pruebas. La plantilla generada ha configurado el ejecutor de pruebas en *PrimeServiceTests.vbproj*:
+<span data-ttu-id="9c2dc-122">Convierta el directorio *PrimeService.Tests* en el directorio actual y cree un proyecto nuevo con [`dotnet new mstest -lang VB`](../tools/dotnet-new.md).</span><span class="sxs-lookup"><span data-stu-id="9c2dc-122">Make the *PrimeService.Tests* directory the current directory and create a new project using [`dotnet new mstest -lang VB`](../tools/dotnet-new.md).</span></span> <span data-ttu-id="9c2dc-123">Este comando crea un proyecto de prueba que usa xUnit como biblioteca de pruebas.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-123">This command creates a test project that uses xUnit as the test library.</span></span> <span data-ttu-id="9c2dc-124">La plantilla generada ha configurado el ejecutor de pruebas en *PrimeServiceTests.vbproj*:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-124">The generated template configures the test runner in the *PrimeServiceTests.vbproj*:</span></span>
 
 ```xml
 <ItemGroup>
@@ -68,15 +68,15 @@ Convierta el directorio *PrimeService.Tests* en el directorio actual y cree un p
 </ItemGroup>
 ```
 
-El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unitarias. `dotnet new` en el paso anterior agregó MSTest y el ejecutor de MSTest. Ahora, agregue la biblioteca de clases `PrimeService` como otra dependencia al proyecto. Use el comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+<span data-ttu-id="9c2dc-125">El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unitarias.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-125">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="9c2dc-126">`dotnet new` en el paso anterior agregó MSTest y el ejecutor de MSTest.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-126">`dotnet new` in the previous step added MSTest and the MSTest runner.</span></span> <span data-ttu-id="9c2dc-127">Ahora, agregue la biblioteca de clases `PrimeService` como otra dependencia al proyecto.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-127">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="9c2dc-128">Use el comando [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="9c2dc-128">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-Puede ver todo el archivo en el [repositorio de muestras](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) en GitHub.
+<span data-ttu-id="9c2dc-129">Puede ver todo el archivo en el [repositorio de muestras](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) en GitHub.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-129">You can see the entire file in the [samples repository](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) on GitHub.</span></span>
 
-Tiene el diseño de solución final siguiente:
+<span data-ttu-id="9c2dc-130">Tiene el diseño de solución final siguiente:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-130">You have the following final solution layout:</span></span>
 
 ```
 /unit-testing-vb-using-mstest
@@ -89,11 +89,11 @@ Tiene el diseño de solución final siguiente:
         PrimeServiceTests.vbproj
 ```
 
-Ejecute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-vb-using-mstest*. 
+<span data-ttu-id="9c2dc-131">Ejecute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-vb-using-mstest*.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-131">Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) in the *unit-testing-vb-using-mstest* directory.</span></span> 
 
-## <a name="creating-the-first-test"></a>Crear la primera prueba
+## <a name="creating-the-first-test"></a><span data-ttu-id="9c2dc-132">Crear la primera prueba</span><span class="sxs-lookup"><span data-stu-id="9c2dc-132">Creating the first test</span></span>
 
-El enfoque de TDD requiere la escritura de una prueba con errores, después la valida y finalmente repite el proceso. Quite *UnitTest1.vb* del directorio *PrimeService.Tests* y cree un archivo de Visual Basic nuevo denominado *PrimeService_IsPrimeShould.VB*. Agregue el código siguiente:
+<span data-ttu-id="9c2dc-133">El enfoque de TDD requiere la escritura de una prueba con errores, después la valida y finalmente repite el proceso.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-133">The TDD approach calls for writing one failing test, making it pass, then repeating the process.</span></span> <span data-ttu-id="9c2dc-134">Quite *UnitTest1.vb* del directorio *PrimeService.Tests* y cree un archivo de Visual Basic nuevo denominado *PrimeService_IsPrimeShould.VB*.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-134">Remove *UnitTest1.vb* from the *PrimeService.Tests* directory and create a new Visual Basic file named *PrimeService_IsPrimeShould.VB*.</span></span> <span data-ttu-id="9c2dc-135">Agregue el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-135">Add the following code:</span></span>
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
@@ -114,9 +114,9 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-El atributo `<TestClass>` indica una clase que contiene pruebas. El atributo `<TestMethod>` indica un método que el ejecutor de pruebas ejecuta. En *unit-testing-vb-using-mstest*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
+<span data-ttu-id="9c2dc-136">El atributo `<TestClass>` indica una clase que contiene pruebas.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-136">The `<TestClass>` attribute indicates a class that contains tests.</span></span> <span data-ttu-id="9c2dc-137">El atributo `<TestMethod>` indica un método que el ejecutor de pruebas ejecuta.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-137">The `<TestMethod>` attribute denotes a method that is run by the test runner.</span></span> <span data-ttu-id="9c2dc-138">En *unit-testing-vb-using-mstest*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-138">From the *unit-testing-vb-using-mstest*, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="9c2dc-139">El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-139">The xUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="9c2dc-140">`dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-140">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `PrimeService` que funciona:
+<span data-ttu-id="9c2dc-141">La prueba produce un error.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-141">Your test fails.</span></span> <span data-ttu-id="9c2dc-142">Todavía no ha creado la implementación.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-142">You haven't created the implementation yet.</span></span> <span data-ttu-id="9c2dc-143">Cree esta prueba escribiendo el código más simple en la clase `PrimeService` que funciona:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-143">Make this test by writing the simplest code in the `PrimeService` class that works:</span></span>
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
@@ -127,23 +127,22 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-En el directorio *unit-testing-vb-using-mstest*, vuelva a ejecutar `dotnet test`. El comando `dotnet test` ejecuta una compilación del proyecto `PrimeService` y luego del proyecto `PrimeService.Tests`. Después de compilar ambos proyectos, se ejecuta esta única prueba. Pasa.
+<span data-ttu-id="9c2dc-144">En el directorio *unit-testing-vb-using-mstest*, vuelva a ejecutar `dotnet test`.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-144">In the *unit-testing-vb-using-mstest* directory, run `dotnet test` again.</span></span> <span data-ttu-id="9c2dc-145">El comando `dotnet test` ejecuta una compilación del proyecto `PrimeService` y luego del proyecto `PrimeService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-145">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="9c2dc-146">Después de compilar ambos proyectos, se ejecuta esta única prueba.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-146">After building both projects, it runs this single test.</span></span> <span data-ttu-id="9c2dc-147">Pasa.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-147">It passes.</span></span>
 
-## <a name="adding-more-features"></a>Agregar más características
+## <a name="adding-more-features"></a><span data-ttu-id="9c2dc-148">Agregar más características</span><span class="sxs-lookup"><span data-stu-id="9c2dc-148">Adding more features</span></span>
 
-Ahora que la prueba se ha superado, es el momento de escribir más. Hay algunos otros casos simples para números primos: 0, -1. Puede agregar esos casos como nuevas pruebas con el atributo `<TestMethod>`, pero enseguida este proceso se hace tedioso. Hay otros atributos de xUnit que le permiten escribir un conjunto de pruebas similares.  Un atributo `<DataTestMethod>` representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada. Puede usar el atributo `<DataRow>` para especificar valores para esas entradas.
+<span data-ttu-id="9c2dc-149">Ahora que la prueba se ha superado, es el momento de escribir más.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-149">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="9c2dc-150">Hay algunos otros casos simples para números primos: 0, -1.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-150">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="9c2dc-151">Puede agregar esos casos como nuevas pruebas con el atributo `<TestMethod>`, pero enseguida este proceso se hace tedioso.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-151">You could add those cases as new tests with the `<TestMethod>` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="9c2dc-152">Hay otros atributos de xUnit que le permiten escribir un conjunto de pruebas similares.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-152">There are other xUnit attributes that enable you to write a suite of similar tests.</span></span>  <span data-ttu-id="9c2dc-153">Un atributo `<DataTestMethod>` representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-153">A `<DataTestMethod>` attribute represents a suite of tests that execute the same code but have different input arguments.</span></span> <span data-ttu-id="9c2dc-154">Puede usar el atributo `<DataRow>` para especificar valores para esas entradas.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-154">You can use the `<DataRow>` attribute to specify values for those inputs.</span></span>
 
-En lugar de crear pruebas nuevas, aplique estos dos atributos para crear una sola teoría. La teoría es un método que prueba varios valores menores que dos, que es el número primo menor:
+<span data-ttu-id="9c2dc-155">En lugar de crear pruebas nuevas, aplique estos dos atributos para crear una sola teoría.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-155">Instead of creating new tests, apply these two attributes to create a single theory.</span></span> <span data-ttu-id="9c2dc-156">La teoría es un método que prueba varios valores menores que dos, que es el número primo menor:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-156">The theory is a method that tests several values less than two, which is the lowest prime number:</span></span>
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Ejecute `dotnet test`, y dos de estas pruebas no se superarán. Para superar todas las pruebas, cambie la cláusula `if` al principio del método:
+<span data-ttu-id="9c2dc-157">Ejecute `dotnet test`, y dos de estas pruebas no se superarán.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-157">Run `dotnet test`, and two of these tests fail.</span></span> <span data-ttu-id="9c2dc-158">Para superar todas las pruebas, cambie la cláusula `if` al principio del método:</span><span class="sxs-lookup"><span data-stu-id="9c2dc-158">To make all of the tests pass, change the `if` clause at the beginning of the method:</span></span>
 
 ```vb
 if candidate < 2
 ```
 
-Puede continuar recorriendo en iteración agregando más pruebas, más teorías y más código en la biblioteca principal. Ya tiene la [versión terminada de las pruebas](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) y la [implementación completa de la biblioteca](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb).
+<span data-ttu-id="9c2dc-159">Puede continuar recorriendo en iteración agregando más pruebas, más teorías y más código en la biblioteca principal.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-159">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="9c2dc-160">Ya tiene la [versión terminada de las pruebas](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) y la [implementación completa de la biblioteca](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb).</span><span class="sxs-lookup"><span data-stu-id="9c2dc-160">You have the [finished version of the tests](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) and the [complete implementation of the library](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb).</span></span>
 
-Ha creado una biblioteca pequeña y un conjunto de pruebas unitarias para esa biblioteca. Ha estructurado la solución, por lo que agregar pruebas y paquetes nuevos es parte del flujo de trabajo normal. Ha centrado la mayor parte del tiempo y del esfuerzo en resolver los objetivos de la aplicación.
-
+<span data-ttu-id="9c2dc-161">Ha creado una biblioteca pequeña y un conjunto de pruebas unitarias para esa biblioteca.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-161">You've built a small library and a set of unit tests for that library.</span></span> <span data-ttu-id="9c2dc-162">Ha estructurado la solución, por lo que agregar pruebas y paquetes nuevos es parte del flujo de trabajo normal.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-162">You've structured the solution so that adding new packages and tests is part of the normal workflow.</span></span> <span data-ttu-id="9c2dc-163">Ha centrado la mayor parte del tiempo y del esfuerzo en resolver los objetivos de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="9c2dc-163">You've concentrated most of your time and effort on solving the goals of the application.</span></span>

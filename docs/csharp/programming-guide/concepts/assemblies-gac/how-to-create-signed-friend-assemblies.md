@@ -1,55 +1,46 @@
 ---
 title: "Cómo: Crear ensamblados de confianza con signo (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-signed-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza con signo (C#)
-En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
+# <a name="how-to-create-signed-friend-assemblies-c"></a><span data-ttu-id="39985-102">Cómo: Crear ensamblados de confianza con signo (C#)</span><span class="sxs-lookup"><span data-stu-id="39985-102">How to: Create Signed Friend Assemblies (C#)</span></span>
+<span data-ttu-id="39985-103">En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros.</span><span class="sxs-lookup"><span data-stu-id="39985-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="39985-104">Ambos ensamblados deben tener nombres seguros.</span><span class="sxs-lookup"><span data-stu-id="39985-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="39985-105">Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.</span><span class="sxs-lookup"><span data-stu-id="39985-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
   
-### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para crear un ensamblado con signo y un ensamblado de confianza  
+### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="39985-106">Para crear un ensamblado con signo y un ensamblado de confianza</span><span class="sxs-lookup"><span data-stu-id="39985-106">To create a signed assembly and a friend assembly</span></span>  
   
-1.  Abra un símbolo del sistema.  
+1.  <span data-ttu-id="39985-107">Abra un símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="39985-107">Open a command prompt.</span></span>  
   
-2.  Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, vea [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  <span data-ttu-id="39985-108">Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública.</span><span class="sxs-lookup"><span data-stu-id="39985-108">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="39985-109">Para obtener más información, vea [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span><span class="sxs-lookup"><span data-stu-id="39985-109">For more information, see [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span></span>  
   
-    1.  Genere una clave de nombre seguro para este ejemplo y almacénela en el archivo FriendAssemblies.snk:  
+    1.  <span data-ttu-id="39985-110">Genere una clave de nombre seguro para este ejemplo y almacénela en el archivo FriendAssemblies.snk:</span><span class="sxs-lookup"><span data-stu-id="39985-110">Generate a strong-name key for this example and store it in the file FriendAssemblies.snk:</span></span>  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Extraiga la clave pública de FriendAssemblies.snk y colóquela en FriendAssemblies.publickey:  
+    2.  <span data-ttu-id="39985-111">Extraiga la clave pública de FriendAssemblies.snk y colóquela en FriendAssemblies.publickey:</span><span class="sxs-lookup"><span data-stu-id="39985-111">Extract the public key from FriendAssemblies.snk and put it into FriendAssemblies.publickey:</span></span>  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Muestre la clave pública almacenada en el archivo FriendAssemblies.publickey:  
+    3.  <span data-ttu-id="39985-112">Muestre la clave pública almacenada en el archivo FriendAssemblies.publickey:</span><span class="sxs-lookup"><span data-stu-id="39985-112">Display the public key stored in the file FriendAssemblies.publickey:</span></span>  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Cree un archivo de C# denominado `friend_signed_A` que incluya el siguiente código. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
+3.  <span data-ttu-id="39985-113">Cree un archivo de C# denominado `friend_signed_A` que incluya el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="39985-113">Create a C# file named `friend_signed_A` that contains the following code.</span></span> <span data-ttu-id="39985-114">El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.</span><span class="sxs-lookup"><span data-stu-id="39985-114">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
-     La herramienta de nombre seguro genera una nueva clave pública cada vez que se ejecuta. Por tanto, debe reemplazar la clave pública en el código siguiente con la clave pública que acaba de generar, como se muestra en el ejemplo siguiente.  
+     <span data-ttu-id="39985-115">La herramienta de nombre seguro genera una nueva clave pública cada vez que se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="39985-115">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="39985-116">Por tanto, debe reemplazar la clave pública en el código siguiente con la clave pública que acaba de generar, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="39985-116">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
   
     ```csharp  
     // friend_signed_A.cs  
@@ -68,13 +59,13 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
     }  
     ```  
   
-4.  Compile y firme friend_signed_A mediante el siguiente comando.  
+4.  <span data-ttu-id="39985-117">Compile y firme friend_signed_A mediante el siguiente comando.</span><span class="sxs-lookup"><span data-stu-id="39985-117">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Cree un archivo de C# con el nombre `friend_signed_B` y que incluya el siguiente código. Dado que friend_signed_A especifica que friend_signed_B es un ensamblado de confianza, el código de friend_signed_B puede tener acceso a tipos `internal` y miembros de friend_signed_A. El archivo contiene el código siguiente.  
+5.  <span data-ttu-id="39985-118">Cree un archivo de C# con el nombre `friend_signed_B` y que incluya el siguiente código.</span><span class="sxs-lookup"><span data-stu-id="39985-118">Create a C# file that is named `friend_signed_B` and contains the following code.</span></span> <span data-ttu-id="39985-119">Dado que friend_signed_A especifica que friend_signed_B es un ensamblado de confianza, el código de friend_signed_B puede tener acceso a tipos `internal` y miembros de friend_signed_A.</span><span class="sxs-lookup"><span data-stu-id="39985-119">Because friend_signed_A specifies friend_signed_B as a friend assembly, the code in friend_signed_B can access `internal` types and members from friend_signed_A.</span></span> <span data-ttu-id="39985-120">El archivo contiene el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="39985-120">The file contains the following code.</span></span>  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -90,28 +81,27 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
     }  
     ```  
   
-6.  Compile y firme friend_signed_B mediante el siguiente comando.  
+6.  <span data-ttu-id="39985-121">Compile y firme friend_signed_B mediante el siguiente comando.</span><span class="sxs-lookup"><span data-stu-id="39985-121">Compile and sign friend_signed_B by using the following command.</span></span>  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     El nombre del ensamblado generado por el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida (.exe o .dll) mediante la opción `/out` del compilador.  Para obtener más información, consulte [/out (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     <span data-ttu-id="39985-122">El nombre del ensamblado generado por el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="39985-122">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="39985-123">Debe especificar explícitamente el nombre del ensamblado de salida (.exe o .dll) mediante la opción `/out` del compilador.</span><span class="sxs-lookup"><span data-stu-id="39985-123">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span>  <span data-ttu-id="39985-124">Para obtener más información, consulte [/out (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="39985-124">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
   
-7.  Ejecute el archivo friend_signed_B.exe.  
+7.  <span data-ttu-id="39985-125">Ejecute el archivo friend_signed_B.exe.</span><span class="sxs-lookup"><span data-stu-id="39985-125">Run the friend_signed_B.exe file.</span></span>  
   
-     El programa imprime la cadena "Class1.Test".  
+     <span data-ttu-id="39985-126">El programa imprime la cadena "Class1.Test".</span><span class="sxs-lookup"><span data-stu-id="39985-126">The program prints the string "Class1.Test".</span></span>  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `internal`.  
+## <a name="net-framework-security"></a><span data-ttu-id="39985-127">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="39985-127">.NET Framework Security</span></span>  
+ <span data-ttu-id="39985-128">Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>.</span><span class="sxs-lookup"><span data-stu-id="39985-128">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="39985-129">La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `internal`.</span><span class="sxs-lookup"><span data-stu-id="39985-129">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [Ensamblados y caché global de ensamblados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [Cómo: Crear ensamblados de confianza sin firmar (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [Sn.exe (Herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23)   
- [Crear y utilizar ensamblados con nombre seguro](https://msdn.microsoft.com/library/xwb8f617)   
- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="39985-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="39985-130">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ <span data-ttu-id="39985-131">[Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])</span><span class="sxs-lookup"><span data-stu-id="39985-131">[Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)</span></span>  
+ [<span data-ttu-id="39985-132">Friend (ensamblados) (C#)</span><span class="sxs-lookup"><span data-stu-id="39985-132">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="39985-133">Cómo: crear ensamblados de confianza sin firmar (C#)</span><span class="sxs-lookup"><span data-stu-id="39985-133">How to: Create Unsigned Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [<span data-ttu-id="39985-134">/keyfile</span><span class="sxs-lookup"><span data-stu-id="39985-134">/keyfile</span></span>](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [<span data-ttu-id="39985-135">Sn.exe (Herramienta de nombre seguro)</span><span class="sxs-lookup"><span data-stu-id="39985-135">Sn.exe (Strong Name Tool)</span></span>](https://msdn.microsoft.com/library/k5b5tt23)  
+ [<span data-ttu-id="39985-136">Crear y utilizar ensamblados con nombre seguro</span><span class="sxs-lookup"><span data-stu-id="39985-136">Creating and Using Strong-Named Assemblies</span></span>](https://msdn.microsoft.com/library/xwb8f617)  
+ [<span data-ttu-id="39985-137">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="39985-137">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)

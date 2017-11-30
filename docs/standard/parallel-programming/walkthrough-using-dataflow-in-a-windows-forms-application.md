@@ -1,145 +1,146 @@
 ---
-title: "Walkthrough: Using Dataflow in a Windows Forms Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TPL dataflow library, in Windows Forms"
-  - "Task Parallel Library, dataflows"
-  - "Windows Forms, and TPL"
+title: 'Tutorial: Usar flujos de datos en aplicaciones de Windows Forms'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TPL dataflow library, in Windows Forms
+- Task Parallel Library, dataflows
+- Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d2775cc99020fd99d6e7d79cdf3e1ffcc3219146
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Walkthrough: Using Dataflow in a Windows Forms Application
-Este documento se muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.  
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a><span data-ttu-id="3e236-102">Tutorial: Usar flujos de datos en aplicaciones de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3e236-102">Walkthrough: Using Dataflow in a Windows Forms Application</span></span>
+<span data-ttu-id="3e236-103">Este documento muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="3e236-103">This document demonstrates how to create a network of dataflow blocks that perform image processing in a Windows Forms application.</span></span>  
   
- Este ejemplo carga los archivos de imagen de la carpeta especificada, crea una imagen compuesta, y muestra el resultado.  El ejemplo utiliza el modelo de flujo de datos para enrutar imágenes a través de la red.  En el modelo de flujo de datos, los componentes independientes de un programa se comunican entre sí enviando mensajes.  Cuando un componente recibe un mensaje, realiza alguna acción y pasa el resultado a otro componente.  Compare esto con el modelo de flujo de control, en el que una aplicación usa estructuras de control, como instrucciones condicionales, bucles, etc., para controlar el orden de las operaciones en un programa.  
+ <span data-ttu-id="3e236-104">En este ejemplo se cargan archivos de imagen de la carpeta especificada, se crea una imagen compuesta y se muestra el resultado.</span><span class="sxs-lookup"><span data-stu-id="3e236-104">This example loads image files from the specified folder, creates a composite image, and displays the result.</span></span> <span data-ttu-id="3e236-105">En el ejemplo se utiliza el modelo de flujo de datos para distribuir las imágenes por la red.</span><span class="sxs-lookup"><span data-stu-id="3e236-105">The example uses the dataflow model to route images through the network.</span></span> <span data-ttu-id="3e236-106">En el modelo de flujo de datos, los componentes independientes de un programa se comunican entre sí mediante mensajes.</span><span class="sxs-lookup"><span data-stu-id="3e236-106">In the dataflow model, independent components of a program communicate with one another by sending messages.</span></span> <span data-ttu-id="3e236-107">Cuando un componente recibe un mensaje, realiza alguna acción y pasa el resultado a otro componente.</span><span class="sxs-lookup"><span data-stu-id="3e236-107">When a component receives a message, it performs some action and then passes the result to another component.</span></span> <span data-ttu-id="3e236-108">Compare esto con el modelo de flujo de control, en el que una aplicación utiliza estructuras de control, como por ejemplo, instrucciones condicionales, bucles, etc., para controlar el orden de las operaciones en un programa.</span><span class="sxs-lookup"><span data-stu-id="3e236-108">Compare this with the control flow model, in which an application uses control structures, for example, conditional statements, loops, and so on, to control the order of operations in a program.</span></span>  
   
-## Requisitos previos  
- Lea [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de iniciar este tutorial.  
-  
-> [!TIP]
->  La biblioteca de flujos de datos TPL \(espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Para instalar el espacio de nombres <xref:System.Threading.Tasks.Dataflow>, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **Administrar paquetes NuGet** en el menú Proyecto, y busque en línea el paquete `Microsoft.Tpl.Dataflow`.  
+## <a name="prerequisites"></a><span data-ttu-id="3e236-109">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="3e236-109">Prerequisites</span></span>  
+ <span data-ttu-id="3e236-110">Lea [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de empezar este tutorial.</span><span class="sxs-lookup"><span data-stu-id="3e236-110">Read [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) before you start this walkthrough.</span></span>  
   
 > [!TIP]
->  La biblioteca de flujos de datos TPL \(espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Para instalar el espacio de nombres <xref:System.Threading.Tasks.Dataflow>, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **Administrar paquetes NuGet** en el menú Proyecto, y busque en línea el paquete `Microsoft.Tpl.Dataflow`.  
+>  <span data-ttu-id="3e236-111">La biblioteca de flujos de datos TPL (espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e236-111">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="3e236-112">Para instalar el <xref:System.Threading.Tasks.Dataflow> espacio de nombres, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **administrar paquetes de NuGet** en el menú proyecto y busque en línea el `Microsoft.Tpl.Dataflow` paquete.</span><span class="sxs-lookup"><span data-stu-id="3e236-112">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
+ 
   
-## Secciones  
- Este tutorial contiene las siguientes secciones:  
+## <a name="sections"></a><span data-ttu-id="3e236-113">Secciones</span><span class="sxs-lookup"><span data-stu-id="3e236-113">Sections</span></span>  
+ <span data-ttu-id="3e236-114">Este tutorial contiene las siguientes secciones:</span><span class="sxs-lookup"><span data-stu-id="3e236-114">This walkthrough contains the following sections:</span></span>  
   
--   [Crear la aplicación de formularios Windows Forms](#winforms)  
+-   [<span data-ttu-id="3e236-115">Crear una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3e236-115">Creating the Windows Forms Application</span></span>](#winforms)  
   
--   [Crear la red de flujo de datos](#network)  
+-   [<span data-ttu-id="3e236-116">Crear la red del flujo de datos</span><span class="sxs-lookup"><span data-stu-id="3e236-116">Creating the Dataflow Network</span></span>](#network)  
   
--   [Conexión de red de flujo de datos con la interfaz de usuario](#ui)  
+-   [<span data-ttu-id="3e236-117">Conectar la red del flujo de datos a la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="3e236-117">Connecting the Dataflow Network to the User Interface</span></span>](#ui)  
   
--   [Ejemplo completo](#complete)  
+-   [<span data-ttu-id="3e236-118">Ejemplo completo</span><span class="sxs-lookup"><span data-stu-id="3e236-118">The Complete Example</span></span>](#complete)  
   
 <a name="winforms"></a>   
-## Crear la aplicación de formularios Windows Forms  
- En esta sección se describe cómo crear una aplicación de Windows Forms básicos y agregar controles al formulario principal.  
+## <a name="creating-the-windows-forms-application"></a><span data-ttu-id="3e236-119">Crear una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3e236-119">Creating the Windows Forms Application</span></span>  
+ <span data-ttu-id="3e236-120">En esta sección se describe cómo crear la aplicación básica de Windows Forms y agregar controles al formulario principal.</span><span class="sxs-lookup"><span data-stu-id="3e236-120">This section describes how to create the basic Windows Forms application and add controls to the main form.</span></span>  
   
-#### Para crear la aplicación de Windows Forms  
+#### <a name="to-create-the-windows-forms-application"></a><span data-ttu-id="3e236-121">Para crear la aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3e236-121">To Create the Windows Forms Application</span></span>  
   
-1.  En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], cree [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o un proyecto de Visual Basic **Aplicación de Windows Forms** .  En este documento, el proyecto se denomina `CompositeImages`.  
+1.  <span data-ttu-id="3e236-122">En [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], cree un proyecto **Aplicación de Windows Forms** de [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3e236-122">In [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], create a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] or Visual Basic **Windows Forms Application** project.</span></span> <span data-ttu-id="3e236-123">En este documento, el proyecto se denomina `CompositeImages`.</span><span class="sxs-lookup"><span data-stu-id="3e236-123">In this document, the project is named `CompositeImages`.</span></span>  
   
-2.  En el diseñador de formularios para el formulario principal, Form1.cs \(Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\), agregue un control de <xref:System.Windows.Forms.ToolStrip> .  
+2.  <span data-ttu-id="3e236-124">En el Diseñador de formularios para el formulario principal, Form1.cs (Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), agregue un <xref:System.Windows.Forms.ToolStrip> control.</span><span class="sxs-lookup"><span data-stu-id="3e236-124">On the form designer for the main form, Form1.cs (Form1.vb for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), add a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
   
-3.  Agregue un control de <xref:System.Windows.Forms.ToolStripButton> al control de <xref:System.Windows.Forms.ToolStrip> .  Establezca la propiedad de <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> a <xref:System.Windows.Forms.ToolStripItemDisplayStyle> y la propiedad de <xref:System.Windows.Forms.ToolStripItem.Text%2A> para elegir la carpeta.  
+3.  <span data-ttu-id="3e236-125">Agregar un <xref:System.Windows.Forms.ToolStripButton> el control a la <xref:System.Windows.Forms.ToolStrip> control.</span><span class="sxs-lookup"><span data-stu-id="3e236-125">Add a <xref:System.Windows.Forms.ToolStripButton> control to the <xref:System.Windows.Forms.ToolStrip> control.</span></span> <span data-ttu-id="3e236-126">Establecer el <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> propiedad a <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> y <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedad **elegir la carpeta de**.</span><span class="sxs-lookup"><span data-stu-id="3e236-126">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> and the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to **Choose Folder**.</span></span>  
   
-4.  Agregue un control de <xref:System.Windows.Forms.ToolStripButton> de segundo al control de <xref:System.Windows.Forms.ToolStrip> .  Establezca la propiedad de <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> a <xref:System.Windows.Forms.ToolStripItemDisplayStyle>, la propiedad de <xref:System.Windows.Forms.ToolStripItem.Text%2A> para cancelar, y la propiedad de <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> a `False`.  
+4.  <span data-ttu-id="3e236-127">Agregue un segundo <xref:System.Windows.Forms.ToolStripButton> el control a la <xref:System.Windows.Forms.ToolStrip> control.</span><span class="sxs-lookup"><span data-stu-id="3e236-127">Add a second <xref:System.Windows.Forms.ToolStripButton> control to the <xref:System.Windows.Forms.ToolStrip> control.</span></span> <span data-ttu-id="3e236-128">Establecer el <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> propiedad <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, el <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedad **cancelar**y el <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> propiedad para `False`.</span><span class="sxs-lookup"><span data-stu-id="3e236-128">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to **Cancel**, and the <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> property to `False`.</span></span>  
   
-5.  Agregue un objeto de <xref:System.Windows.Forms.PictureBox> al formulario principal.  Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle>.  
+5.  <span data-ttu-id="3e236-129">Agregar un <xref:System.Windows.Forms.PictureBox> objeto al formulario principal.</span><span class="sxs-lookup"><span data-stu-id="3e236-129">Add a <xref:System.Windows.Forms.PictureBox> object to the main form.</span></span> <span data-ttu-id="3e236-130">Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="3e236-130">Set the <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
 <a name="network"></a>   
-## Crear la red de flujo de datos  
- En esta sección se describe cómo crear la red de flujo de datos que realiza el procesamiento de imágenes.  
+## <a name="creating-the-dataflow-network"></a><span data-ttu-id="3e236-131">Crear la red del flujo de datos</span><span class="sxs-lookup"><span data-stu-id="3e236-131">Creating the Dataflow Network</span></span>  
+ <span data-ttu-id="3e236-132">En esta sección se describe cómo crear la red del flujo de datos que lleva a cabo el procesamiento de imágenes.</span><span class="sxs-lookup"><span data-stu-id="3e236-132">This section describes how to create the dataflow network that performs image processing.</span></span>  
   
-#### Para crear la red de flujo de datos  
+#### <a name="to-create-the-dataflow-network"></a><span data-ttu-id="3e236-133">Para crear la red del flujo de datos</span><span class="sxs-lookup"><span data-stu-id="3e236-133">To Create the Dataflow Network</span></span>  
   
-1.  Agregue una referencia a System.Threading.Tasks.Dataflow.dll al proyecto.  
+1.  <span data-ttu-id="3e236-134">Agregue a su proyecto una referencia a System.Threading.Tasks.Dataflow.dll.</span><span class="sxs-lookup"><span data-stu-id="3e236-134">Add a reference to System.Threading.Tasks.Dataflow.dll to your project.</span></span>  
   
-2.  Asegúrese de que Form1.cs \(Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) contiene las siguientes instrucciones de `using` \(`Using` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\):  
+2.  <span data-ttu-id="3e236-135">Asegúrese de que Form1.cs (Form1.vb para [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contenga las siguientes instrucciones `using` (`Using` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]):</span><span class="sxs-lookup"><span data-stu-id="3e236-135">Ensure that Form1.cs (Form1.vb for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contains the following `using` (`Using` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) statements:</span></span>  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
-3.  Agregue los siguientes miembros de datos a la clase de `Form1` :  
+3.  <span data-ttu-id="3e236-136">Agregue a la clase `Form1` los miembros de datos siguientes:</span><span class="sxs-lookup"><span data-stu-id="3e236-136">Add the following data members to the `Form1` class:</span></span>  
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4.  Agregue el método siguiente, `CreateImageProcessingNetwork`, a la clase de `Form1` .  Este método crea la red de procesamiento de imágenes.  
+4.  <span data-ttu-id="3e236-137">Agregue el método siguiente, `CreateImageProcessingNetwork`, a la clase `Form1`.</span><span class="sxs-lookup"><span data-stu-id="3e236-137">Add the following method, `CreateImageProcessingNetwork`, to the `Form1` class.</span></span> <span data-ttu-id="3e236-138">Este método crea la red de procesamiento de imágenes.</span><span class="sxs-lookup"><span data-stu-id="3e236-138">This method creates the image processing network.</span></span>  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
-5.  Implemente el método `LoadBitmaps`.  
+5.  <span data-ttu-id="3e236-139">Implemente el método `LoadBitmaps`.</span><span class="sxs-lookup"><span data-stu-id="3e236-139">Implement the `LoadBitmaps` method.</span></span>  
   
      [!code-csharp[TPLDataflow_CompositeImages#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#4)]  
   
-6.  Implemente el método `CreateCompositeBitmap`.  
+6.  <span data-ttu-id="3e236-140">Implemente el método `CreateCompositeBitmap`.</span><span class="sxs-lookup"><span data-stu-id="3e236-140">Implement the `CreateCompositeBitmap` method.</span></span>  
   
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  La versión de C\# del método de `CreateCompositeBitmap` utiliza punteros para habilitar el procesamiento eficaz de los objetos de <xref:System.Drawing.Bitmap?displayProperty=fullName> .  Por consiguiente, debe habilitar la opción de **Permitir código no seguro** en el proyecto para utilizar la palabra clave de [seguro](../Topic/unsafe%20\(C%23%20Reference\).md) .  Para obtener más información sobre cómo habilitar código no seguro en un proyecto de [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] , vea [Compilar \(Página, Diseñador de proyectos\) \(C\#\)](../Topic/Build%20Page,%20Project%20Designer%20\(C%23\).md).  
+    >  <span data-ttu-id="3e236-141">La versión de C# de la `CreateCompositeBitmap` método utiliza punteros para permitir un procesamiento eficiente de los <xref:System.Drawing.Bitmap?displayProperty=nameWithType> objetos.</span><span class="sxs-lookup"><span data-stu-id="3e236-141">The C# version of the `CreateCompositeBitmap` method uses pointers to enable efficient processing of the <xref:System.Drawing.Bitmap?displayProperty=nameWithType> objects.</span></span> <span data-ttu-id="3e236-142">Por lo tanto, debe habilitar la opción **Permitir código no seguro** en el proyecto para utilizar la palabra clave [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="3e236-142">Therefore, you must enable the **Allow unsafe code** option in your project in order to use the [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) keyword.</span></span> <span data-ttu-id="3e236-143">Para obtener más información acerca de cómo habilitar el código no seguro en un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] del proyecto, vea [página compilación, Diseñador de proyectos (C#)] https://msdn.microsoft.com/library/kb4wyys2).</span><span class="sxs-lookup"><span data-stu-id="3e236-143">For more information about how to enable unsafe code in a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] project, see [Build Page, Project Designer (C#)]https://msdn.microsoft.com/library/kb4wyys2).</span></span>  
   
- En la tabla siguiente se describen los miembros de la red.  
+ <span data-ttu-id="3e236-144">En la tabla siguiente se describen los miembros de la red.</span><span class="sxs-lookup"><span data-stu-id="3e236-144">The following table describes the members of the network.</span></span>  
   
-|Miembro|Tipo|Descripción|  
-|-------------|----------|-----------------|  
-|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Toma una ruta de la carpeta como entrada y genera una colección de objetos <xref:System.Drawing.Bitmap> como resultado.|  
-|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Toma una colección de objetos <xref:System.Drawing.Bitmap> como entrada y presenta un mapa de bits compuesto como resultado.|  
-|`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Muestra el mapa de bits compuesto en el formulario.|  
-|`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Muestra una imagen para indicar que se cancele la operación y permite al usuario seleccionar otra carpeta.|  
+|<span data-ttu-id="3e236-145">Miembro</span><span class="sxs-lookup"><span data-stu-id="3e236-145">Member</span></span>|<span data-ttu-id="3e236-146">Tipo</span><span class="sxs-lookup"><span data-stu-id="3e236-146">Type</span></span>|<span data-ttu-id="3e236-147">Descripción</span><span class="sxs-lookup"><span data-stu-id="3e236-147">Description</span></span>|  
+|------------|----------|-----------------|  
+|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|<span data-ttu-id="3e236-148">Toma una ruta de acceso de carpeta como entrada y genera una colección de <xref:System.Drawing.Bitmap> objetos como salida.</span><span class="sxs-lookup"><span data-stu-id="3e236-148">Takes a folder path as input and produces a collection of <xref:System.Drawing.Bitmap> objects as output.</span></span>|  
+|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|<span data-ttu-id="3e236-149">Toma una colección de <xref:System.Drawing.Bitmap> objetos como entrada y genera un mapa de bits compuesto como salida.</span><span class="sxs-lookup"><span data-stu-id="3e236-149">Takes a collection of <xref:System.Drawing.Bitmap> objects as input and produces a composite bitmap as output.</span></span>|  
+|`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|<span data-ttu-id="3e236-150">Muestra el mapa de bits compuesto en el formulario.</span><span class="sxs-lookup"><span data-stu-id="3e236-150">Displays the composite bitmap on the form.</span></span>|  
+|`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|<span data-ttu-id="3e236-151">Muestra una imagen para indicar que la operación se cancela y permite al usuario seleccionar otra carpeta.</span><span class="sxs-lookup"><span data-stu-id="3e236-151">Displays an image to indicate that the operation is canceled and enables the user to select another folder.</span></span>|  
   
- Para conectar los bloques de flujo de datos para formar una red, este ejemplo utiliza el método de <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> .  El método de <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> contiene una versión sobrecargada que toma un objeto de <xref:System.Predicate%601> que determina si el bloque de destino acepta o rechaza un mensaje.  Este mecanismo de filtrado habilita los bloques de mensajes a ciertos valores RO.  En este ejemplo, la red puede crear bifurcaciones de dos maneras.  La bifurcación principal carga las imágenes desde el disco, crea la imagen compuesta, y muestra esa imagen en el formulario.  Alternar las cancelaciones de bifurcación la operación actual.  Los objetos de <xref:System.Predicate%601> permiten a los bloques de flujo de datos a lo largo de la bifurcación principal para cambiar a la alternativa bifurcación rechazando determinados mensajes.  Por ejemplo, si el usuario cancela la operación, el bloque `createCompositeBitmap` de flujo de datos genera `null` \(`Nothing` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) como resultado.  El bloque `displayCompositeBitmap` de flujo de datos rechaza valores de entrada de `null` y, por consiguiente, el mensaje se proporciona a `operationCancelled`.  El bloque `operationCancelled` de flujo de datos acepta todos los mensajes y por lo tanto, muestra una imagen para indicar que la operación se cancela.  
+ <span data-ttu-id="3e236-152">Para conectar los bloques de flujo de datos para formar una red, este ejemplo se utiliza la <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> método.</span><span class="sxs-lookup"><span data-stu-id="3e236-152">To connect the dataflow blocks to form a network, this example uses the <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> method.</span></span> <span data-ttu-id="3e236-153">El <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> método contiene una versión sobrecargada que toma un <xref:System.Predicate%601> objeto que determina si el bloque de destino acepta o rechaza un mensaje.</span><span class="sxs-lookup"><span data-stu-id="3e236-153">The <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> method contains an overloaded version that takes a <xref:System.Predicate%601> object that determines whether the target block accepts or rejects a message.</span></span> <span data-ttu-id="3e236-154">Este mecanismo de filtrado permite que los bloques de mensajes reciban solo ciertos valores.</span><span class="sxs-lookup"><span data-stu-id="3e236-154">This filtering mechanism enables message blocks to receive only certain values.</span></span> <span data-ttu-id="3e236-155">En este ejemplo, la red puede dividirse en ramas de una de dos maneras.</span><span class="sxs-lookup"><span data-stu-id="3e236-155">In this example, the network can branch in one of two ways.</span></span> <span data-ttu-id="3e236-156">La rama principal carga las imágenes desde el disco, crea la imagen compuesta y la muestra en el formulario.</span><span class="sxs-lookup"><span data-stu-id="3e236-156">The main branch loads the images from disk, creates the composite image, and displays that image on the form.</span></span> <span data-ttu-id="3e236-157">La rama alternativa cancela la operación actual.</span><span class="sxs-lookup"><span data-stu-id="3e236-157">The alternate branch cancels the current operation.</span></span> <span data-ttu-id="3e236-158">El <xref:System.Predicate%601> objetos permiten que los bloques de flujo de datos a lo largo de la bifurcación main para cambiar a la bifurcación alternativa rechazando determinados mensajes.</span><span class="sxs-lookup"><span data-stu-id="3e236-158">The <xref:System.Predicate%601> objects enable the dataflow blocks along the main branch to switch to the alternative branch by rejecting certain messages.</span></span> <span data-ttu-id="3e236-159">Por ejemplo, si el usuario cancela la operación, el bloque de flujo de datos `createCompositeBitmap` produce `null` (`Nothing` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) como salida.</span><span class="sxs-lookup"><span data-stu-id="3e236-159">For example, if the user cancels the operation, the dataflow block `createCompositeBitmap` produces `null` (`Nothing` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) as its output.</span></span> <span data-ttu-id="3e236-160">El bloque de flujo de datos `displayCompositeBitmap` rechaza valores de entrada `null` y, por lo tanto, el mensaje se ofrece a `operationCancelled`.</span><span class="sxs-lookup"><span data-stu-id="3e236-160">The dataflow block `displayCompositeBitmap` rejects `null` input values, and therefore, the message is offered to `operationCancelled`.</span></span> <span data-ttu-id="3e236-161">El bloque de flujo de datos `operationCancelled` acepta todos los mensajes y, por lo tanto, muestra una imagen para indicar que se ha cancelado la operación.</span><span class="sxs-lookup"><span data-stu-id="3e236-161">The dataflow block `operationCancelled` accepts all messages and therefore, displays an image to indicate that the operation is canceled.</span></span>  
   
- La siguiente ilustración se muestra la red de procesamiento de imágenes.  
+ <span data-ttu-id="3e236-162">En la ilustración siguiente se muestra la red de procesamiento de imágenes.</span><span class="sxs-lookup"><span data-stu-id="3e236-162">The following illustration shows the image processing network.</span></span>  
   
- ![La red de procesamiento de imágenes](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")  
+ <span data-ttu-id="3e236-163">![Red de procesamiento de imágenes](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")</span><span class="sxs-lookup"><span data-stu-id="3e236-163">![The image processing network](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")</span></span>  
   
- Dado que los bloques de flujo de datos de `displayCompositeBitmap` y de `operationCancelled` representar en la interfaz de usuario, es importante que estas acciones aparecen en el subproceso de interfaz de usuario.  Para ello, durante la creación, estos objetos cada proporcionan un objeto de <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> que tiene la propiedad de <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> establecida en <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=fullName>.  El método de <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=fullName> crea un objeto de <xref:System.Threading.Tasks.TaskScheduler> que realice el trabajo en el contexto de sincronización.  Dado que el método de `CreateImageProcessingNetwork` se denomina del controlador del botón de la carpeta de elegir, que se ejecuta en el subproceso de interfaz de usuario, acciones para los bloques de flujo de datos de `displayCompositeBitmap` y de `operationCancelled` también se ejecutan en el subproceso de interfaz de usuario.  
+ <span data-ttu-id="3e236-164">Dado que los bloques de flujo de datos `displayCompositeBitmap` y `operationCancelled` actúan sobre la interfaz de usuario, es importante que esta acción se produzca en el subproceso de interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="3e236-164">Because the `displayCompositeBitmap` and `operationCancelled` dataflow blocks act on the user interface, it is important that these actions occur on the user-interface thread.</span></span> <span data-ttu-id="3e236-165">Para ello, durante la construcción, estos objetos proporcionan una <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> objeto que tiene el <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> propiedad establecida en <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3e236-165">To accomplish this, during construction, these objects each provide a <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> object that has the <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> property set to <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="3e236-166">El método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> crea un objeto <xref:System.Threading.Tasks.TaskScheduler> que funciona en el contexto de sincronización actual.</span><span class="sxs-lookup"><span data-stu-id="3e236-166">The <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> method creates a <xref:System.Threading.Tasks.TaskScheduler> object that performs work on the current synchronization context.</span></span> <span data-ttu-id="3e236-167">Como se llama al método `CreateImageProcessingNetwork` desde el controlador del botón **Elegir carpeta**, que se ejecuta en el subproceso de la interfaz de usuario, las acciones para los bloques de flujo de datos `displayCompositeBitmap` y `operationCancelled` también se ejecutan en el subproceso de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="3e236-167">Because the `CreateImageProcessingNetwork` method is called from the handler of the **Choose Folder** button, which runs on the user-interface thread, the actions for the `displayCompositeBitmap` and `operationCancelled` dataflow blocks also run on the user-interface thread.</span></span>  
   
- Este ejemplo utiliza un símbolo compartido de cancelación en lugar de establecer la propiedad de <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> porque la propiedad de <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela permanentemente la ejecución del bloque de flujo de datos.  Un token de cancelación permite a este ejemplo reutilizar los mismos varias veces la red de flujo de datos, incluso cuando el usuario cancela una o más operaciones.  Para obtener un ejemplo que utiliza <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> para cancelar permanentemente la ejecución de un bloque de flujo de datos, vea [How to: Cancel a Dataflow Block](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ <span data-ttu-id="3e236-168">Este ejemplo usa un token de cancelación compartidos en lugar de establecer la <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> propiedad porque el <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> propiedad permanentemente cancela la ejecución de bloques de flujo de datos.</span><span class="sxs-lookup"><span data-stu-id="3e236-168">This example uses a shared cancellation token instead of setting the <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> property because the <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> property permanently cancels dataflow block execution.</span></span> <span data-ttu-id="3e236-169">En este ejemplo, un token de cancelación permite reutilizar la misma red del flujo de datos varias veces, incluso cuando el usuario cancela una o varias operaciones.</span><span class="sxs-lookup"><span data-stu-id="3e236-169">A cancellation token enables this example to reuse the same dataflow network multiple times, even when the user cancels one or more operations.</span></span> <span data-ttu-id="3e236-170">Para obtener un ejemplo que usa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> para cancelar la ejecución de un bloque de flujo de datos de modo permanente, consulte [Cómo: cancelar un Dataflow Block](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).</span><span class="sxs-lookup"><span data-stu-id="3e236-170">For an example that uses <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> to permanently cancel the execution of a dataflow block, see [How to: Cancel a Dataflow Block](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).</span></span>  
   
 <a name="ui"></a>   
-## Conexión de red de flujo de datos con la interfaz de usuario  
- Esta sección describe cómo conectar la red de flujo de datos a la interfaz de usuario.  Creación de imagen compuesta y cancelar la operación se inician de carpeta y de los botones Cancelar choose.  Cuando el usuario elige cualquiera de estos botones, la acción adecuada se inicia de forma asincrónica.  
+## <a name="connecting-the-dataflow-network-to-the-user-interface"></a><span data-ttu-id="3e236-171">Conectar la red del flujo de datos a la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="3e236-171">Connecting the Dataflow Network to the User Interface</span></span>  
+ <span data-ttu-id="3e236-172">En esta sección se describe cómo conectar la red del flujo de datos a la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="3e236-172">This section describes how to connect the dataflow network to the user interface.</span></span> <span data-ttu-id="3e236-173">La creación de la imagen compuesta y la cancelación de la operación se inician desde los botones **Elegir carpeta** y **Cancelar**.</span><span class="sxs-lookup"><span data-stu-id="3e236-173">The creation of the composite image and cancellation of the operation are initiated from the **Choose Folder** and **Cancel** buttons.</span></span> <span data-ttu-id="3e236-174">Cuando el usuario elige cualquiera de ellos, se inicia la acción correspondiente de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="3e236-174">When the user chooses either of these buttons, the appropriate action is initiated in an asynchronous manner.</span></span>  
   
-#### Para conectar la red de flujo de datos a la interfaz de usuario  
+#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a><span data-ttu-id="3e236-175">Para conectar la red del flujo de datos a la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="3e236-175">To Connect the Dataflow Network to the User Interface</span></span>  
   
-1.  En el diseñador de formularios para el formulario principal, cree un controlador de eventos para el evento <xref:System.Windows.Forms.ToolStripItem.Click> para el botón de la carpeta de elegir.  
+1.  <span data-ttu-id="3e236-176">En el Diseñador de formularios del formulario principal, cree un controlador de eventos para el <xref:System.Windows.Forms.ToolStripItem.Click> eventos para el **elegir la carpeta** botón.</span><span class="sxs-lookup"><span data-stu-id="3e236-176">On the form designer for the main form, create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event for the **Choose Folder** button.</span></span>  
   
-2.  Implemente el evento de <xref:System.Windows.Forms.ToolStripItem.Click> para el botón de la carpeta de elegir.  
+2.  <span data-ttu-id="3e236-177">Implemente el <xref:System.Windows.Forms.ToolStripItem.Click> eventos para el **elegir la carpeta** botón.</span><span class="sxs-lookup"><span data-stu-id="3e236-177">Implement the <xref:System.Windows.Forms.ToolStripItem.Click> event for the **Choose Folder** button.</span></span>  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  En el diseñador de formularios para el formulario principal, cree un controlador de eventos para el evento <xref:System.Windows.Forms.ToolStripItem.Click> para el botón cancel.  
+3.  <span data-ttu-id="3e236-178">En el Diseñador de formularios del formulario principal, cree un controlador de eventos para el <xref:System.Windows.Forms.ToolStripItem.Click> eventos para el **cancelar** botón.</span><span class="sxs-lookup"><span data-stu-id="3e236-178">On the form designer for the main form, create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event for the **Cancel** button.</span></span>  
   
-4.  Implemente el evento de <xref:System.Windows.Forms.ToolStripItem.Click> para el botón cancel.  
+4.  <span data-ttu-id="3e236-179">Implemente el <xref:System.Windows.Forms.ToolStripItem.Click> eventos para el **cancelar** botón.</span><span class="sxs-lookup"><span data-stu-id="3e236-179">Implement the <xref:System.Windows.Forms.ToolStripItem.Click> event for the **Cancel** button.</span></span>  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
 <a name="complete"></a>   
-## Ejemplo completo  
- El ejemplo siguiente se muestra el código completo de este tutorial.  
+## <a name="the-complete-example"></a><span data-ttu-id="3e236-180">Ejemplo completo</span><span class="sxs-lookup"><span data-stu-id="3e236-180">The Complete Example</span></span>  
+ <span data-ttu-id="3e236-181">En el ejemplo siguiente se muestra el código completo de este tutorial.</span><span class="sxs-lookup"><span data-stu-id="3e236-181">The following example shows the complete code for this walkthrough.</span></span>  
   
  [!code-csharp[TPLDataflow_CompositeImages#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#100)]  
   
- La ilustración siguiente se muestra la salida normal para la carpeta común de Pictures\\ de \\Sample.  
+ <span data-ttu-id="3e236-182">En la ilustración siguiente se muestra la salida típica de la carpeta \Sample Pictures\ común.</span><span class="sxs-lookup"><span data-stu-id="3e236-182">The following illustration shows typical output for the common \Sample Pictures\ folder.</span></span>  
   
- ![Aplicación de Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow\_CompositeImages")  
+ <span data-ttu-id="3e236-183">![Aplicación de Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")</span><span class="sxs-lookup"><span data-stu-id="3e236-183">![The Windows Forms Application](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")</span></span>  
   
-## Pasos siguientes  
+## <a name="next-steps"></a><span data-ttu-id="3e236-184">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="3e236-184">Next Steps</span></span>  
   
-## Vea también  
- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="3e236-185">Vea también</span><span class="sxs-lookup"><span data-stu-id="3e236-185">See Also</span></span>  
+ [<span data-ttu-id="3e236-186">Flujo de datos</span><span class="sxs-lookup"><span data-stu-id="3e236-186">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

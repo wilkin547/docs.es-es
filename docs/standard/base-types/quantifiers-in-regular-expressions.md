@@ -1,277 +1,283 @@
 ---
-title: "Cuantificadores en expresiones regulares | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "expresiones regulares, cuantificadores"
-  - "metacaracteres, cuantificadores"
-  - "cuantificadores de coincidencia mínima"
-  - "cuantificadores en expresiones regulares"
-  - "expresiones regulares de .NET Framework, cuantificadores"
-  - "cuantificadores"
-  - "cuantificadores perezosos"
+title: cuantificadores en expresiones regulares
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- regular expressions, quantifiers
+- metacharacters, quantifiers
+- minimal matching quantifiers
+- quantifiers in regular expressions
+- .NET Framework regular expressions, quantifiers
+- quantifiers
+- lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: 22
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ab06aa0c331c8cbd4c8986cced29334046f30264
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Cuantificadores en expresiones regulares
-Los cuantificadores especifican cuántas instancias de un carácter, un grupo o una clase de caracteres debe haber en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se enumeran los cuantificadores admitidos por .NET Framework.  
+# <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="c8224-102">cuantificadores en expresiones regulares</span><span class="sxs-lookup"><span data-stu-id="c8224-102">Quantifiers in Regular Expressions</span></span>
+<span data-ttu-id="c8224-103">Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.</span><span class="sxs-lookup"><span data-stu-id="c8224-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="c8224-104">En la tabla siguiente se indican los cuantificadores compatibles con .NET.</span><span class="sxs-lookup"><span data-stu-id="c8224-104">The following table lists the quantifiers supported by .NET.</span></span>  
   
-|Cuantificador expansivo|Cuantificador no expansivo|Descripción|  
-|-----------------------------|--------------------------------|-----------------|  
-|`*`|`*?`|Busca cero o más coincidencias.|  
-|`+`|`+?`|Busca una o varias coincidencias.|  
-|`?`|`??`|Busca cero o una coincidencia.|  
-|`{` *n* `}`|`{` *n* `}?`|Match tiempos de *n* exactamente.|  
-|`{` *n* `,}`|`{` *n* `,}?`|Tiempos de *n* match por lo menos.|  
-|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Coincidencia de *n* los tiempos de *m* .|  
+|<span data-ttu-id="c8224-105">Cuantificador expansivo</span><span class="sxs-lookup"><span data-stu-id="c8224-105">Greedy quantifier</span></span>|<span data-ttu-id="c8224-106">Cuantificador diferido</span><span class="sxs-lookup"><span data-stu-id="c8224-106">Lazy quantifier</span></span>|<span data-ttu-id="c8224-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-107">Description</span></span>|  
+|-----------------------|---------------------|-----------------|  
+|`*`|`*?`|<span data-ttu-id="c8224-108">Coincide cero o más veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-108">Match zero or more times.</span></span>|  
+|`+`|`+?`|<span data-ttu-id="c8224-109">Coincide una o más veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-109">Match one or more times.</span></span>|  
+|`?`|`??`|<span data-ttu-id="c8224-110">Coincide cero o una vez.</span><span class="sxs-lookup"><span data-stu-id="c8224-110">Match zero or one time.</span></span>|  
+|<span data-ttu-id="c8224-111">`{` *n* `}`</span><span class="sxs-lookup"><span data-stu-id="c8224-111">`{` *n* `}`</span></span>|<span data-ttu-id="c8224-112">`{` *n* `}?`</span><span class="sxs-lookup"><span data-stu-id="c8224-112">`{` *n* `}?`</span></span>|<span data-ttu-id="c8224-113">Coincidir exactamente con  *n*  veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-113">Match exactly *n* times.</span></span>|  
+|<span data-ttu-id="c8224-114">`{` *n* `,}`</span><span class="sxs-lookup"><span data-stu-id="c8224-114">`{` *n* `,}`</span></span>|<span data-ttu-id="c8224-115">`{` *n* `,}?`</span><span class="sxs-lookup"><span data-stu-id="c8224-115">`{` *n* `,}?`</span></span>|<span data-ttu-id="c8224-116">Coincide con al menos  *n*  veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-116">Match at least *n* times.</span></span>|  
+|<span data-ttu-id="c8224-117">`{` *n* `,` *m* `}`</span><span class="sxs-lookup"><span data-stu-id="c8224-117">`{` *n* `,` *m* `}`</span></span>|<span data-ttu-id="c8224-118">`{` *n* `,` *m* `}?`</span><span class="sxs-lookup"><span data-stu-id="c8224-118">`{` *n* `,` *m* `}?`</span></span>|<span data-ttu-id="c8224-119">Coincide con la de  *n*  a *m* veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-119">Match from *n* to *m* times.</span></span>|  
   
- Las cantidades `n` y `m` son constantes de tipo entero.  Normalmente, los cuantificadores son expansivos; hacen que el motor de expresiones regulares busca coincidencias con tantas apariciones de modelos concretos como sea posible.  Anexar el carácter `?` a un cuantificador lo hace no expansivo; hace que el motor de expresiones regulares coincida con el mínimo de apariciones posible.  Para obtener una descripción de las diferencias que existen entre los dos tipos de cuantificadores, vea la sección [Cuantificaciones expansivos y no expansivos](#Greedy) más adelante en este tema.  
+ <span data-ttu-id="c8224-120">Las cantidades `n` y `m` son constantes de tipo entero.</span><span class="sxs-lookup"><span data-stu-id="c8224-120">The quantities `n` and `m` are integer constants.</span></span> <span data-ttu-id="c8224-121">Normalmente, los cuantificadores son expansivos, ya que hacen que el motor de expresiones regulares busque el mayor número posible de repeticiones de patrones concretos.</span><span class="sxs-lookup"><span data-stu-id="c8224-121">Ordinarily, quantifiers are greedy; they cause the regular expression engine to match as many occurrences of particular patterns as possible.</span></span> <span data-ttu-id="c8224-122">Si se anexa el carácter `?` a un cuantificador se convierte en diferido, ya que hace que el motor de expresiones regulares busque el menor número posible de repeticiones.</span><span class="sxs-lookup"><span data-stu-id="c8224-122">Appending the `?` character to a quantifier makes it lazy; it causes the regular expression engine to match as few occurrences as possible.</span></span> <span data-ttu-id="c8224-123">Para obtener una descripción completa de la diferencia entre los cuantificadores expansivos y diferidos, consulte la sección [Cuantificadores expansivos y diferidos](#Greedy) más adelante en este tema.</span><span class="sxs-lookup"><span data-stu-id="c8224-123">For a complete description of the difference between greedy and lazy quantifiers, see the section [Greedy and Lazy Quantifiers](#Greedy) later in this topic.</span></span>  
   
 > [!IMPORTANT]
->  La anidación de cuantificadores \(como hace, por ejemplo, el patrón de expresión regular `(a*)*`\) puede incrementar el número de comparaciones que debe realizar el motor de expresiones regulares, como función exponencial del número de caracteres de la cadena de entrada.  Para obtener más información sobre este comportamiento y sus soluciones alternativas, vea [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+>  <span data-ttu-id="c8224-124">El anidamiento de cuantificadores (por ejemplo, como hace el patrón de expresión regular `(a*)*`) puede aumentar el número de comparaciones que debe realizar el motor de expresiones regulares, como una función exponencial del número de caracteres de la cadena de entrada.</span><span class="sxs-lookup"><span data-stu-id="c8224-124">Nesting quantifiers (for example, as the regular expression pattern `(a*)*` does) can increase the number of comparisons that the regular expression engine must perform, as an exponential function of the number of characters in the input string.</span></span> <span data-ttu-id="c8224-125">Para obtener más información acerca de este comportamiento y sus soluciones alternativas, consulte [retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="c8224-125">For more information about this behavior and its workarounds, see [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).</span></span>  
   
-## Cuantificadores de expresiones regulares  
- En las secciones siguientes se enumeran los cuantificadores admitidos en las expresiones regulares de .NET Framework.  
+## <a name="regular-expression-quantifiers"></a><span data-ttu-id="c8224-126">Cuantificadores de expresiones regulares</span><span class="sxs-lookup"><span data-stu-id="c8224-126">Regular Expression Quantifiers</span></span>  
+ <span data-ttu-id="c8224-127">En las secciones siguientes se enumeran los cuantificadores admitidos en expresiones regulares de .NET.</span><span class="sxs-lookup"><span data-stu-id="c8224-127">The following sections list the quantifiers supported by .NET regular expressions.</span></span>  
   
 > [!NOTE]
->  Si se encuentran los caracteres \*, \+?, { y } en un modelo de expresión regular, el motor de expresiones regulares los interpretará como cuantificadores o como parte de construcciones de cuantificador, a menos que estén incluidos en una [clase de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  Para interpretarlos como caracteres literales fuera de una clase de caracteres, debe aplicarlos una secuencia de escape precediéndolos con una barra diagonal inversa.  Por ejemplo, la cadena `\*` en un modelo de expresión regular se interpreta como un carácter de asterisco \("\*"\) literal.  
+>  <span data-ttu-id="c8224-128">Si el *, +,?, {, y} caracteres se encuentran en un patrón de expresión regular, el motor de expresiones regulares los interpreta como cuantificadores o como parte de construcciones de cuantificador, a menos que se incluyen en un [clase de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="c8224-128">If the *, +, ?, {, and } characters are encountered in a regular expression pattern, the regular expression engine interprets them as quantifiers or part of quantifier constructs unless they are included in a [character class](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span></span> <span data-ttu-id="c8224-129">Para interpretarlos como caracteres literales fuera de una clase de caracteres, debe anteponerles una barra diagonal inversa para indicar su secuencia de escape.</span><span class="sxs-lookup"><span data-stu-id="c8224-129">To interpret these as literal characters outside a character class, you must escape them by preceding them with a backslash.</span></span> <span data-ttu-id="c8224-130">Por ejemplo, la cadena `\*` en una expresión regular patrón se interpreta como un asterisco literal ("\*") caracteres.</span><span class="sxs-lookup"><span data-stu-id="c8224-130">For example, the string `\*` in a regular expression pattern is interpreted as a literal asterisk ("\*") character.</span></span>  
   
-### Busca cero o más coincidencias: \*  
- El cuantificador `*` coincide cero o más veces con el elemento anterior.  Es equivalente al cuantificador `{0,}`.  `*` es un cuantificador expansivo cuyo equivalente no expansivo es `*?`.  
+### <a name="match-zero-or-more-times-"></a><span data-ttu-id="c8224-131">Coincidir cero o más veces: *</span><span class="sxs-lookup"><span data-stu-id="c8224-131">Match Zero or More Times: *</span></span>  
+ <span data-ttu-id="c8224-132">El cuantificador `*` coincide con el elemento anterior cero o más veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-132">The `*` quantifier matches the preceding element zero or more times.</span></span> <span data-ttu-id="c8224-133">Es equivalente a la `{0,}` cuantificador.</span><span class="sxs-lookup"><span data-stu-id="c8224-133">It is equivalent to the `{0,}` quantifier.</span></span> <span data-ttu-id="c8224-134">`*`es un cuantificador no expansivo cuyo equivalente diferida es `*?`.</span><span class="sxs-lookup"><span data-stu-id="c8224-134">`*` is a greedy quantifier whose lazy equivalent is `*?`.</span></span>  
   
- En el siguiente ejemplo se muestra esta expresión regular.  De los nueve dígitos de la cadena de entrada, cinco coinciden con el modelo y cuatro, \(`95`, `929`, `9129` y `9919`\) no.  
+ <span data-ttu-id="c8224-135">En el ejemplo siguiente se muestra esta expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-135">The following example illustrates this regular expression.</span></span> <span data-ttu-id="c8224-136">De los nueve dígitos de la cadena de entrada, cinco coinciden con el patrón y cuatro (`95`, `929`, `9129` y `9919`) no coinciden.</span><span class="sxs-lookup"><span data-stu-id="c8224-136">Of the nine digits in the input string, five match the pattern and four (`95`, `929`, `9129`, and `9919`) do not.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-137">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-137">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`91*`|Busca una coincidencia con un "9" seguido de cero o más caracteres "1".|  
-|`9*`|Busca una coincidencia con cero o más caracteres "9".|  
-|`\b`|Finaliza en un límite de palabras.|  
+|<span data-ttu-id="c8224-138">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-138">Pattern</span></span>|<span data-ttu-id="c8224-139">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-139">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-140">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-140">Start at a word boundary.</span></span>|  
+|`91*`|<span data-ttu-id="c8224-141">Coincide con un "9" seguido de cero o más caracteres "1".</span><span class="sxs-lookup"><span data-stu-id="c8224-141">Match a "9" followed by zero or more "1" characters.</span></span>|  
+|`9*`|<span data-ttu-id="c8224-142">Coincide con cero o más caracteres "9".</span><span class="sxs-lookup"><span data-stu-id="c8224-142">Match zero or more "9" characters.</span></span>|  
+|`\b`|<span data-ttu-id="c8224-143">Finaliza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-143">End at a word boundary.</span></span>|  
   
-### Busca una o varias coincidencias: \+  
- El cuantificador `+` coincide una o más veces con el elemento anterior.  Equivale a `{1,}`.  `+` es un cuantificador expansivo cuyo equivalente no expansivo es `+?`.  
+### <a name="match-one-or-more-times-"></a><span data-ttu-id="c8224-144">Coincidir una o más veces: +</span><span class="sxs-lookup"><span data-stu-id="c8224-144">Match One or More Times: +</span></span>  
+ <span data-ttu-id="c8224-145">El `+` cuantificador coincide con el elemento anterior una o más veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-145">The `+` quantifier matches the preceding element one or more times.</span></span> <span data-ttu-id="c8224-146">Es equivalente a `{1,}`.</span><span class="sxs-lookup"><span data-stu-id="c8224-146">It is equivalent to `{1,}`.</span></span> <span data-ttu-id="c8224-147">`+`es un cuantificador no expansivo cuyo equivalente diferida es `+?`.</span><span class="sxs-lookup"><span data-stu-id="c8224-147">`+` is a greedy quantifier whose lazy equivalent is `+?`.</span></span>  
   
- Por ejemplo, la expresión regular `\ban+\w*?\b` intenta encontrar coincidencias de palabras enteras que comienzan con la letra `a` seguida de una o varias instancias de la letra `n`.  En el siguiente ejemplo se muestra esta expresión regular.  La expresión regular coincide con las palabras `an`, `annual`, `announcement` y `antique` y, como cabía esperar, no coincide con `autumn` ni con `all`.  
+ <span data-ttu-id="c8224-148">Por ejemplo, la expresión regular `\ban+\w*?\b` intenta coincidir con palabras completas que empiezan por la letra `a` seguida de una o más instancias de la letra `n`.</span><span class="sxs-lookup"><span data-stu-id="c8224-148">For example, the regular expression `\ban+\w*?\b` tries to match entire words that begin with the letter `a` followed by one or more instances of the letter `n`.</span></span> <span data-ttu-id="c8224-149">En el ejemplo siguiente se muestra esta expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-149">The following example illustrates this regular expression.</span></span> <span data-ttu-id="c8224-150">La expresión regular coincide con las palabras `an`, `annual`, `announcement` y `antique`, y no coincide con `autumn` y `all`.</span><span class="sxs-lookup"><span data-stu-id="c8224-150">The regular expression matches the words `an`, `annual`, `announcement`, and `antique`, and correctly fails to match `autumn` and `all`.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#2)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-151">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-151">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`an+`|Busca una coincidencia de una "a" seguida de uno o varios caracteres "n".|  
-|`\w*?`|Busca cero o más coincidencias de un carácter de palabra, pero limitando el número de coincidencias al menor número posible.|  
-|`\b`|Finaliza en un límite de palabras.|  
+|<span data-ttu-id="c8224-152">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-152">Pattern</span></span>|<span data-ttu-id="c8224-153">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-153">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-154">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-154">Start at a word boundary.</span></span>|  
+|`an+`|<span data-ttu-id="c8224-155">Coincide con una "a" seguida de uno o más caracteres "n".</span><span class="sxs-lookup"><span data-stu-id="c8224-155">Match an "a" followed by one or more "n" characters.</span></span>|  
+|`\w*?`|<span data-ttu-id="c8224-156">Coincide con un carácter de palabra cero o más veces, pero el menor número de veces que sea posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-156">Match a word character zero or more times, but as few times as possible.</span></span>|  
+|`\b`|<span data-ttu-id="c8224-157">Finaliza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-157">End at a word boundary.</span></span>|  
   
-### Busca cero o una coincidencia: ?  
- El cuantificador `?` coincide cero o una vez con el elemento anterior.  Equivale a `{0,1}`.  `?` es un cuantificador expansivo cuyo equivalente no expansivo es `??`.  
+### <a name="match-zero-or-one-time-"></a><span data-ttu-id="c8224-158">Coincidir cero o una vez: ?</span><span class="sxs-lookup"><span data-stu-id="c8224-158">Match Zero or One Time: ?</span></span>  
+ <span data-ttu-id="c8224-159">El `?` cuantificador coincide con la hora de elemento cero o uno anterior.</span><span class="sxs-lookup"><span data-stu-id="c8224-159">The `?` quantifier matches the preceding element zero or one time.</span></span> <span data-ttu-id="c8224-160">Es equivalente a `{0,1}`.</span><span class="sxs-lookup"><span data-stu-id="c8224-160">It is equivalent to `{0,1}`.</span></span> <span data-ttu-id="c8224-161">`?`es un cuantificador no expansivo cuyo equivalente diferida es `??`.</span><span class="sxs-lookup"><span data-stu-id="c8224-161">`?` is a greedy quantifier whose lazy equivalent is `??`.</span></span>  
   
- Por ejemplo, la expresión regular `\ban?\b` intenta encontrar coincidencias de palabras enteras que comienzan con la letra `a` seguida de cero o una instancia de la letra `n`.  En otras palabras, intenta buscar coincidencias con las palabras `a` y `an`.  En el siguiente ejemplo se muestra esta expresión regular.  
+ <span data-ttu-id="c8224-162">Por ejemplo, la expresión regular `\ban?\b` intenta coincidir con palabras completas que empiezan por la letra `a` seguida de cero o una instancia de la letra `n`.</span><span class="sxs-lookup"><span data-stu-id="c8224-162">For example, the regular expression `\ban?\b` tries to match entire words that begin with the letter `a` followed by zero or one instances of the letter `n`.</span></span> <span data-ttu-id="c8224-163">En otras palabras, intenta coincidir con las palabras `a` y `an`.</span><span class="sxs-lookup"><span data-stu-id="c8224-163">In other words, it tries to match the words `a` and `an`.</span></span> <span data-ttu-id="c8224-164">En el ejemplo siguiente se muestra esta expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-164">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#3)]
  [!code-vb[RegularExpressions.Quantifiers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#3)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-165">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-165">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`an?`|Busca una coincidencia de una "a" seguida de cero o un carácter "n".|  
-|`\b`|Finaliza en un límite de palabras.|  
+|<span data-ttu-id="c8224-166">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-166">Pattern</span></span>|<span data-ttu-id="c8224-167">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-167">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-168">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-168">Start at a word boundary.</span></span>|  
+|`an?`|<span data-ttu-id="c8224-169">Coincide con una "a" seguida de cero o un carácter "n".</span><span class="sxs-lookup"><span data-stu-id="c8224-169">Match an "a" followed by zero or one "n" character.</span></span>|  
+|`\b`|<span data-ttu-id="c8224-170">Finaliza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-170">End at a word boundary.</span></span>|  
   
-### Busca exactamente n coincidencias: {n}  
- Las coincidencias cuantificadoras de `{`*n*`}` que el elemento anterior *n* mide el tiempo exactamente, donde es cualquier entero *n* .  `{`*n*`}` es un cuantificador expansivo cuyo equivalente lazy es `{`*n*`}?`.  
+### <a name="match-exactly-n-times-n"></a><span data-ttu-id="c8224-171">Coincidir exactamente n veces: {n}</span><span class="sxs-lookup"><span data-stu-id="c8224-171">Match Exactly n Times: {n}</span></span>  
+ <span data-ttu-id="c8224-172">El `{`  *n*  `}` cuantificador coincide con el elemento anterior exactamente  *n*  veces, donde  *n* es un número entero.</span><span class="sxs-lookup"><span data-stu-id="c8224-172">The `{`*n*`}` quantifier matches the preceding element exactly *n* times, where *n* is any integer.</span></span> <span data-ttu-id="c8224-173">`{`*n*`}`es un cuantificador no expansivo cuyo equivalente diferida es `{`  *n*  `}?`.</span><span class="sxs-lookup"><span data-stu-id="c8224-173">`{`*n*`}` is a greedy quantifier whose lazy equivalent is `{`*n*`}?`.</span></span>  
   
- Por ejemplo, la expresión regular `\b\d+\,\d{3}\b` intenta encontrar coincidencias de un límite de palabra seguido de uno o varios dígitos decimales, que, a su vez, van seguidos por tres dígitos decimales seguidos por un límite de palabra.  En el siguiente ejemplo se muestra esta expresión regular.  
+ <span data-ttu-id="c8224-174">Por ejemplo, la expresión regular `\b\d+\,\d{3}\b` intenta coincidir con un límite de palabra seguido de uno o más dígitos decimales, seguidos de tres dígitos decimales, seguidos de un límite de palabra.</span><span class="sxs-lookup"><span data-stu-id="c8224-174">For example, the regular expression `\b\d+\,\d{3}\b` tries to match a word boundary followed by one or more decimal digits followed by three decimal digits followed by a word boundary.</span></span> <span data-ttu-id="c8224-175">En el ejemplo siguiente se muestra esta expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-175">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#4](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#4)]
  [!code-vb[RegularExpressions.Quantifiers#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#4)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-176">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-176">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
-|`\,`|Busca una coincidencia con un carácter de coma.|  
-|`\d{3}`|Buscar coincidencias con tres dígitos decimales.|  
-|`\b`|Finaliza en un límite de palabras.|  
+|<span data-ttu-id="c8224-177">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-177">Pattern</span></span>|<span data-ttu-id="c8224-178">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-178">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-179">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-179">Start at a word boundary.</span></span>|  
+|`\d+`|<span data-ttu-id="c8224-180">Buscar coincidencias con uno o más dígitos decimales.</span><span class="sxs-lookup"><span data-stu-id="c8224-180">Match one or more decimal digits.</span></span>|  
+|`\,`|<span data-ttu-id="c8224-181">Coincide con un carácter de coma.</span><span class="sxs-lookup"><span data-stu-id="c8224-181">Match a comma character.</span></span>|  
+|`\d{3}`|<span data-ttu-id="c8224-182">Coincide con tres dígitos decimales.</span><span class="sxs-lookup"><span data-stu-id="c8224-182">Match three decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="c8224-183">Finaliza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-183">End at a word boundary.</span></span>|  
   
-### Busca al menos n coincidencias: {n,}  
- Las coincidencias cuantificadoras de `{`*n*`,}` que el elemento anterior al menos *n* mide el tiempo, donde es cualquier entero *n* .  `{`*n*`,}` es un cuantificador expansivo cuyo equivalente lazy es `{`*n*`}?`.  
+### <a name="match-at-least-n-times-n"></a><span data-ttu-id="c8224-184">Coincidir al menos n veces: {n,}</span><span class="sxs-lookup"><span data-stu-id="c8224-184">Match at Least n Times: {n,}</span></span>  
+ <span data-ttu-id="c8224-185">El `{`  *n*  `,}` cuantificador coincide con el elemento anterior al menos  *n*  veces, donde  *n* es un número entero.</span><span class="sxs-lookup"><span data-stu-id="c8224-185">The `{`*n*`,}` quantifier matches the preceding element at least *n* times, where *n* is any integer.</span></span> <span data-ttu-id="c8224-186">`{`*n*`,}`es un cuantificador no expansivo cuyo equivalente diferida es `{`  *n*  `}?`.</span><span class="sxs-lookup"><span data-stu-id="c8224-186">`{`*n*`,}` is a greedy quantifier whose lazy equivalent is `{`*n*`}?`.</span></span>  
   
- Por ejemplo, la expresión regular `\b\d{2,}\b\D+` intenta encontrar coincidencias con un límite de palabra seguido por lo menos de dos dígitos, que, a su vez, van seguidos de un límite de palabra y un carácter no numérico.  En el siguiente ejemplo se muestra esta expresión regular.  La expresión regular no coincide con la frase `"7 days"` porque solo contiene un dígito decimal, pero coincide correctamente con las frases `"10 weeks and 300 years"`.  
+ <span data-ttu-id="c8224-187">Por ejemplo, la expresión regular `\b\d{2,}\b\D+` intenta coincidir con un límite de palabra seguido de por lo menos dos dígitos, seguidos de un límite de palabra y de un carácter que no sea un dígito.</span><span class="sxs-lookup"><span data-stu-id="c8224-187">For example, the regular expression `\b\d{2,}\b\D+` tries to match a word boundary followed by at least two digits followed by a word boundary and a non-digit character.</span></span> <span data-ttu-id="c8224-188">En el ejemplo siguiente se muestra esta expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-188">The following example illustrates this regular expression.</span></span> <span data-ttu-id="c8224-189">Se produce un error en la expresión regular para que coincida con la frase `"7 days"` porque contiene un solo dígito decimal, pero coincide correctamente con las frases `"10 weeks and 300 years"`.</span><span class="sxs-lookup"><span data-stu-id="c8224-189">The regular expression fails to match the phrase `"7 days"` because it contains just one decimal digit, but it successfully matches the phrases `"10 weeks and 300 years"`.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#5)]
  [!code-vb[RegularExpressions.Quantifiers#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#5)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-190">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-190">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`\d{2,}`|Busca una coincidencia de al menos dos dígitos decimales.|  
-|`\b`|Hacer coincidir con un límite de palabras.|  
-|`\D+`|Busca una coincidencia de al menos un dígito no decimal.|  
+|<span data-ttu-id="c8224-191">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-191">Pattern</span></span>|<span data-ttu-id="c8224-192">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-192">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-193">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-193">Start at a word boundary.</span></span>|  
+|`\d{2,}`|<span data-ttu-id="c8224-194">Coincide con al menos dos dígitos decimales.</span><span class="sxs-lookup"><span data-stu-id="c8224-194">Match at least two decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="c8224-195">Coincide con un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-195">Match a word boundary.</span></span>|  
+|`\D+`|<span data-ttu-id="c8224-196">Coincide con al menos un carácter de dígito no decimal.</span><span class="sxs-lookup"><span data-stu-id="c8224-196">Match at least one non-decimal digit.</span></span>|  
   
-### Busca de n a m coincidencias: {n,m}  
- Las coincidencias cuantificadoras de `{`*n*`,`*m*`}` que el elemento anterior al menos *n* mide el tiempo, pero no más de *m* mide el tiempo, donde enteros *n* y *m* .  `{`*n*`,`*m*`}` es un cuantificador expansivo cuyo equivalente lazy es `{`*n*`,`*m*`}?`.  
+### <a name="match-between-n-and-m-times-nm"></a><span data-ttu-id="c8224-197">Coincidir de n a m veces: {n,m}</span><span class="sxs-lookup"><span data-stu-id="c8224-197">Match Between n and m Times: {n,m}</span></span>  
+ <span data-ttu-id="c8224-198">El `{`  *n*  `,` *m* `}` cuantificador coincide con el elemento anterior al menos  *n*  veces, pero no más de *m* veces, donde  *n*  y *m* son enteros.</span><span class="sxs-lookup"><span data-stu-id="c8224-198">The `{`*n*`,`*m*`}` quantifier matches the preceding element at least *n* times, but no more than *m* times, where *n* and *m* are integers.</span></span> <span data-ttu-id="c8224-199">`{`*n*`,`*m* `}` es un cuantificador no expansivo cuyo equivalente diferida es `{`  *n*  `,` *m*`}?`.</span><span class="sxs-lookup"><span data-stu-id="c8224-199">`{`*n*`,`*m*`}` is a greedy quantifier whose lazy equivalent is `{`*n*`,`*m*`}?`.</span></span>  
   
- En el ejemplo siguiente, la expresión regular `(00\s){2,4}` intenta encontrar coincidencias entre dos y cuatro ocurrencias de dos ceros seguidos de un espacio.  Observe que la parte final de la cadena de entrada incluye este modelo cinco veces en lugar del máximo de cuatro.  Sin embargo, solo la parte inicial de esta subcadena \(hasta el espacio y el quinto par de ceros\) coincide con el modelo de la expresión regular.  
+ <span data-ttu-id="c8224-200">En el ejemplo siguiente, la expresión regular `(00\s){2,4}` intenta coincidir con dos ceros seguidos de un espacio que se repitan de dos a cuatro veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-200">In the following example, the regular expression `(00\s){2,4}` tries to match between two and four occurrences of two zero digits followed by a space.</span></span> <span data-ttu-id="c8224-201">Observe que la parte final de la cadena de entrada incluye este patrón cinco veces en lugar del máximo de cuatro.</span><span class="sxs-lookup"><span data-stu-id="c8224-201">Note that the final portion of the input string includes this pattern five times rather than the maximum of four.</span></span> <span data-ttu-id="c8224-202">Pero solo la parte inicial de esta subcadena (hasta el espacio y el quinto par de ceros) coincide con el patrón de la expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-202">However, only the initial portion of this substring (up to the space and the fifth pair of zeros) matches the regular expression pattern.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#6](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#6)]
  [!code-vb[RegularExpressions.Quantifiers#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#6)]  
   
-### Busca cero o más coincidencias \(coincidencia no expansiva\): \*?  
- El cuantificador `*?` coincide con el elemento anterior ninguna o alguna vez, pero el menor número de veces que sea posible.  Es el equivalente no expansivo del cuantificador expansivo `*`.  
+### <a name="match-zero-or-more-times-lazy-match-"></a><span data-ttu-id="c8224-203">Coincidir cero o más veces (coincidencia diferida): *?</span><span class="sxs-lookup"><span data-stu-id="c8224-203">Match Zero or More Times (Lazy Match): *?</span></span>  
+ <span data-ttu-id="c8224-204">El `*?` cuantificador coincide con el elemento anterior cero o más veces, pero el menor número de veces que sea posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-204">The `*?` quantifier matches the preceding element zero or more times, but as few times as possible.</span></span> <span data-ttu-id="c8224-205">Es el equivalente no expansivo del cuantificador expansivo `*`.</span><span class="sxs-lookup"><span data-stu-id="c8224-205">It is the lazy counterpart of the greedy quantifier `*`.</span></span>  
   
- En el ejemplo siguiente, la expresión regular `\b\w*?oo\w*?\b` coincide con todas las palabras que contienen la cadena `oo`.  
+ <span data-ttu-id="c8224-206">En el ejemplo siguiente, la expresión regular `\b\w*?oo\w*?\b` coincide con todas las palabras que contienen la cadena `oo`.</span><span class="sxs-lookup"><span data-stu-id="c8224-206">In the following example, the regular expression `\b\w*?oo\w*?\b` matches all words that contain the string `oo`.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#7)]
  [!code-vb[RegularExpressions.Quantifiers#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#7)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-207">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-207">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`\w*?`|Busca una coincidencia con cero o más caracteres de palabra, pero con la menor cantidad posible de caracteres.|  
-|`oo`|Busca una coincidencia con la cadena "oo".|  
-|`\w*?`|Busca una coincidencia con cero o más caracteres de palabra, pero con la menor cantidad posible de caracteres.|  
-|`\b`|Finalizar en un límite de palabras.|  
+|<span data-ttu-id="c8224-208">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-208">Pattern</span></span>|<span data-ttu-id="c8224-209">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-209">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-210">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-210">Start at a word boundary.</span></span>|  
+|`\w*?`|<span data-ttu-id="c8224-211">Coincide con cero o más caracteres de palabra, pero con el menor número de caracteres posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-211">Match zero or more word characters, but as few characters as possible.</span></span>|  
+|`oo`|<span data-ttu-id="c8224-212">Coincide con la cadena "oo".</span><span class="sxs-lookup"><span data-stu-id="c8224-212">Match the string "oo".</span></span>|  
+|`\w*?`|<span data-ttu-id="c8224-213">Coincide con cero o más caracteres de palabra, pero con el menor número de caracteres posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-213">Match zero or more word characters, but as few characters as possible.</span></span>|  
+|`\b`|<span data-ttu-id="c8224-214">Finaliza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-214">End on a word boundary.</span></span>|  
   
-### Busca una o varias coincidencias \(coincidencia no expansiva\): \+?  
- El cuantificador `+?` coincide con el elemento anterior una o más veces, pero el menor número de veces que sea posible.  Es el equivalente no expansivo del cuantificador expansivo `+`.  
+### <a name="match-one-or-more-times-lazy-match-"></a><span data-ttu-id="c8224-215">Coincidir una o más veces (coincidencia diferida): +?</span><span class="sxs-lookup"><span data-stu-id="c8224-215">Match One or More Times (Lazy Match): +?</span></span>  
+ <span data-ttu-id="c8224-216">El `+?` cuantificador coincide con el elemento anterior una o más veces, pero el menor número de veces que sea posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-216">The `+?` quantifier matches the preceding element one or more times, but as few times as possible.</span></span> <span data-ttu-id="c8224-217">Es el equivalente no expansivo del cuantificador expansivo `+`.</span><span class="sxs-lookup"><span data-stu-id="c8224-217">It is the lazy counterpart of the greedy quantifier `+`.</span></span>  
   
- Por ejemplo, la expresión regular `\b\w+?\b` coincide con uno o varios caracteres separados por límites de palabra.  En el siguiente ejemplo se muestra esta expresión regular.  
+ <span data-ttu-id="c8224-218">Por ejemplo, la expresión regular `\b\w+?\b` coincide con uno o más caracteres separados por límites de palabra.</span><span class="sxs-lookup"><span data-stu-id="c8224-218">For example, the regular expression `\b\w+?\b` matches one or more characters separated by word boundaries.</span></span> <span data-ttu-id="c8224-219">En el ejemplo siguiente se muestra esta expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-219">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#8)]
  [!code-vb[RegularExpressions.Quantifiers#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#8)]  
   
-### Busca cero o una coincidencia \(coincidencia no expansiva\): ??  
- El cuantificador `??` coincide con el elemento anterior ninguna o una vez, pero el menor número de veces que sea posible.  Es el equivalente no expansivo del cuantificador expansivo `?`.  
+### <a name="match-zero-or-one-time-lazy-match-"></a><span data-ttu-id="c8224-220">Coincidir cero o una vez (coincidencia diferida): ??</span><span class="sxs-lookup"><span data-stu-id="c8224-220">Match Zero or One Time (Lazy Match): ??</span></span>  
+ <span data-ttu-id="c8224-221">El `??` cuantificador coincide con la hora de elemento cero o uno anterior, pero el menor número de veces posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-221">The `??` quantifier matches the preceding element zero or one time, but as few times as possible.</span></span> <span data-ttu-id="c8224-222">Es el equivalente no expansivo del cuantificador expansivo `?`.</span><span class="sxs-lookup"><span data-stu-id="c8224-222">It is the lazy counterpart of the greedy quantifier `?`.</span></span>  
   
- Por ejemplo, la expresión regular `^\s*(System.)??Console.Write(Line)??\(??` intenta hacer coincidir las cadenas "Console.Write" o "Console.WriteLine".  La cadena también puede incluir "System." delante de "Console", y puede ir seguida de un paréntesis de apertura.  La cadena debe estar al comienzo de una línea, aunque puede ir precedida de un espacio en blanco.  En el siguiente ejemplo se muestra esta expresión regular.  
+ <span data-ttu-id="c8224-223">Por ejemplo, la expresión regular `^\s*(System.)??Console.Write(Line)??\(??` intenta coincidir con las cadenas "Console.Write" o "Console.WriteLine".</span><span class="sxs-lookup"><span data-stu-id="c8224-223">For example, the regular expression `^\s*(System.)??Console.Write(Line)??\(??` attempts to match the strings "Console.Write" or "Console.WriteLine".</span></span> <span data-ttu-id="c8224-224">La cadena también puede incluir "System."</span><span class="sxs-lookup"><span data-stu-id="c8224-224">The string can also include "System."</span></span> <span data-ttu-id="c8224-225">antes de "Console", y puede ir seguida de un paréntesis de apertura.</span><span class="sxs-lookup"><span data-stu-id="c8224-225">before "Console", and it can be followed by an opening parenthesis.</span></span> <span data-ttu-id="c8224-226">La cadena debe estar al principio de una línea, aunque puede ir precedida de un espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="c8224-226">The string must be at the beginning of a line, although it can be preceded by white space.</span></span> <span data-ttu-id="c8224-227">En el ejemplo siguiente se muestra esta expresión regular.</span><span class="sxs-lookup"><span data-stu-id="c8224-227">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#9](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#9)]
  [!code-vb[RegularExpressions.Quantifiers#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#9)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-228">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-228">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`^`|Busca una coincidencia con el comienzo del flujo de entrada.|  
-|`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
-|`(System.)??`|Busca cero o una coincidencia con la cadena "System.".|  
-|`Console.Write`|Busca coincidencias con la cadena "Console.Write".|  
-|`(Line)??`|Busca cero o una coincidencia con la cadena "Line".|  
-|`\(??`|Busca cero o una coincidencia con el paréntesis de apertura.|  
+|<span data-ttu-id="c8224-229">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-229">Pattern</span></span>|<span data-ttu-id="c8224-230">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-230">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="c8224-231">Coincide con el inicio del flujo de entrada.</span><span class="sxs-lookup"><span data-stu-id="c8224-231">Match the start of the input stream.</span></span>|  
+|`\s*`|<span data-ttu-id="c8224-232">Busca coincidencias con cero o más caracteres de espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="c8224-232">Match zero or more white-space characters.</span></span>|  
+|`(System.)??`|<span data-ttu-id="c8224-233">Coincide con cero o una repetición de la cadena "System.".</span><span class="sxs-lookup"><span data-stu-id="c8224-233">Match zero or one occurrence of the string "System.".</span></span>|  
+|`Console.Write`|<span data-ttu-id="c8224-234">Coincide con la cadena "Console.Write".</span><span class="sxs-lookup"><span data-stu-id="c8224-234">Match the string "Console.Write".</span></span>|  
+|`(Line)??`|<span data-ttu-id="c8224-235">Coincide con cero o una repetición de la cadena "Line".</span><span class="sxs-lookup"><span data-stu-id="c8224-235">Match zero or one occurrence of the string "Line".</span></span>|  
+|`\(??`|<span data-ttu-id="c8224-236">Coincide con cero o con una repetición del paréntesis de apertura.</span><span class="sxs-lookup"><span data-stu-id="c8224-236">Match zero or one occurrence of the opening parenthesis.</span></span>|  
   
-### Busca exactamente n coincidencias \(coincidencia no expansiva\): {n}?  
- Las coincidencias cuantificadoras de `{`*n*`}?` que el elemento anterior `n` mide el tiempo exactamente, donde es cualquier entero *n* .  Es el equivalente del cuantificador expansivo `{`*n*`}+`.  
+### <a name="match-exactly-n-times-lazy-match-n"></a><span data-ttu-id="c8224-237">Coincidir exactamente n veces (coincidencia diferida): {n}?</span><span class="sxs-lookup"><span data-stu-id="c8224-237">Match Exactly n Times (Lazy Match): {n}?</span></span>  
+ <span data-ttu-id="c8224-238">El `{`  *n*  `}?` cuantificador coincide con el elemento anterior exactamente `n` veces, donde  *n*  es un número entero.</span><span class="sxs-lookup"><span data-stu-id="c8224-238">The `{`*n*`}?` quantifier matches the preceding element exactly `n` times, where *n* is any integer.</span></span> <span data-ttu-id="c8224-239">Es el equivalente no expansivo del cuantificador expansivo `{`  *n*  `}+`.</span><span class="sxs-lookup"><span data-stu-id="c8224-239">It is the lazy counterpart of the greedy quantifier `{`*n*`}+`.</span></span>  
   
- En el ejemplo siguiente, la expresión regular `\b(\w{3,}?\.){2}?\w{3,}?\b` se usa para identificar una dirección de sitio web.  Observe que coincide con "www.microsoft.com" y "msdn.microsoft.com", pero no coincide con "mywebsite" ni "mycompany.com".  
+ <span data-ttu-id="c8224-240">En el ejemplo siguiente, la expresión regular `\b(\w{3,}?\.){2}?\w{3,}?\b` se usa para identificar la dirección de un sitio web.</span><span class="sxs-lookup"><span data-stu-id="c8224-240">In the following example, the regular expression `\b(\w{3,}?\.){2}?\w{3,}?\b` is used to identify a Web site address.</span></span> <span data-ttu-id="c8224-241">Observe que coincide con "www.microsoft.com" y con "msdn.microsoft.com", pero no coincide con "mywebsite" ni con "mycompany.com".</span><span class="sxs-lookup"><span data-stu-id="c8224-241">Note that it matches "www.microsoft.com" and "msdn.microsoft.com", but does not match "mywebsite" or "mycompany.com".</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#10](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#10)]
  [!code-vb[RegularExpressions.Quantifiers#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#10)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-242">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-242">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`(\w{3,}?\.)`|Busca una coincidencia de al menos 3 caracteres de palabra, pero limitándolos al menor número de caracteres posible, seguidos de un carácter de punto.  Éste es el primer grupo de captura.|  
-|`(\w{3,}?\.){2}?`|Busca dos coincidencias con el modelo en el primer grupo, reduciendo el número de coincidencias al menor número posible.|  
-|`\b`|Finalizar la búsqueda de coincidencias en un límite de palabras.|  
+|<span data-ttu-id="c8224-243">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-243">Pattern</span></span>|<span data-ttu-id="c8224-244">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-244">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-245">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-245">Start at a word boundary.</span></span>|  
+|`(\w{3,}?\.)`|<span data-ttu-id="c8224-246">Coincide con al menos 3 caracteres de palabra, pero con el menor número de caracteres posible, seguidos de un carácter de punto.</span><span class="sxs-lookup"><span data-stu-id="c8224-246">Match at least 3 word characters, but as few characters as possible, followed by a dot or period character.</span></span> <span data-ttu-id="c8224-247">Este es el primer grupo de captura.</span><span class="sxs-lookup"><span data-stu-id="c8224-247">This is the first capturing group.</span></span>|  
+|`(\w{3,}?\.){2}?`|<span data-ttu-id="c8224-248">Coincide con el patrón del primer grupo dos veces, pero el menor número de veces posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-248">Match the pattern in the first group two times, but as few times as possible.</span></span>|  
+|`\b`|<span data-ttu-id="c8224-249">Finalizar la búsqueda de coincidencias en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-249">End the match on a word boundary.</span></span>|  
   
-### Busca al menos n coincidencias \(coincidencia no expansiva\): {n,}?  
- Las coincidencias cuantificadoras de `{`*n*`,}?` que el elemento anterior al menos `n` mide el tiempo, donde es cualquier entero *n* , pero el menor número de veces posible.  Es el equivalente del cuantificador expansivo `{`*n*`,}`.  
+### <a name="match-at-least-n-times-lazy-match-n"></a><span data-ttu-id="c8224-250">Coincidir al menos n veces (coincidencia diferida): {n,}?</span><span class="sxs-lookup"><span data-stu-id="c8224-250">Match at Least n Times (Lazy Match): {n,}?</span></span>  
+ <span data-ttu-id="c8224-251">El `{`  *n*  `,}?` cuantificador coincide con el elemento anterior al menos `n` veces, donde  *n*  es un número entero, pero el menor número de veces es posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-251">The `{`*n*`,}?` quantifier matches the preceding element at least `n` times, where *n* is any integer, but as few times as possible.</span></span> <span data-ttu-id="c8224-252">Es el equivalente no expansivo del cuantificador expansivo `{`  *n*  `,}`.</span><span class="sxs-lookup"><span data-stu-id="c8224-252">It is the lazy counterpart of the greedy quantifier `{`*n*`,}`.</span></span>  
   
- Vea el ejemplo para el cuantificador de `{`*n*`}?` en la sección anterior para una ilustración.  La expresión regular en ese ejemplo utiliza el cuantificador de `{`*n*`,}` para una cadena que tiene al menos tres caracteres seguidos de un punto.  
+ <span data-ttu-id="c8224-253">Vea el ejemplo de la `{`  *n*  `}?` cuantificador en la sección anterior para ver una ilustración.</span><span class="sxs-lookup"><span data-stu-id="c8224-253">See the example for the `{`*n*`}?` quantifier in the previous section for an illustration.</span></span> <span data-ttu-id="c8224-254">La expresión regular en el ejemplo utiliza la `{`  *n*  `,}` cuantificador para que coincida con una cadena que tiene al menos tres caracteres seguido de un punto.</span><span class="sxs-lookup"><span data-stu-id="c8224-254">The regular expression in that example uses the `{`*n*`,}` quantifier to match a string that has at least three characters followed by a period.</span></span>  
   
-### Busca de n a m coincidencias \(coincidencia no expansiva\): {n,m}?  
- Las coincidencias cuantificadoras de `{`*n*`,`*m*`}?` el elemento anterior entre `n` y `m` medir el tiempo, donde enteros *n* y *m* , pero el menor número de veces posible.  Es el equivalente del cuantificador expansivo `{`*n*`,`*m*`}`.  
+### <a name="match-between-n-and-m-times-lazy-match-nm"></a><span data-ttu-id="c8224-255">Coincidir de n a m veces (coincidencia diferida): {n,m}?</span><span class="sxs-lookup"><span data-stu-id="c8224-255">Match Between n and m Times (Lazy Match): {n,m}?</span></span>  
+ <span data-ttu-id="c8224-256">El `{`  *n*  `,` *m* `}?` cuantificador coincide con el elemento anterior entre `n` y `m` veces, donde  *n*  y *m* son números enteros, pero el menor número de veces que sea posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-256">The `{`*n*`,`*m*`}?` quantifier matches the preceding element between `n` and `m` times, where *n* and *m* are integers, but as few times as possible.</span></span> <span data-ttu-id="c8224-257">Es el equivalente no expansivo del cuantificador expansivo `{`  *n*  `,` *m*`}`.</span><span class="sxs-lookup"><span data-stu-id="c8224-257">It is the lazy counterpart of the greedy quantifier `{`*n*`,`*m*`}`.</span></span>  
   
- En el ejemplo siguiente, la expresión regular `\b[A-Z](../../../amples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributes1/VB/s.vb){1,10}?[.!?]` busca coincidencias con frases que contengan entre una y diez palabras.  Coincide con todas las frases de la cadena de entrada a excepción de una frase que contiene 18 palabras.  
+ <span data-ttu-id="c8224-258">En el ejemplo siguiente, la expresión regular `\b[A-Z](\w*\s+){1,10}?[.!?]` coincide con las frases que contengan de una a diez palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-258">In the following example, the regular expression `\b[A-Z](\w*\s+){1,10}?[.!?]` matches sentences that contain between one and ten words.</span></span> <span data-ttu-id="c8224-259">Coincidencia con todas las frases de la cadena de entrada, excepto con una frase que contiene 18 palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-259">It matches all the sentences in the input string except for one sentence that contains 18 words.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#12](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#12)]
  [!code-vb[RegularExpressions.Quantifiers#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#12)]  
   
- El modelo de expresión regular se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-260">El patrón de expresión regular se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-260">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`\b`|Empieza en un límite de palabras.|  
-|`[A-Z]`|Busca una coincidencia de una letra mayúscula de la A a la Z.|  
-|`(\w*\s+)`|Busca una coincidencia con cero o más caracteres de palabra seguidos de uno o varios caracteres de espacio en blanco.  Este es el primer grupo de capturas.|  
-|`{1,10}?`|Busca de 1 a 10 coincidencias con el modelo anterior, reduciendo el número de coincidencias al menor número posible.|  
-|`[.!?]`|Busca una coincidencia de cualquiera de los caracteres de puntuación ".", "\!" o "?".|  
+|<span data-ttu-id="c8224-261">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-261">Pattern</span></span>|<span data-ttu-id="c8224-262">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-262">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="c8224-263">Empieza en un límite de palabras.</span><span class="sxs-lookup"><span data-stu-id="c8224-263">Start at a word boundary.</span></span>|  
+|`[A-Z]`|<span data-ttu-id="c8224-264">Coincide con cualquier letra mayúscula de la A a la Z.</span><span class="sxs-lookup"><span data-stu-id="c8224-264">Match an uppercase character from A to Z.</span></span>|  
+|`(\w*\s+)`|<span data-ttu-id="c8224-265">Coincide con cero o más caracteres de palabra, seguidos de uno o más caracteres de espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="c8224-265">Match zero or more word characters, followed by one or more white-space characters.</span></span> <span data-ttu-id="c8224-266">Este es el primer grupo de capturas.</span><span class="sxs-lookup"><span data-stu-id="c8224-266">This is the first capture group.</span></span>|  
+|`{1,10}?`|<span data-ttu-id="c8224-267">Coincide con el patrón anterior entre una y diez veces, pero el menor número de veces que sea posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-267">Match the previous pattern between 1 and 10 times, but as few times as possible.</span></span>|  
+|`[.!?]`|<span data-ttu-id="c8224-268">Coincide con cualquiera de los caracteres de puntuación ".", "!" o "?".</span><span class="sxs-lookup"><span data-stu-id="c8224-268">Match any one of the punctuation characters ".", "!", or "?".</span></span>|  
   
 <a name="Greedy"></a>   
-## Cuantificadores expansivos y no expansivos  
- Hay varios cuantificadores que tienen dos versiones:  
+## <a name="greedy-and-lazy-quantifiers"></a><span data-ttu-id="c8224-269">Cuantificadores expansivos y diferidos</span><span class="sxs-lookup"><span data-stu-id="c8224-269">Greedy and Lazy Quantifiers</span></span>  
+ <span data-ttu-id="c8224-270">Varios cuantificadores tienen dos versiones:</span><span class="sxs-lookup"><span data-stu-id="c8224-270">A number of the quantifiers have two versions:</span></span>  
   
--   Una versión expansiva.  
+-   <span data-ttu-id="c8224-271">Una versión expansiva.</span><span class="sxs-lookup"><span data-stu-id="c8224-271">A greedy version.</span></span>  
   
-     Un cuantificador expansivo intenta buscar coincidencias con el elemento tantas veces como sea posible.  
+     <span data-ttu-id="c8224-272">Un cuantificador expansivo intenta coincidir con un elemento tantas veces como sea posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-272">A greedy quantifier tries to match an element as many times as possible.</span></span>  
   
--   Una versión no expansiva.  
+-   <span data-ttu-id="c8224-273">Una versión no expansivos (o no).</span><span class="sxs-lookup"><span data-stu-id="c8224-273">A non-greedy (or lazy) version.</span></span>  
   
-     Un cuantificador no expansivo intenta buscar coincidencias con el elemento el menor número de veces posible.  Puede convertir un cuantificador expansivo en un cuantificador no expansivo agregando simplemente un `?`.  
+     <span data-ttu-id="c8224-274">Un cuantificador no expansivo intenta coincidir con un elemento el menor número de veces que sea posible.</span><span class="sxs-lookup"><span data-stu-id="c8224-274">A non-greedy quantifier tries to match an element as few times as possible.</span></span> <span data-ttu-id="c8224-275">Puede convertir un cuantificador expansivo en un cuantificador no expansivo agregando simplemente un `?`.</span><span class="sxs-lookup"><span data-stu-id="c8224-275">You can turn a greedy quantifier into a lazy quantifier by simply adding a `?`.</span></span>  
   
- Considere una expresión regular simple con la que se pretende extraer los cuatro últimos dígitos de una cadena de números como los de una tarjeta de crédito.  La versión de la expresión regular que utiliza el cuantificador `*` expansivo es `\b.*([0-9]{4})\b`.  Sin embargo, si una cadena contiene dos números, esta expresión regular buscará coincidencias solo con los cuatro últimos dígitos del segundo número, tal y como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="c8224-276">Considere una expresión regular simple diseñada para extraer los cuatro últimos dígitos de una cadena de números, como un número de tarjeta de crédito.</span><span class="sxs-lookup"><span data-stu-id="c8224-276">Consider a simple regular expression that is intended to extract the last four digits from a string of numbers such as a credit card number.</span></span> <span data-ttu-id="c8224-277">La versión de la expresión regular que usa el `*` cuantificador expansivo es `\b.*([0-9]{4})\b`.</span><span class="sxs-lookup"><span data-stu-id="c8224-277">The version of the regular expression that uses the `*` greedy quantifier is `\b.*([0-9]{4})\b`.</span></span> <span data-ttu-id="c8224-278">Pero si una cadena contiene dos números, esta expresión regular coincide con los cuatro últimos dígitos del segundo número, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-278">However, if a string contains two numbers, this regular expression matches the last four digits of the second number only, as the following example shows.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#1)]  
   
- La expresión regular no coincide con el primer número porque el cuantificador `*` intenta buscar coincidencias con el elemento anterior tantas veces como sea posible en toda la cadena y, por tanto, encuentra su coincidencia al final de la cadena.  
+ <span data-ttu-id="c8224-279">Se produce un error en la expresión regular para que coincida con el primer número porque el `*` cuantificador intenta buscar coincidencias con el elemento anterior tantas veces como sea posible en toda la cadena y, por lo que encuentra su coincidencia al final de la cadena.</span><span class="sxs-lookup"><span data-stu-id="c8224-279">The regular expression fails to match the first number because the `*` quantifier tries to match the previous element as many times as possible in the entire string, and so it finds its match at the end of the string.</span></span>  
   
- Éste no es el comportamiento deseado.  En su lugar, puede utilizar el cuantificador no expansivo `*?` ``  para extraer los dígitos de ambos números, tal y como se muestra en el siguiente ejemplo.  
+ <span data-ttu-id="c8224-280">Este no es el comportamiento deseado.</span><span class="sxs-lookup"><span data-stu-id="c8224-280">This is not the desired behavior.</span></span> <span data-ttu-id="c8224-281">En su lugar, puede usar el `*?`cuantificador no expansivo para extraer los dígitos de ambos números, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-281">Instead, you can use the `*?`lazy quantifier to extract digits from both numbers, as the following example shows.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#2)]  
   
- En la mayoría de los casos, las expresiones regulares con cuantificadores expansivos y no expansivos devuelven las mismas coincidencias.  La mayor parte de las veces, devuelven resultados diferentes cuando se utilizan con el metacarácter comodín \(`.`\), que coincide con cualquier carácter.  
+ <span data-ttu-id="c8224-282">En la mayoría de los casos, las expresiones regulares con cuantificadores expansivos y diferidos devuelven las mismas coincidencias.</span><span class="sxs-lookup"><span data-stu-id="c8224-282">In most cases, regular expressions with greedy and lazy quantifiers return the same matches.</span></span> <span data-ttu-id="c8224-283">Suelen devolver resultados diferentes cuando se utilizan con el carácter comodín (`.`) metacarácter, que coincide con cualquier carácter.</span><span class="sxs-lookup"><span data-stu-id="c8224-283">They most commonly return different results when they are used with the wildcard (`.`) metacharacter, which matches any character.</span></span>  
   
-## Cuantificadores y coincidencias vacías  
- Los cuantificadores `*`, `+`, y `{`*n*`,`*m*`}` y sus homólogos no expansivos nunca repiten después de que una coincidencia vacía cuando el número mínimo de capturas se ha encontrado.  Esta regla impide que los cuantificadores entren en bucles infinitos de coincidencias de subexpresión vacías cuando el número máximo de capturas posibles del grupo es infinito o casi infinito.  
+## <a name="quantifiers-and-empty-matches"></a><span data-ttu-id="c8224-284">Cuantificadores y coincidencias vacías</span><span class="sxs-lookup"><span data-stu-id="c8224-284">Quantifiers and Empty Matches</span></span>  
+ <span data-ttu-id="c8224-285">Los cuantificadores `*`, `+`, y `{`  *n*  `,` *m* `}` y sus homólogos perezosos nunca se repiten tras vacío coincidencia cuando se ha encontrado el número mínimo de capturas.</span><span class="sxs-lookup"><span data-stu-id="c8224-285">The quantifiers `*`, `+`, and `{`*n*`,`*m*`}` and their lazy counterparts never repeat after an empty match when the minimum number of captures has been found.</span></span> <span data-ttu-id="c8224-286">Esta regla impide que los cuantificadores entren en bucles infinitos en coincidencias de subexpresiones vacías cuando el número máximo de posibles capturas de grupo es infinito o cerca de infinito.</span><span class="sxs-lookup"><span data-stu-id="c8224-286">This rule prevents quantifiers from entering infinite loops on empty subexpression matches when the maximum number of possible group captures is infinite or near infinite.</span></span>  
   
- Por ejemplo, el código siguiente muestra el resultado de una llamada al método <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=fullName> con el modelo de expresión regular `(a?)*`, que coincide con cero o un carácter "a", cero o más veces.  Tenga en cuenta que el grupo de captura único captura todas las instancias de “a”, así como de <xref:System.String.Empty?displayProperty=fullName>, pero no hay una segunda coincidencia vacía, porque en la primera el cuantificador deja de repetirse.  
+ <span data-ttu-id="c8224-287">Por ejemplo, el código siguiente muestra el resultado de una llamada a la <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> método con el patrón de expresión regular `(a?)*`, que coincide con cero o un carácter "a" cero o más veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-287">For example, the following code shows the result of a call to the <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> method with the regular expression pattern `(a?)*`, which matches zero or one "a" character zero or more times.</span></span> <span data-ttu-id="c8224-288">Tenga en cuenta que el grupo de captura solo captura entre "a" como así como <xref:System.String.Empty?displayProperty=nameWithType>, pero que no hay ninguna coincidencia vacía segundo, porque hace que la primera coincidencia vacía el cuantificador dejar de repetirse.</span><span class="sxs-lookup"><span data-stu-id="c8224-288">Note that the single capturing group captures each "a" as well as <xref:System.String.Empty?displayProperty=nameWithType>, but that there is no second empty match, because the first empty match causes the quantifier to stop repeating.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch1.vb#1)]  
   
- Para ver la diferencia práctica entre un grupo de captura que define un número mínimo y máximo de capturas y otro que define un número de capturas fijo, considere los patrones de expresiones regulares `(a\1|(?(1)\1)){0,2}` y `(a\1|(?(1)\1)){2}`.  Ambas expresiones regulares constan de un único grupo de capturas, que se define como se muestra en la tabla siguiente.  
+ <span data-ttu-id="c8224-289">Para ver la diferencia práctica entre un grupo de captura que define un número mínimo y máximo de capturas y otro que define un número fijo de capturas, tenga en cuenta los patrones de expresiones regulares `(a\1|(?(1)\1)){0,2}` y `(a\1|(?(1)\1)){2}`.</span><span class="sxs-lookup"><span data-stu-id="c8224-289">To see the practical difference between a capturing group that defines a minimum and a maximum number of captures and one that defines a fixed number of captures, consider the regular expression patterns `(a\1|(?(1)\1)){0,2}` and `(a\1|(?(1)\1)){2}`.</span></span> <span data-ttu-id="c8224-290">Ambas expresiones regulares constan de un único grupo de captura, que se define como se muestra en la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8224-290">Both regular expressions consist of a single capturing group, which is defined as shown in the following table.</span></span>  
   
-|Modelo|Descripción|  
-|------------|-----------------|  
-|`(a\1`|Hacer coincidir “a” con el valor del primer grupo capturado...|  
-|`&#124;(?(1)`|… o prueba si se ha definido el primer grupo capturado. \(Observe que la construcción `(?(1)` no define un grupo de captura\).|  
-|`\1))`|Si el primer grupo capturado existe, coincide con su valor.  Si el grupo no existe, este coincidirá con <xref:System.String.Empty?displayProperty=fullName>.|  
+|<span data-ttu-id="c8224-291">Modelo</span><span class="sxs-lookup"><span data-stu-id="c8224-291">Pattern</span></span>|<span data-ttu-id="c8224-292">Descripción</span><span class="sxs-lookup"><span data-stu-id="c8224-292">Description</span></span>|  
+|-------------|-----------------|  
+|`(a\1`|<span data-ttu-id="c8224-293">Coincide con "a", junto con el valor del primer grupo capturado...</span><span class="sxs-lookup"><span data-stu-id="c8224-293">Either match "a" along with the value of the first captured group …</span></span>|  
+|`&#124;(?(1)`|<span data-ttu-id="c8224-294">…</span><span class="sxs-lookup"><span data-stu-id="c8224-294">…</span></span> <span data-ttu-id="c8224-295">o bien, prueba si se ha definido el primer grupo capturado.</span><span class="sxs-lookup"><span data-stu-id="c8224-295">or test whether the first captured group has been defined.</span></span> <span data-ttu-id="c8224-296">(Tenga en cuenta que el `(?(1)` construcción no define un grupo de captura.)</span><span class="sxs-lookup"><span data-stu-id="c8224-296">(Note that the `(?(1)` construct does not define a capturing group.)</span></span>|  
+|`\1))`|<span data-ttu-id="c8224-297">Si el primer grupo capturado existe, coincide con su valor.</span><span class="sxs-lookup"><span data-stu-id="c8224-297">If the first captured group exists, match its value.</span></span> <span data-ttu-id="c8224-298">Si el grupo no existe, se corresponderá con el grupo <xref:System.String.Empty?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c8224-298">If the group does not exist, the group will match <xref:System.String.Empty?displayProperty=nameWithType>.</span></span>|  
   
- La primera expresión regular intenta coincidir con este modelo entre cero y dos veces; la segunda, exactamente dos veces.  Dado que el primer modelo alcanza el número mínimo de capturas con su primera captura de <xref:System.String.Empty?displayProperty=fullName>, nunca se repite para intentar hacer coincidir `a\1`; el cuantificador `{0,2}` sólo permite coincidencias vacías en la última iteración.  En cambio, la segunda expresión regular coincide con “a” porque evalúa `a\1` por segunda vez; el número mínimo de iteraciones, 2, obliga al motor a repetir después de una coincidencia vacía.  
+ <span data-ttu-id="c8224-299">La primera expresión regular intenta coincidir con este patrón de cero a dos veces; el segundo, exactamente dos veces.</span><span class="sxs-lookup"><span data-stu-id="c8224-299">The first regular expression tries to match this pattern between zero and two times; the second, exactly two times.</span></span> <span data-ttu-id="c8224-300">Dado que el primer patrón alcanza el número mínimo de capturas con su primera captura de <xref:System.String.Empty?displayProperty=nameWithType>, nunca se repite para intentar hacer coincidir `a\1`; el `{0,2}` cuantificador sólo permite coincidencias vacías en la última iteración.</span><span class="sxs-lookup"><span data-stu-id="c8224-300">Because the first pattern reaches its minimum number of captures with its first capture of <xref:System.String.Empty?displayProperty=nameWithType>, it never repeats to try to match `a\1`; the `{0,2}` quantifier allows only empty matches in the last iteration.</span></span> <span data-ttu-id="c8224-301">En cambio, la segunda expresión regular coincide con "a" porque evalúa `a\1` una segunda vez. El número mínimo de iteraciones (dos) obliga al motor a repetirse tras una coincidencia vacía.</span><span class="sxs-lookup"><span data-stu-id="c8224-301">In contrast, the second regular expression does match "a" because it evaluates `a\1` a second time; the minimum number of iterations, 2, forces the engine to repeat after an empty match.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## Vea también  
- [Lenguaje de expresiones regulares \- Referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)   
- [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="c8224-302">Vea también</span><span class="sxs-lookup"><span data-stu-id="c8224-302">See Also</span></span>  
+ [<span data-ttu-id="c8224-303">Lenguaje de expresiones regulares: referencia rápida</span><span class="sxs-lookup"><span data-stu-id="c8224-303">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [<span data-ttu-id="c8224-304">Retroceso</span><span class="sxs-lookup"><span data-stu-id="c8224-304">Backtracking</span></span>](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

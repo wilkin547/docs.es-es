@@ -1,151 +1,158 @@
 ---
-title: "The Managed Thread Pool | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "thread pooling [.NET Framework]"
-  - "thread pools [.NET Framework]"
-  - "threading [.NET Framework], thread pool"
-  - "threading [.NET Framework], pooling"
+title: Grupo de subprocesos administrados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- thread pooling [.NET Framework]
+- thread pools [.NET Framework]
+- threading [.NET Framework], thread pool
+- threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# The Managed Thread Pool
-La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grupo de subprocesos de trabajo administrados por el sistema, que le permite concentrarse en las tareas de la aplicación en lugar de en la administración de los subprocesos.  Si tiene tareas cortas que requieran procesamiento en segundo plano, el grupo de subprocesos administrados permite aprovechar fácilmente las ventajas de varios subprocesos.  Por ejemplo, a partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede crear objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, que realizan tareas asincrónicas en los subprocesos del grupo de subprocesos.  
+# <a name="the-managed-thread-pool"></a><span data-ttu-id="e5444-102">Grupo de subprocesos administrados</span><span class="sxs-lookup"><span data-stu-id="e5444-102">The Managed Thread Pool</span></span>
+<span data-ttu-id="e5444-103">La clase <xref:System.Threading.ThreadPool> proporciona a la aplicación un grupo de subprocesos de trabajo administrados por el sistema, que le permite concentrarse en las tareas de la aplicación en lugar de en la administración de los subprocesos.</span><span class="sxs-lookup"><span data-stu-id="e5444-103">The <xref:System.Threading.ThreadPool> class provides your application with a pool of worker threads that are managed by the system, allowing you to concentrate on application tasks rather than thread management.</span></span> <span data-ttu-id="e5444-104">Si tiene tareas cortas que requieran procesamiento en segundo plano, el grupo de subprocesos administrados permite aprovechar fácilmente las ventajas de varios subprocesos.</span><span class="sxs-lookup"><span data-stu-id="e5444-104">If you have short tasks that require background processing, the managed thread pool is an easy way to take advantage of multiple threads.</span></span> <span data-ttu-id="e5444-105">Por ejemplo, a partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede crear objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, que realizan tareas asincrónicas en los subprocesos del grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="e5444-105">For example, beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] you can create <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects, which perform asynchronous tasks on thread pool threads.</span></span>  
   
 > [!NOTE]
->  A partir de [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], mejora considerablemente el rendimiento del grupo de subprocesos en tres áreas clave que se identificaron como cuellos de botella en las versiones anteriores de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: poner tareas en cola, enviar subprocesos del grupo de subprocesos y enviar subprocesos de finalización de E\/S.  Para utilizar esta funcionalidad, la aplicación debe utilizar [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] o posterior como destino.  
+>  <span data-ttu-id="e5444-106">A partir de [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], mejora considerablemente el rendimiento del grupo de subprocesos en tres áreas clave que se identificaron como cuellos de botella en las versiones anteriores de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: poner tareas en cola, enviar subprocesos del grupo de subprocesos y enviar subprocesos de finalización de E/S.</span><span class="sxs-lookup"><span data-stu-id="e5444-106">Starting with the [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], the throughput of the thread pool is significantly improved in three key areas that were identified as bottlenecks in previous releases of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: queuing tasks, dispatching thread pool threads, and dispatching I/O completion threads.</span></span> <span data-ttu-id="e5444-107">Para utilizar esta funcionalidad, la aplicación debe utilizar [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] o posterior como destino.</span><span class="sxs-lookup"><span data-stu-id="e5444-107">To use this functionality, your application should target the [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] or later.</span></span>  
   
- Para las tareas en segundo plano que interactúan con la interfaz de usuario, la versión 2.0 de .NET Framework también proporciona la clase <xref:System.ComponentModel.BackgroundWorker>, que se comunica mediante eventos generados en el subproceso de la interfaz de usuario.  
+ <span data-ttu-id="e5444-108">Para las tareas en segundo plano que interactúan con la interfaz de usuario, la versión 2.0 de .NET Framework también proporciona la clase <xref:System.ComponentModel.BackgroundWorker>, que se comunica mediante eventos generados en el subproceso de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="e5444-108">For background tasks that interact with the user interface, the .NET Framework version 2.0 also provides the <xref:System.ComponentModel.BackgroundWorker> class, which communicates using events raised on the user interface thread.</span></span>  
   
- .NET Framework utiliza los subprocesos del grupo de subprocesos para muchos fines, incluida la finalización de E\/S asincrónica, las devoluciones de llamada del temporizador, las operaciones de espera registradas, las llamadas de métodos asincrónicos mediante delegados y las conexiones de socket <xref:System.Net>.  
+ <span data-ttu-id="e5444-109">.NET Framework utiliza los subprocesos del grupo de subprocesos para muchos fines, incluida la finalización de E/S asincrónica, las devoluciones de llamada del temporizador, las operaciones de espera registradas, las llamadas de métodos asincrónicos mediante delegados y las conexiones de socket <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="e5444-109">The .NET Framework uses thread pool threads for many purposes, including asynchronous I/O completion, timer callbacks, registered wait operations, asynchronous method calls using delegates, and <xref:System.Net> socket connections.</span></span>  
   
-## Cuándo no usar subprocesos del grupo de subprocesos  
- Hay varios escenarios en los que es adecuado crear y administrar sus propios subprocesos en lugar de utilizar subprocesos del grupo de subprocesos:  
+## <a name="when-not-to-use-thread-pool-threads"></a><span data-ttu-id="e5444-110">Cuándo no usar subprocesos del grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="e5444-110">When Not to Use Thread Pool Threads</span></span>  
+ <span data-ttu-id="e5444-111">Hay varios escenarios en los que es adecuado crear y administrar sus propios subprocesos en lugar de utilizar subprocesos del grupo de subprocesos:</span><span class="sxs-lookup"><span data-stu-id="e5444-111">There are several scenarios in which it is appropriate to create and manage your own threads instead of using thread pool threads:</span></span>  
   
--   Necesita un subproceso en primer plano.  
+-   <span data-ttu-id="e5444-112">Necesita un subproceso en primer plano.</span><span class="sxs-lookup"><span data-stu-id="e5444-112">You require a foreground thread.</span></span>  
   
--   Necesita que un subproceso tenga una prioridad determinada.  
+-   <span data-ttu-id="e5444-113">Necesita que un subproceso tenga una prioridad determinada.</span><span class="sxs-lookup"><span data-stu-id="e5444-113">You require a thread to have a particular priority.</span></span>  
   
--   Tiene tareas que hacen que el subproceso se bloquee durante largos períodos de tiempo.  El grupo de subprocesos tiene un número máximo de subprocesos, por lo que si hay un gran número de subprocesos del grupo de subprocesos bloqueados, esto puede impedir que se inicien las tareas.  
+-   <span data-ttu-id="e5444-114">Tiene tareas que hacen que el subproceso se bloquee durante largos períodos de tiempo.</span><span class="sxs-lookup"><span data-stu-id="e5444-114">You have tasks that cause the thread to block for long periods of time.</span></span> <span data-ttu-id="e5444-115">El grupo de subprocesos tiene un número máximo de subprocesos, por lo que si hay un gran número de subprocesos del grupo de subprocesos bloqueados, esto puede impedir que se inicien las tareas.</span><span class="sxs-lookup"><span data-stu-id="e5444-115">The thread pool has a maximum number of threads, so a large number of blocked thread pool threads might prevent tasks from starting.</span></span>  
   
--   Debe colocar los subprocesos en un contenedor uniproceso.  Todos los subprocesos <xref:System.Threading.ThreadPool> están en el contenedor multiproceso.  
+-   <span data-ttu-id="e5444-116">Debe colocar los subprocesos en un contenedor uniproceso.</span><span class="sxs-lookup"><span data-stu-id="e5444-116">You need to place threads into a single-threaded apartment.</span></span> <span data-ttu-id="e5444-117">Todos los subprocesos <xref:System.Threading.ThreadPool> están en el contenedor multiproceso.</span><span class="sxs-lookup"><span data-stu-id="e5444-117">All <xref:System.Threading.ThreadPool> threads are in the multithreaded apartment.</span></span>  
   
--   Debe tener una identidad estable asociada al subproceso o dedicar un subproceso a una tarea.  
+-   <span data-ttu-id="e5444-118">Debe tener una identidad estable asociada al subproceso o dedicar un subproceso a una tarea.</span><span class="sxs-lookup"><span data-stu-id="e5444-118">You need to have a stable identity associated with the thread, or to dedicate a thread to a task.</span></span>  
   
-## Características del grupo de subprocesos  
- Los subprocesos del grupo de subprocesos son subprocesos en segundo plano.  Consulte [Foreground and Background Threads](../../../docs/standard/threading/foreground-and-background-threads.md)\-  Cada subproceso utiliza el tamaño de pila predeterminado, se ejecuta con la prioridad predeterminada y está en el contenedor multiproceso.  
+## <a name="thread-pool-characteristics"></a><span data-ttu-id="e5444-119">Características del grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="e5444-119">Thread Pool Characteristics</span></span>  
+ <span data-ttu-id="e5444-120">Los subprocesos del grupo de subprocesos son subprocesos en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="e5444-120">Thread pool threads are background threads.</span></span> <span data-ttu-id="e5444-121">Vea [subprocesos en segundo plano y primer plano](../../../docs/standard/threading/foreground-and-background-threads.md).</span><span class="sxs-lookup"><span data-stu-id="e5444-121">See [Foreground and Background Threads](../../../docs/standard/threading/foreground-and-background-threads.md).</span></span> <span data-ttu-id="e5444-122">Cada subproceso utiliza el tamaño de pila predeterminado, se ejecuta con la prioridad predeterminada y está en el contenedor multiproceso.</span><span class="sxs-lookup"><span data-stu-id="e5444-122">Each thread uses the default stack size, runs at the default priority, and is in the multithreaded apartment.</span></span>  
   
- Hay solo un grupo de subprocesos por cada proceso.  
+ <span data-ttu-id="e5444-123">Hay solo un grupo de subprocesos por cada proceso.</span><span class="sxs-lookup"><span data-stu-id="e5444-123">There is only one thread pool per process.</span></span>  
   
-### Excepciones en los subprocesos del grupo de subprocesos  
- Las excepciones no controladas en los subprocesos del grupo de subprocesos finalizan el proceso.  Hay tres excepciones de esta regla:  
+### <a name="exceptions-in-thread-pool-threads"></a><span data-ttu-id="e5444-124">Excepciones en los subprocesos del grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="e5444-124">Exceptions in Thread Pool Threads</span></span>  
+ <span data-ttu-id="e5444-125">Las excepciones no controladas en los subprocesos del grupo de subprocesos finalizan el proceso.</span><span class="sxs-lookup"><span data-stu-id="e5444-125">Unhandled exceptions on thread pool threads terminate the process.</span></span> <span data-ttu-id="e5444-126">Hay tres excepciones de esta regla:</span><span class="sxs-lookup"><span data-stu-id="e5444-126">There are three exceptions to this rule:</span></span>  
   
--   Se genera un <xref:System.Threading.ThreadAbortException> en un subproceso del grupo de subprocesos, porque se llamó a <xref:System.Threading.Thread.Abort%2A>.  
+-   <span data-ttu-id="e5444-127">Se genera un <xref:System.Threading.ThreadAbortException> en un subproceso del grupo de subprocesos, porque se llamó a <xref:System.Threading.Thread.Abort%2A>.</span><span class="sxs-lookup"><span data-stu-id="e5444-127">A <xref:System.Threading.ThreadAbortException> is thrown in a thread pool thread, because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   Se genera un <xref:System.AppDomainUnloadedException> en un subproceso del grupo de subprocesos, porque se está descargando el dominio de aplicación.  
+-   <span data-ttu-id="e5444-128">Se genera un <xref:System.AppDomainUnloadedException> en un subproceso del grupo de subprocesos, porque se está descargando el dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="e5444-128">An <xref:System.AppDomainUnloadedException> is thrown in a thread pool thread, because the application domain is being unloaded.</span></span>  
   
--   Common Language Runtime o un proceso de host finaliza el subproceso.  
+-   <span data-ttu-id="e5444-129">Common Language Runtime o un proceso de host finaliza el subproceso.</span><span class="sxs-lookup"><span data-stu-id="e5444-129">The common language runtime or a host process terminates the thread.</span></span>  
   
- Para más información, consulte [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
-  
-> [!NOTE]
->  En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime intercepta silenciosamente las excepciones no controladas en los subprocesos del grupo de subprocesos.  Esto puede dañar el estado de la aplicación y puede acabar haciendo que las aplicaciones no respondan, lo cual puede ser muy difícil de depurar.  
-  
-### Número máximo de subprocesos del grupo de subprocesos  
- El número de operaciones que pueden ponerse en la cola del grupo de subprocesos está limitado solamente por la memoria disponible. Sin embargo, el grupo de subprocesos limita el número de subprocesos que pueden estar activos en el proceso de forma simultánea.  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], el tamaño predeterminado del grupo de subprocesos de un proceso depende de varios factores, como el tamaño del espacio de direcciones virtuales.  Un proceso puede llamar al método <xref:System.Threading.ThreadPool.GetMaxThreads%2A> para determinar el número de subprocesos.  
-  
- El número máximo de subprocesos se puede controlar con los métodos <xref:System.Threading.ThreadPool.GetMaxThreads%2A> y <xref:System.Threading.ThreadPool.SetMaxThreads%2A>.  
+ <span data-ttu-id="e5444-130">Para obtener más información, consulte [excepciones en subprocesos administrados](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span><span class="sxs-lookup"><span data-stu-id="e5444-130">For more information, see [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span></span>  
   
 > [!NOTE]
->  En las versiones 1.0 y 1.1 de .NET Framework, el tamaño del grupo de subprocesos no se puede establecer desde el código administrado.  El código que hospeda Common Language Runtime puede establecer el tamaño con `CorSetMaxThreads`, definido en mscoree.h.  
+>  <span data-ttu-id="e5444-131">En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime intercepta silenciosamente las excepciones no controladas en los subprocesos del grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="e5444-131">In the .NET Framework versions 1.0 and 1.1, the common language runtime silently traps unhandled exceptions in thread pool threads.</span></span> <span data-ttu-id="e5444-132">Esto puede dañar el estado de la aplicación y puede acabar haciendo que las aplicaciones no respondan, lo cual puede ser muy difícil de depurar.</span><span class="sxs-lookup"><span data-stu-id="e5444-132">This might corrupt application state and eventually cause applications to hang, which might be very difficult to debug.</span></span>  
   
-### Mínimos del grupo de subprocesos  
- El grupo de subprocesos ofrece nuevos subprocesos de trabajo o subprocesos de finalización de E\/S a petición hasta que llega a un mínimo especificado para cada categoría.  Puede utilizar el método <xref:System.Threading.ThreadPool.GetMinThreads%2A> para obtener estos valores mínimos.  
+### <a name="maximum-number-of-thread-pool-threads"></a><span data-ttu-id="e5444-133">Número máximo de subprocesos del grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="e5444-133">Maximum Number of Thread Pool Threads</span></span>  
+ <span data-ttu-id="e5444-134">El número de operaciones que pueden ponerse en la cola del grupo de subprocesos está limitado solamente por la memoria disponible. Sin embargo, el grupo de subprocesos limita el número de subprocesos que pueden estar activos en el proceso de forma simultánea.</span><span class="sxs-lookup"><span data-stu-id="e5444-134">The number of operations that can be queued to the thread pool is limited only by available memory; however, the thread pool limits the number of threads that can be active in the process simultaneously.</span></span> <span data-ttu-id="e5444-135">A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], el tamaño predeterminado del grupo de subprocesos de un proceso depende de varios factores, como el tamaño del espacio de direcciones virtuales.</span><span class="sxs-lookup"><span data-stu-id="e5444-135">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the default size of the thread pool for a process depends on several factors, such as the size of the virtual address space.</span></span> <span data-ttu-id="e5444-136">Un proceso puede llamar al método <xref:System.Threading.ThreadPool.GetMaxThreads%2A> para determinar el número de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="e5444-136">A process can call the <xref:System.Threading.ThreadPool.GetMaxThreads%2A> method to determine the number of threads.</span></span>  
+  
+ <span data-ttu-id="e5444-137">El número máximo de subprocesos se puede controlar con los métodos <xref:System.Threading.ThreadPool.GetMaxThreads%2A> y <xref:System.Threading.ThreadPool.SetMaxThreads%2A>.</span><span class="sxs-lookup"><span data-stu-id="e5444-137">You can control the maximum number of threads by using the <xref:System.Threading.ThreadPool.GetMaxThreads%2A> and <xref:System.Threading.ThreadPool.SetMaxThreads%2A> methods.</span></span>  
   
 > [!NOTE]
->  Cuando la demanda es baja, el número real de subprocesos del grupo de subprocesos puede descender por debajo de los valores mínimos.  
+>  <span data-ttu-id="e5444-138">En las versiones 1.0 y 1.1 de .NET Framework, el tamaño del grupo de subprocesos no se puede establecer desde el código administrado.</span><span class="sxs-lookup"><span data-stu-id="e5444-138">In the .NET Framework versions 1.0 and 1.1, the size of the thread pool cannot be set from managed code.</span></span> <span data-ttu-id="e5444-139">El código que hospeda Common Language Runtime puede establecer el tamaño con `CorSetMaxThreads`, definido en mscoree.h.</span><span class="sxs-lookup"><span data-stu-id="e5444-139">Code that hosts the common language runtime can set the size using `CorSetMaxThreads`, defined in mscoree.h.</span></span>  
   
- Cuando se alcanza el mínimo, el grupo de subprocesos puede crear subprocesos adicionales o esperar hasta que se completen algunas tareas.  A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el grupo de subprocesos crea y destruye subprocesos de trabajo para optimizar el rendimiento, definido como el número de tareas que se completan por unidad de tiempo.  Si hay demasiados pocos subprocesos, puede que los recursos disponibles no se usen de manera óptima, mientras que si hay demasiados subprocesos, puede aumentar la contención de recursos.  
+### <a name="thread-pool-minimums"></a><span data-ttu-id="e5444-140">Mínimos del grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="e5444-140">Thread Pool Minimums</span></span>  
+ <span data-ttu-id="e5444-141">El grupo de subprocesos ofrece nuevos subprocesos de trabajo o subprocesos de finalización de E/S a petición hasta que llega a un mínimo especificado para cada categoría.</span><span class="sxs-lookup"><span data-stu-id="e5444-141">The thread pool provides new worker threads or I/O completion threads on demand until it reaches a specified minimum for each category.</span></span> <span data-ttu-id="e5444-142">Puede utilizar el método <xref:System.Threading.ThreadPool.GetMinThreads%2A> para obtener estos valores mínimos.</span><span class="sxs-lookup"><span data-stu-id="e5444-142">You can use the <xref:System.Threading.ThreadPool.GetMinThreads%2A> method to obtain these minimum values.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="e5444-143">Cuando la demanda es baja, el número real de subprocesos del grupo de subprocesos puede descender por debajo de los valores mínimos.</span><span class="sxs-lookup"><span data-stu-id="e5444-143">When demand is low, the actual number of thread pool threads can fall below the minimum values.</span></span>  
+  
+ <span data-ttu-id="e5444-144">Cuando se alcanza el mínimo, el grupo de subprocesos puede crear subprocesos adicionales o esperar hasta que se completen algunas tareas.</span><span class="sxs-lookup"><span data-stu-id="e5444-144">When a minimum is reached, the thread pool can create additional threads or wait until some tasks complete.</span></span> <span data-ttu-id="e5444-145">A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el grupo de subprocesos crea y destruye subprocesos de trabajo para optimizar el rendimiento, definido como el número de tareas que se completan por unidad de tiempo.</span><span class="sxs-lookup"><span data-stu-id="e5444-145">Beginning with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], the thread pool creates and destroys worker threads in order to optimize throughput, which is defined as the number of tasks that complete per unit of time.</span></span> <span data-ttu-id="e5444-146">Si hay demasiados pocos subprocesos, puede que los recursos disponibles no se usen de manera óptima, mientras que si hay demasiados subprocesos, puede aumentar la contención de recursos.</span><span class="sxs-lookup"><span data-stu-id="e5444-146">Too few threads might not make optimal use of available resources, whereas too many threads could increase resource contention.</span></span>  
   
 > [!CAUTION]
->  Puede utilizar el método <xref:System.Threading.ThreadPool.SetMinThreads%2A> para aumentar el número mínimo de subprocesos inactivos.  Sin embargo, aumentar innecesariamente estos valores puede causar problemas de rendimiento.  Si se inician demasiadas tareas al mismo tiempo, puede que todas ellas parezcan funcionar con lentitud.  En la mayoría de los casos, el grupo de subprocesos funciona mejor con su propio algoritmo de asignación de subprocesos.  
+>  <span data-ttu-id="e5444-147">Puede utilizar el método <xref:System.Threading.ThreadPool.SetMinThreads%2A> para aumentar el número mínimo de subprocesos inactivos.</span><span class="sxs-lookup"><span data-stu-id="e5444-147">You can use the <xref:System.Threading.ThreadPool.SetMinThreads%2A> method to increase the minimum number of idle threads.</span></span> <span data-ttu-id="e5444-148">Sin embargo, aumentar innecesariamente estos valores puede causar problemas de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="e5444-148">However, unnecessarily increasing these values can cause performance problems.</span></span> <span data-ttu-id="e5444-149">Si se inician demasiadas tareas al mismo tiempo, puede que todas ellas parezcan funcionar con lentitud.</span><span class="sxs-lookup"><span data-stu-id="e5444-149">If too many tasks start at the same time, all of them might appear to be slow.</span></span> <span data-ttu-id="e5444-150">En la mayoría de los casos, el grupo de subprocesos funciona mejor con su propio algoritmo de asignación de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="e5444-150">In most cases the thread pool will perform better with its own algorithm for allocating threads.</span></span>  
   
-## Omisión de comprobaciones de seguridad  
- El grupo de subprocesos también proporciona los métodos <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=fullName> y <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=fullName>.  Utilice estos métodos solamente cuando tenga la seguridad de que la pila del llamador es irrelevante para las comprobaciones de seguridad que se realizan durante la ejecución de la tarea en cola.  <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>y <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> capturan la pila del llamador, que se combina en la pila del subproceso del grupo de subprocesos cuando el subproceso empieza a ejecutar una tarea.  Si es necesaria una comprobación de seguridad, debe comprobarse toda la pila.  La comprobación proporciona seguridad, pero también supone un coste para el rendimiento.  
+## <a name="skipping-security-checks"></a><span data-ttu-id="e5444-151">Omisión de comprobaciones de seguridad</span><span class="sxs-lookup"><span data-stu-id="e5444-151">Skipping Security Checks</span></span>  
+ <span data-ttu-id="e5444-152">El grupo de subprocesos también proporciona los métodos <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> y <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e5444-152">The thread pool also provides the <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> and <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="e5444-153">Utilice estos métodos solamente cuando tenga la seguridad de que la pila del llamador es irrelevante para las comprobaciones de seguridad que se realizan durante la ejecución de la tarea en cola.</span><span class="sxs-lookup"><span data-stu-id="e5444-153">Use these methods only when you are certain that the caller's stack is irrelevant to any security checks performed during the execution of the queued task.</span></span> <span data-ttu-id="e5444-154"><xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>y <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> capturan la pila del llamador, que se combina en la pila del subproceso del grupo cuando el subproceso empieza a ejecutar una tarea.</span><span class="sxs-lookup"><span data-stu-id="e5444-154"><xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> and <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> both capture the caller's stack, which is merged into the stack of the thread pool thread when the thread begins to execute a task.</span></span> <span data-ttu-id="e5444-155">Si es necesaria una comprobación de seguridad, debe comprobarse toda la pila.</span><span class="sxs-lookup"><span data-stu-id="e5444-155">If a security check is required, the entire stack must be checked.</span></span> <span data-ttu-id="e5444-156">La comprobación proporciona seguridad, pero también supone un coste para el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="e5444-156">Although the check provides safety, it also has a performance cost.</span></span>  
   
-## Uso del grupo de subprocesos  
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la manera más fácil de usar el grupo de subprocesos es utilizar la [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md).  De forma predeterminada, los tipos de biblioteca de procesamiento paralelo, como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, utilizan subprocesos del grupo de subprocesos para ejecutar tareas.  También puede utilizar el grupo de subprocesos llamando a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> desde código administrado \(o `CorQueueUserWorkItem` desde código no administrado\) y pasando un delegado <xref:System.Threading.WaitCallback> que represente al método que realiza la tarea.  Otra forma de usar el grupo de subprocesos es poner en cola los elementos de trabajo que están relacionados con una operación de espera mediante el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=fullName> y pasar un <xref:System.Threading.WaitHandle> que, cuando se señala o cuando se agota el tiempo de espera, llame al método representado por el delegado <xref:System.Threading.WaitOrTimerCallback>.  Los subprocesos del grupo de subprocesos se usan para invocar métodos de devolución de llamada.  
+## <a name="using-the-thread-pool"></a><span data-ttu-id="e5444-157">Uso del grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="e5444-157">Using the Thread Pool</span></span>  
+ <span data-ttu-id="e5444-158">A partir del [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la manera más fácil de usar el grupo de subprocesos es utilizar el [tarea Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="e5444-158">Beginning with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], the easiest way to use the thread pool is to use the [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md).</span></span> <span data-ttu-id="e5444-159">De forma predeterminada, los tipos de biblioteca de procesamiento paralelo, como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, utilizan subprocesos del grupo de subprocesos para ejecutar tareas.</span><span class="sxs-lookup"><span data-stu-id="e5444-159">By default, parallel library types like <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> use thread pool threads to run tasks.</span></span> <span data-ttu-id="e5444-160">También puede utilizar el grupo de subprocesos llamando a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> desde código administrado (o `CorQueueUserWorkItem` desde código no administrado) y pasando un delegado <xref:System.Threading.WaitCallback> que represente al método que realiza la tarea.</span><span class="sxs-lookup"><span data-stu-id="e5444-160">You can also use the thread pool by calling <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> from managed code (or `CorQueueUserWorkItem` from unmanaged code) and passing a <xref:System.Threading.WaitCallback> delegate representing the method that performs the task.</span></span> <span data-ttu-id="e5444-161">Otra forma de usar el grupo de subprocesos es poner en cola los elementos de trabajo que están relacionados con una operación de espera mediante el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> y pasar un <xref:System.Threading.WaitHandle> que, cuando se señala o cuando se agota el tiempo de espera, llame al método representado por el delegado <xref:System.Threading.WaitOrTimerCallback>.</span><span class="sxs-lookup"><span data-stu-id="e5444-161">Another way to use the thread pool is to queue work items that are related to a wait operation by using the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> method and passing a <xref:System.Threading.WaitHandle> that, when signaled or when timed out, calls the method represented by the <xref:System.Threading.WaitOrTimerCallback> delegate.</span></span> <span data-ttu-id="e5444-162">Los subprocesos del grupo de subprocesos se usan para invocar métodos de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="e5444-162">Thread pool threads are used to invoke callback methods.</span></span>  
   
-## Ejemplos de ThreadPool  
- Los ejemplos de código de esta sección muestran el grupo de subprocesos con la clase <xref:System.Threading.Tasks.Task>, el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> y el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=fullName>.  
+## <a name="threadpool-examples"></a><span data-ttu-id="e5444-163">Ejemplos de ThreadPool</span><span class="sxs-lookup"><span data-stu-id="e5444-163">ThreadPool Examples</span></span>  
+ <span data-ttu-id="e5444-164">Los ejemplos de código de esta sección muestran el grupo de subprocesos con la clase <xref:System.Threading.Tasks.Task>, el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> y el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e5444-164">The code examples in this section demonstrate the thread pool by using the <xref:System.Threading.Tasks.Task> class, the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> method, and the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> method.</span></span>  
   
--   [Ejecutar tareas asincrónicas con la biblioteca TPL](#TaskParallelLibrary)  
+-   [<span data-ttu-id="e5444-165">Ejecutar tareas asincrónicas con la biblioteca TPL</span><span class="sxs-lookup"><span data-stu-id="e5444-165">Executing Asynchronous Tasks with the Task Parallel Library</span></span>](#TaskParallelLibrary)  
   
--   [Ejecutar código de forma asincrónica con QueueUserWorkItem](#ExecuteCodeWithQUWI)  
+-   [<span data-ttu-id="e5444-166">Ejecutar código de forma asincrónica con QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="e5444-166">Executing Code Asynchronously with QueueUserWorkItem</span></span>](#ExecuteCodeWithQUWI)  
   
--   [Proporcionar datos de tareas para QueueUserWorkItem](#TaskDataForQUWI)  
+-   [<span data-ttu-id="e5444-167">Proporcionar datos de tareas para QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="e5444-167">Supplying Task Data for QueueUserWorkItem</span></span>](#TaskDataForQUWI)  
   
--   [Uso de RegisterWaitForSingleObject](#RegisterWaitForSingleObject)  
+-   [<span data-ttu-id="e5444-168">Uso de RegisterWaitForSingleObject</span><span class="sxs-lookup"><span data-stu-id="e5444-168">Using RegisterWaitForSingleObject</span></span>](#RegisterWaitForSingleObject)  
   
 <a name="TaskParallelLibrary"></a>   
-### Ejecutar tareas asincrónicas con la biblioteca TPL  
- En el siguiente ejemplo, se muestra cómo crear y usar un objeto <xref:System.Threading.Tasks.Task> para llamar al método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=fullName>.  Para ver un ejemplo que utiliza la clase <xref:System.Threading.Tasks.Task%601> con el fin de devolver un valor de una tarea asincrónica, consulte [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a><span data-ttu-id="e5444-169">Ejecutar tareas asincrónicas con la biblioteca TPL</span><span class="sxs-lookup"><span data-stu-id="e5444-169">Executing Asynchronous Tasks with the Task Parallel Library</span></span>  
+ <span data-ttu-id="e5444-170">En el siguiente ejemplo, se muestra cómo crear y usar un objeto <xref:System.Threading.Tasks.Task> para llamar al método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e5444-170">The following example shows how to create and use a <xref:System.Threading.Tasks.Task> object by calling the <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e5444-171">Para obtener un ejemplo que usa el <xref:System.Threading.Tasks.Task%601> clase para devolver un valor de una tarea asincrónica, vea [Cómo: devolver un valor de una tarea](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).</span><span class="sxs-lookup"><span data-stu-id="e5444-171">For an example that uses the <xref:System.Threading.Tasks.Task%601> class to return a value from an asynchronous task, see [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).</span></span>  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
   
 <a name="ExecuteCodeWithQUWI"></a>   
-### Ejecutar código de forma asincrónica con QueueUserWorkItem  
- En el ejemplo siguiente, se pone en cola una tarea muy sencilla, representada por el método `ThreadProc`, con el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>.  
+### <a name="executing-code-asynchronously-with-queueuserworkitem"></a><span data-ttu-id="e5444-172">Ejecutar código de forma asincrónica con QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="e5444-172">Executing Code Asynchronously with QueueUserWorkItem</span></span>  
+ <span data-ttu-id="e5444-173">En el ejemplo siguiente, se pone en cola una tarea muy sencilla, representada por el método `ThreadProc`, con el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>.</span><span class="sxs-lookup"><span data-stu-id="e5444-173">The following example queues a very simple task, represented by the `ThreadProc` method, using the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span>  
   
  [!code-cpp[Conceptual.ThreadPool#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.threadpool/cpp/source1.cpp#1)]
  [!code-csharp[Conceptual.ThreadPool#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source1.cs#1)]
  [!code-vb[Conceptual.ThreadPool#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source1.vb#1)]  
   
 <a name="TaskDataForQUWI"></a>   
-### Proporcionar datos de tareas para QueueUserWorkItem  
- El siguiente ejemplo de código utiliza el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para poner en cola una tarea y proporcionar los datos de la tarea.  
+### <a name="supplying-task-data-for-queueuserworkitem"></a><span data-ttu-id="e5444-174">Proporcionar datos de tareas para QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="e5444-174">Supplying Task Data for QueueUserWorkItem</span></span>  
+ <span data-ttu-id="e5444-175">El siguiente ejemplo de código utiliza el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para poner en cola una tarea y proporcionar los datos de la tarea.</span><span class="sxs-lookup"><span data-stu-id="e5444-175">The following code example uses the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method to queue a task and supply the data for the task.</span></span>  
   
  [!code-cpp[Conceptual.ThreadPool#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.threadpool/cpp/source2.cpp#2)]
  [!code-csharp[Conceptual.ThreadPool#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source2.cs#2)]
  [!code-vb[Conceptual.ThreadPool#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source2.vb#2)]  
   
 <a name="RegisterWaitForSingleObject"></a>   
-### Uso de RegisterWaitForSingleObject  
- En el ejemplo siguiente se muestran diversas características de subprocesamiento:  
+### <a name="using-registerwaitforsingleobject"></a><span data-ttu-id="e5444-176">Uso de RegisterWaitForSingleObject</span><span class="sxs-lookup"><span data-stu-id="e5444-176">Using RegisterWaitForSingleObject</span></span>  
+ <span data-ttu-id="e5444-177">En el ejemplo siguiente se muestran diversas características de subprocesamiento:</span><span class="sxs-lookup"><span data-stu-id="e5444-177">The following example demonstrates several threading features.</span></span>  
   
--   Poner en cola una tarea para que la ejecuten <xref:System.Threading.ThreadPool> subprocesos, con el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>.  
+-   <span data-ttu-id="e5444-178">Poner en cola una tarea para que la ejecuten <xref:System.Threading.ThreadPool> subprocesos, con el método <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="e5444-178">Queuing a task for execution by <xref:System.Threading.ThreadPool> threads, with the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> method.</span></span>  
   
--   Señalar una tarea para su ejecución, con <xref:System.Threading.AutoResetEvent>.  Consulte [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
+-   <span data-ttu-id="e5444-179">Señalar una tarea para su ejecución, con <xref:System.Threading.AutoResetEvent>.</span><span class="sxs-lookup"><span data-stu-id="e5444-179">Signaling a task to execute, with <xref:System.Threading.AutoResetEvent>.</span></span> <span data-ttu-id="e5444-180">Vea [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).</span><span class="sxs-lookup"><span data-stu-id="e5444-180">See [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).</span></span>  
   
--   Controlar los tiempos de espera y las señales con un delegado <xref:System.Threading.WaitOrTimerCallback>.  
+-   <span data-ttu-id="e5444-181">Controlar los tiempos de espera y las señales con un delegado <xref:System.Threading.WaitOrTimerCallback>.</span><span class="sxs-lookup"><span data-stu-id="e5444-181">Handling both time-outs and signals with a <xref:System.Threading.WaitOrTimerCallback> delegate.</span></span>  
   
--   Cancelar una tarea en cola con <xref:System.Threading.RegisteredWaitHandle>.  
+-   <span data-ttu-id="e5444-182">Cancelar una tarea en cola con <xref:System.Threading.RegisteredWaitHandle>.</span><span class="sxs-lookup"><span data-stu-id="e5444-182">Canceling a queued task with <xref:System.Threading.RegisteredWaitHandle>.</span></span>  
   
  [!code-cpp[Conceptual.ThreadPool#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.threadpool/cpp/source3.cpp#3)]
  [!code-csharp[Conceptual.ThreadPool#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source3.cs#3)]
  [!code-vb[Conceptual.ThreadPool#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source3.vb#3)]  
   
-## Vea también  
- <xref:System.Threading.ThreadPool>   
- <xref:System.Threading.Tasks.Task>   
- <xref:System.Threading.Tasks.Task%601>   
- [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)   
- [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)   
- [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)   
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)   
- [E\/S de archivos asincrónica](../../../docs/standard/io/e-s-de-archivos-asincrónica.md)   
- [Timers](../../../docs/standard/threading/timers.md)
+## <a name="see-also"></a><span data-ttu-id="e5444-183">Vea también</span><span class="sxs-lookup"><span data-stu-id="e5444-183">See Also</span></span>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.Tasks.Task>  
+ <xref:System.Threading.Tasks.Task%601>  
+ [<span data-ttu-id="e5444-184">Biblioteca TPL</span><span class="sxs-lookup"><span data-stu-id="e5444-184">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [<span data-ttu-id="e5444-185">Biblioteca TPL</span><span class="sxs-lookup"><span data-stu-id="e5444-185">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ <span data-ttu-id="e5444-186">[How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md) (Devolver un valor a partir de una tarea)</span><span class="sxs-lookup"><span data-stu-id="e5444-186">[How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)</span></span>  
+ [<span data-ttu-id="e5444-187">Objetos y características de subprocesos</span><span class="sxs-lookup"><span data-stu-id="e5444-187">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [<span data-ttu-id="e5444-188">Subprocesos y subprocesamiento</span><span class="sxs-lookup"><span data-stu-id="e5444-188">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
+ <span data-ttu-id="e5444-189">[Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)</span><span class="sxs-lookup"><span data-stu-id="e5444-189">[Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)</span></span>  
+ <span data-ttu-id="e5444-190">[Timers](../../../docs/standard/threading/timers.md) (Temporizadores)</span><span class="sxs-lookup"><span data-stu-id="e5444-190">[Timers](../../../docs/standard/threading/timers.md)</span></span>

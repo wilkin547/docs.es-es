@@ -5,79 +5,71 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 246cd565cd9ab981a993fcbee588783ec4e4e8fb
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Instrucciones para crear componentes para la ejecución en paralelo
-Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:  
+# <a name="guidelines-for-creating-components-for-side-by-side-execution"></a><span data-ttu-id="3fe11-102">Instrucciones para crear componentes para la ejecución en paralelo</span><span class="sxs-lookup"><span data-stu-id="3fe11-102">Guidelines for Creating Components for Side-by-Side Execution</span></span>
+<span data-ttu-id="3fe11-103">Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:</span><span class="sxs-lookup"><span data-stu-id="3fe11-103">Follow these general guidelines to create managed applications or components designed for side-by-side execution:</span></span>  
   
--   Enlazar la identidad de tipo a una versión determinada de un archivo.  
+-   <span data-ttu-id="3fe11-104">Enlazar la identidad de tipo a una versión determinada de un archivo.</span><span class="sxs-lookup"><span data-stu-id="3fe11-104">Bind type identity to a particular version of a file.</span></span>  
   
-     Common Language Runtime enlaza la identidad de tipo a una versión de archivo en particular mediante el uso de ensamblados de nombre seguro. Para poder crear una aplicación o un componente para la ejecución en paralelo, es necesario asignar un nombre seguro a todos los ensamblados. Esto crea la identidad de tipo precisa y garantiza que cualquier resolución de tipos se dirige al archivo correcto. Un ensamblado con nombre seguro contiene la información de versión, referencia cultural y editor que el runtime usa para localizar el archivo correcto y satisfacer una solicitud de enlace.  
+     <span data-ttu-id="3fe11-105">Common Language Runtime enlaza la identidad de tipo a una versión de archivo en particular mediante el uso de ensamblados de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="3fe11-105">The common language runtime binds type identity to a particular file version by using strong-named assemblies.</span></span> <span data-ttu-id="3fe11-106">Para poder crear una aplicación o un componente para la ejecución en paralelo, es necesario asignar un nombre seguro a todos los ensamblados.</span><span class="sxs-lookup"><span data-stu-id="3fe11-106">To create an application or component for side-by-side execution, you must give all assemblies a strong name.</span></span> <span data-ttu-id="3fe11-107">Esto crea la identidad de tipo precisa y garantiza que cualquier resolución de tipos se dirige al archivo correcto.</span><span class="sxs-lookup"><span data-stu-id="3fe11-107">This creates precise type identity and ensures that any type resolution is directed to the correct file.</span></span> <span data-ttu-id="3fe11-108">Un ensamblado con nombre seguro contiene la información de versión, referencia cultural y editor que el runtime usa para localizar el archivo correcto y satisfacer una solicitud de enlace.</span><span class="sxs-lookup"><span data-stu-id="3fe11-108">A strong-named assembly contains version, culture, and publisher information that the runtime uses to locate the correct file to fulfill a binding request.</span></span>  
   
--   Usar almacenamiento con identificación de versión.  
+-   <span data-ttu-id="3fe11-109">Usar almacenamiento con identificación de versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-109">Use version-aware storage.</span></span>  
   
-     El runtime usa la caché de ensamblados global para proporcionar un almacenamiento con identificación de versión. La caché global de ensamblados es una estructura de directorios con identificación de versión instalada en todos los equipos que usan .NET Framework. Los ensamblados instalados en la caché global de ensamblados no se sobrescriben cuando se instala una nueva versión de dicho ensamblado.  
+     <span data-ttu-id="3fe11-110">El runtime usa la caché de ensamblados global para proporcionar un almacenamiento con identificación de versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-110">The runtime uses the global assembly cache to provide version-aware storage.</span></span> <span data-ttu-id="3fe11-111">La caché global de ensamblados es una estructura de directorios con identificación de versión instalada en todos los equipos que usan .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fe11-111">The global assembly cache is a version-aware directory structure installed on every computer that uses the .NET Framework.</span></span> <span data-ttu-id="3fe11-112">Los ensamblados instalados en la caché global de ensamblados no se sobrescriben cuando se instala una nueva versión de dicho ensamblado.</span><span class="sxs-lookup"><span data-stu-id="3fe11-112">Assemblies installed in the global assembly cache are not overwritten when a new version of that assembly is installed.</span></span>  
   
--   Crear una aplicación o componente que se ejecute de forma aislada.  
+-   <span data-ttu-id="3fe11-113">Crear una aplicación o componente que se ejecute de forma aislada.</span><span class="sxs-lookup"><span data-stu-id="3fe11-113">Create an application or component that runs in isolation.</span></span>  
   
-     Una aplicación o componente que se ejecuta de forma aislada debe administrar los recursos para evitar conflictos cuando dos instancias de la aplicación o componente se ejecutan simultáneamente. La aplicación o componente debe usar también una estructura de archivos específica de la versión.  
+     <span data-ttu-id="3fe11-114">Una aplicación o componente que se ejecuta de forma aislada debe administrar los recursos para evitar conflictos cuando dos instancias de la aplicación o componente se ejecutan simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="3fe11-114">An application or component that runs in isolation must manage resources to avoid conflicts when two instances of the application or component are running simultaneously.</span></span> <span data-ttu-id="3fe11-115">La aplicación o componente debe usar también una estructura de archivos específica de la versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-115">The application or component must also use a version-specific file structure.</span></span>  
   
-## <a name="application-and-component-isolation"></a>Aislamiento de aplicación y componente  
- El aislamiento es una de las claves en el diseño de una aplicación o componente para la ejecución en paralelo. La aplicación o componente debe administrar todos los recursos —especialmente la E/S de archivos— de forma aislada. Siga estas instrucciones para asegurarse de que su aplicación o componente se ejecuta de forma aislada:  
+## <a name="application-and-component-isolation"></a><span data-ttu-id="3fe11-116">Aislamiento de aplicación y componente</span><span class="sxs-lookup"><span data-stu-id="3fe11-116">Application and Component Isolation</span></span>  
+ <span data-ttu-id="3fe11-117">El aislamiento es una de las claves en el diseño de una aplicación o componente para la ejecución en paralelo.</span><span class="sxs-lookup"><span data-stu-id="3fe11-117">One key to successfully designing an application or component for side-by-side execution is isolation.</span></span> <span data-ttu-id="3fe11-118">La aplicación o componente debe administrar todos los recursos —especialmente la E/S de archivos— de forma aislada.</span><span class="sxs-lookup"><span data-stu-id="3fe11-118">The application or component must manage all resources, particularly file I/O, in an isolated manner.</span></span> <span data-ttu-id="3fe11-119">Siga estas instrucciones para asegurarse de que su aplicación o componente se ejecuta de forma aislada:</span><span class="sxs-lookup"><span data-stu-id="3fe11-119">Follow these guidelines to make sure your application or component runs in isolation:</span></span>  
   
--   Escriba en el registro de una manera específica de la versión. Almacene los valores en subárboles o claves que indiquen la versión y no comparta información ni el estado entre las versiones de un componente. Esto evita que dos aplicaciones o componentes que se ejecutan al mismo tiempo sobrescriban la información.  
+-   <span data-ttu-id="3fe11-120">Escriba en el registro de una manera específica de la versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-120">Write to the registry in a version-specific way.</span></span> <span data-ttu-id="3fe11-121">Almacene los valores en subárboles o claves que indiquen la versión y no comparta información ni el estado entre las versiones de un componente.</span><span class="sxs-lookup"><span data-stu-id="3fe11-121">Store values in hives or keys that indicate the version, and do not share information or state across versions of a component.</span></span> <span data-ttu-id="3fe11-122">Esto evita que dos aplicaciones o componentes que se ejecutan al mismo tiempo sobrescriban la información.</span><span class="sxs-lookup"><span data-stu-id="3fe11-122">This prevents two applications or components running at the same time from overwriting information.</span></span>  
   
--   Asegúrese de que los objetos de kernel con nombre sean específicos de la versión para que no se produzca una condición de carrera. Por ejemplo, una condición de carrera se produce cuando dos semáforos de dos versiones de la misma aplicación se esperan entre sí.  
+-   <span data-ttu-id="3fe11-123">Asegúrese de que los objetos de kernel con nombre sean específicos de la versión para que no se produzca una condición de carrera.</span><span class="sxs-lookup"><span data-stu-id="3fe11-123">Make named kernel objects version-specific so that a race condition does not occur.</span></span> <span data-ttu-id="3fe11-124">Por ejemplo, una condición de carrera se produce cuando dos semáforos de dos versiones de la misma aplicación se esperan entre sí.</span><span class="sxs-lookup"><span data-stu-id="3fe11-124">For example, a race condition occurs when two semaphores from two versions of the same application wait on each other.</span></span>  
   
--   Use nombres de archivos y directorios con identificación de versión. Esto significa que las estructuras de archivos deben basarse en la información de versión.  
+-   <span data-ttu-id="3fe11-125">Use nombres de archivos y directorios con identificación de versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-125">Make file and directory names version-aware.</span></span> <span data-ttu-id="3fe11-126">Esto significa que las estructuras de archivos deben basarse en la información de versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-126">This means that file structures should rely on version information.</span></span>  
   
--   Cree grupos y cuentas de usuario de forma específica a una versión. Los grupos y cuentas de usuarios creados por una aplicación deben identificarse por versión. No comparta cuentas de usuarios y grupos entre distintas versiones de una aplicación.  
+-   <span data-ttu-id="3fe11-127">Cree grupos y cuentas de usuario de forma específica a una versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-127">Create user accounts and groups in a version-specific manner.</span></span> <span data-ttu-id="3fe11-128">Los grupos y cuentas de usuarios creados por una aplicación deben identificarse por versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-128">User accounts and groups created by an application should be identified by version.</span></span> <span data-ttu-id="3fe11-129">No comparta cuentas de usuarios y grupos entre distintas versiones de una aplicación.</span><span class="sxs-lookup"><span data-stu-id="3fe11-129">Do not share user accounts and groups between versions of an application.</span></span>  
   
-## <a name="installing-and-uninstalling-versions"></a>Instalar y desinstalar versiones  
- Al diseñar una aplicación para la ejecución en paralelo, siga estas instrucciones relativas a la instalación y desinstalación de versiones:  
+## <a name="installing-and-uninstalling-versions"></a><span data-ttu-id="3fe11-130">Instalar y desinstalar versiones</span><span class="sxs-lookup"><span data-stu-id="3fe11-130">Installing and Uninstalling Versions</span></span>  
+ <span data-ttu-id="3fe11-131">Al diseñar una aplicación para la ejecución en paralelo, siga estas instrucciones relativas a la instalación y desinstalación de versiones:</span><span class="sxs-lookup"><span data-stu-id="3fe11-131">When designing an application for side-by-side execution, follow these guidelines concerning installing and uninstalling versions:</span></span>  
   
--   No elimine información del Registro que pueda ser necesaria para otras aplicaciones que se ejecutan en una versión diferente de .NET Framework.  
+-   <span data-ttu-id="3fe11-132">No elimine información del Registro que pueda ser necesaria para otras aplicaciones que se ejecutan en una versión diferente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fe11-132">Do not delete information from the registry that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   No reemplace información del Registro que pueda ser necesaria para otras aplicaciones que se ejecutan con una versión diferente de .NET Framework.  
+-   <span data-ttu-id="3fe11-133">No reemplace información del Registro que pueda ser necesaria para otras aplicaciones que se ejecutan con una versión diferente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fe11-133">Do not replace information in the registry that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   No anule el registro de componentes COM que puedan ser necesarios para otras aplicaciones que se ejecutan en una versión diferente de .NET Framework.  
+-   <span data-ttu-id="3fe11-134">No anule el registro de componentes COM que puedan ser necesarios para otras aplicaciones que se ejecutan en una versión diferente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fe11-134">Do not unregister COM components that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   No cambie **InprocServer32** ni otras entradas del Registro de un servidor COM que ya se haya registrado.  
+-   <span data-ttu-id="3fe11-135">No cambie **InprocServer32** ni otras entradas del Registro de un servidor COM que ya se haya registrado.</span><span class="sxs-lookup"><span data-stu-id="3fe11-135">Do not change **InprocServer32** or other registry entries for a COM server that was already registered.</span></span>  
   
--   No elimine cuentas de usuario ni grupos que puedan ser necesarios para otras aplicaciones que se ejecutan en una versión diferente de .NET Framework.  
+-   <span data-ttu-id="3fe11-136">No elimine cuentas de usuario ni grupos que puedan ser necesarios para otras aplicaciones que se ejecutan en una versión diferente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fe11-136">Do not delete user accounts or groups that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   No agregue nada al Registro que contenga una ruta de acceso sin versión.  
+-   <span data-ttu-id="3fe11-137">No agregue nada al Registro que contenga una ruta de acceso sin versión.</span><span class="sxs-lookup"><span data-stu-id="3fe11-137">Do not add anything to the registry that contains an unversioned path.</span></span>  
   
-## <a name="file-version-number-and-assembly-version-number"></a>Número de versión de archivo y número de versión de ensamblado  
- La versión del archivo es un recurso de versión de Win32 que no es usada por el runtime. En general, la versión del archivo debe actualizarse incluso para una actualización en contexto. Dos archivos idénticos pueden tener información de versión de archivo diferente y dos archivos distintos pueden tener la misma información de versión de archivo.  
+## <a name="file-version-number-and-assembly-version-number"></a><span data-ttu-id="3fe11-138">Número de versión de archivo y número de versión de ensamblado</span><span class="sxs-lookup"><span data-stu-id="3fe11-138">File Version Number and Assembly Version Number</span></span>  
+ <span data-ttu-id="3fe11-139">La versión del archivo es un recurso de versión de Win32 que no es usada por el runtime.</span><span class="sxs-lookup"><span data-stu-id="3fe11-139">File version is a Win32 version resource that is not used by the runtime.</span></span> <span data-ttu-id="3fe11-140">En general, la versión del archivo debe actualizarse incluso para una actualización en contexto.</span><span class="sxs-lookup"><span data-stu-id="3fe11-140">In general, you update the file version even for an in-place update.</span></span> <span data-ttu-id="3fe11-141">Dos archivos idénticos pueden tener información de versión de archivo diferente y dos archivos distintos pueden tener la misma información de versión de archivo.</span><span class="sxs-lookup"><span data-stu-id="3fe11-141">Two identical files can have different file version information, and two different files can have the same file version information.</span></span>  
   
- El runtime usa la versión del ensamblado para el enlace de ensamblados. El runtime considera ensamblados diferentes a dos ensamblados idénticos con un número de versión distinto.  
+ <span data-ttu-id="3fe11-142">El runtime usa la versión del ensamblado para el enlace de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="3fe11-142">The assembly version is used by the runtime for assembly binding.</span></span> <span data-ttu-id="3fe11-143">El runtime considera ensamblados diferentes a dos ensamblados idénticos con un número de versión distinto.</span><span class="sxs-lookup"><span data-stu-id="3fe11-143">Two identical assemblies with different version numbers are treated as two different assemblies by the runtime.</span></span>  
   
- La [herramienta de caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) permite reemplazar un ensamblado solo cuando el número de versión del archivo es más reciente. Generalmente, el programa de instalación no instala encima de un ensamblado a menos que el número de versión del ensamblado sea mayor.  
+ <span data-ttu-id="3fe11-144">La [herramienta de caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) permite reemplazar un ensamblado solo cuando el número de versión del archivo es más reciente.</span><span class="sxs-lookup"><span data-stu-id="3fe11-144">The [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) allows you to replace an assembly when only the file version number is newer.</span></span> <span data-ttu-id="3fe11-145">Generalmente, el programa de instalación no instala encima de un ensamblado a menos que el número de versión del ensamblado sea mayor.</span><span class="sxs-lookup"><span data-stu-id="3fe11-145">The installer generally does not install over an assembly unless the assembly version number is greater.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md)   
- [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-
+## <a name="see-also"></a><span data-ttu-id="3fe11-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="3fe11-146">See Also</span></span>  
+ [<span data-ttu-id="3fe11-147">Ejecución en paralelo</span><span class="sxs-lookup"><span data-stu-id="3fe11-147">Side-by-Side Execution</span></span>](../../../docs/framework/deployment/side-by-side-execution.md)  
+ [<span data-ttu-id="3fe11-148">Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático</span><span class="sxs-lookup"><span data-stu-id="3fe11-148">How to: Enable and Disable Automatic Binding Redirection</span></span>](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

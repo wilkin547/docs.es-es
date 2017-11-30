@@ -1,87 +1,93 @@
 ---
-title: "How to: Specify a Task Scheduler in a Dataflow Block | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TPL dataflow library, linking to task scheduler in TPL"
-  - "Task Parallel Library, dataflows"
-  - "task scheduler, linking from TPL"
+title: "Cómo: Especificar un programador de tareas en un bloque de flujos de datos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TPL dataflow library, linking to task scheduler in TPL
+- Task Parallel Library, dataflows
+- task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 20faebc8bda3b50c4f762615d84b7a449ae61c6f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Specify a Task Scheduler in a Dataflow Block
-Este documento muestra cómo asociar un programador de tareas específico al usar un flujo de datos en la aplicación.  En el ejemplo, se usa la clase <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=fullName> en una aplicación de Windows Forms para mostrar cuándo están activas las tareas de lectura y cuándo está activa una tarea de escritura.  También se usa el método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=fullName> para permitir que un bloque de flujo de datos se ejecute en el subproceso de la interfaz de usuario.  
+# <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a><span data-ttu-id="eebec-102">Cómo: Especificar un programador de tareas en un bloque de flujos de datos</span><span class="sxs-lookup"><span data-stu-id="eebec-102">How to: Specify a Task Scheduler in a Dataflow Block</span></span>
+<span data-ttu-id="eebec-103">Este documento muestra cómo asociar un programador de tareas específico al usar un flujo de datos en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="eebec-103">This document demonstrates how to associate a specific task scheduler when you use dataflow in your application.</span></span> <span data-ttu-id="eebec-104">En el ejemplo, se usa la clase <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> en una aplicación de Windows Forms para mostrar cuándo están activas las tareas de lectura y cuándo está activa una tarea de escritura.</span><span class="sxs-lookup"><span data-stu-id="eebec-104">The example uses the <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> class in a Windows Forms application to show when reader tasks are active and when a writer task is active.</span></span> <span data-ttu-id="eebec-105">También se usa el método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> para permitir que un bloque de flujo de datos se ejecute en el subproceso de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="eebec-105">It also uses the <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> method to enable a dataflow block to run on the user-interface thread.</span></span>  
   
 > [!TIP]
->  La biblioteca de flujos de datos TPL \(espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Para instalar el espacio de nombres <xref:System.Threading.Tasks.Dataflow>, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **Administrar paquetes NuGet** en el menú Proyecto, y busque en línea el paquete `Microsoft.Tpl.Dataflow`.  
+>  <span data-ttu-id="eebec-106">La biblioteca de flujos de datos TPL (espacio de nombres <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) no se distribuye con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="eebec-106">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="eebec-107">Para instalar el <xref:System.Threading.Tasks.Dataflow> espacio de nombres, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **administrar paquetes de NuGet** en el menú proyecto y busque en línea el `Microsoft.Tpl.Dataflow` paquete.</span><span class="sxs-lookup"><span data-stu-id="eebec-107">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
   
-### Para crear la aplicación de Windows Forms  
+### <a name="to-create-the-windows-forms-application"></a><span data-ttu-id="eebec-108">Para crear la aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="eebec-108">To Create the Windows Forms Application</span></span>  
   
-1.  Cree un proyecto de **Aplicación de Windows Forms** de Visual Basic o [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  En los pasos siguientes, el proyecto se denomina `WriterReadersWinForms`.  
+1.  <span data-ttu-id="eebec-109">Crear un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] o Visual Basic **aplicación de Windows Forms** proyecto.</span><span class="sxs-lookup"><span data-stu-id="eebec-109">Create a [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] or Visual Basic **Windows Forms Application** project.</span></span> <span data-ttu-id="eebec-110">En los pasos siguientes, el proyecto se denomina `WriterReadersWinForms`.</span><span class="sxs-lookup"><span data-stu-id="eebec-110">In the following steps, the project is named `WriterReadersWinForms`.</span></span>  
   
-2.  En el diseñador de formularios del formulario principal, Form1.cs \(Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\), agregue cuatro controles <xref:System.Windows.Forms.CheckBox>.  Establezca la propiedad <xref:System.Windows.Forms.Control.Text%2A> como Lector 1 para `checkBox1`, Lector 2 para `checkBox2`, Lector 3 para `checkBox3` y Escritor para `checkBox4`.  Establezca la propiedad <xref:System.Windows.Forms.Control.Enabled%2A> de cada control como `False`.  
+2.  <span data-ttu-id="eebec-111">En el diseñador de formularios del formulario principal, Form1.cs (Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), agregue cuatro controles <xref:System.Windows.Forms.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="eebec-111">On the form designer for the main form, Form1.cs (Form1.vb for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), add four <xref:System.Windows.Forms.CheckBox> controls.</span></span> <span data-ttu-id="eebec-112">Establecer el <xref:System.Windows.Forms.Control.Text%2A> propiedad **lector 1** para `checkBox1`, **Reader 2** para `checkBox2`, **lector 3** para `checkBox3`, y  **Escritor** para `checkBox4`.</span><span class="sxs-lookup"><span data-stu-id="eebec-112">Set the <xref:System.Windows.Forms.Control.Text%2A> property to **Reader 1** for `checkBox1`, **Reader 2** for `checkBox2`, **Reader 3** for `checkBox3`, and **Writer** for `checkBox4`.</span></span> <span data-ttu-id="eebec-113">Establezca la propiedad <xref:System.Windows.Forms.Control.Enabled%2A> de cada control como `False`.</span><span class="sxs-lookup"><span data-stu-id="eebec-113">Set the <xref:System.Windows.Forms.Control.Enabled%2A> property for each control to `False`.</span></span>  
   
-3.  Agregue un control <xref:System.Windows.Forms.Timer> al formulario.  Establezca la propiedad <xref:System.Windows.Forms.Timer.Interval%2A> en `2500`.  
+3.  <span data-ttu-id="eebec-114">Agregue un control <xref:System.Windows.Forms.Timer> al formulario.</span><span class="sxs-lookup"><span data-stu-id="eebec-114">Add a <xref:System.Windows.Forms.Timer> control to the form.</span></span> <span data-ttu-id="eebec-115">Establezca la propiedad <xref:System.Windows.Forms.Timer.Interval%2A> en `2500`.</span><span class="sxs-lookup"><span data-stu-id="eebec-115">Set the <xref:System.Windows.Forms.Timer.Interval%2A> property to `2500`.</span></span>  
   
-## Agregar funcionalidad de flujo de datos  
- En esta sección, se describe cómo crear los bloques de flujo de datos que participan en la aplicación y cómo asociar cada uno a un programador de tareas.  
+## <a name="adding-dataflow-functionality"></a><span data-ttu-id="eebec-116">Agregar funcionalidad de flujo de datos</span><span class="sxs-lookup"><span data-stu-id="eebec-116">Adding Dataflow Functionality</span></span>  
+ <span data-ttu-id="eebec-117">En esta sección, se describe cómo crear los bloques de flujo de datos que participan en la aplicación y cómo asociar cada uno a un programador de tareas.</span><span class="sxs-lookup"><span data-stu-id="eebec-117">This section describes how to create the dataflow blocks that participate in the application and how to associate each one with a task scheduler.</span></span>  
   
-#### Para agregar funcionalidad de flujo de datos a la aplicación  
+#### <a name="to-add-dataflow-functionality-to-the-application"></a><span data-ttu-id="eebec-118">Para agregar funcionalidad de flujo de datos a la aplicación</span><span class="sxs-lookup"><span data-stu-id="eebec-118">To Add Dataflow Functionality to the Application</span></span>  
   
-1.  En el proyecto, agregue una referencia a System.Threading.Tasks.Dataflow.dll.  
+1.  <span data-ttu-id="eebec-119">En el proyecto, agregue una referencia a System.Threading.Tasks.Dataflow.dll.</span><span class="sxs-lookup"><span data-stu-id="eebec-119">In your project, add a reference to System.Threading.Tasks.Dataflow.dll.</span></span>  
   
-2.  Asegúrese de que Form1.cs \(Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\) contenga las siguientes instrucciones `using` \(`Imports` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\).  
+2.  <span data-ttu-id="eebec-120">Asegúrese de que Form1.cs (Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contenga las siguientes instrucciones `using` (`Imports` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).</span><span class="sxs-lookup"><span data-stu-id="eebec-120">Ensure that Form1.cs (Form1.vb for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contains the following `using` statements (`Imports` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).</span></span>  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
   
-3.  Agregue un miembro de datos <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> a la clase `Form1`.  
+3.  <span data-ttu-id="eebec-121">Agregue un miembro de datos <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> a la clase `Form1`.</span><span class="sxs-lookup"><span data-stu-id="eebec-121">Add a <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> data member to the `Form1` class.</span></span>  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#2)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#2)]  
   
-4.  En el constructor `Form1`, después de llamar a `InitializeComponent`, cree un objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> que alterne el estado de los objetos <xref:System.Windows.Forms.CheckBox>.  
+4.  <span data-ttu-id="eebec-122">En el constructor `Form1`, después de llamar a `InitializeComponent`, cree un objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> que alterne el estado de los objetos <xref:System.Windows.Forms.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="eebec-122">In the `Form1` constructor, after the call to `InitializeComponent`, create an <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object that toggles the state of <xref:System.Windows.Forms.CheckBox> objects.</span></span>  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#3)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#3)]  
   
-5.  En el constructor `Form1`, cree un objeto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> y cuatro objetos <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, un objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> para cada objeto <xref:System.Windows.Forms.CheckBox>.  Para cada objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, especifique un objeto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> que tenga la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> establecida como la propiedad <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ConcurrentScheduler%2A> para los lectores, y como la propiedad <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ExclusiveScheduler%2A> para el escritor.  
+5.  <span data-ttu-id="eebec-123">En el constructor `Form1`, cree un objeto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> y cuatro objetos <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, un objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> para cada objeto <xref:System.Windows.Forms.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="eebec-123">In the `Form1` constructor, create a <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> object and four <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> objects, one <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object for each <xref:System.Windows.Forms.CheckBox> object.</span></span> <span data-ttu-id="eebec-124">Para cada objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, especifique un objeto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> que tenga la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> establecida como la propiedad <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ConcurrentScheduler%2A> para los lectores, y como la propiedad <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ExclusiveScheduler%2A> para el escritor.</span><span class="sxs-lookup"><span data-stu-id="eebec-124">For each <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> object, specify a <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> object that has the <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> property set to the <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ConcurrentScheduler%2A> property for the readers, and the <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair.ExclusiveScheduler%2A> property for the writer.</span></span>  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#4)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#4)]  
   
-6.  En el constructor `Form1`, inicie el objeto <xref:System.Windows.Forms.Timer>.  
+6.  <span data-ttu-id="eebec-125">En el constructor `Form1`, inicie el objeto <xref:System.Windows.Forms.Timer>.</span><span class="sxs-lookup"><span data-stu-id="eebec-125">In the `Form1` constructor, start the <xref:System.Windows.Forms.Timer> object.</span></span>  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#5)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#5)]  
   
-7.  En el diseñador de formularios del formulario principal, cree un controlador de eventos para el evento <xref:System.Windows.Forms.Timer.Tick> del temporizador.  
+7.  <span data-ttu-id="eebec-126">En el diseñador de formularios del formulario principal, cree un controlador de eventos para el evento <xref:System.Windows.Forms.Timer.Tick> del temporizador.</span><span class="sxs-lookup"><span data-stu-id="eebec-126">On the form designer for the main form, create an event handler for the <xref:System.Windows.Forms.Timer.Tick> event for the timer.</span></span>  
   
-8.  Implemente el evento <xref:System.Windows.Forms.Timer.Tick> del temporizador.  
+8.  <span data-ttu-id="eebec-127">Implemente el evento <xref:System.Windows.Forms.Timer.Tick> del temporizador.</span><span class="sxs-lookup"><span data-stu-id="eebec-127">Implement the <xref:System.Windows.Forms.Timer.Tick> event for the timer.</span></span>  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#6)]  
   
- Dado que el bloque de flujo de datos `toggleCheckBox` actúa en la interfaz de usuario, es importante que esta acción se produzca en el subproceso de la interfaz de usuario.  Para lograrlo, durante la construcción, este objeto proporciona un objeto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> que tiene la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> establecida como <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=fullName>.  El método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A> crea un objeto <xref:System.Threading.Tasks.TaskScheduler> que funciona en el contexto de sincronización actual.  Dado que al constructor `Form1` se le llama desde el subproceso de la interfaz de usuario, la acción del bloque de flujo de datos `toggleCheckBox` se ejecuta también en el subproceso de la interfaz de usuario.  
+ <span data-ttu-id="eebec-128">Dado que el bloque de flujo de datos `toggleCheckBox` actúa en la interfaz de usuario, es importante que esta acción se produzca en el subproceso de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="eebec-128">Because the `toggleCheckBox` dataflow block acts on the user interface, it is important that this action occur on the user-interface thread.</span></span> <span data-ttu-id="eebec-129">Para lograrlo, durante la construcción, este objeto proporciona un objeto <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> que tiene la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> establecida como <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="eebec-129">To accomplish this, during construction this object provides a <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> object that has the <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> property set to <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="eebec-130">El método <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A> crea un objeto <xref:System.Threading.Tasks.TaskScheduler> que funciona en el contexto de sincronización actual.</span><span class="sxs-lookup"><span data-stu-id="eebec-130">The <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A> method creates a <xref:System.Threading.Tasks.TaskScheduler> object that performs work on the current synchronization context.</span></span> <span data-ttu-id="eebec-131">Dado que al constructor `Form1` se le llama desde el subproceso de la interfaz de usuario, la acción del bloque de flujo de datos `toggleCheckBox` se ejecuta también en el subproceso de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="eebec-131">Because the `Form1` constructor is called from the user-interface thread, the action for the `toggleCheckBox` dataflow block also runs on the user-interface thread.</span></span>  
   
- En este ejemplo, también se usa la clase <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> para permitir que algunos bloques de flujo de datos actúen de forma simultánea y que otro bloque de flujo de datos actúe de forma exclusiva con respecto a todos los demás bloques de flujo de datos que se ejecutan en el mismo objeto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>.  Esta técnica es útil cuando varios bloques de flujo de datos comparten un recurso y algunos requieren acceso exclusivo a ese recurso, ya que evita la necesidad de sincronizar manualmente el acceso a ese recurso.  Al eliminar la sincronización manual, se puede hacer que el código sea más eficiente.  
+ <span data-ttu-id="eebec-132">En este ejemplo, también se usa la clase <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> para permitir que algunos bloques de flujo de datos actúen de forma simultánea y que otro bloque de flujo de datos actúe de forma exclusiva con respecto a todos los demás bloques de flujo de datos que se ejecutan en el mismo objeto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>.</span><span class="sxs-lookup"><span data-stu-id="eebec-132">This example also uses the <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> class to enable some dataflow blocks to act concurrently, and another dataflow block to act exclusive with respect to all other dataflow blocks that run on the same <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> object.</span></span> <span data-ttu-id="eebec-133">Esta técnica es útil cuando varios bloques de flujo de datos comparten un recurso y algunos requieren acceso exclusivo a ese recurso, ya que evita la necesidad de sincronizar manualmente el acceso a ese recurso.</span><span class="sxs-lookup"><span data-stu-id="eebec-133">This technique is useful when multiple dataflow blocks share a resource and some require exclusive access to that resource, because it eliminates the requirement to manually synchronize access to that resource.</span></span> <span data-ttu-id="eebec-134">Al eliminar la sincronización manual, se puede hacer que el código sea más eficiente.</span><span class="sxs-lookup"><span data-stu-id="eebec-134">The elimination of manual synchronization can make code more efficient.</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo, se muestra el código completo de Form1.cs \(Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\).  
+## <a name="example"></a><span data-ttu-id="eebec-135">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="eebec-135">Example</span></span>  
+ <span data-ttu-id="eebec-136">En el siguiente ejemplo, se muestra el código completo de Form1.cs (Form1.vb con [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).</span><span class="sxs-lookup"><span data-stu-id="eebec-136">The following example shows the complete code for Form1.cs (Form1.vb for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).</span></span>  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  
   
-## Vea también  
- [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="eebec-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="eebec-137">See Also</span></span>  
+ [<span data-ttu-id="eebec-138">Flujo de datos</span><span class="sxs-lookup"><span data-stu-id="eebec-138">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

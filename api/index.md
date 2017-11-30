@@ -1,19 +1,17 @@
 ---
 layout: ApiBrowserPage
-hide_bc: true
+hide_bc: True
 title: Explorador de API de .NET
 quickFilterColumn1: netframework-4.7.1,netcore-2.0,netstandard-2.0
 quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
-quickFilterColumn3: azuremgmtresourcemanager-1.5.0-preview,appinsights-2.3.0-beta3,aspnetcore-2.0
+quickFilterColumn3: azure-dotnet,aspnetcore-2.0
+ms.topic: landing-page
+ms.openlocfilehash: 9d41c9b34b8371ed1a6b8395447925acf1075b21
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 9562b6f016923dd88d611a95c797e84fdd1e6c03
-ms.openlocfilehash: d7c4dd17ce0c77ddf4a32fe1da78635b8ed74261
-ms.contentlocale: es-es
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2017
 ---
+# <a name="net-api-browser"></a><span data-ttu-id="0a3cb-102">Explorador de API de .NET</span><span class="sxs-lookup"><span data-stu-id="0a3cb-102">.NET API Browser</span></span>
 
-# <a name="net-api-browser"></a>Explorador de API de .NET
-
-Este es el explorador de API de .NET, donde encontrará todas las API basadas en .NET de Microsoft. Para comenzar a buscar cualquier API administrada, escriba en el cuadro a continuación. Puede obtener más información sobre el explorador de API en [la entrada del blog](https://aka.ms/apibrowser). Si tiene algún comentario, use [el sitio UserVoice](https://aka.ms/apibrowserfeedback).
-
+<span data-ttu-id="0a3cb-103">Este es el explorador de API de .NET, donde encontrará todas las API basadas en .NET de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="0a3cb-103">Welcome to the .NET API Browser – your one-stop shop for all .NET-based APIs from Microsoft.</span></span> <span data-ttu-id="0a3cb-104">Para comenzar a buscar cualquier API administrada, escriba en el cuadro a continuación.</span><span class="sxs-lookup"><span data-stu-id="0a3cb-104">Start searching for any managed APIs by typing in the box below.</span></span> <span data-ttu-id="0a3cb-105">Puede obtener más información sobre el explorador de API en [la entrada del blog](https://aka.ms/apibrowser).</span><span class="sxs-lookup"><span data-stu-id="0a3cb-105">You can learn more about the API Browser [in our blog post](https://aka.ms/apibrowser).</span></span> <span data-ttu-id="0a3cb-106">Si tiene algún comentario, use [el sitio UserVoice](https://aka.ms/apibrowserfeedback).</span><span class="sxs-lookup"><span data-stu-id="0a3cb-106">If you have any feedback,  use [our UserVoice site](https://aka.ms/apibrowserfeedback).</span></span>

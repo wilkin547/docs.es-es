@@ -1,58 +1,38 @@
 ---
 title: "Cómo: Usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- implicitly-typed local variables [C#], how to use
+helpviewer_keywords: implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 754698fc423fb2dfc9bf50ed15be610831cefeda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 60e22aacef05ae2fe1b5e7127396cc66f24661d3
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Cómo: Usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)
-Puede usar variables locales con tipo implícito siempre que quiera que el compilador determine el tipo de una variable local. Debe usar variables locales con tipo implícito para almacenar tipos anónimos, que a menudo se usan en las expresiones de consulta. En los ejemplos siguientes, se muestran los usos obligatorios y opcionales de las variables locales con tipo implícito en las consultas.  
+# <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a><span data-ttu-id="c7891-102">Cómo: Usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="c7891-102">How to: Use Implicitly Typed Local Variables and Arrays in a Query Expression (C# Programming Guide)</span></span>
+<span data-ttu-id="c7891-103">Puede usar variables locales con tipo implícito siempre que quiera que el compilador determine el tipo de una variable local.</span><span class="sxs-lookup"><span data-stu-id="c7891-103">You can use implicitly typed local variables whenever you want the compiler to determine the type of a local variable.</span></span> <span data-ttu-id="c7891-104">Debe usar variables locales con tipo implícito para almacenar tipos anónimos, que a menudo se usan en las expresiones de consulta.</span><span class="sxs-lookup"><span data-stu-id="c7891-104">You must use implicitly typed local variables to store anonymous types, which are often used in query expressions.</span></span> <span data-ttu-id="c7891-105">En los ejemplos siguientes, se muestran los usos obligatorios y opcionales de las variables locales con tipo implícito en las consultas.</span><span class="sxs-lookup"><span data-stu-id="c7891-105">The following examples illustrate both optional and required uses of implicitly typed local variables in queries.</span></span>  
   
- Las variables locales con tipo implícito se declaran mediante la palabra clave contextual [var](../../../csharp/language-reference/keywords/var.md). Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) y [Matrices con asignación implícita de tipos](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+ <span data-ttu-id="c7891-106">Las variables locales con tipo implícito se declaran mediante la palabra clave contextual [var](../../../csharp/language-reference/keywords/var.md).</span><span class="sxs-lookup"><span data-stu-id="c7891-106">Implicitly typed local variables are declared by using the [var](../../../csharp/language-reference/keywords/var.md) contextual keyword.</span></span> <span data-ttu-id="c7891-107">Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) y [Matrices con asignación implícita de tipos](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="c7891-107">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) and [Implicitly Typed Arrays](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se muestra un escenario común en el que la palabra clave `var` es necesaria: una expresión de consulta que genera una secuencia de tipos anónimos. En este escenario, la variable de consulta y la variable de iteración en la instrucción `foreach` deben escribirse de forma implícita mediante el uso de `var` porque no se tiene acceso a un nombre de tipo para el tipo anónimo. Para obtener más información sobre los tipos anónimos, vea [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+## <a name="example"></a><span data-ttu-id="c7891-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c7891-108">Example</span></span>  
+ <span data-ttu-id="c7891-109">En el ejemplo siguiente, se muestra un escenario común en el que la palabra clave `var` es necesaria: una expresión de consulta que genera una secuencia de tipos anónimos.</span><span class="sxs-lookup"><span data-stu-id="c7891-109">The following example shows a common scenario in which the `var` keyword is required: a query expression that produces a sequence of anonymous types.</span></span> <span data-ttu-id="c7891-110">En este escenario, la variable de consulta y la variable de iteración en la instrucción `foreach` deben escribirse de forma implícita mediante el uso de `var` porque no se tiene acceso a un nombre de tipo para el tipo anónimo.</span><span class="sxs-lookup"><span data-stu-id="c7891-110">In this scenario, both the query variable and the iteration variable in the `foreach` statement must be implicitly typed by using `var` because you do not have access to a type name for the anonymous type.</span></span> <span data-ttu-id="c7891-111">Para obtener más información sobre los tipos anónimos, vea [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="c7891-111">For more information about anonymous types, see [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
   
- [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se usa la palabra clave `var` en una situación similar, pero en la que el uso de `var` es opcional. Dado que `student.LastName` es una cadena, la ejecución de la consulta devuelve una secuencia de cadenas. Por tanto, el tipo de `queryID` podría declararse como `System.Collections.Generic.IEnumerable<string>` en lugar de `var`. La palabra clave `var` se usa por comodidad. En el ejemplo, la variable de iteración en la instrucción `foreach` se escribe de forma explícita como una cadena, pero se podría declarar mediante `var`. Dado que el tipo de la variable de iteración no es un tipo anónimo, el uso de `var` es opcional, no es obligatorio. Recuerde que `var` no es un tipo, sino una instrucción para que el compilador deduzca y asigne el tipo.  
+## <a name="example"></a><span data-ttu-id="c7891-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c7891-112">Example</span></span>  
+ <span data-ttu-id="c7891-113">En el ejemplo siguiente, se usa la palabra clave `var` en una situación similar, pero en la que el uso de `var` es opcional.</span><span class="sxs-lookup"><span data-stu-id="c7891-113">The following example uses the `var` keyword in a situation that is similar, but in which the use of `var` is optional.</span></span> <span data-ttu-id="c7891-114">Dado que `student.LastName` es una cadena, la ejecución de la consulta devuelve una secuencia de cadenas.</span><span class="sxs-lookup"><span data-stu-id="c7891-114">Because `student.LastName` is a string, execution of the query returns a sequence of strings.</span></span> <span data-ttu-id="c7891-115">Por tanto, el tipo de `queryID` podría declararse como `System.Collections.Generic.IEnumerable<string>` en lugar de `var`.</span><span class="sxs-lookup"><span data-stu-id="c7891-115">Therefore, the type of `queryID` could be declared as `System.Collections.Generic.IEnumerable<string>` instead of `var`.</span></span> <span data-ttu-id="c7891-116">La palabra clave `var` se usa por comodidad.</span><span class="sxs-lookup"><span data-stu-id="c7891-116">Keyword `var` is used for convenience.</span></span> <span data-ttu-id="c7891-117">En el ejemplo, la variable de iteración en la instrucción `foreach` se escribe de forma explícita como una cadena, pero se podría declarar mediante `var`.</span><span class="sxs-lookup"><span data-stu-id="c7891-117">In the example, the iteration variable in the `foreach` statement is explicitly typed as a string, but it could instead be declared by using `var`.</span></span> <span data-ttu-id="c7891-118">Dado que el tipo de la variable de iteración no es un tipo anónimo, el uso de `var` es opcional, no es obligatorio.</span><span class="sxs-lookup"><span data-stu-id="c7891-118">Because the type of the iteration variable is not an anonymous type, the use of `var` is an option, not a requirement.</span></span> <span data-ttu-id="c7891-119">Recuerde que `var` no es un tipo, sino una instrucción para que el compilador deduzca y asigne el tipo.</span><span class="sxs-lookup"><span data-stu-id="c7891-119">Remember, `var` itself is not a type, but an instruction to the compiler to infer and assign the type.</span></span>  
   
- [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [var](../../../csharp/language-reference/keywords/var.md)   
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="c7891-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="c7891-120">See Also</span></span>  
+ [<span data-ttu-id="c7891-121">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="c7891-121">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c7891-122">Métodos de extensión</span><span class="sxs-lookup"><span data-stu-id="c7891-122">Extension Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [<span data-ttu-id="c7891-123">LINQ (Language Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="c7891-123">LINQ (Language-Integrated Query)</span></span>](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [<span data-ttu-id="c7891-124">var</span><span class="sxs-lookup"><span data-stu-id="c7891-124">var</span></span>](../../../csharp/language-reference/keywords/var.md)  
+ [<span data-ttu-id="c7891-125">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="c7891-125">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)

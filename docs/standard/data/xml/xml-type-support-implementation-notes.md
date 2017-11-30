@@ -1,60 +1,58 @@
 ---
-title: "Notas de implementaci&#243;n de la compatibilidad con tipos XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Notas de implementación de la compatibilidad con tipos XML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5e99573fc3a82db7798426172a13a78e10c65636
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Notas de implementaci&#243;n de la compatibilidad con tipos XML
-En este tema se describen algunos detalles de la implementación que debería conocer.  
+# <a name="xml-type-support-implementation-notes"></a><span data-ttu-id="da4b3-102">Notas de implementación de la compatibilidad con tipos XML</span><span class="sxs-lookup"><span data-stu-id="da4b3-102">XML Type Support Implementation Notes</span></span>
+<span data-ttu-id="da4b3-103">En este tema se describen algunos detalles de la implementación que debería conocer.</span><span class="sxs-lookup"><span data-stu-id="da4b3-103">This topic describes some implementation details that you want to be aware of.</span></span>  
   
-## Asignaciones de listas  
- Los tipos <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Type\[\]** y <xref:System.String> se utilizan para representar tipos de listas del lenguaje de definición de esquemas XML \(XSD\).  
+## <a name="list-mappings"></a><span data-ttu-id="da4b3-104">Asignaciones de listas</span><span class="sxs-lookup"><span data-stu-id="da4b3-104">List Mappings</span></span>  
+ <span data-ttu-id="da4b3-105">El <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **tipo []**, y <xref:System.String> tipos se utilizan para representar tipos de lista de lenguaje (XSD) de definición de esquemas XML.</span><span class="sxs-lookup"><span data-stu-id="da4b3-105">The <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Type[]**, and <xref:System.String> types are used to represent XML Schema definition language (XSD) list types.</span></span>  
   
-## Asignaciones de uniones  
- Los tipos de uniones se representan mediante el tipo <xref:System.Xml.Schema.XmlAtomicValue> o <xref:System.String>.  Por lo tanto, el tipo de origen o el tipo de destino deben ser siempre <xref:System.String> o <xref:System.Xml.Schema.XmlAtomicValue>.  
+## <a name="union-mappings"></a><span data-ttu-id="da4b3-106">Asignaciones de uniones</span><span class="sxs-lookup"><span data-stu-id="da4b3-106">Union Mappings</span></span>  
+ <span data-ttu-id="da4b3-107">Los tipos de uniones se representan mediante el tipo <xref:System.Xml.Schema.XmlAtomicValue> o <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="da4b3-107">Union types are represented using the <xref:System.Xml.Schema.XmlAtomicValue> or <xref:System.String> type.</span></span> <span data-ttu-id="da4b3-108">Por lo tanto, el tipo de origen o el tipo de destino deben ser siempre <xref:System.String> o <xref:System.Xml.Schema.XmlAtomicValue>.</span><span class="sxs-lookup"><span data-stu-id="da4b3-108">The source type or the destination type must therefore always be either <xref:System.String> or <xref:System.Xml.Schema.XmlAtomicValue>.</span></span>  
   
- Si el objeto <xref:System.Xml.Schema.XmlSchemaDatatype> representa un tipo de lista, dicho objeto convierte el valor de la cadena de entrada en una lista de uno o más objetos.  Si <xref:System.Xml.Schema.XmlSchemaDatatype> representa un tipo de unión, se realiza un intento de analizar el valor de entrada como un tipo de miembro de la unión.  Si el intento de análisis produce un error, se intenta realizar la conversión con el siguiente miembro de la unión y así sucesivamente, hasta que la conversión se realice correctamente o no haya ningún otro tipo de miembro que probar, en cuyo caso se inicia una excepción.  
+ <span data-ttu-id="da4b3-109">Si el objeto <xref:System.Xml.Schema.XmlSchemaDatatype> representa un tipo de lista, dicho objeto convierte el valor de la cadena de entrada en una lista de uno o más objetos.</span><span class="sxs-lookup"><span data-stu-id="da4b3-109">If the <xref:System.Xml.Schema.XmlSchemaDatatype> object represents a list type the object converts the input string value to a list of one or more objects.</span></span> <span data-ttu-id="da4b3-110">Si <xref:System.Xml.Schema.XmlSchemaDatatype> representa un tipo de unión, se realiza un intento de analizar el valor de entrada como un tipo de miembro de la unión.</span><span class="sxs-lookup"><span data-stu-id="da4b3-110">If the <xref:System.Xml.Schema.XmlSchemaDatatype> represents a union type then an attempt is made to parse the input value as a member type of the union.</span></span> <span data-ttu-id="da4b3-111">Si el intento de análisis produce un error, se intenta realizar la conversión con el siguiente miembro de la unión y así sucesivamente, hasta que la conversión se realice correctamente o no haya ningún otro tipo de miembro que probar, en cuyo caso se inicia una excepción.</span><span class="sxs-lookup"><span data-stu-id="da4b3-111">If the parse attempt fails then the conversion is attempted with the next member of the union and so on until the conversion is successful, or there are no other member types to try, in which case an exception is thrown.</span></span>  
   
-## Diferencias entre tipos de datos XML y CLR  
- A continuación se describen determinadas diferencias que se podrían producir entre los tipos de datos XML y los tipos CLR y cómo se tratan.  
-  
-> [!NOTE]
->  El prefijo `xs` se asigna a http:\/\/www.w3.org\/2001\/XMLSchema y al identificador URI del espacio de nombres.  
-  
-### System.TimeSpan y xs:duration  
- El tipo `xs:duration` está parcialmente ordenado, ya que hay determinados valores de duración que son diferentes, pero equivalentes.  Eso significa que para el valor del tipo `xs:duration`, por ejemplo 1 mes \(P1M\), es menor que 32 días \(P32D\), mayor que 27 días \(P27D\) y equivalente a 28, 29 o 30 días.  
-  
- La clase <xref:System.TimeSpan> no admite esta ordenación parcial.  En su lugar, toma un número de días específico para 1 año y 1 mes; 365 días y 30 días, respectivamente.  
-  
- Para obtener más información sobre el tipo `xs:duration`, vea la recomendación sobre tipos de datos de esquema XML del W3C, XML Schema Part 2: Datatypes, en la dirección http:\/\/www.w3.org\/TR\/xmlschema\-2\/ \(en inglés\).  
-  
-### xs:time, tipos de fechas gregorianas y System.DateTime  
- Cuando se asigna un valor `xs:time` a un objeto <xref:System.DateTime>, el campo <xref:System.DateTime.MinValue> se utiliza para inicializar las propiedades de fecha del objeto <xref:System.DateTime> \(por ejemplo, <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> y <xref:System.DateTime.Day%2A>\) con el valor <xref:System.DateTime> más pequeño posible.  
-  
- Igualmente, las instancias de `xs:gMonth`, `xs:gDay`, `xs:gYear`, `xs:gYearMonth` y `xs:gMonthDay` también se asignan a un objeto <xref:System.DateTime>.  Las propiedades no utilizadas del objeto <xref:System.DateTime> se inicializan con las de <xref:System.DateTime.MinValue>.  
+## <a name="differences-between-clr-and-xml-data-types"></a><span data-ttu-id="da4b3-112">Diferencias entre tipos de datos XML y CLR</span><span class="sxs-lookup"><span data-stu-id="da4b3-112">Differences Between CLR and XML Data Types</span></span>  
+ <span data-ttu-id="da4b3-113">A continuación se describen determinadas diferencias que se podrían producir entre los tipos de datos XML y los tipos CLR y cómo se tratan.</span><span class="sxs-lookup"><span data-stu-id="da4b3-113">The following describes certain mismatches that can occur between CLR types and XML data types and how they are handled.</span></span>  
   
 > [!NOTE]
->  No puede confiar en el valor de <xref:System.DateTime.Year%2A?displayProperty=fullName> si el contenido tiene el tipo `xs:gMonthDay`.  El valor de <xref:System.DateTime.Year%2A?displayProperty=fullName> siempre está establecido en 1904 en este caso.  
+>  <span data-ttu-id="da4b3-114">El prefijo `xs` se asigna a http://www.w3.org/2001/XMLSchema y al identificador URI del espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="da4b3-114">The `xs` prefix is mapped to the http://www.w3.org/2001/XMLSchema and namespace URI.</span></span>  
   
-### xs:anyURI y System.Uri  
- Cuando se asigna una instancia de `xs:anyURI` que representa un identificador URI relativo a <xref:System.Uri>, el objeto <xref:System.Uri> no tiene un identificador URI básico.  
+### <a name="systemtimespan-and-xsduration"></a><span data-ttu-id="da4b3-115">System.TimeSpan y xs:duration</span><span class="sxs-lookup"><span data-stu-id="da4b3-115">System.TimeSpan and xs:duration</span></span>  
+ <span data-ttu-id="da4b3-116">El tipo `xs:duration` está parcialmente ordenado, ya que hay determinados valores de duración que son diferentes, pero equivalentes.</span><span class="sxs-lookup"><span data-stu-id="da4b3-116">The `xs:duration` type is partially ordered in that there are certain duration values that are different but equivalent.</span></span> <span data-ttu-id="da4b3-117">Eso significa que para el valor del tipo `xs:duration`, por ejemplo 1 mes (P1M), es menor que 32 días (P32D), mayor que 27 días (P27D) y equivalente a 28, 29 o 30 días.</span><span class="sxs-lookup"><span data-stu-id="da4b3-117">This means that for the `xs:duration` type value such as 1 month (P1M) is less than 32 days (P32D), larger than 27 days (P27D) and equivalent to 28, 29 or 30 days.</span></span>  
   
-## Vea también  
- [Compatibilidad de tipos en las clases System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+ <span data-ttu-id="da4b3-118">La clase <xref:System.TimeSpan> no admite esta ordenación parcial.</span><span class="sxs-lookup"><span data-stu-id="da4b3-118">The <xref:System.TimeSpan> class does not support this partial ordering.</span></span> <span data-ttu-id="da4b3-119">En su lugar, toma un número de días específico para 1 año y 1 mes; 365 días y 30 días, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="da4b3-119">Instead, it picks a specific number of days for 1 year and 1 month; 365 days and 30 days respectively.</span></span>  
+  
+ <span data-ttu-id="da4b3-120">Para obtener más información sobre el tipo `xs:duration`, vea la recomendación sobre tipos de datos de esquema XML del W3C, XML Schema Part 2: Datatypes, en la dirección http://www.w3.org/TR/xmlschema-2/ (en inglés).</span><span class="sxs-lookup"><span data-stu-id="da4b3-120">For more information on the `xs:duration` type, see the W3C XML Schema Part 2: Datatypes Recommendation at http://www.w3.org/TR/xmlschema-2/.</span></span>  
+  
+### <a name="xstime-gregorian-date-types-and-systemdatetime"></a><span data-ttu-id="da4b3-121">xs:time, tipos de fechas gregorianas y System.DateTime</span><span class="sxs-lookup"><span data-stu-id="da4b3-121">xs:time, Gregorian Date Types, and System.DateTime</span></span>  
+ <span data-ttu-id="da4b3-122">Cuando se asigna un valor `xs:time` a un objeto <xref:System.DateTime>, el campo <xref:System.DateTime.MinValue> se utiliza para inicializar las propiedades de fecha del objeto <xref:System.DateTime> (por ejemplo, <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> y <xref:System.DateTime.Day%2A>) con el valor <xref:System.DateTime> más pequeño posible.</span><span class="sxs-lookup"><span data-stu-id="da4b3-122">When an `xs:time` value is mapped to a <xref:System.DateTime> object, the <xref:System.DateTime.MinValue> field is used to initialize the date properties of the <xref:System.DateTime> object (such as <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>) to the smallest possible <xref:System.DateTime> value.</span></span>  
+  
+ <span data-ttu-id="da4b3-123">Igualmente, las instancias de `xs:gMonth`, `xs:gDay`, `xs:gYear`, `xs:gYearMonth` y `xs:gMonthDay` también se asignan a un objeto <xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="da4b3-123">Similarly, instances of `xs:gMonth`, `xs:gDay`, `xs:gYear`, `xs:gYearMonth` and `xs:gMonthDay` are also mapped to a <xref:System.DateTime> object.</span></span> <span data-ttu-id="da4b3-124">Las propiedades no utilizadas del objeto <xref:System.DateTime> se inicializan con las de <xref:System.DateTime.MinValue>.</span><span class="sxs-lookup"><span data-stu-id="da4b3-124">Unused properties on the <xref:System.DateTime> object are initialized to those from <xref:System.DateTime.MinValue>.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="da4b3-125">No puede confiar en el valor de <xref:System.DateTime.Year%2A?displayProperty=nameWithType> si el contenido tiene el tipo `xs:gMonthDay`.</span><span class="sxs-lookup"><span data-stu-id="da4b3-125">You cannot rely on the <xref:System.DateTime.Year%2A?displayProperty=nameWithType> value when the content is typed as `xs:gMonthDay`.</span></span> <span data-ttu-id="da4b3-126">El valor de <xref:System.DateTime.Year%2A?displayProperty=nameWithType> siempre está establecido en 1904 en este caso.</span><span class="sxs-lookup"><span data-stu-id="da4b3-126">The <xref:System.DateTime.Year%2A?displayProperty=nameWithType> value is always set to 1904 in this case.</span></span>  
+  
+### <a name="xsanyuri-and-systemuri"></a><span data-ttu-id="da4b3-127">xs:anyURI y System.Uri</span><span class="sxs-lookup"><span data-stu-id="da4b3-127">xs:anyURI and System.Uri</span></span>  
+ <span data-ttu-id="da4b3-128">Cuando se asigna una instancia de `xs:anyURI` que representa un identificador URI relativo a <xref:System.Uri>, el objeto <xref:System.Uri> no tiene un identificador URI básico.</span><span class="sxs-lookup"><span data-stu-id="da4b3-128">When an instance of `xs:anyURI` that represents a relative URI is mapped to a <xref:System.Uri>, the <xref:System.Uri> object does not have a base URI.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="da4b3-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="da4b3-129">See Also</span></span>  
+ [<span data-ttu-id="da4b3-130">Compatibilidad de tipos en las clases System.Xml</span><span class="sxs-lookup"><span data-stu-id="da4b3-130">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

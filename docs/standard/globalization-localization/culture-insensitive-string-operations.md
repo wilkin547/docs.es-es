@@ -1,40 +1,43 @@
 ---
-title: "Operaciones de cadenas que no distinguen entre referencias culturales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "comparaciones con distinción de mayúsculas y minúsculas"
-  - "referencia cultural, operaciones de cadena que no tienen en cuenta la referencia cultural"
-  - "operaciones de cadena que no tienen en cuenta la referencia cultural"
-  - "operaciones de cadena que tienen en cuenta la referencia cultural"
-  - "globalización [.NET Framework], operaciones de cadena que no tienen en cuenta la referencia cultural"
-  - "localización [.NET Framework], operaciones de cadena que no tienen en cuenta la referencia cultural"
-  - "cadenas [.NET Framework], operaciones de cadena que no tienen en cuenta la referencia cultural"
-  - "aplicaciones de uso internacional, operaciones de cadena que no tienen en cuenta la referencia cultural"
+title: Operaciones de cadenas que no distinguen entre referencias culturales
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- culture, culture-insensitive string operations
+- case-sensitive comparisons
+- globalization [.NET Framework], culture-insensitive string operations
+- strings [.NET Framework], culture-insensitive string operations
+- localization [.NET Framework], culture-insensitive string operations
+- world-ready applications, culture-insensitive string operations
+- culture-sensitive string operations
+- culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: dddd46dc5d825738dd9d5038ae573910122953c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Operaciones de cadenas que no distinguen entre referencias culturales
-Las operaciones de cadena que tienen en cuenta la referencia cultural pueden resultar ventajosas si va a crear aplicaciones diseñadas para mostrar los resultados en función de la referencia cultural.  De manera predeterminada, los métodos que tienen en cuenta las referencias culturales obtienen la referencia cultural que van a usar de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A> del subproceso actual.  
+# <a name="culture-insensitive-string-operations"></a><span data-ttu-id="d0346-102">Operaciones de cadenas que no distinguen entre referencias culturales</span><span class="sxs-lookup"><span data-stu-id="d0346-102">Culture-Insensitive String Operations</span></span>
+<span data-ttu-id="d0346-103">Las operaciones de cadena que tienen en cuenta la referencia cultural pueden resultar ventajosas si va a crear aplicaciones diseñadas para mostrar los resultados en función de la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="d0346-103">Culture-sensitive string operations can be an advantage if you are creating applications designed to display results to users on a per-culture basis.</span></span> <span data-ttu-id="d0346-104">De manera predeterminada, los métodos que tienen en cuenta las referencias culturales obtienen la referencia cultural que van a usar de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A> del subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="d0346-104">By default, culture-sensitive methods obtain the culture to use from the <xref:System.Globalization.CultureInfo.CurrentCulture%2A> property for the current thread.</span></span>  
   
- Recuerde que las operaciones de cadena que tienen en cuenta la referencia cultural no son siempre el comportamiento más deseable.  Si se utilizan operaciones que tienen en cuenta las referencias culturales cuando los resultados deben ser independientes de las referencias culturales, podrían producirse errores de código en referencias culturales con reglas de ordenación y asignaciones de mayúsculas y minúsculas personalizadas.  Para obtener un ejemplo, vea "Comparaciones de cadenas que usan la referencia cultural actual" en el artículo [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md).  
+ <span data-ttu-id="d0346-105">Recuerde que las operaciones de cadena que tienen en cuenta la referencia cultural no son siempre el comportamiento más deseable.</span><span class="sxs-lookup"><span data-stu-id="d0346-105">Note that culture-sensitive string operations are not always the desired behavior.</span></span> <span data-ttu-id="d0346-106">Si se utilizan operaciones que tienen en cuenta las referencias culturales cuando los resultados deben ser independientes de las referencias culturales, podrían producirse errores de código en referencias culturales con reglas de ordenación y asignaciones de mayúsculas y minúsculas personalizadas.</span><span class="sxs-lookup"><span data-stu-id="d0346-106">Using culture-sensitive operations when results should be independent of culture can cause application code to fail on cultures with custom case mappings and sorting rules.</span></span> <span data-ttu-id="d0346-107">Para obtener un ejemplo, vea la sección "Cadena comparaciones que Use la referencia cultural actual" en la [prácticas recomendadas para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md) artículo.</span><span class="sxs-lookup"><span data-stu-id="d0346-107">For an example, see the "String Comparisons that Use the Current Culture" section in the [Best Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md) article.</span></span>  
   
- Si las operaciones de cadenas deberían tener en cuenta las referencias culturales o no depende de cómo use la aplicación los resultados.  Las operaciones de cadena que muestran los resultados al usuario normalmente deberían tener en cuenta las referencias culturales.  Por ejemplo, si una aplicación muestra al usuario una lista ordenada de cadenas localizadas en un cuadro de lista, la aplicación debería realizar una ordenación que tuviera en cuenta las referencias culturales.  
+ <span data-ttu-id="d0346-108">Si las operaciones de cadenas deberían tener en cuenta las referencias culturales o no depende de cómo use la aplicación los resultados.</span><span class="sxs-lookup"><span data-stu-id="d0346-108">Whether string operations should be culture-sensitive or culture-insensitive depends on how your application uses the results.</span></span> <span data-ttu-id="d0346-109">Las operaciones de cadena que muestran los resultados al usuario normalmente deberían tener en cuenta las referencias culturales.</span><span class="sxs-lookup"><span data-stu-id="d0346-109">String operations that display results to the user should typically be culture-sensitive.</span></span> <span data-ttu-id="d0346-110">Por ejemplo, si una aplicación muestra al usuario una lista ordenada de cadenas localizadas en un cuadro de lista, la aplicación debería realizar una ordenación que tuviera en cuenta las referencias culturales.</span><span class="sxs-lookup"><span data-stu-id="d0346-110">For example, if an application displays a sorted list of localized strings in a list box, the application should perform a culture-sensitive sort.</span></span>  
   
- Los resultados de las operaciones de cadenas que se usan internamente no deberían normalmente tener en cuenta las referencias culturales.  En general, si la aplicación está trabajando con nombres de archivo, formatos de persistencia o información simbólica que no se muestra al usuario final, los resultados de las operaciones de cadenas no deberían variar en función de la referencia cultural.  Por ejemplo, si una aplicación compara una cadena para determinar si es una etiqueta XML reconocida, la comparación no debería tener en cuenta las referencias culturales.  Asimismo, si una decisión de seguridad se basa en el resultado de una comparación de cadenas o de cambio de mayúsculas a minúsculas, la operación no debería tener en cuenta las referencias culturales para asegurarse de que el resultado no se vea afectado por el valor de <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.  
+ <span data-ttu-id="d0346-111">Los resultados de las operaciones de cadenas que se usan internamente no deberían normalmente tener en cuenta las referencias culturales.</span><span class="sxs-lookup"><span data-stu-id="d0346-111">Results of string operations that are used internally should typically be culture-insensitive.</span></span> <span data-ttu-id="d0346-112">En general, si la aplicación está trabajando con nombres de archivo, formatos de persistencia o información simbólica que no se muestra al usuario final, los resultados de las operaciones de cadenas no deberían variar en función de la referencia cultural.</span><span class="sxs-lookup"><span data-stu-id="d0346-112">In general, if the application is working with file names, persistence formats, or symbolic information that is not displayed to the user, results of string operations should not vary by culture.</span></span> <span data-ttu-id="d0346-113">Por ejemplo, si una aplicación compara una cadena para determinar si es una etiqueta XML reconocida, la comparación no debería tener en cuenta las referencias culturales.</span><span class="sxs-lookup"><span data-stu-id="d0346-113">For example, if an application compares a string to determine whether it is a recognized XML tag, the comparison should not be culture-sensitive.</span></span> <span data-ttu-id="d0346-114">Asimismo, si una decisión de seguridad se basa en el resultado de una comparación de cadenas o de cambio de mayúsculas a minúsculas, la operación no debería tener en cuenta las referencias culturales para asegurarse de que el resultado no se vea afectado por el valor de <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.</span><span class="sxs-lookup"><span data-stu-id="d0346-114">In addition, if a security decision is based on the result of a string comparison or case change operation, the operation should be culture-insensitive to ensure that the result is not affected by the value of <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.</span></span>  
   
- Independientemente de si está desarrollando o no una aplicación que incluye código para controlar cuestiones de localización y globalización, debería conocer los métodos de .NET Framework que recuperan resultados que tienen en cuenta las referencias culturales de manera predeterminada.  El propósito de este tema es ilustrar la forma correcta de que la aplicación utilice esos métodos cuando se desea obtener resultados que no tengan en cuenta las referencias culturales.  
+ <span data-ttu-id="d0346-115">Independientemente de si está desarrollando o no una aplicación que incluye código para controlar cuestiones de localización y globalización, debería conocer los métodos de .NET Framework que recuperan resultados que tienen en cuenta las referencias culturales de manera predeterminada.</span><span class="sxs-lookup"><span data-stu-id="d0346-115">Whether or not you are developing an application that includes code to handle localization and globalization issues, you should be aware of the .NET Framework methods that retrieve culture-sensitive results by default.</span></span> <span data-ttu-id="d0346-116">El propósito de este tema es ilustrar la forma correcta de que la aplicación utilice esos métodos cuando se desea obtener resultados que no tengan en cuenta las referencias culturales.</span><span class="sxs-lookup"><span data-stu-id="d0346-116">The purpose of this topic is to illustrate the correct way for your applications to use these methods to obtain culture-insensitive results.</span></span>  
   
-## Vea también  
- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a><span data-ttu-id="d0346-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="d0346-117">See Also</span></span>  
+ [<span data-ttu-id="d0346-118">Globalización y localización</span><span class="sxs-lookup"><span data-stu-id="d0346-118">Globalization and Localization</span></span>](../../../docs/standard/globalization-localization/index.md)

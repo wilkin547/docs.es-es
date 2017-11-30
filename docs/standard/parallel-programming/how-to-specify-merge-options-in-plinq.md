@@ -1,37 +1,42 @@
 ---
-title: "How to: Specify Merge Options in PLINQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, how to use merge options"
+title: "Cómo: Especificar opciones de fusión mediante combinación en PLINQ"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ec601e8bbefd31650fb91c438b032942cfc93101
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Specify Merge Options in PLINQ
-En este ejemplo se muestra cómo especificar las opciones de combinación que se aplicarán a todos los operadores subsiguientes en una consulta PLINQ.  No tiene que establecer las opciones de combinación explícitamente, pero, si lo hace, puede mejorar rendimiento.  Para obtener más información acerca de las opciones de combinación, vea [Merge Options in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+# <a name="how-to-specify-merge-options-in-plinq"></a><span data-ttu-id="ce2cc-102">Cómo: Especificar opciones de fusión mediante combinación en PLINQ</span><span class="sxs-lookup"><span data-stu-id="ce2cc-102">How to: Specify Merge Options in PLINQ</span></span>
+<span data-ttu-id="ce2cc-103">En este ejemplo se muestra cómo especificar las opciones de combinación que se aplicarán a todos los operadores subsiguientes en una consulta PLINQ.</span><span class="sxs-lookup"><span data-stu-id="ce2cc-103">This example shows how to specify the merge options that will apply to all subsequent operators in a PLINQ query.</span></span> <span data-ttu-id="ce2cc-104">No es necesario que establecer las opciones de combinación explícitamente, pero por lo que puede mejorar el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="ce2cc-104">You do not have to set merge options explicitly, but doing so may improve performance.</span></span> <span data-ttu-id="ce2cc-105">Para obtener más información acerca de las opciones de combinación, vea [opciones de combinación en PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="ce2cc-105">For more information about merge options, see [Merge Options in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).</span></span>  
   
 > [!WARNING]
->  Este ejemplo está diseñado para mostrar el uso y podría no ejecutarse más rápidamente que la consulta secuencial equivalente de LINQ to Objects.  Para obtener más información sobre la aceleración, vea [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  <span data-ttu-id="ce2cc-106">La finalidad de este ejemplo es mostrar el uso, y puede que su ejecución no sea tan rápida como la de la consulta LINQ to Objects secuencial equivalente.</span><span class="sxs-lookup"><span data-stu-id="ce2cc-106">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="ce2cc-107">Para obtener más información acerca de la velocidad, consulte [Introducción a la velocidad en PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="ce2cc-107">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra el comportamiento de las opciones de combinación en un escenario básico que tiene un origen no ordenado y aplica una función que utiliza muchos recursos a cada elemento.  
+## <a name="example"></a><span data-ttu-id="ce2cc-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ce2cc-108">Example</span></span>  
+ <span data-ttu-id="ce2cc-109">En el ejemplo siguiente se muestra el comportamiento de las opciones de combinación en un escenario básico que tiene un origen no ordenado y aplica una función de cara a cada elemento.</span><span class="sxs-lookup"><span data-stu-id="ce2cc-109">The following example demonstrates the behavior of merge options in a basic scenario that has an unordered source and applies an expensive function to every element.</span></span>  
   
  [!code-csharp[PLINQ#23](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#23)]
  [!code-vb[PLINQ#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#23)]  
   
- Cuando la opción <xref:System.Linq.ParallelMergeOptions> incurre en una latencia no deseable antes de proporcionar el primer elemento, pruebe la opción <xref:System.Linq.ParallelMergeOptions> para proporcionar elementos del resultado de una manera más rápida y sencilla.  
+ <span data-ttu-id="ce2cc-110">En casos donde la <xref:System.Linq.ParallelMergeOptions.AutoBuffered> opción incurre en una latencia indeseable antes de que se produjo el primer elemento, pruebe el <xref:System.Linq.ParallelMergeOptions.NotBuffered> opción para proporcionar elementos de resultado más rápido y más suave.</span><span class="sxs-lookup"><span data-stu-id="ce2cc-110">In cases where the <xref:System.Linq.ParallelMergeOptions.AutoBuffered> option incurs an undesirable latency before the first element is yielded, try the <xref:System.Linq.ParallelMergeOptions.NotBuffered> option to yield result elements faster and more smoothly.</span></span>  
   
-## Vea también  
- <xref:System.Linq.ParallelMergeOptions>   
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="ce2cc-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="ce2cc-111">See Also</span></span>  
+ <xref:System.Linq.ParallelMergeOptions>  
+ [<span data-ttu-id="ce2cc-112">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="ce2cc-112">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

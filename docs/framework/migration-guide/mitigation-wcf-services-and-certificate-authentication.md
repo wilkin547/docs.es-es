@@ -11,34 +11,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: bb852719e3312b78b86621e3cb69fa8bf7267856
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigación: Servicios WCF y autenticación de certificados
-.NET Framework 4.6 agrega TLS 1.1 y TLS 1.2 a la lista predeterminada de protocolos SSL de WCF. Cuando los equipos cliente y servidor tienen .NET Framework 4.6 o posterior instalado, se usa TLS 1.2 para la negociación.  
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a><span data-ttu-id="64aa2-102">Mitigación: Servicios WCF y autenticación de certificados</span><span class="sxs-lookup"><span data-stu-id="64aa2-102">Mitigation: WCF Services and Certificate Authentication</span></span>
+<span data-ttu-id="64aa2-103">.NET Framework 4.6 agrega TLS 1.1 y TLS 1.2 a la lista predeterminada de protocolos SSL de WCF.</span><span class="sxs-lookup"><span data-stu-id="64aa2-103">The .NET Framework 4.6 adds TLS 1.1 and TLS 1.2 to the WCF SSL protocol default list.</span></span> <span data-ttu-id="64aa2-104">Cuando los equipos cliente y servidor tienen .NET Framework 4.6 o posterior instalado, se usa TLS 1.2 para la negociación.</span><span class="sxs-lookup"><span data-stu-id="64aa2-104">When both client and server machines have  the .NET Framework 4.6 or later installed, TLS 1.2 is used for negotiation.</span></span>  
   
-## <a name="impact"></a>Impacto  
- TLS 1.2 no admite la autenticación de certificado MD5. Como resultado, si un cliente utiliza un certificado SSL que utiliza MD5 para el algoritmo hash, el cliente WCF no se puede conectar al servicio WCF. Para obtener más información, consulte [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md) (Mitigación: servicios de WCF y autenticación de certificados).  
+## <a name="impact"></a><span data-ttu-id="64aa2-105">Impacto</span><span class="sxs-lookup"><span data-stu-id="64aa2-105">Impact</span></span>  
+ <span data-ttu-id="64aa2-106">TLS 1.2 no admite la autenticación de certificado MD5.</span><span class="sxs-lookup"><span data-stu-id="64aa2-106">TLS 1.2 does not support MD5 certificate authentication.</span></span> <span data-ttu-id="64aa2-107">Como resultado, si un cliente utiliza un certificado SSL que utiliza MD5 para el algoritmo hash, el cliente WCF no se puede conectar al servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="64aa2-107">As a result, if a customer uses an SSL  certificate which uses MD5 for the hash algorithm, the WCF client fails to connect to the WCF service.</span></span> <span data-ttu-id="64aa2-108">Para obtener más información, consulte [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md) (Mitigación: servicios de WCF y autenticación de certificados).</span><span class="sxs-lookup"><span data-stu-id="64aa2-108">For more information, see [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md).</span></span>  
   
-## <a name="mitigation"></a>Mitigación  
- Puede evitar este problema para que el cliente WCF pueda conectarse a un servidor WCF realizando alguno de los siguientes procedimientos:  
+## <a name="mitigation"></a><span data-ttu-id="64aa2-109">Mitigación</span><span class="sxs-lookup"><span data-stu-id="64aa2-109">Mitigation</span></span>  
+ <span data-ttu-id="64aa2-110">Puede evitar este problema para que el cliente WCF pueda conectarse a un servidor WCF realizando alguno de los siguientes procedimientos:</span><span class="sxs-lookup"><span data-stu-id="64aa2-110">You can work around this issue so that a WCF client can connect to a WCF server by doing any of the following:</span></span>  
   
--   Actualizar el certificado para que no use el algoritmo MD5. Esta es la solución recomendada.  
+-   <span data-ttu-id="64aa2-111">Actualizar el certificado para que no use el algoritmo MD5.</span><span class="sxs-lookup"><span data-stu-id="64aa2-111">Update the certificate to not use the MD5 algorithm.</span></span> <span data-ttu-id="64aa2-112">Esta es la solución recomendada.</span><span class="sxs-lookup"><span data-stu-id="64aa2-112">This is the recommended solution.</span></span>  
   
--   Si la vinculación no se configura dinámicamente en el código fuente, actualice el archivo de configuración de la aplicación para usar TLS 1.1 o una versión anterior del protocolo. Esto le permite seguir usando un certificado con el algoritmo hash MD5.  
+-   <span data-ttu-id="64aa2-113">Si la vinculación no se configura dinámicamente en el código fuente, actualice el archivo de configuración de la aplicación para usar TLS 1.1 o una versión anterior del protocolo.</span><span class="sxs-lookup"><span data-stu-id="64aa2-113">If the binding is not dynamically configured in source code, update the application's configuration file to use TLS 1.1 or an earlier version of the protocol.</span></span> <span data-ttu-id="64aa2-114">Esto le permite seguir usando un certificado con el algoritmo hash MD5.</span><span class="sxs-lookup"><span data-stu-id="64aa2-114">This allows you to continue to use a certificate with the MD5 hash algorithm.</span></span>  
   
     > [!CAUTION]
-    >  Esta solución no es recomendable, puesto que se considera que el algoritmo hash MD5 no es seguro.  
+    >  <span data-ttu-id="64aa2-115">Esta solución no es recomendable, puesto que se considera que el algoritmo hash MD5 no es seguro.</span><span class="sxs-lookup"><span data-stu-id="64aa2-115">This workaround is not recommended, since a certificate with the MD5 hash algorithm is considered insecure.</span></span>  
   
-     El archivo de configuración siguiente realiza esta tarea:  
+     <span data-ttu-id="64aa2-116">El archivo de configuración siguiente realiza esta tarea:</span><span class="sxs-lookup"><span data-stu-id="64aa2-116">The following configuration file does this:</span></span>  
   
     ```xml  
     <configuration>  
@@ -59,11 +58,10 @@ ms.lasthandoff: 07/28/2017
     </configuration>  
     ```  
   
--   Si la vinculación se configura dinámicamente en el código fuente, actualice la propiedad <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> para usar TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=fullName>) o una versión anterior del protocolo en el código fuente.  
+-   <span data-ttu-id="64aa2-117">Si la vinculación se configura dinámicamente en el código fuente, actualice la propiedad <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> para usar TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) o una versión anterior del protocolo en el código fuente.</span><span class="sxs-lookup"><span data-stu-id="64aa2-117">If the binding is dynamically configured in source code, update the <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> property to use TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) or an  earlier version of the protocol in the source code.</span></span>  
   
     > [!CAUTION]
-    >  Esta solución no es recomendable, puesto que se considera que el algoritmo hash MD5 no es seguro.  
+    >  <span data-ttu-id="64aa2-118">Esta solución no es recomendable, puesto que se considera que el algoritmo hash MD5 no es seguro.</span><span class="sxs-lookup"><span data-stu-id="64aa2-118">This workaround is not recommended, since a certificate with the MD5 hash algorithm is considered insecure.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
-
+## <a name="see-also"></a><span data-ttu-id="64aa2-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="64aa2-119">See Also</span></span>  
+ [<span data-ttu-id="64aa2-120">Cambios en el runtime</span><span class="sxs-lookup"><span data-stu-id="64aa2-120">Runtime Changes</span></span>](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

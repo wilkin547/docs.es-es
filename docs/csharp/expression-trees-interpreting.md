@@ -10,27 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="interpreting-expressions"></a><span data-ttu-id="5c0fe-104">Interpretación de expresiones</span><span class="sxs-lookup"><span data-stu-id="5c0fe-104">Interpreting Expressions</span></span>
 
-# <a name="interpreting-expressions"></a>Interpretación de expresiones
+<span data-ttu-id="5c0fe-105">[Previous -- Executing Expressions](expression-trees-execution.md) (Anterior: Ejecución de expresiones)</span><span class="sxs-lookup"><span data-stu-id="5c0fe-105">[Previous -- Executing Expressions](expression-trees-execution.md)</span></span>
 
-[Previous -- Executing Expressions](expression-trees-execution.md) (Anterior: Ejecución de expresiones)
+<span data-ttu-id="5c0fe-106">Ahora, vamos a escribir código para examinar la estructura de un *árbol de expresión*.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-106">Now, let's write some code to examine the structure of an *expression tree*.</span></span> <span data-ttu-id="5c0fe-107">Cada nodo de un árbol de expresión será un objeto de una clase derivada de `Expression`.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-107">Every node in an expression tree will be an object of a class that is derived from `Expression`.</span></span>
 
-Ahora, vamos a escribir código para examinar la estructura de un *árbol de expresión*. Cada nodo de un árbol de expresión será un objeto de una clase derivada de `Expression`.
+<span data-ttu-id="5c0fe-108">Ese diseño hace que la visita de todos los nodos de un árbol de expresión sea una operación recursiva relativamente sencilla.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-108">That design makes visiting all the nodes in an expression tree a relatively straight forward recursive operation.</span></span> <span data-ttu-id="5c0fe-109">La estrategia general es comenzar en el nodo raíz y determinar qué tipo de nodo es.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-109">The general strategy is to start at the root node and determine what kind of node it is.</span></span>
 
-Ese diseño hace que la visita de todos los nodos de un árbol de expresión sea una operación recursiva relativamente sencilla. La estrategia general es comenzar en el nodo raíz y determinar qué tipo de nodo es.
+<span data-ttu-id="5c0fe-110">Si el tipo de nodo tiene elementos secundarios, visítelos recursivamente.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-110">If the node type has children, recursively visit the children.</span></span> <span data-ttu-id="5c0fe-111">En cada nodo secundario, repita el proceso que ha usado en el nodo raíz: determine el tipo, y si el tipo tiene elementos secundarios, visite cada uno de ellos.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-111">At each child node, repeat the process used at the root node: determine the type, and if the type has children, visit each of the children.</span></span>
 
-Si el tipo de nodo tiene elementos secundarios, visítelos recursivamente. En cada nodo secundario, repita el proceso que ha usado en el nodo raíz: determine el tipo, y si el tipo tiene elementos secundarios, visite cada uno de ellos.
-
-## <a name="examining-an-expression-with-no-children"></a>Examinar una expresión sin elementos secundarios
-Comencemos visitando cada nodo en un árbol de expresión muy sencillo.
-Aquí se muestra el código que crea una expresión constante y, después, examina sus propiedades:
+## <a name="examining-an-expression-with-no-children"></a><span data-ttu-id="5c0fe-112">Examinar una expresión sin elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="5c0fe-112">Examining an Expression with No Children</span></span>
+<span data-ttu-id="5c0fe-113">Comencemos visitando cada nodo en un árbol de expresión muy sencillo.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-113">Let's start by visiting each node in a very simple expression tree.</span></span>
+<span data-ttu-id="5c0fe-114">Aquí se muestra el código que crea una expresión constante y, después, examina sus propiedades:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-114">Here's the code that creates a constant expression and then examines its properties:</span></span>
 
 ```csharp
 var constant = Expression.Constant(24, typeof(int));
@@ -40,7 +38,7 @@ Console.WriteLine($"The type of the constant value is {constant.Type}");
 Console.WriteLine($"The value of the constant value is {constant.Value}");
 ```
 
-Esto imprimirá lo siguiente:
+<span data-ttu-id="5c0fe-115">Esto imprimirá lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-115">This will print the following:</span></span>
 
 ```
 This is an Constant expression type
@@ -48,21 +46,21 @@ The type of the constant value is System.Int32
 The value of the constant value is 24
 ```
 
-Ahora, vamos a escribir el código que examinará esta expresión y también algunas propiedades importantes sobre este. Aquí se muestra el código:
+<span data-ttu-id="5c0fe-116">Ahora, vamos a escribir el código que examinará esta expresión y también algunas propiedades importantes sobre este.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-116">Now, let's write the code that would examine this expression and write out some important properties about it.</span></span> <span data-ttu-id="5c0fe-117">Aquí se muestra el código:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-117">Here's that code:</span></span>
 
-## <a name="examining-a-simple-addition-expression"></a>Examinar una expresión de adición sencilla
+## <a name="examining-a-simple-addition-expression"></a><span data-ttu-id="5c0fe-118">Examinar una expresión de adición sencilla</span><span class="sxs-lookup"><span data-stu-id="5c0fe-118">Examining a simple Addition Expression</span></span>
 
-Comencemos con el ejemplo de adición de la instrucción de esta sección.
+<span data-ttu-id="5c0fe-119">Comencemos con el ejemplo de adición de la instrucción de esta sección.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-119">Let's start with the addition sample from the introduction to this section.</span></span>
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> No estoy usando `var` para declarar este árbol de expresión, y no es posible porque el lado derecho de la asignación tiene un tipo implícito. Para comprender esto mejor, lea [aquí](implicitly-typed-lambda-expressions.md).
+> <span data-ttu-id="5c0fe-120">No estoy usando `var` para declarar este árbol de expresión, y no es posible porque el lado derecho de la asignación tiene un tipo implícito.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-120">I'm not using `var` to declare this expression tree, as it is not possible because the right-hand side of the assignment is implicitly typed.</span></span> <span data-ttu-id="5c0fe-121">Para comprender esto mejor, lea [aquí](implicitly-typed-lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="5c0fe-121">To understand this more deeply, read [here](implicitly-typed-lambda-expressions.md).</span></span>
 
-El nodo raíz es `LambdaExpression`. Para obtener el código interesante en el lado derecho del operador `=>`, necesita buscar uno de los elementos secundarios de `LambdaExpression`. Haremos esto con todas las expresiones de esta sección. El nodo primario nos ayuda a encontrar el tipo de valor devuelto de `LambdaExpression`.
+<span data-ttu-id="5c0fe-122">El nodo raíz es `LambdaExpression`.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-122">The root node is a `LambdaExpression`.</span></span> <span data-ttu-id="5c0fe-123">Para obtener el código interesante en el lado derecho del operador `=>`, necesita buscar uno de los elementos secundarios de `LambdaExpression`.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-123">In order to get the interesting code on the right hand side of the `=>` operator, you need to find one of the children of the `LambdaExpression`.</span></span> <span data-ttu-id="5c0fe-124">Haremos esto con todas las expresiones de esta sección.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-124">We'll do that with all the expressions in this section.</span></span> <span data-ttu-id="5c0fe-125">El nodo primario nos ayuda a encontrar el tipo de valor devuelto de `LambdaExpression`.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-125">The parent node does help us find the return type of the `LambdaExpression`.</span></span>
 
-Para examinar cada nodo de esta expresión, necesitaremos visitar recursivamente varios nodos. Aquí se muestra una primera implementación sencilla:
+<span data-ttu-id="5c0fe-126">Para examinar cada nodo de esta expresión, necesitaremos visitar recursivamente varios nodos.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-126">To examine each node in this expression, we'll need to recursively visit a number of nodes.</span></span> <span data-ttu-id="5c0fe-127">Aquí se muestra una primera implementación sencilla:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-127">Here's a simple first implementation:</span></span>
 
 ```csharp
 Expression<Func<int, int, int>> addition = (a, b) => a + b;
@@ -86,7 +84,7 @@ var right= (ParameterExpression)additionBody.Right;
 Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name}");
 ```
 
-Este ejemplo imprime el siguiente resultado:
+<span data-ttu-id="5c0fe-128">Este ejemplo imprime el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-128">This sample prints the following output:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -102,9 +100,9 @@ The right side is a Parameter expression
         Parameter Type: System.Int32, Name: b
 ```
 
-Observará muchas repeticiones en el ejemplo de código anterior.
-Vamos a limpiarlo y a crear un visitante del nodo de expresión con una finalidad más general. Para ello vamos a necesitar escribir un algoritmo recursivo. Cualquier nodo puede ser de un tipo que pueda tener elementos secundarios.
-Cualquier nodo que tenga elementos secundarios necesita que los visitemos y determinemos cuál es ese nodo. Aquí se muestra una versión limpia que usa la recursividad para visitar las operaciones de adición:
+<span data-ttu-id="5c0fe-129">Observará muchas repeticiones en el ejemplo de código anterior.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-129">You'll notice a lot of repetition in the code sample above.</span></span>
+<span data-ttu-id="5c0fe-130">Vamos a limpiarlo y a crear un visitante del nodo de expresión con una finalidad más general.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-130">Let's clean that up and build a more general purpose expression node visitor.</span></span> <span data-ttu-id="5c0fe-131">Para ello vamos a necesitar escribir un algoritmo recursivo.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-131">That's going to require us to write a recursive algorithm.</span></span> <span data-ttu-id="5c0fe-132">Cualquier nodo puede ser de un tipo que pueda tener elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-132">Any node could be of a type that might have children.</span></span>
+<span data-ttu-id="5c0fe-133">Cualquier nodo que tenga elementos secundarios necesita que los visitemos y determinemos cuál es ese nodo.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-133">Any node that has children requires us to visit those children and determine what that node is.</span></span> <span data-ttu-id="5c0fe-134">Aquí se muestra una versión limpia que usa la recursividad para visitar las operaciones de adición:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-134">Here's the cleaned up version that utilizes recursion to visit the addition operations:</span></span>
 
 ```csharp
 // Base Visitor class:
@@ -222,9 +220,9 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Este algoritmo es la base de un algoritmo que puede visitar cualquier `LambdaExpression` arbitrario. Existen muchas vulnerabilidades, concretamente que el código que he creado solo busca una muestra muy pequeña de los posibles conjuntos de nodos de árbol de expresión que puede encontrar. En cambio, todavía puede aprender bastante de lo que genera. (El caso predeterminado en el método `Visitor.CreateFromExpression` imprime un mensaje a la consola de error cuando se detecta un nuevo tipo de nodo. De esta manera, sabe que se va a agregar un nuevo tipo de expresión).
+<span data-ttu-id="5c0fe-135">Este algoritmo es la base de un algoritmo que puede visitar cualquier `LambdaExpression` arbitrario.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-135">This algorithm is the basis of an algorithm that can visit any arbitrary `LambdaExpression`.</span></span> <span data-ttu-id="5c0fe-136">Existen muchas vulnerabilidades, concretamente que el código que he creado solo busca una muestra muy pequeña de los posibles conjuntos de nodos de árbol de expresión que puede encontrar.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-136">There are a lot of holes, namely that the code I created only looks for a very small sample of the possible sets of expression tree nodes that it may encounter.</span></span> <span data-ttu-id="5c0fe-137">En cambio, todavía puede aprender bastante de lo que genera.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-137">However, you can still learn quite a bit from what it produces.</span></span> <span data-ttu-id="5c0fe-138">(El caso predeterminado en el método `Visitor.CreateFromExpression` imprime un mensaje a la consola de error cuando se detecta un nuevo tipo de nodo.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-138">(The default case in the `Visitor.CreateFromExpression` method prints a message to the error console when a new node type is encountered.</span></span> <span data-ttu-id="5c0fe-139">De esta manera, sabe que se va a agregar un nuevo tipo de expresión).</span><span class="sxs-lookup"><span data-stu-id="5c0fe-139">That way, you know to add a new expression type.)</span></span>
 
-Cuando ejecuta este visitante en la expresión de adición que se muestra arriba, obtiene el siguiente resultado:
+<span data-ttu-id="5c0fe-140">Cuando ejecuta este visitante en la expresión de adición que se muestra arriba, obtiene el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-140">When you run this visitor on the addition expression shown above, you get the following output:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -245,17 +243,17 @@ The expression body is:
                 Type: System.Int32, Name: b, ByRef: False
 ```
 
-Ahora que ha creado una implementación de visitante más general, puede visitar y procesar muchos más tipos de expresiones diferentes.
+<span data-ttu-id="5c0fe-141">Ahora que ha creado una implementación de visitante más general, puede visitar y procesar muchos más tipos de expresiones diferentes.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-141">Now that you've built a more general visitor implementation, you can visit and process many more different types of expressions.</span></span>
 
-## <a name="examining-an-addition-expression-with-many-levels"></a>Examinar una expresión de adición con muchos niveles
+## <a name="examining-an-addition-expression-with-many-levels"></a><span data-ttu-id="5c0fe-142">Examinar una expresión de adición con muchos niveles</span><span class="sxs-lookup"><span data-stu-id="5c0fe-142">Examining an Addition Expression with Many Levels</span></span>
 
-Vamos a probar un ejemplo más complicado, todavía limitando los tipos de nodo solo a los de adición:
+<span data-ttu-id="5c0fe-143">Vamos a probar un ejemplo más complicado, todavía limitando los tipos de nodo solo a los de adición:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-143">Let's try a more complicated example, yet still limit the node types to addition only:</span></span>
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-Antes de que ejecute esto en el algoritmo de visitante, haga un ejercicio de reflexión para calcular cuál podría ser el resultado. Recuerde que el operador `+` es un *operador binario*: debe tener dos elementos secundarios, que representen los operandos izquierdo y derecho. Existen varias maneras posibles de construir un árbol que pueda ser correcto:
+<span data-ttu-id="5c0fe-144">Antes de que ejecute esto en el algoritmo de visitante, haga un ejercicio de reflexión para calcular cuál podría ser el resultado.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-144">Before you run this on the visitor algorithm, try a thought exercise to work out what the output might be.</span></span> <span data-ttu-id="5c0fe-145">Recuerde que el operador `+` es un *operador binario*: debe tener dos elementos secundarios, que representen los operandos izquierdo y derecho.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-145">Remember that the `+` operator is a *binary operator*: it must have two children, representing the left and right operands.</span></span> <span data-ttu-id="5c0fe-146">Existen varias maneras posibles de construir un árbol que pueda ser correcto:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-146">There are several possible ways to construct a tree that could be correct:</span></span>
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));
@@ -266,18 +264,18 @@ Expression<Func<int>> sum4 = () => 1 + ((2 + 3) + 4);
 Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
-Puede ver la separación en dos respuestas posibles para resaltar la más prometedora. La primera representa las expresiones *asociativas por la derecha*. La segunda representa las expresiones *asociativas por la izquierda*.
-La ventaja de los dos formatos es que el formato escala a cualquier número arbitrario de expresiones de adición. 
+<span data-ttu-id="5c0fe-147">Puede ver la separación en dos respuestas posibles para resaltar la más prometedora.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-147">You can see the separation into two possible answers to highlight the most promising.</span></span> <span data-ttu-id="5c0fe-148">La primera representa las expresiones *asociativas por la derecha*.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-148">The first represents *right associative* expressions.</span></span> <span data-ttu-id="5c0fe-149">La segunda representa las expresiones *asociativas por la izquierda*.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-149">The second represent *left associative* expressions.</span></span>
+<span data-ttu-id="5c0fe-150">La ventaja de los dos formatos es que el formato escala a cualquier número arbitrario de expresiones de adición.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-150">The advantage of both of those two formats is that the format scales to any arbitrary number of addition expressions.</span></span> 
 
-Si ejecuta esta expresión a través del visitante, verá este resultado y comprobará que la expresión de adición simple es *asociativa por la izquierda*. 
+<span data-ttu-id="5c0fe-151">Si ejecuta esta expresión a través del visitante, verá este resultado y comprobará que la expresión de adición simple es *asociativa por la izquierda*.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-151">If you do run this expression through the visitor, you will see this this output, verifying that the simple addition expression is *left associative*.</span></span> 
 
-Para ejecutar este ejemplo, y ver el árbol de expresión completo, tuve que realizar un cambio en el árbol de expresión de origen. Cuando el árbol de expresión contiene todas las constantes, el árbol resultante simplemente contiene el valor constante de `10`. El compilador realiza toda la adición y reduce la expresión a su forma más simple. Simplemente con agregar una variable a la expresión es suficiente para ver el árbol original:
+<span data-ttu-id="5c0fe-152">Para ejecutar este ejemplo, y ver el árbol de expresión completo, tuve que realizar un cambio en el árbol de expresión de origen.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-152">In order to run this sample, and see the full expression tree, I had to make one change to the source expression tree.</span></span> <span data-ttu-id="5c0fe-153">Cuando el árbol de expresión contiene todas las constantes, el árbol resultante simplemente contiene el valor constante de `10`.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-153">When the expression tree contains all constants, the resulting tree simply contains the constant value of `10`.</span></span> <span data-ttu-id="5c0fe-154">El compilador realiza toda la adición y reduce la expresión a su forma más simple.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-154">The compiler performs all the addition and reduces the expression to its simplest form.</span></span> <span data-ttu-id="5c0fe-155">Simplemente con agregar una variable a la expresión es suficiente para ver el árbol original:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-155">Simply adding one variable in the expression is sufficient to see the original tree:</span></span>
 
 ```csharp
 Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 ```
 
-Cree un visitante para esta suma y ejecute el visitante para ver este resultado:
+<span data-ttu-id="5c0fe-156">Cree un visitante para esta suma y ejecute el visitante para ver este resultado:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-156">Create a visitor for this sum and run the visitor you'll see this output:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -309,13 +307,13 @@ The expression body is:
                 The value of the constant value is 4
 ```
 
-También puede ejecutar cualquiera de los otros ejemplos a través del código de visitante y ver qué árbol representa. Aquí se muestra un ejemplo de la expresión `sum3` anterior (con un parámetro adicional para evitar que el compilador calcule la constante):
+<span data-ttu-id="5c0fe-157">También puede ejecutar cualquiera de los otros ejemplos a través del código de visitante y ver qué árbol representa.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-157">You can also run any of the other samples through the visitor code and see what tree it represents.</span></span> <span data-ttu-id="5c0fe-158">Aquí se muestra un ejemplo de la expresión `sum3` anterior (con un parámetro adicional para evitar que el compilador calcule la constante):</span><span class="sxs-lookup"><span data-stu-id="5c0fe-158">Here's an example of the `sum3` expression above (with an additional parameter to prevent the compiler from computing the constant):</span></span>
 
 ```csharp
 Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 ```
 
-Aquí se muestra el resultado del visitante:
+<span data-ttu-id="5c0fe-159">Aquí se muestra el resultado del visitante:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-159">Here's the output from the visitor:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -348,11 +346,11 @@ The expression body is:
                         Type: System.Int32, Name: b, ByRef: False
 ```
 
-Tenga en cuenta que los paréntesis no forman parte del resultado. No existen nodos en el árbol de expresión que representen los paréntesis en la expresión de entrada. La estructura del árbol de expresión contiene toda la información necesaria para comunicar la precedencia.
+<span data-ttu-id="5c0fe-160">Tenga en cuenta que los paréntesis no forman parte del resultado.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-160">Notice that the parentheses are not part of the output.</span></span> <span data-ttu-id="5c0fe-161">No existen nodos en el árbol de expresión que representen los paréntesis en la expresión de entrada.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-161">There are no nodes in the expression tree that represent the parentheses in the input expression.</span></span> <span data-ttu-id="5c0fe-162">La estructura del árbol de expresión contiene toda la información necesaria para comunicar la precedencia.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-162">The structure of the expression tree contains all the information necessary to communicate the precedence.</span></span>
 
-## <a name="extending-from-this-sample"></a>Ampliar a partir de este ejemplo
+## <a name="extending-from-this-sample"></a><span data-ttu-id="5c0fe-163">Ampliar a partir de este ejemplo</span><span class="sxs-lookup"><span data-stu-id="5c0fe-163">Extending from this sample</span></span>
 
-El ejemplo trata solo los árboles de expresión más básicos. El código que ha visto en esta sección solo controla enteros constantes y el operador binario `+`. Como último ejemplo, vamos a actualizar el visitante para que controle una expresión más complicada. Hagamos que funcione para esto:
+<span data-ttu-id="5c0fe-164">El ejemplo trata solo los árboles de expresión más básicos.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-164">The sample deals with only the most rudimentary expression trees.</span></span> <span data-ttu-id="5c0fe-165">El código que ha visto en esta sección solo controla enteros constantes y el operador binario `+`.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-165">The code you've seen in this section only handles constant integers and the binary `+` operator.</span></span> <span data-ttu-id="5c0fe-166">Como último ejemplo, vamos a actualizar el visitante para que controle una expresión más complicada.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-166">As a final sample, let's update the visitor to handle a more complicated expression.</span></span> <span data-ttu-id="5c0fe-167">Hagamos que funcione para esto:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-167">Let's make it work for this:</span></span>
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
@@ -361,17 +359,17 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-Este código representa una posible implementación para la función *factorial* matemática. La manera en que he escrito este código resalta dos limitaciones en la creación de árboles de expresión asignando expresiones lambda a las expresiones. En primer lugar, las expresiones lambda de instrucción no están permitidas. Eso significa que no puedo usar bucles, bloques, instrucciones IF/ELSE ni otras estructuras de control comunes en C#. Estoy limitado al uso de expresiones. En segundo lugar, no puedo llamar recursivamente a la misma expresión.
-Podría si ya fuera un delegado, pero no puedo llamarla en su forma de árbol de expresión. En la sección de [Crear árboles de expresión](expression-trees-building.md), obtendrá las técnicas para superar estas limitaciones.
+<span data-ttu-id="5c0fe-168">Este código representa una posible implementación para la función *factorial* matemática.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-168">This code represents one possible implementation for the mathematical *factorial* function.</span></span> <span data-ttu-id="5c0fe-169">La manera en que he escrito este código resalta dos limitaciones en la creación de árboles de expresión asignando expresiones lambda a las expresiones.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-169">The way I've written this code highlights two limitiations of building expression trees by assigning lambda expressions to Expressions.</span></span> <span data-ttu-id="5c0fe-170">En primer lugar, las expresiones lambda de instrucción no están permitidas.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-170">First, statement lambdas are not allowed.</span></span> <span data-ttu-id="5c0fe-171">Eso significa que no puedo usar bucles, bloques, instrucciones IF/ELSE ni otras estructuras de control comunes en C#.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-171">That means I can't use loops, blocks, if / else statements, and other control structures common in C#.</span></span> <span data-ttu-id="5c0fe-172">Estoy limitado al uso de expresiones.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-172">I'm limited to using expressions.</span></span> <span data-ttu-id="5c0fe-173">En segundo lugar, no puedo llamar recursivamente a la misma expresión.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-173">Second, I can't recursively call the same expression.</span></span>
+<span data-ttu-id="5c0fe-174">Podría si ya fuera un delegado, pero no puedo llamarla en su forma de árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-174">I could if it were already a delegate, but I can't call it in its expression tree form.</span></span> <span data-ttu-id="5c0fe-175">En la sección de [Crear árboles de expresión](expression-trees-building.md), obtendrá las técnicas para superar estas limitaciones.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-175">In the section on [building expression trees](expression-trees-building.md) you'll learn techniques to overcome these limitations.</span></span>
 
 
-En esta expresión, encontrará nodos de todos estos tipos:
-1. Equal (expresión binaria)
-2. Multiply (expresión binaria)
-3. Conditional (la expresión ? :)
-4. Expresión de llamada a método (con la llamada a `Range()` y `Aggregate()`)
+<span data-ttu-id="5c0fe-176">En esta expresión, encontrará nodos de todos estos tipos:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-176">In this expression, you'll encounter nodes of all these types:</span></span>
+1. <span data-ttu-id="5c0fe-177">Equal (expresión binaria)</span><span class="sxs-lookup"><span data-stu-id="5c0fe-177">Equal (binary expression)</span></span>
+2. <span data-ttu-id="5c0fe-178">Multiply (expresión binaria)</span><span class="sxs-lookup"><span data-stu-id="5c0fe-178">Multiply (binary expression)</span></span>
+3. <span data-ttu-id="5c0fe-179">Conditional (la expresión ?</span><span class="sxs-lookup"><span data-stu-id="5c0fe-179">Conditional (the ?</span></span> <span data-ttu-id="5c0fe-180">:)</span><span class="sxs-lookup"><span data-stu-id="5c0fe-180">: expression)</span></span>
+4. <span data-ttu-id="5c0fe-181">Expresión de llamada a método (con la llamada a `Range()` y `Aggregate()`)</span><span class="sxs-lookup"><span data-stu-id="5c0fe-181">Method Call Expression (calling `Range()` and `Aggregate()`)</span></span>
 
-Una manera de modificar el algoritmo de visitante es seguir ejecutándolo y escribir el tipo de nodo cada vez que llegue a su cláusula `default`. Después de varias iteraciones, habrá visto cada uno de los nodos potenciales. Después, tiene todo lo que necesita. El resultado será similar al siguiente:
+<span data-ttu-id="5c0fe-182">Una manera de modificar el algoritmo de visitante es seguir ejecutándolo y escribir el tipo de nodo cada vez que llegue a su cláusula `default`.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-182">One way to modify the visitor algorithm is to keep executing it, and write the node type every time you reach your `default` clause.</span></span> <span data-ttu-id="5c0fe-183">Después de varias iteraciones, habrá visto cada uno de los nodos potenciales.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-183">After a few iterations, you'll have seen each of the potential nodes.</span></span> <span data-ttu-id="5c0fe-184">Después, tiene todo lo que necesita.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-184">Then, you have all you need.</span></span> <span data-ttu-id="5c0fe-185">El resultado será similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-185">The result would be something like this:</span></span>
 
 ```csharp
 public static Visitor CreateFromExpression(Expression node)
@@ -399,7 +397,7 @@ public static Visitor CreateFromExpression(Expression node)
 }
 ```
 
-ConditionalVisitor y MethodCallVisitor procesan esos dos nodos:
+<span data-ttu-id="5c0fe-186">ConditionalVisitor y MethodCallVisitor procesan esos dos nodos:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-186">The ConditionalVisitor and MethodCallVisitor process those two nodes:</span></span>
 
 ```csharp
 public class ConditionalVisitor : Visitor
@@ -458,7 +456,7 @@ public class MethodCallVisitor : Visitor
 }
 ```
 
-Y el resultado del árbol de expresión será:
+<span data-ttu-id="5c0fe-187">Y el resultado del árbol de expresión será:</span><span class="sxs-lookup"><span data-stu-id="5c0fe-187">And the output for the expression tree would be:</span></span>
 
 ```
 This expression is a/an Lambda expression type
@@ -514,19 +512,18 @@ The expression body is:
                                         Type: System.Int32, Name: factor, ByRef: False
 ```
 
-## <a name="extending-the-sample-library"></a>Ampliar la biblioteca de ejemplo
+## <a name="extending-the-sample-library"></a><span data-ttu-id="5c0fe-188">Ampliar la biblioteca de ejemplo</span><span class="sxs-lookup"><span data-stu-id="5c0fe-188">Extending the Sample Library</span></span>
 
-Los ejemplos de esta sección muestran las técnicas principales para visitar y examinar nodos de un árbol de expresión. He pasado por alto muchas acciones que puede necesitar para concentrarme en las tareas principales a la hora de visitar y acceder a los nodos de un árbol de expresión. 
+<span data-ttu-id="5c0fe-189">Los ejemplos de esta sección muestran las técnicas principales para visitar y examinar nodos de un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-189">The samples in this section show the core techniques to visit and examine nodes in an expression tree.</span></span> <span data-ttu-id="5c0fe-190">He pasado por alto muchas acciones que puede necesitar para concentrarme en las tareas principales a la hora de visitar y acceder a los nodos de un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-190">I glossed over many actions you might need in order to concentrate on the core tasks of visiting and accessing nodes in an expression tree.</span></span> 
 
-En primer lugar, los visitantes solo controlan constantes que son enteros. Los valores constantes pueden ser cualquier otro tipo numérico, y el lenguaje de C# admite conversiones y promociones entre esos tipos. Una versión más sólida de este código reflejará todas esas capacidades.
+<span data-ttu-id="5c0fe-191">En primer lugar, los visitantes solo controlan constantes que son enteros.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-191">First, the visitors only handle constants that are integers.</span></span> <span data-ttu-id="5c0fe-192">Los valores constantes pueden ser cualquier otro tipo numérico, y el lenguaje de C# admite conversiones y promociones entre esos tipos.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-192">Constant values could be any other numeric type, and the C# language supports conversions and promotions between those types.</span></span> <span data-ttu-id="5c0fe-193">Una versión más sólida de este código reflejará todas esas capacidades.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-193">A more robust version of this code would mirror all those capabilities.</span></span>
 
-Incluso en el último ejemplo se reconoce un subconjunto de los tipos de nodo posibles.
-Todavía puede proporcionarle muchas expresiones que provocarán que se produzca un error.
-Se incluye una implementación completa en .NET Standard bajo el nombre [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) y puede controlar todos los tipos de nodo posibles.
+<span data-ttu-id="5c0fe-194">Incluso en el último ejemplo se reconoce un subconjunto de los tipos de nodo posibles.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-194">Even the last example recognizes a subset of the possible node types.</span></span>
+<span data-ttu-id="5c0fe-195">Todavía puede proporcionarle muchas expresiones que provocarán que se produzca un error.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-195">You can still feed it many expressions that will cause it to fail.</span></span>
+<span data-ttu-id="5c0fe-196">Se incluye una implementación completa en .NET Standard bajo el nombre [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) y puede controlar todos los tipos de nodo posibles.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-196">A full implementation is included in the .NET Standard under the name [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) and can handle all the possible node types.</span></span>
 
-Por último, la biblioteca que he usado en este artículo se ha creado con fines de demostración y aprendizaje. No está optimizada. La he escrito para dejar claro las estructuras que he usado y para resaltar las técnicas usadas para visitar los nodos y analizar lo que hay ahí. Una implementación de producción prestaría más atención al rendimiento.
+<span data-ttu-id="5c0fe-197">Por último, la biblioteca que he usado en este artículo se ha creado con fines de demostración y aprendizaje.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-197">Finally, the library I used in this article was built for demonstration and learning.</span></span> <span data-ttu-id="5c0fe-198">No está optimizada.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-198">It's not optimized.</span></span> <span data-ttu-id="5c0fe-199">La he escrito para dejar claro las estructuras que he usado y para resaltar las técnicas usadas para visitar los nodos y analizar lo que hay ahí.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-199">I wrote it to make the structures used very clear, and to highlight the techniques used to visit the nodes and analyze what's there.</span></span> <span data-ttu-id="5c0fe-200">Una implementación de producción prestaría más atención al rendimiento.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-200">A production implementation would pay more attention to performance than I have.</span></span>
 
-Incluso con esas limitaciones, se encuentra en el camino correcto para escribir algoritmos que lean y comprendan árboles de expresión.
+<span data-ttu-id="5c0fe-201">Incluso con esas limitaciones, se encuentra en el camino correcto para escribir algoritmos que lean y comprendan árboles de expresión.</span><span class="sxs-lookup"><span data-stu-id="5c0fe-201">Even with those limitations, you should be well on your way to writing algorithms that read and understand expression trees.</span></span>
 
-[Next -- Building Expressions](expression-trees-building.md) (Siguiente: Creación de expresiones)
-
+<span data-ttu-id="5c0fe-202">[Next -- Building Expressions](expression-trees-building.md) (Siguiente: Creación de expresiones)</span><span class="sxs-lookup"><span data-stu-id="5c0fe-202">[Next -- Building Expressions](expression-trees-building.md)</span></span>

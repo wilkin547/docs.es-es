@@ -1,70 +1,50 @@
 ---
 title: "&lt;typeparam&gt; (Guía de programación de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- typeparam
-dev_langs:
-- CSharp
+f1_keywords: typeparam
 helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6b9b81883d6d8abb960eda54f5c435acab6310b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8bb1d13976cf2cc9df4f573702168c6abdfff3d5
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (Guía de programación de C#)
-## <a name="syntax"></a>Sintaxis  
+# <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="5b061-102">&lt;typeparam&gt; (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="5b061-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="5b061-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5b061-103">Syntax</span></span>  
   
 ```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="5b061-104">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5b061-104">Parameters</span></span>  
  `name`  
- El nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").  
+ <span data-ttu-id="5b061-105">El nombre del parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="5b061-105">The name of the type parameter.</span></span> <span data-ttu-id="5b061-106">Ponga el nombre entre comillas dobles (" ").</span><span class="sxs-lookup"><span data-stu-id="5b061-106">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- Una descripción del parámetro de tipo.  
+ <span data-ttu-id="5b061-107">Una descripción del parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="5b061-107">A description for the type parameter.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- La etiqueta `<typeparam>` debe usarse en el comentario de una declaración de método o tipo genérico para describir un parámetro de tipo. Agregue una etiqueta para cada parámetro de tipo del tipo o método genérico.  
+## <a name="remarks"></a><span data-ttu-id="5b061-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5b061-108">Remarks</span></span>  
+ <span data-ttu-id="5b061-109">La etiqueta `<typeparam>` debe usarse en el comentario de una declaración de método o tipo genérico para describir un parámetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="5b061-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="5b061-110">Agregue una etiqueta para cada parámetro de tipo del tipo o método genérico.</span><span class="sxs-lookup"><span data-stu-id="5b061-110">Add a tag for each type parameter of the generic type or method.</span></span>  
   
- Para más información, vea [Genéricos](../../../csharp/programming-guide/generics/index.md).  
+ <span data-ttu-id="5b061-111">Para obtener más información, consulte [Genéricos](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="5b061-111">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- El texto de la etiqueta `<typeparam>` se mostrará en IntelliSense, el informe web de comentario de código de la [Ventana Examinador de objetos](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda).  
+ <span data-ttu-id="5b061-112">El texto de la etiqueta `<typeparam>` se mostrará en IntelliSense, el informe web de comentario de código de la [Ventana Examinador de objetos](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda).</span><span class="sxs-lookup"><span data-stu-id="5b061-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) code comment web report.</span></span>  
   
- Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ <span data-ttu-id="5b061-113">Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.</span><span class="sxs-lookup"><span data-stu-id="5b061-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
+## <a name="example"></a><span data-ttu-id="5b061-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5b061-114">Example</span></span>  
+ [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="5b061-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b061-115">See Also</span></span>  
+ [<span data-ttu-id="5b061-116">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="5b061-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="5b061-117">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="5b061-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="5b061-118">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="5b061-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

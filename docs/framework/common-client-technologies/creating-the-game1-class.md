@@ -5,50 +5,47 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47932ce3-2ba5-476f-a26b-3ddfd5226f27
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: 1e4fd15013f10667b397e010fff56b7bc6a0f641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9c6d0bdfd21f431ae6da38e3868386f91d5b725b
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="creating-the-game1-class"></a>Crear la clase Game1
-Igual que con todos los proyectos de Microsoft XNA, la clase Game1 deriva de la clase [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx), que proporciona funciones básicas de inicialización de dispositivos de gráficos, lógica de juego y código de representación para juegos de XNA. La clase Game1 es bastante simple porque la mayor parte del trabajo se realiza en las clases GamePiece y GamePieceCollection.  
+# <a name="creating-the-game1-class"></a><span data-ttu-id="fc952-102">Crear la clase Game1</span><span class="sxs-lookup"><span data-stu-id="fc952-102">Creating the Game1 Class</span></span>
+<span data-ttu-id="fc952-103">Igual que con todos los proyectos de Microsoft XNA, la clase Game1 deriva de la clase [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx), que proporciona funciones básicas de inicialización de dispositivos de gráficos, lógica de juego y código de representación para juegos de XNA.</span><span class="sxs-lookup"><span data-stu-id="fc952-103">As with all Microsoft XNA projects, the Game1 class derives from the [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) class, which provides basic graphics device initialization, game logic, and rendering code for XNA games.</span></span> <span data-ttu-id="fc952-104">La clase Game1 es bastante simple porque la mayor parte del trabajo se realiza en las clases GamePiece y GamePieceCollection.</span><span class="sxs-lookup"><span data-stu-id="fc952-104">The Game1 class is fairly simple because most of the work in done in the GamePiece and GamePieceCollection classes.</span></span>  
   
-## <a name="creating-the-code"></a>Crear el código  
- Los miembros privados de la clase se componen de un objeto **GamePieceCollection** para contener las piezas de juego, un objeto [GraphicsDeviceManager](http://msdn.microsoft.com/library/microsoft.xna.framework.graphicsdevicemanager.aspx) y un objeto [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) que se usa para representar las piezas de juego.  
+## <a name="creating-the-code"></a><span data-ttu-id="fc952-105">Crear el código</span><span class="sxs-lookup"><span data-stu-id="fc952-105">Creating the Code</span></span>  
+ <span data-ttu-id="fc952-106">Los miembros privados de la clase se componen de un objeto **GamePieceCollection** para contener las piezas de juego, un objeto [GraphicsDeviceManager](http://msdn.microsoft.com/library/microsoft.xna.framework.graphicsdevicemanager.aspx) y un objeto [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) que se usa para representar las piezas de juego.</span><span class="sxs-lookup"><span data-stu-id="fc952-106">The private members for the class consist of a **GamePieceCollection** object to hold the game pieces, a [GraphicsDeviceManager](http://msdn.microsoft.com/library/microsoft.xna.framework.graphicsdevicemanager.aspx) object, and a [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) object used to render game pieces.</span></span>  
   
  [!code-csharp[ManipulationXNA#_Game1_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_privatemembers)]  
   
- Durante la inicialización del juego se crean instancias de estos objetos.  
+ <span data-ttu-id="fc952-107">Durante la inicialización del juego se crean instancias de estos objetos.</span><span class="sxs-lookup"><span data-stu-id="fc952-107">During game initialization, these objects are instantiated.</span></span>  
   
  [!code-csharp[ManipulationXNA#_Game1_ConstructorInitialize](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_constructorinitialize)]  
   
- Cuando se llama al método [LoadContent](http://msdn.microsoft.com/library/microsoft.xna.framework.game.loadcontent.aspx), se crean las piezas de juego y se asignan al objeto **GamePieceCollection**. Hay dos tipos de piezas de juego. El factor de escala de las piezas cambia ligeramente para que haya piezas algo más pequeñas y algo más grandes.  
+ <span data-ttu-id="fc952-108">Cuando se llama al método [LoadContent](http://msdn.microsoft.com/library/microsoft.xna.framework.game.loadcontent.aspx), se crean las piezas de juego y se asignan al objeto **GamePieceCollection**.</span><span class="sxs-lookup"><span data-stu-id="fc952-108">When the [LoadContent](http://msdn.microsoft.com/library/microsoft.xna.framework.game.loadcontent.aspx) method is called, the game pieces are created and assigned to the **GamePieceCollection** object.</span></span> <span data-ttu-id="fc952-109">Hay dos tipos de piezas de juego.</span><span class="sxs-lookup"><span data-stu-id="fc952-109">There are two types of game pieces.</span></span> <span data-ttu-id="fc952-110">El factor de escala de las piezas cambia ligeramente para que haya piezas algo más pequeñas y algo más grandes.</span><span class="sxs-lookup"><span data-stu-id="fc952-110">The scale factor for the pieces is changed slightly so that there are some smaller and some larger pieces.</span></span>  
   
  [!code-csharp[ManipulationXNA#_Game1_LoadContent](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_loadcontent)]  
   
- XNA Framework llama al método [Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) repetidamente mientras el juego se está ejecutando. El método [Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) llama a los métodos **ProcessInertia** y **UpdateFromMouse** en la colección de piezas de juego. Estos métodos se describen en [Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) (Crear la clase GamePieceCollection).  
+ <span data-ttu-id="fc952-111">XNA Framework llama al método [Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) repetidamente mientras el juego se está ejecutando.</span><span class="sxs-lookup"><span data-stu-id="fc952-111">The [Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) method is called repeatedly by the XNA Framework while the game is running.</span></span> <span data-ttu-id="fc952-112">El método [Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) llama a los métodos **ProcessInertia** y **UpdateFromMouse** en la colección de piezas de juego.</span><span class="sxs-lookup"><span data-stu-id="fc952-112">The [Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) method calls the **ProcessInertia** and the **UpdateFromMouse** methods on the game piece collection.</span></span> <span data-ttu-id="fc952-113">Estos métodos se describen en [Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) (Crear la clase GamePieceCollection).</span><span class="sxs-lookup"><span data-stu-id="fc952-113">These methods are described in [Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md).</span></span>  
   
  [!code-csharp[ManipulationXNA#_Game1_UpdateGame](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_updategame)]  
   
- XNA Framework llama también al método [Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) repetidamente mientras el juego se está ejecutando. El método [Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) llama al método **Draw** del objeto **GamePieceCollection** para realizar la representación de las piezas de juego. Este método se describe en [Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) (Crear la clase GamePieceCollection).  
+ <span data-ttu-id="fc952-114">XNA Framework llama también al método [Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) repetidamente mientras el juego se está ejecutando.</span><span class="sxs-lookup"><span data-stu-id="fc952-114">The [Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) method is also called repeatedly by the XNA Framework while the game is running.</span></span> <span data-ttu-id="fc952-115">El método [Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) llama al método **Draw** del objeto **GamePieceCollection** para realizar la representación de las piezas de juego.</span><span class="sxs-lookup"><span data-stu-id="fc952-115">The [Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) method performs the rendering of game pieces by calling the **Draw** method of the **GamePieceCollection** object.</span></span> <span data-ttu-id="fc952-116">Este método se describe en [Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) (Crear la clase GamePieceCollection).</span><span class="sxs-lookup"><span data-stu-id="fc952-116">This method is described in[Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md).</span></span>  
   
  [!code-csharp[ManipulationXNA#_Game1_DrawGame](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_drawgame)]  
   
-## <a name="see-also"></a>Vea también  
- [Manipulaciones e inercia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [Usar manipulaciones e inercia en una aplicación XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [Crear la clase GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
- [Crear la clase GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
- [Listas de código completas](../../../docs/framework/common-client-technologies/full-code-listings.md)
-
+## <a name="see-also"></a><span data-ttu-id="fc952-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="fc952-117">See Also</span></span>  
+ [<span data-ttu-id="fc952-118">Manipulaciones e inercia</span><span class="sxs-lookup"><span data-stu-id="fc952-118">Manipulations and Inertia</span></span>](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [<span data-ttu-id="fc952-119">Usar manipulaciones e inercia en una aplicación XNA</span><span class="sxs-lookup"><span data-stu-id="fc952-119">Using Manipulations and Inertia in an XNA Application</span></span>](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [<span data-ttu-id="fc952-120">Crear la clase GamePiece</span><span class="sxs-lookup"><span data-stu-id="fc952-120">Creating the GamePiece Class</span></span>](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
+ [<span data-ttu-id="fc952-121">Crear la clase GamePieceCollection</span><span class="sxs-lookup"><span data-stu-id="fc952-121">Creating the GamePieceCollection Class</span></span>](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
+ [<span data-ttu-id="fc952-122">Listas de código completas</span><span class="sxs-lookup"><span data-stu-id="fc952-122">Full Code Listings</span></span>](../../../docs/framework/common-client-technologies/full-code-listings.md)

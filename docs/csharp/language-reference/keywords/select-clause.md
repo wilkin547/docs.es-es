@@ -1,68 +1,49 @@
 ---
 title: "select (Cláusula, Referencia de C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - select_CSharpKeyword
 - select
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f40bc26d1812e76ac618c5a0ddf23c4cef2700d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a505399eb79cbecbefcc53953329279a4abd92f6
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="select-clause-c-reference"></a>select (Cláusula, Referencia de C#)
-En una expresión de consulta, la cláusula `select` especifica el tipo de valores que se producirán cuando se ejecute la consulta. El resultado se basa en la evaluación de todas las cláusulas anteriores y en cualquier expresión de la propia cláusula `select`. Una expresión de consulta debe finalizar con una cláusula `select` o con una cláusula [group](../../../csharp/language-reference/keywords/group-clause.md).  
+# <a name="select-clause-c-reference"></a><span data-ttu-id="5e217-102">select (Cláusula, Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="5e217-102">select clause (C# Reference)</span></span>
+<span data-ttu-id="5e217-103">En una expresión de consulta, la cláusula `select` especifica el tipo de valores que se producirán cuando se ejecute la consulta.</span><span class="sxs-lookup"><span data-stu-id="5e217-103">In a query expression, the `select` clause specifies the type of values that will be produced when the query is executed.</span></span> <span data-ttu-id="5e217-104">El resultado se basa en la evaluación de todas las cláusulas anteriores y en cualquier expresión de la propia cláusula `select`.</span><span class="sxs-lookup"><span data-stu-id="5e217-104">The result is based on the evaluation of all the previous clauses and on any expressions in the `select` clause itself.</span></span> <span data-ttu-id="5e217-105">Una expresión de consulta debe finalizar con una cláusula `select` o con una cláusula [group](../../../csharp/language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="5e217-105">A query expression must terminate with either a `select` clause or a [group](../../../csharp/language-reference/keywords/group-clause.md) clause.</span></span>  
   
- En el ejemplo siguiente, se muestra una cláusula `select` simple en una expresión de consulta.  
+ <span data-ttu-id="5e217-106">En el ejemplo siguiente, se muestra una cláusula `select` simple en una expresión de consulta.</span><span class="sxs-lookup"><span data-stu-id="5e217-106">The following example shows a simple `select` clause in a query expression.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_1.cs)]  
   
- El tipo de la secuencia generada por la cláusula `select` determina el tipo de la variable de consulta `queryHighScores`. En el caso más simple, la cláusula `select` simplemente especifica la variable de rango. Esto hace que la secuencia devuelta contenga elementos del mismo tipo que el origen de datos. Para obtener más información, vea [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md) (Relaciones entre tipos en las operaciones de consulta LINQ). En cambio, la cláusula `select` también proporciona un mecanismo eficaz para transformar (o *proyectar*) el origen de datos en nuevos tipos. Para obtener más información, vea [Transformaciones de datos con LINQ (C#)](../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md).  
+ <span data-ttu-id="5e217-107">El tipo de la secuencia generada por la cláusula `select` determina el tipo de la variable de consulta `queryHighScores`.</span><span class="sxs-lookup"><span data-stu-id="5e217-107">The type of the sequence produced by the `select` clause determines the type of the query variable `queryHighScores`.</span></span> <span data-ttu-id="5e217-108">En el caso más simple, la cláusula `select` simplemente especifica la variable de rango.</span><span class="sxs-lookup"><span data-stu-id="5e217-108">In the simplest case, the `select` clause just specifies the range variable.</span></span> <span data-ttu-id="5e217-109">Esto hace que la secuencia devuelta contenga elementos del mismo tipo que el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="5e217-109">This causes the returned sequence to contain elements of the same type as the data source.</span></span> <span data-ttu-id="5e217-110">Para obtener más información, vea [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md) (Relaciones entre tipos en las operaciones de consulta LINQ).</span><span class="sxs-lookup"><span data-stu-id="5e217-110">For more information, see [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span></span> <span data-ttu-id="5e217-111">En cambio, la cláusula `select` también proporciona un mecanismo eficaz para transformar (o *proyectar*) el origen de datos en nuevos tipos.</span><span class="sxs-lookup"><span data-stu-id="5e217-111">However, the `select` clause also provides a powerful mechanism for transforming (or *projecting*) source data into new types.</span></span> <span data-ttu-id="5e217-112">Para obtener más información, vea [Transformaciones de datos con LINQ (C#)](../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md).</span><span class="sxs-lookup"><span data-stu-id="5e217-112">For more information, see [Data Transformations with LINQ (C#)](../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se muestran las distintas formas que puede tener una cláusula `select`. En cada consulta, tenga en cuenta la relación entre la cláusula `select` y el tipo de la *variable de consulta* (`studentQuery1`, `studentQuery2`, etc.).  
+## <a name="example"></a><span data-ttu-id="5e217-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5e217-113">Example</span></span>  
+ <span data-ttu-id="5e217-114">En el ejemplo siguiente, se muestran las distintas formas que puede tener una cláusula `select`.</span><span class="sxs-lookup"><span data-stu-id="5e217-114">The following example shows all the different forms that a `select` clause may take.</span></span> <span data-ttu-id="5e217-115">En cada consulta, tenga en cuenta la relación entre la cláusula `select` y el tipo de la *variable de consulta* (`studentQuery1`, `studentQuery2`, etc.).</span><span class="sxs-lookup"><span data-stu-id="5e217-115">In each query, note the relationship between the `select` clause and the type of the *query variable* (`studentQuery1`, `studentQuery2`, and so on).</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_2.cs)]  
   
- Como se muestra en `studentQuery8` en el ejemplo anterior, a veces es posible que quiera que los elementos de la secuencia devuelta contengan solo un subconjunto de las propiedades de los elementos de origen. Al mantener la secuencia devuelta lo más pequeña posible, puede reducir los requisitos de memoria y aumentar la velocidad de ejecución de la consulta. Puede hacerlo al crear un tipo anónimo en la cláusula `select` y usar un inicializador de objeto para inicializarlo con las propiedades adecuadas del elemento de origen. Para obtener un ejemplo de cómo hacerlo, consulte [Inicializadores de objeto y de colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ <span data-ttu-id="5e217-116">Como se muestra en `studentQuery8` en el ejemplo anterior, a veces es posible que quiera que los elementos de la secuencia devuelta contengan solo un subconjunto de las propiedades de los elementos de origen.</span><span class="sxs-lookup"><span data-stu-id="5e217-116">As shown in `studentQuery8` in the previous example, sometimes you might want the elements of the returned sequence to contain only a subset of the properties of the source elements.</span></span> <span data-ttu-id="5e217-117">Al mantener la secuencia devuelta lo más pequeña posible, puede reducir los requisitos de memoria y aumentar la velocidad de ejecución de la consulta.</span><span class="sxs-lookup"><span data-stu-id="5e217-117">By keeping the returned sequence as small as possible you can reduce the memory requirements and increase the speed of the execution of the query.</span></span> <span data-ttu-id="5e217-118">Puede hacerlo al crear un tipo anónimo en la cláusula `select` y usar un inicializador de objeto para inicializarlo con las propiedades adecuadas del elemento de origen.</span><span class="sxs-lookup"><span data-stu-id="5e217-118">You can accomplish this by creating an anonymous type in the `select` clause and using an object initializer to initialize it with the appropriate properties from the source element.</span></span> <span data-ttu-id="5e217-119">Para obtener un ejemplo de cómo hacerlo, consulte [Inicializadores de objeto y de colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span><span class="sxs-lookup"><span data-stu-id="5e217-119">For an example of how to do this, see [Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- En tiempo de compilación, la cláusula `select` se convierte en una llamada de método al operador de consulta estándar <xref:System.Linq.Enumerable.Select%2A>.  
+## <a name="remarks"></a><span data-ttu-id="5e217-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5e217-120">Remarks</span></span>  
+ <span data-ttu-id="5e217-121">En tiempo de compilación, la cláusula `select` se convierte en una llamada de método al operador de consulta estándar <xref:System.Linq.Enumerable.Select%2A>.</span><span class="sxs-lookup"><span data-stu-id="5e217-121">At compile time, the `select` clause is translated to a method call to the <xref:System.Linq.Enumerable.Select%2A> standard query operator.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Palabras clave de consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [from (Cláusula)](../../../csharp/language-reference/keywords/from-clause.md)   
- [partial (método, referencia de C#)](../../../csharp/language-reference/keywords/partial-method.md)   
- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Introducción a LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="5e217-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="5e217-122">See Also</span></span>  
+ [<span data-ttu-id="5e217-123">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="5e217-123">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="5e217-124">Palabras clave para consultas (LINQ)</span><span class="sxs-lookup"><span data-stu-id="5e217-124">Query Keywords (LINQ)</span></span>](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [<span data-ttu-id="5e217-125">from (cláusula)</span><span class="sxs-lookup"><span data-stu-id="5e217-125">from clause</span></span>](../../../csharp/language-reference/keywords/from-clause.md)  
+ [<span data-ttu-id="5e217-126">Partial (método) (referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="5e217-126">partial (Method) (C# Reference)</span></span>](../../../csharp/language-reference/keywords/partial-method.md)  
+ [<span data-ttu-id="5e217-127">Tipos anónimos</span><span class="sxs-lookup"><span data-stu-id="5e217-127">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+ [<span data-ttu-id="5e217-128">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="5e217-128">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [<span data-ttu-id="5e217-129">Introducción a LINQ en C#</span><span class="sxs-lookup"><span data-stu-id="5e217-129">Getting Started with LINQ in C#</span></span>](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
