@@ -1,53 +1,54 @@
 ---
-title: "C&#243;mo: Ajustar la escala de un elemento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases, ScaleTransform"
-  - "gráficos, ajustar la escala de elementos"
-  - "ScaleTransform (clase)"
-  - "ajustar la escala, elementos"
+title: "Cómo: Ajustar la escala de un elemento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scaling [WPF], elements
+- graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23b3086452526e804bfdbe50bb0c134f33158f5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ajustar la escala de un elemento
-En este ejemplo se muestra cómo usar un objeto <xref:System.Windows.Media.ScaleTransform> para ajustar la escala de un elemento.  
+# <a name="how-to-scale-an-element"></a><span data-ttu-id="08ef3-102">Cómo: Ajustar la escala de un elemento</span><span class="sxs-lookup"><span data-stu-id="08ef3-102">How to: Scale an Element</span></span>
+<span data-ttu-id="08ef3-103">Este ejemplo muestra cómo utilizar un <xref:System.Windows.Media.ScaleTransform> para escalar un elemento.</span><span class="sxs-lookup"><span data-stu-id="08ef3-103">This example shows how to use a <xref:System.Windows.Media.ScaleTransform> to scale an element.</span></span>  
   
- Use las propiedades <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> y <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> para ajustar la escala del elemento según el factor especificado.  Por ejemplo, un valor de <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> de 1,5 expande el elemento al 150 por ciento de su ancho original.  Un valor de <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> de 0,5 reduce el alto de un elemento a la mitad.  
+ <span data-ttu-id="08ef3-104">Use la <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> y <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> propiedades para cambiar el tamaño del elemento según el factor especificado.</span><span class="sxs-lookup"><span data-stu-id="08ef3-104">Use the <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> properties to resize the element by the factor you specify.</span></span> <span data-ttu-id="08ef3-105">Por ejemplo, un <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> valor de 1,5 expande el elemento al 150 por ciento de su ancho original.</span><span class="sxs-lookup"><span data-stu-id="08ef3-105">For example, a <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> value of 1.5 stretches the element to 150 percent of its original width.</span></span> <span data-ttu-id="08ef3-106">Un <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> valor de 0,5 reduce el alto de un elemento a 50 por ciento.</span><span class="sxs-lookup"><span data-stu-id="08ef3-106">A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> value of 0.5 shrinks the height of an element by 50 percent.</span></span>  
   
- Use las propiedades <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A> para especificar el punto central de la operación de ajuste de la escala.  De manera predeterminada, <xref:System.Windows.Media.ScaleTransform> se centra en el punto \(0,0\), que corresponde a la esquina superior izquierda del rectángulo.  Esto tiene el efecto de mover el elemento y de hacerlo parecer mayor, porque al aplicar <xref:System.Windows.Media.Transform>, cambia el espacio de coordenadas en que reside el objeto.  
+ <span data-ttu-id="08ef3-107">Use la <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A> propiedades para especificar el punto que representa el centro de la operación de escalado.</span><span class="sxs-lookup"><span data-stu-id="08ef3-107">Use the <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A> properties to specify the point that is the center of the scale operation.</span></span> <span data-ttu-id="08ef3-108">De forma predeterminada, un <xref:System.Windows.Media.ScaleTransform> se centra en el punto (0,0), que corresponde a la esquina superior izquierda del rectángulo.</span><span class="sxs-lookup"><span data-stu-id="08ef3-108">By default, a <xref:System.Windows.Media.ScaleTransform> is centered at the point (0,0), which corresponds to the upper-left corner of the rectangle.</span></span> <span data-ttu-id="08ef3-109">Esto tiene el efecto de mover el elemento y también de lo que aparezca más grande, ya que al aplicar un <xref:System.Windows.Media.Transform>, cambie el espacio de coordenadas en el que reside el objeto.</span><span class="sxs-lookup"><span data-stu-id="08ef3-109">This has the effect of moving the element and also of making it appear larger, because when you apply a <xref:System.Windows.Media.Transform>, you change the coordinate space in which the object resides.</span></span>  
   
- En el ejemplo siguiente se utiliza <xref:System.Windows.Media.ScaleTransform> para duplicar el tamaño de un <xref:System.Windows.Shapes.Rectangle> de 50 por 50.  <xref:System.Windows.Media.ScaleTransform> tiene un valor de 0 \(el valor predeterminado\) para <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y para <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.  
+ <span data-ttu-id="08ef3-110">En el ejemplo siguiente se usa un <xref:System.Windows.Media.ScaleTransform> duplicar el tamaño de un 50-50 <xref:System.Windows.Shapes.Rectangle>.</span><span class="sxs-lookup"><span data-stu-id="08ef3-110">The following example uses a <xref:System.Windows.Media.ScaleTransform> to double the size of a 50-by-50 <xref:System.Windows.Shapes.Rectangle>.</span></span> <span data-ttu-id="08ef3-111">El <xref:System.Windows.Media.ScaleTransform> tiene un valor de 0 (valor predeterminado) para ambos <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.</span><span class="sxs-lookup"><span data-stu-id="08ef3-111">The <xref:System.Windows.Media.ScaleTransform> has a value of 0 (the default) for both <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.</span></span>  
   
-## Ejemplo  
- [!code-xml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
+## <a name="example"></a><span data-ttu-id="08ef3-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="08ef3-112">Example</span></span>  
+ [!code-xaml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
- Normalmente, <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A> se establecen en el centro del objeto cuya escala se ajusta: \(<xref:System.Windows.FrameworkElement.Width%2A>\/2, <xref:System.Windows.FrameworkElement.Height%2A>\/2\).  
+ <span data-ttu-id="08ef3-113">Normalmente, se establece <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A> al centro del objeto que se escala: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).</span><span class="sxs-lookup"><span data-stu-id="08ef3-113">Typically, you set <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A> to the center of the object that is scaled: (<xref:System.Windows.FrameworkElement.Width%2A>/2, <xref:System.Windows.FrameworkElement.Height%2A>/2).</span></span>  
   
- En el ejemplo siguiente se muestra otro <xref:System.Windows.Shapes.Rectangle> cuyo tamaño se duplica; sin embargo, en este caso <xref:System.Windows.Media.ScaleTransform> tiene un valor de 25 para <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y para <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, lo que corresponde al centro del rectángulo.  
+ <span data-ttu-id="08ef3-114">En el ejemplo siguiente se muestra otro <xref:System.Windows.Shapes.Rectangle> que se duplica en tamaño; sin embargo, esto <xref:System.Windows.Media.ScaleTransform> tiene un valor de 25 para ambos <xref:System.Windows.Media.ScaleTransform.CenterX%2A> y <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, que se corresponde con el centro del rectángulo.</span><span class="sxs-lookup"><span data-stu-id="08ef3-114">The following example shows another <xref:System.Windows.Shapes.Rectangle> that is doubled in size; however, this <xref:System.Windows.Media.ScaleTransform> has a value of 25 for both <xref:System.Windows.Media.ScaleTransform.CenterX%2A> and <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, which corresponds to the center of the rectangle.</span></span>  
   
- [!code-xml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
+ [!code-xaml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
- En la ilustración siguiente se muestra la diferencia entre las dos operaciones <xref:System.Windows.Media.ScaleTransform>.  La línea de puntos muestra el tamaño y la posición del rectángulo antes de ajustar su escala.  
+ <span data-ttu-id="08ef3-115">En la siguiente ilustración muestra la diferencia entre los dos <xref:System.Windows.Media.ScaleTransform> operaciones.</span><span class="sxs-lookup"><span data-stu-id="08ef3-115">The following illustration shows the difference between the two <xref:System.Windows.Media.ScaleTransform> operations.</span></span> <span data-ttu-id="08ef3-116">La línea de puntos muestra el tamaño y la posición del rectángulo antes de escalar.</span><span class="sxs-lookup"><span data-stu-id="08ef3-116">The dotted line shows the size and position of the rectangle before scaling.</span></span>  
   
- ![escalas dobles con diferentes centros](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.png "wcpsdk\_graphicsmm\_scalecenter")  
-Dos operaciones de ScaleTransform con valores idénticos de las propiedades ScaleX y ScaleY pero con centros diferentes  
+ <span data-ttu-id="08ef3-117">![escalas x 2 con diferentes centros](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")</span><span class="sxs-lookup"><span data-stu-id="08ef3-117">![2x scales with different center points](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")</span></span>  
+<span data-ttu-id="08ef3-118">Dos operaciones de ScaleTransform con valores idénticos de ScaleX y ScaleY pero con centros diferentes</span><span class="sxs-lookup"><span data-stu-id="08ef3-118">Two ScaleTransform operations with identical ScaleX and ScaleY values but different centers</span></span>  
   
- Para obtener el ejemplo completo, vea [2\-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ <span data-ttu-id="08ef3-119">Para ver el ejemplo completo, consulte [Ejemplo de transformaciones 2D](http://go.microsoft.com/fwlink/?LinkID=158252).</span><span class="sxs-lookup"><span data-stu-id="08ef3-119">For the complete sample, see [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.ScaleTransform>   
- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="08ef3-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="08ef3-120">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.ScaleTransform>  
+ [<span data-ttu-id="08ef3-121">Información general sobre transformaciones</span><span class="sxs-lookup"><span data-stu-id="08ef3-121">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="08ef3-122">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="08ef3-122">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

@@ -1,46 +1,50 @@
 ---
-title: "Curvas spline cardinales en GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "curvas spline cardinales"
-  - "GDI+, curvas spline cardinales"
-  - "curvas spline, cardinales"
+title: Curvas spline cardinales en GDI+
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- splines [Windows Forms], cardinal
+- GDI+, cardinal splines
+- cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0ad417ee61026f6573f19e70409511e0b28e4d78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Curvas spline cardinales en GDI+
-Una curva spline cardinal es una secuencia de curvas individuales combinadas para formar una curva mayor.  La curva spline se especifica mediante una matriz de puntos y un parámetro de tensión.  Una curva spline cardinal pasa suavemente por cada punto de la matriz; no hay esquinas definidas ni cambios abruptos en la tensión de la curva.  En la siguiente ilustración se muestra un conjunto de puntos y una curva spline cardinal que pasa por cada punto del conjunto.  
+# <a name="cardinal-splines-in-gdi"></a><span data-ttu-id="79893-102">Curvas spline cardinales en GDI+</span><span class="sxs-lookup"><span data-stu-id="79893-102">Cardinal Splines in GDI+</span></span>
+<span data-ttu-id="79893-103">Una curva spline cardinal es una secuencia de curvas individuales combinadas para formar una curva mayor.</span><span class="sxs-lookup"><span data-stu-id="79893-103">A cardinal spline is a sequence of individual curves joined to form a larger curve.</span></span> <span data-ttu-id="79893-104">La curva spline se especifica mediante una matriz de puntos y un parámetro de tensión.</span><span class="sxs-lookup"><span data-stu-id="79893-104">The spline is specified by an array of points and a tension parameter.</span></span> <span data-ttu-id="79893-105">Una curva spline cardinal pasa suavemente por cada punto de la matriz; hay sin esquinas definidas y ningún cambio abrupto en la tensión de la curva.</span><span class="sxs-lookup"><span data-stu-id="79893-105">A cardinal spline passes smoothly through each point in the array; there are no sharp corners and no abrupt changes in the tightness of the curve.</span></span> <span data-ttu-id="79893-106">En la siguiente ilustración muestra un conjunto de puntos y una curva spline cardinal que pasa por cada punto en el conjunto.</span><span class="sxs-lookup"><span data-stu-id="79893-106">The following illustration shows a set of points and a cardinal spline that passes through each point in the set.</span></span>  
   
- ![Curva spline cardinal](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art09.png "Aboutgdip02\_art09")  
+ <span data-ttu-id="79893-107">![Curva cardinal Spline](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art09.gif "Aboutgdip02_art09")</span><span class="sxs-lookup"><span data-stu-id="79893-107">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art09.gif "Aboutgdip02_art09")</span></span>  
   
-## Curvas spline físicas y matemáticas  
- Una curva spline física es un trozo fino de madera o de otro material flexible.  Antes de la aparición de las curvas spline matemáticas, los diseñadores utilizaban curvas spline físicas para dibujar curvas.  Un diseñador colocaba la curva spline en un trozo de papel y la delimitaba con respecto a un conjunto determinado de puntos.  Después, el diseñador podía crear una curva dibujando a lo largo de la curva spline con un lápiz.  Un conjunto determinado de puntos podría generar varias curvas, en función de las propiedades de la curva spline física.  Por ejemplo, una curva spline con una resistencia alta a curvarse genera una curva distinta a la de una curva spline extremadamente flexible.  
+## <a name="physical-and-mathematical-splines"></a><span data-ttu-id="79893-108">Curvas spline física y matemática</span><span class="sxs-lookup"><span data-stu-id="79893-108">Physical and Mathematical Splines</span></span>  
+ <span data-ttu-id="79893-109">Una curva spline física es un trozo fino de madera u otros materiales flexible.</span><span class="sxs-lookup"><span data-stu-id="79893-109">A physical spline is a thin piece of wood or other flexible material.</span></span> <span data-ttu-id="79893-110">Antes de la llegada de b-spline matemática, los diseñadores utilizaban curvas spline físicas para dibujar curvas.</span><span class="sxs-lookup"><span data-stu-id="79893-110">Before the advent of mathematical splines, designers used physical splines to draw curves.</span></span> <span data-ttu-id="79893-111">Un diseñador podría colocar la curva spline en una hoja de papel y anclarlo a un conjunto determinado de puntos.</span><span class="sxs-lookup"><span data-stu-id="79893-111">A designer would place the spline on a piece of paper and anchor it to a given set of points.</span></span> <span data-ttu-id="79893-112">El diseñador, a continuación, podría crear una curva dibujando a lo largo de la curva spline con un lápiz o un lápiz.</span><span class="sxs-lookup"><span data-stu-id="79893-112">The designer could then create a curve by drawing along the spline with a pen or pencil.</span></span> <span data-ttu-id="79893-113">Un conjunto determinado de puntos podría generar una variedad de curvas, según las propiedades de la curva spline física.</span><span class="sxs-lookup"><span data-stu-id="79893-113">A given set of points could yield a variety of curves, depending on the properties of the physical spline.</span></span> <span data-ttu-id="79893-114">Por ejemplo, una curva spline con una resistencia alta a doblar generaría una curva distinta que una curva spline extremadamente flexible.</span><span class="sxs-lookup"><span data-stu-id="79893-114">For example, a spline with a high resistance to bending would produce a different curve than an extremely flexible spline.</span></span>  
   
- Las fórmulas que se utilizan para calcular curvas spline matemáticas se basan en las propiedades de barras flexibles, de modo que las curvas creadas por curvas spline matemáticas son similares a las curvas que se crearon una vez con las curvas spline físicas.  Del mismo modo que las curvas spline físicas de distinta tensión generan curvas distintas a través de un conjunto determinado de puntos, las curvas spline matemáticas con valores diferentes para el parámetro de tensión generan curvas diferentes a través de un conjunto determinado de puntos.  En la siguiente ilustración se muestran cuatro curvas spline cardinales que pasan por el mismo conjunto de puntos.  Se muestra la tensión de cada curva spline.  Una tensión de 0 se corresponde con una tensión física infinita, lo que obliga a la curva a tomar el camino más corto \(líneas rectas\) entre puntos.  Una tensión de 1 corresponde a la ausencia de tensión física, que permite a la curva spline tomar el trazado de menor curvatura total.  Con valores de tensión superiores a 1, la curva se comporta como un muelle comprimido, al que se empuja para tomar un trazado más largo.  
+ <span data-ttu-id="79893-115">Las fórmulas para curvas spline matemáticas se basan en las propiedades de barras flexibles, por lo que las curvas creadas por curvas spline matemáticas son similares a las curvas que han generado una vez curvas spline físicas.</span><span class="sxs-lookup"><span data-stu-id="79893-115">The formulas for mathematical splines are based on the properties of flexible rods, so the curves produced by mathematical splines are similar to the curves that were once produced by physical splines.</span></span> <span data-ttu-id="79893-116">Como curvas spline físicas de distinta tensión generan curvas diferentes a través de un conjunto determinado de puntos, curvas spline matemáticas con valores diferentes para el parámetro de tensión generan curvas diferentes a través de un conjunto determinado de puntos.</span><span class="sxs-lookup"><span data-stu-id="79893-116">Just as physical splines of different tension will produce different curves through a given set of points, mathematical splines with different values for the tension parameter will produce different curves through a given set of points.</span></span> <span data-ttu-id="79893-117">La siguiente ilustración muestra cuatro curvas spline cardinales que pasan por el mismo conjunto de puntos.</span><span class="sxs-lookup"><span data-stu-id="79893-117">The following illustration shows four cardinal splines passing through the same set of points.</span></span> <span data-ttu-id="79893-118">Se muestra la tensión de cada curva spline.</span><span class="sxs-lookup"><span data-stu-id="79893-118">The tension is shown for each spline.</span></span> <span data-ttu-id="79893-119">Una tensión de 0 se corresponde con una tensión física infinita, forzar la curva a tomar el camino más corto (líneas rectas) entre los puntos.</span><span class="sxs-lookup"><span data-stu-id="79893-119">A tension of 0 corresponds to infinite physical tension, forcing the curve to take the shortest way (straight lines) between points.</span></span> <span data-ttu-id="79893-120">Una tensión de 1 corresponde a ninguna tensión física, lo que permite la curva spline tomar la ruta de acceso de menor curvatura total.</span><span class="sxs-lookup"><span data-stu-id="79893-120">A tension of 1 corresponds to no physical tension, allowing the spline to take the path of least total bend.</span></span> <span data-ttu-id="79893-121">Con valores de tensión superiores a 1, la curva se comporta como un muelle comprimido, empuja para tomar una ruta más larga.</span><span class="sxs-lookup"><span data-stu-id="79893-121">With tension values greater than 1, the curve behaves like a compressed spring, pushed to take a longer path.</span></span>  
   
- ![Curvas spline cardinales](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art10.png "Aboutgdip02\_art10")  
+ <span data-ttu-id="79893-122">![Curvas spline cardinales](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art10.gif "Aboutgdip02_art10")</span><span class="sxs-lookup"><span data-stu-id="79893-122">![Cardinal Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art10.gif "Aboutgdip02_art10")</span></span>  
   
- Las cuatro curvas spline de la ilustración anterior comparten la misma línea tangente en el punto inicial.  La tangente es la línea que va desde el punto inicial hasta el siguiente punto de la curva.  De forma similar, la tangente compartida en el extremo es la línea que va desde el extremo hasta el punto anterior de la curva.  
+ <span data-ttu-id="79893-123">Las cuatro curvas spline en la ilustración anterior comparten la misma línea tangente en el punto inicial.</span><span class="sxs-lookup"><span data-stu-id="79893-123">The four splines in the preceding illustration share the same tangent line at the starting point.</span></span> <span data-ttu-id="79893-124">La tangente es la línea que se dibuja desde el punto de partida hasta el siguiente punto a lo largo de la curva.</span><span class="sxs-lookup"><span data-stu-id="79893-124">The tangent is the line drawn from the starting point to the next point along the curve.</span></span> <span data-ttu-id="79893-125">Del mismo modo, la tangente compartida en el punto final es la línea que se dibuja desde el punto final hasta el punto anterior en la curva.</span><span class="sxs-lookup"><span data-stu-id="79893-125">Likewise, the shared tangent at the ending point is the line drawn from the ending point to the previous point on the curve.</span></span>  
   
- Para dibujar una curva spline cardinal, necesita una instancia de la clase <xref:System.Drawing.Graphics>, un <xref:System.Drawing.Pen> y una matriz de los objetos <xref:System.Drawing.Point>. La instancia de la clase <xref:System.Drawing.Graphics> proporciona el método <xref:System.Drawing.Graphics.DrawCurve%2A>, que dibuja la curva spline, y <xref:System.Drawing.Pen> almacena los atributos de la curva spline, como ancho de línea y color.  La matriz de objetos <xref:System.Drawing.Point> almacena los puntos por los que pasará la curva.  En el ejemplo de código siguiente se muestra cómo dibujar una curva spline cardinal que atraviesa los puntos de  `myPointArray`.  La tensión es el tercer parámetro.  
+ <span data-ttu-id="79893-126">Para dibujar una curva spline cardinal, necesita una instancia de la <xref:System.Drawing.Graphics> (clase), un <xref:System.Drawing.Pen>y una matriz de <xref:System.Drawing.Point> objetos de la instancia de la <xref:System.Drawing.Graphics> clase proporciona el <xref:System.Drawing.Graphics.DrawCurve%2A> método, que se dibuja la curva spline, y el <xref:System.Drawing.Pen> almacena los atributos de la curva spline, como el color y ancho de línea.</span><span class="sxs-lookup"><span data-stu-id="79893-126">To draw a cardinal spline, you need an instance of the <xref:System.Drawing.Graphics> class, a <xref:System.Drawing.Pen>, and an array of <xref:System.Drawing.Point> objects The instance of the <xref:System.Drawing.Graphics> class provides the <xref:System.Drawing.Graphics.DrawCurve%2A> method, which draws the spline, and the <xref:System.Drawing.Pen> stores attributes of the spline, such as line width and color.</span></span> <span data-ttu-id="79893-127">La matriz de <xref:System.Drawing.Point> objetos almacena los puntos que pasará la curva.</span><span class="sxs-lookup"><span data-stu-id="79893-127">The array of <xref:System.Drawing.Point> objects stores the points that the curve will pass through.</span></span> <span data-ttu-id="79893-128">En el ejemplo de código siguiente se muestra cómo dibujar una curva spline cardinal que atraviesa los puntos en `myPointArray`.</span><span class="sxs-lookup"><span data-stu-id="79893-128">The following code example shows how to draw a cardinal spline that passes through the points in `myPointArray`.</span></span> <span data-ttu-id="79893-129">El tercer parámetro es la tensión.</span><span class="sxs-lookup"><span data-stu-id="79893-129">The third parameter is the tension.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#31)]
  [!code-vb[LinesCurvesAndShapes#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
-## Vea también  
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Crear y dibujar curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a><span data-ttu-id="79893-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="79893-130">See Also</span></span>  
+ [<span data-ttu-id="79893-131">Líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="79893-131">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="79893-132">Crear y dibujar curvas</span><span class="sxs-lookup"><span data-stu-id="79893-132">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

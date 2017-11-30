@@ -1,85 +1,83 @@
 ---
-title: "Dise&#241;o de eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "eventos anteriores"
-  - "eventos [.NET Framework], instrucciones de diseño"
-  - "instrucciones de diseño de miembros, eventos"
-  - "controladores de eventos [.NET Framework], instrucciones de diseño de eventos"
-  - "eventos posteriores"
-  - "firmas, control de eventos"
+title: "Diseño de eventos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pre-events
+- events [.NET Framework], design guidelines
+- member design guidelines, events
+- event handlers [.NET Framework], event design guidelines
+- post-events
+- signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e8dcd1003b3f93db733ece4f90340d1d98867d2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Dise&#241;o de eventos
-Los eventos son la forma más utilizada de devoluciones de llamada \(construcciones que permiten que el marco de trabajo llamar a código de usuario\). Otros mecanismos de devolución de llamada incluyen a miembros tomar delegados, los miembros virtuales y los complementos basado en la interfaz. Datos de estudios de uso indican que la mayoría de los desarrolladores es más cómodo utilizar eventos que utilizan otros mecanismos de devolución de llamada. Eventos se integran perfectamente con Visual Studio y muchos idiomas.  
+# <a name="event-design"></a><span data-ttu-id="36624-102">Diseño de eventos</span><span class="sxs-lookup"><span data-stu-id="36624-102">Event Design</span></span>
+<span data-ttu-id="36624-103">Los eventos son la forma más utilizada de las devoluciones de llamada (construcciones que permiten el marco de trabajo llamar a código de usuario).</span><span class="sxs-lookup"><span data-stu-id="36624-103">Events are the most commonly used form of callbacks (constructs that allow the framework to call into user code).</span></span> <span data-ttu-id="36624-104">Otros mecanismos de devolución de llamada deben incluir a miembros teniendo delegados, los miembros virtuales y usar complementos basado en la interfaz. Datos de estudios de uso indican que la mayoría de los desarrolladores más cómodo mediante eventos que usen otros mecanismos de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="36624-104">Other callback mechanisms include members taking delegates, virtual members, and interface-based plug-ins. Data from usability studies indicate that the majority of developers are more comfortable using events than they are using the other callback mechanisms.</span></span> <span data-ttu-id="36624-105">Eventos se integran perfectamente con Visual Studio y muchos idiomas.</span><span class="sxs-lookup"><span data-stu-id="36624-105">Events are nicely integrated with Visual Studio and many languages.</span></span>  
   
- Es importante tener en cuenta que hay dos grupos de eventos: eventos producidos antes de un estado de los cambios del sistema, denominados eventos anteriores y eventos generados después de un estado cambia, denominan eventos posteriores. Un ejemplo de un evento previo sería `Form.Closing`, que se desencadena antes de que se cierra un formulario. Un ejemplo de un evento posterior sería `Form.Closed`, que se provoca cuando se cierra un formulario.  
+ <span data-ttu-id="36624-106">Es importante tener en cuenta que hay dos grupos de eventos: eventos generados antes de un estado de los cambios del sistema, denominados eventos anteriores y eventos que se desencadena cuando se cambia un estado, denominan eventos posteriores a la.</span><span class="sxs-lookup"><span data-stu-id="36624-106">It is important to note that there are two groups of events: events raised before a state of the system changes, called pre-events, and events raised after a state changes, called post-events.</span></span> <span data-ttu-id="36624-107">Un ejemplo de un evento previo sería `Form.Closing`, que se produce antes de que se cierra un formulario.</span><span class="sxs-lookup"><span data-stu-id="36624-107">An example of a pre-event would be `Form.Closing`, which is raised before a form is closed.</span></span> <span data-ttu-id="36624-108">Un ejemplo de un evento posterior a la sería `Form.Closed`, que se desencadena cuando se cierra un formulario.</span><span class="sxs-lookup"><span data-stu-id="36624-108">An example of a post-event would be `Form.Closed`, which is raised after a form is closed.</span></span>  
   
- **✓ hacer** utiliza el término "elevar" para los eventos en lugar de "activar" o "activar".  
+ <span data-ttu-id="36624-109">**✓ HACER** se usa el término "generar" para los eventos en lugar de "activar" o "activar".</span><span class="sxs-lookup"><span data-stu-id="36624-109">**✓ DO** use the term "raise" for events rather than "fire" or "trigger."</span></span>  
   
- **✓ hacer** use <xref:System.EventHandler%601?displayProperty=fullName> en lugar de crear manualmente nuevos delegados que se usará como controladores de eventos.  
+ <span data-ttu-id="36624-110">**✓ HACER** use <xref:System.EventHandler%601?displayProperty=nameWithType> en lugar de crear manualmente nuevos delegados que se usará como controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="36624-110">**✓ DO** use <xref:System.EventHandler%601?displayProperty=nameWithType> instead of manually creating new delegates to be used as event handlers.</span></span>  
   
- **✓ considere** usando una subclase de <xref:System.EventArgs> como el argumento de evento, a menos que esté absolutamente seguro nunca tendrá que llevar los datos al método de control de eventos al evento en cuyo caso puede utilizar la `EventArgs` escribir directamente.  
+ <span data-ttu-id="36624-111">**✓ Considere la posibilidad de** con una subclase de <xref:System.EventArgs> como el argumento de evento, a menos que esté totalmente seguro nunca tendrá que realizar ningún dato para el método de control de eventos el evento en cuyo caso puede utilizar la `EventArgs` escribir directamente.</span><span class="sxs-lookup"><span data-stu-id="36624-111">**✓ CONSIDER** using a subclass of <xref:System.EventArgs> as the event argument, unless you are absolutely sure the event will never need to carry any data to the event handling method, in which case you can use the `EventArgs` type directly.</span></span>  
   
- Si incluye una API con `EventArgs` directamente, nunca podrá agregar los datos se realice con el evento sin interrumpir la compatibilidad. Si usa una subclase, incluso si inicialmente completamente vacía, podrá agregar propiedades a la subclase cuando sea necesario.  
+ <span data-ttu-id="36624-112">Tanto si incluye una API mediante `EventArgs` directamente, nunca podrá agregar todos los datos se realiza con el evento sin interrumpir la compatibilidad.</span><span class="sxs-lookup"><span data-stu-id="36624-112">If you ship an API using `EventArgs` directly, you will never be able to add any data to be carried with the event without breaking compatibility.</span></span> <span data-ttu-id="36624-113">Si usa una subclase, incluso si inicialmente completamente vacías, podrá agregar propiedades a la subclase cuando sea necesario.</span><span class="sxs-lookup"><span data-stu-id="36624-113">If you use a subclass, even if initially completely empty, you will be able to add properties to the subclass when needed.</span></span>  
   
- **✓ hacer** utilizar un método virtual protegido para provocar cada evento. Esto solo es aplicable a los eventos no estáticos en clases no selladas, no a las estructuras, clases selladas ni eventos estáticos.  
+ <span data-ttu-id="36624-114">**✓ HACER** utilizar un método virtual protegido para provocar cada evento.</span><span class="sxs-lookup"><span data-stu-id="36624-114">**✓ DO** use a protected virtual method to raise each event.</span></span> <span data-ttu-id="36624-115">Esto solo es aplicable a los eventos no estáticos en clases no selladas, no a las estructuras, clases selladas o eventos estáticos.</span><span class="sxs-lookup"><span data-stu-id="36624-115">This is only applicable to nonstatic events on unsealed classes, not to structs, sealed classes, or static events.</span></span>  
   
- El propósito del método es proporcionar una forma de una clase derivada para controlar el evento mediante una invalidación. Reemplazar es la forma más natural, más rápida y más flexible para controlar los eventos de la clase base en clases derivadas. Por convención, el nombre del método debe comenzar con "On" y seguir con el nombre del evento.  
+ <span data-ttu-id="36624-116">El propósito del método es proporcionar una manera para que una clase derivada para controlar el evento mediante una invalidación.</span><span class="sxs-lookup"><span data-stu-id="36624-116">The purpose of the method is to provide a way for a derived class to handle the event using an override.</span></span> <span data-ttu-id="36624-117">Reemplazar el método es una manera más flexible, más rápida y más natural para controlar los eventos de la clase base en clases derivadas.</span><span class="sxs-lookup"><span data-stu-id="36624-117">Overriding is a more flexible, faster, and more natural way to handle base class events in derived classes.</span></span> <span data-ttu-id="36624-118">Por convención, el nombre del método debe comenzar con "On" y seguir con el nombre del evento.</span><span class="sxs-lookup"><span data-stu-id="36624-118">By convention, the name of the method should start with "On" and be followed with the name of the event.</span></span>  
   
- La clase derivada puede elegir no llamar a la implementación base del método en su reemplazo. Prepárese para esto, no incluya ningún procesamiento en el método que se requiere para la clase base para que funcione correctamente.  
+ <span data-ttu-id="36624-119">La clase derivada puede elegir no llamar a la implementación base del método en su reemplazo.</span><span class="sxs-lookup"><span data-stu-id="36624-119">The derived class can choose not to call the base implementation of the method in its override.</span></span> <span data-ttu-id="36624-120">Prepárese para esto, no incluya ningún procesamiento en el método que se requiere para la clase base para que funcione correctamente.</span><span class="sxs-lookup"><span data-stu-id="36624-120">Be prepared for this by not including any processing in the method that is required for the base class to work correctly.</span></span>  
   
- **✓ hacer** tomar un parámetro al método protegido que genera un evento.  
+ <span data-ttu-id="36624-121">**✓ HACER** tomar un parámetro para el método protegido que genera un evento.</span><span class="sxs-lookup"><span data-stu-id="36624-121">**✓ DO** take one parameter to the protected method that raises an event.</span></span>  
   
- El parámetro se debe denominar `e` y debe escribirse como la clase de argumento de evento.  
+ <span data-ttu-id="36624-122">El parámetro se debe denominar `e` y debe escribirse como la clase de argumento de evento.</span><span class="sxs-lookup"><span data-stu-id="36624-122">The parameter should be named `e` and should be typed as the event argument class.</span></span>  
   
- **X no** pase null como el remitente cuando se provoca un evento no estático.  
+ <span data-ttu-id="36624-123">**X DO NOT** pasa null como el remitente cuando cuando se genera un evento no estático.</span><span class="sxs-lookup"><span data-stu-id="36624-123">**X DO NOT** pass null as the sender when raising a nonstatic event.</span></span>  
   
- **✓ hacer** pase null como el remitente al generar un evento estático.  
+ <span data-ttu-id="36624-124">**✓ HACER** pasa null como el remitente al generar un evento estático.</span><span class="sxs-lookup"><span data-stu-id="36624-124">**✓ DO** pass null as the sender when raising a static event.</span></span>  
   
- **X no** pasa null como parámetro de datos del evento al iniciar un evento.  
+ <span data-ttu-id="36624-125">**X DO NOT** pasa null como parámetro de datos del evento al generar un evento.</span><span class="sxs-lookup"><span data-stu-id="36624-125">**X DO NOT** pass null as the event data parameter when raising an event.</span></span>  
   
- Debería pasar `EventArgs.Empty` Si no desea pasar ningún dato al método de control de eventos. Los desarrolladores esperan este parámetro no sea null.  
+ <span data-ttu-id="36624-126">Debería pasar `EventArgs.Empty` si no desea pasar ningún dato para el método de control de eventos.</span><span class="sxs-lookup"><span data-stu-id="36624-126">You should pass `EventArgs.Empty` if you don’t want to pass any data to the event handling method.</span></span> <span data-ttu-id="36624-127">Los desarrolladores esperan este parámetro para que no sea null.</span><span class="sxs-lookup"><span data-stu-id="36624-127">Developers expect this parameter not to be null.</span></span>  
   
- **✓ considere** generar eventos que se puede cancelar el usuario final. Esto sólo se aplica a los eventos anteriores.  
+ <span data-ttu-id="36624-128">**Considere la posibilidad de ✓** generar eventos que se puede cancelar el usuario final.</span><span class="sxs-lookup"><span data-stu-id="36624-128">**✓ CONSIDER** raising events that the end user can cancel.</span></span> <span data-ttu-id="36624-129">Esto solo se aplica a los eventos anteriores.</span><span class="sxs-lookup"><span data-stu-id="36624-129">This only applies to pre-events.</span></span>  
   
- Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=fullName> o su subclase como el argumento de evento para permitir al usuario final Cancelar eventos.  
+ <span data-ttu-id="36624-130">Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o su subclase como el argumento de evento para permitir que el usuario final pueda cancelar eventos.</span><span class="sxs-lookup"><span data-stu-id="36624-130">Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> or its subclass as the event argument to allow the end user to cancel events.</span></span>  
   
-### Diseño de controlador de eventos personalizados  
- Hay casos en los que `EventHandler<T>` no se puede utilizar, por ejemplo, cuando el marco de trabajo necesita trabajar con las versiones anteriores de CLR, que no era compatible con genéricos. En estos casos, tendrá que diseñar y desarrollar a un delegado de controlador de eventos personalizado.  
+### <a name="custom-event-handler-design"></a><span data-ttu-id="36624-131">Diseño de controlador de eventos personalizados</span><span class="sxs-lookup"><span data-stu-id="36624-131">Custom Event Handler Design</span></span>  
+ <span data-ttu-id="36624-132">Hay casos en los que `EventHandler<T>` no se puede usar, por ejemplo, cuando el marco de trabajo necesita trabajar con versiones anteriores de CLR, el cual no era compatible con genéricos.</span><span class="sxs-lookup"><span data-stu-id="36624-132">There are cases in which `EventHandler<T>` cannot be used, such as when the framework needs to work with earlier versions of the CLR, which did not support Generics.</span></span> <span data-ttu-id="36624-133">En tales casos, deberá diseñar y desarrollar a un delegado de controlador de eventos personalizado.</span><span class="sxs-lookup"><span data-stu-id="36624-133">In such cases, you might need to design and develop a custom event handler delegate.</span></span>  
   
- **✓ hacer** utilizar un tipo de valor devuelto de void para los controladores de eventos.  
+ <span data-ttu-id="36624-134">**✓ HACER** utilizar un tipo de valor devuelto de void para controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="36624-134">**✓ DO** use a return type of void for event handlers.</span></span>  
   
- Un controlador de eventos puede invocar varios métodos, posiblemente en varios objetos de control de eventos. Si se permiten métodos de control de eventos para devolver un valor, habrá varios valores devueltos para cada invocación del evento.  
+ <span data-ttu-id="36624-135">Un controlador de eventos puede invocar varios métodos, posiblemente en varios objetos de control de eventos.</span><span class="sxs-lookup"><span data-stu-id="36624-135">An event handler can invoke multiple event handling methods, possibly on multiple objects.</span></span> <span data-ttu-id="36624-136">Si se permiten métodos de control de eventos para devolver un valor, habrá varios valores devueltos para cada invocación del evento.</span><span class="sxs-lookup"><span data-stu-id="36624-136">If event handling methods were allowed to return a value, there would be multiple return values for each event invocation.</span></span>  
   
- **✓ hacer** use `object` como el tipo del primer parámetro del controlador de eventos y llámelo `sender`.  
+ <span data-ttu-id="36624-137">**✓ HACER** usar `object` como el tipo del primer parámetro del controlador de eventos y llámelo `sender`.</span><span class="sxs-lookup"><span data-stu-id="36624-137">**✓ DO** use `object` as the type of the first parameter of the event handler, and call it `sender`.</span></span>  
   
- **✓ hacer** use <xref:System.EventArgs?displayProperty=fullName> o su subclase como el tipo del segundo parámetro del controlador de eventos y llámelo `e`.  
+ <span data-ttu-id="36624-138">**✓ HACER** usar <xref:System.EventArgs?displayProperty=nameWithType> o su subclase como el tipo del segundo parámetro del controlador de eventos y llámelo `e`.</span><span class="sxs-lookup"><span data-stu-id="36624-138">**✓ DO** use <xref:System.EventArgs?displayProperty=nameWithType> or its subclass as the type of the second parameter of the event handler, and call it `e`.</span></span>  
   
- **X no** tiene más de dos parámetros en los controladores de eventos.  
+ <span data-ttu-id="36624-139">**X DO NOT** tiene más de dos parámetros en controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="36624-139">**X DO NOT** have more than two parameters on event handlers.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="36624-140">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="36624-140">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="36624-141">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="36624-141">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="36624-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="36624-142">See Also</span></span>  
+ [<span data-ttu-id="36624-143">Instrucciones de diseño de miembros</span><span class="sxs-lookup"><span data-stu-id="36624-143">Member Design Guidelines</span></span>](../../../docs/standard/design-guidelines/member.md)  
+ [<span data-ttu-id="36624-144">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="36624-144">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

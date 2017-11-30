@@ -1,137 +1,136 @@
 ---
-title: "Identificadores (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Identificadores (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 21518cad85ebcfc4c326e99d615b4f2dfccf6a2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Identificadores (Entity SQL)
-En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identificadores como representación de los alias de expresiones de consulta, referencias de variables, propiedades de objetos, funciones, etc.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona dos tipos de identificadores: los identificadores simples y los identificadores entre comillas.  
+# <a name="identifiers-entity-sql"></a><span data-ttu-id="fa56d-102">Identificadores (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="fa56d-102">Identifiers (Entity SQL)</span></span>
+<span data-ttu-id="fa56d-103">En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se utilizan identificadores como representación de los alias de expresiones de consulta, referencias de variables, propiedades de objetos, funciones, etc.</span><span class="sxs-lookup"><span data-stu-id="fa56d-103">Identifiers are used in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to represent query expression aliases, variable references, properties of objects, functions, and so on.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="fa56d-104">proporciona dos tipos de identificadores: los identificadores simples y los identificadores entre comillas.</span><span class="sxs-lookup"><span data-stu-id="fa56d-104"> provides two kinds of identifiers: simple identifiers and quoted identifiers.</span></span>  
   
-## Identificadores simples  
- Un identificador simple en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es una secuencia de caracteres alfanuméricos y de subrayado.  El primer carácter del identificador debe ser alfabético \(a\-z o A\-Z\).  
+## <a name="simple-identifiers"></a><span data-ttu-id="fa56d-105">Identificadores simples</span><span class="sxs-lookup"><span data-stu-id="fa56d-105">Simple Identifiers</span></span>  
+ <span data-ttu-id="fa56d-106">Un identificador simple en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es una secuencia de alfanuméricos y caracteres de subrayado.</span><span class="sxs-lookup"><span data-stu-id="fa56d-106">A simple identifier in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is a sequence of alphanumeric and underscore characters.</span></span> <span data-ttu-id="fa56d-107">El primer carácter del identificador debe ser alfabético (a-z o A-Z).</span><span class="sxs-lookup"><span data-stu-id="fa56d-107">The first character of the identifier must be an alphabetical character (a-z or A-Z).</span></span>  
   
-## Identificadores entre comillas  
- Un identificador entre comillas es cualquier secuencia de caracteres incluida entre corchetes \(\[\]\).  Los identificadores entre comillas le permiten especificar identificadores con caracteres que no son válidos.  Todos los caracteres entre los corchetes se convierten en parte del identificador, incluido todo el espacio en blanco.  
+## <a name="quoted-identifiers"></a><span data-ttu-id="fa56d-108">Identificadores entre comillas</span><span class="sxs-lookup"><span data-stu-id="fa56d-108">Quoted Identifiers</span></span>  
+ <span data-ttu-id="fa56d-109">Un identificador entre comillas es cualquier secuencia de caracteres incluida entre corchetes ([]).</span><span class="sxs-lookup"><span data-stu-id="fa56d-109">A quoted identifier is any sequence of characters enclosed in square brackets ([]).</span></span> <span data-ttu-id="fa56d-110">Los identificadores entre comillas le permiten especificar identificadores con caracteres que no son válidos.</span><span class="sxs-lookup"><span data-stu-id="fa56d-110">Quoted identifiers let you specify identifiers with characters that are not valid in identifiers.</span></span> <span data-ttu-id="fa56d-111">Todos los caracteres entre los corchetes se convierten en parte del identificador, incluido todo el espacio en blanco.</span><span class="sxs-lookup"><span data-stu-id="fa56d-111">All characters between the square brackets become part of the identifier, including all whitespace.</span></span>  
   
- Un identificador entre comillas no puede incluir los caracteres siguientes:  
+ <span data-ttu-id="fa56d-112">Un identificador entre comillas no puede incluir los caracteres siguientes:</span><span class="sxs-lookup"><span data-stu-id="fa56d-112">A quoted identifier cannot include the following characters:</span></span>  
   
--   Nueva línea.  
+-   <span data-ttu-id="fa56d-113">Nueva línea.</span><span class="sxs-lookup"><span data-stu-id="fa56d-113">Newline.</span></span>  
   
--   Retorno de carro.  
+-   <span data-ttu-id="fa56d-114">Retorno de carro.</span><span class="sxs-lookup"><span data-stu-id="fa56d-114">Carriage returns.</span></span>  
   
--   Tabulaciones.  
+-   <span data-ttu-id="fa56d-115">Tabulaciones.</span><span class="sxs-lookup"><span data-stu-id="fa56d-115">Tabs.</span></span>  
   
--   Retroceso.  
+-   <span data-ttu-id="fa56d-116">Retroceso.</span><span class="sxs-lookup"><span data-stu-id="fa56d-116">Backspace.</span></span>  
   
--   Corchetes adicionales \(es decir, corchetes dentro de los corchetes que delinean el identificador\).  
+-   <span data-ttu-id="fa56d-117">Corchetes adicionales (es decir, corchetes dentro de los corchetes que delinean el identificador).</span><span class="sxs-lookup"><span data-stu-id="fa56d-117">Additional square brackets (that is, square brackets within the square brackets that delineate the identifier).</span></span>  
   
- Un identificador entre comillas puede incluir caracteres Unicode.  
+ <span data-ttu-id="fa56d-118">Un identificador entre comillas puede incluir caracteres Unicode.</span><span class="sxs-lookup"><span data-stu-id="fa56d-118">A quoted-identifier can include Unicode characters.</span></span>  
   
- Los identificadores entre comillas le permiten crear caracteres de nombres de propiedad que no son válidos en identificadores, como se muestra en el ejemplo siguiente:  
+ <span data-ttu-id="fa56d-119">Los identificadores entre comillas le permiten crear caracteres de nombres de propiedad que no son válidos en identificadores, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="fa56d-119">Quoted identifiers enable you to create property name characters that are not valid in identifiers, as illustrated in the following example:</span></span>  
   
  `SELECT c.ContactName AS [Contact Name] FROM customers AS c`  
   
- También puede utilizar los identificadores entre comillas para especificar un identificador que sea una palabra clave reservada de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  Por ejemplo, si el tipo `Email` tiene una propiedad denominada "From", puede eliminar la ambigüedad de la palabra clave reservada FROM utilizando corchetes, como sigue:  
+ <span data-ttu-id="fa56d-120">También puede utilizar los identificadores entre comillas para especificar un identificador que sea una palabra clave reservada de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fa56d-120">You can also use quoted identifiers to specify an identifier that is a reserved keyword of [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span> <span data-ttu-id="fa56d-121">Por ejemplo, si el tipo `Email` tiene una propiedad denominada "From", puede eliminar la ambigüedad de la palabra clave reservada FROM utilizando corchetes, como sigue:</span><span class="sxs-lookup"><span data-stu-id="fa56d-121">For example, if the type `Email` has a property named "From", you can disambiguate it from the reserved keyword FROM by using square brackets, as follows:</span></span>  
   
  `SELECT e.[From] FROM emails AS e`  
   
- Puede utilizar un identificador entre comillas en el lado derecho de un operador de punto \(.\).  
+ <span data-ttu-id="fa56d-122">Puede utilizar un identificador entre comillas en el lado derecho de un operador de punto (.).</span><span class="sxs-lookup"><span data-stu-id="fa56d-122">You can use a quoted identifier on the right side of a dot (.) operator.</span></span>  
   
  `SELECT t FROM ts as t WHERE t.[property] == 2`  
   
- Para utilizar el corchete en un identificador, agregue un corchete adicional.  El ejemplo siguiente, "`abc]`" es el identificador:  
+ <span data-ttu-id="fa56d-123">Para utilizar el corchete en un identificador, agregue un corchete adicional.</span><span class="sxs-lookup"><span data-stu-id="fa56d-123">To use the square bracket in an identifier, add an extra square bracket.</span></span> <span data-ttu-id="fa56d-124">El ejemplo siguiente, "`abc]`" es el identificador:</span><span class="sxs-lookup"><span data-stu-id="fa56d-124">In the following example "`abc]`" is the identifier:</span></span>  
   
  `SELECT t from ts as t WHERE t.[abc]]] == 2`  
   
- Para conocer la semántica de comparación de los identificadores entrecomillados, vea [Juego de caracteres de entrada](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+ <span data-ttu-id="fa56d-125">Para la semántica de comparación de identificador entre comillas, vea [juego de caracteres de entrada](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="fa56d-125">For quoted identifier comparison semantics, see [Input Character Set](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).</span></span>  
   
-## Reglas de alias  
- Se recomienda especificar alias en las consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siempre que se necesite, incluso en las construcciones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes:  
+## <a name="aliasing-rules"></a><span data-ttu-id="fa56d-126">Reglas de alias</span><span class="sxs-lookup"><span data-stu-id="fa56d-126">Aliasing Rules</span></span>  
+ <span data-ttu-id="fa56d-127">Se recomienda especificar alias en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta cada vez que necesita, incluidos los siguientes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] construye:</span><span class="sxs-lookup"><span data-stu-id="fa56d-127">We recommend specifying aliases in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries whenever needed, including the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] constructs:</span></span>  
   
--   Campos de un constructor de fila.  
+-   <span data-ttu-id="fa56d-128">Campos de un constructor de fila.</span><span class="sxs-lookup"><span data-stu-id="fa56d-128">Fields of a row constructor.</span></span>  
   
--   Elementos de la cláusula FROM de una expresión de consulta.  
+-   <span data-ttu-id="fa56d-129">Elementos de la cláusula FROM de una expresión de consulta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-129">Items in the FROM clause of a query expression.</span></span>  
   
--   Elementos de la cláusula SELECT de una expresión de consulta.  
+-   <span data-ttu-id="fa56d-130">Elementos de la cláusula SELECT de una expresión de consulta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-130">Items in the SELECT clause of a query expression.</span></span>  
   
--   Elementos de la cláusula GROUP BY de una expresión de consulta.  
+-   <span data-ttu-id="fa56d-131">Elementos de la cláusula GROUP BY de una expresión de consulta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-131">Items in the GROUP BY clause of a query expression.</span></span>  
   
-### Alias válidos  
- Los alias válidos en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] son cualquier identificador simple o entre comillas.  
+### <a name="valid-aliases"></a><span data-ttu-id="fa56d-132">Alias válidos</span><span class="sxs-lookup"><span data-stu-id="fa56d-132">Valid Aliases</span></span>  
+ <span data-ttu-id="fa56d-133">Alias válidos en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] son cualquier identificador simple o un identificador entre comillas.</span><span class="sxs-lookup"><span data-stu-id="fa56d-133">Valid aliases in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] are any simple identifier or quoted identifier.</span></span>  
   
-### Generación de alias  
- Si no se especifica ningún alias en una expresión de consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar un alias según las siguientes reglas simples:  
+### <a name="alias-generation"></a><span data-ttu-id="fa56d-134">Generación de alias</span><span class="sxs-lookup"><span data-stu-id="fa56d-134">Alias Generation</span></span>  
+ <span data-ttu-id="fa56d-135">Si se especifica ningún alias en una [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión, de consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar un alias según las siguientes reglas simples:</span><span class="sxs-lookup"><span data-stu-id="fa56d-135">If no alias is specified in an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query expression, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tries to generate an alias based on the following simple rules:</span></span>  
   
--   Si la expresión de consulta \(para la que el alias está sin especificar\) es un identificador simple o entre comillas, ese identificador se utiliza como alias.  Por ejemplo,  `ROW(a, [b])`  se convierte en  `ROW(a AS a, [b] AS [b])`.  
+-   <span data-ttu-id="fa56d-136">Si la expresión de consulta (para la que el alias está sin especificar) es un identificador simple o entre comillas, ese identificador se utiliza como alias.</span><span class="sxs-lookup"><span data-stu-id="fa56d-136">If the query expression (for which the alias is unspecified) is a simple or quoted identifier, that identifier is used as the alias.</span></span> <span data-ttu-id="fa56d-137">Por ejemplo, `ROW(a, [b])` se convierte en `ROW(a AS a, [b] AS [b])`.</span><span class="sxs-lookup"><span data-stu-id="fa56d-137">For example, `ROW(a, [b])` becomes `ROW(a AS a, [b] AS [b])`.</span></span>  
   
--   Si la expresión de consulta es más compleja, pero el último componente es un identificador simple, ese identificador se utiliza como alias.  Por ejemplo,  `ROW(a.a1, b.[b1])`  se convierte en  `ROW(a.a1 AS a1, b.[b1] AS [b1])`.  
+-   <span data-ttu-id="fa56d-138">Si la expresión de consulta es más compleja, pero el último componente es un identificador simple, ese identificador se utiliza como alias.</span><span class="sxs-lookup"><span data-stu-id="fa56d-138">If the query expression is a more complex expression, but the last component of that query expression is a simple identifier, then that identifier is used as the alias.</span></span> <span data-ttu-id="fa56d-139">Por ejemplo, `ROW(a.a1, b.[b1])` se convierte en `ROW(a.a1 AS a1, b.[b1] AS [b1])`.</span><span class="sxs-lookup"><span data-stu-id="fa56d-139">For example, `ROW(a.a1, b.[b1])` becomes `ROW(a.a1 AS a1, b.[b1] AS [b1])`.</span></span>  
   
- Recomendamos que no utilice el alias implícito si desea utilizar el nombre del alias después.  Cuando aparezca un conflicto en los alias \(implícito o explícito\) o se repitan en el mismo ámbito, habrá un error de compilación.  Un alias implícito pasará la compilación aun cuando sea un alias explícito o implícito del mismo nombre.  
+ <span data-ttu-id="fa56d-140">Recomendamos que no utilice el alias implícito si desea utilizar el nombre del alias después.</span><span class="sxs-lookup"><span data-stu-id="fa56d-140">We recommend that you do not use implicit aliasing if you want to use the alias name later.</span></span> <span data-ttu-id="fa56d-141">Cuando aparezca un conflicto en los alias (implícito o explícito) o se repitan en el mismo ámbito, habrá un error de compilación.</span><span class="sxs-lookup"><span data-stu-id="fa56d-141">Anytime aliases (implicit or explicit) conflict or are repeated in the same scope, there will be a compile error.</span></span> <span data-ttu-id="fa56d-142">Un alias implícito pasará la compilación aun cuando sea un alias explícito o implícito del mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="fa56d-142">An implicit alias will pass compilation even if there is an explicit or implicit alias of the same name.</span></span>  
   
- Los alias implícitos se generan automáticamente según los datos que proporcione el usuario.  Por ejemplo, la línea de código siguiente generará NAME como un alias para ambas columnas y, por consiguiente, estará en conflicto.  
+ <span data-ttu-id="fa56d-143">Los alias implícitos se generan automáticamente según los datos que proporcione el usuario.</span><span class="sxs-lookup"><span data-stu-id="fa56d-143">Implicit aliases are autogenerated based on user input.</span></span> <span data-ttu-id="fa56d-144">Por ejemplo, la línea de código siguiente generará NAME como un alias para ambas columnas y, por consiguiente, estará en conflicto.</span><span class="sxs-lookup"><span data-stu-id="fa56d-144">For example, the following line of code will generate NAME as an alias for both columns and therefore will conflict.</span></span>  
   
 ```  
 SELECT product.NAME, person.NAME  
 ```  
   
- También se producirá un error en la línea de código siguiente, que utiliza alias explícitos.  Sin embargo, el error será más aparente al leer el código.  
+ <span data-ttu-id="fa56d-145">También se producirá un error en la línea de código siguiente, que utiliza alias explícitos.</span><span class="sxs-lookup"><span data-stu-id="fa56d-145">The following line of code, which uses explicit aliases, will also fail.</span></span> <span data-ttu-id="fa56d-146">Sin embargo, el error será más aparente al leer el código.</span><span class="sxs-lookup"><span data-stu-id="fa56d-146">However, the failure will be more apparent by reading the code.</span></span>  
   
 ```  
 SELECT 1 AS X, 2 AS X …  
 ```  
   
-## Reglas de ámbito  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] define reglas de ámbito que determinan cuándo determinadas variables son visibles en el lenguaje de consulta.  Algunas expresiones o instrucciones incluyen nombres nuevos.  Las reglas de ámbito determinan dónde se pueden utilizar esos nombres y cuándo o dónde una declaración nueva con el mismo nombre que otra puede ocultar a su predecesora.  
+## <a name="scoping-rules"></a><span data-ttu-id="fa56d-147">Reglas de ámbito</span><span class="sxs-lookup"><span data-stu-id="fa56d-147">Scoping Rules</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="fa56d-148">define reglas de ámbito que determinan cuándo determinadas variables son visibles en el lenguaje de consulta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-148"> defines scoping rules that determine when particular variables are visible in the query language.</span></span> <span data-ttu-id="fa56d-149">Algunas expresiones o instrucciones incluyen nombres nuevos.</span><span class="sxs-lookup"><span data-stu-id="fa56d-149">Some expressions or statements introduce new names.</span></span> <span data-ttu-id="fa56d-150">Las reglas de ámbito determinan dónde se pueden utilizar esos nombres y cuándo o dónde una declaración nueva con el mismo nombre que otra puede ocultar a su predecesora.</span><span class="sxs-lookup"><span data-stu-id="fa56d-150">The scoping rules determine where those names can be used, and when or where a new declaration with the same name as another can hide its predecessor.</span></span>  
   
- Cuando los nombres se definen en una consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)], se dice que se definen dentro de un ámbito.  Un ámbito cubre una región completa de la consulta.  Todas las expresiones o las referencias de nombre dentro de un cierto ámbito pueden ver los nombres que están definidos dentro de ese ámbito.  Antes de que un ámbito comience y después de que finalice, no se puede hacer referencia a los nombres que se definen dentro del ámbito.  
+ <span data-ttu-id="fa56d-151">Cuando los nombres se definen en un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta, se dice que se definen dentro de un ámbito.</span><span class="sxs-lookup"><span data-stu-id="fa56d-151">When names are defined in an [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query, they are said to be defined within a scope.</span></span> <span data-ttu-id="fa56d-152">Un ámbito cubre una región completa de la consulta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-152">A scope covers an entire region of the query.</span></span> <span data-ttu-id="fa56d-153">Todas las expresiones o las referencias de nombre dentro de un cierto ámbito pueden ver los nombres que están definidos dentro de ese ámbito.</span><span class="sxs-lookup"><span data-stu-id="fa56d-153">All expressions or name references within a certain scope can see names that are defined within that scope.</span></span> <span data-ttu-id="fa56d-154">Antes de que un ámbito comience y después de que finalice, no se puede hacer referencia a los nombres que se definen dentro del ámbito.</span><span class="sxs-lookup"><span data-stu-id="fa56d-154">Before a scope begins and after it ends, names that are defined within the scope cannot be referenced.</span></span>  
   
- Los ámbitos se pueden anidar.  Los componentes de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluyen ámbitos nuevos que abarcan regiones enteras y estas regiones pueden contener otras expresiones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que también incluyen ámbitos.  Cuando los ámbitos están anidados, se pueden realizar referencias a los nombres que se definen en el ámbito más interno, que contiene la referencia.  Las referencias también se pueden realizar a cualquier nombre que se defina en algún ámbito externo.  Dos ámbitos cualesquiera definidos dentro del mismo ámbito se consideran del mismo nivel.  No se pueden realizar referencias a nombres que están definidos dentro de ámbitos del mismo nivel.  
+ <span data-ttu-id="fa56d-155">Los ámbitos se pueden anidar.</span><span class="sxs-lookup"><span data-stu-id="fa56d-155">Scopes can be nested.</span></span> <span data-ttu-id="fa56d-156">Partes de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluyen ámbitos nuevos que abarcan regiones enteras y estas regiones pueden contener otras [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresiones que también incluyen ámbitos.</span><span class="sxs-lookup"><span data-stu-id="fa56d-156">Parts of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduce new scopes that cover entire regions, and these regions can contain other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressions that also introduce scopes.</span></span> <span data-ttu-id="fa56d-157">Cuando los ámbitos están anidados, se pueden realizar referencias a los nombres que se definen en el ámbito más interno, que contiene la referencia.</span><span class="sxs-lookup"><span data-stu-id="fa56d-157">When scopes are nested, references can be made to names that are defined in the innermost scope, which contains the reference.</span></span> <span data-ttu-id="fa56d-158">Las referencias también se pueden realizar a cualquier nombre que se defina en algún ámbito externo.</span><span class="sxs-lookup"><span data-stu-id="fa56d-158">References can also be made to any names that are defined in any outer scopes.</span></span> <span data-ttu-id="fa56d-159">Dos ámbitos cualesquiera definidos dentro del mismo ámbito se consideran del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="fa56d-159">Any two scopes defined within the same scope are considered sibling scopes.</span></span> <span data-ttu-id="fa56d-160">No se pueden realizar referencias a nombres que están definidos dentro de ámbitos del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="fa56d-160">References cannot be made to names that are defined within sibling scopes.</span></span>  
   
- Si un nombre declarado en un ámbito interno coincide con un nombre declarado en un ámbito externo, las referencias dentro del ámbito interno o de los ámbitos declarados dentro de ese ámbito solo hacen referencia al nombre recién declarado.  El nombre en el ámbito externo se oculta.  
+ <span data-ttu-id="fa56d-161">Si un nombre declarado en un ámbito interno coincide con un nombre declarado en un ámbito externo, las referencias dentro del ámbito interno o de los ámbitos declarados dentro de ese ámbito solo hacen referencia al nombre recién declarado.</span><span class="sxs-lookup"><span data-stu-id="fa56d-161">If a name declared in an inner scope matches a name declared in an outer scope, references within the inner scope or within scopes declared within that scope refer only to the newly declared name.</span></span> <span data-ttu-id="fa56d-162">El nombre en el ámbito externo se oculta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-162">The name in the outer scope is hidden.</span></span>  
   
- Incluso dentro del mismo ámbito, no se puede hacer referencia a los nombres antes de que se definan.  
+ <span data-ttu-id="fa56d-163">Incluso dentro del mismo ámbito, no se puede hacer referencia a los nombres antes de que se definan.</span><span class="sxs-lookup"><span data-stu-id="fa56d-163">Even within the same scope, names cannot be referenced before they are defined.</span></span>  
   
- Los nombres globales pueden existir como parte del entorno de ejecución.  Se pueden los nombres de las variables de entorno o colecciones persistentes.  Para que un nombre sea global, se debe declarar en el ámbito más externo.  
+ <span data-ttu-id="fa56d-164">Los nombres globales pueden existir como parte del entorno de ejecución.</span><span class="sxs-lookup"><span data-stu-id="fa56d-164">Global names can exist as part of the execution environment.</span></span> <span data-ttu-id="fa56d-165">Se pueden los nombres de las variables de entorno o colecciones persistentes.</span><span class="sxs-lookup"><span data-stu-id="fa56d-165">This can include names of persistent collections or environment variables.</span></span> <span data-ttu-id="fa56d-166">Para que un nombre sea global, se debe declarar en el ámbito más externo.</span><span class="sxs-lookup"><span data-stu-id="fa56d-166">For a name to be global, it must be declared in the outermost scope.</span></span>  
   
- Los parámetros no están en un ámbito.  Dado que las referencias a los parámetros incluyen una sintaxis especial, los nombres de los parámetros nunca colisionarán con los otros nombres en la consulta.  
+ <span data-ttu-id="fa56d-167">Los parámetros no están en un ámbito.</span><span class="sxs-lookup"><span data-stu-id="fa56d-167">Parameters are not in a scope.</span></span> <span data-ttu-id="fa56d-168">Dado que las referencias a los parámetros incluyen una sintaxis especial, los nombres de los parámetros nunca colisionarán con los otros nombres en la consulta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-168">Because references to parameters include special syntax, names of parameters will never collide with other names in the query.</span></span>  
   
-### Expresiones de consulta  
- Una expresión de consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluye un nuevo ámbito.  Los nombres que se definen en la cláusula FROM se incluyen en el ámbito de FROM en orden de aparición, de izquierda a derecha.  En la lista de uniones, las expresiones pueden hacer referencia a los nombres que se definieron en la lista anteriormente.  Las propiedades públicas \(campos, etc.\) de los elementos identificados en la cláusula FROM no se agregan al ámbito de FROM.  El nombre certificado con el alias siempre debe hacer referencia a estas propiedades.  Normalmente, todas las partes de la expresión SELECT se consideran dentro del ámbito de FROM.  
+### <a name="query-expressions"></a><span data-ttu-id="fa56d-169">Expresiones de consulta</span><span class="sxs-lookup"><span data-stu-id="fa56d-169">Query Expressions</span></span>  
+ <span data-ttu-id="fa56d-170">Un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión incluye un nuevo ámbito de consulta.</span><span class="sxs-lookup"><span data-stu-id="fa56d-170">An [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query expression introduces a new scope.</span></span> <span data-ttu-id="fa56d-171">Los nombres que se definen en la cláusula FROM se incluyen en el ámbito de FROM en orden de aparición, de izquierda a derecha.</span><span class="sxs-lookup"><span data-stu-id="fa56d-171">Names that are defined in the FROM clause are introduced into the from scope in order of appearance, left to right.</span></span> <span data-ttu-id="fa56d-172">En la lista de uniones, las expresiones pueden hacer referencia a los nombres que se definieron en la lista anteriormente.</span><span class="sxs-lookup"><span data-stu-id="fa56d-172">In the join list, expressions can refer to names that were defined earlier in the list.</span></span> <span data-ttu-id="fa56d-173">Las propiedades públicas (campos, etc.) de los elementos identificados en la cláusula FROM no se agregan al ámbito de FROM.</span><span class="sxs-lookup"><span data-stu-id="fa56d-173">Public properties (fields and so on) of elements identified in the FROM clause are not added to the from-scope.</span></span> <span data-ttu-id="fa56d-174">El nombre certificado con el alias siempre debe hacer referencia a estas propiedades.</span><span class="sxs-lookup"><span data-stu-id="fa56d-174">They must be always referenced by the alias-qualified name.</span></span> <span data-ttu-id="fa56d-175">Normalmente, todas las partes de la expresión SELECT se consideran dentro del ámbito de FROM.</span><span class="sxs-lookup"><span data-stu-id="fa56d-175">Typically, all parts of the SELECT expression are considered within the from-scope.</span></span>  
   
- La cláusula GROUP BY también incluye un nuevo ámbito de elementos del mismo nivel.  Cada grupo puede tener un nombre que haga referencia a la colección de elementos del grupo.  Cada expresión de agrupación también incluirá un nombre nuevo en el ámbito de GROUP.  Además, el agregado de anidación \(o el grupo con nombre\) también se agrega al ámbito.  Las propias expresiones de agrupación están dentro del ámbito de FROM.  Sin embargo, cuando se utiliza una cláusula GROUP BY, se considera que la lista de selección \(proyección\), la cláusula HAVING y la cláusula ORDER BY están dentro del ámbito de GROUP y no del ámbito de FROM.  Los agregados reciben un tratamiento especial, según se describe en la lista con viñetas siguiente.  
+ <span data-ttu-id="fa56d-176">La cláusula GROUP BY también incluye un nuevo ámbito de elementos del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="fa56d-176">The GROUP BY clause also introduces a new sibling scope.</span></span> <span data-ttu-id="fa56d-177">Cada grupo puede tener un nombre que haga referencia a la colección de elementos del grupo.</span><span class="sxs-lookup"><span data-stu-id="fa56d-177">Each group can have a group name that refers to the collection of elements in the group.</span></span> <span data-ttu-id="fa56d-178">Cada expresión de agrupación también incluirá un nombre nuevo en el ámbito de GROUP.</span><span class="sxs-lookup"><span data-stu-id="fa56d-178">Each grouping expression will also introduce a new name into the group-scope.</span></span> <span data-ttu-id="fa56d-179">Además, el agregado de anidación (o el grupo con nombre) también se agrega al ámbito.</span><span class="sxs-lookup"><span data-stu-id="fa56d-179">Additionally, the nest aggregate (or the named group) is also added to the scope.</span></span> <span data-ttu-id="fa56d-180">Las propias expresiones de agrupación están dentro del ámbito de FROM.</span><span class="sxs-lookup"><span data-stu-id="fa56d-180">The grouping expressions themselves are within the from-scope.</span></span> <span data-ttu-id="fa56d-181">Sin embargo, cuando se utiliza una cláusula GROUP BY, se considera que la lista de selección (proyección), la cláusula HAVING y la cláusula ORDER BY están dentro del ámbito de GROUP y no del ámbito de FROM.</span><span class="sxs-lookup"><span data-stu-id="fa56d-181">However, when a GROUP BY clause is used, the select-list (projection), HAVING clause, and ORDER BY clause are considered to be within the group-scope, and not the from-scope.</span></span> <span data-ttu-id="fa56d-182">Los agregados reciben un tratamiento especial, según se describe en la lista con viñetas siguiente.</span><span class="sxs-lookup"><span data-stu-id="fa56d-182">Aggregates receive special treatment, as described in the following bulleted list.</span></span>  
   
- Las siguientes son notas adicionales sobre los ámbitos:  
+ <span data-ttu-id="fa56d-183">Las siguientes son notas adicionales sobre los ámbitos:</span><span class="sxs-lookup"><span data-stu-id="fa56d-183">The following are additional notes about scopes:</span></span>  
   
--   La lista de selección puede incluir nombres nuevos en el ámbito, en orden.  Las expresiones de proyección a la derecha podrían hacer referencia a los nombres proyectados en la izquierda.  
+-   <span data-ttu-id="fa56d-184">La lista de selección puede incluir nombres nuevos en el ámbito, en orden.</span><span class="sxs-lookup"><span data-stu-id="fa56d-184">The select-list can introduce new names into the scope, in order.</span></span> <span data-ttu-id="fa56d-185">Las expresiones de proyección a la derecha podrían hacer referencia a los nombres proyectados en la izquierda.</span><span class="sxs-lookup"><span data-stu-id="fa56d-185">Projection expressions to the right might refer to names projected on the left.</span></span>  
   
--   La cláusula ORDER BY puede hacer referencia a los nombres \(alias\) especificados en la lista de selección.  
+-   <span data-ttu-id="fa56d-186">La cláusula ORDER BY puede hacer referencia a los nombres (alias) especificados en la lista de selección.</span><span class="sxs-lookup"><span data-stu-id="fa56d-186">The ORDER BY clause can refer to names (aliases) specified in the select list.</span></span>  
   
--   El orden de evaluación de las cláusulas dentro de la expresión SELECT determina el orden en que los nombres se incluyen en el ámbito.  La cláusula FROM se evalúa primero y a continuación se evalúan las cláusulas WHERE, GROUP BY, HAVING, SELECT y, finalmente, ORDER BY.  
+-   <span data-ttu-id="fa56d-187">El orden de evaluación de las cláusulas dentro de la expresión SELECT determina el orden en que los nombres se incluyen en el ámbito.</span><span class="sxs-lookup"><span data-stu-id="fa56d-187">The order of evaluation of clauses within the SELECT expression determines the order that names are introduced into the scope.</span></span> <span data-ttu-id="fa56d-188">La cláusula FROM se evalúa primero y a continuación se evalúan las cláusulas WHERE, GROUP BY, HAVING, SELECT y, finalmente, ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="fa56d-188">The FROM clause is evaluated first, followed by the WHERE clause, GROUP BY clause, HAVING clause, SELECT clause, and finally the ORDER BY clause.</span></span>  
   
-### Control de los agregados  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite dos formatos de agregados: los basados en la colección y los basados en el grupo.  Los agregados basados en la colección son la construcción preferida en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] y los agregados basados en el grupo se admiten por compatibilidad con SQL.  
+### <a name="aggregate-handling"></a><span data-ttu-id="fa56d-189">Control de los agregados</span><span class="sxs-lookup"><span data-stu-id="fa56d-189">Aggregate Handling</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="fa56d-190">admite dos formatos de agregados: los agregados basados en la colección y los agregados basados en grupo.</span><span class="sxs-lookup"><span data-stu-id="fa56d-190"> supports two forms of aggregates: collection-based aggregates and group-based aggregates.</span></span> <span data-ttu-id="fa56d-191">Los agregados basados en la colección son la construcción preferida en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] y los agregados basados en el grupo se admiten por compatibilidad con SQL.</span><span class="sxs-lookup"><span data-stu-id="fa56d-191">Collection-based aggregates are the preferred construct in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], and group-based aggregates are supported for SQL compatibility.</span></span>  
   
- Al resolver un agregado, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primero intenta tratarlo como un agregado basado en la colección.  Si eso no funciona, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transforma la entrada del agregado en una referencia al agregado anidado e intenta resolver esta nueva expresión, según se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="fa56d-192">Al resolver un agregado, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primero intenta tratarlo como un agregado basado en la colección.</span><span class="sxs-lookup"><span data-stu-id="fa56d-192">When resolving an aggregate, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] first tries to treat it as a collection-based aggregate.</span></span> <span data-ttu-id="fa56d-193">Si se produce un error, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transforma la entrada del agregado en una referencia al agregado anidado e intenta resolver esta nueva expresión, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="fa56d-193">If that fails, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transforms the aggregate input into a reference to the nest aggregate and tries to resolve this new expression, as illustrated in the following example.</span></span>  
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
-## Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [Información general de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)   
- [Juego de caracteres de entrada](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="fa56d-194">Vea también</span><span class="sxs-lookup"><span data-stu-id="fa56d-194">See Also</span></span>  
+ [<span data-ttu-id="fa56d-195">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="fa56d-195">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="fa56d-196">Información general sobre de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="fa56d-196">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="fa56d-197">Juego de caracteres de entrada</span><span class="sxs-lookup"><span data-stu-id="fa56d-197">Input Character Set</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

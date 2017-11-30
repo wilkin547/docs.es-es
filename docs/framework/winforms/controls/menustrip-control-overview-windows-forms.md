@@ -1,72 +1,72 @@
 ---
-title: "Informaci&#243;n general sobre el control MenuStrip (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MenuStrip"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "menús, crear"
-  - "MenuStrip (control) [Windows Forms], acerca del control MenuStrip"
+title: "Información general sobre el control MenuStrip (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MenuStrip
+helpviewer_keywords:
+- MenuStrip control [Windows Forms], about MenuStrip control
+- menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06cd4e812f4acf546dad577a2e1ddc571281ebe3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el control MenuStrip (formularios Windows Forms)
-Los menús exponen la funcionalidad a sus usuarios presionando comandos agrupados por un tema común.  
+# <a name="menustrip-control-overview-windows-forms"></a><span data-ttu-id="0b3fc-102">Información general sobre el control MenuStrip (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="0b3fc-102">MenuStrip Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="0b3fc-103">Los menús exponen la funcionalidad a los usuarios, se conservan los comandos que están agrupados por un tema común.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-103">Menus expose functionality to your users by holding commands that are grouped by a common theme.</span></span>  
   
- El control <xref:System.Windows.Forms.MenuStrip> es nuevo en esta versión de Visual Studio y .NET Framework.  Con el control puede crear fácilmente menús como los de Microsoft Office.  
+ <span data-ttu-id="0b3fc-104">El <xref:System.Windows.Forms.MenuStrip> control es una novedad de esta versión de Visual Studio y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-104">The <xref:System.Windows.Forms.MenuStrip> control is new to this version of Visual Studio and the .NET Framework.</span></span> <span data-ttu-id="0b3fc-105">Con el control, puede crear fácilmente menús como los que se encuentran en Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-105">With the control, you can easily create menus like those found in Microsoft Office.</span></span>  
   
- El control <xref:System.Windows.Forms.MenuStrip> admite la interfaz de múltiples documentos \(MDI\) y combinación de menús, la información sobre herramientas y el desbordamiento.  Puede mejorar la utilidad y legibilidad de sus menús agregando teclas de acceso, teclas de método abreviado, marcas de verificación, imágenes y barras separadoras.  
+ <span data-ttu-id="0b3fc-106">El <xref:System.Windows.Forms.MenuStrip> control es compatible con la interfaz de múltiples documentos (MDI) y combinación de menús, información sobre herramientas y desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-106">The <xref:System.Windows.Forms.MenuStrip> control supports the multiple-document interface (MDI) and menu merging, tool tips, and overflow.</span></span> <span data-ttu-id="0b3fc-107">Puede mejorar la facilidad de uso y mejorar la legibilidad de los menús agregando teclas de acceso, teclas de método abreviado, marcas de verificación, imágenes y barras separadoras.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-107">You can enhance the usability and readability of your menus by adding access keys, shortcut keys, check marks, images, and separator bars.</span></span>  
   
- Aunque el control <xref:System.Windows.Forms.MenuStrip> reemplaza y agrega la funcionalidad al control <xref:System.Windows.Forms.MainMenu>, éste se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
+ <span data-ttu-id="0b3fc-108">El <xref:System.Windows.Forms.MenuStrip> control reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.MainMenu> control; sin embargo, el <xref:System.Windows.Forms.MainMenu> control se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-108">The <xref:System.Windows.Forms.MenuStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> control; however, the <xref:System.Windows.Forms.MainMenu> control is retained for backward compatibility and future use if you choose.</span></span>  
   
-## Usos del control MenuStrip  
- Utilice el control <xref:System.Windows.Forms.MenuStrip> para:  
+## <a name="ways-to-use-the-menustrip-control"></a><span data-ttu-id="0b3fc-109">Formas de utilizar el Control MenuStrip</span><span class="sxs-lookup"><span data-stu-id="0b3fc-109">Ways to Use the MenuStrip Control</span></span>  
+ <span data-ttu-id="0b3fc-110">Use el <xref:System.Windows.Forms.MenuStrip> el control al:</span><span class="sxs-lookup"><span data-stu-id="0b3fc-110">Use the <xref:System.Windows.Forms.MenuStrip> control to:</span></span>  
   
--   Crear fácilmente menús personalizados y comúnmente empleados compatibles con la interfaz de usuario avanzada y con las características de diseño, como la alineación y orden de texto e imágenes, operaciones de arrastrar y colocar, MDI, desbordamiento y modos alternativos de acceso a comandos de menú.  
+-   <span data-ttu-id="0b3fc-111">Crear fácilmente personalizada, comúnmente empleados menús que admiten usuario interfaz y el diseño características avanzadas, como texto y ordenación de imagen y alineación, operaciones de arrastrar y colocar, MDI, desbordamiento y modos alternativos de acceso a los comandos de menú.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-111">Create easily customized, commonly employed menus that support advanced user interface and layout features, such as text and image ordering and alignment, drag-and-drop operations, MDI, overflow, and alternate modes of accessing menu commands.</span></span>  
   
--   Compatibilidad con el comportamiento y aspecto típico del sistema operativo.  
+-   <span data-ttu-id="0b3fc-112">Admite la apariencia habitual y el comportamiento del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-112">Support the typical appearance and behavior of the operating system.</span></span>  
   
--   Controlar de forma coherente los eventos para todos los contenedores y los elementos contenidos, al igual que controla los eventos para otros controles.  
+-   <span data-ttu-id="0b3fc-113">Controlar los eventos de forma coherente para todos los contenedores y los elementos contenidos, de la misma manera controlar los eventos de otros controles.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-113">Handle events consistently for all containers and contained items, in the same way you handle events for other controls.</span></span>  
   
- La tabla siguiente muestra propiedades particularmente importantes de <xref:System.Windows.Forms.MenuStrip> y de las clases asociadas.  
+ <span data-ttu-id="0b3fc-114">La siguiente tabla muestra algunas propiedades especialmente importantes de <xref:System.Windows.Forms.MenuStrip> y asociados de clases.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-114">The following table shows some particularly important properties of <xref:System.Windows.Forms.MenuStrip> and associated classes.</span></span>  
   
-|Propiedad.|Descripción|  
-|----------------|-----------------|  
-|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Obtiene o establece el <xref:System.Windows.Forms.ToolStripMenuItem> utilizado para mostrar una lista de formularios MDI secundarios.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=fullName>|Obtiene o establece cómo se combinan los menús secundarios con menús primarios en aplicaciones MDI.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=fullName>|Obtiene o establece la posición de un elemento combinado dentro de un menú en aplicaciones MDI.|  
-|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=fullName>|Obtiene o establece un valor que indica si el formulario es un contenedor para los formularios MDI secundarios.|  
-|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Obtiene o establece un valor que indica si la información sobre herramientas se muestra para <xref:System.Windows.Forms.MenuStrip>.|  
-|<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|Obtiene o establece un valor que indica si <xref:System.Windows.Forms.MenuStrip> admite la funcionalidad del desbordamiento.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Obtiene o establece las teclas de método abreviado asociadas a <xref:System.Windows.Forms.ToolStripMenuItem>.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Obtiene o establece un valor que indica si las teclas de método abreviado asociadas a <xref:System.Windows.Forms.ToolStripMenuItem> se muestran al lado de <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<span data-ttu-id="0b3fc-115">Propiedad</span><span class="sxs-lookup"><span data-stu-id="0b3fc-115">Property</span></span>|<span data-ttu-id="0b3fc-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="0b3fc-116">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|<span data-ttu-id="0b3fc-117">Obtiene o establece el <xref:System.Windows.Forms.ToolStripMenuItem> que se usa para mostrar una lista de formularios MDI secundarios.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-117">Gets or sets the <xref:System.Windows.Forms.ToolStripMenuItem> that is used to display a list of MDI child forms.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|<span data-ttu-id="0b3fc-118">Obtiene o establece cómo se combinan los menús secundarios con menús primarios en aplicaciones MDI.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-118">Gets or sets how child menus are merged with parent menus in MDI applications.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=nameWithType>|<span data-ttu-id="0b3fc-119">Obtiene o establece la posición de un elemento combinado dentro de un menú en aplicaciones MDI.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-119">Gets or sets the position of a merged item within a menu in MDI applications.</span></span>|  
+|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|<span data-ttu-id="0b3fc-120">Obtiene o establece un valor que indica si el formulario es un contenedor para formularios MDI secundarios.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-120">Gets or sets a value indicating whether the form is a container for MDI child forms.</span></span>|  
+|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|<span data-ttu-id="0b3fc-121">Obtiene o establece un valor que indica si se muestra información sobre herramientas para el <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-121">Gets or sets a value indicating whether tool tips are shown for the <xref:System.Windows.Forms.MenuStrip>.</span></span>|  
+|<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|<span data-ttu-id="0b3fc-122">Obtiene o establece un valor que indica si <xref:System.Windows.Forms.MenuStrip> admite la funcionalidad del desbordamiento.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-122">Gets or sets a value indicating whether the <xref:System.Windows.Forms.MenuStrip> supports overflow functionality.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|<span data-ttu-id="0b3fc-123">Obtiene o establece las teclas de método abreviado asociadas a la <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-123">Gets or sets the shortcut keys associated with the <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|<span data-ttu-id="0b3fc-124">Obtiene o establece un valor que indica si el método abreviado de claves que están asociadas a la <xref:System.Windows.Forms.ToolStripMenuItem> se muestran junto a la <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-124">Gets or sets a value indicating whether the shortcut keys that are associated with the <xref:System.Windows.Forms.ToolStripMenuItem> are displayed next to the <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>|  
   
- La tabla siguiente muestra las clases <xref:System.Windows.Forms.MenuStrip> complementarias importantes.  
+ <span data-ttu-id="0b3fc-125">La siguiente tabla muestra las importantes <xref:System.Windows.Forms.MenuStrip> clases complementarias.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-125">The following table shows the important <xref:System.Windows.Forms.MenuStrip> companion classes.</span></span>  
   
-|Clase|Descripción|  
+|<span data-ttu-id="0b3fc-126">Clase</span><span class="sxs-lookup"><span data-stu-id="0b3fc-126">Class</span></span>|<span data-ttu-id="0b3fc-127">Descripción</span><span class="sxs-lookup"><span data-stu-id="0b3fc-127">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Representa una opción seleccionable mostrada en un <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ContextMenuStrip>|Representa un menú contextual.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Representa una control que permite al usuario seleccionar un elemento de la lista que se muestra cuando el usuario hace clic en un <xref:System.Windows.Forms.ToolStripDropDownButton> o en un elemento de menú de nivel superior.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Proporciona la funcionalidad básica para controles derivados de <xref:System.Windows.Forms.ToolStripItem> que muestra los elementos desplegables cuando se hace clic en ellos.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<span data-ttu-id="0b3fc-128">Representa una opción seleccionable mostrada en un <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-128">Represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>|  
+|<xref:System.Windows.Forms.ContextMenuStrip>|<span data-ttu-id="0b3fc-129">Representa un menú contextual.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-129">Represents a shortcut menu.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<span data-ttu-id="0b3fc-130">Representa un control que permite al usuario seleccionar un único elemento de una lista que se muestra cuando el usuario hace clic en un <xref:System.Windows.Forms.ToolStripDropDownButton> o un elemento de menú de nivel superior.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-130">Represents a control that allows the user to select a single item from a list that is displayed when the user clicks a <xref:System.Windows.Forms.ToolStripDropDownButton> or a higher-level menu item.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|<span data-ttu-id="0b3fc-131">Proporciona la funcionalidad básica para los controles derivan de <xref:System.Windows.Forms.ToolStripItem> que mostrar los elementos de lista desplegable al hacer clic en.</span><span class="sxs-lookup"><span data-stu-id="0b3fc-131">Provides basic functionality for controls derived from <xref:System.Windows.Forms.ToolStripItem> that display drop-down items when clicked.</span></span>|  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ContextMenuStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- <xref:System.Windows.Forms.ToolStripItem>   
+## <a name="see-also"></a><span data-ttu-id="0b3fc-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="0b3fc-132">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ContextMenuStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ <xref:System.Windows.Forms.ToolStripItem>  
  <xref:System.Windows.Forms.ToolStripDropDown>

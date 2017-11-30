@@ -1,109 +1,112 @@
 ---
-title: "Configuraci&#243;n del Registro en la representaci&#243;n de gr&#225;ficos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gráficos [WPF], representar"
-  - "representar gráficos"
-  - "representar gráficos, configuración del Registro"
-  - "representar gráficos, solucionar problemas"
-  - "solucionar problemas de representación de gráficos"
+title: "Configuración del Registro en la representación de gráficos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rendering graphics [WPF], registry settings
+- rendering graphics [WPF]
+- rendering graphics [WPF], troubleshooting
+- troubleshooting graphics rendering [WPF]
+- graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1a86d715edb68564d6ebfcc8a419e333da4ea03
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Configuraci&#243;n del Registro en la representaci&#243;n de gr&#225;ficos
-En este tema se proporciona información general sobre la configuración del Registro para la representación de gráficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="graphics-rendering-registry-settings"></a><span data-ttu-id="042e0-102">Configuración del Registro en la representación de gráficos</span><span class="sxs-lookup"><span data-stu-id="042e0-102">Graphics Rendering Registry Settings</span></span>
+<span data-ttu-id="042e0-103">En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-103">This topic provides an overview of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics rendering registry settings that affect [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  
   
-   
+
   
 <a name="overview"></a>   
-## Cuándo utilizar los valores del Registro para la representación de gráficos  
- Estos valores del Registro se proporciona con fines de solución de problemas, depuración y soporte técnico.  Dado que los cambios del Registro afectan a todas las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], una aplicación nunca debe modificar las claves del Registro automáticamente ni durante la instalación.  
+## <a name="when-to-use-graphics-rendering-registry-settings"></a><span data-ttu-id="042e0-104">Cuándo usar la configuración del Registro en la representación de gráficos</span><span class="sxs-lookup"><span data-stu-id="042e0-104">When to Use Graphics Rendering Registry Settings</span></span>  
+ <span data-ttu-id="042e0-105">Esta configuración del Registro se proporciona a efectos de solución de problemas, depuración y soporte técnico del producto.</span><span class="sxs-lookup"><span data-stu-id="042e0-105">These registry settings are provided for troubleshooting, debugging, and product support purposes.</span></span> <span data-ttu-id="042e0-106">Como los cambios al Registro afectan a todas las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], la aplicación no debe nunca modificar estas claves del Registro automáticamente ni durante la instalación.</span><span class="sxs-lookup"><span data-stu-id="042e0-106">Because changes to the registry affect all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, your application should never alter these registry keys automatically, or during installation.</span></span>  
   
 <a name="xpdmandwddm"></a>   
-## ¿Qué son XPDM y WDDM?  
- Algunos de los valores del Registro para la representación de gráficos tienen valores predeterminados diferentes, dependiendo de si la tarjeta de vídeo utiliza un controlador XPDM o WDDM.  XPDM es el Modelo de controladores de pantalla de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] y WDDM es el Modelo de controladores de pantalla de Windows.  WDDM está disponible en los equipos que ejecutan [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)].  XPDM está disponible en los equipos que ejecutan [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)].  Para obtener más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](http://go.microsoft.com/fwlink/?LinkId=178394).  
+## <a name="what-are-xpdm-and-wddm"></a><span data-ttu-id="042e0-107">¿Qué son XPDM y WDDM?</span><span class="sxs-lookup"><span data-stu-id="042e0-107">What are XPDM and WDDM?</span></span>  
+ <span data-ttu-id="042e0-108">Parte de la configuración del Registro en la representación de gráficos incluye distintos valores predeterminados, que varían en función de que la tarjeta de vídeo use un controlador XPDM o WDDM.</span><span class="sxs-lookup"><span data-stu-id="042e0-108">Some of the graphics rendering registry settings have different default values, depending on whether your video card uses an XPDM or WDDM driver.</span></span> <span data-ttu-id="042e0-109">XPDM se refiere a [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model y WDDM, a Windows Display Driver Model.</span><span class="sxs-lookup"><span data-stu-id="042e0-109">XPDM is the [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model and WDDM is the Windows Display Driver Model.</span></span> <span data-ttu-id="042e0-110">WDDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-110">WDDM is available on computers running [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] and [!INCLUDE[win7](../../../../includes/win7-md.md)].</span></span> <span data-ttu-id="042e0-111">XPDM está disponible en equipos que ejecuten [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] y [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-111">XPDM is available on computers running [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], and [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)].</span></span> <span data-ttu-id="042e0-112">Para más información sobre WDDM, vea [Windows Vista Display Driver Model Design Guide](http://go.microsoft.com/fwlink/?LinkId=178394) (Guía de diseño de Windows Vista Display Driver Model).</span><span class="sxs-lookup"><span data-stu-id="042e0-112">For more information about WDDM, see [Windows Vista Display Driver Model Design Guide](http://go.microsoft.com/fwlink/?LinkId=178394).</span></span>  
   
 <a name="registry_settings"></a>   
-## Valores del Registro  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro valores del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+## <a name="registry-settings"></a><span data-ttu-id="042e0-113">Configuración de registro</span><span class="sxs-lookup"><span data-stu-id="042e0-113">Registry Settings</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="042e0-114"> proporciona cuatro parámetros de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="042e0-114"> provides four registry settings for controlling [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering:</span></span>  
   
-|Configuración|Descripción|  
-|-------------------|-----------------|  
-|**Deshabilitar la opción de aceleración de hardware**|Especifica si la aceleración de hardware debe estar habilitada.|  
-|**Valor máximo de muestreo múltiple**|Especifica el grado de muestreo múltiple para el suavizado de contorno del contenido [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  
-|**Valor de fecha de controlador de vídeo necesario**|Especifica si el sistema deshabilita la aceleración de hardware para los controladores publicados antes de noviembre de 2004.|  
-|**Usar la opción de rasterizador de referencia**|Especifica si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe utilizar el rasterizador de referencia.|  
+|<span data-ttu-id="042e0-115">Parámetro</span><span class="sxs-lookup"><span data-stu-id="042e0-115">Setting</span></span>|<span data-ttu-id="042e0-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="042e0-116">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="042e0-117">**Opción de deshabilitación de aceleración de hardware**</span><span class="sxs-lookup"><span data-stu-id="042e0-117">**Disable Hardware Acceleration Option**</span></span>|<span data-ttu-id="042e0-118">Especifica si se debe habilitar la aceleración de hardware.</span><span class="sxs-lookup"><span data-stu-id="042e0-118">Specifies whether hardware acceleration should be enabled.</span></span>|  
+|<span data-ttu-id="042e0-119">**Valor máximo de muestreo múltiple**</span><span class="sxs-lookup"><span data-stu-id="042e0-119">**Maximum Multisample Value**</span></span>|<span data-ttu-id="042e0-120">Especifica el grado de muestreo múltiple para el suavizado de contorno del contenido [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-120">Specifies the degree of multisampling for antialiasing [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] content.</span></span>|  
+|<span data-ttu-id="042e0-121">**Configuración obligatoria de fecha del controlador de vídeo**</span><span class="sxs-lookup"><span data-stu-id="042e0-121">**Required Video Driver Date Setting**</span></span>|<span data-ttu-id="042e0-122">Especifica si el sistema deshabilita la aceleración de hardware para los controladores publicados antes de noviembre de 2004.</span><span class="sxs-lookup"><span data-stu-id="042e0-122">Specifies whether the system disables hardware acceleration for drivers released before November 2004.</span></span>|  
+|<span data-ttu-id="042e0-123">**Opción de uso del rasterizador de referencia**</span><span class="sxs-lookup"><span data-stu-id="042e0-123">**Use Reference Rasterizer Option**</span></span>|<span data-ttu-id="042e0-124">Especifica si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe utilizar el rasterizador de referencia.</span><span class="sxs-lookup"><span data-stu-id="042e0-124">Specifies whether [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] should use the reference rasterizer.</span></span>|  
   
- Cualquier utilidad de configuración externa que pueda hacer referencia a los valores del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede tener acceso a estos valores.  Estos valores se pueden crear o modificar también mediante el acceso directo a los valores utilizando el Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ <span data-ttu-id="042e0-125">Es posible acceder a estos parámetros mediante una utilidad de configuración externa que pueda hacer referencia a la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-125">These settings can be accessed by any external configuration utility that knows how to reference the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] registry settings.</span></span> <span data-ttu-id="042e0-126">Estos valores de configuración también pueden crearse o modificarse mediante el acceso a los valores directamente a través del Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-126">These settings can also be created or modified by accessing the values directly by using the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Registry Editor.</span></span>  
   
 <a name="disablehardwareacceleration"></a>   
-## Deshabilitar la opción de aceleración de hardware  
+## <a name="disable-hardware-acceleration-option"></a><span data-ttu-id="042e0-127">Opción de deshabilitación de aceleración de hardware</span><span class="sxs-lookup"><span data-stu-id="042e0-127">Disable Hardware Acceleration Option</span></span>  
   
-|Clave del Registro|Tipo de valor|  
-|------------------------|-------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\DisableHWAcceleration`|DWORD|  
+|<span data-ttu-id="042e0-128">Clave del Registro</span><span class="sxs-lookup"><span data-stu-id="042e0-128">Registry key</span></span>|<span data-ttu-id="042e0-129">Tipo de valor</span><span class="sxs-lookup"><span data-stu-id="042e0-129">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\DisableHWAcceleration`|<span data-ttu-id="042e0-130">DWORD</span><span class="sxs-lookup"><span data-stu-id="042e0-130">DWORD</span></span>|  
   
- El valor de **deshabilitar la opción de aceleración de hardware** permite desactivar la aceleración de hardware con fines de depuración y pruebas.  Si se aprecian anomalías de representación en una aplicación, intente desactivar la aceleración de hardware.  Si la anomalía desaparece, puede que el problema se deba al controlador de vídeo.  
+ <span data-ttu-id="042e0-131">La **opción de deshabilitación de aceleración de hardware** le permite desactivar la aceleración de hardware a efectos de depuración y prueba.</span><span class="sxs-lookup"><span data-stu-id="042e0-131">The **disable hardware acceleration option** enables you to turn off hardware acceleration for debugging and test purposes.</span></span> <span data-ttu-id="042e0-132">Cuando vea artefactos de representación en una aplicación, intente desactivar la aceleración de hardware.</span><span class="sxs-lookup"><span data-stu-id="042e0-132">When you see rendering artifacts in an application, try turning off hardware acceleration.</span></span> <span data-ttu-id="042e0-133">Si el artefacto desaparece, podría ser el problema con el controlador de vídeo.</span><span class="sxs-lookup"><span data-stu-id="042e0-133">If the artifact disappears, the problem might be with your video driver.</span></span>  
   
- **Deshabilitar la opción de aceleración de hardware** es un valor DWORD que puede ser 0 ó 1.  Un valor de 1 deshabilita la aceleración de hardware.  El valor 0 habilita la aceleración de hardware, siempre que el sistema cumpla los requisitos de aceleración de hardware; para obtener más información, consulte [Niveles de representación de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ <span data-ttu-id="042e0-134">La **opción de deshabilitación de aceleración de hardware** es un valor DWORD que se establece en 0 o 1.</span><span class="sxs-lookup"><span data-stu-id="042e0-134">The **disable hardware acceleration option** is a DWORD value that is either 0 or 1.</span></span> <span data-ttu-id="042e0-135">Un valor de 1 deshabilita la aceleración de hardware.</span><span class="sxs-lookup"><span data-stu-id="042e0-135">A value of 1 disables hardware acceleration.</span></span> <span data-ttu-id="042e0-136">Un valor de 0 habilita la aceleración de hardware, siempre que el sistema cumpla los requisitos de aceleración de hardware. Para más información, consulte [Niveles de representación de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span><span class="sxs-lookup"><span data-stu-id="042e0-136">A value of 0 enables hardware acceleration, provided the system meets hardware acceleration requirements; for more information, see [Graphics Rendering Tiers](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span></span>  
   
 <a name="maxmultisample"></a>   
-## Valor máximo de muestreo múltiple  
+## <a name="maximum-multisample-value"></a><span data-ttu-id="042e0-137">Valor máximo de muestreo múltiple</span><span class="sxs-lookup"><span data-stu-id="042e0-137">Maximum Multisample Value</span></span>  
   
-|Clave del Registro|Tipo de valor|  
-|------------------------|-------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
+|<span data-ttu-id="042e0-138">Clave del Registro</span><span class="sxs-lookup"><span data-stu-id="042e0-138">Registry key</span></span>|<span data-ttu-id="042e0-139">Tipo de valor</span><span class="sxs-lookup"><span data-stu-id="042e0-139">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|<span data-ttu-id="042e0-140">DWORD</span><span class="sxs-lookup"><span data-stu-id="042e0-140">DWORD</span></span>|  
   
- El **valor máximo de multimuestreo** permite ajustar la cantidad máxima de suavizado de contorno del contenido [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].  Use este nivel para deshabilitar el suavizado de contorno de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] en [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] o habilitarlo en [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ <span data-ttu-id="042e0-141">El **valor máximo de muestreo múltiple** le permite ajustar la cantidad máxima de suavizado de contorno del contenido [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-141">The **maximum multisample value** enables you to adjust the maximum amount of antialiasing of [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] content.</span></span> <span data-ttu-id="042e0-142">Use este nivel para deshabilitar el suavizado de contorno de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] en [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] o para habilitarlo en [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-142">Use this level to disable [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] antialiasing in [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] or enable it in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span></span>  
   
- El **valor máximo de muestreo múltiple** es un valor DWORD que va de 0 a 16.  El valor 0 especifica que el suavizado de contorno del muestreo múltiple del contenido 3D debe estar deshabilitado, y el valor 16 intentará usar un suavizado de contorno de hasta 16x, si lo admite la tarjeta de vídeo.  Tenga en cuenta que establecer el valor de esta clave del Registro en equipos que usen controladores XPDM hará que las aplicaciones utilicen gran cantidad de memoria de vídeo adicional, disminuirá el rendimiento de la representación [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] y podría dar lugar a errores de representación y a problemas de estabilidad.  
+ <span data-ttu-id="042e0-143">El **valor máximo de muestreo múltiple** es un valor DWORD comprendido entre 0 y 16.</span><span class="sxs-lookup"><span data-stu-id="042e0-143">The **maximum multisample value** is a DWORD value that ranges from 0 to 16.</span></span> <span data-ttu-id="042e0-144">Un valor de 0 especifica que debe deshabilitarse el suavizado de contorno de muestreo múltiple del contenido 3D y un valor de 16 intentará usar un suavizado de contorno de muestreo múltiple hasta 16 veces mayor, si la tarjeta de vídeo lo admite.</span><span class="sxs-lookup"><span data-stu-id="042e0-144">A value of 0 specifies that multisample antialiasing of 3-D content should be disabled, and a value of 16 will attempt to use up to 16x multisample antialiasing, if supported by the video card.</span></span> <span data-ttu-id="042e0-145">Tenga en cuenta que, si establece este valor de clave del Registro en equipos que usen controladores XPDM, las aplicaciones usarán una gran cantidad de memoria de vídeo adicional, disminuirá el rendimiento de representación [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] y aumentarán las posibilidades de añadir errores de representación y problemas de estabilidad.</span><span class="sxs-lookup"><span data-stu-id="042e0-145">Beware that setting this registry key value on computers using XPDM drivers will cause applications to use a large amount of additional video memory, decrease the performance of [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] rendering, and has the potential to introduce rendering errors and stability problems.</span></span>  
   
- Cuando no se establece esta clave del Registro, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza como valor predeterminado el 0 para los controladores XPDM y el 4 para los controladores WDDM.  
+ <span data-ttu-id="042e0-146">Cuando no se establece esta clave del Registro, el valor predeterminado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es 0 para los controladores XPDM y 4 para los controladores WDDM.</span><span class="sxs-lookup"><span data-stu-id="042e0-146">When this registry key is not set, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] defaults to 0 for XPDM drivers and 4 for WDDM drivers.</span></span>  
   
 <a name="requiredvideodriverdatesetting"></a>   
-## Valor de fecha de controlador de vídeo necesario  
+## <a name="required-video-driver-date-setting"></a><span data-ttu-id="042e0-147">Configuración obligatoria de fecha del controlador de vídeo</span><span class="sxs-lookup"><span data-stu-id="042e0-147">Required Video Driver Date Setting</span></span>  
   
-|Clave del Registro|Tipo de valor|  
-|------------------------|-------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Cadena.|  
+|<span data-ttu-id="042e0-148">Clave del Registro</span><span class="sxs-lookup"><span data-stu-id="042e0-148">Registry key</span></span>|<span data-ttu-id="042e0-149">Tipo de valor</span><span class="sxs-lookup"><span data-stu-id="042e0-149">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|<span data-ttu-id="042e0-150">Cadena</span><span class="sxs-lookup"><span data-stu-id="042e0-150">String</span></span>|  
   
- En noviembre de 2004, [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] publicó una nueva versión de las directrices de pruebas de controladores; los controladores escritos después de esta fecha ofrecen mayor estabilidad.  De manera predeterminada, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizará la canalización de aceleración de hardware para estos controladores y recurrirá a la representación de software para los controladores XPDM publicados antes de esta fecha.  
+ <span data-ttu-id="042e0-151">En noviembre de 2004, [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] publicó una nueva versión de las instrucciones de prueba de controladores; los controladores escritos después de esta fecha ofrecen una mayor estabilidad.</span><span class="sxs-lookup"><span data-stu-id="042e0-151">In November, 2004, [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] released a new version of the driver testing guidelines; the drivers written after this date offer better stability.</span></span> <span data-ttu-id="042e0-152">De forma predeterminada, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará la canalización de aceleración de hardware para estos controladores y recurrirá a la representación de software para los controladores XPDM publicados antes de esta fecha.</span><span class="sxs-lookup"><span data-stu-id="042e0-152">By default, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] will use the hardware acceleration pipeline for these drivers and will fall back to software rendering for XPDM drivers published before this date.</span></span>  
   
- El **valor de fecha de controlador de vídeo necesario** permite especificar una fecha mínima alternativa para los controladores XPDM.  Únicamente debe especificar fechas anteriores a noviembre de 2004 si está seguro de que el controlador de vídeo es lo bastante estable para admitir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <span data-ttu-id="042e0-153">La **configuración obligatoria de fecha del controlador de vídeo** le permite especificar una fecha mínima alternativa para los controladores XPDM.</span><span class="sxs-lookup"><span data-stu-id="042e0-153">The **required video driver date setting** enables you to specify an alternate minimum date for XPDM drivers.</span></span> <span data-ttu-id="042e0-154">Solo se debe especificar una fecha anterior a noviembre de 2004 si está seguro de que el controlador de vídeo es lo suficientemente estable como para admitir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="042e0-154">You should only specify a date earlier than November, 2004 if you are confident that your video driver is stable enough to support [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
- El valor de controlador de vídeo necesario acepta una cadena del formato siguiente:  
+ <span data-ttu-id="042e0-155">La configuración obligatoria de fecha del controlador de vídeo adopta una cadena con el formato siguiente:</span><span class="sxs-lookup"><span data-stu-id="042e0-155">The required video driver setting takes a string of the following format:</span></span>  
   
 ||  
 |-|  
-|*AAAA* `/` *MM* `/` *DD*|  
+|<span data-ttu-id="042e0-156">*AAAA* `/` *MM* `/` *DD*</span><span class="sxs-lookup"><span data-stu-id="042e0-156">*YYYY* `/` *MM* `/` *DD*</span></span>|  
   
- Donde *AAAA* es el año con cuatro dígitos, *MM* es el mes con dos dígitos y *DD* es el día con dos dígitos.  Cuando este valor no se establece, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza noviembre de 2004 como fecha del controlador de vídeo necesaria.  
+ <span data-ttu-id="042e0-157">Donde *AAAA* son los cuatro dígitos del año, *MM* son los dos dígitos del mes y *DD* son los dos dígitos del día.</span><span class="sxs-lookup"><span data-stu-id="042e0-157">Where *YYYY* is the four-digit year, *MM* is the two-digit month, and *DD* is the two digit day.</span></span> <span data-ttu-id="042e0-158">Cuando este valor no se establece, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa noviembre de 2004 como fecha obligatoria del controlador de vídeo.</span><span class="sxs-lookup"><span data-stu-id="042e0-158">When this value is unset, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uses November, 2004 as its required video driver date.</span></span>  
   
 <a name="usereferencerasterizeroption"></a>   
-## Usar la opción de rasterizador de referencia  
+## <a name="use-reference-rasterizer-option"></a><span data-ttu-id="042e0-159">Opción de uso del rasterizador de referencia</span><span class="sxs-lookup"><span data-stu-id="042e0-159">Use Reference Rasterizer Option</span></span>  
   
-|Clave del Registro|Tipo de valor|  
-|------------------------|-------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
+|<span data-ttu-id="042e0-160">Clave del Registro</span><span class="sxs-lookup"><span data-stu-id="042e0-160">Registry key</span></span>|<span data-ttu-id="042e0-161">Tipo de valor</span><span class="sxs-lookup"><span data-stu-id="042e0-161">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|<span data-ttu-id="042e0-162">DWORD</span><span class="sxs-lookup"><span data-stu-id="042e0-162">DWORD</span></span>|  
   
- El valor de **usar la opción de rasterizador de referencia** permite forzar un modo de representación de hardware simulado en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para la depuración: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra en el modo de hardware, pero usa el rasterizador de software de referencia [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)], d3dref9.dll, en lugar de un dispositivo de hardware real.  
+ <span data-ttu-id="042e0-163">La **opción de uso del rasterizador de referencia** le permite forzar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a un modo simulado de representación de hardware para depuración: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pasa al modo de hardware, pero usa el rasterizador de software de referencia [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)], d3dref9.dll, en lugar de un dispositivo real de hardware.</span><span class="sxs-lookup"><span data-stu-id="042e0-163">The **use reference rasterizer option** enables you to force [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] into a simulated hardware rendering mode for debugging: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] goes into hardware mode, but uses the [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)] reference software rasterizer, d3dref9.dll, instead of an actual hardware device.</span></span>  
   
- El rasterizador de referencia es muy lento, pero omite el controlador de vídeo para evitar cualquier problema de representación producido por problemas del controlador.  Por esta razón, puede utilizar el rasterizador de referencia para determinar si el controlador de vídeo es el causante de los problemas de representación.  El archivo d3dref9.dll debe estar en una ubicación donde la aplicación pueda tener acceso a él, como en cualquier ubicación de la ruta de acceso del sistema o en el directorio local de la aplicación.  
+ <span data-ttu-id="042e0-164">El rasterizador de referencia es muy lento, pero omite el controlador de vídeo para evitar cualquier problema de representación causado por problemas de controladores.</span><span class="sxs-lookup"><span data-stu-id="042e0-164">The reference rasterizer is very slow, but bypasses your video driver to avoid any rendering issues caused by driver problems.</span></span> <span data-ttu-id="042e0-165">Por este motivo, se puede usar el rasterizador de referencia para determinar si los problemas de representación se deben al controlador de vídeo.</span><span class="sxs-lookup"><span data-stu-id="042e0-165">For this reason, you can use the reference rasterizer to determine if rendering issues are caused by the video driver.</span></span> <span data-ttu-id="042e0-166">El archivo d3dref9.dll debe estar en una ubicación en la que la aplicación pueda acceder a él, como cualquier ubicación en la ruta del sistema o el directorio local de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="042e0-166">The d3dref9.dll file must be in a location where the application can access it, such as in any location in the system path or in the local directory of the application.</span></span>  
   
- El valor de **utilizar la opción de rasterizador de referencia** acepta un valor DWORD.  El valor 0 indica que no se utiliza el rasterizador de referencia.  Cualquier otro valor distinto de cero fuerza a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a utilizar el rasterizador de referencia.  
+ <span data-ttu-id="042e0-167">La **opción de uso del rasterizador de referencia** adopta un valor DWORD.</span><span class="sxs-lookup"><span data-stu-id="042e0-167">The **use reference rasterizer option** takes a DWORD value.</span></span> <span data-ttu-id="042e0-168">Un valor de 0 indica que no se usa el rasterizador de referencia.</span><span class="sxs-lookup"><span data-stu-id="042e0-168">A value of 0 indicates that the reference rasterizer is not used.</span></span> <span data-ttu-id="042e0-169">Cualquier otro valor distinto de cero fuerza a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a usar el rasterizador de referencia.</span><span class="sxs-lookup"><span data-stu-id="042e0-169">Any other non-zero value forces [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to use the reference rasterizer.</span></span>  
   
-## Vea también  
- [Niveles de representación de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)   
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a><span data-ttu-id="042e0-170">Vea también</span><span class="sxs-lookup"><span data-stu-id="042e0-170">See Also</span></span>  
+ [<span data-ttu-id="042e0-171">Niveles de representación de gráficos</span><span class="sxs-lookup"><span data-stu-id="042e0-171">Graphics Rendering Tiers</span></span>](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
+ [<span data-ttu-id="042e0-172">Información general sobre la representación de gráficos en WPF</span><span class="sxs-lookup"><span data-stu-id="042e0-172">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

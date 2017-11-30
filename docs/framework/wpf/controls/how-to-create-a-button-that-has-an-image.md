@@ -1,36 +1,41 @@
 ---
-title: "C&#243;mo: Crear un bot&#243;n que tenga una imagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Button (controles) [WPF], crear"
+title: "Cómo: Crear un botón que tenga una imagen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fa3aa5454629d53fd8864df6a4f204e22028208f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear un bot&#243;n que tenga una imagen
-En este ejemplo se muestra cómo incluir una imagen en un control <xref:System.Windows.Controls.Button>.  
+# <a name="how-to-create-a-button-that-has-an-image"></a><span data-ttu-id="0f8d0-102">Cómo: Crear un botón que tenga una imagen</span><span class="sxs-lookup"><span data-stu-id="0f8d0-102">How to: Create a Button That Has an Image</span></span>
+<span data-ttu-id="0f8d0-103">Este ejemplo muestra cómo puede incluir una imagen en un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="0f8d0-103">This example shows how to include an image on a <xref:System.Windows.Controls.Button>.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se crean dos controles <xref:System.Windows.Controls.Button>.  Un control <xref:System.Windows.Controls.Button> contiene texto y el otro una imagen.  La imagen está en una carpeta denominada datos, que es una subcarpeta de la carpeta de proyecto del ejemplo.  Cuando un usuario hace clic en el control <xref:System.Windows.Controls.Button> que tiene la imagen, cambian el fondo y el texto del otro <xref:System.Windows.Controls.Button>.  
+## <a name="example"></a><span data-ttu-id="0f8d0-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0f8d0-104">Example</span></span>  
+ <span data-ttu-id="0f8d0-105">En el ejemplo siguiente se crea dos <xref:System.Windows.Controls.Button> controles.</span><span class="sxs-lookup"><span data-stu-id="0f8d0-105">The following example creates two <xref:System.Windows.Controls.Button> controls.</span></span> <span data-ttu-id="0f8d0-106">Una <xref:System.Windows.Controls.Button> contiene texto y el otro contiene una imagen.</span><span class="sxs-lookup"><span data-stu-id="0f8d0-106">One <xref:System.Windows.Controls.Button> contains text and the other contains an image.</span></span> <span data-ttu-id="0f8d0-107">La imagen está en una carpeta denominada data, que es una subcarpeta de la carpeta del proyecto del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="0f8d0-107">The image is in a folder called data, which is a subfolder of the example’s project folder.</span></span> <span data-ttu-id="0f8d0-108">Cuando un usuario hace clic en el <xref:System.Windows.Controls.Button> que tiene la imagen, el fondo y el texto de la otra <xref:System.Windows.Controls.Button> cambiar.</span><span class="sxs-lookup"><span data-stu-id="0f8d0-108">When a user clicks the <xref:System.Windows.Controls.Button> that has the image, the background and the text of the other <xref:System.Windows.Controls.Button> change.</span></span>  
   
- En este ejemplo, los controles <xref:System.Windows.Controls.Button> se crean mediante marcado, pero se usa código para escribir los controladores de eventos <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.  
+ <span data-ttu-id="0f8d0-109">Este ejemplo se crea <xref:System.Windows.Controls.Button> controla mediante el uso de marcado, pero se usa código para escribir el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="0f8d0-109">This example creates <xref:System.Windows.Controls.Button> controls by using markup but uses code to write the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handlers.</span></span>  
   
- [!code-xml[BtnColor#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
+ [!code-xaml[BtnColor#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
   
  [!code-csharp[BtnColor#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml.cs#6)]
  [!code-vb[BtnColor#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
   
-## Vea también  
- [Controles](../../../../docs/framework/wpf/controls/index.md)   
- [Biblioteca de controles](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a><span data-ttu-id="0f8d0-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="0f8d0-110">See Also</span></span>  
+ [<span data-ttu-id="0f8d0-111">Controles</span><span class="sxs-lookup"><span data-stu-id="0f8d0-111">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+ [<span data-ttu-id="0f8d0-112">Biblioteca de controles</span><span class="sxs-lookup"><span data-stu-id="0f8d0-112">Control Library</span></span>](../../../../docs/framework/wpf/controls/control-library.md)

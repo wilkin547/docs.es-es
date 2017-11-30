@@ -1,27 +1,30 @@
 ---
-title: "C&#243;mo: Configurar la persistencia con WorkflowServiceHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Configurar la persistencia con WorkflowServiceHost"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 05441dfea9c70cc71211b17690772bf8666d3209
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Configurar la persistencia con WorkflowServiceHost
-En este tema, se describe cómo configurar la característica Almacén de instancias de flujo de trabajo de SQL para habilitar la persistencia de los flujos de trabajo hospedados en <xref:System.ServiceHost.Activities.WorkflowServiceHost> mediante un archivo de configuración.  Antes de utilizar la característica Almacén de instancias de flujo de trabajo de SQL, cree una base de datos SQL que se use para guardar instancias de flujo de trabajo.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation//how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
+# <a name="how-to-configure-persistence-with-workflowservicehost"></a><span data-ttu-id="120f9-102">Cómo: Configurar la persistencia con WorkflowServiceHost</span><span class="sxs-lookup"><span data-stu-id="120f9-102">How to: Configure Persistence with WorkflowServiceHost</span></span>
+<span data-ttu-id="120f9-103">En este tema, se describe cómo configurar la característica Almacén de instancias de flujo de trabajo de SQL para habilitar la persistencia de los flujos de trabajo hospedados en <xref:System.ServiceModel.Activities.WorkflowServiceHost> mediante un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="120f9-103">This topic describes how to configure the SQL Workflow Instance Store feature to enable persistence for workflows hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost> by using a configuration file.</span></span> <span data-ttu-id="120f9-104">Antes de utilizar la característica Almacén de instancias de flujo de trabajo de SQL, cree una base de datos SQL que se use para guardar instancias de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="120f9-104">Before using the SQL Workflow Instance Store feature you must create a SQL database that is used to persist workflow instances.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="120f9-105">[Cómo: habilitar la persistencia de SQL para los flujos de trabajo y los servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).</span><span class="sxs-lookup"><span data-stu-id="120f9-105"> [How to: Enable SQL Persistence for Workflows and Workflow Services](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).</span></span>  
   
-### Para configurar el Almacén de instancias de flujo de trabajo de SQL en Configuración  
+### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a><span data-ttu-id="120f9-106">Para configurar el Almacén de instancias de flujo de trabajo de SQL en Configuración</span><span class="sxs-lookup"><span data-stu-id="120f9-106">To Configure the SQL Workflow Instance Store in Configuration</span></span>  
   
-1.  Las propiedades del Almacén de instancias de flujo de trabajo de SQL se pueden configurar a través de <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, un comportamiento del servicio que le permite cambiar la configuración a través de la configuración de XML.  El siguiente ejemplo de configuración muestra cómo configurar el Almacén de instancias de flujo de trabajo de SQL mediante el elemento de comportamiento \<`sqlWorkflowInstanceStore`\> en un archivo de configuración.  
+1.  <span data-ttu-id="120f9-107">Las propiedades del Almacén de instancias de flujo de trabajo de SQL se pueden configurar a través de <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, un comportamiento del servicio que le permite cambiar la configuración a través de la configuración de XML.</span><span class="sxs-lookup"><span data-stu-id="120f9-107">The properties of the SQL workflow instance store can be configured through the <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, a service behavior that allows you to change the settings through XML configuration.</span></span> <span data-ttu-id="120f9-108">El siguiente ejemplo de configuración muestra cómo configurar el Almacén de instancias de flujo de trabajo de SQL mediante el elemento de comportamiento <`sqlWorkflowInstanceStore`> en un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="120f9-108">The following configuration example shows how to configure the SQL workflow instance store by using the <`sqlWorkflowInstanceStore`> behavior element in a configuration file.</span></span>  
   
     ```xml  
     <serviceBehaviors>  
@@ -36,17 +39,16 @@ En este tema, se describe cómo configurar la característica Almacén de instan
             <sqlWorkflowInstanceStore/>  
         </behavior>  
     </serviceBehaviors>  
-  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo configurar el almacén de instancias de flujo de trabajo de SQL, vea [Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation//how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los valores individuales para el elemento de comportamiento \<`sqlWorkflowInstanceStore`\>, vea [Almacén de instancias de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md).  Windows Server App Fabric proporciona su propio almacén de persistencia.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Persistencia de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193121).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="120f9-109">Cómo configurar el almacén de instancias de flujo de trabajo SQL, consulte [Cómo: habilitar la persistencia de SQL para los flujos de trabajo y los servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).</span><span class="sxs-lookup"><span data-stu-id="120f9-109"> how to configure the SQL workflow instance store, see [How to: Enable SQL Persistence for Workflows and Workflow Services](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="120f9-110">la configuración individual de la <`sqlWorkflowInstanceStore`> elemento de comportamiento, consulte [almacén de instancias de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span><span class="sxs-lookup"><span data-stu-id="120f9-110"> the individual settings for the <`sqlWorkflowInstanceStore`> behavior element, see [SQL Workflow Instance Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span></span> <span data-ttu-id="120f9-111">Windows Server App Fabric proporciona su propio almacén de persistencia.</span><span class="sxs-lookup"><span data-stu-id="120f9-111">Windows Server App Fabric provides its own persistence store.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="120f9-112">[Windows Server AppFabric persistencia](http://go.microsoft.com/fwlink/?LinkId=193121).</span><span class="sxs-lookup"><span data-stu-id="120f9-112"> [Windows Server App Fabric Persistence](http://go.microsoft.com/fwlink/?LinkId=193121).</span></span>  
   
     > [!NOTE]
-    >  El ejemplo de configuración anterior usa una configuración simplificada.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md)  
+    >  <span data-ttu-id="120f9-113">El ejemplo de configuración anterior usa una configuración simplificada.</span><span class="sxs-lookup"><span data-stu-id="120f9-113">The preceding configuration example uses simplified configuration.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="120f9-114">[Simplificado la configuración](../../../../docs/framework/wcf/simplified-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="120f9-114"> [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)</span></span>  
   
-### Para configurar el Almacén de instancias de flujo de trabajo de SQL en el código  
+### <a name="to-configure-the-sql-workflow-instance-store-in-code"></a><span data-ttu-id="120f9-115">Para configurar el Almacén de instancias de flujo de trabajo de SQL en el código</span><span class="sxs-lookup"><span data-stu-id="120f9-115">To Configure the SQL Workflow Instance Store in Code</span></span>  
   
-1.  Las propiedades del Almacén de instancias de flujo de trabajo de SQL se pueden configurar a través de <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, un comportamiento del servicio que le permite cambiar la configuración a través de código.  El siguiente ejemplo muestra cómo configurar el almacén de instancias de flujo de trabajo de SQL mediante el elemento de comportamiento <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> en un código.  
+1.  <span data-ttu-id="120f9-116">Las propiedades del Almacén de instancias de flujo de trabajo de SQL se pueden configurar a través de <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, un comportamiento del servicio que le permite cambiar la configuración a través de código.</span><span class="sxs-lookup"><span data-stu-id="120f9-116">The properties of the SQL workflow instance store can be configured through the <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, a service behavior that allows you to change the settings through code.</span></span> <span data-ttu-id="120f9-117">El siguiente ejemplo muestra cómo configurar el almacén de instancias de flujo de trabajo de SQL mediante el elemento de comportamiento <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> en un código.</span><span class="sxs-lookup"><span data-stu-id="120f9-117">The following example shows how to configure the SQL workflow instance store by using the <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> behavior element in a code</span></span>  
   
     ```csharp  
     host.Description.Behaviors.Add(new SqlWorkflowInstanceStoreBehavior  
@@ -60,14 +62,14 @@ En este tema, se describe cómo configurar la característica Almacén de instan
     });  
     ```  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo configurar el almacén de instancias de flujo de trabajo de SQL, vea [Cómo: Habilitar la persistencia de SQL para flujos de trabajo y servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation//how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los valores individuales para el elemento de comportamiento <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, vea [Almacén de instancias de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md).  Windows Server App Fabric proporciona su propio almacén de persistencia.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Persistencia de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193121).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="120f9-118">Cómo configurar el almacén de instancias de flujo de trabajo SQL, consulte [Cómo: habilitar la persistencia de SQL para los flujos de trabajo y los servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).</span><span class="sxs-lookup"><span data-stu-id="120f9-118"> how to configure the SQL workflow instance store, see [How to: Enable SQL Persistence for Workflows and Workflow Services](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="120f9-119">la configuración individual de la <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> elemento de comportamiento, consulte [almacén de instancias de flujo de trabajo de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span><span class="sxs-lookup"><span data-stu-id="120f9-119"> the individual settings for the <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> behavior element, see [SQL Workflow Instance Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span></span> <span data-ttu-id="120f9-120">Windows Server App Fabric proporciona su propio almacén de persistencia.</span><span class="sxs-lookup"><span data-stu-id="120f9-120">Windows Server App Fabric provides its own persistence store.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="120f9-121">[Windows Server AppFabric persistencia](http://go.microsoft.com/fwlink/?LinkId=193121).</span><span class="sxs-lookup"><span data-stu-id="120f9-121"> [Windows Server App Fabric Persistence](http://go.microsoft.com/fwlink/?LinkId=193121).</span></span>  
   
     > [!NOTE]
-    >  El ejemplo de configuración anterior usa una configuración simplificada.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md)  
+    >  <span data-ttu-id="120f9-122">El ejemplo de configuración anterior usa una configuración simplificada.</span><span class="sxs-lookup"><span data-stu-id="120f9-122">The preceding configuration example uses simplified configuration.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="120f9-123">[Simplificado la configuración](../../../../docs/framework/wcf/simplified-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="120f9-123"> [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)</span></span>  
   
-     Para obtener un ejemplo de cómo configurar la persistencia mediante programación, vea [Cómo: Habilitar persistencia para flujos de trabajo y servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation//how-to-enable-persistence-for-workflows-and-workflow-services.md).  
+     <span data-ttu-id="120f9-124">Para obtener un ejemplo de cómo configurar la persistencia mediante programación, vea [Cómo: habilitar la persistencia para flujos de trabajo y los servicios de flujo de trabajo](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).</span><span class="sxs-lookup"><span data-stu-id="120f9-124">For an example of how to configure persistence programmatically see [How to: Enable Persistence for Workflows and Workflow Services](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).</span></span>  
   
-## Vea también  
- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Persistencia del flujo de trabajo](../../../../docs/framework/windows-workflow-foundation//workflow-persistence.md)   
- [Persistencia de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193121)
+## <a name="see-also"></a><span data-ttu-id="120f9-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="120f9-125">See Also</span></span>  
+ [<span data-ttu-id="120f9-126">Servicios de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="120f9-126">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="120f9-127">Persistencia del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="120f9-127">Workflow Persistence</span></span>](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
+ [<span data-ttu-id="120f9-128">Persistencia de AppFabric de Windows Server</span><span class="sxs-lookup"><span data-stu-id="120f9-128">Windows Server App Fabric Persistence</span></span>](http://go.microsoft.com/fwlink/?LinkId=193121)

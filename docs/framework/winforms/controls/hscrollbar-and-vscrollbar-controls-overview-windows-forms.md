@@ -1,51 +1,52 @@
 ---
-title: "Introducci&#243;n a los controles HScrollBar y VScrollBar (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HScrollBar"
-  - "VScrollBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "HScrollBar (control) [Windows Forms], acerca de HScrollBar"
-  - "barras de desplazamiento, acerca de barras de desplazamiento"
-  - "ScrollBar (control) [Windows Forms]"
-  - "ScrollBar (control) [Windows Forms], acerca del control ScrollBar"
-  - "VScrollBar (control) [Windows Forms], acerca del control VScrollBar"
+title: "Introducción a los controles HScrollBar y VScrollBar (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HScrollBar
+- VScrollBar
+helpviewer_keywords:
+- ScrollBar control [Windows Forms]
+- HScrollBar control [Windows Forms], about HScrollBar
+- VScrollBar control [Windows Forms], about VScrollBar control
+- ScrollBar control [Windows Forms], about ScrollBar control
+- scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80ec592bf83969ae57495b0df2af110b5622ea11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Introducci&#243;n a los controles HScrollBar y VScrollBar (formularios Windows Forms)
-Los controles <xref:System.Windows.Forms.ScrollBar> de formularios Windows Forms se utilizan para permitir una navegación fácil por una lista de elementos o un gran volumen de información, ya sea horizontal o verticalmente, dentro de una aplicación o control.  Las barras de desplazamiento son un elemento común de la interfaz de Windows, así que el control <xref:System.Windows.Forms.ScrollBar> suele utilizarse con controles que no derivan de la clase <xref:System.Windows.Forms.ScrollableControl>.  De forma similar, muchos programadores eligen incorporar el control <xref:System.Windows.Forms.ScrollBar> cuando crean sus propios controles de usuario.  
+# <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a><span data-ttu-id="605c0-102">Introducción a los controles HScrollBar y VScrollBar (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="605c0-102">HScrollBar and VScrollBar Controls Overview (Windows Forms)</span></span>
+<span data-ttu-id="605c0-103">Formularios Windows Forms <xref:System.Windows.Forms.ScrollBar> controles se utilizan para proporcionar navegación fácil por una larga lista de elementos o una gran cantidad de información, ya sea horizontal o verticalmente, dentro de una aplicación o control.</span><span class="sxs-lookup"><span data-stu-id="605c0-103">Windows Forms <xref:System.Windows.Forms.ScrollBar> controls are used to provide easy navigation through a long list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span> <span data-ttu-id="605c0-104">Barras de desplazamiento son un elemento común de la interfaz de Windows, por lo que la <xref:System.Windows.Forms.ScrollBar> control suele utilizarse con controles que no se derivan de la <xref:System.Windows.Forms.ScrollableControl> clase.</span><span class="sxs-lookup"><span data-stu-id="605c0-104">Scroll bars are a common element of the Windows interface, so the <xref:System.Windows.Forms.ScrollBar> control is often used with controls that do not derive from the <xref:System.Windows.Forms.ScrollableControl> class.</span></span> <span data-ttu-id="605c0-105">De forma similar, muchos programadores eligen incorporar el <xref:System.Windows.Forms.ScrollBar> controlar al crear sus propios controles de usuario.</span><span class="sxs-lookup"><span data-stu-id="605c0-105">Similarly, many developers choose to incorporate the <xref:System.Windows.Forms.ScrollBar> control when authoring their own user controls.</span></span>  
   
- Los controles <xref:System.Windows.Forms.HScrollBar> \(horizontal\) y <xref:System.Windows.Forms.VScrollBar> \(vertical\) operan independientemente de otros controles y tienen su propio conjunto de eventos, propiedades y métodos.  Los controles <xref:System.Windows.Forms.ScrollBar> no se asemejan a las barras de desplazamiento integradas que se adjuntan a los cuadros de texto, cuadros de lista, cuadros combinados o formularios MDI \(el control <xref:System.Windows.Forms.TextBox> tiene una propiedad <xref:System.Windows.Forms.TextBox.ScrollBars%2A> para mostrar u ocultar las barras de desplazamiento adjuntas a un control\).  
+ <span data-ttu-id="605c0-106">El <xref:System.Windows.Forms.HScrollBar> (horizontal) y <xref:System.Windows.Forms.VScrollBar> controles (verticales) operan independientemente de otros controles y tienen su propio conjunto de eventos, propiedades y métodos.</span><span class="sxs-lookup"><span data-stu-id="605c0-106">The <xref:System.Windows.Forms.HScrollBar> (horizontal) and <xref:System.Windows.Forms.VScrollBar> (vertical) controls operate independently from other controls and have their own set of events, properties, and methods.</span></span> <span data-ttu-id="605c0-107"><xref:System.Windows.Forms.ScrollBar>controles no son los mismos que las barras de desplazamiento integradas que se adjuntan a los cuadros de texto, cuadros de lista, cuadros combinados o formularios MDI (el <xref:System.Windows.Forms.TextBox> control tiene un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propiedad para mostrar u ocultar las barras de desplazamiento que se adjuntan al control).</span><span class="sxs-lookup"><span data-stu-id="605c0-107"><xref:System.Windows.Forms.ScrollBar> controls are not the same as the built-in scroll bars that are attached to text boxes, list boxes, combo boxes, or MDI forms (the <xref:System.Windows.Forms.TextBox> control has a <xref:System.Windows.Forms.TextBox.ScrollBars%2A> property to show or hide scroll bars that are attached to the control).</span></span>  
   
- Los controles <xref:System.Windows.Forms.ScrollBar> utilizan el evento <xref:System.Windows.Forms.ScrollBar.Scroll> para supervisar el movimiento del cuadro de desplazamiento \(a veces conocido como control de posición\) a lo largo de la barra de desplazamiento.  El uso del evento <xref:System.Windows.Forms.ScrollBar.Scroll> proporciona acceso al valor de la barra de desplazamiento durante la operación de arrastre.  
+ <span data-ttu-id="605c0-108">El <xref:System.Windows.Forms.ScrollBar> controla el uso del <xref:System.Windows.Forms.ScrollBar.Scroll> eventos para supervisar el movimiento del cuadro de desplazamiento (denominado a veces como control de posición) a lo largo de la barra de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="605c0-108">The <xref:System.Windows.Forms.ScrollBar> controls use the <xref:System.Windows.Forms.ScrollBar.Scroll> event to monitor the movement of the scroll box (sometimes referred to as the thumb) along the scroll bar.</span></span> <span data-ttu-id="605c0-109">Mediante el <xref:System.Windows.Forms.ScrollBar.Scroll> evento proporciona acceso para el valor de la barra de desplazamiento tal y como se está arrastrando.</span><span class="sxs-lookup"><span data-stu-id="605c0-109">Using the <xref:System.Windows.Forms.ScrollBar.Scroll> event provides access to the scroll bar value as it is being dragged.</span></span>  
   
-## Value \(Propiedad\)  
- La propiedad <xref:System.Windows.Forms.ScrollBar.Value%2A> \(que, de forma predeterminada, es 0\) es un valor de tipo `integer` que corresponde a la posición del cuadro de desplazamiento en la barra de desplazamiento.  Cuando la posición del cuadro de desplazamiento se encuentra en el valor mínimo, se desplaza al extremo izquierdo \(en las barras de desplazamiento horizontal\) o al extremo superior \(en las barras de desplazamiento vertical\).  Cuando el cuadro de desplazamiento está en el valor máximo, el cuadro de desplazamiento se desplaza al extremo derecho o inferior.  De forma similar, un valor a medio camino entre el inferior y el superior del intervalo sitúa el margen inicial del cuadro de desplazamiento en el punto medio de la barra de desplazamiento.  
+## <a name="value-property"></a><span data-ttu-id="605c0-110">Propiedad Value</span><span class="sxs-lookup"><span data-stu-id="605c0-110">Value Property</span></span>  
+ <span data-ttu-id="605c0-111">El <xref:System.Windows.Forms.ScrollBar.Value%2A> propiedad (que, de forma predeterminada, es 0) es un `integer` valor corresponde a la posición del cuadro de desplazamiento en la barra de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="605c0-111">The <xref:System.Windows.Forms.ScrollBar.Value%2A> property (which, by default, is 0) is an `integer` value corresponding to the position of the scroll box in the scroll bar.</span></span> <span data-ttu-id="605c0-112">Una vez la posición del cuadro de desplazamiento en el valor mínimo, mueve a la posición más a la izquierda (para las barras de desplazamiento horizontal) o la posición superior (para las barras de desplazamiento vertical).</span><span class="sxs-lookup"><span data-stu-id="605c0-112">When the scroll box position is at the minimum value, it moves to the left-most position (for horizontal scroll bars) or the top position (for vertical scroll bars).</span></span> <span data-ttu-id="605c0-113">Cuando el cuadro de desplazamiento está en el valor máximo, los movimientos del cuadro de desplazamiento más a la derecha o posición de la parte inferior.</span><span class="sxs-lookup"><span data-stu-id="605c0-113">When the scroll box is at the maximum value, the scroll box moves to the right-most or bottom position.</span></span> <span data-ttu-id="605c0-114">De forma similar, un valor comprendido entre la parte inferior y superior del intervalo sitúa el borde inicial del cuadro de desplazamiento en el medio de la barra de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="605c0-114">Similarly, a value halfway between the bottom and top of the range places the leading edge of the scroll box in the middle of the scroll bar.</span></span>  
   
- Además de hacer clic con el mouse para cambiar el valor de la barra de desplazamiento, un usuario puede también arrastrar el cuadro de desplazamiento a cualquier punto de la barra.  El valor resultante depende de la posición del cuadro de desplazamiento, pero se encuentra siempre dentro del intervalo de las propiedades <xref:System.Windows.Forms.ScrollBar.Minimum%2A> a <xref:System.Windows.Forms.ScrollBar.Maximum%2A> establecido por el usuario.  
+ <span data-ttu-id="605c0-115">Además de usar clics del mouse para cambiar el valor de la barra de desplazamiento, un usuario también puede arrastrar el cuadro de desplazamiento a cualquier punto a lo largo de la barra.</span><span class="sxs-lookup"><span data-stu-id="605c0-115">In addition to using mouse clicks to change the scroll bar value, a user can also drag the scroll box to any point along the bar.</span></span> <span data-ttu-id="605c0-116">El valor resultante depende de la posición del cuadro de desplazamiento, pero se encuentra siempre dentro del intervalo de la <xref:System.Windows.Forms.ScrollBar.Minimum%2A> a <xref:System.Windows.Forms.ScrollBar.Maximum%2A> propiedades establecidas por el usuario.</span><span class="sxs-lookup"><span data-stu-id="605c0-116">The resulting value depends on the position of the scroll box, but it is always within the range of the <xref:System.Windows.Forms.ScrollBar.Minimum%2A> to <xref:System.Windows.Forms.ScrollBar.Maximum%2A> properties set by the user.</span></span>  
   
-## Propiedades LargeChange y SmallChange  
- Cuando el usuario presiona la tecla RE PÁG o AV PÁG o hace clic en el recorrido de la barra de desplazamiento, la propiedad <xref:System.Windows.Forms.ScrollBar.Value%2A> cambia de acuerdo con el valor establecido en la propiedad <xref:System.Windows.Forms.ScrollBar.LargeChange%2A>.  
+## <a name="largechange-and-smallchange-properties"></a><span data-ttu-id="605c0-117">Propiedades LargeChange y SmallChange</span><span class="sxs-lookup"><span data-stu-id="605c0-117">LargeChange and SmallChange Properties</span></span>  
+ <span data-ttu-id="605c0-118">Cuando el usuario presiona la tecla RE PÁG o AV PÁG o hace clic en el recorrido de la barra de desplazamiento a cada lado del cuadro de desplazamiento, el <xref:System.Windows.Forms.ScrollBar.Value%2A> cambios de propiedad según el valor establecido en el <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="605c0-118">When the user presses the PAGE UP or PAGE DOWN key or clicks in the scroll bar track on either side of the scroll box, the <xref:System.Windows.Forms.ScrollBar.Value%2A> property changes according to the value set in the <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> property.</span></span>  
   
- Cuando el usuario presiona una de las teclas de dirección o hace clic en uno de los botones de la barra de desplazamiento, la propiedad <xref:System.Windows.Forms.ScrollBar.Value%2A> cambia de acuerdo con el valor establecido en la propiedad <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>.  
+ <span data-ttu-id="605c0-119">Cuando el usuario presiona uno de la flecha de claves o haga clic en uno de los botones de barra de desplazamiento, el <xref:System.Windows.Forms.ScrollBar.Value%2A> cambios de propiedad según el valor establecido en el <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="605c0-119">When the user presses one of the arrow keys or clicks one of the scroll bar buttons, the <xref:System.Windows.Forms.ScrollBar.Value%2A> property changes according to the value set in the <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> property.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.HScrollBar>   
- <xref:System.Windows.Forms.VScrollBar>   
- [Adiciones a Windows Forms para .NET Framework 2.0](http://msdn.microsoft.com/es-es/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)   
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="605c0-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="605c0-120">See Also</span></span>  
+ <xref:System.Windows.Forms.HScrollBar>  
+ <xref:System.Windows.Forms.VScrollBar>  
+ [<span data-ttu-id="605c0-121">Adiciones a formularios Windows Forms para .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="605c0-121">Additions to Windows Forms for the .NET Framework 2.0</span></span>](http://msdn.microsoft.com/en-us/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
+ [<span data-ttu-id="605c0-122">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="605c0-122">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

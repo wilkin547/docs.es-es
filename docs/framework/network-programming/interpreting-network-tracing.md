@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - TraceMode attribute
 - hexidecimal data, network tracing output
@@ -20,28 +15,27 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8c451a84117208457942d1c3794628963a49e93
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: deb191f18bda5b00ef4a967f50e8e983289882a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="interpreting-network-tracing"></a>Interpretar el seguimiento de red
-Cuando está habilitado el seguimiento de red, puede usarlo para capturar las llamadas que la aplicación realiza a diversos miembros de clase <xref:System.Net>. La salida de estas llamadas puede ser similar a los ejemplos siguientes.  
+# <a name="interpreting-network-tracing"></a><span data-ttu-id="cea52-102">Interpretar el seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="cea52-102">Interpreting Network Tracing</span></span>
+<span data-ttu-id="cea52-103">Cuando está habilitado el seguimiento de red, puede usarlo para capturar las llamadas que la aplicación realiza a diversos miembros de clase <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="cea52-103">When network tracing is enabled, you can use tracing to capture calls your application makes to various <xref:System.Net> class members.</span></span> <span data-ttu-id="cea52-104">La salida de estas llamadas puede ser similar a los ejemplos siguientes.</span><span class="sxs-lookup"><span data-stu-id="cea52-104">The output from these calls may be similar to the following examples.</span></span>  
   
 ```  
 [588]   (4357)   Entering Socket#33574638::Send()  
 [588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
 ```  
   
- En el ejemplo anterior, [588] es el identificador único del subproceso actual. (4357) y (4387) son marcas de tiempo que indican el número de milisegundos que han transcurrido desde que se ha iniciado la aplicación. Los datos que aparecen después de la marca de tiempo muestran la aplicación que entra y sale del método **Socket.Send**. El objeto que ejecuta el método **Send** tiene como identificador único 33574638. El seguimiento de salida del método incluye el valor devuelto (61 en el ejemplo anterior).  
+ <span data-ttu-id="cea52-105">En el ejemplo anterior, [588] es el identificador único del subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="cea52-105">In the preceding example, [588] is the current thread's unique identifier.</span></span> <span data-ttu-id="cea52-106">(4357) y (4387) son marcas de tiempo que indican el número de milisegundos que han transcurrido desde que se ha iniciado la aplicación.</span><span class="sxs-lookup"><span data-stu-id="cea52-106">(4357) and (4387) are timestamps denoting the number of milliseconds that have elapsed since the application started.</span></span> <span data-ttu-id="cea52-107">Los datos que aparecen después de la marca de tiempo muestran la aplicación que entra y sale del método **Socket.Send**.</span><span class="sxs-lookup"><span data-stu-id="cea52-107">The data following the timestamp shows the application entering and exiting the method **Socket.Send**.</span></span> <span data-ttu-id="cea52-108">El objeto que ejecuta el método **Send** tiene como identificador único 33574638.</span><span class="sxs-lookup"><span data-stu-id="cea52-108">The object executing the **Send** method has 33574638 as its unique identifier.</span></span> <span data-ttu-id="cea52-109">El seguimiento de salida del método incluye el valor devuelto (61 en el ejemplo anterior).</span><span class="sxs-lookup"><span data-stu-id="cea52-109">The method exit trace includes the return value (61 in the preceding example).</span></span>  
   
- Los seguimientos de red pueden capturar el tráfico de red que se envía desde la aplicación o que se recibe en esta mediante protocolos de nivel de aplicación, como el Protocolo de transferencia de hipertexto (HTTP). Estos datos se pueden capturar como texto y, opcionalmente, como datos hexadecimales. Los datos hexadecimales están disponibles cuando se especifica **includehex** como valor del atributo **tracemode**. (Para obtener información detallada sobre este atributo, vea [How to: Configure Network Tracing](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) (Cómo: configurar el seguimiento de red)). El seguimiento del ejemplo siguiente se ha generado con **includehex**.  
+ <span data-ttu-id="cea52-110">Los seguimientos de red pueden capturar el tráfico de red que se envía desde la aplicación o que se recibe en esta mediante protocolos de nivel de aplicación, como el Protocolo de transferencia de hipertexto (HTTP).</span><span class="sxs-lookup"><span data-stu-id="cea52-110">Network traces can capture network traffic that is sent from or received by your application using application-level protocols such as Hypertext Transfer Protocol (HTTP).</span></span> <span data-ttu-id="cea52-111">Estos datos se pueden capturar como texto y, opcionalmente, como datos hexadecimales.</span><span class="sxs-lookup"><span data-stu-id="cea52-111">This data can be captured as text and, optionally, hexadecimal data.</span></span> <span data-ttu-id="cea52-112">Los datos hexadecimales están disponibles cuando se especifica **includehex** como valor del atributo **tracemode**.</span><span class="sxs-lookup"><span data-stu-id="cea52-112">Hexadecimal data is available when you specify **includehex** as the value of the **tracemode** attribute.</span></span> <span data-ttu-id="cea52-113">(Para obtener información detallada sobre este atributo, vea [How to: Configure Network Tracing](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) (Cómo: configurar el seguimiento de red)). El seguimiento del ejemplo siguiente se ha generado con **includehex**.</span><span class="sxs-lookup"><span data-stu-id="cea52-113">(For detailed information about this attribute, see [How to: Configure Network Tracing](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).) The following example trace was generated using **includehex**.</span></span>  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -51,7 +45,7 @@ Cuando está habilitado el seguimiento de red, puede usarlo para capturar las ll
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- Para omitir los datos hexadecimales, especifique **protocolonly** como valor del atributo **tracemode**. En el ejemplo siguiente se muestra el seguimiento cuando se especifica **protocolonly**.  
+ <span data-ttu-id="cea52-114">Para omitir los datos hexadecimales, especifique **protocolonly** como valor del atributo **tracemode**.</span><span class="sxs-lookup"><span data-stu-id="cea52-114">To omit hexadecimal data, specify **protocolonly** as the value for the **tracemode** attribute.</span></span> <span data-ttu-id="cea52-115">En el ejemplo siguiente se muestra el seguimiento cuando se especifica **protocolonly**.</span><span class="sxs-lookup"><span data-stu-id="cea52-115">The following example shows the trace when **protocolonly** is specified.</span></span>  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   
@@ -59,8 +53,7 @@ Cuando está habilitado el seguimiento de red, puede usarlo para capturar las ll
   
  `Connection: Close`  
   
-## <a name="see-also"></a>Vea también  
- [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [Cómo: configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
- [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)
-
+## <a name="see-also"></a><span data-ttu-id="cea52-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="cea52-116">See Also</span></span>  
+ [<span data-ttu-id="cea52-117">Habilitar el seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="cea52-117">Enabling Network Tracing</span></span>](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [<span data-ttu-id="cea52-118">Cómo: configurar el seguimiento de red</span><span class="sxs-lookup"><span data-stu-id="cea52-118">How to: Configure Network Tracing</span></span>](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+ [<span data-ttu-id="cea52-119">Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="cea52-119">Network Tracing in the .NET Framework</span></span>](../../../docs/framework/network-programming/network-tracing.md)

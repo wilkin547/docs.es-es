@@ -1,81 +1,63 @@
 ---
-title: /addmodule | Documentos de Microsoft
-ms.date: 2015-07-20
+title: /addmodule
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /addmodule compiler option [Visual Basic]
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 949962905ec933dc42301bf8c21654e73dbe2f70
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fff292605e125776ae25e667d4813d770ed0a0aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="addmodule"></a>/addmodule
-Hace que el compilador facilite al proyecto que se está compilando toda la información de tipos presente en los archivos especificados.  
+# <a name="addmodule"></a><span data-ttu-id="27666-102">/addmodule</span><span class="sxs-lookup"><span data-stu-id="27666-102">/addmodule</span></span>
+<span data-ttu-id="27666-103">Hace que el compilador facilite al proyecto que se está compilando toda la información de tipos presente en los archivos especificados.</span><span class="sxs-lookup"><span data-stu-id="27666-103">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="27666-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="27666-104">Syntax</span></span>  
   
 ```  
 /addmodule:fileList  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a><span data-ttu-id="27666-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="27666-105">Arguments</span></span>  
  `fileList`  
- Obligatorio. Lista delimitada por comas de archivos que contienen metadatos pero no contienen manifiestos de ensamblado. Los nombres de archivo que contienen espacios deben incluirse entre comillas ("").  
+ <span data-ttu-id="27666-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="27666-106">Required.</span></span> <span data-ttu-id="27666-107">Lista delimitada por comas de los archivos que contienen metadatos pero no contienen manifiestos de ensamblado.</span><span class="sxs-lookup"><span data-stu-id="27666-107">Comma-delimited list of files that contain metadata but do not contain assembly manifests.</span></span> <span data-ttu-id="27666-108">Nombres de archivo que contienen espacios deben ir entre comillas ("").</span><span class="sxs-lookup"><span data-stu-id="27666-108">File names containing spaces should be surrounded by quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Los archivos mostrados por la `fileList` parámetro debe crearse con el `/target:module` opción, o con el equivalente de otro compilador a `/target:module`.  
+## <a name="remarks"></a><span data-ttu-id="27666-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="27666-109">Remarks</span></span>  
+ <span data-ttu-id="27666-110">Los archivos mostrados por la `fileList` parámetro debe crearse con el `/target:module` opción, o con el equivalente de otro compilador a `/target:module`.</span><span class="sxs-lookup"><span data-stu-id="27666-110">The files listed by the `fileList` parameter must be created with the `/target:module` option, or with another compiler's equivalent to `/target:module`.</span></span>  
   
- Todos los módulos agregados con `/addmodule` deben estar en el mismo directorio que el archivo de salida en tiempo de ejecución. Es decir, puede especificar un módulo en cualquier directorio en tiempo de compilación, pero el módulo debe estar en el directorio de la aplicación en tiempo de ejecución. Si no es así, obtendrá una <xref:System.TypeLoadException>error.</xref:System.TypeLoadException>  
+ <span data-ttu-id="27666-111">Todos los módulos agregados con `/addmodule` debe estar en el mismo directorio que el archivo de salida en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="27666-111">All modules added with `/addmodule` must be in the same directory as the output file at run time.</span></span> <span data-ttu-id="27666-112">Es decir, puede especificar un módulo en cualquier directorio en tiempo de compilación, pero el módulo debe estar en el directorio de la aplicación en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="27666-112">That is, you can specify a module in any directory at compile time, but the module must be in the application directory at run time.</span></span> <span data-ttu-id="27666-113">Si no es así, obtendrá una <xref:System.TypeLoadException> error.</span><span class="sxs-lookup"><span data-stu-id="27666-113">If it is not, you get a <xref:System.TypeLoadException> error.</span></span>  
   
- Si se especifica (implícita o explícitamente) cualquier[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) opción distinto de `/target:module` con `/addmodule`, los archivos que pase a `/addmodule` pasan a formar parte del ensamblado del proyecto. Es necesario un ensamblado para ejecutar un archivo de salida que tiene uno o más archivos agregados mediante `/addmodule`.  
+ <span data-ttu-id="27666-114">Si especifica (implícita o explícitamente) cualquier[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) opción distinto de `/target:module` con `/addmodule`, los archivos que pase a `/addmodule` pasan a formar parte del ensamblado del proyecto.</span><span class="sxs-lookup"><span data-stu-id="27666-114">If you specify (implicitly or explicitly) any[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) option other than `/target:module` with `/addmodule`, the files you pass to `/addmodule` become part of the project's assembly.</span></span> <span data-ttu-id="27666-115">Se requiere un ensamblado para ejecutar un archivo de salida que tiene uno o más archivos agregados mediante `/addmodule`.</span><span class="sxs-lookup"><span data-stu-id="27666-115">An assembly is required to run an output file that has one or more files added with `/addmodule`.</span></span>  
   
- Utilice [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) para importar metadatos de un archivo que contiene un ensamblado.  
+ <span data-ttu-id="27666-116">Use [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) para importar metadatos de un archivo que contiene un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="27666-116">Use [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) to import metadata from a file that contains an assembly.</span></span>  
   
 > [!NOTE]
->  El `/addmodule` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible sólo cuando se compila desde la línea de comandos.  
+>  <span data-ttu-id="27666-117">El `/addmodule` opción no está disponible en el entorno de desarrollo de Visual Studio, que está disponible sólo cuando se compila desde la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="27666-117">The `/addmodule` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- El siguiente código crea un módulo.  
+## <a name="example"></a><span data-ttu-id="27666-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="27666-118">Example</span></span>  
+ <span data-ttu-id="27666-119">El siguiente código crea un módulo.</span><span class="sxs-lookup"><span data-stu-id="27666-119">The following code creates a module.</span></span>  
   
- [!code-vb[VbVbalrCompiler&#47;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
   
- El siguiente código importa los tipos del módulo.  
+ <span data-ttu-id="27666-120">El siguiente código importa los tipos del módulo.</span><span class="sxs-lookup"><span data-stu-id="27666-120">The following code imports the module's types.</span></span>  
   
- [!code-vb[VbVbalrCompiler Nº&48;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
   
- Al ejecutar `t1`, genera `802`.  
+ <span data-ttu-id="27666-121">Al ejecutar `t1`, genera `802`.</span><span class="sxs-lookup"><span data-stu-id="27666-121">When you run `t1`, it outputs `802`.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="27666-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="27666-122">See Also</span></span>  
+ [<span data-ttu-id="27666-123">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="27666-123">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="27666-124">/target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27666-124">/target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [<span data-ttu-id="27666-125">/ Reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27666-125">/reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [<span data-ttu-id="27666-126">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="27666-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

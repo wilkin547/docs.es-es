@@ -1,57 +1,62 @@
 ---
-title: "How to: Determine Which Modifier Key Was Pressed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "keyboard input"
-  - "shift keys"
-  - "events [Windows Forms], mouse"
-  - "Keys.ControlKey enumeration member"
-  - "keys, control keys"
-  - "user input, checking for keyboard"
-  - "keys, determining last pressed"
-  - "keys, shift keys"
-  - "keys, modifier keys"
-  - "control keys"
-  - "keys, alt keys"
-  - "alt keys"
-  - "Keys.Shift enumeration member"
-  - "events [Windows Forms], keyboard"
-  - "keyboards, keyboard input"
-  - "Keys.Alt enumeration member"
-  - "modifier keys"
+title: "Cómo: Determinar qué tecla modificadora se presionó"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- keyboard input
+- shift keys
+- events [Windows Forms], mouse
+- Keys.ControlKey enumeration member
+- keys [Windows Forms], control keys
+- user input [Windows Forms], checking for keyboard
+- keys [Windows Forms], determining last pressed
+- keys [Windows Forms], shift keys
+- keys [Windows Forms], modifier keys
+- control keys
+- keys [Windows Forms], alt keys
+- alt keys
+- Keys.Shift enumeration member
+- events [Windows Forms], keyboard
+- keyboards [Windows Forms], keyboard input
+- Keys.Alt enumeration member
+- modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6fdc93063bbc8c9428f2f01c6cd5c0578e77ab01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Determine Which Modifier Key Was Pressed
-Cuando cree una aplicación que acepte pulsaciones de teclas por parte del usuario, es posible que desee supervisar también teclas modificadoras tales como Mayús, Alt y Ctrl.  Cuando se presiona una tecla modificadora en combinación con otras teclas, o con clics del mouse, la aplicación puede responder adecuadamente.  Por ejemplo, si se presiona la letra S, esto puede hacer que simplemente aparezca una "s" en la pantalla, pero si presiona las teclas CTRL\+S, se puede guardar el documento actual.  Si controla el evento <xref:System.Windows.Forms.Control.KeyDown>, la propiedad <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> de <xref:System.Windows.Forms.KeyEventArgs> recibida por el controlador de eventos especifica qué teclas modificadoras se han presionado.  De forma alternativa, la propiedad <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> de <xref:System.Windows.Forms.KeyEventArgs> especifica el carácter que se presionó, así como cualquier tecla modificadora en combinación con una operación OR bit a bit.  Sin embargo, si está controlando el evento <xref:System.Windows.Forms.Control.KeyPress> o un evento del mouse, el controlador de eventos no recibe esta información.  En este caso, debe utilizar la propiedad <xref:System.Windows.Forms.Control.ModifierKeys%2A> de la clase <xref:System.Windows.Forms.Control>.  En cualquier caso, debe realizar una operación AND bit a bit del valor <xref:System.Windows.Forms.Keys> adecuado y el valor que está probando.  La enumeración <xref:System.Windows.Forms.Keys> proporciona variaciones de cada tecla modificadora, por lo que es importante que realice una operación AND bit a bit con el valor correcto.  Por ejemplo, <xref:System.Windows.Forms.Keys>, <xref:System.Windows.Forms.Keys>, <xref:System.Windows.Forms.Keys> y <xref:System.Windows.Forms.Keys> representan la tecla MAYÚS y el valor correcto para probar la tecla MAYÚS como tecla modificadora es <xref:System.Windows.Forms.Keys>.  De forma similar, para probar las teclas CTLR y ALT como modificadores debería utilizar los valores <xref:System.Windows.Forms.Keys> y <xref:System.Windows.Forms.Keys> respectivamente.  
+# <a name="how-to-determine-which-modifier-key-was-pressed"></a><span data-ttu-id="2128c-102">Cómo: Determinar qué tecla modificadora se presionó</span><span class="sxs-lookup"><span data-stu-id="2128c-102">How to: Determine Which Modifier Key Was Pressed</span></span>
+<span data-ttu-id="2128c-103">Cuando se crea una aplicación que acepte pulsaciones de teclas del usuario, también puede supervisar las teclas modificadoras como las teclas MAYÚS, ALT y CTRL.</span><span class="sxs-lookup"><span data-stu-id="2128c-103">When you create an application that accepts the user's keystrokes, you may also want to monitor for modifier keys such as the SHIFT, ALT, and CTRL keys.</span></span> <span data-ttu-id="2128c-104">Cuando se presiona una tecla modificadora en combinación con otras teclas o con clics del mouse, la aplicación pueda responder correctamente.</span><span class="sxs-lookup"><span data-stu-id="2128c-104">When a modifier key is pressed in combination with other keys, or with mouse clicks, your application can respond appropriately.</span></span> <span data-ttu-id="2128c-105">Por ejemplo, si se presiona la letra S, esto puede hacer simplemente una "s" en la pantalla, pero si se presionan las teclas CTRL + S, se puede guardar el documento actual.</span><span class="sxs-lookup"><span data-stu-id="2128c-105">For example, if the letter S is pressed, this may simply cause an "s" to appear on the screen, but if the keys CTRL+S are pressed, the current document may be saved.</span></span> <span data-ttu-id="2128c-106">Si controla el <xref:System.Windows.Forms.Control.KeyDown> eventos, el <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> propiedad de la <xref:System.Windows.Forms.KeyEventArgs> recibidos por el evento controlador especifica se presionan las teclas modificadoras.</span><span class="sxs-lookup"><span data-stu-id="2128c-106">If you handle the <xref:System.Windows.Forms.Control.KeyDown> event, the <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property of the <xref:System.Windows.Forms.KeyEventArgs> received by the event handler specifies which modifier keys are pressed.</span></span> <span data-ttu-id="2128c-107">Como alternativa, el <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> propiedad de <xref:System.Windows.Forms.KeyEventArgs> especifica el carácter que se presionó, así como las teclas modificadoras combinadas con una operación OR bit a bit.</span><span class="sxs-lookup"><span data-stu-id="2128c-107">Alternatively, the <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> property of <xref:System.Windows.Forms.KeyEventArgs> specifies the character that was pressed as well as any modifier keys combined with a bitwise OR.</span></span> <span data-ttu-id="2128c-108">Sin embargo, si está controlando el <xref:System.Windows.Forms.Control.KeyPress> evento o un evento del mouse, el controlador de eventos no recibe esta información.</span><span class="sxs-lookup"><span data-stu-id="2128c-108">However, if you are handling the <xref:System.Windows.Forms.Control.KeyPress> event or a mouse event, the event handler does not receive this information.</span></span> <span data-ttu-id="2128c-109">En este caso, debe usar el <xref:System.Windows.Forms.Control.ModifierKeys%2A> propiedad de la <xref:System.Windows.Forms.Control> clase.</span><span class="sxs-lookup"><span data-stu-id="2128c-109">In this case, you must use the <xref:System.Windows.Forms.Control.ModifierKeys%2A> property of the <xref:System.Windows.Forms.Control> class.</span></span> <span data-ttu-id="2128c-110">En cualquier caso, debe realizar una operación AND bit a bit de los <xref:System.Windows.Forms.Keys> valor y el valor que se va a probar.</span><span class="sxs-lookup"><span data-stu-id="2128c-110">In either case, you must perform a bitwise AND of the appropriate <xref:System.Windows.Forms.Keys> value and the value you are testing.</span></span> <span data-ttu-id="2128c-111">El <xref:System.Windows.Forms.Keys> enumeración ofrece las variaciones de cada tecla modificadora, por lo que es importante que lleva a cabo el bit a bit y con el valor correcto.</span><span class="sxs-lookup"><span data-stu-id="2128c-111">The <xref:System.Windows.Forms.Keys> enumeration offers variations of each modifier key, so it is important that you perform the bitwise AND with the correct value.</span></span> <span data-ttu-id="2128c-112">Por ejemplo, la tecla MAYÚS se representa por <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> y <xref:System.Windows.Forms.Keys.LShiftKey> el valor correcto para probar el desplazamiento como una tecla modificadora es <xref:System.Windows.Forms.Keys.Shift>.</span><span class="sxs-lookup"><span data-stu-id="2128c-112">For example, the SHIFT key is represented by <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> and <xref:System.Windows.Forms.Keys.LShiftKey> The correct value to test SHIFT as a modifier key is <xref:System.Windows.Forms.Keys.Shift>.</span></span> <span data-ttu-id="2128c-113">De igual forma, debe usar probar para CTRL y ALT como modificadores del <xref:System.Windows.Forms.Keys.Control> y <xref:System.Windows.Forms.Keys.Alt> valores, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="2128c-113">Similarly, to test for CTLR and ALT as modifiers you should use the <xref:System.Windows.Forms.Keys.Control> and <xref:System.Windows.Forms.Keys.Alt> values, respectively.</span></span>  
   
 > [!NOTE]
->  Los programadores de Visual Basic también pueden obtener acceso a la información sobre las teclas a través de la propiedad <xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A>.  
+>  <span data-ttu-id="2128c-114">Los programadores de Visual Basic también pueden acceder a información clave a través de la <xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A> propiedad</span><span class="sxs-lookup"><span data-stu-id="2128c-114">Visual Basic programmers can also access key information through the <xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A> property</span></span>  
   
-### Para determinar qué tecla modificadora se presionó  
+### <a name="to-determine-which-modifier-key-was-pressed"></a><span data-ttu-id="2128c-115">Para determinar qué tecla modificadora se presionó</span><span class="sxs-lookup"><span data-stu-id="2128c-115">To determine which modifier key was pressed</span></span>  
   
--   Utilice el operador `AND` bit a bit con la propiedad <xref:System.Windows.Forms.Control.ModifierKeys%2A> y un valor de la enumeración <xref:System.Windows.Forms.Keys> para determinar si se presiona una tecla modificadora determinada.  El ejemplo de código siguiente muestra cómo determinar si la tecla MAYÚS se presiona dentro de un controlador de eventos <xref:System.Windows.Forms.Control.KeyPress>.  
+-   <span data-ttu-id="2128c-116">Utilice el bit a bit `AND` operador con la <xref:System.Windows.Forms.Control.ModifierKeys%2A> propiedad y un valor de la <xref:System.Windows.Forms.Keys> enumeración para determinar si se presiona una tecla modificadora determinada.</span><span class="sxs-lookup"><span data-stu-id="2128c-116">Use the bitwise `AND` operator with the <xref:System.Windows.Forms.Control.ModifierKeys%2A> property and a value of the <xref:System.Windows.Forms.Keys> enumeration to determine whether a particular modifier key is pressed.</span></span> <span data-ttu-id="2128c-117">En el ejemplo de código siguiente se muestra cómo determinar si se presionó la tecla MAYÚS dentro de un <xref:System.Windows.Forms.Control.KeyPress> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="2128c-117">The following code example shows how to determine whether the SHIFT key is pressed within a <xref:System.Windows.Forms.Control.KeyPress> event handler.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/VB/form1.vb#5)]  
   
-## Vea también  
- <xref:System.Windows.Forms.Keys>   
- <xref:System.Windows.Forms.Control.ModifierKeys%2A>   
- [Keyboard Input in a Windows Forms Application](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [How to: Determine If CapsLock is On in Visual Basic](http://msdn.microsoft.com/es-es/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+## <a name="see-also"></a><span data-ttu-id="2128c-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="2128c-118">See Also</span></span>  
+ <xref:System.Windows.Forms.Keys>  
+ <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
+ [<span data-ttu-id="2128c-119">Entradas mediante teclado en una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2128c-119">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="2128c-120">Cómo: determinar si CapsLock está activado en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2128c-120">How to: Determine If CapsLock is On in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/91e60f5c-dd61-4222-ba5f-39af803afd8c)

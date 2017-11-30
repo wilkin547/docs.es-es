@@ -1,48 +1,49 @@
 ---
-title: "C&#243;mo: Agregar y quitar fichas de un control TabControl de formularios Windows Forms mediante el Dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "páginas de fichas"
-  - "TabPage (control)"
-  - "TabPage (control) [formularios Windows Forms], agregar y quitar fichas"
-  - "pestañas, agregar a páginas"
-  - "pestañas, quitar de páginas"
+title: "Cómo: Agregar y quitar fichas de un control TabControl de formularios Windows Forms mediante el Diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tabs [Windows Forms], removing from pages
+- TabPage control
+- TabPage control [Windows Forms], adding and removing tabs
+- tabs [Windows Forms], adding to pages
+- tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02bcf434baee0c27ca2674817df0e4033effb125
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Agregar y quitar fichas de un control TabControl de formularios Windows Forms mediante el Dise&#241;ador
-Cuando coloca un control <xref:System.Windows.Forms.TabControl> en el formulario, contiene de forma predeterminada dos fichas.  Puede agregar o quitar fichas mediante el diseñador.  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a><span data-ttu-id="c376f-102">Cómo: Agregar y quitar fichas de un control TabControl de formularios Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="c376f-102">How to: Add and Remove Tabs with the Windows Forms TabControl Using the Designer</span></span>
+<span data-ttu-id="c376f-103">Cuando coloca un <xref:System.Windows.Forms.TabControl> control en el formulario, contiene dos pestañas de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="c376f-103">When you place a <xref:System.Windows.Forms.TabControl> control on your form, it contains two tabs by default.</span></span> <span data-ttu-id="c376f-104">Puede agregar o quitar fichas mediante el diseñador.</span><span class="sxs-lookup"><span data-stu-id="c376f-104">You can add or remove tabs using the designer.</span></span>  
   
- El procedimiento siguiente requiere un proyecto de **Aplicación para Windows** con un formulario que contiene un control <xref:System.Windows.Forms.TabControl>.  Para obtener información sobre cómo configurar tal proyecto, vea [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="c376f-105">El procedimiento siguiente requiere un **aplicación de Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.TabControl> control.</span><span class="sxs-lookup"><span data-stu-id="c376f-105">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.TabControl> control.</span></span> <span data-ttu-id="c376f-106">Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="c376f-106">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="c376f-107">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="c376f-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c376f-108">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="c376f-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c376f-109">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="c376f-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Para agregar o quitar una ficha mediante el diseñador  
+### <a name="to-add-or-remove-a-tab-using-the-designer"></a><span data-ttu-id="c376f-110">Para agregar o quitar una ficha mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="c376f-110">To add or remove a tab using the designer</span></span>  
   
--   En la etiqueta inteligente del control, haga clic en **Agregar ficha** o **Quitar ficha**  
+-   <span data-ttu-id="c376f-111">En las etiquetas inteligentes del control, haga clic en **Agregar pestaña** o **Quitar ficha**</span><span class="sxs-lookup"><span data-stu-id="c376f-111">On the control's smart tag, click **Add Tab** or **Remove Tab**</span></span>  
   
-     O bien  
+     <span data-ttu-id="c376f-112">O bien</span><span class="sxs-lookup"><span data-stu-id="c376f-112">-or-</span></span>  
   
-     En la ventana **Propiedades**, haga clic en el botón de **puntos suspensivos** \(![Captura de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) que se encuentra junto a la propiedad <xref:System.Windows.Forms.TabControl.TabPages%2A> para abrir el **Editor de la colección TabPage**.  Haga clic en el botón **Agregar** o **Quitar**.  
+     <span data-ttu-id="c376f-113">En el **propiedades** ventana, haga clic en el **puntos suspensivos** botón (![de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) junto a el <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad para abrir el **Editor de la colección TabPage**.</span><span class="sxs-lookup"><span data-stu-id="c376f-113">In the **Properties** window, click the **Ellipsis** button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.TabControl.TabPages%2A> property to open the **TabPage Collection Editor**.</span></span> <span data-ttu-id="c376f-114">Haga clic en el **agregar** o **quitar** botón.</span><span class="sxs-lookup"><span data-stu-id="c376f-114">Click the **Add** or **Remove** button.</span></span>  
   
-## Vea también  
- [TabControl \(Control\)](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)   
- [Información general del control TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [Cómo: Agregar un control a una página de fichas](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [Cómo: Deshabilitar páginas de ficha](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)   
- [Cómo: Cambiar la apariencia del control TabControl de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="c376f-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="c376f-115">See Also</span></span>  
+ [<span data-ttu-id="c376f-116">TabControl (control)</span><span class="sxs-lookup"><span data-stu-id="c376f-116">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ [<span data-ttu-id="c376f-117">Información general del control TabControl</span><span class="sxs-lookup"><span data-stu-id="c376f-117">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="c376f-118">Agregar un control a una página de fichas</span><span class="sxs-lookup"><span data-stu-id="c376f-118">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [<span data-ttu-id="c376f-119">Deshabilitar páginas de ficha</span><span class="sxs-lookup"><span data-stu-id="c376f-119">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [<span data-ttu-id="c376f-120">Cambiar la apariencia del control TabControl de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c376f-120">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

@@ -1,35 +1,39 @@
 ---
-title: "C&#243;mo: Crear figuras a partir de l&#237;neas, curvas y formas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "figuras, crear a partir de líneas"
-  - "figuras, crear a partir de formas"
+title: "Cómo: Crear figuras a partir de líneas, curvas y formas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- figures [Windows Forms], creating from shapes
+- figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b382e0e1a627d7f61ce8ac664ac47d98c3725cad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear figuras a partir de l&#237;neas, curvas y formas
-Para crear una figura, construya un <xref:System.Drawing.Drawing2D.GraphicsPath> y, a continuación, llame a métodos como <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> para agregar tipos primitivos al trazado.  
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a><span data-ttu-id="0cd3f-102">Cómo: Crear figuras a partir de líneas, curvas y formas</span><span class="sxs-lookup"><span data-stu-id="0cd3f-102">How to: Create Figures from Lines, Curves, and Shapes</span></span>
+<span data-ttu-id="0cd3f-103">Para crear una figura, construya un <xref:System.Drawing.Drawing2D.GraphicsPath>y, a continuación, llamar a métodos, como <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> y <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, para agregar tipos primitivos a la ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-103">To create a figure, construct a <xref:System.Drawing.Drawing2D.GraphicsPath>, and then call methods, such as <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> and <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, to add primitives to the path.</span></span>  
   
-## Ejemplo  
- Los ejemplos de código siguientes crean trazados que tienen las figuras:  
+## <a name="example"></a><span data-ttu-id="0cd3f-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0cd3f-104">Example</span></span>  
+ <span data-ttu-id="0cd3f-105">Ejemplos de código siguientes crean rutas de acceso que tienen las figuras:</span><span class="sxs-lookup"><span data-stu-id="0cd3f-105">The following code examples create paths that have figures:</span></span>  
   
--   En el primer ejemplo se crea un trazado que tiene una sola figura.  La figura está formada por un único arco.  El arco tiene un ángulo de barrido de \-180 grados, que va en sentido contrario a las agujas del reloj en el sistema de coordenadas predeterminado.  
+-   <span data-ttu-id="0cd3f-106">El primer ejemplo crea una ruta de acceso que tiene una sola figura.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-106">The first example creates a path that has a single figure.</span></span> <span data-ttu-id="0cd3f-107">La figura está formada por un único arco. El arco tiene un ángulo de barrido de-180 grados, que está a la izquierda en el sistema de coordenadas de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-107">The figure consists of a single arc. The arc has a sweep angle of –180 degrees, which is counterclockwise in the default coordinate system.</span></span>  
   
--   En el segundo ejemplo se crea un trazado que tiene dos figuras.  La primera figura es un arco seguido de una línea.  La segunda figura es una línea seguida de una curva seguida de una línea.  La primera figura se deja abierta, la segunda está cerrada.  
+-   <span data-ttu-id="0cd3f-108">El segundo ejemplo crea una ruta de acceso que tiene dos figuras.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-108">The second example creates a path that has two figures.</span></span> <span data-ttu-id="0cd3f-109">La primera figura es un arco seguido de una línea.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-109">The first figure is an arc followed by a line.</span></span> <span data-ttu-id="0cd3f-110">La segunda figura es una línea seguida de una curva seguida de una línea.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-110">The second figure is a line followed by a curve followed by a line.</span></span> <span data-ttu-id="0cd3f-111">La primera figura se deja abierta y se cierra la segunda figura.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-111">The first figure is left open, and the second figure is closed.</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  
@@ -37,10 +41,10 @@ Para crear una figura, construya un <xref:System.Drawing.Drawing2D.GraphicsPath>
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#22)]  
   
-## Compilar el código  
- Los ejemplos anteriores están diseñados para formularios Windows Forms y requieren <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador del evento <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="0cd3f-112">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="0cd3f-112">Compiling the Code</span></span>  
+ <span data-ttu-id="0cd3f-113">Los ejemplos anteriores están diseñados para su uso con Windows Forms y requieren <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="0cd3f-113">The previous examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## Vea también  
- <xref:System.Drawing.Drawing2D.GraphicsPath>   
- [Crear y dibujar trazados](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)   
- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="0cd3f-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="0cd3f-114">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.GraphicsPath>  
+ [<span data-ttu-id="0cd3f-115">Crear y dibujar trazados</span><span class="sxs-lookup"><span data-stu-id="0cd3f-115">Constructing and Drawing Paths</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
+ [<span data-ttu-id="0cd3f-116">Utilizar lápiz para dibujar líneas y formas</span><span class="sxs-lookup"><span data-stu-id="0cd3f-116">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

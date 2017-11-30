@@ -1,37 +1,29 @@
 ---
-title: "Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: dividir un archivo en todos los archivos mediante el uso de grupos (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 00fbffa99ade302db536f7e56a4d004071efb2c6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76fb89136e05ee803c1bb2c91674e6b216e4ed2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Cómo: dividir un archivo en varios archivos mediante el uso de grupos (LINQ) (Visual Basic)
-Este ejemplo muestra una manera de combinar el contenido de dos archivos y, a continuación, crear un conjunto de archivos nuevos que organizar los datos de una manera nueva.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="90612-102">Cómo: dividir un archivo en todos los archivos mediante el uso de grupos (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90612-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="90612-103">En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.</span><span class="sxs-lookup"><span data-stu-id="90612-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="90612-104">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="90612-104">To create the data files</span></span>  
   
-1.  Copie estos nombres en un archivo de texto que se denomine names1.txt y guárdelo en la carpeta del proyecto:  
+1.  <span data-ttu-id="90612-105">Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:</span><span class="sxs-lookup"><span data-stu-id="90612-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ Este ejemplo muestra una manera de combinar el contenido de dos archivos y, a co
     Garcia, Debra  
     ```  
   
-2.  Copie estos nombres en un archivo de texto que se denomine names2.txt y guárdelo en la carpeta del proyecto: tenga en cuenta que los dos archivos tienen algunos nombres en común.  
+2.  <span data-ttu-id="90612-106">Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: tenga en cuenta que los dos archivos tienen algunos nombres en común.</span><span class="sxs-lookup"><span data-stu-id="90612-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +53,7 @@ Este ejemplo muestra una manera de combinar el contenido de dos archivos y, a co
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="90612-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="90612-107">Example</span></span>  
   
 ```vb  
 Class SplitWithGroups  
@@ -130,11 +122,11 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- El programa escribe un archivo independiente para cada grupo en la misma carpeta que los archivos de datos.  
+ <span data-ttu-id="90612-108">El programa escribe un archivo independiente para cada grupo en la misma carpeta que los archivos de datos.</span><span class="sxs-lookup"><span data-stu-id="90612-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="90612-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="90612-109">Compiling the Code</span></span>  
+ <span data-ttu-id="90612-110">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="90612-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="90612-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="90612-111">See Also</span></span>  
+ [<span data-ttu-id="90612-112">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90612-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="90612-113">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90612-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

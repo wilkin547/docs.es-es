@@ -1,38 +1,42 @@
 ---
-title: "Reemplazar el m&#233;todo OnPaint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "OnPaint (método), reemplazar en controles personalizados de Windows Forms"
-  - "Paint (evento), controlar en controles personalizados de Windows Forms"
+title: "Reemplazar el método OnPaint"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Paint event [Windows Forms], handling in Windows Forms custom control
+- OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41205f7f0ec21e27b97d0b12415fca89ae526552
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Reemplazar el m&#233;todo OnPaint
-Los pasos básicos para reemplazar un evento definido en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son los mismos y se resumen en la siguiente lista.  
+# <a name="overriding-the-onpaint-method"></a><span data-ttu-id="c8ef3-102">Reemplazar el método OnPaint</span><span class="sxs-lookup"><span data-stu-id="c8ef3-102">Overriding the OnPaint Method</span></span>
+<span data-ttu-id="c8ef3-103">Los pasos básicos para reemplazar un evento definido en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son idénticos y se resumen en la lista siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-103">The basic steps for overriding any event defined in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] are identical and are summarized in the following list.</span></span>  
   
-#### Para reemplazar un evento heredado  
+#### <a name="to-override-an-inherited-event"></a><span data-ttu-id="c8ef3-104">Para reemplazar un evento heredado</span><span class="sxs-lookup"><span data-stu-id="c8ef3-104">To override an inherited event</span></span>  
   
-1.  Invalide el método protegido `On`*nombreDeEvento*.  
+1.  <span data-ttu-id="c8ef3-105">Invalidar el protegido `On` *EventName* método.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-105">Override the protected `On`*EventName* method.</span></span>  
   
-2.  Llame al método `On`*nombreDeEvento* de la clase base desde el método invalidado `On`*nombreDeEvento*, para que los delegados registrados reciban el evento.  
+2.  <span data-ttu-id="c8ef3-106">Llame a la `On` *EventName* método de la clase base desde el invalidado `On` *EventName* método, para que los delegados registrados reciban el evento.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-106">Call the `On`*EventName* method of the base class from the overridden `On`*EventName* method, so that registered delegates receive the event.</span></span>  
   
- El evento <xref:System.Windows.Forms.Control.Paint> se explica aquí en detalle dado que cada control de formularios Windows Forms debe reemplazar el evento <xref:System.Windows.Forms.Control.Paint> que hereda de <xref:System.Windows.Forms.Control>.  La clase base <xref:System.Windows.Forms.Control> no sabe cómo debe dibujarse un control derivado y no proporciona una lógica de representación en el método <xref:System.Windows.Forms.Control.OnPaint%2A>.  El método <xref:System.Windows.Forms.Control.OnPaint%2A> de <xref:System.Windows.Forms.Control> se limita a enviar el evento <xref:System.Windows.Forms.Control.Paint> a los receptores de elemento registrados.  
+ <span data-ttu-id="c8ef3-107">El <xref:System.Windows.Forms.Control.Paint> eventos se explica con detalle aquí porque cada control de formularios Windows Forms debe reemplazar el <xref:System.Windows.Forms.Control.Paint> eventos que hereda de <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-107">The <xref:System.Windows.Forms.Control.Paint> event is discussed in detail here because every Windows Forms control must override the <xref:System.Windows.Forms.Control.Paint> event that it inherits from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="c8ef3-108">La base de <xref:System.Windows.Forms.Control> clase no sabe cómo debe dibujarse un control derivado y no proporciona ninguna lógica de dibujo en el <xref:System.Windows.Forms.Control.OnPaint%2A> método.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-108">The base <xref:System.Windows.Forms.Control> class does not know how a derived control needs to be drawn and does not provide any painting logic in the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="c8ef3-109">El <xref:System.Windows.Forms.Control.OnPaint%2A> método <xref:System.Windows.Forms.Control> simplemente envía el <xref:System.Windows.Forms.Control.Paint> evento a los receptores de eventos registrados.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-109">The <xref:System.Windows.Forms.Control.OnPaint%2A> method of <xref:System.Windows.Forms.Control> simply dispatches the <xref:System.Windows.Forms.Control.Paint> event to registered event receivers.</span></span>  
   
- Si ha realizado el ejemplo de [Cómo: Desarrollar un control de formularios Windows Forms sencillo](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), ha podido ver un ejemplo de cómo reemplazar el método <xref:System.Windows.Forms.Control.OnPaint%2A>.  El fragmento de código siguiente está tomado de dicho ejemplo.  
+ <span data-ttu-id="c8ef3-110">Si ha trabajado en el ejemplo en [Cómo: desarrollar un Control de Windows Forms Simple](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), ha visto un ejemplo de cómo reemplazar el <xref:System.Windows.Forms.Control.OnPaint%2A> método.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-110">If you worked through the sample in [How to: Develop a Simple Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), you have seen an example of overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="c8ef3-111">El siguiente fragmento de código se toma del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-111">The following code fragment is taken from that sample.</span></span>  
   
 ```vb  
 Public Class FirstControl  
@@ -62,7 +66,7 @@ public class FirstControl : Control{
 }   
 ```  
   
- La clase <xref:System.Windows.Forms.PaintEventArgs> contiene datos del evento <xref:System.Windows.Forms.Control.Paint>.  Posee dos propiedades, como se muestra en el código siguiente.  
+ <span data-ttu-id="c8ef3-112">El <xref:System.Windows.Forms.PaintEventArgs> clase contiene datos para el <xref:System.Windows.Forms.Control.Paint> eventos.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-112">The <xref:System.Windows.Forms.PaintEventArgs> class contains data for the <xref:System.Windows.Forms.Control.Paint> event.</span></span> <span data-ttu-id="c8ef3-113">Tiene dos propiedades, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-113">It has two properties, as shown in the following code.</span></span>  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -88,11 +92,11 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- La propiedad <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es el rectángulo que se va a representar y la propiedad <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> hace referencia a un objeto <xref:System.Drawing.Graphics>.  Las clases del espacio de nombres <xref:System.Drawing?displayProperty=fullName> son clases administradas que proporcionan acceso a la funcionalidad de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la nueva biblioteca gráfica de Windows.  El objeto <xref:System.Drawing.Graphics> dispone de métodos para dibujar puntos, cadenas, líneas, arcos, elipses y muchas otras formas.  
+ <span data-ttu-id="c8ef3-114"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>es el rectángulo que se va a pintar y el <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> propiedad hace referencia a un <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-114"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> is the rectangle to be painted, and the <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> property refers to a <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="c8ef3-115">Las clases en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres se administran las clases que proporcionan acceso a la funcionalidad de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la nueva biblioteca gráfica de Windows.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-115">The classes in the <xref:System.Drawing?displayProperty=nameWithType> namespace are managed classes that provide access to the functionality of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], the new Windows graphics library.</span></span> <span data-ttu-id="c8ef3-116">La <xref:System.Drawing.Graphics> objeto tiene métodos para dibujar puntos, cadenas, líneas, arcos, elipses y muchas otras formas.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-116">The <xref:System.Drawing.Graphics> object has methods to draw points, strings, lines, arcs, ellipses, and many other shapes.</span></span>  
   
- Un control invoca su método <xref:System.Windows.Forms.Control.OnPaint%2A> cuando necesita cambiar su apariencia visual.  Este método provoca a su vez el evento <xref:System.Windows.Forms.Control.Paint>.  
+ <span data-ttu-id="c8ef3-117">Un control invoca su <xref:System.Windows.Forms.Control.OnPaint%2A> método siempre que sea necesario para cambiar su apariencia visual.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-117">A control invokes its <xref:System.Windows.Forms.Control.OnPaint%2A> method whenever it needs to change its visual display.</span></span> <span data-ttu-id="c8ef3-118">Este método provoca a su vez el <xref:System.Windows.Forms.Control.Paint> eventos.</span><span class="sxs-lookup"><span data-stu-id="c8ef3-118">This method in turn raises the <xref:System.Windows.Forms.Control.Paint> event.</span></span>  
   
-## Vea también  
- [Eventos](../../../../docs/standard/events/index.md)   
- [Representar un control de formularios Windows Forms](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)   
- [Definir un evento en los controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="c8ef3-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="c8ef3-119">See Also</span></span>  
+ [<span data-ttu-id="c8ef3-120">Eventos</span><span class="sxs-lookup"><span data-stu-id="c8ef3-120">Events</span></span>](../../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="c8ef3-121">Representar un control de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c8ef3-121">Rendering a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
+ [<span data-ttu-id="c8ef3-122">Definir un evento en los controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c8ef3-122">Defining an Event</span></span>](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

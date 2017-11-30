@@ -1,54 +1,55 @@
 ---
-title: "Tres categor&#237;as de servicios gr&#225;ficos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "gráficos vectoriales 2D"
-  - "gráficos, categorías"
-  - "imágenes"
-  - "tipografía"
-  - "gráficos vectoriales"
+title: "Tres categorías de servicios gráficos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- imaging
+- graphics [Windows Forms], categories
+- 2-D vector graphics
+- vector graphics
+- typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53429513426d3b197da4740e5e92d44d8b3a5533
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tres categor&#237;as de servicios gr&#225;ficos
-Las sugerencias de los gráficos en formularios Windows Forms pertenecen a las tres categorías siguientes:  
+# <a name="three-categories-of-graphics-services"></a><span data-ttu-id="ae53b-102">Tres categorías de servicios gráficos</span><span class="sxs-lookup"><span data-stu-id="ae53b-102">Three Categories of Graphics Services</span></span>
+<span data-ttu-id="ae53b-103">Las ofertas de gráficos en formularios Windows Forms se dividen en tres amplias categorías:</span><span class="sxs-lookup"><span data-stu-id="ae53b-103">The graphics offerings in Windows Forms fall into the following three broad categories:</span></span>  
   
--   Gráficos vectoriales bidimensionales \(2D\)  
+-   <span data-ttu-id="ae53b-104">Gráficos vectoriales bidimensionales (2D)</span><span class="sxs-lookup"><span data-stu-id="ae53b-104">Two-dimensional (2-D) vector graphics</span></span>  
   
--   Imágenes  
+-   <span data-ttu-id="ae53b-105">Creación de imágenes</span><span class="sxs-lookup"><span data-stu-id="ae53b-105">Imaging</span></span>  
   
--   Tipografía  
+-   <span data-ttu-id="ae53b-106">Tipografía</span><span class="sxs-lookup"><span data-stu-id="ae53b-106">Typography</span></span>  
   
-## Gráficos vectoriales 2D  
- Gráficos vectoriales que están relacionados con el dibujo de tipos primitivos \(como líneas, curvas y figuras\) y que se especifican mediante conjuntos de puntos en un sistema de coordenadas.  Por ejemplo, una línea recta puede especificarse mediante sus dos extremos, y un rectángulo puede especificarse mediante un punto que indique la ubicación del borde superior izquierdo y un par de números que indiquen el ancho y el alto.  Un trazado simple puede especificarse mediante una matriz de puntos que se van a conectar mediante líneas rectas.  Una curva spline de Bézier es una curva sofisticada especificada por cuatro puntos de control.  
+## <a name="2-d-vector-graphics"></a><span data-ttu-id="ae53b-107">Gráficos vectoriales 2D</span><span class="sxs-lookup"><span data-stu-id="ae53b-107">2-D Vector Graphics</span></span>  
+ <span data-ttu-id="ae53b-108">Gráficos vectoriales bidimensionales son primitivos; Por ejemplo, las líneas, curvas y figuras; que se especifican los conjuntos de puntos en un sistema de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="ae53b-108">Two-dimensional vector graphics are primitives; such as lines, curves, and figures; that are specified by sets of points on a coordinate system.</span></span> <span data-ttu-id="ae53b-109">Por ejemplo, una línea recta se especifica mediante sus dos extremos, y un rectángulo especificado por un punto que indique la ubicación de la esquina superior izquierda y un par de números que indiquen su ancho y alto.</span><span class="sxs-lookup"><span data-stu-id="ae53b-109">For example, a straight line is specified by its two endpoints, and a rectangle is specified by a point giving the location of its upper-left corner and a pair of numbers giving its width and height.</span></span> <span data-ttu-id="ae53b-110">Se especifica una ruta de acceso simple por una matriz de puntos conectados por líneas rectas.</span><span class="sxs-lookup"><span data-stu-id="ae53b-110">A simple path is specified by an array of points that are connected by straight lines.</span></span> <span data-ttu-id="ae53b-111">Una curva spline de Bézier es una curva sofisticada especificada por cuatro puntos de control.</span><span class="sxs-lookup"><span data-stu-id="ae53b-111">A Bézier spline is a sophisticated curve specified by four control points.</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona clases y estructuras que almacenan información acerca de los propios tipos primitivos, las clases que almacenan información sobre la forma en que deben dibujarse los tipos primitivos y las clases que realmente realizan el dibujo.  Por ejemplo, la estructura <xref:System.Drawing.Rectangle> almacena la ubicación y el tamaño de un rectángulo; la clase <xref:System.Drawing.Pen> almacena información sobre el color de línea, ancho de línea y estilo de línea; y la clase <xref:System.Drawing.Graphics> dispone de métodos para dibujar líneas, rectángulos, trazados y otras figuras.  También existen varias clases <xref:System.Drawing.Brush> que almacenan información sobre la forma en que las figuras cerradas y los trazados van a rellenarse con colores o modelos.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ae53b-112">Proporciona clases y estructuras que almacenan información acerca de los tipos primitivos por sí mismos, las clases que almacenan información sobre cómo se extraen los tipos primitivos y las clases que realmente realizan el dibujo.</span><span class="sxs-lookup"><span data-stu-id="ae53b-112"> provides classes and structures that store information about the primitives themselves, classes that store information about how the primitives will be drawn, and classes that actually do the drawing.</span></span> <span data-ttu-id="ae53b-113">Por ejemplo, el <xref:System.Drawing.Rectangle> estructura almacena la ubicación y el tamaño de un rectángulo; la <xref:System.Drawing.Pen> clase almacena información sobre el color de línea, el ancho de línea y el estilo de línea; y la <xref:System.Drawing.Graphics> clase tiene métodos para dibujar líneas, rectángulos, las rutas de acceso, y otras figuras.</span><span class="sxs-lookup"><span data-stu-id="ae53b-113">For example, the <xref:System.Drawing.Rectangle> structure stores the location and size of a rectangle; the <xref:System.Drawing.Pen> class stores information about line color, line width, and line style; and the <xref:System.Drawing.Graphics> class has methods for drawing lines, rectangles, paths, and other figures.</span></span> <span data-ttu-id="ae53b-114">Hay también varios <xref:System.Drawing.Brush> las clases que almacenan información acerca de cómo cerrar las cifras y las rutas de acceso se rellena con colores o patrones.</span><span class="sxs-lookup"><span data-stu-id="ae53b-114">There are also several <xref:System.Drawing.Brush> classes that store information about how closed figures and paths will be filled with colors or patterns.</span></span>  
   
- Puede registrar en un metarchivo una imagen de vector que sea una secuencia de comandos gráficos.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona la clase <xref:System.Drawing.Imaging.Metafile> para registrar, mostrar y guardar metarchivos.  Con las clases <xref:System.Drawing.Imaging.MetafileHeader> y <xref:System.Drawing.Imaging.MetaHeader> puede inspeccionar los datos almacenados en un encabezado de metarchivo.  
+ <span data-ttu-id="ae53b-115">Puede registrar una imagen de vector, que es una secuencia de comandos de gráficos, en un metarchivo.</span><span class="sxs-lookup"><span data-stu-id="ae53b-115">You can record a vector image, which is a sequence of graphics commands, in a metafile.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ae53b-116">proporciona la <xref:System.Drawing.Imaging.Metafile> clase para registrar, mostrar y guardar metarchivos.</span><span class="sxs-lookup"><span data-stu-id="ae53b-116"> provides the <xref:System.Drawing.Imaging.Metafile> class for recording, displaying, and saving metafiles.</span></span> <span data-ttu-id="ae53b-117">Con el <xref:System.Drawing.Imaging.MetafileHeader> y <xref:System.Drawing.Imaging.MetaHeader> clases, puede inspeccionar los datos almacenados en un encabezado de metarchivo.</span><span class="sxs-lookup"><span data-stu-id="ae53b-117">With the <xref:System.Drawing.Imaging.MetafileHeader> and <xref:System.Drawing.Imaging.MetaHeader> classes, you can inspect the data stored in a metafile header.</span></span>  
   
-## Imágenes  
- Hay ciertos tipos de imágenes que no se pueden o son muy difíciles de mostrar con las técnicas de gráficos vectoriales.  Por ejemplo, las imágenes de los botones de la barra de herramientas y las imágenes que aparecen en forma de iconos serían difíciles de especificar en forma de colecciones de líneas y curvas.  Una fotografía digital de alta resolución de un estadio de béisbol abarrotado sería aún más difícil de crear con las técnicas vectoriales.  Este tipo de imágenes se almacena en mapas de bits, que son matrices de números que representan colores de puntos individuales en la pantalla.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona la clase <xref:System.Drawing.Bitmap> para mostrar, manipular y guardar mapas de bits.  
+## <a name="imaging"></a><span data-ttu-id="ae53b-118">Creación de imágenes</span><span class="sxs-lookup"><span data-stu-id="ae53b-118">Imaging</span></span>  
+ <span data-ttu-id="ae53b-119">Ciertos tipos de imágenes sean difíciles o imposibles mostrar con las técnicas de gráficos vectoriales.</span><span class="sxs-lookup"><span data-stu-id="ae53b-119">Certain kinds of pictures are difficult or impossible to display with the techniques of vector graphics.</span></span> <span data-ttu-id="ae53b-120">Por ejemplo, las imágenes de botones de barra de herramientas y las imágenes que aparecen como iconos son difíciles de especificar que las colecciones de líneas y curvas conectadas.</span><span class="sxs-lookup"><span data-stu-id="ae53b-120">For example, the pictures on toolbar buttons and the pictures that appear as icons are difficult to specify as collections of lines and curves.</span></span> <span data-ttu-id="ae53b-121">Una fotografía digital de alta resolución de un estadio de béisbol abarrotado es incluso más difícil de crear con las técnicas vectoriales.</span><span class="sxs-lookup"><span data-stu-id="ae53b-121">A high-resolution digital photograph of a crowded baseball stadium is even more difficult to create with vector techniques.</span></span> <span data-ttu-id="ae53b-122">Imágenes de este tipo se almacenan como mapas de bits, que son matrices de números que representan los colores de puntos individuales en la pantalla.</span><span class="sxs-lookup"><span data-stu-id="ae53b-122">Images of this type are stored as bitmaps, which are arrays of numbers that represent the colors of individual dots on the screen.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ae53b-123">proporciona la <xref:System.Drawing.Bitmap> clase para mostrar, manipular y guardar mapas de bits.</span><span class="sxs-lookup"><span data-stu-id="ae53b-123"> provides the <xref:System.Drawing.Bitmap> class for displaying, manipulating, and saving bitmaps.</span></span>  
   
-## Tipografía  
- La tipografía es la presentación de texto en una variedad de fuentes, tamaños y estilos.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona una extensa compatibilidad para esta compleja tarea.  Una de las nuevas características de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es la función de suavizado de contorno de subpíxel, que proporciona una apariencia más regular al texto que se representa en una pantalla LCD.  
+## <a name="typography"></a><span data-ttu-id="ae53b-124">Tipografía</span><span class="sxs-lookup"><span data-stu-id="ae53b-124">Typography</span></span>  
+ <span data-ttu-id="ae53b-125">Tipografía es la presentación del texto en una variedad de fuentes, tamaños y estilos.</span><span class="sxs-lookup"><span data-stu-id="ae53b-125">Typography is the display of text in a variety of fonts, sizes, and styles.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ae53b-126">Proporciona una amplia compatibilidad para esta tarea compleja.</span><span class="sxs-lookup"><span data-stu-id="ae53b-126"> provides extensive support for this complex task.</span></span> <span data-ttu-id="ae53b-127">Una de las nuevas características de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se suavizado de contorno de subpíxel, que proporciona texto que se representa en una pantalla LCD una apariencia más suave.</span><span class="sxs-lookup"><span data-stu-id="ae53b-127">One of the new features in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is subpixel antialiasing, which gives text rendered on an LCD screen a smoother appearance.</span></span>  
   
- Además, Windows Forms ofrece la opción de dibujar texto con funciones [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] en su clase <xref:System.Windows.Forms.TextRenderer>.  
+ <span data-ttu-id="ae53b-128">Además, Windows Forms ofrece la opción de dibujar texto con [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] capacidades en su <xref:System.Windows.Forms.TextRenderer> clase.</span><span class="sxs-lookup"><span data-stu-id="ae53b-128">In addition, Windows Forms offers the option to draw text with [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] capabilities in its <xref:System.Windows.Forms.TextRenderer> class.</span></span>  
   
-## Vea también  
- [Información general de gráficos](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)   
- [Código administrado de GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)   
- [Utilizar clases gráficas administradas](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+## <a name="see-also"></a><span data-ttu-id="ae53b-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="ae53b-129">See Also</span></span>  
+ <span data-ttu-id="ae53b-130">[Graphics Overview](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md) (Información general sobre gráficos [Windows Forms])</span><span class="sxs-lookup"><span data-stu-id="ae53b-130">[Graphics Overview](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)</span></span>  
+ <span data-ttu-id="ae53b-131">[About GDI+ Managed Code](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md) (Acerca del código administrado de GDI+)</span><span class="sxs-lookup"><span data-stu-id="ae53b-131">[About GDI+ Managed Code](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)</span></span>  
+ <span data-ttu-id="ae53b-132">[Using Managed Graphics Classes](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md) (Usar clases gráficas administradas)</span><span class="sxs-lookup"><span data-stu-id="ae53b-132">[Using Managed Graphics Classes](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)</span></span>

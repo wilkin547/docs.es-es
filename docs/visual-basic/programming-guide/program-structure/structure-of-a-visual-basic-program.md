@@ -1,111 +1,94 @@
 ---
-title: Estructura de un programa de Visual Basic | Documentos de Microsoft
+title: Estructura de un programa de Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- conditional compilation, Visual Basic
-- program structure, Visual Basic
-- procedures, structure
+- conditional compilation [Visual Basic], Visual Basic
+- program structure [Visual Basic], Visual Basic
+- procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64aab045538461d86946c870fa428bf8ad4ec15e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 136be5e2eab3ed0226e0ca471ee1d84cdc7a52d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="structure-of-a-visual-basic-program"></a>Estructura de un programa de Visual Basic
-Un [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] programa se crea a partir de bloques de creación estándar. Un *solución* consta de uno o varios proyectos. Un *proyecto* a su vez puede contener uno o más ensamblados. Cada *ensamblado* se compila a partir de uno o varios archivos de origen. Un *archivo de código fuente* proporciona la definición e implementación de clases, estructuras, módulos e interfaces, que en última instancia contienen todo el código.  
+# <a name="structure-of-a-visual-basic-program"></a><span data-ttu-id="45651-102">Estructura de un programa de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="45651-102">Structure of a Visual Basic Program</span></span>
+<span data-ttu-id="45651-103">Un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programa se componen de bloques de creación estándar.</span><span class="sxs-lookup"><span data-stu-id="45651-103">A [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] program is built up from standard building blocks.</span></span> <span data-ttu-id="45651-104">A *solución* consta de uno o varios proyectos.</span><span class="sxs-lookup"><span data-stu-id="45651-104">A *solution* comprises one or more projects.</span></span> <span data-ttu-id="45651-105">A *proyecto* a su vez puede contener uno o más ensamblados.</span><span class="sxs-lookup"><span data-stu-id="45651-105">A *project* in turn can contain one or more assemblies.</span></span> <span data-ttu-id="45651-106">Cada *ensamblado* se compila a partir de uno o varios archivos de origen.</span><span class="sxs-lookup"><span data-stu-id="45651-106">Each *assembly* is compiled from one or more source files.</span></span> <span data-ttu-id="45651-107">A *archivo de código fuente* proporciona la definición e implementación de clases, estructuras, módulos y las interfaces, que en última instancia contienen todo el código.</span><span class="sxs-lookup"><span data-stu-id="45651-107">A *source file* provides the definition and implementation of classes, structures, modules, and interfaces, which ultimately contain all your code.</span></span>  
   
- Para obtener más información acerca de estos bloques de creación de un [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] , consulte [soluciones y proyectos](https://docs.microsoft.com/visualstudio/ide/solutions-and-projects-in-visual-studio) y [ensamblados y la caché de ensamblados Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ <span data-ttu-id="45651-108">Para obtener más información acerca de estos bloques de creación de un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , consulte [soluciones y proyectos](/visualstudio/ide/solutions-and-projects-in-visual-studio) y [ensamblados y la caché Global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).</span><span class="sxs-lookup"><span data-stu-id="45651-108">For more information about these building blocks of a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] program, see [Solutions and Projects](/visualstudio/ide/solutions-and-projects-in-visual-studio) and [Assemblies and the Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).</span></span>  
   
-## <a name="file-level-programming-elements"></a>Elementos de programación de nivel de archivo  
- Al iniciar un proyecto o archivo y abrir el editor de código, verá algún código ya en vigor y en el orden correcto. Cualquier código que escriba debe seguir la secuencia siguiente:  
+## <a name="file-level-programming-elements"></a><span data-ttu-id="45651-109">Elementos de programación de nivel de archivo</span><span class="sxs-lookup"><span data-stu-id="45651-109">File-Level Programming Elements</span></span>  
+ <span data-ttu-id="45651-110">Cuando se inicia un proyecto o archivo y abre el editor de código, vea parte del código ya están en vigor y en el orden correcto.</span><span class="sxs-lookup"><span data-stu-id="45651-110">When you start a project or file and open the code editor, you see some code already in place and in the correct order.</span></span> <span data-ttu-id="45651-111">Cualquier código que escriba debe seguir la secuencia siguiente:</span><span class="sxs-lookup"><span data-stu-id="45651-111">Any code that you write should follow the following sequence:</span></span>  
   
-1.  `Option`instrucciones  
+1.  <span data-ttu-id="45651-112">`Option`instrucciones</span><span class="sxs-lookup"><span data-stu-id="45651-112">`Option` statements</span></span>  
   
-2.  `Imports`instrucciones  
+2.  <span data-ttu-id="45651-113">`Imports`instrucciones</span><span class="sxs-lookup"><span data-stu-id="45651-113">`Imports` statements</span></span>  
   
-3.  `Namespace`instrucciones y los elementos de nivel de espacio de nombres  
+3.  <span data-ttu-id="45651-114">`Namespace`instrucciones y los elementos de nivel de espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="45651-114">`Namespace` statements and namespace-level elements</span></span>  
   
- Si escribe instrucciones en un orden distinto, pueden producirse errores de compilación.  
+ <span data-ttu-id="45651-115">Si escribe instrucciones en un orden diferente, pueden dar lugar a errores de compilación.</span><span class="sxs-lookup"><span data-stu-id="45651-115">If you enter statements in a different order, compilation errors can result.</span></span>  
   
- Un programa también puede contener instrucciones de compilación condicional. Pueden incluirse en el archivo de código fuente entre las instrucciones de la secuencia anterior.  
+ <span data-ttu-id="45651-116">Un programa también puede contener instrucciones de compilación condicional.</span><span class="sxs-lookup"><span data-stu-id="45651-116">A program can also contain conditional compilation statements.</span></span> <span data-ttu-id="45651-117">Puede incluirse en el archivo de código fuente entre las instrucciones de la secuencia anterior.</span><span class="sxs-lookup"><span data-stu-id="45651-117">You can intersperse these in the source file among the statements of the preceding sequence.</span></span>  
   
-### <a name="option-statements"></a>Instrucciones de la opción  
- `Option`las instrucciones establecen reglas de base para el código subsiguiente, ayudando a evitar errores de sintaxis y la lógica. El [instrucción Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) garantiza que todas las variables se declaran y ha escrito correctamente, lo que reduce el tiempo de depuración. El [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md) ayuda a minimizar la pérdida de datos y los errores de lógica que puede producirse al trabajar entre variables de diferentes tipos de datos. El [instrucción Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) especifica que se comparan las cadenas de manera entre sí, en función de sus `Binary` o `Text` valores.  
+### <a name="option-statements"></a><span data-ttu-id="45651-118">Instrucciones de la opción</span><span class="sxs-lookup"><span data-stu-id="45651-118">Option Statements</span></span>  
+ <span data-ttu-id="45651-119">`Option`las instrucciones establecen reglas de base para el código subsiguiente, ayudando a evitar errores de sintaxis y la lógica.</span><span class="sxs-lookup"><span data-stu-id="45651-119">`Option` statements establish ground rules for subsequent code, helping prevent syntax and logic errors.</span></span> <span data-ttu-id="45651-120">El [instrucción Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md) garantiza que todas las variables se declaran y ha escrito correctamente, lo que reduce el tiempo de depuración.</span><span class="sxs-lookup"><span data-stu-id="45651-120">The [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md) ensures that all variables are declared and spelled correctly, which reduces debugging time.</span></span> <span data-ttu-id="45651-121">El [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md) ayuda a minimizar la pérdida de datos y errores de lógica que puede producirse al trabajar entre variables de diferentes tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="45651-121">The [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) helps to minimize logic errors and data loss that can occur when you work between variables of different data types.</span></span> <span data-ttu-id="45651-122">El [instrucción Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) especifica que se comparan las cadenas de manera entre sí, en función de sus `Binary` o `Text` valores.</span><span class="sxs-lookup"><span data-stu-id="45651-122">The [Option Compare Statement](../../../visual-basic/language-reference/statements/option-compare-statement.md) specifies the way strings are compared to each other, based on either their `Binary` or `Text` values.</span></span>  
   
-### <a name="imports-statements"></a>Instrucciones Imports  
- Puede incluir un [Imports (instrucción Namespace .NET y tipo)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar nombres definidos fuera del proyecto. Un `Imports` instrucción permite que el código hacer referencia a clases y otros tipos definidos en el espacio de nombres importado sin tener que calificarlos. Puede utilizar tantas `Imports` instrucciones según corresponda. Para obtener más información, consulte [referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).  
+### <a name="imports-statements"></a><span data-ttu-id="45651-123">Instrucciones Imports</span><span class="sxs-lookup"><span data-stu-id="45651-123">Imports Statements</span></span>  
+ <span data-ttu-id="45651-124">Puede incluir un [Imports (instrucción Namespace de .NET y tipo)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar nombres definidos fuera del proyecto.</span><span class="sxs-lookup"><span data-stu-id="45651-124">You can include an [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import names defined outside your project.</span></span> <span data-ttu-id="45651-125">Un `Imports` instrucción permite que el código hacer referencia a las clases y otros tipos definidos en el espacio de nombres importado, sin tener que calificarlos.</span><span class="sxs-lookup"><span data-stu-id="45651-125">An `Imports` statement allows your code to refer to classes and other types defined within the imported namespace, without having to qualify them.</span></span> <span data-ttu-id="45651-126">Puede utilizar tantas `Imports` instrucciones según corresponda.</span><span class="sxs-lookup"><span data-stu-id="45651-126">You can use as many `Imports` statements as appropriate.</span></span> <span data-ttu-id="45651-127">Para obtener más información, consulte [referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).</span><span class="sxs-lookup"><span data-stu-id="45651-127">For more information, see [References and the Imports Statement](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).</span></span>  
   
-### <a name="namespace-statements"></a>Instrucciones Namespace  
- Espacios de nombres le ayudarán a organiza y clasificar los elementos de programación para facilitar la agrupación y el acceso. Utiliza la [instrucción Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md) para clasificar las instrucciones siguientes dentro de un espacio de nombres determinado. Para obtener más información, consulte [los espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+### <a name="namespace-statements"></a><span data-ttu-id="45651-128">Instrucciones Namespace</span><span class="sxs-lookup"><span data-stu-id="45651-128">Namespace Statements</span></span>  
+ <span data-ttu-id="45651-129">Espacios de nombres le ayudarán a organiza y clasificar los elementos de programación para facilitar la agrupación y el acceso.</span><span class="sxs-lookup"><span data-stu-id="45651-129">Namespaces help you organize and classify your programming elements for ease of grouping and accessing.</span></span> <span data-ttu-id="45651-130">Usa el [instrucción Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md) para clasificar las instrucciones siguientes dentro de un espacio de nombres determinado.</span><span class="sxs-lookup"><span data-stu-id="45651-130">You use the [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md) to classify the following statements within a particular namespace.</span></span> <span data-ttu-id="45651-131">Para más información, consulte [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="45651-131">For more information, see [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).</span></span>  
   
-### <a name="conditional-compilation-statements"></a>Instrucciones de compilación condicional  
- Instrucciones de compilación condicional pueden aparecer prácticamente en cualquier parte del archivo de origen. Hacen que las partes del código se incluyan o excluyan en tiempo de compilación según ciertas condiciones. También puede utilizarlas para depurar la aplicación, porque el código condicional se ejecuta sólo en modo de depuración. Para obtener más información, consulte [compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md).  
+### <a name="conditional-compilation-statements"></a><span data-ttu-id="45651-132">Instrucciones de compilación condicional</span><span class="sxs-lookup"><span data-stu-id="45651-132">Conditional Compilation Statements</span></span>  
+ <span data-ttu-id="45651-133">Instrucciones de compilación condicional pueden aparecer prácticamente en cualquier parte del archivo de origen.</span><span class="sxs-lookup"><span data-stu-id="45651-133">Conditional compilation statements can appear almost anywhere in your source file.</span></span> <span data-ttu-id="45651-134">Hacer que partes del código que se incluirán o excluirán en tiempo de compilación según determinadas condiciones.</span><span class="sxs-lookup"><span data-stu-id="45651-134">They cause parts of your code to be included or excluded at compile time depending on certain conditions.</span></span> <span data-ttu-id="45651-135">También puede utilizarlas para depurar la aplicación, porque el código condicional se ejecuta en modo sólo de depuración.</span><span class="sxs-lookup"><span data-stu-id="45651-135">You can also use them for debugging your application, because conditional code runs in debugging mode only.</span></span> <span data-ttu-id="45651-136">Para obtener más información, consulte [compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md).</span><span class="sxs-lookup"><span data-stu-id="45651-136">For more information, see [Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md).</span></span>  
   
-## <a name="namespace-level-programming-elements"></a>Elementos de programación de nivel de Namespace  
- Clases, estructuras y módulos contienen todo el código del archivo de origen. Son *nivel de espacio de nombres* elementos, que pueden aparecer dentro de un espacio de nombres o en el nivel de archivos de origen. Contienen las declaraciones de todos los demás elementos de programación. Las interfaces, que definen firmas de elemento pero no proporcionan ninguna implementación, también aparecen en el nivel de módulo. Para obtener más información sobre los elementos de nivel de módulo, vea lo siguiente:  
+## <a name="namespace-level-programming-elements"></a><span data-ttu-id="45651-137">Elementos de programación de nivel de Namespace</span><span class="sxs-lookup"><span data-stu-id="45651-137">Namespace-Level Programming Elements</span></span>  
+ <span data-ttu-id="45651-138">Clases, estructuras y módulos contienen todo el código en el archivo de origen.</span><span class="sxs-lookup"><span data-stu-id="45651-138">Classes, structures, and modules contain all the code in your source file.</span></span> <span data-ttu-id="45651-139">Únicamente son *nivel de espacio de nombres* elementos, que pueden aparecer dentro de un espacio de nombres o en el nivel de archivos de origen.</span><span class="sxs-lookup"><span data-stu-id="45651-139">They are *namespace-level* elements, which can appear within a namespace or at the source file level.</span></span> <span data-ttu-id="45651-140">Contienen las declaraciones de todos los demás elementos de programación.</span><span class="sxs-lookup"><span data-stu-id="45651-140">They hold the declarations of all other programming elements.</span></span> <span data-ttu-id="45651-141">Las interfaces, que definen firmas de elemento pero no proporcionan ninguna implementación, también aparecen en el nivel de módulo.</span><span class="sxs-lookup"><span data-stu-id="45651-141">Interfaces, which define element signatures but provide no implementation, also appear at module level.</span></span> <span data-ttu-id="45651-142">Para obtener más información sobre los elementos de nivel de módulo, vea lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="45651-142">For more information on the module-level elements, see the following:</span></span>  
   
--   [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [<span data-ttu-id="45651-143">Class (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-143">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [<span data-ttu-id="45651-144">Structure (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-144">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module (instrucción)](../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [<span data-ttu-id="45651-145">Module (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-145">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   [<span data-ttu-id="45651-146">Interface (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-146">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- Elementos de datos en el nivel de espacio de nombres son las enumeraciones y delegados.  
+ <span data-ttu-id="45651-147">Elementos de datos en el nivel de espacio de nombres son las enumeraciones y delegados.</span><span class="sxs-lookup"><span data-stu-id="45651-147">Data elements at namespace level are enumerations and delegates.</span></span>  
   
-## <a name="module-level-programming-elements"></a>Elementos de programación de nivel de módulo  
- Los procedimientos, operadores, propiedades y eventos son los únicos elementos de programación que pueden contener código ejecutable (instrucciones que realizan acciones en tiempo de ejecución). Son el *nivel de módulo* elementos del programa. Para obtener más información sobre los elementos de nivel de procedimiento, vea lo siguiente:  
+## <a name="module-level-programming-elements"></a><span data-ttu-id="45651-148">Elementos de programación de nivel de módulo</span><span class="sxs-lookup"><span data-stu-id="45651-148">Module-Level Programming Elements</span></span>  
+ <span data-ttu-id="45651-149">Procedimientos, operadores, propiedades y eventos son los únicos elementos de programación que pueden contener código ejecutable (instrucciones que realizan acciones en tiempo de ejecución).</span><span class="sxs-lookup"><span data-stu-id="45651-149">Procedures, operators, properties, and events are the only programming elements that can hold executable code (statements that perform actions at run time).</span></span> <span data-ttu-id="45651-150">Únicamente son el *nivel de módulo* elementos del programa.</span><span class="sxs-lookup"><span data-stu-id="45651-150">They are the *module-level* elements of your program.</span></span> <span data-ttu-id="45651-151">Para obtener más información sobre los elementos de nivel de procedimiento, vea lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="45651-151">For more information on the procedure-level elements, see the following:</span></span>  
   
--   [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [<span data-ttu-id="45651-152">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-152">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [<span data-ttu-id="45651-153">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-153">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [<span data-ttu-id="45651-154">Declare (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-154">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [<span data-ttu-id="45651-155">Operator (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-155">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [<span data-ttu-id="45651-156">Property (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-156">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
+-   [<span data-ttu-id="45651-157">Event (instrucción)</span><span class="sxs-lookup"><span data-stu-id="45651-157">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- Elementos de datos en el nivel de módulo son las variables, constantes, enumeraciones y delegados.  
+ <span data-ttu-id="45651-158">Elementos de datos en el nivel de módulo son las variables, constantes, enumeraciones y delegados.</span><span class="sxs-lookup"><span data-stu-id="45651-158">Data elements at module level are variables, constants, enumerations, and delegates.</span></span>  
   
-## <a name="procedure-level-programming-elements"></a>Elementos de programación de nivel de procedimiento  
- La mayoría del contenido de *nivel de procedimiento* elementos son instrucciones ejecutables, que constituyen el código de tiempo de ejecución del programa. Todo el código ejecutable debe estar en algún procedimiento (`Function`, `Sub`, `Operator`, `Get`, `Set`, `AddHandler`, `RemoveHandler`, `RaiseEvent`). Para obtener más información, consulte [instrucciones](../../../visual-basic/programming-guide/language-features/statements.md).  
+## <a name="procedure-level-programming-elements"></a><span data-ttu-id="45651-159">Elementos de programación de nivel de procedimiento</span><span class="sxs-lookup"><span data-stu-id="45651-159">Procedure-Level Programming Elements</span></span>  
+ <span data-ttu-id="45651-160">La mayoría del contenido de *nivel de procedimiento* elementos son las instrucciones ejecutables, que constituyen el código en tiempo de ejecución del programa.</span><span class="sxs-lookup"><span data-stu-id="45651-160">Most of the contents of *procedure-level* elements are executable statements, which constitute the run-time code of your program.</span></span> <span data-ttu-id="45651-161">Todo el código ejecutable debe estar en algún procedimiento (`Function`, `Sub`, `Operator`, `Get`, `Set`, `AddHandler`, `RemoveHandler`, `RaiseEvent`).</span><span class="sxs-lookup"><span data-stu-id="45651-161">All executable code must be in some procedure (`Function`, `Sub`, `Operator`, `Get`, `Set`, `AddHandler`, `RemoveHandler`, `RaiseEvent`).</span></span> <span data-ttu-id="45651-162">Para obtener más información, vea [Instrucciones (Guía de programación de C#)](../../../visual-basic/programming-guide/language-features/statements.md).</span><span class="sxs-lookup"><span data-stu-id="45651-162">For more information, see [Statements](../../../visual-basic/programming-guide/language-features/statements.md).</span></span>  
   
- Elementos de datos en el nivel de procedimiento se limitan a las constantes y variables locales.  
+ <span data-ttu-id="45651-163">Elementos de datos en el nivel de procedimiento se limitan a las constantes y variables locales.</span><span class="sxs-lookup"><span data-stu-id="45651-163">Data elements at procedure level are limited to local variables and constants.</span></span>  
   
-## <a name="the-main-procedure"></a>El procedimiento principal  
- El `Main` procedimiento es el primer código que se ejecutará cuando se ha cargado su aplicación. `Main`actúa como punto de partida y control general de la aplicación. Hay cuatro variedades de `Main`:  
+## <a name="the-main-procedure"></a><span data-ttu-id="45651-164">El procedimiento principal</span><span class="sxs-lookup"><span data-stu-id="45651-164">The Main Procedure</span></span>  
+ <span data-ttu-id="45651-165">El `Main` procedimiento es el primer código que se ejecuta cuando se ha cargado su aplicación.</span><span class="sxs-lookup"><span data-stu-id="45651-165">The `Main` procedure is the first code to run when your application has been loaded.</span></span> <span data-ttu-id="45651-166">`Main`actúa como punto de partida y control general de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="45651-166">`Main` serves as the starting point and overall control for your application.</span></span> <span data-ttu-id="45651-167">Hay cuatro variedades de `Main`:</span><span class="sxs-lookup"><span data-stu-id="45651-167">There are four varieties of `Main`:</span></span>  
   
 -   `Sub Main()`  
   
@@ -115,9 +98,9 @@ Un [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vb
   
 -   `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- La variedad más común de este procedimiento es `Sub Main()`. Para obtener más información, consulte [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
+ <span data-ttu-id="45651-168">La variedad más común de este procedimiento es `Sub Main()`.</span><span class="sxs-lookup"><span data-stu-id="45651-168">The most common variety of this procedure is `Sub Main()`.</span></span> <span data-ttu-id="45651-169">Para obtener más información, consulte [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).</span><span class="sxs-lookup"><span data-stu-id="45651-169">For more information, see [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)   
- [Convenciones de nomenclatura de Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [Limitaciones de Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)
+## <a name="see-also"></a><span data-ttu-id="45651-170">Vea también</span><span class="sxs-lookup"><span data-stu-id="45651-170">See Also</span></span>  
+ [<span data-ttu-id="45651-171">Procedimiento Main en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="45651-171">Main Procedure in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
+ [<span data-ttu-id="45651-172">Convenciones de nomenclatura de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="45651-172">Visual Basic Naming Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [<span data-ttu-id="45651-173">Limitaciones de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="45651-173">Visual Basic Limitations</span></span>](../../../visual-basic/programming-guide/program-structure/limitations.md)

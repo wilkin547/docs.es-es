@@ -1,42 +1,48 @@
 ---
-title: "C&#243;mo: Guardar, cargar e imprimir contenido de un control RichTextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cargar controles RichTextBox"
-  - "imprimir controles RichTextBox"
-  - "RichTextBox (control), cargar"
-  - "RichTextBox (control), imprimir"
-  - "RichTextBox (control), guardar"
-  - "guardar controles RichTextBox"
+title: "Cómo: Guardar, cargar e imprimir contenido de un control RichTextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- saving RichTextBox controls [WPF]
+- printing RichTextBox controls [WPF]
+- loading RichTextBox controls [WPF]
+- RichTextBox control [WPF], saving
+- RichTextBox control [WPF], printing
+- RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca969848ae82d567642cd0f4174c52ebc24ef5d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Guardar, cargar e imprimir contenido de un control RichTextBox
-En el ejemplo siguiente, se muestra cómo guardar el contenido de un control <xref:System.Windows.Controls.RichTextBox> en un archivo, cargar ese contenido de nuevo en <xref:System.Windows.Controls.RichTextBox> e imprimirlo.  
+# <a name="how-to-save-load-and-print-richtextbox-content"></a><span data-ttu-id="54c17-102">Cómo: Guardar, cargar e imprimir contenido de un control RichTextBox</span><span class="sxs-lookup"><span data-stu-id="54c17-102">How to: Save, Load, and Print RichTextBox Content</span></span>
+<span data-ttu-id="54c17-103">En el ejemplo siguiente se muestra cómo guardar el contenido de un <xref:System.Windows.Controls.RichTextBox> en un archivo, cargar ese contenido de nuevo en el <xref:System.Windows.Controls.RichTextBox>e imprimir el contenido.</span><span class="sxs-lookup"><span data-stu-id="54c17-103">The following example shows how to save content of a <xref:System.Windows.Controls.RichTextBox> to a file, load that content back into the <xref:System.Windows.Controls.RichTextBox>, and print the contents.</span></span>  
   
-## Ejemplo  
- A continuación se muestra el marcado para obtener el ejemplo.  
+## <a name="example"></a><span data-ttu-id="54c17-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="54c17-104">Example</span></span>  
+ <span data-ttu-id="54c17-105">A continuación, se muestra el marcado para el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="54c17-105">Below is the markup for the example.</span></span>  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
   
-## Ejemplo  
- A continuación, se muestra el código subyacente del ejemplo.  
+## <a name="example"></a><span data-ttu-id="54c17-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="54c17-106">Example</span></span>  
+ <span data-ttu-id="54c17-107">A continuación, se muestra el código subyacente para el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="54c17-107">Below is the code behind for the example.</span></span>  
   
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## Vea también  
- [Información general sobre el control RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)   
- [Información general sobre TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="54c17-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="54c17-108">See Also</span></span>  
+ <span data-ttu-id="54c17-109">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) (Introducción a RichTextBox)</span><span class="sxs-lookup"><span data-stu-id="54c17-109">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md)</span></span>  
+ [<span data-ttu-id="54c17-110">Información general sobre TextBox</span><span class="sxs-lookup"><span data-stu-id="54c17-110">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)

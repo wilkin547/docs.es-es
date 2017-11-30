@@ -1,27 +1,30 @@
 ---
-title: "Prevenir ataques por repetici&#243;n cuando un servicio WCF est&#225; hospedado en una granja web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Prevenir ataques por repetición cuando un servicio WCF está hospedado en una granja web"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ecf37ffb87ddfdd483cebcac3f5892bab43dcd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Prevenir ataques por repetici&#243;n cuando un servicio WCF est&#225; hospedado en una granja web
-Cuando se usa seguridad de mensajes, WCF impide los ataques por repetición creando un NONCE a partir del mensaje entrante y comprobando la `InMemoryNonceCache` interna para ver si el NONCE generado está presente.Si lo está, el mensaje se descarta como respuesta.Cuando un servicio de WCF se hospeda en una granja de servidores web, como `InMemoryNonceCache` no se comparte entre los nodos de la granja de servidores web, el servicio es vulnerable a ataques mediante repetición.Para mitigar este escenario WCF 4.5 proporciona un punto de extensibilidad que le permite implementar su propia memoria caché compartida de NONCE derivando una clase de la clase abstracta <xref:System.ServiceModel.Security.NoneCache>.  
+# <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a><span data-ttu-id="b210d-102">Prevenir ataques por repetición cuando un servicio WCF está hospedado en una granja web</span><span class="sxs-lookup"><span data-stu-id="b210d-102">Preventing Replay Attacks When a WCF Service is Hosted in a Web Farm</span></span>
+<span data-ttu-id="b210d-103">Cuando se usa seguridad de mensajes, WCF impide los ataques por repetición creando un NONCE a partir del mensaje entrante y comprobando la `InMemoryNonceCache` interna para ver si el NONCE generado está presente.</span><span class="sxs-lookup"><span data-stu-id="b210d-103">When using message security WCF prevents replay attacks by creating a NONCE out of the incoming message and checking the internal `InMemoryNonceCache` to see if the generated NONCE is present.</span></span> <span data-ttu-id="b210d-104">Si lo está, el mensaje se descarta como respuesta.</span><span class="sxs-lookup"><span data-stu-id="b210d-104">If it is, the message is discarded as a replay.</span></span> <span data-ttu-id="b210d-105">Cuando un servicio de WCF se hospeda en una granja de servidores web, como `InMemoryNonceCache` no se comparte entre los nodos de la granja de servidores web, el servicio es vulnerable a ataques mediante repetición.</span><span class="sxs-lookup"><span data-stu-id="b210d-105">When a WCF service is hosted in a web farm, since the `InMemoryNonceCache` is not shared across the nodes in the web farm, the service is vulnerable to replay attacks.</span></span>  <span data-ttu-id="b210d-106">Para mitigar este escenario WCF 4.5 proporciona un punto de extensibilidad que le permite implementar su propia memoria caché compartida de NONCE derivando una clase de la clase abstracta <xref:System.ServiceModel.Security.NonceCache>.</span><span class="sxs-lookup"><span data-stu-id="b210d-106">To mitigate this scenario WCF 4.5 provides an extensibility point that allows you to implement your own shared NONCE cache by deriving a class from the abstract class <xref:System.ServiceModel.Security.NonceCache>.</span></span>  
   
-## Implementación de NoneCache  
- Para implementar su propia caché compartida de NONCE, derive una clase de <xref:System.ServiceModel.Security.NoneCache> y reemplace los métodos [M:System.ServiceModel.Security.NoneCache.CheckNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.CheckNonce%2A> y [M:System.ServiceModel.Security.NoneCache.TryAddNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.TryAddNonce%2A>.[M:System.ServiceModel.Security.NoneCache.CheckNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.CheckNonce%2A> comprobará para ver si el NONCE especificado existe en la memoria caché.[M:System.ServiceModel.Security.NoneCache.TryAddNonce\(System.Byte\<xref:System.ServiceModel.Security.NoneCache.TryAddNonce%2A> intentará agregar un NONCE a la memoria caché.Una vez implementada la clase, puede enlazarla creando una instancia y asignándola a <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSecuritySettings.NonceCache%2A> para la detección de reproducción del lado cliente y a <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSecuritySettings.NonceCache%2A> para la detección de reproducción del lado servidor.No hay compatibilidad con la configuración lista para usar para esta característica.  
+## <a name="noncecache-implementation"></a><span data-ttu-id="b210d-107">Implementación de NonceCache</span><span class="sxs-lookup"><span data-stu-id="b210d-107">NonceCache Implementation</span></span>  
+ <span data-ttu-id="b210d-108">Para implementar su propia caché compartida de NONCE, derive una clase de <xref:System.ServiceModel.Security.NonceCache> y reemplace los métodos <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> y <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A>.</span><span class="sxs-lookup"><span data-stu-id="b210d-108">To implement your own shared NONCE cache, derive a class from <xref:System.ServiceModel.Security.NonceCache> and override the <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> and <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> methods.</span></span> <span data-ttu-id="b210d-109"><xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> comprobará para ver si el NONCE especificado existe en la memoria caché.</span><span class="sxs-lookup"><span data-stu-id="b210d-109"><xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> will check to see if the specified NONCE exists in the cache.</span></span> <span data-ttu-id="b210d-110"><xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> intentará agregar un NONCE a la memoria caché.</span><span class="sxs-lookup"><span data-stu-id="b210d-110"><xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> will attempt to add a NONCE to the cache.</span></span> <span data-ttu-id="b210d-111">Una vez implementada la clase, puede enlazarla creando una instancia y asignándola a <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> para la detección de reproducción del lado cliente y a <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> para la detección de reproducción del lado servidor.</span><span class="sxs-lookup"><span data-stu-id="b210d-111">Once the class is implemented, you hook it up by instantiating an instance and assigning it to <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> for client-side replay detection and <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> for server-side replay detection.</span></span> <span data-ttu-id="b210d-112">No hay compatibilidad con la configuración lista para usar para esta característica.</span><span class="sxs-lookup"><span data-stu-id="b210d-112">There is no out of the box configuration support for this feature.</span></span>  
   
-## Vea también  
- [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
- [SymmetricSecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)
+## <a name="see-also"></a><span data-ttu-id="b210d-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="b210d-113">See Also</span></span>  
+ [<span data-ttu-id="b210d-114">Seguridad de mensajes</span><span class="sxs-lookup"><span data-stu-id="b210d-114">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [<span data-ttu-id="b210d-115">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="b210d-115">SymmetricSecurityBindingElement</span></span>](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)

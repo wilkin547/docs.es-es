@@ -1,64 +1,65 @@
 ---
-title: "M&#233;todos abreviados de teclado para el control DataGrid de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid (control) [Windows Forms], teclas de desplazamiento"
-  - "métodos abreviados de teclado, DataGrid (control)"
+title: "Métodos abreviados de teclado para el control DataGrid de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# M&#233;todos abreviados de teclado para el control DataGrid de formularios Windows Forms
+# <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a><span data-ttu-id="c7d6e-102">Métodos abreviados de teclado para el control DataGrid de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c7d6e-102">Keyboard Shortcuts for the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Aunque el control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>, este control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y, en su caso, de uso futuro.  Para obtener más información, vea [Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="c7d6e-103">El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="c7d6e-104">Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).</span><span class="sxs-lookup"><span data-stu-id="c7d6e-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- En la tabla siguiente se muestran los métodos abreviados de teclado que se pueden utilizar para navegar por el control <xref:System.Windows.Forms.DataGrid> de formularios Windows Forms:  
+ <span data-ttu-id="c7d6e-105">En la tabla siguiente se enumera los métodos abreviados de teclado que pueden usarse para la navegación en Windows Forms <xref:System.Windows.Forms.DataGrid> control:</span><span class="sxs-lookup"><span data-stu-id="c7d6e-105">The following table lists the keyboard shortcuts that can be used for navigation within the Windows Forms <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
-|Acción|Acceso directo|  
-|------------|--------------------|  
-|Completar una entrada en una celda y bajar a la celda siguiente.<br /><br /> Si el foco se encuentra en un vínculo a una tabla secundaria, navegue hasta dicha tabla.|ENTRAR|  
-|Cancelar la modificación de la celda, en modo de edición de celdas.<br /><br /> Cancelar la modificación de la fila, en la selección de marquesinas.|ESC|  
-|Eliminar el carácter situado delante del punto de inserción al editar una celda.|RETROCESO|  
-|Eliminar el carácter situado detrás del punto de inserción al editar una celda.|DELETE|  
-|Desplazarse a la primera celda de la fila actual.|INICIO|  
-|Desplazarse a la última celda de la fila actual.|FIN|  
-|Resaltar los caracteres de la celda actual y colocar el punto de inserción al final de la línea.  El igual que hacer doble clic en una celda.|F2|  
-|Si el foco se encuentra en una celda, ir a la celda siguiente de la fila.<br /><br /> Si el foco se encuentra en la última celda de una fila, ir al primer vínculo de tabla secundaria de la fila y expandirlo.<br /><br /> Si el foco se encuentra en un vínculo secundario, desplazarse hasta el siguiente vínculo secundario.<br /><br /> Si el foco se encuentra en el último vínculo secundario, ir a la primera celda de la fila siguiente.|TAB|  
-|Si el foco se encuentra en una celda, ir a la celda anterior de la fila.<br /><br /> Si el foco se encuentra en la primera celda de una fila, ir al último vínculo expandido de tabla secundaria de la fila anterior o ir a la última celda de la fila anterior.<br /><br /> Si el foco se encuentra en un vínculo secundario, desplazarse hasta el vínculo secundario anterior.<br /><br /> Si el foco se encuentra en el primer vínculo secundario, ir a la última celda de la fila anterior.|MAYÚS\+TAB|  
-|Ir al siguiente control en el orden de tabulación.|CTRL\+TAB|  
-|Ir al control anterior en el orden de tabulación.|CTRL\+MAYÚS\+TAB|  
-|Subir hasta la tabla principal si está en una tabla secundaria.  Es igual que hacer clic en el botón Atrás.|ALT\+FLECHA IZQUIERDA|  
-|Expandir los vínculos de tabla secundaria.  ALT\+FLECHA ABAJO expande todos los vínculos, no sólo los que estén seleccionados.|ALT\+FLECHA ABAJO o CTRL\+SIGNO MÁS|  
-|Contraer los vínculos de tabla secundaria.  ALT\+FLECHA ARRIBA contrae todos los vínculos, no sólo los que estén seleccionados.|ALT\+FLECHA ARRIBA o CTRL\+SIGNO MENOS|  
-|Ir hasta la última celda que no esté vacía en el sentido de la flecha.|CTRL\+FLECHA|  
-|Extender la selección una fila en el sentido de la flecha \(sin incluir los vínculos de tabla secundaria\).|MAYÚS\+FLECHA ARRIBA\/ABAJO|  
-|Extender la selección hasta la última fila que no esté vacía en el sentido de la flecha \(sin incluir los vínculos de tabla secundaria\).|CTRL\+MAYÚS\+ FLECHA ARRIBA\/ABAJO|  
-|Desplazarse a la celda superior izquierda.|CTRL\+INICIO|  
-|Desplazarse a la celda inferior derecha.|CTRL\+FIN|  
-|Extender la selección hasta la fila superior.|CTRL\+MAYÚS\+INICIO|  
-|Extender la selección hasta la fila inferior.|CTRL\+MAYÚS\+FIN|  
-|Seleccionar la fila actual \(sin incluir los vínculos de tabla secundaria\).|MAYÚS\+ESPACIO|  
-|Seleccionar la cuadrícula completa \(sin incluir los vínculos de tabla secundaria\).|CTRL\+A|  
-|Mostrar la fila principal al encontrarse en una tabla secundaria.|CTRL\+AV PÁG|  
-|Ocultar la fila principal al encontrarse en una tabla secundaria.|CTRL\+RE PÁG|  
-|Extender la selección hacia abajo una pantalla \(sin incluir los vínculos de tabla secundaria\).|MAYÚS\+AV PÁG|  
-|Extender la selección hacia arriba una pantalla \(sin incluir los vínculos de tabla secundaria\).|MAYÚS\+RE PÁG|  
-|Llamar al método <xref:System.Windows.Forms.DataGrid.EndEdit%2A> para la fila actual.|CTRL\+ENTRAR|  
-|Escribir un valor <xref:System.DBNull.Value?displayProperty=fullName> en una celda, en modo de edición.|CTRL\+0|  
+|<span data-ttu-id="c7d6e-106">Acción</span><span class="sxs-lookup"><span data-stu-id="c7d6e-106">Action</span></span>|<span data-ttu-id="c7d6e-107">Acceso directo</span><span class="sxs-lookup"><span data-stu-id="c7d6e-107">Shortcut</span></span>|  
+|------------|--------------|  
+|<span data-ttu-id="c7d6e-108">Completar una entrada de celda y desplazarse hacia abajo a la celda siguiente.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-108">Complete a cell entry and move down to the next cell.</span></span><br /><br /> <span data-ttu-id="c7d6e-109">Si el foco está en un vínculo de la tabla secundaria, navegue a esa tabla.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-109">If focus is on a child table link, navigate to that table.</span></span>|<span data-ttu-id="c7d6e-110">ENTRAR</span><span class="sxs-lookup"><span data-stu-id="c7d6e-110">ENTER</span></span>|  
+|<span data-ttu-id="c7d6e-111">Cancela la edición de celda si se encuentra en modo de edición de la celda.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-111">Cancel cell editing if in cell edit mode.</span></span><br /><br /> <span data-ttu-id="c7d6e-112">Si se encuentra en la selección de recuadro, cancelar la modificación de la fila.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-112">If in marquee selection, cancel editing on the row.</span></span>|<span data-ttu-id="c7d6e-113">ESC</span><span class="sxs-lookup"><span data-stu-id="c7d6e-113">ESC</span></span>|  
+|<span data-ttu-id="c7d6e-114">Eliminar el carácter situado delante del punto de inserción al editar una celda.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-114">Delete the character before the insertion point when editing a cell.</span></span>|<span data-ttu-id="c7d6e-115">RETROCESO</span><span class="sxs-lookup"><span data-stu-id="c7d6e-115">BACKSPACE</span></span>|  
+|<span data-ttu-id="c7d6e-116">Eliminar el carácter después del punto de inserción al editar una celda.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-116">Delete the character after the insertion point when editing a cell.</span></span>|<span data-ttu-id="c7d6e-117">SUPRIMIR</span><span class="sxs-lookup"><span data-stu-id="c7d6e-117">DELETE</span></span>|  
+|<span data-ttu-id="c7d6e-118">Mover a la primera celda de la fila actual.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-118">Move to the first cell in the current row.</span></span>|<span data-ttu-id="c7d6e-119">INICIO</span><span class="sxs-lookup"><span data-stu-id="c7d6e-119">HOME</span></span>|  
+|<span data-ttu-id="c7d6e-120">Se mueve a la última celda de la fila actual.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-120">Move to the last cell in the current row.</span></span>|<span data-ttu-id="c7d6e-121">FIN</span><span class="sxs-lookup"><span data-stu-id="c7d6e-121">END</span></span>|  
+|<span data-ttu-id="c7d6e-122">Resaltar los caracteres de la celda actual y coloque el punto de inserción al final de la línea.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-122">Highlight characters in the current cell and position the insertion point at the end of the line.</span></span> <span data-ttu-id="c7d6e-123">Mismo comportamiento que haga doble clic en una celda.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-123">Same behavior as double-clicking a cell.</span></span>|<span data-ttu-id="c7d6e-124">F2</span><span class="sxs-lookup"><span data-stu-id="c7d6e-124">F2</span></span>|  
+|<span data-ttu-id="c7d6e-125">Si el foco está en una celda, mueva a la celda siguiente en la fila.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-125">If focus is on a cell, move to the next cell in the row.</span></span><br /><br /> <span data-ttu-id="c7d6e-126">Si el foco está en la última celda de una fila, desplácese al primer vínculo de la tabla secundaria de la fila y expandirlo.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-126">If focus is on the last cell in a row, move to the first child table link of the row and expand it.</span></span><br /><br /> <span data-ttu-id="c7d6e-127">Si el foco está en un vínculo secundario, desplazarse hasta el siguiente vínculo secundario.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-127">If focus is on a child link, move to the next child link.</span></span><br /><br /> <span data-ttu-id="c7d6e-128">Si el foco está en el último vínculo secundario, mueva a la primera celda de la fila siguiente.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-128">If focus is on the last child link, move to the first cell of the next row.</span></span>|<span data-ttu-id="c7d6e-129">TAB</span><span class="sxs-lookup"><span data-stu-id="c7d6e-129">TAB</span></span>|  
+|<span data-ttu-id="c7d6e-130">Si el foco está en una celda, mueva a la celda anterior de la fila.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-130">If focus is on a cell, move to the previous cell in the row.</span></span><br /><br /> <span data-ttu-id="c7d6e-131">Si el foco está en la primera celda de una fila, desplazarse hasta el último vínculo de tabla expandida secundarios de la fila anterior o se mueve a la última celda de la fila anterior.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-131">If focus is on the first cell in a row, move to the last expanded child table link of the previous row, or move to the last cell of the previous row.</span></span><br /><br /> <span data-ttu-id="c7d6e-132">Si el foco está en un vínculo secundario, mueva el vínculo secundario anterior.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-132">If focus is on a child link, move to the previous child link.</span></span><br /><br /> <span data-ttu-id="c7d6e-133">Si el foco está en el primer vínculo secundario, se mueve a la última celda de la fila anterior.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-133">If focus is on the first child link, move to the last cell of the previous row.</span></span>|<span data-ttu-id="c7d6e-134">MAYÚS+TAB</span><span class="sxs-lookup"><span data-stu-id="c7d6e-134">SHIFT+TAB</span></span>|  
+|<span data-ttu-id="c7d6e-135">Mover al siguiente control en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-135">Move to the next control in the tab order.</span></span>|<span data-ttu-id="c7d6e-136">CTRL+TAB</span><span class="sxs-lookup"><span data-stu-id="c7d6e-136">CTRL+TAB</span></span>|  
+|<span data-ttu-id="c7d6e-137">Mover al control anterior en el orden de tabulación.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-137">Move to the previous control in the tab order.</span></span>|<span data-ttu-id="c7d6e-138">CTRL+MAYÚS+TAB</span><span class="sxs-lookup"><span data-stu-id="c7d6e-138">CTRL+SHIFT+TAB</span></span>|  
+|<span data-ttu-id="c7d6e-139">Mover hacia arriba a la tabla primaria en el caso de una tabla secundaria.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-139">Move up to the parent table if in a child table.</span></span> <span data-ttu-id="c7d6e-140">Mismo comportamiento que al hacer clic en el botón Atrás.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-140">Same behavior as clicking the Back button.</span></span>|<span data-ttu-id="c7d6e-141">ALT+FLECHA IZQUIERDA</span><span class="sxs-lookup"><span data-stu-id="c7d6e-141">ALT+LEFT ARROW</span></span>|  
+|<span data-ttu-id="c7d6e-142">Expanda los vínculos de tabla secundaria.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-142">Expand child table links.</span></span> <span data-ttu-id="c7d6e-143">ALT+FLECHA abajo expande todos los vínculos, no solo los seleccionados.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-143">ALT+DOWN ARROW expands all links, not just the ones selected.</span></span>|<span data-ttu-id="c7d6e-144">ALT + flecha abajo o CTRL + signo</span><span class="sxs-lookup"><span data-stu-id="c7d6e-144">ALT+DOWN ARROW or CTRL+PLUS SIGN</span></span>|  
+|<span data-ttu-id="c7d6e-145">Contraer los vínculos de tabla secundaria.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-145">Collapse child table links.</span></span> <span data-ttu-id="c7d6e-146">ALT+FLECHA arriba contrae todos los vínculos, no solo los seleccionados.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-146">ALT+UP ARROW collapses all links, not just the ones selected.</span></span>|<span data-ttu-id="c7d6e-147">ALT + flecha arriba o CTRL + signo menos</span><span class="sxs-lookup"><span data-stu-id="c7d6e-147">ALT+UP ARROW or CTRL+MINUS SIGN</span></span>|  
+|<span data-ttu-id="c7d6e-148">Desplazarse a la celda más lejano no vacías en la dirección de la flecha.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-148">Move to the farthest nonblank cell in the direction of the arrow.</span></span>|<span data-ttu-id="c7d6e-149">CTRL + FLECHA</span><span class="sxs-lookup"><span data-stu-id="c7d6e-149">CTRL+ARROW</span></span>|  
+|<span data-ttu-id="c7d6e-150">Ampliar la selección de una fila en la dirección de la flecha (sin incluir los vínculos de tabla secundaria).</span><span class="sxs-lookup"><span data-stu-id="c7d6e-150">Extend the selection one row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="c7d6e-151">MAYÚS+FLECHA ARRIBA/ABAJO</span><span class="sxs-lookup"><span data-stu-id="c7d6e-151">SHIFT+UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="c7d6e-152">Ampliar la selección de fila más lejano no vacíos en la dirección de la flecha (sin incluir los vínculos de tabla secundaria).</span><span class="sxs-lookup"><span data-stu-id="c7d6e-152">Extend the selection to farthest nonblank row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="c7d6e-153">CTRL + MAYÚS + ARRIBA/FLECHA ABAJO</span><span class="sxs-lookup"><span data-stu-id="c7d6e-153">CTRL+SHIFT+ UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="c7d6e-154">Mover a la celda superior izquierda.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-154">Move to the upper-left cell.</span></span>|<span data-ttu-id="c7d6e-155">CTRL + INICIO</span><span class="sxs-lookup"><span data-stu-id="c7d6e-155">CTRL+HOME</span></span>|  
+|<span data-ttu-id="c7d6e-156">Mover a la celda inferior derecha.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-156">Move to the lower-right cell.</span></span>|<span data-ttu-id="c7d6e-157">CTRL + FIN</span><span class="sxs-lookup"><span data-stu-id="c7d6e-157">CTRL+END</span></span>|  
+|<span data-ttu-id="c7d6e-158">Ampliar la selección de la fila superior.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-158">Extend the selection to the top row.</span></span>|<span data-ttu-id="c7d6e-159">CTRL + MAYÚS + INICIO</span><span class="sxs-lookup"><span data-stu-id="c7d6e-159">CTRL+SHIFT+HOME</span></span>|  
+|<span data-ttu-id="c7d6e-160">Ampliar la selección de la fila inferior.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-160">Extend the selection to the bottom row.</span></span>|<span data-ttu-id="c7d6e-161">CTRL + MAYÚS + FIN</span><span class="sxs-lookup"><span data-stu-id="c7d6e-161">CTRL+SHIFT+END</span></span>|  
+|<span data-ttu-id="c7d6e-162">Seleccione la fila actual (sin incluir los vínculos de tabla secundaria).</span><span class="sxs-lookup"><span data-stu-id="c7d6e-162">Select the current row (excluding child table links).</span></span>|<span data-ttu-id="c7d6e-163">CTRL+MAYÚS+BARRA ESPACIADORA</span><span class="sxs-lookup"><span data-stu-id="c7d6e-163">SHIFT+SPACEBAR</span></span>|  
+|<span data-ttu-id="c7d6e-164">Seleccione la cuadrícula completa (sin incluir los vínculos de tabla secundaria).</span><span class="sxs-lookup"><span data-stu-id="c7d6e-164">Select the entire grid (excluding child table links).</span></span>|<span data-ttu-id="c7d6e-165">CTRL+A</span><span class="sxs-lookup"><span data-stu-id="c7d6e-165">CTRL+A</span></span>|  
+|<span data-ttu-id="c7d6e-166">Mostrar la fila primaria cuando se encuentra en una tabla secundaria.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-166">Display the parent row when in a child table.</span></span>|<span data-ttu-id="c7d6e-167">CTRL+AV PÁG</span><span class="sxs-lookup"><span data-stu-id="c7d6e-167">CTRL+PAGE DOWN</span></span>|  
+|<span data-ttu-id="c7d6e-168">Ocultar la fila primaria cuando se encuentra en una tabla secundaria.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-168">Hide the parent row when in a child table.</span></span>|<span data-ttu-id="c7d6e-169">CTRL+RE PÁG</span><span class="sxs-lookup"><span data-stu-id="c7d6e-169">CTRL+PAGE UP</span></span>|  
+|<span data-ttu-id="c7d6e-170">Ampliar la selección hacia abajo una pantalla (sin incluir los vínculos de tabla secundaria).</span><span class="sxs-lookup"><span data-stu-id="c7d6e-170">Extend the selection down one screen (excluding child table links).</span></span>|<span data-ttu-id="c7d6e-171">MAYÚS+AV PÁG</span><span class="sxs-lookup"><span data-stu-id="c7d6e-171">SHIFT+PAGE DOWN</span></span>|  
+|<span data-ttu-id="c7d6e-172">Ampliar la selección hacia arriba una pantalla (sin incluir los vínculos de tabla secundaria).</span><span class="sxs-lookup"><span data-stu-id="c7d6e-172">Extend the selection up one screen (excluding child table links).</span></span>|<span data-ttu-id="c7d6e-173">MAYÚS+RE PÁG</span><span class="sxs-lookup"><span data-stu-id="c7d6e-173">SHIFT+PAGE UP</span></span>|  
+|<span data-ttu-id="c7d6e-174">Llame a la <xref:System.Windows.Forms.DataGrid.EndEdit%2A> método para la fila actual.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-174">Call the <xref:System.Windows.Forms.DataGrid.EndEdit%2A> method for the current row.</span></span>|<span data-ttu-id="c7d6e-175">CTRL+ENTRAR</span><span class="sxs-lookup"><span data-stu-id="c7d6e-175">CTRL+ENTER</span></span>|  
+|<span data-ttu-id="c7d6e-176">Escriba un <xref:System.DBNull.Value?displayProperty=nameWithType> valor en una celda en modo de edición.</span><span class="sxs-lookup"><span data-stu-id="c7d6e-176">Enter a <xref:System.DBNull.Value?displayProperty=nameWithType> value into a cell when in edit mode.</span></span>|<span data-ttu-id="c7d6e-177">CTRL+0</span><span class="sxs-lookup"><span data-stu-id="c7d6e-177">CTRL+0</span></span>|  
   
-## Vea también  
- [Información general del control DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Control DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="c7d6e-178">Vea también</span><span class="sxs-lookup"><span data-stu-id="c7d6e-178">See Also</span></span>  
+ [<span data-ttu-id="c7d6e-179">Información general del control DataGrid</span><span class="sxs-lookup"><span data-stu-id="c7d6e-179">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="c7d6e-180">DataGrid (control)</span><span class="sxs-lookup"><span data-stu-id="c7d6e-180">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

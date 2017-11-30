@@ -1,36 +1,35 @@
 ---
-title: "Configuraci&#243;n de un cliente b&#225;sico de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "clientes de WCF [WCF], configurar"
+title: "Configuración de un cliente básico de Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-caps.latest.revision: 47
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 47
+caps.latest.revision: "47"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1f4d6b5386e82a2052182ba3f4a929de13b27c22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Configuraci&#243;n de un cliente b&#225;sico de Windows Communication Foundation
-Es la quinta de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  Para obtener información general de las seis tareas, vea el tema [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a><span data-ttu-id="c3f3d-102">Configuración de un cliente básico de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="c3f3d-102">How to: Configure a Basic Windows Communication Foundation Client</span></span>
+<span data-ttu-id="c3f3d-103">Es la quinta de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c3f3d-103">This is the fifth of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="c3f3d-104">Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- Este tema explica el archivo de configuración del cliente generado mediante la funcionalidad de Agregar referencia de servicio de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] o la [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  La configuración del cliente consiste en especificar el extremo que utiliza el cliente para obtener acceso al servicio.  Un extremo tiene una dirección, un enlace y un contrato y cada uno de estos elementos debe especificarse en el proceso de configuración del cliente.  
+ <span data-ttu-id="c3f3d-105">Este archivo de configuración de cliente que se ha generado mediante la funcionalidad Agregar referencia de servicio de disuccess de tema [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] o [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="c3f3d-105">This topic disuccess the client configuration file that was generated using the Add Service Reference functionality of [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] or the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="c3f3d-106">La configuración del cliente consiste en especificar el punto de conexión que utiliza el cliente para obtener acceso al servicio.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-106">Configuring the client consists of specifying the endpoint that the client uses to access the service.</span></span> <span data-ttu-id="c3f3d-107">Un extremo tiene una dirección, un enlace y un contrato y cada uno de estos elementos debe especificarse en el proceso de configuración del cliente.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-107">An endpoint has an address, a binding and a contract, and each of these must be specified in the process of configuring the client.</span></span>  
   
-### Configuración de un cliente de Windows Communication Foundation  
+### <a name="to-configure-a-windows-communication-foundation-client"></a><span data-ttu-id="c3f3d-108">Configuración de un cliente de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="c3f3d-108">To configure a Windows Communication Foundation client</span></span>  
   
-1.  Abra el archivo de configuración generado \(App.config\) del proyecto GettingStartedClient.  El siguiente ejemplo es una vista del archivo de configuración generado.  Bajo la sección [\<system.serviceModel\>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md), busque el elemento [\<endpoint\>](http://msdn.microsoft.com/es-es/13aa23b7-2f08-4add-8dbf-a99f8127c017).  
+1.  <span data-ttu-id="c3f3d-109">Abra el archivo de configuración generado (App.config) del proyecto GettingStartedClient.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-109">Open the generated configuration file (App.config) from the GettingStartedClient project.</span></span> <span data-ttu-id="c3f3d-110">El siguiente ejemplo es una vista del archivo de configuración generado.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-110">The following example is a view of the generated configuration file.</span></span> <span data-ttu-id="c3f3d-111">En el [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sección, busque la [ \<extremo >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-111">Under the [\<system.serviceModel>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) section, find the [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
         <startup>   
@@ -55,39 +54,18 @@ Es la quinta de las seis tareas necesarias para crear una aplicación básica de
                 </endpoint>  
             </client>  
         </system.serviceModel>  
-    </configuration><?xml version="1.0" encoding="utf-8" ?>  
-    <configuration>  
-        <startup>   
-            <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5,Profile=Client" />  
-        </startup>  
-        <system.serviceModel>  
-            <bindings>  
-                <wsHttpBinding>  
-                    <binding name="WSHttpBinding_ICalculator" />  
-                </wsHttpBinding>  
-            </bindings>  
-            <client>  
-                <endpoint address="http://localhost:8000/ServiceModelSamples/Service/CalculatorService"  
-                    binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_ICalculator"  
-                    contract="ServiceReference1.ICalculator" name="WSHttpBinding_ICalculator">  
-                    <identity>  
-                        <userPrincipalName value="migree@redmond.corp.microsoft.com" />  
-                    </identity>  
-                </endpoint>  
-            </client>  
-        </system.serviceModel>  
     </configuration>   
     ```  
   
-     Este ejemplo configura el extremo que usa el cliente para tener acceso al servicio que se ubica en la siguiente dirección: http:\/\/localhost:8000\/ServiceModelSamples\/Service\/CalculatorService  
+     <span data-ttu-id="c3f3d-112">Este ejemplo configura el punto de conexión que usa el cliente para tener acceso al servicio que se ubica en la siguiente dirección: http://localhost:8000/ServiceModelSamples/Service/CalculatorService</span><span class="sxs-lookup"><span data-stu-id="c3f3d-112">This example configures the endpoint that the client uses to access the service that is located at the following address: http://localhost:8000/ServiceModelSamples/Service/CalculatorService</span></span>  
   
-     El elemento de extremo especifica que el contrato de servicio de `ServiceReference1.ICalculator` se usa para la comunicación entre el cliente y el servicio de WCF.  El canal de WCF se configura con el <xref:System.ServiceModel.WsHttpBinding> proporcionado por el sistema.  Este contrato se generó mediante Agregar referencia de servicio en Visual Studio.  Es básicamente una copia del contrato que se definió en el proyecto GettingStartedLib.  El enlace <xref:System.ServiceModel.WsHttpBinding> especifica HTTP como el transporte, la seguridad interoperable y otros detalles de configuración.  
+     <span data-ttu-id="c3f3d-113">El elemento de extremo especifica que el contrato de servicio de `ServiceReference1.ICalculator` se usa para la comunicación entre el cliente y el servicio de WCF.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-113">The endpoint element specifies that the `ServiceReference1.ICalculator` service contract is used for communication between the WCF client and service.</span></span> <span data-ttu-id="c3f3d-114">Se configura el canal WCF con los proporcionados por el sistema <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-114">The WCF channel is configured with the system-provided <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>.</span></span> <span data-ttu-id="c3f3d-115">Este contrato se generó mediante Agregar referencia de servicio en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-115">This contract was generated by using Add Service Reference in Visual Studio.</span></span> <span data-ttu-id="c3f3d-116">Es básicamente una copia del contrato que se definió en el proyecto GettingStartedLib.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-116">It is essentially a copy of the contract that was defined in the GettingStartedLib project.</span></span> <span data-ttu-id="c3f3d-117">El <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> enlace especifica HTTP como el transporte, seguridad interoperable y otros detalles de configuración.</span><span class="sxs-lookup"><span data-stu-id="c3f3d-117">The <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> binding specifies HTTP as the transport, interoperable security, and other configuration details.</span></span>  
   
-2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] uso del cliente generado con esta configuración, vea [Cómo utilizar un cliente](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
+2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="c3f3d-118">cómo usar el cliente generado con esta configuración, consulte [Cómo: usar un cliente](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="c3f3d-118"> how to use the generated client with this configuration, see [How to: Use a Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).</span></span>  
   
-## Vea también  
- [Utilización de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [Introducción:](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [Autohospedaje](../../../docs/framework/wcf/samples/self-host.md)
+## <a name="see-also"></a><span data-ttu-id="c3f3d-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="c3f3d-119">See Also</span></span>  
+ [<span data-ttu-id="c3f3d-120">Utilización de enlaces para configurar servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="c3f3d-120">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="c3f3d-121">Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="c3f3d-121">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="c3f3d-122">Cómo crear un cliente</span><span class="sxs-lookup"><span data-stu-id="c3f3d-122">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="c3f3d-123">Introducción</span><span class="sxs-lookup"><span data-stu-id="c3f3d-123">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="c3f3d-124">Autohospedaje</span><span class="sxs-lookup"><span data-stu-id="c3f3d-124">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

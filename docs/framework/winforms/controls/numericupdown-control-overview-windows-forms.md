@@ -1,39 +1,39 @@
 ---
-title: "Informaci&#243;n general sobre el control NumericUpDown (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NumericUpDown"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "control de botones de número, Windows Forms"
-  - "NumericUpDown (control) [Windows Forms], acerca del control NumericUpDown"
-  - "control de botón de número, Windows Forms"
+title: "Información general sobre el control NumericUpDown (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NumericUpDown
+helpviewer_keywords:
+- numeric spin button control [Windows Forms], Windows Forms
+- NumericUpDown control [Windows Forms], about NumericUpDown control
+- spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e1afb128fd5e098a59fa2636f09998a2a463c926
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el control NumericUpDown (formularios Windows Forms)
-El control <xref:System.Windows.Forms.NumericUpDown> es similar a una combinación de un cuadro de texto y un par de flechas en las que el usuario puede hacer clic para ajustar un valor.  El control muestra y establece un valor numérico único a partir de una lista de opciones de valor numérico fijo.  Para incrementar y reducir el número, el usuario puede hacer clic en los botones hacia arriba y hacia abajo, presionar las teclas de dirección ARRIBA y ABAJO, o escribir un número en la parte del cuadro de texto del control.  Al presionar la tecla de dirección ARRIBA, el número se mueve hacia arriba hacia el valor máximo; al presionar la tecla de dirección ABAJO, el número se mueve hacia el mínimo.  
+# <a name="numericupdown-control-overview-windows-forms"></a><span data-ttu-id="51d5e-102">Información general sobre el control NumericUpDown (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="51d5e-102">NumericUpDown Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="51d5e-103">El <xref:System.Windows.Forms.NumericUpDown> control es similar a una combinación de un cuadro de texto y un par de flechas en las que el usuario puede hacer clic para ajustar un valor.</span><span class="sxs-lookup"><span data-stu-id="51d5e-103">The <xref:System.Windows.Forms.NumericUpDown> control looks like a combination of a text box and a pair of arrows that the user can click to adjust a value.</span></span> <span data-ttu-id="51d5e-104">El control muestra y establece un valor numérico único en una lista de opciones de valor numérico fijas.</span><span class="sxs-lookup"><span data-stu-id="51d5e-104">The control displays and sets a single numeric value from a list of fixed numeric-value choices.</span></span> <span data-ttu-id="51d5e-105">El usuario puede aumentar y reducir el número, haga clic en arriba y abajo, presionando las teclas de dirección arriba y abajo, o escriba un número en el elemento de cuadro de texto del control.</span><span class="sxs-lookup"><span data-stu-id="51d5e-105">The user can increase and decrease the number by clicking the up and down arrows, by pressing the UP and DOWN ARROW keys, or by typing a number in the text box part of the control.</span></span> <span data-ttu-id="51d5e-106">Al presionar la tecla flecha arriba desplaza el número en el valor máximo; al presionar la tecla de flecha abajo mueve el número hacia el valor mínimo.</span><span class="sxs-lookup"><span data-stu-id="51d5e-106">Clicking the UP ARROW key moves the number toward the maximum; clicking the DOWN ARROW key moves the number toward the minimum.</span></span>  
   
- Debido a su versátil funcionalidad, este control es una elección obvia, por ejemplo, si desea crear un control de volumen para una aplicación de reproducción de música.  El control <xref:System.Windows.Forms.NumericUpDown> se utiliza en muchas aplicaciones del Panel de control de Windows.  
+ <span data-ttu-id="51d5e-107">Debido a su versátil funcionalidad, este control es una opción obvia, por ejemplo, si desea crear un control de volumen para una aplicación de Reproductor de música.</span><span class="sxs-lookup"><span data-stu-id="51d5e-107">Because of its versatile functionality, this control is an obvious choice, for example, if you want to create a volume control for a music player application.</span></span> <span data-ttu-id="51d5e-108">El <xref:System.Windows.Forms.NumericUpDown> control se utiliza en muchas aplicaciones de Panel de Control de Windows.</span><span class="sxs-lookup"><span data-stu-id="51d5e-108">The <xref:System.Windows.Forms.NumericUpDown> control is used in many Windows Control Panel applications.</span></span>  
   
-## Propiedades y métodos principales  
- Los números mostrados en el cuadro de texto de control pueden presentarse en una variedad de formatos, incluso el hexadecimal.  Para obtener más información, vea [Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).  Las propiedades principales del control son <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> \(valor predeterminado 100\), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> \(valor predeterminado 0\) y <xref:System.Windows.Forms.NumericUpDown.Increment%2A> \(valor predeterminado 1\).  La propiedad <xref:System.Windows.Forms.NumericUpDown.Value%2A> establece el número seleccionado actualmente en el control.  La propiedad <xref:System.Windows.Forms.NumericUpDown.Increment%2A> establece la cantidad en la que se ajusta el valor cuando el usuario hace clic en un botón arriba o abajo.  Cuando el foco se desplaza fuera del control, la entrada escrita se valida frente a los valores numéricos máximo y mínimo.  Se puede aumentar la velocidad del control por los números, si el usuario presiona la teclas de flecha arriba y abajo, con la propiedad <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A>.  Las propiedades principales del control son <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> y <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="51d5e-109">Métodos y propiedades claves</span><span class="sxs-lookup"><span data-stu-id="51d5e-109">Key Properties and Methods</span></span>  
+ <span data-ttu-id="51d5e-110">Los números mostrados en el cuadro de texto del control pueden estar en una variedad de formatos, incluidos los hexadecimales.</span><span class="sxs-lookup"><span data-stu-id="51d5e-110">The numbers displayed in the control's text box can be in a variety of formats, including hexadecimal.</span></span> <span data-ttu-id="51d5e-111">Para obtener más información, consulte [Cómo: establecer el formato para el NumericUpDown Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).</span><span class="sxs-lookup"><span data-stu-id="51d5e-111">For more information, see [How to: Set the Format for the Windows Forms NumericUpDown Control](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).</span></span> <span data-ttu-id="51d5e-112">Las propiedades principales del control son <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (valor predeterminado es 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (valor predeterminado es 0), y <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (valor predeterminado 1).</span><span class="sxs-lookup"><span data-stu-id="51d5e-112">The key properties of the control are <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (default value 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (default value 0), and <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (default value 1).</span></span> <span data-ttu-id="51d5e-113">El <xref:System.Windows.Forms.NumericUpDown.Value%2A> propiedad establece el número seleccionado actualmente en el control.</span><span class="sxs-lookup"><span data-stu-id="51d5e-113">The <xref:System.Windows.Forms.NumericUpDown.Value%2A> property sets the current number selected in the control.</span></span> <span data-ttu-id="51d5e-114">El <xref:System.Windows.Forms.NumericUpDown.Increment%2A> propiedad establece la cantidad que el número se ajusta cuando el usuario hace clic en un arriba o flecha abajo.</span><span class="sxs-lookup"><span data-stu-id="51d5e-114">The <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property sets the amount that the number is adjusted by when the user clicks an up or down arrow.</span></span> <span data-ttu-id="51d5e-115">Cuando el foco se desplaza fuera del control, ninguna entrada con tipo se validarán con los valores numéricos de mínimos y máximo.</span><span class="sxs-lookup"><span data-stu-id="51d5e-115">When focus moves off the control, any typed input will be validated against the minimum and maximum numeric values.</span></span> <span data-ttu-id="51d5e-116">Puede aumentar la velocidad que el control se mueve a través de números, cuando el usuario presiona continuamente arriba o flecha abajo, con el <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="51d5e-116">You can increase the speed that the control moves through numbers, when the user continuously presses the up or down arrow, with the <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> property.</span></span> <span data-ttu-id="51d5e-117">Los métodos principales del control son <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> y <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="51d5e-117">The key methods of the control are <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.NumericUpDown>   
- [NumericUpDown \(Control\)](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)   
- [Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)   
- [TextBox \(Control\)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="51d5e-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="51d5e-118">See Also</span></span>  
+ <xref:System.Windows.Forms.NumericUpDown>  
+ [<span data-ttu-id="51d5e-119">NumericUpDown (control)</span><span class="sxs-lookup"><span data-stu-id="51d5e-119">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [<span data-ttu-id="51d5e-120">Cómo: Establecer el formato del control NumericUpDown de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="51d5e-120">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ [<span data-ttu-id="51d5e-121">Control TextBox</span><span class="sxs-lookup"><span data-stu-id="51d5e-121">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

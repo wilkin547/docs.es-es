@@ -1,42 +1,41 @@
 ---
-title: "C&#243;mo: Obtener acceso a una variable que oculta una clase derivada (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "clases base, tener acceso a elementos"
-  - "elementos declarados, hacer referencia"
-  - "nombres de elementos, calificación"
-  - "calificación, de nombres de elementos"
-  - "referencias, elementos declarados"
-  - "variables [Visual Basic], tener acceso a los ocultos"
+title: "Cómo: Obtener acceso a una variable que oculta una clase derivada (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- base classes [Visual Basic], accessing elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declared elements [Visual Basic], referencing
+- variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Obtener acceso a una variable que oculta una clase derivada (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Cuando un código de una clase derivada tiene acceso a una variable, el compilador resuelve normalmente la referencia en la versión accesible más cercana, es decir, la versión accesible con el menor número de pasos de derivación en sentido inverso desde la clase que obtiene acceso.  Si la variable está definida en la clase derivada, el código tiene acceso normalmente a esta definición.  
+# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a><span data-ttu-id="0c497-102">Cómo: Obtener acceso a una variable que oculta una clase derivada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c497-102">How to: Access a Variable Hidden by a Derived Class (Visual Basic)</span></span>
+<span data-ttu-id="0c497-103">Cuando el código en una clase derivada tiene acceso a una variable, el compilador resuelve normalmente la referencia a la versión accesible más cercana, es decir, la versión accesible los mínimos pasos de derivación en sentido con versiones anteriores de la clase que tiene acceso.</span><span class="sxs-lookup"><span data-stu-id="0c497-103">When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class.</span></span> <span data-ttu-id="0c497-104">Si la variable se define en la clase derivada, el código tiene acceso normalmente a esa definición.</span><span class="sxs-lookup"><span data-stu-id="0c497-104">If the variable is defined in the derived class, the code normally accesses that definition.</span></span>  
   
- Si la variable de la clase derivada enmascara una variable de la clase base, oculta la versión de la clase base.  Sin embargo, puede tener acceso a la variable de la clase base calificándola con la palabra clave `MyBase`.  
+ <span data-ttu-id="0c497-105">Si la variable de clase derivada oculta una variable en la clase base, oculta la versión de la clase base.</span><span class="sxs-lookup"><span data-stu-id="0c497-105">If the derived class variable shadows a variable in the base class, it hides the base class version.</span></span> <span data-ttu-id="0c497-106">Sin embargo, puede acceder a la variable de clase base mediante su calificación con la `MyBase` palabra clave.</span><span class="sxs-lookup"><span data-stu-id="0c497-106">However, you can access the base class variable by qualifying it with the `MyBase` keyword.</span></span>  
   
-### Para tener acceso a una variable de la clase base ocultada por una clase derivada  
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a><span data-ttu-id="0c497-107">Para obtener acceso a una variable de clase base oculta mediante una clase derivada</span><span class="sxs-lookup"><span data-stu-id="0c497-107">To access a base class variable hidden by a derived class</span></span>  
   
--   En una expresión o instrucción de asignación, preceda el nombre de variable con la palabra clave `MyBase` y un punto \(`.`\).  
+-   <span data-ttu-id="0c497-108">En una expresión o instrucción de asignación, incluya delante del nombre de variable con el `MyBase` palabra clave y un período (`.`).</span><span class="sxs-lookup"><span data-stu-id="0c497-108">In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).</span></span>  
   
-     El compilador resuelve la referencia en la versión de la clase base de la variable.  
+     <span data-ttu-id="0c497-109">El compilador resuelve la referencia a la versión de la clase base de la variable.</span><span class="sxs-lookup"><span data-stu-id="0c497-109">The compiler resolves the reference to the base class version of the variable.</span></span>  
   
-     El ejemplo siguiente ilustra el sombreado por herencia.  Realiza dos referencias, una que tiene acceso a la variable de sombreado y otra que omite el sombreado.  
+     <span data-ttu-id="0c497-110">En el ejemplo siguiente se ilustra el sombreado por herencia.</span><span class="sxs-lookup"><span data-stu-id="0c497-110">The following example illustrates shadowing through inheritance.</span></span> <span data-ttu-id="0c497-111">Realiza dos referencias, una que tiene acceso a la variable de sombreado y otra que omite el sombreado.</span><span class="sxs-lookup"><span data-stu-id="0c497-111">It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.</span></span>  
   
     ```  
     Public Class shadowBaseClass  
@@ -53,18 +52,18 @@ Cuando un código de una clase derivada tiene acceso a una variable, el compilad
     End Class  
     ```  
   
-     En el ejemplo anterior, se declara la variable `shadowString` en la clase base y se sombrea dicha variable en la clase derivada.  El procedimiento `showStrings` de la clase derivada muestra la versión de sombreado de la cadena cuando el nombre `shadowString` no está calificado.  Luego, muestra la versión oculta cuando `shadowString` está calificado con la palabra clave `MyBase` .  
+     <span data-ttu-id="0c497-112">En el ejemplo anterior se declara la variable `shadowString` en la clase base y la sombra en la clase derivada.</span><span class="sxs-lookup"><span data-stu-id="0c497-112">The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class.</span></span> <span data-ttu-id="0c497-113">El procedimiento `showStrings` en la clase derivada muestra la versión de sombreado de la cadena cuando el nombre `shadowString` no está calificado.</span><span class="sxs-lookup"><span data-stu-id="0c497-113">The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified.</span></span> <span data-ttu-id="0c497-114">A continuación, muestra la versión sombreada cuando `shadowString` se califica con el `MyBase` palabra clave.</span><span class="sxs-lookup"><span data-stu-id="0c497-114">It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.</span></span>  
   
-## Programación eficaz  
- Para reducir el riesgo de hacer referencia a una versión no deseada de una variable oculta, puede calificar por completo todas las referencias a una variable oculta.  El ocultamiento presenta más de una versión de una variable con el mismo nombre.  Cuando una instrucción de código hace referencia al nombre de variable, la versión en la que el compilador resuelve la referencia depende de factores como la ubicación de la instrucción de código y la presencia de una cadena de calificación.  Esto puede aumentar el riesgo de hacer referencia a una versión errónea de la variable.  
+## <a name="robust-programming"></a><span data-ttu-id="0c497-115">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="0c497-115">Robust Programming</span></span>  
+ <span data-ttu-id="0c497-116">Para reducir el riesgo de que hace referencia a una versión no deseada de una variable sombreada, puede calificar por completo todas las referencias a una variable sombreada.</span><span class="sxs-lookup"><span data-stu-id="0c497-116">To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable.</span></span> <span data-ttu-id="0c497-117">El sombreado presenta más de una versión de una variable con el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="0c497-117">Shadowing introduces more than one version of a variable with the same name.</span></span> <span data-ttu-id="0c497-118">Cuando una instrucción de código hace referencia al nombre de variable, la versión a la que el compilador resuelve la referencia depende de factores como la ubicación de la instrucción de código y la presencia de una cadena de calificación.</span><span class="sxs-lookup"><span data-stu-id="0c497-118">When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string.</span></span> <span data-ttu-id="0c497-119">Esto puede aumentar el riesgo de que hace referencia a una versión incorrecta de la variable.</span><span class="sxs-lookup"><span data-stu-id="0c497-119">This can increase the risk of referring to the wrong version of the variable.</span></span>  
   
-## Vea también  
- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Diferencias entre sombrear y reemplazar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [Cómo: Ocultar una variable con el mismo nombre que su variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [Cómo: Ocultar una variable heredada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Fundamentos de la herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="0c497-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="0c497-120">See Also</span></span>  
+ [<span data-ttu-id="0c497-121">Referencias a elementos declarados</span><span class="sxs-lookup"><span data-stu-id="0c497-121">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="0c497-122">Sombrear en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0c497-122">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="0c497-123">Diferencias entre sombrear y reemplazar</span><span class="sxs-lookup"><span data-stu-id="0c497-123">Differences Between Shadowing and Overriding</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [<span data-ttu-id="0c497-124">Ocultar una variable con el mismo nombre que su variable</span><span class="sxs-lookup"><span data-stu-id="0c497-124">How to: Hide a Variable with the Same Name as Your Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [<span data-ttu-id="0c497-125">Ocultar una variable heredada</span><span class="sxs-lookup"><span data-stu-id="0c497-125">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="0c497-126">Shadows</span><span class="sxs-lookup"><span data-stu-id="0c497-126">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="0c497-127">Overrides</span><span class="sxs-lookup"><span data-stu-id="0c497-127">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="0c497-128">Me, My, MyBase y MyClass</span><span class="sxs-lookup"><span data-stu-id="0c497-128">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [<span data-ttu-id="0c497-129">Fundamentos de la herencia</span><span class="sxs-lookup"><span data-stu-id="0c497-129">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,110 +1,113 @@
 ---
-title: "Creaci&#243;n de un control de entrada manuscrita | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recopilar trazos de entrada manuscrita"
-  - "DynamicRenderer (objetos)"
-  - "controles para proporcionar entrada manuscrita"
-  - "trazos de entrada manuscrita, recopilar"
-  - "trazos de entrada manuscrita, administrar"
-  - "entrada manuscrita, representación"
-  - "entrada desde el mouse, aceptar"
-  - "administrar trazos de entrada manuscrita"
-  - "entrada del mouse, aceptar"
-  - "representar entrada manuscrita"
-  - "StylusPlugIn (objetos)"
+title: "Creación de un control de entrada manuscrita"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ink strokes [WPF], managing
+- managing ink strokes [WPF]
+- ink input control [WPF]
+- input from mouse [WPF], accepting
+- mouse input [WPF], accepting
+- ink [WPF], rendering
+- ink strokes [WPF], collecting
+- rendering ink [WPF]
+- collecting ink strokes [WPF]
+- DynamicRenderer objects [WPF]
+- StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cfc6553fe9dd176d2aa557df906141c13a5f425
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Creaci&#243;n de un control de entrada manuscrita
-Puede crear un control personalizado que represente la entrada de lápiz de forma dinámica y estática.  Es decir, es posible representar la entrada de lápiz mientras el usuario dibuja el trazo, con lo que parece "fluir" del lápiz de Tablet PC, y mostrar la entrada de lápiz una vez agregada al control, bien a través del lápiz de Tablet PC, pegada desde el Portapapeles o cargada desde un archivo.  Para representar dinámicamente la entrada de lápiz, el control debe usar <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  Para representar estáticamente la entrada de lápiz, debe invalidar los métodos de evento de lápiz \(<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A> y <xref:System.Windows.UIElement.OnStylusUp%2A>\) para recopilar los datos de <xref:System.Windows.Input.StylusPoint>, crear los trazos y agregarlos a un objeto <xref:System.Windows.Controls.InkPresenter> \(que representa la entrada de lápiz en el control\).  
+# <a name="creating-an-ink-input-control"></a><span data-ttu-id="a1413-102">Creación de un control de entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="a1413-102">Creating an Ink Input Control</span></span>
+<span data-ttu-id="a1413-103">Puede crear un control personalizado dinámicamente y estáticamente representa la entrada de lápiz.</span><span class="sxs-lookup"><span data-stu-id="a1413-103">You can create a custom control that dynamically and statically renders ink.</span></span> <span data-ttu-id="a1413-104">Es decir, tinta se representan como un usuario dibuja un trazo que produce la tinta que aparezca "fluir" del lápiz de tablet PC y mostrar tinta después de se agrega al control, ya sea mediante el lápiz de tablet PC, pegado desde el Portapapeles o cargada desde un archivo.</span><span class="sxs-lookup"><span data-stu-id="a1413-104">That is, render ink as a user draws a stroke, causing the ink to appear to "flow" from the tablet pen, and display ink after it is added to the control, either via the tablet pen, pasted from the Clipboard, or loaded from a file.</span></span> <span data-ttu-id="a1413-105">Para representar dinámicamente la tinta, el control debe usar un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span><span class="sxs-lookup"><span data-stu-id="a1413-105">To dynamically render ink, your control must use a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span> <span data-ttu-id="a1413-106">Para representar estáticamente tinta, debe invalidar los métodos de evento de lápiz (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, y <xref:System.Windows.UIElement.OnStylusUp%2A>) para recopilar <xref:System.Windows.Input.StylusPoint> datos, crear los trazos y agregarlos a un <xref:System.Windows.Controls.InkPresenter> (que representa la entrada manuscrita en el control).</span><span class="sxs-lookup"><span data-stu-id="a1413-106">To statically render ink, you must override the stylus event methods (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, and <xref:System.Windows.UIElement.OnStylusUp%2A>) to collect <xref:System.Windows.Input.StylusPoint> data, create strokes, and add them to an <xref:System.Windows.Controls.InkPresenter> (which renders the ink on the control).</span></span>  
   
- Este tema contiene las siguientes subsecciones:  
+ <span data-ttu-id="a1413-107">Este tema contiene las siguientes subsecciones:</span><span class="sxs-lookup"><span data-stu-id="a1413-107">This topic contains the following subsections:</span></span>  
   
--   [Cómo: Recopilar datos de los puntos de lápiz y crear trazos de entrada de lápiz](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [<span data-ttu-id="a1413-108">Cómo: recopilar datos de punto de lápiz y crear trazos de tinta</span><span class="sxs-lookup"><span data-stu-id="a1413-108">How to: Collect Stylus Point Data and Create Ink Strokes</span></span>](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Cómo: Permitir que el control acepte la entrada del mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [<span data-ttu-id="a1413-109">Cómo: habilitar el Control Aceptar la entrada desde el Mouse</span><span class="sxs-lookup"><span data-stu-id="a1413-109">How to: Enable Your Control to Accept Input from the Mouse</span></span>](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Resultado final](#PuttingItTogether)  
+-   [<span data-ttu-id="a1413-110">Colocarlo juntos</span><span class="sxs-lookup"><span data-stu-id="a1413-110">Putting it together</span></span>](#PuttingItTogether)  
   
--   [Uso de complementos adicionales y representadores dinámicos](#UsingAdditionalPluginsAndDynamicRenderers)  
+-   [<span data-ttu-id="a1413-111">Uso de complementos adicionales y representadores dinámicos</span><span class="sxs-lookup"><span data-stu-id="a1413-111">Using Additional Plug-ins and DynamicRenderers</span></span>](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Conclusión](#AdvancedInkHandling_Conclusion)  
+-   [<span data-ttu-id="a1413-112">Conclusión</span><span class="sxs-lookup"><span data-stu-id="a1413-112">Conclusion</span></span>](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
-## Cómo: Recopilar datos de los puntos de lápiz y crear trazos de entrada de lápiz  
- Para crear un control que recopile y administre los trazos de entrada de lápiz, realice estas acciones:  
+## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a><span data-ttu-id="a1413-113">Cómo: recopilar datos de punto de lápiz y crear trazos de tinta</span><span class="sxs-lookup"><span data-stu-id="a1413-113">How to: Collect Stylus Point Data and Create Ink Strokes</span></span>  
+ <span data-ttu-id="a1413-114">Para crear un control que recopila y administra tinta trazos hacer lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="a1413-114">To create a control that collects and manages ink strokes do the following:</span></span>  
   
-1.  Derive una clase de <xref:System.Windows.Controls.Control> o una de las clases derivadas de <xref:System.Windows.Controls.Control>, como <xref:System.Windows.Controls.Label>.  
+1.  <span data-ttu-id="a1413-115">Derivar una clase de <xref:System.Windows.Controls.Control> o una de las clases derivadas de <xref:System.Windows.Controls.Control>, como <xref:System.Windows.Controls.Label>.</span><span class="sxs-lookup"><span data-stu-id="a1413-115">Derive a class from <xref:System.Windows.Controls.Control> or one of the classes derived from <xref:System.Windows.Controls.Control>, such as <xref:System.Windows.Controls.Label>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
     [!code-csharp[AdvancedInkTopicsSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#14)]  
     [!code-csharp[AdvancedInkTopicsSamples#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#15)]  
   
-2.  Agregue un objeto <xref:System.Windows.Controls.InkPresenter> a la clase y establezca la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> en el nuevo objeto <xref:System.Windows.Controls.InkPresenter>.  
+2.  <span data-ttu-id="a1413-116">Agregar un <xref:System.Windows.Controls.InkPresenter> a la clase y establezca la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad al nuevo <xref:System.Windows.Controls.InkPresenter>.</span><span class="sxs-lookup"><span data-stu-id="a1413-116">Add an <xref:System.Windows.Controls.InkPresenter> to the class and set the <xref:System.Windows.Controls.ContentControl.Content%2A> property to the new <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#16)]  
   
-3.  Asocie la propiedad <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> de <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> al objeto <xref:System.Windows.Controls.InkPresenter> mediante una llamada al método <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> y agregue <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> a la colección <xref:System.Windows.UIElement.StylusPlugIns%2A>.  Esto permite a <xref:System.Windows.Controls.InkPresenter> mostrar la entrada de lápiz a medida que el control recopila los datos de los puntos de lápiz.  
+3.  <span data-ttu-id="a1413-117">Adjuntar el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> de la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> a la <xref:System.Windows.Controls.InkPresenter> mediante una llamada a la <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> método y agregue el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> a la <xref:System.Windows.UIElement.StylusPlugIns%2A> colección.</span><span class="sxs-lookup"><span data-stu-id="a1413-117">Attach the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> of the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.Controls.InkPresenter> by calling the <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> method, and add the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection.</span></span> <span data-ttu-id="a1413-118">Esto permite la <xref:System.Windows.Controls.InkPresenter> para mostrar la tinta tal y como se recopilan los datos de punto de lápiz por el control.</span><span class="sxs-lookup"><span data-stu-id="a1413-118">This allows the <xref:System.Windows.Controls.InkPresenter> to display the ink as the stylus point data is collected by your control.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
     [!code-csharp[AdvancedInkTopicsSamples#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
   
-4.  Invalide el método <xref:System.Windows.UIElement.OnStylusDown%2A>.  En este método, capture el lápiz con una llamada a <xref:System.Windows.Input.Stylus.Capture%2A>.  Al capturar el lápiz, su control seguirá recibiendo eventos <xref:System.Windows.UIElement.StylusMove> y <xref:System.Windows.UIElement.StylusUp> aun cuando el lápiz abandone los límites del control.  Esto no es estrictamente obligatorio, pero es deseable en la mayoría de los casos, para mejorar la experiencia del usuario.  Cree una nueva <xref:System.Windows.Input.StylusPointCollection> para recopilar los datos de <xref:System.Windows.Input.StylusPoint>.  Finalmente, agregue el conjunto inicial de datos de <xref:System.Windows.Input.StylusPoint> a <xref:System.Windows.Input.StylusPointCollection>.  
+4.  <span data-ttu-id="a1413-119">Invalide el método <xref:System.Windows.UIElement.OnStylusDown%2A>.</span><span class="sxs-lookup"><span data-stu-id="a1413-119">Override the <xref:System.Windows.UIElement.OnStylusDown%2A> method.</span></span>  <span data-ttu-id="a1413-120">En este método, capture el lápiz con una llamada a <xref:System.Windows.Input.Stylus.Capture%2A>.</span><span class="sxs-lookup"><span data-stu-id="a1413-120">In this method, capture the stylus with a call to <xref:System.Windows.Input.Stylus.Capture%2A>.</span></span> <span data-ttu-id="a1413-121">Al capturar el lápiz, el control le para continuar recibiendo <xref:System.Windows.UIElement.StylusMove> y <xref:System.Windows.UIElement.StylusUp> incluso si el lápiz sale de los límites del control de eventos.</span><span class="sxs-lookup"><span data-stu-id="a1413-121">By capturing the stylus, your control will to continue to receive <xref:System.Windows.UIElement.StylusMove> and <xref:System.Windows.UIElement.StylusUp> events even if the stylus leaves the control's boundaries.</span></span> <span data-ttu-id="a1413-122">Esto no es estrictamente obligatorio, pero casi siempre deseado para una buena experiencia del usuario.</span><span class="sxs-lookup"><span data-stu-id="a1413-122">This is not strictly mandatory, but almost always desired for a good user experience.</span></span> <span data-ttu-id="a1413-123">Crear un nuevo <xref:System.Windows.Input.StylusPointCollection> para recopilar <xref:System.Windows.Input.StylusPoint> datos.</span><span class="sxs-lookup"><span data-stu-id="a1413-123">Create a new <xref:System.Windows.Input.StylusPointCollection> to gather <xref:System.Windows.Input.StylusPoint> data.</span></span> <span data-ttu-id="a1413-124">Por último, agregue el conjunto inicial de <xref:System.Windows.Input.StylusPoint> datos a la <xref:System.Windows.Input.StylusPointCollection>.</span><span class="sxs-lookup"><span data-stu-id="a1413-124">Finally, add the initial set of <xref:System.Windows.Input.StylusPoint> data to the <xref:System.Windows.Input.StylusPointCollection>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
   
-5.  Invalide el método <xref:System.Windows.UIElement.OnStylusMove%2A> y agregue los datos de <xref:System.Windows.Input.StylusPoint> al objeto <xref:System.Windows.Input.StylusPointCollection> que creó anteriormente.  
+5.  <span data-ttu-id="a1413-125">Invalidar el <xref:System.Windows.UIElement.OnStylusMove%2A> método y agregue el <xref:System.Windows.Input.StylusPoint> datos a la <xref:System.Windows.Input.StylusPointCollection> objeto que creó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="a1413-125">Override the <xref:System.Windows.UIElement.OnStylusMove%2A> method and add the <xref:System.Windows.Input.StylusPoint> data to the <xref:System.Windows.Input.StylusPointCollection> object that you created earlier.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#8)]  
   
-6.  Invalide el método <xref:System.Windows.UIElement.OnStylusUp%2A> y cree un nuevo objeto <xref:System.Windows.Ink.Stroke> con los datos de <xref:System.Windows.Input.StylusPointCollection>.  Agregue el objeto <xref:System.Windows.Ink.Stroke> que ha creado a la colección <xref:System.Windows.Controls.InkPresenter.Strokes%2A> de <xref:System.Windows.Controls.InkPresenter> y libere la captura del lápiz.  
+6.  <span data-ttu-id="a1413-126">Invalidar el <xref:System.Windows.UIElement.OnStylusUp%2A> método y crear un nuevo <xref:System.Windows.Ink.Stroke> con el <xref:System.Windows.Input.StylusPointCollection> datos.</span><span class="sxs-lookup"><span data-stu-id="a1413-126">Override the <xref:System.Windows.UIElement.OnStylusUp%2A> method and create a new <xref:System.Windows.Ink.Stroke> with the <xref:System.Windows.Input.StylusPointCollection> data.</span></span> <span data-ttu-id="a1413-127">Agregue el nuevo <xref:System.Windows.Ink.Stroke> que ha creado para el <xref:System.Windows.Controls.InkPresenter.Strokes%2A> colección de la <xref:System.Windows.Controls.InkPresenter> y liberar la captura del lápiz.</span><span class="sxs-lookup"><span data-stu-id="a1413-127">Add the new <xref:System.Windows.Ink.Stroke> you created to the <xref:System.Windows.Controls.InkPresenter.Strokes%2A> collection of the <xref:System.Windows.Controls.InkPresenter> and release stylus capture.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
-## Cómo: Permitir que el control acepte la entrada del mouse  
- Si agrega el control anterior a su aplicación, lo ejecuta y usa el mouse como dispositivo de entrada, observará que no se conservan los trazos.  Para conservar los trazos cuando se use el mouse como dispositivo de entrada realice los pasos siguientes:  
+## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a><span data-ttu-id="a1413-128">Cómo: habilitar el Control Aceptar la entrada desde el Mouse</span><span class="sxs-lookup"><span data-stu-id="a1413-128">How to: Enable Your Control to Accept Input from the Mouse</span></span>  
+ <span data-ttu-id="a1413-129">Si agrega el control anterior a la aplicación, ejecutar y usar el mouse como un dispositivo de entrada, observará que no se conservan los trazos.</span><span class="sxs-lookup"><span data-stu-id="a1413-129">If you add the preceding control to your application, run it, and use the mouse as an input device, you will notice that the strokes are not persisted.</span></span> <span data-ttu-id="a1413-130">Para conservar los trazos cuando el mouse se usa como el dispositivo de entrada realice lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="a1413-130">To persist the strokes when the mouse is used as the input device do the following:</span></span>  
   
-1.  Invalide el método <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> y cree un nuevo objeto <xref:System.Windows.Input.StylusPointCollection>. Obtenga la posición del mouse cuando se produjo el evento, cree un objeto <xref:System.Windows.Input.StylusPoint> a partir de los datos de los puntos y agregue el objeto <xref:System.Windows.Input.StylusPoint> a <xref:System.Windows.Input.StylusPointCollection>.  
+1.  <span data-ttu-id="a1413-131">Invalidar el <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> y crear un nuevo <xref:System.Windows.Input.StylusPointCollection> obtener la posición del mouse cuando se produjo el evento y crear un <xref:System.Windows.Input.StylusPoint> con los datos de coma y agrega el <xref:System.Windows.Input.StylusPoint> a la <xref:System.Windows.Input.StylusPointCollection>.</span><span class="sxs-lookup"><span data-stu-id="a1413-131">Override the <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> and create a new <xref:System.Windows.Input.StylusPointCollection> Get the position of the mouse when the event occurred and create a <xref:System.Windows.Input.StylusPoint> using the point data and add the <xref:System.Windows.Input.StylusPoint> to the <xref:System.Windows.Input.StylusPointCollection>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
   
-2.  Invalide el método <xref:System.Windows.UIElement.OnMouseMove%2A>.  Obtenga la posición del mouse cuando se produjo el evento y cree un objeto <xref:System.Windows.Input.StylusPoint> con los datos de los puntos.  Agregue <xref:System.Windows.Input.StylusPoint> al objeto <xref:System.Windows.Input.StylusPointCollection> que creó anteriormente.  
+2.  <span data-ttu-id="a1413-132">Invalide el método <xref:System.Windows.UIElement.OnMouseMove%2A>.</span><span class="sxs-lookup"><span data-stu-id="a1413-132">Override the <xref:System.Windows.UIElement.OnMouseMove%2A> method.</span></span> <span data-ttu-id="a1413-133">Obtener la posición del mouse cuando se produjo el evento y crear un <xref:System.Windows.Input.StylusPoint> con los datos de punto.</span><span class="sxs-lookup"><span data-stu-id="a1413-133">Get the position of the mouse when the event occurred and create a <xref:System.Windows.Input.StylusPoint> using the point data.</span></span>  <span data-ttu-id="a1413-134">Agregar el <xref:System.Windows.Input.StylusPoint> a la <xref:System.Windows.Input.StylusPointCollection> objeto que creó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="a1413-134">Add the <xref:System.Windows.Input.StylusPoint> to the <xref:System.Windows.Input.StylusPointCollection> object that you created earlier.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
   
-3.  Invalide el método <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A>.  Cree un nuevo objeto <xref:System.Windows.Ink.Stroke> con los datos de <xref:System.Windows.Input.StylusPointCollection> y agregue el nuevo <xref:System.Windows.Ink.Stroke> que creó a la colección <xref:System.Windows.Controls.InkPresenter.Strokes%2A> de <xref:System.Windows.Controls.InkPresenter>.  
+3.  <span data-ttu-id="a1413-135">Invalide el método <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A>.</span><span class="sxs-lookup"><span data-stu-id="a1413-135">Override the <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> method.</span></span>  <span data-ttu-id="a1413-136">Crear un nuevo <xref:System.Windows.Ink.Stroke> con el <xref:System.Windows.Input.StylusPointCollection> datos y agregar los nuevos <xref:System.Windows.Ink.Stroke> que ha creado para el <xref:System.Windows.Controls.InkPresenter.Strokes%2A> colección de la <xref:System.Windows.Controls.InkPresenter>.</span><span class="sxs-lookup"><span data-stu-id="a1413-136">Create a new <xref:System.Windows.Ink.Stroke> with the <xref:System.Windows.Input.StylusPointCollection> data, and add the new <xref:System.Windows.Ink.Stroke> you created to the <xref:System.Windows.Controls.InkPresenter.Strokes%2A> collection of the <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
   
 <a name="PuttingItTogether"></a>   
-## Resultado final  
- En el ejemplo siguiente se ilustra un control personalizado que recopila la entrada de lápiz cuando el usuario emplea el mouse o el lápiz.  
+## <a name="putting-it-together"></a><span data-ttu-id="a1413-137">Colocarlo juntos</span><span class="sxs-lookup"><span data-stu-id="a1413-137">Putting it together</span></span>  
+ <span data-ttu-id="a1413-138">En el ejemplo siguiente es un control personalizado que recopila tinta cuando el usuario usa el mouse o lápiz.</span><span class="sxs-lookup"><span data-stu-id="a1413-138">The following example is a custom control that collects ink when the user uses either the mouse or the pen.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
 [!code-csharp[AdvancedInkTopicsSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#6)]  
   
 <a name="UsingAdditionalPluginsAndDynamicRenderers"></a>   
-## Uso de complementos adicionales y representadores dinámicos  
- Como sucede con InkCanvas, su control personalizado puede tener elementos <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> personalizados y objetos <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> adicionales.  Agréguelos a la colección <xref:System.Windows.UIElement.StylusPlugIns%2A>.  El orden de los objetos <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> en <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> afecta a la apariencia de la entrada de lápiz cuando se representa.  Supongamos que tiene un objeto <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> denominado `dynamicRenderer` y un objeto <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> personalizado denominado `translatePlugin` que desplaza la entrada de lápiz del lápiz de Tablet PC.  Si `translatePlugin` es el primer <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> de <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> y `dynamicRenderer` es el segundo, la entrada de lápiz que "fluye" se desplazará a medida que el usuario mueva el lápiz.  Si `dynamicRenderer` está primero y `translatePlugin` es el segundo, no se desplazará la entrada de lápiz hasta que el usuario levante el lápiz.  
+## <a name="using-additional-plug-ins-and-dynamicrenderers"></a><span data-ttu-id="a1413-139">Uso de complementos adicionales y representadores dinámicos</span><span class="sxs-lookup"><span data-stu-id="a1413-139">Using Additional Plug-ins and DynamicRenderers</span></span>  
+ <span data-ttu-id="a1413-140">Al igual que sucede con InkCanvas, su control personalizado puede tener personalizado <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> y adicionales <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> objetos.</span><span class="sxs-lookup"><span data-stu-id="a1413-140">Like the InkCanvas, your custom control can have custom <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> and additional <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> objects.</span></span> <span data-ttu-id="a1413-141">Agregarlas a la <xref:System.Windows.UIElement.StylusPlugIns%2A> colección.</span><span class="sxs-lookup"><span data-stu-id="a1413-141">Add these to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection.</span></span> <span data-ttu-id="a1413-142">El orden de la <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objetos en el <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> afecta a la apariencia de la tinta cuando se represente.</span><span class="sxs-lookup"><span data-stu-id="a1413-142">The order of the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> affects the appearance of the ink when it is rendered.</span></span> <span data-ttu-id="a1413-143">Suponga que tiene un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> llama `dynamicRenderer` y personalizado <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> denominado `translatePlugin` que desplaza la tinta del lápiz de tablet PC.</span><span class="sxs-lookup"><span data-stu-id="a1413-143">Suppose you have a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> called `dynamicRenderer` and a custom <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> called `translatePlugin` that offsets the ink from the tablet pen.</span></span> <span data-ttu-id="a1413-144">Si `translatePlugin` es la primera <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> en el <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, y `dynamicRenderer` es el segundo, se desplazará la tinta que "fluye" cuando el usuario mueve el lápiz.</span><span class="sxs-lookup"><span data-stu-id="a1413-144">If `translatePlugin` is the first <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, and `dynamicRenderer` is the second, the ink that "flows" will be offset as the user moves the pen.</span></span> <span data-ttu-id="a1413-145">Si `dynamicRenderer` es el primero, y `translatePlugin` es en segundo lugar, la tinta no se desplazará hasta que el usuario levanta el lápiz.</span><span class="sxs-lookup"><span data-stu-id="a1413-145">If `dynamicRenderer` is first, and `translatePlugin` is second, the ink will not be offset until the user lifts the pen.</span></span>  
   
 <a name="AdvancedInkHandling_Conclusion"></a>   
-## Conclusión  
- Puede crear un control que recopile y represente la entrada de lápiz si invalida los métodos de evento de lápiz.  Si crea un control propio, deriva sus propias clases <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> y las inserta en <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, podrá implementar prácticamente cualquier comportamiento imaginable con la entrada de lápiz digital.  Al tener acceso a los datos de <xref:System.Windows.Input.StylusPoint> a medida que se generan, puede personalizar la entrada de <xref:System.Windows.Input.Stylus> y representarla en pantalla según sea adecuado para su aplicación.  Dado que tiene este acceso tan detallado a los datos de <xref:System.Windows.Input.StylusPoint>, puede implementar la recopilación y representación de la entrada de lápiz con un rendimiento óptimo para su aplicación.  
+## <a name="conclusion"></a><span data-ttu-id="a1413-146">Conclusión</span><span class="sxs-lookup"><span data-stu-id="a1413-146">Conclusion</span></span>  
+ <span data-ttu-id="a1413-147">Puede crear un control que recopile y represente la tinta invalidando los métodos de eventos de lápiz.</span><span class="sxs-lookup"><span data-stu-id="a1413-147">You can create a control that collects and renders ink by overriding the stylus event methods.</span></span> <span data-ttu-id="a1413-148">Al crear su propio control, derive su propia <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clases e insertándolos el en <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, puede implementar prácticamente cualquier comportamiento imaginable con la entrada de lápiz digital.</span><span class="sxs-lookup"><span data-stu-id="a1413-148">By creating your own control, deriving your own <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes, and inserting them the into <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, you can implement virtually any behavior imaginable with digital ink.</span></span> <span data-ttu-id="a1413-149">Tener acceso a la <xref:System.Windows.Input.StylusPoint> datos a medida que se generan, lo que le ofrece la oportunidad de personalizar <xref:System.Windows.Input.Stylus> de entrada y representarlo en la pantalla según corresponda para su aplicación.</span><span class="sxs-lookup"><span data-stu-id="a1413-149">You have access to the <xref:System.Windows.Input.StylusPoint> data as it is generated, giving you the opportunity to  customize <xref:System.Windows.Input.Stylus> input and render it on the screen as appropriate for your application.</span></span> <span data-ttu-id="a1413-150">Dado que tienen dicho acceso de bajo nivel a la <xref:System.Windows.Input.StylusPoint> datos, puede implementar la recopilación de tinta y representar con un rendimiento óptimo para la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a1413-150">Because you have such low-level access to the <xref:System.Windows.Input.StylusPoint> data, you can implement ink collection and render it with optimal performance for your application.</span></span>  
   
-## Vea también  
- [Control avanzado de entrada manuscrita](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)   
- [Obtener acceso y manipular entradas manuscritas](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="a1413-151">Vea también</span><span class="sxs-lookup"><span data-stu-id="a1413-151">See Also</span></span>  
+ [<span data-ttu-id="a1413-152">Control avanzado de entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="a1413-152">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [<span data-ttu-id="a1413-153">Obtener acceso y manipular la entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="a1413-153">Accessing and Manipulating Pen Input</span></span>](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

@@ -1,45 +1,46 @@
 ---
-title: "Mouse Pointers in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pointers, setting [Windows Forms]"
-  - "mouse pointers"
-  - "mouse cursors"
-  - "mouse pointers, setting [Windows Forms]"
-  - "cursors, setting [Windows Forms]"
-  - "mouse, cursors"
+title: "Punteros del mouse (ratón) en formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pointers [Windows Forms], setting
+- mouse pointers
+- mouse cursors
+- mouse pointers [Windows Forms], setting
+- cursors [Windows Forms], setting
+- mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4fb0e193ccbced719f30ede91cb59cd51dd349a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Mouse Pointers in Windows Forms
-El *puntero* del mouse, al que a veces se denomina cursor, es un mapa de bits que especifica un punto de foco en la pantalla para la entrada de datos proporcionados por el usuario a través del mouse.  Este tema proporciona información general sobre el puntero del mouse en formularios Windows Forms y describe algunas formas de modificarlo y controlarlo.  
+# <a name="mouse-pointers-in-windows-forms"></a><span data-ttu-id="8c579-102">Punteros del mouse (ratón) en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8c579-102">Mouse Pointers in Windows Forms</span></span>
+<span data-ttu-id="8c579-103">El mouse *puntero*, que a veces se conoce como el cursor es un mapa de bits que especifica un punto de enfoque en la pantalla para la entrada de usuario con el mouse.</span><span class="sxs-lookup"><span data-stu-id="8c579-103">The mouse *pointer*, which is sometimes referred to as the cursor, is a bitmap that specifies a focus point on the screen for user input with the mouse.</span></span> <span data-ttu-id="8c579-104">En este tema se proporciona información general del puntero del mouse (ratón) en formularios Windows Forms y describe algunas de las formas para modificar y controlar el puntero del mouse.</span><span class="sxs-lookup"><span data-stu-id="8c579-104">This topic provides an overview of the mouse pointer in Windows Forms and describes some of the ways to modify and control the mouse pointer.</span></span>  
   
-## Acceso al puntero del mouse  
- La clase <xref:System.Windows.Forms.Cursor> representa el puntero del mouse y cada <xref:System.Windows.Forms.Control> tiene una propiedad <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> que especifica el puntero para ese control.  La clase <xref:System.Windows.Forms.Cursor> contiene las propiedades que describen el puntero, como <xref:System.Windows.Forms.Cursor.Position%2A> y <xref:System.Windows.Forms.Cursor.HotSpot%2A>, así como los métodos que pueden modificar la apariencia del puntero, como <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A> y <xref:System.Windows.Forms.Cursor.DrawStretched%2A>.  
+## <a name="accessing-the-mouse-pointer"></a><span data-ttu-id="8c579-105">Obtener acceso al puntero del Mouse</span><span class="sxs-lookup"><span data-stu-id="8c579-105">Accessing the Mouse Pointer</span></span>  
+ <span data-ttu-id="8c579-106">El puntero del mouse está representado por la <xref:System.Windows.Forms.Cursor> (clase) y cada <xref:System.Windows.Forms.Control> tiene un <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> propiedad que especifica el puntero para ese control.</span><span class="sxs-lookup"><span data-stu-id="8c579-106">The mouse pointer is represented by the <xref:System.Windows.Forms.Cursor> class, and each <xref:System.Windows.Forms.Control> has a <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> property that specifies the pointer for that control.</span></span> <span data-ttu-id="8c579-107">El <xref:System.Windows.Forms.Cursor> clase contiene propiedades que describen el puntero, como la <xref:System.Windows.Forms.Cursor.Position%2A> y <xref:System.Windows.Forms.Cursor.HotSpot%2A> propiedades y métodos que pueden modificar la apariencia del puntero, como la <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, y <xref:System.Windows.Forms.Cursor.DrawStretched%2A> métodos.</span><span class="sxs-lookup"><span data-stu-id="8c579-107">The <xref:System.Windows.Forms.Cursor> class contains properties that describe the pointer, such as the <xref:System.Windows.Forms.Cursor.Position%2A> and <xref:System.Windows.Forms.Cursor.HotSpot%2A> properties, and methods that can modify the appearance of the pointer, such as the <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, and <xref:System.Windows.Forms.Cursor.DrawStretched%2A> methods.</span></span>  
   
-## Controlar el puntero del mouse  
- Es posible que a veces desee limitar el área donde se puede utilizar el puntero del mouse o cambiar su posición.  Puede obtener o establecer la ubicación actual del mouse utilizando la propiedad <xref:System.Windows.Forms.Cursor.Position%2A> de <xref:System.Windows.Forms.Cursor>.  Además, puede limitar el área que puede utilizar el puntero del mouse estableciendo la propiedad <xref:System.Windows.Forms.Cursor.Clip%2A>.  El área de recorte, de manera predeterminada, es la pantalla completa.  
+## <a name="controlling-the-mouse-pointer"></a><span data-ttu-id="8c579-108">Controlar el puntero del Mouse</span><span class="sxs-lookup"><span data-stu-id="8c579-108">Controlling the Mouse Pointer</span></span>  
+ <span data-ttu-id="8c579-109">En ocasiones, puede que desee limitar el área en el que se puede utilizar el puntero del mouse o cambiar la posición del mouse.</span><span class="sxs-lookup"><span data-stu-id="8c579-109">Sometimes you may want to limit the area in which the mouse pointer can be used or change the position the mouse.</span></span> <span data-ttu-id="8c579-110">Puede obtener o establecer la ubicación actual del mouse (ratón) con el <xref:System.Windows.Forms.Cursor.Position%2A> propiedad de la <xref:System.Windows.Forms.Cursor>.</span><span class="sxs-lookup"><span data-stu-id="8c579-110">You can get or set the current location of the mouse using the <xref:System.Windows.Forms.Cursor.Position%2A> property of the <xref:System.Windows.Forms.Cursor>.</span></span> <span data-ttu-id="8c579-111">Además, puede limitar el área que puede utilizarse el puntero del mouse puede configuración el <xref:System.Windows.Forms.Cursor.Clip%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="8c579-111">In addition, you can limit the area the mouse pointer can be used be setting the <xref:System.Windows.Forms.Cursor.Clip%2A> property.</span></span> <span data-ttu-id="8c579-112">El área de recorte, de forma predeterminada, es la pantalla completa.</span><span class="sxs-lookup"><span data-stu-id="8c579-112">The clip area, by default, is the entire screen.</span></span>  
   
-## Cambiar el puntero del mouse  
- Cambiar el puntero del mouse es una forma significativa de proporcionar información al usuario.  Por ejemplo, el puntero del mouse puede modificarse en los controladores de los eventos <xref:System.Windows.Forms.Control.MouseEnter> y <xref:System.Windows.Forms.Control.MouseLeave> para informar al usuario de los cálculos que se están realizando y para limitar la interacción del usuario en el control.  A veces, el puntero del mouse cambiará debido a eventos del sistema, por ejemplo cuando la aplicación realice operaciones de arrastrar y colocar.  
+## <a name="changing-the-mouse-pointer"></a><span data-ttu-id="8c579-113">Cambiar el puntero del Mouse</span><span class="sxs-lookup"><span data-stu-id="8c579-113">Changing the Mouse Pointer</span></span>  
+ <span data-ttu-id="8c579-114">Cambiar el puntero del mouse es un aspecto importante de proporcionar comentarios al usuario.</span><span class="sxs-lookup"><span data-stu-id="8c579-114">Changing the mouse pointer is an important way of providing feedback to the user.</span></span> <span data-ttu-id="8c579-115">Por ejemplo, el puntero del mouse puede modificarse en los controladores de la <xref:System.Windows.Forms.Control.MouseEnter> y <xref:System.Windows.Forms.Control.MouseLeave> para indicar al usuario que se están produciendo los cálculos y para limitar la interacción del usuario en el control de eventos.</span><span class="sxs-lookup"><span data-stu-id="8c579-115">For example, the mouse pointer can be modified in the handlers of the <xref:System.Windows.Forms.Control.MouseEnter> and <xref:System.Windows.Forms.Control.MouseLeave> events to tell the user that computations are occurring and to limit user interaction in the control.</span></span> <span data-ttu-id="8c579-116">A veces, el puntero del mouse cambiará debido a eventos del sistema, como cuando la aplicación está implicada en una operación de arrastrar y colocar.</span><span class="sxs-lookup"><span data-stu-id="8c579-116">Sometimes, the mouse pointer will change because of system events, such as when your application is involved in a drag-and-drop operation.</span></span>  
   
- La forma principal de cambiar el puntero del mouse es estableciendo <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> o la propiedad <xref:System.Windows.Forms.Control.DefaultCursor%2A> de un control en un nuevo <xref:System.Windows.Forms.Cursor>.  Para obtener ejemplos para cambiar el puntero del mouse, vea el ejemplo de código en la clase <xref:System.Windows.Forms.Cursor>.  Además, la clase <xref:System.Windows.Forms.Cursors> expone un conjunto de objetos <xref:System.Windows.Forms.Cursor> para diferentes tipos de punteros, como el puntero que se muestra como una mano.  Para mostrar un puntero de espera, que se asemeja a un reloj de arena, siempre que el puntero del mouse esté sobre un control, utilice la propiedad <xref:System.Windows.Forms.Control.UseWaitCursor%2A> de la clase<xref:System.Windows.Forms.Control>.  
+ <span data-ttu-id="8c579-117">La manera principal para cambiar el puntero del mouse está definiendo el <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.Control.DefaultCursor%2A> propiedad de un control a una nueva <xref:System.Windows.Forms.Cursor>.</span><span class="sxs-lookup"><span data-stu-id="8c579-117">The primary way to change the mouse pointer is by setting the <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> or <xref:System.Windows.Forms.Control.DefaultCursor%2A> property of a control to a new <xref:System.Windows.Forms.Cursor>.</span></span> <span data-ttu-id="8c579-118">Para obtener ejemplos de cambiar el puntero del mouse, vea el ejemplo de código en el <xref:System.Windows.Forms.Cursor> clase.</span><span class="sxs-lookup"><span data-stu-id="8c579-118">For examples of changing the mouse pointer, see the code example in the <xref:System.Windows.Forms.Cursor> class.</span></span> <span data-ttu-id="8c579-119">Además, el <xref:System.Windows.Forms.Cursors> clase expone un conjunto de <xref:System.Windows.Forms.Cursor> objetos para muchos tipos distintos de punteros, como un puntero que se parece a una mano.</span><span class="sxs-lookup"><span data-stu-id="8c579-119">In addition, the <xref:System.Windows.Forms.Cursors> class exposes a set of <xref:System.Windows.Forms.Cursor> objects for many different types of pointers, such as a pointer that resembles a hand.</span></span> <span data-ttu-id="8c579-120">Para mostrar el puntero de espera, que es similar a un reloj de arena, siempre que el puntero del mouse está sobre el control, use la <xref:System.Windows.Forms.Control.UseWaitCursor%2A> propiedad de la <xref:System.Windows.Forms.Control> clase.</span><span class="sxs-lookup"><span data-stu-id="8c579-120">To display the wait pointer, which resembles an hourglass, whenever the mouse pointer is on the control, use the <xref:System.Windows.Forms.Control.UseWaitCursor%2A> property of the <xref:System.Windows.Forms.Control> class.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.Cursor>   
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)   
- [Drag\-and\-Drop Functionality in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8c579-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="8c579-121">See Also</span></span>  
+ <xref:System.Windows.Forms.Cursor>  
+ [<span data-ttu-id="8c579-122">Entradas mediante el mouse en una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8c579-122">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="8c579-123">Funcionalidad de arrastrar y soltar en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8c579-123">Drag-and-Drop Functionality in Windows Forms</span></span>](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)

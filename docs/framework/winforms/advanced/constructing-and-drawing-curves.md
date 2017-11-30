@@ -1,36 +1,37 @@
 ---
-title: "Crear y dibujar curvas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "curvas, dibujar"
-  - "dibujar, curvas"
-  - "ejemplos [Windows Forms], dibujar curvas"
+title: Crear y dibujar curvas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [Windows Forms], curves
+- examples [Windows Forms], drawing curves
+- curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 801af10f7b9e5e7998fc061537977c5bced6bdb3
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Crear y dibujar curvas
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] admite varios tipos de curvas: elipses, arcos, curvas spline cardinales y curvas spline de Bézier.  Una elipse queda definida por su rectángulo delimitador; un arco es parte de una elipse definida por un ángulo de inicio y un ángulo de barrido.  Una curva spline cardinal queda definida por una matriz de puntos y un parámetro de tensión: la curva pasa suavemente por cada punto de la matriz y el parámetro de tensión influye el modo en que se inclina la curva.  Una curva spline de Bézier queda definida por dos puntos extremos y dos puntos de control: la curva no pasa por los puntos de control, pero estos puntos influyen en la dirección y la inclinación del recorrido de la curva de un extremo a otro.  
+# <a name="constructing-and-drawing-curves"></a><span data-ttu-id="283e6-102">Crear y dibujar curvas</span><span class="sxs-lookup"><span data-stu-id="283e6-102">Constructing and Drawing Curves</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="283e6-103">admite varios tipos de curvas: elipses, arcos, curvas spline cardinales y curvas spline de Bézier.</span><span class="sxs-lookup"><span data-stu-id="283e6-103"> supports several types of curves: ellipses, arcs, cardinal splines, and Bézier splines.</span></span> <span data-ttu-id="283e6-104">Una elipse se define por su rectángulo delimitador; un arco es una parte de una elipse definida por un ángulo inicial y un ángulo de barrido.</span><span class="sxs-lookup"><span data-stu-id="283e6-104">An ellipse is defined by its bounding rectangle; an arc is a portion of an ellipse defined by a starting angle and a sweep angle.</span></span> <span data-ttu-id="283e6-105">Una curva spline cardinal se define mediante una matriz de puntos y un parámetro de tensión: la curva pasa suavemente por cada punto de la matriz, y el parámetro de tensión influye en la forma de la curva.</span><span class="sxs-lookup"><span data-stu-id="283e6-105">A cardinal spline is defined by an array of points and a tension parameter — the curve passes smoothly through each point in the array, and the tension parameter influences the way the curve bends.</span></span> <span data-ttu-id="283e6-106">Una curva spline de Bézier se define mediante dos puntos de conexión y dos puntos de control de que la curva no pasa por los puntos de control, pero los puntos de control influyen en la dirección y doblar la curva de tránsito de un extremo a otro.</span><span class="sxs-lookup"><span data-stu-id="283e6-106">A Bézier spline is defined by two endpoints and two control points  the curve does not pass through the control points, but the control points influence the direction and bend as the curve goes from one endpoint to the other.</span></span>  
   
-## En esta sección  
- [Cómo: Dibujar curvas spline cardinales](../../../../docs/framework/winforms/advanced/how-to-draw-cardinal-splines.md)  
- Describe las curvas spline cardinales y cómo dibujarlas.  
+## <a name="in-this-section"></a><span data-ttu-id="283e6-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="283e6-107">In This Section</span></span>  
+ [<span data-ttu-id="283e6-108">Dibujar curvas spline cardinales</span><span class="sxs-lookup"><span data-stu-id="283e6-108">How to: Draw Cardinal Splines</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-cardinal-splines.md)  
+ <span data-ttu-id="283e6-109">Describe las curvas spline cardinales y cómo obtenerlas.</span><span class="sxs-lookup"><span data-stu-id="283e6-109">Describes cardinal splines and how to draw them.</span></span>  
   
- [Cómo: Dibujar una curva spline de Bézier](../../../../docs/framework/winforms/advanced/how-to-draw-a-single-bezier-spline.md)  
- Describe una curva spline de Bézier y cómo dibujar una.  
+ [<span data-ttu-id="283e6-110">Dibujar una curva spline de Bézier</span><span class="sxs-lookup"><span data-stu-id="283e6-110">How to: Draw a Single Bézier Spline</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-single-bezier-spline.md)  
+ <span data-ttu-id="283e6-111">Describe una curva spline de Bézier y cómo dibujar uno.</span><span class="sxs-lookup"><span data-stu-id="283e6-111">Describes a Bézier spline and how to draw one.</span></span>  
   
- [Cómo: Dibujar una secuencia de curvas spline de Bézier](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)  
- Explica cómo dibujar varias curvas spline de Bézier secuencialmente.
+ [<span data-ttu-id="283e6-112">Dibujar una secuencia de curvas spline de Bézier</span><span class="sxs-lookup"><span data-stu-id="283e6-112">How to: Draw a Sequence of Bézier Splines</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)  
+ <span data-ttu-id="283e6-113">Explica cómo dibujar varias curvas spline de Bézier en secuencia.</span><span class="sxs-lookup"><span data-stu-id="283e6-113">Explains how to draw several Bézier splines in sequence.</span></span>

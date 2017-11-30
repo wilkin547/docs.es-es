@@ -5,53 +5,45 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ca6d1e6ec5c19f690ab862b13783b9db05ac2a9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 107b47ba8abcbd1084bed6e043f5a648aa91cc91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="enabling-jit-attach-debugging"></a>Habilitar la depuración de adjuntos JIT
-La depuración de adjuntos JIT es la frase usada para describir el hecho de adjuntar un depurador a un proceso cuando se detectan errores, o se puede desencadenar mediante métodos o funciones concretos.  
+# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="4d312-102">Habilitar la depuración de adjuntos JIT</span><span class="sxs-lookup"><span data-stu-id="4d312-102">Enabling JIT-Attach Debugging</span></span>
+<span data-ttu-id="4d312-103">La depuración de adjuntos JIT es la frase usada para describir el hecho de adjuntar un depurador a un proceso cuando se detectan errores, o se puede desencadenar mediante métodos o funciones concretos.</span><span class="sxs-lookup"><span data-stu-id="4d312-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
   
- La depuración de adjuntos JIT se usa en las siguientes condiciones de error:  
+ <span data-ttu-id="4d312-104">La depuración de adjuntos JIT se usa en las siguientes condiciones de error:</span><span class="sxs-lookup"><span data-stu-id="4d312-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
   
--   Excepciones no controladas (el código nativo y administrado).  
+-   <span data-ttu-id="4d312-105">Excepciones no controladas (el código nativo y administrado).</span><span class="sxs-lookup"><span data-stu-id="4d312-105">Unhandled exceptions (in both native and managed code).</span></span>  
   
--   Método <xref:System.Environment.FailFast%2A?displayProperty=fullName> o función [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) (familia Windows 7).  
+-   <span data-ttu-id="4d312-106">Método <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> o función [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) (familia Windows 7).</span><span class="sxs-lookup"><span data-stu-id="4d312-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> method or [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
   
--   Errores irrecuperables de runtime.  
+-   <span data-ttu-id="4d312-107">Errores irrecuperables de runtime.</span><span class="sxs-lookup"><span data-stu-id="4d312-107">Runtime fatal errors.</span></span>  
   
- La depuración de adjuntos JIT también se desencadena mediante llamadas a los métodos y las funciones siguientes:  
+ <span data-ttu-id="4d312-108">La depuración de adjuntos JIT también se desencadena mediante llamadas a los métodos y las funciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="4d312-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
   
--   Método <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="4d312-109">Método <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4d312-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> method.</span></span>  
   
--   Método <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="4d312-110">Método <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4d312-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> method.</span></span>  
   
--   [DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) (función) (Win32).  
+-   <span data-ttu-id="4d312-111">[DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) (función) (Win32).</span><span class="sxs-lookup"><span data-stu-id="4d312-111">[DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
   
- Antes de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework proporcionaba claves del Registro independientes para controlar el comportamiento de los depuradores administrados y nativos. A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el control se consolida en una única clave del Registro: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Los valores que puede establecer para esa clave determinan si se invoca un depurador y, de ser así, si se invoca con un cuadro de diálogo que necesita interacción del usuario. Para obtener información sobre el establecimiento de este clave del Registro, vea [Configuración de la depuración automática](http://go.microsoft.com/fwlink/?LinkId=181767) en MSDN Library.  
+ <span data-ttu-id="4d312-112">Antes de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework proporcionaba claves del Registro independientes para controlar el comportamiento de los depuradores administrados y nativos.</span><span class="sxs-lookup"><span data-stu-id="4d312-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="4d312-113">A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el control se consolida en una única clave del Registro: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span><span class="sxs-lookup"><span data-stu-id="4d312-113">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="4d312-114">Los valores que puede establecer para esa clave determinan si se invoca un depurador y, de ser así, si se invoca con un cuadro de diálogo que necesita interacción del usuario.</span><span class="sxs-lookup"><span data-stu-id="4d312-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="4d312-115">Para obtener información acerca de cómo establecer esta clave del registro, consulte [Configuring Automatic Debugging](http://go.microsoft.com/fwlink/?LinkId=181767).</span><span class="sxs-lookup"><span data-stu-id="4d312-115">For information about setting this registry key, see [Configuring Automatic Debugging](http://go.microsoft.com/fwlink/?LinkId=181767).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Depurar, trazar y generar perfiles](../../../docs/framework/debug-trace-profile/index.md)   
- [Facilitar la depuración de una imagen](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)   
- [Habilitar la generación de perfiles](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
-
+## <a name="see-also"></a><span data-ttu-id="4d312-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="4d312-116">See Also</span></span>  
+ [<span data-ttu-id="4d312-117">Depurar, trazar y generar perfiles</span><span class="sxs-lookup"><span data-stu-id="4d312-117">Debugging, Tracing, and Profiling</span></span>](../../../docs/framework/debug-trace-profile/index.md)  
+ [<span data-ttu-id="4d312-118">Facilitar la depuración de una imagen</span><span class="sxs-lookup"><span data-stu-id="4d312-118">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
+ [<span data-ttu-id="4d312-119">Habilitar la generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="4d312-119">Enabling Profiling</span></span>](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)

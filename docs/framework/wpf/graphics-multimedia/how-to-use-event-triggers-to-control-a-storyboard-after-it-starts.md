@@ -1,58 +1,61 @@
 ---
-title: "C&#243;mo: Utilizar desencadenadores de eventos para controlar un gui&#243;n gr&#225;fico despu&#233;s de su inicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "desencadenadores de eventos, controlar guiones gráficos"
-  - "Guiones gráficos, controlar después del inicio"
-  - "desencadenadores, controlar guiones gráficos"
+title: "Cómo: Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- triggers [WPF], controlling Storyboards
+- event triggers [WPF], controlling Storyboards
+- Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d9e096969713cc4b9c42261b238691d51cb49d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Utilizar desencadenadores de eventos para controlar un gui&#243;n gr&#225;fico despu&#233;s de su inicio
-En este ejemplo se muestra cómo controlar un objeto <xref:System.Windows.Media.Animation.Storyboard> después de iniciarse.  Para iniciar un objeto <xref:System.Windows.Media.Animation.Storyboard> mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilice <xref:System.Windows.Media.Animation.BeginStoryboard>, que distribuye las animaciones a los objetos y las propiedades que se animan y, a continuación, inicia el guión gráfico.  Si asigna un nombre a <xref:System.Windows.Media.Animation.BeginStoryboard> especificando su propiedad <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>, lo convierte en un guión gráfico controlable.  A continuación, podrá controlar interactivamente el guión gráfico una vez iniciado.  
+# <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a><span data-ttu-id="03ec5-102">Cómo: Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio</span><span class="sxs-lookup"><span data-stu-id="03ec5-102">How to: Use Event Triggers to Control a Storyboard After It Starts</span></span>
+<span data-ttu-id="03ec5-103">Este ejemplo muestra cómo controlar un <xref:System.Windows.Media.Animation.Storyboard> después de iniciarse.</span><span class="sxs-lookup"><span data-stu-id="03ec5-103">This example shows how to control a <xref:System.Windows.Media.Animation.Storyboard> after it starts.</span></span> <span data-ttu-id="03ec5-104">Para iniciar un <xref:System.Windows.Media.Animation.Storyboard> utilizando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilice <xref:System.Windows.Media.Animation.BeginStoryboard>, que distribuye las animaciones a los objetos y propiedades que se animan y, a continuación, inicia el guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="03ec5-104">To start a <xref:System.Windows.Media.Animation.Storyboard> by using [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Media.Animation.BeginStoryboard>, which distributes the animations to the objects and properties they animate and then starts the storyboard.</span></span> <span data-ttu-id="03ec5-105">Si asigna <xref:System.Windows.Media.Animation.BeginStoryboard> un nombre mediante la especificación de su <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propiedad, permite que un guión gráfico controlable.</span><span class="sxs-lookup"><span data-stu-id="03ec5-105">If you give <xref:System.Windows.Media.Animation.BeginStoryboard> a name by specifying its <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> property, you make it a controllable storyboard.</span></span> <span data-ttu-id="03ec5-106">A continuación, podrá controlar interactivamente el guión gráfico después de iniciarse.</span><span class="sxs-lookup"><span data-stu-id="03ec5-106">You can then interactively control the storyboard after it starts.</span></span>  
   
- Utilice las acciones de guión gráfico siguientes junto con objetos <xref:System.Windows.EventTrigger> para controlar un guión gráfico.  
+ <span data-ttu-id="03ec5-107">Utilice las siguientes acciones de guión gráfico junto con <xref:System.Windows.EventTrigger> objetos que se va a controlar un guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="03ec5-107">Use the following storyboard actions together with <xref:System.Windows.EventTrigger> objects to control a storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>: pone en pausa el guión gráfico.  
+-   <span data-ttu-id="03ec5-108"><xref:System.Windows.Media.Animation.PauseStoryboard>: Se detiene el guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="03ec5-108"><xref:System.Windows.Media.Animation.PauseStoryboard>: Pauses the storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: reanuda un guión gráfico que se ha puesto en pausa.  
+-   <span data-ttu-id="03ec5-109"><xref:System.Windows.Media.Animation.ResumeStoryboard>: Se reanuda un guión gráfico en pausa.</span><span class="sxs-lookup"><span data-stu-id="03ec5-109"><xref:System.Windows.Media.Animation.ResumeStoryboard>: Resumes a paused storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: cambia la velocidad del guión gráfico.  
+-   <span data-ttu-id="03ec5-110"><xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Cambia la velocidad del guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="03ec5-110"><xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Changes the storyboard speed.</span></span>  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: avanza un guión gráfico hasta el final de su período de relleno, si lo tiene.  
+-   <span data-ttu-id="03ec5-111"><xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Hace avanzar un guión gráfico hasta el final de su período de relleno, si lo tiene.</span><span class="sxs-lookup"><span data-stu-id="03ec5-111"><xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Advances a storyboard to the end of its fill period, if it has one.</span></span>  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: detiene el guión gráfico.  
+-   <span data-ttu-id="03ec5-112"><xref:System.Windows.Media.Animation.StopStoryboard>: Detiene el guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="03ec5-112"><xref:System.Windows.Media.Animation.StopStoryboard>: Stops the storyboard.</span></span>  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>: quita el guión gráfico para liberar recursos.  
+-   <span data-ttu-id="03ec5-113"><xref:System.Windows.Media.Animation.RemoveStoryboard>: Quita el guión gráfico para liberar recursos.</span><span class="sxs-lookup"><span data-stu-id="03ec5-113"><xref:System.Windows.Media.Animation.RemoveStoryboard>: Removes the storyboard, freeing resources.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se utilizan acciones para controlar interactivamente un guión gráfico.  
+## <a name="example"></a><span data-ttu-id="03ec5-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="03ec5-114">Example</span></span>  
+ <span data-ttu-id="03ec5-115">En el ejemplo siguiente se utiliza acciones de guión gráfico controlable para controlar interactivamente un guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="03ec5-115">The following example uses controllable storyboard actions to interactively control a storyboard.</span></span>  
   
- **Nota:** para ver un ejemplo de control de un guión gráfico mediante código, vea [Controlar un guión gráfico una vez iniciado usando métodos interactivos](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md).  
+ <span data-ttu-id="03ec5-116">**Nota:** para ver un ejemplo de control de un guión gráfico mediante código, vea [controlar un guión gráfico después de que se inicia utilizando sus métodos interactivos](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md).</span><span class="sxs-lookup"><span data-stu-id="03ec5-116">**Note:** To see an example of controlling a storyboard by using code, see [Control a Storyboard After It Starts Using Its Interactive Methods](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md).</span></span>  
   
- [!code-xml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
+ [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
- Para obtener ejemplos adicionales, vea [Animation Example Gallery](http://go.microsoft.com/fwlink/?LinkID=159969).  
+ <span data-ttu-id="03ec5-117">Para obtener ejemplos adicionales, consulte la [Animation Example Gallery](http://go.microsoft.com/fwlink/?LinkID=159969).</span><span class="sxs-lookup"><span data-stu-id="03ec5-117">For additional examples, see the [Animation Example Gallery](http://go.microsoft.com/fwlink/?LinkID=159969).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Media.Animation.ResumeStoryboard>   
- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>   
- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>   
- <xref:System.Windows.Media.Animation.PauseStoryboard>   
- <xref:System.Windows.Media.Animation.StopStoryboard>   
- <xref:System.Windows.Media.Animation.SeekStoryboard>   
- [Controlar un guión gráfico una vez iniciado usando métodos interactivos](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)   
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Información general sobre objetos Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a><span data-ttu-id="03ec5-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="03ec5-118">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.ResumeStoryboard>  
+ <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>  
+ <xref:System.Windows.Media.Animation.SkipStoryboardToFill>  
+ <xref:System.Windows.Media.Animation.PauseStoryboard>  
+ <xref:System.Windows.Media.Animation.StopStoryboard>  
+ <xref:System.Windows.Media.Animation.SeekStoryboard>  
+ [<span data-ttu-id="03ec5-119">Controlar un guión gráfico una vez iniciado usando métodos interactivos</span><span class="sxs-lookup"><span data-stu-id="03ec5-119">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="03ec5-120">Información general sobre animaciones</span><span class="sxs-lookup"><span data-stu-id="03ec5-120">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="03ec5-121">Información general sobre objetos Storyboard </span><span class="sxs-lookup"><span data-stu-id="03ec5-121">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

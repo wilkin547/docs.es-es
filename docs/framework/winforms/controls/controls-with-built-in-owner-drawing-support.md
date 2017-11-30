@@ -1,61 +1,62 @@
 ---
-title: "Controles compatibles con dibujos propietarios integrados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "propietario del dibujo,"
-  - "dibujo personalizado"
-  - "controles [Windows Forms], cambiar la apariencia"
-  - "dibujo personalizado"
-  - "dibujo del propietario"
+title: Controles compatibles con dibujos propietarios integrados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [Windows Forms], owner
+- drawing [Windows Forms], custom
+- controls [Windows Forms], changing appearance
+- custom drawing
+- owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8fb699a93effcdf0b5f88606419479d51754125b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Controles compatibles con dibujos propietarios integrados
-Dibujo propietario en formularios Windows Forms, que también se conoce como dibujo personalizado, es una técnica para cambiar la apariencia visual de determinados controles.  
+# <a name="controls-with-built-in-owner-drawing-support"></a><span data-ttu-id="439f6-102">Controles compatibles con dibujos propietarios integrados</span><span class="sxs-lookup"><span data-stu-id="439f6-102">Controls with Built-In Owner-Drawing Support</span></span>
+<span data-ttu-id="439f6-103">Los dibujos propietarios en formularios Windows Forms, que también se conocen como dibujos personalizados, es una técnica para cambiar la apariencia visual de determinados controles.</span><span class="sxs-lookup"><span data-stu-id="439f6-103">Owner drawing in Windows Forms, which is also known as custom drawing, is a technique for changing the visual appearance of certain controls.</span></span>  
   
 > [!NOTE]
->  La palabra "control" en este tema se utiliza para indicar que las clases que derivan de <xref:System.Windows.Forms.Control> o <xref:System.ComponentModel.Component>.  
+>  <span data-ttu-id="439f6-104">La palabra "control" en este tema se utiliza para indicar que las clases que derivan de <xref:System.Windows.Forms.Control> o <xref:System.ComponentModel.Component>.</span><span class="sxs-lookup"><span data-stu-id="439f6-104">The word "control" in this topic is used to mean classes that derive from either <xref:System.Windows.Forms.Control> or <xref:System.ComponentModel.Component>.</span></span>  
   
- Normalmente, Windows controla el dibujo automático mediante la configuración de la propiedad como <xref:System.Windows.Forms.Control.BackColor%2A> para determinar la apariencia de un control. Con el dibujo del propietario, tomar sobre el proceso de dibujo, cambiar los elementos de la apariencia de que no están disponibles mediante las propiedades. Por ejemplo, muchos controles permiten establecer el color del texto que se muestra, pero está limitado a un único color. Dibujo del propietario le permite realizar tareas como mostrar una parte del texto en negro y otra en rojo.  
+ <span data-ttu-id="439f6-105">Normalmente, Windows controla el dibujo automáticamente mediante la configuración de la propiedad como <xref:System.Windows.Forms.Control.BackColor%2A> para determinar la apariencia de un control.</span><span class="sxs-lookup"><span data-stu-id="439f6-105">Typically, Windows handles painting automatically by using property settings such as <xref:System.Windows.Forms.Control.BackColor%2A> to determine the appearance of a control.</span></span> <span data-ttu-id="439f6-106">Con el dibujo del propietario, toma el control sobre el proceso de dibujo, con lo que puede cambiar los elementos de apariencia que no están disponibles mediante las propiedades.</span><span class="sxs-lookup"><span data-stu-id="439f6-106">With owner drawing, you take over the painting process, changing elements of appearance that are not available by using properties.</span></span> <span data-ttu-id="439f6-107">Por ejemplo, muchos controles le permiten establecer el color del texto que se muestra, pero está limitado a un único color.</span><span class="sxs-lookup"><span data-stu-id="439f6-107">For example, many controls let you set the color of the text that is displayed, but you are limited to a single color.</span></span> <span data-ttu-id="439f6-108">El dibujo del propietario le permite realizar tareas como mostrar una parte del texto en negro y otra en rojo.</span><span class="sxs-lookup"><span data-stu-id="439f6-108">Owner drawing enables you to do things like display part of the text in black and part in red.</span></span>  
   
- En la práctica, el dibujo del propietario es similar a dibujar gráficos en un formulario. Por ejemplo, podría utilizar métodos gráficos en un controlador para el formulario <xref:System.Windows.Forms.Control.Paint> eventos para emular un `ListBox` control, pero tendría que escribir su propio código para controlar toda la interacción del usuario. Con el dibujo del propietario, el control utiliza su código para dibujar el contenido pero por lo demás retiene todas sus funciones intrínsecas. Puede utilizar métodos gráficos para dibujar cada elemento en el control o para personalizar algunos aspectos de cada elemento mientras utiliza la apariencia predeterminada para otros aspectos de cada elemento.  
+ <span data-ttu-id="439f6-109">En la práctica, el dibujo del propietario es similar a dibujar gráficos en un formulario.</span><span class="sxs-lookup"><span data-stu-id="439f6-109">In practice, owner drawing is similar to drawing graphics on a form.</span></span> <span data-ttu-id="439f6-110">Por ejemplo, podría utilizar métodos de gráficos en un controlador para el formulario <xref:System.Windows.Forms.Control.Paint> eventos para emular un `ListBox` control, pero se tendría que escribir su propio código para controlar toda la interacción del usuario.</span><span class="sxs-lookup"><span data-stu-id="439f6-110">For example, you could use graphics methods in a handler for the form's <xref:System.Windows.Forms.Control.Paint> event to emulate a `ListBox` control, but you would have to write your own code to handle all user interaction.</span></span> <span data-ttu-id="439f6-111">Con el dibujo del propietario, el control utiliza su código para dibujar el contenido, pero por lo demás conserva todas sus funciones intrínsecas.</span><span class="sxs-lookup"><span data-stu-id="439f6-111">With owner drawing, the control uses your code to draw its contents but otherwise retains all its intrinsic capabilities.</span></span> <span data-ttu-id="439f6-112">Puede utilizar métodos gráficos para dibujar cada elemento en el control o personalizar algunos aspectos de cada elemento mientras utiliza la apariencia predeterminada para otros aspectos de cada elemento.</span><span class="sxs-lookup"><span data-stu-id="439f6-112">You can use graphics methods to draw each item in the control or to customize some aspects of each item while you use the default appearance for other aspects of each item.</span></span>  
   
-## <a name="owner-drawing-in-windows-forms-controls"></a>Controles de dibujo propietario en Windows Forms  
- Para realizar el dibujo propietario en controles que lo admiten, normalmente se establece una propiedad y controlar uno o más eventos.  
+## <a name="owner-drawing-in-windows-forms-controls"></a><span data-ttu-id="439f6-113">Dibujo del propietario en controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="439f6-113">Owner Drawing in Windows Forms Controls</span></span>  
+ <span data-ttu-id="439f6-114">Para realizar el dibujo propietario en controles compatibles, normalmente establece una propiedad y controla uno o más eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-114">To perform owner drawing in controls that support it, you will typically set one property and handle one or more events.</span></span>  
   
- La mayoría de los controles que admiten el dibujo propietario tienen una `OwnerDraw` o `DrawMode` propiedad que indica si el control provocará su evento relacionado con el dibujo o eventos cuando pinta a sí mismo.  
+ <span data-ttu-id="439f6-115">La mayoría de los controles que admiten el dibujo del propietario tienen una propiedad `OwnerDraw` o `DrawMode` que indica si el control generará eventos relacionados con el dibujo cuando se pinta a sí mismo.</span><span class="sxs-lookup"><span data-stu-id="439f6-115">Most controls that support owner drawing have an `OwnerDraw` or `DrawMode` property that indicates whether the control will raise its drawing-related event or events when it paints itself.</span></span>  
   
- Controles que no tienen un `OwnerDraw` o `DrawMode` propiedad incluye la `DataGridView` control, que proporciona eventos de dibujo que se producen automáticamente, y el `ToolStrip` control, que se dibuja utilizando una clase de representación externa que tiene sus propios eventos relacionados con el dibujo.  
+ <span data-ttu-id="439f6-116">Los controles que no tienen una propiedad `OwnerDraw` o `DrawMode` incluyen el control `DataGridView`, que proporciona eventos de dibujo que se producen automáticamente, y el control `ToolStrip`, que se dibuja utilizando una clase de representación externa que tiene sus propios eventos relacionados con el dibujo.</span><span class="sxs-lookup"><span data-stu-id="439f6-116">Controls that do not have an `OwnerDraw` or `DrawMode` property include the `DataGridView` control, which provides drawing events that occur automatically, and the `ToolStrip` control, which is drawn using an external rendering class that has its own drawing-related events.</span></span>  
   
- Hay muchos tipos diferentes de eventos de dibujo, pero se produce un evento de dibujo típico para dibujar un solo elemento dentro de un control. El controlador de eventos recibe un `EventArgs` objeto que contiene información acerca del elemento que se va a dibujar y herramientas puede utilizar para dibujarlo. Por ejemplo, este objeto contiene normalmente el número de índice del elemento en la colección primaria, un <xref:System.Drawing.Rectangle> que indica que el elemento muestre los límites y un <xref:System.Drawing.Graphics> objeto para llamar a métodos de pintura. En algunos casos, la `EventArgs` objeto proporciona información adicional sobre el elemento y los métodos que se pueden llamar para dibujar algunos aspectos del elemento de forma predeterminada, como el fondo o un rectángulo de foco.  
+ <span data-ttu-id="439f6-117">Hay muchos tipos diferentes de eventos de dibujo, pero se produce un evento de dibujo típico con el fin de dibujar un solo elemento dentro de un control.</span><span class="sxs-lookup"><span data-stu-id="439f6-117">There are many different kinds of drawing events, but a typical drawing event occurs in order to draw a single item within a control.</span></span> <span data-ttu-id="439f6-118">El controlador de eventos recibe un objeto `EventArgs` que contiene información sobre el elemento que se va a dibujar y herramientas que puede utilizar para dibujarlo.</span><span class="sxs-lookup"><span data-stu-id="439f6-118">The event handler receives an `EventArgs` object that contains information about the item being drawn and tools you can use to draw it.</span></span> <span data-ttu-id="439f6-119">Por ejemplo, este objeto suele contener el número de índice del elemento en la colección primaria, un <xref:System.Drawing.Rectangle> que indica el elemento Mostrar límites y un <xref:System.Drawing.Graphics> objeto para llamar a métodos de paint.</span><span class="sxs-lookup"><span data-stu-id="439f6-119">For example, this object typically contains the item's index number within its parent collection, a <xref:System.Drawing.Rectangle> that indicates the item's display boundaries, and a <xref:System.Drawing.Graphics> object for calling paint methods.</span></span> <span data-ttu-id="439f6-120">En algunos eventos, el objeto `EventArgs` proporciona información adicional sobre el elemento y los métodos que puede llamar para dibujar algunos aspectos del elemento de forma predeterminada, como el fondo o un rectángulo de enfoque.</span><span class="sxs-lookup"><span data-stu-id="439f6-120">For some events, the `EventArgs` object provides additional information about the item and methods that you can call to paint some aspects of the item by default, such as the background or a focus rectangle.</span></span>  
   
- Para crear un control reutilizable que contiene sus personalizaciones dibujado por el propietario, cree una nueva clase que deriva de una clase de control que admite el dibujo del propietario. En lugar de controlar eventos de dibujo, incluya el código de dibujo propietario en invalidaciones adecuado `On` *EventName* método o métodos de la clase nueva. Asegúrese de que llama a la clase base `On` *EventName* método o métodos en este caso para que pueden controlar eventos de dibujo propietario y proporcionar una personalización adicional a los usuarios de su control.  
+ <span data-ttu-id="439f6-121">Para crear un control reutilizable que contenga sus personalizaciones para dibujo del propietario, cree una nueva clase que derive de una clase de control que admita el dibujo del propietario.</span><span class="sxs-lookup"><span data-stu-id="439f6-121">To create a reusable control that contains your owner-drawn customizations, create a new class that derives from a control class that supports owner drawing.</span></span> <span data-ttu-id="439f6-122">En lugar de controlar eventos de dibujo, incluya el código de dibujo del propietario en invalidaciones para el método o los métodos `On`*EventName* de la clase nueva.</span><span class="sxs-lookup"><span data-stu-id="439f6-122">Rather than handling drawing events, include your owner-drawing code in overrides for the appropriate `On`*EventName* method or methods in the new class.</span></span> <span data-ttu-id="439f6-123">Asegúrese de llamar al método o los métodos `On`*EventName* de la clase base en este caso para que los usuarios de su control puedan controlar eventos del dibujo del propietario y proporcionar una personalización adicional.</span><span class="sxs-lookup"><span data-stu-id="439f6-123">Make sure that you call the base class `On`*EventName* method or methods in this case so that users of your control can handle owner-drawing events and provide additional customization.</span></span>  
   
- Lo siguientes formularios Windows Forms controles admiten el dibujo propietario en todas las versiones de .NET Framework:  
+ <span data-ttu-id="439f6-124">Los siguientes controles de formularios Windows Forms son compatibles con el dibujo del propietario en todas las versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="439f6-124">The following Windows Forms controls support owner drawing in all versions of the .NET Framework:</span></span>  
   
 -   <xref:System.Windows.Forms.ListBox>  
   
 -   <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem> (utilizado por <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu>)  
+-   <span data-ttu-id="439f6-125"><xref:System.Windows.Forms.MenuItem>(usa <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu>)</span><span class="sxs-lookup"><span data-stu-id="439f6-125"><xref:System.Windows.Forms.MenuItem> (used by <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu>)</span></span>  
   
 -   <xref:System.Windows.Forms.TabControl>  
   
- Los controles siguientes admiten el dibujo en propietario [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ <span data-ttu-id="439f6-126">Los controles siguientes son compatibles solamente con el dibujo del propietario en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="439f6-126">The following controls support owner drawing only in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:</span></span>  
   
 -   <xref:System.Windows.Forms.ToolTip>  
   
@@ -63,117 +64,117 @@ Dibujo propietario en formularios Windows Forms, que también se conoce como dib
   
 -   <xref:System.Windows.Forms.TreeView>  
   
- Los controles siguientes admiten el dibujo propietario y son nuevo en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:  
+ <span data-ttu-id="439f6-127">Los controles siguientes son compatibles con el dibujo del propietario y son nuevos en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="439f6-127">The following controls support owner drawing and are new in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridView>  
   
 -   <xref:System.Windows.Forms.ToolStrip>  
   
- Las secciones siguientes proporcionan detalles adicionales para cada uno de estos controles.  
+ <span data-ttu-id="439f6-128">Las secciones siguientes ofrecen detalles adicionales para cada uno de estos controles.</span><span class="sxs-lookup"><span data-stu-id="439f6-128">The following sections provide additional details for each of these controls.</span></span>  
   
-### <a name="listbox-and-combobox-controls"></a>Controles ListBox y ComboBox  
- El <xref:System.Windows.Forms.ListBox> y <xref:System.Windows.Forms.ComboBox> controles le permiten dibujar elementos individuales en el control en un tamaño, o en varios tamaños.  
+### <a name="listbox-and-combobox-controls"></a><span data-ttu-id="439f6-129">Controles ListBox y ComboBox</span><span class="sxs-lookup"><span data-stu-id="439f6-129">ListBox and ComboBox Controls</span></span>  
+ <span data-ttu-id="439f6-130">El <xref:System.Windows.Forms.ListBox> y <xref:System.Windows.Forms.ComboBox> controles le permiten dibujar elementos individuales en el control en un tamaño, o en diferentes tamaños.</span><span class="sxs-lookup"><span data-stu-id="439f6-130">The <xref:System.Windows.Forms.ListBox> and <xref:System.Windows.Forms.ComboBox> controls enable you to draw individual items in the control either all in one size, or in varying sizes.</span></span>  
   
 > [!NOTE]
->  Aunque la <xref:System.Windows.Forms.CheckedListBox> control se deriva el <xref:System.Windows.Forms.ListBox> control, no admite el dibujo del propietario.  
+>  <span data-ttu-id="439f6-131">Aunque la <xref:System.Windows.Forms.CheckedListBox> control se deriva de la <xref:System.Windows.Forms.ListBox> (control), no admite dibujo del propietario.</span><span class="sxs-lookup"><span data-stu-id="439f6-131">Although the <xref:System.Windows.Forms.CheckedListBox> control is derived from the <xref:System.Windows.Forms.ListBox> control, it does not support owner drawing.</span></span>  
   
- Para dibujar cada elemento del mismo tamaño, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.DrawMode> y controlar la `DrawItem` eventos.  
+ <span data-ttu-id="439f6-132">Para dibujar cada elemento del mismo tamaño, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> y controlar la `DrawItem` eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-132">To draw each item the same size, set the `DrawMode` property to <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> and handle the `DrawItem` event.</span></span>  
   
- Para dibujar cada elemento con un tamaño diferente, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.DrawMode> y controlar tanto el `MeasureItem` y `DrawItem` eventos. El `MeasureItem` evento le permite indicar el tamaño de un elemento antes de la `DrawItem` evento tiene lugar para ese elemento.  
+ <span data-ttu-id="439f6-133">Para dibujar cada elemento con un tamaño distinto, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> y controlar tanto la `MeasureItem` y `DrawItem` eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-133">To draw each item using a different size, set the `DrawMode` property to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> and handle both the `MeasureItem` and `DrawItem` events.</span></span> <span data-ttu-id="439f6-134">El evento `MeasureItem` le permite indicar el tamaño de un elemento antes de que se produzca el evento `DrawItem` para ese elemento.</span><span class="sxs-lookup"><span data-stu-id="439f6-134">The `MeasureItem` event lets you indicate the size of an item before the `DrawItem` event occurs for that item.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas siguientes:  
+ <span data-ttu-id="439f6-135">Para obtener más información, incluidos los ejemplos de código, consulte los temas siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-135">For more information, including code examples, see the following topics:</span></span>  
   
--   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Cómo: crear texto de tamaño Variable en un Control ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [<span data-ttu-id="439f6-136">Procedimiento para crear texto de tamaño variable en un control ComboBox</span><span class="sxs-lookup"><span data-stu-id="439f6-136">How to: Create Variable Sized Text in a ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
-### <a name="menuitem-component"></a>Componente MenuItem  
- El <xref:System.Windows.Forms.MenuItem> componente representa un solo elemento de menú en un <xref:System.Windows.Forms.MainMenu> o <xref:System.Windows.Forms.ContextMenu> componente.  
+### <a name="menuitem-component"></a><span data-ttu-id="439f6-137">Componente MenuItem</span><span class="sxs-lookup"><span data-stu-id="439f6-137">MenuItem Component</span></span>  
+ <span data-ttu-id="439f6-138">El <xref:System.Windows.Forms.MenuItem> componente representa un solo elemento de menú en un <xref:System.Windows.Forms.MainMenu> o <xref:System.Windows.Forms.ContextMenu> componente.</span><span class="sxs-lookup"><span data-stu-id="439f6-138">The <xref:System.Windows.Forms.MenuItem> component represents a single menu item in a <xref:System.Windows.Forms.MainMenu> or <xref:System.Windows.Forms.ContextMenu> component.</span></span>  
   
- Para dibujar un <xref:System.Windows.Forms.MenuItem>, establezca su `OwnerDraw` propiedad `true` y controlar su `DrawItem` eventos. Para personalizar el tamaño del elemento de menú antes de la `DrawItem` evento se produce, controlar el elemento `MeasureItem` eventos.  
+ <span data-ttu-id="439f6-139">Para dibujar un <xref:System.Windows.Forms.MenuItem>, establezca su `OwnerDraw` propiedad `true` y controlar su `DrawItem` eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-139">To draw a <xref:System.Windows.Forms.MenuItem>, set its `OwnerDraw` property to `true` and handle its `DrawItem` event.</span></span> <span data-ttu-id="439f6-140">Para personalizar el tamaño del elemento de menú antes de que se produzca el evento `DrawItem`, controle el evento `MeasureItem` del elemento.</span><span class="sxs-lookup"><span data-stu-id="439f6-140">To customize the size of the menu item before the `DrawItem` event occurs, handle the item's `MeasureItem` event.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas de referencia siguientes:  
+ <span data-ttu-id="439f6-141">Para obtener más información, incluidos los ejemplos de código, consulte los temas de consulta siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-141">For more information, including code examples, see the following reference topics:</span></span>  
   
--   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
-### <a name="tabcontrol-control"></a>TabControl (Control)  
- El <xref:System.Windows.Forms.TabControl> control permite dibujar fichas individuales en el control. Dibujo del propietario afecta sólo a las fichas; el <xref:System.Windows.Forms.TabPage> no afecta al contenido.  
+### <a name="tabcontrol-control"></a><span data-ttu-id="439f6-142">TabControl (Control)</span><span class="sxs-lookup"><span data-stu-id="439f6-142">TabControl Control</span></span>  
+ <span data-ttu-id="439f6-143">El <xref:System.Windows.Forms.TabControl> control permite dibujar fichas individuales en el control.</span><span class="sxs-lookup"><span data-stu-id="439f6-143">The <xref:System.Windows.Forms.TabControl> control enables you to draw individual tabs in the control.</span></span> <span data-ttu-id="439f6-144">Dibujo del propietario afecta a sólo las fichas; el <xref:System.Windows.Forms.TabPage> no afecta al contenido.</span><span class="sxs-lookup"><span data-stu-id="439f6-144">Owner drawing affects only the tabs; the <xref:System.Windows.Forms.TabPage> contents are not affected.</span></span>  
   
- Para dibujar cada ficha en un <xref:System.Windows.Forms.TabControl>, establezca el `DrawMode` propiedad <xref:System.Windows.Forms.TabDrawMode> y controlar la `DrawItem` eventos. Este evento se produce una vez para cada ficha sólo cuando la ficha está visible en el control.  
+ <span data-ttu-id="439f6-145">Para dibujar cada ficha un <xref:System.Windows.Forms.TabControl>, establezca el `DrawMode` propiedad <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> y controlar la `DrawItem` eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-145">To draw each tab in a <xref:System.Windows.Forms.TabControl>, set the `DrawMode` property to <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> and handle the `DrawItem` event.</span></span> <span data-ttu-id="439f6-146">Este evento se produce una vez para cada pestaña solo cuando la pestaña está visible en el control.</span><span class="sxs-lookup"><span data-stu-id="439f6-146">This event occurs once for each tab only when the tab is visible in the control.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas de referencia siguientes:  
+ <span data-ttu-id="439f6-147">Para obtener más información, incluidos los ejemplos de código, consulte los temas de consulta siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-147">For more information, including code examples, see the following reference topics:</span></span>  
   
--   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
-### <a name="tooltip-component"></a>ToolTip  
- El <xref:System.Windows.Forms.ToolTip> componente permite dibujar la información sobre herramientas completa cuando se muestra.  
+### <a name="tooltip-component"></a><span data-ttu-id="439f6-148">ToolTip</span><span class="sxs-lookup"><span data-stu-id="439f6-148">ToolTip Component</span></span>  
+ <span data-ttu-id="439f6-149">El <xref:System.Windows.Forms.ToolTip> componente permite dibujar la información sobre herramientas completa cuando se muestre.</span><span class="sxs-lookup"><span data-stu-id="439f6-149">The <xref:System.Windows.Forms.ToolTip> component enables you to draw the entire ToolTip when it is displayed.</span></span>  
   
- Para dibujar un <xref:System.Windows.Forms.ToolTip>, establezca su `OwnerDraw` propiedad `true` y controlar su `Draw` eventos. Para personalizar el tamaño de la <xref:System.Windows.Forms.ToolTip> antes de la `Draw` se produce el evento, controlar el `Popup` eventos y establezca la <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> propiedad en el controlador de eventos.  
+ <span data-ttu-id="439f6-150">Para dibujar un <xref:System.Windows.Forms.ToolTip>, establezca su `OwnerDraw` propiedad `true` y controlar su `Draw` eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-150">To draw a <xref:System.Windows.Forms.ToolTip>, set its `OwnerDraw` property to `true` and handle its `Draw` event.</span></span> <span data-ttu-id="439f6-151">Para personalizar el tamaño de la <xref:System.Windows.Forms.ToolTip> antes de la `Draw` se produce el evento, controlar el `Popup` eventos y establezca la <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> propiedad en el controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-151">To customize the size of the <xref:System.Windows.Forms.ToolTip> before the `Draw` event occurs, handle the `Popup` event and set the <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> property in the event handler.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas de referencia siguientes:  
+ <span data-ttu-id="439f6-152">Para obtener más información, incluidos los ejemplos de código, consulte los temas de consulta siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-152">For more information, including code examples, see the following reference topics:</span></span>  
   
--   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
-### <a name="listview-control"></a>Control ListView  
- El <xref:System.Windows.Forms.ListView> control permite dibujar elementos individuales, subelementos y encabezados de columna en el control.  
+### <a name="listview-control"></a><span data-ttu-id="439f6-153">Control ListView</span><span class="sxs-lookup"><span data-stu-id="439f6-153">ListView Control</span></span>  
+ <span data-ttu-id="439f6-154">El <xref:System.Windows.Forms.ListView> control permite dibujar elementos individuales, subelementos y encabezados de columna en el control.</span><span class="sxs-lookup"><span data-stu-id="439f6-154">The <xref:System.Windows.Forms.ListView> control enables you to draw individual items, subitems, and column headers in the control.</span></span>  
   
- Para habilitar el dibujo propietario en el control, establezca la `OwnerDraw` propiedad `true`.  
+ <span data-ttu-id="439f6-155">Para habilitar el dibujo propietario en el control, establezca la propiedad `OwnerDraw` en `true`.</span><span class="sxs-lookup"><span data-stu-id="439f6-155">To enable owner drawing in the control, set the `OwnerDraw` property to `true`.</span></span>  
   
- Para dibujar cada elemento en el control, controle el `DrawItem` eventos.  
+ <span data-ttu-id="439f6-156">Para dibujar cada elemento en el control, controle el evento `DrawItem`.</span><span class="sxs-lookup"><span data-stu-id="439f6-156">To draw each item in the control, handle the `DrawItem` event.</span></span>  
   
- Para dibujar cada subelemento o encabezado de columna en el control cuando el <xref:System.Windows.Forms.ListView.View%2A> propiedad está establecida en <xref:System.Windows.Forms.View>, controlar el `DrawSubItem` y `DrawColumnHeader` eventos.  
+ <span data-ttu-id="439f6-157">Para dibujar cada subelemento o encabezado de columna en el control cuando el <xref:System.Windows.Forms.ListView.View%2A> propiedad está establecida en <xref:System.Windows.Forms.View.Details>, controlar el `DrawSubItem` y `DrawColumnHeader` eventos.</span><span class="sxs-lookup"><span data-stu-id="439f6-157">To draw each subitem or column header in the control when the <xref:System.Windows.Forms.ListView.View%2A> property is set to <xref:System.Windows.Forms.View.Details>, handle the `DrawSubItem` and `DrawColumnHeader` events.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas de referencia siguientes:  
+ <span data-ttu-id="439f6-158">Para obtener más información, incluidos los ejemplos de código, consulte los temas de consulta siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-158">For more information, including code examples, see the following reference topics:</span></span>  
   
--   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
-### <a name="treeview-control"></a>TreeView (Control)  
- El <xref:System.Windows.Forms.TreeView> control permite dibujar nodos individuales en el control.  
+### <a name="treeview-control"></a><span data-ttu-id="439f6-159">TreeView (Control)</span><span class="sxs-lookup"><span data-stu-id="439f6-159">TreeView Control</span></span>  
+ <span data-ttu-id="439f6-160">El <xref:System.Windows.Forms.TreeView> control permite dibujar nodos individuales en el control.</span><span class="sxs-lookup"><span data-stu-id="439f6-160">The <xref:System.Windows.Forms.TreeView> control enables you to draw individual nodes in the control.</span></span>  
   
- Para dibujar sólo el texto mostrado en cada nodo, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.TreeViewDrawMode> y controlar la `DrawNode` eventos para dibujar el texto.  
+ <span data-ttu-id="439f6-161">Para dibujar sólo el texto mostrado en cada nodo, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> y controlar la `DrawNode` eventos para dibujar el texto.</span><span class="sxs-lookup"><span data-stu-id="439f6-161">To draw only the text displayed in each node, set the `DrawMode` property to <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> and handle the `DrawNode` event to draw the text.</span></span>  
   
- Para dibujar todos los elementos de cada nodo, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.TreeViewDrawMode> y controlar la `DrawNode` eventos para dibujar cualquier elemento que necesite, como texto, iconos, casillas, signos, más y menos y líneas que conectan los nodos.  
+ <span data-ttu-id="439f6-162">Para dibujar todos los elementos de cada nodo, establezca la `DrawMode` propiedad <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> y controlar la `DrawNode` eventos para dibujar cualquier elemento que necesite, como texto, iconos, casillas, signos más y menos y las líneas que conectan los nodos.</span><span class="sxs-lookup"><span data-stu-id="439f6-162">To draw all elements of each node, set the `DrawMode` property to <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> and handle the `DrawNode` event to draw whichever elements you need, such as text, icons, check boxes, plus and minus signs, and lines connecting the nodes.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas de referencia siguientes:  
+ <span data-ttu-id="439f6-163">Para obtener más información, incluidos los ejemplos de código, consulte los temas de consulta siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-163">For more information, including code examples, see the following reference topics:</span></span>  
   
--   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
-### <a name="datagridview-control"></a>Control DataGridView  
- El <xref:System.Windows.Forms.DataGridView> control permite dibujar celdas y filas individuales en el control.  
+### <a name="datagridview-control"></a><span data-ttu-id="439f6-164">Control DataGridView</span><span class="sxs-lookup"><span data-stu-id="439f6-164">DataGridView Control</span></span>  
+ <span data-ttu-id="439f6-165">El <xref:System.Windows.Forms.DataGridView> control permite dibujar celdas y filas individuales en el control.</span><span class="sxs-lookup"><span data-stu-id="439f6-165">The <xref:System.Windows.Forms.DataGridView> control enables you to draw individual cells and rows in the control.</span></span>  
   
- Para dibujar celdas individuales, controle el `CellPainting` eventos.  
+ <span data-ttu-id="439f6-166">Para dibujar celdas individuales, controle el evento `CellPainting`.</span><span class="sxs-lookup"><span data-stu-id="439f6-166">To draw individual cells, handle the `CellPainting` event.</span></span>  
   
- Para dibujar elementos de filas o filas individuales, controle uno o ambos de los `RowPrePaint` y `RowPostPaint` eventos. El `RowPrePaint` evento se produce antes de que se dibujan las celdas de una fila y el `RowPostPaint` evento se produce después de que se dibujan las celdas. Puede controlar ambos eventos y la `CellPainting` eventos para pintar el fondo de la fila, celdas individuales y filas en primer plano por separado, o puede proporcionar personalizaciones específicas donde necesite y utilizar la presentación predeterminada de otros elementos de la fila.  
+ <span data-ttu-id="439f6-167">Para dibujar filas o elementos de filas, controle uno o ambos eventos `RowPrePaint` y `RowPostPaint`.</span><span class="sxs-lookup"><span data-stu-id="439f6-167">To draw individual rows or elements of rows, handle one or both of the `RowPrePaint` and `RowPostPaint` events.</span></span> <span data-ttu-id="439f6-168">El evento `RowPrePaint` se produce antes de que se dibujen las celdas en una fila, y el evento `RowPostPaint` se produce después de dibujar las celdas.</span><span class="sxs-lookup"><span data-stu-id="439f6-168">The `RowPrePaint` event occurs before the cells in a row are painted, and the `RowPostPaint` event occurs after the cells are painted.</span></span> <span data-ttu-id="439f6-169">Puede controlar ambos eventos y el evento `CellPainting` para pintar el fondo de una fila, celdas individuales y el primer plano de una fila por separado, o bien puede proporcionar personalizaciones específicas donde las necesite y usar la vista predeterminada para otros elementos de la fila.</span><span class="sxs-lookup"><span data-stu-id="439f6-169">You can handle both events and the `CellPainting` event to paint row background, individual cells, and row foreground separately, or you can provide specific customizations where you need them and use the default display for other elements of the row.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas siguientes:  
+ <span data-ttu-id="439f6-170">Para obtener más información, incluidos los ejemplos de código, consulte los temas siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-170">For more information, including code examples, see the following topics:</span></span>  
   
 -   <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
@@ -181,22 +182,22 @@ Dibujo propietario en formularios Windows Forms, que también se conoce como dib
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Cómo: personalizar la apariencia de las celdas en el Control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [<span data-ttu-id="439f6-171">Procedimiento para personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="439f6-171">How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Cómo: personalizar la apariencia de las filas en el Control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [<span data-ttu-id="439f6-172">Procedimiento para personalizar la apariencia de las filas en el control DataGridView de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="439f6-172">How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
-### <a name="toolstrip-control"></a>ToolStrip  
- <xref:System.Windows.Forms.ToolStrip> y controles derivados le permiten personalizar cualquier aspecto de su apariencia.  
+### <a name="toolstrip-control"></a><span data-ttu-id="439f6-173">ToolStrip</span><span class="sxs-lookup"><span data-stu-id="439f6-173">ToolStrip Control</span></span>  
+ <span data-ttu-id="439f6-174"><xref:System.Windows.Forms.ToolStrip>y los controles derivados le permiten personalizar cualquier aspecto de su apariencia.</span><span class="sxs-lookup"><span data-stu-id="439f6-174"><xref:System.Windows.Forms.ToolStrip> and derived controls enable you to customize any aspect of their appearance.</span></span>  
   
- Para proporcionar una representación personalizada para <xref:System.Windows.Forms.ToolStrip> controles, establecer el `Renderer` propiedad de un <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, o <xref:System.Windows.Forms.ToolStripContentPanel> a una `ToolStripRenderer` de objetos y administrar uno o varios de los muchos eventos de dibujos proporcionados por la `ToolStripRenderer` clase. Como alternativa, establezca un `Renderer` propiedad a una instancia de su propia clase derivada de `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, o <xref:System.Windows.Forms.ToolStripSystemRenderer> que implementa o reemplaza específico `On` *EventName* métodos.  
+ <span data-ttu-id="439f6-175">Para proporcionar una representación personalizada para <xref:System.Windows.Forms.ToolStrip> controles, establecer el `Renderer` propiedad de un <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, o <xref:System.Windows.Forms.ToolStripContentPanel> a una `ToolStripRenderer` de objetos y administrar uno o varios de los diversos eventos de dibujo proporcionados por el `ToolStripRenderer` clase.</span><span class="sxs-lookup"><span data-stu-id="439f6-175">To provide custom rendering for <xref:System.Windows.Forms.ToolStrip> controls, set the `Renderer` property of a <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, or <xref:System.Windows.Forms.ToolStripContentPanel> to a `ToolStripRenderer` object and handle one or more of the many drawing events provided by the `ToolStripRenderer` class.</span></span> <span data-ttu-id="439f6-176">Por otra parte, defina un `Renderer` propiedad a una instancia de su propia clase derivada de `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, o <xref:System.Windows.Forms.ToolStripSystemRenderer> que implementa o invalida específico `On` *EventName* métodos.</span><span class="sxs-lookup"><span data-stu-id="439f6-176">Alternatively, set a `Renderer` property to an instance of your own class derived from `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, or <xref:System.Windows.Forms.ToolStripSystemRenderer> that implements or overrides specific `On`*EventName* methods.</span></span>  
   
- Para obtener más información, incluidos ejemplos de código, vea los temas siguientes:  
+ <span data-ttu-id="439f6-177">Para obtener más información, incluidos los ejemplos de código, consulte los temas siguientes:</span><span class="sxs-lookup"><span data-stu-id="439f6-177">For more information, including code examples, see the following topics:</span></span>  
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Cómo: crear y establecer un representador personalizado para el Control ToolStrip de Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [<span data-ttu-id="439f6-178">Procedimiento para crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="439f6-178">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Cómo: personalizar dibujar un Control ToolStrip](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [<span data-ttu-id="439f6-179">Procedimiento para dibujar un control ToolStrip de manera personalizada</span><span class="sxs-lookup"><span data-stu-id="439f6-179">How to: Custom Draw a ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
   
-## <a name="see-also"></a>Vea también  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="439f6-180">Vea también</span><span class="sxs-lookup"><span data-stu-id="439f6-180">See Also</span></span>  
+ [<span data-ttu-id="439f6-181">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="439f6-181">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

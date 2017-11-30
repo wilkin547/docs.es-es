@@ -1,51 +1,54 @@
 ---
-title: "Importancia del orden de transformaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "transformaciones, importancia del orden"
+title: "Importancia del orden de transformación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b170c9247b2415c724c1306a4c21d067c823b4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Importancia del orden de transformaci&#243;n
-Un único objeto <xref:System.Drawing.Drawing2D.Matrix> puede almacenar una transformación o una secuencia de transformaciones.  Ésta última se denomina transformación compuesta.  La matriz de una transformación compuesta se obtiene multiplicando las matrices de las transformaciones individuales.  
+# <a name="why-transformation-order-is-significant"></a><span data-ttu-id="dc5da-102">Importancia del orden de transformación</span><span class="sxs-lookup"><span data-stu-id="dc5da-102">Why Transformation Order Is Significant</span></span>
+<span data-ttu-id="dc5da-103">Una sola <xref:System.Drawing.Drawing2D.Matrix> objeto puede almacenar una transformación o una secuencia de transformaciones.</span><span class="sxs-lookup"><span data-stu-id="dc5da-103">A single <xref:System.Drawing.Drawing2D.Matrix> object can store a single transformation or a sequence of transformations.</span></span> <span data-ttu-id="dc5da-104">Se llama a este último una transformación compuesta.</span><span class="sxs-lookup"><span data-stu-id="dc5da-104">The latter is called a composite transformation.</span></span> <span data-ttu-id="dc5da-105">La matriz de una transformación compuesta se obtiene multiplicando las matrices de las transformaciones individuales.</span><span class="sxs-lookup"><span data-stu-id="dc5da-105">The matrix of a composite transformation is obtained by multiplying the matrices of individual transformations.</span></span>  
   
-## Ejemplos de transformación compuestas  
- En una transformación compuesta, es importante el orden de cada una de las transformaciones.  Por ejemplo, si primero se gira, después se cambia el tamaño y después se traslada, el resultado será distinto que si primero se traslada, después se gira y después se cambia el tamaño.  En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], las transformaciones compuestas se compilan de izquierda a derecha.  Si S, R y T son matrices de cambio de tamaño, giro y traslado respectivamente, el producto SRT \(en ese orden\) es la matriz de la transformación compuesta que primero cambia el tamaño, luego gira y después traslada.  La matriz que se obtiene con el producto SRT es distinta a la que se obtiene con el producto TRS.  
+## <a name="composite-transform-examples"></a><span data-ttu-id="dc5da-106">Ejemplos de transformación compuestas</span><span class="sxs-lookup"><span data-stu-id="dc5da-106">Composite Transform Examples</span></span>  
+ <span data-ttu-id="dc5da-107">En una transformación compuesta, es importante el orden de las transformaciones individuales.</span><span class="sxs-lookup"><span data-stu-id="dc5da-107">In a composite transformation, the order of individual transformations is important.</span></span> <span data-ttu-id="dc5da-108">Por ejemplo, si primero girar, escalar y, luego, traducir, obtendrá un resultado diferente que si primero se traslada, girar y escalar.</span><span class="sxs-lookup"><span data-stu-id="dc5da-108">For example, if you first rotate, then scale, then translate, you get a different result than if you first translate, then rotate, then scale.</span></span> <span data-ttu-id="dc5da-109">En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], las transformaciones compuestas se generan de izquierda a derecha.</span><span class="sxs-lookup"><span data-stu-id="dc5da-109">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], composite transformations are built from left to right.</span></span> <span data-ttu-id="dc5da-110">Si S, R y T son matrices de escala, rotación y traducción respectivamente, a continuación, el producto SRT (en ese orden) es la matriz de la transformación compuesta que primero cambia el tamaño, a continuación, gira y se traduce.</span><span class="sxs-lookup"><span data-stu-id="dc5da-110">If S, R, and T are scale, rotation, and translation matrices respectively, then the product SRT (in that order) is the matrix of the composite transformation that first scales, then rotates, then translates.</span></span> <span data-ttu-id="dc5da-111">La matriz generada por el producto SRT es diferente de la matriz generada por el producto TRS.</span><span class="sxs-lookup"><span data-stu-id="dc5da-111">The matrix produced by the product SRT is different from the matrix produced by the product TRS.</span></span>  
   
- Una razón por la que el orden es importante es que las transformaciones como el giro y el cambio de tamaño se hacen en relación con el origen del sistema de coordenadas.  Cambiar el tamaño de un objeto que está centrado en el origen tiene un resultado diferente a cambiar el tamaño de un objeto que se ha alejado del origen.  De forma similar, girar un objeto que está centrado en el origen tiene un resultado diferente a girar un objeto que se ha alejado del origen.  
+ <span data-ttu-id="dc5da-112">Una razón orden es importante es que las transformaciones como el giro y ajuste de escala se hacen en relación con el origen del sistema de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="dc5da-112">One reason order is significant is that transformations like rotation and scaling are done with respect to the origin of the coordinate system.</span></span> <span data-ttu-id="dc5da-113">Ajuste de escala en un objeto que está centrado en el origen, genera un resultado diferente a cambiar el tamaño de un objeto que se ha movido fuera del origen.</span><span class="sxs-lookup"><span data-stu-id="dc5da-113">Scaling an object that is centered at the origin produces a different result than scaling an object that has been moved away from the origin.</span></span> <span data-ttu-id="dc5da-114">De forma similar, girar un objeto que está centrado en el origen, genera un resultado diferente a girar un objeto que se ha movido fuera del origen.</span><span class="sxs-lookup"><span data-stu-id="dc5da-114">Similarly, rotating an object that is centered at the origin produces a different result than rotating an object that has been moved away from the origin.</span></span>  
   
- En el ejemplo siguiente se combina el cambio de tamaño, el giro y el traslado \(en ese orden\) para formar una transformación compuesta.  El argumento <xref:System.Drawing.Drawing2D.MatrixOrder> que se pasa al método <xref:System.Drawing.Graphics.RotateTransform%2A> indica que el giro seguirá al cambio de tamaño.  Igualmente, el argumento <xref:System.Drawing.Drawing2D.MatrixOrder> que se pasa al método <xref:System.Drawing.Graphics.TranslateTransform%2A> indica que la traducción seguirá a la rotación.  <xref:System.Drawing.Drawing2D.MatrixOrder> y <xref:System.Drawing.Drawing2D.MatrixOrder> son miembros de la enumeración <xref:System.Drawing.Drawing2D.MatrixOrder>.  
+ <span data-ttu-id="dc5da-115">En el ejemplo siguiente se combina el ajuste de escala, rotación y traducción (en ese orden) para formar una transformación compuesta.</span><span class="sxs-lookup"><span data-stu-id="dc5da-115">The following example combines scaling, rotation and translation (in that order) to form a composite transformation.</span></span> <span data-ttu-id="dc5da-116">El argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> pasa a la <xref:System.Drawing.Graphics.RotateTransform%2A> método indica que el giro seguirá el escalado.</span><span class="sxs-lookup"><span data-stu-id="dc5da-116">The argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passed to the <xref:System.Drawing.Graphics.RotateTransform%2A> method indicates that the rotation will follow the scaling.</span></span> <span data-ttu-id="dc5da-117">Del mismo modo, el argumento <xref:System.Drawing.Drawing2D.MatrixOrder.Append> pasa a la <xref:System.Drawing.Graphics.TranslateTransform%2A> método indica que la traducción seguirá la rotación.</span><span class="sxs-lookup"><span data-stu-id="dc5da-117">Likewise, the argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passed to the <xref:System.Drawing.Graphics.TranslateTransform%2A> method indicates that the translation will follow the rotation.</span></span> <span data-ttu-id="dc5da-118"><xref:System.Drawing.Drawing2D.MatrixOrder.Append>y <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> son miembros de la <xref:System.Drawing.Drawing2D.MatrixOrder> enumeración.</span><span class="sxs-lookup"><span data-stu-id="dc5da-118"><xref:System.Drawing.Drawing2D.MatrixOrder.Append> and <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> are members of the <xref:System.Drawing.Drawing2D.MatrixOrder> enumeration.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  
   
- En el ejemplo siguiente se hacen las mismas llamadas a métodos que en el anterior, pero se invierte el orden de las llamadas.  El orden resultante de las operaciones es primero traslado, después giro y después cambio de tamaño, lo cual genera un resultado muy diferente a primero cambiar el tamaño, luego girar y después trasladar.  
+ <span data-ttu-id="dc5da-119">En el ejemplo siguiente se realiza las mismas llamadas de método como el ejemplo anterior, pero se invierte el orden de las llamadas.</span><span class="sxs-lookup"><span data-stu-id="dc5da-119">The following example makes the same method calls as the preceding example, but the order of the calls is reversed.</span></span> <span data-ttu-id="dc5da-120">El orden resultante de las operaciones se traduce en primer lugar, girar, escala, lo que produce un resultado muy diferente a la primera escala, a continuación, rotar, luego, traducir.</span><span class="sxs-lookup"><span data-stu-id="dc5da-120">The resulting order of operations is first translate, then rotate, then scale, which produces a very different result than first scale, then rotate, then translate.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.MiscLegacyTopics#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#22)]  
   
- Una manera de invertir el orden de las transformaciones en una transformación compuesta consiste en invertir el orden de una secuencia de llamadas a métodos.  Otra forma de controlar el orden de las operaciones es cambiar el argumento de orden de la matriz.  El ejemplo siguiente es igual que el ejemplo anterior, sólo que <xref:System.Drawing.Drawing2D.MatrixOrder> se ha cambiado a <xref:System.Drawing.Drawing2D.MatrixOrder>.  La multiplicación de la matriz se hace en el orden SRT, donde S, R y T son las matrices de cambio de tamaño, giro y traslado, respectivamente.  El orden de la transformación compuesta es primero el cambio de tamaño, después el giro y después el traslado.  
+ <span data-ttu-id="dc5da-121">Una manera de invertir el orden de las transformaciones en una transformación compuesta es invertir el orden de una secuencia de llamadas al método.</span><span class="sxs-lookup"><span data-stu-id="dc5da-121">One way to reverse the order of individual transformations in a composite transformation is to reverse the order of a sequence of method calls.</span></span> <span data-ttu-id="dc5da-122">Una segunda forma de controlar el orden de las operaciones es cambiar el argumento de orden de la matriz.</span><span class="sxs-lookup"><span data-stu-id="dc5da-122">A second way to control the order of operations is to change the matrix order argument.</span></span> <span data-ttu-id="dc5da-123">En el ejemplo siguiente es el mismo que el ejemplo anterior, salvo que <xref:System.Drawing.Drawing2D.MatrixOrder.Append> ha cambiado a <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>.</span><span class="sxs-lookup"><span data-stu-id="dc5da-123">The following example is the same as the preceding example, except that <xref:System.Drawing.Drawing2D.MatrixOrder.Append> has been changed to <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>.</span></span> <span data-ttu-id="dc5da-124">La multiplicación de matrices se realiza en el orden SRT, donde S, R y T son las matrices para escalar, girar y traducen, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="dc5da-124">The matrix multiplication is done in the order SRT, where S, R, and T are the matrices for scale, rotate, and translate, respectively.</span></span> <span data-ttu-id="dc5da-125">El orden de la transformación compuesta es la primera escala, girar, a continuación, traducir.</span><span class="sxs-lookup"><span data-stu-id="dc5da-125">The order of the composite transformation is first scale, then rotate, then translate.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.MiscLegacyTopics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#23)]  
   
- El resultado del ejemplo precedente es el mismo que el del primer ejemplo de este tema.  Esto es así por que se han invertido el orden de las llamadas a métodos y el orden de la multiplicación de la matriz.  
+ <span data-ttu-id="dc5da-126">El resultado del ejemplo precedente es el mismo como resultado del primer ejemplo de este tema.</span><span class="sxs-lookup"><span data-stu-id="dc5da-126">The result of the immediately preceding example is the same as the result of the first example in this topic.</span></span> <span data-ttu-id="dc5da-127">Esto es porque se invierten el orden de las llamadas al método y el orden de la multiplicación de matrices.</span><span class="sxs-lookup"><span data-stu-id="dc5da-127">This is because we reversed both the order of the method calls and the order of the matrix multiplication.</span></span>  
   
-## Vea también  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [Sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Usar transformaciones en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="dc5da-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="dc5da-128">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [<span data-ttu-id="dc5da-129">Sistemas de coordenadas y transformaciones</span><span class="sxs-lookup"><span data-stu-id="dc5da-129">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="dc5da-130">Usar transformaciones en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="dc5da-130">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

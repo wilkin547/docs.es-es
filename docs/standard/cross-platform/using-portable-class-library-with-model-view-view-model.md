@@ -1,99 +1,100 @@
 ---
-title: "Usar la Biblioteca de clases portable con Model-View-View Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Biblioteca de clases portable [.NET Framework] y MVVM"
-  - "MVVM y Biblioteca de clases portable"
+title: Usar la Biblioteca de clases portable con Model-View-View Model
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Portable Class Library [.NET Framework], and MVVM
+- MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e39a8df5c8aee05414e778f15a29bbeda8dba930
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Usar la Biblioteca de clases portable con Model-View-View Model
-Puede utilizar.NET Framework [Biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para implementar ensamblados de modelo y de la acción de \(MVVM\) del modelo de la Modelo\-Vista\- vista en varias plataformas.  
+# <a name="using-portable-class-library-with-model-view-view-model"></a><span data-ttu-id="d6f21-102">Usar la Biblioteca de clases portable con Model-View-View Model</span><span class="sxs-lookup"><span data-stu-id="d6f21-102">Using Portable Class Library with Model-View-View Model</span></span>
+<span data-ttu-id="d6f21-103">Puede utilizar .NET Framework [biblioteca de clases Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para implementar el modelo Model-View-View Model (MVVM) y compartir los ensamblados en varias plataformas.</span><span class="sxs-lookup"><span data-stu-id="d6f21-103">You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.</span></span>  
   
- TALES es un modelo de la aplicación que aísla la interfaz de usuario de la lógica de negocios subyacente.  Puede implementar las clases modelo del modelo y ver en un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], y crea las vistas se personalizan para distintas plataformas.  Este enfoque permite escribir el modelo de datos y lógica empresarial sólo una vez, y se utiliza ese código de .NET Framework, Silverlight, Windows phone, y las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , como se muestra en la ilustración siguiente.  
+ <span data-ttu-id="d6f21-104">MVVM es un patrón de aplicación que aísla la interfaz de usuario de la lógica empresarial subyacente.</span><span class="sxs-lookup"><span data-stu-id="d6f21-104">MVVM is an application pattern that isolates the user interface from the underlying business logic.</span></span> <span data-ttu-id="d6f21-105">Puede implementar el modelo y ver clases del modelo en un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]y, a continuación, crear vistas personalizadas para distintas plataformas.</span><span class="sxs-lookup"><span data-stu-id="d6f21-105">You can implement the model and view model classes in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], and then create views that are customized for different platforms.</span></span> <span data-ttu-id="d6f21-106">Este enfoque le permite escribir los datos de modelo y lógica de negocios de una sola vez y uso de código de .NET Framework, Silverlight y Windows Phone, y [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicaciones, tal como se muestra en la siguiente ilustración.</span><span class="sxs-lookup"><span data-stu-id="d6f21-106">This approach enables you to write the data model and business logic only once, and use that code from .NET Framework, Silverlight, Windows Phone, and [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps, as shown in the following illustration.</span></span>  
   
- ![Portable con diagrama de MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
+ <span data-ttu-id="d6f21-107">![Portable con diagrama MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")</span><span class="sxs-lookup"><span data-stu-id="d6f21-107">![Portable with MVVM diagram](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")</span></span>  
   
- Este tema no proporciona información general sobre el modelo MVVM.  Solo proporciona información acerca de cómo usar [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] para implementar MVVM.  Para obtener más información sobre MVVM, vea [TALES QuickStart](http://go.microsoft.com/fwlink/?LinkId=234934) en MSDN Library.  
+ <span data-ttu-id="d6f21-108">En este tema no proporciona información general sobre el patrón MVVM.</span><span class="sxs-lookup"><span data-stu-id="d6f21-108">This topic does not provide general information about the MVVM pattern.</span></span> <span data-ttu-id="d6f21-109">Solo se proporciona información sobre cómo usar [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] para implementar MVVM.</span><span class="sxs-lookup"><span data-stu-id="d6f21-109">It only provides information about how to use [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] to implement MVVM.</span></span> <span data-ttu-id="d6f21-110">Para obtener más información acerca de MVVM, consulte el [inicio rápido de MVVM](http://go.microsoft.com/fwlink/?LinkId=234934).</span><span class="sxs-lookup"><span data-stu-id="d6f21-110">For more information about MVVM, see the [MVVM Quickstart](http://go.microsoft.com/fwlink/?LinkId=234934).</span></span>  
   
-## Clases que admiten MVVM  
- Cuando elige como destino [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight o Windows Phone 7.5 para su proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], se encuentran disponibles las siguientes clases para implementar el modelo MVVM:  
+## <a name="classes-that-support-mvvm"></a><span data-ttu-id="d6f21-111">Clases que admiten MVVM</span><span class="sxs-lookup"><span data-stu-id="d6f21-111">Classes That Support MVVM</span></span>  
+ <span data-ttu-id="d6f21-112">Si el destino es el [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight y Windows Phone 7.5 para su [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto, las siguientes clases están disponibles para implementar el patrón MVVM:</span><span class="sxs-lookup"><span data-stu-id="d6f21-112">When you target the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, or Windows Phone 7.5 for your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, the following classes are available for implementing the MVVM pattern:</span></span>  
   
--   Clase <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-113">Clase <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-113"><xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-114">Clase <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-114"><xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-115">Clase <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-115"><xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-116">Clase <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-116"><xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-117">Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-117"><xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-118">Clase <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-118"><xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-119">Clase <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-119"><xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-120">Clase <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-120"><xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-121">Clase <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-121"><xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> class</span></span>  
   
--   Clase <xref:System.Windows.Input.ICommand?displayProperty=fullName>  
+-   <span data-ttu-id="d6f21-122">Clase <xref:System.Windows.Input.ICommand?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d6f21-122"><xref:System.Windows.Input.ICommand?displayProperty=nameWithType> class</span></span>  
   
--   Todas las clases en el espacio de nombres <xref:System.ComponentModel.DataAnnotations?displayProperty=fullName>.  
+-   <span data-ttu-id="d6f21-123">Todas las clases en el <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="d6f21-123">All classes in the <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace</span></span>  
   
-## implementar MVVM  
- Para implementar MVVM, por lo general se crea un modelo y un modelo de vista en un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] porque un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] no puede hacer referencia a un proyecto no portable.  El modelo y el modelo de vista pueden estar en el mismo proyecto o en proyectos independientes.  Si utiliza proyectos independientes, agregue una referencia desde el proyecto de modelo de vista al proyecto de modelo.  
+## <a name="implementing-mvvm"></a><span data-ttu-id="d6f21-124">Implementar MVVM</span><span class="sxs-lookup"><span data-stu-id="d6f21-124">Implementing MVVM</span></span>  
+ <span data-ttu-id="d6f21-125">Para implementar MVVM, crea normalmente el modelo y el modelo de vista en un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] del proyecto, porque un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto no puede hacer referencia a un proyecto no portable.</span><span class="sxs-lookup"><span data-stu-id="d6f21-125">To implement MVVM, you typically create both the model and the view model in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, because a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project cannot reference a non-portable project.</span></span> <span data-ttu-id="d6f21-126">El modelo y el modelo de vista pueden estar en el mismo proyecto o en proyectos independientes.</span><span class="sxs-lookup"><span data-stu-id="d6f21-126">The model and view model can be in the same project or in separate projects.</span></span> <span data-ttu-id="d6f21-127">Si utiliza proyectos independientes, agregue una referencia del proyecto de modelo de vista para el proyecto de modelos.</span><span class="sxs-lookup"><span data-stu-id="d6f21-127">If you use separate projects, add a reference from the view model project to the model project.</span></span>  
   
- Después de compilar el modelo y ver los proyectos de modelo, se hace referencia a esos ensamblados en la aplicación que contiene la vista.  Si la vista interactúa solo con el modelo de vista, solo tienes que hacer referencia al ensamblado que contiene el modelo de vista.  
+ <span data-ttu-id="d6f21-128">Después de compilar el modelo y ver los proyectos de modelos, hacer referencia a esos ensamblados en la aplicación que contiene la vista.</span><span class="sxs-lookup"><span data-stu-id="d6f21-128">After you compile the model and view model projects, you reference those assemblies in the app that contains the view.</span></span> <span data-ttu-id="d6f21-129">Si la vista se interactúa con el modelo de vista, basta con hacer referencia al ensamblado que contiene el modelo de vista.</span><span class="sxs-lookup"><span data-stu-id="d6f21-129">If the view interacts only with the view model, you only have to reference the assembly that contains the view model.</span></span>  
   
-### Modelo  
- En el ejemplo siguiente muestra una clase de modelo simplificado que puede residir en un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)].  
+### <a name="model"></a><span data-ttu-id="d6f21-130">Modelo</span><span class="sxs-lookup"><span data-stu-id="d6f21-130">Model</span></span>  
+ <span data-ttu-id="d6f21-131">En el ejemplo siguiente se muestra una clase de modelo simplificado que puede residir en un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto.</span><span class="sxs-lookup"><span data-stu-id="d6f21-131">The following example shows a simplified model class that could reside in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]  
   
- En el ejemplo siguiente se muestra una manera sencilla de rellenar, recuperar y actualizar los datos de un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)].  En una aplicación real, recuperaría los datos en un origen como un servicio de Windows Communication Foundation \(WCF\).  
+ <span data-ttu-id="d6f21-132">En el ejemplo siguiente se muestra una manera sencilla de rellenar, recuperar y actualizar los datos en un [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] proyecto.</span><span class="sxs-lookup"><span data-stu-id="d6f21-132">The following example shows a simple way to populate, retrieve, and update the data in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project.</span></span> <span data-ttu-id="d6f21-133">En una aplicación real, puede recuperar los datos de un origen como un servicio de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d6f21-133">In a real app, you would retrieve the data from a source such as a Windows Communication Foundation (WCF) service.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]  
   
-### Modelo de vista  
- Con frecuencia se agrega una clase base para los modelos de vista al implementar el modelo MVVM.  En el siguiente ejemplo se muestra una clase base:  
+### <a name="view-model"></a><span data-ttu-id="d6f21-134">Modelo de vista</span><span class="sxs-lookup"><span data-stu-id="d6f21-134">View Model</span></span>  
+ <span data-ttu-id="d6f21-135">Con frecuencia se agrega una clase base para ver modelos al implementar el patrón MVVM.</span><span class="sxs-lookup"><span data-stu-id="d6f21-135">A base class for view models is frequently added when implementing the MVVM pattern.</span></span> <span data-ttu-id="d6f21-136">En el ejemplo siguiente se muestra una clase base.</span><span class="sxs-lookup"><span data-stu-id="d6f21-136">The following example shows a base class.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]  
   
- Una implementación de la interfaz <xref:System.Windows.Input.ICommand> se usa frecuentemente con el modelo MVVM.  En el siguiente ejemplo se muestra una implementación de la interfaz <xref:System.Windows.Input.ICommand>.  
+ <span data-ttu-id="d6f21-137">Una implementación de la <xref:System.Windows.Input.ICommand> interfaz es habitual con el patrón MVVM.</span><span class="sxs-lookup"><span data-stu-id="d6f21-137">An implementation of the <xref:System.Windows.Input.ICommand> interface is frequently used with the MVVM pattern.</span></span> <span data-ttu-id="d6f21-138">En el siguiente ejemplo se muestra una implementación de la interfaz <xref:System.Windows.Input.ICommand>.</span><span class="sxs-lookup"><span data-stu-id="d6f21-138">The following example shows an implementation of the <xref:System.Windows.Input.ICommand> interface.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]  
   
- En el ejemplo siguiente se muestra un modelo de vista simplificada.  
+ <span data-ttu-id="d6f21-139">En el ejemplo siguiente se muestra un modelo de vista simplificada.</span><span class="sxs-lookup"><span data-stu-id="d6f21-139">The following example shows a simplified view model.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### View  
- Desde una aplicación [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], una aplicación [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], una aplicación basada en Silverlight o una aplicación de Windows Phone 7.5, puede hacer referencia el ensamblado que contiene el modelo y los proyectos de modelo de vista.  A continuación, cree una vista que interactúe con el modelo de vista.  En el ejemplo siguiente se muestra una aplicación simplificada de Windows Presentation Foundation \(WPF\) que recupera y actualiza los datos del modelo de vista.  Puede crear vistas similares en aplicaciones de Silverlight, Windows Phone, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+### <a name="view"></a><span data-ttu-id="d6f21-140">Ver</span><span class="sxs-lookup"><span data-stu-id="d6f21-140">View</span></span>  
+ <span data-ttu-id="d6f21-141">Desde un [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] aplicación, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicación, una aplicación basada en Silverlight o aplicación de Windows Phone 7.5, puede hacer referencia al ensamblado que contiene los proyectos de modelo de modelo y vista.</span><span class="sxs-lookup"><span data-stu-id="d6f21-141">From a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] app, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, Silverlight-based app, or Windows Phone 7.5 app, you can reference the assembly that contains the model and view model projects.</span></span>  <span data-ttu-id="d6f21-142">A continuación, cree una vista que interactúa con el modelo de vista.</span><span class="sxs-lookup"><span data-stu-id="d6f21-142">You then create a view that interacts with the view model.</span></span> <span data-ttu-id="d6f21-143">En el ejemplo siguiente se muestra una aplicación de Windows Presentation Foundation (WPF) simplificada que recupera y actualiza los datos desde el modelo de vista.</span><span class="sxs-lookup"><span data-stu-id="d6f21-143">The following example shows a simplified Windows Presentation Foundation (WPF) app that retrieves and updates data from the view model.</span></span> <span data-ttu-id="d6f21-144">Puede crear vistas similares en Silverlight, Windows Phone, o [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="d6f21-144">You could create similar views in Silverlight, Windows Phone, or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span>  
   
- [!code-xml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
+ [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## Vea también  
- [Biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a><span data-ttu-id="d6f21-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="d6f21-145">See Also</span></span>  
+ [<span data-ttu-id="d6f21-146">Biblioteca de clases Portable</span><span class="sxs-lookup"><span data-stu-id="d6f21-146">Portable Class Library</span></span>](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

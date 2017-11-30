@@ -1,67 +1,67 @@
 ---
-title: "C&#243;mo: Ver m&#250;ltiples l&#237;neas en el control TextBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "retorno de carro"
-  - "CRLF"
-  - "fin de línea"
-  - "avance de línea"
-  - "MultiLine (propiedad del control TextBox)"
-  - "nueva línea"
-  - "ScrollBars (propiedad), del control TextBox"
-  - "TextBox (control) [Windows Forms], ver múltiples líneas"
-  - "WordWrap (propiedad)"
+title: "Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- newline
+- end of line
+- ScrollBars property [Windows Forms], in TextBox control
+- CRLF
+- MultiLine property in TextBox control
+- line-feed
+- TextBox control [Windows Forms], viewing multiple lines
+- carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e8f39e031835275818504151e66834f0634b7f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ver m&#250;ltiples l&#237;neas en el control TextBox de formularios Windows Forms
-De forma predeterminada, el control <xref:System.Windows.Forms.TextBox> de formularios Windows Forms muestra una única línea de texto y no muestra barras de desplazamiento.  Si la longitud del texto es mayor que el espacio disponible, sólo estará visible parte del texto.  Se puede cambiar este comportamiento predeterminado si se establecen las propiedades <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> y <xref:System.Windows.Forms.TextBox.ScrollBars%2A> en los valores apropiados.  
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a><span data-ttu-id="0829c-102">Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0829c-102">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>
+<span data-ttu-id="0829c-103">De forma predeterminada, los formularios Windows Forms <xref:System.Windows.Forms.TextBox> control muestra una sola línea de texto y no muestra barras de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="0829c-103">By default, the Windows Forms <xref:System.Windows.Forms.TextBox> control displays a single line of text and does not display scroll bars.</span></span> <span data-ttu-id="0829c-104">Si el texto es más largo que el espacio disponible, solo una parte del texto está visible.</span><span class="sxs-lookup"><span data-stu-id="0829c-104">If the text is longer than the available space, only part of the text is visible.</span></span> <span data-ttu-id="0829c-105">Puede cambiar este comportamiento predeterminado estableciendo la <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, y <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propiedades en los valores adecuados.</span><span class="sxs-lookup"><span data-stu-id="0829c-105">You can change this default behavior by setting the <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, and <xref:System.Windows.Forms.TextBox.ScrollBars%2A> properties to appropriate values.</span></span>  
   
-### Para mostrar un retorno de carro en el control TextBox  
+### <a name="to-display-a-carriage-return-in-the-textbox-control"></a><span data-ttu-id="0829c-106">Para mostrar un retorno de carro en el control de cuadro de texto</span><span class="sxs-lookup"><span data-stu-id="0829c-106">To display a carriage return in the TextBox control</span></span>  
   
--   Para mostrar un retorno de carro en un control <xref:System.Windows.Forms.TextBox> de varias líneas, utilice la propiedad <xref:System.Environment.NewLine%2A>.  
+-   <span data-ttu-id="0829c-107">Para mostrar un retorno de carro en una de varias líneas <xref:System.Windows.Forms.TextBox>, use el <xref:System.Environment.NewLine%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="0829c-107">To display a carriage return in a multi-line <xref:System.Windows.Forms.TextBox>, use the <xref:System.Environment.NewLine%2A> property.</span></span>  
   
-     Tenga en cuenta que la interpretación de los caracteres de escape \(\\\) es específica del lenguaje.  Visual Basic utiliza `Chr$(13) & Chr$(10)` para la combinación de caracteres de retorno de carro y avance de línea.  
+     <span data-ttu-id="0829c-108">Tenga en cuenta que la interpretación de caracteres de escape (\\) es específico del idioma.</span><span class="sxs-lookup"><span data-stu-id="0829c-108">Be aware that the interpretation of escape characters (\\) is language-specific.</span></span> <span data-ttu-id="0829c-109">Visual Basic usa `Chr$(13) & Chr$(10)` para la combinación de caracteres de retorno de carro y de transporte.</span><span class="sxs-lookup"><span data-stu-id="0829c-109">Visual Basic uses `Chr$(13) & Chr$(10)` for the carriage return and linefeed character combination.</span></span>  
   
-### Para ver múltiples líneas en el control TextBox  
+### <a name="to-view-multiple-lines-in-the-textbox-control"></a><span data-ttu-id="0829c-110">Para ver varias líneas en el control de cuadro de texto</span><span class="sxs-lookup"><span data-stu-id="0829c-110">To view multiple lines in the TextBox control</span></span>  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.TextBox.Multiline%2A> en `true`.  Si el valor de <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> es `true` \(el valor predeterminado\), el texto del control aparecerá en uno o más párrafos; de lo contrario, aparecerá como una lista, en la que algunas líneas pueden quedar cortadas en el borde del control.  
+1.  <span data-ttu-id="0829c-111">Establezca la propiedad <xref:System.Windows.Forms.TextBox.Multiline%2A> en `true`.</span><span class="sxs-lookup"><span data-stu-id="0829c-111">Set the <xref:System.Windows.Forms.TextBox.Multiline%2A> property to `true`.</span></span> <span data-ttu-id="0829c-112">Si <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> es `true` (valor predeterminado), a continuación, el texto en el control se mostrará como uno o varios párrafos; en caso contrario, aparecerá como una lista, en el que algunas líneas pueden quedar cortadas en el borde del control.</span><span class="sxs-lookup"><span data-stu-id="0829c-112">If <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> is `true` (the default), then the text in the control will appear as one or more paragraphs; otherwise it will appear as a list, in which some lines may be clipped at the edge of the control.</span></span>  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.TextBox.ScrollBars%2A> en un valor apropiado.  
+2.  <span data-ttu-id="0829c-113">Establezca la propiedad <xref:System.Windows.Forms.TextBox.ScrollBars%2A> en un valor apropiado.</span><span class="sxs-lookup"><span data-stu-id="0829c-113">Set the <xref:System.Windows.Forms.TextBox.ScrollBars%2A> property to an appropriate value.</span></span>  
   
-    |Valor|Descripción|  
+    |<span data-ttu-id="0829c-114">Valor</span><span class="sxs-lookup"><span data-stu-id="0829c-114">Value</span></span>|<span data-ttu-id="0829c-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="0829c-115">Description</span></span>|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.ScrollBars>|Utilice este valor si el texto va a ser un párrafo que casi siempre cabrá en el control.  Los usuarios pueden utilizar el puntero del mouse para moverse por el control si el texto resulta demasiado grande como para mostrarlo todo a la vez.|  
-    |<xref:System.Windows.Forms.ScrollBars>|Utilice este valor si desea mostrar una lista de líneas, algunas de las cuales pueden ser más largas que el ancho del control <xref:System.Windows.Forms.TextBox>.|  
-    |<xref:System.Windows.Forms.ScrollBars>|Utilice este valor si la lista puede ser más larga que el alto del control.|  
+    |<xref:System.Windows.Forms.ScrollBars.None>|<span data-ttu-id="0829c-116">Utilice este valor si el texto será un párrafo que casi siempre se ajusta el control.</span><span class="sxs-lookup"><span data-stu-id="0829c-116">Use this value if the text will be a paragraph that almost always fits the control.</span></span> <span data-ttu-id="0829c-117">El usuario puede utilizar el puntero del mouse para moverse por el control si el texto es demasiado largo para mostrarse a la vez.</span><span class="sxs-lookup"><span data-stu-id="0829c-117">The user can use the mouse pointer to move around inside the control if the text is too long to display all at once.</span></span>|  
+    |<xref:System.Windows.Forms.ScrollBars.Horizontal>|<span data-ttu-id="0829c-118">Use este valor si desea mostrar una lista de líneas, algunas de las cuales pueden ser mayor que el ancho de la <xref:System.Windows.Forms.TextBox> control.</span><span class="sxs-lookup"><span data-stu-id="0829c-118">Use this value if you want to display a list of lines, some of which may be longer than the width of the <xref:System.Windows.Forms.TextBox> control.</span></span>|  
+    |<xref:System.Windows.Forms.ScrollBars.Both>|<span data-ttu-id="0829c-119">Utilice este valor si la lista puede ser mayor que el alto del control.</span><span class="sxs-lookup"><span data-stu-id="0829c-119">Use this value if the list may be longer than the height of the control.</span></span>|  
   
-3.  Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.  
+3.  <span data-ttu-id="0829c-120">Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> en un valor apropiado.</span><span class="sxs-lookup"><span data-stu-id="0829c-120">Set the <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> property to an appropriate value.</span></span>  
   
-    |Valor|Descripción|  
+    |<span data-ttu-id="0829c-121">Valor</span><span class="sxs-lookup"><span data-stu-id="0829c-121">Value</span></span>|<span data-ttu-id="0829c-122">Descripción</span><span class="sxs-lookup"><span data-stu-id="0829c-122">Description</span></span>|  
     |-----------|-----------------|  
-    |`false`|El texto del control no se ajustará automáticamente, así que se desplazará hacia la derecha hasta encontrar un salto de línea.  Utilice este valor si eligió barras de desplazamiento <xref:System.Windows.Forms.ScrollBars> o <xref:System.Windows.Forms.ScrollBars>.|  
-    |`true` \(valor predeterminado\)|La barra de desplazamiento horizontal no aparecerá.  Utilice este valor si anteriormente eligió los valores <xref:System.Windows.Forms.ScrollBars> o <xref:System.Windows.Forms.ScrollBars> para las barras de desplazamiento con el fin de mostrar uno o más párrafos.|  
+    |`false`|<span data-ttu-id="0829c-123">Texto en el control no automáticamente se ajustará, por lo que se desplazará a la derecha hasta que se alcance un salto de línea.</span><span class="sxs-lookup"><span data-stu-id="0829c-123">Text in the control will not automatically be wrapped, so it will scroll to the right until a line break is reached.</span></span> <span data-ttu-id="0829c-124">Utilice este valor si eligió <xref:System.Windows.Forms.ScrollBars.Horizontal> las barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.Both>anteriormente.</span><span class="sxs-lookup"><span data-stu-id="0829c-124">Use this value if you chose <xref:System.Windows.Forms.ScrollBars.Horizontal> scroll bars or <xref:System.Windows.Forms.ScrollBars.Both>, above.</span></span>|  
+    |<span data-ttu-id="0829c-125">`true` (valor predeterminado)</span><span class="sxs-lookup"><span data-stu-id="0829c-125">`true` (default)</span></span>|<span data-ttu-id="0829c-126">No se mostrará la barra de desplazamiento horizontal.</span><span class="sxs-lookup"><span data-stu-id="0829c-126">The horizontal scrollbar will not appear.</span></span> <span data-ttu-id="0829c-127">Utilice este valor si eligió <xref:System.Windows.Forms.ScrollBars.Vertical> las barras de desplazamiento o <xref:System.Windows.Forms.ScrollBars.None>, anterior, para mostrar uno o varios párrafos.</span><span class="sxs-lookup"><span data-stu-id="0829c-127">Use this value if you chose <xref:System.Windows.Forms.ScrollBars.Vertical> scroll bars or <xref:System.Windows.Forms.ScrollBars.None>, above, to display one or more paragraphs.</span></span>|  
   
-## Vea también  
- <xref:System.Windows.Forms.TextBox>   
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de sólo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Cómo: Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [TextBox \(Control\)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="0829c-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="0829c-128">See Also</span></span>  
+ <xref:System.Windows.Forms.TextBox>  
+ [<span data-ttu-id="0829c-129">Información general sobre el control TextBox</span><span class="sxs-lookup"><span data-stu-id="0829c-129">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="0829c-130">Controlar el punto de inserción en un control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0829c-130">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="0829c-131">Crear un cuadro de texto de contraseña con el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0829c-131">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="0829c-132">Crear un cuadro de texto de sólo lectura</span><span class="sxs-lookup"><span data-stu-id="0829c-132">How to: Create a Read-Only Text Box</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [<span data-ttu-id="0829c-133">Insertar comillas en una cadena</span><span class="sxs-lookup"><span data-stu-id="0829c-133">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [<span data-ttu-id="0829c-134">Seleccionar texto en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0829c-134">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="0829c-135">Control TextBox</span><span class="sxs-lookup"><span data-stu-id="0829c-135">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

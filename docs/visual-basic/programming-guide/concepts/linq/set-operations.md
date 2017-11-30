@@ -1,75 +1,67 @@
 ---
-title: Conjunto de operaciones (Visual Basic) | Documentos de Microsoft
+title: Operaciones de conjunto (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e835737b388427445a15b6658c7d148801f29b79
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2e30c521635326afeea4aad9ce932d5206d06c6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="set-operations-visual-basic"></a>Operaciones Set (Visual Basic)
-Operaciones Set de LINQ, consulte operaciones de consulta que producen un conjunto de resultados que se basa en la presencia o ausencia de elementos equivalentes dentro de las mismas u otras colecciones (o conjuntos).  
+# <a name="set-operations-visual-basic"></a><span data-ttu-id="12afc-102">Operaciones de conjunto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12afc-102">Set Operations (Visual Basic)</span></span>
+<span data-ttu-id="12afc-103">Las operaciones set de LINQ se refieren a operaciones de consulta que generan un conjunto de resultados en función de la presencia o ausencia de elementos equivalentes dentro de la misma colección o en distintas colecciones (o conjuntos).</span><span class="sxs-lookup"><span data-stu-id="12afc-103">Set operations in LINQ refer to query operations that produce a result set that is based on the presence or absence of equivalent elements within the same or separate collections (or sets).</span></span>  
   
- Los métodos de operador de consulta estándar que realizan operaciones de conjuntos se enumeran en la sección siguiente.  
+ <span data-ttu-id="12afc-104">Los métodos del operador de consulta estándar que realizan operaciones set se indican en la sección siguiente.</span><span class="sxs-lookup"><span data-stu-id="12afc-104">The standard query operator methods that perform set operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a><span data-ttu-id="12afc-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="12afc-105">Methods</span></span>  
   
-|Nombre del método|Descripción|Sintaxis de expresiones de consulta de Visual Basic|Más información|  
+|<span data-ttu-id="12afc-106">Nombre del método</span><span class="sxs-lookup"><span data-stu-id="12afc-106">Method Name</span></span>|<span data-ttu-id="12afc-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="12afc-107">Description</span></span>|<span data-ttu-id="12afc-108">Sintaxis de expresiones de consulta de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="12afc-108">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="12afc-109">Más información</span><span class="sxs-lookup"><span data-stu-id="12afc-109">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Distinct|Quita los valores duplicados de una colección.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName></xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName>|  
-|Except|Devuelve la diferencia de conjuntos, lo que significa que los elementos de una colección que no aparecen en una segunda colección.|No es aplicable.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=fullName></xref:System.Linq.Queryable.Except%2A?displayProperty=fullName>|  
-|Formar intersección|Devuelve la intersección de conjuntos, lo que significa que los elementos que aparecen en cada una de las dos colecciones.|No es aplicable.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName></xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName>|  
-|Unión|Devuelve la unión de conjuntos, lo que significa elementos únicos que aparecen en cualquiera de las dos colecciones.|No es aplicable.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=fullName></xref:System.Linq.Queryable.Union%2A?displayProperty=fullName>|  
+|<span data-ttu-id="12afc-110">Distinct</span><span class="sxs-lookup"><span data-stu-id="12afc-110">Distinct</span></span>|<span data-ttu-id="12afc-111">Quita valores duplicados de una colección.</span><span class="sxs-lookup"><span data-stu-id="12afc-111">Removes duplicate values from a collection.</span></span>|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="12afc-112">Except</span><span class="sxs-lookup"><span data-stu-id="12afc-112">Except</span></span>|<span data-ttu-id="12afc-113">Devuelve la diferencia de conjuntos, es decir, los elementos de una colección que no aparecen en una segunda colección.</span><span class="sxs-lookup"><span data-stu-id="12afc-113">Returns the set difference, which means the elements of one collection that do not appear in a second collection.</span></span>|<span data-ttu-id="12afc-114">No es aplicable.</span><span class="sxs-lookup"><span data-stu-id="12afc-114">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="12afc-115">Formar intersección</span><span class="sxs-lookup"><span data-stu-id="12afc-115">Intersect</span></span>|<span data-ttu-id="12afc-116">Devuelve la intersección de conjuntos, es decir, los elementos que aparecen en las dos colecciones.</span><span class="sxs-lookup"><span data-stu-id="12afc-116">Returns the set intersection, which means elements that appear in each of two collections.</span></span>|<span data-ttu-id="12afc-117">No es aplicable.</span><span class="sxs-lookup"><span data-stu-id="12afc-117">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="12afc-118">Unión</span><span class="sxs-lookup"><span data-stu-id="12afc-118">Union</span></span>|<span data-ttu-id="12afc-119">Devuelve la unión de conjuntos, es decir, los elementos únicos que aparecen en una de las dos colecciones.</span><span class="sxs-lookup"><span data-stu-id="12afc-119">Returns the set union, which means unique elements that appear in either of two collections.</span></span>|<span data-ttu-id="12afc-120">No es aplicable.</span><span class="sxs-lookup"><span data-stu-id="12afc-120">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
   
-## <a name="comparison-of-set-operations"></a>Comparación de operaciones Set  
+## <a name="comparison-of-set-operations"></a><span data-ttu-id="12afc-121">Comparación de operaciones set</span><span class="sxs-lookup"><span data-stu-id="12afc-121">Comparison of Set Operations</span></span>  
   
-### <a name="distinct"></a>Distinct  
- La siguiente ilustración muestra el comportamiento de la <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName>método en una secuencia de caracteres.</xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> La secuencia devuelta contiene los elementos únicos de la secuencia de entrada.  
+### <a name="distinct"></a><span data-ttu-id="12afc-122">Distinct</span><span class="sxs-lookup"><span data-stu-id="12afc-122">Distinct</span></span>  
+ <span data-ttu-id="12afc-123">En la siguiente ilustración se muestra el comportamiento del método <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> en una secuencia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="12afc-123">The following illustration depicts the behavior of the <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> method on a sequence of characters.</span></span> <span data-ttu-id="12afc-124">La secuencia devuelta contiene los elementos únicos de la secuencia de entrada.</span><span class="sxs-lookup"><span data-stu-id="12afc-124">The returned sequence contains the unique elements from the input sequence.</span></span>  
   
- ![Gráfico mostrando el comportamiento de Distinct(). ] (../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ <span data-ttu-id="12afc-125">![Gráfico que muestra el comportamiento de Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")</span><span class="sxs-lookup"><span data-stu-id="12afc-125">![Graphic showing the behavior of Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")</span></span>  
   
-### <a name="except"></a>Except  
- La siguiente ilustración muestra el comportamiento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>.</xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName> La secuencia devuelta contiene sólo los elementos de la primera secuencia de entrada que no están en la segunda secuencia de entrada.  
+### <a name="except"></a><span data-ttu-id="12afc-126">Except</span><span class="sxs-lookup"><span data-stu-id="12afc-126">Except</span></span>  
+ <span data-ttu-id="12afc-127">En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="12afc-127">The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="12afc-128">La secuencia devuelta solo contiene los elementos de la primera secuencia de entrada que no están en la segunda secuencia de entrada.</span><span class="sxs-lookup"><span data-stu-id="12afc-128">The returned sequence contains only the elements from the first input sequence that are not in the second input sequence.</span></span>  
   
- ![Gráfico mostrando la acción de Except(). ](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ <span data-ttu-id="12afc-129">![Gráfico que muestra la acción de Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")</span><span class="sxs-lookup"><span data-stu-id="12afc-129">![Graphic showing the action of Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")</span></span>  
   
-### <a name="intersect"></a>Formar intersección  
- La siguiente ilustración muestra el comportamiento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>.</xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName> La secuencia devuelta contiene los elementos que son comunes a los de las secuencias de entrada.  
+### <a name="intersect"></a><span data-ttu-id="12afc-130">Formar intersección</span><span class="sxs-lookup"><span data-stu-id="12afc-130">Intersect</span></span>  
+ <span data-ttu-id="12afc-131">En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="12afc-131">The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="12afc-132">La secuencia devuelta contiene los elementos que son comunes a las dos secuencias de entrada.</span><span class="sxs-lookup"><span data-stu-id="12afc-132">The returned sequence contains the elements that are common to both of the input sequences.</span></span>  
   
- ![Gráfico mostrando la intersección de dos secuencias. ] (../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
+ <span data-ttu-id="12afc-133">![Gráfico que muestra la intersección de dos secuencias.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")</span><span class="sxs-lookup"><span data-stu-id="12afc-133">![Graphic showing the intersection of two sequences.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")</span></span>  
   
-### <a name="union"></a>Unión  
- La siguiente ilustración muestra una operación de unión de dos secuencias de caracteres. La secuencia devuelta contiene los elementos únicos de dos secuencias de entrada.  
+### <a name="union"></a><span data-ttu-id="12afc-134">Unión</span><span class="sxs-lookup"><span data-stu-id="12afc-134">Union</span></span>  
+ <span data-ttu-id="12afc-135">En la siguiente ilustración se muestra una operación de unión en dos secuencias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="12afc-135">The following illustration depicts a union operation on two sequences of characters.</span></span> <span data-ttu-id="12afc-136">La secuencia devuelta contiene los elementos únicos de las dos secuencias de entrada.</span><span class="sxs-lookup"><span data-stu-id="12afc-136">The returned sequence contains the unique elements from both input sequences.</span></span>  
   
- ![Gráfico mostrando la unión de dos secuencias. ](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
+ <span data-ttu-id="12afc-137">![Gráfico que muestra la unión de dos secuencias.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")</span><span class="sxs-lookup"><span data-stu-id="12afc-137">![Graphic showing the union of two sequences.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")</span></span>  
   
-## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta  
- En el ejemplo siguiente se usa el `Distinct` cláusula en una consulta LINQ para devolver los números únicos de una lista de enteros.  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="12afc-138">Ejemplo de sintaxis de expresiones de consulta</span><span class="sxs-lookup"><span data-stu-id="12afc-138">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="12afc-139">En el ejemplo siguiente se usa el `Distinct` cláusula en una consulta LINQ para devolver los números únicos de una lista de enteros.</span><span class="sxs-lookup"><span data-stu-id="12afc-139">The following example uses the `Distinct` clause in a LINQ query to return the unique numbers from a list of integers.</span></span>  
   
- [!code-vb[1 CsLINQSetOps](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
+ [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Linq></xref:System.Linq>   
- [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [DISTINCT (cláusula)](../../../../visual-basic/language-reference/queries/distinct-clause.md)   
- [Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
- [Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a><span data-ttu-id="12afc-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="12afc-140">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="12afc-141">Información general sobre operadores de consulta estándar (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12afc-141">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="12afc-142">Distinct (cláusula)</span><span class="sxs-lookup"><span data-stu-id="12afc-142">Distinct Clause</span></span>](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [<span data-ttu-id="12afc-143">Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12afc-143">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
+ [<span data-ttu-id="12afc-144">Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="12afc-144">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

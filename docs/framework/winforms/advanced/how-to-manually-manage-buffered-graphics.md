@@ -1,50 +1,53 @@
 ---
-title: "C&#243;mo: Administrar manualmente gr&#225;ficos almacenados en b&#250;fer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BufferedGraphicsContext (clase)"
-  - "parpadeo, reducir mediante la administración manual de gráficos"
-  - "gráficos, administrar almacenados en búfer"
+title: "Cómo: Administrar manualmente gráficos almacenados en búfer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing by manually managing graphics
+- graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 678b9ad5e8f9b40f927a35e98973cabc831c5cf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Administrar manualmente gr&#225;ficos almacenados en b&#250;fer
-En aquellos escenarios de doble búfer más avanzados, se pueden utilizar las clases de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para implementar su propia lógica de búfer doble.  La clase responsable de asignar y administrar búferes de gráficos individuales es la clase <xref:System.Drawing.BufferedGraphicsContext>.  Cada aplicación tiene su propio <xref:System.Drawing.BufferedGraphicsContext> predeterminado que administra todos los búferes dobles predeterminados para dicha aplicación.  Puede recuperar una referencia a esta instancia mediante la llamada a la propiedad <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
+# <a name="how-to-manually-manage-buffered-graphics"></a><span data-ttu-id="14054-102">Cómo: Administrar manualmente gráficos almacenados en búfer</span><span class="sxs-lookup"><span data-stu-id="14054-102">How to: Manually Manage Buffered Graphics</span></span>
+<span data-ttu-id="14054-103">Para escenarios más avanzados de almacenamiento en búfer dobles, puede usar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] las clases para implementar su propia lógica de almacenamiento en búfer doble.</span><span class="sxs-lookup"><span data-stu-id="14054-103">For more advanced double buffering scenarios, you can use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classes to implement your own double-buffering logic.</span></span> <span data-ttu-id="14054-104">La clase responsable de asignar y administrar los búferes de gráficos individuales es la <xref:System.Drawing.BufferedGraphicsContext> clase.</span><span class="sxs-lookup"><span data-stu-id="14054-104">The class responsible for allocating and managing individual graphics buffers is the <xref:System.Drawing.BufferedGraphicsContext> class.</span></span> <span data-ttu-id="14054-105">Cada aplicación tiene su propio valor predeterminado <xref:System.Drawing.BufferedGraphicsContext> que administra todos de manera predeterminada el doble búfer para esa aplicación.</span><span class="sxs-lookup"><span data-stu-id="14054-105">Every application has its own default <xref:System.Drawing.BufferedGraphicsContext> that manages all of the default double buffering for that application.</span></span> <span data-ttu-id="14054-106">Puede recuperar una referencia a esta instancia mediante una llamada a la <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.</span><span class="sxs-lookup"><span data-stu-id="14054-106">You can retrieve a reference to this instance by calling the <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.</span></span>  
   
-### Para obtener una referencia a la clase BufferedGraphicsContext predeterminada  
+### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a><span data-ttu-id="14054-107">Para obtener una referencia a la clase BufferedGraphicsContext predeterminada</span><span class="sxs-lookup"><span data-stu-id="14054-107">To obtain a reference to the default BufferedGraphicsContext</span></span>  
   
--   Establezca la propiedad <xref:System.Drawing.BufferedGraphicsManager.Current%2A>, como se muestra en el ejemplo de código siguiente.  
+-   <span data-ttu-id="14054-108">Establecer el <xref:System.Drawing.BufferedGraphicsManager.Current%2A> propiedad, como se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="14054-108">Set the <xref:System.Drawing.BufferedGraphicsManager.Current%2A> property, as shown in the following code example.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
   
     > [!NOTE]
-    >  No tiene que llamar al método `Dispose` en la referencia <xref:System.Drawing.BufferedGraphicsContext> que recibe de la clase <xref:System.Drawing.BufferedGraphicsManager>.  La clase <xref:System.Drawing.BufferedGraphicsManager> controla la asignación y la distribución de memoria para las instancias de <xref:System.Drawing.BufferedGraphicsContext> predeterminadas.  
+    >  <span data-ttu-id="14054-109">No es necesario llamar a la `Dispose` método en el <xref:System.Drawing.BufferedGraphicsContext> referencia que recibe la <xref:System.Drawing.BufferedGraphicsManager> clase.</span><span class="sxs-lookup"><span data-stu-id="14054-109">You do not need to call the `Dispose` method on the <xref:System.Drawing.BufferedGraphicsContext> reference that you receive from the <xref:System.Drawing.BufferedGraphicsManager> class.</span></span> <span data-ttu-id="14054-110">El <xref:System.Drawing.BufferedGraphicsManager> se encarga de toda la asignación de memoria de distribución predeterminada <xref:System.Drawing.BufferedGraphicsContext> instancias.</span><span class="sxs-lookup"><span data-stu-id="14054-110">The <xref:System.Drawing.BufferedGraphicsManager> handles all of the memory allocation and distribution for default <xref:System.Drawing.BufferedGraphicsContext> instances.</span></span>  
   
-     En aquellas aplicaciones que utilizan gráficos de forma intensiva, a veces se puede mejorar el rendimiento utilizando una clase <xref:System.Drawing.BufferedGraphicsContext> dedicada en lugar de <xref:System.Drawing.BufferedGraphicsContext> proporcionada por <xref:System.Drawing.BufferedGraphicsManager>.  Este sistema permite crear y administrar búferes de gráficos individualmente, sin causar la sobrecarga de rendimiento de administrar el resto de gráficos almacenados en búfer asociados con la aplicación, aunque la memoria consumida por la aplicación será mayor.  
+     <span data-ttu-id="14054-111">Para las aplicaciones gráficamente intensivas como las animaciones, a veces puede mejorar el rendimiento mediante el uso de una dedicado <xref:System.Drawing.BufferedGraphicsContext> en lugar de la <xref:System.Drawing.BufferedGraphicsContext> proporcionada por el <xref:System.Drawing.BufferedGraphicsManager>.</span><span class="sxs-lookup"><span data-stu-id="14054-111">For graphically intensive applications such as animation, you can sometimes improve performance by using a dedicated <xref:System.Drawing.BufferedGraphicsContext> instead of the <xref:System.Drawing.BufferedGraphicsContext> provided by the <xref:System.Drawing.BufferedGraphicsManager>.</span></span> <span data-ttu-id="14054-112">Esto le permite crear y administrar búferes de gráficos individualmente, sin incurrir en la sobrecarga de rendimiento de la administración de todos los otros gráficos almacenados en búfer asociados a la aplicación, aunque la memoria consumida por la aplicación será mayor.</span><span class="sxs-lookup"><span data-stu-id="14054-112">This enables you to create and manage graphics buffers individually, without incurring the performance overhead of managing all the other buffered graphics associated with your application, though the memory consumed by the application will be greater.</span></span>  
   
-### Para crear una clase BufferedGraphicsContext dedicada  
+### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a><span data-ttu-id="14054-113">Para crear una clase BufferedGraphicsContext dedicada</span><span class="sxs-lookup"><span data-stu-id="14054-113">To create a dedicated BufferedGraphicsContext</span></span>  
   
--   Declare y cree una nueva instancia de la clase <xref:System.Drawing.BufferedGraphicsContext>, como se muestra en el ejemplo de código siguiente.  
+-   <span data-ttu-id="14054-114">Declarar y crear una nueva instancia de la <xref:System.Drawing.BufferedGraphicsContext> de la clase, como se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="14054-114">Declare and create a new instance of the <xref:System.Drawing.BufferedGraphicsContext> class, as shown in the following code example.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
   
-## Vea también  
- <xref:System.Drawing.BufferedGraphicsContext>   
- [Gráficos de doble búfer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [Cómo: Representar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)
+## <a name="see-also"></a><span data-ttu-id="14054-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="14054-115">See Also</span></span>  
+ <xref:System.Drawing.BufferedGraphicsContext>  
+ [<span data-ttu-id="14054-116">Gráficos de doble búfer</span><span class="sxs-lookup"><span data-stu-id="14054-116">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [<span data-ttu-id="14054-117">Representar manualmente gráficos almacenados en búfer</span><span class="sxs-lookup"><span data-stu-id="14054-117">How to: Manually Render Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)

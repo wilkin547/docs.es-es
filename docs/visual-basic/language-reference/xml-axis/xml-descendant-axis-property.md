@@ -1,16 +1,12 @@
 ---
-title: Propiedad de eje descendiente XML (Visual Basic) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Propiedad de eje descendiente XML Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.XmlPropertyDescendantsAxis
-dev_langs:
-- VB
+f1_keywords: vb.XmlPropertyDescendantsAxis
 helpviewer_keywords:
 - Visual Basic code, accessing XML
 - XML descendant axis property [Visual Basic]
@@ -18,91 +14,76 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 434dc90c643381bdc27b2da54a7418e39bf15e98
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0f3c42b5134b058c010ca4c7a5ee7c24627c65fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="xml-descendant-axis-property-visual-basic"></a>Propiedad de eje descendiente XML Visual Basic)
-Proporciona acceso a los descendientes de los siguientes: una <xref:System.Xml.Linq.XElement>objeto, un <xref:System.Xml.Linq.XDocument>(objeto), una colección de <xref:System.Xml.Linq.XElement>objetos o una colección de <xref:System.Xml.Linq.XDocument>objetos.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>  
+# <a name="xml-descendant-axis-property-visual-basic"></a><span data-ttu-id="eeda3-102">Propiedad de eje descendiente XML Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eeda3-102">XML Descendant Axis Property (Visual Basic)</span></span>
+<span data-ttu-id="eeda3-103">Proporciona acceso a los descendientes de los siguientes valores: una <xref:System.Xml.Linq.XElement> objeto, un <xref:System.Xml.Linq.XDocument> (objeto), una colección de <xref:System.Xml.Linq.XElement> objetos o una colección de <xref:System.Xml.Linq.XDocument> objetos.</span><span class="sxs-lookup"><span data-stu-id="eeda3-103">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="eeda3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="eeda3-104">Syntax</span></span>  
   
 ```  
-  
 object...<descendant>  
 ```  
   
-## <a name="parts"></a>Elementos  
+## <a name="parts"></a><span data-ttu-id="eeda3-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="eeda3-105">Parts</span></span>  
  `object`  
- Obligatorio. Un <xref:System.Xml.Linq.XElement>objeto, un <xref:System.Xml.Linq.XDocument>(objeto), una colección de <xref:System.Xml.Linq.XElement>objetos o una colección de <xref:System.Xml.Linq.XDocument>objetos.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="eeda3-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="eeda3-106">Required.</span></span> <span data-ttu-id="eeda3-107">Un objeto <xref:System.Xml.Linq.XElement>, un objeto <xref:System.Xml.Linq.XDocument>, una colección de objetos <xref:System.Xml.Linq.XElement> o una colección de objetos <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="eeda3-107">An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
- ...<  
- Requerido. Denota el inicio de una propiedad de eje descendiente.  
+ <span data-ttu-id="eeda3-108">...<</span><span class="sxs-lookup"><span data-stu-id="eeda3-108">...<</span></span>  
+ <span data-ttu-id="eeda3-109">Requerido.</span><span class="sxs-lookup"><span data-stu-id="eeda3-109">Required.</span></span> <span data-ttu-id="eeda3-110">Denota el inicio de una propiedad de eje descendiente.</span><span class="sxs-lookup"><span data-stu-id="eeda3-110">Denotes the start of a descendant axis property.</span></span>  
   
  `descendant`  
- Obligatorio. Nombre de los nodos descendientes para tener acceso a la forma [`prefix``:`]`name`.  
+ <span data-ttu-id="eeda3-111">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="eeda3-111">Required.</span></span> <span data-ttu-id="eeda3-112">Nombre de los nodos descendientes para tener acceso a la forma [`prefix``:`]`name`.</span><span class="sxs-lookup"><span data-stu-id="eeda3-112">Name of the descendant nodes to access, of the form [`prefix``:`]`name`.</span></span>  
   
-|Parte|Descripción|  
+|<span data-ttu-id="eeda3-113">Parte</span><span class="sxs-lookup"><span data-stu-id="eeda3-113">Part</span></span>|<span data-ttu-id="eeda3-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="eeda3-114">Description</span></span>|  
 |----------|-----------------|  
-|`prefix`|Opcional. Prefijo de espacio de nombres XML para el nodo descendiente. Debe ser un espacio de nombres XML global que se define mediante una `Imports` instrucción.|  
-|`name`|Obligatorio. Nombre local del nodo descendiente. Consulte [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`prefix`|<span data-ttu-id="eeda3-115">Opcional.</span><span class="sxs-lookup"><span data-stu-id="eeda3-115">Optional.</span></span> <span data-ttu-id="eeda3-116">Prefijo de espacio de nombres XML para el nodo descendiente.</span><span class="sxs-lookup"><span data-stu-id="eeda3-116">XML namespace prefix for the descendant node.</span></span> <span data-ttu-id="eeda3-117">Debe ser un espacio de nombres XML global que se define mediante una `Imports` instrucción.</span><span class="sxs-lookup"><span data-stu-id="eeda3-117">Must be a global XML namespace that is defined by using an `Imports` statement.</span></span>|  
+|`name`|<span data-ttu-id="eeda3-118">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="eeda3-118">Required.</span></span> <span data-ttu-id="eeda3-119">Nombre local del nodo descendiente.</span><span class="sxs-lookup"><span data-stu-id="eeda3-119">Local name of the descendant node.</span></span> <span data-ttu-id="eeda3-120">Vea [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="eeda3-120">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
   
  \>  
- Obligatorio. Denota el final de una propiedad de eje descendiente.  
+ <span data-ttu-id="eeda3-121">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="eeda3-121">Required.</span></span> <span data-ttu-id="eeda3-122">Denota el final de una propiedad de eje descendiente.</span><span class="sxs-lookup"><span data-stu-id="eeda3-122">Denotes the end of a descendant axis property.</span></span>  
   
-## <a name="return-value"></a>Valor devuelto  
- Una colección de <xref:System.Xml.Linq.XElement>objetos.</xref:System.Xml.Linq.XElement>  
+## <a name="return-value"></a><span data-ttu-id="eeda3-123">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="eeda3-123">Return Value</span></span>  
+ <span data-ttu-id="eeda3-124">Una colección de objetos <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="eeda3-124">A collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Puede usar una propiedad de eje descendiente XML para obtener acceso a los nodos descendientes por nombre de un <xref:System.Xml.Linq.XElement>o <xref:System.Xml.Linq.XDocument>objeto, o de una colección de <xref:System.Xml.Linq.XElement>o <xref:System.Xml.Linq.XDocument>objetos.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> Utilice el XML `Value` propiedad para tener acceso al valor del primer nodo descendiente en la colección devuelta. Para obtener más información, consulte [propiedad Value de XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+## <a name="remarks"></a><span data-ttu-id="eeda3-125">Comentarios</span><span class="sxs-lookup"><span data-stu-id="eeda3-125">Remarks</span></span>  
+ <span data-ttu-id="eeda3-126">Puede usar una propiedad de eje descendiente XML para tener acceso a los nodos descendientes por nombre desde un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> objeto, o de una colección de <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> objetos.</span><span class="sxs-lookup"><span data-stu-id="eeda3-126">You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="eeda3-127">Use el código XML `Value` propiedad que se va a obtener acceso al valor del primer nodo descendiente en la colección devuelta.</span><span class="sxs-lookup"><span data-stu-id="eeda3-127">Use the XML `Value` property to access the value of the first descendant node in the returned collection.</span></span> <span data-ttu-id="eeda3-128">Para obtener más información, consulte [propiedad Value de XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="eeda3-128">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
- El [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador convierte las propiedades de eje descendiente en llamadas a la <xref:System.Xml.Linq.XContainer.Descendants%2A>método.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <span data-ttu-id="eeda3-129">El [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador convierte las propiedades de eje descendiente en llamadas a la <xref:System.Xml.Linq.XContainer.Descendants%2A> método.</span><span class="sxs-lookup"><span data-stu-id="eeda3-129">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.</span></span>  
   
-## <a name="xml-namespaces"></a>Espacios de nombres XML  
- El nombre de una propiedad de eje descendiente puede usar únicamente espacios de nombres XML declarados globalmente con la `Imports` instrucción. No puede utilizar espacios de nombres XML declarados localmente dentro de literales de elemento XML. Para obtener más información, consulte [instrucción Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+## <a name="xml-namespaces"></a><span data-ttu-id="eeda3-130">Espacios de nombres XML</span><span class="sxs-lookup"><span data-stu-id="eeda3-130">XML Namespaces</span></span>  
+ <span data-ttu-id="eeda3-131">El nombre de una propiedad de eje descendiente puede usar únicamente espacios de nombres XML declarados globalmente con la `Imports` instrucción.</span><span class="sxs-lookup"><span data-stu-id="eeda3-131">The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement.</span></span> <span data-ttu-id="eeda3-132">No puede utilizar espacios de nombres XML declarados localmente dentro de literales de elemento XML.</span><span class="sxs-lookup"><span data-stu-id="eeda3-132">It cannot use XML namespaces declared locally within XML element literals.</span></span> <span data-ttu-id="eeda3-133">Para obtener más información, consulte [instrucción Imports (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="eeda3-133">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo tener acceso al valor del primer nodo descendiente denominado `name` y los valores de todos los nodos descendientes denominados `phone` desde el `contacts` objeto.  
+## <a name="example"></a><span data-ttu-id="eeda3-134">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="eeda3-134">Example</span></span>  
+ <span data-ttu-id="eeda3-135">En el ejemplo siguiente se muestra cómo tener acceso al valor del primer nodo descendiente denominado `name` y los valores de todos los nodos descendientes denominados `phone` desde el `contacts` objeto.</span><span class="sxs-lookup"><span data-stu-id="eeda3-135">The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.</span></span>  
   
- [!code-vb[VbXMLSamples&#25;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
   
- Este código muestra el siguiente texto:  
+ <span data-ttu-id="eeda3-136">Este código muestra el siguiente texto:</span><span class="sxs-lookup"><span data-stu-id="eeda3-136">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
  `Home Phone = 206-555-0144`  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se declara `ns` como un prefijo de espacio de nombres XML. A continuación, usa el prefijo del espacio de nombres para crear un literal XML y obtener acceso al valor del primer nodo secundario con el nombre completo `ns:name`.  
+## <a name="example"></a><span data-ttu-id="eeda3-137">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="eeda3-137">Example</span></span>  
+ <span data-ttu-id="eeda3-138">En el ejemplo siguiente se declara `ns` como un prefijo de espacio de nombres XML.</span><span class="sxs-lookup"><span data-stu-id="eeda3-138">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="eeda3-139">A continuación, utiliza el prefijo del espacio de nombres para crear un literal XML y obtener acceso al valor del primer nodo secundario con el nombre completo `ns:name`.</span><span class="sxs-lookup"><span data-stu-id="eeda3-139">It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.</span></span>  
   
- [!code-vb[26 de VbXMLSamples #](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
- Este código muestra el siguiente texto:  
+ <span data-ttu-id="eeda3-140">Este código muestra el siguiente texto:</span><span class="sxs-lookup"><span data-stu-id="eeda3-140">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement>   
- [Propiedades de eje XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)   
- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a><span data-ttu-id="eeda3-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="eeda3-141">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement>  
+ [<span data-ttu-id="eeda3-142">Propiedades del eje XML</span><span class="sxs-lookup"><span data-stu-id="eeda3-142">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [<span data-ttu-id="eeda3-143">Literales XML</span><span class="sxs-lookup"><span data-stu-id="eeda3-143">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="eeda3-144">Crear XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="eeda3-144">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="eeda3-145">Nombres de atributos y elementos XML declarados</span><span class="sxs-lookup"><span data-stu-id="eeda3-145">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

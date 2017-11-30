@@ -1,55 +1,38 @@
 ---
-title: My.Computer.FileSystem.SpecialDirectories (objeto) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: My.Computer.FileSystem.SpecialDirectories (Objeto)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13a3c2f5d49a1675d65bfffecfb6c199f95cff74
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7196d6e7627e0fc7404b3d6cf5bfa804a8b76876
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories (Objeto)
-Proporciona propiedades para tener acceso a normalmente hace referencia a directorios.  
+# <a name="mycomputerfilesystemspecialdirectories-object"></a><span data-ttu-id="883df-102">My.Computer.FileSystem.SpecialDirectories (Objeto)</span><span class="sxs-lookup"><span data-stu-id="883df-102">My.Computer.FileSystem.SpecialDirectories Object</span></span>
+<span data-ttu-id="883df-103">Proporciona propiedades para obtener acceso a directorios a los que suele hacerse referencia.</span><span class="sxs-lookup"><span data-stu-id="883df-103">Provides properties for accessing commonly referenced directories.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener información acerca de los métodos y propiedades de la `My.Computer.FileSystem.SpecialDirectories` objeto, vea <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.</xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
+## <a name="remarks"></a><span data-ttu-id="883df-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="883df-104">Remarks</span></span>  
+ <span data-ttu-id="883df-105">Para obtener información acerca de los métodos y propiedades de la `My.Computer.FileSystem.SpecialDirectories` de objetos, consulte <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.</span><span class="sxs-lookup"><span data-stu-id="883df-105">For information about the methods and properties of the `My.Computer.FileSystem.SpecialDirectories` object, see <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>.</span></span>  
   
- Para obtener más información, consulte [Cómo: recuperar el contenido del directorio Mis documentos](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
+ <span data-ttu-id="883df-106">Para obtener más información, consulte [Cómo: recuperar el contenido del directorio Mis documentos](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).</span><span class="sxs-lookup"><span data-stu-id="883df-106">For more information, see [How to: Retrieve the Contents of the My Documents Directory](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).</span></span>  
   
-## <a name="requirements"></a>Requisitos  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices></xref:Microsoft.VisualBasic.MyServices>  
+## <a name="requirements"></a><span data-ttu-id="883df-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="883df-107">Requirements</span></span>  
+ <span data-ttu-id="883df-108">**Namespace:**<xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="883df-108">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- **Clase:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>(proporciona acceso a <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)</xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> </xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>  
+ <span data-ttu-id="883df-109">**Clase:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (proporciona acceso a <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)</span><span class="sxs-lookup"><span data-stu-id="883df-109">**Class:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)</span></span>  
   
- **Ensamblado:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ <span data-ttu-id="883df-110">**Ensamblado:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="883df-110">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [My.Computer.FileSystem (objeto)](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)   
- [My.Computer (objeto)](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="883df-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="883df-111">See Also</span></span>  
+ [<span data-ttu-id="883df-112">My.Computer.FileSystem (objeto)</span><span class="sxs-lookup"><span data-stu-id="883df-112">My.Computer.FileSystem Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [<span data-ttu-id="883df-113">My.Computer (objeto)</span><span class="sxs-lookup"><span data-stu-id="883df-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

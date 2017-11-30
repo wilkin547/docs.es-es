@@ -1,33 +1,37 @@
 ---
-title: "C&#243;mo: Implementar la interfaz ITypedList | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingList(Of T) (clase)"
-  - "enlace de datos, implementar"
-  - "IBindingList (interfaz)"
-  - "ITypedList (interfaz)"
+title: "Cómo: Implementar la interfaz ITypedList"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ITypedList interface
+- BindingList(Of T) class
+- data binding [Windows Forms], implementing
+- IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 95888fc5c0df31529db429ead0e7d3e342f9a6e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar la interfaz ITypedList
-Implemente la interfaz <xref:System.ComponentModel.ITypedList> para habilitar la detección del esquema para obtener una lista enlazable.  
+# <a name="how-to-implement-the-itypedlist-interface"></a><span data-ttu-id="d9d39-102">Cómo: Implementar la interfaz ITypedList</span><span class="sxs-lookup"><span data-stu-id="d9d39-102">How to: Implement the ITypedList Interface</span></span>
+<span data-ttu-id="d9d39-103">Implemente el <xref:System.ComponentModel.ITypedList> interfaz para habilitar la detección del esquema para obtener una lista enlazable.</span><span class="sxs-lookup"><span data-stu-id="d9d39-103">Implement the <xref:System.ComponentModel.ITypedList> interface to enable discovery of the schema for a bindable list.</span></span>  
   
-## Ejemplo  
- En el ejemplo de código siguiente se muestra cómo implementar la interfaz <xref:System.ComponentModel.ITypedList>.  Un tipo genérico llamado `SortableBindingList` deriva de la clase <xref:System.ComponentModel.BindingList%601> e implementa la interfaz <xref:System.ComponentModel.ITypedList>.  Una clase simple llamada `Customer` proporciona los datos, que se enlazan al encabezado de un control <xref:System.Windows.Forms.DataGridView>.  
+## <a name="example"></a><span data-ttu-id="d9d39-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d9d39-104">Example</span></span>  
+ <span data-ttu-id="d9d39-105">En el ejemplo de código siguiente se muestra cómo implementar el <xref:System.ComponentModel.ITypedList> interfaz.</span><span class="sxs-lookup"><span data-stu-id="d9d39-105">The following code example demonstrates how to implement the <xref:System.ComponentModel.ITypedList> interface.</span></span> <span data-ttu-id="d9d39-106">Un tipo genérico denominado `SortableBindingList` se deriva de la <xref:System.ComponentModel.BindingList%601> clase e implementa el <xref:System.ComponentModel.ITypedList> interfaz.</span><span class="sxs-lookup"><span data-stu-id="d9d39-106">A generic type named `SortableBindingList` derives from the <xref:System.ComponentModel.BindingList%601> class and implements the <xref:System.ComponentModel.ITypedList> interface.</span></span> <span data-ttu-id="d9d39-107">Una clase simple denominada `Customer` proporciona los datos, que está enlazados al encabezado de una <xref:System.Windows.Forms.DataGridView> control.</span><span class="sxs-lookup"><span data-stu-id="d9d39-107">A simple class named `Customer` provides data, which is bound to the header of a <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  [!code-csharp[System.ComponentModel.ITypedList#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.ITypedList/CS/SortableBindingList.cs#1)]
  [!code-vb[System.ComponentModel.ITypedList#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.ITypedList/VB/SortableBindingList.vb#1)]  
@@ -38,13 +42,13 @@ Implemente la interfaz <xref:System.ComponentModel.ITypedList> para habilitar la
  [!code-csharp[System.ComponentModel.ITypedList#100](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.ITypedList/CS/Form1.cs#100)]
  [!code-vb[System.ComponentModel.ITypedList#100](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.ITypedList/VB/Form1.vb#100)]  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="d9d39-108">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="d9d39-108">Compiling the Code</span></span>  
+ <span data-ttu-id="d9d39-109">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="d9d39-109">This example requires:</span></span>  
   
--   Referencias a los ensamblados System.Drawing y System.Windows.Forms.  
+-   <span data-ttu-id="d9d39-110">Referencias a los ensamblados System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="d9d39-110">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
-## Vea también  
- <xref:System.ComponentModel.ITypedList>   
- <xref:System.ComponentModel.BindingList%601>   
- <xref:System.ComponentModel.IBindingList>   
- [Enlace de datos y formularios Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="d9d39-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="d9d39-111">See Also</span></span>  
+ <xref:System.ComponentModel.ITypedList>  
+ <xref:System.ComponentModel.BindingList%601>  
+ <xref:System.ComponentModel.IBindingList>  
+ [<span data-ttu-id="d9d39-112">Enlace de datos y Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d9d39-112">Data Binding and Windows Forms</span></span>](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

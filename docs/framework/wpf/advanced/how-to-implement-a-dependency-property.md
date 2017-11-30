@@ -1,41 +1,47 @@
 ---
-title: "C&#243;mo: Implementar una propiedad de dependencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propiedades de dependencia, respaldar propiedades con"
-  - "propiedades, respaldar con propiedades de dependencia"
+title: "Cómo: Implementar una propiedad de dependencia"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], backing properties with
+- properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9bc4dee8f0b2eef76e5769ae7da3a13edf7c3300
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar una propiedad de dependencia
-En este ejemplo se muestra cómo respaldar una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] con un campo <xref:System.Windows.DependencyProperty>, para definir así una [propiedad de dependencia](GTMT).  Si define sus propias propiedades y desea que admitan numerosos aspectos de la funcionalidad de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], incluidos los estilos, el enlace de datos, la herencia, la animación y los valores predeterminados, debe implementarlas como [propiedades de dependencia](GTMT).  
+# <a name="how-to-implement-a-dependency-property"></a><span data-ttu-id="f8517-102">Cómo: Implementar una propiedad de dependencia</span><span class="sxs-lookup"><span data-stu-id="f8517-102">How to: Implement a Dependency Property</span></span>
+<span data-ttu-id="f8517-103">Este ejemplo muestra cómo realizar copias de un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propiedad con un <xref:System.Windows.DependencyProperty> campo, lo que define una propiedad de dependencia.</span><span class="sxs-lookup"><span data-stu-id="f8517-103">This example shows how to back a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property with a <xref:System.Windows.DependencyProperty> field, thus defining a dependency property.</span></span> <span data-ttu-id="f8517-104">Si define sus propias propiedades y quiere que admitan muchos aspectos de la funcionalidad de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], incluidos los estilos, el enlace de datos, la herencia, la animación y los valores predeterminados, debe implementarlas como una propiedad de dependencia.</span><span class="sxs-lookup"><span data-stu-id="f8517-104">When you define your own properties and want them to support many aspects of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] functionality, including styles, data binding, inheritance, animation, and default values, you should implement them as a dependency property.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se registra en primer lugar una [propiedad de dependencia](GTMT) llamando al método <xref:System.Windows.DependencyProperty.Register%2A>.  El nombre del campo identificador que se utiliza para almacenar el nombre y las características de la [propiedad de dependencia](GTMT) debe ser el valor de <xref:System.Windows.DependencyProperty.Name%2A> que eligió para la propiedad de dependencia como la parte de la llamada al método <xref:System.Windows.DependencyProperty.Register%2A>, con la cadena literal `Property` anexada a dicho valor.  Por ejemplo, si registra una propiedad de dependencia cuyo valor de <xref:System.Windows.DependencyProperty.Name%2A> es `Location`, el campo identificador que defina para la propiedad de dependencia deberá denominarse `LocationProperty`.  
+## <a name="example"></a><span data-ttu-id="f8517-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f8517-105">Example</span></span>  
+ <span data-ttu-id="f8517-106">En primer lugar, el ejemplo siguiente registra una propiedad de dependencia mediante una llamada a la <xref:System.Windows.DependencyProperty.Register%2A> método.</span><span class="sxs-lookup"><span data-stu-id="f8517-106">The following example first registers a dependency property by calling the <xref:System.Windows.DependencyProperty.Register%2A> method.</span></span> <span data-ttu-id="f8517-107">El nombre del campo de identificador que se utiliza para almacenar el nombre y las características de la propiedad de dependencia deben ser el <xref:System.Windows.DependencyProperty.Name%2A> que eligió para la propiedad de dependencia como parte de la <xref:System.Windows.DependencyProperty.Register%2A> llamada, seguido de la cadena literal `Property`.</span><span class="sxs-lookup"><span data-stu-id="f8517-107">The name of the identifier field that you use to store the name and characteristics of the dependency property must be the <xref:System.Windows.DependencyProperty.Name%2A> you chose for the dependency property as part of the <xref:System.Windows.DependencyProperty.Register%2A> call, appended by the literal string `Property`.</span></span> <span data-ttu-id="f8517-108">Por ejemplo, si registra una propiedad de dependencia con un <xref:System.Windows.DependencyProperty.Name%2A> de `Location`, a continuación, el campo de identificador que se define para la propiedad de dependencia debe denominarse `LocationProperty`.</span><span class="sxs-lookup"><span data-stu-id="f8517-108">For instance, if you register a dependency property with a <xref:System.Windows.DependencyProperty.Name%2A> of `Location`, then the identifier field that you define for the dependency property must be named `LocationProperty`.</span></span>  
   
- En este ejemplo, el nombre de la [propiedad de dependencia](GTMT) y su descriptor de acceso [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] es `State`; el campo de identificador es `StateProperty`; el tipo de la propiedad es <xref:System.Boolean>; y el tipo que registra la [propiedad de dependencia](GTMT) es `MyStateControl`.  
+ <span data-ttu-id="f8517-109">En este ejemplo, el nombre de la propiedad de dependencia y su [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] descriptor de acceso es `State`; el campo de identificador es `StateProperty`; el tipo de la propiedad es <xref:System.Boolean>; y el tipo que se registra la propiedad de dependencia es `MyStateControl`.</span><span class="sxs-lookup"><span data-stu-id="f8517-109">In this example, the name of the dependency property and its [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] accessor is `State`; the identifier field is `StateProperty`; the type of the property is <xref:System.Boolean>; and the type that registers the dependency property is `MyStateControl`.</span></span>  
   
- Si no sigue este modelo de nombres, puede que los diseñadores no informen correctamente sobre la propiedad y es posible que algunos aspectos de la aplicación de estilos del sistema a las propiedades no se comporten como cabría esperar.  
+ <span data-ttu-id="f8517-110">Si no sigue este patrón de nomenclatura, es posible que los diseñadores no puedan notificar la propiedad correctamente y que ciertos aspectos de la aplicación de estilos del sistema de propiedades no funcionen según lo previsto.</span><span class="sxs-lookup"><span data-stu-id="f8517-110">If you fail to follow this naming pattern, designers might not report your property correctly, and certain aspects of property system style application might not behave as expected.</span></span>  
   
- También puede especificar metadatos predeterminados para una [propiedad de dependencia](GTMT).  En este ejemplo se registra que el valor predeterminado de la [propiedad de dependencia](GTMT) `State` es `false`.  
+ <span data-ttu-id="f8517-111">También puede especificar los metadatos predeterminados de una propiedad de dependencia.</span><span class="sxs-lookup"><span data-stu-id="f8517-111">You can also specify default metadata for a dependency property.</span></span> <span data-ttu-id="f8517-112">En este ejemplo se registra el valor predeterminado de la propiedad de dependencia `State` para que sea `false`.</span><span class="sxs-lookup"><span data-stu-id="f8517-112">This example registers the default value of the `State` dependency property to be `false`.</span></span>  
   
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
   
- Para obtener más información sobre cómo y por qué implementar una [propiedad de dependencia](GTMT), en lugar de limitarse a respaldar una propiedad [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con un campo privado, vea [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ <span data-ttu-id="f8517-113">Para obtener más información acerca de cómo y por qué se debe implementar una propiedad de dependencia, en lugar de respaldar simplemente una propiedad [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con un campo privado, consulte [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span><span class="sxs-lookup"><span data-stu-id="f8517-113">For more information about how and why to implement a dependency property, as opposed to just backing a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] property with a private field, see [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
-## Vea también  
- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="f8517-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="f8517-114">See Also</span></span>  
+ [<span data-ttu-id="f8517-115">Información general sobre las propiedades de dependencia</span><span class="sxs-lookup"><span data-stu-id="f8517-115">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="f8517-116">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="f8517-116">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

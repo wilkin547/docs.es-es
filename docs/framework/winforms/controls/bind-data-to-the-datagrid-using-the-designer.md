@@ -1,71 +1,72 @@
 ---
-title: "C&#243;mo: Enlazar datos al control DataGridView de formularios Windows Forms mediante el dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "orígenes de datos, enlazar a controles de formularios Windows Forms"
-  - "DataGridView (control) [Windows Forms], enlace de datos"
-  - "controles de Windows Forms, enlazar a orígenes de datos"
+title: "Cómo: Enlazar datos al control DataGridView de formularios Windows Forms mediante el diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, binding to a data source
+- data sources [Windows Forms], binding to Windows Forms controls
+- DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a203aa20865a4180b4eb9a7b192fc3c9b73a2f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Enlazar datos al control DataGridView de formularios Windows Forms mediante el dise&#241;ador
-Puede utilizar el diseñador para conectar un control <xref:System.Windows.Forms.DataGridView> a distintos orígenes de datos, incluso bases de datos, objetos de negocio o servicios Web.  Cuando enlaza el control a un origen de datos mediante el diseñador, el control se enlaza automáticamente a un componente <xref:System.Windows.Forms.BindingSource> que representa el origen de datos.  Además, las columnas se generan automáticamente en el control para coincidir con la información del esquema proporcionada por el origen de datos.  
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="e72b5-102">Cómo: Enlazar datos al control DataGridView de formularios Windows Forms mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="e72b5-102">How to: Bind Data to the Windows Forms DataGridView Control Using the Designer</span></span>
+<span data-ttu-id="e72b5-103">Puede utilizar el diseñador para conectar un <xref:System.Windows.Forms.DataGridView> control a orígenes de datos de diferentes tipos, incluidas las bases de datos, objetos comerciales o servicios Web.</span><span class="sxs-lookup"><span data-stu-id="e72b5-103">You can use the designer to connect a <xref:System.Windows.Forms.DataGridView> control to data sources of several different varieties, including databases, business objects, or Web services.</span></span> <span data-ttu-id="e72b5-104">Al enlazar el control a un origen de datos mediante el diseñador, el control se enlaza automáticamente a un <xref:System.Windows.Forms.BindingSource> componente que representa el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="e72b5-104">When you bind the control to a data source using the designer, the control is automatically bound to a <xref:System.Windows.Forms.BindingSource> component that represents the data source.</span></span> <span data-ttu-id="e72b5-105">Además, las columnas se generan automáticamente en el control para coincidir con la información del esquema proporcionada por el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="e72b5-105">Additionally, columns are automatically generated in the control to match the schema information provided by the data source.</span></span>  
   
- Después de generar las columnas, puede modificarlas para satisfacer sus necesidades.  Por ejemplo, puede quitar u ocultar aquellas columnas que no desee mostrar, puede reorganizar las columnas o puede modificar los tipos de columna.  Para obtener más información sobre la modificación de columnas, consulte los temas mostrados en la sección Vea también.  
+ <span data-ttu-id="e72b5-106">Después de generar las columnas, puede modificarlas para satisfacer sus necesidades.</span><span class="sxs-lookup"><span data-stu-id="e72b5-106">After columns have been generated, you can modify them to meet your needs.</span></span> <span data-ttu-id="e72b5-107">Por ejemplo, puede quitar u ocultar aquellas columnas que no desee mostrar, puede reorganizar las columnas o puede modificar los tipos de columna.</span><span class="sxs-lookup"><span data-stu-id="e72b5-107">For example, you can remove or hide columns you are not interested in displaying, you can rearrange the columns, or you can modify the column types.</span></span> <span data-ttu-id="e72b5-108">Para más información sobre la modificación de columnas, consulte los temas mostrados en la sección Vea también.</span><span class="sxs-lookup"><span data-stu-id="e72b5-108">For more information about modifying columns, see the topics listed in the See Also section.</span></span>  
   
- También puede enlazar varios controles <xref:System.Windows.Forms.DataGridView> a las tablas relacionadas para crear relaciones principal\/detalle.  En esta configuración, un control muestra una tabla primaria y otro control muestra sólo aquellas filas de una tabla secundaria que están relacionadas con la fila actual de la tabla primaria.  Para obtener más información, vea [Cómo: Mostrar datos relacionados en una aplicación de Windows Forms](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md).  
+ <span data-ttu-id="e72b5-109">También puede enlazar varios <xref:System.Windows.Forms.DataGridView> controles a las tablas relacionadas para crear relaciones principal-detalle.</span><span class="sxs-lookup"><span data-stu-id="e72b5-109">You can also bind multiple <xref:System.Windows.Forms.DataGridView> controls to related tables to create master/detail relationships.</span></span> <span data-ttu-id="e72b5-110">En esta configuración, un control muestra una tabla primaria y otro control muestra solo aquellas filas de una tabla secundaria que están relacionadas con la fila actual de la tabla primaria.</span><span class="sxs-lookup"><span data-stu-id="e72b5-110">In this configuration, one control displays a parent table and another control displays only those rows from a child table that are related to the current row in the parent table.</span></span> <span data-ttu-id="e72b5-111">Para más información, consulte [Cómo: Mostrar datos relacionados en una aplicación de Windows Forms](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).</span><span class="sxs-lookup"><span data-stu-id="e72b5-111">For more information, see [How to: Display Related Data in a Windows Forms Application](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).</span></span>  
   
- El procedimiento siguiente requiere un proyecto de **Aplicación para Windows** con un formulario que contiene un control <xref:System.Windows.Forms.DataGridView>o dos controles de una relación principal\/detalle.  Para obtener información sobre cómo iniciar tal proyecto, vea [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="e72b5-112">El procedimiento siguiente requiere un **aplicación de Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGridView> control o dos controles de una relación principal-detalle.</span><span class="sxs-lookup"><span data-stu-id="e72b5-112">The following procedure requires a **Windows Application** project with a form that contains a <xref:System.Windows.Forms.DataGridView> control or two controls for a master/detail relationship.</span></span> <span data-ttu-id="e72b5-113">Para información sobre cómo iniciar tal proyecto, vea [Cómo: Crear un proyecto de aplicación para Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="e72b5-113">For information about starting such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="e72b5-114">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="e72b5-114">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="e72b5-115">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="e72b5-115">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="e72b5-116">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="e72b5-116">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Para enlazar el control a un origen de datos  
+### <a name="to-bind-the-control-to-a-data-source"></a><span data-ttu-id="e72b5-117">Para enlazar el control a un origen de datos</span><span class="sxs-lookup"><span data-stu-id="e72b5-117">To bind the control to a data source</span></span>  
   
-1.  Haga clic en el glifo de la etiqueta inteligente \(![Glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) situado en la esquina superior derecha del control <xref:System.Windows.Forms.DataGridView>.  
+1.  <span data-ttu-id="e72b5-118">Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) en la esquina superior derecha de la <xref:System.Windows.Forms.DataGridView> control.</span><span class="sxs-lookup"><span data-stu-id="e72b5-118">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) on the upper-right corner of the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-2.  Haga clic en la flecha de lista desplegable de la opción **Elegir origen de datos**.  
+2.  <span data-ttu-id="e72b5-119">Haga clic en la flecha de lista desplegable de la opción **Elegir origen de datos**.</span><span class="sxs-lookup"><span data-stu-id="e72b5-119">Click the drop-down arrow for the **Choose Data Source** option.</span></span>  
   
-3.  Si su proyecto aún no tiene un origen de datos, hace clic en **Agregar origen de datos del proyecto** y siga los pasos indicados por el asistente.  
+3.  <span data-ttu-id="e72b5-120">Si su proyecto aún no tiene un origen de datos, haga clic en **Agregar origen de datos del proyecto** y siga los pasos indicados por el asistente.</span><span class="sxs-lookup"><span data-stu-id="e72b5-120">If your project does not already have a data source, click **Add Project Data Source** and follow the steps indicated by the wizard.</span></span>  
   
-     Para obtener más información, vea [Asistente para la configuración de orígenes de datos](../Topic/Data%20Source%20Configuration%20Wizard.md).  El nuevo origen de datos aparecerá en la ventana desplegable **Elegir origen de datos**.  Si el nuevo origen de datos contiene sólo uno miembro, por ejemplo, una tabla de base de datos única, el control se enlazará automáticamente a dicho miembro.  En caso contrario, continúe con el paso siguiente.  
+     <span data-ttu-id="e72b5-121">Para más información, consulte [Asistente para la configuración de orígenes de datos](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f).</span><span class="sxs-lookup"><span data-stu-id="e72b5-121">For more information, see [Data Source Configuration Wizard](http://msdn.microsoft.com/library/c4df7de5-5da0-4064-940c-761dd6d9e28f).</span></span> <span data-ttu-id="e72b5-122">El nuevo origen de datos aparecerá en la ventana desplegable **Elegir origen de datos**.</span><span class="sxs-lookup"><span data-stu-id="e72b5-122">Your new data source will appear in the **Choose Data Source** drop-down window.</span></span> <span data-ttu-id="e72b5-123">Si el nuevo origen de datos contiene solo un miembro, como una única tabla de base de datos, el control se enlazará automáticamente a dicho miembro.</span><span class="sxs-lookup"><span data-stu-id="e72b5-123">If your new data source contains only one member, such as a single database table, the control will automatically bind to that member.</span></span> <span data-ttu-id="e72b5-124">De lo contrario, vaya al paso siguiente.</span><span class="sxs-lookup"><span data-stu-id="e72b5-124">Otherwise, continue to the next step.</span></span>  
   
-4.  Expanda los nodos **Otros orígenes de datos** y **Orígenes de datos del proyecto** si ya no están expandidos y, a continuación, seleccione el origen datos que desee enlazar al control.  
+4.  <span data-ttu-id="e72b5-125">Expanda los nodos **Otros orígenes de datos** y **Orígenes de datos del proyecto** si aún no están expandidos y, después, seleccione el origen datos al que desea enlazar el control.</span><span class="sxs-lookup"><span data-stu-id="e72b5-125">Expand the **Other Data Sources** and **Project Data Sources** nodes if they are not already expanded, and then select the data source to bind the control to.</span></span>  
   
-5.  Si el origen de datos contiene más de un miembro, por ejemplo, si ha creado un <xref:System.Data.DataSet?displayProperty=fullName> que contiene varias tablas, expanda el origen de datos y, a continuación, seleccione el miembro específico que se va a enlazar.  
+5.  <span data-ttu-id="e72b5-126">Si el origen de datos contiene más de un miembro, por ejemplo, si ha creado un <xref:System.Data.DataSet?displayProperty=nameWithType> que contiene varias tablas, expanda el origen de datos y, a continuación, seleccione el miembro específico que se va a enlazar a.</span><span class="sxs-lookup"><span data-stu-id="e72b5-126">If your data source contains more than one member, such as if you have created a <xref:System.Data.DataSet?displayProperty=nameWithType> that contains multiple tables, expand the data source, and then select the specific member to bind to.</span></span>  
   
-6.  Para crear una relación principal\/detalle, en la ventana desplegable **Elegir origen de datos** de un segundo control <xref:System.Windows.Forms.DataGridView>, expanda el <xref:System.Windows.Forms.BindingSource> creado para la tabla primaria y, a continuación, seleccione la tabla secundaria relacionada en la lista que se muestra.  
+6.  <span data-ttu-id="e72b5-127">Para crear una relación maestro y detalles, en la **Elegir origen de datos** ventana de lista desplegable para un segundo <xref:System.Windows.Forms.DataGridView> controlar, expanda el <xref:System.Windows.Forms.BindingSource> creado para la tabla primaria y, a continuación, seleccione la tabla secundaria relacionada de la lista se muestra.</span><span class="sxs-lookup"><span data-stu-id="e72b5-127">To create a master/detail relationship, in the **Choose Data Source** drop-down window for a second <xref:System.Windows.Forms.DataGridView> control, expand the <xref:System.Windows.Forms.BindingSource> created for the parent table, and then select the related child table from the list shown.</span></span>  
   
     > [!NOTE]
-    >  Si su proyecto ya tiene un origen de datos, también puede utilizar la ventana **Orígenes de datos** para crear un formulario de datos.  Para obtener más información, vea [Orígenes de datos \(ventana\)](../Topic/Data%20Sources%20Window.md).  
+    >  <span data-ttu-id="e72b5-128">Si el proyecto ya tiene un origen de datos, también puede usar la ventaja **Orígenes de datos** para crear un formulario de datos.</span><span class="sxs-lookup"><span data-stu-id="e72b5-128">If your project already has a data source, you can also use the **Data Sources** window to create a data form.</span></span> <span data-ttu-id="e72b5-129">Para más información, consulte [Orígenes de datos (ventana)](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).</span><span class="sxs-lookup"><span data-stu-id="e72b5-129">For more information, see [Data Sources Window](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>   
- [Cómo: Conectarse a los datos de una base de datos](../Topic/How%20to:%20Connect%20to%20Data%20in%20a%20Database.md)   
- [Cómo: Agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)   
- [Cómo: Cambiar el orden de las columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)   
- [Cómo: Cambiar el tipo de una columna DataGridView de formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)   
- [Cómo: Inmovilizar columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)   
- [Cómo: Ocultar columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)   
- [Cómo: Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Orígenes de datos \(ventana\)](../Topic/Data%20Sources%20Window.md)   
- [Cómo: Mostrar datos relacionados en una aplicación de Windows Forms](../Topic/How%20to:%20Display%20Related%20Data%20in%20a%20Windows%20Forms%20Application.md)
+## <a name="see-also"></a><span data-ttu-id="e72b5-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="e72b5-130">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="e72b5-131">Cómo: Conectarse a los datos de una base de datos</span><span class="sxs-lookup"><span data-stu-id="e72b5-131">How to: Connect to Data in a Database</span></span>](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)  
+ [<span data-ttu-id="e72b5-132">Agregar y quitar columnas en el control DataGridView de Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="e72b5-132">How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="e72b5-133">Cambiar el orden de las columnas en el control DataGridView de Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="e72b5-133">How to: Change the Order of Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="e72b5-134">Cambiar el tipo de una columna DataGridView de Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="e72b5-134">How to: Change the Type of a Windows Forms DataGridView Column Using the Designer</span></span>](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
+ [<span data-ttu-id="e72b5-135">Inmovilizar columnas en el control DataGridView de Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="e72b5-135">How to: Freeze Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="e72b5-136">Ocultar columnas en el control DataGridView de Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="e72b5-136">How to: Hide Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="e72b5-137">Crear columnas de sólo lectura en el control DataGridView de Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="e72b5-137">How to: Make Columns Read-Only in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="e72b5-138">Cómo: crear un proyecto de aplicación de Windows</span><span class="sxs-lookup"><span data-stu-id="e72b5-138">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="e72b5-139">Cómo: Agregar controles a Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e72b5-139">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="e72b5-140">Ventana Orígenes de datos</span><span class="sxs-lookup"><span data-stu-id="e72b5-140">Data Sources Window</span></span>](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)  
+ [<span data-ttu-id="e72b5-141">Cómo: Mostrar datos relacionados en una aplicación de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e72b5-141">How to: Display Related Data in a Windows Forms Application</span></span>](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd)

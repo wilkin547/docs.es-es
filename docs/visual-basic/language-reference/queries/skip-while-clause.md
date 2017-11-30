@@ -1,61 +1,58 @@
 ---
-title: "Skip While (Cl&#225;usula, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySkipWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "consultas [Visual Basic], Skip While"
-  - "Skip While (cláusula)"
-  - "Skip While (instrucción)"
+title: "Skip While (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySkipWhile
+helpviewer_keywords:
+- Skip While statement [Visual Basic]
+- Skip While clause [Visual Basic]
+- queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f447a6d9b2eb58fa546ced6c96b987caf68fb3e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Skip While (Cl&#225;usula, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Omite los elementos de una colección en tanto que una condición especificada sea `true` y, a continuación, devuelva los elementos restantes.  
+# <a name="skip-while-clause-visual-basic"></a><span data-ttu-id="898c0-102">Skip While (Cláusula, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="898c0-102">Skip While Clause (Visual Basic)</span></span>
+<span data-ttu-id="898c0-103">Omite los elementos de una colección siempre que el valor de una condición especificada sea `true` y, a continuación, devuelve los elementos restantes.</span><span class="sxs-lookup"><span data-stu-id="898c0-103">Bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="898c0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="898c0-104">Syntax</span></span>  
   
 ```  
 Skip While expression  
 ```  
   
-## Elementos  
+## <a name="parts"></a><span data-ttu-id="898c0-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="898c0-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Término|Definición|  
-|`expression`|Obligatorio.  Expresión que representa una condición que deben cumplir los elementos.  La expresión debe devolver un valor de tipo `Boolean` o un equivalente funcional, como un valor de tipo `Integer` que debe evaluarse como `Boolean`.|  
+|<span data-ttu-id="898c0-106">Término</span><span class="sxs-lookup"><span data-stu-id="898c0-106">Term</span></span>|<span data-ttu-id="898c0-107">Definición</span><span class="sxs-lookup"><span data-stu-id="898c0-107">Definition</span></span>|  
+|---|---|  
+|`expression`|<span data-ttu-id="898c0-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="898c0-108">Required.</span></span> <span data-ttu-id="898c0-109">Una expresión que representa una condición para probar los elementos de.</span><span class="sxs-lookup"><span data-stu-id="898c0-109">An expression that represents a condition to test elements for.</span></span> <span data-ttu-id="898c0-110">La expresión debe devolver un `Boolean` valor o un equivalente funcional, como un `Integer` que se debe evaluar como un `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="898c0-110">The expression must return a `Boolean` value or a functional equivalent, such as an `Integer` to be evaluated as a `Boolean`.</span></span>|  
   
-## Comentarios  
- La cláusula `Skip While` omite los elementos desde el principio del resultado de una consulta hasta que el parámetro `expression` proporcionado devuelva `false`.  Después de que `expression` devuelva `false`, la consulta devuelve todos los elementos restantes.  Se omite `expression` para los resultados restantes.  
+## <a name="remarks"></a><span data-ttu-id="898c0-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="898c0-111">Remarks</span></span>  
+ <span data-ttu-id="898c0-112">El `Skip While` cláusula omite los elementos desde el principio del resultado de una consulta hasta que se ha suministrado `expression` devuelve `false`.</span><span class="sxs-lookup"><span data-stu-id="898c0-112">The `Skip While` clause bypasses elements from the beginning of a query result until the supplied `expression` returns `false`.</span></span> <span data-ttu-id="898c0-113">Después de `expression` devuelve `false`, la consulta devuelve todos los elementos restantes.</span><span class="sxs-lookup"><span data-stu-id="898c0-113">After `expression` returns `false`, the query returns all the remaining elements.</span></span> <span data-ttu-id="898c0-114">El `expression` se omite para los resultados restantes.</span><span class="sxs-lookup"><span data-stu-id="898c0-114">The `expression` is ignored for the remaining results.</span></span>  
   
- La cláusula `Skip While` se diferencia de la cláusula `Where` en que la cláusula `Where` se puede usar para excluir todos los elementos de una consulta que no cumplan una condición determinada.  La cláusula `Skip While` solamente excluye los elementos hasta que no se cumpla la condición por primera vez.  La cláusula `Skip While` es muy útil cuando se trabaja con un resultado de consulta ordenado.  
+ <span data-ttu-id="898c0-115">El `Skip While` cláusula difiere de la `Where` cláusula en la que el `Where` cláusula puede usarse para excluir todos los elementos de una consulta que no cumplen una condición determinada.</span><span class="sxs-lookup"><span data-stu-id="898c0-115">The `Skip While` clause differs from the `Where` clause in that the `Where` clause can be used to exclude all elements from a query that do not meet a particular condition.</span></span> <span data-ttu-id="898c0-116">El `Skip While` cláusula excluye los elementos hasta la primera vez que no se cumple la condición.</span><span class="sxs-lookup"><span data-stu-id="898c0-116">The `Skip While` clause excludes elements only until the first time that the condition is not satisfied.</span></span> <span data-ttu-id="898c0-117">El `Skip While` cláusula es muy útil cuando se trabaja con un resultado de consulta ordenado.</span><span class="sxs-lookup"><span data-stu-id="898c0-117">The `Skip While` clause is most useful when you are working with an ordered query result.</span></span>  
   
- Se puede omitir un número concreto de resultados desde el principio del resultado de una consulta mediante la cláusula `Skip`.  
+ <span data-ttu-id="898c0-118">Puede omitir un número concreto de resultados desde el principio del resultado de una consulta mediante el uso de la `Skip` cláusula.</span><span class="sxs-lookup"><span data-stu-id="898c0-118">You can bypass a specific number of results from the beginning of a query result by using the `Skip` clause.</span></span>  
   
-## Ejemplo  
- En el ejemplo de código siguiente se usa la cláusula `Skip While` para omitir los resultados hasta que se encuentre el primer cliente de Estados Unidos.  
+## <a name="example"></a><span data-ttu-id="898c0-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="898c0-119">Example</span></span>  
+ <span data-ttu-id="898c0-120">El siguiente ejemplo de código utiliza el `Skip While` cláusula para omitir resultados hasta que se encuentre el primer cliente de los Estados Unidos.</span><span class="sxs-lookup"><span data-stu-id="898c0-120">The following code example uses the `Skip While` clause to bypass results until the first customer from the United States is found.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
-## Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)   
- [Select \(Cláusula\)](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From \(Cláusula\)](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Skip \(Cláusula\)](../../../visual-basic/language-reference/queries/skip-clause.md)   
- [Take While \(Cláusula\)](../../../visual-basic/language-reference/queries/take-while-clause.md)   
- [Where \(Cláusula\)](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a><span data-ttu-id="898c0-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="898c0-121">See Also</span></span>  
+ [<span data-ttu-id="898c0-122">Introducción a LINQ en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="898c0-122">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="898c0-123">Consultas</span><span class="sxs-lookup"><span data-stu-id="898c0-123">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="898c0-124">Select (cláusula)</span><span class="sxs-lookup"><span data-stu-id="898c0-124">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="898c0-125">From (cláusula)</span><span class="sxs-lookup"><span data-stu-id="898c0-125">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="898c0-126">Skip (cláusula)</span><span class="sxs-lookup"><span data-stu-id="898c0-126">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [<span data-ttu-id="898c0-127">Take While (cláusula)</span><span class="sxs-lookup"><span data-stu-id="898c0-127">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [<span data-ttu-id="898c0-128">Where (cláusula)</span><span class="sxs-lookup"><span data-stu-id="898c0-128">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)

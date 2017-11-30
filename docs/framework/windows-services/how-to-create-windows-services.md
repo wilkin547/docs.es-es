@@ -1,84 +1,87 @@
 ---
-title: "How to: Create Windows Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows Service applications, creating"
-  - "templates, Windows Service"
+title: "Cómo: Crear servicios de Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Service applications, creating
+- templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: 18
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: c4d7f2f19c8d156f86513ac7138bccd59ae3b7fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create Windows Services
-Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio denominada **Servicio de Windows**.  Esta plantilla realiza automáticamente gran parte del trabajo: hace referencia a las clases y los espacios de nombres correctos, configura la herencia de la clase base para los servicios y reemplazar algunos de los métodos que es probable que desee reemplazar.  
+# <a name="how-to-create-windows-services"></a><span data-ttu-id="a6c18-102">Cómo: Crear servicios de Windows</span><span class="sxs-lookup"><span data-stu-id="a6c18-102">How to: Create Windows Services</span></span>
+<span data-ttu-id="a6c18-103">Cuando se crea un servicio, puede usar una plantilla de proyecto de Visual Studio denominada **servicio de Windows**.</span><span class="sxs-lookup"><span data-stu-id="a6c18-103">When you create a service, you can use a Visual Studio project template called **Windows Service**.</span></span> <span data-ttu-id="a6c18-104">Esta plantilla realiza automáticamente gran parte del trabajo: hace referencia a las clases y los espacios de nombres correctos, configura la herencia de la clase base para los servicios y reemplazar algunos de los métodos que es probable que desee reemplazar.</span><span class="sxs-lookup"><span data-stu-id="a6c18-104">This template automatically does much of the work for you by referencing the appropriate classes and namespaces, setting up the inheritance from the base class for services, and overriding several of the methods you're likely to want to override.</span></span>  
   
 > [!WARNING]
->  La plantilla de proyecto Servicios de Windows no está disponible en la edición Express de Visual Studio.  
+>  <span data-ttu-id="a6c18-105">La plantilla de proyecto Servicios de Windows no está disponible en la edición Express de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-105">The Windows Services project template is not available in the Express edition of Visual Studio.</span></span>  
   
- Como mínimo, para crear un servicio funcional, deberá:  
+ <span data-ttu-id="a6c18-106">Como mínimo, para crear un servicio funcional, deberá:</span><span class="sxs-lookup"><span data-stu-id="a6c18-106">At a minimum, to create a functional service you must:</span></span>  
   
--   Establecer la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
+-   <span data-ttu-id="a6c18-107">Establecer la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6c18-107">Set the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property.</span></span>  
   
--   Crear los instaladores necesarios para la aplicación de servicio.  
+-   <span data-ttu-id="a6c18-108">Crear los instaladores necesarios para la aplicación de servicio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-108">Create the necessary installers for your service application.</span></span>  
   
--   Reemplazar y especificar el código para los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para personalizar el modo en que se comporta el servicio.  
+-   <span data-ttu-id="a6c18-109">Reemplazar y especificar el código para los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para personalizar el modo en que se comporta el servicio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-109">Override and specify code for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> methods to customize the ways in which your service behaves.</span></span>  
   
-### Para crear una aplicación de servicio de Windows  
+### <a name="to-create-a-windows-service-application"></a><span data-ttu-id="a6c18-110">Para crear una aplicación de servicio de Windows</span><span class="sxs-lookup"><span data-stu-id="a6c18-110">To create a Windows Service application</span></span>  
   
-1.  Cree un proyecto de **Servicio Windows**.  
-  
-    > [!NOTE]
-    >  Para obtener instrucciones sobre cómo escribir un servicio sin usar la plantilla, vea [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
-  
-2.  En la ventana **Propiedades**, establezca la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> para el servicio.  
-  
-     ![Establezca la propiedad ServiceName.](../../../docs/framework/windows-services/media/windowsservice-servicename.png "WindowsService\_ServiceName")  
+1.  <span data-ttu-id="a6c18-111">Crear un **servicio de Windows** proyecto.</span><span class="sxs-lookup"><span data-stu-id="a6c18-111">Create a **Windows Service** project.</span></span>  
   
     > [!NOTE]
-    >  El valor de la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> siempre debe coincidir con el nombre registrado en las clases del instalador.  Si cambia esta propiedad, también debe actualizar la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> de las clases del instalador.  
+    >  <span data-ttu-id="a6c18-112">Para obtener instrucciones sobre cómo escribir un servicio sin utilizar la plantilla, consulte [Cómo: escribir servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).</span><span class="sxs-lookup"><span data-stu-id="a6c18-112">For instructions on writing a service without using the template, see [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).</span></span>  
   
-3.  Establezca cualquiera de las siguientes propiedades para determinar cómo funcionará el servicio.  
+2.  <span data-ttu-id="a6c18-113">En el **propiedades** ventana, establezca el <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> propiedad para el servicio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-113">In the **Properties** window, set the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for your service.</span></span>  
   
-    |Propiedad|Parámetro|  
-    |---------------|---------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` para indicar que el servicio aceptará solicitudes para detener la ejecución; `false` para impedir que el servicio se detenga.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` para indicar que el servicio desea recibir una notificación cuando se apaga el equipo en que reside, lo que le permite llamar al procedimiento <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` para indicar que el servicio aceptará solicitudes para pausar o reanudar la ejecución; `false` para impedir que el servicio se pause y se reanude.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`  para indicar que el servicio puede controlar la notificación de cambios en el estado de alimentación del equipo; `false` para impedir la notificación al servicio de estos cambios.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para escribir entradas informativas en el registro de sucesos de aplicación cuando el servicio realice una acción; `false` para deshabilitar esta funcionalidad.  Para obtener más información, vea [How to: Log Information About Services](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Note:**  De manera predeterminada, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> se establece en `true`.|  
+     <span data-ttu-id="a6c18-114">![Establezca la propiedad ServiceName. ] (../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")</span><span class="sxs-lookup"><span data-stu-id="a6c18-114">![Set the ServiceName property.](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")</span></span>  
   
     > [!NOTE]
-    >  Cuando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> `` o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> `` se establecen en `false`, el **Administrador de control de servicios** deshabilitará las opciones de menú correspondientes para detener, pausar o continuar el servicio.  
+    >  <span data-ttu-id="a6c18-115">El valor de la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> siempre debe coincidir con el nombre registrado en las clases del instalador.</span><span class="sxs-lookup"><span data-stu-id="a6c18-115">The value of the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property must always match the name recorded in the installer classes.</span></span> <span data-ttu-id="a6c18-116">Si cambia esta propiedad, también debe actualizar la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> de las clases del instalador.</span><span class="sxs-lookup"><span data-stu-id="a6c18-116">If you change this property, you must update the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property of installer classes as well.</span></span>  
   
-4.  Obtenga acceso al Editor de código y rellene el procesamiento que desee para los procedimientos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
+3.  <span data-ttu-id="a6c18-117">Establezca cualquiera de las siguientes propiedades para determinar cómo funcionará el servicio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-117">Set any of the following properties to determine how your service will function.</span></span>  
   
-5.  Reemplace los otros métodos para los que desee definir la funcionalidad.  
-  
-6.  Agregar los instaladores necesarios para su aplicación de servicio.  Para obtener más información, vea [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
-  
-7.  En el menú **Compilar**, seleccione **Compilar solución** para compilar el proyecto.  
+    |<span data-ttu-id="a6c18-118">Propiedad</span><span class="sxs-lookup"><span data-stu-id="a6c18-118">Property</span></span>|<span data-ttu-id="a6c18-119">Parámetro</span><span class="sxs-lookup"><span data-stu-id="a6c18-119">Setting</span></span>|  
+    |--------------|-------------|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|<span data-ttu-id="a6c18-120">`True` para indicar que el servicio aceptará solicitudes para detener la ejecución; `false` para impedir que el servicio se detenga.</span><span class="sxs-lookup"><span data-stu-id="a6c18-120">`True` to indicate that the service will accept requests to stop running; `false` to prevent the service from being stopped.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|<span data-ttu-id="a6c18-121">`True` para indicar que el servicio desea recibir una notificación cuando se apaga el equipo en que reside, lo que le permite llamar al procedimiento <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6c18-121">`True` to indicate that the service wants to receive notification when the computer on which it lives shuts down, enabling it to call the <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> procedure.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|<span data-ttu-id="a6c18-122">`True` para indicar que el servicio aceptará solicitudes para pausar o reanudar la ejecución; `false` para impedir que el servicio se pause y se reanude.</span><span class="sxs-lookup"><span data-stu-id="a6c18-122">`True` to indicate that the service will accept requests to pause or to resume running; `false` to prevent the service from being paused and resumed.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|<span data-ttu-id="a6c18-123">`True`para indicar que el servicio puede controlar la notificación de cambios en el estado de energía del equipo; `false` para impedir que el servicio de notificación de estos cambios.</span><span class="sxs-lookup"><span data-stu-id="a6c18-123">`True` to indicate that the service can handle notification of changes to the computer's power status; `false` to prevent the service from being notified of these changes.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|<span data-ttu-id="a6c18-124">`True` para escribir entradas informativas en el registro de sucesos de aplicación cuando el servicio realice una acción; `false` para deshabilitar esta funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="a6c18-124">`True` to write informational entries to the Application event log when your service performs an action; `false` to disable this functionality.</span></span> <span data-ttu-id="a6c18-125">Para obtener más información, consulte [Cómo: obtener información acerca de servicios de registro](../../../docs/framework/windows-services/how-to-log-information-about-services.md).</span><span class="sxs-lookup"><span data-stu-id="a6c18-125">For more information, see [How to: Log Information About Services](../../../docs/framework/windows-services/how-to-log-information-about-services.md).</span></span> <span data-ttu-id="a6c18-126">**Nota:** de forma predeterminada, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> está establecido en `true`.</span><span class="sxs-lookup"><span data-stu-id="a6c18-126">**Note:**  By default, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> is set to `true`.</span></span>|  
   
     > [!NOTE]
-    >  No presione F5 para ejecutar el proyecto: no se puede ejecutar un proyecto de servicio de esta manera.  
+    >  <span data-ttu-id="a6c18-127">Cuando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> se establecen en `false`, **Service Control Manager** deshabilitará las opciones de menú correspondientes para detener, pausar o reanudar el servicio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-127">When <xref:System.ServiceProcess.ServiceBase.CanStop%2A> or <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> are set to `false`, the **Service Control Manager** will disable the corresponding menu options to stop, pause, or continue the service.</span></span>  
   
-8.  Instale el servicio.  Para obtener más información, vea [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+4.  <span data-ttu-id="a6c18-128">Obtenga acceso al Editor de código y rellene el procesamiento que desee para los procedimientos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.</span><span class="sxs-lookup"><span data-stu-id="a6c18-128">Access the Code Editor and fill in the processing you want for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedures.</span></span>  
   
-## Vea también  
- [Introduction to Windows Service Applications](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)   
- [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)   
- [How to: Log Information About Services](../../../docs/framework/windows-services/how-to-log-information-about-services.md)   
- [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md)   
- [How to: Specify the Security Context for Services](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)   
- [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)   
- [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+5.  <span data-ttu-id="a6c18-129">Reemplace los otros métodos para los que desee definir la funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="a6c18-129">Override any other methods for which you want to define functionality.</span></span>  
+  
+6.  <span data-ttu-id="a6c18-130">Agregar los instaladores necesarios para su aplicación de servicio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-130">Add the necessary installers for your service application.</span></span> <span data-ttu-id="a6c18-131">Para obtener más información, consulte [Cómo: agregar instaladores a la aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="a6c18-131">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
+  
+7.  <span data-ttu-id="a6c18-132">Compilar el proyecto seleccionando **generar solución** desde el **generar** menú.</span><span class="sxs-lookup"><span data-stu-id="a6c18-132">Build your project by selecting **Build Solution** from the **Build** menu.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="a6c18-133">No presione F5 para ejecutar el proyecto: no se puede ejecutar un proyecto de servicio de esta manera.</span><span class="sxs-lookup"><span data-stu-id="a6c18-133">Do not press F5 to run your project — you cannot run a service project in this way.</span></span>  
+  
+8.  <span data-ttu-id="a6c18-134">Instale el servicio.</span><span class="sxs-lookup"><span data-stu-id="a6c18-134">Install the service.</span></span> <span data-ttu-id="a6c18-135">Para obtener más información, consulta [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="a6c18-135">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="a6c18-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="a6c18-136">See Also</span></span>  
+ [<span data-ttu-id="a6c18-137">Introducción a las aplicaciones de servicio de Windows</span><span class="sxs-lookup"><span data-stu-id="a6c18-137">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [<span data-ttu-id="a6c18-138">Cómo: crear servicios mediante programación</span><span class="sxs-lookup"><span data-stu-id="a6c18-138">How to: Write Services Programmatically</span></span>](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
+ [<span data-ttu-id="a6c18-139">Cómo: agregar instaladores a la aplicación de servicio</span><span class="sxs-lookup"><span data-stu-id="a6c18-139">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [<span data-ttu-id="a6c18-140">Cómo: registrar información sobre servicios</span><span class="sxs-lookup"><span data-stu-id="a6c18-140">How to: Log Information About Services</span></span>](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [<span data-ttu-id="a6c18-141">Cómo: iniciar servicios</span><span class="sxs-lookup"><span data-stu-id="a6c18-141">How to: Start Services</span></span>](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [<span data-ttu-id="a6c18-142">Cómo: especificar el contexto de seguridad para los servicios</span><span class="sxs-lookup"><span data-stu-id="a6c18-142">How to: Specify the Security Context for Services</span></span>](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
+ [<span data-ttu-id="a6c18-143">Cómo: instalar y desinstalar servicios</span><span class="sxs-lookup"><span data-stu-id="a6c18-143">How to: Install and Uninstall Services</span></span>](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [<span data-ttu-id="a6c18-144">Tutorial: Crear una aplicación de servicio de Windows en el Diseñador de componentes</span><span class="sxs-lookup"><span data-stu-id="a6c18-144">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

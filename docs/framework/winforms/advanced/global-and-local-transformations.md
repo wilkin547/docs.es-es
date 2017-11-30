@@ -1,71 +1,75 @@
 ---
-title: "Transformaciones globales y locales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "matrices, con transformaciones"
-  - "transformaciones, globales"
-  - "transformaciones, locales"
+title: Transformaciones globales y locales
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- matrices [Windows Forms], using transformations
+- transformations [Windows Forms], global
+- transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Transformaciones globales y locales
-Una transformación global es una transformación que se aplica a todos los elementos dibujados por un objeto <xref:System.Drawing.Graphics> determinado.  Por el contrario, una transformación local es una transformación que se aplica a un elemento específico que se va a dibujar.  
+# <a name="global-and-local-transformations"></a><span data-ttu-id="9c880-102">Transformaciones globales y locales</span><span class="sxs-lookup"><span data-stu-id="9c880-102">Global and Local Transformations</span></span>
+<span data-ttu-id="9c880-103">Una transformación global es una transformación que se aplica a todos los elementos dibujados por un determinado <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="9c880-103">A global transformation is a transformation that applies to every item drawn by a given <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="9c880-104">En cambio, una transformación local es una transformación que se aplica a un elemento específico que se va a dibujar.</span><span class="sxs-lookup"><span data-stu-id="9c880-104">In contrast, a local transformation is a transformation that applies to a specific item to be drawn.</span></span>  
   
-## Transformaciones globales  
- Para crear una transformación global hay que construir un objeto <xref:System.Drawing.Graphics> y, después, manipular su propiedad <xref:System.Drawing.Graphics.Transform%2A>.  La propiedad <xref:System.Drawing.Graphics.Transform%2A> es un objeto <xref:System.Drawing.Drawing2D.Matrix>, por lo que puede almacenar cualquier secuencia de transformaciones afines.  La transformación que se almacena en la propiedad <xref:System.Drawing.Graphics.Transform%2A> se denomina transformación de coordenadas universales.  La clase <xref:System.Drawing.Graphics> proporciona varios métodos para compilar una transformación universal compuesta: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A> y <xref:System.Drawing.Graphics.TranslateTransform%2A>.  En el siguiente ejemplo se dibuja una elipse dos veces: una, antes de crear una transformación de coordenadas universales y otra, después.  La transformación, en primer lugar, ajusta la escala de la elipse en un factor de 0,5 en la dirección del eje, después, traslada 50 unidades la elipse en la dirección del eje x y, por último, rota la elipse 30 grados.  
+## <a name="global-transformations"></a><span data-ttu-id="9c880-105">Transformaciones globales</span><span class="sxs-lookup"><span data-stu-id="9c880-105">Global Transformations</span></span>  
+ <span data-ttu-id="9c880-106">Para crear una transformación global, construir un <xref:System.Drawing.Graphics> objeto y, a continuación, manipular su <xref:System.Drawing.Graphics.Transform%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="9c880-106">To create a global transformation, construct a <xref:System.Drawing.Graphics> object, and then manipulate its <xref:System.Drawing.Graphics.Transform%2A> property.</span></span> <span data-ttu-id="9c880-107">El <xref:System.Drawing.Graphics.Transform%2A> propiedad es una <xref:System.Drawing.Drawing2D.Matrix> de objeto, por lo que puede almacenar cualquier secuencia de transformaciones afines.</span><span class="sxs-lookup"><span data-stu-id="9c880-107">The <xref:System.Drawing.Graphics.Transform%2A> property is a <xref:System.Drawing.Drawing2D.Matrix> object, so it can hold any sequence of affine transformations.</span></span> <span data-ttu-id="9c880-108">La transformación se almacena en la <xref:System.Drawing.Graphics.Transform%2A> propiedad se denomina la transformación universal.</span><span class="sxs-lookup"><span data-stu-id="9c880-108">The transformation stored in the <xref:System.Drawing.Graphics.Transform%2A> property is called the world transformation.</span></span> <span data-ttu-id="9c880-109">El <xref:System.Drawing.Graphics> clase proporciona varios métodos para crear una transformación universal compuesta: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, y <xref:System.Drawing.Graphics.TranslateTransform%2A>.</span><span class="sxs-lookup"><span data-stu-id="9c880-109">The <xref:System.Drawing.Graphics> class provides several methods for building up a composite world transformation: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, and <xref:System.Drawing.Graphics.TranslateTransform%2A>.</span></span> <span data-ttu-id="9c880-110">En el ejemplo siguiente se dibuja una elipse dos veces: una vez antes de crear una transformación de coordenadas universales y otra después.</span><span class="sxs-lookup"><span data-stu-id="9c880-110">The following example draws an ellipse twice: once before creating a world transformation and once after.</span></span> <span data-ttu-id="9c880-111">La transformación primero escala por un factor de 0,5 en la dirección del eje y, a continuación, traduce 50 unidades en la dirección del eje x y, a continuación, gira 30 grados.</span><span class="sxs-lookup"><span data-stu-id="9c880-111">The transformation first scales by a factor of 0.5 in the y direction, then translates 50 units in the x direction, and then rotates 30 degrees.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- En la siguiente ilustración se muestran las matrices que forman parte de la transformación.  
+ <span data-ttu-id="9c880-112">En la siguiente ilustración muestra las matrices implicados en la transformación.</span><span class="sxs-lookup"><span data-stu-id="9c880-112">The following illustration shows the matrices involved in the transformation.</span></span>  
   
- ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05\_art14")  
+ <span data-ttu-id="9c880-113">![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span><span class="sxs-lookup"><span data-stu-id="9c880-113">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span></span>  
   
 > [!NOTE]
->  En el ejemplo anterior se rota la elipse alrededor del origen del sistema de coordenadas, que está en la esquina superior izquierda del área de cliente.  Esto produce un resultado diferente al de la rotación de la elipse alrededor de su propio centro.  
+>  <span data-ttu-id="9c880-114">En el ejemplo anterior, la elipse gira sobre el origen del sistema de coordenadas, que se encuentra en la esquina superior izquierda del área cliente.</span><span class="sxs-lookup"><span data-stu-id="9c880-114">In the preceding example, the ellipse is rotated about the origin of the coordinate system, which is at the upper-left corner of the client area.</span></span> <span data-ttu-id="9c880-115">Esto produce un resultado diferente a la rotación de la elipse alrededor de su propio centro.</span><span class="sxs-lookup"><span data-stu-id="9c880-115">This produces a different result than rotating the ellipse about its own center.</span></span>  
   
-## Transformaciones locales  
- Una transformación local se aplica a un elemento específico que se va a dibujar.  Por ejemplo, un objeto <xref:System.Drawing.Drawing2D.GraphicsPath> tiene un método <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> que permite transformar los puntos de datos de ese trazado.  En el siguiente ejemplo se dibuja un rectángulo sin transformación y un trazado con una transformación de rotación.  Se supone que no hay transformación de coordenadas universales.  
+## <a name="local-transformations"></a><span data-ttu-id="9c880-116">Transformaciones locales</span><span class="sxs-lookup"><span data-stu-id="9c880-116">Local Transformations</span></span>  
+ <span data-ttu-id="9c880-117">Una transformación local se aplica a un elemento específico que se va a dibujar.</span><span class="sxs-lookup"><span data-stu-id="9c880-117">A local transformation applies to a specific item to be drawn.</span></span> <span data-ttu-id="9c880-118">Por ejemplo, un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto tiene una <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> método que permite transformar los puntos de datos de dicha ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="9c880-118">For example, a <xref:System.Drawing.Drawing2D.GraphicsPath> object has a <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> method that allows you to transform the data points of that path.</span></span> <span data-ttu-id="9c880-119">En el ejemplo siguiente se dibuja un rectángulo sin transformación y un trazado con una transformación de giro.</span><span class="sxs-lookup"><span data-stu-id="9c880-119">The following example draws a rectangle with no transformation and a path with a rotation transformation.</span></span> <span data-ttu-id="9c880-120">(Se supone que no hay ninguna transformación universal.)</span><span class="sxs-lookup"><span data-stu-id="9c880-120">(Assume that there is no world transformation.)</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- La transformación de coordenadas universales puede combinarse con transformaciones locales para conseguir resultados diversos.  Por ejemplo, la transformación de coordenadas universales puede utilizarse para revisar el sistema de coordenadas, y las transformaciones locales pueden utilizarse para rotar y ajustar la escala de objetos dibujados en el nuevo sistema de coordenadas.  
+ <span data-ttu-id="9c880-121">Puede combinar la transformación universal con transformaciones locales para conseguir una gran variedad de resultados.</span><span class="sxs-lookup"><span data-stu-id="9c880-121">You can combine the world transformation with local transformations to achieve a variety of results.</span></span> <span data-ttu-id="9c880-122">Por ejemplo, puede usar la transformación universal para revisar el sistema de coordenadas y usar transformaciones locales para girar y escalar objetos dibujados en el nuevo sistema de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="9c880-122">For example, you can use the world transformation to revise the coordinate system and use local transformations to rotate and scale objects drawn on the new coordinate system.</span></span>  
   
- Supongamos que desea que el sistema de coordenadas tenga el origen a 200 píxeles del borde izquierdo del área de cliente y a 150 píxeles de la parte superior del área de cliente.  Además, supongamos que desea que la unidad de medida sea el píxel, con el eje x apuntando hacia la derecha y el eje y hacia arriba.  El sistema de coordenadas predeterminado tiene el eje y apuntando hacia abajo, así que es necesario realizar una reflexión a través del eje horizontal.  En la siguiente ilustración se muestra la matriz de dicha reflexión.  
+ <span data-ttu-id="9c880-123">Imagine que desea que un sistema de coordenadas que tiene su origen a 200 píxeles desde el borde izquierdo del área cliente y 150 píxeles de la parte superior del área cliente.</span><span class="sxs-lookup"><span data-stu-id="9c880-123">Suppose you want a coordinate system that has its origin 200 pixels from the left edge of the client area and 150 pixels from the top of the client area.</span></span> <span data-ttu-id="9c880-124">Además, supongamos que desea que la unidad de medida que sea el píxel, con el eje x apuntando hacia la derecha y el eje y apuntando hacia arriba.</span><span class="sxs-lookup"><span data-stu-id="9c880-124">Furthermore, assume that you want the unit of measure to be the pixel, with the x-axis pointing to the right and the y-axis pointing up.</span></span> <span data-ttu-id="9c880-125">El sistema de coordenadas predeterminado tiene el eje y apuntando hacia abajo, por lo que necesita realizar una reflexión en el eje horizontal.</span><span class="sxs-lookup"><span data-stu-id="9c880-125">The default coordinate system has the y-axis pointing down, so you need to perform a reflection across the horizontal axis.</span></span> <span data-ttu-id="9c880-126">En la siguiente ilustración muestra la matriz de dicha reflexión.</span><span class="sxs-lookup"><span data-stu-id="9c880-126">The following illustration shows the matrix of such a reflection.</span></span>  
   
- ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.png "AboutGdip05\_art15")  
+ <span data-ttu-id="9c880-127">![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span><span class="sxs-lookup"><span data-stu-id="9c880-127">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span></span>  
   
- A continuación, supongamos que es necesario realizar una traslación de 200 unidades hacia la derecha y 150 unidades hacia abajo.  
+ <span data-ttu-id="9c880-128">A continuación, imagine que necesita realizar una conversión de 200 unidades a la derecha y 150 unidades hacia abajo.</span><span class="sxs-lookup"><span data-stu-id="9c880-128">Next, assume you need to perform a translation 200 units to the right and 150 units down.</span></span>  
   
- En el siguiente ejemplo se establece el sistema de coordenadas descrito mediante el establecimiento de la transformación de coordenadas universales de un objeto <xref:System.Drawing.Graphics>.  
+ <span data-ttu-id="9c880-129">El ejemplo siguiente establece el sistema de coordenadas descrito mediante el establecimiento de la transformación universal de un <xref:System.Drawing.Graphics> objeto.</span><span class="sxs-lookup"><span data-stu-id="9c880-129">The following example establishes the coordinate system just described by setting the world transformation of a <xref:System.Drawing.Graphics> object.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- En el siguiente código \(ubicado al final del ejemplo anterior\) se crea un trazado formado por un rectángulo único con la esquina inferior izquierda en el origen del nuevo sistema de coordenadas.  El rectángulo se ha rellenado una vez sin transformación local y otra vez con una transformación local.  La transformación local está compuesta por un ajuste de escala horizontal en un factor de 2 seguido de una rotación de 30 grados.  
+ <span data-ttu-id="9c880-130">El código siguiente (que se coloca al final del ejemplo anterior) crea una ruta de acceso que consta de un rectángulo con la esquina inferior izquierda en el origen del nuevo sistema de coordenadas.</span><span class="sxs-lookup"><span data-stu-id="9c880-130">The following code (placed at the end of the preceding example) creates a path that consists of a single rectangle with its lower-left corner at the origin of the new coordinate system.</span></span> <span data-ttu-id="9c880-131">El rectángulo se rellena una vez sin transformación local y otra vez con una transformación local.</span><span class="sxs-lookup"><span data-stu-id="9c880-131">The rectangle is filled once with no local transformation and once with a local transformation.</span></span> <span data-ttu-id="9c880-132">La transformación local consta de un ajuste de escala horizontal en un factor de 2 seguido de una rotación de 30 grados.</span><span class="sxs-lookup"><span data-stu-id="9c880-132">The local transformation consists of a horizontal scaling by a factor of 2 followed by a 30-degree rotation.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- En la siguiente ilustración se muestra el nuevo sistema de coordenadas y los dos rectángulos.  
+ <span data-ttu-id="9c880-133">En la siguiente ilustración muestra el nuevo sistema de coordenadas y los dos rectángulos.</span><span class="sxs-lookup"><span data-stu-id="9c880-133">The following illustration shows the new coordinate system and the two rectangles.</span></span>  
   
- ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.png "AboutGdip05\_art16")  
+ <span data-ttu-id="9c880-134">![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span><span class="sxs-lookup"><span data-stu-id="9c880-134">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span></span>  
   
-## Vea también  
- [Sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Usar transformaciones en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="9c880-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c880-135">See Also</span></span>  
+ [<span data-ttu-id="9c880-136">Sistemas de coordenadas y transformaciones</span><span class="sxs-lookup"><span data-stu-id="9c880-136">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="9c880-137">Usar transformaciones en la interfaz GDI+ administrada</span><span class="sxs-lookup"><span data-stu-id="9c880-137">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

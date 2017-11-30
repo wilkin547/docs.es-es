@@ -1,25 +1,28 @@
 ---
-title: "TargetFilePath especifica una carpeta existente. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: TargetFilePath especifica una carpeta existente.
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 2334f49e-d080-4ee2-b036-f95c7f76c3ec
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c244dbd914845f579474bef2ae590a45a59c7afc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# TargetFilePath especifica una carpeta existente.
-El parámetro `TargetFilePath` especifica un directorio existente pero debe especificar el nombre del nuevo directorio.  
+# <a name="targetfilepath-specifies-an-existing-folder"></a><span data-ttu-id="c0370-102">TargetFilePath especifica una carpeta existente.</span><span class="sxs-lookup"><span data-stu-id="c0370-102">TargetFilePath specifies an existing folder</span></span>
+<span data-ttu-id="c0370-103">El parámetro `TargetFilePath` especifica un directorio existente pero debe especificar el nombre del nuevo directorio.</span><span class="sxs-lookup"><span data-stu-id="c0370-103">The parameter `TargetFilePath` specifies an existing directory but must specify the new directory's name.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c0370-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="c0370-104">To correct this error</span></span>  
   
--   Cambie `TargetFilePath` para que especifique un directorio nuevo, en lugar de uno existente.  
+-   <span data-ttu-id="c0370-105">Cambie `TargetFilePath` para que especifique un directorio nuevo, en lugar de uno existente.</span><span class="sxs-lookup"><span data-stu-id="c0370-105">Change `TargetFilePath` to specify a new, rather than existing, directory.</span></span>  
   
-## Vea también  
- [Cómo: Mover archivos](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)   
- [Cómo: Mover un directorio en Visual Basic](http://msdn.microsoft.com/es-es/0f26d1ef-c0a0-4445-8eb0-9b7d0490411c)   
- [Cómo: Cambiar el nombre de un archivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)   
- [Cómo: Cambiar el nombre de un directorio en Visual Basic](http://msdn.microsoft.com/es-es/780c7afc-a03c-4b01-865a-510fe331b1cc)
+## <a name="see-also"></a><span data-ttu-id="c0370-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="c0370-106">See Also</span></span>  
+ [<span data-ttu-id="c0370-107">Mover archivos</span><span class="sxs-lookup"><span data-stu-id="c0370-107">How to: Move a File</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [<span data-ttu-id="c0370-108">Cómo: mover un directorio en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0370-108">How to: Move a Directory in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/0f26d1ef-c0a0-4445-8eb0-9b7d0490411c)  
+ [<span data-ttu-id="c0370-109">Cambiar el nombre de un archivo</span><span class="sxs-lookup"><span data-stu-id="c0370-109">How to: Rename a File</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [<span data-ttu-id="c0370-110">Cómo: cambiar el nombre de un directorio en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c0370-110">How to: Rename a Directory in Visual Basic</span></span>](http://msdn.microsoft.com/en-us/780c7afc-a03c-4b01-865a-510fe331b1cc)

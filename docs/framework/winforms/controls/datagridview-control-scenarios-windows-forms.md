@@ -1,100 +1,101 @@
 ---
-title: "Escenarios del control DataGridView (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "datos [Windows Forms], mostrar en formato de tabla"
-  - "cuadrículas de datos, acerca de las cuadrículas de datos"
-  - "DataGridView (control) [Windows Forms], escenarios"
+title: Escenarios del control DataGridView (formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], displaying in tabular format
+- data grids [Windows Forms], about data grids
+- DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Escenarios del control DataGridView (formularios Windows Forms)
-Con el control <xref:System.Windows.Forms.DataGridView>, puede mostrar datos en formato de tabla de distintos orígenes de datos.  Para usos sencillos, puede rellenar manualmente un control <xref:System.Windows.Forms.DataGridView> y manipular directamente los datos a través del control.  No obstante, normalmente almacenará los datos en un origen de datos externo y enlazará el control a él a través de un componente <xref:System.Windows.Forms.BindingSource>.  
+# <a name="datagridview-control-scenarios-windows-forms"></a><span data-ttu-id="5d433-102">Escenarios del control DataGridView (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5d433-102">DataGridView Control Scenarios (Windows Forms)</span></span>
+<span data-ttu-id="5d433-103">Con el <xref:System.Windows.Forms.DataGridView> control, puede mostrar datos tabulares de una variedad de orígenes de datos.</span><span class="sxs-lookup"><span data-stu-id="5d433-103">With the <xref:System.Windows.Forms.DataGridView> control, you can display tabular data from a variety of data sources.</span></span> <span data-ttu-id="5d433-104">Para usos sencillos, puede rellenar manualmente un <xref:System.Windows.Forms.DataGridView> y manipular los datos directamente a través del control.</span><span class="sxs-lookup"><span data-stu-id="5d433-104">For simple uses, you can manually populate a <xref:System.Windows.Forms.DataGridView> and manipulate the data directly through the control.</span></span> <span data-ttu-id="5d433-105">Normalmente, sin embargo, se almacenan los datos en un origen de datos externo y enlazar el control a él a través de un <xref:System.Windows.Forms.BindingSource> componente.</span><span class="sxs-lookup"><span data-stu-id="5d433-105">Typically, however, you will store your data in an external data source and bind the control to it through a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- En este tema se describen algunos de los escenarios comunes en los que interviene el control <xref:System.Windows.Forms.DataGridView>.  
+ <span data-ttu-id="5d433-106">Este tema describen algunos de los escenarios comunes que implican el <xref:System.Windows.Forms.DataGridView> control.</span><span class="sxs-lookup"><span data-stu-id="5d433-106">This topic describes some of the common scenarios that involve the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-## Escenario 1: Mostrar pequeñas cantidades de datos  
- No tiene que almacenar los datos en un origen de datos externo para mostrarlos en el control <xref:System.Windows.Forms.DataGridView>.  Si trabaja con una pequeña cantidad de datos, puede rellenar el control y manipular los datos a través del control.  A esto se lo denomina *modo sin enlazar*.  Para obtener más información, vea [Cómo: Crear un control DataGridView no enlazado en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+## <a name="scenario-1-displaying-small-amounts-of-data"></a><span data-ttu-id="5d433-107">Escenario 1: Mostrar pequeñas cantidades de datos</span><span class="sxs-lookup"><span data-stu-id="5d433-107">Scenario 1: Displaying Small Amounts of Data</span></span>  
+ <span data-ttu-id="5d433-108">No es necesario que almacenar los datos en un origen de datos externo para que se muestre en el <xref:System.Windows.Forms.DataGridView> control.</span><span class="sxs-lookup"><span data-stu-id="5d433-108">You do not have to store your data in an external data source to display it in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="5d433-109">Si está trabajando con una pequeña cantidad de datos, puede rellenar el control y manipular los datos a través del control.</span><span class="sxs-lookup"><span data-stu-id="5d433-109">If you are working with a small amount of data, you can populate the control yourself and manipulate the data through the control.</span></span> <span data-ttu-id="5d433-110">Esto se denomina *el modo sin enlazar*.</span><span class="sxs-lookup"><span data-stu-id="5d433-110">This is called *unbound mode*.</span></span> <span data-ttu-id="5d433-111">Para obtener más información, consulte [Cómo: crear un DataGridView Control de Windows Forms sin enlazar](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-111">For more information, see [How to: Create an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
-### Puntos clave del escenario  
+### <a name="scenario-key-points"></a><span data-ttu-id="5d433-112">Puntos clave del escenario</span><span class="sxs-lookup"><span data-stu-id="5d433-112">Scenario Key Points</span></span>  
   
--   En el modo sin enlazar, puede rellenar manualmente el control.  
+-   <span data-ttu-id="5d433-113">En el modo sin enlazar, rellenar manualmente el control.</span><span class="sxs-lookup"><span data-stu-id="5d433-113">In unbound mode, you populate the control manually.</span></span>  
   
--   El modo sin enlazar resulta especialmente adecuado para pequeñas cantidades de datos de sólo lectura.  
+-   <span data-ttu-id="5d433-114">El modo sin enlazar es especialmente adecuado para pequeñas cantidades de datos de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="5d433-114">Unbound mode is particularly suited for small amounts of read-only data.</span></span>  
   
--   El modo sin enlazar también resulta adecuado para tablas del estilo de hoja de cálculo o muy poco pobladas.  
+-   <span data-ttu-id="5d433-115">El modo sin enlazar también es ideal para las tablas de hoja de cálculo o apenas llena.</span><span class="sxs-lookup"><span data-stu-id="5d433-115">Unbound mode is also suited for spreadsheet-like or sparsely populated tables.</span></span>  
   
-## Escenario 2: Mostrar y actualizar datos almacenados en un origen de datos externo  
- Puede utilizar el control <xref:System.Windows.Forms.DataGridView> como una interfaz de usuario \(IU\) a través de la que los usuarios pueden tener acceso a datos conservados en un origen de datos como una tabla de base de datos o una colección de objetos comerciales.  Para obtener más información, vea [Cómo: Enlazar datos al control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a><span data-ttu-id="5d433-116">Escenario 2: Ver y actualizar los datos almacenados en un origen de datos externo</span><span class="sxs-lookup"><span data-stu-id="5d433-116">Scenario 2: Viewing and Updating Data Stored in an External Data Source</span></span>  
+ <span data-ttu-id="5d433-117">Puede usar el <xref:System.Windows.Forms.DataGridView> control como una interfaz de usuario (UI) a través de los usuarios que pueden tener acceso a datos guardados en un origen de datos como una tabla de base de datos o una colección de objetos comerciales.</span><span class="sxs-lookup"><span data-stu-id="5d433-117">You can use the <xref:System.Windows.Forms.DataGridView> control as a user interface (UI) through which users can access data kept in a data source such as a database table or a collection of business objects.</span></span> <span data-ttu-id="5d433-118">Para obtener más información, consulte [Cómo: enlazar datos al DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-118">For more information, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
   
-### Puntos clave del escenario  
+### <a name="scenario-key-points"></a><span data-ttu-id="5d433-119">Puntos clave del escenario</span><span class="sxs-lookup"><span data-stu-id="5d433-119">Scenario Key Points</span></span>  
   
--   El modo de enlace permite conectar con un origen de datos, generar automáticamente columnas según las propiedades del origen de datos o las columnas de base de datos y rellenar automáticamente el control.  
+-   <span data-ttu-id="5d433-120">El modo de enlace le permite conectarse a un origen de datos, generar automáticamente columnas basándose en las propiedades del origen de datos o columnas de base de datos y rellenar automáticamente el control.</span><span class="sxs-lookup"><span data-stu-id="5d433-120">Bound mode lets you connect to a data source, automatically generate columns based on the data source properties or database columns, and automatically populate the control.</span></span>  
   
--   El modo de enlace resulta adecuado para una interacción intensiva del usuario con los datos.  Se puede dar formato a los datos para su presentación y analizarse los datos especificados por el usuario en el formato esperado por el origen de datos.  Se pueden detectar errores de formato de introducción de datos y de restricción de base de datos de modo que se pueda advertir a los usuarios y corregirse las celdas con error.  
+-   <span data-ttu-id="5d433-121">Modo de enlace es adecuado para la interacción del usuario pesada con datos.</span><span class="sxs-lookup"><span data-stu-id="5d433-121">Bound mode is suited for heavy user interaction with data.</span></span> <span data-ttu-id="5d433-122">Se pueden aplicar el formato de datos para su presentación y se pueden analizar los datos especificados por el usuario en el formato esperado por el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="5d433-122">Data can be formatted for display, and user-specified data can be parsed into the format expected by the data source.</span></span> <span data-ttu-id="5d433-123">Se pueden detectar errores y errores de restricción de la base de datos de formato de entrada de datos para que pueden advertir a los usuarios y corregirse las celdas pueden corregirse.</span><span class="sxs-lookup"><span data-stu-id="5d433-123">Data entry formatting errors and database constraint errors can be detected so that users can be warned and erroneous cells can be corrected.</span></span>  
   
--   Funciones adicionales como ordenación de columnas, inmovilización y reordenación permiten a los usuarios mostrar los datos de la manera más cómoda para su flujo de trabajo.  
+-   <span data-ttu-id="5d433-124">Funcionalidad adicional como la ordenación de columnas, inmovilización y la reordenación de permiten a los usuarios ver los datos de la manera más conveniente para su flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5d433-124">Additional functionality such as column sorting, freezing, and reordering enable users to view data in the way most convenient for their workflow.</span></span>  
   
--   La función del Portapapeles permite a los usuarios copiar datos de la aplicación en otras aplicaciones.  
+-   <span data-ttu-id="5d433-125">Compatibilidad con el Portapapeles permite a los usuarios copiar datos desde la aplicación en otras aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="5d433-125">Clipboard support enables users to copy data from your application into other applications.</span></span>  
   
-## Escenario 3: Datos avanzados  
- Si tiene necesidades especiales que el modelo de enlace de datos estándar no trata, puede administrar la interacción entre el control y los datos implementando el *modo virtual*.  Implementar el modo virtual significa implementar uno o más controladores de eventos que permiten al control solicitar información sobre celdas cuando la necesita.  
+## <a name="scenario-3-advanced-data"></a><span data-ttu-id="5d433-126">Escenario 3: Avanzada de datos</span><span class="sxs-lookup"><span data-stu-id="5d433-126">Scenario 3: Advanced Data</span></span>  
+ <span data-ttu-id="5d433-127">Si tiene necesidades especiales que el modelo de enlace de datos estándar no se soluciona, puede administrar la interacción entre el control y los datos mediante la implementación *modo virtual*.</span><span class="sxs-lookup"><span data-stu-id="5d433-127">If you have special needs that the standard data binding model does not address, you can manage the interaction between the control and your data by implementing *virtual mode*.</span></span> <span data-ttu-id="5d433-128">Implementar el modo virtual significa implementar uno o más controladores de eventos que permiten al control solicitar información acerca de las celdas que la información es necesaria.</span><span class="sxs-lookup"><span data-stu-id="5d433-128">Implementing virtual mode means implementing one or more event handlers that let the control request information about cells as the information is needed.</span></span>  
   
- Por ejemplo, si trabaja con grandes cantidades de datos, quizá desee implementar el modo virtual para garantizar una eficacia óptima.  El modo virtual también resulta de utilidad para mantener los valores de columnas sin enlazar que puede mostrar junto con columnas recuperadas de otro origen de datos.  
+ <span data-ttu-id="5d433-129">Por ejemplo, si trabaja con grandes cantidades de datos, puede implementar el modo virtual para garantizar una eficiencia óptima.</span><span class="sxs-lookup"><span data-stu-id="5d433-129">For example, if you work with large amounts of data, you may want to implement virtual mode to ensure optimal efficiency.</span></span> <span data-ttu-id="5d433-130">Modo virtual también es útil para mantener los valores de columnas sin enlazar que puede mostrar junto con columnas recuperadas de otro origen de datos.</span><span class="sxs-lookup"><span data-stu-id="5d433-130">Virtual mode is also useful for maintaining the values of unbound columns that you display along with columns retrieved from another data source.</span></span>  
   
- Para obtener más información sobre el modo de virtual, vea [Tutorial: Implementar el modo virtual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ <span data-ttu-id="5d433-131">Para obtener más información sobre el modo virtual, vea [Tutorial: implementar el modo Virtual en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-131">For more information about virtual mode, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
-### Puntos clave del escenario  
+### <a name="scenario-key-points"></a><span data-ttu-id="5d433-132">Puntos clave del escenario</span><span class="sxs-lookup"><span data-stu-id="5d433-132">Scenario Key Points</span></span>  
   
--   El modo virtual resulta adecuado para mostrar cantidades muy grandes de datos cuando necesita ajustar el rendimiento.  
+-   <span data-ttu-id="5d433-133">Modo virtual es adecuado para mostrar grandes cantidades de datos cuando se necesita optimizar el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="5d433-133">Virtual mode is suited for displaying very large amounts of data when you need to fine-tune performance.</span></span>  
   
-## Escenario 4: Cambio de tamaño de filas y columnas automático  
- Cuando muestra datos que se actualizan regularmente, puede cambiar el tamaño de filas y columnas automáticamente para garantizar que todo el contenido está visible.  El control <xref:System.Windows.Forms.DataGridView> proporciona varias opciones que permiten habilitar o deshabilitar el cambio de tamaño manual, el cambio de tamaño mediante programación a horas concretas o el cambio de tamaño automático cada vez que cambia el contenido.  Para obtener más información, vea [Opciones de ajuste de tamaño en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-4-automatically-resizing-rows-and-columns"></a><span data-ttu-id="5d433-134">Escenario 4: Cambiar el tamaño automáticamente filas y columnas</span><span class="sxs-lookup"><span data-stu-id="5d433-134">Scenario 4: Automatically Resizing Rows and Columns</span></span>  
+ <span data-ttu-id="5d433-135">Cuando muestra datos que se actualizan con regularidad, puede cambiar automáticamente filas y columnas para asegurarse de que todo el contenido está visible.</span><span class="sxs-lookup"><span data-stu-id="5d433-135">When you display data that is regularly updated, you can automatically resize rows and columns to ensure that all content is visible.</span></span> <span data-ttu-id="5d433-136">El <xref:System.Windows.Forms.DataGridView> control ofrece varias opciones que permiten habilitar o deshabilitar manualmente el cambio de tamaño, cambiar el tamaño mediante programación a horas específicas o cambio de tamaño automáticamente cada vez que cambie el contenido.</span><span class="sxs-lookup"><span data-stu-id="5d433-136">The <xref:System.Windows.Forms.DataGridView> control provides several options that let you enable or disable manual resizing, resize programmatically at specific times, or resize automatically whenever content changes.</span></span> <span data-ttu-id="5d433-137">Para obtener más información, consulte [opciones de ajuste de tamaño en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-137">For more information, see [Sizing Options in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### Puntos clave del escenario  
+### <a name="scenario-key-points"></a><span data-ttu-id="5d433-138">Puntos clave del escenario</span><span class="sxs-lookup"><span data-stu-id="5d433-138">Scenario Key Points</span></span>  
   
--   El cambio de tamaño manual permite a los usuarios ajustar el alto y ancho de celdas.  
+-   <span data-ttu-id="5d433-139">El cambio de tamaño manual permite a los usuarios ajustar el alto de celda y el ancho.</span><span class="sxs-lookup"><span data-stu-id="5d433-139">Manual resizing enables users to adjust cell heights and widths.</span></span>  
   
--   El cambio de tamaño automático permite mantener los tamaños de celda para que nunca se recorte el contenido de la celda.  
+-   <span data-ttu-id="5d433-140">Cambio de tamaño automático permite mantener los tamaños de celda para que nunca se recorta el contenido de la celda.</span><span class="sxs-lookup"><span data-stu-id="5d433-140">Automatic resizing enables you to maintain cell sizes so that cell content is never clipped.</span></span>  
   
--   El cambio de tamaño mediante programación permite cambiar el tamaño de las celdas en momentos concretos para evitar la reducción del rendimiento por el cambio de tamaño automático continuo.  
+-   <span data-ttu-id="5d433-141">Cambiar el tamaño mediante programación permite cambiar el tamaño de las celdas en momentos concretos para evitar la reducción del rendimiento de tamaño automático continuo.</span><span class="sxs-lookup"><span data-stu-id="5d433-141">Programmatic resizing enables you to resize cells at specific times to avoid the performance penalty of continuous automatic resizing.</span></span>  
   
-## Escenario 5: Personalización simple  
- El control <xref:System.Windows.Forms.DataGridView> proporciona muchas maneras de modificar el aspecto y comportamiento básico.  Para obtener más información, vea [Estilos de celda en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-5-simple-customization"></a><span data-ttu-id="5d433-142">Escenario 5: Personalización Simple</span><span class="sxs-lookup"><span data-stu-id="5d433-142">Scenario 5: Simple Customization</span></span>  
+ <span data-ttu-id="5d433-143">El <xref:System.Windows.Forms.DataGridView> control proporciona muchas formas de modificar su aspecto y comportamiento básico.</span><span class="sxs-lookup"><span data-stu-id="5d433-143">The <xref:System.Windows.Forms.DataGridView> control provides many ways for you to alter its basic appearance and behavior.</span></span> <span data-ttu-id="5d433-144">Para obtener más información, consulte [estilos de celda en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-144">For more information, see [Cell Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### Puntos clave del escenario  
+### <a name="scenario-key-points"></a><span data-ttu-id="5d433-145">Puntos clave del escenario</span><span class="sxs-lookup"><span data-stu-id="5d433-145">Scenario Key Points</span></span>  
   
--   Los objetos <xref:System.Windows.Forms.DataGridViewCellStyle> permiten proporcionar color, fuente, formato e información de posición en varios niveles y para elementos individuales del control.  
+-   <span data-ttu-id="5d433-146"><xref:System.Windows.Forms.DataGridViewCellStyle>objetos permiten proporcionar color, fuente, formato e información de posición en varios niveles y de los elementos individuales del control.</span><span class="sxs-lookup"><span data-stu-id="5d433-146"><xref:System.Windows.Forms.DataGridViewCellStyle> objects let you provide color, font, formatting, and positioning information at multiple levels and for individual elements of the control.</span></span>  
   
--   Se pueden disponer en capas los estilos de celda y compartirse entre varios elementos, lo que permite reutilizar el código.  
+-   <span data-ttu-id="5d433-147">Estilos de celda se pueden niveles y compartidos por varios elementos, lo que le permite reutilizar el código.</span><span class="sxs-lookup"><span data-stu-id="5d433-147">Cell styles can be layered and shared by multiple elements, letting you reuse code.</span></span>  
   
-## Escenario 6: Personalización avanzada  
- El control <xref:System.Windows.Forms.DataGridView> proporciona muchas maneras de personalizar su aspecto y comportamiento.  
+## <a name="scenario-6-advanced-customization"></a><span data-ttu-id="5d433-148">Escenario 6: Personalización avanzada</span><span class="sxs-lookup"><span data-stu-id="5d433-148">Scenario 6: Advanced Customization</span></span>  
+ <span data-ttu-id="5d433-149">El <xref:System.Windows.Forms.DataGridView> control proporciona muchas maneras de personalizar su apariencia y comportamiento.</span><span class="sxs-lookup"><span data-stu-id="5d433-149">The <xref:System.Windows.Forms.DataGridView> control provides many ways for you to customize its appearance and behavior.</span></span>  
   
-### Puntos clave del escenario  
+### <a name="scenario-key-points"></a><span data-ttu-id="5d433-150">Puntos clave del escenario</span><span class="sxs-lookup"><span data-stu-id="5d433-150">Scenario Key Points</span></span>  
   
--   Puede proporcionar su propio código de dibujo de celda.  Para obtener más información, vea [Cómo: Personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).  
+-   <span data-ttu-id="5d433-151">Puede proporcionar su propio código de dibujo de la celda.</span><span class="sxs-lookup"><span data-stu-id="5d433-151">You can provide your own cell painting code.</span></span> <span data-ttu-id="5d433-152">Para obtener más información, consulte [Cómo: personalizar la apariencia de celdas en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-152">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).</span></span>  
   
--   Puede proporcionar su propio dibujo de fila.  Por ejemplo, esto resulta de utilidad para crear filas con contenido que abarca varias columnas.  Para obtener más información, vea [Cómo: Personalizar la apariencia de las filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+-   <span data-ttu-id="5d433-153">Puede proporcionar su propio dibujo de fila.</span><span class="sxs-lookup"><span data-stu-id="5d433-153">You can provide your own row painting.</span></span> <span data-ttu-id="5d433-154">Esto es útil, por ejemplo, para crear filas con contenido que abarca varias columnas.</span><span class="sxs-lookup"><span data-stu-id="5d433-154">This is useful, for example, to create rows with content that spans multiple columns.</span></span> <span data-ttu-id="5d433-155">Para obtener más información, consulte [Cómo: personalizar la apariencia de filas en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-155">For more information, see [How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).</span></span>  
   
--   Puede implementar sus propias clases de celda y columna para personalizar la apariencia de la celda.  Para obtener más información, vea [Cómo: Personalizar celdas y columnas en el control DataGridView de formularios Windows Forms ampliando su comportamiento y apariencia](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
+-   <span data-ttu-id="5d433-156">Puede implementar sus propias clases de celda y de columna para personalizar el aspecto de la celda.</span><span class="sxs-lookup"><span data-stu-id="5d433-156">You can implement your own cell and column classes to customize cell appearance.</span></span> <span data-ttu-id="5d433-157">Para obtener más información, consulte [Cómo: personalizar celdas y columnas en el DataGridView Control de formularios Windows Forms por extender su comportamiento y apariencia](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-157">For more information, see [How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).</span></span>  
   
--   Puede implementar sus propias clases de celda y columna para hospedar controles que no sean los proporcionados por los tipos de columna integrados.  Para obtener más información, vea [Cómo: Alojar controles en celdas DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+-   <span data-ttu-id="5d433-158">Puede implementar sus propias clases de celda y columna para hospedar controles distintos de los proporcionados por los tipos de columna integrados.</span><span class="sxs-lookup"><span data-stu-id="5d433-158">You can implement your own cell and column classes to host controls other than the ones provided by the built-in column types.</span></span> <span data-ttu-id="5d433-159">Para obtener más información, consulte [Cómo: hospedar controles en celdas DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span><span class="sxs-lookup"><span data-stu-id="5d433-159">For more information, see [How to: Host Controls in Windows Forms DataGridView Cells](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- [Información general del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5d433-160">Vea también</span><span class="sxs-lookup"><span data-stu-id="5d433-160">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="5d433-161">Información general del control DataGridView</span><span class="sxs-lookup"><span data-stu-id="5d433-161">DataGridView Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

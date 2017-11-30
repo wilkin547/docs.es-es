@@ -1,94 +1,97 @@
 ---
-title: "Plantillas de Visual Studio para WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Plantillas de Visual Studio para WCF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a659fa3801d52da4fa4837b7df4fea9e4ac6cf5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Plantillas de Visual Studio para WCF
-Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] son plantillas de proyecto y de elemento predefinidas que pueden utilizarse en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para generar rápidamente servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y las aplicaciones relacionadas.  
+# <a name="wcf-visual-studio-templates"></a><span data-ttu-id="ab3f8-102">Plantillas de Visual Studio para WCF</span><span class="sxs-lookup"><span data-stu-id="ab3f8-102">WCF Visual Studio Templates</span></span>
+<span data-ttu-id="ab3f8-103">Las plantillas para [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] son plantillas de proyecto y de elemento predefinidas que pueden utilizarse en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para generar rápidamente servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y las aplicaciones relacionadas.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] templates are predefined project and item templates you can use in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] to quickly build [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services and surrounding applications.</span></span>  
   
-## <a name="using-the-wcf-templates"></a>Utilización de las plantillas de WCF  
- Las plantillas para [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] proporcionan una estructura de clases básica para el desarrollo de servicios. En concreto, estas plantillas proporcionan las definiciones básicas para el contrato de servicios y el contrato de datos, así como la implementación y configuración del servicio. Puede utilizar estas plantillas para crear un servicio simple con una interacción de código mínima, además de una unidad de creación para servicios más avanzados.  
+## <a name="using-the-wcf-templates"></a><span data-ttu-id="ab3f8-104">Utilización de las plantillas de WCF</span><span class="sxs-lookup"><span data-stu-id="ab3f8-104">Using the WCF Templates</span></span>  
+ <span data-ttu-id="ab3f8-105">Las plantillas para [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] proporcionan una estructura de clases básica para el desarrollo de servicios.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-105">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] templates provide a basic class structure for service development.</span></span> <span data-ttu-id="ab3f8-106">En concreto, estas plantillas proporcionan las definiciones básicas para el contrato de servicios y el contrato de datos, así como la implementación y configuración del servicio.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-106">Specifically, these templates provide the basic definitions for service contract, data contract, service implementation, and configuration.</span></span> <span data-ttu-id="ab3f8-107">Puede utilizar estas plantillas para crear un servicio simple con una interacción de código mínima, además de una unidad de creación para servicios más avanzados.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-107">You can use these templates to create a simple service with minimal code interaction, as well as a building block for more advanced services.</span></span>  
   
-### <a name="wcf-service-library-project-template"></a>Plantilla de proyecto de biblioteca de servicio WCF  
- El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de proyecto de biblioteca de servicio está disponible en el cuadro de diálogo nuevo proyecto bajo **Visual C# \WCF** y **Visual Basic\WCF**.  
+### <a name="wcf-service-library-project-template"></a><span data-ttu-id="ab3f8-108">Plantilla de proyecto de biblioteca de servicio WCF</span><span class="sxs-lookup"><span data-stu-id="ab3f8-108">WCF Service Library Project Template</span></span>  
+ <span data-ttu-id="ab3f8-109">El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de proyecto Biblioteca de servicio está disponible en el cuadro de diálogo nuevo proyecto bajo **Visual C# \WCF** y **Visual Basic\WCF**.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-109">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library project template is available in the new project dialog box under **Visual C#\WCF** and **Visual Basic\WCF**.</span></span>  
   
- Cuando se crea un nuevo proyecto con el **servicio WCF** plantilla, el nuevo proyecto incluye automáticamente los tres archivos siguientes:  
+ <span data-ttu-id="ab3f8-110">Cuando se crea un nuevo proyecto mediante el **servicio WCF** plantilla, el nuevo proyecto incluye automáticamente los tres archivos siguientes:</span><span class="sxs-lookup"><span data-stu-id="ab3f8-110">When you create a new project using the **WCF Service** template, the new project automatically includes the following three files:</span></span>  
   
--   Archivo de contrato de servicio (IService1.cs o IService1.vb). El archivo de contrato de servicio es una interfaz a la que se aplican los atributos de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Este archivo proporciona una definición de un servicio simple que muestra cómo definir los servicios, e incluye operaciones basadas en parámetros y un ejemplo de contrato de datos simple. Éste es el archivo predeterminado mostrado en el editor de código después de crear un proyecto de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <span data-ttu-id="ab3f8-111">Archivo de contrato de servicio (IService1.cs o IService1.vb).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-111">Service contract file (IService1.cs or IService1.vb).</span></span> <span data-ttu-id="ab3f8-112">El archivo de contrato de servicio es una interfaz a la que se aplican los atributos de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ab3f8-112">The service contract file is an interface that has [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service attributes applied.</span></span> <span data-ttu-id="ab3f8-113">Este archivo proporciona una definición de un servicio simple que muestra cómo definir los servicios, e incluye operaciones basadas en parámetros y un ejemplo de contrato de datos simple.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-113">This file provides a definition of a simple service to show you how to define your services, and includes parameter-based operations and a simple data contract sample.</span></span> <span data-ttu-id="ab3f8-114">Éste es el archivo predeterminado mostrado en el editor de código después de crear un proyecto de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ab3f8-114">This is the default file displayed in the code editor after creating a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service project.</span></span>  
   
--   Archivo de implementación de servicio (Service1.cs o Service1.vb). El archivo de implementación de servicio implementa el contrato definido en el archivo de contrato de servicio.  
+-   <span data-ttu-id="ab3f8-115">Archivo de implementación de servicio (Service1.cs o Service1.vb).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-115">Service implementation file (Service1.cs or Service1.vb).</span></span> <span data-ttu-id="ab3f8-116">El archivo de implementación de servicio implementa el contrato definido en el archivo de contrato de servicio.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-116">The service implementation file implements the contract defined in the service contract file.</span></span>  
   
--   Archivo de configuración de la aplicación (App.config). El archivo de configuración proporciona los elementos básicos de un modelo de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con un enlace HTTP seguro. Además incluye un punto de conexión para el servicio y habilita el intercambio de metadatos.  
-  
-> [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]está configurado para reconocer el archivo App.config como archivo de configuración para el proyecto cuando se ejecuta mediante el [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que es la configuración predeterminada. Si hospeda la biblioteca de servicios en un ejecutable, sitúe el código de configuración en el archivo de configuración del ejecutable, ya que los archivos de configuración para DLL no son válidos.  
-  
-### <a name="wcf-service-application-template"></a>Plantilla Aplicación del servicio de WCF  
- El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla aplicación de servicio está disponible en el cuadro de diálogo nuevo proyecto en **Visual C# \WCF** y **Visual Basic\WCF**.  
-  
- Cuando se crea un nuevo proyecto con el **servicio de aplicación Web de WCF** plantilla, el proyecto incluye los cuatro archivos siguientes:  
-  
--   Archivo de host del servicio (service1.svc).  
-  
--   Archivo de contrato de servicio (IService1.cs o IService1.vb).  
-  
--   Archivo de implementación de servicio (Service1.cs o Service1.vb).  
-  
--   Archivo de configuración web (Web.config).  
-  
- La plantilla crea automáticamente un sitio web (que se implementará en un directorio virtual), y hospeda un servicio en él.  
-  
-### <a name="wcf-web-site-template"></a>Plantilla de sitio web de WCF  
- El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de sitio Web está disponible en el cuadro de diálogo nuevo proyecto en **Visual C# \Web Site\WCF servicio** y **Visual basic\sitio Web\servicio WCF**. Esto crea los mismos archivos que la plantilla Aplicación del servicio de WCF pero los organiza como si fuera un sitio web ASP.NET. Se crean las carpetas App_Code y App_Data.  
-  
-### <a name="wcf-service-item-template"></a>Plantilla de elementos de servicio WCF  
- La plantilla de elementos de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es una plantilla personalizada que proporciona una manera rápida de agregar servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a los proyectos [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] existentes.  
-  
- Para utilizar esta plantilla, vaya a la **el Explorador de soluciones** panel, haga clic en el nombre del proyecto, seleccione **agregar**y, a continuación, haga clic en **nuevo elemento** para iniciar el **Agregar nuevo elemento** cuadro de diálogo.  
-  
- La interfaz de servicio y los archivos de implementación están situados en la carpeta raíz del proyecto.  
-  
- La plantilla intenta combinar la sección de configuración del nuevo servicio con el archivo de configuración existente, si sus tipos son compatibles.  
-  
- Si el proyecto existente es un proyecto web, también se crea un archivo de host de servicio (service1.svc).  
-  
-### <a name="wcf-wf-service-project-and-item-template"></a>Plantilla de proyectos y elementos WF del servicio WCF.  
- Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web. Existen plantillas independientes para XAML o modelos de programación imperativos. Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado. Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/es-es/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](../Topic/Creating%20Legacy%20Workflow%20Projects.md).  
-  
- El diseñador [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] es más sensible si se utilizan flujos de trabajo de tipo XOML en lugar de los flujos basados en código. El flujo de trabajo de XOML es el tipo de flujo predeterminado que se crea.  
-  
-### <a name="wcf-syndication-service-library-template"></a>Plantilla Biblioteca de servicio de distribución de WCF  
- Esta plantilla permite exponer la fuente con el formato RSS o ATOM como un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Para obtener más información, consulte [sindicación WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
-  
-#### <a name="changing-the-address-of-the-feed"></a>Cambiar la dirección o la fuente  
- La plantilla de distribución utiliza Internet Explorer durante la ejecución. Cuando hace doble clic en el proyecto en **el Explorador de soluciones** en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], seleccione **propiedades**, a continuación, seleccione la **depurar** ficha y puede ver la dirección predeterminada de la plantilla. Internet Explorer intenta abrir la fuente en esta dirección.  
-  
- Si cambia la dirección de su fuente, también debe cambiar la dirección en la **depurar** ficha. Si no lo hace, Internet Explorer intenta abrir la fuente en la dirección predeterminada y no lo consigue.  
-  
-### <a name="ajax-enabled-wcf-service-item-template"></a>Plantilla de elementos de servicio WCF con AJAX habilitado  
- Esta plantilla expone un control AJAX como un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Para obtener más información sobre los controles AJAX, vea la [documentación de control de AJAX](http://go.microsoft.com/fwlink/?LinkId=96717).  
-  
-### <a name="silverlight-enabled-wcf-service-item-template"></a>Plantilla de elementos de servicio WCF habilitado para Silverlight  
- Esta plantilla crea un servicio web que proporciona datos a un cliente o front-end de Silverlight. La plantilla se puede agregar a un sitio web o proyecto de aplicación web para crear un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], que incluye la configuración y el código del servicio que permiten comunicar con un cliente de Silverlight. A continuación, puede usar **Agregar referencia de servicio** para agregar un proxy de cliente del servicio al cliente e intercambiar datos entre el cliente de Silverlight y el servicio WCF habilitado para Silverlight.  
-  
- Para obtener acceso a esta plantilla, haga clic en un proyecto de aplicación Web o sitio Web en **el Explorador de soluciones**, haga clic en **agregar un nuevo elemento**y haga clic en **servicio WCF habilitado para Silverlight**.  
+-   <span data-ttu-id="ab3f8-117">Archivo de configuración de la aplicación (App.config).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-117">Application configuration file (App.config).</span></span> <span data-ttu-id="ab3f8-118">El archivo de configuración proporciona los elementos básicos de un modelo de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] con un enlace HTTP seguro.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-118">The configuration file provides the basic elements of a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service model with a secure HTTP binding.</span></span> <span data-ttu-id="ab3f8-119">Además incluye un punto de conexión para el servicio y habilita el intercambio de metadatos.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-119">It also includes an endpoint for the service and enables metadata exchange.</span></span>  
   
 > [!NOTE]
->  El servicio WCF habilitado para Silverlight expone un extremo `basicHttpBinding` sin habilitar ninguna configuración de seguridad. Por lo tanto, todos los clientes que se conectan a este servicio pueden obtener información sobre el mismo. Los mensajes que se intercambian entre el servicio y el cliente tampoco están firmados ni cifrados. Para proteger el punto de conexión correctamente, debería usar la autenticación de ASP.NET, HTTPS u otros mecanismos.  
+>  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]<span data-ttu-id="ab3f8-120">se configura para reconocer el archivo App.config como el archivo de configuración para el proyecto cuando se ejecuta con la [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), que es la configuración predeterminada.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-120"> is configured to recognize the App.config file as the configuration file for the project when it is run using the [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), which is the default configuration.</span></span> <span data-ttu-id="ab3f8-121">Si hospeda la biblioteca de servicios en un ejecutable, sitúe el código de configuración en el archivo de configuración del ejecutable, ya que los archivos de configuración para DLL no son válidos.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-121">If you host the service library in an executable, you have to move the configuration code to the configuration file of the executable, as configuration files for DLLs are not valid.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)   
- [Cliente de prueba WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+### <a name="wcf-service-application-template"></a><span data-ttu-id="ab3f8-122">Plantilla Aplicación del servicio de WCF</span><span class="sxs-lookup"><span data-stu-id="ab3f8-122">WCF Service Application Template</span></span>  
+ <span data-ttu-id="ab3f8-123">El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de aplicación de servicio está disponible en el cuadro de diálogo nuevo proyecto en **Visual C# \WCF** y **Visual Basic\WCF**.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-123">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Application template is available in the New Project dialog box under **Visual C#\WCF** and **Visual Basic\WCF**.</span></span>  
+  
+ <span data-ttu-id="ab3f8-124">Cuando se crea un nuevo proyecto mediante el **servicio de aplicación Web de WCF** plantilla, el proyecto incluye los cuatro archivos siguientes:</span><span class="sxs-lookup"><span data-stu-id="ab3f8-124">When you create a new project using the **WCF Web Application Service** template, the project includes the following four files:</span></span>  
+  
+-   <span data-ttu-id="ab3f8-125">Archivo de host del servicio (service1.svc).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-125">Service host file (service1.svc).</span></span>  
+  
+-   <span data-ttu-id="ab3f8-126">Archivo de contrato de servicio (IService1.cs o IService1.vb).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-126">Service contract file (IService1.cs or IService1.vb).</span></span>  
+  
+-   <span data-ttu-id="ab3f8-127">Archivo de implementación de servicio (Service1.cs o Service1.vb).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-127">Service implementation file (Service1.svc.cs or Service1.svc.vb).</span></span>  
+  
+-   <span data-ttu-id="ab3f8-128">Archivo de configuración web (Web.config).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-128">Web configuration file (Web.config).</span></span>  
+  
+ <span data-ttu-id="ab3f8-129">La plantilla crea automáticamente un sitio web (que se implementará en un directorio virtual), y hospeda un servicio en él.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-129">The template automatically creates a Web site (to be deployed to a virtual directory) and hosts a service in it.</span></span>  
+  
+### <a name="wcf-web-site-template"></a><span data-ttu-id="ab3f8-130">Plantilla de sitio web de WCF</span><span class="sxs-lookup"><span data-stu-id="ab3f8-130">WCF Web Site Template</span></span>  
+ <span data-ttu-id="ab3f8-131">El [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] plantilla de sitio Web está disponible en el cuadro de diálogo nuevo proyecto en **Visual C# \Web Site\WCF servicio** y **Visual basic\sitio Web\servicio WCF**.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-131">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web Site template is available in the New Project dialog box under **Visual C#\Web Site\WCF Service** and **Visual Basic\Web Site\WCF Service**.</span></span> <span data-ttu-id="ab3f8-132">Esto crea los mismos archivos que la plantilla Aplicación del servicio de WCF pero los organiza como si fuera un sitio web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-132">This creates the same files as the WCF Service Application template but organizes it as if it were a ASP.NET web site.</span></span> <span data-ttu-id="ab3f8-133">Se crean las carpetas App_Code y App_Data.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-133">App_Code and App_Data folders are created.</span></span>  
+  
+### <a name="wcf-service-item-template"></a><span data-ttu-id="ab3f8-134">Plantilla de elementos de servicio WCF</span><span class="sxs-lookup"><span data-stu-id="ab3f8-134">WCF Service Item Template</span></span>  
+ <span data-ttu-id="ab3f8-135">La plantilla de elementos de servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es una plantilla personalizada que proporciona una manera rápida de agregar servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a los proyectos [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] existentes.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-135">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Item template is a custom template that provides a quick way to add [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services to your existing [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projects.</span></span>  
+  
+ <span data-ttu-id="ab3f8-136">Para usar esta plantilla, vaya a la **el Explorador de soluciones** panel, haga clic en el nombre del proyecto, seleccione **agregar**y, a continuación, haga clic en **nuevo elemento** para iniciar el **Agregar nuevo Elemento** cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-136">To use this template, go to the **Solution Explorer** pane, right-click your project name, point to **Add**, and then click **New Item** to launch the **Add New Item** dialog box.</span></span>  
+  
+ <span data-ttu-id="ab3f8-137">La interfaz de servicio y los archivos de implementación están situados en la carpeta raíz del proyecto.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-137">The service interface and implementation files are placed in the root project folder.</span></span>  
+  
+ <span data-ttu-id="ab3f8-138">La plantilla intenta combinar la sección de configuración del nuevo servicio con el archivo de configuración existente, si sus tipos son compatibles.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-138">The template attempts to merge the configuration section of the new service to the existing configuration file, if they are compatible types.</span></span>  
+  
+ <span data-ttu-id="ab3f8-139">Si el proyecto existente es un proyecto web, también se crea un archivo de host de servicio (service1.svc).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-139">A service host file (service1.svc) is also created if the existing project is a Web project.</span></span>  
+  
+### <a name="wcf-wf-service-project-and-item-template"></a><span data-ttu-id="ab3f8-140">Plantilla de proyectos y elementos WF del servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-140">WCF WF Service Project and Item Template.</span></span>  
+ <span data-ttu-id="ab3f8-141">Estas plantillas crean servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que hospedan un servicio de flujo de trabajo, que es un flujo de trabajo al que se puede obtener acceso como a un servicio web.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-141">These templates create [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services that host a Workflow Service, which is a workflow that can be accessed like a web service.</span></span> <span data-ttu-id="ab3f8-142">Existen plantillas independientes para XAML o modelos de programación imperativos.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-142">Separate templates exist for XAML or imperative programming models.</span></span> <span data-ttu-id="ab3f8-143">Con las plantillas, puede crear un flujo de trabajo de equipo secuencial o de estado.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-143">Using the templates, you can create sequential or state machine workflow.</span></span> <span data-ttu-id="ab3f8-144">Para obtener más información sobre estos tipos de flujo de trabajo, consulte [tutoriales de Windows Workflow Foundation](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-144">For more information on these types of workflow, see [Windows Workflow Foundation Tutorials](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="ab3f8-145">crear proyectos de flujo de trabajo, consulte [crear proyectos de flujo de trabajo heredado](/visualstudio/workflow-designer/creating-legacy-workflow-projects).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-145"> creating workflow projects, see [Creating Legacy Workflow Projects](/visualstudio/workflow-designer/creating-legacy-workflow-projects).</span></span>  
+  
+ <span data-ttu-id="ab3f8-146">El diseñador [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] es más sensible si se utilizan flujos de trabajo de tipo XOML en lugar de los flujos basados en código.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-146">[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] designer is more responsive when XOML type workflows are used instead of code based ones.</span></span> <span data-ttu-id="ab3f8-147">El flujo de trabajo de XOML es el tipo de flujo predeterminado que se crea.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-147">XOML workflow is the default workflow type to be created.</span></span>  
+  
+### <a name="wcf-syndication-service-library-template"></a><span data-ttu-id="ab3f8-148">Plantilla Biblioteca de servicio de distribución de WCF</span><span class="sxs-lookup"><span data-stu-id="ab3f8-148">WCF Syndication Service Library Template</span></span>  
+ <span data-ttu-id="ab3f8-149">Esta plantilla permite exponer la fuente con el formato RSS o ATOM como un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ab3f8-149">This template enables you to expose your feed in the RSS or ATOM format as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="ab3f8-150">Para obtener más información, consulte [sindicación en WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-150">For more information, see [WCF Syndication](../../../docs/framework/wcf/feature-details/wcf-syndication.md).</span></span>  
+  
+#### <a name="changing-the-address-of-the-feed"></a><span data-ttu-id="ab3f8-151">Cambiar la dirección o la fuente</span><span class="sxs-lookup"><span data-stu-id="ab3f8-151">Changing the Address of the Feed</span></span>  
+ <span data-ttu-id="ab3f8-152">La plantilla de distribución utiliza Internet Explorer durante la ejecución.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-152">The syndication template uses Internet Explorer during execution.</span></span> <span data-ttu-id="ab3f8-153">Cuando hace doble clic en el proyecto en **el Explorador de soluciones** en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], seleccione **propiedades**, a continuación, seleccione la **depurar** ficha y se puede ver la dirección predeterminada de la plantilla.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-153">When you right-click your project in **Solutions Explorer** in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], select **Properties**, then select the **Debug** tab and you can see the default address of the template.</span></span> <span data-ttu-id="ab3f8-154">Internet Explorer intenta abrir la fuente en esta dirección.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-154">Internet Explorer attempts to open the feed at this address.</span></span>  
+  
+ <span data-ttu-id="ab3f8-155">Si cambia la dirección de su fuente, también debe cambiar la dirección en la **depurar** ficha. Si no lo hace, Internet Explorer intenta abrir la fuente en la dirección predeterminada y no lo consigue.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-155">If you change the address of your feed, you must also change the address in the **Debug** tab. If you do not do this, Internet Explorer attempts to open the feed at the default address and fail.</span></span>  
+  
+### <a name="ajax-enabled-wcf-service-item-template"></a><span data-ttu-id="ab3f8-156">Plantilla de elementos de servicio WCF con AJAX habilitado</span><span class="sxs-lookup"><span data-stu-id="ab3f8-156">AJAX enabled WCF Service Item Template</span></span>  
+ <span data-ttu-id="ab3f8-157">Esta plantilla expone un control AJAX como un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ab3f8-157">This template exposes an AJAX control as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="ab3f8-158">Para obtener más información sobre controles de AJAX, consulte el [documentación de control de AJAX](http://go.microsoft.com/fwlink/?LinkId=96717).</span><span class="sxs-lookup"><span data-stu-id="ab3f8-158">For more information on AJAX controls, see the [AJAX control documentation](http://go.microsoft.com/fwlink/?LinkId=96717).</span></span>  
+  
+### <a name="silverlight-enabled-wcf-service-item-template"></a><span data-ttu-id="ab3f8-159">Plantilla de elementos de servicio WCF habilitado para Silverlight</span><span class="sxs-lookup"><span data-stu-id="ab3f8-159">Silverlight-enabled WCF Service Item Template</span></span>  
+ <span data-ttu-id="ab3f8-160">Esta plantilla crea un servicio web que proporciona datos a un cliente o front-end de Silverlight.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-160">This template creates a Web service that provides data to a Silverlight client or front-end.</span></span> <span data-ttu-id="ab3f8-161">La plantilla se puede agregar a un sitio web o proyecto de aplicación web para crear un servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], que incluye la configuración y el código del servicio que permiten comunicar con un cliente de Silverlight.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-161">The template can be added to a Web site or Web application project to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service, which includes service code and configuration that support communicating with a Silverlight client.</span></span> <span data-ttu-id="ab3f8-162">A continuación, puede usar **Agregar referencia de servicio** para agregar un proxy de cliente del servicio al cliente e intercambiar datos entre el cliente de Silverlight y el servicio WCF habilitado para Silverlight.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-162">You can then use **Add Service Reference** to add a client proxy of the service to the client, and exchange data between the Silverlight client and the Silverlight-enabled WCF service.</span></span>  
+  
+ <span data-ttu-id="ab3f8-163">Para obtener acceso a esta plantilla, haga clic en un proyecto de aplicación Web o sitio Web en **el Explorador de soluciones**, haga clic en **agregar un nuevo elemento**y haga clic en **servicio WCF habilitado para Silverlight**.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-163">To access this template, right-click a Web site or Web application project in **Solution Explorer**, click **Add a new item**, and click **Silverlight-enabled WCF Service**.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="ab3f8-164">El servicio WCF habilitado para Silverlight expone un extremo `basicHttpBinding` sin habilitar ninguna configuración de seguridad.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-164">The Silverlight-enabled WCF Service exposes a `basicHttpBinding` endpoint without enabling any security settings.</span></span> <span data-ttu-id="ab3f8-165">Por lo tanto, todos los clientes que se conectan a este servicio pueden obtener información sobre el mismo.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-165">Therefore, information about the service can be obtained by all clients that connect to this service.</span></span> <span data-ttu-id="ab3f8-166">Los mensajes que se intercambian entre el servicio y el cliente tampoco están firmados ni cifrados.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-166">Messages exchanged between the service and the client are also not signed or encrypted.</span></span> <span data-ttu-id="ab3f8-167">Para proteger el punto de conexión correctamente, debería usar la autenticación de ASP.NET, HTTPS u otros mecanismos.</span><span class="sxs-lookup"><span data-stu-id="ab3f8-167">To secure the endpoint properly, you should use ASP.NET authentication, HTTPS or other mechanisms.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ab3f8-168">Vea también</span><span class="sxs-lookup"><span data-stu-id="ab3f8-168">See Also</span></span>  
+ [<span data-ttu-id="ab3f8-169">Host de servicio WCF (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="ab3f8-169">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [<span data-ttu-id="ab3f8-170">Cliente de prueba de WCF (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="ab3f8-170">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

@@ -1,76 +1,74 @@
 ---
-title: "Los m&#233;todos de &#39;System.Nullable(Of T)&#39; no se pueden utilizar como operandos del operador &#39;AddressOf&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc32126"
-  - "bc32126"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC32126"
+title: "Métodos de &#39; System. Nullable (Of T) &#39; no se pueden utilizar como operandos de la &#39; AddressOf &#39; operador"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc32126
+- bc32126
+helpviewer_keywords: BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ce0e9bc6abd71f22e3f6c3486ef40493e74d820f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Los m&#233;todos de &#39;System.Nullable(Of T)&#39; no se pueden utilizar como operandos del operador &#39;AddressOf&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una instrucción usa el operador `AddressOf` con un operando que representa un procedimiento de la estructura <xref:System.Nullable%601>.  
+# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a><span data-ttu-id="c4a04-102">Métodos de &#39; System. Nullable (Of T) &#39; no se pueden utilizar como operandos de la &#39; AddressOf &#39; operador</span><span class="sxs-lookup"><span data-stu-id="c4a04-102">Methods of &#39;System.Nullable(Of T)&#39; cannot be used as operands of the &#39;AddressOf&#39; operator</span></span>
+<span data-ttu-id="c4a04-103">Una instrucción usa la `AddressOf` operador con un operando que representa un procedimiento con el <xref:System.Nullable%601> estructura.</span><span class="sxs-lookup"><span data-stu-id="c4a04-103">A statement uses the `AddressOf` operator with an operand that represents a procedure of the <xref:System.Nullable%601> structure.</span></span>  
   
- **Id. de error:** BC32126  
+ <span data-ttu-id="c4a04-104">**Id. de error:** BC32126</span><span class="sxs-lookup"><span data-stu-id="c4a04-104">**Error ID:** BC32126</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c4a04-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="c4a04-105">To correct this error</span></span>  
   
--   Reemplace el nombre de procedimiento en la cláusula `AddressOf` por un operando que no sea miembro de <xref:System.Nullable%601>.  
+-   <span data-ttu-id="c4a04-106">Reemplace el nombre del procedimiento en el `AddressOf` cláusula con un operando que no es un miembro de <xref:System.Nullable%601>.</span><span class="sxs-lookup"><span data-stu-id="c4a04-106">Replace the procedure name in the `AddressOf` clause with an operand that is not a member of <xref:System.Nullable%601>.</span></span>  
   
--   Escriba una clase que incluya el método de <xref:System.Nullable%601> que desea usar.  En el ejemplo siguiente, la clase `NullableWrapper` define un nuevo método denominado `GetValueOrDefault`.  Dado que este nuevo método no es miembro de <xref:System.Nullable%601>, se puede aplicar a `nullInstance`, una instancia de un tipo que acepta valores NULL, para formar un argumento para `AddressOf`.  
+-   <span data-ttu-id="c4a04-107">Escriba una clase que contiene el método de <xref:System.Nullable%601> que desea usar.</span><span class="sxs-lookup"><span data-stu-id="c4a04-107">Write a class that wraps the method of <xref:System.Nullable%601> that you want to use.</span></span> <span data-ttu-id="c4a04-108">En el ejemplo siguiente, la `NullableWrapper` clase define un nuevo método denominado `GetValueOrDefault`.</span><span class="sxs-lookup"><span data-stu-id="c4a04-108">In the following example, the `NullableWrapper` class defines a new method named `GetValueOrDefault`.</span></span> <span data-ttu-id="c4a04-109">Dado que este nuevo método no es un miembro de <xref:System.Nullable%601>, éste puede aplicarse a `nullInstance`, una instancia de un tipo que acepta valores NULL, para formar un argumento para `AddressOf`.</span><span class="sxs-lookup"><span data-stu-id="c4a04-109">Because this new method is not a member of <xref:System.Nullable%601>, it can be applied to `nullInstance`, an instance of a nullable type, to form an argument for `AddressOf`.</span></span>  
   
-    ```vb#  
-    Module Module1  
+```vb  
+Module Module1  
   
-        Delegate Function Deleg() As Integer  
+    Delegate Function Deleg() As Integer  
   
-        Sub Main()  
-            Dim nullInstance As New Nullable(Of Integer)(1)  
+    Sub Main()  
+        Dim nullInstance As New Nullable(Of Integer)(1)  
   
-            Dim del As Deleg  
+        Dim del As Deleg  
   
-            ' GetValueOrDefault is a method of the Nullable generic  
-            ' type. It cannot be used as an operand of AddressOf.  
-            ' del = AddressOf nullInstance.GetValueOrDefault  
+        ' GetValueOrDefault is a method of the Nullable generic  
+        ' type. It cannot be used as an operand of AddressOf.  
+        ' del = AddressOf nullInstance.GetValueOrDefault  
   
-            ' The following line uses the GetValueOrDefault method  
-            ' defined in the NullableWrapper class.  
-            del = AddressOf (New NullableWrapper(  
-                Of Integer)(nullInstance)).GetValueOrDefault  
+        ' The following line uses the GetValueOrDefault method  
+        ' defined in the NullableWrapper class.  
+        del = AddressOf (New NullableWrapper(  
+            Of Integer)(nullInstance)).GetValueOrDefault  
   
-            Console.WriteLine(del.Invoke())  
+        Console.WriteLine(del.Invoke())  
+    End Sub  
+  
+    Class NullableWrapper(Of T As Structure)  
+        Private m_Value As Nullable(Of T)  
+  
+        Sub New(ByVal Value As Nullable(Of T))  
+            m_Value = Value  
         End Sub  
   
-        Class NullableWrapper(Of T As Structure)  
-            Private m_Value As Nullable(Of T)  
+        Public Function GetValueOrDefault() As T  
+            Return m_Value.Value  
+        End Function  
+    End Class  
+End Module  
+```  
   
-            Sub New(ByVal Value As Nullable(Of T))  
-                m_Value = Value  
-            End Sub  
-  
-            Public Function GetValueOrDefault() As T  
-                Return m_Value.Value  
-            End Function  
-        End Class  
-    End Module  
-    ```  
-  
-## Vea también  
- <xref:System.Nullable%601>   
- [AddressOf \(Operador\)](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Tipos de valor que aceptan valores NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+## <a name="see-also"></a><span data-ttu-id="c4a04-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="c4a04-110">See Also</span></span>  
+ <xref:System.Nullable%601>  
+ [<span data-ttu-id="c4a04-111">AddressOf (operador)</span><span class="sxs-lookup"><span data-stu-id="c4a04-111">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="c4a04-112">Tipos de valor que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="c4a04-112">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [<span data-ttu-id="c4a04-113">Tipos genéricos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c4a04-113">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

@@ -1,42 +1,43 @@
 ---
-title: "Windows Forms Coordinates | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms coordinates"
-  - "screen coordinates"
-  - "client coordinates"
-  - "coordinates, Windows Forms"
+title: Coordenadas de formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms coordinates
+- screen coordinates
+- client coordinates
+- coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ecb47efdd69730350cf98e1c7b1e49150ad324d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms Coordinates
-El sistema de coordenadas de un Windows Form está basado en las coordenadas del dispositivo, y la unidad básica de medida cuando se dibuja en Windows Forms es la unidad de dispositivo \(normalmente, el píxel\).  Los puntos en la pantalla se describen mediante pares de coordenadas x e y, con las coordenadas x aumentando hacia la derecha y las coordenadas y aumentando de la parte superior a la inferior.  La ubicación del origen, relativo a la pantalla, varía dependiendo de si está especificando coordenadas de pantalla o de cliente.  
+# <a name="windows-forms-coordinates"></a><span data-ttu-id="1b6a7-102">Coordenadas de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1b6a7-102">Windows Forms Coordinates</span></span>
+<span data-ttu-id="1b6a7-103">El sistema de coordenadas de un formulario Windows Forms se basa en coordenadas de dispositivo y la unidad básica de medida al dibujar en formularios Windows Forms es la unidad de dispositivo (normalmente, el píxel).</span><span class="sxs-lookup"><span data-stu-id="1b6a7-103">The coordinate system for a Windows Form is based on device coordinates, and the basic unit of measure when drawing in Windows Forms is the device unit (typically, the pixel).</span></span> <span data-ttu-id="1b6a7-104">Puntos en la pantalla se describen mediante pares de coordenadas x e y, con las coordenadas x aumentando hacia la derecha y las coordenadas aumenta de arriba a abajo.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-104">Points on the screen are described by x- and y-coordinate pairs, with the x-coordinates increasing to the right and the y-coordinates increasing from top to bottom.</span></span> <span data-ttu-id="1b6a7-105">La ubicación de origen, con respecto a la pantalla, variará dependiendo de si está especificando coordenadas de pantalla o el cliente.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-105">The location of the origin, relative to the screen, will vary depending on whether you are specifying screen or client coordinates.</span></span>  
   
-## Coordenadas de pantalla  
- Una aplicación de Windows Forms especifica la posición de la ventana en la pantalla en coordenadas de la pantalla.  En el caso de las coordenadas de pantalla, el origen es la esquina superior izquierda de la pantalla.  La posición completa de la pantalla se suele describir mediante una estructura <xref:System.Drawing.Rectangle> que contiene las coordenadas de la pantalla de dos puntos que definen las esquinas superior izquierda e inferior derecha de la ventana.  
+## <a name="screen-coordinates"></a><span data-ttu-id="1b6a7-106">Coordenadas de pantalla</span><span class="sxs-lookup"><span data-stu-id="1b6a7-106">Screen Coordinates</span></span>  
+ <span data-ttu-id="1b6a7-107">Una aplicación de Windows Forms especifica la posición de una ventana en la pantalla en coordenadas de pantalla.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-107">A Windows Forms application specifies the position of a window on the screen in screen coordinates.</span></span> <span data-ttu-id="1b6a7-108">Para las coordenadas de pantalla, el origen es la esquina superior izquierda de la pantalla.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-108">For screen coordinates, the origin is the upper-left corner of the screen.</span></span> <span data-ttu-id="1b6a7-109">La posición de una ventana completa se suele describir mediante un <xref:System.Drawing.Rectangle> estructura que contiene las coordenadas de pantalla de dos puntos que definen las esquinas superior izquierda e inferior derecha de la ventana.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-109">The full position of a window is often described by a <xref:System.Drawing.Rectangle> structure containing the screen coordinates of two points that define the upper-left and lower-right corners of the window.</span></span>  
   
-## Coordenadas de cliente  
- Una aplicación de Windows Forms especifica la posición de los puntos en un formulario o control mediante las coordenadas de cliente.  El origen de las coordenadas de cliente está en la esquina superior izquierda del área de cliente del control o formulario.  Las coordenadas de cliente aseguran que una aplicación puede usar valores de coordenadas coherentes mientras se dibuja en un formulario o control, sin tener en cuenta la posición del formulario o del control en la pantalla.  
+## <a name="client-coordinates"></a><span data-ttu-id="1b6a7-110">Coordenadas de cliente</span><span class="sxs-lookup"><span data-stu-id="1b6a7-110">Client Coordinates</span></span>  
+ <span data-ttu-id="1b6a7-111">Una aplicación de Windows Forms especifica la posición de puntos en un formulario o control mediante las coordenadas de cliente.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-111">A Windows Forms application specifies the position of points in a form or control using client coordinates.</span></span> <span data-ttu-id="1b6a7-112">El origen de las coordenadas de cliente es la esquina superior izquierda del área cliente del control o formulario.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-112">The origin for client coordinates is the upper-left corner of the client area of the control or form.</span></span> <span data-ttu-id="1b6a7-113">Coordenadas de cliente aseguran de que una aplicación puede usar valores de coordenadas coherentes mientras se dibuja en un formulario o control, independientemente de la posición del formulario o control en la pantalla.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-113">Client coordinates ensure that an application can use consistent coordinate values while drawing in a form or control, regardless of the position of the form or control on the screen.</span></span>  
   
- Las dimensiones del área de cliente también se describen mediante una estructura <xref:System.Drawing.Rectangle> que contiene las coordenadas de cliente para esa área.  En todos los casos, la coordenada superior izquierda del rectángulo se incluye en el área de cliente, mientras se excluye la coordenada inferior derecha.  Las operaciones gráficas no incluyen los bordes derecho e inferior de un área de cliente.  Por ejemplo, el método <xref:System.Drawing.Graphics.FillRectangle%2A> rellenará el borde derecho e inferior del rectángulo especificado, pero no incluirá estos bordes.  
+ <span data-ttu-id="1b6a7-114">También se describen las dimensiones del área de cliente mediante un <xref:System.Drawing.Rectangle> estructura que contiene las coordenadas de cliente para el área.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-114">The dimensions of the client area are also described by a <xref:System.Drawing.Rectangle> structure that contains client coordinates for the area.</span></span> <span data-ttu-id="1b6a7-115">En todos los casos, la coordenada superior izquierda del rectángulo se incluye en el área de cliente, mientras se excluye la coordenada inferior derecha.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-115">In all cases, the upper-left coordinate of the rectangle is included in the client area, while the lower-right coordinate is excluded.</span></span> <span data-ttu-id="1b6a7-116">Las operaciones de gráficos no incluyen los bordes derecho e inferior de un área de cliente.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-116">Graphics operations do not include the right and lower edges of a client area.</span></span> <span data-ttu-id="1b6a7-117">Por ejemplo el <xref:System.Drawing.Graphics.FillRectangle%2A> método se llenará con el borde derecho e inferior del rectángulo especificado, pero no incluirá estos bordes.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-117">For example the <xref:System.Drawing.Graphics.FillRectangle%2A> method will fill up to the right and lower edge of the specified rectangle, but will not include these edges.</span></span>  
   
-## Asignación de un tipo de coordenada a otro  
- En ocasiones, es posible que necesite asignar las coordenadas de pantalla a las de cliente.  Esta asignación se puede realizar fácilmente mediante los métodos <xref:System.Windows.Forms.Control.PointToClient%2A> y <xref:System.Windows.Forms.Control.PointToScreen%2A> disponibles en la clase <xref:System.Windows.Forms.Control>.  Por ejemplo, la propiedad <xref:System.Windows.Forms.Control.MousePosition%2A> de <xref:System.Windows.Forms.Control> se ofrece en las coordenadas de pantalla, pero quizá desee convertirlas a coordenadas de cliente.  
+## <a name="mapping-from-one-type-of-coordinate-to-another"></a><span data-ttu-id="1b6a7-118">Asignación de un tipo de coordenadas a otro</span><span class="sxs-lookup"><span data-stu-id="1b6a7-118">Mapping From One Type of Coordinate to Another</span></span>  
+ <span data-ttu-id="1b6a7-119">En ocasiones, necesite asignar de coordenadas de pantalla a coordenadas de cliente.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-119">Occasionally, you may need to map from screen coordinates to client coordinates.</span></span> <span data-ttu-id="1b6a7-120">Puede hacerlo fácilmente mediante el uso de la <xref:System.Windows.Forms.Control.PointToClient%2A> y <xref:System.Windows.Forms.Control.PointToScreen%2A> métodos disponibles en la <xref:System.Windows.Forms.Control> clase.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-120">You can easily accomplish this by using the <xref:System.Windows.Forms.Control.PointToClient%2A> and <xref:System.Windows.Forms.Control.PointToScreen%2A> methods available in the <xref:System.Windows.Forms.Control> class.</span></span> <span data-ttu-id="1b6a7-121">Por ejemplo, el <xref:System.Windows.Forms.Control.MousePosition%2A> propiedad de <xref:System.Windows.Forms.Control> se notifica en coordenadas de pantalla, pero puede que desee convertir a coordenadas de cliente.</span><span class="sxs-lookup"><span data-stu-id="1b6a7-121">For example, the <xref:System.Windows.Forms.Control.MousePosition%2A> property of <xref:System.Windows.Forms.Control> is reported in screen coordinates, but you may want to convert these to client coordinates.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.Control.PointToClient%2A>   
+## <a name="see-also"></a><span data-ttu-id="1b6a7-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="1b6a7-122">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.PointToClient%2A>  
  <xref:System.Windows.Forms.Control.PointToScreen%2A>

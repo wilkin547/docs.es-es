@@ -1,59 +1,40 @@
 ---
-title: "Implementación de aplicaciones que hacen referencia al componente PrintForm (Visual Basic) | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: Implementar aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- PrintForm component [Visual Basic], deploying
+helpviewer_keywords: PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 016643329d2ee66ca5a32f155cf91e0ee137f38f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 15b6e21e769c90e23e66e4f87b37f74462423985
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Implementación de aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
-Si desea implementar una aplicación que hace referencia el <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>, componente, el componente debe instalarse en el equipo de destino.</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+# <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a><span data-ttu-id="ebb53-102">Implementar aplicaciones que hacen referencia al componente PrintForm (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ebb53-102">Deploying applications that reference the PrintForm component (Visual Basic)</span></span>
+<span data-ttu-id="ebb53-103">Si quiere implementar una aplicación que haga referencia al componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , el componente debe estar instalado en el equipo de destino.</span><span class="sxs-lookup"><span data-stu-id="ebb53-103">If you want to deploy an application that references the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component, the component must be installed on the destination computer.</span></span>  
   
- Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [Centro de descarga](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ <span data-ttu-id="ebb53-104">Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [Centro de descarga](http://www.microsoft.com/en-us/download/details.aspx?id=25169).</span><span class="sxs-lookup"><span data-stu-id="ebb53-104">The PowerPack controls are no longer included in Visual Studio, but you can download them from the [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169).</span></span>  
   
-## <a name="installing-the-printform-as-a-prerequisite"></a>Instalar el componente PrintForm como requisito previo  
- Para implementar correctamente una aplicación, también debe implementar todos los componentes a los que hace referencia la aplicación. El proceso de instalación de componentes de requisito previo se conoce como *arranque*.  
+## <a name="installing-the-printform-as-a-prerequisite"></a><span data-ttu-id="ebb53-105">Instalación de PrintForm como un requisito previo</span><span class="sxs-lookup"><span data-stu-id="ebb53-105">Installing the PrintForm as a prerequisite</span></span>  
+ <span data-ttu-id="ebb53-106">Para implementar correctamente una aplicación, también debe implementar todos los componentes a los que hace referencia la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ebb53-106">To successfully deploy an application, you must also deploy all components that are referenced by the application.</span></span> <span data-ttu-id="ebb53-107">El proceso de instalación de componentes de requisito previo se conoce como *arranque*.</span><span class="sxs-lookup"><span data-stu-id="ebb53-107">The process of installing prerequisite components is known as *bootstrapping*.</span></span>  
   
- Cuando el <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>componente está instalado en el equipo de desarrollo, se agrega un paquete de programa previo de Microsoft Visual Basic Power Packs para el [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] directorio de arranque.</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Este paquete está disponible al seguir los procedimientos para agregar los requisitos previos para cualquiera [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] o implementación de Windows Installer.  
+ <span data-ttu-id="ebb53-108">Si el componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> está instalado en el equipo de desarrollo, se agrega un paquete de arranque de Microsoft Visual Basic PowerPacks al directorio de arranque de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ebb53-108">When the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component is installed on your development computer, a Microsoft Visual Basic Power Packs bootstrapper package is added to the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] bootstrapper directory.</span></span> <span data-ttu-id="ebb53-109">Este paquete está disponible al seguir los procedimientos para agregar requisitos previos para cualquier implementación de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] o Windows Installer.</span><span class="sxs-lookup"><span data-stu-id="ebb53-109">This package is then available when you follow the procedures for adding prerequisites for either [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] or Windows Installer deployment.</span></span>  
   
- De forma predeterminada, los componentes de arranque se implementan desde la misma ubicación que el paquete de instalación. Como alternativa, puede implementar los componentes desde una dirección URL o una ubicación de recurso compartido de archivo desde la que los usuarios pueden descargarlos según sea necesario.  
+ <span data-ttu-id="ebb53-110">De forma predeterminada, los componentes de arranque se implementan desde la misma ubicación que el paquete de instalación.</span><span class="sxs-lookup"><span data-stu-id="ebb53-110">By default, bootstrapped components are deployed from the same location as the installation package.</span></span> <span data-ttu-id="ebb53-111">Como alternativa, puede implementar los componentes desde una dirección URL o una ubicación de recurso compartido de archivo desde la que los usuarios pueden descargarlos según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="ebb53-111">Alternatively, you can choose to deploy the components from a URL or file share location from which users can download them as necessary.</span></span>  
   
 > [!NOTE]
->  Para instalar los componentes de arranque, el usuario podría necesitar permisos de usuario administrativo o similares en el equipo. Para [!INCLUDE[ndptecclick](../../../visual-basic/developing-apps/printing/includes/ndptecclick_md.md)] aplicaciones, esto significa que el usuario necesitará permisos administrativos para instalar la aplicación, independientemente del nivel de seguridad especificado por la aplicación. Una vez instalada la aplicación, el usuario puede ejecutarla sin permisos administrativos.  
+>  <span data-ttu-id="ebb53-112">Para instalar los componentes de arranque, el usuario podría necesitar permisos de usuario administrativo o similares en el equipo.</span><span class="sxs-lookup"><span data-stu-id="ebb53-112">To install bootstrapped components, the user might need administrative or similar user permissions on the computer.</span></span> <span data-ttu-id="ebb53-113">Para las aplicaciones [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] , esto significa que el usuario necesitará permisos administrativos para instalar la aplicación, independientemente del nivel de seguridad especificado por la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ebb53-113">For [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] applications, this means that the user will need administrative permissions to install the application, regardless of the security level specified by the application.</span></span> <span data-ttu-id="ebb53-114">Una vez instalada la aplicación, el usuario puede ejecutarla sin permisos administrativos.</span><span class="sxs-lookup"><span data-stu-id="ebb53-114">After the application is installed, the user can run the application without administrative permissions.</span></span>  
   
- Durante la instalación, los usuarios le pedirá que instale el <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>componente si no está presente en el equipo de destino.</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+ <span data-ttu-id="ebb53-115">Durante la instalación, se pedirá a los usuarios que instalen el componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> si no está presente en el equipo de destino.</span><span class="sxs-lookup"><span data-stu-id="ebb53-115">During installation, users will be prompted to install the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component if it is not present on the destination computer.</span></span>  
   
- Como alternativa al arranque, puede implementar previamente el <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>componente mediante un sistema de distribución electrónica de software como Microsoft Systems Management Server.</xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>  
+ <span data-ttu-id="ebb53-116">Como alternativa al arranque, puede realizar una implementación previa del componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> mediante un sistema electrónico de distribución de software, como Microsoft Systems Management Server.</span><span class="sxs-lookup"><span data-stu-id="ebb53-116">As an alternative to bootstrapping, you can pre-deploy the <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> component by using an electronic software distribution system like Microsoft Systems Management Server.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: instalar requisitos previos mediante una aplicación ClickOnce](http://msdn.microsoft.com/library/e964fca5-fdfd-47cf-a1c9-7fb96b1c88b5)   
- [PrintForm (componente)](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a><span data-ttu-id="ebb53-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="ebb53-117">See also</span></span>  
+ [<span data-ttu-id="ebb53-118">Cómo: Instalar requisitos previos mediante una aplicación ClickOnce</span><span class="sxs-lookup"><span data-stu-id="ebb53-118">How to: Install Prerequisites with a ClickOnce Application</span></span>](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
+ [<span data-ttu-id="ebb53-119">PrintForm (componente)</span><span class="sxs-lookup"><span data-stu-id="ebb53-119">PrintForm Component</span></span>](../../../visual-basic/developing-apps/printing/printform-component.md)

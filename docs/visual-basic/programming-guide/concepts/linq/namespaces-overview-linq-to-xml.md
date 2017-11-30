@@ -1,44 +1,36 @@
 ---
-title: "Información general de los espacios de nombres (LINQ to XML) | Documentos de Microsoft"
+title: "Información general sobre los espacios de nombres (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b8eb31fa-4b26-4acf-8050-6e705687f458
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cec2efd31c96af17ad717abaa8f4359210e99a78
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 082172720abd39634f7183367d4d7b8d53d2bb7e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="namespaces-overview-linq-to-xml"></a>Información general sobre los espacios de nombres (LINQ to XML)
-Este tema presenta los espacios de nombres, <xref:System.Xml.Linq.XName>clase y la <xref:System.Xml.Linq.XNamespace>clase.</xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName>  
+# <a name="namespaces-overview-linq-to-xml"></a><span data-ttu-id="0689d-102">Información general sobre los espacios de nombres (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0689d-102">Namespaces Overview (LINQ to XML)</span></span>
+<span data-ttu-id="0689d-103">Este tema presenta los espacios de nombres, la clase <xref:System.Xml.Linq.XName> y la clase <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="0689d-103">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>  
   
-## <a name="xml-names"></a>Nombres XML  
- Los nombres XML a menudo son una fuente de complejidad en la programación XML. Un nombre XML se compone de un espacio de nombres XML (también denominado URI de espacio de nombres XML) y un nombre local. Un espacio de nombres XML es similar a un espacio de nombres en un programa basado en [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Permite calificar de manera exclusiva los nombres de los elementos y los atributos. Evita conflictos de nombres entre varias partes de un documento XML. Una vez que haya declarado un espacio de nombres XML, puede seleccionar un nombre local que sólo debe ser único en dicho espacio de nombres.  
+## <a name="xml-names"></a><span data-ttu-id="0689d-104">Nombres XML</span><span class="sxs-lookup"><span data-stu-id="0689d-104">XML Names</span></span>  
+ <span data-ttu-id="0689d-105">Los nombres XML a menudo son una fuente de complejidad en la programación XML.</span><span class="sxs-lookup"><span data-stu-id="0689d-105">XML names are often a source of complexity in XML programming.</span></span> <span data-ttu-id="0689d-106">Un nombre XML se compone de un espacio de nombres XML (también denominado URI de espacio de nombres XML) y un nombre local.</span><span class="sxs-lookup"><span data-stu-id="0689d-106">An XML name consists of an XML namespace (also called an XML namespace URI) and a local name.</span></span> <span data-ttu-id="0689d-107">Un espacio de nombres XML es similar a un espacio de nombres en un programa basado en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0689d-107">An XML namespace is similar to a namespace in a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-based program.</span></span> <span data-ttu-id="0689d-108">Permite calificar de manera exclusiva los nombres de los elementos y los atributos.</span><span class="sxs-lookup"><span data-stu-id="0689d-108">It enables you to uniquely qualify the names of elements and attributes.</span></span> <span data-ttu-id="0689d-109">Evita conflictos de nombres entre varias partes de un documento XML.</span><span class="sxs-lookup"><span data-stu-id="0689d-109">This helps avoid name conflicts between various parts of an XML document.</span></span> <span data-ttu-id="0689d-110">Una vez que haya declarado un espacio de nombres XML, puede seleccionar un nombre local que sólo debe ser único en dicho espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="0689d-110">When you have declared an XML namespace, you can select a local name that only has to be unique within that namespace.</span></span>  
   
- Otro aspecto de los nombres XML es XML *prefijos de espacio de nombres*. Los prefijos XML generan la mayor parte de la complejidad de los nombres XML. Estos prefijos permiten crear un acceso directo de un espacio de nombres XML, lo que hace que el documento XML sea más conciso y comprensible. Sin embargo, los prefijos XML dependen de su contexto para tener un significado, lo que aumenta la complejidad. Por ejemplo, el prefijo XML `aw` podría asociarse a un espacio de nombres XML en una parte del árbol XML y a un espacio de nombres XML diferente en una parte distinta de dicho árbol.  
+ <span data-ttu-id="0689d-111">Otro aspecto de los nombres XML son los *prefijos de espacios de nombres* XML.</span><span class="sxs-lookup"><span data-stu-id="0689d-111">Another aspect of XML names is XML *namespace prefixes*.</span></span> <span data-ttu-id="0689d-112">Los prefijos XML generan la mayor parte de la complejidad de los nombres XML.</span><span class="sxs-lookup"><span data-stu-id="0689d-112">XML prefixes cause most of the complexity of XML names.</span></span> <span data-ttu-id="0689d-113">Estos prefijos permiten crear un acceso directo de un espacio de nombres XML, lo que hace que el documento XML sea más conciso y comprensible.</span><span class="sxs-lookup"><span data-stu-id="0689d-113">These prefixes enable you to create a shortcut for an XML namespace, which makes the XML document more concise and understandable.</span></span> <span data-ttu-id="0689d-114">Sin embargo, los prefijos XML dependen de su contexto para tener un significado, lo que aumenta la complejidad.</span><span class="sxs-lookup"><span data-stu-id="0689d-114">However, XML prefixes depend on their context to have meaning, which adds complexity.</span></span> <span data-ttu-id="0689d-115">Por ejemplo, el prefijo XML `aw` podría asociarse a un espacio de nombres XML en una parte del árbol XML y a un espacio de nombres XML diferente en una parte distinta de dicho árbol.</span><span class="sxs-lookup"><span data-stu-id="0689d-115">For example, the XML prefix `aw` could be associated with one XML namespace in one part of an XML tree, and with a different XML namespace in a different part of the XML tree.</span></span>  
   
- Cuando se utiliza [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] con literales XML y Visual Basic, debe usar los prefijos de espacio de nombres cuando se trabaja con documentos en espacios de nombres.  
+ <span data-ttu-id="0689d-116">Cuando se usa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con literales XML y Visual Basic, debe usar los prefijos de espacio de nombres cuando se trabaja con documentos en espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="0689d-116">When using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with Visual Basic and XML literals, you must use namespace prefixes when working with documents in namespaces.</span></span>  
   
- En [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], la clase que representa los nombres XML es <xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> Los nombres XML aparecen frecuentemente en la [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] API, y cuando se requiera un nombre XML, encontrará un <xref:System.Xml.Linq.XName>parámetro.</xref:System.Xml.Linq.XName> No obstante, apenas se trabaja directamente con un <xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> <xref:System.Xml.Linq.XName>contiene una conversión implícita de cadena.</xref:System.Xml.Linq.XName>  
+ <span data-ttu-id="0689d-117">En [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], la clase que representa los nombres XML es <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="0689d-117">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the class that represents XML names is <xref:System.Xml.Linq.XName>.</span></span> <span data-ttu-id="0689d-118">Los nombres XML aparecen frecuentemente en la API [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], y cuando se requiera un nombre XML, encontrará un parámetro <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="0689d-118">XML names appear frequently throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API, and wherever an XML name is required, you will find an <xref:System.Xml.Linq.XName> parameter.</span></span> <span data-ttu-id="0689d-119">En cambio, apenas se trabaja directamente con un objeto <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="0689d-119">However, you rarely work directly with an <xref:System.Xml.Linq.XName>.</span></span> <span data-ttu-id="0689d-120"><xref:System.Xml.Linq.XName> contiene una conversión implícita de cadena.</span><span class="sxs-lookup"><span data-stu-id="0689d-120"><xref:System.Xml.Linq.XName> contains an implicit conversion from string.</span></span>  
   
- Para obtener más información, consulte <xref:System.Xml.Linq.XNamespace>y <xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XNamespace>  
+ <span data-ttu-id="0689d-121">Para obtener más información, consulte <xref:System.Xml.Linq.XNamespace> y <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="0689d-121">For more information, see <xref:System.Xml.Linq.XNamespace> and <xref:System.Xml.Linq.XName>.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="0689d-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="0689d-122">See Also</span></span>  
+ [<span data-ttu-id="0689d-123">Trabajar con espacios de nombres XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0689d-123">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
