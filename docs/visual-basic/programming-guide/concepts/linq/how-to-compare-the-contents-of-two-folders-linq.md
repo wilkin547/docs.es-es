@@ -1,44 +1,36 @@
 ---
-title: "Cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce4f89c88fd856d3471e4f32c4f69d15e8ccb4c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a65b5f74e872cb4d2e459bc7ff866ca332706ef9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Cómo: comparar el contenido de dos carpetas (LINQ) (Visual Basic)
-En este ejemplo se muestra tres maneras de comparar dos listas de archivos:  
+En este ejemplo se muestran tres maneras de comparar dos listados de archivos:  
   
--   Mediante la consulta de un valor booleano que especifica si las dos listas de archivos son idénticos.  
+-   Mediante la consulta de un valor booleano que especifica si las dos listas de archivos son idénticas.  
   
--   Consultar la intersección recuperar los archivos que están en ambas carpetas.  
+-   Mediante la consulta de la intersección para recuperar los archivos que están en ambas carpetas.  
   
--   Consultar la diferencia de conjuntos recuperar los archivos que se encuentran en una carpeta pero no el otro.  
+-   Mediante la consulta de la diferencia de conjuntos para recuperar los archivos que se encuentran en una carpeta, pero no en la otra.  
   
     > [!NOTE]
-    >  Las técnicas mostradas aquí pueden adaptarse para comparar secuencias de objetos de cualquier tipo.  
+    >  Las técnicas que se mencionan aquí pueden adaptarse para comparar secuencias de objetos de cualquier tipo.  
   
- La `FileComparer` clase se muestra a continuación muestra cómo utilizar una clase comparadora personalizada junto con los operadores de consulta estándar. La clase no está diseñada para su uso en escenarios del mundo real. Simplemente usa el nombre y la longitud en bytes de cada archivo para determinar si el contenido de cada carpeta es idéntico o no. En un escenario real, debería modificar este comparador para realizar una comprobación de igualdad más rigurosa.  
+ La clase `FileComparer` que aparece a continuación muestra cómo usar una clase de comparador personalizada junto con los operadores de consulta estándar. La clase no está diseñada para su uso en escenarios reales. Simplemente usa el nombre y la longitud en bytes de cada archivo para determinar si el contenido de cada una de las carpetas es idéntico o no. En un escenario real, debería modificar este comparador para realizar una comprobación de igualdad más rigurosa.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -131,8 +123,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

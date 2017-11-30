@@ -1,65 +1,63 @@
 ---
-title: "Single (Tipo de datos, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Single"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "! (carácter de tipo identificador)"
-  - "caracteres 0, finales"
-  - "tipos de datos [Visual Basic], asignar"
-  - "F (carácter de tipo literal)"
-  - "números de punto flotante, Single (tipo de datos)"
-  - "caracteres de tipo identificador, !"
-  - "caracteres de tipo literal, F"
-  - "números, punto flotante"
-  - "números, reales"
-  - "números reales"
-  - "Single (tipo de datos)"
-  - "números de precisión sencilla"
-  - "caracteres 0 finales"
-  - "ceros finales"
-  - "ceros, finales"
+title: Single (Tipo de datos, Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Single
+helpviewer_keywords:
+- Single data type
+- F literal type character [Visual Basic]
+- trailing zeros
+- real numbers
+- literal type characters [Visual Basic], F
+- trailing 0 characters [Visual Basic]
+- identifier type characters [Visual Basic], !
+- single-precision numbers
+- '! identifier type character'
+- 0 characters [Visual Basic], trailing
+- data types [Visual Basic], assigning
+- floating-point numbers [Visual Basic], Single data type
+- numbers [Visual Basic], real
+- zeros, trailing
+- numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c91dbdf73ed1e26393518001ec8651557e5b780f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Single (Tipo de datos, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Incluye números IEEE de punto flotante de precisión sencilla de 32 bits \(4 bytes\) con signo cuyos valores van de \-3,4028235E\+38 a \-1,401298E\-45 para números negativos y de 1,401298E\-45 a 3,4028235E\+38 para números positivos.  Los números de precisión sencilla almacenan aproximaciones de números reales.  
+# <a name="single-data-type-visual-basic"></a>Single (Tipo de datos, Visual Basic)
+Contiene con signo números de punto flotante IEEE 32 bits (4 bytes) precisión sencilla que abarcan un valor de - 3, 4028235E + 38 a - 1, 401298E-45 para los valores negativos y entre 1, 401298E-45 a 3, 4028235E + 38 para valores positivos. Los números de precisión sencilla almacenan una aproximación de un número real.  
   
-## Comentarios  
- Utilice el tipo de datos `Single` para incluir valores de punto flotante que no requieren el ancho completo de datos de `Double`.  En algunos casos, Common Language Runtime puede empaquetar las variables `Single` de forma que se ahorre consumo de memoria.  
+## <a name="remarks"></a>Comentarios  
+ Use la `Single` tipo de datos para contener valores de punto flotante que no requieren el ancho completo de datos de `Double`. En algunos casos, common language runtime podrían llevar empaquetar su `Single` variables estrecha colaboración y ahorre consumo de memoria.  
   
  El valor predeterminado de `Single` es 0.  
   
-## Sugerencias de programación  
+## <a name="programming-tips"></a>Sugerencias de programación  
   
--   **Precisión.** Cuando trabaje con números de punto flotante, tenga presente que no siempre tienen una representación precisa en memoria.  Esto podría conducir a resultados inesperados en ciertas operaciones, como la comparación de valores y el operador `Mod`.  Para obtener más información, vea [Solucionar problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   **Precisión.** Cuando trabaje con números de punto flotante, tenga en cuenta que no siempre tienen una representación precisa en memoria. Esto podría provocar resultados inesperados en ciertas operaciones, como comparación de valores y la `Mod` operador. Para obtener más información, consulte [solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Ampliación.** El tipo de datos `Single` amplía a `Double`.  Esto significa que puede convertir `Single` en `Double` sin encontrar un error <xref:System.OverflowException?displayProperty=fullName>.  
+-   **De ampliación.** El `Single` tipo de datos se amplía a `Double`. Esto significa que se puede convertir `Single` a `Double` sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
--   **Ceros finales.** Los tipos de datos de punto flotante no tienen representación interna de caracteres 0 finales.  Por ejemplo, no distinguen entre 4,2000 y 4,2.  Por consiguiente, los caracteres 0 finales no aparecen cuando muestra o imprime valores de punto flotante.  
+-   **Ceros finales.** Los tipos de datos de punto flotante no tiene una representación interna de caracteres 0 finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, los caracteres 0 finales no aparecen al mostrar o imprimir valores de punto flotante.  
   
--   **Caracteres de tipo.** Al agregar el carácter de tipo literal `F` a un literal, el tipo de datos se convierte al tipo de datos `Single`.  Si se agrega el carácter de tipo identificador `!` a cualquier identificador, se convierte su tipo de datos al tipo `Single`.  
+-   **Caracteres de tipo.** Al agregar el carácter de tipo literal `F` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Single`. Si se agrega el carácter de tipo identificador `!` a cualquier identificador, se convierte forzosamente al tipo `Single`.  
   
--   **Tipo en Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Single?displayProperty=fullName>.  
+-   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Single?displayProperty=nameWithType>.  
   
-## Vea también  
- <xref:System.Single?displayProperty=fullName>   
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Decimal \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)   
- [Double \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/double-data-type.md)   
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Solucionar problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Single?displayProperty=nameWithType>  
+ [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Decimal (tipo de datos)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [Double (tipos de datos)](../../../visual-basic/language-reference/data-types/double-data-type.md)  
+ [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

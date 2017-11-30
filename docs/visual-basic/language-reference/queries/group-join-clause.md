@@ -1,35 +1,34 @@
 ---
-title: "Group Join (Cl&#225;usula, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryGroupJoinIn"
-  - "vb.QueryGroupJoinOn"
-  - "vb.QueryGroupJoin"
-  - "vb.QueryGroupJoinInto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Group Join (cláusula)"
-  - "Group Join (instrucción)"
-  - "consultas [Visual Basic], Combinación agrupada"
+title: "Group Join (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryGroupJoinIn
+- vb.QueryGroupJoinOn
+- vb.QueryGroupJoin
+- vb.QueryGroupJoinInto
+helpviewer_keywords:
+- Group Join clause [Visual Basic]
+- Group Join statement [Visual Basic]
+- queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Group Join (Cl&#225;usula, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Combina dos colecciones en una sola colección jerárquica.  La operación de combinación se basa en claves coincidentes.  
+# <a name="group-join-clause-visual-basic"></a>Group Join (Cláusula, Visual Basic)
+Combina dos colecciones en una sola colección jerárquica. La operación de combinación se basa en claves coincidentes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Group Join element [As type] In collection _  
@@ -37,38 +36,37 @@ Group Join element [As type] In collection _
   Into expressionList  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
   
-|||  
-|-|-|  
 |Término|Definición|  
-|`element`|Obligatorio.  Variable de control de la colección que se va a combinar.|  
-|`type`|Opcional.  Tipo de `element`.  Si no se especifica ningún `type`, el tipo de `element` se infiere de `collection`.|  
-|`collection`|Obligatorio.  Colección que se va a combinar con la colección que está a la izquierda del operador `Group Join`.  Una cláusula `Group Join` puede estar anidada en una cláusula `Join` o en otra cláusula `Group Join`.|  
-|`key1` `Equals` `key2`|Obligatorio.  Identifica las claves de las colecciones que se van a combinar.  Debe usar el operador `Equals` para comparar las claves de las colecciones que se van a combinar.  Puede combinar las condiciones de combinación mediante el operador `And` para identificar varias claves.  El parámetro `key1` debe ser de la colección de la izquierda del operador `Join`.  El parámetro `key2` debe ser de la colección de la derecha del operador `Join`.<br /><br /> Las claves que se usan en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección.  Sin embargo, cada expresión de clave solamente puede contener elementos de su colección respectiva.|  
-|`expressionList`|Obligatorio.  Una o más expresiones que identifican cómo se agregan los grupos de elementos desde la colección.  Para identificar un nombre de miembro de los resultados agrupados, utilice la palabra clave `Group` \(`<alias> = Group`\).  También puede incluir las funciones de agregado que se van a aplicar al grupo.|  
+|---|---|  
+|`element`|Obligatorio. La variable de control de la colección que se está combinando.|  
+|`type`|Opcional. Tipo de `element`. Si no hay ningún `type` se especifica, el tipo de `element` se deduce de `collection`.|  
+|`collection`|Obligatorio. La colección que combine con la colección que se encuentra en el lado izquierdo de la `Group Join` operador. A `Group Join` cláusula puede estar anidada en una `Join` cláusula o en otro `Group Join` cláusula.|  
+|`key1` `Equals` `key2`|Requerido. Identifica las claves para las colecciones que se está combina. Debe utilizar el `Equals` operador para comparar las claves de las colecciones que se está combina. Puede combinar condiciones de combinación mediante la `And` operador para identificar varias claves. El `key1` parámetro debe ser de la colección en el lado izquierdo de la `Join` operador. El `key2` parámetro debe ser de la colección en el lado derecho de la `Join` operador.<br /><br /> Las claves utilizadas en la condición de combinación pueden ser expresiones que incluyen más de un elemento de la colección. Sin embargo, cada expresión de clave solo puede contener elementos de su colección respectiva.|  
+|`expressionList`|Obligatorio. Una o varias expresiones que identifican cómo se agregan los grupos de elementos de la colección. Para identificar un nombre de miembro para los resultados agrupados, utilice la `Group` palabra clave (`<alias> = Group`). También puede incluir funciones de agregado para aplicar al grupo.|  
   
-## Comentarios  
- La cláusula `Group Join` combina dos colecciones basándose en los valores de clave coincidentes de las colecciones que se van a combinar.  La colección resultante puede contener un miembro que haga referencia a una colección de elementos de la segunda colección que coincidan con el valor de clave de la primera colección.  También puede especificar las funciones de agregado que se van a aplicar a los elementos agrupados de la segunda colección.  Para obtener información acerca de las funciones de agregado, vea [Aggregate \(Cláusula\)](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a>Comentarios  
+ El `Group Join` cláusula combina dos colecciones que coinciden con los valores de clave de las colecciones que se está combinando. La colección resultante puede contener a un miembro que hace referencia a una colección de elementos de la segunda colección que coinciden con el valor de clave de la primera colección. También puede especificar las funciones de agregado para aplicar a los elementos agrupados de la segunda colección. Para obtener información acerca de las funciones de agregado, vea [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Por ejemplo, considere una colección de administradores y una colección de empleados.  Los elementos de ambas colecciones tienen una propiedad ManagerID que identifica a los empleados que informan a un administrador concreto.  Los resultados de una operación de combinación contendrían un resultado por cada administrador y empleado con un valor ManagerID coincidente.  Los resultados de una operación de `Group Join` contendrían la lista completa de administradores.  Cada resultado de administrador tendría un miembro que hizo referencia a la lista de empleados que fueron una coincidencia para el administrador concreto.  
+ Considere, por ejemplo, una colección de administradores y una colección de empleados. Elementos de ambas colecciones tienen una propiedad ManagerID que identifica a los empleados que dependen de un administrador determinado. Los resultados de una operación de combinación contendrían un resultado para cada administrador y empleado con un valor ManagerID coincidente. Los resultados de una `Group Join` operación contendría la lista completa de administradores. Cada resultado de administrador tendría un miembro que hace referencia a la lista de empleados que fueron una coincidencia para el administrador concreto.  
   
- La colección resultante de una operación de `Group Join` puede contener cualquier combinación de valores de la colección identificada en la cláusula `From` y de las expresiones identificadas en la cláusula `Into` de la cláusula `Group Join`.  Para obtener más información sobre expresiones válidas de la cláusula `Into`, vea [Aggregate \(Cláusula\)](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ La colección resultante de un `Group Join` operación puede contener cualquier combinación de valores de la colección identificado en el `From` cláusula y las expresiones identificadas en el `Into` cláusula de la `Group Join` cláusula. Para obtener más información sobre las expresiones válidas para la `Into` cláusula, vea [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Una operación de `Group Join` devolverá todos los resultados de la colección identificada a la izquierda del operador `Group Join` Esto es así aunque no haya ninguna coincidencia en la colección que se está combinando  Esto equivale a `LEFT OUTER JOIN` en SQL.  
+ A `Group Join` operación devolverá todos los resultados de la colección identificado en el lado izquierdo de la `Group Join` operador. Esto ocurre incluso si no hay ninguna coincidencia en la colección que se está combinando. Esto es similar a una `LEFT OUTER JOIN` en SQL.  
   
- Puede usar la cláusula `Join` para combinar colecciones en una sola colección  Esto es equivalente a `INNER JOIN` en SQL.  
+ Puede usar el `Join` cláusula para combinar colecciones en una sola colección. Esto es equivalente a un `INNER JOIN` en SQL.  
   
-## Ejemplo  
- En el ejemplo de código siguiente se combinan dos colecciones mediante la cláusula `Group Join`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se combina dos colecciones mediante el uso de la `Group Join` cláusula.  
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)   
- [Select \(Cláusula\)](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From \(Cláusula\)](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Join \(Cláusula\)](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Where \(Cláusula\)](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Group By \(Cláusula\)](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>Vea también  
+ [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Join (cláusula)](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Group By (cláusula)](../../../visual-basic/language-reference/queries/group-by-clause.md)
