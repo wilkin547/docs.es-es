@@ -1,39 +1,38 @@
 ---
-title: "Desarrollo r&#225;pido de aplicaciones con My.Resources y My.Settings (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Resources (objeto), desarrollar aplicaciones"
-  - "My.Settings (objeto), desarrollar aplicaciones"
-  - "desarrollo rápido de aplicaciones (RAD), My.Resources"
-  - "desarrollo rápido de aplicaciones (RAD), My.Settings"
+title: "Desarrollo rápido de aplicaciones con My.Resources y My.Settings (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.Settings object [Visual Basic], developing applications
+- rapid application development (RAD), My.Resources
+- rapid application development (RAD), My.Settings
+- My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1657febf935560ff4c8dd2f54b10fdcb2254891f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Desarrollo r&#225;pido de aplicaciones con My.Resources y My.Settings (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-El objeto `My.Resources` proporciona acceso a los recursos de la aplicación y permite recuperar dinámicamente los recursos de su aplicación.  
+# <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a><span data-ttu-id="179c2-102">Desarrollo rápido de aplicaciones con My.Resources y My.Settings (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="179c2-102">Rapid Application Development with My.Resources and My.Settings (Visual Basic)</span></span>
+<span data-ttu-id="179c2-103">La `My.Resources` objeto proporciona acceso a los recursos de la aplicación y permite recuperar dinámicamente los recursos de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="179c2-103">The `My.Resources` object provides access to the application's resources and allows you to dynamically retrieve resources for your application.</span></span>  
   
-## Recuperar recursos  
- Diferentes recursos como archivos de sonido, iconos, imágenes y cadenas se pueden recuperar a través del objeto `My.Resources`.  Por ejemplo, puede tener acceso a los archivos de recursos específicos de la referencia cultural de la aplicación.  El siguiente ejemplo establece el icono del formulario en el icono denominado `Form1Icon` almacenado en el archivo de recursos de la aplicación.  
+## <a name="retrieving-resources"></a><span data-ttu-id="179c2-104">Recuperar recursos</span><span class="sxs-lookup"><span data-stu-id="179c2-104">Retrieving Resources</span></span>  
+ <span data-ttu-id="179c2-105">Un número de recursos, como archivos de audio, iconos, imágenes y cadenas se puede recuperar mediante el `My.Resources` objeto.</span><span class="sxs-lookup"><span data-stu-id="179c2-105">A number of resources such as audio files, icons, images, and strings can be retrieved through the `My.Resources` object.</span></span> <span data-ttu-id="179c2-106">Por ejemplo, puede tener acceso a archivos de recursos específicos de la referencia cultural de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="179c2-106">For example, you can access the application's culture-specific resource files.</span></span> <span data-ttu-id="179c2-107">En el ejemplo siguiente se establece el icono del formulario en el icono denominado `Form1Icon` almacenados en el archivo de recursos de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="179c2-107">The following example sets the icon of the form to the icon named `Form1Icon` stored in the application's resource file.</span></span>  
   
  [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
- El objeto `My.Resources` expone sólo recursos globales.  No proporciona acceso a archivos de recursos asociados a formularios.  Debe tener acceso a los recursos de formulario de los formularios.  Para obtener más información, vea [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
+ <span data-ttu-id="179c2-108">La `My.Resources` objeto expone sólo recursos globales.</span><span class="sxs-lookup"><span data-stu-id="179c2-108">The `My.Resources` object exposes only global resources.</span></span> <span data-ttu-id="179c2-109">No proporciona acceso a los archivos de recursos asociados con los formularios.</span><span class="sxs-lookup"><span data-stu-id="179c2-109">It does not provide access to resource files associated with forms.</span></span> <span data-ttu-id="179c2-110">Debe tener acceso a los recursos de formulario desde el formulario.</span><span class="sxs-lookup"><span data-stu-id="179c2-110">You must access the form resources from the form.</span></span> <span data-ttu-id="179c2-111">Para obtener más información, consulte [Tutorial: Adaptar Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).</span><span class="sxs-lookup"><span data-stu-id="179c2-111">For more information, see [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).</span></span>  
   
- De la misma forma, el objeto `My.Settings` proporciona acceso a la configuración de la aplicación y permite almacenar y recuperar de forma dinámica valores de propiedades y otra información relativa a la aplicación.  Para obtener más información, vea [My.Resources \(Objeto\)](../../../visual-basic/language-reference/objects/my-resources-object.md) y [My.Settings \(Objeto\)](../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ <span data-ttu-id="179c2-112">De forma similar, la `My.Settings` objeto proporciona acceso a la configuración de la aplicación y permite almacenar y recuperar valores de propiedad y otra información para la aplicación de forma dinámica.</span><span class="sxs-lookup"><span data-stu-id="179c2-112">Similarly, the `My.Settings` object provides access to the application's settings and allows you to dynamically store and retrieve property settings and other information for your application.</span></span> <span data-ttu-id="179c2-113">Para obtener más información, consulte [My.Resources (objeto)](../../../visual-basic/language-reference/objects/my-resources-object.md) y [My.Settings (objeto)](../../../visual-basic/language-reference/objects/my-settings-object.md).</span><span class="sxs-lookup"><span data-stu-id="179c2-113">For more information, see [My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md) and [My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md).</span></span>  
   
-## Vea también  
- [My.Resources \(Objeto\)](../../../visual-basic/language-reference/objects/my-resources-object.md)   
- [My.Settings \(Objeto\)](../../../visual-basic/language-reference/objects/my-settings-object.md)   
- [Acceso a la configuración de la aplicación.](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+## <a name="see-also"></a><span data-ttu-id="179c2-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="179c2-114">See Also</span></span>  
+ [<span data-ttu-id="179c2-115">My.Resources (objeto)</span><span class="sxs-lookup"><span data-stu-id="179c2-115">My.Resources Object</span></span>](../../../visual-basic/language-reference/objects/my-resources-object.md)  
+ [<span data-ttu-id="179c2-116">My.Settings (objeto)</span><span class="sxs-lookup"><span data-stu-id="179c2-116">My.Settings Object</span></span>](../../../visual-basic/language-reference/objects/my-settings-object.md)  
+ [<span data-ttu-id="179c2-117">Acceso a la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="179c2-117">Accessing Application Settings</span></span>](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)

@@ -1,1 +1,1 @@
-Aplicaciones del explorador XAML (XBAPs)
+<span data-ttu-id="f8b0f-101">Aplicaciones del explorador XAML (XBAPs)</span><span class="sxs-lookup"><span data-stu-id="f8b0f-101">XAML browser applications (XBAPs)</span></span>

@@ -1,37 +1,29 @@
 ---
-title: "Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7240f9a8923060634e8824f2516c220b376e2e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)
-Este ejemplo muestra cómo combinar archivos que contienen líneas de texto y, a continuación, ordenación los resultados. En concreto, muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="f30ca-102">Cómo: combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f30ca-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="f30ca-103">En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados.</span><span class="sxs-lookup"><span data-stu-id="f30ca-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="f30ca-104">En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.</span><span class="sxs-lookup"><span data-stu-id="f30ca-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar el proyecto y los archivos de texto  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="f30ca-105">Para configurar el proyecto y los archivos de texto</span><span class="sxs-lookup"><span data-stu-id="f30ca-105">To set up the project and the text files</span></span>  
   
-1.  Copie estos nombres en un archivo de texto que se denomine names1.txt y guárdelo en la carpeta del proyecto:  
+1.  <span data-ttu-id="f30ca-106">Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:</span><span class="sxs-lookup"><span data-stu-id="f30ca-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ Este ejemplo muestra cómo combinar archivos que contienen líneas de texto y, a
     Garcia, Debra  
     ```  
   
-2.  Copie estos nombres en un archivo de texto que se denomine names2.txt y guárdelo en la carpeta del proyecto. Tenga en cuenta que los dos archivos tienen algunos nombres en común.  
+2.  <span data-ttu-id="f30ca-107">Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto.</span><span class="sxs-lookup"><span data-stu-id="f30ca-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="f30ca-108">Tenga en cuenta que los dos archivos tienen algunos nombres en común.</span><span class="sxs-lookup"><span data-stu-id="f30ca-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +53,7 @@ Este ejemplo muestra cómo combinar archivos que contienen líneas de texto y, a
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="f30ca-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f30ca-109">Example</span></span>  
   
 ```vb  
 Class ConcatenateStrings  
@@ -179,9 +171,9 @@ End Class
 ' 2 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="f30ca-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="f30ca-110">Compiling the Code</span></span>  
+ <span data-ttu-id="f30ca-111">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="f30ca-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="f30ca-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="f30ca-112">See Also</span></span>  
+ [<span data-ttu-id="f30ca-113">LINQ y cadenas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f30ca-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="f30ca-114">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f30ca-114">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

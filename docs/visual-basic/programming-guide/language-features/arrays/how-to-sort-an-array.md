@@ -1,32 +1,30 @@
 ---
-title: "C&#243;mo: Ordenar una matriz en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Array.Sort"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "matrices [Visual Basic], ordenar"
-  - "ejemplos [Visual Basic], matrices"
+title: "Cómo: Ordenar una matriz en Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: Array.Sort
+helpviewer_keywords:
+- arrays [Visual Basic], sorting
+- examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 310c2dacb384de49c80073840c6c58d37f3937d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ordenar una matriz en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-En el siguiente ejemplo se declara una matriz de objetos `String` denominada `zooAnimals`, se llena y se ordena alfabéticamente.  
+# <a name="how-to-sort-an-array-in-visual-basic"></a><span data-ttu-id="8d431-102">Cómo: Ordenar una matriz en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8d431-102">How to: Sort An Array in Visual Basic</span></span>
+<span data-ttu-id="8d431-103">Este ejemplo declara una matriz de `String` objetos denominados `zooAnimals`lo rellena y, a continuación, ordena alfabéticamente.</span><span class="sxs-lookup"><span data-stu-id="8d431-103">This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically.</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="8d431-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8d431-104">Example</span></span>  
   
 ```  
 Private Sub sortAnimals()  
@@ -38,23 +36,23 @@ Private Sub sortAnimals()
 End Sub  
 ```  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="8d431-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="8d431-105">Compiling the Code</span></span>  
+ <span data-ttu-id="8d431-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="8d431-106">This example requires:</span></span>  
   
--   Obtener acceso a Mscorlib.dll y al espacio de nombres <xref:System>.  
+-   <span data-ttu-id="8d431-107">Acceso a Mscorlib.dll y <xref:System> espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="8d431-107">Access to Mscorlib.dll and the <xref:System> namespace.</span></span>  
   
-## Programación eficaz  
- Las condiciones siguientes pueden provocar una excepción:  
+## <a name="robust-programming"></a><span data-ttu-id="8d431-108">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="8d431-108">Robust Programming</span></span>  
+ <span data-ttu-id="8d431-109">Las condiciones siguientes pueden provocar una excepción:</span><span class="sxs-lookup"><span data-stu-id="8d431-109">The following conditions may cause an exception:</span></span>  
   
--   La matriz está vacía \(clase <xref:System.ArgumentNullException>\)  
+-   <span data-ttu-id="8d431-110">Matriz está vacía (<xref:System.ArgumentNullException> clase)</span><span class="sxs-lookup"><span data-stu-id="8d431-110">Array is empty (<xref:System.ArgumentNullException> class)</span></span>  
   
--   La matriz es multidimensional \(clase <xref:System.RankException>\)  
+-   <span data-ttu-id="8d431-111">La matriz es multidimensional (<xref:System.RankException> clase)</span><span class="sxs-lookup"><span data-stu-id="8d431-111">Array is multidimensional (<xref:System.RankException> class)</span></span>  
   
--   Uno o más elementos de la matriz no implementan la interfaz <xref:System.IComparable> \(clase <xref:System.InvalidOperationException>\).  
+-   <span data-ttu-id="8d431-112">Uno o más elementos de la matriz no implementan la <xref:System.IComparable> interfaz (<xref:System.InvalidOperationException> clase)</span><span class="sxs-lookup"><span data-stu-id="8d431-112">One or more elements of the array do not implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class)</span></span>  
   
-## Vea también  
- <xref:System.Array.Sort%2A?displayProperty=fullName>   
- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Solucionar problemas de matrices](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Colecciones](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   
- [For Each...Next \(Instrucción\)](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="8d431-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="8d431-113">See Also</span></span>  
+ <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="8d431-114">Matrices</span><span class="sxs-lookup"><span data-stu-id="8d431-114">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="8d431-115">Solución de problemas de matrices</span><span class="sxs-lookup"><span data-stu-id="8d431-115">Troubleshooting Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [<span data-ttu-id="8d431-116">Colecciones</span><span class="sxs-lookup"><span data-stu-id="8d431-116">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [<span data-ttu-id="8d431-117">For Each...Next (instrucción)</span><span class="sxs-lookup"><span data-stu-id="8d431-117">For Each...Next Statement</span></span>](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

@@ -1,36 +1,28 @@
 ---
-title: (Visual Basic) de temporizadores de subprocesos | Documentos de Microsoft
+title: Temporizadores de subprocesos (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 809cba93-cc93-4e21-afda-f299f9a39818
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ea657482d4e8e1465d9bc6ae3f94915badee512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b828476301424ca767e2b581c173d6a2dcd184ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="thread-timers-visual-basic"></a>Temporizadores de subprocesos (Visual Basic)
-La <xref:System.Threading.Timer?displayProperty=fullName>clase es útil para ejecutar periódicamente una tarea en un subproceso independiente.</xref:System.Threading.Timer?displayProperty=fullName> Por ejemplo, podría utilizar un temporizador de subproceso para comprobar el estado y la integridad de una base de datos o para realizar copias de seguridad de archivos críticos.  
+# <a name="thread-timers-visual-basic"></a><span data-ttu-id="b249b-102">Temporizadores de subprocesos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b249b-102">Thread Timers (Visual Basic)</span></span>
+<span data-ttu-id="b249b-103">La clase <xref:System.Threading.Timer?displayProperty=nameWithType> es útil para ejecutar una tarea periódicamente en un subproceso independiente.</span><span class="sxs-lookup"><span data-stu-id="b249b-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="b249b-104">Por ejemplo, podría usar un temporizador de subprocesos para comprobar el estado y la integridad de una base de datos o para hacer copias de seguridad de archivos importantes.</span><span class="sxs-lookup"><span data-stu-id="b249b-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>Ejemplo de temporizador de subproceso  
- En el ejemplo siguiente se inicia una tarea cada dos segundos y utiliza un indicador para iniciar el <xref:System.IDisposable.Dispose%2A>método que detiene el temporizador.</xref:System.IDisposable.Dispose%2A> Este ejemplo envía el estado a la ventana de salida.  
+## <a name="thread-timer-example"></a><span data-ttu-id="b249b-105">Ejemplo de temporizador de subprocesos</span><span class="sxs-lookup"><span data-stu-id="b249b-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="b249b-106">El ejemplo siguiente inicia una tarea cada dos segundos y usa un marcador para iniciar el método <xref:System.IDisposable.Dispose%2A>, que detiene el temporizador.</span><span class="sxs-lookup"><span data-stu-id="b249b-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="b249b-107">En este ejemplo se publica el estado en la ventana de salida.</span><span class="sxs-lookup"><span data-stu-id="b249b-107">This example posts status to the output window.</span></span>  
   
 ```vb  
 Private Class StateObjClass  
@@ -76,8 +68,8 @@ Private Sub TimerTask(ByVal StateObj As Object)
 End Sub  
 ```  
   
- Temporizadores de subprocesos resultan especialmente útiles cuando la <xref:System.Windows.Forms.Timer?displayProperty=fullName>objeto no está disponible, como cuando se están desarrollando aplicaciones de consola.</xref:System.Windows.Forms.Timer?displayProperty=fullName>  
+ <span data-ttu-id="b249b-108">Los temporizadores de subprocesos resultan especialmente útiles cuando el objeto <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> no se encuentra disponible; como cuando se desarrollan aplicaciones de consola.</span><span class="sxs-lookup"><span data-stu-id="b249b-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading></xref:System.Threading>   
- [Aplicaciones multiproceso (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)
+## <a name="see-also"></a><span data-ttu-id="b249b-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="b249b-109">See Also</span></span>  
+ <xref:System.Threading>  
+ [<span data-ttu-id="b249b-110">Aplicaciones multiproceso (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b249b-110">Multithreaded Applications (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

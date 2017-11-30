@@ -1,72 +1,70 @@
 ---
-title: "Patr&#243;n de Dispose | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Dispose (método)"
-  - "instrucciones de diseño clases biblioteca [.NET Framework], Dispose (método)"
-  - "instrucciones de diseño [.NET Framework] de bibliotecas de clases, Finalize (método)"
-  - "personalizar el nombre del método Dispose"
-  - "Finalize (método)"
+title: "Patrón de Dispose"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Dispose method
+- class library design guidelines [.NET Framework], Dispose method
+- class library design guidelines [.NET Framework], Finalize method
+- customizing Dispose method name
+- Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: 22
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 97f0c63857b7af408613e1ffdfecb157d1e2c704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Patr&#243;n de Dispose
-Todos los programas adquieren uno o más recursos del sistema, como memoria, identificadores de sistema o conexiones de base de datos, en el transcurso de su ejecución. Los desarrolladores tienen cuidado al usar estos recursos del sistema, porque debe liberarse tras adquirir y usar.  
+# <a name="dispose-pattern"></a><span data-ttu-id="478ff-102">Patrón de Dispose</span><span class="sxs-lookup"><span data-stu-id="478ff-102">Dispose Pattern</span></span>
+<span data-ttu-id="478ff-103">Todos los programas adquieren uno o más recursos del sistema, como la memoria, los identificadores del sistema o las conexiones de base de datos, en el transcurso de su ejecución.</span><span class="sxs-lookup"><span data-stu-id="478ff-103">All programs acquire one or more system resources, such as memory, system handles, or database connections, during the course of their execution.</span></span> <span data-ttu-id="478ff-104">Los desarrolladores tienen que tenga cuidado al usar estos recursos del sistema, porque debe liberarse después de adquirir y usar.</span><span class="sxs-lookup"><span data-stu-id="478ff-104">Developers have to be careful when using such system resources, because they must be released after they have been acquired and used.</span></span>  
   
- CLR proporciona compatibilidad para la administración automática de la memoria. Administra la memoria \(memoria asignada mediante el operador de C\# `new`\) no es necesario liberar de forma explícita. Se libera automáticamente por el recolector de elementos no utilizados \(GC\). Esto evita que los desarrolladores la tarea tediosa y difícil de liberación de memoria y ha sido una de las razones principales para la productividad sin precedentes proporcionada por .NET Framework.  
+ <span data-ttu-id="478ff-105">CLR proporciona compatibilidad para la administración automática de la memoria.</span><span class="sxs-lookup"><span data-stu-id="478ff-105">The CLR provides support for automatic memory management.</span></span> <span data-ttu-id="478ff-106">La memoria administrada (memoria asignada mediante el operador de C# `new`) no es necesario liberar de forma explícita.</span><span class="sxs-lookup"><span data-stu-id="478ff-106">Managed memory (memory allocated using the C# operator `new`) does not need to be explicitly released.</span></span> <span data-ttu-id="478ff-107">Se liberan automáticamente por el recolector de elementos no utilizados (GC).</span><span class="sxs-lookup"><span data-stu-id="478ff-107">It is released automatically by the garbage collector (GC).</span></span> <span data-ttu-id="478ff-108">Esto evita que los desarrolladores la tarea tediosa y difícil de liberación de memoria y ha sido una de las razones principales para la productividad sin precedentes ofrecida por .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="478ff-108">This frees developers from the tedious and difficult task of releasing memory and has been one of the main reasons for the unprecedented productivity afforded by the .NET Framework.</span></span>  
   
- Desafortunadamente, la memoria administrada es sólo uno de muchos tipos de recursos del sistema. Recursos distintos de la memoria administrada todavía deben liberar explícitamente y se conocen como recursos no administrados. El GC específicamente no fue diseñado para administrar estos recursos no administrados, lo que significa que la responsabilidad de administrar los recursos no administrados que se encuentra en manos de los desarrolladores.  
+ <span data-ttu-id="478ff-109">Desafortunadamente, la memoria administrada es solo uno de muchos tipos de recursos del sistema.</span><span class="sxs-lookup"><span data-stu-id="478ff-109">Unfortunately, managed memory is just one of many types of system resources.</span></span> <span data-ttu-id="478ff-110">Aún así, los recursos distintos de la memoria administrada deben liberar explícitamente y se conocen como recursos no administrados.</span><span class="sxs-lookup"><span data-stu-id="478ff-110">Resources other than managed memory still need to be released explicitly and are referred to as unmanaged resources.</span></span> <span data-ttu-id="478ff-111">El catálogo global concreto no se diseñó para administrar estos recursos no administrados, lo que significa que la responsabilidad de administrar los recursos no administrados que se encuentra en manos de los desarrolladores.</span><span class="sxs-lookup"><span data-stu-id="478ff-111">The GC was specifically not designed to manage such unmanaged resources, which means that the responsibility for managing unmanaged resources lies in the hands of the developers.</span></span>  
   
- El CLR proporciona ayuda en liberar recursos no administrados.<xref:System.Object?displayProperty=fullName> declara un método virtual <xref:System.Object.Finalize%2A> \(también denominado el finalizador\) que llama el GC antes de la memoria del objeto sea reclamada por el catálogo global y se puede invalidar para liberar recursos no administrados. Los tipos que reemplazan el finalizador se conocen como tipos susceptibles de finalización.  
+ <span data-ttu-id="478ff-112">El CLR proporciona ayuda en liberar recursos no administrados.</span><span class="sxs-lookup"><span data-stu-id="478ff-112">The CLR provides some help in releasing unmanaged resources.</span></span> <span data-ttu-id="478ff-113"><xref:System.Object?displayProperty=nameWithType>declara un método virtual <xref:System.Object.Finalize%2A> (también denominado el finalizador) que es llamado por el catálogo global antes de la memoria del objeto sea reclamada por el catálogo global y se puede invalidar para liberar recursos no administrados.</span><span class="sxs-lookup"><span data-stu-id="478ff-113"><xref:System.Object?displayProperty=nameWithType> declares a virtual method <xref:System.Object.Finalize%2A> (also called the finalizer) that is called by the GC before the object’s memory is reclaimed by the GC and can be overridden to release unmanaged resources.</span></span> <span data-ttu-id="478ff-114">Los tipos que invalidan el finalizador se conocen como tipos susceptibles de finalización.</span><span class="sxs-lookup"><span data-stu-id="478ff-114">Types that override the finalizer are referred to as finalizable types.</span></span>  
   
- Aunque los finalizadores son eficaces en algunos escenarios de limpieza, tienen dos inconvenientes significativos:  
+ <span data-ttu-id="478ff-115">Aunque los finalizadores son eficaces en algunos escenarios de limpieza, tienen dos desventajas importantes:</span><span class="sxs-lookup"><span data-stu-id="478ff-115">Although finalizers are effective in some cleanup scenarios, they have two significant drawbacks:</span></span>  
   
--   El finalizador se llama cuando el GC detecta que un objeto es apto para la recolección. Esto sucede durante un período indeterminado de tiempo después de que el recurso ya no es necesaria. El retraso entre cuando el desarrollador puede o desea liberar el recurso y la hora cuando el recurso se libera realmente el finalizador puede ser inaceptable en programas que adquieren varios recursos insuficientes \(recursos que se pueden agotar fácilmente\) o en casos en que los recursos son costosos de mantener en uso \(por ejemplo, los búferes de gran cantidad de memoria no administrada\).  
+-   <span data-ttu-id="478ff-116">El finalizador se llama cuando el GC detecta que un objeto es apto para la recolección.</span><span class="sxs-lookup"><span data-stu-id="478ff-116">The finalizer is called when the GC detects that an object is eligible for collection.</span></span> <span data-ttu-id="478ff-117">Esto sucede durante un período indeterminado de tiempo después de que el recurso no es necesaria ya.</span><span class="sxs-lookup"><span data-stu-id="478ff-117">This happens at some undetermined period of time after the resource is not needed anymore.</span></span> <span data-ttu-id="478ff-118">El retraso entre cuando el desarrollador puede o desea liberar el recurso y la hora cuando el recurso se libera realmente por el finalizador podría ser aceptable en programas que adquieren muchos recursos insuficientes (recursos que se pueden agotar fácilmente) o en casos en que los recursos son costosos mantener en uso (p. ej., los búferes de gran cantidad de memoria no administrada).</span><span class="sxs-lookup"><span data-stu-id="478ff-118">The delay between when the developer could or would like to release the resource and the time when the resource is actually released by the finalizer might be unacceptable in programs that acquire many scarce resources (resources that can be easily exhausted) or in cases in which resources are costly to keep in use (e.g., large unmanaged memory buffers).</span></span>  
   
--   Cuando el CLR necesita llamar a un finalizador, debe posponer la colección de la memoria del objeto hasta la próxima de ida y vuelta de elementos no utilizados \(los finalizadores que se ejecute entre colecciones\). Esto significa que la memoria del objeto \(y todos los objetos que se hace referencia a\) no se lance durante un período de tiempo más largo.  
+-   <span data-ttu-id="478ff-119">Cuando el CLR necesita llamar a un finalizador, debe posponer esta acción de la memoria del objeto hasta que la siguiente de ida y vuelta de recolección de elementos (los finalizadores ejecutar entre colecciones).</span><span class="sxs-lookup"><span data-stu-id="478ff-119">When the CLR needs to call a finalizer, it must postpone collection of the object’s memory until the next round of garbage collection (the finalizers run between collections).</span></span> <span data-ttu-id="478ff-120">Esto significa que la memoria del objeto (y todos los objetos que se hace referencia a) no se disocie durante un período más largo de tiempo.</span><span class="sxs-lookup"><span data-stu-id="478ff-120">This means that the object’s memory (and all objects it refers to) will not be released for a longer period of time.</span></span>  
   
- Por lo tanto, basarse exclusivamente en los finalizadores podría no ser apropiado en muchos escenarios cuando es importante reclamar los recursos no administrados lo más rápidamente posible, cuando se trabaja con recursos insuficientes, o en escenarios de gran rendimiento alta en el que el GC agregado sobrecarga de finalización no es aceptable.  
+ <span data-ttu-id="478ff-121">Por lo tanto, basarse exclusivamente en los finalizadores podría no ser apropiado en muchos escenarios cuando es importante reclamar los recursos no administrados lo más rápido posible, cuando se trabaja con recursos insuficientes, o en escenarios de alta un rendimiento superior en el que la sobrecarga adicional de GC de finalización no es aceptable.</span><span class="sxs-lookup"><span data-stu-id="478ff-121">Therefore, relying exclusively on finalizers might not be appropriate in many scenarios when it is important to reclaim unmanaged resources as quickly as possible, when dealing with scarce resources, or in highly performant scenarios in which the added GC overhead of finalization is unacceptable.</span></span>  
   
- Proporciona el marco de la <xref:System.IDisposable?displayProperty=fullName> interfaz que debe implementarse para proporcionar a los programadores un método manual para liberar recursos no administrados como no son necesarios. También proporciona el <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> método que puede indicar el GC que un objeto se ha eliminado manualmente y no necesita finalizarse ya, en cuyo caso se puede reclamar la memoria del objeto anterior. Tipos que implementan la `IDisposable` interfaz se conocen como tipos de elementos desechables.  
+ <span data-ttu-id="478ff-122">El marco de trabajo proporciona el <xref:System.IDisposable?displayProperty=nameWithType> interfaz que debe implementarse para proporcionar a los programadores un método manual para liberar recursos no administrados como no son necesarios.</span><span class="sxs-lookup"><span data-stu-id="478ff-122">The Framework provides the <xref:System.IDisposable?displayProperty=nameWithType> interface that should be implemented to provide the developer a manual way to release unmanaged resources as soon as they are not needed.</span></span> <span data-ttu-id="478ff-123">También proporciona la <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> método que puede indicar el catálogo global que un objeto se ha eliminado manualmente y no necesita ser finalizados ya, en cuyo caso se puede reclamar la memoria del objeto anterior.</span><span class="sxs-lookup"><span data-stu-id="478ff-123">It also provides the <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> method that can tell the GC that an object was manually disposed of and does not need to be finalized anymore, in which case the object’s memory can be reclaimed earlier.</span></span> <span data-ttu-id="478ff-124">Los tipos que implementan la `IDisposable` interfaz se conocen como tipos descartables.</span><span class="sxs-lookup"><span data-stu-id="478ff-124">Types that implement the `IDisposable` interface are referred to as disposable types.</span></span>  
   
- El patrón Dispose está diseñado para estandarizar el uso y la implementación de finalizadores y `IDisposable` interfaz.  
+ <span data-ttu-id="478ff-125">El patrón Dispose está diseñado para estandarizar el uso y la implementación de los finalizadores y el `IDisposable` interfaz.</span><span class="sxs-lookup"><span data-stu-id="478ff-125">The Dispose Pattern is intended to standardize the usage and implementation of finalizers and the `IDisposable` interface.</span></span>  
   
- El motivo principal para el modelo es reducir la complejidad de la implementación de la <xref:System.Object.Finalize%2A> y la <xref:System.IDisposable.Dispose%2A> métodos. La complejidad procede del hecho de que los métodos comparten algunas pero no todas las rutas de acceso de código \(las diferencias se describen más adelante en este capítulo\). Además, existen motivos históricos para algunos elementos del modelo relacionados con la evolución de la compatibilidad de idioma para la administración de recursos determinista.  
+ <span data-ttu-id="478ff-126">La motivación principal para el patrón es reducir la complejidad de la implementación de la <xref:System.Object.Finalize%2A> y <xref:System.IDisposable.Dispose%2A> métodos.</span><span class="sxs-lookup"><span data-stu-id="478ff-126">The main motivation for the pattern is to reduce the complexity of the implementation of the <xref:System.Object.Finalize%2A> and the <xref:System.IDisposable.Dispose%2A> methods.</span></span> <span data-ttu-id="478ff-127">La complejidad proviene del hecho de que los métodos comparten algunos, pero no todas las rutas de acceso de código (las diferencias se describen más adelante en el capítulo).</span><span class="sxs-lookup"><span data-stu-id="478ff-127">The complexity stems from the fact that the methods share some but not all code paths (the differences are described later in the chapter).</span></span> <span data-ttu-id="478ff-128">Además, existen motivos históricos para algunos de los elementos del modelo relacionados con la evolución de la compatibilidad de idioma para la administración de recursos determinista.</span><span class="sxs-lookup"><span data-stu-id="478ff-128">In addition, there are historical reasons for some elements of the pattern related to the evolution of language support for deterministic resource management.</span></span>  
   
- **✓ hacer** implementar el patrón Dispose básico en tipos que contiene instancias de tipos de elementos desechables. Consulte la [patrón Dispose básico](#basic_pattern) sección para obtener más información sobre el patrón básico.  
+ <span data-ttu-id="478ff-129">**✓ HACER** implementar el patrón de Dispose básico en tipos que contiene instancias de los tipos descartables.</span><span class="sxs-lookup"><span data-stu-id="478ff-129">**✓ DO** implement the Basic Dispose Pattern on types containing instances of disposable types.</span></span> <span data-ttu-id="478ff-130">Consulte la [patrón de Dispose básico](#basic_pattern) sección para obtener más información sobre el patrón básico.</span><span class="sxs-lookup"><span data-stu-id="478ff-130">See the [Basic Dispose Pattern](#basic_pattern) section for details on the basic pattern.</span></span>  
   
- Si un tipo es responsable de la duración de otros objetos descartables, los desarrolladores necesitan una forma de deshacerse de ellos, demasiado. Uso del contenedor `Dispose` método es una forma cómoda para que esto sea posible.  
+ <span data-ttu-id="478ff-131">Si un tipo es responsable de la duración de otros objetos descartables, los desarrolladores necesitan una manera para deshacerse de ellos, demasiado.</span><span class="sxs-lookup"><span data-stu-id="478ff-131">If a type is responsible for the lifetime of other disposable objects, developers need a way to dispose of them, too.</span></span> <span data-ttu-id="478ff-132">Uso del contenedor `Dispose` método es una manera cómoda para que esto sea posible.</span><span class="sxs-lookup"><span data-stu-id="478ff-132">Using the container’s `Dispose` method is a convenient way to make this possible.</span></span>  
   
- **✓ hacer** implementar el patrón Dispose básico y proporcionar un finalizador en tipos de recursos de explotación que deben ser liberados explícitamente y que no tienen finalizadores.  
+ <span data-ttu-id="478ff-133">**✓ HACER** implementar el patrón Dispose básico y se proporciona un finalizador en tipos que contiene recursos que deben ser liberados explícitamente y que no tienen los finalizadores.</span><span class="sxs-lookup"><span data-stu-id="478ff-133">**✓ DO** implement the Basic Dispose Pattern and provide a finalizer on types holding resources that need to be freed explicitly and that do not have finalizers.</span></span>  
   
- Por ejemplo, se debe implementar el patrón en tipos de almacenamiento de los búferes de memoria no administrada. El [tipos susceptibles de finalización](#finalizable_types) sección describe directrices relacionadas con la implementación de finalizadores.  
+ <span data-ttu-id="478ff-134">Por ejemplo, el modelo debe implementarse en tipos de almacenamiento de los búferes de memoria no administrada.</span><span class="sxs-lookup"><span data-stu-id="478ff-134">For example, the pattern should be implemented on types storing unmanaged memory buffers.</span></span> <span data-ttu-id="478ff-135">El [tipos susceptibles de finalización](#finalizable_types) sección describe directrices relacionadas con la implementación de los finalizadores.</span><span class="sxs-lookup"><span data-stu-id="478ff-135">The [Finalizable Types](#finalizable_types) section discusses guidelines related to implementing finalizers.</span></span>  
   
- **✓ considere** implementa el patrón Dispose básico en clases que ellos mismos no mantenga los recursos no administrados u objetos descartables pero están probable que tenga los subtipos que lo hacen.  
+ <span data-ttu-id="478ff-136">**✓ Considere la posibilidad de** implementar el patrón de Dispose básicas en las clases que ellos mismos no mantenga los recursos no administrados o los objetos descartables pero están probables que tienen subtipos que realizar.</span><span class="sxs-lookup"><span data-stu-id="478ff-136">**✓ CONSIDER** implementing the Basic Dispose Pattern on classes that themselves don’t hold unmanaged resources or disposable objects but are likely to have subtypes that do.</span></span>  
   
- Un buen ejemplo de esto es la <xref:System.IO.Stream?displayProperty=fullName> clase. Aunque es una clase base abstracta que no contiene todos los recursos, la mayoría de sus subclases y por este motivo, que implementa este patrón.  
+ <span data-ttu-id="478ff-137">Un buen ejemplo de esto es la <xref:System.IO.Stream?displayProperty=nameWithType> clase.</span><span class="sxs-lookup"><span data-stu-id="478ff-137">A great example of this is the <xref:System.IO.Stream?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="478ff-138">Aunque es una clase base abstracta que no contiene todos los recursos, no de la mayoría de sus subclases y por este motivo, implementa este patrón.</span><span class="sxs-lookup"><span data-stu-id="478ff-138">Although it is an abstract base class that doesn’t hold any resources, most of its subclasses do and because of this, it implements this pattern.</span></span>  
   
 <a name="basic_pattern"></a>   
-## Patrón de Dispose básica  
- La implementación básica del patrón implica implementar el `System.IDisposable` interfaz y declarar la `Dispose(bool)` método que implementa la lógica de limpieza de todos los recursos compartido entre el `Dispose` método y el finalizador opcional.  
+## <a name="basic-dispose-pattern"></a><span data-ttu-id="478ff-139">Patrón de Dispose básica</span><span class="sxs-lookup"><span data-stu-id="478ff-139">Basic Dispose Pattern</span></span>  
+ <span data-ttu-id="478ff-140">La implementación básica del patrón, es preciso implementar la `System.IDisposable` interfaz y declarar la `Dispose(bool)` método que implementa la lógica de limpieza de todos los recursos que deban compartirse entre el `Dispose` método y el finalizador opcional.</span><span class="sxs-lookup"><span data-stu-id="478ff-140">The basic implementation of the pattern involves implementing the `System.IDisposable` interface and declaring the `Dispose(bool)` method that implements all resource cleanup logic to be shared between the `Dispose` method and the optional finalizer.</span></span>  
   
- En el ejemplo siguiente se muestra una implementación sencilla del patrón básico:  
+ <span data-ttu-id="478ff-141">En el ejemplo siguiente se muestra una implementación simple del patrón básico:</span><span class="sxs-lookup"><span data-stu-id="478ff-141">The following example shows a simple implementation of the basic pattern:</span></span>  
   
 ```  
 public class DisposableResourceHolder : IDisposable {  
@@ -90,13 +88,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- El parámetro booleano `disposing` indica si el método se invoca desde el `IDisposable.Dispose` implementación o desde el finalizador. El `Dispose(bool)` implementación debe comprobar el parámetro antes de obtener acceso a otros objetos de referencia \(por ejemplo, el campo de recursos en el ejemplo anterior\). Estos objetos sólo deben tener acceso cuando se llama al método desde el `IDisposable.Dispose` implementación \(cuando el `disposing` parámetro es igual a true\). Si el método se invoca desde el finalizador \(`disposing` es false\), no se deben tener acceso a otros objetos. El motivo es que los objetos se finalizan en un orden impredecible y por lo tanto, o cualquiera de sus dependencias, podría haber finalizado.  
+ <span data-ttu-id="478ff-142">El parámetro booleano `disposing` indica si el método se invoca desde la `IDisposable.Dispose` implementación o desde el finalizador.</span><span class="sxs-lookup"><span data-stu-id="478ff-142">The Boolean parameter `disposing` indicates whether the method was invoked from the `IDisposable.Dispose` implementation or from the finalizer.</span></span> <span data-ttu-id="478ff-143">El `Dispose(bool)` implementación debe comprobar el parámetro antes de obtener acceso a otros objetos de referencia (por ejemplo, el campo de recursos en el ejemplo anterior).</span><span class="sxs-lookup"><span data-stu-id="478ff-143">The `Dispose(bool)` implementation should check the parameter before accessing other reference objects (e.g., the resource field in the preceding sample).</span></span> <span data-ttu-id="478ff-144">Solo se deben acceder a estos objetos cuando se llama al método desde el `IDisposable.Dispose` implementación (cuando el `disposing` parámetro es igual a true).</span><span class="sxs-lookup"><span data-stu-id="478ff-144">Such objects should only be accessed when the method is called from the `IDisposable.Dispose` implementation (when the `disposing` parameter is equal to true).</span></span> <span data-ttu-id="478ff-145">Si el método se invoca desde el finalizador (`disposing` es false), no se deben tener acceso a otros objetos.</span><span class="sxs-lookup"><span data-stu-id="478ff-145">If the method is invoked from the finalizer (`disposing` is false), other objects should not be accessed.</span></span> <span data-ttu-id="478ff-146">La razón es que los objetos se finalizan en un orden impredecible y por lo tanto, o cualquiera de sus dependencias, podría haber finalizado.</span><span class="sxs-lookup"><span data-stu-id="478ff-146">The reason is that objects are finalized in an unpredictable order and so they, or any of their dependencies, might already have been finalized.</span></span>  
   
- Además, esta sección se aplica a las clases con una base que ya no implementan el patrón Dispose. Si se hereda de una clase que implemente el patrón, invalide el `Dispose(bool)` método para proporcionar la lógica de limpieza de recursos adicionales.  
+ <span data-ttu-id="478ff-147">Además, esta sección se aplica a las clases con una base de que ya no implementan el patrón Dispose.</span><span class="sxs-lookup"><span data-stu-id="478ff-147">Also, this section applies to classes with a base that does not already implement the Dispose Pattern.</span></span> <span data-ttu-id="478ff-148">Si se hereda de una clase que ya implementa el patrón, invalide el `Dispose(bool)` método para proporcionar lógica de limpieza de recursos adicionales.</span><span class="sxs-lookup"><span data-stu-id="478ff-148">If you are inheriting from a class that already implements the pattern, simply override the `Dispose(bool)` method to provide additional resource cleanup logic.</span></span>  
   
- **✓ hacer** declara void virtual protegido `Dispose(bool disposing)` método centralizar toda la lógica relacionada con liberar recursos no administrados.  
+ <span data-ttu-id="478ff-149">**✓ HACER** declarar un void virtual protegido `Dispose(bool disposing)` relacionado de método para centralizar toda la lógica para liberar recursos no administrados.</span><span class="sxs-lookup"><span data-stu-id="478ff-149">**✓ DO** declare a protected virtual void `Dispose(bool disposing)` method to centralize all logic related to releasing unmanaged resources.</span></span>  
   
- Todos los recursos deben limpiarse en este método. Se llama al método desde el finalizador de ambos y `IDisposable.Dispose` \(método\). El parámetro es false si se invoca desde dentro de un finalizador. Se debe usar para asegurarse de que cualquier código que se ejecuta durante la finalización no se tiene acceso a otros objetos susceptibles de finalización. En la siguiente sección se describen los detalles de implementación de finalizadores.  
+ <span data-ttu-id="478ff-150">Todos los recursos deben limpiarse en este método.</span><span class="sxs-lookup"><span data-stu-id="478ff-150">All resource cleanup should occur in this method.</span></span> <span data-ttu-id="478ff-151">Se llama al método desde el finalizador de ambos y `IDisposable.Dispose` método.</span><span class="sxs-lookup"><span data-stu-id="478ff-151">The method is called from both the finalizer and the `IDisposable.Dispose` method.</span></span> <span data-ttu-id="478ff-152">El parámetro será false si se va a invocar desde dentro de un finalizador.</span><span class="sxs-lookup"><span data-stu-id="478ff-152">The parameter will be false if being invoked from inside a finalizer.</span></span> <span data-ttu-id="478ff-153">Se debe usar para asegurarse de que cualquier código que se ejecuta durante la finalización no se tiene acceso a otros objetos susceptibles de finalización.</span><span class="sxs-lookup"><span data-stu-id="478ff-153">It should be used to ensure any code running during finalization is not accessing other finalizable objects.</span></span> <span data-ttu-id="478ff-154">Detalles de la implementación de los finalizadores se describen en la sección siguiente.</span><span class="sxs-lookup"><span data-stu-id="478ff-154">Details of implementing finalizers are described in the next section.</span></span>  
   
 ```  
 protected virtual void Dispose(bool disposing){  
@@ -106,9 +104,9 @@ protected virtual void Dispose(bool disposing){
 }  
 ```  
   
- **✓ hacer** implementar la `IDisposable` interfaz mediante la llamada a `Dispose(true)` seguido de `GC.SuppressFinalize(this)`.  
+ <span data-ttu-id="478ff-155">**✓ HACER** implementar la `IDisposable` interfaz llamando simplemente `Dispose(true)` seguido de `GC.SuppressFinalize(this)`.</span><span class="sxs-lookup"><span data-stu-id="478ff-155">**✓ DO** implement the `IDisposable` interface by simply calling `Dispose(true)` followed by `GC.SuppressFinalize(this)`.</span></span>  
   
- La llamada a `SuppressFinalize` solo debería ocurrir si `Dispose(true)` se ejecuta correctamente.  
+ <span data-ttu-id="478ff-156">La llamada a `SuppressFinalize` solo deberían producirse si `Dispose(true)` se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="478ff-156">The call to `SuppressFinalize` should only occur if `Dispose(true)` executes successfully.</span></span>  
   
 ```  
 public void Dispose(){  
@@ -117,9 +115,9 @@ public void Dispose(){
 }  
 ```  
   
- **X no** realizar sin parámetros `Dispose` método virtual.  
+ <span data-ttu-id="478ff-157">**X DO NOT** realizar sin parámetros `Dispose` método virtual.</span><span class="sxs-lookup"><span data-stu-id="478ff-157">**X DO NOT** make the parameterless `Dispose` method virtual.</span></span>  
   
- El `Dispose(bool)` método es el que debe reemplazarse por las subclases.  
+ <span data-ttu-id="478ff-158">El `Dispose(bool)` método es el que debe reemplazarse por las subclases.</span><span class="sxs-lookup"><span data-stu-id="478ff-158">The `Dispose(bool)` method is the one that should be overridden by subclasses.</span></span>  
   
 ```  
 // bad design  
@@ -135,11 +133,11 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **X no** declarar las sobrecargas de los `Dispose` método distinto de `Dispose()` y `Dispose(bool)`.  
+ <span data-ttu-id="478ff-159">**X DO NOT** declarar las sobrecargas de la `Dispose` otro método que `Dispose()` y `Dispose(bool)`.</span><span class="sxs-lookup"><span data-stu-id="478ff-159">**X DO NOT** declare any overloads of the `Dispose` method other than `Dispose()` and `Dispose(bool)`.</span></span>  
   
- `Dispose` debe considerarse una palabra reservada para codificar este patrón y evitar la confusión entre los implementadores, los usuarios y los compiladores. Algunos lenguajes pueden optar por implementar automáticamente este patrón de determinados tipos.  
+ <span data-ttu-id="478ff-160">`Dispose`debe considerarse una palabra reservada para ayudar a codificar este patrón y evitar la confusión entre los implementadores y los usuarios, los compiladores.</span><span class="sxs-lookup"><span data-stu-id="478ff-160">`Dispose` should be considered a reserved word to help codify this pattern and prevent confusion among implementers, users, and compilers.</span></span> <span data-ttu-id="478ff-161">Algunos lenguajes pueden optar por implementar automáticamente este patrón de determinados tipos.</span><span class="sxs-lookup"><span data-stu-id="478ff-161">Some languages might choose to automatically implement this pattern on certain types.</span></span>  
   
- **✓ hacer** permitir la `Dispose(bool)` método al que llamar más de una vez. El método puede optar por no hacer nada después de la primera llamada.  
+ <span data-ttu-id="478ff-162">**✓ HACER** permitir la `Dispose(bool)` método al que llamar más de una vez.</span><span class="sxs-lookup"><span data-stu-id="478ff-162">**✓ DO** allow the `Dispose(bool)` method to be called more than once.</span></span> <span data-ttu-id="478ff-163">El método puede optar por no hacer nada después de la primera llamada.</span><span class="sxs-lookup"><span data-stu-id="478ff-163">The method might choose to do nothing after the first call.</span></span>  
   
 ```  
 public class DisposableResourceHolder : IDisposable {  
@@ -155,13 +153,13 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **Evitar X** producir una excepción desde `Dispose(bool)` excepto en situaciones críticas que se ha dañado el proceso que contiene \(pérdidas, estado compartido incoherente, etc.\).  
+ <span data-ttu-id="478ff-164">**X evitar** producir una excepción desde `Dispose(bool)` excepto en situaciones críticas que se ha dañado el proceso que lo contiene (pérdidas, un estado compartido incoherente, etcetera).</span><span class="sxs-lookup"><span data-stu-id="478ff-164">**X AVOID** throwing an exception from within `Dispose(bool)` except under critical situations where the containing process has been corrupted (leaks, inconsistent shared state, etc.).</span></span>  
   
- Los usuarios esperan que una llamada a `Dispose` no producirá una excepción.  
+ <span data-ttu-id="478ff-165">Los usuarios esperan que una llamada a `Dispose` no generará una excepción.</span><span class="sxs-lookup"><span data-stu-id="478ff-165">Users expect that a call to `Dispose` will not raise an exception.</span></span>  
   
- Si `Dispose` podría generar una excepción, no se ejecutará más lógica de limpieza del bloque finally. Para solucionar este problema, el usuario tendría que incluir todas las llamadas a `Dispose` \(dentro del bloque finally\!\) en un bloque try, lo que conduce a controladores de limpieza muy compleja. Si ejecuta un `Dispose(bool disposing)` método, nunca inicia una excepción si disposing es false. Esto finalizará el proceso si se ejecuta en un contexto de finalizador.  
+ <span data-ttu-id="478ff-166">Si `Dispose` podría producir una excepción, no se ejecutará más lógica de limpieza del bloque finally.</span><span class="sxs-lookup"><span data-stu-id="478ff-166">If `Dispose` could raise an exception, further finally-block cleanup logic will not execute.</span></span> <span data-ttu-id="478ff-167">Para resolver este problema, el usuario necesitaría ajustar todas las llamadas a `Dispose` (en el bloque finally!) en un bloque try, lo que conduce a controladores de limpieza muy complejos.</span><span class="sxs-lookup"><span data-stu-id="478ff-167">To work around this, the user would need to wrap every call to `Dispose` (within the finally block!) in a try block, which leads to very complex cleanup handlers.</span></span> <span data-ttu-id="478ff-168">Si ejecuta un `Dispose(bool disposing)` método, nunca inician una excepción si la eliminación es false.</span><span class="sxs-lookup"><span data-stu-id="478ff-168">If executing a `Dispose(bool disposing)` method, never throw an exception if disposing is false.</span></span> <span data-ttu-id="478ff-169">Si lo hace, se terminará el proceso si la ejecución dentro de un contexto de finalizador.</span><span class="sxs-lookup"><span data-stu-id="478ff-169">Doing so will terminate the process if executing inside a finalizer context.</span></span>  
   
- **✓ hacer** producir una <xref:System.ObjectDisposedException> de cualquier miembro que no se puede utilizar después de que se ha eliminado el objeto.  
+ <span data-ttu-id="478ff-170">**✓ HACER** producir una <xref:System.ObjectDisposedException> de cualquier miembro que no se puede utilizar una vez que se ha eliminado el objeto.</span><span class="sxs-lookup"><span data-stu-id="478ff-170">**✓ DO** throw an <xref:System.ObjectDisposedException> from any member that cannot be used after the object has been disposed of.</span></span>  
   
 ```  
 public class DisposableResourceHolder : IDisposable {  
@@ -182,9 +180,9 @@ public class DisposableResourceHolder : IDisposable {
 }  
 ```  
   
- **✓, considere la posibilidad de** de forma `Close()`, además el `Dispose()`, si es cerrar la terminología estándar en el área.  
+ <span data-ttu-id="478ff-171">**✓ Considere la posibilidad de** proporciona el método `Close()`, además el `Dispose()`, si es cerrar terminología estándar en el área.</span><span class="sxs-lookup"><span data-stu-id="478ff-171">**✓ CONSIDER** providing method `Close()`, in addition to the `Dispose()`, if close is standard terminology in the area.</span></span>  
   
- Al hacerlo, es importante que realice el `Close` idéntico de la implementación `Dispose` y considere implementar la `IDisposable.Dispose` método explícitamente.  
+ <span data-ttu-id="478ff-172">Al hacerlo, es importante que realice la `Close` idéntico de la implementación `Dispose` y considere implementar la `IDisposable.Dispose` método explícitamente.</span><span class="sxs-lookup"><span data-stu-id="478ff-172">When doing so, it is important that you make the `Close` implementation identical to `Dispose` and consider implementing the `IDisposable.Dispose` method explicitly.</span></span>  
   
 ```  
 public class Stream : IDisposable {  
@@ -199,16 +197,16 @@ public class Stream : IDisposable {
 ```  
   
 <a name="finalizable_types"></a>   
-## Tipos susceptibles de finalización  
- Tipos susceptibles de finalización son tipos que extienden el patrón Dispose básico reemplazando el finalizador y proporcionar la ruta de acceso de código de finalización en la `Dispose(bool)` \(método\).  
+## <a name="finalizable-types"></a><span data-ttu-id="478ff-173">Tipos susceptibles de finalización</span><span class="sxs-lookup"><span data-stu-id="478ff-173">Finalizable Types</span></span>  
+ <span data-ttu-id="478ff-174">Los tipos susceptibles de finalización son tipos que extienden el patrón Dispose básico reemplazando el finalizador y proporcionar la ruta de acceso de código de finalización en la `Dispose(bool)` método.</span><span class="sxs-lookup"><span data-stu-id="478ff-174">Finalizable types are types that extend the Basic Dispose Pattern by overriding the finalizer and providing finalization code path in the `Dispose(bool)` method.</span></span>  
   
- Los finalizadores son considerablemente difíciles de implementar correctamente, principalmente porque no puede realizar determinadas suposiciones sobre el estado del sistema \(normalmente válidos\) durante su ejecución. Las instrucciones siguientes deben tenerse en consideración cuidadosa.  
+ <span data-ttu-id="478ff-175">Los finalizadores son considerablemente difíciles de implementar correctamente, principalmente porque no se realizan determinadas suposiciones (suele ser válidos) sobre el estado del sistema durante su ejecución.</span><span class="sxs-lookup"><span data-stu-id="478ff-175">Finalizers are notoriously difficult to implement correctly, primarily because you cannot make certain (normally valid) assumptions about the state of the system during their execution.</span></span> <span data-ttu-id="478ff-176">Las instrucciones siguientes deben tenerse en consideración cuidadosa.</span><span class="sxs-lookup"><span data-stu-id="478ff-176">The following guidelines should be taken into careful consideration.</span></span>  
   
- Tenga en cuenta que algunas de las instrucciones no sólo al aplican la `Finalize` \(método\), pero a cualquier código que llama desde un finalizador. En el caso del Dispose patrón básico definido anteriormente, esto significa la lógica que se ejecuta dentro de `Dispose(bool disposing)` cuando el `disposing` parámetro es false.  
+ <span data-ttu-id="478ff-177">Tenga en cuenta que algunas de las instrucciones se aplican no solo a los `Finalize` (método), pero en cualquier código llamar desde un finalizador.</span><span class="sxs-lookup"><span data-stu-id="478ff-177">Note that some of the guidelines apply not just to the `Finalize` method, but to any code called from a finalizer.</span></span> <span data-ttu-id="478ff-178">En el caso del Dispose patrón básico definido anteriormente, esto significa lógica que se ejecute dentro de `Dispose(bool disposing)` cuando el `disposing` del parámetro es false.</span><span class="sxs-lookup"><span data-stu-id="478ff-178">In the case of the Basic Dispose Pattern previously defined, this means logic that executes inside `Dispose(bool disposing)` when the `disposing` parameter is false.</span></span>  
   
- Si la clase base ya es susceptible de finalización e implementa el patrón Dispose básico, no debe invalidar `Finalize` nuevo. En su lugar, debe reemplazar simplemente la `Dispose(bool)` método para proporcionar la lógica de limpieza de recursos adicionales.  
+ <span data-ttu-id="478ff-179">Si la clase base ya está susceptibles de finalización e implementa el patrón Dispose básico, no debe invalidar `Finalize` nuevo.</span><span class="sxs-lookup"><span data-stu-id="478ff-179">If the base class already is finalizable and implements the Basic Dispose Pattern, you should not override `Finalize` again.</span></span> <span data-ttu-id="478ff-180">En su lugar, debería invalidar simplemente la `Dispose(bool)` método para proporcionar lógica de limpieza de recursos adicionales.</span><span class="sxs-lookup"><span data-stu-id="478ff-180">You should instead just override the `Dispose(bool)` method to provide additional resource cleanup logic.</span></span>  
   
- El código siguiente muestra un ejemplo de un tipo susceptibles de finalización:  
+ <span data-ttu-id="478ff-181">El código siguiente muestra un ejemplo de un tipo susceptibles de finalización:</span><span class="sxs-lookup"><span data-stu-id="478ff-181">The following code shows an example of a finalizable type:</span></span>  
   
 ```  
 public class ComplexResourceHolder : IDisposable {  
@@ -239,17 +237,17 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **Evitar X** crear tipos susceptibles de finalización.  
+ <span data-ttu-id="478ff-182">**X evitar** realicen tipos susceptibles de finalización.</span><span class="sxs-lookup"><span data-stu-id="478ff-182">**X AVOID** making types finalizable.</span></span>  
   
- Considere detenidamente un caso en el que piensa que es necesario un finalizador. Hay un número real los costos asociados con instancias de los finalizadores, desde el punto de vista de complejidad de un código y el rendimiento. Prefieren usar contenedores de recursos como <xref:System.Runtime.InteropServices.SafeHandle> para encapsular los recursos no administrados cuando sea posible, en cuyo caso un finalizador se convierte en innecesario porque el contenedor es responsable de su propia limpieza de recursos.  
+ <span data-ttu-id="478ff-183">Tenga en cuenta todos los casos en que cree que es necesario un finalizador.</span><span class="sxs-lookup"><span data-stu-id="478ff-183">Carefully consider any case in which you think a finalizer is needed.</span></span> <span data-ttu-id="478ff-184">Hay un número real los costos asociados con instancias con los finalizadores, desde la perspectiva de complejidad de un código y el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="478ff-184">There is a real cost associated with instances with finalizers, from both a performance and code complexity standpoint.</span></span> <span data-ttu-id="478ff-185">Prefiere con contenedores de recursos como <xref:System.Runtime.InteropServices.SafeHandle> para encapsular los recursos no administrados que siempre que sea posible, en cuyo caso un finalizador se convierte en innecesario porque el contenedor es responsable de su propia limpieza de recursos.</span><span class="sxs-lookup"><span data-stu-id="478ff-185">Prefer using resource wrappers such as <xref:System.Runtime.InteropServices.SafeHandle> to encapsulate unmanaged resources where possible, in which case a finalizer becomes unnecessary because the wrapper is responsible for its own resource cleanup.</span></span>  
   
- **X no** susceptibles de finalización permite que los tipos de valor.  
+ <span data-ttu-id="478ff-186">**X DO NOT** que los tipos de valor susceptibles de finalización.</span><span class="sxs-lookup"><span data-stu-id="478ff-186">**X DO NOT** make value types finalizable.</span></span>  
   
- Obtengan finalizados realmente sólo los tipos de referencia CLR y, por tanto, se omitirá cualquier intento de colocar un finalizador en un tipo de valor. Los compiladores de C\+\+ y C\# cumple esta regla.  
+ <span data-ttu-id="478ff-187">Solo los tipos de referencia realmente obtengan finalizados CLR y, por tanto, se pasará por alto cualquier intento para colocar un finalizador en un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="478ff-187">Only reference types actually get finalized by the CLR, and thus any attempt to place a finalizer on a value type will be ignored.</span></span> <span data-ttu-id="478ff-188">Los compiladores de C++ y C# aplican esta regla.</span><span class="sxs-lookup"><span data-stu-id="478ff-188">The C# and C++ compilers enforce this rule.</span></span>  
   
- **✓ hacer** hacer susceptibles de finalización de un tipo si el tipo es responsable de liberar un recurso no administrado que no tiene su propio finalizador.  
+ <span data-ttu-id="478ff-189">**✓ HACER** que un tipo susceptibles de finalización si el tipo es responsable de liberar un recurso no administrado que no tiene su propio finalizador.</span><span class="sxs-lookup"><span data-stu-id="478ff-189">**✓ DO** make a type finalizable if the type is responsible for releasing an unmanaged resource that does not have its own finalizer.</span></span>  
   
- Al implementar el finalizador, simplemente llame `Dispose(false)` y coloque la lógica de limpieza de todos los recursos dentro de la `Dispose(bool disposing)` \(método\).  
+ <span data-ttu-id="478ff-190">Al implementar el finalizador, basta con llamar a `Dispose(false)` y coloque toda la lógica de limpieza de recursos dentro de la `Dispose(bool disposing)` método.</span><span class="sxs-lookup"><span data-stu-id="478ff-190">When implementing the finalizer, simply call `Dispose(false)` and place all resource cleanup logic inside the `Dispose(bool disposing)` method.</span></span>  
   
 ```  
 public class ComplexResourceHolder : IDisposable {  
@@ -264,33 +262,33 @@ public class ComplexResourceHolder : IDisposable {
 }  
 ```  
   
- **✓ hacer** implementa el patrón Dispose básico en cada tipo susceptibles de finalización.  
+ <span data-ttu-id="478ff-191">**✓ HACER** implementar el patrón de Dispose básico en todos los tipos susceptibles de finalización.</span><span class="sxs-lookup"><span data-stu-id="478ff-191">**✓ DO** implement the Basic Dispose Pattern on every finalizable type.</span></span>  
   
- Esto ofrece a los usuarios del tipo de medio para realizar explícitamente la limpieza determinista de los mismos recursos que es responsable el finalizador.  
+ <span data-ttu-id="478ff-192">Esto proporciona a los usuarios del tipo de medio para realizar explícitamente una limpieza determinista de los mismos recursos que es responsable el finalizador.</span><span class="sxs-lookup"><span data-stu-id="478ff-192">This gives users of the type a means to explicitly perform deterministic cleanup of those same resources for which the finalizer is responsible.</span></span>  
   
- **X no** tener acceso a los objetos susceptibles de finalización en la ruta de acceso del código de finalizador porque no hay riesgo significativo que ya habrá finalizados.  
+ <span data-ttu-id="478ff-193">**X DO NOT** tener acceso a los objetos susceptibles de finalización en la ruta de acceso del código de finalizador, porque no hay riesgo significativo que ya habrá finalizados.</span><span class="sxs-lookup"><span data-stu-id="478ff-193">**X DO NOT** access any finalizable objects in the finalizer code path, because there is significant risk that they will have already been finalized.</span></span>  
   
- Por ejemplo, un objeto susceptible de finalización A que tiene una referencia a otro objeto finalizable B no puede utilizar confiable B en del finalizador, o viceversa. Se llaman a los finalizadores en orden aleatorio \(aparte de una garantía de ordenación débil de finalización crítica\).  
+ <span data-ttu-id="478ff-194">Por ejemplo, un objeto susceptible de finalización A que tiene una referencia a otro objeto susceptibles de finalización B confiable no puede usar B en del finalizador, o viceversa.</span><span class="sxs-lookup"><span data-stu-id="478ff-194">For example, a finalizable object A that has a reference to another finalizable object B cannot reliably use B in A’s finalizer, or vice versa.</span></span> <span data-ttu-id="478ff-195">Los finalizadores se llaman en orden aleatorio (aparte de una garantía de ordenación débil de finalización crítica).</span><span class="sxs-lookup"><span data-stu-id="478ff-195">Finalizers are called in a random order (short of a weak ordering guarantee for critical finalization).</span></span>  
   
- Además, tenga en cuenta que obtener recopilará los objetos almacenados en variables estáticas en ciertos puntos durante una descarga del dominio de aplicación o al salir del proceso. Obtener acceso a una variable estática que hace referencia a un objeto finalizable \(o llamar a un método estático que se puede usar los valores almacenados en variables estáticas\) podría no ser seguro if <xref:System.Environment.HasShutdownStarted%2A?displayProperty=fullName> devuelve true.  
+ <span data-ttu-id="478ff-196">Además, tenga en cuenta que estos objetos almacenados en variables estáticas se se recopilan en ciertos puntos durante una descarga del dominio de aplicación o al salir del proceso.</span><span class="sxs-lookup"><span data-stu-id="478ff-196">Also, be aware that objects stored in static variables will get collected at certain points during an application domain unload or while exiting the process.</span></span> <span data-ttu-id="478ff-197">Obtener acceso a una variable estática que hace referencia a un objeto susceptible de finalización (o llamar a un método estático que puedan usar los valores almacenados en variables estáticas) podría no ser seguro if <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> devuelve true.</span><span class="sxs-lookup"><span data-stu-id="478ff-197">Accessing a static variable that refers to a finalizable object (or calling a static method that might use values stored in static variables) might not be safe if <xref:System.Environment.HasShutdownStarted%2A?displayProperty=nameWithType> returns true.</span></span>  
   
- **✓ hacer** realizar su `Finalize` método protegido.  
+ <span data-ttu-id="478ff-198">**✓ HACER** realizar su `Finalize` método protegido.</span><span class="sxs-lookup"><span data-stu-id="478ff-198">**✓ DO** make your `Finalize` method protected.</span></span>  
   
- Los desarrolladores de C\#, C\+\+ y VB.NET no es necesario preocuparse, porque los compiladores ayudan a aplicar esta directriz.  
+ <span data-ttu-id="478ff-199">Los desarrolladores de C#, C++ y VB.NET no tiene que preocuparse sobre esto, porque los compiladores de ayudan a aplicar esta directriz.</span><span class="sxs-lookup"><span data-stu-id="478ff-199">C#, C++, and VB.NET developers do not need to worry about this, because the compilers help to enforce this guideline.</span></span>  
   
- **X no** escape excepciones let de la lógica de finalizador, excepto los errores críticos del sistema.  
+ <span data-ttu-id="478ff-200">**X DO NOT** escape permiten excepciones de la lógica de finalizador, excepto los errores críticos del sistema.</span><span class="sxs-lookup"><span data-stu-id="478ff-200">**X DO NOT** let exceptions escape from the finalizer logic, except for system-critical failures.</span></span>  
   
- Si se produce una excepción de un finalizador, el CLR se apagará de todo el proceso \(a partir de .NET Framework versión 2.0\), que impiden que otros finalizadores de ejecución y recursos de liberarse de una manera controlada.  
+ <span data-ttu-id="478ff-201">Si se produce una excepción de un finalizador, el CLR se apagará de todo el proceso (a partir de .NET Framework versión 2.0), impide que otros finalizadores ejecutar y recursos de que se liberan de una manera controlada.</span><span class="sxs-lookup"><span data-stu-id="478ff-201">If an exception is thrown from a finalizer, the CLR will shut down the entire process (as of .NET Framework version 2.0), preventing other finalizers from executing and resources from being released in a controlled manner.</span></span>  
   
- **✓ considere** crear y utilizar un objeto susceptible de finalización crítico \(un tipo con una jerarquía de tipos que contiene <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>\) en situaciones en las que un finalizador absolutamente debe ejecutar incluso en caso de dominio de aplicación forzada descarga y cancelaciones de subprocesos.  
+ <span data-ttu-id="478ff-202">**✓ Considere la posibilidad de** crear y usar un objeto susceptibles de finalización crítico (un tipo con una jerarquía de tipos que contiene <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) para situaciones en que un finalizador absolutamente debe ejecutar incluso frente a la fuerza del dominio de aplicación forzada y subprocesos se anula.</span><span class="sxs-lookup"><span data-stu-id="478ff-202">**✓ CONSIDER** creating and using a critical finalizable object (a type with a type hierarchy that contains <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) for situations in which a finalizer absolutely must execute even in the face of forced application domain unloads and thread aborts.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="478ff-203">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="478ff-203">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="478ff-204">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="478ff-204">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>   
- <xref:System.Object.Finalize%2A?displayProperty=fullName>   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)   
- [Patrones de diseño comunes](../../../docs/standard/design-guidelines/common-design-patterns.md)   
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="478ff-205">Vea también</span><span class="sxs-lookup"><span data-stu-id="478ff-205">See Also</span></span>  
+ <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  
+ <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="478ff-206">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="478ff-206">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="478ff-207">Patrones de diseño comunes</span><span class="sxs-lookup"><span data-stu-id="478ff-207">Common Design Patterns</span></span>](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [<span data-ttu-id="478ff-208">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="478ff-208">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

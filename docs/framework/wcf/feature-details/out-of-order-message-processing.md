@@ -1,26 +1,29 @@
 ---
-title: "Procesar un mensaje sin orden | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Procesar un mensaje sin orden
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2ffd220babe99661d8b6aaf271a566d415af5eb1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Procesar un mensaje sin orden
-Los servicios del flujo de trabajo pueden depender de mensajes enviados en un orden concreto.Un servicio del flujo de trabajo contiene una o más actividades <xref:System.ServiceModel.Activities.Receive> y cada actividad <xref:System.ServiceModel.Activities.Receive> espera un mensaje concreto.Sin garantías de entrega de transporte específicas, se pueden retrasar los mensajes enviados por los clientes y, por lo tanto, se pueden entregar en un orden que el servicio del flujo de trabajo no se espera.La implementación de un servicio del flujo de trabajo que no requiera que los mensajes se envíen en un orden concreto se suele llevar a cabo mediante una actividad paralela.Si el protocolo de aplicación es más complicado, el flujo de trabajo se volvería muy complejo con mucha rapidez.La característica de procesamiento de mensajes desordenado en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear este tipo de flujo de trabajo sin toda la complejidad de las actividades paralelas anidadas.El procesamiento de mensajes desordenado solo se admite en canales que admitan <xref:System.ServiceModel.Channele.ReceiveContext>, como los enlaces de MSMQ de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="out-of-order-message-processing"></a><span data-ttu-id="cae64-102">Procesar un mensaje sin orden</span><span class="sxs-lookup"><span data-stu-id="cae64-102">Out-of-Order Message Processing</span></span>
+<span data-ttu-id="cae64-103">Los servicios del flujo de trabajo pueden depender de mensajes enviados en un orden concreto.</span><span class="sxs-lookup"><span data-stu-id="cae64-103">Workflow services may depend on messages being sent in a specific order.</span></span> <span data-ttu-id="cae64-104">Un servicio del flujo de trabajo contiene una o más actividades <xref:System.ServiceModel.Activities.Receive> y cada actividad <xref:System.ServiceModel.Activities.Receive> espera un mensaje concreto.</span><span class="sxs-lookup"><span data-stu-id="cae64-104">A workflow service contains one or more <xref:System.ServiceModel.Activities.Receive> activities and each <xref:System.ServiceModel.Activities.Receive> activity is expecting a specific message.</span></span> <span data-ttu-id="cae64-105">Sin garantías de entrega de transporte específicas, se pueden retrasar los mensajes enviados por los clientes y, por lo tanto, se pueden entregar en un orden que el servicio del flujo de trabajo no se espera.</span><span class="sxs-lookup"><span data-stu-id="cae64-105">Without particular transport delivery guarantees, messages sent by clients may be delayed and therefore delivered in an order the workflow service may not expect.</span></span> <span data-ttu-id="cae64-106">La implementación de un servicio del flujo de trabajo que no requiera que los mensajes se envíen en un orden concreto se suele llevar a cabo mediante una actividad paralela.</span><span class="sxs-lookup"><span data-stu-id="cae64-106">Implementing a workflow service that does not require messages be sent in a specific order is normally done using a Parallel activity.</span></span> <span data-ttu-id="cae64-107">Si el protocolo de aplicación es más complicado, el flujo de trabajo se volvería muy complejo con mucha rapidez.</span><span class="sxs-lookup"><span data-stu-id="cae64-107">For a more complicated application protocol, the workflow would become very complex very quickly.</span></span>  <span data-ttu-id="cae64-108">La característica de procesamiento de mensajes desordenado en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear este tipo de flujo de trabajo sin toda la complejidad de las actividades paralelas anidadas.</span><span class="sxs-lookup"><span data-stu-id="cae64-108">The out-of-order message processing feature in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] allows you to create such a workflow without all of the complexity of nested Parallel activities.</span></span> <span data-ttu-id="cae64-109">El procesamiento de mensajes desordenado solo se admite en canales que admitan <xref:System.ServiceModel.Channels.ReceiveContext>, como los enlaces de MSMQ de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cae64-109">Out-of-order message processing is only supported on channels that support <xref:System.ServiceModel.Channels.ReceiveContext> such as the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] MSMQ bindings.</span></span>  
   
-## Habilitar el procesamiento de mensajes desordenado  
- El procesamiento de mensajes desordenado se habilita estableciendo la propiedad <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> en `true` en WorkflowService.En el siguiente ejemplo, se muestra cómo establecer la propiedad <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> en código.  
+## <a name="enabling-out-of-order-message-processing"></a><span data-ttu-id="cae64-110">Habilitar el procesamiento de mensajes desordenado</span><span class="sxs-lookup"><span data-stu-id="cae64-110">Enabling Out-Of-Order Message Processing</span></span>  
+ <span data-ttu-id="cae64-111">El procesamiento de mensajes desordenado se habilita estableciendo la propiedad <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> en `true` en WorkflowService.</span><span class="sxs-lookup"><span data-stu-id="cae64-111">Out-of-order message processing is enabled by setting the <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> property to `true` on the WorkflowService.</span></span> <span data-ttu-id="cae64-112">En el siguiente ejemplo, se muestra cómo establecer la propiedad <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> en código.</span><span class="sxs-lookup"><span data-stu-id="cae64-112">The following example shows how to set the <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> property in code.</span></span>  
   
 ```csharp  
 // Code: Opt-in to Buffered Receive processing...  
@@ -30,10 +33,9 @@ WorkflowService service = new WorkflowService
     Body = workflow,  
     AllowBufferedReceive = true  
 };  
-  
 ```  
   
- También puede aplicar el atributo `AllowBufferedReceive` a un servicio del flujo de trabajo en XAML, tal y como se muestra en el siguiente ejemplo.  
+ <span data-ttu-id="cae64-113">También puede aplicar el atributo `AllowBufferedReceive` a un servicio del flujo de trabajo en XAML, tal y como se muestra en el siguiente ejemplo.</span><span class="sxs-lookup"><span data-stu-id="cae64-113">You can also apply the `AllowBufferedReceive` attribute to a workflow service in XAML as shown in the following example.</span></span>  
   
 ```xaml  
 // Xaml: Opt-in to Buffered Receive processing...  
@@ -42,7 +44,7 @@ WorkflowService service = new WorkflowService
 </Sequence>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Channels.ReceiveContext>   
- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Colas y sesiones de confianza](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
+## <a name="see-also"></a><span data-ttu-id="cae64-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="cae64-114">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.ReceiveContext>  
+ [<span data-ttu-id="cae64-115">Servicios de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="cae64-115">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="cae64-116">Las colas y sesiones confiables</span><span class="sxs-lookup"><span data-stu-id="cae64-116">Queues and Reliable Sessions</span></span>](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)

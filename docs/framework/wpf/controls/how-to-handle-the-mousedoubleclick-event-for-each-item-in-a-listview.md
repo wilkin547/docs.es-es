@@ -1,44 +1,49 @@
 ---
-title: "C&#243;mo: Controlar el evento MouseDoubleClick para cada elemento de un control ListView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView (controles), MouseDoubleClick (evento)"
+title: "Cómo: Controlar el evento MouseDoubleClick para cada elemento de un control ListView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53c40e9e3b02bdf33a073a93d28b619e399e375f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Controlar el evento MouseDoubleClick para cada elemento de un control ListView
-Para administrar un evento de un elemento en un control <xref:System.Windows.Controls.ListView>, se debe agregar un controlador de eventos a cada <xref:System.Windows.Controls.ListViewItem>.  Cuando <xref:System.Windows.Controls.ListView> se enlaza a un origen de datos, no se crea explícitamente un elemento <xref:System.Windows.Controls.ListViewItem>, pero el evento de cada elemento se puede controlar agregando <xref:System.Windows.EventSetter> a un estilo de <xref:System.Windows.Controls.ListViewItem>.  
+# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a><span data-ttu-id="a88a0-102">Cómo: Controlar el evento MouseDoubleClick para cada elemento de un control ListView</span><span class="sxs-lookup"><span data-stu-id="a88a0-102">How to: Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>
+<span data-ttu-id="a88a0-103">Para controlar un evento para un elemento de un <xref:System.Windows.Controls.ListView>, debe agregar un controlador de eventos a cada uno <xref:System.Windows.Controls.ListViewItem>.</span><span class="sxs-lookup"><span data-stu-id="a88a0-103">To handle an event for an item in a <xref:System.Windows.Controls.ListView>, you need to add an event handler to each <xref:System.Windows.Controls.ListViewItem>.</span></span> <span data-ttu-id="a88a0-104">Cuando un <xref:System.Windows.Controls.ListView> está enlazado a un origen de datos, no se crea explícitamente una <xref:System.Windows.Controls.ListViewItem>, pero se puede controlar el evento para cada elemento mediante la adición de un <xref:System.Windows.EventSetter> a un estilo de un <xref:System.Windows.Controls.ListViewItem>.</span><span class="sxs-lookup"><span data-stu-id="a88a0-104">When a <xref:System.Windows.Controls.ListView> is bound to a data source, you don't explicitly create a <xref:System.Windows.Controls.ListViewItem>, but you can handle the event for each item by adding an <xref:System.Windows.EventSetter> to a style of a <xref:System.Windows.Controls.ListViewItem>.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se crea un control <xref:System.Windows.Controls.ListView> enlazado a datos y también se crea un objeto <xref:System.Windows.Style> para agregar un controlador de eventos a cada <xref:System.Windows.Controls.ListViewItem>.  
+## <a name="example"></a><span data-ttu-id="a88a0-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a88a0-105">Example</span></span>  
+ <span data-ttu-id="a88a0-106">En el ejemplo siguiente se crea un enlace de datos <xref:System.Windows.Controls.ListView> y crea un <xref:System.Windows.Style> para agregar un controlador de eventos a cada uno <xref:System.Windows.Controls.ListViewItem>.</span><span class="sxs-lookup"><span data-stu-id="a88a0-106">The following example creates a data-bound <xref:System.Windows.Controls.ListView> and creates a <xref:System.Windows.Style> to add an event handler to each <xref:System.Windows.Controls.ListViewItem>.</span></span>  
   
- [!code-xml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
-[!code-xml[ListViewHowTos#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
-[!code-xml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
+ [!code-xaml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
+[!code-xaml[ListViewHowTos#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
+[!code-xaml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- En el siguiente ejemplo se controla el evento <xref:System.Windows.Controls.Control.MouseDoubleClick>.  
+ <span data-ttu-id="a88a0-107">El siguiente ejemplo se controla el <xref:System.Windows.Controls.Control.MouseDoubleClick> eventos.</span><span class="sxs-lookup"><span data-stu-id="a88a0-107">The following example handles the <xref:System.Windows.Controls.Control.MouseDoubleClick> event.</span></span>  
   
  [!code-csharp[ListViewHowTos#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
  [!code-vb[ListViewHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  Aunque lo más común es enlazar un control <xref:System.Windows.Controls.ListView> a un origen de datos, puede utilizar un estilo para agregar un controlador de eventos a cada <xref:System.Windows.Controls.ListViewItem> de un control <xref:System.Windows.Controls.ListView> no enlazado a datos, tanto si crea el control <xref:System.Windows.Controls.ListViewItem> de manera explícita como si no.  Para obtener más información acerca de controles <xref:System.Windows.Controls.ListViewItem> creados de manera explícita e implícita, vea <xref:System.Windows.Controls.ItemsControl>.  
+>  <span data-ttu-id="a88a0-108">Aunque es más común para enlazar un <xref:System.Windows.Controls.ListView> a un origen de datos, puede usar un estilo para agregar un controlador de eventos a cada uno <xref:System.Windows.Controls.ListViewItem> en una no enlazado a datos <xref:System.Windows.Controls.ListView> independientemente de si crea explícitamente una <xref:System.Windows.Controls.ListViewItem>.</span><span class="sxs-lookup"><span data-stu-id="a88a0-108">Although it is most common to bind a <xref:System.Windows.Controls.ListView> to a data source, you can use a style to add an event handler to each <xref:System.Windows.Controls.ListViewItem> in a non-data-bound <xref:System.Windows.Controls.ListView> regardless of whether you explicitly create a <xref:System.Windows.Controls.ListViewItem>.</span></span>  <span data-ttu-id="a88a0-109">Para obtener más información acerca de cómo crear explícita e implícitamente <xref:System.Windows.Controls.ListViewItem> controles, vea <xref:System.Windows.Controls.ItemsControl>.</span><span class="sxs-lookup"><span data-stu-id="a88a0-109">For more information about explicitly and implicitly created <xref:System.Windows.Controls.ListViewItem> controls, see <xref:System.Windows.Controls.ItemsControl>.</span></span>  
   
-## Vea también  
- <xref:System.Xml.XmlElement>   
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Enlazar a datos XML mediante XMLDataProvider y consultas XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)   
- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="a88a0-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="a88a0-110">See Also</span></span>  
+ <xref:System.Xml.XmlElement>  
+ [<span data-ttu-id="a88a0-111">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="a88a0-111">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="a88a0-112">Aplicar estilos y plantillas</span><span class="sxs-lookup"><span data-stu-id="a88a0-112">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="a88a0-113">Enlazar a datos XML mediante XMLDataProvider y consultas XPath</span><span class="sxs-lookup"><span data-stu-id="a88a0-113">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="a88a0-114">Información general sobre ListView</span><span class="sxs-lookup"><span data-stu-id="a88a0-114">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

@@ -1,1 +1,1 @@
-Kit de desarrollo de software de Windows (SDK)
+<span data-ttu-id="9edee-101">Kit de desarrollo de software de Windows (SDK)</span><span class="sxs-lookup"><span data-stu-id="9edee-101">Windows Software Development Kit (SDK)</span></span>

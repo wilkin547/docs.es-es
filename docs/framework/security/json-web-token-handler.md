@@ -5,38 +5,35 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="json-web-token-handler"></a>Controlador de token web de JSON
-La extensión del controlador de token web JSON para Windows Identity Foundation permite crear y validar tokens web JSON (JWT) en las aplicaciones. El controlador de token JWT se puede configurar para ejecutarse en la canalización de WIF igual que otros controladores de tokens de seguridad integrados, pero también se puede usar de forma independiente para validar tokens en aplicaciones ligeras. El controlador de token JWT es especialmente útil cuando se usa un esquema de token portador de OAuth 2.0, como la autenticación en Microsoft Azure Active Directory.  
+# <a name="json-web-token-handler"></a><span data-ttu-id="718f7-102">Controlador de token web de JSON</span><span class="sxs-lookup"><span data-stu-id="718f7-102">JSON Web Token Handler</span></span>
+<span data-ttu-id="718f7-103">La extensión del controlador de token web JSON para Windows Identity Foundation permite crear y validar tokens web JSON (JWT) en las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="718f7-103">The JSON Web Token Handler extension for Windows Identity Foundation enables you to create and validate JSON Web Tokens (JWT) in your applications.</span></span> <span data-ttu-id="718f7-104">El controlador de token JWT se puede configurar para ejecutarse en la canalización de WIF igual que otros controladores de tokens de seguridad integrados, pero también se puede usar de forma independiente para validar tokens en aplicaciones ligeras.</span><span class="sxs-lookup"><span data-stu-id="718f7-104">The JWT Token Handler can be configured to run in the WIF pipeline like other built-in security token handlers, but it can also be used independently to perform token validation in lightweight applications.</span></span> <span data-ttu-id="718f7-105">El controlador de token JWT es especialmente útil cuando se usa un esquema de token portador de OAuth 2.0, como la autenticación en Microsoft Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="718f7-105">The JWT Token Handler is particularly useful when using an OAuth 2.0 bearer token scheme, such as authenticating to Windows Azure Active Directory.</span></span>  
   
- El controlador de token JWT está disponible como paquete NuGet. Vea [Downloading the JSON Web Token Handler Package](../../../docs/framework/security/downloading-the-json-web-token-handler-package.md) (Descargar el paquete del controlador de JSON Web Token) para obtener más información.  
+ <span data-ttu-id="718f7-106">El controlador de token JWT está disponible como paquete NuGet.</span><span class="sxs-lookup"><span data-stu-id="718f7-106">The JWT Token Handler is available as a NuGet package.</span></span> <span data-ttu-id="718f7-107">Vea [Downloading the JSON Web Token Handler Package](../../../docs/framework/security/downloading-the-json-web-token-handler-package.md) (Descargar el paquete del controlador de JSON Web Token) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="718f7-107">See [Downloading the JSON Web Token Handler Package](../../../docs/framework/security/downloading-the-json-web-token-handler-package.md) for more information.</span></span>  
   
-## <a name="scenarios"></a>Escenarios  
- El controlador de token JWT habilita los escenarios clave siguientes:  
+## <a name="scenarios"></a><span data-ttu-id="718f7-108">Escenarios</span><span class="sxs-lookup"><span data-stu-id="718f7-108">Scenarios</span></span>  
+ <span data-ttu-id="718f7-109">El controlador de token JWT habilita los escenarios clave siguientes:</span><span class="sxs-lookup"><span data-stu-id="718f7-109">The JWT Token Handler enables the following key scenarios:</span></span>  
   
--   **Validar un token JWT en una aplicación de servidor**: en este escenario, una empresa llamada Litware tiene una aplicación de servidor que usa WIF para controlar las solicitudes de inicio de sesión web. Litware desea habilitar la aplicación para usar tokens JWT para la autenticación. La aplicación se actualiza con el controlador de token JWT y, a continuación, la configuración de la aplicación se actualiza para agregar dicho controlador en la canalización de WIF. Una vez que se realizan las actualizaciones y se especifica una nueva solicitud en la canalización de WIF, el token JWT se valida con el nuevo controlador y la autenticación se lleva a cabo correctamente.  
+-   <span data-ttu-id="718f7-110">**Validar un token JWT en una aplicación de servidor**: en este escenario, una empresa llamada Litware tiene una aplicación de servidor que usa WIF para controlar las solicitudes de inicio de sesión web.</span><span class="sxs-lookup"><span data-stu-id="718f7-110">**Validate a JWT Token in a Server Application**: In this scenario, a company named Litware has a server application that uses WIF to handle web sign-on requests.</span></span> <span data-ttu-id="718f7-111">Litware desea habilitar la aplicación para usar tokens JWT para la autenticación.</span><span class="sxs-lookup"><span data-stu-id="718f7-111">Litware wants to enable their application to use JWT tokens for authentication.</span></span> <span data-ttu-id="718f7-112">La aplicación se actualiza con el controlador de token JWT y, a continuación, la configuración de la aplicación se actualiza para agregar dicho controlador en la canalización de WIF.</span><span class="sxs-lookup"><span data-stu-id="718f7-112">The application is updated with the JWT Token Handler, and then the application configuration is updated to add the JWT Token Handler in the WIF pipeline.</span></span> <span data-ttu-id="718f7-113">Una vez que se realizan las actualizaciones y se especifica una nueva solicitud en la canalización de WIF, el token JWT se valida con el nuevo controlador y la autenticación se lleva a cabo correctamente.</span><span class="sxs-lookup"><span data-stu-id="718f7-113">After the updates have been made and a new request enters the WIF pipeline, the JWT token is validated using the new handler and successful authentication occurs.</span></span>  
   
--   **Validar un token JWT en un servicio web REST**: en este escenario, una empresa llamada Litware tiene un servicio web REST protegido por Microsoft Azure Active Directory. Microsoft Azure AD debe autenticar las solicitudes al servicio Web. Tras una autenticación correcta, se emite un token JWT. Litware tiene una aplicación cliente que requiere acceso al servicio Web. El cliente realiza una solicitud al servicio Web y presenta su token JWT de Microsoft Azure AD que el servicio Web valida a continuación mediante el controlador de token JWT. Una vez que el controlador de token JWT ha validado el token, el servicio Web devuelve el recurso deseado al cliente.  
+-   <span data-ttu-id="718f7-114">**Validar un token JWT en un servicio web REST**: en este escenario, una empresa llamada Litware tiene un servicio web REST protegido por Microsoft Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="718f7-114">**Validate a JWT Token in a REST Web Service**: In this scenario, a company named Litware has a REST web service that is secured by Windows Azure Active Directory.</span></span> <span data-ttu-id="718f7-115">Microsoft Azure AD debe autenticar las solicitudes al servicio Web. Tras una autenticación correcta, se emite un token JWT.</span><span class="sxs-lookup"><span data-stu-id="718f7-115">Requests to the web service must be authenticated by Windows Azure AD, which issues a JWT token upon successful authentication.</span></span> <span data-ttu-id="718f7-116">Litware tiene una aplicación cliente que requiere acceso al servicio Web.</span><span class="sxs-lookup"><span data-stu-id="718f7-116">Litware has a client application that needs to access the web service.</span></span> <span data-ttu-id="718f7-117">El cliente realiza una solicitud al servicio Web y presenta su token JWT de Microsoft Azure AD que el servicio Web valida a continuación mediante el controlador de token JWT.</span><span class="sxs-lookup"><span data-stu-id="718f7-117">The client makes a request to the web service and presents its JWT token from Windows Azure AD, which is then validated by the web service using the JWT Token Handler.</span></span> <span data-ttu-id="718f7-118">Una vez que el controlador de token JWT ha validado el token, el servicio Web devuelve el recurso deseado al cliente.</span><span class="sxs-lookup"><span data-stu-id="718f7-118">After the JWT Token Handler has validated the token, the desired resource is returned to the client by the web service.</span></span>  
   
-## <a name="features"></a>Características  
- El controlador de token JWT ofrece las características siguientes:  
+## <a name="features"></a><span data-ttu-id="718f7-119">Características</span><span class="sxs-lookup"><span data-stu-id="718f7-119">Features</span></span>  
+ <span data-ttu-id="718f7-120">El controlador de token JWT ofrece las características siguientes:</span><span class="sxs-lookup"><span data-stu-id="718f7-120">The JWT Token Handler offers the following features:</span></span>  
   
--   **Validar un token JWT**: los tokens JWT pueden validarse fácilmente mediante la lógica de validación del controlador de token, ya sea como parte de la canalización WIF de la aplicación o al llamarse con independencia de WIF.  
+-   <span data-ttu-id="718f7-121">**Validar un token JWT**: los tokens JWT pueden validarse fácilmente mediante la lógica de validación del controlador de token, ya sea como parte de la canalización WIF de la aplicación o al llamarse con independencia de WIF.</span><span class="sxs-lookup"><span data-stu-id="718f7-121">**Validate a JWT Token**: JWT tokens can be easily validated by the token handler’s validation logic, either as a part of the application’s WIF pipeline or called independently of WIF</span></span>  
   
--   **Crear un token JWT**: el controlador de token JWT se puede usar para crear tokens JWT con fines de autorización en servicios descendentes.
-
+-   <span data-ttu-id="718f7-122">**Crear un token JWT**: el controlador de token JWT se puede usar para crear tokens JWT con fines de autorización en servicios descendentes.</span><span class="sxs-lookup"><span data-stu-id="718f7-122">**Create a JWT Token**: The JWT Token Handler can be used to create JWT tokens for authorization in downstream services</span></span>
