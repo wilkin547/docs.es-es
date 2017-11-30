@@ -1,83 +1,83 @@
 ---
-title: "Organizar controles en formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VisualSelection"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms], ubicación"
-  - "Controles de formularios Windows Forms, colocar en un formulario"
+title: Organizar controles en formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VisualSelection
+helpviewer_keywords:
+- controls [Windows Forms], positioning
+- Windows Forms controls, positioning on form
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5709f07edc90b9094561870d31fbe28697974ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Organizar controles en formularios Windows Forms
-Si coloca y manipular los controles en formularios de maneras diferentes, puede crear interfaces de usuario que sean intuitivas y funcionales para los usuarios.  
+# <a name="arranging-controls-on-windows-forms"></a><span data-ttu-id="cc53e-102">Organizar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-102">Arranging Controls on Windows Forms</span></span>
+<span data-ttu-id="cc53e-103">Colocar y manipular los controles en formularios de maneras diferentes le permite crear interfaces de usuario que sean intuitivas y funcionales para los usuarios.</span><span class="sxs-lookup"><span data-stu-id="cc53e-103">By placing and manipulating controls on forms in different ways, you can create user interfaces that are both intuitive and functional for users.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Cómo: alinear varios controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
- Proporciona instrucciones para alinear la posición de un número de controles del formulario Windows Forms.  
+## <a name="in-this-section"></a><span data-ttu-id="cc53e-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="cc53e-104">In This Section</span></span>  
+ [<span data-ttu-id="cc53e-105">Procedimiento para alinear varios controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-105">How to: Align Multiple Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
+ <span data-ttu-id="cc53e-106">Proporciona instrucciones para alinear la posición de varios controles del formulario Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="cc53e-106">Gives directions for lining up the position of a number of controls on your Windows Form.</span></span>  
   
- [Cómo: delimitar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- Proporciona instrucciones para establecer controles que se va a cambiar el tamaño de forma dinámica en tiempo de ejecución.  
+ [<span data-ttu-id="cc53e-107">Procedimiento para delimitar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-107">How to: Anchor Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ <span data-ttu-id="cc53e-108">Proporciona instrucciones que permiten establecer controles para cambiar el tamaño de forma dinámica en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="cc53e-108">Gives directions for setting controls to resize dynamically at run time.</span></span>  
   
- [Cómo: copiar controles entre formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
- Proporciona instrucciones para duplicar controles entre formularios.  
+ [<span data-ttu-id="cc53e-109">Procedimiento para copiar controles entre formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-109">How to: Copy Controls Between Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
+ <span data-ttu-id="cc53e-110">Proporciona instrucciones para duplicar controles entre formularios.</span><span class="sxs-lookup"><span data-stu-id="cc53e-110">Gives directions for duplicating controls between forms.</span></span>  
   
- [Cómo: acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- Proporciona instrucciones para hacer que los controles "se adhieran" a los lados de un formulario.  
+ [<span data-ttu-id="cc53e-111">Procedimiento para acoplar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-111">How to: Dock Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ <span data-ttu-id="cc53e-112">Proporciona instrucciones para hacer que los controles "se adhieran" a los lados de un formulario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-112">Gives directions for making controls "stick" to the side(s) of a form.</span></span>  
   
- [Cómo: Disponer objetos en formularios Windows Forms en capas](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)  
- Proporciona instrucciones para establecer qué controles están en primer plano respecto al eje z (orden z).  
+ [<span data-ttu-id="cc53e-113">Procedimiento para disponer objetos en capas en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-113">How to: Layer Objects on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)  
+ <span data-ttu-id="cc53e-114">Proporciona instrucciones para establecer qué controles están en primer plano respecto al eje z (orden z).</span><span class="sxs-lookup"><span data-stu-id="cc53e-114">Gives directions for establishing which controls are on top relative to the z-axis (z-order).</span></span>  
   
- [Cómo: bloquear controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)  
- Ofrece indicaciones para fijar controles permanentemente al formulario.  
+ [<span data-ttu-id="cc53e-115">Procedimiento para bloquear controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-115">How to: Lock Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)  
+ <span data-ttu-id="cc53e-116">Proporciona instrucciones para fijar controles permanentemente al formulario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-116">Gives directions for fastening controls permanently to the form.</span></span>  
   
- [Cómo: colocar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-position-controls-on-windows-forms.md)  
- Proporciona instrucciones para establecer las coordenadas de los controles en un formulario.  
+ [<span data-ttu-id="cc53e-117">Procedimiento para colocar los controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-117">How to: Position Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-position-controls-on-windows-forms.md)  
+ <span data-ttu-id="cc53e-118">Proporciona instrucciones para establecer las coordenadas de los controles en un formulario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-118">Gives directions for setting the coordinates of the controls on a form.</span></span>  
   
- [Cómo: cambiar el tamaño de los controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- Proporciona instrucciones para establecer el tamaño de los controles en un formulario.  
+ [<span data-ttu-id="cc53e-119">Procedimiento para cambiar el tamaño de los controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-119">How to: Resize Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ <span data-ttu-id="cc53e-120">Proporciona instrucciones para establecer el tamaño de los controles en un formulario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-120">Gives directions for setting the size of controls on a form.</span></span>  
   
- [Cómo: establecer opciones de cuadrícula para todos los formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-grid-options-for-all-windows-forms.md)  
- Proporciona instrucciones para calibrar el tamaño de la cuadrícula que cubre un formulario.  
+ [<span data-ttu-id="cc53e-121">Procedimiento para establecer opciones de cuadrícula para todos los formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-121">How to: Set Grid Options for All Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-set-grid-options-for-all-windows-forms.md)  
+ <span data-ttu-id="cc53e-122">Proporciona instrucciones para calibrar el tamaño de la cuadrícula que cubre un formulario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-122">Gives directions for calibrating the size of the grid that covers a form.</span></span>  
   
- [Cómo: establecer el orden de tabulación en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
- Proporciona instrucciones para regular el orden en que los controles tengan foco cuando el usuario presiona TAB.  
+ [<span data-ttu-id="cc53e-123">Procedimiento para establecer el orden de tabulación en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-123">How to: Set the Tab Order on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
+ <span data-ttu-id="cc53e-124">Proporciona instrucciones para regular el orden en que los controles se activan cuando el usuario presiona TAB.</span><span class="sxs-lookup"><span data-stu-id="cc53e-124">Gives directions for regulating the order in which controls will have focus when the user presses TAB.</span></span>  
   
- [Cómo: organizar controles con las líneas de ajuste y la cuadrícula en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md)  
- Proporciona instrucciones para la colocación de controles a la cuadrícula en un formulario.  
+ [<span data-ttu-id="cc53e-125">Procedimiento para organizar controles con las líneas de ajuste y la cuadrícula en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-125">How to: Arrange Controls with Snaplines and the Grid in Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md)  
+ <span data-ttu-id="cc53e-126">Proporciona instrucciones para la colocación de controles en la cuadrícula en un formulario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-126">Gives directions for affixing controls to the grid on a form.</span></span>  
   
- [Cómo: reasignar controles existentes en un elemento primario diferente](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)  
- Proporciona instrucciones para asignar controles existentes a un nuevo contenedor primario.  
+ [<span data-ttu-id="cc53e-127">Procedimiento para reasignar controles existentes en un elemento primario diferente</span><span class="sxs-lookup"><span data-stu-id="cc53e-127">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)  
+ <span data-ttu-id="cc53e-128">Proporciona instrucciones para asignar controles existentes a un nuevo contenedor primario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-128">Gives directions for assigning existing controls to a new parent container.</span></span>  
   
- [Tutorial: Diseñar formularios Windows Forms controles con relleno, márgenes y la propiedad AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
- Describe cómo se pueden colocar controles en los formularios utilizando el <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, y <xref:System.Windows.Forms.Control.AutoSize%2A> propiedades dentro de la **Diseñador de formularios**.  
+ [<span data-ttu-id="cc53e-129">Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize</span><span class="sxs-lookup"><span data-stu-id="cc53e-129">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ <span data-ttu-id="cc53e-130">Describe cómo se pueden colocar controles en los formularios mediante el uso de la <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, y <xref:System.Windows.Forms.Control.AutoSize%2A> propiedades dentro de la **Diseñador de formularios**.</span><span class="sxs-lookup"><span data-stu-id="cc53e-130">Describes how you can place controls on your forms by using the <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, and <xref:System.Windows.Forms.Control.AutoSize%2A> properties within the **Forms Designer**.</span></span>  
   
- [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- Muestra las distintas funciones de diseño que cumple las guías de alineación.  
+ [<span data-ttu-id="cc53e-131">Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste</span><span class="sxs-lookup"><span data-stu-id="cc53e-131">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ <span data-ttu-id="cc53e-132">Muestra las distintas funciones de diseño que cumplen las guías de alineación.</span><span class="sxs-lookup"><span data-stu-id="cc53e-132">Demonstrates the various layout roles fulfilled by snaplines.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [Cómo: designar un botón de Windows Forms como botón para cancelar mediante el diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- Proporciona instrucciones para establecer un botón como control para cancelar el formulario.  
+## <a name="related-sections"></a><span data-ttu-id="cc53e-133">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="cc53e-133">Related Sections</span></span>  
+ [<span data-ttu-id="cc53e-134">Procedimiento para designar un botón de formularios Windows Forms como botón para cancelar mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="cc53e-134">How to: Designate a Windows Forms Button as the Cancel Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ <span data-ttu-id="cc53e-135">Proporciona instrucciones para establecer un botón como control para cancelar el formulario.</span><span class="sxs-lookup"><span data-stu-id="cc53e-135">Gives directions for establishing a button as the control to cancel the form.</span></span>  
   
- [Cómo: designar un botón de Windows Forms como botón para aceptar mediante el diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- Proporciona instrucciones para establecer un botón (con frecuencia un botón "Aceptar") como el botón "Aceptar entrada" cuando se presiona ENTRAR, independientemente de donde está el foco en el momento en el cuadro de diálogo.  
+ [<span data-ttu-id="cc53e-136">Procedimiento para designar un botón de formularios Windows Forms como botón para aceptar mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="cc53e-136">How to: Designate a Windows Forms Button as the Accept Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
+ <span data-ttu-id="cc53e-137">Proporciona instrucciones para establecer un botón (con frecuencia un botón "Aceptar") como el botón "Aceptar entrada" cuando se presiona ENTRAR, independientemente de qué esté activo en ese momento en el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="cc53e-137">Gives directions for establishing a button (often an "OK" button) as the "accept input" button when ENTER is pressed regardless of where focus is at the time in the dialog box.</span></span>  
   
- [Cómo: agrupar controles RadioButton de Windows Forms para que funcionen como un conjunto](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- Proporciona instrucciones para establecer un conjunto de `RadioButton` controles relacionados entre sí.  
+ [<span data-ttu-id="cc53e-138">Procedimiento para agrupar controles RadioButton de formularios Windows Forms para que funcionen como un conjunto</span><span class="sxs-lookup"><span data-stu-id="cc53e-138">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ <span data-ttu-id="cc53e-139">Proporciona instrucciones para establecer un conjunto de controles `RadioButton` relacionados entre sí.</span><span class="sxs-lookup"><span data-stu-id="cc53e-139">Gives directions for establishing a set of `RadioButton` controls as being related to one another.</span></span>  
   
- [Controles de Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Proporciona información general acerca de los controles.
+ [<span data-ttu-id="cc53e-140">Controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cc53e-140">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="cc53e-141">Proporciona información general sobre los controles.</span><span class="sxs-lookup"><span data-stu-id="cc53e-141">Provides general information about controls.</span></span>

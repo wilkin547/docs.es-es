@@ -1,109 +1,110 @@
 ---
-title: "Desarrollar controles de formularios Windows Forms en tiempo de dise&#241;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Controles de Windows Forms"
-  - "Controles de formularios Windows Forms, crear"
-  - "controles [Windows Forms]"
-  - "controles [Windows Forms], crear"
-  - "controles de usuario [Windows Forms]"
-  - "controles personalizados [Windows Forms]"
+title: "Desarrollar controles de formularios Windows Forms en tiempo de diseño"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls [Windows Forms]
+- Windows Forms controls, creating
+- controls [Windows Forms]
+- controls [Windows Forms], creating
+- user controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4f9680bb64339f2f232793beb9c47a36c07aa4a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Desarrollar controles de formularios Windows Forms en tiempo de dise&#241;o
-Para los autores de controles, .NET Framework proporciona una gran cantidad de tecnología de creación de controles. Los creadores ya no están limitados al diseño de controles compuestos que actúan como una colección de controles preexistentes. A través de la herencia, puede crear sus propios controles de controles compuestos preexistentes o controles de formularios Windows Forms preexistentes. También puede diseñar sus propios controles que implementen el dibujo personalizado. Estas opciones permiten una gran flexibilidad en el diseño y la funcionalidad de la interfaz visual. Para aprovechar estas características, debe estar familiarizado con conceptos de programación basado en objetos.  
+# <a name="developing-windows-forms-controls-at-design-time"></a><span data-ttu-id="1a7e9-102">Desarrollar controles de formularios Windows Forms en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="1a7e9-102">Developing Windows Forms Controls at Design Time</span></span>
+<span data-ttu-id="1a7e9-103">Para los autores de controles, .NET Framework proporciona una gran cantidad de tecnologías de creación de controles.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-103">For control authors, the .NET Framework provides a wealth of control authoring technology.</span></span> <span data-ttu-id="1a7e9-104">Los creadores ya no están limitados al diseño de controles compuestos que actúan como una colección de controles preexistentes.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-104">Authors are no longer limited to designing composite controls that act as a collection of preexisting controls.</span></span> <span data-ttu-id="1a7e9-105">A través de la herencia, puede crear sus propios controles a partir de controles compuestos preexistentes o de controles de Windows Forms preexistentes.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-105">Through inheritance, you can create your own controls from preexisting composite controls or preexisting Windows Forms controls.</span></span> <span data-ttu-id="1a7e9-106">También puede diseñar sus propios controles que implementen el dibujo personalizado.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-106">You can also design your own controls that implement custom painting.</span></span> <span data-ttu-id="1a7e9-107">Estas opciones permiten una gran flexibilidad en el diseño y la funcionalidad de la interfaz visual.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-107">These options enable a great deal of flexibility to the design and functionality of the visual interface.</span></span> <span data-ttu-id="1a7e9-108">Para aprovechar estas características, debe estar familiarizado con conceptos de programación basada en objetos.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-108">To take advantage of these features, you should be familiar with object-based programming concepts.</span></span>  
   
 > [!NOTE]
->  No es necesario tener un conocimiento exhaustivo de herencia, pero le resultará útil para hacer referencia a [NOT IN BUILD: herencia en Visual Basic](http://msdn.microsoft.com/es-es/e5e6e240-ed31-4657-820c-079b7c79313c).  
+>  <span data-ttu-id="1a7e9-109">No es necesario tener un conocimiento exhaustivo de herencia, pero quizá le resulte útil para hacer referencia a [Fundamentos de la herencia (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span><span class="sxs-lookup"><span data-stu-id="1a7e9-109">It is not necessary to have a thorough understanding of inheritance, but you may find it useful to refer to [Inheritance basics (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).</span></span>  
   
- Si desea crear controles personalizados para utilizarlos en formularios Web Forms, vea [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md).  
+ <span data-ttu-id="1a7e9-110">Si quiere crear controles personalizados para usarlos en formularios Web Forms, consulte [Desarrollar controles de servidor ASP.NET personalizados](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span><span class="sxs-lookup"><span data-stu-id="1a7e9-110">If you want to create custom controls to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Tutorial: Crear un Control compuesto con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- Muestra cómo crear un control compuesto simple en Visual Basic.  
+## <a name="in-this-section"></a><span data-ttu-id="1a7e9-111">En esta sección</span><span class="sxs-lookup"><span data-stu-id="1a7e9-111">In This Section</span></span>  
+ [<span data-ttu-id="1a7e9-112">Tutorial: Crear un control compuesto con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1a7e9-112">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ <span data-ttu-id="1a7e9-113">Muestra cómo crear un control compuesto simple en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-113">Shows how to create a simple composite control in Visual Basic.</span></span>  
   
- [Tutorial: Crear un Control compuesto con Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- Muestra cómo crear un control compuesto simple en C#.  
+ [<span data-ttu-id="1a7e9-114">Tutorial: Crear un control compuesto con Visual C#</span><span class="sxs-lookup"><span data-stu-id="1a7e9-114">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ <span data-ttu-id="1a7e9-115">Muestra cómo crear un control compuesto simple en C#.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-115">Shows how to create a simple composite control in C#.</span></span>  
   
- [Tutorial: Heredar de un Control de formularios Windows Forms con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- Muestra cómo crear un control de formularios Windows Forms sencillo utilizando la herencia en Visual Basic.  
+ [<span data-ttu-id="1a7e9-116">Tutorial: Heredar de un control de Windows Forms con Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1a7e9-116">Walkthrough: Inheriting from a Windows Forms Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ <span data-ttu-id="1a7e9-117">Muestra cómo crear un control de Windows Forms simple utilizando la herencia en Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-117">Shows how to create a simple Windows Forms control using inheritance in Visual Basic.</span></span>  
   
- [Tutorial: Heredar de un Control de formularios Windows Forms con Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- Muestra cómo crear un control de formularios Windows Forms sencillo utilizando la herencia en C#.  
+ [<span data-ttu-id="1a7e9-118">Tutorial: Heredar de un control de Windows Forms con Visual C#</span><span class="sxs-lookup"><span data-stu-id="1a7e9-118">Walkthrough: Inheriting from a Windows Forms Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ <span data-ttu-id="1a7e9-119">Muestra cómo crear un control de Windows Forms simple utilizando la herencia en C#.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-119">Shows how to create a simple Windows Forms control using inheritance in C#.</span></span>  
   
- [Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en Windows Forms controles](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Muestra cómo usar la característica de etiquetas inteligentes en controles de formularios Windows Forms.  
+ [<span data-ttu-id="1a7e9-120">Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1a7e9-120">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ <span data-ttu-id="1a7e9-121">Muestra cómo usar la característica de etiquetas inteligentes en controles de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-121">Shows how to use the smart tag feature on Windows Forms controls.</span></span>  
   
- [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
- Muestra cómo utilizar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=fullName> atributo para serializar una colección.  
+ [<span data-ttu-id="1a7e9-122">Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute</span><span class="sxs-lookup"><span data-stu-id="1a7e9-122">Walkthrough: Serializing Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
+ <span data-ttu-id="1a7e9-123">Muestra cómo utilizar el <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> atributo para serializar una colección.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-123">Shows how to use the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> attribute to serialize a collection.</span></span>  
   
- [Tutorial: Depurar personalizado controles Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- Muestra cómo depurar el comportamiento en tiempo de diseño de un control de formularios Windows Forms.  
+ [<span data-ttu-id="1a7e9-124">Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="1a7e9-124">Walkthrough: Debugging Custom Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="1a7e9-125">Muestra cómo depurar el comportamiento en tiempo de diseño de un control de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-125">Shows how to debug the design-time behavior of a Windows Forms control.</span></span>  
   
- [Tutorial: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- Muestra cómo integrar un control compuesto en el entorno de diseño.  
+ [<span data-ttu-id="1a7e9-126">Tutorial: Crear un control de Windows Forms que aproveche las características en tiempo de diseño de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1a7e9-126">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+ <span data-ttu-id="1a7e9-127">Muestra cómo integrar estrechamente un control compuesto en el entorno de diseño.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-127">Shows how to tightly integrate a composite control into the design environment.</span></span>  
   
- [Cómo: crear controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- Proporciona información general sobre consideraciones para implementar un control de formularios Windows Forms.  
+ [<span data-ttu-id="1a7e9-128">Cómo: Crear controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1a7e9-128">How to: Author Controls for Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ <span data-ttu-id="1a7e9-129">Proporciona información general sobre consideraciones para implementar un control de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-129">Provides an overview of considerations for implementing a Windows Forms control.</span></span>  
   
- [Cómo: crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- Muestra cómo crear un control mediante la herencia de un control compuesto.  
+ [<span data-ttu-id="1a7e9-130">Cómo: Crear controles compuestos</span><span class="sxs-lookup"><span data-stu-id="1a7e9-130">How to: Author Composite Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ <span data-ttu-id="1a7e9-131">Muestra cómo crear un control al heredar de un control compuesto.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-131">Shows how to create a control by inheriting from a composite control.</span></span>  
   
- [Cómo: heredar de la clase UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- Proporciona información general sobre el procedimiento para crear un control compuesto.  
+ [<span data-ttu-id="1a7e9-132">Cómo: Heredar de una clase UserControl</span><span class="sxs-lookup"><span data-stu-id="1a7e9-132">How to: Inherit from the UserControl Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ <span data-ttu-id="1a7e9-133">Proporciona información general sobre el procedimiento para crear un control compuesto.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-133">Provides an overview of the procedure for creating a composite control.</span></span>  
   
- [Cómo: heredar de Windows existentes controles de formularios](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- Muestra cómo crear un control extendido heredando de la <xref:System.Windows.Forms.Button> clase del control.  
+ [<span data-ttu-id="1a7e9-134">Cómo: Heredar de controles de Windows Forms existentes</span><span class="sxs-lookup"><span data-stu-id="1a7e9-134">How to: Inherit from Existing Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ <span data-ttu-id="1a7e9-135">Muestra cómo crear un control extendido heredando de la <xref:System.Windows.Forms.Button> clase del control.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-135">Shows how to create an extended control by inheriting from the <xref:System.Windows.Forms.Button> control class.</span></span>  
   
- [Cómo: heredar de la clase de Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- Proporciona información general de la creación de un control extendido.  
+ [<span data-ttu-id="1a7e9-136">Cómo: Heredar de la clase control</span><span class="sxs-lookup"><span data-stu-id="1a7e9-136">How to: Inherit from the Control Class</span></span>](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ <span data-ttu-id="1a7e9-137">Proporciona información general sobre la creación de un control extendido.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-137">Provides an overview of creating an extended control.</span></span>  
   
- [Cómo: alinear un Control con los bordes de formularios en tiempo de diseño](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- Muestra cómo utilizar el <xref:System.Windows.Forms.Control.Dock%2A> propiedad para alinear el control con el borde del formulario que ocupa.  
+ [<span data-ttu-id="1a7e9-138">Cómo: Alinear un control con los bordes de los formularios en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="1a7e9-138">How to: Align a Control to the Edges of Forms at Design Time</span></span>](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ <span data-ttu-id="1a7e9-139">Muestra cómo utilizar el <xref:System.Windows.Forms.Control.Dock%2A> propiedad para alinear el control con el borde del formulario que ocupa.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-139">Shows how to use the <xref:System.Windows.Forms.Control.Dock%2A> property to align your control to the edge of the form it occupies.</span></span>  
   
- [Cómo: mostrar un Control en el cuadro de diálogo de elementos de cuadro de herramientas elegir](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- Muestra el procedimiento para instalar el control para que aparezca en el **Personalizar cuadro de herramientas** cuadro de diálogo.  
+ [<span data-ttu-id="1a7e9-140">Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas</span><span class="sxs-lookup"><span data-stu-id="1a7e9-140">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ <span data-ttu-id="1a7e9-141">Muestra el procedimiento para instalar el control de modo que aparezca en el cuadro de diálogo **Customize Toolbox** (Personalizar cuadro de herramientas).</span><span class="sxs-lookup"><span data-stu-id="1a7e9-141">Shows the procedure for installing your control so that it appears in the **Customize Toolbox** dialog box.</span></span>  
   
- [Cómo: proporcionar un mapa de bits del cuadro de herramientas para un Control](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- Muestra cómo utilizar el <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el **cuadro de herramientas**.  
+ [<span data-ttu-id="1a7e9-142">Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control</span><span class="sxs-lookup"><span data-stu-id="1a7e9-142">How to: Provide a Toolbox Bitmap for a Control</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+ <span data-ttu-id="1a7e9-143">Muestra cómo utilizar el <xref:System.Drawing.ToolboxBitmapAttribute> para mostrar un icono junto al control personalizado en el **cuadro de herramientas**.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-143">Shows how to use the <xref:System.Drawing.ToolboxBitmapAttribute> to display an icon next to your custom control in the **Toolbox**.</span></span>  
   
- [Cómo: probar el comportamiento de tiempo de ejecución de un control de usuario](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- Muestra cómo utilizar el **UserControl Test Container** para probar el comportamiento de un control compuesto.  
+ [<span data-ttu-id="1a7e9-144">Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución</span><span class="sxs-lookup"><span data-stu-id="1a7e9-144">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ <span data-ttu-id="1a7e9-145">Muestra cómo utilizar **UserControl Test Container** para probar el comportamiento de un control compuesto.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-145">Shows how to use the **UserControl Test Container** to test the behavior of a composite control.</span></span>  
   
- [Errores en tiempo de diseño en el Diseñador de Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- Explica el significado y el uso de la lista de errores de tiempo de diseño que aparece en Microsoft Visual Studio cuando no se puede cargar el Diseñador de formularios Windows Forms.  
+ [<span data-ttu-id="1a7e9-146">Errores en tiempo de diseño en el Diseñador de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1a7e9-146">Design-Time Errors in the Windows Forms Designer</span></span>](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
+ <span data-ttu-id="1a7e9-147">Explica el significado y el uso de la lista de errores de tiempo de diseño que aparece en Microsoft Visual Studio cuando no se puede cargar el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-147">Explains the meaning and use of the Design-Time Error List that appears in Microsoft Visual Studio when the Windows Forms designer fails to load.</span></span>  
   
- [Solución de problemas de creación de controles y componentes](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- Muestra cómo diagnosticar y corregir los problemas comunes que pueden producirse al crear un componente personalizado o un control.  
+ [<span data-ttu-id="1a7e9-148">Solución de problemas relacionados con la creación de controles y componentes</span><span class="sxs-lookup"><span data-stu-id="1a7e9-148">Troubleshooting Control and Component Authoring</span></span>](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ <span data-ttu-id="1a7e9-149">Muestra cómo diagnosticar y corregir los problemas comunes que pueden producirse al crear un componente o control personalizados.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-149">Shows how to diagnose and fix common issues that can occur when you author a custom component or control.</span></span>  
   
-## <a name="reference"></a>Referencia  
- <xref:System.Windows.Forms.Control?displayProperty=fullName>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+## <a name="reference"></a><span data-ttu-id="1a7e9-150">Referencia</span><span class="sxs-lookup"><span data-stu-id="1a7e9-150">Reference</span></span>  
+ <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
+ <span data-ttu-id="1a7e9-151">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-151">Describes this class and has links to all of its members.</span></span>  
   
- <xref:System.Windows.Forms.UserControl?displayProperty=fullName>  
- Describe esta clase y contiene vínculos a todos sus miembros.  
+ <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
+ <span data-ttu-id="1a7e9-152">Describe esta clase y contiene vínculos a todos sus miembros.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-152">Describes this class and has links to all of its members.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [Desarrollo personalizado de Windows Forms controles con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- Describe cómo crear sus propios controles personalizados con .NET Framework.  
+## <a name="related-sections"></a><span data-ttu-id="1a7e9-153">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="1a7e9-153">Related Sections</span></span>  
+ [<span data-ttu-id="1a7e9-154">Desarrollar controles personalizados de Windows Forms con .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1a7e9-154">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ <span data-ttu-id="1a7e9-155">Describe cómo crear sus propios controles personalizados con .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-155">Discusses how to create your own custom controls with the .NET Framework.</span></span>  
   
- [Independencia del lenguaje y componentes independientes del lenguaje](../../../../docs/standard/language-independence-and-language-independent-components.md)  
- Presenta common language runtime, que está diseñado para simplificar la creación y uso de componentes. Un aspecto importante de esta simplificación es mejoras de interoperabilidad entre componentes escritos con diferentes lenguajes de programación. Common Language Specification (CLS) hace posible crear herramientas y componentes que funcionen con varios lenguajes de programación.  
+ [<span data-ttu-id="1a7e9-156">Independencia del lenguaje y componentes independientes del lenguaje</span><span class="sxs-lookup"><span data-stu-id="1a7e9-156">Language Independence and Language-Independent Components</span></span>](../../../../docs/standard/language-independence-and-language-independent-components.md)  
+ <span data-ttu-id="1a7e9-157">Presenta Common Language Runtime, que está diseñado para simplificar la creación y el uso de componentes.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-157">Introduces the common language runtime, which is designed to simplify the creation and use of components.</span></span> <span data-ttu-id="1a7e9-158">Un aspecto importante de esta simplificación es la interoperabilidad mejorada entre los componentes escritos con diferentes lenguajes de programación.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-158">An important aspect of this simplification is enhanced interoperability between components written using different programming languages.</span></span> <span data-ttu-id="1a7e9-159">Common Language Specification (CLS) hace posible crear herramientas y componentes que funcionen con varios lenguajes de programación.</span><span class="sxs-lookup"><span data-stu-id="1a7e9-159">The Common Language Specification (CLS) makes it possible to create tools and components that work with multiple programming languages.</span></span>  
   
- [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- Describe cómo habilitar el componente o el control se mostrará en el **Personalizar cuadro de herramientas** cuadro de diálogo.
+ [<span data-ttu-id="1a7e9-160">Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados</span><span class="sxs-lookup"><span data-stu-id="1a7e9-160">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ <span data-ttu-id="1a7e9-161">Describe cómo habilitar que el componente o el control se muestren en el cuadro de diálogo **Customize Toolbox** (Personalizar cuadro de herramientas).</span><span class="sxs-lookup"><span data-stu-id="1a7e9-161">Describes how to enable your component or control to be displayed in the **Customize Toolbox** dialog box.</span></span>

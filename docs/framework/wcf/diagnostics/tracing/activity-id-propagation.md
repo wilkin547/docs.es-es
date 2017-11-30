@@ -1,55 +1,58 @@
 ---
-title: "Propagaci&#243;n de ID de actividad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propagación de ID de actividad"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c61087102148688678d868ce25a9cb63315ed65
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Propagaci&#243;n de ID de actividad
-La propagación se produce cuando el seguimiento de la actividad ServiceModel está habilitada \(propagación de ServiceModel\) o deshabilitada \(propagación de actividad entre usuarios\).  
+# <a name="activity-id-propagation"></a><span data-ttu-id="a321e-102">Propagación de ID de actividad</span><span class="sxs-lookup"><span data-stu-id="a321e-102">Activity ID Propagation</span></span>
+<span data-ttu-id="a321e-103">La propagación se produce cuando el seguimiento de la actividad ServiceModel está habilitada (propagación de ServiceModel) o deshabilitada (propagación de actividad entre usuarios).</span><span class="sxs-lookup"><span data-stu-id="a321e-103">Propagation happens when ServiceModel activity tracing is enabled (ServiceModel propagation) or disabled (User-to-User activity propagation).</span></span>  
   
-## Seguimiento de actividad ServiceModel está habilitado  
- Si ServiceModel ActivityTracing está habilitado, se produce la propagación entre las actividades ProcessAction.  
+## <a name="servicemodel-activity-tracing-is-enabled"></a><span data-ttu-id="a321e-104">Seguimiento de actividad ServiceModel está habilitado</span><span class="sxs-lookup"><span data-stu-id="a321e-104">ServiceModel Activity Tracing is Enabled</span></span>  
+ <span data-ttu-id="a321e-105">Si ServiceModel ActivityTracing está habilitado, se produce la propagación entre las actividades ProcessAction.</span><span class="sxs-lookup"><span data-stu-id="a321e-105">If ServiceModel ActivityTracing is enabled, propagation happens between ProcessAction activities.</span></span>  
   
-### Servidor  
- Cuando el atributo `propagateActivity` está establecido en `true` en el cliente y servidor, el id. de actividad `ProcessAction` del servidor es idéntico al id. de encabezado del mensaje `ActivityId` propagado.  
+### <a name="server"></a><span data-ttu-id="a321e-106">Servidor</span><span class="sxs-lookup"><span data-stu-id="a321e-106">Server</span></span>  
+ <span data-ttu-id="a321e-107">Cuando el `propagateActivity` atributo está establecido en `true` en el cliente y el servidor, el identificador de la `ProcessAction` actividad en el servidor es idéntica al identificador propagado `ActivityId` encabezado del mensaje.</span><span class="sxs-lookup"><span data-stu-id="a321e-107">When the `propagateActivity` attribute is set to `true` on both the client and server, the ID of the `ProcessAction` activity in the server is identical to the ID in the propagated `ActivityId` message header.</span></span>  
   
- Cuando no hay ningún encabezado `ActivityId` en el mensaje \(es decir, `propagateActivity`\=`false` en el cliente\), o cuando `propagateActivity`\=`false` en el servidor, el servidor genera un nuevo id. de actividad.  
+ <span data-ttu-id="a321e-108">Si no `ActivityId` encabezado está presente en el mensaje (es decir, `propagateActivity` = `false` en el cliente), o cuando `propagateActivity` = `false` en el servidor, el servidor genera un nuevo identificador de actividad.</span><span class="sxs-lookup"><span data-stu-id="a321e-108">When no `ActivityId` header is present in the message (that is, `propagateActivity`=`false` on the client), or when `propagateActivity`=`false` on the server, the server generates a new activity ID.</span></span>  
   
-### Cliente  
- Si el cliente es un subproceso único de forma sincrónica, el cliente no tiene en cuenta los valores de `propagateActivity` del cliente o servidor.  En su lugar, la respuesta se administra en la actividad de solicitud.  Si el cliente es un multiproceso asincrónico o sincrónico, `propagateActivity`\=`true` en el cliente y hay un encabezado de id. de actividad en el mensaje enviado por el servidor, el cliente recupera el id. de actividad del mensaje y transfiere a la actividad de  procesamiento de acción que contiene el id. de actividad propagado.  De lo contrario, el cliente se transfiere de la actividad de procesamiento de mensajes a una nueva actividad de acción de procesos.  Se realiza esta transferencia adicional a una nueva actividad de procesamiento de acción por coherencia.  Dentro de esta actividad, el cliente recupera el id. de actividad de la actividad BeginCall del contexto del subproceso local, cuando se asigna el subproceso para procesamiento del mensaje de respuesta.  Se transfiere, a continuación, a la actividad inicial de procesamiento de acción.  
+### <a name="client"></a><span data-ttu-id="a321e-109">Cliente</span><span class="sxs-lookup"><span data-stu-id="a321e-109">Client</span></span>  
+ <span data-ttu-id="a321e-110">Si el cliente es un subproceso único de forma sincrónica, el cliente no tiene en cuenta los valores de `propagateActivity` del cliente o servidor.</span><span class="sxs-lookup"><span data-stu-id="a321e-110">If the client is synchronously single threaded, the client disregards any settings of `propagateActivity` at the client or server.</span></span> <span data-ttu-id="a321e-111">En su lugar, la respuesta se administra en la actividad de solicitud.</span><span class="sxs-lookup"><span data-stu-id="a321e-111">Instead, the response is handled in the request activity.</span></span> <span data-ttu-id="a321e-112">Si el cliente sea asincrónico o sincrónico multiproceso, `propagateActivity` = `true` en el cliente y hay un encabezado de Id. de actividad en el mensaje enviado por el servidor, el cliente recupera el identificador de actividad del mensaje y transfiere a la Actividad de acción de proceso que contiene el identificador de actividad propagado.</span><span class="sxs-lookup"><span data-stu-id="a321e-112">If the client is asynchronous or synchronous multithreaded, `propagateActivity`=`true` in the client, and there is an activity ID header in the message sent by the server, the client retrieves the activity ID from the message, and transfers to the Process Action activity that contains the propagated activity ID.</span></span> <span data-ttu-id="a321e-113">De lo contrario, el cliente se transfiere de la actividad de procesamiento de mensajes a una nueva actividad de acción de procesos.</span><span class="sxs-lookup"><span data-stu-id="a321e-113">Otherwise, the client transfers from Process Message activity to a new Process Action activity.</span></span> <span data-ttu-id="a321e-114">Se realiza esta transferencia adicional a una nueva actividad de procesamiento de acción por coherencia.</span><span class="sxs-lookup"><span data-stu-id="a321e-114">This extra transfer to a new Process Action activity is done for consistency.</span></span> <span data-ttu-id="a321e-115">Dentro de esta actividad, el cliente recupera el id. de actividad de la actividad BeginCall del contexto del subproceso local, cuando se asigna el subproceso para procesamiento del mensaje de respuesta.</span><span class="sxs-lookup"><span data-stu-id="a321e-115">Inside this activity, the client retrieves the activity ID of the BeginCall activity from the local thread context, when the thread is allocated for response message processing.</span></span> <span data-ttu-id="a321e-116">Se transfiere, a continuación, a la actividad inicial de procesamiento de acción.</span><span class="sxs-lookup"><span data-stu-id="a321e-116">It then transfers to the initial Process Action activity.</span></span>  
   
- Si el cliente es dúplex, el cliente actúa como servidor al recibir el mensaje.  
+ <span data-ttu-id="a321e-117">Si el cliente es dúplex, el cliente actúa como servidor al recibir el mensaje.</span><span class="sxs-lookup"><span data-stu-id="a321e-117">If the client is duplex, the client acts as server on receiving the message.</span></span>  
   
-### Propagación en mensajes de error  
- No hay ninguna diferencia a la hora de administrar mensajes válidos y mensajes de error.  Si `propagateActivity`\=`true`, el id. de actividad agregada a los encabezados de los mensajes de error SOAP es idéntico a la actividad ambiente.  
+### <a name="propagation-in-fault-messages"></a><span data-ttu-id="a321e-118">Propagación en mensajes de error</span><span class="sxs-lookup"><span data-stu-id="a321e-118">Propagation in Fault Messages</span></span>  
+ <span data-ttu-id="a321e-119">No hay ninguna diferencia a la hora de administrar mensajes válidos y mensajes de error.</span><span class="sxs-lookup"><span data-stu-id="a321e-119">There is no difference in handling valid and fault messages.</span></span> <span data-ttu-id="a321e-120">Si `propagateActivity` = `true`, el identificador de actividad que se agregan a los encabezados del mensaje de error SOAP es idéntico a la actividad ambiente.</span><span class="sxs-lookup"><span data-stu-id="a321e-120">If `propagateActivity`=`true`, the activity ID added to the SOAP fault message headers is identical to the ambient activity.</span></span>  
   
-## El seguimiento de actividad ServiceModel está deshabilitad  
- Si ServiceModel ActivityTracing está deshabilitado, la propagación se produce directamente entre las actividades de código de usuario sin pasar por las actividades ServiceModel.  Un id. de actividad definido por el usuario también se propaga a través del encabezado de id. de actividad de mensaje.  
+## <a name="servicemodel-activity-tracing-is-disabled"></a><span data-ttu-id="a321e-121">El seguimiento de actividad ServiceModel está deshabilitad</span><span class="sxs-lookup"><span data-stu-id="a321e-121">ServiceModel Activity Tracing is Disabled</span></span>  
+ <span data-ttu-id="a321e-122">Si ServiceModel ActivityTracing está deshabilitado, la propagación se produce directamente entre las actividades de código de usuario sin pasar por las actividades ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="a321e-122">If ServiceModel ActivityTracing is disabled, propagation occurs between user code activities directly without going through ServiceModel activities.</span></span> <span data-ttu-id="a321e-123">Un id. de actividad definido por el usuario también se propaga a través del encabezado de id. de actividad de mensaje. </span><span class="sxs-lookup"><span data-stu-id="a321e-123">A user-defined activity ID is also propagated through the message activity ID header.</span></span>  
   
- Si `propagateActivity`\=`true` y `ActivityTracing`\=`off` para un agente de escucha de seguimiento de ServiceModel \(sin tener en cuenta si está habilitado el seguimiento en ServiceModel\), lo siguiente ocurre en el cliente o servidor:  
+ <span data-ttu-id="a321e-124">Si `propagateActivity` = `true` y `ActivityTracing` = `off` para un agente de escucha de seguimiento de ServiceModel (independientemente de si se habilita el seguimiento en ServiceModel), lo siguiente ocurre en el cliente o el servidor:</span><span class="sxs-lookup"><span data-stu-id="a321e-124">If `propagateActivity`=`true` and `ActivityTracing`=`off` for a ServiceModel trace listener (regardless of whether tracing is enabled on ServiceModel), the following happen on either the client or server:</span></span>  
   
--   En la solicitud de operación o respuesta de envío, el id. de actividad en TLS se propaga fuera del código de usuario hasta que se forma un mensaje.  También se inserta en el mensaje un encabezado de id. de actividad antes de enviarse.  
+-   <span data-ttu-id="a321e-125">En la solicitud de operación o respuesta de envío, el id. de actividad en TLS se propaga fuera del código de usuario hasta que se forma un mensaje.</span><span class="sxs-lookup"><span data-stu-id="a321e-125">On operation request or sending response, the activity ID in TLS is propagated out of user code until a message is formed.</span></span> <span data-ttu-id="a321e-126">También se inserta en el mensaje un encabezado de id. de actividad antes de enviarse.</span><span class="sxs-lookup"><span data-stu-id="a321e-126">An activity ID header is also inserted into the message before it is sent.</span></span>  
   
--   Al recibir la solicitud o recibir la respuesta, el id. de actividad se recupera del encabezado del mensaje en cuanto se cree el objeto de mensaje recibido.  Se propaga el id. de actividad en TLS en cuanto el mensaje desaparece del ámbito hasta que se alcance el código de usuario.  
+-   <span data-ttu-id="a321e-127">Al recibir la solicitud o recibir la respuesta, el id. de actividad se recupera del encabezado del mensaje en cuanto se cree el objeto de mensaje recibido.</span><span class="sxs-lookup"><span data-stu-id="a321e-127">On receiving request or receiving response, the activity ID is retrieved from the message header as soon as the received message object is created.</span></span> <span data-ttu-id="a321e-128">Se propaga el id. de actividad en TLS en cuanto el mensaje desaparece del ámbito hasta que se alcance el código de usuario. </span><span class="sxs-lookup"><span data-stu-id="a321e-128">The activity ID in TLS is propagated as soon as the message disappears from scope until user code is reached.</span></span>  
   
- Estas acciones garantizan que los seguimientos del usuario aparecerán en la misma actividad si la propagación está activada.  Sin embargo, no hay garantía en seguimientos de ServiceModel.  Los seguimientos de ServiceModel se producen en una actividad de código de usuario si se ejecuta el procesamiento de esos seguimientos en el mismo subproceso donde se estableció la actividad de código de usuario.  
+ <span data-ttu-id="a321e-129">Estas acciones garantizan que los seguimientos del usuario aparecerán en la misma actividad si la propagación está activada.</span><span class="sxs-lookup"><span data-stu-id="a321e-129">These actions guarantee that user traces will appear in the same activity if propagation is on.</span></span> <span data-ttu-id="a321e-130">Sin embargo, no hay garantía en seguimientos de ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="a321e-130">However, it makes no guarantee on ServiceModel traces.</span></span> <span data-ttu-id="a321e-131">Los seguimientos de ServiceModel se producen en una actividad de código de usuario si se ejecuta el procesamiento de esos seguimientos en el mismo subproceso donde se estableció la actividad de código de usuario.</span><span class="sxs-lookup"><span data-stu-id="a321e-131">ServiceModel traces occur in a user code activity only if the processing of those traces is executed on the same thread where the user code activity was set.</span></span>  
   
- En general, los seguimientos de ServiceModel se puede observar en los lugares siguientes:  
+ <span data-ttu-id="a321e-132">En general, los seguimientos de ServiceModel se puede observar en los lugares siguientes:</span><span class="sxs-lookup"><span data-stu-id="a321e-132">In general, ServiceModel traces can be observed in the following places:</span></span>  
   
--   Si el seguimiento de ServiceModel está deshabilitado, todos los seguimientos emitidos aparecen en actividades de usuario.  Si la propagación está habilitada en el servidor y cliente, estos seguimientos estarán en la misma actividad.  
+-   <span data-ttu-id="a321e-133">Si el seguimiento de ServiceModel está deshabilitado, todos los seguimientos emitidos aparecen en actividades de usuario.</span><span class="sxs-lookup"><span data-stu-id="a321e-133">If ServiceModel tracing is disabled, all emitted traces appear in user activities.</span></span> <span data-ttu-id="a321e-134">Si la propagación está habilitada en el servidor y cliente, estos seguimientos estarán en la misma actividad.</span><span class="sxs-lookup"><span data-stu-id="a321e-134">If propagation is enabled at both the server and client, these traces will be in the same activity.</span></span>  
   
--   Si el seguimiento de ServiceModel está habilitado, pero ActivityTracing está deshabilitado, los seguimientos del usuario aparecen en la misma actividad si la propagación está habilitada en ambos.  Los seguimientos de ServiceModel aparecen en la actividad predeterminada 0000, a menos que se produzcan en el mismo subproceso que el procesamiento de código de usuario donde se establece la actividad inicialmente.  
+-   <span data-ttu-id="a321e-135">Si el seguimiento de ServiceModel está habilitado, pero ActivityTracing está deshabilitado, los seguimientos del usuario aparecen en la misma actividad si la propagación está habilitada en ambos.</span><span class="sxs-lookup"><span data-stu-id="a321e-135">If ServiceModel tracing is enabled, but ActivityTracing is disabled, user traces appear in the same activity if propagation is enabled on both ends.</span></span> <span data-ttu-id="a321e-136">Los seguimientos de ServiceModel aparecen en la actividad predeterminada 0000, a menos que se produzcan en el mismo subproceso que el procesamiento de código de usuario donde se establece la actividad inicialmente.</span><span class="sxs-lookup"><span data-stu-id="a321e-136">ServiceModel traces appear in the default 0000 activity, unless they occur in the same thread as the user code processing where the activity is initially set.</span></span>  
   
--   Si están habilitados ambos seguimientos de ServiceModel y ActivityTracing, los seguimientos del usuario aparecen en actividades definidas por el usuario y los seguimientos de ServiceModel aparecen en actividades definidas por ServiceModel.  La propagación se produce en el nivel de ServiceModel.
+-   <span data-ttu-id="a321e-137">Si están habilitados ambos seguimientos de ServiceModel y ActivityTracing, los seguimientos del usuario aparecen en actividades definidas por el usuario y los seguimientos de ServiceModel aparecen en actividades definidas por ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="a321e-137">If both ServiceModel tracing and ActivityTracing are enabled, user traces appear in user-defined activities, and ServiceModel traces appear in ServiceModel-defined activities.</span></span> <span data-ttu-id="a321e-138">La propagación se produce en el nivel de ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="a321e-138">Propagation happens at ServiceModel level.</span></span>

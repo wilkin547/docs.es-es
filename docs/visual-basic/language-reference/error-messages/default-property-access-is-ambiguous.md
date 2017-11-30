@@ -1,29 +1,27 @@
 ---
-title: "Hay un acceso de propiedad Default ambiguo entre los miembros &lt;nombreDePropiedadPredeterminado&gt; heredados de la interfaz &lt;nombreDeInterfaz1&gt; y &lt;nombreDePropiedadPredeterminado&gt; de la interfaz &lt;nombreDeInterfaz2&gt; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30686"
-  - "bc30686"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30686"
+title: Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz &#39; &lt;defaultpropertyname&gt;&#39; de la interfaz &#39;&lt; interfacename1&gt;&#39; y &#39;&lt; defaultpropertyname&gt;&#39; de la interfaz &#39;&lt; interfacename2&gt;&#39;
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30686
+- bc30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Hay un acceso de propiedad Default ambiguo entre los miembros &lt;nombreDePropiedadPredeterminado&gt; heredados de la interfaz &lt;nombreDeInterfaz1&gt; y &lt;nombreDePropiedadPredeterminado&gt; de la interfaz &lt;nombreDeInterfaz2&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una interfaz hereda de dos interfaces, cada una de las cuales declara una propiedad predeterminada con el mismo nombre.  El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación.  Esto se ilustra en el siguiente ejemplo:  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a><span data-ttu-id="87082-102">Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz &#39; &lt;defaultpropertyname&gt;&#39; de la interfaz &#39;&lt; interfacename1&gt;&#39; y &#39;&lt; defaultpropertyname&gt;&#39; de la interfaz &#39;&lt; interfacename2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="87082-102">Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;</span></span>
+<span data-ttu-id="87082-103">Una interfaz hereda de dos interfaces, cada uno de los cuales declara una propiedad predeterminada con el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="87082-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="87082-104">El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación.</span><span class="sxs-lookup"><span data-stu-id="87082-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="87082-105">Esto se ilustra en el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="87082-105">The following example illustrates this.</span></span>  
   
 ```  
 Public Interface Iface1  
@@ -43,21 +41,21 @@ Public Class testClass
 End Class  
 ```  
   
- Cuando especifica `testObj(1)`, el compilador intenta resolverlo con la propiedad predeterminada.  Sin embargo, hay dos propiedades predeterminadas posibles debido a las interfaces heredadas, por lo que el compilador señala este error.  
+ <span data-ttu-id="87082-106">Cuando se especifica `testObj(1)`, el compilador intenta resolver en la propiedad predeterminada.</span><span class="sxs-lookup"><span data-stu-id="87082-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="87082-107">Sin embargo, hay dos propiedades predeterminadas posibles debido a las interfaces heredadas, por lo que el compilador señala este error.</span><span class="sxs-lookup"><span data-stu-id="87082-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
   
- **Identificador de error:** BC30686  
+ <span data-ttu-id="87082-108">**Id. de error:** BC30686</span><span class="sxs-lookup"><span data-stu-id="87082-108">**Error ID:** BC30686</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="87082-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="87082-109">To correct this error</span></span>  
   
--   Evite heredar miembros con el mismo nombre.  En el ejemplo anterior, si `testObj` no necesita ninguno miembro, por ejemplo, `Iface2`, declárelo del modo siguiente:  
+-   <span data-ttu-id="87082-110">Evite heredar a miembros con el mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="87082-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="87082-111">En el ejemplo anterior, si `testObj` no necesita ninguno de los miembros de, por ejemplo, `Iface2`, declárelo como sigue:</span><span class="sxs-lookup"><span data-stu-id="87082-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     O bien  
+     <span data-ttu-id="87082-112">O bien</span><span class="sxs-lookup"><span data-stu-id="87082-112">-or-</span></span>  
   
--   Implemente la interfaz que hereda en una clase.  A continuación, puede implementar cada una de las propiedades heredadas con nombres diferentes.  Sin embargo, sólo una de ellas puede ser la propiedad predeterminada de la clase de implementación.  Esto se ilustra en el siguiente ejemplo:  
+-   <span data-ttu-id="87082-113">Implemente la interfaz que hereda de una clase.</span><span class="sxs-lookup"><span data-stu-id="87082-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="87082-114">A continuación, puede implementar cada una de las propiedades heredadas con nombres diferentes.</span><span class="sxs-lookup"><span data-stu-id="87082-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="87082-115">Sin embargo, sólo uno de ellos puede ser la propiedad predeterminada de la clase de implementación.</span><span class="sxs-lookup"><span data-stu-id="87082-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="87082-116">Esto se ilustra en el siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="87082-116">The following example illustrates this.</span></span>  
   
     ```  
     Public Class useIface3  
@@ -71,5 +69,5 @@ End Class
     End Class  
     ```  
   
-## Vea también  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="87082-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="87082-117">See Also</span></span>  
+ [<span data-ttu-id="87082-118">Interfaces</span><span class="sxs-lookup"><span data-stu-id="87082-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

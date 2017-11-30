@@ -1,27 +1,31 @@
 ---
-title: "Propiedades y argumentos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Propiedades frente a Argumentos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9b3f06cf91591a373550f876f7b2111159067ba3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Propiedades y argumentos
-Hay varias opciones disponibles para pasar datos en una actividad.Además de utilizar <xref:System.Activities.InArgument>, las actividades también se pueden desarrollar para recibir datos utilizando las propiedades CLR estándar o las propiedades <xref:System.Activities.ActivityAction> públicas.En este tema se analiza la forma de seleccionar el tipo de método adecuado.  
+# <a name="properties-vs-arguments"></a><span data-ttu-id="46b9f-102">Propiedades frente a Argumentos</span><span class="sxs-lookup"><span data-stu-id="46b9f-102">Properties vs. Arguments</span></span>
+<span data-ttu-id="46b9f-103">Hay varias opciones disponibles para pasar datos en una actividad.</span><span class="sxs-lookup"><span data-stu-id="46b9f-103">There are several options available for passing data into an activity.</span></span> <span data-ttu-id="46b9f-104">Además de utilizar <xref:System.Activities.InArgument>, las actividades también se pueden desarrollar para recibir datos utilizando las propiedades CLR estándar o las propiedades <xref:System.Activities.ActivityAction> públicas.</span><span class="sxs-lookup"><span data-stu-id="46b9f-104">In addition to using <xref:System.Activities.InArgument>, activities can also be developed that receive data using either standard CLR Properties or public <xref:System.Activities.ActivityAction> properties.</span></span> <span data-ttu-id="46b9f-105">En este tema se analiza la forma de seleccionar el tipo de método adecuado.</span><span class="sxs-lookup"><span data-stu-id="46b9f-105">This topic discusses how to select the appropriate method type.</span></span>  
   
-## Utilizar propiedades CLR  
- Cuando se pasan datos en una actividad, las propiedades CLR \(es decir, los métodos públicos que utilizan rutinas Get y Set para exponer los datos\) son la opción con mayor número de restricciones.El valor de un parámetro pasado en una propiedad CLR debe conocerse cuando la solución se ha compilado; este valor será el mismo para todas las instancias del flujo de trabajo.De esta manera, un valor pasado en una propiedad CLR es similar a una constante definida en código; este valor no puede cambiar mientras dura la actividad, y no se puede cambiar para distintas instancias de la actividad.<xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A> es un ejemplo de una propiedad CLR expuesta por una actividad; el nombre del método al que la actividad llama no se puede cambiar según las condiciones del runtime y será el mismo para cada instancia de la actividad.  
+## <a name="using-clr-properties"></a><span data-ttu-id="46b9f-106">Utilizar propiedades CLR</span><span class="sxs-lookup"><span data-stu-id="46b9f-106">Using CLR Properties</span></span>  
+ <span data-ttu-id="46b9f-107">Cuando se pasan datos en una actividad, las propiedades CLR (es decir, los métodos públicos que utilizan rutinas Get y Set para exponer los datos) son la opción con mayor número de restricciones.</span><span class="sxs-lookup"><span data-stu-id="46b9f-107">When passing data into an activity, CLR properties (that is, public methods that use Get and Set routines to expose data) are the option that has the most restrictions.</span></span> <span data-ttu-id="46b9f-108">El valor de un parámetro pasado en una propiedad CLR debe conocerse cuando la solución se ha compilado; este valor será el mismo para todas las instancias del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="46b9f-108">The value of a parameter passed into a CLR property must be known when the solution is compiled; this value will be the same for every instance of the workflow.</span></span> <span data-ttu-id="46b9f-109">De esta manera, un valor pasado en una propiedad CLR es similar a una constante definida en código; este valor no puede cambiar mientras dura la actividad, y no se puede cambiar para distintas instancias de la actividad.</span><span class="sxs-lookup"><span data-stu-id="46b9f-109">In this way, a value passed into a CLR property is similar to a constant defined in code; this value can’t change for the life of the activity, and can’t be changed for different instances of the activity.</span></span> <span data-ttu-id="46b9f-110"><xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A> es un ejemplo de una propiedad CLR expuesta por una actividad; el nombre del método al que la actividad llama no se puede cambiar según las condiciones del tiempo de ejecución y será el mismo para cada instancia de la actividad.</span><span class="sxs-lookup"><span data-stu-id="46b9f-110"><xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A> is an example of a CLR property exposed by an activity; the method name that the activity calls can’t be changed based on runtime conditions, and will be the same for every instance of the activity.</span></span>  
   
-## Utilizar argumentos  
- Se deben usar argumentos cuando los datos se evalúan solo una vez durante la duración de la actividad; es decir, su valor no cambiará durante la duración de la actividad, pero el valor puede ser diferente para distintas instancias de la actividad.<xref:System.Activities.Statements.If.Condition%2A> es un ejemplo de un valor que se evalúa una vez; por consiguiente se define como argumento.<xref:System.Activities.Statements.WriteLine.Text%2A> es otro ejemplo de un método que debe definirse como argumento, ya que se evalúa solo una vez durante la ejecución de la actividad, pero puede ser diferente para distintas instancias de la actividad.  
+## <a name="using-arguments"></a><span data-ttu-id="46b9f-111">Utilizar argumentos</span><span class="sxs-lookup"><span data-stu-id="46b9f-111">Using Arguments</span></span>  
+ <span data-ttu-id="46b9f-112">Se deben usar argumentos cuando los datos se evalúan solo una vez durante la duración de la actividad; es decir, su valor no cambiará durante la duración de la actividad, pero el valor puede ser diferente para distintas instancias de la actividad.</span><span class="sxs-lookup"><span data-stu-id="46b9f-112">Arguments should be used when data is only evaluated once during the lifetime of the activity; that is, its value will not change during the lifetime of the activity, but the value can be different for different instances of the activity.</span></span> <span data-ttu-id="46b9f-113"><xref:System.Activities.Statements.If.Condition%2A> es un ejemplo de un valor que se evalúa una vez; por consiguiente se define como argumento.</span><span class="sxs-lookup"><span data-stu-id="46b9f-113"><xref:System.Activities.Statements.If.Condition%2A> is an example of a value that gets evaluated once; therefore it is defined as an argument.</span></span> <span data-ttu-id="46b9f-114"><xref:System.Activities.Statements.WriteLine.Text%2A> es otro ejemplo de un método que debe definirse como argumento, ya que se evalúa solo una vez durante la ejecución de la actividad, pero puede ser diferente para distintas instancias de la actividad.</span><span class="sxs-lookup"><span data-stu-id="46b9f-114"><xref:System.Activities.Statements.WriteLine.Text%2A> is another example of a method that should be defined as an argument, since it is only evaluated once during the activity’s execution, but it can be different for different instances of the activity.</span></span>  
   
-## Utilizar ActivityAction  
- Cuando es necesario evaluar los datos varias veces durante la ejecución de una actividad, debe utilizarse <xref:System.Activities.ActivityAction>.Por ejemplo, la propiedad <xref:System.Activities.Statements.While.Condition%2A> se evalúa para cada iteración del bucle <xref:System.Activities.Statements.While>.Si se utiliza <xref:System.Activities.InArgument> con este fin, nunca se saldrá del bucle, ya que el argumento no se volverá a evaluar para cada iteración y siempre se devolverá el mismo resultado.
+## <a name="using-activityaction"></a><span data-ttu-id="46b9f-115">Utilizar ActivityAction</span><span class="sxs-lookup"><span data-stu-id="46b9f-115">Using ActivityAction</span></span>  
+ <span data-ttu-id="46b9f-116">Cuando es necesario evaluar los datos varias veces durante la ejecución de una actividad, debe utilizarse <xref:System.Activities.ActivityAction>.</span><span class="sxs-lookup"><span data-stu-id="46b9f-116">When data needs to be evaluated multiple times during the lifetime of an activity’s execution, an <xref:System.Activities.ActivityAction> should be used.</span></span> <span data-ttu-id="46b9f-117">Por ejemplo, la propiedad <xref:System.Activities.Statements.While.Condition%2A> se evalúa para cada iteración del bucle <xref:System.Activities.Statements.While>.</span><span class="sxs-lookup"><span data-stu-id="46b9f-117">For example, the <xref:System.Activities.Statements.While.Condition%2A> property is evaluated for each iteration of the <xref:System.Activities.Statements.While> loop.</span></span> <span data-ttu-id="46b9f-118">Si se utiliza <xref:System.Activities.InArgument> con este fin, nunca se saldrá del bucle, ya que el argumento no se volverá a evaluar para cada iteración y siempre se devolverá el mismo resultado.</span><span class="sxs-lookup"><span data-stu-id="46b9f-118">If an <xref:System.Activities.InArgument> were used for this purpose, the loop would never exit, since the argument would not be reevaluated for each iteration, and would always return the same result.</span></span>

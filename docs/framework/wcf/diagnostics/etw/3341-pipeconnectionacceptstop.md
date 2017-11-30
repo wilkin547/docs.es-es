@@ -1,35 +1,38 @@
 ---
-title: "3341 - PipeConnectionAcceptStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3341 - PipeConnectionAcceptStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 85d20b28-53c2-4206-90bc-8564a03dcb49
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f5b361ebc5e56c985d55c9966c313c7ad5056000
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3341 - PipeConnectionAcceptStop
-## Propiedades  
+# <a name="3341---pipeconnectionacceptstop"></a><span data-ttu-id="710f7-102">3341 - PipeConnectionAcceptStop</span><span class="sxs-lookup"><span data-stu-id="710f7-102">3341 - PipeConnectionAcceptStop</span></span>
+## <a name="properties"></a><span data-ttu-id="710f7-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="710f7-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|3341|  
-|Palabras clave|Canal|  
-|Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="710f7-104">Id.</span><span class="sxs-lookup"><span data-stu-id="710f7-104">ID</span></span>|<span data-ttu-id="710f7-105">3341</span><span class="sxs-lookup"><span data-stu-id="710f7-105">3341</span></span>|  
+|<span data-ttu-id="710f7-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="710f7-106">Keywords</span></span>|<span data-ttu-id="710f7-107">Canal</span><span class="sxs-lookup"><span data-stu-id="710f7-107">Channel</span></span>|  
+|<span data-ttu-id="710f7-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="710f7-108">Level</span></span>|<span data-ttu-id="710f7-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="710f7-109">Verbose</span></span>|  
+|<span data-ttu-id="710f7-110">Canal</span><span class="sxs-lookup"><span data-stu-id="710f7-110">Channel</span></span>|<span data-ttu-id="710f7-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="710f7-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Este evento se genera cuando la aceptación de conexión de canalización se detiene.  
+## <a name="description"></a><span data-ttu-id="710f7-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="710f7-112">Description</span></span>  
+ <span data-ttu-id="710f7-113">Este evento se genera cuando la aceptación de conexión de canalización se detiene.</span><span class="sxs-lookup"><span data-stu-id="710f7-113">This event is emitted when the pipe connection accept stops.</span></span>  
   
-## Mensaje  
- Se aceptó la conexión de canalización.  
+## <a name="message"></a><span data-ttu-id="710f7-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="710f7-114">Message</span></span>  
+ <span data-ttu-id="710f7-115">Se aceptó la conexión de canalización.</span><span class="sxs-lookup"><span data-stu-id="710f7-115">Pipe connection accepted.</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="710f7-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="710f7-116">Details</span></span>

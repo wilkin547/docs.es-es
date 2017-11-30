@@ -1,38 +1,42 @@
 ---
-title: "1008 - WorkflowApplicationUnloaded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1008 - WorkflowApplicationUnloaded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a605b780-4a7e-43ab-92e7-0a3b01d053b0
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 297b3ad9a677d28d12d1b00fdaeec8ec94842263
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 1008 - WorkflowApplicationUnloaded
-## Propiedades  
+# <a name="1008---workflowapplicationunloaded"></a><span data-ttu-id="4362a-102">1008 - WorkflowApplicationUnloaded</span><span class="sxs-lookup"><span data-stu-id="4362a-102">1008 - WorkflowApplicationUnloaded</span></span>
+## <a name="properties"></a><span data-ttu-id="4362a-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="4362a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|1008|  
-|Palabras clave|WFRuntime|  
-|Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="4362a-104">Id.</span><span class="sxs-lookup"><span data-stu-id="4362a-104">ID</span></span>|<span data-ttu-id="4362a-105">1008</span><span class="sxs-lookup"><span data-stu-id="4362a-105">1008</span></span>|  
+|<span data-ttu-id="4362a-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="4362a-106">Keywords</span></span>|<span data-ttu-id="4362a-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="4362a-107">WFRuntime</span></span>|  
+|<span data-ttu-id="4362a-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="4362a-108">Level</span></span>|<span data-ttu-id="4362a-109">Información</span><span class="sxs-lookup"><span data-stu-id="4362a-109">Information</span></span>|  
+|<span data-ttu-id="4362a-110">Canal</span><span class="sxs-lookup"><span data-stu-id="4362a-110">Channel</span></span>|<span data-ttu-id="4362a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="4362a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Indica que una aplicación de flujo de trabajo se ha cargado.  
+## <a name="description"></a><span data-ttu-id="4362a-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="4362a-112">Description</span></span>  
+ <span data-ttu-id="4362a-113">Indica que una aplicación de flujo de trabajo se ha cargado.</span><span class="sxs-lookup"><span data-stu-id="4362a-113">Indicates a workflow application has unloaded.</span></span>  
   
-## Mensaje  
- WorkflowInstance Id: '%1' se descargó.  
+## <a name="message"></a><span data-ttu-id="4362a-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="4362a-114">Message</span></span>  
+ <span data-ttu-id="4362a-115">WorkflowInstance Id: '%1' se descargó.</span><span class="sxs-lookup"><span data-stu-id="4362a-115">WorkflowInstance Id: '%1' was Unloaded.</span></span>  
   
-## Detalles  
+## <a name="details"></a><span data-ttu-id="4362a-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="4362a-116">Details</span></span>  
   
-|Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|WorkflowInstanceId|`xs:string`|El id. de instancia del flujo de trabajo.|  
-|AppDomain|`xs:string`|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="4362a-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="4362a-117">Data Item Name</span></span>|<span data-ttu-id="4362a-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="4362a-118">Data Item Type</span></span>|<span data-ttu-id="4362a-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="4362a-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="4362a-120">WorkflowInstanceId</span><span class="sxs-lookup"><span data-stu-id="4362a-120">WorkflowInstanceId</span></span>|`xs:string`|<span data-ttu-id="4362a-121">El id. de instancia del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="4362a-121">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="4362a-122">AppDomain</span><span class="sxs-lookup"><span data-stu-id="4362a-122">AppDomain</span></span>|`xs:string`|<span data-ttu-id="4362a-123">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="4362a-123">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

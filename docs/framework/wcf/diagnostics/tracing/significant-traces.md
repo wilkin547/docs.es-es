@@ -1,31 +1,34 @@
 ---
-title: "Seguimientos significativos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguimientos significativos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 40a1770e-3b09-4142-b0dd-f9ef73642074
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 58322a472a59ee9d3ac9451ff1f20ed95405ac54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Seguimientos significativos
-En este tema se enumeran algunos de los principales seguimientos emitidos por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+# <a name="significant-traces"></a><span data-ttu-id="92839-102">Seguimientos significativos</span><span class="sxs-lookup"><span data-stu-id="92839-102">Significant Traces</span></span>
+<span data-ttu-id="92839-103">En este tema se enumeran algunos de los principales seguimientos emitidos por [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="92839-103">This topic lists some of the major traces emitted by [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span></span>  
   
-## Seguimientos significativos  
+## <a name="significant-traces"></a><span data-ttu-id="92839-104">Seguimientos significativos</span><span class="sxs-lookup"><span data-stu-id="92839-104">Significant Traces</span></span>  
   
-|Seguimiento|Descripción|  
-|-----------------|-----------------|  
-|Seguimiento del registro de mensajes|Se emite el seguimiento cuando la característica de registro de mensajes registra un mensaje [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] cuando el origen de seguimiento de `System.ServiceModel.MessageLogging` está habilitado.Al hacer clic en este seguimiento, se muestra el mensaje.Hay cuatro puntos de registro configurables para un mensaje: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, también indicado por el atributo Message Source en el seguimiento del registro de mensajes.|  
-|Seguimiento de mensajes recibidos|Se emite este seguimiento cuando se recibe un mensaje [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] si el origen de seguimiento de `System.ServiceModel` está habilitado a modo informativo o detallado.Este seguimiento es necesario para ver la flecha de correlación de mensajes en la vista gráfica de actividad.|  
-|Seguimiento de mensajes enviados|Se emite este seguimiento cuando se envía un mensaje de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] si el origen de seguimiento de `System.ServiceModel` está habilitado a modo informativo o detallado.Este seguimiento es necesario para ver la flecha de correlación de mensajes en la vista gráfica de actividad.|  
-|Obtener ChannelEndpointElement|Este seguimiento se emite en el generador de canales de construcción, a modo informativo.Proporciona una descripción del extremo \(dirección remota, enlazando, nombre del contrato\) con el que el cliente está hablando.|  
-|Obtener ServiceElement|Este seguimiento se emite en el host de servicio de construcción, a modo informativo.Proporciona una descripción del enlace y contrato de servicios.|  
-|Creación de SocketConnection|Este seguimiento se emite en la primera acción de proceso realizada por el cliente y en la actividad de bytes recibidos del servicio.Proporciona las direcciones IP locales y remotas.Se emite a modo informativo.|
+|<span data-ttu-id="92839-105">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="92839-105">Trace</span></span>|<span data-ttu-id="92839-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="92839-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="92839-107">Seguimiento del registro de mensajes</span><span class="sxs-lookup"><span data-stu-id="92839-107">Message log trace</span></span>|<span data-ttu-id="92839-108">Se emite el seguimiento cuando la característica de registro de mensajes registra un mensaje [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] cuando el origen de seguimiento de `System.ServiceModel.MessageLogging` está habilitado.</span><span class="sxs-lookup"><span data-stu-id="92839-108">The trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is logged by the message logging feature when the `System.ServiceModel.MessageLogging` trace source is enabled.</span></span> <span data-ttu-id="92839-109">Al hacer clic en este seguimiento, se muestra el mensaje.</span><span class="sxs-lookup"><span data-stu-id="92839-109">Clicking this trace displays the message.</span></span> <span data-ttu-id="92839-110">Hay cuatro puntos de registro configurables para un mensaje: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, también indicado por el atributo Message Source en el seguimiento del registro de mensajes.</span><span class="sxs-lookup"><span data-stu-id="92839-110">There are four configurable logging points for a message: `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive`, `ServiceLevelReceiveRequest`, also indicated by the Message Source attribute in the message log trace.</span></span>|  
+|<span data-ttu-id="92839-111">Seguimiento de mensajes recibidos</span><span class="sxs-lookup"><span data-stu-id="92839-111">Message received trace</span></span>|<span data-ttu-id="92839-112">Este seguimiento se emite cuando se recibe un mensaje [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] si el origen de seguimiento de `System.ServiceModel` está habilitado de modo informativo o detallado.</span><span class="sxs-lookup"><span data-stu-id="92839-112">This trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is received if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="92839-113">Este seguimiento es necesario para ver la flecha de correlación de mensajes en la vista gráfica de actividad.</span><span class="sxs-lookup"><span data-stu-id="92839-113">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>|  
+|<span data-ttu-id="92839-114">Seguimiento de mensajes enviados</span><span class="sxs-lookup"><span data-stu-id="92839-114">Message sent trace</span></span>|<span data-ttu-id="92839-115">Este seguimiento se emite cuando se envía un mensaje de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] si el origen de seguimiento de `System.ServiceModel` está habilitado a modo informativo o detallado.</span><span class="sxs-lookup"><span data-stu-id="92839-115">This trace is emitted when a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message is sent if the `System.ServiceModel` trace source is enabled at information or verbose level.</span></span> <span data-ttu-id="92839-116">Este seguimiento es necesario para ver la flecha de correlación de mensajes en la vista gráfica de actividad.</span><span class="sxs-lookup"><span data-stu-id="92839-116">This trace is necessary to see the message correlation arrow in the activity graph view.</span></span>|  
+|<span data-ttu-id="92839-117">Obtener ChannelEndpointElement</span><span class="sxs-lookup"><span data-stu-id="92839-117">Get ChannelEndpointElement</span></span>|<span data-ttu-id="92839-118">Este seguimiento se emite en el generador de canales de construcción, a modo informativo.</span><span class="sxs-lookup"><span data-stu-id="92839-118">This trace is emitted in Construct channel factory, at information level.</span></span> <span data-ttu-id="92839-119">Proporciona una descripción del extremo (dirección remota, enlazando, nombre del contrato) con el que el cliente está hablando.</span><span class="sxs-lookup"><span data-stu-id="92839-119">It provides a description of the endpoint the client is talking to (remote address, binding, contract name).</span></span>|  
+|<span data-ttu-id="92839-120">Obtener ServiceElement</span><span class="sxs-lookup"><span data-stu-id="92839-120">Get ServiceElement</span></span>|<span data-ttu-id="92839-121">Este seguimiento se emite en el host de servicio de construcción, a modo informativo.</span><span class="sxs-lookup"><span data-stu-id="92839-121">This trace is emitted in Construct service host, at Information level.</span></span> <span data-ttu-id="92839-122">Proporciona una descripción del enlace y contrato de servicios.</span><span class="sxs-lookup"><span data-stu-id="92839-122">It provides a description of the service contract and binding.</span></span>|  
+|<span data-ttu-id="92839-123">Creación de SocketConnection</span><span class="sxs-lookup"><span data-stu-id="92839-123">SocketConnection create</span></span>|<span data-ttu-id="92839-124">Este seguimiento se emite en la primera acción de proceso realizada por el cliente y en la actividad de bytes recibidos del servicio.</span><span class="sxs-lookup"><span data-stu-id="92839-124">This trace is emitted in the first Process action performed by the client and in the Receive bytes activity on the service.</span></span> <span data-ttu-id="92839-125">Proporciona las direcciones IP locales y remotas.</span><span class="sxs-lookup"><span data-stu-id="92839-125">It provides the local and remote IP addresses.</span></span> <span data-ttu-id="92839-126">Se emite a modo informativo.</span><span class="sxs-lookup"><span data-stu-id="92839-126">It is emitted at Information level.</span></span>|

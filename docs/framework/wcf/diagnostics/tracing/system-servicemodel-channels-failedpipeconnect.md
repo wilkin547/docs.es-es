@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.FailedPipeConnect | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.FailedPipeConnect
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a827e0f-fb91-46bb-bd54-926d4b74d8a6
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9a64f5885fd32d2486c90ebe4f8e0c739a025d0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.FailedPipeConnect
-Se produjo un error al intentar conectar al extremo de la canalización con nombre.Se realiza otro intento dentro del período de tiempo de espera especificado.  
+# <a name="systemservicemodelchannelsfailedpipeconnect"></a><span data-ttu-id="6fdb9-102">System.ServiceModel.Channels.FailedPipeConnect</span><span class="sxs-lookup"><span data-stu-id="6fdb9-102">System.ServiceModel.Channels.FailedPipeConnect</span></span>
+<span data-ttu-id="6fdb9-103">Se produjo un error al intentar conectar al punto de conexión de la canalización con nombre.</span><span class="sxs-lookup"><span data-stu-id="6fdb9-103">An attempt to connect to the named pipe endpoint failed.</span></span> <span data-ttu-id="6fdb9-104">Se realiza otro intento dentro del período de tiempo de espera especificado.</span><span class="sxs-lookup"><span data-stu-id="6fdb9-104">Another attempt is made within the specified timeout period.</span></span>  
   
-## Descripción  
- Este seguimiento de traza de información indica un error en la conexión con un extremo de canalización con nombre.Esto podría ocurrir si el extremo de canalización con nombre no se encuentra o está ocupado.Se realizan intentos adicionales, cada uno separado por un espacio de tiempo, hasta que uno se realiza correctamente o finaliza OpenTimeout.  
+## <a name="description"></a><span data-ttu-id="6fdb9-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="6fdb9-105">Description</span></span>  
+ <span data-ttu-id="6fdb9-106">Este seguimiento de traza de información indica un error en la conexión con un extremo de canalización con nombre.</span><span class="sxs-lookup"><span data-stu-id="6fdb9-106">This informational trace indicates a failure to connect to a named pipe endpoint.</span></span> <span data-ttu-id="6fdb9-107">Esto podría ocurrir si el extremo de canalización con nombre no se encuentra o está ocupado.</span><span class="sxs-lookup"><span data-stu-id="6fdb9-107">This could happen if the named pipe endpoint is not found or is busy.</span></span> <span data-ttu-id="6fdb9-108">Se realizan intentos adicionales, cada uno separado por un espacio de tiempo, hasta que uno se realiza correctamente o finaliza OpenTimeout.</span><span class="sxs-lookup"><span data-stu-id="6fdb9-108">Additional attempts are made, each separated by a short amount of time, until one succeeds or the OpenTimeout expires.</span></span>  
   
-## Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6fdb9-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="6fdb9-109">See Also</span></span>  
+ [<span data-ttu-id="6fdb9-110">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="6fdb9-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6fdb9-111">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="6fdb9-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6fdb9-112">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="6fdb9-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

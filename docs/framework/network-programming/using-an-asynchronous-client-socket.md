@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,27 +23,26 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-an-asynchronous-client-socket"></a>Usar un socket de cliente asincrónico
-Un socket de cliente asincrónico no suspende la aplicación mientras espera a que finalicen las operaciones de red. En lugar de eso, usa el modelo de programación asincrónico estándar de .NET Framework para procesar la conexión de red en un subproceso mientras la aplicación continúa ejecutándose en el subproceso original. Los sockets asincrónicos son adecuados para aplicaciones que hacen un uso intensivo de la red o que no pueden esperar a que finalicen las operaciones de red antes de continuar.  
+# <a name="using-an-asynchronous-client-socket"></a><span data-ttu-id="d11a3-102">Usar un socket de cliente asincrónico</span><span class="sxs-lookup"><span data-stu-id="d11a3-102">Using an Asynchronous Client Socket</span></span>
+<span data-ttu-id="d11a3-103">Un socket de cliente asincrónico no suspende la aplicación mientras espera a que finalicen las operaciones de red.</span><span class="sxs-lookup"><span data-stu-id="d11a3-103">An asynchronous client socket does not suspend the application while waiting for network operations to complete.</span></span> <span data-ttu-id="d11a3-104">En lugar de eso, usa el modelo de programación asincrónico estándar de .NET Framework para procesar la conexión de red en un subproceso mientras la aplicación continúa ejecutándose en el subproceso original.</span><span class="sxs-lookup"><span data-stu-id="d11a3-104">Instead, it uses the standard .NET Framework asynchronous programming model to process the network connection on one thread while the application continues to run on the original thread.</span></span> <span data-ttu-id="d11a3-105">Los sockets asincrónicos son adecuados para aplicaciones que hacen un uso intensivo de la red o que no pueden esperar a que finalicen las operaciones de red antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="d11a3-105">Asynchronous sockets are appropriate for applications that make heavy use of the network or that cannot wait for network operations to complete before continuing.</span></span>  
   
- La clase <xref:System.Net.Sockets.Socket> sigue el patrón de nombres de .NET Framework para los métodos asincrónicos; por ejemplo, el método sincrónico <xref:System.Net.Sockets.Socket.Receive%2A> se corresponde con los métodos asincrónicos <xref:System.Net.Sockets.Socket.BeginReceive%2A> y <xref:System.Net.Sockets.Socket.EndReceive%2A>.  
+ <span data-ttu-id="d11a3-106">La clase <xref:System.Net.Sockets.Socket> sigue el patrón de nombres de .NET Framework para los métodos asincrónicos; por ejemplo, el método sincrónico <xref:System.Net.Sockets.Socket.Receive%2A> se corresponde con los métodos asincrónicos <xref:System.Net.Sockets.Socket.BeginReceive%2A> y <xref:System.Net.Sockets.Socket.EndReceive%2A>.</span><span class="sxs-lookup"><span data-stu-id="d11a3-106">The <xref:System.Net.Sockets.Socket> class follows the .NET Framework naming pattern for asynchronous methods; for example, the synchronous <xref:System.Net.Sockets.Socket.Receive%2A> method corresponds to the asynchronous <xref:System.Net.Sockets.Socket.BeginReceive%2A> and <xref:System.Net.Sockets.Socket.EndReceive%2A> methods.</span></span>  
   
- Las operaciones asincrónicas necesitan un método de devolución de llamada para devolver el resultado de la operación. Si la aplicación no necesita conocer el resultado, no se necesita ningún método de devolución de llamada. El código de ejemplo de esta sección muestra cómo usar un método para iniciar la conexión a un dispositivo de red y un método de devolución de llamada para completar la conexión, un método para empezar a enviar datos y un método de devolución de llamada para completar el envío y un método para iniciar la recepción de datos y un método de devolución de llamada para finalizar la recepción de datos.  
+ <span data-ttu-id="d11a3-107">Las operaciones asincrónicas necesitan un método de devolución de llamada para devolver el resultado de la operación.</span><span class="sxs-lookup"><span data-stu-id="d11a3-107">Asynchronous operations require a callback method to return the result of the operation.</span></span> <span data-ttu-id="d11a3-108">Si la aplicación no necesita conocer el resultado, no se necesita ningún método de devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="d11a3-108">If your application does not need to know the result, then no callback method is required.</span></span> <span data-ttu-id="d11a3-109">El código de ejemplo de esta sección muestra cómo usar un método para iniciar la conexión a un dispositivo de red y un método de devolución de llamada para completar la conexión, un método para empezar a enviar datos y un método de devolución de llamada para completar el envío y un método para iniciar la recepción de datos y un método de devolución de llamada para finalizar la recepción de datos.</span><span class="sxs-lookup"><span data-stu-id="d11a3-109">The example code in this section demonstrates using a method to start connecting to a network device and a callback method to complete the connection, a method to start sending data and a callback method to complete the send, and a method to start receiving data and a callback method to end receiving data.</span></span>  
   
- Los sockets asincrónicos usan varios subprocesos del grupo de subprocesos del sistema para procesar las conexiones de red. Un subproceso es responsable de iniciar el envío o la recepción de datos; otros subprocesos completan la conexión al dispositivo de red y envían o reciben los datos. En los ejemplos siguientes se usan instancias de la clase <xref:System.Threading.ManualResetEvent?displayProperty=fullName> para suspender la ejecución del subproceso principal e indicar cuándo puede continuar la ejecución.  
+ <span data-ttu-id="d11a3-110">Los sockets asincrónicos usan varios subprocesos del grupo de subprocesos del sistema para procesar las conexiones de red.</span><span class="sxs-lookup"><span data-stu-id="d11a3-110">Asynchronous sockets use multiple threads from the system thread pool to process network connections.</span></span> <span data-ttu-id="d11a3-111">Un subproceso es responsable de iniciar el envío o la recepción de datos; otros subprocesos completan la conexión al dispositivo de red y envían o reciben los datos.</span><span class="sxs-lookup"><span data-stu-id="d11a3-111">One thread is responsible for initiating the sending or receiving of data; other threads complete the connection to the network device and send or receive the data.</span></span> <span data-ttu-id="d11a3-112">En los ejemplos siguientes se usan instancias de la clase <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> para suspender la ejecución del subproceso principal e indicar cuándo puede continuar la ejecución.</span><span class="sxs-lookup"><span data-stu-id="d11a3-112">In the following examples, instances of the <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> class are used to suspend execution of the main thread and signal when execution can continue.</span></span>  
   
- En el ejemplo siguiente, para conectar un socket asincrónico a un dispositivo de red, el método `Connect` inicializa un **socket** y luego llama al método <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>, pasando un punto de conexión remoto que representa al dispositivo de red, el método de devolución de llamada de conexión y un objeto de estado (el **socket** de cliente), que se usa para pasar información de estado entre llamadas asincrónicas. El ejemplo implementa el método `Connect` para conectar el **socket** especificado al punto de conexión indicado. Asume un elemento global **ManualResetEvent** denominado `connectDone`.  
+ <span data-ttu-id="d11a3-113">En el ejemplo siguiente, para conectar un socket asincrónico a un dispositivo de red, el método `Connect` inicializa un **socket** y luego llama al método <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType>, pasando un punto de conexión remoto que representa al dispositivo de red, el método de devolución de llamada de conexión y un objeto de estado (el **socket** de cliente), que se usa para pasar información de estado entre llamadas asincrónicas.</span><span class="sxs-lookup"><span data-stu-id="d11a3-113">In the following example, to connect an asynchronous socket to a network device, the `Connect` method initializes a **Socket** and then calls the <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType> method, passing a remote endpoint that represents the network device, the connect callback method, and a state object (the client **Socket**), which is used to pass state information between asynchronous calls.</span></span> <span data-ttu-id="d11a3-114">El ejemplo implementa el método `Connect` para conectar el **socket** especificado al punto de conexión indicado.</span><span class="sxs-lookup"><span data-stu-id="d11a3-114">The example implements the `Connect` method to connect the specified **Socket** to the specified endpoint.</span></span> <span data-ttu-id="d11a3-115">Asume un elemento global **ManualResetEvent** denominado `connectDone`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-115">It assumes a global **ManualResetEvent** named `connectDone`.</span></span>  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -65,7 +62,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- El método de devolución de llamada de conexión `ConnectCallback` implementa el delegado <xref:System.AsyncCallback>. Se conecta al dispositivo remoto cuando este está disponible y luego indica al subproceso de aplicación que la conexión está completada al establecer **ManualResetEvent** `connectDone`. El código siguiente implementa el método `ConnectCallback`.  
+ <span data-ttu-id="d11a3-116">El método de devolución de llamada de conexión `ConnectCallback` implementa el delegado <xref:System.AsyncCallback>.</span><span class="sxs-lookup"><span data-stu-id="d11a3-116">The connect callback method `ConnectCallback` implements the <xref:System.AsyncCallback> delegate.</span></span> <span data-ttu-id="d11a3-117">Se conecta al dispositivo remoto cuando este está disponible y luego indica al subproceso de aplicación que la conexión está completada al establecer **ManualResetEvent** `connectDone`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-117">It connects to the remote device when the remote device is available and then signals the application thread that the connection is complete by setting the **ManualResetEvent** `connectDone`.</span></span> <span data-ttu-id="d11a3-118">El código siguiente implementa el método `ConnectCallback`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-118">The following code implements the `ConnectCallback` method.</span></span>  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -107,7 +104,7 @@ private static void ConnectCallback(IAsyncResult ar) {
 }  
 ```  
   
- El método de ejemplo `Send` codifica los datos de cadena especificados en formato ASCII y los envía de forma asincrónica al dispositivo de red representado por el socket especificado. El ejemplo siguiente implementa el método `Send`.  
+ <span data-ttu-id="d11a3-119">El método de ejemplo `Send` codifica los datos de cadena especificados en formato ASCII y los envía de forma asincrónica al dispositivo de red representado por el socket especificado.</span><span class="sxs-lookup"><span data-stu-id="d11a3-119">The example method `Send` encodes the specified string data in ASCII format and sends it asynchronously to the network device represented by the specified socket.</span></span> <span data-ttu-id="d11a3-120">El ejemplo siguiente implementa el método `Send`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-120">The following example implements the `Send` method.</span></span>  
   
 ```vb  
 Private Shared Sub Send(client As Socket, data As [String])  
@@ -131,7 +128,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- El método de devolución de llamada de envío `SendCallback` implementa el delegado <xref:System.AsyncCallback>. Envía los datos cuando el dispositivo de red está listo para recibir. El siguiente ejemplo muestra la implementación del método `SendCallback`. Asume un elemento global **ManualResetEvent** denominado `sendDone`.  
+ <span data-ttu-id="d11a3-121">El método de devolución de llamada de envío `SendCallback` implementa el delegado <xref:System.AsyncCallback>.</span><span class="sxs-lookup"><span data-stu-id="d11a3-121">The send callback method `SendCallback` implements the <xref:System.AsyncCallback> delegate.</span></span> <span data-ttu-id="d11a3-122">Envía los datos cuando el dispositivo de red está listo para recibir.</span><span class="sxs-lookup"><span data-stu-id="d11a3-122">It sends the data when the network device is ready to receive.</span></span> <span data-ttu-id="d11a3-123">El siguiente ejemplo muestra la implementación del método `SendCallback`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-123">The following example shows the implementation of the `SendCallback` method.</span></span> <span data-ttu-id="d11a3-124">Asume un elemento global **ManualResetEvent** denominado `sendDone`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-124">It assumes a global **ManualResetEvent** named `sendDone`.</span></span>  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -169,7 +166,7 @@ private static void SendCallback(IAsyncResult ar) {
 }  
 ```  
   
- La lectura de los datos de un socket de cliente requiere un objeto de estado que pase valores entre llamadas asincrónicas. La clase siguiente es un objeto de estado de ejemplo para recibir datos de un socket de cliente. Contiene un campo para el socket de cliente, un búfer para los datos recibidos y un <xref:System.Text.StringBuilder> para contener la cadena de datos entrante. La colocación de estos campos en el objeto de estado permite conservar sus valores en varias llamadas para leer datos desde el socket de cliente.  
+ <span data-ttu-id="d11a3-125">La lectura de los datos de un socket de cliente requiere un objeto de estado que pase valores entre llamadas asincrónicas.</span><span class="sxs-lookup"><span data-stu-id="d11a3-125">Reading data from a client socket requires a state object that passes values between asynchronous calls.</span></span> <span data-ttu-id="d11a3-126">La clase siguiente es un objeto de estado de ejemplo para recibir datos de un socket de cliente.</span><span class="sxs-lookup"><span data-stu-id="d11a3-126">The following class is an example state object for receiving data from a client socket.</span></span> <span data-ttu-id="d11a3-127">Contiene un campo para el socket de cliente, un búfer para los datos recibidos y un <xref:System.Text.StringBuilder> para contener la cadena de datos entrante.</span><span class="sxs-lookup"><span data-stu-id="d11a3-127">It contains a field for the client socket, a buffer for the received data, and a <xref:System.Text.StringBuilder> to hold the incoming data string.</span></span> <span data-ttu-id="d11a3-128">La colocación de estos campos en el objeto de estado permite conservar sus valores en varias llamadas para leer datos desde el socket de cliente.</span><span class="sxs-lookup"><span data-stu-id="d11a3-128">Placing these fields in the state object allows their values to be preserved across multiple calls to read data from the client socket.</span></span>  
   
 ```vb  
 Public Class StateObject  
@@ -197,7 +194,7 @@ public class StateObject {
 }  
 ```  
   
- El método de ejemplo `Receive` configura el objeto de estado y luego llama al método **BeginReceive** para leer los datos desde el socket de cliente de forma asincrónica. El ejemplo siguiente implementa el método `Receive`.  
+ <span data-ttu-id="d11a3-129">El método de ejemplo `Receive` configura el objeto de estado y luego llama al método **BeginReceive** para leer los datos desde el socket de cliente de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="d11a3-129">The example `Receive` method sets up the state object and then calls the **BeginReceive** method to read the data from the client socket asynchronously.</span></span> <span data-ttu-id="d11a3-130">El ejemplo siguiente implementa el método `Receive`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-130">The following example implements the `Receive` method.</span></span>  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -231,9 +228,9 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- El método de devolución de llamada de recepción `ReceiveCallback` implementa el delegado **AsyncCallback**. Recibe los datos del dispositivo de red y genera una cadena de mensaje. Lee uno o más bytes de datos de la red al búfer de datos y luego llama al método **BeginReceive** de nuevo hasta que los datos enviados por el cliente están completos. Una vez que se han leído todos los datos del cliente, `ReceiveCallback` indica al subproceso de aplicación que los datos están completos al establecer **ManualResetEvent** `sendDone`.  
+ <span data-ttu-id="d11a3-131">El método de devolución de llamada de recepción `ReceiveCallback` implementa el delegado **AsyncCallback**.</span><span class="sxs-lookup"><span data-stu-id="d11a3-131">The receive callback method `ReceiveCallback` implements the **AsyncCallback** delegate.</span></span> <span data-ttu-id="d11a3-132">Recibe los datos del dispositivo de red y genera una cadena de mensaje.</span><span class="sxs-lookup"><span data-stu-id="d11a3-132">It receives the data from the network device and builds a message string.</span></span> <span data-ttu-id="d11a3-133">Lee uno o más bytes de datos de la red al búfer de datos y luego llama al método **BeginReceive** de nuevo hasta que los datos enviados por el cliente están completos.</span><span class="sxs-lookup"><span data-stu-id="d11a3-133">It reads one or more bytes of data from the network into the data buffer and then calls the **BeginReceive** method again until the data sent by the client is complete.</span></span> <span data-ttu-id="d11a3-134">Una vez que se han leído todos los datos del cliente, `ReceiveCallback` indica al subproceso de aplicación que los datos están completos al establecer **ManualResetEvent** `sendDone`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-134">Once all the data is read from the client, `ReceiveCallback` signals the application thread that the data is complete by setting the **ManualResetEvent** `sendDone`.</span></span>  
   
- El código de ejemplo siguiente implementa el método `ReceiveCallback`. Asume una cadena global denominada `response` que contiene la cadena recibida y un elemento global **ManualResetEvent** denominado `receiveDone`. El servidor debe cerrar el socket de cliente correctamente para finalizar la sesión de red.  
+ <span data-ttu-id="d11a3-135">El código de ejemplo siguiente implementa el método `ReceiveCallback`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-135">The following example code implements the `ReceiveCallback` method.</span></span> <span data-ttu-id="d11a3-136">Asume una cadena global denominada `response` que contiene la cadena recibida y un elemento global **ManualResetEvent** denominado `receiveDone`.</span><span class="sxs-lookup"><span data-stu-id="d11a3-136">It assumes a global string named `response` that holds the received string and a global **ManualResetEvent** named `receiveDone`.</span></span> <span data-ttu-id="d11a3-137">El servidor debe cerrar el socket de cliente correctamente para finalizar la sesión de red.</span><span class="sxs-lookup"><span data-stu-id="d11a3-137">The server must shut down the client socket gracefully to end the network session.</span></span>  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
@@ -297,8 +294,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Listening with Sockets (Escucha con sockets)](../../../docs/framework/network-programming/listening-with-sockets.md)   
- [Ejemplo de sockets de cliente asincrónicos](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-
+## <a name="see-also"></a><span data-ttu-id="d11a3-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="d11a3-138">See Also</span></span>  
+ [<span data-ttu-id="d11a3-139">Usar un Socket de cliente sincrónico</span><span class="sxs-lookup"><span data-stu-id="d11a3-139">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [<span data-ttu-id="d11a3-140">Escuchas con sockets</span><span class="sxs-lookup"><span data-stu-id="d11a3-140">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)  
+ [<span data-ttu-id="d11a3-141">Ejemplo de sockets de cliente asincrónicos</span><span class="sxs-lookup"><span data-stu-id="d11a3-141">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

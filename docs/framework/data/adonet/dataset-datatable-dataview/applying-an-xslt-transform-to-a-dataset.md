@@ -1,27 +1,33 @@
 ---
-title: "Aplicar una transformaci&#243;n XSLT a un DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aplicar una transformación XSL a un DataSet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Aplicar una transformaci&#243;n XSLT a un DataSet
-El método **WriteXml** del <xref:System.Data.DataSet> le permite escribir el contenido de un **DataSet** como datos XML.  Normalmente se transforma ese XML en otro formato mediante transformaciones XSL \(XSLT\).  Sin embargo, la sincronización de un **DataSet** con un <xref:System.Xml.XmlDataDocument> le permite aplicar una hoja de estilos de XSLT al contenido de un **DataSet** sin tener que escribir primero el contenido del **DataSet** como datos XML mediante **WriteXml**.  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="f061b-102">Aplicar una transformación XSL a un DataSet</span><span class="sxs-lookup"><span data-stu-id="f061b-102">Applying an XSLT Transform to a DataSet</span></span>
+<span data-ttu-id="f061b-103">El **WriteXml** método de la <xref:System.Data.DataSet> le permite escribir el contenido de un **conjunto de datos** como datos XML.</span><span class="sxs-lookup"><span data-stu-id="f061b-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="f061b-104">Normalmente se transforma ese XML en otro formato mediante transformaciones XSL (XSLT).</span><span class="sxs-lookup"><span data-stu-id="f061b-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="f061b-105">Sin embargo, la sincronización una **conjunto de datos** con una <xref:System.Xml.XmlDataDocument> le permite aplicar una hoja de estilos XSLT al contenido de un **conjunto de datos** sin tener que escribir primero el contenido de la  **Conjunto de datos** como datos XML mediante **WriteXml**.</span><span class="sxs-lookup"><span data-stu-id="f061b-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
   
- En el siguiente ejemplo se llena un **DataSet** con tablas y relaciones, se sincroniza el **DataSet** con un **XmlDataDocument** y se escribe una parte del **DataSet** como un archivo HTML utilizando una hoja de estilos de XSLT.  A continuación se muestra el contenido de la hoja de estilos XSLT.  
+ <span data-ttu-id="f061b-106">El ejemplo siguiente rellena un **conjunto de datos** con tablas y relaciones, se sincroniza el **conjunto de datos** con una **XmlDataDocument**y se escribe una parte de la  **Conjunto de datos** como un archivo HTML utilizando una hoja de estilos XSLT.</span><span class="sxs-lookup"><span data-stu-id="f061b-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="f061b-107">A continuación se muestra el contenido de la hoja de estilos XSLT.</span><span class="sxs-lookup"><span data-stu-id="f061b-107">Following are the contents of the XSLT stylesheet.</span></span>  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
   
 <xsl:template match="CustomerOrders">  
@@ -60,10 +66,10 @@ El método **WriteXml** del <xref:System.Data.DataSet> le permite escribir el co
 </xsl:stylesheet>  
 ```  
   
- En el código siguiente se rellena el **DataSet** y se aplica la hoja de estilos XSLT.  
+ <span data-ttu-id="f061b-108">El siguiente código rellena el **conjunto de datos** y se aplica la hoja de estilos XSLT.</span><span class="sxs-lookup"><span data-stu-id="f061b-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
   
 > [!NOTE]
->  Si se aplica una hoja de estilos XSLT a un **DataSet** que contenga relaciones, se obtiene un mayor rendimiento al establecer la propiedad **Nested** de la <xref:System.Data.DataRelation> como **true** para cada relación anidada.  Esto le permite utilizar hojas de estilos XSLT que implementan un procesamiento natural, de arriba abajo, para navegar por la jerarquía y transformar los datos, en lugar de utilizar ejes de ubicación XPath de rendimiento intensivo \(por ejemplo, el elemento anterior y el siguiente en expresiones de prueba de nodos de la hoja de estilos\) para navegar por ésta.  Para obtener más información sobre las relaciones anidadas, vea [Anidar DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+>  <span data-ttu-id="f061b-109">Si va a aplicar una hoja de estilos XSLT a un **conjunto de datos** que contenga relaciones, conseguirá un rendimiento óptimo si establece la **Nested** propiedad de la <xref:System.Data.DataRelation> a **true**para cada relación anidada.</span><span class="sxs-lookup"><span data-stu-id="f061b-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="f061b-110">Esto le permite utilizar hojas de estilos XSLT que implementan un procesamiento natural, de arriba abajo, para navegar por la jerarquía y transformar los datos, en lugar de utilizar ejes de ubicación XPath de rendimiento intensivo (por ejemplo, el elemento anterior y el siguiente en expresiones de prueba de nodos de la hoja de estilos) para navegar por ésta.</span><span class="sxs-lookup"><span data-stu-id="f061b-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="f061b-111">Para obtener más información sobre las relaciones anidadas, vea [anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="f061b-111">For more information on nested relations, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -127,6 +133,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## Vea también  
- [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f061b-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="f061b-112">See Also</span></span>  
+ [<span data-ttu-id="f061b-113">Sincronización de DataSet y XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="f061b-113">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="f061b-114">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="f061b-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

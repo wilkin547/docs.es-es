@@ -1,45 +1,48 @@
 ---
-title: "Throttled Parallel ForEach | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Throttled Parallel ForEach
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c8336060be48f55b974960e67ca1ebc57e76c63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Throttled Parallel ForEach
-La actividad `ThrottleParallelForEach` es similar a la actividad <xref:System.Activities.Statements.ParallelForEach> con la única excepción de que permite establecer un factor de simultaneidad para restringir el número de bifurcaciones simultáneas que se ejecutará.La actividad `ThrottleParallelForEach` se deriva de <xref:System.Activities.NativeActivity>, porque necesita programar otras actividades \(las actividades secundarias\) y el único acceso posible es a través de la clase <xref:System.Activities.NativeActivityContext>.  
+# <a name="throttled-parallel-foreach"></a><span data-ttu-id="286f1-102">Throttled Parallel ForEach</span><span class="sxs-lookup"><span data-stu-id="286f1-102">Throttled Parallel ForEach</span></span>
+<span data-ttu-id="286f1-103">El `ThrottleParallelForEach` actividad es similar a la <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` actividad con la única excepción que permite establecer un factor de simultaneidad para restringir el número de bifurcaciones simultáneas que se ejecutará.</span><span class="sxs-lookup"><span data-stu-id="286f1-103">The `ThrottleParallelForEach` activity is similar to the <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` activity with the one exception that it allows setting a concurrency factor to restrict the number of simultaneous branches to execute.</span></span> <span data-ttu-id="286f1-104">La actividad `ThrottleParallelForEach` se deriva de <xref:System.Activities.NativeActivity>, porque necesita programar otras actividades (las actividades secundarias) y el único acceso posible es a través de la clase <xref:System.Activities.NativeActivityContext>.</span><span class="sxs-lookup"><span data-stu-id="286f1-104">The `ThrottleParallelForEach` activity derives from <xref:System.Activities.NativeActivity>, because it needs to schedule other activities (the child activities) and this is only accessible through the <xref:System.Activities.NativeActivityContext> class.</span></span>  
   
-## Proyectos  
+## <a name="projects"></a><span data-ttu-id="286f1-105">Proyectos</span><span class="sxs-lookup"><span data-stu-id="286f1-105">Projects</span></span>  
   
-||||  
+|<span data-ttu-id="286f1-106">**ProjectName**</span><span class="sxs-lookup"><span data-stu-id="286f1-106">**ProjectName**</span></span>|<span data-ttu-id="286f1-107">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="286f1-107">**Description**</span></span>|<span data-ttu-id="286f1-108">**Archivos principales**</span><span class="sxs-lookup"><span data-stu-id="286f1-108">**Main Files**</span></span>|  
 |-|-|-|  
-|**ProjectName**|**Descripción**|**Archivos principales**|  
-|ThrottledParallelForEach|Contiene la actividad `ThrottledParallelForEach` y su diseñador.|ThrottledParallelForEach.cs<br /><br /> La definición de actividad de `ThrottledParallelForEach`.|  
-|CodeTestClient|Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo con una actividad `ThrottledParallelForEach` utilizando código imperativo.|Program.cs<br /><br /> Define y ejecuta una instancia del flujo de trabajo de muestra.|  
+|<span data-ttu-id="286f1-109">ThrottledParallelForEach</span><span class="sxs-lookup"><span data-stu-id="286f1-109">ThrottledParallelForEach</span></span>|<span data-ttu-id="286f1-110">Contiene la actividad `ThrottledParallelForEach` y su diseñador.</span><span class="sxs-lookup"><span data-stu-id="286f1-110">Contains `ThrottledParallelForEach` activity and its designer.</span></span>|<span data-ttu-id="286f1-111">ThrottledParallelForEach.cs</span><span class="sxs-lookup"><span data-stu-id="286f1-111">ThrottledParallelForEach.cs</span></span><br /><br /> <span data-ttu-id="286f1-112">La definición de actividad de `ThrottledParallelForEach`.</span><span class="sxs-lookup"><span data-stu-id="286f1-112">The `ThrottledParallelForEach` activity definition.</span></span>|  
+|<span data-ttu-id="286f1-113">CodeTestClient</span><span class="sxs-lookup"><span data-stu-id="286f1-113">CodeTestClient</span></span>|<span data-ttu-id="286f1-114">Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo con una actividad `ThrottledParallelForEach` utilizando código imperativo.</span><span class="sxs-lookup"><span data-stu-id="286f1-114">Sample client application that configures and runs a workflow with a `ThrottledParallelForEach` using imperative code.</span></span>|<span data-ttu-id="286f1-115">Program.cs</span><span class="sxs-lookup"><span data-stu-id="286f1-115">Program.cs</span></span><br /><br /> <span data-ttu-id="286f1-116">Define y ejecuta una instancia del flujo de trabajo de muestra.</span><span class="sxs-lookup"><span data-stu-id="286f1-116">Defines and runs an instance of the sample workflow.</span></span>|  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="286f1-117">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="286f1-117">To use this sample</span></span>  
   
-1.  Abra el archivo ThrottledParallelForEach.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="286f1-118">Abra el archivo ThrottledParallelForEach.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="286f1-118">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ThrottledParallelForEach.sln file.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="286f1-119">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="286f1-119">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Presione F5 para ejecutar la solución.  
+3.  <span data-ttu-id="286f1-120">Presione F5 para ejecutar la solución.</span><span class="sxs-lookup"><span data-stu-id="286f1-120">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="286f1-121">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="286f1-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="286f1-122">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="286f1-122">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="286f1-123">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="286f1-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="286f1-124">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="286f1-124">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ThrottledParallelForEach`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\ThrottledParallelForEach`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="286f1-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="286f1-125">See Also</span></span>

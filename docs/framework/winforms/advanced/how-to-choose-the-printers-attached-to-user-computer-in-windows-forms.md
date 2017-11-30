@@ -1,38 +1,43 @@
 ---
-title: "C&#243;mo: Seleccionar las impresoras conectadas al equipo de un usuario en formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "impresión [Windows Forms], elegir impresoras"
-  - "impresoras, elegir"
+title: "Cómo: seleccionar las impresoras conectadas a un usuario &#39; s equipo en Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- printing [Windows Forms], choosing printers
+- printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec334ff65095e11855d706f445fda1d4b7ea1472
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Seleccionar las impresoras conectadas al equipo de un usuario en formularios Windows Forms
-A menudo, los usuarios quieren elegir una impresora que no sea la predeterminada. Para que los usuarios puedan elegir una impresora de entre las que están instaladas, use el componente <xref:System.Windows.Forms.PrintDialog>. Con el componente <xref:System.Windows.Forms.PrintDialog>, se captura el <xref:System.Windows.Forms.DialogResult> del componente <xref:System.Windows.Forms.PrintDialog> y se usa para seleccionar la impresora.  
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a><span data-ttu-id="39533-102">Cómo: seleccionar las impresoras conectadas a un usuario &#39; s equipo en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="39533-102">How to: Choose the Printers Attached to a User&#39;s Computer in Windows Forms</span></span>
+<span data-ttu-id="39533-103">A menudo, los usuarios quieren elegir una impresora que no sea la predeterminada.</span><span class="sxs-lookup"><span data-stu-id="39533-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="39533-104">Para que los usuarios puedan elegir una impresora de entre las que están instaladas, use el componente <xref:System.Windows.Forms.PrintDialog> .</span><span class="sxs-lookup"><span data-stu-id="39533-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="39533-105">Con el componente <xref:System.Windows.Forms.PrintDialog> , se captura el <xref:System.Windows.Forms.DialogResult> del componente <xref:System.Windows.Forms.PrintDialog> y se usa para seleccionar la impresora.</span><span class="sxs-lookup"><span data-stu-id="39533-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
   
- En el siguiente procedimiento se selecciona un archivo de texto para imprimirlo en la impresora predeterminada y luego se crea una instancia de la clase <xref:System.Windows.Forms.PrintDialog>.  
+ <span data-ttu-id="39533-106">En el siguiente procedimiento se selecciona un archivo de texto para imprimirlo en la impresora predeterminada</span><span class="sxs-lookup"><span data-stu-id="39533-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="39533-107">y luego se crea una instancia de la clase <xref:System.Windows.Forms.PrintDialog> .</span><span class="sxs-lookup"><span data-stu-id="39533-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
   
-### Para elegir una impresora e imprimir un archivo  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="39533-108">Para elegir una impresora e imprimir un archivo</span><span class="sxs-lookup"><span data-stu-id="39533-108">To choose a printer and then print a file</span></span>  
   
-1.  Seleccione la impresora que se va a usar con el componente <xref:System.Windows.Forms.PrintDialog>.  
+1.  <span data-ttu-id="39533-109">Seleccione la impresora que se utilizará con el <xref:System.Windows.Forms.PrintDialog> componente.</span><span class="sxs-lookup"><span data-stu-id="39533-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
   
-     En el siguiente ejemplo de código se tratan dos eventos. En el primero, el evento <xref:System.Windows.Forms.Control.Click> de un control <xref:System.Windows.Forms.Button>, se crea una instancia de la clase <xref:System.Windows.Forms.PrintDialog> y la impresora seleccionada por el usuario se captura en la propiedad <xref:System.Windows.Forms.DialogResult>.  
+     <span data-ttu-id="39533-110">En el siguiente ejemplo de código se tratan dos eventos.</span><span class="sxs-lookup"><span data-stu-id="39533-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="39533-111">En el primero, un <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Click> eventos, el <xref:System.Windows.Forms.PrintDialog> se crea una instancia de clase y la impresora seleccionada por el usuario se captura en el <xref:System.Windows.Forms.DialogResult> propiedad.</span><span class="sxs-lookup"><span data-stu-id="39533-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
   
-     En el segundo evento, el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> del componente <xref:System.Drawing.Printing.PrintDocument>, se imprime un documento de ejemplo en la impresora especificada.  
+     <span data-ttu-id="39533-112">En el segundo caso, el <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos de la <xref:System.Drawing.Printing.PrintDocument> , componente, se imprime un documento de ejemplo en la impresora especificada.</span><span class="sxs-lookup"><span data-stu-id="39533-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -49,7 +54,6 @@ A menudo, los usuarios quieren elegir una impresora que no sea la predeterminada
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
        e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))          
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ A menudo, los usuarios quieren elegir una impresora que no sea la predeterminada
        e.Graphics.FillRectangle(Brushes.Red,   
          new Rectangle(500, 500, 500, 500));  
     }  
-  
     ```  
   
     ```cpp  
@@ -96,14 +99,13 @@ A menudo, los usuarios quieren elegir una impresora que no sea la predeterminada
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
+     <span data-ttu-id="39533-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="39533-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
        System.Drawing.Printing.PrintPageEventHandler  
        (this.printDocument1_PrintPage);  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -114,5 +116,5 @@ A menudo, los usuarios quieren elegir una impresora que no sea la predeterminada
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## Vea también  
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="39533-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="39533-114">See Also</span></span>  
+ <span data-ttu-id="39533-115">[Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="39533-115">[Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)</span></span>

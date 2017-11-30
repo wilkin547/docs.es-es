@@ -1,30 +1,28 @@
 ---
-title: "Se debe llamar primero a la funci&#243;n &#39;Dir&#39; con un argumento &#39;Pathname&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrDIR_IllegalCall"
-dev_langs: 
-  - "VB"
+title: "&#39; Dir &#39; en primer lugar debe llamar la función con un &#39; Ruta de acceso &#39; argumento"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 843918fe9cb0b9dece076b5dc1373c3571588caa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Se debe llamar primero a la funci&#243;n &#39;Dir&#39; con un argumento &#39;Pathname&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una llamada inicial a la función `Dir` no incluye el argumento `PathName`.  La primera llamada a `Dir` debe incluir un `PathName`, pero las llamadas posteriores a `Dir` no necesitan incluir parámetros para recuperar el siguiente elemento.  
+# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a><span data-ttu-id="1b518-102">&#39; Dir &#39; en primer lugar debe llamar la función con un &#39; Ruta de acceso &#39; argumento</span><span class="sxs-lookup"><span data-stu-id="1b518-102">&#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument</span></span>
+<span data-ttu-id="1b518-103">Una llamada inicial a la `Dir` función no incluye la `PathName` argumento.</span><span class="sxs-lookup"><span data-stu-id="1b518-103">An initial call to the `Dir` function does not include the `PathName` argument.</span></span> <span data-ttu-id="1b518-104">La primera llamada a `Dir` debe incluir un `PathName`, pero posteriores llamadas a `Dir` no es necesario incluir parámetros para recuperar el elemento siguiente.</span><span class="sxs-lookup"><span data-stu-id="1b518-104">The first call to `Dir` must include a `PathName`, but subsequent calls to `Dir` do not need to include parameters to retrieve the next item.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1b518-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="1b518-105">To correct this error</span></span>  
   
-1.  Proporcione un argumento `PathName` en la llamada a función.  
+1.  <span data-ttu-id="1b518-106">Proporcione un `PathName` argumento en la llamada de función.</span><span class="sxs-lookup"><span data-stu-id="1b518-106">Supply a `PathName` argument in the function call.</span></span>  
   
-## Vea también  
+## <a name="see-also"></a><span data-ttu-id="1b518-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="1b518-107">See Also</span></span>  
  <xref:Microsoft.VisualBasic.FileSystem.Dir%2A>

@@ -1,40 +1,43 @@
 ---
-title: "Propiedad y separaci&#243;n usuario-esquema en SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Propiedad y separación de esquemas de usuario en SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 168eaf9bc0bbac80cbd1e2bb0538aab89d262a49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Propiedad y separaci&#243;n usuario-esquema en SQL Server
-Un concepto básico en la seguridad de SQL Server es que los propietarios de los objetos disponen de permisos irrevocables para administrarlos.  No puede quitar privilegios de un propietario del objeto y no puede eliminar usuarios de una base de datos si en ella existen objetos que les pertenezcan.  
+# <a name="ownership-and-user-schema-separation-in-sql-server"></a><span data-ttu-id="49646-102">Propiedad y separación de esquemas de usuario en SQL Server</span><span class="sxs-lookup"><span data-stu-id="49646-102">Ownership and User-Schema Separation in SQL Server</span></span>
+<span data-ttu-id="49646-103">Un concepto básico en la seguridad de SQL Server es que los propietarios de los objetos disponen de permisos irrevocables para administrarlos.</span><span class="sxs-lookup"><span data-stu-id="49646-103">A core concept of SQL Server security is that owners of objects have irrevocable permissions to administer them.</span></span> <span data-ttu-id="49646-104">No puede quitar privilegios de un propietario del objeto y no puede eliminar usuarios de una base de datos si en ella existen objetos que les pertenezcan.</span><span class="sxs-lookup"><span data-stu-id="49646-104">You cannot remove privileges from an object owner, and you cannot drop users from a database if they own objects in it.</span></span>  
   
-## Separación usuario\-esquema  
- La separación del esquema de usuario permite disponer de más flexibilidad en la administración de los permisos de objeto de base de datos.  Un *esquema* es un contenedor con nombre para objetos de base de datos, que permite agrupar objetos en espacios de nombres independientes.  Por ejemplo, la base de datos de ejemplo de AdventureWorks contiene esquemas para Production, Sales y HumanResources.  
+## <a name="user-schema-separation"></a><span data-ttu-id="49646-105">Separación usuario-esquema</span><span class="sxs-lookup"><span data-stu-id="49646-105">User-Schema Separation</span></span>  
+ <span data-ttu-id="49646-106">La separación del esquema de usuario permite disponer de más flexibilidad en la administración de los permisos de objeto de base de datos.</span><span class="sxs-lookup"><span data-stu-id="49646-106">User-schema separation allows for more flexibility in managing database object permissions.</span></span> <span data-ttu-id="49646-107">A *esquema* es un contenedor con nombre para los objetos de base de datos, que permite agrupar objetos en espacios de nombres independientes.</span><span class="sxs-lookup"><span data-stu-id="49646-107">A *schema* is a named container for database objects, which allows you to group objects into separate namespaces.</span></span> <span data-ttu-id="49646-108">Por ejemplo, la base de datos de ejemplo de AdventureWorks contiene esquemas para Production, Sales y HumanResources.</span><span class="sxs-lookup"><span data-stu-id="49646-108">For example, the AdventureWorks sample database contains schemas for Production, Sales, and HumanResources.</span></span>  
   
- La sintaxis de asignación de nombres de cuatro partes para hacer referencia a los objetos especifica el nombre de esquema.  
+ <span data-ttu-id="49646-109">La sintaxis de asignación de nombres de cuatro partes para hacer referencia a los objetos especifica el nombre de esquema.</span><span class="sxs-lookup"><span data-stu-id="49646-109">The four-part naming syntax for referring to objects specifies the schema name.</span></span>  
   
 ```  
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   
-### Propietarios y permisos de esquemas  
- Los esquemas pueden pertenecer a cualquier entidad de seguridad de base de datos y una entidad de seguridad puede ser propietaria de varios esquemas.  Puede aplicar reglas de seguridad a un esquema, que heredan todos los objetos incluidos en él.  Después de configurar los permisos de acceso de un esquema, estos permisos se aplican automáticamente a medida que se agregan nuevos objetos al esquema.  Se puede asignar un esquema predeterminado a los usuarios y varios usuarios de base de datos pueden compartir el mismo esquema.  
+### <a name="schema-owners-and-permissions"></a><span data-ttu-id="49646-110">Propietarios y permisos de esquemas</span><span class="sxs-lookup"><span data-stu-id="49646-110">Schema Owners and Permissions</span></span>  
+ <span data-ttu-id="49646-111">Los esquemas pueden pertenecer a cualquier entidad de seguridad de base de datos y una entidad de seguridad puede ser propietaria de varios esquemas.</span><span class="sxs-lookup"><span data-stu-id="49646-111">Schemas can be owned by any database principal, and a single principal can own multiple schemas.</span></span> <span data-ttu-id="49646-112">Puede aplicar reglas de seguridad a un esquema, que heredan todos los objetos incluidos en él.</span><span class="sxs-lookup"><span data-stu-id="49646-112">You can apply security rules to a schema, which are inherited by all objects in the schema.</span></span> <span data-ttu-id="49646-113">Después de configurar los permisos de acceso de un esquema, estos permisos se aplican automáticamente a medida que se agregan nuevos objetos al esquema.</span><span class="sxs-lookup"><span data-stu-id="49646-113">Once you set up access permissions for a schema, those permissions are automatically applied as new objects are added to the schema.</span></span> <span data-ttu-id="49646-114">Se puede asignar un esquema predeterminado a los usuarios y varios usuarios de base de datos pueden compartir el mismo esquema.</span><span class="sxs-lookup"><span data-stu-id="49646-114">Users can be assigned a default schema, and multiple database users can share the same schema.</span></span>  
   
- De forma predeterminada, cuando los programadores crean objetos en un esquema, éstos pertenecen a la entidad de seguridad a la que pertenece el esquema y no al programador.  La propiedad del objeto se puede transferir con la instrucción ALTER AUTHORIZATION de Transact\-SQL.  Un esquema también puede contener objetos que pertenecen a diferentes usuarios y disponer de más permisos granulares que los asignados al esquema, si bien esto no resulta recomendable ya que agrega complejidad a la administración de permisos.  Los objetos se pueden mover entre los esquemas y la propiedad del esquema se puede transferir entre entidades de seguridad.  Se pueden quitar usuarios de base de datos sin que esto afecte a los esquemas.  
+ <span data-ttu-id="49646-115">De forma predeterminada, cuando los programadores crean objetos en un esquema, éstos pertenecen a la entidad de seguridad a la que pertenece el esquema y no al programador.</span><span class="sxs-lookup"><span data-stu-id="49646-115">By default, when developers create objects in a schema, the objects are owned by the security principal that owns the schema, not the developer.</span></span> <span data-ttu-id="49646-116">La propiedad del objeto se puede transferir con la instrucción ALTER AUTHORIZATION de Transact-SQL.</span><span class="sxs-lookup"><span data-stu-id="49646-116">Object ownership can be transferred with ALTER AUTHORIZATION Transact-SQL statement.</span></span> <span data-ttu-id="49646-117">Un esquema también puede contener objetos que pertenecen a diferentes usuarios y disponer de más permisos granulares que los asignados al esquema, si bien esto no resulta recomendable ya que agrega complejidad a la administración de permisos.</span><span class="sxs-lookup"><span data-stu-id="49646-117">A schema can also contain objects that are owned by different users and have more granular permissions than those assigned to the schema, although this is not recommended because it adds complexity to managing permissions.</span></span> <span data-ttu-id="49646-118">Los objetos se pueden mover entre los esquemas y la propiedad del esquema se puede transferir entre entidades de seguridad.</span><span class="sxs-lookup"><span data-stu-id="49646-118">Objects can be moved between schemas, and schema ownership can be transferred between principals.</span></span> <span data-ttu-id="49646-119">Se pueden quitar usuarios de base de datos sin que esto afecte a los esquemas.</span><span class="sxs-lookup"><span data-stu-id="49646-119">Database users can be dropped without affecting schemas.</span></span>  
   
-### Esquemas integrados  
- SQL Server incluye diez esquemas predefinidos que usan el mismo nombre que los usuarios y los roles de base de datos integrados.  Estos esquemas se han creado principalmente por compatibilidad con versiones anteriores.  No puede quitar los esquemas con el mismo nombre que las funciones fijas de base de datos, aunque no los necesite.  No puede quitar los siguientes esquemas:  
+### <a name="built-in-schemas"></a><span data-ttu-id="49646-120">Esquemas integrados</span><span class="sxs-lookup"><span data-stu-id="49646-120">Built-In Schemas</span></span>  
+ <span data-ttu-id="49646-121">SQL Server incluye diez esquemas predefinidos que usan el mismo nombre que los usuarios y los roles de base de datos integrados.</span><span class="sxs-lookup"><span data-stu-id="49646-121">SQL Server ships with ten pre-defined schemas that have the same names as the built-in database users and roles.</span></span> <span data-ttu-id="49646-122">Estos esquemas se han creado principalmente por compatibilidad con versiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="49646-122">These exist mainly for backward compatibility.</span></span> <span data-ttu-id="49646-123">No puede quitar los esquemas con el mismo nombre que las funciones fijas de base de datos, aunque no los necesite.</span><span class="sxs-lookup"><span data-stu-id="49646-123">You can drop the schemas that have the same names as the fixed database roles if you do not need them.</span></span> <span data-ttu-id="49646-124">No puede quitar los siguientes esquemas:</span><span class="sxs-lookup"><span data-stu-id="49646-124">You cannot drop the following schemas:</span></span>  
   
 -   `dbo`  
   
@@ -44,30 +47,30 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 -   `INFORMATION_SCHEMA`  
   
- Si los quita de la base de datos modelo, no aparecerán en las nuevas bases de datos.  
+ <span data-ttu-id="49646-125">Si los quita de la base de datos modelo, no aparecerán en las nuevas bases de datos.</span><span class="sxs-lookup"><span data-stu-id="49646-125">If you drop them from the model database, they will not appear in new databases.</span></span>  
   
 > [!NOTE]
->  Los esquemas `sys` y `INFORMATION_SCHEMA` están reservados para los objetos del sistema.  No puede crear objetos en ellos ni quitarlos.  
+>  <span data-ttu-id="49646-126">Los esquemas `sys` y `INFORMATION_SCHEMA` están reservados para los objetos del sistema.</span><span class="sxs-lookup"><span data-stu-id="49646-126">The `sys` and `INFORMATION_SCHEMA` schemas are reserved for system objects.</span></span> <span data-ttu-id="49646-127">No puede crear objetos en ellos ni quitarlos.</span><span class="sxs-lookup"><span data-stu-id="49646-127">You cannot create objects in these schemas and you cannot drop them.</span></span>  
   
-#### Esquema dbo  
- `dbo` es el esquema predeterminado en una base de datos recién creada.  El esquema `dbo` pertenece a la cuenta de usuario `dbo`.  De forma predeterminada, los usuarios creados con el comando CREATE USER de Transact\-SQL usan `dbo` como esquema predeterminado.  
+#### <a name="the-dbo-schema"></a><span data-ttu-id="49646-128">Esquema dbo</span><span class="sxs-lookup"><span data-stu-id="49646-128">The dbo Schema</span></span>  
+ <span data-ttu-id="49646-129">`dbo` es el esquema predeterminado en una base de datos recién creada.</span><span class="sxs-lookup"><span data-stu-id="49646-129">The `dbo` schema is the default schema for a newly created database.</span></span> <span data-ttu-id="49646-130">El esquema `dbo` pertenece a la cuenta de usuario `dbo`.</span><span class="sxs-lookup"><span data-stu-id="49646-130">The `dbo` schema is owned by the `dbo` user account.</span></span> <span data-ttu-id="49646-131">De forma predeterminada, los usuarios creados con el comando CREATE USER de Transact-SQL usan `dbo` como esquema predeterminado.</span><span class="sxs-lookup"><span data-stu-id="49646-131">By default, users created with the CREATE USER Transact-SQL command have `dbo` as their default schema.</span></span>  
   
- Los usuarios a los que se asigna el esquema `dbo` no heredan los permisos de la cuenta de usuario `dbo`.  Los usuarios no heredan ningún permiso de un esquema; los permisos de esquema se heredan en los objetos de base de datos incluidos en el esquema.  
+ <span data-ttu-id="49646-132">Los usuarios a los que se asigna el esquema `dbo` no heredan los permisos de la cuenta de usuario `dbo`.</span><span class="sxs-lookup"><span data-stu-id="49646-132">Users who are assigned the `dbo` schema do not inherit the permissions of the `dbo` user account.</span></span> <span data-ttu-id="49646-133">Los usuarios no heredan ningún permiso de un esquema; los permisos de esquema se heredan en los objetos de base de datos incluidos en el esquema.</span><span class="sxs-lookup"><span data-stu-id="49646-133">No permissions are inherited from a schema by users; schema permissions are inherited by the database objects contained in the schema.</span></span>  
   
 > [!NOTE]
->  Cuando se hace referencia a objetos de base de datos con un nombre de una sola parte, SQL Server busca en primer lugar en el esquema predeterminado del usuario.  Si no se encuentra el objeto, SQL Server busca a continuación en el esquema `dbo`.  Si el objeto tampoco se encuentra en el esquema `dbo`, se muestra un error.  
+>  <span data-ttu-id="49646-134">Cuando se hace referencia a objetos de base de datos con un nombre de una sola parte, SQL Server busca en primer lugar en el esquema predeterminado del usuario.</span><span class="sxs-lookup"><span data-stu-id="49646-134">When database objects are referenced by using a one-part name, SQL Server first looks in the user's default schema.</span></span> <span data-ttu-id="49646-135">Si no se encuentra el objeto, SQL Server busca a continuación en el esquema `dbo`.</span><span class="sxs-lookup"><span data-stu-id="49646-135">If the object is not found there, SQL Server looks next in the `dbo` schema.</span></span> <span data-ttu-id="49646-136">Si el objeto tampoco se encuentra en el esquema `dbo`, se muestra un error.</span><span class="sxs-lookup"><span data-stu-id="49646-136">If the object is not in the `dbo` schema, an error is returned.</span></span>  
   
-## Recursos externos  
- Para obtener más información sobre la propiedad de objetos y los esquemas, vea los siguientes recursos.  
+## <a name="external-resources"></a><span data-ttu-id="49646-137">Recursos externos</span><span class="sxs-lookup"><span data-stu-id="49646-137">External Resources</span></span>  
+ <span data-ttu-id="49646-138">Para obtener más información sobre la propiedad de objetos y los esquemas, vea los siguientes recursos.</span><span class="sxs-lookup"><span data-stu-id="49646-138">For more information on object ownership and schemas, see the following resources.</span></span>  
   
-|Recurso|Descripción|  
-|-------------|-----------------|  
-|[Separación de esquemas de usuario](http://msdn.microsoft.com/library/ms190387.aspx) en los Libros en pantalla de SQL Server.|Describe los cambios que introduce la separación usuario\-esquema.  Incluye el nuevo comportamiento, así como su impacto en la propiedad, las vistas de catálogo y los permisos.|  
+|<span data-ttu-id="49646-139">Recurso</span><span class="sxs-lookup"><span data-stu-id="49646-139">Resource</span></span>|<span data-ttu-id="49646-140">Descripción</span><span class="sxs-lookup"><span data-stu-id="49646-140">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="49646-141">[Separación usuario-esquema](http://msdn.microsoft.com/library/ms190387.aspx) en libros en pantalla de SQL Server</span><span class="sxs-lookup"><span data-stu-id="49646-141">[User-Schema Separation](http://msdn.microsoft.com/library/ms190387.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="49646-142">Describe los cambios que introduce la separación usuario-esquema.</span><span class="sxs-lookup"><span data-stu-id="49646-142">Describes the changes introduced by user-schema separation.</span></span> <span data-ttu-id="49646-143">Incluye el nuevo comportamiento, así como su impacto en la propiedad, las vistas de catálogo y los permisos.</span><span class="sxs-lookup"><span data-stu-id="49646-143">Includes new behavior, its impact on ownership, catalog views, and permissions.</span></span>|  
   
-## Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)   
- [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)   
- [Autorización y permisos en SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="49646-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="49646-144">See Also</span></span>  
+ [<span data-ttu-id="49646-145">Proteger aplicaciones de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="49646-145">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="49646-146">Escenarios de seguridad de la aplicación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="49646-146">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="49646-147">Autenticación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="49646-147">Authentication in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [<span data-ttu-id="49646-148">Roles de servidor y base de datos en SQL Server</span><span class="sxs-lookup"><span data-stu-id="49646-148">Server and Database Roles in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [<span data-ttu-id="49646-149">Autorización y permisos en SQL Server</span><span class="sxs-lookup"><span data-stu-id="49646-149">Authorization and Permissions in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [<span data-ttu-id="49646-150">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="49646-150">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

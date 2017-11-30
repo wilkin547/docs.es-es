@@ -1,31 +1,30 @@
 ---
-title: "Par&#225;metros (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Parámetros (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2a3700b5f9bdc996b147609d86bcaed0ec0bb116
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Par&#225;metros (Entity SQL)
-Los parámetros son variables que se definen fuera de [!INCLUDE[esql](../../../../../../includes/esql-md.md)], normalmente a través de una API de enlace que se usa en un lenguaje host.  Cada parámetro tiene un nombre y un tipo.  Los nombres de los parámetros se definen en expresiones de consulta con el símbolo \(@\) como prefijo. De esta forma se elimina su ambigüedad en los nombres de las propiedades o en otros nombres que se definen en la consulta.  
+# <a name="parameters-entity-sql"></a><span data-ttu-id="4002f-102">Parámetros (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="4002f-102">Parameters (Entity SQL)</span></span>
+<span data-ttu-id="4002f-103">Los parámetros son variables que se definen fuera de [!INCLUDE[esql](../../../../../../includes/esql-md.md)], normalmente a través de una API de enlace que se usa en un lenguaje host.</span><span class="sxs-lookup"><span data-stu-id="4002f-103">Parameters are variables that are defined outside [!INCLUDE[esql](../../../../../../includes/esql-md.md)], usually through a binding API that is used by a host language.</span></span> <span data-ttu-id="4002f-104">Cada parámetro tiene un nombre y un tipo.</span><span class="sxs-lookup"><span data-stu-id="4002f-104">Each parameter has a name and a type.</span></span> <span data-ttu-id="4002f-105">Los nombres de los parámetros se definen en expresiones de consulta con el símbolo (@) como prefijo.</span><span class="sxs-lookup"><span data-stu-id="4002f-105">Parameter names are defined in query expressions with the at (@) symbol as a prefix.</span></span> <span data-ttu-id="4002f-106">De esta forma se elimina su ambigüedad en los nombres de las propiedades o en otros nombres que se definen en la consulta.</span><span class="sxs-lookup"><span data-stu-id="4002f-106">This disambiguates them from the names of properties or other names that are defined in the query.</span></span>  
   
- La API de enlace de lenguaje host proporciona otras API para los parámetros de enlace.  
+ <span data-ttu-id="4002f-107">La API de enlace de lenguaje host proporciona otras API para los parámetros de enlace.</span><span class="sxs-lookup"><span data-stu-id="4002f-107">The host-language binding API provides APIs for binding parameters.</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="4002f-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4002f-108">Example</span></span>  
   
 ```  
 select c   
@@ -33,6 +32,6 @@ select c
       where c.Name = @name  
 ```  
   
-## Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [Información general de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4002f-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="4002f-109">See Also</span></span>  
+ [<span data-ttu-id="4002f-110">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="4002f-110">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="4002f-111">Información general sobre de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="4002f-111">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

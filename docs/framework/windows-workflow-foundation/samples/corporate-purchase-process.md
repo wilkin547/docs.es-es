@@ -1,184 +1,185 @@
 ---
-title: "Proceso de compra corporativa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Proceso de compra corporativa
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ea3814fe187fb721771b6ce09a5fa0ff95558852
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Proceso de compra corporativa
-En este ejemplo se muestra cómo crear solicitudes de propuesta \(RFP\) muy básicas en función del proceso de compra con selección automática de la mejor propuesta.  Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.  
+# <a name="corporate-purchase-process"></a><span data-ttu-id="b3f5e-102">Proceso de compra corporativa</span><span class="sxs-lookup"><span data-stu-id="b3f5e-102">Corporate Purchase Process</span></span>
+<span data-ttu-id="b3f5e-103">En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-103">This sample shows how to create a very basic Request for Proposals (RFP) based purchase process with automatic best proposal selection.</span></span> <span data-ttu-id="b3f5e-104">Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-104">It combines <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, and <xref:System.Activities.Statements.ForEach%601> and a custom activity to create a workflow that represents the process.</span></span>  
   
- Este ejemplo incluye una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite interactuar con el proceso como diferentes participantes \(como el solicitante original o un proveedor en particular\).  
+ <span data-ttu-id="b3f5e-105">Este ejemplo incluye una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite interactuar con el proceso como diferentes participantes (como el solicitante original o un proveedor en particular).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-105">This sample contains an [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] client application that allows interacting with the process as different participants (as the original requester or a particular vendor).</span></span>  
   
-## Requisitos  
+## <a name="requirements"></a><span data-ttu-id="b3f5e-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b3f5e-106">Requirements</span></span>  
   
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+-   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]<span data-ttu-id="b3f5e-107">.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-107">.</span></span>  
   
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="b3f5e-108">.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-108">.</span></span>  
   
-## Demostraciones  
+## <a name="demonstrates"></a><span data-ttu-id="b3f5e-109">Demostraciones</span><span class="sxs-lookup"><span data-stu-id="b3f5e-109">Demonstrates</span></span>  
   
--   Actividades personalizadas  
+-   <span data-ttu-id="b3f5e-110">Actividades personalizadas</span><span class="sxs-lookup"><span data-stu-id="b3f5e-110">Custom activities.</span></span>  
   
--   Composición de actividades.  
+-   <span data-ttu-id="b3f5e-111">Composición de actividades.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-111">Composition of activities.</span></span>  
   
--   Marcadores  
+-   <span data-ttu-id="b3f5e-112">Marcadores</span><span class="sxs-lookup"><span data-stu-id="b3f5e-112">Bookmarks.</span></span>  
   
--   Persistencia  
+-   <span data-ttu-id="b3f5e-113">Persistencia</span><span class="sxs-lookup"><span data-stu-id="b3f5e-113">Persistence.</span></span>  
   
--   Persistencia esquematizada  
+-   <span data-ttu-id="b3f5e-114">Persistencia esquematizada</span><span class="sxs-lookup"><span data-stu-id="b3f5e-114">Schematized persistence.</span></span>  
   
--   Traza  
+-   <span data-ttu-id="b3f5e-115">Traza</span><span class="sxs-lookup"><span data-stu-id="b3f5e-115">Tracing.</span></span>  
   
--   Seguimiento  
+-   <span data-ttu-id="b3f5e-116">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="b3f5e-116">Tracking.</span></span>  
   
--   Hospedaje de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes \(aplicaciones web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y aplicaciones WinForms\).  
+-   <span data-ttu-id="b3f5e-117">Hospedaje de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y aplicaciones WinForms).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-117">Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in different clients ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web applications and WinForms applications).</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="b3f5e-118">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b3f5e-119">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-119">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="b3f5e-120">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b3f5e-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b3f5e-121">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-121">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
-## Descripción del proceso  
- En este ejemplo se muestra una implementación de un programa [!INCLUDE[wf](../../../../includes/wf-md.md)] para recopilar las propuestas de los proveedores para una compañía genérica.  
+## <a name="description-of-the-process"></a><span data-ttu-id="b3f5e-122">Descripción del proceso</span><span class="sxs-lookup"><span data-stu-id="b3f5e-122">Description of the Process</span></span>  
+ <span data-ttu-id="b3f5e-123">En este ejemplo se muestra una implementación de un programa [!INCLUDE[wf](../../../../includes/wf-md.md)] para recopilar las propuestas de los proveedores para una compañía genérica.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-123">This sample shows an implementation of a [!INCLUDE[wf](../../../../includes/wf-md.md)] program to gather proposals from vendors for a generic company.</span></span>  
   
-1.  Un empleado de la compañía X crea una solicitud de propuestas \(RFP\).  
+1.  <span data-ttu-id="b3f5e-124">Un empleado de la compañía X crea una solicitud de propuestas (RFP).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-124">An employee of Company X creates a Request for Proposal (RFP).</span></span>  
   
-    1.  El empleado escribe el título de la solicitud de propuestas y una descripción.  
+    1.  <span data-ttu-id="b3f5e-125">El empleado escribe el título de la solicitud de propuestas y una descripción.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-125">The employee types in the RFP title and description.</span></span>  
   
-    2.  El empleado selecciona los proveedores que desea invitar a que envíen sus propuestas.  
+    2.  <span data-ttu-id="b3f5e-126">El empleado selecciona los proveedores que desea invitar a que envíen sus propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-126">The employee selects the vendors that he wants to invite to submit proposals.</span></span>  
   
-2.  El empleado envía la propuesta.  
+2.  <span data-ttu-id="b3f5e-127">El empleado envía la propuesta.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-127">The employee submits the proposal.</span></span>  
   
-    1.  Se crea una instancia del flujo de trabajo.  
+    1.  <span data-ttu-id="b3f5e-128">Se crea una instancia del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-128">An instance of the workflow is created.</span></span>  
   
-    2.  El flujo de trabajo espera a que todos los proveedores envíen sus propuestas.  
+    2.  <span data-ttu-id="b3f5e-129">El flujo de trabajo espera a que todos los proveedores envíen sus propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-129">The workflow is waiting for all vendors to submit their proposals.</span></span>  
   
-3.  Una vez recibidas todas las propuestas, el flujo de trabajo recorre en iteración todas las propuestas recibidas y selecciona la mejor.  
+3.  <span data-ttu-id="b3f5e-130">Una vez recibidas todas las propuestas, el flujo de trabajo recorre en iteración todas las propuestas recibidas y selecciona la mejor.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-130">After all proposals are received, the workflow iterates through all the received proposals and selects the best one.</span></span>  
   
-    1.  Cada proveedor tiene una reputación \(en este ejemplo la lista de reputaciones se almacena en VendorRepository.cs\).  
+    1.  <span data-ttu-id="b3f5e-131">Cada proveedor tiene una reputación (en este ejemplo la lista de reputaciones se almacena en VendorRepository.cs).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-131">Each vendor has a reputation (this sample stores the reputation list in VendorRepository.cs).</span></span>  
   
-    2.  El valor total de la propuesta se determina por \(El valor escrito por el proveedor\) \* \(La reputación grabada del proveedor\) \/ 100.  
+    2.  <span data-ttu-id="b3f5e-132">El valor total de la propuesta se determina por (El valor escrito por el proveedor) * (La reputación grabada del proveedor) / 100.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-132">The total value of the proposal is determined by (The value typed in by the vendor) * (The vendor's recorded reputation) / 100.</span></span>  
   
-4.  El solicitante original puede ver todas las propuestas enviadas.  La mejor propuesta se presenta en una sección especial del informe.  
+4.  <span data-ttu-id="b3f5e-133">El solicitante original puede ver todas las propuestas enviadas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-133">The original requester can see all the submitted proposals.</span></span> <span data-ttu-id="b3f5e-134">La mejor propuesta se presenta en una sección especial del informe.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-134">The best proposal is presented in a special section in the report.</span></span>  
   
-## Definición del proceso  
- La lógica básica del ejemplo utiliza una actividad <xref:System.Activities.Statements.ParallelForEach%601> que espera las ofertas de cada proveedor \(utilizando una actividad personalizada que crea un marcador\) y registra la propuesta del proveedor como una solicitud de propuesta \(mediante una actividad <xref:System.Activities.Statements.InvokeMethod>\).  
+## <a name="process-definition"></a><span data-ttu-id="b3f5e-135">Definición del proceso</span><span class="sxs-lookup"><span data-stu-id="b3f5e-135">Process Definition</span></span>  
+ <span data-ttu-id="b3f5e-136">La lógica básica del ejemplo utiliza una actividad <xref:System.Activities.Statements.ParallelForEach%601> que espera las ofertas de cada proveedor (utilizando una actividad personalizada que crea un marcador) y registra la propuesta del proveedor como una solicitud de propuesta (mediante una actividad <xref:System.Activities.Statements.InvokeMethod>).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-136">The core logic of the sample uses a <xref:System.Activities.Statements.ParallelForEach%601> activity that waits for the offers from each vendor (using a custom activity that creates a bookmark), and registers the vendor proposal as an RFP (using an <xref:System.Activities.Statements.InvokeMethod> activity).</span></span>  
   
- A continuación, el ejemplo recorre en iteración todas las propuestas recibidas almacenadas en `RfpRepository`, calculando el valor ajustado \(mediante una actividad <xref:System.Activities.Statements.Assign> y las actividades <xref:System.Activities.Expressions>\), y si el valor ajustado es mejor que la mejor oferta anterior, asigna el nuevo valor como la mejor oferta \(utilizando actividades <xref:System.Activities.Statements.If> y <xref:System.Activities.Statements.Assign>\).  
+ <span data-ttu-id="b3f5e-137">A continuación, el ejemplo recorre en iteración todas las propuestas recibidas almacenadas en `RfpRepository`, calculando el valor ajustado (mediante una actividad <xref:System.Activities.Statements.Assign> y las actividades <xref:System.Activities.Expressions>), y si el valor ajustado es mejor que la mejor oferta anterior, asigna el nuevo valor como la mejor oferta (utilizando actividades <xref:System.Activities.Statements.If> y <xref:System.Activities.Statements.Assign>).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-137">The sample then iterates through all of the received proposals stored in the `RfpRepository`, calculating the adjusted value (using an <xref:System.Activities.Statements.Assign> activity and <xref:System.Activities.Expressions> activities), and if the adjusted value is better than the previous best offer, assigns the new value as the best offer (using <xref:System.Activities.Statements.If> and <xref:System.Activities.Statements.Assign> activities).</span></span>  
   
-## Proyectos en este ejemplo  
- Este ejemplo contiene los siguientes proyectos.  
+## <a name="projects-in-this-sample"></a><span data-ttu-id="b3f5e-138">Proyectos en este ejemplo</span><span class="sxs-lookup"><span data-stu-id="b3f5e-138">Projects in this Sample</span></span>  
+ <span data-ttu-id="b3f5e-139">Este ejemplo contiene los siguientes proyectos.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-139">This sample contains the following projects.</span></span>  
   
-|Project|Descripción|  
+|<span data-ttu-id="b3f5e-140">Project</span><span class="sxs-lookup"><span data-stu-id="b3f5e-140">Project</span></span>|<span data-ttu-id="b3f5e-141">Descripción</span><span class="sxs-lookup"><span data-stu-id="b3f5e-141">Description</span></span>|  
 |-------------|-----------------|  
-|Común|Los objetos entidad utilizados dentro del proceso \(solicitud de propuesta, proveedor y propuesta del proveedor\).|  
-|WfDefinition|La definición del proceso \(como un programa [!INCLUDE[wf1](../../../../includes/wf1-md.md)]\) y el host \(`PurchaseProcessHost`\) utilizado por las aplicaciones cliente para crear y utilizar instancias del flujo de trabajo del proceso de compra.|  
-|WebClient|Una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite a los usuarios crear y participar en instancias del proceso de compra.  Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
-|WinFormsClient|Una aplicación cliente de Windows Forms que permite a los usuarios crear y participar en instancias del proceso de compra.  Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
+|<span data-ttu-id="b3f5e-142">Común</span><span class="sxs-lookup"><span data-stu-id="b3f5e-142">Common</span></span>|<span data-ttu-id="b3f5e-143">Los objetos entidad utilizados dentro del proceso (solicitud de propuesta, proveedor y propuesta del proveedor).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-143">The entity objects used within the process (Request for Proposal, Vendor, and Vendor Proposal).</span></span>|  
+|<span data-ttu-id="b3f5e-144">WfDefinition</span><span class="sxs-lookup"><span data-stu-id="b3f5e-144">WfDefinition</span></span>|<span data-ttu-id="b3f5e-145">La definición del proceso (como un programa [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) y el host (`PurchaseProcessHost`) utilizado por las aplicaciones cliente para crear y utilizar instancias del flujo de trabajo del proceso de compra.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-145">The definition of the process (as a [!INCLUDE[wf1](../../../../includes/wf1-md.md)] program) and host (`PurchaseProcessHost`) used by client applications for creating and using instances of the purchase process workflow.</span></span>|  
+|<span data-ttu-id="b3f5e-146">WebClient</span><span class="sxs-lookup"><span data-stu-id="b3f5e-146">WebClient</span></span>|<span data-ttu-id="b3f5e-147">Una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite a los usuarios crear y participar en instancias del proceso de compra.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-147">An [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] client application that allows the users to create and participate in instances of the purchase process.</span></span> <span data-ttu-id="b3f5e-148">Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-148">It uses a custom-created host to interact with the workflow engine.</span></span>|  
+|<span data-ttu-id="b3f5e-149">WinFormsClient</span><span class="sxs-lookup"><span data-stu-id="b3f5e-149">WinFormsClient</span></span>|<span data-ttu-id="b3f5e-150">Una aplicación cliente de Windows Forms que permite a los usuarios crear y participar en instancias del proceso de compra.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-150">A Windows Forms client application that allows the users to create and participate in instances of the purchase process.</span></span> <span data-ttu-id="b3f5e-151">Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-151">It uses a custom-created host to interact with the workflow engine.</span></span>|  
   
-### WfDefinition  
- La siguiente tabla contiene una descripción de los archivos más importantes dentro del proyecto WfDefinition.  
+### <a name="wfdefinition"></a><span data-ttu-id="b3f5e-152">WfDefinition</span><span class="sxs-lookup"><span data-stu-id="b3f5e-152">WfDefinition</span></span>  
+ <span data-ttu-id="b3f5e-153">La siguiente tabla contiene una descripción de los archivos más importantes dentro del proyecto WfDefinition.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-153">The following table contains a description of the most important files in the WfDefinition project.</span></span>  
   
-|Archivo|Descripción|  
-|-------------|-----------------|  
-|IPurchaseProcessHost.cs|Interfaz del host del flujo de trabajo.|  
-|PurchaseProcessHost.cs|Implementación de un host para el flujo de trabajo.  El host resume los detalles del tiempo de ejecución del flujo de trabajo y se utiliza en todas las aplicaciones cliente para cargar, ejecutar e interactuar con instancias de flujo de trabajo `PurchaseProcess`.|  
-|PurchaseProcessWorkflow.cs|Una actividad que contiene la definición del flujo de trabajo del proceso de compra \(se deriva de <xref:System.Activities.Activity>\).<br /><br /> Las actividades que se derivan de <xref:System.Activities.Activity> crean la funcionalidad ensamblando actividades personalizadas existentes y actividades procedentes de la biblioteca de actividades de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  Ensamblar estas actividades es la manera más básica de crear la funcionalidad personalizada.|  
-|WaitForVendorProposal.cs|Esta actividad personalizada se deriva de <xref:System.Activities.NativeActivity> y crea un marcador con nombre que debe reanudar posteriormente un proveedor al enviar la propuesta.<br /><br /> Las actividades que deriven de <xref:System.Activities.NativeActivity>, como aquéllas que derivan de <xref:System.Activities.CodeActivity>, crean la funcionalidad imperativa invalidando <xref:System.Activities.NativeActivity.Execute%2A>, pero también tienen acceso a toda la funcionalidad del tiempo de ejecución del flujo de trabajo a través de <xref:System.Activities.ActivityContext> que se transfiere al método `Execute`.  Este contexto tiene soporte técnico para programar y cancelar actividades secundarias, configurando zonas sin persistencia \(bloques de ejecución durante los cuales el tiempo de ejecución no conserva los datos del flujo de trabajo, como dentro de las transacciones atómicas\) y los objetos <xref:System.Activities.Bookmark> \(controladores para reanudar los flujos de trabajo en pausa\).|  
-|TrackingParticipant.cs|<xref:System.Activities.Tracking.TrackingParticipant> que recibe todos los eventos de seguimiento y los guarda en un archivo de texto.<br /><br /> Los participantes de seguimiento se agregan a la instancia de flujo de trabajo como extensiones.|  
-|XmlWorkflowInstanceStore.cs|Un objeto <xref:System.Runtime.DurableInstancing.InstanceStore> personalizado que guarda las aplicaciones de flujo de trabajo en archivos XML.|  
-|XmlPersistenceParticipant.cs|Un objeto <xref:System.Activities.Persistence.PersistenceParticipant> personalizado que guarda una instancia de solicitud de propuesta en un archivo XML.|  
-|AsyncResult.cs \/ CompletedAsyncResult.cs|Clases de aplicación auxiliar para implementar el patrón asincrónico en los componentes de persistencia.|  
+|<span data-ttu-id="b3f5e-154">Archivo</span><span class="sxs-lookup"><span data-stu-id="b3f5e-154">File</span></span>|<span data-ttu-id="b3f5e-155">Descripción</span><span class="sxs-lookup"><span data-stu-id="b3f5e-155">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="b3f5e-156">IPurchaseProcessHost.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-156">IPurchaseProcessHost.cs</span></span>|<span data-ttu-id="b3f5e-157">Interfaz del host del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-157">Interface for the host of the workflow.</span></span>|  
+|<span data-ttu-id="b3f5e-158">PurchaseProcessHost.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-158">PurchaseProcessHost.cs</span></span>|<span data-ttu-id="b3f5e-159">Implementación de un host para el flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-159">Implementation of a host for the workflow.</span></span> <span data-ttu-id="b3f5e-160">El host resume los detalles del tiempo de ejecución del flujo de trabajo y se utiliza en todas las aplicaciones cliente para cargar, ejecutar e interactuar con instancias de flujo de trabajo `PurchaseProcess`.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-160">The host abstracts the details of the workflow runtime and is used in all the client applications to load, run, and interact with `PurchaseProcess` workflow instances.</span></span>|  
+|<span data-ttu-id="b3f5e-161">PurchaseProcessWorkflow.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-161">PurchaseProcessWorkflow.cs</span></span>|<span data-ttu-id="b3f5e-162">Una actividad que contiene la definición del flujo de trabajo del proceso de compra (se deriva de <xref:System.Activities.Activity>).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-162">An activity that contains the definition of the Purchase Process workflow (derives from <xref:System.Activities.Activity>).</span></span><br /><br /> <span data-ttu-id="b3f5e-163">Las actividades que se derivan de <xref:System.Activities.Activity> crean la funcionalidad ensamblando actividades personalizadas existentes y actividades procedentes de la biblioteca de actividades de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b3f5e-163">Activities that derive from <xref:System.Activities.Activity> compose functionality by assembling existing custom activities and activities from the [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] activity library.</span></span> <span data-ttu-id="b3f5e-164">Ensamblar estas actividades es la manera más básica de crear la funcionalidad personalizada.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-164">Assembling these activities is the most basic way to create custom functionality.</span></span>|  
+|<span data-ttu-id="b3f5e-165">WaitForVendorProposal.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-165">WaitForVendorProposal.cs</span></span>|<span data-ttu-id="b3f5e-166">Esta actividad personalizada se deriva de <xref:System.Activities.NativeActivity> y crea un marcador con nombre que debe reanudar posteriormente un proveedor al enviar la propuesta.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-166">This custom activity derives from <xref:System.Activities.NativeActivity> and creates a named bookmark that must be resumed later by a vendor when submitting the proposal.</span></span><br /><br /> <span data-ttu-id="b3f5e-167">Las actividades que deriven de <xref:System.Activities.NativeActivity>, como aquéllas que derivan de <xref:System.Activities.CodeActivity>, crean la funcionalidad imperativa invalidando <xref:System.Activities.NativeActivity.Execute%2A>, pero también tienen acceso a toda la funcionalidad del tiempo de ejecución del flujo de trabajo a través de <xref:System.Activities.ActivityContext> que se transfiere al método `Execute`.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-167">Activities that derive from <xref:System.Activities.NativeActivity>, like those that derive from <xref:System.Activities.CodeActivity>, create imperative functionality by overriding <xref:System.Activities.NativeActivity.Execute%2A>, but also have access to all of the functionality of the workflow runtime through the <xref:System.Activities.ActivityContext> that gets passed into the `Execute` method.</span></span> <span data-ttu-id="b3f5e-168">Este contexto tiene soporte técnico para programar y cancelar actividades secundarias, configurando zonas sin persistencia (bloques de ejecución durante los cuales el tiempo de ejecución no conserva los datos del flujo de trabajo, como dentro de las transacciones atómicas) y los objetos <xref:System.Activities.Bookmark> (controladores para reanudar los flujos de trabajo en pausa).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-168">This context has support for scheduling and canceling child activities, setting up no-persist zones (execution blocks during which the runtime does not persist the workflow’s data, such as within atomic transactions), and <xref:System.Activities.Bookmark> objects (handles for resuming paused workflows).</span></span>|  
+|<span data-ttu-id="b3f5e-169">TrackingParticipant.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-169">TrackingParticipant.cs</span></span>|<span data-ttu-id="b3f5e-170"><xref:System.Activities.Tracking.TrackingParticipant> que recibe todos los eventos de seguimiento y los guarda en un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-170">A <xref:System.Activities.Tracking.TrackingParticipant> that receives all tracking events and saves them to a text file.</span></span><br /><br /> <span data-ttu-id="b3f5e-171">Los participantes de seguimiento se agregan a la instancia de flujo de trabajo como extensiones.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-171">Tracking participants are added to workflow instance as Extensions.</span></span>|  
+|<span data-ttu-id="b3f5e-172">XmlWorkflowInstanceStore.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-172">XmlWorkflowInstanceStore.cs</span></span>|<span data-ttu-id="b3f5e-173">Un objeto <xref:System.Runtime.DurableInstancing.InstanceStore> personalizado que guarda las aplicaciones de flujo de trabajo en archivos XML.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-173">A custom <xref:System.Runtime.DurableInstancing.InstanceStore> that saves workflow applications to XML files.</span></span>|  
+|<span data-ttu-id="b3f5e-174">XmlPersistenceParticipant.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-174">XmlPersistenceParticipant.cs</span></span>|<span data-ttu-id="b3f5e-175">Un objeto <xref:System.Activities.Persistence.PersistenceParticipant> personalizado que guarda una instancia de solicitud de propuesta en un archivo XML.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-175">A custom <xref:System.Activities.Persistence.PersistenceParticipant> that saves an instance of request for proposal to an XML file.</span></span>|  
+|<span data-ttu-id="b3f5e-176">AsyncResult.cs / CompletedAsyncResult.cs</span><span class="sxs-lookup"><span data-stu-id="b3f5e-176">AsyncResult.cs / CompletedAsyncResult.cs</span></span>|<span data-ttu-id="b3f5e-177">Clases de aplicación auxiliar para implementar el patrón asincrónico en los componentes de persistencia.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-177">Helper classes for implementing the asynchronous pattern in the persistence components.</span></span>|  
   
-### Común  
- La siguiente tabla contiene una descripción de las clases más importantes dentro del proyecto Común.  
+### <a name="common"></a><span data-ttu-id="b3f5e-178">Común</span><span class="sxs-lookup"><span data-stu-id="b3f5e-178">Common</span></span>  
+ <span data-ttu-id="b3f5e-179">La siguiente tabla contiene una descripción de las clases más importantes dentro del proyecto Común.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-179">The following table contains a description of the most important classes in the Common project.</span></span>  
   
-|Clase|Descripción|  
+|<span data-ttu-id="b3f5e-180">Clase</span><span class="sxs-lookup"><span data-stu-id="b3f5e-180">Class</span></span>|<span data-ttu-id="b3f5e-181">Descripción</span><span class="sxs-lookup"><span data-stu-id="b3f5e-181">Description</span></span>|  
 |-----------|-----------------|  
-|Vendor|Un proveedor que envía propuestas en una solicitud de propuestas.|  
-|RequestForProposal|Una solicitud de propuestas \(RFP\) es una invitación para que los proveedores envíen propuestas para un artículo o un servicio concretos.|  
-|VendorProposal|Una propuesta enviada por un proveedor a una determinada solicitud de propuestas.|  
-|VendorRepository|El repositorio de los proveedores.  Esta implementación contiene una colección ubicada en memoria de instancias de proveedor y métodos para exponer esas instancias.|  
-|RfpRepository|El repositorio de solicitudes de propuestas.  Esta implementación contiene usos de Linq to XML para consultar el archivo XML de solicitudes de propuestas generado por la persistencia esquematizada.  Esta clase implementa <xref:System.Runtime.Persistence.IDataViewMapper>.|  
-|IOHelper|Esta clase administra todos los problemas relacionados con E\/S \(carpetas, rutas de acceso, etc.\).|  
+|<span data-ttu-id="b3f5e-182">Vendor</span><span class="sxs-lookup"><span data-stu-id="b3f5e-182">Vendor</span></span>|<span data-ttu-id="b3f5e-183">Un proveedor que envía propuestas en una solicitud de propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-183">A vendor that submits proposals in a Request for Proposals.</span></span>|  
+|<span data-ttu-id="b3f5e-184">RequestForProposal</span><span class="sxs-lookup"><span data-stu-id="b3f5e-184">RequestForProposal</span></span>|<span data-ttu-id="b3f5e-185">Una solicitud de propuestas (RFP) es una invitación para que los proveedores envíen propuestas para un artículo o un servicio concretos.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-185">A request for proposals (RFP) is an invitation for vendors to submit proposals on a specific commodity or service.</span></span>|  
+|<span data-ttu-id="b3f5e-186">VendorProposal</span><span class="sxs-lookup"><span data-stu-id="b3f5e-186">VendorProposal</span></span>|<span data-ttu-id="b3f5e-187">Una propuesta enviada por un proveedor a una determinada solicitud de propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-187">A proposal submitted by a vendor to a concrete RFP.</span></span>|  
+|<span data-ttu-id="b3f5e-188">VendorRepository</span><span class="sxs-lookup"><span data-stu-id="b3f5e-188">VendorRepository</span></span>|<span data-ttu-id="b3f5e-189">El repositorio de los proveedores.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-189">The repository of Vendors.</span></span> <span data-ttu-id="b3f5e-190">Esta implementación contiene una colección ubicada en memoria de instancias de proveedor y métodos para exponer esas instancias.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-190">This implementation contains an in-memory collection of instances of Vendor and methods for exposing those instances.</span></span>|  
+|<span data-ttu-id="b3f5e-191">RfpRepository</span><span class="sxs-lookup"><span data-stu-id="b3f5e-191">RfpRepository</span></span>|<span data-ttu-id="b3f5e-192">El repositorio de solicitudes de propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-192">The repository of Requests for Proposals.</span></span> <span data-ttu-id="b3f5e-193">Esta implementación contiene usos de Linq to XML para consultar el archivo XML de solicitudes de propuestas generado por la persistencia esquematizada.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-193">This implementation contains uses Linq to XML to query the XML file of Requests for Proposal generated by the schematized persistence.</span></span> <span data-ttu-id="b3f5e-194">Esta clase implementa [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-194">This class implements [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).</span></span>|  
+|<span data-ttu-id="b3f5e-195">IOHelper</span><span class="sxs-lookup"><span data-stu-id="b3f5e-195">IOHelper</span></span>|<span data-ttu-id="b3f5e-196">Esta clase administra todos los problemas relacionados con E/S (carpetas, rutas de acceso, etc.).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-196">This class handles all I/O-related issues (folders, paths, and so on.)</span></span>|  
   
-### Cliente web  
- La siguiente tabla contiene una descripción de las páginas web más importantes dentro del proyecto Cliente web.  
+### <a name="web-client"></a><span data-ttu-id="b3f5e-197">Cliente web</span><span class="sxs-lookup"><span data-stu-id="b3f5e-197">Web Client</span></span>  
+ <span data-ttu-id="b3f5e-198">La siguiente tabla contiene una descripción de las páginas web más importantes dentro del proyecto Cliente web.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-198">The following table contains a description of the most important Web pages in the Web Client project.</span></span>  
   
-|||  
+|<span data-ttu-id="b3f5e-199">Archivo</span><span class="sxs-lookup"><span data-stu-id="b3f5e-199">File</span></span>|<span data-ttu-id="b3f5e-200">Descripción</span><span class="sxs-lookup"><span data-stu-id="b3f5e-200">Description</span></span>|  
 |-|-|  
-|Archivo|Descripción|  
-|CreateRfp.aspx|Crea y envía nuevas solicitudes de propuestas.|  
-|Default.aspx|Muestra todas las solicitudes de propuestas activas y completas.|  
-|GetVendorProposal.aspx|Recibe una propuesta de un proveedor en una solicitud de propuestas concreta.  Esta página la usan solo los proveedores.|  
-|ShowRfp.aspx|Muestra toda la información sobre una solicitud de propuestas \(propuestas recibidas, fechas, valores y otra información\).  Esta página solo la usa el creador de la solicitud de propuestas.|  
+|<span data-ttu-id="b3f5e-201">CreateRfp.aspx</span><span class="sxs-lookup"><span data-stu-id="b3f5e-201">CreateRfp.aspx</span></span>|<span data-ttu-id="b3f5e-202">Crea y envía nuevas solicitudes de propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-202">Creates and submits a new Request for Proposals.</span></span>|  
+|<span data-ttu-id="b3f5e-203">Default.aspx</span><span class="sxs-lookup"><span data-stu-id="b3f5e-203">Default.aspx</span></span>|<span data-ttu-id="b3f5e-204">Muestra todas las solicitudes de propuestas activas y completas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-204">Shows all active and completed Requests for Proposals.</span></span>|  
+|<span data-ttu-id="b3f5e-205">GetVendorProposal.aspx</span><span class="sxs-lookup"><span data-stu-id="b3f5e-205">GetVendorProposal.aspx</span></span>|<span data-ttu-id="b3f5e-206">Recibe una propuesta de un proveedor en una solicitud de propuestas concreta.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-206">Gets a proposal from a vendor in a concrete Request for Proposals.</span></span> <span data-ttu-id="b3f5e-207">Esta página la usan solo los proveedores.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-207">This page is used only by vendors.</span></span>|  
+|<span data-ttu-id="b3f5e-208">ShowRfp.aspx</span><span class="sxs-lookup"><span data-stu-id="b3f5e-208">ShowRfp.aspx</span></span>|<span data-ttu-id="b3f5e-209">Muestra toda la información sobre una solicitud de propuestas (propuestas recibidas, fechas, valores y otra información).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-209">Show all the information about a Request for Proposals (received proposals, dates, values, and other information).</span></span> <span data-ttu-id="b3f5e-210">Esta página solo la usa el creador de la solicitud de propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-210">This page is only used by the creator of the Request for Proposal.</span></span>|  
   
-### Cliente de WinForms  
- La siguiente tabla contiene una descripción de los formularios más importantes dentro del proyecto de WinForms.  
+### <a name="winforms-client"></a><span data-ttu-id="b3f5e-211">Cliente de WinForms</span><span class="sxs-lookup"><span data-stu-id="b3f5e-211">WinForms Client</span></span>  
+ <span data-ttu-id="b3f5e-212">La siguiente tabla contiene una descripción de los formularios más importantes dentro del proyecto de WinForms.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-212">The following table contains a description of the most important forms in the Win Forms project.</span></span>  
   
-|||  
+|<span data-ttu-id="b3f5e-213">Form</span><span class="sxs-lookup"><span data-stu-id="b3f5e-213">Form</span></span>|<span data-ttu-id="b3f5e-214">Descripción</span><span class="sxs-lookup"><span data-stu-id="b3f5e-214">Description</span></span>|  
 |-|-|  
-|Form|Descripción|  
-|NewRfp|Crea y envía nuevas solicitudes de propuestas.|  
-|ShowProposals|Muestra todas las solicitudes de propuestas activas y finalizadas. **Note:**  Puede que necesite hacer clic en el botón **Actualizar** en la interfaz de usuario para ver los cambios en la pantalla después de crear o modificar una solicitud de propuesta.|  
-|SubmitProposal|Recibe una propuesta de un proveedor en una solicitud de propuestas concreta.  Esta ventana solo la usan los proveedores.|  
-|ViewRfp|Muestra toda la información sobre una solicitud de propuestas \(propuestas recibidas, fechas, valores y otra información\).  Esta ventana solo la usa el creador de la solicitud de propuestas.|  
+|<span data-ttu-id="b3f5e-215">NewRfp</span><span class="sxs-lookup"><span data-stu-id="b3f5e-215">NewRfp</span></span>|<span data-ttu-id="b3f5e-216">Crea y envía nuevas solicitudes de propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-216">Creates and submits a new Request for Proposals.</span></span>|  
+|<span data-ttu-id="b3f5e-217">ShowProposals</span><span class="sxs-lookup"><span data-stu-id="b3f5e-217">ShowProposals</span></span>|<span data-ttu-id="b3f5e-218">Muestra todas las solicitudes de propuestas activas y finalizadas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-218">Show all active and finished Requests for Proposals.</span></span> <span data-ttu-id="b3f5e-219">**Nota:** debe hacer clic en el **actualizar** botón en la interfaz de usuario para ver los cambios en la pantalla después de crear o modificar una solicitud de propuesta.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-219">**Note:**  You may need to click the **Refresh** button in the UI to see changes in that screen after you create or modify a Request for Proposal.</span></span>|  
+|<span data-ttu-id="b3f5e-220">SubmitProposal</span><span class="sxs-lookup"><span data-stu-id="b3f5e-220">SubmitProposal</span></span>|<span data-ttu-id="b3f5e-221">Recibe una propuesta de un proveedor en una solicitud de propuestas concreta.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-221">Get a proposal from a vendor in a concrete Request for Proposals.</span></span> <span data-ttu-id="b3f5e-222">Esta ventana solo la usan los proveedores.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-222">This window is used only by vendors.</span></span>|  
+|<span data-ttu-id="b3f5e-223">ViewRfp</span><span class="sxs-lookup"><span data-stu-id="b3f5e-223">ViewRfp</span></span>|<span data-ttu-id="b3f5e-224">Muestra toda la información sobre una solicitud de propuestas (propuestas recibidas, fechas, valores y otra información).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-224">Show all the information about a Request for Proposals (received proposals, dates, values, and other information).</span></span> <span data-ttu-id="b3f5e-225">Esta ventana solo la usa el creador de la solicitud de propuestas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-225">This window  is only used by the creator of the Request for Proposals.</span></span>|  
   
-### Archivos de persistencia  
- La siguiente tabla muestra los archivos generados por el proveedor de persistencia \(`XmlPersistenceProvider`\) que se encuentran en la ruta de acceso de la carpeta temporal del sistema actual \(utilizando <xref:System.IO.Path.GetTempPath%2A>\).  El archivo de traza se crea en la ruta de acceso de ejecución actual.  
+### <a name="persistence-files"></a><span data-ttu-id="b3f5e-226">Archivos de persistencia</span><span class="sxs-lookup"><span data-stu-id="b3f5e-226">Persistence Files</span></span>  
+ <span data-ttu-id="b3f5e-227">La siguiente tabla muestra los archivos generados por el proveedor de persistencia (`XmlPersistenceProvider`) que se encuentran en la ruta de acceso de la carpeta temporal del sistema actual (utilizando <xref:System.IO.Path.GetTempPath%2A>).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-227">The following table shows the files generated by the persistence provider (`XmlPersistenceProvider`) are located in the path of the current system's temporary folder (using <xref:System.IO.Path.GetTempPath%2A>).</span></span> <span data-ttu-id="b3f5e-228">El archivo de traza se crea en la ruta de acceso de ejecución actual.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-228">The tracing file is created in the current execution path.</span></span>  
   
-||||  
+|<span data-ttu-id="b3f5e-229">Nombre de archivo</span><span class="sxs-lookup"><span data-stu-id="b3f5e-229">File Name</span></span>|<span data-ttu-id="b3f5e-230">Descripción</span><span class="sxs-lookup"><span data-stu-id="b3f5e-230">Description</span></span>|<span data-ttu-id="b3f5e-231">Ruta de acceso</span><span class="sxs-lookup"><span data-stu-id="b3f5e-231">Path</span></span>|  
 |-|-|-|  
-|Nombre de archivo|Descripción|Ruta de acceso|  
-|rfps.xml|El archivo XML con todas las solicitudes de propuestas activas y finalizadas.|<xref:System.IO.Path.GetTempPath%2A>|  
-|\[instanceid\]|Este archivo contiene toda la información sobre una instancia de flujo de trabajo.<br /><br /> La implementación de la persistencia esquematizada \(PersistenceParticipant en XmlPersistenceProvider\) genera este archivo.|<xref:System.IO.Path.GetTempPath%2A>|  
-|\[instanceId\] .tracking|Un archivo de texto con todos los eventos que se produjeron dentro de una instancia concreta.<br /><br /> TrackingParticipant genera este archivo.|<xref:System.IO.Path.GetTempPath%2A>|  
-|PurchaseProcess.Tracing.TraceLog.txt|El archivo de traza generado por el flujo de trabajo en base a los parámetros de configuración de los archivos App.config o Web.config.|Ruta de acceso de ejecución actual|  
+|<span data-ttu-id="b3f5e-232">rfps.xml</span><span class="sxs-lookup"><span data-stu-id="b3f5e-232">rfps.xml</span></span>|<span data-ttu-id="b3f5e-233">El archivo XML con todas las solicitudes de propuestas activas y finalizadas.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-233">The XML file with all the active and finished Requests for Proposals.</span></span>|<xref:System.IO.Path.GetTempPath%2A>|  
+|<span data-ttu-id="b3f5e-234">[instanceid]</span><span class="sxs-lookup"><span data-stu-id="b3f5e-234">[instanceid]</span></span>|<span data-ttu-id="b3f5e-235">Este archivo contiene toda la información sobre una instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-235">This file contains all the information about a workflow instance.</span></span><br /><br /> <span data-ttu-id="b3f5e-236">La implementación de la persistencia esquematizada (PersistenceParticipant en XmlPersistenceProvider) genera este archivo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-236">This file is generated by the schematized persistence implementation (PersistenceParticipant in XmlPersistenceProvider).</span></span>|<xref:System.IO.Path.GetTempPath%2A>|  
+|<span data-ttu-id="b3f5e-237">[instanceId] .tracking</span><span class="sxs-lookup"><span data-stu-id="b3f5e-237">[instanceId].tracking</span></span>|<span data-ttu-id="b3f5e-238">Un archivo de texto con todos los eventos que se produjeron dentro de una instancia concreta.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-238">A text file with all the events that occurred within a concrete instance.</span></span><br /><br /> <span data-ttu-id="b3f5e-239">TrackingParticipant genera este archivo.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-239">This file is generated by TrackingParticipant.</span></span>|<xref:System.IO.Path.GetTempPath%2A>|  
+|<span data-ttu-id="b3f5e-240">PurchaseProcess.Tracing.TraceLog.txt</span><span class="sxs-lookup"><span data-stu-id="b3f5e-240">PurchaseProcess.Tracing.TraceLog.txt</span></span>|<span data-ttu-id="b3f5e-241">El archivo de traza generado por el flujo de trabajo en base a los parámetros de configuración de los archivos App.config o Web.config.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-241">The tracing file generated by the workflow based on the configuration parameters in the App.config or Web.config files.</span></span>|<span data-ttu-id="b3f5e-242">Ruta de acceso de ejecución actual</span><span class="sxs-lookup"><span data-stu-id="b3f5e-242">Current execution path</span></span>|  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="b3f5e-243">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="b3f5e-243">To use this sample</span></span>  
   
-1.  Abra el archivo de solución PurchaseProcess.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="b3f5e-244">Abra el archivo de solución PurchaseProcess.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b3f5e-244">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the PurchaseProcess.sln solution file.</span></span>  
   
-2.  Para ejecutar el proyecto Cliente web, abra el **Explorador de soluciones** y haga clic con el botón secundario en el proyecto **Cliente web**.  Seleccione **Establecer como proyecto de inicio**.  
+2.  <span data-ttu-id="b3f5e-245">Para ejecutar el proyecto de cliente Web, abra **el Explorador de soluciones** y haga clic en el **cliente Web** proyecto.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-245">To execute the Web Client project, open **Solution Explorer** and right-click the **Web Client** project.</span></span> <span data-ttu-id="b3f5e-246">Seleccione **establecer como proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-246">Select **Set as Startup Project**.</span></span>  
   
-3.  Para ejecutar el proyecto Cliente de WinForms, abra el **Explorador de soluciones** y haga clic con el botón secundario en el proyecto **Cliente de WinForms**.  Seleccione **Establecer como proyecto de inicio**.  
+3.  <span data-ttu-id="b3f5e-247">Para ejecutar el proyecto de cliente de WinForms, abra **el Explorador de soluciones** y haga clic en el **cliente de WinForms** proyecto.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-247">To execute the WinForms Client project, open **Solution Explorer** and right-click the **WinForms Client** project.</span></span> <span data-ttu-id="b3f5e-248">Seleccione **establecer como proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-248">Select **Set as Startup Project**.</span></span>  
   
-4.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+4.  <span data-ttu-id="b3f5e-249">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-249">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-5.  Para ejecutar la solución, presione CTRL\+F5.  
+5.  <span data-ttu-id="b3f5e-250">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-250">To run the solution, press CTRL+F5.</span></span>  
   
-### Opciones del cliente web  
+### <a name="web-client-options"></a><span data-ttu-id="b3f5e-251">Opciones del cliente web</span><span class="sxs-lookup"><span data-stu-id="b3f5e-251">Web Client Options</span></span>  
   
--   **Crear un nuevo RFP**: crea una solicitud de propuestas \(RFP\) e inicia un flujo de trabajo de proceso de compra.  
+-   <span data-ttu-id="b3f5e-252">**Crear un nuevo RFP**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo del proceso de compra.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-252">**Create a new RFP**: Creates a new Request for Proposals (RFP) and starts a Purchase Process workflow.</span></span>  
   
--   **Actualizar**: actualiza la lista de solicitudes de propuestas activas y finalizadas en la ventana principal.  
+-   <span data-ttu-id="b3f5e-253">**Actualizar**: actualiza la lista de activas y finalizadas en la ventana principal.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-253">**Refresh**: Refreshes the list of Active and Finished RFPs in the main window.</span></span>  
   
--   **Ver**: muestra el contenido de una solicitud de propuestas existente.  Los proveedores pueden enviar sus propuestas \(si están invitados o la solicitud de propuestas no finaliza\).  
+-   <span data-ttu-id="b3f5e-254">**Vista**: muestra el contenido de una solicitud de propuestas existente.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-254">**View**: Shows the content of an existing RFP.</span></span> <span data-ttu-id="b3f5e-255">Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-255">Vendors can submit their proposals (if invited or the RFP is not finished).</span></span>  
   
--   Ver como: el usuario puede tener acceso a la solicitud de propuestas mediante diferentes identidades seleccionando el participante deseado en el cuadro combinado **Ver como** de la cuadrícula de la solicitud de propuestas activa.  
+-   <span data-ttu-id="b3f5e-256">Ver como: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-256">View As: The user can access the RFP using different identities by selecting the desired participant in the **View as** combo box in the active RFPs grid.</span></span>  
   
-### Opciones del cliente de WinForms  
+### <a name="winforms-client-options"></a><span data-ttu-id="b3f5e-257">Opciones del cliente de WinForms</span><span class="sxs-lookup"><span data-stu-id="b3f5e-257">WinForms Client Options</span></span>  
   
--   **Crear RFP**: crea una solicitud de propuestas \(RFP\) e inicia un flujo de trabajo de proceso de compra.  
+-   <span data-ttu-id="b3f5e-258">**Crear solicitud de propuestas**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo del proceso de compra.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-258">**Create RFP**: Creates a new Request for Proposals (RFP) and starts a Purchase Process workflow.</span></span>  
   
--   **Actualizar**: actualiza la lista de solicitudes de propuestas activas y finalizadas en la ventana principal.  
+-   <span data-ttu-id="b3f5e-259">**Actualizar**: actualiza la lista de activas y finalizadas en la ventana principal.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-259">**Refresh**: Refreshes the list of Active and Finished RFPs in the main window.</span></span>  
   
--   **Ver RFP**: muestra el contenido de una solicitud de propuestas existente.  Los proveedores pueden enviar sus propuestas \(si están invitados o la solicitud de propuestas no finaliza\).  
+-   <span data-ttu-id="b3f5e-260">**Ver RFP**: muestra el contenido de una solicitud de propuestas existente.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-260">**View RFP**: Shows the content of an existing RFP.</span></span> <span data-ttu-id="b3f5e-261">Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).</span><span class="sxs-lookup"><span data-stu-id="b3f5e-261">Vendors can submit their proposals (if invited or the RFP is not finished)</span></span>  
   
--   **Conectar como**: el usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el cuadro combinado **View as** de la cuadrícula de la solicitud de propuestas activa.  
+-   <span data-ttu-id="b3f5e-262">**Conectar como**: el usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.</span><span class="sxs-lookup"><span data-stu-id="b3f5e-262">**Connect As**: The user can access the RFP using different identities by selecting the desired participant in the **View as** combo box in the active RFPs grid.</span></span>  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="b3f5e-263">Vea también</span><span class="sxs-lookup"><span data-stu-id="b3f5e-263">See Also</span></span>

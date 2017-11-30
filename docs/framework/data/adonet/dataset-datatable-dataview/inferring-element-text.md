@@ -1,45 +1,48 @@
 ---
-title: "Deducir texto de elemento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Inferir texto de elemento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66dcc6a98d365f20da6c7f4c075c2fdd8ab936e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Deducir texto de elemento
-Si un elemento contiene texto y no tiene elementos secundarios que se vayan a deducir como tablas \(como elementos con atributos o elementos repetidos\), se agregará una nueva columna denominada **TableName\_Text** a la tabla que se deduzca para el elemento.  El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna.  La propiedad **ColumnMapping** de la nueva columna se establecerá como **MappingType.SimpleContent**.  
+# <a name="inferring-element-text"></a><span data-ttu-id="16e6c-102">Inferir texto de elemento</span><span class="sxs-lookup"><span data-stu-id="16e6c-102">Inferring Element Text</span></span>
+<span data-ttu-id="16e6c-103">Si el elemento contiene texto y no tiene elementos secundarios que se deducen como tablas (como elementos con atributos) o elementos repetidos, una nueva columna con el nombre **TableName_Text** se agregará a la tabla que se deduzca para el elemento.</span><span class="sxs-lookup"><span data-stu-id="16e6c-103">If an element contains text and has no child elements to be inferred as tables (such as elements with attributes or repeated elements), a new column with the name **TableName_Text** will be added to the table that is inferred for the element.</span></span> <span data-ttu-id="16e6c-104">El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna.</span><span class="sxs-lookup"><span data-stu-id="16e6c-104">The text contained in the element will be added to a row in the table and stored in the new column.</span></span> <span data-ttu-id="16e6c-105">El **ColumnMapping** propiedad de la nueva columna se establecerá en **MappingType.SimpleContent**.</span><span class="sxs-lookup"><span data-stu-id="16e6c-105">The **ColumnMapping** property of the new column will be set to **MappingType.SimpleContent**.</span></span>  
   
- Por ejemplo, tomemos el siguiente código XML.  
+ <span data-ttu-id="16e6c-106">Por ejemplo, tomemos el siguiente código XML.</span><span class="sxs-lookup"><span data-stu-id="16e6c-106">For example, consider the following XML.</span></span>  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1">Text1</Element1>  
 </DocumentElement>  
 ```  
   
- El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas: **attr1** y **Element1\_Text**.  La propiedad **ColumnMapping** de la columna **attr1** se establecerá en **MappingType.Attribute**.  La propiedad **ColumnMapping** de la columna **Element1\_Text** se establecerá en **MappingType.SimpleContent**.  
+ <span data-ttu-id="16e6c-107">El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas: **attr1** y **Element1_Text**.</span><span class="sxs-lookup"><span data-stu-id="16e6c-107">The inference process will produce a table named **Element1** with two columns: **attr1** and **Element1_Text**.</span></span> <span data-ttu-id="16e6c-108">El **ColumnMapping** propiedad de la **attr1** columna se establecerá en **MappingType.Attribute**.</span><span class="sxs-lookup"><span data-stu-id="16e6c-108">The **ColumnMapping** property of the **attr1** column will be set to **MappingType.Attribute**.</span></span> <span data-ttu-id="16e6c-109">El **ColumnMapping** propiedad de la **Element1_Text** columna se establecerá en **MappingType.SimpleContent**.</span><span class="sxs-lookup"><span data-stu-id="16e6c-109">The **ColumnMapping** property of the **Element1_Text** column will be set to **MappingType.SimpleContent**.</span></span>  
   
- **DataSet:** DocumentElement  
+ <span data-ttu-id="16e6c-110">**Conjunto de datos:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="16e6c-110">**DataSet:** DocumentElement</span></span>  
   
- **Tabla:** Element1  
+ <span data-ttu-id="16e6c-111">**Tabla:** Element1</span><span class="sxs-lookup"><span data-stu-id="16e6c-111">**Table:** Element1</span></span>  
   
-|attr1|Element1\_Text|  
+|<span data-ttu-id="16e6c-112">attr1</span><span class="sxs-lookup"><span data-stu-id="16e6c-112">attr1</span></span>|<span data-ttu-id="16e6c-113">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="16e6c-113">Element1_Text</span></span>|  
 |-----------|--------------------|  
-|value1|Text1|  
+|<span data-ttu-id="16e6c-114">value1</span><span class="sxs-lookup"><span data-stu-id="16e6c-114">value1</span></span>|<span data-ttu-id="16e6c-115">Text1</span><span class="sxs-lookup"><span data-stu-id="16e6c-115">Text1</span></span>|  
   
- Si un elemento contiene texto, pero también tiene elementos secundarios que contienen texto, no se agregará una columna a la tabla para almacenar el texto contenido en el elemento.  El texto contenido en el elemento se pasará por alto, mientras que el texto de los elementos secundarios se incluirá en una fila de la tabla.  Por ejemplo, tomemos el siguiente código XML.  
+ <span data-ttu-id="16e6c-116">Si un elemento contiene texto, pero también tiene elementos secundarios que contienen texto, no se agregará una columna a la tabla para almacenar el texto contenido en el elemento.</span><span class="sxs-lookup"><span data-stu-id="16e6c-116">If an element contains text, but also has child elements that contain text, a column will not be added to the table to store the text contained in the element.</span></span> <span data-ttu-id="16e6c-117">El texto contenido en el elemento se pasará por alto, mientras que el texto de los elementos secundarios se incluirá en una fila de la tabla.</span><span class="sxs-lookup"><span data-stu-id="16e6c-117">The text contained in the element will be ignored, while the text in the child elements is included in a row in the table.</span></span> <span data-ttu-id="16e6c-118">Por ejemplo, tomemos el siguiente código XML.</span><span class="sxs-lookup"><span data-stu-id="16e6c-118">For example, consider the following XML.</span></span>  
   
-```  
+```xml  
 <Element1>  
   Text1  
   <ChildElement1>Text2</ChildElement1>  
@@ -47,20 +50,20 @@ Si un elemento contiene texto y no tiene elementos secundarios que se vayan a de
 </Element1>  
 ```  
   
- El proceso de inferencia producirá una tabla llamada **Element1** con una columna denominada **ChildElement1**.  El texto del elemento **ChildElement1** se incluirá en una fila de la tabla.  El otro texto se pasará por alto.  La propiedad **ColumnMapping** de la columna **ChildElement1** se establecerá en **MappingType.Element**.  
+ <span data-ttu-id="16e6c-119">El proceso de inferencia producirá una tabla denominada **Element1** con una columna denominada **ChildElement1**.</span><span class="sxs-lookup"><span data-stu-id="16e6c-119">The inference process will produce a table named **Element1** with one column named **ChildElement1**.</span></span> <span data-ttu-id="16e6c-120">El texto de la **ChildElement1** elemento se incluirá en una fila de la tabla.</span><span class="sxs-lookup"><span data-stu-id="16e6c-120">The text for the **ChildElement1** element will be included in a row in the table.</span></span> <span data-ttu-id="16e6c-121">El otro texto se pasará por alto.</span><span class="sxs-lookup"><span data-stu-id="16e6c-121">The other text will be ignored.</span></span> <span data-ttu-id="16e6c-122">El **ColumnMapping** propiedad de la **ChildElement1** columna se establecerá en **MappingType.Element**.</span><span class="sxs-lookup"><span data-stu-id="16e6c-122">The **ColumnMapping** property of the **ChildElement1** column will be set to **MappingType.Element**.</span></span>  
   
- **DataSet:** DocumentElement  
+ <span data-ttu-id="16e6c-123">**Conjunto de datos:** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="16e6c-123">**DataSet:** DocumentElement</span></span>  
   
- **Tabla:** Element1  
+ <span data-ttu-id="16e6c-124">**Tabla:** Element1</span><span class="sxs-lookup"><span data-stu-id="16e6c-124">**Table:** Element1</span></span>  
   
-|ChildElement1|  
+|<span data-ttu-id="16e6c-125">ChildElement1</span><span class="sxs-lookup"><span data-stu-id="16e6c-125">ChildElement1</span></span>|  
 |-------------------|  
-|Text2|  
+|<span data-ttu-id="16e6c-126">Text2</span><span class="sxs-lookup"><span data-stu-id="16e6c-126">Text2</span></span>|  
   
-## Vea también  
- [Deducir la estructura relacional de DataSet de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Cargar DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Cargar la información de esquema de DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Utilizar XML en un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="16e6c-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="16e6c-127">See Also</span></span>  
+ [<span data-ttu-id="16e6c-128">Deducir la estructura relacional de DataSet desde XML</span><span class="sxs-lookup"><span data-stu-id="16e6c-128">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="16e6c-129">Cargar un conjunto de datos desde XML</span><span class="sxs-lookup"><span data-stu-id="16e6c-129">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="16e6c-130">Cargar la información de esquema de DataSet desde XML</span><span class="sxs-lookup"><span data-stu-id="16e6c-130">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="16e6c-131">Usar XML en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="16e6c-131">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="16e6c-132">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="16e6c-132">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="16e6c-133">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="16e6c-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

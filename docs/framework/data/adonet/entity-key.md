@@ -1,51 +1,54 @@
 ---
-title: "clave de entidad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: clave de entidad
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d0d7df7ff1a0e8e732688e10befb4bffa86599d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# clave de entidad
-Una *clave de entidad* es una [propiedad](../../../../docs/framework/data/adonet/property.md) o un conjunto de propiedades de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) que se usan para determinar la identidad.  Las propiedades que constituyen una entidad se eligen en tiempo de diseño.  Los valores de las propiedades de clave de entidad deben identificar de forma inequívoca en tiempo de ejecución una instancia de tipo de entidad dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md).  Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.  
+# <a name="entity-key"></a><span data-ttu-id="3c8f5-102">clave de entidad</span><span class="sxs-lookup"><span data-stu-id="3c8f5-102">entity key</span></span>
+<span data-ttu-id="3c8f5-103">Un *clave de entidad* es un [propiedad](../../../../docs/framework/data/adonet/property.md) o un conjunto de propiedades de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) que se usan para determinar la identidad.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-103">An *entity key* is a [property](../../../../docs/framework/data/adonet/property.md) or a set of properties of an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that are used to determine identity.</span></span> <span data-ttu-id="3c8f5-104">Las propiedades que constituyen una entidad se eligen en tiempo de diseño.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-104">The properties that make up an entity key are chosen at design time.</span></span> <span data-ttu-id="3c8f5-105">Los valores de propiedades de clave de entidad deben identificar de forma exclusiva una instancia de tipo de entidad dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-105">The values of entity key properties must uniquely identify an entity type instance within an [entity set](../../../../docs/framework/data/adonet/entity-set.md) at run time.</span></span> <span data-ttu-id="3c8f5-106">Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-106">The properties that make up an entity key should be chosen to guarantee uniqueness of instances in an entity set.</span></span>  
   
- Los requisitos para que un conjunto de propiedades sea una clave de entidad son los siguientes:  
+ <span data-ttu-id="3c8f5-107">Los requisitos para que un conjunto de propiedades sea una clave de entidad son los siguientes:</span><span class="sxs-lookup"><span data-stu-id="3c8f5-107">The following are the requirements for a set of properties to be an entity key:</span></span>  
   
--   No puede haber dos claves de entidad idénticas en un conjunto de entidades.  Es decir, para dos entidades cualesquiera dentro de un conjunto de entidades, los valores de todas las propiedades que constituyen una clave no pueden ser idénticos.  Sin embargo, algunos \(pero no todos\) los valores que constituyen una clave de entidad pueden ser idénticos.  
+-   <span data-ttu-id="3c8f5-108">No puede haber dos claves de entidad idénticas en un conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-108">No two entity keys within an entity set can be identical.</span></span> <span data-ttu-id="3c8f5-109">Es decir, para dos entidades cualesquiera dentro de un conjunto de entidades, los valores de todas las propiedades que constituyen una clave no pueden ser idénticos.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-109">That is, for any two entities within an entity set, the values for all of the properties that constitute a key cannot be the same.</span></span> <span data-ttu-id="3c8f5-110">Sin embargo, algunos (pero no todos) los valores que constituyen una clave de entidad pueden ser idénticos.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-110">However, some (but not all) of the values that make up an entity key can be the same.</span></span>  
   
--   Una clave de entidad debe estar compuesta por un conjunto de [propiedades de tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md) inmutables que no acepten valores Null.  
+-   <span data-ttu-id="3c8f5-111">Una clave de entidad debe constar de un conjunto de que no aceptan valores NULL, inmutable, [propiedades de tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="3c8f5-111">An entity key must consist of a set of non-nullable, immutable, [primitive type properties](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span></span>  
   
--   Las propiedades que constituyen una clave de entidad para un tipo de entidad determinado no pueden cambiar.  No se puede designar más de una clave de entidad posible para un tipo de entidad determinado; no se admiten las claves suplentes.  
+-   <span data-ttu-id="3c8f5-112">Las propiedades que constituyen una clave de entidad para un tipo de entidad determinado no pueden cambiar.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-112">The properties that make up an entity key for a given entity type cannot change.</span></span> <span data-ttu-id="3c8f5-113">No se puede designar más de una clave de entidad posible para un tipo de entidad determinado; no se admiten las claves suplentes.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-113">You cannot allow more than one possible entity key for a given entity type; surrogate keys are not supported.</span></span>  
   
--   Cuando una entidad está implicada en una jerarquía de herencia, la entidad raíz debe contener todas las propiedades que constituyen la clave de entidad, y esta se debe definir en el tipo de entidad raíz.  Para obtener más información, consulta [Entity Data Model: Herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+-   <span data-ttu-id="3c8f5-114">Cuando una entidad está implicada en una jerarquía de herencia, la entidad raíz debe contener todas las propiedades que constituyen la clave de entidad, y esta se debe definir en el tipo de entidad raíz.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-114">When an entity is involved in an inheritance hierarchy, the root entity must contain all the properties that make up the entity key, and the entity key must be defined on the root entity type.</span></span> <span data-ttu-id="3c8f5-115">Para obtener más información, consulte [Entity Data Model: herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="3c8f5-115">For more information, see [Entity Data Model: Inheritance](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).</span></span>  
   
-## Ejemplo  
- El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.  Las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "\(Key\)".  Tenga en cuenta que el tipo de entidad `Author` tiene una clave de entidad que consta de dos propiedades, `Name` y `Address`.  
+## <a name="example"></a><span data-ttu-id="3c8f5-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3c8f5-116">Example</span></span>  
+ <span data-ttu-id="3c8f5-117">El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span> <span data-ttu-id="3c8f5-118">Las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "(Key)".</span><span class="sxs-lookup"><span data-stu-id="3c8f5-118">The properties of each entity type that make up its entity key are denoted with "(Key)".</span></span> <span data-ttu-id="3c8f5-119">Tenga en cuenta que el tipo de entidad `Author` tiene una clave de entidad que consta de dos propiedades, `Name` y `Address`.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-119">Note that the `Author` entity type has an entity key that consists of two properties, `Name` and `Address`.</span></span>  
   
- ![Modelo de ejemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="3c8f5-120">![Ejemplo de modelo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="3c8f5-120">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio \(DSL\) denominado lenguaje de definición de esquemas conceptuales \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\) para definir los modelos conceptuales.  El código CSDL siguiente define el tipo de entidad `Book` mostrado en el diagrama anterior.  Observe que la clave de entidad se define haciendo referencia a la propiedad `ISBN` del tipo de entidad.  
+ <span data-ttu-id="3c8f5-121">El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-121">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="3c8f5-122">El código CSDL siguiente define el tipo de entidad `Book` mostrado en el diagrama anterior.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-122">The CSDL below defines the `Book` entity type shown in the diagram above.</span></span> <span data-ttu-id="3c8f5-123">Observe que la clave de entidad se define haciendo referencia a la propiedad `ISBN` del tipo de entidad.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-123">Note that the entity key is defined by referencing the `ISBN` property of the entity type.</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
- La propiedad `ISBN` es una opción adecuada para la clave de entidad, ya que el International Standard Book Number \(ISBN\) permite identificar un libro de manera inequívoca.  
+ <span data-ttu-id="3c8f5-124">La propiedad `ISBN` es una opción adecuada para la clave de entidad, ya que el International Standard Book Number (ISBN) permite identificar un libro de manera inequívoca.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-124">The `ISBN` property is a good choice for the entity key because an International Standard Book Number (ISBN) uniquely identifies a book.</span></span>  
   
- El código CSDL siguiente define el tipo de entidad `Author` mostrado en el diagrama anterior.  Observe que la clave de entidad consta de dos propiedades, `Name` y `Address`.  
+ <span data-ttu-id="3c8f5-125">El código CSDL siguiente define el tipo de entidad `Author` mostrado en el diagrama anterior.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-125">The CSDL below defines the `Author` entity type shown in the diagram above.</span></span> <span data-ttu-id="3c8f5-126">Observe que la clave de entidad consta de dos propiedades, `Name` y `Address`.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-126">Note that the entity key consists of two properties, `Name` and `Address`.</span></span>  
   
  [!code-xml[EDM_Example_Model#CompositeKeyExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#compositekeyexample)]  
   
- El uso de `Name` y `Address` para la clave de entidad es una opción razonable, ya que no es probable que dos autores con el mismo nombre vivan en la misma dirección.  Sin embargo, esta opción no garantiza por completo la existencia de claves de entidad únicas en un conjunto de entidades.  En este caso, se recomienda la adición de una propiedad, como `AuthorId`, que se podría usar para identificar un autor de forma inequívoca.  
+ <span data-ttu-id="3c8f5-127">El uso de `Name` y `Address` para la clave de entidad es una opción razonable, ya que no es probable que dos autores con el mismo nombre vivan en la misma dirección.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-127">Using `Name` and `Address` for the entity key is a reasonable choice, because two authors of the same name are unlikely to live at the same address.</span></span> <span data-ttu-id="3c8f5-128">Sin embargo, esta opción no garantiza por completo la existencia de claves de entidad únicas en un conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-128">However, this choice for an entity key does not absolutely guarantee unique entity keys in an entity set.</span></span> <span data-ttu-id="3c8f5-129">En este caso, se recomienda la adición de una propiedad, como `AuthorId`, que se podría usar para identificar un autor de forma inequívoca.</span><span class="sxs-lookup"><span data-stu-id="3c8f5-129">Adding a property, such as `AuthorId`, that could be used to uniquely identify an author would be recommended in this case.</span></span>  
   
-## Vea también  
- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="3c8f5-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="3c8f5-130">See Also</span></span>  
+ [<span data-ttu-id="3c8f5-131">Conceptos básicos de modelo de datos de entidad</span><span class="sxs-lookup"><span data-stu-id="3c8f5-131">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="3c8f5-132">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="3c8f5-132">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -1,6 +1,6 @@
 ---
 title: Funciones (F#)
-description: Funciones (F#)
+description: "Obtenga información acerca de las funciones en F # y cómo F # admite construcciones comunes de programación funcionales."
 keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
@@ -10,21 +10,20 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 7a5fff4746157b430c6f1a492c23e9ea3d7b82c3
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9750e37647a3e382c7a8308c3ffede15729012d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="functions"></a><span data-ttu-id="d8f87-104">Funciones</span><span class="sxs-lookup"><span data-stu-id="d8f87-104">Functions</span></span>
 
-# <a name="functions"></a>Funciones
+<span data-ttu-id="d8f87-105">Las funciones son la unidad fundamental de la ejecución del programa en cualquier lenguaje de programación.</span><span class="sxs-lookup"><span data-stu-id="d8f87-105">Functions are the fundamental unit of program execution in any programming language.</span></span> <span data-ttu-id="d8f87-106">Al igual que en otros lenguajes, una función de F# tiene un nombre, puede tener parámetros y tomar argumentos, y tiene un cuerpo.</span><span class="sxs-lookup"><span data-stu-id="d8f87-106">As in other languages, an F# function has a name, can have parameters and take arguments, and has a body.</span></span> <span data-ttu-id="d8f87-107">F# también admite construcciones de programación funcional como el tratamiento de las funciones como valores, el uso de funciones sin nombre en expresiones, la composición de funciones para crear nuevas funciones, funciones currificadas y la definición implícita de funciones mediante la aplicación parcial de argumentos de función.</span><span class="sxs-lookup"><span data-stu-id="d8f87-107">F# also supports functional programming constructs such as treating functions as values, using unnamed functions in expressions, composition of functions to form new functions, curried functions, and the implicit definition of functions by way of the partial application of function arguments.</span></span>
 
-Las funciones son la unidad fundamental de la ejecución del programa en cualquier lenguaje de programación. Al igual que en otros lenguajes, una función de F# tiene un nombre, puede tener parámetros y tomar argumentos, y tiene un cuerpo. F# también admite construcciones de programación funcional como el tratamiento de las funciones como valores, el uso de funciones sin nombre en expresiones, la composición de funciones para crear nuevas funciones, funciones currificadas y la definición implícita de funciones mediante la aplicación parcial de argumentos de función.
-
-Las funciones se definen mediante la palabra clave `let`, o bien, si la función es recursiva, la combinación de palabras clave `let rec`.
+<span data-ttu-id="d8f87-108">Las funciones se definen mediante la palabra clave `let`, o bien, si la función es recursiva, la combinación de palabras clave `let rec`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-108">You define functions by using the `let` keyword, or, if the function is recursive, the `let rec` keyword combination.</span></span>
 
 
-## <a name="syntax"></a>Sintaxis
+## <a name="syntax"></a><span data-ttu-id="d8f87-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d8f87-109">Syntax</span></span>
 
 ```fsharp
 // Non-recursive function definition.
@@ -33,138 +32,138 @@ let [inline] function-name parameter-list [ : return-type ] = function-body
 let rec function-name parameter-list = recursive-function-body
 ```
 
-## <a name="remarks"></a>Comentarios
-El *nombre de la función* es un identificador que representa la función. La *lista de parámetros* consta de parámetros sucesivos separados por espacios. Se puede especificar un tipo explícito para cada parámetro, tal como se describe en la sección Parámetros. Si no se especifica un tipo de argumento concreto, el compilador intenta deducir el tipo del cuerpo de la función. El *cuerpo de la función* consta de una expresión. La expresión que forma el cuerpo de la función suele ser una expresión compuesta formada por varias expresiones que culminan en una expresión final que es el valor devuelto. El *tipo de valor devuelto* es un signo de dos puntos seguido de un tipo y es opcional. Si no se especifica explícitamente el tipo del valor devuelto, el compilador determina el tipo de valor devuelto a partir de la expresión final.
+## <a name="remarks"></a><span data-ttu-id="d8f87-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d8f87-110">Remarks</span></span>
+<span data-ttu-id="d8f87-111">El *nombre de la función* es un identificador que representa la función.</span><span class="sxs-lookup"><span data-stu-id="d8f87-111">The *function-name* is an identifier that represents the function.</span></span> <span data-ttu-id="d8f87-112">La *lista de parámetros* consta de parámetros sucesivos separados por espacios.</span><span class="sxs-lookup"><span data-stu-id="d8f87-112">The *parameter-list* consists of successive parameters that are separated by spaces.</span></span> <span data-ttu-id="d8f87-113">Se puede especificar un tipo explícito para cada parámetro, tal como se describe en la sección Parámetros.</span><span class="sxs-lookup"><span data-stu-id="d8f87-113">You can specify an explicit type for each parameter, as described in the Parameters section.</span></span> <span data-ttu-id="d8f87-114">Si no se especifica un tipo de argumento concreto, el compilador intenta deducir el tipo del cuerpo de la función.</span><span class="sxs-lookup"><span data-stu-id="d8f87-114">If you do not specify a specific argument type, the compiler attempts to infer the type from the function body.</span></span> <span data-ttu-id="d8f87-115">El *cuerpo de la función* consta de una expresión.</span><span class="sxs-lookup"><span data-stu-id="d8f87-115">The *function-body* consists of an expression.</span></span> <span data-ttu-id="d8f87-116">La expresión que forma el cuerpo de la función suele ser una expresión compuesta formada por varias expresiones que culminan en una expresión final que es el valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="d8f87-116">The expression that makes up the function body is typically a compound expression consisting of a number of expressions that culminate in a final expression that is the return value.</span></span> <span data-ttu-id="d8f87-117">El *tipo de valor devuelto* es un signo de dos puntos seguido de un tipo y es opcional.</span><span class="sxs-lookup"><span data-stu-id="d8f87-117">The *return-type* is a colon followed by a type and is optional.</span></span> <span data-ttu-id="d8f87-118">Si no se especifica explícitamente el tipo del valor devuelto, el compilador determina el tipo de valor devuelto a partir de la expresión final.</span><span class="sxs-lookup"><span data-stu-id="d8f87-118">If you do not specify the type of the return value explicitly, the compiler determines the return type from the final expression.</span></span>
 
-Una definición de función simple es similar a la siguiente:
+<span data-ttu-id="d8f87-119">Una definición de función simple es similar a la siguiente:</span><span class="sxs-lookup"><span data-stu-id="d8f87-119">A simple function definition resembles the following:</span></span>
 
 ```fsharp
 let f x = x + 1
 ```
 
-En el ejemplo anterior, el nombre de función es `f`, el argumento es `x`, que tiene el tipo `int`, el cuerpo de la función es `x + 1` y el valor devuelto es de tipo `int`.
+<span data-ttu-id="d8f87-120">En el ejemplo anterior, el nombre de función es `f`, el argumento es `x`, que tiene el tipo `int`, el cuerpo de la función es `x + 1` y el valor devuelto es de tipo `int`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-120">In the previous example, the function name is `f`, the argument is `x`, which has type `int`, the function body is `x + 1`, and the return value is of type `int`.</span></span>
 
-Las funciones se pueden marcar como `inline`. Para más información sobre `inline`, vea [Inline Functions](../functions/inline-functions.md) (Funciones insertadas).
+<span data-ttu-id="d8f87-121">Las funciones se pueden marcar como `inline`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-121">Functions can be marked `inline`.</span></span> <span data-ttu-id="d8f87-122">Para más información sobre `inline`, vea [Inline Functions](../functions/inline-functions.md) (Funciones insertadas).</span><span class="sxs-lookup"><span data-stu-id="d8f87-122">For information about `inline`, see [Inline Functions](../functions/inline-functions.md).</span></span>
 
 
-## <a name="scope"></a>Ámbito
-En cualquier nivel de ámbito distinto al ámbito de módulo, no es un error volver a usar un nombre de función o valor. Si se vuelve a usar un nombre, el último nombre declarado prevalece sobre el declarado anteriormente. Pero en el ámbito de nivel superior en un módulo, los nombres deben ser únicos. Por ejemplo, el código siguiente produce un error cuando aparece en el ámbito de módulo, pero no cuando aparece dentro de una función:
+## <a name="scope"></a><span data-ttu-id="d8f87-123">Ámbito</span><span class="sxs-lookup"><span data-stu-id="d8f87-123">Scope</span></span>
+<span data-ttu-id="d8f87-124">En cualquier nivel de ámbito distinto al ámbito de módulo, no es un error volver a usar un nombre de función o valor.</span><span class="sxs-lookup"><span data-stu-id="d8f87-124">At any level of scope other than module scope, it is not an error to reuse a value or function name.</span></span> <span data-ttu-id="d8f87-125">Si se vuelve a usar un nombre, el último nombre declarado prevalece sobre el declarado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="d8f87-125">If you reuse a name, the name declared later shadows the name declared earlier.</span></span> <span data-ttu-id="d8f87-126">Pero en el ámbito de nivel superior en un módulo, los nombres deben ser únicos.</span><span class="sxs-lookup"><span data-stu-id="d8f87-126">However, at the top level scope in a module, names must be unique.</span></span> <span data-ttu-id="d8f87-127">Por ejemplo, el código siguiente produce un error cuando aparece en el ámbito de módulo, pero no cuando aparece dentro de una función:</span><span class="sxs-lookup"><span data-stu-id="d8f87-127">For example, the following code produces an error when it appears at module scope, but not when it appears inside a function:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
-Pero el código siguiente es aceptable en cualquier nivel de ámbito:
+<span data-ttu-id="d8f87-128">Pero el código siguiente es aceptable en cualquier nivel de ámbito:</span><span class="sxs-lookup"><span data-stu-id="d8f87-128">But the following code is acceptable at any level of scope:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
     
-#### <a name="parameters"></a>Parámetros
-Los nombres de los parámetros aparecen después del nombre de función. Se puede especificar un tipo para un parámetro, como se muestra en el ejemplo siguiente:
+#### <a name="parameters"></a><span data-ttu-id="d8f87-129">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d8f87-129">Parameters</span></span>
+<span data-ttu-id="d8f87-130">Los nombres de los parámetros aparecen después del nombre de función.</span><span class="sxs-lookup"><span data-stu-id="d8f87-130">Names of parameters are listed after the function name.</span></span> <span data-ttu-id="d8f87-131">Se puede especificar un tipo para un parámetro, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="d8f87-131">You can specify a type for a parameter, as shown in the following example:</span></span>
 
 ```fsharp
 let f (x : int) = x + 1
 ```
 
-Si se especifica un tipo, sigue al nombre del parámetro y se separa del nombre mediante dos puntos. Si se omite el tipo del parámetro, el compilador infiere el tipo de parámetro. Por ejemplo, en la siguiente definición de función, se deduce que el argumento `x` es del tipo `int` porque 1 es de tipo `int`.
+<span data-ttu-id="d8f87-132">Si se especifica un tipo, sigue al nombre del parámetro y se separa del nombre mediante dos puntos.</span><span class="sxs-lookup"><span data-stu-id="d8f87-132">If you specify a type, it follows the name of the parameter and is separated from the name by a colon.</span></span> <span data-ttu-id="d8f87-133">Si se omite el tipo del parámetro, el compilador infiere el tipo de parámetro.</span><span class="sxs-lookup"><span data-stu-id="d8f87-133">If you omit the type for the parameter, the parameter type is inferred by the compiler.</span></span> <span data-ttu-id="d8f87-134">Por ejemplo, en la siguiente definición de función, se deduce que el argumento `x` es del tipo `int` porque 1 es de tipo `int`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-134">For example, in the following function definition, the argument `x` is inferred to be of type `int` because 1 is of type `int`.</span></span>
 
 ```fsharp
 let f x = x + 1
 ```
 
-Pero el compilador intentará que la función sea lo más genérica posible. Por ejemplo, observe el código siguiente:
+<span data-ttu-id="d8f87-135">Pero el compilador intentará que la función sea lo más genérica posible.</span><span class="sxs-lookup"><span data-stu-id="d8f87-135">However, the compiler will attempt to make the function as generic as possible.</span></span> <span data-ttu-id="d8f87-136">Por ejemplo, observe el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="d8f87-136">For example, note the following code:</span></span>
 
 ```fsharp
 let f x = (x, x)
 ```
 
-La función crea una tupla a partir de un argumento de cualquier tipo. Dado que no se especifica el tipo, la función se puede usar con cualquier tipo de argumento. Para más información, vea [Automatic Generalization](../generics/automatic-generalization.md) (Generalización automática).
+<span data-ttu-id="d8f87-137">La función crea una tupla a partir de un argumento de cualquier tipo.</span><span class="sxs-lookup"><span data-stu-id="d8f87-137">The function creates a tuple from one argument of any type.</span></span> <span data-ttu-id="d8f87-138">Dado que no se especifica el tipo, la función se puede usar con cualquier tipo de argumento.</span><span class="sxs-lookup"><span data-stu-id="d8f87-138">Because the type is not specified, the function can be used with any argument type.</span></span> <span data-ttu-id="d8f87-139">Para más información, vea [Automatic Generalization](../generics/automatic-generalization.md) (Generalización automática).</span><span class="sxs-lookup"><span data-stu-id="d8f87-139">For more information, see [Automatic Generalization](../generics/automatic-generalization.md).</span></span>
 
 
-## <a name="function-bodies"></a>Cuerpos de función
-El cuerpo de una función puede contener definiciones de variables locales y funciones. Estas variables y funciones están en ámbito en el cuerpo de la función actual, pero no fuera de ella. Una vez habilitada la opción de sintaxis ligera, se debe usar sangría para indicar que es una definición de un cuerpo de función, como se muestra en el ejemplo siguiente:
+## <a name="function-bodies"></a><span data-ttu-id="d8f87-140">Cuerpos de función</span><span class="sxs-lookup"><span data-stu-id="d8f87-140">Function Bodies</span></span>
+<span data-ttu-id="d8f87-141">El cuerpo de una función puede contener definiciones de variables locales y funciones.</span><span class="sxs-lookup"><span data-stu-id="d8f87-141">A function body can contain definitions of local variables and functions.</span></span> <span data-ttu-id="d8f87-142">Estas variables y funciones están en ámbito en el cuerpo de la función actual, pero no fuera de ella.</span><span class="sxs-lookup"><span data-stu-id="d8f87-142">Such variables and functions are in scope in the body of the current function but not outside it.</span></span> <span data-ttu-id="d8f87-143">Una vez habilitada la opción de sintaxis ligera, se debe usar sangría para indicar que es una definición de un cuerpo de función, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="d8f87-143">When you have the lightweight syntax option enabled, you must use indentation to indicate that a definition is in a function body, as shown in the following example:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-Para más información, vea [Code Formatting Guidelines](../code-formatting-guidelines.md) (Instrucciones de formato de código) y [Verbose Syntax](../verbose-syntax.md) (Sintaxis detallada).
+<span data-ttu-id="d8f87-144">Para más información, vea [Code Formatting Guidelines](../code-formatting-guidelines.md) (Instrucciones de formato de código) y [Verbose Syntax](../verbose-syntax.md) (Sintaxis detallada).</span><span class="sxs-lookup"><span data-stu-id="d8f87-144">For more information, see [Code Formatting Guidelines](../code-formatting-guidelines.md) and [Verbose Syntax](../verbose-syntax.md).</span></span>
 
 
-## <a name="return-values"></a>Valores devueltos
-El compilador usa la expresión final en el cuerpo de una función para determinar el tipo y el valor devuelto. Es posible que el compilador deduzca el tipo de la expresión final a partir las expresiones anteriores. En la función `cylinderVolume`, como se muestra en la sección anterior, el tipo de `pi` se determina a partir del tipo del literal `3.14159` como `float`. El compilador usa el tipo de `pi` para determinar el tipo de la expresión `h * pi * r * r` como `float`. Por tanto, el tipo de valor devuelto global de la función es `float`.
+## <a name="return-values"></a><span data-ttu-id="d8f87-145">Valores devueltos</span><span class="sxs-lookup"><span data-stu-id="d8f87-145">Return Values</span></span>
+<span data-ttu-id="d8f87-146">El compilador usa la expresión final en el cuerpo de una función para determinar el tipo y el valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="d8f87-146">The compiler uses the final expression in a function body to determine the return value and type.</span></span> <span data-ttu-id="d8f87-147">Es posible que el compilador deduzca el tipo de la expresión final a partir las expresiones anteriores.</span><span class="sxs-lookup"><span data-stu-id="d8f87-147">The compiler might infer the type of the final expression from previous expressions.</span></span> <span data-ttu-id="d8f87-148">En la función `cylinderVolume`, como se muestra en la sección anterior, el tipo de `pi` se determina a partir del tipo del literal `3.14159` como `float`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-148">In the function `cylinderVolume`, shown in the previous section, the type of `pi` is determined from the type of the literal `3.14159` to be `float`.</span></span> <span data-ttu-id="d8f87-149">El compilador usa el tipo de `pi` para determinar el tipo de la expresión `h * pi * r * r` como `float`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-149">The compiler uses the type of `pi` to determine the type of the expression `h * pi * r * r` to be `float`.</span></span> <span data-ttu-id="d8f87-150">Por tanto, el tipo de valor devuelto global de la función es `float`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-150">Therefore, the overall return type of the function is `float`.</span></span>
 
-Para especificar explícitamente el valor devuelto, escriba el código de esta forma:
+<span data-ttu-id="d8f87-151">Para especificar explícitamente el valor devuelto, escriba el código de esta forma:</span><span class="sxs-lookup"><span data-stu-id="d8f87-151">To specify the return value explicitly, write the code as follows:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
-Tal como se escribe el código anterior, el compilador aplica **float** a toda la función. Si también quiere aplicarlo a los tipos de parámetro, use el código siguiente:
+<span data-ttu-id="d8f87-152">Tal como se escribe el código anterior, el compilador aplica **float** a toda la función. Si también quiere aplicarlo a los tipos de parámetro, use el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="d8f87-152">As the code is written above, the compiler applies **float** to the entire function; if you mean to apply it to the parameter types as well, use the following code:</span></span>
 
 ```fsharp
 let cylinderVolume (radius : float) (length : float) : float
 ```
 
-## <a name="calling-a-function"></a>Llamar a una función
-Las funciones se llaman especificando el nombre de la función seguido de un espacio y, después, los argumentos separados por espacios. Por ejemplo, para llamar a la función **cylinderVolume** y asignar el resultado al valor **vol**, se escribe el código siguiente:
+## <a name="calling-a-function"></a><span data-ttu-id="d8f87-153">Llamar a una función</span><span class="sxs-lookup"><span data-stu-id="d8f87-153">Calling a Function</span></span>
+<span data-ttu-id="d8f87-154">Las funciones se llaman especificando el nombre de la función seguido de un espacio y, después, los argumentos separados por espacios.</span><span class="sxs-lookup"><span data-stu-id="d8f87-154">You call functions by specifying the function name followed by a space and then any arguments separated by spaces.</span></span> <span data-ttu-id="d8f87-155">Por ejemplo, para llamar a la función **cylinderVolume** y asignar el resultado al valor **vol**, se escribe el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="d8f87-155">For example, to call the function **cylinderVolume** and assign the result to the value **vol**, you write the following code:</span></span>
 
 ```fsharp
 let vol = cylinderVolume 2.0 3.0
 ```
 
-## <a name="partial-application-of-arguments"></a>Aplicación parcial de argumentos
-Si se proporcionan menos argumentos que los especificados, se crea una nueva función que espera los argumentos restantes. Este método de control de argumentos se conoce como *currificación* y es una característica de los lenguajes de programación funcionales como F#. Por ejemplo, supongamos que está trabajando con dos tamaños de canalización: una tiene un radio de **2,0** y la otra tiene un radio de **3,0**. Se podrían crear funciones que determinen el volumen de canalización de esta forma:
+## <a name="partial-application-of-arguments"></a><span data-ttu-id="d8f87-156">Aplicación parcial de argumentos</span><span class="sxs-lookup"><span data-stu-id="d8f87-156">Partial Application of Arguments</span></span>
+<span data-ttu-id="d8f87-157">Si se proporcionan menos argumentos que los especificados, se crea una nueva función que espera los argumentos restantes.</span><span class="sxs-lookup"><span data-stu-id="d8f87-157">If you supply fewer than the specified number of arguments, you create a new function that expects the remaining arguments.</span></span> <span data-ttu-id="d8f87-158">Este método de control de argumentos se conoce como *currificación* y es una característica de los lenguajes de programación funcionales como F#.</span><span class="sxs-lookup"><span data-stu-id="d8f87-158">This method of handling arguments is referred to as *currying* and is a characteristic of functional programming languages like F#.</span></span> <span data-ttu-id="d8f87-159">Por ejemplo, supongamos que está trabajando con dos tamaños de canalización: una tiene un radio de **2,0** y la otra tiene un radio de **3,0**.</span><span class="sxs-lookup"><span data-stu-id="d8f87-159">For example, suppose you are working with two sizes of pipe: one has a radius of **2.0** and the other has a radius of **3.0**.</span></span> <span data-ttu-id="d8f87-160">Se podrían crear funciones que determinen el volumen de canalización de esta forma:</span><span class="sxs-lookup"><span data-stu-id="d8f87-160">You could create functions that determine the volume of pipe as follows:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
-Después, se proporcionaría el argumento adicional según sea necesario para las distintas longitudes de canalización de los dos tamaños diferentes:
+<span data-ttu-id="d8f87-161">Después, se proporcionaría el argumento adicional según sea necesario para las distintas longitudes de canalización de los dos tamaños diferentes:</span><span class="sxs-lookup"><span data-stu-id="d8f87-161">You would then supply the additional argument as needed for various lengths of pipe of the two different sizes:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
-## <a name="recursive-functions"></a>Funciones recursivas
-Las *funciones recursivas* son funciones que se llaman a sí mismas. Requieren que se especifique la palabra clave **rec** después de la palabra clave **let**. La función recursiva se invoca desde el interior del cuerpo de la función de la misma forma que se invocaría cualquier llamada de función. La siguiente función recursiva calcula el número *n* de Fibonacci. La secuencia de números de Fibonacci se conoce desde la antigüedad y es una secuencia en la que cada número sucesivo es la suma de los dos números anteriores en la secuencia.
+## <a name="recursive-functions"></a><span data-ttu-id="d8f87-162">Funciones recursivas</span><span class="sxs-lookup"><span data-stu-id="d8f87-162">Recursive Functions</span></span>
+<span data-ttu-id="d8f87-163">Las *funciones recursivas* son funciones que se llaman a sí mismas.</span><span class="sxs-lookup"><span data-stu-id="d8f87-163">*Recursive functions* are functions that call themselves.</span></span> <span data-ttu-id="d8f87-164">Requieren que se especifique la palabra clave **rec** después de la palabra clave **let**.</span><span class="sxs-lookup"><span data-stu-id="d8f87-164">They require that you specify the **rec** keyword following the **let** keyword.</span></span> <span data-ttu-id="d8f87-165">La función recursiva se invoca desde el interior del cuerpo de la función de la misma forma que se invocaría cualquier llamada de función.</span><span class="sxs-lookup"><span data-stu-id="d8f87-165">Invoke the recursive function from within the body of the function just as you would invoke any function call.</span></span> <span data-ttu-id="d8f87-166">La siguiente función recursiva calcula el  *n* número de Fibonacci.</span><span class="sxs-lookup"><span data-stu-id="d8f87-166">The following recursive function computes the *n*th Fibonacci number.</span></span> <span data-ttu-id="d8f87-167">La secuencia de números de Fibonacci se conoce desde la antigüedad y es una secuencia en la que cada número sucesivo es la suma de los dos números anteriores en la secuencia.</span><span class="sxs-lookup"><span data-stu-id="d8f87-167">The Fibonacci number sequence has been known since antiquity and is a sequence in which each successive number is the sum of the previous two numbers in the sequence.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
-Es posible que algunas funciones recursivas desborden la pila del programa o tengan un rendimiento ineficaz si no se escriben con cuidado y con el conocimiento de determinadas técnicas especiales, como el uso de acumuladores y continuaciones.
+<span data-ttu-id="d8f87-168">Es posible que algunas funciones recursivas desborden la pila del programa o tengan un rendimiento ineficaz si no se escriben con cuidado y con el conocimiento de determinadas técnicas especiales, como el uso de acumuladores y continuaciones.</span><span class="sxs-lookup"><span data-stu-id="d8f87-168">Some recursive functions might overflow the program stack or perform inefficiently if you do not write them with care and with awareness of special techniques, such as the use of accumulators and continuations.</span></span>
 
 
-## <a name="function-values"></a>Valores de función
-En F#, todas las funciones se consideran valores, de hecho, se conocen como *valores de función*. Dado que las funciones son valores, se pueden usar como argumentos de otras funciones o en otros contextos donde se usan los valores. El siguiente ejemplo muestra una función que toma un valor de función como argumento:
+## <a name="function-values"></a><span data-ttu-id="d8f87-169">Valores de función</span><span class="sxs-lookup"><span data-stu-id="d8f87-169">Function Values</span></span>
+<span data-ttu-id="d8f87-170">En F#, todas las funciones se consideran valores, de hecho, se conocen como *valores de función*.</span><span class="sxs-lookup"><span data-stu-id="d8f87-170">In F#, all functions are considered values; in fact, they are known as *function values*.</span></span> <span data-ttu-id="d8f87-171">Dado que las funciones son valores, se pueden usar como argumentos de otras funciones o en otros contextos donde se usan los valores.</span><span class="sxs-lookup"><span data-stu-id="d8f87-171">Because functions are values, they can be used as arguments to other functions or in other contexts where values are used.</span></span> <span data-ttu-id="d8f87-172">El siguiente ejemplo muestra una función que toma un valor de función como argumento:</span><span class="sxs-lookup"><span data-stu-id="d8f87-172">Following is an example of a function that takes a function value as an argument:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
-El tipo de un valor de función se especifica mediante el token `->`. En el lado izquierdo de este token está el tipo del argumento y, en el lado derecho, el valor devuelto. En el ejemplo anterior, `apply1` es una función que toma una función `transform` como argumento, donde `transform` es una función que toma un entero y devuelve otro entero. En el código siguiente se muestra cómo usar `apply1`:
+<span data-ttu-id="d8f87-173">El tipo de un valor de función se especifica mediante el token `->`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-173">You specify the type of a function value by using the `->` token.</span></span> <span data-ttu-id="d8f87-174">En el lado izquierdo de este token está el tipo del argumento y, en el lado derecho, el valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="d8f87-174">On the left side of this token is the type of the argument, and on the right side is the return value.</span></span> <span data-ttu-id="d8f87-175">En el ejemplo anterior, `apply1` es una función que toma una función `transform` como argumento, donde `transform` es una función que toma un entero y devuelve otro entero.</span><span class="sxs-lookup"><span data-stu-id="d8f87-175">In the previous example, `apply1` is a function that takes a function `transform` as an argument, where `transform` is a function that takes an integer and returns another integer.</span></span> <span data-ttu-id="d8f87-176">En el código siguiente se muestra cómo usar `apply1`:</span><span class="sxs-lookup"><span data-stu-id="d8f87-176">The following code shows how to use `apply1`:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
-El valor de `result` será 101 después de ejecutar el código anterior.
+<span data-ttu-id="d8f87-177">El valor de `result` será 101 después de ejecutar el código anterior.</span><span class="sxs-lookup"><span data-stu-id="d8f87-177">The value of `result` will be 101 after the previous code runs.</span></span>
 
-Si hay varios argumentos, se separan por sucesivos tokens `->`, como se muestra en el ejemplo siguiente:
+<span data-ttu-id="d8f87-178">Si hay varios argumentos, se separan por sucesivos tokens `->`, como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="d8f87-178">Multiple arguments are separated by successive `->` tokens, as shown in the following example:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
-El resultado es 200.
+<span data-ttu-id="d8f87-179">El resultado es 200.</span><span class="sxs-lookup"><span data-stu-id="d8f87-179">The result is 200.</span></span>
 
 
-## <a name="lambda-expressions"></a>Expresiones lambda
-Una *expresión lambda* es una función sin nombre. En los ejemplos anteriores, en lugar de definir las funciones con nombre **increment** y **mul**, se podrían usar expresiones lambda de esta forma:
+## <a name="lambda-expressions"></a><span data-ttu-id="d8f87-180">Expresiones lambda</span><span class="sxs-lookup"><span data-stu-id="d8f87-180">Lambda Expressions</span></span>
+<span data-ttu-id="d8f87-181">Una *expresión lambda* es una función sin nombre.</span><span class="sxs-lookup"><span data-stu-id="d8f87-181">A *lambda expression* is an unnamed function.</span></span> <span data-ttu-id="d8f87-182">En los ejemplos anteriores, en lugar de definir las funciones con nombre **increment** y **mul**, se podrían usar expresiones lambda de esta forma:</span><span class="sxs-lookup"><span data-stu-id="d8f87-182">In the previous examples, instead of defining named functions **increment** and **mul**, you could use lambda expressions as follows:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Las expresiones lambda se definen mediante la palabra clave `fun`. Una expresión lambda es similar a una definición de función, salvo que en lugar del token `=` se usa el token `->` para separar la lista de argumentos del cuerpo de la función. Al igual que en una definición de función normal, se pueden deducir o especificar explícitamente los tipos de argumento, y el tipo de valor devuelto de la expresión lambda se deduce del tipo de la última expresión en el cuerpo. Para más información, vea [Lambda Expressions: The `fun` Keyword](../functions/lambda-expressions-the-fun-keyword.md) (Expresiones lambda: la palabra clave `fun`).
+<span data-ttu-id="d8f87-183">Las expresiones lambda se definen mediante la palabra clave `fun`.</span><span class="sxs-lookup"><span data-stu-id="d8f87-183">You define lambda expressions by using the `fun` keyword.</span></span> <span data-ttu-id="d8f87-184">Una expresión lambda es similar a una definición de función, salvo que en lugar del token `=` se usa el token `->` para separar la lista de argumentos del cuerpo de la función.</span><span class="sxs-lookup"><span data-stu-id="d8f87-184">A lambda expression resembles a function definition, except that instead of the `=` token, the `->` token is used to separate the argument list from the function body.</span></span> <span data-ttu-id="d8f87-185">Al igual que en una definición de función normal, se pueden deducir o especificar explícitamente los tipos de argumento, y el tipo de valor devuelto de la expresión lambda se deduce del tipo de la última expresión en el cuerpo.</span><span class="sxs-lookup"><span data-stu-id="d8f87-185">As in a regular function definition, the argument types can be inferred or specified explicitly, and the return type of the lambda expression is inferred from the type of the last expression in the body.</span></span> <span data-ttu-id="d8f87-186">Para más información, vea [Lambda Expressions: The `fun` Keyword](../functions/lambda-expressions-the-fun-keyword.md) (Expresiones lambda: la palabra clave `fun`).</span><span class="sxs-lookup"><span data-stu-id="d8f87-186">For more information, see [Lambda Expressions: The `fun` Keyword](../functions/lambda-expressions-the-fun-keyword.md).</span></span>
 
 
-## <a name="function-composition-and-pipelining"></a>Composición de funciones y canalización
-En F#, las funciones se pueden componer a partir de otras funciones. La composición de dos funciones **función1** y **función2** es otra función que representa la aplicación de **función1** seguida de la aplicación de **función2**:
+## <a name="function-composition-and-pipelining"></a><span data-ttu-id="d8f87-187">Composición de funciones y canalización</span><span class="sxs-lookup"><span data-stu-id="d8f87-187">Function Composition and Pipelining</span></span>
+<span data-ttu-id="d8f87-188">En F#, las funciones se pueden componer a partir de otras funciones.</span><span class="sxs-lookup"><span data-stu-id="d8f87-188">Functions in F# can be composed from other functions.</span></span> <span data-ttu-id="d8f87-189">La composición de dos funciones **función1** y **función2** es otra función que representa la aplicación de **función1** seguida de la aplicación de **función2**:</span><span class="sxs-lookup"><span data-stu-id="d8f87-189">The composition of two functions **function1** and **function2** is another function that represents the application of **function1** followed the application of **function2**:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
-El resultado es 202.
+<span data-ttu-id="d8f87-190">El resultado es 202.</span><span class="sxs-lookup"><span data-stu-id="d8f87-190">The result is 202.</span></span>
 
-La canalización permite encadenar llamadas a funciones como operaciones sucesivas. La canalización funciona de la siguiente manera:
+<span data-ttu-id="d8f87-191">La canalización permite encadenar llamadas a funciones como operaciones sucesivas.</span><span class="sxs-lookup"><span data-stu-id="d8f87-191">Pipelining enables function calls to be chained together as successive operations.</span></span> <span data-ttu-id="d8f87-192">La canalización funciona de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="d8f87-192">Pipelining works as follows:</span></span>
 
 ```fsharp
 let result = 100 |> function1 |> function2
 ```
 
-El resultado es 202 de nuevo.
+<span data-ttu-id="d8f87-193">El resultado es 202 de nuevo.</span><span class="sxs-lookup"><span data-stu-id="d8f87-193">The result is again 202.</span></span>
 
-Los operadores de composición toman dos funciones y devuelven una función. Por el contrario, los operadores de canalización toman una función y un argumento, y devuelven un valor. En el ejemplo de código siguiente se muestra la diferencia entre los operadores de canalización y composición mostrando las diferencias en las firmas de función y el uso.
+<span data-ttu-id="d8f87-194">Los operadores de composición toman dos funciones y devuelven una función. Por el contrario, los operadores de canalización toman una función y un argumento, y devuelven un valor.</span><span class="sxs-lookup"><span data-stu-id="d8f87-194">The composition operators take two functions and return a function; by contrast, the pipeline operators take a function and an argument and return a value.</span></span> <span data-ttu-id="d8f87-195">En el ejemplo de código siguiente se muestra la diferencia entre los operadores de canalización y composición mostrando las diferencias en las firmas de función y el uso.</span><span class="sxs-lookup"><span data-stu-id="d8f87-195">The following code example shows the difference between the pipeline and composition operators by showing the differences in the function signatures and usage.</span></span>
 
 ```fsharp
 // Function composition and pipeline operators compared.
@@ -188,11 +187,11 @@ let result2 = Compose2 2
 
 // Pipelining
 // Pipeline operator
-// ( <| ) : ('T -> 'U) -> 'T -> 'U
+// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
 let Pipeline1 x = addOne <| timesTwo x
 
 // Backward pipeline operator
-// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
+// ( <| ) : ('T -> 'U) -> 'T -> 'U
 let Pipeline2 x = addOne x |> timesTwo
 
 // Result is 5
@@ -202,12 +201,11 @@ let result3 = Pipeline1 2
 let result4 = Pipeline2 2
 ```
 
-## <a name="overloading-functions"></a>Sobrecargar funciones
-Los métodos de un tipo se pueden sobrecargar, pero no las funciones. Para más información, vea [Métodos](../members/methods.md).
+## <a name="overloading-functions"></a><span data-ttu-id="d8f87-196">Sobrecargar funciones</span><span class="sxs-lookup"><span data-stu-id="d8f87-196">Overloading Functions</span></span>
+<span data-ttu-id="d8f87-197">Los métodos de un tipo se pueden sobrecargar, pero no las funciones.</span><span class="sxs-lookup"><span data-stu-id="d8f87-197">You can overload methods of a type but not functions.</span></span> <span data-ttu-id="d8f87-198">Para más información, vea [Métodos](../members/methods.md).</span><span class="sxs-lookup"><span data-stu-id="d8f87-198">For more information, see [Methods](../members/methods.md).</span></span>
 
 
-## <a name="see-also"></a>Vea también
-[Valores](../values/index.md)
+## <a name="see-also"></a><span data-ttu-id="d8f87-199">Vea también</span><span class="sxs-lookup"><span data-stu-id="d8f87-199">See Also</span></span>
+[<span data-ttu-id="d8f87-200">Valores</span><span class="sxs-lookup"><span data-stu-id="d8f87-200">Values</span></span>](../values/index.md)
 
-[Referencia del lenguaje F#](../index.md)
-
+[<span data-ttu-id="d8f87-201">Referencia del lenguaje F#</span><span class="sxs-lookup"><span data-stu-id="d8f87-201">F# Language Reference</span></span>](../index.md)

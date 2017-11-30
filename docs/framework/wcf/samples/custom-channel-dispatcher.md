@@ -1,64 +1,66 @@
 ---
-title: "Distribuidor de canal personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Distribuidor de canal personalizado
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5814850b3d5a25f5f3c118e732930168f9489d9d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Distribuidor de canal personalizado
-Este ejemplo muestra cómo crear la pila del canal de manera personalizada implementando <xref:System.ServiceModel.ServiceHostBase> directamente y cómo crear un distribuidor de canal personalizado en un entorno de host web.El distribuidor del canal interactúa con <xref:System.ServiceModel.Channels.IChannelListener> para aceptar los canales y recupera los mensajes de la pila del canal.Este ejemplo también proporciona un ejemplo básico para mostrar cómo integrar una pila del canal en un entorno de host web con <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
+# <a name="custom-channel-dispatcher"></a><span data-ttu-id="bfd7c-102">Distribuidor de canal personalizado</span><span class="sxs-lookup"><span data-stu-id="bfd7c-102">Custom Channel Dispatcher</span></span>
+<span data-ttu-id="bfd7c-103">Este ejemplo muestra cómo crear la pila del canal de manera personalizada implementando <xref:System.ServiceModel.ServiceHostBase> directamente y cómo crear un distribuidor de canal personalizado en un entorno de host web.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-103">This sample demonstrates how to build the channel stack in a custom way by implementing <xref:System.ServiceModel.ServiceHostBase> directly and how to create a custom channel dispatcher in Web host environment.</span></span> <span data-ttu-id="bfd7c-104">El distribuidor del canal interactúa con <xref:System.ServiceModel.Channels.IChannelListener> para aceptar los canales y recupera los mensajes de la pila del canal.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-104">The channel dispatcher interacts with <xref:System.ServiceModel.Channels.IChannelListener> to accept channels and retrieves messages from the channel stack.</span></span> <span data-ttu-id="bfd7c-105">Este ejemplo también proporciona un ejemplo básico para mostrar cómo integrar una pila del canal en un entorno de host web con <xref:System.ServiceModel.Activation.VirtualPathExtension>.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-105">This sample also provides a basic sample to show how to build a channel stack in a Web host environment by using <xref:System.ServiceModel.Activation.VirtualPathExtension>.</span></span>  
   
-## ServiceHostBase personalizado  
- En este ejemplo se implementa el tipo base <xref:System.ServiceModel.ServiceHostBase> en lugar de <xref:System.ServiceModel.ServiceHost> para mostrar cómo reemplazar la implementación de la pila de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un nivel de control de mensajes personalizado encima de la pila del canal.Se invalida el método virtual <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> para compilar los agentes de escucha del canal y el distribuidor de canal.  
+## <a name="custom-servicehostbase"></a><span data-ttu-id="bfd7c-106">ServiceHostBase personalizado</span><span class="sxs-lookup"><span data-stu-id="bfd7c-106">Custom ServiceHostBase</span></span>  
+ <span data-ttu-id="bfd7c-107">En este ejemplo se implementa el tipo base <xref:System.ServiceModel.ServiceHostBase> en lugar de <xref:System.ServiceModel.ServiceHost> para mostrar cómo reemplazar la implementación de la pila de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con un nivel de control de mensajes personalizado encima de la pila del canal.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-107">This sample implements the base type <xref:System.ServiceModel.ServiceHostBase> instead of <xref:System.ServiceModel.ServiceHost> to demonstrate how to replace the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stack implementation with a custom message handling layer on top of the channel stack.</span></span> <span data-ttu-id="bfd7c-108">Se invalida el método virtual <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> para compilar los agentes de escucha del canal y el distribuidor de canal.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-108">You override the virtual method <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> to build channel listeners and the channel dispatcher.</span></span>  
   
- Para implementar un servicio hospedado en web, obtenga la extensión de servicio <xref:System.ServiceModel.Activation.VirtualPathExtension> de la colección de la propiedad <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> y agréguela al objeto <xref:System.ServiceModel.Channels.BindingParameterCollection> para que el nivel de transporte sepa cómo configurar el agente de escucha del canal según los valores de entorno de hospedaje, es decir, la configuración de Internet Information Services \(IIS\)\/Servicio de activación de procesos de Windows \(WAS\).  
+ <span data-ttu-id="bfd7c-109">Para implementar un servicio hospedado en web, obtenga la extensión de servicio <xref:System.ServiceModel.Activation.VirtualPathExtension> de la colección de la propiedad <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> y agréguela al objeto <xref:System.ServiceModel.Channels.BindingParameterCollection> para que el nivel de transporte sepa cómo configurar el agente de escucha del canal según los valores de entorno de hospedaje, es decir, la configuración de Internet Information Services (IIS)/Servicio de activación de procesos de Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="bfd7c-109">To implement a Web-hosted service, get the service extension <xref:System.ServiceModel.Activation.VirtualPathExtension> from the <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> collection and add it to the <xref:System.ServiceModel.Channels.BindingParameterCollection> so that the transport layer knows how to configure the channel listener based on the hosting environment settings, that is, the Internet Information Services (IIS)/Windows Process Activation Service (WAS) settings.</span></span>  
   
-## Distribuidor de canal personalizado  
- El distribuidor de canal personalizado extiende el tipo <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>.Este tipo implementa la lógica de programación del nivel del canal.En este ejemplo, solo se admite <xref:System.ServiceModel.Channels.IReplyChannel> para el modelo de intercambio de mensajes de solicitud\-respuesta, pero el distribuidor del canal personalizado se puede extender con facilidad a otros tipos de canal.  
+## <a name="custom-channel-dispatcher"></a><span data-ttu-id="bfd7c-110">Distribuidor de canal personalizado</span><span class="sxs-lookup"><span data-stu-id="bfd7c-110">Custom Channel Dispatcher</span></span>  
+ <span data-ttu-id="bfd7c-111">El distribuidor de canal personalizado extiende el tipo <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-111">The custom channel dispatcher extends the type <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>.</span></span> <span data-ttu-id="bfd7c-112">Este tipo implementa la lógica de programación del nivel del canal.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-112">This type implements the channel-layer programming logic.</span></span> <span data-ttu-id="bfd7c-113">En este ejemplo, solo se admite <xref:System.ServiceModel.Channels.IReplyChannel> para el patrón de intercambio de mensajes de solicitud-respuesta, pero el distribuidor del canal personalizado se puede extender con facilidad a otros tipos de canal.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-113">In this sample, only <xref:System.ServiceModel.Channels.IReplyChannel> is supported for request-reply message exchange pattern, but the custom channel dispatcher can be easily extended to other channel types.</span></span>  
   
- El distribuidor abre el agente de escucha del canal primero y, a continuación, acepta el canal de respuesta singleton.Con el canal, empieza a enviar los mensajes \(solicitudes\) en un bucle infinito.Para cada solicitud, crea un mensaje de respuesta y lo envía de nuevo al cliente.  
+ <span data-ttu-id="bfd7c-114">El distribuidor abre el agente de escucha del canal primero y, a continuación, acepta el canal de respuesta singleton.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-114">The dispatcher first opens the channel listener and then accepts the singleton reply channel.</span></span> <span data-ttu-id="bfd7c-115">Con el canal, empieza a enviar los mensajes (solicitudes) en un bucle infinito.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-115">With the channel, it starts to send messages (requests) in an infinite loop.</span></span> <span data-ttu-id="bfd7c-116">Para cada solicitud, crea un mensaje de respuesta y lo envía de nuevo al cliente.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-116">For each request, it creates a reply message and sends it back to the client.</span></span>  
   
-## Crear un mensaje de respuesta  
- El procesamiento de mensajes se implementa en el tipo `MyServiceManager`.En el método `HandleRequest`, el encabezado de mensaje `Action` se comprueba primero para ver si se admite la solicitud.Se define una acción "http:\/\/tempuri.org\/HelloWorld\/Hello" de SOAP predefinida para permitir el filtrado de mensajes.Esto es similar al concepto de contrato de servicios en la implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de <xref:System.ServiceModel.ServiceHost>.  
+## <a name="creating-a-response-message"></a><span data-ttu-id="bfd7c-117">Crear un mensaje de respuesta</span><span class="sxs-lookup"><span data-stu-id="bfd7c-117">Creating a Response Message</span></span>  
+ <span data-ttu-id="bfd7c-118">El procesamiento de mensajes se implementa en el tipo `MyServiceManager`.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-118">The message processing is implemented in the type `MyServiceManager`.</span></span> <span data-ttu-id="bfd7c-119">En el método `HandleRequest`, el encabezado de mensaje `Action` se comprueba primero para ver si se admite la solicitud.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-119">In the `HandleRequest` method, the `Action` header of the message is first checked to see whether the request is supported.</span></span> <span data-ttu-id="bfd7c-120">Se define una acción "http://tempuri.org/HelloWorld/Hello" de SOAP predefinida para permitir el filtrado de mensajes.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-120">A predefined SOAP action "http://tempuri.org/HelloWorld/Hello" is defined to provide message filtering.</span></span> <span data-ttu-id="bfd7c-121">Esto es similar al concepto de contrato de servicios en la implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-121">This is similar to the service contract concept in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementation of <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
- En el caso de la acción SOAP correcta, el ejemplo recupera los datos de mensaje solicitados y genera una respuesta correspondiente a la solicitud similar a lo que se ve en el caso de <xref:System.ServiceModel.ServiceHost>.  
+ <span data-ttu-id="bfd7c-122">En el caso de la acción SOAP correcta, el ejemplo recupera los datos de mensaje solicitados y genera una respuesta correspondiente a la solicitud similar a lo que se ve en el caso de <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-122">For the correct SOAP action case, the sample retrieves the requested message data and generates a corresponding response to the request similar to what is seen in the <xref:System.ServiceModel.ServiceHost> case.</span></span>  
   
- Para administrar el verbo HTTP\-GET en especial, devuelve un mensaje HTML personalizado, en este caso, para que pueda examinar el servicio desde un explorador para ver que está compilado correctamente.Si la acción SOAP no coincide, envíe a un mensaje de error para indicar que no se admite la solicitud.  
+ <span data-ttu-id="bfd7c-123">Para administrar el verbo HTTP-GET en especial, devuelve un mensaje HTML personalizado, en este caso, para que pueda examinar el servicio desde un explorador para ver que está compilado correctamente.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-123">You specially handled the HTTP-GET verb by returning a custom HTML message, in this, case so that you can browse the service from a browser to see that it is compiled correctly.</span></span> <span data-ttu-id="bfd7c-124">Si la acción SOAP no coincide, envíe a un mensaje de error para indicar que no se admite la solicitud.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-124">If the SOAP action does not match, send a fault message back to indicate that the request is not supported.</span></span>  
   
- El cliente de este ejemplo es un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal que no supone nada del servicio.De este modo, el servicio está diseñado especialmente para coincidir con lo que se obtiene de una implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost> normal.Como resultado, solo se requiere un contrato de servicio en el cliente.  
+ <span data-ttu-id="bfd7c-125">El cliente de este ejemplo es un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal que no supone nada del servicio.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-125">The client of this sample is a normal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that does not assume anything from the service.</span></span> <span data-ttu-id="bfd7c-126">De este modo, el servicio está diseñado especialmente para coincidir con lo que se obtiene de una implementación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost> normal.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-126">So, the service is specially designed to match what you get from a normal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost> implementation.</span></span> <span data-ttu-id="bfd7c-127">Como resultado, solo se requiere un contrato de servicio en el cliente.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-127">As a result, only a service contract is required on the client.</span></span>  
   
-## Utilizar el ejemplo  
- Al ejecutar la aplicación cliente directamente, se genera el siguiente resultado.  
+## <a name="using-the-sample"></a><span data-ttu-id="bfd7c-128">Utilizar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="bfd7c-128">Using the sample</span></span>  
+ <span data-ttu-id="bfd7c-129">Al ejecutar la aplicación cliente directamente, se genera el siguiente resultado.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-129">Running the client application directly produces the following output.</span></span>  
   
 ```Output  
-El cliente está hablando con un servicio WCF de solicitud/respuesta.   
-Escriba lo que desea indicar al servidor: Howdy  
-El Servidor respondió: Usted dijo: Howdy.Identificador de mensaje: 1  
-El Servidor respondió: Usted dijo: Howdy.Identificador de mensaje: 2  
-El Servidor respondió: Usted dijo: Howdy.Identificador de mensaje: 3  
-El Servidor respondió: Usted dijo: Howdy.Identificador de mensaje: 4  
-El Servidor respondió: Usted dijo: Howdy.Identificador de mensaje: 5  
-  
+Client is talking to a request/reply WCF service.   
+Type what you want to say to the server: Howdy  
+Server replied: You said: Howdy. Message id: 1  
+Server replied: You said: Howdy. Message id: 2  
+Server replied: You said: Howdy. Message id: 3  
+Server replied: You said: Howdy. Message id: 4  
+Server replied: You said: Howdy. Message id: 5  
 ```  
   
- También puede examinar el servicio desde un explorador para que se procese un mensaje HTTP\-GET en el servidor.De esta forma obtiene de vuelta texto HTLM con formato correcto.  
+ <span data-ttu-id="bfd7c-130">También puede examinar el servicio desde un explorador para que se procese un mensaje HTTP-GET en el servidor.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-130">You can also browse the service from a browser so that an HTTP-GET message gets processed on the server.</span></span> <span data-ttu-id="bfd7c-131">De esta forma obtiene de vuelta texto HTLM con formato correcto.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-131">This gets you well-formatted HTML text back.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="bfd7c-132">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="bfd7c-133">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-133">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="bfd7c-134">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="bfd7c-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bfd7c-135">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="bfd7c-135">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

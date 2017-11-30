@@ -1,40 +1,42 @@
 ---
-title: "Supervisar los errores de operaci&#243;n de servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Supervisar los errores de operación de servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 42506f7f32d0174b4f980f4e94d370cf4c137276
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Supervisar los errores de operaci&#243;n de servicio
-Si la traza analítica está habilitada para una aplicación, los errores del servicio se pueden supervisar con facilidad en el visor de eventos.Este tema muestra cómo determinar cuándo se produce un error en una operación del servicio y cómo determinar lo que produjo el error.  
+# <a name="monitoring-service-operation-failures"></a><span data-ttu-id="51e04-102">Supervisar los errores de operación de servicio</span><span class="sxs-lookup"><span data-stu-id="51e04-102">Monitoring Service Operation Failures</span></span>
+<span data-ttu-id="51e04-103">Si la traza analítica está habilitada para una aplicación, los errores del servicio se pueden supervisar con facilidad en el visor de eventos.</span><span class="sxs-lookup"><span data-stu-id="51e04-103">If analytic tracing is enabled for an application, service failures can easily be monitored in the event viewer.</span></span>  <span data-ttu-id="51e04-104">Este tema muestra cómo determinar cuándo se produce un error en una operación del servicio y cómo determinar lo que produjo el error.</span><span class="sxs-lookup"><span data-stu-id="51e04-104">This topic demonstrates how to determine when a service operation fails, and how to determine what caused the failure.</span></span>  
   
-### Determinar la información de error de la operación del servicio  
+### <a name="determining-service-operation-failure-information"></a><span data-ttu-id="51e04-105">Determinar la información de error de la operación del servicio</span><span class="sxs-lookup"><span data-stu-id="51e04-105">Determining service operation failure information</span></span>  
   
-1.  Abra el Visor de eventos; para ello, haga clic en **Inicio** y en **Ejecutar**, y escriba `eventvwr.exe`.  
+1.  <span data-ttu-id="51e04-106">Abra el Visor de eventos, haga clic en **iniciar**, **ejecutar**y escriba `eventvwr.exe`.</span><span class="sxs-lookup"><span data-stu-id="51e04-106">Open Event Viewer by clicking **Start**, **Run**, and entering `eventvwr.exe`.</span></span>  
   
-2.  Si no ha habilitado la traza analítica, expanda **Registros de aplicaciones y servicios**, **Microsoft**, **Windows** y **Servidor de aplicaciones\-Aplicaciones**Seleccione **Ver**, **Mostrar registros analíticos y de depuración**.Haga clic con el botón secundario en **Analítico** y seleccione **Habilitar registro**.Deje abierto el Visor de eventos para que los seguimientos se puedan ver cuando se produzca el error en la operación de servicio.  
+2.  <span data-ttu-id="51e04-107">Si no ha habilitado la traza analítica, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **servidor de aplicaciones** .</span><span class="sxs-lookup"><span data-stu-id="51e04-107">If you haven’t enabled analytic tracing, expand **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**.</span></span> <span data-ttu-id="51e04-108">Seleccione **vista**, **mostrar analíticos y de depuración registros**.</span><span class="sxs-lookup"><span data-stu-id="51e04-108">Select **View**, **Show Analytic and Debug Logs**.</span></span> <span data-ttu-id="51e04-109">Haga clic en **analítico** y seleccione **Habilitar registro**.</span><span class="sxs-lookup"><span data-stu-id="51e04-109">Right-click **Analytic** and select **Enable Log**.</span></span> <span data-ttu-id="51e04-110">Deje abierto el Visor de eventos para que los seguimientos se puedan ver cuando se produzca el error en la operación de servicio.</span><span class="sxs-lookup"><span data-stu-id="51e04-110">Leave Event Viewer open so that traces can be viewed after the service operation fails.</span></span>  
   
-3.  Luego, abra el ejemplo creado en el [Tutorial de introducción](../../../../../docs/framework/wcf/getting-started-tutorial.md) en [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]. Observe que debe ejecutar [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] como administrador para que se pueda crear el servicio.Si tiene instalados los ejemplos de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], puede abrir [Introducción:](../../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.  
+3.  <span data-ttu-id="51e04-111">A continuación, abra el ejemplo creado en el [Tutorial de introducción](../../../../../docs/framework/wcf/getting-started-tutorial.md) en [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] tenga en cuenta que debe ejecutar [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] como administrador para que se puede crear el servicio.</span><span class="sxs-lookup"><span data-stu-id="51e04-111">Next, open the sample created in the [Getting Started Tutorial](../../../../../docs/framework/wcf/getting-started-tutorial.md) in [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Note that you must run [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] as an administrator so that the service can be created.</span></span> <span data-ttu-id="51e04-112">Si tiene la [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ejemplos instalados, puede abrir el [Introducción](../../../../../docs/framework/wcf/samples/getting-started-sample.md), que contiene el proyecto completado creado en el tutorial.</span><span class="sxs-lookup"><span data-stu-id="51e04-112">If you have the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] samples installed, you can open the [Getting Started](../../../../../docs/framework/wcf/samples/getting-started-sample.md), which contains the completed project created in the tutorial.</span></span>  
   
-4.  En el archivo Program.cs del proyecto Servidor, agregue la siguiente línea de código al principio del método `Divide` en la clase `CalculatorService`:  
+4.  <span data-ttu-id="51e04-113">En el archivo Program.cs del proyecto Servidor, agregue la siguiente línea de código al principio del método `Divide` en la clase `CalculatorService`:</span><span class="sxs-lookup"><span data-stu-id="51e04-113">In the Program.cs file in the Server project, add the following line of code to the start of the `Divide` method in the `CalculatorService` class:</span></span>  
   
     ```  
     if (n2 == 0) throw new DivideByZeroException();  
-  
     ```  
   
-5.  En el archivo Program.cs del proyecto Cliente, cambie por cero el valor asignado a value2:  
+5.  <span data-ttu-id="51e04-114">En el archivo Program.cs del proyecto Cliente, cambie por cero el valor asignado a value2:</span><span class="sxs-lookup"><span data-stu-id="51e04-114">In the Program.cs file in the Client project, change the value assigned to value2 to zero:</span></span>  
   
     ```  
     //Call the Divide service operation  
@@ -42,18 +44,17 @@ Si la traza analítica está habilitada para una aplicación, los errores del se
     value2 = 0.00D;  
     result = client.Divide(value1, value2);  
     Console.WriteLine("Divide({0}, {1}) = {2}", value1, value2, result);  
-  
     ```  
   
-6.  Ejecute la aplicación de servidor sin depurar presionando **Ctrl\+F5**.  
+6.  <span data-ttu-id="51e04-115">Ejecute la aplicación de servidor sin depurar presionando **CTRL+F5**.</span><span class="sxs-lookup"><span data-stu-id="51e04-115">Execute the server application without debugging by pressing **Ctrl+F5**.</span></span>  
   
-7.  Abra un símbolo del sistema de Visual Studio 2010.Desplácese hasta el directorio de cliente y ejecute el cliente desde la línea de comandos.  
+7.  <span data-ttu-id="51e04-116">Abra un símbolo del sistema de Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="51e04-116">Open a Visual Studio command prompt.</span></span>  <span data-ttu-id="51e04-117">Desplácese hasta el directorio de cliente y ejecute el cliente desde la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="51e04-117">Navigate to the client directory and execute the client from the command line.</span></span>  
   
-8.  En el Visor de eventos, deshabilite el registro analítico y actualícelo, y ordene los eventos por identificador de evento.Busque un evento con el identificador de evento [219 \- ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), que describe el error del servicio.  
+8.  <span data-ttu-id="51e04-118">En el Visor de eventos, deshabilite el registro analítico y actualícelo, y ordene los eventos por identificador de evento.</span><span class="sxs-lookup"><span data-stu-id="51e04-118">In Event Viewer, disable and refresh the Analytic log and sort the events by Event ID.</span></span>  <span data-ttu-id="51e04-119">Busque un evento con el Id. de evento [ServiceException 219 -](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), que describe el error del servicio.</span><span class="sxs-lookup"><span data-stu-id="51e04-119">Look for an event with Event ID [219 - ServiceException](../../../../../docs/framework/wcf/diagnostics/etw/219-serviceexception.md), which describes the service failure.</span></span>  
   
     ```Output  
-    Se produjo una excepción no controlada de tipo 'System.DivideByZeroException' durante el procesamiento del mensaje.Excepción completa ToString: System.DivideByZeroException: Se intentó dividir por cero.  
+    There was an unhandled exception of type 'System.DivideByZeroException' during message processing.  Full Exception ToString: System.DivideByZeroException: Attempted to divide by zero.  
     ```  
   
     > [!NOTE]
-    >  Los eventos se almacenan en búfer al enviarse al visor de eventos; el evento erróneo puede no aparecer enseguida.
+    >  <span data-ttu-id="51e04-120">Los eventos se almacenan en búfer al enviarse al visor de eventos; el evento erróneo puede no aparecer enseguida.</span><span class="sxs-lookup"><span data-stu-id="51e04-120">Events are buffered when being sent to the event viewer; the failure event may not appear right away.</span></span>

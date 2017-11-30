@@ -1,162 +1,165 @@
 ---
-title: "ServiceDescription y referencias WSDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceDescription y referencias WSDL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 26babd473ca78d6b55ada6c0505ec2f94214448b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceDescription y referencias WSDL
-Este tema describe cómo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] asigna los documentos del lenguaje de descripción de servicios Web \(WSDL\) a y desde las instancias <xref:System.ServiceModel.Description.ServiceDescription>.  
+# <a name="servicedescription-and-wsdl-reference"></a><span data-ttu-id="56291-102">ServiceDescription y referencias WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-102">ServiceDescription and WSDL Reference</span></span>
+<span data-ttu-id="56291-103">Este tema describe cómo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] asigna los documentos del lenguaje de descripción de servicios Web (WSDL) a y desde las instancias <xref:System.ServiceModel.Description.ServiceDescription>.</span><span class="sxs-lookup"><span data-stu-id="56291-103">This topic describes how [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] maps Web Services Description Language (WSDL) documents to and from <xref:System.ServiceModel.Description.ServiceDescription> instances.</span></span>  
   
-## Asignaciones de ServiceDescription a WSDL 1.1  
- Puede utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para exportar los documentos WSDL desde una instancia <xref:System.ServiceModel.Description.ServiceDescription> de su servicio.  Los documentos WSDL se generan automáticamente para su servicio al publicar los extremos de metadatos.  
+## <a name="how-servicedescription-maps-to-wsdl-11"></a><span data-ttu-id="56291-104">Asignaciones de ServiceDescription a WSDL 1.1</span><span class="sxs-lookup"><span data-stu-id="56291-104">How ServiceDescription Maps to WSDL 1.1</span></span>  
+ <span data-ttu-id="56291-105">Puede utilizar [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para exportar los documentos WSDL desde una instancia <xref:System.ServiceModel.Description.ServiceDescription> de su servicio.</span><span class="sxs-lookup"><span data-stu-id="56291-105">You can use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to export WSDL documents from a <xref:System.ServiceModel.Description.ServiceDescription> instance for your service.</span></span> <span data-ttu-id="56291-106">Los documentos WSDL se generan automáticamente para su servicio al publicar los extremos de metadatos.</span><span class="sxs-lookup"><span data-stu-id="56291-106">WSDL documents are automatically generated for your service when you publish metadata endpoints.</span></span>  
   
- Además, puede importar instancias <xref:System.ServiceModel.Description.ServiceEndpoint>, instancias <xref:System.ServiceModel.Description.ContractDescription>, e instancias <xref:System.ServiceModel.Channels.Binding> desde documentos WSDL mediante el tipo `WsdlImporter`.  
+ <span data-ttu-id="56291-107">Además, puede importar instancias <xref:System.ServiceModel.Description.ServiceEndpoint>, instancias <xref:System.ServiceModel.Description.ContractDescription>, e instancias <xref:System.ServiceModel.Channels.Binding> desde documentos WSDL mediante el tipo `WsdlImporter`.</span><span class="sxs-lookup"><span data-stu-id="56291-107">You can also import <xref:System.ServiceModel.Description.ServiceEndpoint> instances, <xref:System.ServiceModel.Description.ContractDescription> instances, and <xref:System.ServiceModel.Channels.Binding> instances from WSDL documents using the `WsdlImporter` type.</span></span>  
   
- Los documentos de WSDL, exportados mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], importan cualquier definición de esquema XML utilizada a partir de documentos de esquema XML externos.  Se exporta un documento de esquema XML independiente para cada espacio de nombres de destino utilizado por los tipos de datos en el servicio.  Igualmente, se exporta un documento WSDL independiente para cada espacio de nombres de destino utilizado por los contratos de servicios.  
+ <span data-ttu-id="56291-108">Los documentos de WSDL, exportados mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], importan cualquier definición de esquema XML utilizada a partir de documentos de esquema XML externos.</span><span class="sxs-lookup"><span data-stu-id="56291-108">The WSDL documents, exported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], import any XML Schema definitions used from external XML Schema documents.</span></span> <span data-ttu-id="56291-109">Se exporta un documento de esquema XML independiente para cada espacio de nombres de destino utilizado por los tipos de datos en el servicio.</span><span class="sxs-lookup"><span data-stu-id="56291-109">A separate XML Schema document is exported for each target namespace the data types use in the service.</span></span> <span data-ttu-id="56291-110">Igualmente, se exporta un documento WSDL independiente para cada espacio de nombres de destino utilizado por los contratos de servicios.</span><span class="sxs-lookup"><span data-stu-id="56291-110">Likewise, a separate WSDL document is exported for each target namespace the service contracts use.</span></span>  
   
-### ServiceDescription  
- Se asigna una instancia <xref:System.ServiceModel.Description.ServiceDescription> a un elemento `wsdl:service`.  Una instancia <xref:System.ServiceModel.Description.ServiceDescription> contiene una colección de instancias <xref:System.ServiceModel.Description.ServiceEndpoint> en la que cada una se asigna a elementos `wsdl:port` individuales.  
+### <a name="servicedescription"></a><span data-ttu-id="56291-111">ServiceDescription</span><span class="sxs-lookup"><span data-stu-id="56291-111">ServiceDescription</span></span>  
+ <span data-ttu-id="56291-112">Se asigna una instancia <xref:System.ServiceModel.Description.ServiceDescription> a un elemento `wsdl:service`.</span><span class="sxs-lookup"><span data-stu-id="56291-112">A <xref:System.ServiceModel.Description.ServiceDescription> instance maps to a `wsdl:service` element.</span></span> <span data-ttu-id="56291-113">Una instancia <xref:System.ServiceModel.Description.ServiceDescription> contiene una colección de instancias <xref:System.ServiceModel.Description.ServiceEndpoint> en la que cada una se asigna a elementos `wsdl:port` individuales.</span><span class="sxs-lookup"><span data-stu-id="56291-113">A <xref:System.ServiceModel.Description.ServiceDescription> instance contains a collection of <xref:System.ServiceModel.Description.ServiceEndpoint> instances that each map to individual `wsdl:port` elements.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Name`|El valor `wsdl:service`\/@name para el servicio.|  
-|`Namespace`|El espacio de nombres de destino para la definición `wsdl:service` del servicio.|  
-|`Endpoints`|Las definiciones `wsdl:port` del servicio.|  
+|<span data-ttu-id="56291-114">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-114">Properties</span></span>|<span data-ttu-id="56291-115">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-115">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="56291-116">El `wsdl:service` /@name valor para el servicio.</span><span class="sxs-lookup"><span data-stu-id="56291-116">The `wsdl:service`/@name value for the service.</span></span>|  
+|`Namespace`|<span data-ttu-id="56291-117">El espacio de nombres de destino para la definición `wsdl:service` del servicio.</span><span class="sxs-lookup"><span data-stu-id="56291-117">The targetNamespace for the `wsdl:service` definition for the service.</span></span>|  
+|`Endpoints`|<span data-ttu-id="56291-118">Las definiciones `wsdl:port` del servicio.</span><span class="sxs-lookup"><span data-stu-id="56291-118">The `wsdl:port` definitions for the service.</span></span>|  
   
-### ServiceEndpoint  
- Se asigna una instancia <xref:System.ServiceModel.Description.ServiceEndpoint> a un elemento `wsdl:port`.  Una instancia <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una dirección, un enlace y un contrato.  
+### <a name="serviceendpoint"></a><span data-ttu-id="56291-119">ServiceEndpoint</span><span class="sxs-lookup"><span data-stu-id="56291-119">ServiceEndpoint</span></span>  
+ <span data-ttu-id="56291-120">Se asigna una instancia <xref:System.ServiceModel.Description.ServiceEndpoint> a un elemento `wsdl:port`.</span><span class="sxs-lookup"><span data-stu-id="56291-120">A <xref:System.ServiceModel.Description.ServiceEndpoint> instance maps to a `wsdl:port` element.</span></span> <span data-ttu-id="56291-121">Una instancia <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una dirección, un enlace y un contrato.</span><span class="sxs-lookup"><span data-stu-id="56291-121">A <xref:System.ServiceModel.Description.ServiceEndpoint> instance contains an address, a binding, and a contract.</span></span>  
   
- Los comportamientos del extremo que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar el elemento `wsdl:port` del extremo al que están adjuntos.  
+ <span data-ttu-id="56291-122">Los comportamientos del extremo que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar el elemento `wsdl:port` del extremo al que están adjuntos.</span><span class="sxs-lookup"><span data-stu-id="56291-122">Endpoint behaviors that implement the <xref:System.ServiceModel.Description.IWsdlExportExtension> interface can modify the `wsdl:port` element for the endpoint they are attached to.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Name`|El valor `wsdl:port`\/@name del extremo, y el valor `wsdl:binding`\/@name del enlace del extremo.|  
-|`Address`|La dirección para la definición `wsdl:port` del extremo.<br /><br /> El transporte del extremo determina el formato de la dirección.  Por ejemplo, para transportes compatibles con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podría ser una dirección de SOAP o una referencia de extremo.|  
-|`Binding`|La definición `wsdl:binding` del extremo.<br /><br /> A diferencia de las definiciones `wsdl:binding`, los enlaces en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no están asociados con un contrato.|  
-|`Contract`|La definición `wsdl:portType` del extremo.|  
-|`Behaviors`|Los comportamientos del extremo que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar `wsdl:port` del extremo.|  
+|<span data-ttu-id="56291-123">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-123">Properties</span></span>|<span data-ttu-id="56291-124">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-124">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="56291-125">El `wsdl:port` /@name valor para el punto de conexión y la `wsdl:binding` /@name valor para el enlace de punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="56291-125">The `wsdl:port`/@name value for the endpoint and the `wsdl:binding`/@name value for the endpoint binding.</span></span>|  
+|`Address`|<span data-ttu-id="56291-126">La dirección para la definición `wsdl:port` del extremo.</span><span class="sxs-lookup"><span data-stu-id="56291-126">The address for the `wsdl:port` definition for the endpoint.</span></span><br /><br /> <span data-ttu-id="56291-127">El transporte del extremo determina el formato de la dirección.</span><span class="sxs-lookup"><span data-stu-id="56291-127">The transport for the endpoint determines the format of the address.</span></span> <span data-ttu-id="56291-128">Por ejemplo, para transportes compatibles con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] podría ser una dirección de SOAP o una referencia de extremo.</span><span class="sxs-lookup"><span data-stu-id="56291-128">For example, for [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-supported transports it could be a SOAP address or an endpoint reference.</span></span>|  
+|`Binding`|<span data-ttu-id="56291-129">La definición `wsdl:binding` del extremo.</span><span class="sxs-lookup"><span data-stu-id="56291-129">The `wsdl:binding` definition for the endpoint.</span></span><br /><br /> <span data-ttu-id="56291-130">A diferencia de las definiciones `wsdl:binding`, los enlaces en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no están asociados con un contrato.</span><span class="sxs-lookup"><span data-stu-id="56291-130">Unlike `wsdl:binding` definitions, bindings in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] are not tied to any one contract.</span></span>|  
+|`Contract`|<span data-ttu-id="56291-131">La definición `wsdl:portType` del extremo.</span><span class="sxs-lookup"><span data-stu-id="56291-131">The `wsdl:portType` definition for the endpoint.</span></span>|  
+|`Behaviors`|<span data-ttu-id="56291-132">Los comportamientos del extremo que implementan la interfaz <xref:System.ServiceModel.Description.IWsdlExportExtension> pueden modificar `wsdl:port` del extremo.</span><span class="sxs-lookup"><span data-stu-id="56291-132">Endpoint behaviors that implement the <xref:System.ServiceModel.Description.IWsdlExportExtension> interface can modify the `wsdl:port` for the endpoint.</span></span>|  
   
-### Enlaces  
- La instancia de enlace para una instancia `ServiceEndpoint` se asigna a una definición `wsdl:binding`.  A diferencia de las definiciones `wsdl:binding`, que deben estar asociadas a un definición `wsdl:portType` específica, los enlaces [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] son independientes de cualquier contrato.  
+### <a name="bindings"></a><span data-ttu-id="56291-133">Enlaces</span><span class="sxs-lookup"><span data-stu-id="56291-133">Bindings</span></span>  
+ <span data-ttu-id="56291-134">La instancia de enlace para una instancia `ServiceEndpoint` se asigna a una definición `wsdl:binding`.</span><span class="sxs-lookup"><span data-stu-id="56291-134">The binding instance for a `ServiceEndpoint` instance maps to a `wsdl:binding` definition.</span></span> <span data-ttu-id="56291-135">A diferencia de las definiciones `wsdl:binding`, que deben estar asociadas a un definición `wsdl:portType` específica, los enlaces [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] son independientes de cualquier contrato.</span><span class="sxs-lookup"><span data-stu-id="56291-135">Unlike `wsdl:binding` definitions, which must be associated with a specific `wsdl:portType` definition, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bindings are independent of any contract.</span></span>  
   
- Un enlace se compone de una colección de elementos de enlace.  Cada elemento describe algún aspecto de cómo el extremo se comunica con los clientes.  Además, un enlace tiene una <xref:System.ServiceModel.Channels.MessageVersion> que indica la <xref:System.ServiceModel.EnvelopeVersion> y la <xref:System.ServiceModel.Channels.AddressingVersion> del extremo.  
+ <span data-ttu-id="56291-136">Un enlace se compone de una colección de elementos de enlace.</span><span class="sxs-lookup"><span data-stu-id="56291-136">A binding is made up of a collection of binding elements.</span></span> <span data-ttu-id="56291-137">Cada elemento describe algún aspecto de cómo el extremo se comunica con los clientes.</span><span class="sxs-lookup"><span data-stu-id="56291-137">Each element describes some aspect of how the endpoint communicates with clients.</span></span> <span data-ttu-id="56291-138">Además, un enlace tiene una <xref:System.ServiceModel.Channels.MessageVersion> que indica la <xref:System.ServiceModel.EnvelopeVersion> y la <xref:System.ServiceModel.Channels.AddressingVersion> del extremo.</span><span class="sxs-lookup"><span data-stu-id="56291-138">Additionally, a binding has a <xref:System.ServiceModel.Channels.MessageVersion> that indicates the <xref:System.ServiceModel.EnvelopeVersion> and <xref:System.ServiceModel.Channels.AddressingVersion> for the endpoint.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Name`|Se utiliza en el nombre predeterminado de un extremo, que es el nombre del enlace al que se anexa el nombre del contrato separado por un guión bajo.|  
-|`Namespace`|`targetNamespace` para la definición `wsdl:binding`.<br /><br /> En importación, si una directiva está adjunta al puerto WSDL, el espacio de nombres del enlace importado se asigna a `targetNamespace` para la definición `wsdl:port`.|  
-|`BindingElementCollection`, como lo devuelve el método `CreateBindingElements`\(\).|Varias extensiones específicas del dominio para la definición `wsdl:binding`, normalmente, las aserciones de directiva.|  
-|`MessageVersion`|`EnvelopeVersion` y `AddressingVersion` para el extremo.<br /><br /> Cuando se especifica `MessageVersion.None`, el enlace de WSDL no contiene un enlace SOAP y el puerto WSDL no incluye contenido de WS\-Addressing.  Este valor se utiliza normalmente para extremos “XML sin formato” \(POX\).|  
+|<span data-ttu-id="56291-139">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-139">Properties</span></span>|<span data-ttu-id="56291-140">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-140">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="56291-141">Se utiliza en el nombre predeterminado de un extremo, que es el nombre del enlace al que se anexa el nombre del contrato separado por un guión bajo.</span><span class="sxs-lookup"><span data-stu-id="56291-141">Used in the default name of an endpoint, which is the binding name with the contract name appended separated by an underscore.</span></span>|  
+|`Namespace`|<span data-ttu-id="56291-142">`targetNamespace` para la definición `wsdl:binding`.</span><span class="sxs-lookup"><span data-stu-id="56291-142">The `targetNamespace` for the `wsdl:binding` definition.</span></span><br /><br /> <span data-ttu-id="56291-143">En importación, si una directiva está adjunta al puerto WSDL, el espacio de nombres del enlace importado se asigna a `targetNamespace` para la definición `wsdl:port`.</span><span class="sxs-lookup"><span data-stu-id="56291-143">On import, if a policy is attached to the WSDL port, the imported binding namespace maps to the `targetNamespace` for the `wsdl:port` definition.</span></span>|  
+|<span data-ttu-id="56291-144">`BindingElementCollection`, como lo devuelve el método `CreateBindingElements`().</span><span class="sxs-lookup"><span data-stu-id="56291-144">`BindingElementCollection`, as returned by the `CreateBindingElements`() method</span></span>|<span data-ttu-id="56291-145">Varias extensiones específicas del dominio para la definición `wsdl:binding`, normalmente, las aserciones de directiva.</span><span class="sxs-lookup"><span data-stu-id="56291-145">Various domain-specific extensions to the `wsdl:binding` definition, typically policy assertions.</span></span>|  
+|`MessageVersion`|<span data-ttu-id="56291-146">`EnvelopeVersion` y `AddressingVersion` para el extremo.</span><span class="sxs-lookup"><span data-stu-id="56291-146">The `EnvelopeVersion` and `AddressingVersion` for the endpoint.</span></span><br /><br /> <span data-ttu-id="56291-147">Cuando se especifica `MessageVersion.None`, el enlace de WSDL no contiene un enlace SOAP y el puerto WSDL no incluye contenido de WS-Addressing.</span><span class="sxs-lookup"><span data-stu-id="56291-147">When `MessageVersion.None` is specified, the WSDL binding does not contain a SOAP binding and the WSDL port does not contain WS-Addressing content.</span></span> <span data-ttu-id="56291-148">Este valor se utiliza normalmente para extremos “XML sin formato” (POX).</span><span class="sxs-lookup"><span data-stu-id="56291-148">This setting is typically used for plain old XML (POX) endpoints.</span></span>|  
   
-#### BindingElements  
- Los elementos de enlace de un enlace de extremo se asignan a distintas extensiones WSDL en `wsdl:binding`, por ejemplo, las aserciones de directiva.  
+#### <a name="bindingelements"></a><span data-ttu-id="56291-149">BindingElements</span><span class="sxs-lookup"><span data-stu-id="56291-149">BindingElements</span></span>  
+ <span data-ttu-id="56291-150">Los elementos de enlace de un enlace de extremo se asignan a distintas extensiones WSDL en `wsdl:binding`, por ejemplo, las aserciones de directiva.</span><span class="sxs-lookup"><span data-stu-id="56291-150">The binding elements for an endpoint binding map to various WSDL extensions in the `wsdl:binding`, such as policy assertions.</span></span>  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement> del enlace determina la dirección URI del transporte de un enlace SOAP.  
+ <span data-ttu-id="56291-151"><xref:System.ServiceModel.Channels.TransportBindingElement> del enlace determina la dirección URI del transporte de un enlace SOAP.</span><span class="sxs-lookup"><span data-stu-id="56291-151">The <xref:System.ServiceModel.Channels.TransportBindingElement> for the binding determines the transport Uniform Resource Identifier (URI) for a SOAP binding.</span></span>  
   
-#### AddressingVersion  
- `AddressingVersion` en un enlace se asigna a la versión de direccionamiento usada en `wsd:port`.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite direcciones SOAP 1.1 y SOAP 1.2, y referencias de extremo de WS\-Addressing 08\/2004 y de WS\-Addressing 1.0.  
+#### <a name="addressingversion"></a><span data-ttu-id="56291-152">AddressingVersion</span><span class="sxs-lookup"><span data-stu-id="56291-152">AddressingVersion</span></span>  
+ <span data-ttu-id="56291-153">`AddressingVersion` en un enlace se asigna a la versión de direccionamiento usada en `wsd:port`.</span><span class="sxs-lookup"><span data-stu-id="56291-153">The `AddressingVersion` on a binding maps to the version of addressing used in the `wsd:port`.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="56291-154"> admite direcciones SOAP 1.1 y SOAP 1.2, y referencias de extremo de WS-Addressing 08/2004 y de WS-Addressing 1.0.</span><span class="sxs-lookup"><span data-stu-id="56291-154"> supports SOAP 1.1 and SOAP 1.2 addresses, and WS-Addressing 08/2004 and WS-Addressing 1.0 endpoint references.</span></span>  
   
-#### EnvelopeVersion  
- `EnvelopeVersion` en un enlace se asigna a la versión de SOAP usada en `wsdl:binding`.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite enlaces SOAP 1.1 y SOAP 1.2.  
+#### <a name="envelopeversion"></a><span data-ttu-id="56291-155">EnvelopeVersion</span><span class="sxs-lookup"><span data-stu-id="56291-155">EnvelopeVersion</span></span>  
+ <span data-ttu-id="56291-156">`EnvelopeVersion` en un enlace se asigna a la versión de SOAP usada en `wsdl:binding`.</span><span class="sxs-lookup"><span data-stu-id="56291-156">The `EnvelopeVersion` on a binding maps to the version of SOAP used in the `wsdl:binding`.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="56291-157"> admite enlaces SOAP 1.1 y SOAP 1.2.</span><span class="sxs-lookup"><span data-stu-id="56291-157"> supports SOAP 1.1 and SOAP 1.2 bindings.</span></span>  
   
-### Contratos  
- La instancia <xref:System.ServiceModel.Description.ContractDescription> para una instancia `ServiceEndpoint` se asigna a `wsdl:portType`.  Una instancia `ContractDescription` describe todas las operaciones de un contrato determinado.  
+### <a name="contracts"></a><span data-ttu-id="56291-158">Contratos</span><span class="sxs-lookup"><span data-stu-id="56291-158">Contracts</span></span>  
+ <span data-ttu-id="56291-159">La instancia <xref:System.ServiceModel.Description.ContractDescription> para una instancia `ServiceEndpoint` se asigna a `wsdl:portType`.</span><span class="sxs-lookup"><span data-stu-id="56291-159">The <xref:System.ServiceModel.Description.ContractDescription> instance for a `ServiceEndpoint` instance maps to a `wsdl:portType`.</span></span> <span data-ttu-id="56291-160">Una instancia `ContractDescription` describe todas las operaciones de un contrato determinado.</span><span class="sxs-lookup"><span data-stu-id="56291-160">A `ContractDescription` instance describes all of the operations for a given contract.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Name`|El valor `wsdl:portType`\/@name del contrato.|  
-|`Namespace`|El espacio de nombres de destino para la definición `wsdl:portType`.|  
-|`SessionMode`|El valor `wsdl:portType`\/@ msc:usingSession para el contrato.  Este atributo es una extensión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para WSDL 1.1.|  
-|`Operations`|Las definiciones `wsdl:operation` para el contrato.|  
+|<span data-ttu-id="56291-161">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-161">Properties</span></span>|<span data-ttu-id="56291-162">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-162">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="56291-163">El `wsdl:portType` /@name valor para el contrato.</span><span class="sxs-lookup"><span data-stu-id="56291-163">The `wsdl:portType`/@name value for the contract.</span></span>|  
+|`Namespace`|<span data-ttu-id="56291-164">El espacio de nombres de destino para la definición `wsdl:portType`.</span><span class="sxs-lookup"><span data-stu-id="56291-164">The targetNamespace for the `wsdl:portType` definition.</span></span>|  
+|`SessionMode`|<span data-ttu-id="56291-165">El `wsdl:portType` /@msc:usingSession valor para el contrato.</span><span class="sxs-lookup"><span data-stu-id="56291-165">The `wsdl:portType`/@msc:usingSession value for the contract.</span></span> <span data-ttu-id="56291-166">Este atributo es una extensión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para WSDL 1.1.</span><span class="sxs-lookup"><span data-stu-id="56291-166">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`Operations`|<span data-ttu-id="56291-167">Las definiciones `wsdl:operation` para el contrato.</span><span class="sxs-lookup"><span data-stu-id="56291-167">The `wsdl:operation` definitions for the contract.</span></span>|  
   
-### Operaciones  
- Una instancia <xref:System.ServiceModel.Description.OperationDescription> se asigna a `wsdl:portType`\/`wsdl:operation`.  `OperationDescription` contiene una colección de instancias `MessageDescription` que describen los mensajes para la operación.  
+### <a name="operations"></a><span data-ttu-id="56291-168">Operaciones</span><span class="sxs-lookup"><span data-stu-id="56291-168">Operations</span></span>  
+ <span data-ttu-id="56291-169">Un <xref:System.ServiceModel.Description.OperationDescription> instancia se asigna a un `wsdl:portType` / `wsdl:operation`.</span><span class="sxs-lookup"><span data-stu-id="56291-169">An <xref:System.ServiceModel.Description.OperationDescription> instance maps to a `wsdl:portType`/`wsdl:operation`.</span></span> <span data-ttu-id="56291-170">`OperationDescription` contiene una colección de instancias `MessageDescription` que describen los mensajes para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-170">An `OperationDescription` contains a collection of `MessageDescription` instances that describe the messages for the operation.</span></span>  
   
- Dos comportamientos de la operación participan considerablemente en la asignación de `OperationDescription` a un documento WSDL: `DataContractSerializerOperationBehavior` y `XmlSerializerOperationBehavior`.  
+ <span data-ttu-id="56291-171">Dos comportamientos de la operación participan considerablemente en la asignación de `OperationDescription` a un documento WSDL: `DataContractSerializerOperationBehavior` y `XmlSerializerOperationBehavior`.</span><span class="sxs-lookup"><span data-stu-id="56291-171">Two operation behaviors participate heavily in how an `OperationDescription` is mapped to a WSDL document: `DataContractSerializerOperationBehavior` and `XmlSerializerOperationBehavior`.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Name`|El valor `wsdl:portType`\/`wsdl:operation`\/@name para la operación.|  
-|`ProtectionLevel`|Aserciones de protección de la directiva de seguridad adjuntas a los mensajes `wsdl:binding/wsdl:operation` de esta operación.|  
-|`IsInitiating`|El valor `wsdl:portType`\/`wsdl:operation`\/@msc:isInitiating para la operación.  Este atributo es una extensión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para WSDL 1.1.|  
-|`IsTerminating`|El valor `wsdl:portType`\/`wsdl:operation`\/@msc:isTerminating para la operación.  Este atributo es una extensión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para WSDL 1.1.|  
-|`Messages`|Los mensajes `wsdl:portType`\/`wsdl:operation`\/`wsdl:input` y `wsdl:portType`\/`wsdl:operation`\/`wsdl:output` para la operación.|  
-|`Faults`|Las definiciones `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault` para la operación.|  
-|`Behaviors`|`DataContractSerializerOperationBehavior` y `XmlSerializerOperationBehavior` están relacionados con el enlace y los mensajes de la operación.|  
+|<span data-ttu-id="56291-172">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-172">Properties</span></span>|<span data-ttu-id="56291-173">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-173">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="56291-174">El `wsdl:portType` / `wsdl:operation` /@name valor para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-174">The `wsdl:portType`/`wsdl:operation`/@name value for the operation.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="56291-175">Aserciones de protección de la directiva de seguridad adjuntas a los mensajes `wsdl:binding/wsdl:operation` de esta operación.</span><span class="sxs-lookup"><span data-stu-id="56291-175">Protection assertions in security policy attached to the `wsdl:binding/wsdl:operation` messages for this operation.</span></span>|  
+|`IsInitiating`|<span data-ttu-id="56291-176">El `wsdl:portType` / `wsdl:operation` /@msc:isInitiating valor para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-176">The `wsdl:portType`/`wsdl:operation`/@msc:isInitiating value for the operation.</span></span> <span data-ttu-id="56291-177">Este atributo es una extensión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para WSDL 1.1.</span><span class="sxs-lookup"><span data-stu-id="56291-177">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`IsTerminating`|<span data-ttu-id="56291-178">El `wsdl:portType` / `wsdl:operation` /@msc:isTerminating valor para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-178">The `wsdl:portType`/`wsdl:operation`/@msc:isTerminating value for the operation.</span></span> <span data-ttu-id="56291-179">Este atributo es una extensión [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para WSDL 1.1.</span><span class="sxs-lookup"><span data-stu-id="56291-179">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`Messages`|<span data-ttu-id="56291-180">El `wsdl:portType` / `wsdl:operation` / `wsdl:input` y `wsdl:portType` / `wsdl:operation` / `wsdl:output` mensajes para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-180">The `wsdl:portType`/`wsdl:operation`/`wsdl:input` and `wsdl:portType`/`wsdl:operation`/`wsdl:output` messages for the operation.</span></span>|  
+|`Faults`|<span data-ttu-id="56291-181">El `wsdl:portType` / `wsdl:operation` / `wsdl:fault` definiciones para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-181">The `wsdl:portType`/`wsdl:operation`/`wsdl:fault` definitions for the operation.</span></span>|  
+|`Behaviors`|<span data-ttu-id="56291-182">`DataContractSerializerOperationBehavior` y `XmlSerializerOperationBehavior` están relacionados con el enlace y los mensajes de la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-182">The `DataContractSerializerOperationBehavior` and `XmlSerializerOperationBehavior` deal with the operation binding and the operation messages.</span></span>|  
   
-#### DataContractSerializerOperationBehavior  
- `DataContractSerializerOperationBehavior` de una operación es una implementación `IWsdlExportExtension` que exporta los mensajes y el enlace WSDL de esa operación.  Los tipos del esquema XML se exportan mediante `XsdDataContractExporter`.  `DataContractSerializerOperationBehavior` también determina el uso y el estilo, así como el exportador e importador del esquema que se utilizarán para esa operación.  
+#### <a name="the-datacontractserializeroperationbehavior"></a><span data-ttu-id="56291-183">DataContractSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="56291-183">The DataContractSerializerOperationBehavior</span></span>  
+ <span data-ttu-id="56291-184">`DataContractSerializerOperationBehavior` de una operación es una implementación `IWsdlExportExtension` que exporta los mensajes y el enlace WSDL de esa operación.</span><span class="sxs-lookup"><span data-stu-id="56291-184">The `DataContractSerializerOperationBehavior` for an operation is an `IWsdlExportExtension` implementation that exports the WSDL messages and binding for that operation.</span></span> <span data-ttu-id="56291-185">Los tipos del esquema XML se exportan mediante `XsdDataContractExporter`.</span><span class="sxs-lookup"><span data-stu-id="56291-185">The XML Schema types are exported using the `XsdDataContractExporter`.</span></span> <span data-ttu-id="56291-186">`DataContractSerializerOperationBehavior` también determina el uso y el estilo, así como el exportador e importador del esquema que se utilizarán para esa operación.</span><span class="sxs-lookup"><span data-stu-id="56291-186">The `DataContractSerializerOperationBehavior` also determines the use, style, and schema exporter and importer to use for that operation.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`DataContractFormatAttribute`|La propiedad `Style` de este atributo se asigna al valor `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/@style de la operación.<br /><br /> `DataContractSerializerOperationBehavior` solo admite el uso literal de los tipos del esquema en WSDL.|  
+|<span data-ttu-id="56291-187">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-187">Properties</span></span>|<span data-ttu-id="56291-188">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-188">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`DataContractFormatAttribute`|<span data-ttu-id="56291-189">El `Style` propiedad para este atributo se asigna a la `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style valor para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-189">The `Style` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/@style value for the operation.</span></span><br /><br /> <span data-ttu-id="56291-190">`DataContractSerializerOperationBehavior` solo admite el uso literal de los tipos del esquema en WSDL.</span><span class="sxs-lookup"><span data-stu-id="56291-190">The `DataContractSerializerOperationBehavior` supports only the literal use of the schema types in the WSDL.</span></span>|  
   
-#### XmlSerializerOperationBehavior  
- `XmlSerializerOperationBehavior` de una operación es una implementación `IWsdlExportExtension` que exporta los mensajes y el enlace WSDL de esa operación.  Los tipos del esquema XML se exportan mediante `XmlSchemaExporter`.  `XmlSerializerOperationBehavior` también determina el uso y el estilo, así como el exportador e importador del esquema que se utilizarán para esa operación.  
+#### <a name="the-xmlserializeroperationbehavior"></a><span data-ttu-id="56291-191">XmlSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="56291-191">The XmlSerializerOperationBehavior</span></span>  
+ <span data-ttu-id="56291-192">`XmlSerializerOperationBehavior` de una operación es una implementación `IWsdlExportExtension` que exporta los mensajes y el enlace WSDL de esa operación.</span><span class="sxs-lookup"><span data-stu-id="56291-192">The `XmlSerializerOperationBehavior` for an operation is an `IWsdlExportExtension` implementation that exports the WSDL messages and binding for that operation.</span></span> <span data-ttu-id="56291-193">Los tipos del esquema XML se exportan mediante `XmlSchemaExporter`.</span><span class="sxs-lookup"><span data-stu-id="56291-193">The XML Schema types are exported using the `XmlSchemaExporter`.</span></span> <span data-ttu-id="56291-194">`XmlSerializerOperationBehavior` también determina el uso y el estilo, así como el exportador e importador del esquema que se utilizarán para esa operación.</span><span class="sxs-lookup"><span data-stu-id="56291-194">The `XmlSerializerOperationBehavior` also determines the use, style, and schema exporter and importer to use for that operation.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`XmlSerializerFormatAttribute`|La propiedad `Style` de este atributo se asigna al valor `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/@style de la operación.<br /><br /> La propiedad `Use` de este atributo se asigna a los valores `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/\* @ para todos los mensajes de la operación.|  
+|<span data-ttu-id="56291-195">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-195">Properties</span></span>|<span data-ttu-id="56291-196">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-196">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`XmlSerializerFormatAttribute`|<span data-ttu-id="56291-197">El `Style` propiedad para este atributo se asigna a la `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style valor para la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-197">The `Style` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/@style value for the operation.</span></span><br /><br /> <span data-ttu-id="56291-198">El `Use` propiedad para este atributo se asigna a la `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use valores para todos los mensajes en la operación.</span><span class="sxs-lookup"><span data-stu-id="56291-198">The `Use` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/*/@use values for all messages in the operation.</span></span>|  
   
-### Mensajes  
- Se asigna una instancia `MessageDescription` a `wsdl:message`, al que hace referencia `wsdl:portType`\/`wsdl:operation`\/`wsdl:input`, o a un mensaje `wsdl:portType`\/`wsdl:operation`\/`wsdl:output` de una operación.  `MessageDescription` posee un cuerpo y encabezados.  
+### <a name="messages"></a><span data-ttu-id="56291-199">Mensajes</span><span class="sxs-lookup"><span data-stu-id="56291-199">Messages</span></span>  
+ <span data-ttu-id="56291-200">A `MessageDescription` instancia se asigna a un `wsdl:message` al que hace referencia un `wsdl:portType` / `wsdl:operation` / `wsdl:input` o un `wsdl:portType` / `wsdl:operation` / `wsdl:output`mensaje en una operación.</span><span class="sxs-lookup"><span data-stu-id="56291-200">A `MessageDescription` instance maps to a `wsdl:message` that is referenced by a `wsdl:portType`/`wsdl:operation`/`wsdl:input` or a `wsdl:portType`/`wsdl:operation`/`wsdl:output` message in an operation.</span></span> <span data-ttu-id="56291-201">`MessageDescription` posee un cuerpo y encabezados.</span><span class="sxs-lookup"><span data-stu-id="56291-201">A `MessageDescription` has a body and headers.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Action`|La acción de SOAP o de WS\-Addressing para el mensaje.<br /><br /> Tenga en cuenta que las operaciones que utilizan la cadena de acción "\*" no se representan en WSDL.|  
-|`Direction`|`MessageDirection.Input` se asigna a `wsdl:input`.<br /><br /> `MessageDirection.Output` se asigna a `wsdl:output`.|  
-|`ProtectionLevel`|Aserciones de protección de la directiva de seguridad adjuntas a las definiciones `wsdl:message` de este mensaje.|  
-|`Body`|El cuerpo del mensaje.|  
-|`Headers`|Los encabezados del mensaje.|  
-|`ContractDescription.Name`, `OperationContract.Name`|Al exportar, se utilizan para derivar el valor `wsdl:message`\/@name.|  
+|<span data-ttu-id="56291-202">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-202">Properties</span></span>|<span data-ttu-id="56291-203">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-203">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`Action`|<span data-ttu-id="56291-204">La acción de SOAP o de WS-Addressing para el mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-204">The SOAP or WS-Addressing action for the message.</span></span><br /><br /> <span data-ttu-id="56291-205">Tenga en cuenta que las operaciones que utilizan la cadena de acción "*" no se representan en WSDL.</span><span class="sxs-lookup"><span data-stu-id="56291-205">Note that operations that use the Action string "*" are not represented in WSDL.</span></span>|  
+|`Direction`|<span data-ttu-id="56291-206">`MessageDirection.Input` se asigna a `wsdl:input`.</span><span class="sxs-lookup"><span data-stu-id="56291-206">`MessageDirection.Input` maps to `wsdl:input`.</span></span><br /><br /> <span data-ttu-id="56291-207">`MessageDirection.Output` se asigna a `wsdl:output`.</span><span class="sxs-lookup"><span data-stu-id="56291-207">`MessageDirection.Output` maps to `wsdl:output`.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="56291-208">Aserciones de protección de la directiva de seguridad adjuntas a las definiciones `wsdl:message` de este mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-208">Protection assertions in security policy attached to the `wsdl:message` definition for this message.</span></span>|  
+|`Body`|<span data-ttu-id="56291-209">El cuerpo del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-209">The message body for the message.</span></span>|  
+|`Headers`|<span data-ttu-id="56291-210">Los encabezados del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-210">The headers for the message.</span></span>|  
+|<span data-ttu-id="56291-211">`ContractDescription.Name`, `OperationContract.Name`</span><span class="sxs-lookup"><span data-stu-id="56291-211">`ContractDescription.Name`, `OperationContract.Name`</span></span>|<span data-ttu-id="56291-212">Durante la exportación, que se usa para derivar el `wsdl:message` /@name valor.</span><span class="sxs-lookup"><span data-stu-id="56291-212">On export, used to derive the `wsdl:message`/@name value.</span></span>|  
   
-#### Cuerpo del mensaje  
- Se asigna una instancia de `MessageBodyDescription` a las definiciones `wsdl:message`\/`wsdl:part` para el cuerpo de un mensaje.  El cuerpo del mensaje puede ser de estilo ajustado o sencillo.  
+#### <a name="message-body"></a><span data-ttu-id="56291-213">Cuerpo del mensaje</span><span class="sxs-lookup"><span data-stu-id="56291-213">Message Body</span></span>  
+ <span data-ttu-id="56291-214">A `MessageBodyDescription` instancia se asigna a la `wsdl:message` / `wsdl:part` definiciones para el cuerpo de un mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-214">A `MessageBodyDescription` instance maps to the `wsdl:message`/`wsdl:part` definitions for the body of a message.</span></span> <span data-ttu-id="56291-215">El cuerpo del mensaje puede ser de estilo ajustado o sencillo.</span><span class="sxs-lookup"><span data-stu-id="56291-215">The message body may be wrapped or bare.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`WrapperName`|Si el estilo no es RPC, se asigna `WrapperName` al nombre de elemento al que hace referencia `wsdl:message`\/`wsdl:part` con el valor @name establecido en "parámetros".|  
-|`WrapperNamespace`|Si el estilo no es RPC, se asigna `WrapperNamespace` al espacio de nombres del elemento de `wsdl:message`\/`wsdl:part` con el valor @name establecido en "parámetros".|  
-|`Parts`|Las partes del mensaje de este cuerpo del mensaje.|  
-|`ReturnValue`|El elemento secundario del elemento contenedor, en caso de existir uno \(documente con estilo ajustado o RPC\), de lo contrario, el primer `wsdl:message`\/`wsdl:part` del mensaje.|  
+|<span data-ttu-id="56291-216">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-216">Properties</span></span>|<span data-ttu-id="56291-217">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-217">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`WrapperName`|<span data-ttu-id="56291-218">Si el estilo no es RPC, el `WrapperName` asigna al nombre del elemento al que hace referencia el `wsdl:message` / `wsdl:part` con @name establecido en "parámetros".</span><span class="sxs-lookup"><span data-stu-id="56291-218">If the style is not RPC, then the `WrapperName` maps to the element name referenced by the `wsdl:message`/`wsdl:part` with @name set to "parameters".</span></span>|  
+|`WrapperNamespace`|<span data-ttu-id="56291-219">Si el estilo no es RPC, el `WrapperNamespace` se asigna al espacio de nombres de elemento para el `wsdl:message` / `wsdl:part` con @name establecido en "parámetros".</span><span class="sxs-lookup"><span data-stu-id="56291-219">If the style is not RPC, then the `WrapperNamespace` maps to the element namespace for the `wsdl:message`/`wsdl:part` with @name set to "parameters".</span></span>|  
+|`Parts`|<span data-ttu-id="56291-220">Las partes del mensaje de este cuerpo del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-220">The message parts for this message body.</span></span>|  
+|`ReturnValue`|<span data-ttu-id="56291-221">El elemento secundario del elemento contenedor, si un elemento contenedor existe (Documente con estilo ajustado o estilo RPC), de lo contrario, la primera `wsdl:message` / `wsdl:part` en el mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-221">The child element of the wrapper element if a wrapper element exists (document wrapped style, or RPC style), otherwise the first `wsdl:message`/`wsdl:part` in the message.</span></span>|  
   
-#### Partes del mensaje  
- Se asigna una instancia `MessagePartDescription` a `wsdl:message`\/`wsdl:part` y al tipo o elemento de esquema XML a los que señala la parte del mensaje.  
+#### <a name="message-parts"></a><span data-ttu-id="56291-222">Partes del mensaje</span><span class="sxs-lookup"><span data-stu-id="56291-222">Message Parts</span></span>  
+ <span data-ttu-id="56291-223">A `MessagePartDescription` instancia se asigna a un `wsdl:message` / `wsdl:part` y el tipo de esquema XML o el elemento al que apunta la parte del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-223">A `MessagePartDescription` instance maps to a `wsdl:message`/`wsdl:part` and the XML schema type or element that the message part points to.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Name`|El valor de `wsd:message`\/`wsdl:part`\/@name para la parte del mensaje y el nombre del elemento a los que señala la parte del mensaje.|  
-|`Namespace`|Espacio de nombres del elemento al que señala la parte del mensaje.|  
-|`Index`|Índice de `wsdl:message`\/`wsdl:part` para el mensaje.|  
-|`ProtectionLevel`|Aserciones de protección de la directiva de seguridad adjuntas a la definición `wsdl:message` de esta parte del mensaje.  La directiva se parametriza para señalar la parte del mensaje específica.|  
-|`MessageType`|El tipo de esquema XML del elemento al que señala la parte del mensaje.|  
+|<span data-ttu-id="56291-224">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-224">Properties</span></span>|<span data-ttu-id="56291-225">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-225">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="56291-226">El `wsd:message` / `wsdl:part` /@name valor para la parte del mensaje y el nombre del elemento al que señala la parte del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-226">The `wsd:message`/`wsdl:part`/@name value for the message part and the name of the element that the message part points to.</span></span>|  
+|`Namespace`|<span data-ttu-id="56291-227">Espacio de nombres del elemento al que señala la parte del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-227">The namespace of the element that the message part points to.</span></span>|  
+|`Index`|<span data-ttu-id="56291-228">El índice de la `wsdl:message` / `wsdl:part` para el mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-228">The index of the `wsdl:message`/`wsdl:part` for the message.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="56291-229">Aserciones de protección de la directiva de seguridad adjuntas a la definición `wsdl:message` de esta parte del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-229">Protection assertions in security policy attached to the `wsdl:message` definition for this message part.</span></span> <span data-ttu-id="56291-230">La directiva se parametriza para señalar la parte del mensaje específica.</span><span class="sxs-lookup"><span data-stu-id="56291-230">The policy is parameterized to point to the specific message part.</span></span>|  
+|`MessageType`|<span data-ttu-id="56291-231">El tipo de esquema XML del elemento al que señala la parte del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-231">The XML Schema type of the element that the message part points to.</span></span>|  
   
-#### Encabezados de mensajes  
- Una instancia `MessageHeaderDescription` es una parte de un mensaje que también se asigna a un enlace `soap:header` de la parte del mensaje.  
+#### <a name="message-headers"></a><span data-ttu-id="56291-232">Encabezados de mensajes</span><span class="sxs-lookup"><span data-stu-id="56291-232">Message Headers</span></span>  
+ <span data-ttu-id="56291-233">Una instancia `MessageHeaderDescription` es una parte de un mensaje que también se asigna a un enlace `soap:header` de la parte del mensaje.</span><span class="sxs-lookup"><span data-stu-id="56291-233">A `MessageHeaderDescription` instance is a message part that also maps to a `soap:header` binding for the message part.</span></span>  
   
-### Errores  
- Se asigna una instancia `FaultDescription` a una definición `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault` y a su definición `wsdl:message` asociada.  Se agrega `wsdl:message` al mismo espacio de nombres de destino que su tipo de puerto WSDL asociado.  `wsdl:message` tiene una única parte del mensaje denominada "detalle" que señala al elemento de esquema XML que corresponde al valor de propiedad `DefaultType` para la instancia `FaultDescription`.  
+### <a name="faults"></a><span data-ttu-id="56291-234">Errores</span><span class="sxs-lookup"><span data-stu-id="56291-234">Faults</span></span>  
+ <span data-ttu-id="56291-235">A `FaultDescription` instancia se asigna a un `wsdl:portType` / `wsdl:operation` / `wsdl:fault` definición y sus asociados `wsdl:message` definición.</span><span class="sxs-lookup"><span data-stu-id="56291-235">A `FaultDescription` instance maps to a `wsdl:portType`/`wsdl:operation`/`wsdl:fault` definition and its associated `wsdl:message` definition.</span></span> <span data-ttu-id="56291-236">Se agrega `wsdl:message` al mismo espacio de nombres de destino que su tipo de puerto WSDL asociado.</span><span class="sxs-lookup"><span data-stu-id="56291-236">The `wsdl:message` is added to the same target namespace as its associated WSDL port type.</span></span> <span data-ttu-id="56291-237">`wsdl:message` tiene una única parte del mensaje denominada "detalle" que señala al elemento de esquema XML que corresponde al valor de propiedad `DefaultType` para la instancia `FaultDescription`.</span><span class="sxs-lookup"><span data-stu-id="56291-237">The `wsdl:message` has a single message part named "detail" that points to the XML Schema element that corresponds to the `DefaultType` property value for the `FaultDescription` instance.</span></span>  
   
-|Propiedades|Asignación WSDL|  
-|-----------------|---------------------|  
-|`Name`|El valor `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault`\/@name para el error.|  
-|`Namespace`|El espacio de nombres del elemento de esquema XML al que señala la parte del mensaje de información acerca del error.|  
-|`Action`|La acción de SOAP o de WS\-Addressing para el error.|  
-|`ProtectionLevel`|Aserciones de protección de la directiva de seguridad adjuntas a la definición `wsdl:message` de este error.|  
-|`DetailType`|El tipo de esquema XML del elemento al que señala la parte del mensaje de información.|  
-|`Name, ContractDescription.Name, OperationDescription.Name,`|Se utiliza para derivar el valor `wsdl:message`\/@name para el mensaje de error.|  
+|<span data-ttu-id="56291-238">Propiedades</span><span class="sxs-lookup"><span data-stu-id="56291-238">Properties</span></span>|<span data-ttu-id="56291-239">Asignación WSDL</span><span class="sxs-lookup"><span data-stu-id="56291-239">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="56291-240">El `wsdl:portType` / `wsdl:operation` / `wsdl:fault` /@name valor para el error.</span><span class="sxs-lookup"><span data-stu-id="56291-240">The `wsdl:portType`/`wsdl:operation`/`wsdl:fault`/@name value for the fault.</span></span>|  
+|`Namespace`|<span data-ttu-id="56291-241">El espacio de nombres del elemento de esquema XML al que señala la parte del mensaje de información acerca del error.</span><span class="sxs-lookup"><span data-stu-id="56291-241">The namespace of the XML Schema element that the fault detail message part points to.</span></span>|  
+|`Action`|<span data-ttu-id="56291-242">La acción de SOAP o de WS-Addressing para el error.</span><span class="sxs-lookup"><span data-stu-id="56291-242">The SOAP or WS-Addressing action for the fault.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="56291-243">Aserciones de protección de la directiva de seguridad adjuntas a la definición `wsdl:message` de este error.</span><span class="sxs-lookup"><span data-stu-id="56291-243">Protection assertions in security policy attached to the `wsdl:message` definition for this fault.</span></span>|  
+|`DetailType`|<span data-ttu-id="56291-244">El tipo de esquema XML del elemento al que señala la parte del mensaje de información.</span><span class="sxs-lookup"><span data-stu-id="56291-244">The XML Schema type of the element that the detail message part points to.</span></span>|  
+|`Name, ContractDescription.Name, OperationDescription.Name,`|<span data-ttu-id="56291-245">Usar para derivar el `wsdl:message` /@name valor para el mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="56291-245">Used to derive the `wsdl:message`/@name value for the fault message.</span></span>|  
   
-## Vea también  
+## <a name="see-also"></a><span data-ttu-id="56291-246">Vea también</span><span class="sxs-lookup"><span data-stu-id="56291-246">See Also</span></span>  
  <xref:System.ServiceModel.Description>

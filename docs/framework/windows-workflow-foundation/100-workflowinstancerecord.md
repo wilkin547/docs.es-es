@@ -1,45 +1,49 @@
 ---
-title: "100 - WorkflowInstanceRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 100 - WorkflowInstanceRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed4d1851-b378-489b-a22d-c1db09571fb4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b22ccea1130b4f2c9a1d60d8e4e0218fecaf7afb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 100 - WorkflowInstanceRecord
-## Propiedades  
+# <a name="100---workflowinstancerecord"></a><span data-ttu-id="124c7-102">100 - WorkflowInstanceRecord</span><span class="sxs-lookup"><span data-stu-id="124c7-102">100 - WorkflowInstanceRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="124c7-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="124c7-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|100|  
-|Palabras clave|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
-|Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="124c7-104">Id.</span><span class="sxs-lookup"><span data-stu-id="124c7-104">Id</span></span>|<span data-ttu-id="124c7-105">100</span><span class="sxs-lookup"><span data-stu-id="124c7-105">100</span></span>|  
+|<span data-ttu-id="124c7-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="124c7-106">Keywords</span></span>|<span data-ttu-id="124c7-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="124c7-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="124c7-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="124c7-108">Level</span></span>|<span data-ttu-id="124c7-109">Información</span><span class="sxs-lookup"><span data-stu-id="124c7-109">Information</span></span>|  
+|<span data-ttu-id="124c7-110">Canal</span><span class="sxs-lookup"><span data-stu-id="124c7-110">Channel</span></span>|<span data-ttu-id="124c7-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="124c7-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descripción  
- El participante de seguimiento de ETW emite este evento cuando una instancia de flujo de trabajo emite WorkflowInstanceRecord para los estados del flujo de trabajo: iniciado, reanudado, conservado, inactivo, eliminado, completado, cancelado, descargado y no suspendido.  
+## <a name="description"></a><span data-ttu-id="124c7-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="124c7-112">Description</span></span>  
+ <span data-ttu-id="124c7-113">El participante de seguimiento de ETW emite este evento cuando una instancia de flujo de trabajo emite WorkflowInstanceRecord para los estados del flujo de trabajo: iniciado, reanudado, conservado, inactivo, eliminado, completado, cancelado, descargado y no suspendido.</span><span class="sxs-lookup"><span data-stu-id="124c7-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceRecord for workflow states : Started, Resumed, Persisted, Idle, Deleted, Completed, Canceled, Unloaded, Unsuspended.</span></span>  
   
-## Mensaje  
- TrackRecord\= WorkflowInstanceRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, State \= %5, Annotations \= %6, ProfileName \= %7  
+## <a name="message"></a><span data-ttu-id="124c7-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="124c7-114">Message</span></span>  
+ <span data-ttu-id="124c7-115">TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7</span><span class="sxs-lookup"><span data-stu-id="124c7-115">TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7</span></span>  
   
-## Detalles  
+## <a name="details"></a><span data-ttu-id="124c7-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="124c7-116">Details</span></span>  
   
-|Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|InstanceId|xs:GUID|El id. de instancia del flujo de trabajo.|  
-|RecordNumber|xs:long|El número de secuencia del registro emitido.|  
-|EventTime|xs:dateTime|La hora en UTC cuando se emitió el evento.|  
-|ActivityDefinitionId|xs:string|El nombre de la actividad raíz del flujo de trabajo.|  
-|State|xs:string|El estado actual del flujo de trabajo.|  
-|Annotations|xs:string|Las anotaciones que se agregaron a este evento.Los valores se almacenan en un elemento xml con el formato\<items\>\< item  name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>.Si no se especifica ninguna anotación, la cadena contendrá \<items\/\>.El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<items\>...\<\/items.\>|  
-|ProfileName|xs:string|El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.|  
-|HostReference|xs:string|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.Su formato se define como 'Ruta de acceso virtual de la aplicación del nombre del sitio web&#124;Ruta de acceso virtual del servicio&#124;NombreServicio' Ejemplo: 'Sitio web predeterminado\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
-|AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="124c7-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="124c7-117">Data Item Name</span></span>|<span data-ttu-id="124c7-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="124c7-118">Data Item Type</span></span>|<span data-ttu-id="124c7-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="124c7-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="124c7-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="124c7-120">InstanceId</span></span>|<span data-ttu-id="124c7-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="124c7-121">xs:GUID</span></span>|<span data-ttu-id="124c7-122">El id. de instancia del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="124c7-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="124c7-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="124c7-123">RecordNumber</span></span>|<span data-ttu-id="124c7-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="124c7-124">xs:long</span></span>|<span data-ttu-id="124c7-125">El número de secuencia del registro emitido.</span><span class="sxs-lookup"><span data-stu-id="124c7-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="124c7-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="124c7-126">EventTime</span></span>|<span data-ttu-id="124c7-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="124c7-127">xs:dateTime</span></span>|<span data-ttu-id="124c7-128">La hora en UTC cuando se emitió el evento.</span><span class="sxs-lookup"><span data-stu-id="124c7-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="124c7-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="124c7-129">ActivityDefinitionId</span></span>|<span data-ttu-id="124c7-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="124c7-130">xs:string</span></span>|<span data-ttu-id="124c7-131">El nombre de la actividad raíz del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="124c7-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="124c7-132">Estado</span><span class="sxs-lookup"><span data-stu-id="124c7-132">State</span></span>|<span data-ttu-id="124c7-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="124c7-133">xs:string</span></span>|<span data-ttu-id="124c7-134">El estado actual del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="124c7-134">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="124c7-135">Anotaciones</span><span class="sxs-lookup"><span data-stu-id="124c7-135">Annotations</span></span>|<span data-ttu-id="124c7-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="124c7-136">xs:string</span></span>|<span data-ttu-id="124c7-137">Las anotaciones que se agregaron a este evento.</span><span class="sxs-lookup"><span data-stu-id="124c7-137">The annotations that were added to this event.</span></span>  <span data-ttu-id="124c7-138">Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "annotationName" Type = "> annotationValue\</artículo > \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="124c7-138">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="124c7-139">Si se especifica ninguna anotación, a continuación, la cadena contiene \<elementos / >.</span><span class="sxs-lookup"><span data-stu-id="124c7-139">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="124c7-140">El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.</span><span class="sxs-lookup"><span data-stu-id="124c7-140">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="124c7-141">Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<elementos >...  \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="124c7-141">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="124c7-142">ProfileName</span><span class="sxs-lookup"><span data-stu-id="124c7-142">ProfileName</span></span>|<span data-ttu-id="124c7-143">xs:string</span><span class="sxs-lookup"><span data-stu-id="124c7-143">xs:string</span></span>|<span data-ttu-id="124c7-144">El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.</span><span class="sxs-lookup"><span data-stu-id="124c7-144">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="124c7-145">HostReference</span><span class="sxs-lookup"><span data-stu-id="124c7-145">HostReference</span></span>|<span data-ttu-id="124c7-146">xs:string</span><span class="sxs-lookup"><span data-stu-id="124c7-146">xs:string</span></span>|<span data-ttu-id="124c7-147">En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.</span><span class="sxs-lookup"><span data-stu-id="124c7-147">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="124c7-148">El formato se define como ' ruta de acceso Virtual de sitio Web de nombre de aplicación &#124; Ruta de acceso Virtual del servicio &#124; NombreServicio ' ejemplo: ' sitio Web/CalculatorApplication &#124;/CalculatorService.svc &#124; predeterminada CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="124c7-148">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="124c7-149">AppDomain</span><span class="sxs-lookup"><span data-stu-id="124c7-149">AppDomain</span></span>|<span data-ttu-id="124c7-150">xs:string</span><span class="sxs-lookup"><span data-stu-id="124c7-150">xs:string</span></span>|<span data-ttu-id="124c7-151">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="124c7-151">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

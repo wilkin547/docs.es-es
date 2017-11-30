@@ -1,30 +1,40 @@
 ---
-title: "&lt;messageSenderAuthentication&gt; (elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;messageSenderAuthentication&gt; (elemento)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f73a72398d183e5b758f69edb7bc034f30ed80a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageSenderAuthentication&gt; (elemento)
-Especifica las opciones de autenticación para los remitentes del mensaje punto a punto.  
+# <a name="ltmessagesenderauthenticationgt-element"></a><span data-ttu-id="09055-102">&lt;messageSenderAuthentication&gt; (elemento)</span><span class="sxs-lookup"><span data-stu-id="09055-102">&lt;messageSenderAuthentication&gt; element</span></span>
+<span data-ttu-id="09055-103">Especifica las opciones de autenticación para los remitentes del mensaje punto a punto.</span><span class="sxs-lookup"><span data-stu-id="09055-103">Specifies authentication options for peer-to-peer message senders.</span></span>  
   
- Para obtener más información acerca de la programación de igual a igual, vea [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ <span data-ttu-id="09055-104">Para obtener más información acerca de la programación de punto a punto, vea [redes Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span><span class="sxs-lookup"><span data-stu-id="09055-104">For more information about peer-to-peer programming, see [Peer-to-Peer Networking](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="09055-105">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="09055-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="09055-106">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="09055-106">\<behaviors></span></span>  
+<span data-ttu-id="09055-107">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="09055-107">\<endpointBehaviors></span></span>  
+<span data-ttu-id="09055-108">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="09055-108">\<behavior></span></span>  
+<span data-ttu-id="09055-109">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="09055-109">\<clientCredentials></span></span>  
+<span data-ttu-id="09055-110">\<punto ></span><span class="sxs-lookup"><span data-stu-id="09055-110">\<peer></span></span>  
+<span data-ttu-id="09055-111">\<messageSenderAuthentication ></span><span class="sxs-lookup"><span data-stu-id="09055-111">\<messageSenderAuthentication></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="09055-112">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="09055-112">Syntax</span></span>  
   
+```xml  
 <messageSenderAuthentication  
 customCertificateValidatorType= "namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
 certificateValidationMode = "ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
@@ -33,58 +43,58 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
+## <a name="attributes-and-elements"></a><span data-ttu-id="09055-113">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="09055-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="09055-114">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="09055-114">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="09055-115">Atributos</span><span class="sxs-lookup"><span data-stu-id="09055-115">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|customCertificateValidatorType|Tipo y ensamblado utilizados para validar un tipo personalizado.  Se debe establecer este atributo cuando `certificateValidationMode` está establecido en `Custom`.|  
-|certifcateValidationMode|Especifica uno de los tres modos utilizados para validar las credenciales.  Si se establece en `Custom`, también debe proporcionarse un `customCertificateValidator`.|  
-|revocationMode|Uno de los modos utilizados para comprobar listas de certificados revocadas \(CRL\).|  
-|trustedStoreLocation|Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`.  Se utiliza este valor cuando un certificado del servicio se negocia al cliente.  La validación se realiza contra el **Personas de confianza** almacén en la ubicación del almacén especificada.|  
+|<span data-ttu-id="09055-116">Atributo</span><span class="sxs-lookup"><span data-stu-id="09055-116">Attribute</span></span>|<span data-ttu-id="09055-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="09055-117">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="09055-118">customCertificateValidatorType</span><span class="sxs-lookup"><span data-stu-id="09055-118">customCertificateValidatorType</span></span>|<span data-ttu-id="09055-119">Tipo y ensamblado utilizados para validar un tipo personalizado.</span><span class="sxs-lookup"><span data-stu-id="09055-119">A type and assembly used to validate a custom type.</span></span> <span data-ttu-id="09055-120">Se debe establecer este atributo cuando `certificateValidationMode` está establecido en `Custom`.</span><span class="sxs-lookup"><span data-stu-id="09055-120">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span>|  
+|<span data-ttu-id="09055-121">certifcateValidationMode</span><span class="sxs-lookup"><span data-stu-id="09055-121">certifcateValidationMode</span></span>|<span data-ttu-id="09055-122">Especifica uno de los tres modos utilizados para validar las credenciales.</span><span class="sxs-lookup"><span data-stu-id="09055-122">Specifies one of three modes used to validate credentials.</span></span> <span data-ttu-id="09055-123">Si se establece en `Custom`, también debe proporcionarse un `customCertificateValidator`.</span><span class="sxs-lookup"><span data-stu-id="09055-123">If set to `Custom`, then a `customCertificateValidator` must also be supplied.</span></span>|  
+|<span data-ttu-id="09055-124">revocationMode</span><span class="sxs-lookup"><span data-stu-id="09055-124">revocationMode</span></span>|<span data-ttu-id="09055-125">Uno de los modos utilizados para comprobar listas de certificados revocadas (CRL).</span><span class="sxs-lookup"><span data-stu-id="09055-125">One of the modes used to check for a revoked certificate lists (CRL).</span></span>|  
+|<span data-ttu-id="09055-126">trustedStoreLocation</span><span class="sxs-lookup"><span data-stu-id="09055-126">trustedStoreLocation</span></span>|<span data-ttu-id="09055-127">Una de las dos ubicaciones de almacenamiento del sistema: `LocalMachine` o `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="09055-127">One of the two system store locations: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="09055-128">Se utiliza este valor cuando un certificado del servicio se negocia al cliente.</span><span class="sxs-lookup"><span data-stu-id="09055-128">This value is used when a service certificate is negotiated to the client.</span></span> <span data-ttu-id="09055-129">Validación se realiza contra el **personas de confianza** almacenar en la ubicación del almacén especificado.</span><span class="sxs-lookup"><span data-stu-id="09055-129">Validation is performed against the **Trusted People** store in the specified store location.</span></span>|  
   
-## Atributo customCertificateValidatorType  
+## <a name="customcertificatevalidatortype-attribute"></a><span data-ttu-id="09055-130">Atributo customCertificateValidatorType</span><span class="sxs-lookup"><span data-stu-id="09055-130">customCertificateValidatorType Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="09055-131">Valor</span><span class="sxs-lookup"><span data-stu-id="09055-131">Value</span></span>|<span data-ttu-id="09055-132">Descripción</span><span class="sxs-lookup"><span data-stu-id="09055-132">Description</span></span>|  
 |-----------|-----------------|  
-|String|Opcional.  Especifica el nombre de tipo y el ensamblado y otros datos utilizados para buscar el tipo.  Como mínimo, se requieren un espacio de nombres y un nombre de tipo.  La información opcionales incluye: nombre de ensamblado, número de versión, referencia cultural y token de clave pública.|  
+|<span data-ttu-id="09055-133">String</span><span class="sxs-lookup"><span data-stu-id="09055-133">String</span></span>|<span data-ttu-id="09055-134">Opcional.</span><span class="sxs-lookup"><span data-stu-id="09055-134">Optional.</span></span> <span data-ttu-id="09055-135">Especifica el nombre de tipo y el ensamblado y otros datos utilizados para buscar el tipo.</span><span class="sxs-lookup"><span data-stu-id="09055-135">Specifies the type name and assembly and other data used to find the type.</span></span> <span data-ttu-id="09055-136">Como mínimo, se requieren un espacio de nombres y un nombre de tipo.</span><span class="sxs-lookup"><span data-stu-id="09055-136">At minimum, a namespace and type name are required.</span></span> <span data-ttu-id="09055-137">La información opcionales incluye: nombre de ensamblado, número de versión, referencia cultural y token de clave pública.</span><span class="sxs-lookup"><span data-stu-id="09055-137">Optional information includes: assembly name, version number, culture, and public key token.</span></span>|  
   
-## Atributo certificateValidationMode  
+## <a name="certificatevalidationmode-attribute"></a><span data-ttu-id="09055-138">Atributo certificateValidationMode</span><span class="sxs-lookup"><span data-stu-id="09055-138">certificateValidationMode Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="09055-139">Valor</span><span class="sxs-lookup"><span data-stu-id="09055-139">Value</span></span>|<span data-ttu-id="09055-140">Descripción</span><span class="sxs-lookup"><span data-stu-id="09055-140">Description</span></span>|  
 |-----------|-----------------|  
-|Enumeración|Opcional.  Uno de los siguientes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.  De manera predeterminada, es `ChainTrust`.  De manera predeterminada, es `ChainTrust`.<br /><br /> Para obtener más información, consulta [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|<span data-ttu-id="09055-141">Enumeración</span><span class="sxs-lookup"><span data-stu-id="09055-141">Enumeration</span></span>|<span data-ttu-id="09055-142">Opcional.</span><span class="sxs-lookup"><span data-stu-id="09055-142">Optional.</span></span> <span data-ttu-id="09055-143">Uno de los siguientes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.</span><span class="sxs-lookup"><span data-stu-id="09055-143">One of the following values: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.</span></span> <span data-ttu-id="09055-144">De manera predeterminada, es `ChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="09055-144">The default is `ChainTrust`.</span></span> <span data-ttu-id="09055-145">De manera predeterminada, es `ChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="09055-145">The default is `ChainTrust`.</span></span><br /><br /> <span data-ttu-id="09055-146">Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="09055-146">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## Atributo revocationMode  
+## <a name="revocationmode-attribute"></a><span data-ttu-id="09055-147">Atributo revocationMode</span><span class="sxs-lookup"><span data-stu-id="09055-147">revocationMode Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="09055-148">Valor</span><span class="sxs-lookup"><span data-stu-id="09055-148">Value</span></span>|<span data-ttu-id="09055-149">Descripción</span><span class="sxs-lookup"><span data-stu-id="09055-149">Description</span></span>|  
 |-----------|-----------------|  
-|Enumeración|Uno de los siguientes valores: `NoCheck`, `Online`, `Offline`.  De manera predeterminada, es `Online`.<br /><br /> Para obtener más información, consulta [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|<span data-ttu-id="09055-150">Enumeración</span><span class="sxs-lookup"><span data-stu-id="09055-150">Enumeration</span></span>|<span data-ttu-id="09055-151">Uno de los siguientes valores: `NoCheck`, `Online`, `Offline`.</span><span class="sxs-lookup"><span data-stu-id="09055-151">One of the following values: `NoCheck`, `Online`, `Offline`.</span></span> <span data-ttu-id="09055-152">De manera predeterminada, es `Online`.</span><span class="sxs-lookup"><span data-stu-id="09055-152">The default is `Online`.</span></span><br /><br /> <span data-ttu-id="09055-153">Para obtener más información, consulte [trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="09055-153">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## Atributo trustedStoreLocation  
+## <a name="trustedstorelocation-attribute"></a><span data-ttu-id="09055-154">Atributo trustedStoreLocation</span><span class="sxs-lookup"><span data-stu-id="09055-154">trustedStoreLocation Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="09055-155">Valor</span><span class="sxs-lookup"><span data-stu-id="09055-155">Value</span></span>|<span data-ttu-id="09055-156">Descripción</span><span class="sxs-lookup"><span data-stu-id="09055-156">Description</span></span>|  
 |-----------|-----------------|  
-|Enumeración|Uno de los siguientes valores: `LocalMachine` o `CurrentUser`.  De manera predeterminada, es `CurrentUser`.  Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`.  Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.  De manera predeterminada, es `CurrentUser`.|  
+|<span data-ttu-id="09055-157">Enumeración</span><span class="sxs-lookup"><span data-stu-id="09055-157">Enumeration</span></span>|<span data-ttu-id="09055-158">Uno de los siguientes valores: `LocalMachine` o `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="09055-158">One of the following values: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="09055-159">De manera predeterminada, es `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="09055-159">The default is `CurrentUser`.</span></span> <span data-ttu-id="09055-160">Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`.</span><span class="sxs-lookup"><span data-stu-id="09055-160">If the client application is running under a system account then the certificate is typically under `LocalMachine`.</span></span> <span data-ttu-id="09055-161">Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="09055-161">If the client application is running under a user account then the certificate is typically in `CurrentUser`.</span></span> <span data-ttu-id="09055-162">De manera predeterminada, es `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="09055-162">The default is `CurrentUser`.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="09055-163">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="09055-163">Child Elements</span></span>  
+ <span data-ttu-id="09055-164">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="09055-164">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="09055-165">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="09055-165">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<peer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica una credencial utilizada para autenticar el cliente a un servicio del mismo nivel.|  
+|<span data-ttu-id="09055-166">Elemento</span><span class="sxs-lookup"><span data-stu-id="09055-166">Element</span></span>|<span data-ttu-id="09055-167">Descripción</span><span class="sxs-lookup"><span data-stu-id="09055-167">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="09055-168">\<punto ></span><span class="sxs-lookup"><span data-stu-id="09055-168">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|<span data-ttu-id="09055-169">Especifica una credencial utilizada para autenticar el cliente a un servicio del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="09055-169">Specifies a credential used for authenticating the client to a peer service.</span></span>|  
   
-## Comentarios  
- Se debe configurar este elemento si se elige la autenticación de mensajes.  Para los canales de salida, cada mensaje se firma utilizando el certificado proporcionado por [\<certificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md).  Todos los mensajes, antes de ser entregados a la aplicación, se comprueban con la credencial de mensaje utilizando el validador especificado por el atributo `customCertificateValidatorType` de este elemento.  El validador puede aceptar o rechazar la credencial.  
+## <a name="remarks"></a><span data-ttu-id="09055-170">Comentarios</span><span class="sxs-lookup"><span data-stu-id="09055-170">Remarks</span></span>  
+ <span data-ttu-id="09055-171">Se debe configurar este elemento si se elige la autenticación de mensajes.</span><span class="sxs-lookup"><span data-stu-id="09055-171">This element must be configured if message authentication is chosen.</span></span> <span data-ttu-id="09055-172">Para los canales de salida, cada mensaje se firma utilizando el certificado proporcionado por [ \<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md).</span><span class="sxs-lookup"><span data-stu-id="09055-172">For output channels, each message is signed using the certificate provided by [\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md).</span></span> <span data-ttu-id="09055-173">Todos los mensajes, antes de ser entregados a la aplicación, se comprueban con la credencial de mensaje utilizando el validador especificado por el atributo `customCertificateValidatorType` de este elemento.</span><span class="sxs-lookup"><span data-stu-id="09055-173">All messages, before delivered to the application, are checked against the message credential using the validator specified by the `customCertificateValidatorType` attribute of this element.</span></span> <span data-ttu-id="09055-174">El validador puede aceptar o rechazar la credencial.</span><span class="sxs-lookup"><span data-stu-id="09055-174">The validator can either accept or reject the credential.</span></span>  
   
-## Ejemplo  
- El código siguiente establece el modo de validación del remitente del mensaje en `PeerOrChainTrust`.  
+## <a name="example"></a><span data-ttu-id="09055-175">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="09055-175">Example</span></span>  
+ <span data-ttu-id="09055-176">El código siguiente establece el modo de validación del remitente del mensaje en `PeerOrChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="09055-176">The following code sets the message sender validation mode to `PeerOrChainTrust`.</span></span>  
   
-```  
+```xml  
 <behaviors>  
  <endpointBehaviors>  
   <behavior name="MyEndpointBehavior">  
@@ -102,13 +112,13 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  </endpointBehaviors>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>   
- <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>   
- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)   
- [Peer Channel Message Authentication](http://msdn.microsoft.com/es-es/80e73386-514e-4c30-9e4a-b9ca8c173a95)   
- [Peer Channel Custom Authentication](http://msdn.microsoft.com/es-es/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)   
- [Protección de las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a><span data-ttu-id="09055-177">Vea también</span><span class="sxs-lookup"><span data-stu-id="09055-177">See Also</span></span>  
+ <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
+ <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
+ [<span data-ttu-id="09055-178">Trabajar con certificados</span><span class="sxs-lookup"><span data-stu-id="09055-178">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="09055-179">Redes de punto a punto</span><span class="sxs-lookup"><span data-stu-id="09055-179">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="09055-180">Autenticación de mensajes del canal del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="09055-180">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="09055-181">Canal del mismo nivel de autenticación personalizada</span><span class="sxs-lookup"><span data-stu-id="09055-181">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="09055-182">Proteger las aplicaciones de canal del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="09055-182">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

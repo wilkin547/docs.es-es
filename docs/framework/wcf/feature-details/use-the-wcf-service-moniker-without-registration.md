@@ -1,35 +1,37 @@
 ---
-title: "C&#243;mo utilizar el moniker de servicio de Windows Communication Foundation sin registrarse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM [WCF], monikers de servicio sin registro"
+title: "Cómo utilizar el moniker de servicio de Windows Communication Foundation sin registrarse"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e859f0eddf93191a01230508742c0777ec73751
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo utilizar el moniker de servicio de Windows Communication Foundation sin registrarse
-Para conectarse y comunicarse con un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la aplicación cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe disponer de los detalles de la dirección de servicio, la configuración del enlace y el contrato de servicios.  
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a><span data-ttu-id="ca4ce-102">Cómo utilizar el moniker de servicio de Windows Communication Foundation sin registrarse</span><span class="sxs-lookup"><span data-stu-id="ca4ce-102">How to: Use the Windows Communication Foundation Service Moniker without Registration</span></span>
+<span data-ttu-id="ca4ce-103">Para conectarse y comunicarse con un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la aplicación cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] debe disponer de los detalles de la dirección de servicio, la configuración del enlace y el contrato de servicios.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-103">To connect to and communicate with a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service, a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application must have the details of the service address, the binding configuration, and the service contract.</span></span>  
   
- Normalmente, el moniker de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obtiene el contrato necesario a través del registro previo a los tipos de atributo requeridos, aunque podría haber casos en los que esto no es posible.  En lugar del registro, el moniker puede obtener la definición del contrato en forma de documento de lenguaje de descripción de servicios Web \(WSDL\), mediante el uso del parámetro `wsdl` o a través de Metadatos Exchange, utilizando el parámetro `mexAddress`.  
+ <span data-ttu-id="ca4ce-104">Normalmente, el moniker de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obtiene el contrato necesario a través del registro previo a los tipos de atributo requeridos, aunque podría haber casos en los que esto no es posible.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-104">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service moniker typically obtains the required contract through prior registration of the required attribute types, but there might be cases where this is not feasible.</span></span> <span data-ttu-id="ca4ce-105">En lugar del registro, el moniker puede obtener la definición del contrato en forma de documento de lenguaje de descripción de servicios Web (WSDL), mediante el uso del parámetro `wsdl` o a través de Metadatos Exchange, utilizando el parámetro `mexAddress`.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-105">In place of registration, the moniker can obtain the definition of the contract in the form of a Web Services Definition Language (WSDL) document, through the use of the `wsdl` parameter or through Metadata Exchange, through the use of the `mexAddress` parameter.</span></span>  
   
- Esto habilita escenarios como la distribución de una hoja de cálculo de Excel en la que algunos de los valores de celda se calculan mediante las interacciones del servicio Web.  En este escenario, puede no ser posible registrar el ensamblado de contrato de servicios en todos los clientes que podrían abrir el documento.  El parámetro `wsdl` o el parámetro `mexAddress` habilitan una solución autónoma.  
+ <span data-ttu-id="ca4ce-106">Esto habilita escenarios como la distribución de una hoja de cálculo de Excel en la que algunos de los valores de celda se calculan mediante las interacciones del servicio Web.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-106">This enables scenarios such as the distribution of an Excel spreadsheet where some of the cell values are calculated through Web service interactions.</span></span> <span data-ttu-id="ca4ce-107">En este escenario, puede no ser posible registrar el ensamblado de contrato de servicios en todos los clientes que podrían abrir el documento.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-107">In this scenario, it might not be feasible to register the service contract assembly on all clients that might open the document.</span></span> <span data-ttu-id="ca4ce-108">El parámetro `wsdl` o el parámetro `mexAddress` habilitan una solución autónoma.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-108">The `wsdl` parameter or the `mexAddress` parameter enables a self-contained solution.</span></span>  
   
 > [!NOTE]
->  La autenticación mutua debe utilizarse como protección frente a la manipulación o suplantación de solicitudes o respuestas.  Más concretamente, es importante para los clientes estar seguros de que el extremo del intercambio de metadatos es la parte de confianza interesada.  
+>  <span data-ttu-id="ca4ce-109">La autenticación mutua debe utilizarse como protección frente a la manipulación o suplantación de solicitudes o respuestas.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-109">Mutual authentication must be used to protect against request and response tampering or spoofing.</span></span> <span data-ttu-id="ca4ce-110">Más concretamente, es importante para los clientes estar seguros de que el extremo del intercambio de metadatos es la parte de confianza interesada.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-110">Specifically, it is important for clients to be assured that the Metadata Exchange endpoint that is responding is the intended trusted party.</span></span>  
   
-## Ejemplo  
- Este ejemplo muestra el uso del moniker de servicio con un contrato MEX \(Metadata Exchange\).  Un servicio con el siguiente contrato se expone con wsHttpBinding.  
+## <a name="example"></a><span data-ttu-id="ca4ce-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ca4ce-111">Example</span></span>  
+ <span data-ttu-id="ca4ce-112">Este ejemplo muestra el uso del moniker de servicio con un contrato MEX (Metadata Exchange).</span><span class="sxs-lookup"><span data-stu-id="ca4ce-112">This example shows the use of the service moniker with a MEX contract.</span></span> <span data-ttu-id="ca4ce-113">Un servicio con el siguiente contrato se expone con wsHttpBinding.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-113">A service with the following contract is exposed with a wsHttpBinding.</span></span>  
   
 ```  
 using System.ServiceModel;  
@@ -50,7 +52,7 @@ public interface IAffiliate
 }  
 ```  
   
- Si desea construir un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el servicio remoto puede utilizar la cadena de moniker del ejemplo siguiente.  
+ <span data-ttu-id="ca4ce-114">Si desea construir un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el servicio remoto puede utilizar la cadena de moniker del ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-114">To construct a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client for the remote service the following example moniker string can be used.</span></span>  
   
 ```  
 service4:mexAddress="http://servername/Affiliates/service.svc/mex",  
@@ -59,10 +61,10 @@ contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,
 binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/  
 ```  
   
- Durante la ejecución de la aplicación cliente, el cliente realiza `WS-MetadataExchange` con la `mexAddress` proporcionada.  Esto podría devolver los detalles de la dirección, el enlace y el contrato de varios servicios.  Los parámetros `address`, `contract`, `contractNamespace`, `binding` y `bindingNamespace` se utilizan para identificar el servicio deseado.  Una vez identificadas las coincidencias de esos parámetros, el moniker construye un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con la definición del contrato adecuada y, a continuación, pueden realizarse las llamadas utilizando el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como con el contrato con tipos.  
+ <span data-ttu-id="ca4ce-115">Durante la ejecución de la aplicación cliente, el cliente realiza `WS-MetadataExchange` con la `mexAddress` proporcionada.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-115">During the execution of the client application, the client performs a `WS-MetadataExchange` with the provided `mexAddress`.</span></span> <span data-ttu-id="ca4ce-116">Esto podría devolver los detalles de la dirección, el enlace y el contrato de varios servicios.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-116">This might return the address, binding and contract details for a number of services.</span></span> <span data-ttu-id="ca4ce-117">Los parámetros `address`, `contract`, `contractNamespace`, `binding` y `bindingNamespace` se utilizan para identificar el servicio deseado.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-117">The `address`, `contract`, `contractNamespace`, `binding` and `bindingNamespace` parameters are used to identify the intended service.</span></span> <span data-ttu-id="ca4ce-118">Una vez identificadas las coincidencias de esos parámetros, el moniker construye un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con la definición del contrato adecuada y, a continuación, pueden realizarse las llamadas utilizando el cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como con el contrato con tipos.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-118">Once those parameters have been matched, the moniker constructs a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client with the appropriate contract definition and calls can then be made using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, as with the typed contract.</span></span>  
   
 > [!NOTE]
->  Si el moniker es incorrecto o el servicio no está disponible, la llamada a `GetObject` devuelve un error informando de que la sintaxis no es válida.  Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.  
+>  <span data-ttu-id="ca4ce-119">Si el moniker es incorrecto o el servicio no está disponible, la llamada a `GetObject` devuelve un error informando de que la sintaxis no es válida.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-119">If the moniker is malformed or if the service is unavailable, the call to `GetObject` returns an error saying "Invalid Syntax".</span></span> <span data-ttu-id="ca4ce-120">Si recibe este error, asegúrese de que el moniker que está utilizando es correcto y el servicio está disponible.</span><span class="sxs-lookup"><span data-stu-id="ca4ce-120">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>  
   
-## Vea también  
- [Cómo registrar y configurar un moniker de servicio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a><span data-ttu-id="ca4ce-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="ca4ce-121">See Also</span></span>  
+ [<span data-ttu-id="ca4ce-122">Cómo: registrar y configurar un Moniker de servicio</span><span class="sxs-lookup"><span data-stu-id="ca4ce-122">How to: Register and Configure a Service Moniker</span></span>](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

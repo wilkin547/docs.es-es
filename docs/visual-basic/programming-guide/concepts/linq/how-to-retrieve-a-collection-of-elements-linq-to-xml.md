@@ -1,34 +1,30 @@
 ---
-title: "Cómo: recuperar una colección de elementos (LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: recuperar una colección de elementos (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfe4450d268125f021795dfb61885f4c2cb81151
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: a3d8cc558191b1ad672660e0d9ada4c4653cd1a7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Cómo: recuperar una colección de elementos (LINQ to XML) (Visual Basic)
-Este tema se muestra el <xref:System.Xml.Linq.XContainer.Elements%2A>método.</xref:System.Xml.Linq.XContainer.Elements%2A> Este método recupera una colección de elementos secundarios de un elemento.  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a><span data-ttu-id="1f83c-102">Cómo: recuperar una colección de elementos (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f83c-102">How to: Retrieve a Collection of Elements (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="1f83c-103">En este tema se demuestra el método <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="1f83c-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="1f83c-104">Este método recupera una colección de elementos secundarios de un elemento.</span><span class="sxs-lookup"><span data-stu-id="1f83c-104">This method retrieves a collection of the child elements of an element.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo recorre en iteración los elementos secundarios del elemento `purchaseOrder`.  
+## <a name="example"></a><span data-ttu-id="1f83c-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1f83c-105">Example</span></span>  
+ <span data-ttu-id="1f83c-106">Este ejemplo recorre en iteración los elementos secundarios del elemento `purchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="1f83c-106">This example iterates through the child elements of the `purchaseOrder` element.</span></span>  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de ejemplo: pedido de compra típico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ <span data-ttu-id="1f83c-107">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1f83c-107">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -41,7 +37,7 @@ For Each el As XElement In childElements
 Next  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="1f83c-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="1f83c-108">This example produces the following output.</span></span>  
   
 ```  
 Name: Address  
@@ -50,5 +46,5 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Ejes LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="1f83c-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="1f83c-109">See Also</span></span>  
+ [<span data-ttu-id="1f83c-110">Ejes de LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f83c-110">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -1,51 +1,54 @@
 ---
-title: "Colas con problemas de entrega | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Colas con problemas de entrega
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a16ed3d0f60ea4b7acc483ce543bad0459dd2f3f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Colas con problemas de entrega
-Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega.  Está basado en el ejemplo [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  El ejemplo usa el enlace `netMsmqBinding`.  El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
+# <a name="dead-letter-queues"></a><span data-ttu-id="5efcf-102">Colas con problemas de entrega</span><span class="sxs-lookup"><span data-stu-id="5efcf-102">Dead Letter Queues</span></span>
+<span data-ttu-id="5efcf-103">Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega.</span><span class="sxs-lookup"><span data-stu-id="5efcf-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="5efcf-104">Se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="5efcf-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="5efcf-105">El ejemplo usa el enlace `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="5efcf-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="5efcf-106">El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  <span data-ttu-id="5efcf-107">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="5efcf-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!NOTE]
->  Este ejemplo muestra cada cola de mensajes no enviados de la aplicación que solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].  El ejemplo se puede modificar para utilizar las colas para todo el sistema predeterminadas para MSMQ 3.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+>  <span data-ttu-id="5efcf-108">Este ejemplo muestra cada cola de mensajes no enviados de la aplicación que solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5efcf-108">This sample demonstrates each application dead letter queue that is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="5efcf-109">El ejemplo se puede modificar para utilizar las colas para todo el sistema predeterminadas para MSMQ 3.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5efcf-109">The sample can be modified to use the default system-wide queues for MSMQ 3.0 on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
   
- En la comunicación con colas, el cliente se comunica con el servicio mediante una cola.  Más exactamente, el cliente envía los mensajes a una cola.  El servicio recibe los mensajes de la cola.  El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.  
+ <span data-ttu-id="5efcf-110">En la comunicación con colas, el cliente se comunica con el servicio mediante una cola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-110">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="5efcf-111">Más exactamente, el cliente envía los mensajes a una cola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-111">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="5efcf-112">El servicio recibe los mensajes de la cola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-112">The service receives messages from the queue.</span></span> <span data-ttu-id="5efcf-113">El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-113">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- Dado que la comunicación en cola puede implicar una cierta cantidad de inactividad, quizá prefiera asociar un valor de período de vida en el mensaje para asegurarse de que el mensaje no se entrega a la aplicación si se ha pasado de hora.  Hay también casos, donde si la entrega del mensaje ha fallado se debe notificar a la aplicación.  En todos estos casos, como cuando el período de vida del mensaje ha expirado o la entrega del mensaje ha fallado, el mensaje se coloca en una cola de mensajes no enviados.  La aplicación emisora puede leer en la cola mensajes no entregados y emprender acciones de corrección que van desde no realizar ninguna acción hasta corregir las razones del error de la entrega y reenviar el mensaje.  
+ <span data-ttu-id="5efcf-114">Dado que la comunicación en cola puede implicar una cierta cantidad de inactividad, quizá prefiera asociar un valor de período de vida en el mensaje para asegurarse de que el mensaje no se entrega a la aplicación si se ha pasado de hora.</span><span class="sxs-lookup"><span data-stu-id="5efcf-114">Because queued communication can involve a certain amount of dormancy, you may want to associate a time-to-live value on the message to ensure that the message does not get delivered to the application if it has gone past the time.</span></span> <span data-ttu-id="5efcf-115">Hay también casos, donde si la entrega del mensaje ha fallado se debe notificar a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="5efcf-115">There are also cases, where an application must be informed whether a message failed delivery.</span></span> <span data-ttu-id="5efcf-116">En todos estos casos, como cuando el período de vida del mensaje ha expirado o la entrega del mensaje ha fallado, el mensaje se coloca en una cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-116">In all of these cases, such as when the time-to-live on the message has expired or the message failed delivery, the message is put in a dead letter queue.</span></span> <span data-ttu-id="5efcf-117">La aplicación emisora puede leer en la cola mensajes no entregados y emprender acciones de corrección que van desde no realizar ninguna acción hasta corregir las razones del error de la entrega y reenviar el mensaje.</span><span class="sxs-lookup"><span data-stu-id="5efcf-117">The sending application can then read the messages in the dead-letter queue and take corrective actions that range from no action to correcting the reasons for failed delivery and resending the message.</span></span>  
   
- La cola de mensajes no enviados en el enlace `NetMsmqBinding` se expresa en las propiedades siguientes:  
+ <span data-ttu-id="5efcf-118">La cola de mensajes no enviados en el enlace `NetMsmqBinding` se expresa en las propiedades siguientes:</span><span class="sxs-lookup"><span data-stu-id="5efcf-118">The dead-letter queue in the `NetMsmqBinding` binding is expressed in the following properties:</span></span>  
   
--   La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente.  Esta enumeración tiene los valores siguientes:  
+-   <span data-ttu-id="5efcf-119">La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente.</span><span class="sxs-lookup"><span data-stu-id="5efcf-119"><xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> property to express the kind of dead-letter queue required by the client.</span></span> <span data-ttu-id="5efcf-120">Esta enumeración tiene los valores siguientes:</span><span class="sxs-lookup"><span data-stu-id="5efcf-120">This enumeration has the following values:</span></span>  
   
--   `None`: el cliente no requiere la cola de mensajes no enviados.  
+-   <span data-ttu-id="5efcf-121">`None`: el cliente no requiere la cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-121">`None`: No dead-letter queue is required by the client.</span></span>  
   
--   `System`: La cola de mensajes no enviados del sistema se utiliza para guardar los mensajes no entregados.  Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.  
+-   <span data-ttu-id="5efcf-122">`System`: La cola de mensajes no enviados del sistema se utiliza para guardar los mensajes no entregados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-122">`System`: The system dead-letter queue is used to store dead messages.</span></span> <span data-ttu-id="5efcf-123">Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.</span><span class="sxs-lookup"><span data-stu-id="5efcf-123">The system dead-letter queue is shared by all applications running on the computer.</span></span>  
   
--   `Custom`: una cola de mensajes no enviados personalizada especificada con la propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> se utiliza para almacenar los mensajes no entregados.  Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].  Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.  
+-   <span data-ttu-id="5efcf-124">`Custom`: una cola de mensajes no enviados personalizada especificada con la propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> se utiliza para almacenar los mensajes no entregados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-124">`Custom`: A custom dead-letter queue specified using the <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property is used to store dead messages.</span></span> <span data-ttu-id="5efcf-125">Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5efcf-125">This feature is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="5efcf-126">Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.</span><span class="sxs-lookup"><span data-stu-id="5efcf-126">This is used when the application must use its own dead letter queue instead of sharing it with other applications running on the same computer.</span></span>  
   
--   La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados.  Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+-   <span data-ttu-id="5efcf-127">La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-127"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property to express the specific queue to use as a dead-letter queue.</span></span> <span data-ttu-id="5efcf-128">Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5efcf-128">This is available only in [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span>  
   
- En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción y especifica un valor arbitrariamente bajo para el "período de vida" para estos mensajes \(aproximadamente 2 segundos\).  El cliente también especifica una cola de mensajes no enviados personalizada utilizada para poner en cola los mensajes que han expirado.  
+ <span data-ttu-id="5efcf-129">En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción y especifica un valor arbitrariamente bajo para el "período de vida" para estos mensajes (aproximadamente 2 segundos).</span><span class="sxs-lookup"><span data-stu-id="5efcf-129">In this sample, the client sends a batch of messages to the service from within the scope of a transaction and specifies an arbitrarily low value for "time-to-live" for these messages (about 2 seconds).</span></span> <span data-ttu-id="5efcf-130">El cliente también especifica una cola de mensajes no enviados personalizada utilizada para poner en cola los mensajes que han expirado.</span><span class="sxs-lookup"><span data-stu-id="5efcf-130">The client also specifies a custom dead-letter queue to use to enqueue the messages that have expired.</span></span>  
   
- La aplicación del cliente puede leer los mensajes en la cola de mensajes no enviados e intentar enviar el mensaje o corregir el error que causó que el mensaje original fuera colocado en la cola de mensajes no enviados y enviar el mensaje.  En el ejemplo, el cliente muestra un mensaje de error.  
+ <span data-ttu-id="5efcf-131">La aplicación del cliente puede leer los mensajes en la cola de mensajes no enviados e intentar enviar el mensaje o corregir el error que causó que el mensaje original fuera colocado en la cola de mensajes no enviados y enviar el mensaje.</span><span class="sxs-lookup"><span data-stu-id="5efcf-131">The client application can read the messages in the dead-letter queue and either retry sending the message or correct the error that caused the original message to be placed in the dead-letter queue and send the message.</span></span> <span data-ttu-id="5efcf-132">En el ejemplo, el cliente muestra un mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="5efcf-132">In the sample, the client displays an error message.</span></span>  
   
- El contrato de servicios es `IOrderProcessor`, tal y como se muestra en el código de ejemplo siguiente.  
+ <span data-ttu-id="5efcf-133">El contrato de servicios es `IOrderProcessor`, tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="5efcf-133">The service contract is `IOrderProcessor`, as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -54,12 +57,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-  
 ```  
   
- El código del servicio en el ejemplo es [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ <span data-ttu-id="5efcf-134">El código del servicio en el ejemplo es el de la [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span><span class="sxs-lookup"><span data-stu-id="5efcf-134">The service code in the sample is that of the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span></span>  
   
- La comunicación con el servicio tiene lugar dentro del ámbito de una transacción.  El servicio lee los mensajes de la cola, realiza la operación y, a continuación, muestra los resultados de la operación.  La aplicación también crea una cola de mensajes no enviados para mensajes no enviados.  
+ <span data-ttu-id="5efcf-135">La comunicación con el servicio tiene lugar dentro del ámbito de una transacción.</span><span class="sxs-lookup"><span data-stu-id="5efcf-135">Communication with the service takes place within the scope of a transaction.</span></span> <span data-ttu-id="5efcf-136">El servicio lee los mensajes de la cola, realiza la operación y, a continuación, muestra los resultados de la operación.</span><span class="sxs-lookup"><span data-stu-id="5efcf-136">The service reads messages from the queue, performs the operation and then displays the results of the operation.</span></span> <span data-ttu-id="5efcf-137">La aplicación también crea una cola de mensajes no enviados para mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-137">The application also creates a dead-letter queue for dead-letter messages.</span></span>  
   
 ```  
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
@@ -116,14 +118,14 @@ class Client
 }  
 ```  
   
- La configuración del cliente especifica una duración corta para que el mensaje alcance el servicio.  Si el mensaje no se puede transmitir dentro de la duración especificada, el mensaje expira y se mueve a la cola de mensajes no enviados.  
+ <span data-ttu-id="5efcf-138">La configuración del cliente especifica una duración corta para que el mensaje alcance el servicio.</span><span class="sxs-lookup"><span data-stu-id="5efcf-138">The client's configuration specifies a short duration for the message to reach the service.</span></span> <span data-ttu-id="5efcf-139">Si el mensaje no se puede transmitir dentro de la duración especificada, el mensaje expira y se mueve a la cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-139">If the message cannot be transmitted within the duration specified, the message expires and is moved to the dead-letter queue.</span></span>  
   
 > [!NOTE]
->  Es posible que el cliente entregue el mensaje a la cola del servicio dentro de la hora especificada.  Para asegurarse de ver el servicio de mensajes no enviados en acción, se debe ejecutar el cliente antes de iniciar el servicio.  El mensaje espera y se entrega al servicio de mensajes no enviados.  
+>  <span data-ttu-id="5efcf-140">Es posible que el cliente entregue el mensaje a la cola del servicio dentro de la hora especificada.</span><span class="sxs-lookup"><span data-stu-id="5efcf-140">It is possible for the client to deliver the message to the service queue within the specified time.</span></span> <span data-ttu-id="5efcf-141">Para asegurarse de ver el servicio de mensajes no enviados en acción, se debe ejecutar el cliente antes de iniciar el servicio.</span><span class="sxs-lookup"><span data-stu-id="5efcf-141">To ensure you see the dead-letter service in action, you should run the client before starting the service.</span></span> <span data-ttu-id="5efcf-142">El mensaje espera y se entrega al servicio de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-142">The message times out and is delivered to the dead-letter service.</span></span>  
   
- La aplicación debe definir qué cola utilizar como su cola de mensajes no enviados.  Si no se especifica ninguna cola, la cola de mensajes transaccionales no enviados para todo el sistema predeterminada se utiliza para poner en la cola los mensajes no enviados.  En este ejemplo, la aplicación cliente especifica su propia cola de mensajes no enviados de la aplicación.  
+ <span data-ttu-id="5efcf-143">La aplicación debe definir qué cola utilizar como su cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-143">The application must define which queue to use as its dead-letter queue.</span></span> <span data-ttu-id="5efcf-144">Si no se especifica ninguna cola, la cola de mensajes transaccionales no enviados para todo el sistema predeterminada se utiliza para poner en la cola los mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-144">If no queue is specified, the default system-wide transactional dead-letter queue is used to queue dead messages.</span></span> <span data-ttu-id="5efcf-145">En este ejemplo, la aplicación cliente especifica su propia cola de mensajes no enviados de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="5efcf-145">In this example, the client application specifies its own application dead-letter queue.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -152,15 +154,14 @@ class Client
   </system.serviceModel>  
   
 </configuration>  
-  
 ```  
   
- El servicio de mensajes no enviados lee los mensajes de la cola de mensajes no enviados.  El servicio de mensajes no enviados implementa el contrato `IOrderProcessor`.  Sin embargo, su implementación no es procesar las órdenes.  El servicio de mensajes no enviados es un servicio del cliente y no tiene facilidad para procesar las órdenes.  
+ <span data-ttu-id="5efcf-146">El servicio de mensajes no enviados lee los mensajes de la cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-146">The dead-letter message service reads messages from the dead-letter queue.</span></span> <span data-ttu-id="5efcf-147">El servicio de mensajes no enviados implementa el contrato `IOrderProcessor`.</span><span class="sxs-lookup"><span data-stu-id="5efcf-147">The dead-letter message service implements the `IOrderProcessor` contract.</span></span> <span data-ttu-id="5efcf-148">Sin embargo, su implementación no es procesar las órdenes.</span><span class="sxs-lookup"><span data-stu-id="5efcf-148">Its implementation however is not to process orders.</span></span> <span data-ttu-id="5efcf-149">El servicio de mensajes no enviados es un servicio del cliente y no tiene facilidad para procesar las órdenes.</span><span class="sxs-lookup"><span data-stu-id="5efcf-149">The dead-letter message service is a client service and does not have the facility to process orders.</span></span>  
   
 > [!NOTE]
->  La cola de mensajes no enviados es una cola del cliente y es local al administrador de cola del cliente.  
+>  <span data-ttu-id="5efcf-150">La cola de mensajes no enviados es una cola del cliente y es local al administrador de cola del cliente.</span><span class="sxs-lookup"><span data-stu-id="5efcf-150">The dead-letter queue is a client queue and is local to the client queue manager.</span></span>  
   
- La implementación de servicio de mensajes no enviados comprueba la razón por la que un mensaje no se ha enviado y toma medidas de corrección.  La razón de un error en el envío del mensaje se captura en dos enumeraciones, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> y <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>.  Se puede recuperar el <xref:System.ServiceModel.Channels.MsmqMessageProperty> de <xref:System.ServiceModel.OperationContext> como se muestra en el código muestra siguiente:  
+ <span data-ttu-id="5efcf-151">La implementación de servicio de mensajes no enviados comprueba la razón por la que un mensaje no se ha enviado y toma medidas de corrección.</span><span class="sxs-lookup"><span data-stu-id="5efcf-151">The dead-letter message service implementation checks for the reason a message failed delivery and takes corrective measures.</span></span> <span data-ttu-id="5efcf-152">La razón de un error en el envío del mensaje se captura en dos enumeraciones, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> y <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>.</span><span class="sxs-lookup"><span data-stu-id="5efcf-152">The reason for a message failure is captured in two enumerations, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> and <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>.</span></span> <span data-ttu-id="5efcf-153">Se puede recuperar el <xref:System.ServiceModel.Channels.MsmqMessageProperty> de <xref:System.ServiceModel.OperationContext> como se muestra en el código muestra siguiente:</span><span class="sxs-lookup"><span data-stu-id="5efcf-153">You can retrieve the <xref:System.ServiceModel.Channels.MsmqMessageProperty> from the <xref:System.ServiceModel.OperationContext> as shown in the following sample code:</span></span>  
   
 ```  
 public void SubmitPurchaseOrder(PurchaseOrder po)  
@@ -176,12 +177,11 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine();  
     ….  
 }  
-  
 ```  
   
- Los mensajes en la cola de mensajes no enviados son mensajes que se dirigen al servicio que está procesando el mensaje.  Por consiguiente, cuando el servicio de mensajes no enviados lee los mensajes de la cola, el nivel de canal de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] encuentra la desigualdad en los extremos y no envía el mensaje.  En este caso, el mensaje se dirige al servicio de procesamiento de la orden, pero quien lo recibe es el servicio de mensajes no enviados.  Para recibir un mensaje que se dirige a un extremo diferente, una dirección se filtra para coincidir con cualquier dirección especificada en `ServiceBehavior`.  Esto se exigen para procesar correctamente los mensajes que se leen de la cola de mensajes no enviados.  
+ <span data-ttu-id="5efcf-154">Los mensajes en la cola de mensajes no enviados son mensajes que se dirigen al servicio que está procesando el mensaje.</span><span class="sxs-lookup"><span data-stu-id="5efcf-154">Messages in the dead-letter queue are messages that are addressed to the service that is processing the message.</span></span> <span data-ttu-id="5efcf-155">Por consiguiente, cuando el servicio de mensajes no enviados lee los mensajes de la cola, el nivel de canal de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] encuentra la desigualdad en los extremos y no envía el mensaje.</span><span class="sxs-lookup"><span data-stu-id="5efcf-155">Therefore, when the dead-letter message service reads messages from the queue, the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] channel layer finds the mismatch in endpoints and does not dispatch the message.</span></span> <span data-ttu-id="5efcf-156">En este caso, el mensaje se dirige al servicio de procesamiento de la orden, pero quien lo recibe es el servicio de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-156">In this case, the message is addressed to the order processing service but is received by the dead-letter message service.</span></span> <span data-ttu-id="5efcf-157">Para recibir un mensaje que se dirige a un extremo diferente, una dirección se filtra para coincidir con cualquier dirección especificada en `ServiceBehavior`.</span><span class="sxs-lookup"><span data-stu-id="5efcf-157">To receive a message that is addressed to a different endpoint, an address filter to match any address is specified in the `ServiceBehavior`.</span></span> <span data-ttu-id="5efcf-158">Esto se exigen para procesar correctamente los mensajes que se leen de la cola de mensajes no enviados.</span><span class="sxs-lookup"><span data-stu-id="5efcf-158">This is required to successfully process messages that are read from the dead-letter queue.</span></span>  
   
- En este ejemplo, el servicio de mensajes no enviados reenvía el mensaje en el caso de que la razón para el error sea que el mensaje ha agotado el tiempo de espera.  Para el resto de razones, muestra el error de la entrega, como se muestra en el código muestra siguiente:  
+ <span data-ttu-id="5efcf-159">En este ejemplo, el servicio de mensajes no enviados reenvía el mensaje en el caso de que la razón para el error sea que el mensaje ha agotado el tiempo de espera. Para el resto de razones, muestra el error de la entrega, como se muestra en el código muestra siguiente:</span><span class="sxs-lookup"><span data-stu-id="5efcf-159">In this sample, the dead-letter message service resends the message if the reason for failure is that the message timed out. For all other reasons, it displays the delivery failure, as shown in the following sample code:</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -238,9 +238,9 @@ public class PurchaseOrderDLQService : IOrderProcessor
 }   
 ```  
   
- El ejemplo siguiente muestra la configuración para un mensaje no enviado:  
+ <span data-ttu-id="5efcf-160">El ejemplo siguiente muestra la configuración para un mensaje no enviado:</span><span class="sxs-lookup"><span data-stu-id="5efcf-160">The following sample shows the configuration for a dead-letter message:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -273,23 +273,22 @@ public class PurchaseOrderDLQService : IOrderProcessor
     </bindings>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- Para ejecutar el ejemplo, hay 3 aplicaciones ejecutables para ejecutar para ver cómo la cola de mensajes no enviados funciona para cada aplicación; el cliente, el servicio y el servicio de mensajes no enviados que lee de la cola de mensajes no enviados para cada aplicación y reenvían el mensaje al servicio.  Todos son las aplicaciones de consola con el resultado de ventanas de consola.  
+ <span data-ttu-id="5efcf-161">Para ejecutar el ejemplo, hay 3 aplicaciones ejecutables para ejecutar para ver cómo la cola de mensajes no enviados funciona para cada aplicación; el cliente, el servicio y el servicio de mensajes no enviados que lee de la cola de mensajes no enviados para cada aplicación y reenvían el mensaje al servicio.</span><span class="sxs-lookup"><span data-stu-id="5efcf-161">In running the sample, there are 3 executables to run to see how the dead-letter queue works for each application; the client, service and a dead-letter service that reads from the dead-letter queue for each application and resends the message to the service.</span></span> <span data-ttu-id="5efcf-162">Todos son las aplicaciones de consola con el resultado de ventanas de consola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-162">All are console applications with output in console windows.</span></span>  
   
 > [!NOTE]
->  Debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente.  Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.  Se debe iniciar el servicio y apagarlo para que se pueda crear la cola.  
+>  <span data-ttu-id="5efcf-163">Debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente.</span><span class="sxs-lookup"><span data-stu-id="5efcf-163">Because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="5efcf-164">Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.</span><span class="sxs-lookup"><span data-stu-id="5efcf-164">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span> <span data-ttu-id="5efcf-165">Se debe iniciar el servicio y apagarlo para que se pueda crear la cola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-165">You should start the service and shut it down so that the queue can be created.</span></span>  
   
- Al ejecutar el cliente, el cliente muestra el mensaje:  
+ <span data-ttu-id="5efcf-166">Al ejecutar el cliente, el cliente muestra el mensaje:</span><span class="sxs-lookup"><span data-stu-id="5efcf-166">When running the client, the client displays the message:</span></span>  
   
 ```  
 Press <ENTER> to terminate client.  
 ```  
   
- El cliente intentó enviar el mensaje pero con un tiempo de espera corto, el mensaje expiró y se puso en la cola, y ahora se encuentra en la cola de mensajes no enviados para cada aplicación.  
+ <span data-ttu-id="5efcf-167">El cliente intentó enviar el mensaje pero con un tiempo de espera corto, el mensaje expiró y se puso en la cola, y ahora se encuentra en la cola de mensajes no enviados para cada aplicación.</span><span class="sxs-lookup"><span data-stu-id="5efcf-167">The client attempted to send the message but with a short timeout, the message expired and is now queued in the dead-letter queue for each application.</span></span>  
   
- Ejecute a continuación el servicio de mensajes no enviados, que lee el mensaje y muestra el código del error y reenvía de nuevo el mensaje al servicio.  
+ <span data-ttu-id="5efcf-168">Ejecute a continuación el servicio de mensajes no enviados, que lee el mensaje y muestra el código del error y reenvía de nuevo el mensaje al servicio.</span><span class="sxs-lookup"><span data-stu-id="5efcf-168">You then run the dead-letter service, which reads the message and displays the error code and resends the message back to the service.</span></span>  
   
 ```  
 The dead letter service is ready.  
@@ -302,13 +301,11 @@ Message Delivery Failure: ReachQueueTimeout
 Purchase order Time To Live expired  
 Trying to resend the message  
 Purchase order resent  
-  
 ```  
   
- El servicio se inicia y, a continuación, lee el mensaje reenviado y lo procesa.  
+ <span data-ttu-id="5efcf-169">El servicio se inicia y, a continuación, lee el mensaje reenviado y lo procesa.</span><span class="sxs-lookup"><span data-stu-id="5efcf-169">The service starts and then reads the resent message and processes it.</span></span>  
   
 ```  
-  
 The service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -319,34 +316,33 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
                 Order LineItem: 890 of Red Widget @unit price: $45.89  
         Total cost of this order: $42461.56  
         Order status: Pending  
-  
 ```  
   
-### Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5efcf-170">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="5efcf-170">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="5efcf-171">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5efcf-171">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente.  Si la cola no está presente, el servicio creará una.  Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ.  Siga estos pasos para crear una cola en Windows 2008.  
+2.  <span data-ttu-id="5efcf-172">Si se ejecuta el servicio primero, comprobará que la cola esté presente.</span><span class="sxs-lookup"><span data-stu-id="5efcf-172">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="5efcf-173">Si la cola no está presente, el servicio creará una.</span><span class="sxs-lookup"><span data-stu-id="5efcf-173">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="5efcf-174">Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ.</span><span class="sxs-lookup"><span data-stu-id="5efcf-174">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="5efcf-175">Siga estos pasos para crear una cola en Windows 2008.</span><span class="sxs-lookup"><span data-stu-id="5efcf-175">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Abra el Administrador del servidor en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="5efcf-176">Abra el Administrador del servidor en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5efcf-176">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Expanda la pestaña **Características**.  
+    2.  <span data-ttu-id="5efcf-177">Expanda el **características** ficha.</span><span class="sxs-lookup"><span data-stu-id="5efcf-177">Expand the **Features** tab.</span></span>  
   
-    3.  Haga clic con el botón secundario en **Cola de mensajes privados** y seleccione **Nuevo**, **Cola privada**.  
+    3.  <span data-ttu-id="5efcf-178">Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.</span><span class="sxs-lookup"><span data-stu-id="5efcf-178">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Active la casilla **Transaccional**.  
+    4.  <span data-ttu-id="5efcf-179">Compruebe el **transaccional** cuadro.</span><span class="sxs-lookup"><span data-stu-id="5efcf-179">Check the **Transactional** box.</span></span>  
   
-    5.  Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.  
+    5.  <span data-ttu-id="5efcf-180">Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.</span><span class="sxs-lookup"><span data-stu-id="5efcf-180">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="5efcf-181">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5efcf-181">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Para ejecutar el ejemplo en una configuración de uno o varios equipos, cambie los nombres de las colas según corresponda, reemplazando el host local con nombre completo del equipo, y siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="5efcf-182">Para ejecutar el ejemplo en una cola de cambio de configuración de equipo único o varios nombres como corresponda, reemplace el host local con el nombre completo del equipo y siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5efcf-182">To run the sample in a single- or cross-computer configuration change queue names appropriately, replacing localhost with full name of the computer and follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="5efcf-183">Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo</span><span class="sxs-lookup"><span data-stu-id="5efcf-183">To run the sample on a computer joined to a workgroup</span></span>  
   
-1.  Si su equipo no forma parte de un dominio, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en `None`, tal y como se muestra en la configuración de ejemplo siguiente:  
+1.  <span data-ttu-id="5efcf-184">Si su equipo no forma parte de un dominio, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en `None`, tal y como se muestra en la configuración de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="5efcf-184">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
         <netMsmqBinding>  
             <binding name="TransactedBinding">  
@@ -356,23 +352,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>  
     ```  
   
-     Asegúrese de que el extremo está asociado con el enlace definiendo el atributo `bindingConfiguration` del extremo.  
+     <span data-ttu-id="5efcf-185">Asegúrese de que el extremo está asociado con el enlace definiendo el atributo `bindingConfiguration` del extremo.</span><span class="sxs-lookup"><span data-stu-id="5efcf-185">Ensure the endpoint is associated with the binding by setting the endpoint's `bindingConfiguration` attribute.</span></span>  
   
-2.  Asegúrese de que cambia la configuración en el servidor DeadLetterService y en el cliente antes de ejecutar el ejemplo.  
+2.  <span data-ttu-id="5efcf-186">Asegúrese de que cambia la configuración en el servidor DeadLetterService y en el cliente antes de ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="5efcf-186">Ensure that you change the configuration on the DeadLetterService, server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  Establecer `security mode` en `None` es equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` y la seguridad de `Message` en `None`.  
+    >  <span data-ttu-id="5efcf-187">Establecer `security mode` en `None` es equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` y la seguridad de `Message` en `None`.</span><span class="sxs-lookup"><span data-stu-id="5efcf-187">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel` and `Message` security to `None`.</span></span>  
   
-## Comentarios  
- De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada.  Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte.  De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`.  Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio.  Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".  
+## <a name="comments"></a><span data-ttu-id="5efcf-188">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5efcf-188">Comments</span></span>  
+ <span data-ttu-id="5efcf-189">De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada.</span><span class="sxs-lookup"><span data-stu-id="5efcf-189">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="5efcf-190">Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte.</span><span class="sxs-lookup"><span data-stu-id="5efcf-190">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="5efcf-191">De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`.</span><span class="sxs-lookup"><span data-stu-id="5efcf-191">By default the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="5efcf-192">Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio.</span><span class="sxs-lookup"><span data-stu-id="5efcf-192">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="5efcf-193">Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".</span><span class="sxs-lookup"><span data-stu-id="5efcf-193">If you run this sample on a computer that is not part of a domain, you receive the following error: "User's internal message queuing certificate does not exist".</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="5efcf-194">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="5efcf-194">The samples may already be installed on your computer.</span></span> <span data-ttu-id="5efcf-195">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="5efcf-195">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="5efcf-196">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="5efcf-196">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5efcf-197">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="5efcf-197">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="5efcf-198">Vea también</span><span class="sxs-lookup"><span data-stu-id="5efcf-198">See Also</span></span>

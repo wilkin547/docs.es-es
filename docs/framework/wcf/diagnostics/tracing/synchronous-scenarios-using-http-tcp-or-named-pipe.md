@@ -1,71 +1,74 @@
 ---
-title: "Escenarios sincr&#243;nicos en los que se utiliza HTTP, TCP o canalizaciones con nombre | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c58998e3fd75d2bdadc029f44cc9927b849ddd9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Escenarios sincr&#243;nicos en los que se utiliza HTTP, TCP o canalizaciones con nombre
-En este tema se describen las actividades y transferencias para diferentes escenarios sincrónicos de solicitud\/respuesta, con un cliente de un único subproceso, utilizando HTTP, TCP o canalización con nombre.Vea [Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) para obtener más información acerca de solicitudes de subprocesos múltiples.  
+# <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="d48db-102">Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre</span><span class="sxs-lookup"><span data-stu-id="d48db-102">Synchronous Scenarios using HTTP, TCP or Named-Pipe</span></span>
+<span data-ttu-id="d48db-103">En este tema se describen las actividades y transferencias para diferentes escenarios sincrónicos de solicitud/respuesta, con un cliente de un único subproceso, utilizando HTTP, TCP o canalización con nombre.</span><span class="sxs-lookup"><span data-stu-id="d48db-103">This topic describes the activities and transfers for different synchronous request/reply scenarios, with a single-threaded client, using HTTP, TCP or named pipe.</span></span> <span data-ttu-id="d48db-104">Vea [escenarios asincrónicos utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) para obtener más información sobre las solicitudes de varios subprocesos.</span><span class="sxs-lookup"><span data-stu-id="d48db-104">See [Asynchronous Scenarios using HTTP, TCP, or Named-Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) for more information on multi-threaded requests.</span></span>  
   
-## Solicitud\/respuesta sincrónica sin errores  
- En esta sección se describen las actividades y transferencias para un escenario válido sincrónico de solicitud\/respuesta, con cliente de un único subproceso.  
+## <a name="synchronous-requestreply-without-errors"></a><span data-ttu-id="d48db-105">Solicitud/respuesta sincrónica sin errores</span><span class="sxs-lookup"><span data-stu-id="d48db-105">Synchronous Request/Reply without Errors</span></span>  
+ <span data-ttu-id="d48db-106">En esta sección se describen las actividades y transferencias para un escenario válido sincrónico de solicitud/respuesta, con cliente de un único subproceso.</span><span class="sxs-lookup"><span data-stu-id="d48db-106">This section describes the activities and transfers for a valid synchronous request/reply scenario, with single-threaded client.</span></span>  
   
-### Client  
+### <a name="client"></a><span data-ttu-id="d48db-107">Cliente</span><span class="sxs-lookup"><span data-stu-id="d48db-107">Client</span></span>  
   
-#### Establecer la comunicación con el extremo de servicio  
- Un cliente se construye y se abre.Para cada uno de estos pasos, la actividad ambiente \(A\) se transfiere respectivamente a una actividad "Cliente de construcción" \(B\) y "Abrir cliente" \(C\).Por cada actividad a la que se transfiere, la actividad ambiente se suspende hasta que se devuelve una transferencia, es decir, hasta que se ejecuta el código de ServiceModel.  
+#### <a name="establishing-communication-with-service-endpoint"></a><span data-ttu-id="d48db-108">Establecer la comunicación con el extremo de servicio</span><span class="sxs-lookup"><span data-stu-id="d48db-108">Establishing Communication with Service Endpoint</span></span>  
+ <span data-ttu-id="d48db-109">Un cliente se construye y se abre.</span><span class="sxs-lookup"><span data-stu-id="d48db-109">A client is constructed and opened.</span></span> <span data-ttu-id="d48db-110">Para cada uno de estos pasos, la actividad ambiente (A) se transfiere a un "Cliente de construcción" (B) y "Abrir cliente" (C) actividad respectivamente.</span><span class="sxs-lookup"><span data-stu-id="d48db-110">For each of these steps, the ambient activity (A) is transferred to a "Construct Client" (B) and "Open Client" (C) activity respectively.</span></span> <span data-ttu-id="d48db-111">Por cada actividad a la que se transfiere, la actividad ambiente se suspende hasta que se devuelve una transferencia, es decir, hasta que se ejecuta el código de ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="d48db-111">For each activity being transferred to, the ambient activity is suspended until there is a transfer back, that is, until ServiceModel code is executed.</span></span>  
   
-#### Realizar una solicitud al extremo de servicio  
- La actividad ambiente se transfiere a una actividad "ProcessAction" \(D\).Dentro de esta actividad, se envía un mensaje de solicitud y se recibe un mensaje de respuesta.La actividad finaliza cuando el control vuelve al código de usuario.Dado que se trata de una solicitud sincrónica, la actividad ambiente se suspende hasta que el control vuelve.  
+#### <a name="making-a-request-to-service-endpoint"></a><span data-ttu-id="d48db-112">Realizar una solicitud al punto de conexión de servicio</span><span class="sxs-lookup"><span data-stu-id="d48db-112">Making a Request to Service Endpoint</span></span>  
+ <span data-ttu-id="d48db-113">La actividad ambiente se transfiere a una actividad "ProcessAction" (D).</span><span class="sxs-lookup"><span data-stu-id="d48db-113">The ambient activity is transferred to a "ProcessAction" (D) activity.</span></span> <span data-ttu-id="d48db-114">Dentro de esta actividad, se envía un mensaje de solicitud y se recibe un mensaje de respuesta.</span><span class="sxs-lookup"><span data-stu-id="d48db-114">Within this activity, a request message is sent, and a response message is received.</span></span> <span data-ttu-id="d48db-115">La actividad finaliza cuando el control vuelve al código de usuario.</span><span class="sxs-lookup"><span data-stu-id="d48db-115">The activity ends when control returns to user code.</span></span> <span data-ttu-id="d48db-116">Dado que se trata de una solicitud sincrónica, la actividad ambiente se suspende hasta que el control vuelve.</span><span class="sxs-lookup"><span data-stu-id="d48db-116">Because this is a synchronous request, the ambient activity suspends until control returns.</span></span>  
   
-#### Cerrar la comunicación con el extremo de servicio  
- La actividad de cierre \(I\) del cliente se crea a partir de la actividad ambiente.Esto es idéntico a nuevo y abrir.  
+#### <a name="closing-communication-with-service-endpoint"></a><span data-ttu-id="d48db-117">Cerrar la comunicación con el extremo de servicio</span><span class="sxs-lookup"><span data-stu-id="d48db-117">Closing Communication with Service Endpoint</span></span>  
+ <span data-ttu-id="d48db-118">La actividad de cierre (I) del cliente se crea a partir de la actividad ambiente.</span><span class="sxs-lookup"><span data-stu-id="d48db-118">The client's close activity (I) is created from the ambient activity.</span></span> <span data-ttu-id="d48db-119">Esto es idéntico a nuevo y abrir.</span><span class="sxs-lookup"><span data-stu-id="d48db-119">This is identical to new and open.</span></span>  
   
-### Servidor  
+### <a name="server"></a><span data-ttu-id="d48db-120">Servidor</span><span class="sxs-lookup"><span data-stu-id="d48db-120">Server</span></span>  
   
-#### Configurar un host de servicio  
- Las actividades nuevas y de abrir \(N y O\) del ServiceHost se crean a partir de la actividad ambiente \(M\).  
+#### <a name="setting-up-a-service-host"></a><span data-ttu-id="d48db-121">Configurar un host de servicio</span><span class="sxs-lookup"><span data-stu-id="d48db-121">Setting up a Service Host</span></span>  
+ <span data-ttu-id="d48db-122">Las actividades nuevas y de abrir (N y O) del ServiceHost se crean a partir de la actividad ambiente (M).</span><span class="sxs-lookup"><span data-stu-id="d48db-122">The ServiceHost’s new and open activities (N and O) are created from the ambient activity (M).</span></span>  
   
- Una actividad de escucha \(P\) se crea abriendo un ServiceHost para cada escucha.La actividad de la escucha espera a recibir y procesar los datos.  
+ <span data-ttu-id="d48db-123">Una actividad de escucha (P) se crea abriendo un ServiceHost para cada escucha.</span><span class="sxs-lookup"><span data-stu-id="d48db-123">A listener activity (P) is created from opening a ServiceHost for each listener.</span></span> <span data-ttu-id="d48db-124">La actividad de la escucha espera a recibir y procesar los datos.</span><span class="sxs-lookup"><span data-stu-id="d48db-124">The listener activity waits to receive and process data.</span></span>  
   
-#### Recibir los datos en la conexión  
- Cuando los datos llegan en la conexión, se crea una actividad "ReceiveBytes" si aún no existe \(Q\) para procesar los datos recibidos.Esta actividad se puede reutilizar para varios mensajes dentro de una conexión o cola.  
+#### <a name="receiving-data-on-the-wire"></a><span data-ttu-id="d48db-125">Recibir los datos en la conexión</span><span class="sxs-lookup"><span data-stu-id="d48db-125">Receiving Data on the Wire</span></span>  
+ <span data-ttu-id="d48db-126">Cuando los datos llegan en la conexión, se crea una actividad "ReceiveBytes" Si aún no existe (Q) para procesar los datos recibidos.</span><span class="sxs-lookup"><span data-stu-id="d48db-126">When data arrives on the wire, a "ReceiveBytes" activity is created if it does not already exist (Q) to process the received data.</span></span> <span data-ttu-id="d48db-127">Esta actividad se puede reutilizar para varios mensajes dentro de una conexión o cola.</span><span class="sxs-lookup"><span data-stu-id="d48db-127">This activity can be reused for multiple messages within a connection or queue.</span></span>  
   
- La actividad ReceiveBytes inicia una actividad ProcessMessage \(R\) si tiene bastantes datos para formar un mensaje de acción SOAP.  
+ <span data-ttu-id="d48db-128">La actividad ReceiveBytes inicia una actividad ProcessMessage (R) si tiene bastantes datos para formar un mensaje de acción SOAP.</span><span class="sxs-lookup"><span data-stu-id="d48db-128">The ReceiveBytes activity launches a ProcessMessage activity (R) if it has enough data to form a SOAP action message.</span></span>  
   
- En actividad R, se procesan los encabezados del mensaje y se comprueba el encabezado de activityID.Si este encabezado está presente, el id. de actividad se establece en la actividad ProcessAction; de lo contrario, se crea un nuevo id.  
+ <span data-ttu-id="d48db-129">En actividad R, se procesan los encabezados del mensaje y se comprueba el encabezado de activityID.</span><span class="sxs-lookup"><span data-stu-id="d48db-129">In activity R, the message headers are processed, and the activityID header is verified.</span></span> <span data-ttu-id="d48db-130">Si este encabezado está presente, el id. de actividad se establece en la actividad ProcessAction; de lo contrario, se crea un nuevo id.</span><span class="sxs-lookup"><span data-stu-id="d48db-130">If this header is present, the activity ID is set to the ProcessAction activity; otherwise, a new ID is created.</span></span>  
   
- Se crea la actividad ProcessAction \(S\) y se transfiere cuando se procesa la llamada.Esta actividad finaliza cuando todo el procesamiento relacionado con el mensaje entrante se completa, incluidos la ejecución del código de usuario \(T\) y el envío del mensaje de respuesta si es aplicable.  
+ <span data-ttu-id="d48db-131">Se crea la actividad ProcessAction (S) y se transfiere cuando se procesa la llamada.</span><span class="sxs-lookup"><span data-stu-id="d48db-131">ProcessAction activity (S) is created and being transferred to, when the call is processed.</span></span> <span data-ttu-id="d48db-132">Esta actividad finaliza cuando todo el procesamiento relacionado con el mensaje entrante se completa, incluidos la ejecución del código de usuario (T) y el envío del mensaje de respuesta si es aplicable.</span><span class="sxs-lookup"><span data-stu-id="d48db-132">This activity ends when all processing related to the incoming message is completed, including executing user code (T) and sending the response message if applicable.</span></span>  
   
-#### Cerrar un host de servicio  
- La actividad de cierre del ServiceHost \(Z\) se crea a partir de la actividad ambiente.  
+#### <a name="closing-a-service-host"></a><span data-ttu-id="d48db-133">Cerrar un host de servicio</span><span class="sxs-lookup"><span data-stu-id="d48db-133">Closing a Service Host</span></span>  
+ <span data-ttu-id="d48db-134">La actividad de cierre del ServiceHost (Z) se crea a partir de la actividad ambiente.</span><span class="sxs-lookup"><span data-stu-id="d48db-134">The ServiceHost’s close activity (Z) is created from the ambient activity.</span></span>  
   
- ![Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "Sync")  
+ <span data-ttu-id="d48db-135">![Escenarios sincrónicos mediante HTTP &#47; TCP &#47; Canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "sincronización")</span><span class="sxs-lookup"><span data-stu-id="d48db-135">![Synchronous scenarios using HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "Sync")</span></span>  
   
- En \<A: name\>, `A` es un símbolo abreviado que describe la actividad en el texto anterior y en la tabla 3.`Name` es un nombre abreviado de la actividad.  
+ <span data-ttu-id="d48db-136">En \<A: name >, `A` es un símbolo de método abreviado que describe la actividad en el texto anterior y en la tabla 3.</span><span class="sxs-lookup"><span data-stu-id="d48db-136">In \<A: name>, `A` is a shortcut symbol that describes the activity in the previous text and in table 3.</span></span> <span data-ttu-id="d48db-137">`Name` es un nombre abreviado de la actividad.</span><span class="sxs-lookup"><span data-stu-id="d48db-137">`Name` is a shortened name of the activity.</span></span>  
   
- Si `propagateActivity`\=`true`, Process Action tanto en el cliente como en el servicio tienen el mismo id. de actividad.  
+ <span data-ttu-id="d48db-138">Si `propagateActivity` = `true`, acción de proceso en el cliente y el servicio tiene el mismo identificador de actividad.</span><span class="sxs-lookup"><span data-stu-id="d48db-138">If `propagateActivity`=`true`, Process Action on both the client and service have the same activity ID.</span></span>  
   
-## Solicitud\/respuesta sincrónica con Errores  
- La única diferencia con el escenario anterior es que un mensaje de error SOAP se devuelve como un mensaje de respuesta.Si `propagateActivity`\=`true`, el id. de actividad del mensaje de solicitud se agrega al mensaje de error SOAP.  
+## <a name="synchronous-requestreply-with-errors"></a><span data-ttu-id="d48db-139">Solicitud/respuesta sincrónica con Errores</span><span class="sxs-lookup"><span data-stu-id="d48db-139">Synchronous Request/Reply with Errors</span></span>  
+ <span data-ttu-id="d48db-140">La única diferencia con el escenario anterior es que un mensaje de error SOAP se devuelve como un mensaje de respuesta.</span><span class="sxs-lookup"><span data-stu-id="d48db-140">The only difference with the previous scenario is that a SOAP fault message is returned as a response message.</span></span> <span data-ttu-id="d48db-141">Si `propagateActivity` = `true`, el identificador de actividad del mensaje de solicitud se agrega al mensaje de error SOAP.</span><span class="sxs-lookup"><span data-stu-id="d48db-141">If `propagateActivity`=`true`, the activity ID of the request message is added to the SOAP fault message.</span></span>  
   
-## Unidireccional sincrónico sin errores  
- La única diferencia con el primer escenario es que ningún mensaje se devuelve al servidor.Para los protocolos basados en HTTP, un estado \(valid o error\) se devuelve todavía al cliente.Esto es porque HTTP es el único protocolo con un semántica de solicitud\-respuesta que forma parte de la pila del protocolo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].Dado que el procesamiento del TCP se oculta de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], ninguna confirmación se envía al cliente.  
+## <a name="synchronous-one-way-without-errors"></a><span data-ttu-id="d48db-142">Unidireccional sincrónico sin errores</span><span class="sxs-lookup"><span data-stu-id="d48db-142">Synchronous One-Way without Errors</span></span>  
+ <span data-ttu-id="d48db-143">La única diferencia con el primer escenario es que ningún mensaje se devuelve al servidor.</span><span class="sxs-lookup"><span data-stu-id="d48db-143">The only difference with the first scenario is that no message is returned to the server.</span></span> <span data-ttu-id="d48db-144">Para los protocolos basados en HTTP, un estado (valid o error) se devuelve todavía al cliente.</span><span class="sxs-lookup"><span data-stu-id="d48db-144">For HTTP-based protocols, a status (valid or error) is still returned to the client.</span></span> <span data-ttu-id="d48db-145">Esto es porque HTTP es el único protocolo con un semántica de solicitud-respuesta que forma parte de la pila del protocolo [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d48db-145">This is because HTTP is the only protocol with a request-response semantics that is part of the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] protocol stack.</span></span> <span data-ttu-id="d48db-146">Dado que el procesamiento del TCP se oculta de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], ninguna confirmación se envía al cliente.</span><span class="sxs-lookup"><span data-stu-id="d48db-146">Because TCP processing is hidden from [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], no acknowledgement is sent to the client.</span></span>  
   
-## Unidireccional sincrónico con errores  
- Si un error se produce procesando el mensaje \(Q o más allá\), ninguna notificación se devuelve al cliente.Esto es idéntico al escenario "Unidireccional sincrónico sin errores".No debería utilizar un escenario unidireccional si desea recibir un mensaje de error.  
+## <a name="synchronous-one-way-with-errors"></a><span data-ttu-id="d48db-147">Unidireccional sincrónico con errores</span><span class="sxs-lookup"><span data-stu-id="d48db-147">Synchronous One-Way with Errors</span></span>  
+ <span data-ttu-id="d48db-148">Si un error se produce procesando el mensaje (Q o más allá), ninguna notificación se devuelve al cliente.</span><span class="sxs-lookup"><span data-stu-id="d48db-148">If an error occurs while processing the message (Q or beyond), no notification is returned to the client.</span></span> <span data-ttu-id="d48db-149">Esto es idéntico al escenario "Unidireccional sincrónico sin errores".</span><span class="sxs-lookup"><span data-stu-id="d48db-149">This is identical to the "Synchronous One-Way without Errors" scenario.</span></span> <span data-ttu-id="d48db-150">No debería utilizar un escenario unidireccional si desea recibir un mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="d48db-150">You should not use a One-Way scenario if you want to receive an error message.</span></span>  
   
-## Dúplex  
- La diferencia con los escenarios anteriores es que el cliente actúa como un servicio, en el que crea las actividades ReceiveBytes y ProcessMessage, similares a los escenarios asincrónicos.
+## <a name="duplex"></a><span data-ttu-id="d48db-151">Dúplex</span><span class="sxs-lookup"><span data-stu-id="d48db-151">Duplex</span></span>  
+ <span data-ttu-id="d48db-152">La diferencia con los escenarios anteriores es que el cliente actúa como un servicio, en el que crea las actividades ReceiveBytes y ProcessMessage, similares a los escenarios asincrónicos.</span><span class="sxs-lookup"><span data-stu-id="d48db-152">The difference with the previous scenarios is that the client acts as a service, in which it creates the ReceiveBytes and ProcessMessage activities, similar to the Asynchronous scenarios.</span></span>

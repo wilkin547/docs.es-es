@@ -1,55 +1,58 @@
 ---
-title: "Canal de confirmaci&#243;n de HTTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Canal de confirmación de HTTP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bf8e62d99ffc0a7296d83685dfeb15993afff934
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Canal de confirmaci&#243;n de HTTP
-El canal de confirmación HTTP es un ejemplo de canal en niveles que cambia el modelo de mensajería unidireccional, permitiendo que un servicio confirme o rechace los mensajes entrantes en lugar de enviar una confirmación de recibo automáticamente.Además, permite al servicio retrasar la confirmación hasta que pueda tener la garantía de que el mensaje se procesará.  
+# <a name="http-acknowledgement-channel"></a><span data-ttu-id="64f87-102">Canal de confirmación de HTTP</span><span class="sxs-lookup"><span data-stu-id="64f87-102">HTTP Acknowledgement Channel</span></span>
+<span data-ttu-id="64f87-103">El canal de confirmación HTTP es un ejemplo de canal en niveles que cambia el patrón de mensajería unidireccional, permitiendo que un servicio confirme o rechace los mensajes entrantes en lugar de enviar una confirmación de recibo automáticamente.</span><span class="sxs-lookup"><span data-stu-id="64f87-103">The HTTP Acknowledgement Channel is an example of a layered channel that changes the one-way messaging pattern, allowing a service to acknowledge or refuse incoming messages rather than automatically sending an acknowledgement on receipt.</span></span> <span data-ttu-id="64f87-104">Además, permite al servicio retrasar la confirmación hasta que pueda tener la garantía de que el mensaje se procesará.</span><span class="sxs-lookup"><span data-stu-id="64f87-104">The HTTP Acknowledgement Channel also allows the service to delay acknowledgement until it can make a business-level guarantee that the message will be processed.</span></span>  
   
-## Demostraciones  
- <xref:System.ServiceModel.Channels.ReceiveContext>, ejemplo del canal en niveles \(canal de confirmación HTTP\).  
+## <a name="demonstrates"></a><span data-ttu-id="64f87-105">Demostraciones</span><span class="sxs-lookup"><span data-stu-id="64f87-105">Demonstrates</span></span>  
+ <span data-ttu-id="64f87-106"><xref:System.ServiceModel.Channels.ReceiveContext>, ejemplo del canal en niveles (canal de confirmación HTTP).</span><span class="sxs-lookup"><span data-stu-id="64f87-106"><xref:System.ServiceModel.Channels.ReceiveContext>, Layered channel example (HTTP Acknowledgement channel).</span></span>  
   
-## Análisis  
- El canal de confirmación HTTP implementa <xref:System.ServiceModel.Channels.ReceiveContext> para volver a dar forma al patrón de mensajería solicitud\-respuesta HTTP para un modelo unidireccional con confirmación demorada.Con este nuevo modelo, un servicio puede garantizar el procesamiento de los mensajes enviando una confirmación en forma de código de estado OK 200 de HTTP sin bloquear el cliente hasta que el procesamiento de mensajes se complete o puede enviar un mensaje de error al cliente en forma de código de estado de error de servidor interno 500 de HTTP.Por ejemplo, un servicio podría enviar una confirmación después de escribir un mensaje en una cola y, a continuación, continuar el procesamiento del mensaje de forma asincrónica.En este escenario, un cliente podría estar seguro de que el servicio procesó al menos una vez sus mensajes, si reenviara cada mensaje hasta que recibiera una confirmación del servicio.Tenga en cuenta que si un servicio requiere el procesamiento de mensajes asincrónico a través de HTTP sin ninguna garantía del procesamiento de los mensajes, es más adecuado usar <xref:System.ServiceModel.Channels.OneWayBindingElement>.  
+## <a name="discussion"></a><span data-ttu-id="64f87-107">Explicación</span><span class="sxs-lookup"><span data-stu-id="64f87-107">Discussion</span></span>  
+ <span data-ttu-id="64f87-108">El canal de confirmación HTTP implementa <xref:System.ServiceModel.Channels.ReceiveContext> para volver a dar forma al patrón de mensajería solicitud-respuesta HTTP para un patrón unidireccional con confirmación demorada.</span><span class="sxs-lookup"><span data-stu-id="64f87-108">The HTTP Acknowledgement Channel implements <xref:System.ServiceModel.Channels.ReceiveContext> to reshape the HTTP request-reply messaging pattern to a one-way pattern with delayed acknowledgement.</span></span> <span data-ttu-id="64f87-109">Con este nuevo patrón, un servicio puede garantizar el procesamiento de los mensajes enviando una confirmación en forma de código de estado OK 200 de HTTP sin bloquear el cliente hasta que el procesamiento de mensajes se complete o puede enviar un mensaje de error al cliente en forma de código de estado de error de servidor interno 500 de HTTP.</span><span class="sxs-lookup"><span data-stu-id="64f87-109">Using this new pattern, a service can ensure message processing by sending an acknowledgement in the form of an HTTP OK status code of 200 without blocking the client until message processing completes or can send a failure message to the client in the form of an HTTP Internal Server error status code of 500.</span></span> <span data-ttu-id="64f87-110">Por ejemplo, un servicio podría enviar una confirmación después de escribir un mensaje en una cola y, a continuación, continuar el procesamiento del mensaje de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="64f87-110">For example, a service could send an acknowledgement after writing a message to a queue, and then continue processing the message asynchronously.</span></span> <span data-ttu-id="64f87-111">En este escenario, un cliente podría estar seguro de que el servicio procesó al menos una vez sus mensajes, si reenviara cada mensaje hasta que recibiera una confirmación del servicio.</span><span class="sxs-lookup"><span data-stu-id="64f87-111">In this scenario, a client could be assured its messages were processed at least once by the service, if it re-sent each message until it received an acknowledgement from the service.</span></span> <span data-ttu-id="64f87-112">Tenga en cuenta que si un servicio requiere el procesamiento de mensajes asincrónico a través de HTTP sin ninguna garantía del procesamiento de los mensajes, es más adecuado usar <xref:System.ServiceModel.Channels.OneWayBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="64f87-112">Note that, if a service requires fast asynchronous message processing over HTTP without any message processing guarantees, then the <xref:System.ServiceModel.Channels.OneWayBindingElement> is a more appropriate choice.</span></span>  
   
- <xref:System.ServiceModel.Channels.ReceiveContext> se utiliza para conservar el mensaje en su lugar mientras se determina si se puede procesar en el servicio.La capacidad de un servicio para procesar el mensaje correctamente se indica llamando a Complete en el objeto <xref:System.ServiceModel.Channels.ReceiveContext>, que envía un código de estado OK de HTTP y si el servicio puede procesar el mensaje, se indica llamando al método `Abandon` del objeto <xref:System.ServiceModel.Channels.ReceiveContext> en el objeto <xref:System.ServiceModel.Channels.ReceiveContext>, que envía un código de estado de error de servidor interno HTTP.  
+ <span data-ttu-id="64f87-113"><xref:System.ServiceModel.Channels.ReceiveContext> se utiliza para conservar el mensaje en su lugar mientras se determina si se puede procesar en el servicio.</span><span class="sxs-lookup"><span data-stu-id="64f87-113"><xref:System.ServiceModel.Channels.ReceiveContext> is used to hold the message in place while it is determined whether the message can be processed at the service.</span></span> <span data-ttu-id="64f87-114">La capacidad de un servicio para procesar el mensaje correctamente se indica llamando a Complete en el objeto <xref:System.ServiceModel.Channels.ReceiveContext>, que envía un código de estado OK de HTTP y si el servicio puede procesar el mensaje, se indica llamando al método <xref:System.ServiceModel.Channels.ReceiveContext> del objeto `Abandon` en el objeto <xref:System.ServiceModel.Channels.ReceiveContext>, que envía un código de estado de error de servidor interno HTTP.</span><span class="sxs-lookup"><span data-stu-id="64f87-114">The ability of a service to successfully process the message is indicated by calling Complete on the <xref:System.ServiceModel.Channels.ReceiveContext> object that sends an HTTP OK status code and whether the service can process the message is indicated by calling <xref:System.ServiceModel.Channels.ReceiveContext>’s `Abandon` method on the <xref:System.ServiceModel.Channels.ReceiveContext> object, which sends an HTTP Internal Server error status code.</span></span>  
   
- En este ejemplo, el cliente solicita la información de procesamiento enviando un identificador de empleado.En el extremo del servicio, si el identificador de empleado recibido es mayor que 50, el servicio envía un código de estado de HTTP 500 \(error de servidor interno\) al cliente; de lo contrario, se supone que el procesamiento se puede hacer correctamente y envía un código de estado HTTP 200 \(correcto\) al cliente.  
+ <span data-ttu-id="64f87-115">En este ejemplo, el cliente solicita la información de procesamiento enviando un identificador de empleado.</span><span class="sxs-lookup"><span data-stu-id="64f87-115">In this example, the client requests processing information by sending an employee ID.</span></span> <span data-ttu-id="64f87-116">En el extremo del servicio, si el identificador de empleado recibido es mayor que 50, el servicio envía un código de estado de HTTP 500 (error de servidor interno) al cliente; de lo contrario, se supone que el procesamiento se puede hacer correctamente y envía un código de estado HTTP 200 (correcto) al cliente.</span><span class="sxs-lookup"><span data-stu-id="64f87-116">On the service end, if the employee ID received is greater than 50, the service sends an HTTP Status code of 500 (Internal Server Error) back to the client, otherwise it is assumed that the processing can be successfully done and sends an HTTP Status code of 200 (Successful) to the client.</span></span>  
   
-#### Para configurar, compilar y ejecutar el ejemplo  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="64f87-117">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="64f87-117">To set up, build, and run the sample</span></span>  
   
-1.  Abra [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegios de administrador.  
+1.  <span data-ttu-id="64f87-118">Abra [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegios de administrador.</span><span class="sxs-lookup"><span data-stu-id="64f87-118">Open [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] with Administrator privileges.</span></span>  
   
-2.  Abra la solución **HttpAckChannel**.  
+2.  <span data-ttu-id="64f87-119">Abra la **HttpAckChannel** solución.</span><span class="sxs-lookup"><span data-stu-id="64f87-119">Open the **HttpAckChannel** solution.</span></span>  
   
-3.  Inicie una nueva instancia del proyecto **Servicio** haciendo clic con el botón secundario en el proyecto en el **Explorador de soluciones** y seleccionando **Depurar**, **Iniciar nueva instancia** desde el menú contextual.  
+3.  <span data-ttu-id="64f87-120">Inicie una nueva instancia de la **servicio** proyecto haciendo clic en el proyecto en **el Explorador de soluciones**y seleccionando **depurar**, **Iniciar nueva instancia** en el menú contextual.</span><span class="sxs-lookup"><span data-stu-id="64f87-120">Start a new instance of the **Service** project by right clicking the project in **Solution Explorer**, and selecting **Debug**, **Start new instance** from the context menu.</span></span>  
   
-4.  Inicie una nueva instancia del proyecto **Cliente** haciendo clic con el botón secundario en el proyecto en el **Explorador de soluciones** y seleccionando **Depurar**, **Iniciar nueva instancia** desde el menú contextual.  
+4.  <span data-ttu-id="64f87-121">Inicie una nueva instancia de la **cliente** proyecto haciendo clic en el proyecto en **el Explorador de soluciones**y seleccionando **depurar**, y **Iniciar nueva instancia** en el menú contextual.</span><span class="sxs-lookup"><span data-stu-id="64f87-121">Start a new instance of the **Client** project by right clicking the project in **Solution Explorer**, and selecting **Debug**, and **Start new instance** from the context menu.</span></span>  
   
-5.  Cuando el servicio se haya iniciado, presione Entrar en la ventana de cliente para permitir al cliente enviar un mensaje al servicio.  
+5.  <span data-ttu-id="64f87-122">Cuando el servicio se haya iniciado, presione Entrar en la ventana de cliente para permitir al cliente enviar un mensaje al servicio.</span><span class="sxs-lookup"><span data-stu-id="64f87-122">Once the service has started, press ENTER in the client window to let the client send a message to the service.</span></span>  
   
-6.  El primer mensaje se procesa en el servicio y envía un código de estado OK de HTTP al cliente.  
+6.  <span data-ttu-id="64f87-123">El primer mensaje se procesa en el servicio y envía un código de estado OK de HTTP al cliente.</span><span class="sxs-lookup"><span data-stu-id="64f87-123">The first message is processed on the service, and it sends an HTTP OK status code back to the client.</span></span>  
   
-7.  El segundo mensaje es incorrecto y envía un código de estado de error de servidor interno de HTTP al cliente, que genera un <xref:System.ServiceModel.CommunicationException> en el cliente.  
+7.  <span data-ttu-id="64f87-124">El segundo mensaje es incorrecto y envía un código de estado de error de servidor interno de HTTP al cliente, que genera un <xref:System.ServiceModel.CommunicationException> en el cliente.</span><span class="sxs-lookup"><span data-stu-id="64f87-124">The second message is unsuccessful, and it sends an HTTP Internal Server error status code back to the client, which raises a <xref:System.ServiceModel.CommunicationException> on the client.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="64f87-125">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="64f87-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="64f87-126">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="64f87-126">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="64f87-127">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="64f87-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="64f87-128">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="64f87-128">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

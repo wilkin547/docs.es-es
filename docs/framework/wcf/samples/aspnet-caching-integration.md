@@ -1,72 +1,75 @@
 ---
-title: "Integraci&#243;n de almacenamiento en cach&#233; de ASP.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Integración de almacenamiento en caché de ASP.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a8830f1c19b7a91d6c22d3b5955624c7d8a86f5f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Integraci&#243;n de almacenamiento en cach&#233; de ASP.NET
-En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF.  Vea el ejemplo de [Servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) para obtener una versión autohospedada de este escenario que explique la implementación del servicio a fondo.  Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.  
+# <a name="aspnet-caching-integration"></a><span data-ttu-id="97cfe-102">Integración de almacenamiento en caché de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="97cfe-102">ASP.NET Caching Integration</span></span>
+<span data-ttu-id="97cfe-103">En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF.</span><span class="sxs-lookup"><span data-stu-id="97cfe-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="97cfe-104">Vea la [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo para obtener una versión de este escenario que se explica la implementación del servicio en profundidad hospedada por sí mismo.</span><span class="sxs-lookup"><span data-stu-id="97cfe-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="97cfe-105">Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="97cfe-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  
   
-## Demostraciones  
- Integración con la memoria caché de resultados de ASP.NET  
+## <a name="demonstrates"></a><span data-ttu-id="97cfe-106">Demostraciones</span><span class="sxs-lookup"><span data-stu-id="97cfe-106">Demonstrates</span></span>  
+ <span data-ttu-id="97cfe-107">Integración con la memoria caché de resultados de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="97cfe-107">Integration with the ASP.NET Output Cache</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="97cfe-108">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="97cfe-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="97cfe-109">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="97cfe-109">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="97cfe-110">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="97cfe-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="97cfe-111">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="97cfe-111">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
-## Explicación  
- En el ejemplo se utiliza <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> para utilizar el almacenamiento en la memoria caché de resultados de ASP.NET con el servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> se aplica a las operaciones de servicio y proporciona el nombre de un perfil de la memoria caché en un archivo de configuración que se debería aplicar a las respuestas de la operación dada.  
+## <a name="discussion"></a><span data-ttu-id="97cfe-112">Explicación</span><span class="sxs-lookup"><span data-stu-id="97cfe-112">Discussion</span></span>  
+ <span data-ttu-id="97cfe-113">En el ejemplo se utiliza <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> para utilizar el almacenamiento en la memoria caché de resultados de ASP.NET con el servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="97cfe-113">The sample uses the <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> to utilize ASP.NET output caching with the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="97cfe-114"><xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> se aplica a las operaciones de servicio y proporciona el nombre de un perfil de la memoria caché en un archivo de configuración que se debería aplicar a las respuestas de la operación dada.</span><span class="sxs-lookup"><span data-stu-id="97cfe-114">The <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> is applied to service operations, and provides the name of a cache profile in a configuration file that should be applied to responses from the given operation.</span></span>  
   
- En el archivo Service.cs del proyecto Servicio del ejemplo, ambas operaciones, `GetCustomers` y `GetCustomer`, se marcan con <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, que proporciona el nombre del perfil de la memoria caché "CacheFor60Seconds".  En el archivo Web.config del proyecto Servicio, el perfil de la memoria caché "CacheFor60Seconds" se proporciona bajo el elemento \<`caching`\> de \<`system.web`\>.  Para este perfil de la memoria caché, el valor del atributo `duration` es "60", de modo que las respuestas asociadas a este perfil están almacenadas en la memoria caché, en la caché de resultados de ASP.NET durante 60 segundos.  Además, para este perfil de la memoria caché, el atributo `varmByParam` se establece en "format" de modo que las solicitudes con valores diferentes para el parámetro de cadena de consulta `format` tengan sus respuestas almacenadas en memoria caché de forma independiente.  Por último, el atributo `varyByHeader` del perfil de la memoria caché se establece en "Accept", de modo que las solicitudes con diferentes valores de encabezado Accept tienen sus respuestas almacenadas en memoria caché separadamente.  
+ <span data-ttu-id="97cfe-115">En el archivo Service.cs del proyecto de servicio de ejemplo, tanto la `GetCustomer` y `GetCustomers` operaciones se marcan con la <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, que proporciona el nombre del perfil de caché "CacheFor60Seconds".</span><span class="sxs-lookup"><span data-stu-id="97cfe-115">In the Service.cs file of the sample Service project, both the `GetCustomer` and `GetCustomers` operations are marked with the <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, which provides the cache profile name "CacheFor60Seconds".</span></span> <span data-ttu-id="97cfe-116">En el archivo Web.config del proyecto de servicio, el perfil de caché "CacheFor60Seconds" se proporciona en el <`caching`> elemento de <`system.web`>.</span><span class="sxs-lookup"><span data-stu-id="97cfe-116">In the Web.config file of the Service project, the cache profile "CacheFor60Seconds" is provided under the <`caching`> element of <`system.web`>.</span></span> <span data-ttu-id="97cfe-117">Para este perfil de caché, el valor de la `duration` atributo es "60", por lo que las respuestas asociadas con este perfil se almacenan en caché en la caché de resultados ASP.NET durante 60 segundos.</span><span class="sxs-lookup"><span data-stu-id="97cfe-117">For this cache profile, the value of the `duration` attribute is "60", so responses associated with this profile are cached in the ASP.NET output cache for 60 seconds.</span></span> <span data-ttu-id="97cfe-118">Además, para este perfil de caché, el `varmByParam` atributo está establecido en "format" de modo que las solicitudes con valores diferentes para el `format` consulta al parámetro de cadena tienen sus respuestas en caché por separado.</span><span class="sxs-lookup"><span data-stu-id="97cfe-118">Also, for this cache profile, the `varmByParam` attribute is set to "format" so requests with different values for the `format` query string parameter have their responses cached separately.</span></span> <span data-ttu-id="97cfe-119">Por último, el perfil de caché `varyByHeader` atributo está establecido en "Accept", por lo que las solicitudes con diferentes valores de encabezado Accept tienen sus respuestas en caché por separado.</span><span class="sxs-lookup"><span data-stu-id="97cfe-119">Lastly, the cache profile’s `varyByHeader` attribute is set to "Accept", so requests with different Accept header values have their responses cached separately.</span></span>  
   
- Program.cs en el proyecto cliente muestra el modo en que se puede crear este tipo de cliente utilizando <xref:System.Net.HttpWebRequest>.  Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF.  También es posible tener acceso al servicio utilizando otras clases de .NET Framework como el generador de canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y <xref:System.Net.WebClient>.  Otros ejemplos del SDK \(como [Servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) y [Selección de formato automática](../../../../docs/framework/wcf/samples/automatic-format-selection.md)\) ilustran cómo utilizar estas clases para comunicarse con un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="97cfe-120">Program.cs en el proyecto cliente muestra el modo en que se puede crear este tipo de cliente utilizando <xref:System.Net.HttpWebRequest>.</span><span class="sxs-lookup"><span data-stu-id="97cfe-120">Program.cs in the Client project demonstrates how such a client can be authored using <xref:System.Net.HttpWebRequest>.</span></span> <span data-ttu-id="97cfe-121">Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF.</span><span class="sxs-lookup"><span data-stu-id="97cfe-121">Note that this is just one way to access a WCF service.</span></span> <span data-ttu-id="97cfe-122">También es posible tener acceso al servicio utilizando otras clases de .NET Framework como el generador de canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y <xref:System.Net.WebClient>.</span><span class="sxs-lookup"><span data-stu-id="97cfe-122">It is also possible to access the service using other .NET Framework classes like the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel factory and <xref:System.Net.WebClient>.</span></span> <span data-ttu-id="97cfe-123">Otros ejemplos del SDK (como el [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo y la [la selección automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md) ejemplo) muestran cómo utilizar estas clases para comunicarse con un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio.</span><span class="sxs-lookup"><span data-stu-id="97cfe-123">Other samples in the SDK (such as the [Basic HTTP Service](../../../../docs/framework/wcf/samples/basic-http-service.md) sample and the [Automatic Format Selection](../../../../docs/framework/wcf/samples/automatic-format-selection.md) sample) illustrate how to use these classes to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-## Para ejecutar el ejemplo  
- El ejemplo consta de tres proyectos:  
+## <a name="to-run-the-sample"></a><span data-ttu-id="97cfe-124">Para ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="97cfe-124">To run the sample</span></span>  
+ <span data-ttu-id="97cfe-125">El ejemplo consta de tres proyectos:</span><span class="sxs-lookup"><span data-stu-id="97cfe-125">The sample consists of three projects:</span></span>  
   
--   **Servicio**: proyecto de aplicación web que incluye un servicio HTTP WCF hospedado en ASP.NET.  
+-   <span data-ttu-id="97cfe-126">**Servicio**: proyecto de aplicación Web que incluye un servicio HTTP WCF hospedado en ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="97cfe-126">**Service**: A Web Application project that includes a WCF HTTP service hosted in ASP.NET.</span></span>  
   
--   **Cliente**: proyecto de aplicación de consola que realiza las llamadas al servicio.  
+-   <span data-ttu-id="97cfe-127">**Cliente**: un proyecto de aplicación de consola que realiza llamadas al servicio.</span><span class="sxs-lookup"><span data-stu-id="97cfe-127">**Client**: A console application project that makes calls to the service.</span></span>  
   
--   **Común**: biblioteca compartida que contiene el tipo Customer utilizado por el cliente y el servicio.  
+-   <span data-ttu-id="97cfe-128">**Common**: una biblioteca compartida que contiene el tipo de cliente utilizado por el cliente y el servicio.</span><span class="sxs-lookup"><span data-stu-id="97cfe-128">**Common**: A shared library that contains the Customer type used by the client and service.</span></span>  
   
- Cuando se ejecuta la aplicación de consola Cliente, el cliente realiza las solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.  
+ <span data-ttu-id="97cfe-129">Cuando se ejecuta la aplicación de consola Cliente, el cliente realiza las solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.</span><span class="sxs-lookup"><span data-stu-id="97cfe-129">As the Client console application runs, the client makes requests to the service and writes the pertinent information from the responses to the console window.</span></span>  
   
-#### Para ejecutar el ejemplo  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="97cfe-130">Para ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="97cfe-130">To run the sample</span></span>  
   
-1.  Abra la solución para obtener el ejemplo de integración del almacenamiento en caché de ASP.NET.  
+1.  <span data-ttu-id="97cfe-131">Abra la solución para obtener el ejemplo de integración del almacenamiento en caché de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="97cfe-131">Open the solution for the ASP.NET Caching Integration Sample.</span></span>  
   
-2.  Presione Ctrl\+MAYÚS\+B para compilar la solución.  
+2.  <span data-ttu-id="97cfe-132">Presione Ctrl+MAYÚS+B para compilar la solución.</span><span class="sxs-lookup"><span data-stu-id="97cfe-132">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-3.  Si no está abierta aún, presione CTRL\+W\+S para abrir la ventana del **Explorador de soluciones**.  
+3.  <span data-ttu-id="97cfe-133">Si el **el Explorador de soluciones** ventana ya no está abierta, presione CTRL + W + S.</span><span class="sxs-lookup"><span data-stu-id="97cfe-133">If the **Solution Explorer** window is not already open, press CTRL+W+S.</span></span>  
   
-4.  En la ventana del  **Explorador de soluciones**, haga clic con el botón secundario en el proyecto **Servicio** y seleccione **Iniciar nueva instancia**.  De esta forma se inicia el servidor de desarrollo de ASP.NET, que hospeda el servicio.  
+4.  <span data-ttu-id="97cfe-134">Desde el **el Explorador de soluciones** (ventana), haga clic derecho el **servicio** de proyecto y seleccione **Iniciar nueva instancia**.</span><span class="sxs-lookup"><span data-stu-id="97cfe-134">From the **Solution Explorer** window, right click the **Service** project and select **Start New Instance**.</span></span> <span data-ttu-id="97cfe-135">De esta forma se inicia el servidor de desarrollo de ASP.NET, que hospeda el servicio.</span><span class="sxs-lookup"><span data-stu-id="97cfe-135">This launches the ASP.NET development server, which hosts the service.</span></span>  
   
-5.  En la ventana del  **Explorador de soluciones**, haga clic con el botón secundario en el proyecto **Cliente** y seleccione **Iniciar nueva instancia**.  
+5.  <span data-ttu-id="97cfe-136">Desde el **el Explorador de soluciones** (ventana), haga clic derecho el **cliente** de proyecto y seleccione **Iniciar nueva instancia**.</span><span class="sxs-lookup"><span data-stu-id="97cfe-136">From the **Solution Explorer** window, right click the **Client** project and select **Start New Instance**.</span></span>  
   
-6.  La ventana de la consola del cliente aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este.  Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador.  
+6.  <span data-ttu-id="97cfe-137">La ventana de la consola del cliente aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este.</span><span class="sxs-lookup"><span data-stu-id="97cfe-137">The client console window appears and provides the URI of the running service and the URI of the HTML help page for the running service.</span></span> <span data-ttu-id="97cfe-138">Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador.</span><span class="sxs-lookup"><span data-stu-id="97cfe-138">At any point in time you can view the HTML help page by typing the URI of the help page in a browser.</span></span>  
   
-7.  A medida que el ejemplo se ejecuta, el cliente escribe el estado de la actividad actual.  
+7.  <span data-ttu-id="97cfe-139">A medida que el ejemplo se ejecuta, el cliente escribe el estado de la actividad actual.</span><span class="sxs-lookup"><span data-stu-id="97cfe-139">As the sample runs, the client writes the status of the current activity.</span></span>  
   
-8.  Presione cualquier tecla para terminar la aplicación de consola del cliente.  
+8.  <span data-ttu-id="97cfe-140">Presione cualquier tecla para terminar la aplicación de consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="97cfe-140">Press any key to terminate the client console application.</span></span>  
   
-9. Presione MAYÚS\+F5 para dejar de depurar el servicio.  
+9. <span data-ttu-id="97cfe-141">Presione MAYÚS+F5 para dejar de depurar el servicio.</span><span class="sxs-lookup"><span data-stu-id="97cfe-141">Press SHIFT+F5 to stop debugging the service.</span></span>  
   
-10. En el Área de notificación de Windows, haga clic con el botón secundario en el icono del servidor de desarrollo de ASP.NET y seleccione **Detener**.
+10. <span data-ttu-id="97cfe-142">En el área de notificación de Windows, haga clic con el icono del servidor de desarrollo de ASP.NET y seleccione **detener**.</span><span class="sxs-lookup"><span data-stu-id="97cfe-142">In the Windows Notification Area, right click the ASP.NET development server icon and select **Stop**.</span></span>

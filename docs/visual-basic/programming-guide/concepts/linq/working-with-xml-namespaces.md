@@ -1,44 +1,36 @@
 ---
-title: Trabajar con espacios de nombres XML (Visual Basic) | Documentos de Microsoft
+title: Trabajar con espacios de nombres XML (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 52c248a48a1fa650bb50451cd9d0911ccc4586bb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fd38b2421a58fafa807d39506b728b7d3a4645a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="working-with-xml-namespaces-visual-basic"></a>Trabajar con espacios de nombres XML (Visual Basic)
-Los temas de esta sección describen cómo [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] admite espacios de nombres.  
+# <a name="working-with-xml-namespaces-visual-basic"></a><span data-ttu-id="828dd-102">Trabajar con espacios de nombres XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="828dd-102">Working with XML Namespaces (Visual Basic)</span></span>
+<span data-ttu-id="828dd-103">En los temas de esta sección se describe cómo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admite espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="828dd-103">The topics in this section describe how [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] supports namespaces.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a><span data-ttu-id="828dd-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="828dd-104">In This Section</span></span>  
   
-|Tema|Descripción|  
+|<span data-ttu-id="828dd-105">Tema</span><span class="sxs-lookup"><span data-stu-id="828dd-105">Topic</span></span>|<span data-ttu-id="828dd-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="828dd-106">Description</span></span>|  
 |-----------|-----------------|  
-|[Información general sobre los espacios de nombres (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Este tema presenta los espacios de nombres, <xref:System.Xml.Linq.XName>clase y la <xref:System.Xml.Linq.XNamespace>clase.</xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName>|  
-|[Cómo: crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces.md)|Muestra cómo crear documentos con espacios de nombres.|  
-|[Cómo: controlar prefijos de Namespace (Visual Basic) (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|Muestra cómo controlar prefijos de espacios de nombres declarando espacios de nombres globales.|  
-|[Ámbito de los espacios de nombres predeterminados en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Demuestra la forma apropiada de escribir consultas para XML en el espacio de nombres predeterminado.|  
-|[Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/working-with-global-namespaces-linq-to-xml.md)|Explica la semántica de espacios de nombres globales en Visual Basic y razones para utilizarlos.|  
-|[Cómo: escribir consultas en XML en espacios de nombres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Muestra cómo especificar espacios de nombres XML en Visual Basic LINQ a consultas XML.|  
+|[<span data-ttu-id="828dd-107">Información general sobre los espacios de nombres (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="828dd-107">Namespaces Overview (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|<span data-ttu-id="828dd-108">Este tema presenta los espacios de nombres, la clase <xref:System.Xml.Linq.XName> y la clase <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="828dd-108">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>|  
+|[<span data-ttu-id="828dd-109">Cómo: crear un documento con espacios de nombres (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="828dd-109">How to: Create a Document with Namespaces (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces.md)|<span data-ttu-id="828dd-110">Muestra cómo crear documentos con espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="828dd-110">Shows how to create documents with namespaces.</span></span>|  
+|[<span data-ttu-id="828dd-111">Cómo: controlar prefijos de Namespace (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="828dd-111">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|<span data-ttu-id="828dd-112">Muestra cómo controlar prefijos de espacios de nombres declarando espacios de nombres globales.</span><span class="sxs-lookup"><span data-stu-id="828dd-112">Shows how to control namespace prefixes by declaring global namespaces.</span></span>|  
+|[<span data-ttu-id="828dd-113">Ámbito de los espacios de nombres predeterminados en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="828dd-113">Scope of Default Namespaces in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/scope-of-default-namespaces.md)|<span data-ttu-id="828dd-114">Demuestra la forma apropiada de escribir consultas para XML en el espacio de nombres predeterminado.</span><span class="sxs-lookup"><span data-stu-id="828dd-114">Demonstrates the appropriate way to write queries for XML in the default namespace.</span></span>|  
+|[<span data-ttu-id="828dd-115">Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="828dd-115">Working with Global Namespaces (Visual Basic) (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-global-namespaces-linq-to-xml.md)|<span data-ttu-id="828dd-116">Explica la semántica de espacios de nombres globales en Visual Basic y razones para utilizarlos.</span><span class="sxs-lookup"><span data-stu-id="828dd-116">Explains the semantics of global namespaces in Visual Basic, and reasons for using them.</span></span>|  
+|[<span data-ttu-id="828dd-117">Cómo: escribir consultas en XML en espacios de nombres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="828dd-117">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|<span data-ttu-id="828dd-118">Muestra cómo especificar espacios de nombres XML en Visual Basic LINQ a consultas XML.</span><span class="sxs-lookup"><span data-stu-id="828dd-118">Demonstrates how to specify XML namespaces in Visual Basic LINQ to XML queries.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="828dd-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="828dd-119">See Also</span></span>  
+ [<span data-ttu-id="828dd-120">Guía de programación (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="828dd-120">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

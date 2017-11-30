@@ -1,35 +1,38 @@
 ---
-title: "1407 - SendTimeout | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1407 - SendTimeout
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1df1c98e-89ac-441a-b943-6dd2d41a37ed
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f480425d0d35cacce533cb24b06320d35a45dbb1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 1407 - SendTimeout
-## Propiedades  
+# <a name="1407---sendtimeout"></a><span data-ttu-id="c6858-102">1407 - SendTimeout</span><span class="sxs-lookup"><span data-stu-id="c6858-102">1407 - SendTimeout</span></span>
+## <a name="properties"></a><span data-ttu-id="c6858-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="c6858-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|1407|  
-|Palabras clave|ServiceModel|  
-|Nivel|Error|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="c6858-104">Id.</span><span class="sxs-lookup"><span data-stu-id="c6858-104">ID</span></span>|<span data-ttu-id="c6858-105">1407</span><span class="sxs-lookup"><span data-stu-id="c6858-105">1407</span></span>|  
+|<span data-ttu-id="c6858-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="c6858-106">Keywords</span></span>|<span data-ttu-id="c6858-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c6858-107">ServiceModel</span></span>|  
+|<span data-ttu-id="c6858-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="c6858-108">Level</span></span>|<span data-ttu-id="c6858-109">Error</span><span class="sxs-lookup"><span data-stu-id="c6858-109">Error</span></span>|  
+|<span data-ttu-id="c6858-110">Canal</span><span class="sxs-lookup"><span data-stu-id="c6858-110">Channel</span></span>|<span data-ttu-id="c6858-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="c6858-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descripción  
- Este evento se genera en enviar tiempo de espera.  
+## <a name="description"></a><span data-ttu-id="c6858-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="c6858-112">Description</span></span>  
+ <span data-ttu-id="c6858-113">Este evento se genera en enviar tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="c6858-113">This event is emitted on send timeout.</span></span>  
   
-## Mensaje  
- 1 %  
+## <a name="message"></a><span data-ttu-id="c6858-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="c6858-114">Message</span></span>  
+ <span data-ttu-id="c6858-115">1 %</span><span class="sxs-lookup"><span data-stu-id="c6858-115">1%</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="c6858-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="c6858-116">Details</span></span>

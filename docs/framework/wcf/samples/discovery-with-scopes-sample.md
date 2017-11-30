@@ -1,47 +1,50 @@
 ---
-title: "Ejemplo de detecci&#243;n con &#225;mbitos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ejemplo de detección con ámbitos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97bf047f26b95cdd4ac4a40e6b2284ec170442bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de detecci&#243;n con &#225;mbitos
-Este ejemplo muestra cómo utilizar los ámbitos para clasificar los extremos detectables además de cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> para realizar una búsqueda asincrónica de los extremos.En el servicio, este ejemplo muestra cómo personalizar la detección de cada extremo agregando un comportamiento de detección de extremo y utilizándolo para agregar un ámbito al extremo así como controlando la detectabilidad del extremo.En el cliente, el ejemplo revisa el modo en que los clientes pueden crear un <xref:System.ServiceModel.Discovery.DiscoveryClient> y ajustar los parámetros de búsqueda para incluir ámbitos agregándolos a <xref:System.ServiceModel.Discovery.FindCriteria>.Este ejemplo también muestra el modo en que los clientes pueden restringir las respuestas agregando un criterio de terminación.  
+# <a name="discovery-with-scopes-sample"></a><span data-ttu-id="484e4-102">Ejemplo de detección con ámbitos</span><span class="sxs-lookup"><span data-stu-id="484e4-102">Discovery with Scopes Sample</span></span>
+<span data-ttu-id="484e4-103">Este ejemplo muestra cómo utilizar los ámbitos para clasificar los extremos detectables además de cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> para realizar una búsqueda asincrónica de los extremos.</span><span class="sxs-lookup"><span data-stu-id="484e4-103">This sample shows how to use scopes to categorize discoverable endpoints as well how to use <xref:System.ServiceModel.Discovery.DiscoveryClient> to perform an asynchronous search for endpoints.</span></span> <span data-ttu-id="484e4-104">En el servicio, este ejemplo muestra cómo personalizar la detección de cada extremo agregando un comportamiento de detección de extremo y utilizándolo para agregar un ámbito al extremo así como controlando la detectabilidad del extremo.</span><span class="sxs-lookup"><span data-stu-id="484e4-104">On the service, this sample shows how to customize discovery for each endpoint by adding an endpoint discovery behavior and using it to add a scope to the endpoint as well as controlling the endpoint’s discoverability.</span></span> <span data-ttu-id="484e4-105">En el cliente, el ejemplo revisa el modo en que los clientes pueden crear un <xref:System.ServiceModel.Discovery.DiscoveryClient> y ajustar los parámetros de búsqueda para incluir ámbitos agregándolos a <xref:System.ServiceModel.Discovery.FindCriteria>.</span><span class="sxs-lookup"><span data-stu-id="484e4-105">On the client, the sample goes over how clients can create a <xref:System.ServiceModel.Discovery.DiscoveryClient> and fine tune search parameters to include scopes by adding scopes to the <xref:System.ServiceModel.Discovery.FindCriteria>.</span></span> <span data-ttu-id="484e4-106">Este ejemplo también muestra el modo en que los clientes pueden restringir las respuestas agregando un criterio de terminación.</span><span class="sxs-lookup"><span data-stu-id="484e4-106">This sample also shows how clients can restrict responses by adding a termination criterion.</span></span>  
   
-## Características de servicio  
- Este proyecto muestra dos extremos de servicio que se agregan a un <xref:System.ServiceModel.ServiceHost>.Cada extremo tiene un <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> asociado.Este comportamiento se utiliza para agregar los ámbitos del URI para ambos extremos.Los ámbitos se utilizan para distinguir cada uno de estos extremos para que los clientes puedan ajustar la búsqueda.Para el segundo extremo, la detectabilidad puede deshabilitarse estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`.De este modo se asegura de que los metadatos de detección asociados a este extremo no se envían como parte de ningún mensaje de detección.  
+## <a name="service-features"></a><span data-ttu-id="484e4-107">Características de servicio</span><span class="sxs-lookup"><span data-stu-id="484e4-107">Service Features</span></span>  
+ <span data-ttu-id="484e4-108">Este proyecto muestra dos extremos de servicio que se agregan a un <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="484e4-108">This project shows two service endpoints being added to a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="484e4-109">Cada extremo tiene un <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> asociado.</span><span class="sxs-lookup"><span data-stu-id="484e4-109">Each endpoint has a <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> associated with it.</span></span> <span data-ttu-id="484e4-110">Este comportamiento se utiliza para agregar los ámbitos del URI para ambos extremos.</span><span class="sxs-lookup"><span data-stu-id="484e4-110">This behavior is used to add URI scopes for both endpoints.</span></span> <span data-ttu-id="484e4-111">Los ámbitos se utilizan para distinguir cada uno de estos extremos para que los clientes puedan ajustar la búsqueda.</span><span class="sxs-lookup"><span data-stu-id="484e4-111">Scopes are used to distinguish each of these endpoints so that the clients can fine tune the search.</span></span> <span data-ttu-id="484e4-112">Para el segundo extremo, la detectabilidad puede deshabilitarse estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`.</span><span class="sxs-lookup"><span data-stu-id="484e4-112">For the second endpoint, the discoverability can be disabled by setting the <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> property to `false`.</span></span> <span data-ttu-id="484e4-113">De este modo se asegura de que los metadatos de detección asociados a este extremo no se envían como parte de ningún mensaje de detección.</span><span class="sxs-lookup"><span data-stu-id="484e4-113">This ensures that the discovery metadata associated with this endpoint is not sent as part of any discovery messages.</span></span>  
   
-## Características de cliente  
- El método `FindCalculatorServiceAddress()` muestra cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> y pasarlo en un <xref:System.ServiceModel.Discovery.FindCriteria> con dos restricciones.Un ámbito se agrega a los criterios y la propiedad <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> se establece en 1.El ámbito limita los resultados solo a los servicios que publican el mismo ámbito.Al establecer <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> en 1, se limitan las respuestas que el <xref:System.ServiceModel.Discovery.DiscoveryClient> espera a un extremo, como máximo.La llamada a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> es una operación sincrónica que bloquea el subproceso hasta que se alcance un tiempo de espera o se encuentre un extremo.  
+## <a name="client-features"></a><span data-ttu-id="484e4-114">Características de cliente</span><span class="sxs-lookup"><span data-stu-id="484e4-114">Client Features</span></span>  
+ <span data-ttu-id="484e4-115">El método `FindCalculatorServiceAddress()` muestra cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> y pasarlo en un <xref:System.ServiceModel.Discovery.FindCriteria> con dos restricciones.</span><span class="sxs-lookup"><span data-stu-id="484e4-115">The `FindCalculatorServiceAddress()` method shows how to use a <xref:System.ServiceModel.Discovery.DiscoveryClient> and pass in a <xref:System.ServiceModel.Discovery.FindCriteria> with two restrictions.</span></span> <span data-ttu-id="484e4-116">Un ámbito se agrega a los criterios y la propiedad <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> se establece en 1.</span><span class="sxs-lookup"><span data-stu-id="484e4-116">A scope is added to the criteria and the <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> property is set to 1.</span></span> <span data-ttu-id="484e4-117">El ámbito limita los resultados solo a los servicios que publican el mismo ámbito.</span><span class="sxs-lookup"><span data-stu-id="484e4-117">The scope limits the results to only the services that publish the same scope.</span></span> <span data-ttu-id="484e4-118">Al establecer <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> en 1, se limitan las respuestas que el <xref:System.ServiceModel.Discovery.DiscoveryClient> espera a un extremo, como máximo.</span><span class="sxs-lookup"><span data-stu-id="484e4-118">Setting <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> to 1 limits the responses the <xref:System.ServiceModel.Discovery.DiscoveryClient> waits for to, at most, 1 endpoint.</span></span> <span data-ttu-id="484e4-119">La llamada a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> es una operación sincrónica que bloquea el subproceso hasta que se alcance un tiempo de espera o se encuentre un extremo.</span><span class="sxs-lookup"><span data-stu-id="484e4-119">The <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> call is a synchronous operation that blocks the thread until a timeout is reached or one endpoint is found.</span></span>  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="484e4-120">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="484e4-120">To use this sample</span></span>  
   
-1.  Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas.Vea [Configura HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) para obtener detalles.Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas.Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  <span data-ttu-id="484e4-121">Este ejemplo utiliza los puntos de conexión HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas.</span><span class="sxs-lookup"><span data-stu-id="484e4-121">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added.</span></span> <span data-ttu-id="484e4-122">Vea [configurar HTTP y HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="484e4-122">See [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) for details.</span></span> <span data-ttu-id="484e4-123">Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas.</span><span class="sxs-lookup"><span data-stu-id="484e4-123">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="484e4-124">Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`</span><span class="sxs-lookup"><span data-stu-id="484e4-124">You may want to substitute your Domain and Username for the following arguments if the command does not work as is: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`</span></span>  
   
-2.  Compile la solución.  
+2.  <span data-ttu-id="484e4-125">Compile la solución.</span><span class="sxs-lookup"><span data-stu-id="484e4-125">Build the solution.</span></span>  
   
-3.  Ejecute el ejecutable de servicio desde el directorio de compilación.  
+3.  <span data-ttu-id="484e4-126">Ejecute el ejecutable de servicio desde el directorio de compilación.</span><span class="sxs-lookup"><span data-stu-id="484e4-126">Run the service executable from the build directory.</span></span>  
   
-4.  Ejecute la aplicación cliente.Observe que el cliente puede localizar el servicio.  
+4.  <span data-ttu-id="484e4-127">Ejecute la aplicación cliente.</span><span class="sxs-lookup"><span data-stu-id="484e4-127">Run the client executable.</span></span> <span data-ttu-id="484e4-128">Observe que el cliente puede localizar el servicio.</span><span class="sxs-lookup"><span data-stu-id="484e4-128">Note that the client is able to locate the service.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="484e4-129">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="484e4-129">The samples may already be installed on your machine.</span></span> <span data-ttu-id="484e4-130">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="484e4-130">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="484e4-131">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="484e4-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="484e4-132">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="484e4-132">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="484e4-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="484e4-133">See Also</span></span>

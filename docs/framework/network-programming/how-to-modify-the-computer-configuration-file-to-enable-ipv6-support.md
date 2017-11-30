@@ -7,36 +7,30 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a23a2690b0df30eaa815d0b321200af3a3403e5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 696aeb619f14a5ebe9a760cbd78a0d0fa876edc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
-En el ejemplo de código siguiente se muestra cómo modificar el archivo de configuración de equipo, *machine.config*, para permitir la compatibilidad con IPv6. El archivo *machine.config* se almacena en la carpeta *%Windir%\Microsoft.NET\Framework* en el directorio donde se ha instalado Windows. Hay un archivo *machine.config* distinto en las carpetas bajo *%Windir%\Microsoft.NET\Framework* para cada versión de .NET Framework instalada en el equipo (por ejemplo, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a><span data-ttu-id="da35d-102">Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6</span><span class="sxs-lookup"><span data-stu-id="da35d-102">How to: Modify the Computer Configuration File to Enable IPv6 Support</span></span>
+<span data-ttu-id="da35d-103">En el ejemplo de código siguiente se muestra cómo modificar el archivo de configuración de equipo, *machine.config*, para permitir la compatibilidad con IPv6.</span><span class="sxs-lookup"><span data-stu-id="da35d-103">The following code example shows how to modify the computer configuration file, *machine.config*, to enable IPv6 support.</span></span> <span data-ttu-id="da35d-104">El archivo *machine.config* se almacena en la carpeta *%Windir%\Microsoft.NET\Framework* en el directorio donde se ha instalado Windows.</span><span class="sxs-lookup"><span data-stu-id="da35d-104">The *machine.config* file is stored in the *%Windir%\Microsoft.NET\Framework* folder in the directory where Windows was installed.</span></span> <span data-ttu-id="da35d-105">Hay un archivo *machine.config* distinto en las carpetas bajo *%Windir%\Microsoft.NET\Framework* para cada versión de .NET Framework instalada en el equipo (por ejemplo, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).</span><span class="sxs-lookup"><span data-stu-id="da35d-105">There is a separate *machine.config* file in the folders under *%Windir%\Microsoft.NET\Framework* for each version of the .NET Framework installed on the computer (for example, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).</span></span>  
   
- Estos valores se pueden crear también en el archivo de configuración de la aplicación, que tiene prioridad sobre el archivo de configuración del equipo.  
+ <span data-ttu-id="da35d-106">Estos valores se pueden crear también en el archivo de configuración de la aplicación, que tiene prioridad sobre el archivo de configuración del equipo.</span><span class="sxs-lookup"><span data-stu-id="da35d-106">These settings can also be made in the configuration file for the application, which has precedence over the computer configuration file.</span></span>  
   
- Para .NET Framework versión 1.1 y anterior, el valor del modificador de la configuración **ipv6 enabled** especifica si los miembros de la clase <xref:System.Net.Dns?displayProperty=fullName> devuelven las direcciones de IPv6.  
+ <span data-ttu-id="da35d-107">Para .NET Framework versión 1.1 y anterior, el valor del modificador de la configuración **ipv6 enabled** especifica si los miembros de la clase <xref:System.Net.Dns?displayProperty=nameWithType> devuelven las direcciones de IPv6.</span><span class="sxs-lookup"><span data-stu-id="da35d-107">For .NET Framework version 1.1 and earlier, the value of the **ipv6 enabled** configuration switch specifies whether members of the <xref:System.Net.Dns?displayProperty=nameWithType> class return IPv6 addresses.</span></span>  
   
- En la versión 2.0 de .NET Framework y versiones posteriores, si Windows admite IPv6, entonces todos los miembros de la clase <xref:System.Net.Dns?displayProperty=fullName> (por ejemplo, el método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName>), devolverán las direcciones de IPv6 con una limitación. Los miembros obsoletos de la clase <xref:System.Net.Dns?displayProperty=fullName> (por ejemplo, el método <xref:System.Net.Dns.Resolve%2A?displayProperty=fullName>) leerán y reconocerán el valor en el archivo de configuración.  
+ <span data-ttu-id="da35d-108">En la versión 2.0 de .NET Framework y versiones posteriores, si Windows admite IPv6, entonces todos los miembros de la clase <xref:System.Net.Dns?displayProperty=nameWithType> (por ejemplo, el método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>), devolverán las direcciones de IPv6 con una limitación.</span><span class="sxs-lookup"><span data-stu-id="da35d-108">For .NET Framework version 2.0 and later, if Windows supports IPv6, then all members of the <xref:System.Net.Dns?displayProperty=nameWithType> class (for example, the <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> method), will return IPv6 addresses with one limitation.</span></span> <span data-ttu-id="da35d-109">Los miembros obsoletos de la clase <xref:System.Net.Dns?displayProperty=nameWithType> (por ejemplo, el método <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) leerán y reconocerán el valor en el archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="da35d-109">Obsolete members of the <xref:System.Net.Dns?displayProperty=nameWithType> class (for example, the <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> method) will read and recognize the value in the configuration file.</span></span>  
   
 > [!NOTE]
->  En la versión 2.0 de .NET Framework y versiones posteriores, IPv6 está habilitada de manera predeterminada. Para .NET Framework versión 1.1 y anteriores, IPv6 está deshabilitada de manera predeterminada.  
+>  <span data-ttu-id="da35d-110">En la versión 2.0 de .NET Framework y versiones posteriores, IPv6 está habilitada de manera predeterminada.</span><span class="sxs-lookup"><span data-stu-id="da35d-110">For .NET Framework version 2.0 and later, IPv6 is enabled by default.</span></span> <span data-ttu-id="da35d-111">Para .NET Framework versión 1.1 y anteriores, IPv6 está deshabilitada de manera predeterminada.</span><span class="sxs-lookup"><span data-stu-id="da35d-111">For .NET Framework version 1.1 and earlier, IPv6 is disabled by default.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="da35d-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="da35d-112">Example</span></span>  
   
 ```xml  
 <system.net>  
@@ -50,8 +44,7 @@ En el ejemplo de código siguiente se muestra cómo modificar el archivo de conf
 <system.net>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Direccionamiento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)   
- [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)   
- [Elemento \<ipv6> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="da35d-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="da35d-113">See Also</span></span>  
+ [<span data-ttu-id="da35d-114">Direccionamiento IPv6</span><span class="sxs-lookup"><span data-stu-id="da35d-114">IPv6 Addressing</span></span>](../../../docs/framework/network-programming/ipv6-addressing.md)  
+ [<span data-ttu-id="da35d-115">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="da35d-115">Network Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/network/index.md)  
+ [<span data-ttu-id="da35d-116">Elemento \<ipv6> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="da35d-116">\<ipv6> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

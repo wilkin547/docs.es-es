@@ -1,84 +1,87 @@
 ---
-title: "Elemento &lt;codeBase&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/codeBase"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<codeBase> (elemento)"
-  - "codeBase (elemento)"
-  - "etiquetas contenedoras, <codeBase> (elemento)"
+title: '&lt;codeBase&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/codeBase
+helpviewer_keywords:
+- <codeBase> element
+- container tags, <codeBase> element
+- codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c5b30f1dc3ccade3028c31c57ffdab521802f086
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;codeBase&gt;
-Especifica dónde puede buscar Common Language Runtime un ensamblado.  
+# <a name="ltcodebasegt-element"></a><span data-ttu-id="ee7f4-102">&lt;codeBase&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="ee7f4-102">&lt;codeBase&gt; Element</span></span>
+<span data-ttu-id="ee7f4-103">Especifica que common language runtime puede encontrar un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-103">Specifies where the common language runtime can find an assembly.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="ee7f4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ee7f4-104">\<configuration></span></span>  
+<span data-ttu-id="ee7f4-105">\<en tiempo de ejecución ></span><span class="sxs-lookup"><span data-stu-id="ee7f4-105">\<runtime></span></span>  
+<span data-ttu-id="ee7f4-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="ee7f4-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="ee7f4-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="ee7f4-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="ee7f4-108">\<codeBase ></span><span class="sxs-lookup"><span data-stu-id="ee7f4-108">\<codeBase></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ee7f4-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ee7f4-109">Syntax</span></span>  
   
-   <codeBase    
+```xml  
+   <codeBase    
 version="Assembly version"  
 href="URL of assembly"/>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ee7f4-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="ee7f4-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="ee7f4-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="ee7f4-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="ee7f4-112">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`href`|Atributo necesario.<br /><br /> Especifica la dirección URL en la que el motor de ejecución puede localizar la versión especificada del ensamblado.|  
-|`version`|Atributo necesario.<br /><br /> Especifica la versión de ensamblado que aplica el código base.  El formato de un número de versión de ensamblado es *major.minor.build.revision*.|  
+|<span data-ttu-id="ee7f4-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="ee7f4-113">Attribute</span></span>|<span data-ttu-id="ee7f4-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="ee7f4-114">Description</span></span>|  
+|---------------|-----------------|  
+|`href`|<span data-ttu-id="ee7f4-115">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="ee7f4-116">Especifica la dirección URL donde encuentre el runtime la versión especificada del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-116">Specifies the URL where the runtime can find the specified version of the assembly.</span></span>|  
+|`version`|<span data-ttu-id="ee7f4-117">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="ee7f4-118">Especifica la versión del ensamblado al que se aplica el código base.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-118">Specifies the version of the assembly the codebase applies to.</span></span> <span data-ttu-id="ee7f4-119">El formato de un número de versión de ensamblado es *principal.secundaria.compilación.revisión*.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-119">The format of an assembly version number is *major.minor.build.revision*.</span></span>|  
   
-## Atributo version  
+## <a name="version-attribute"></a><span data-ttu-id="ee7f4-120">versión del atributo</span><span class="sxs-lookup"><span data-stu-id="ee7f4-120">version Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="ee7f4-121">Valor</span><span class="sxs-lookup"><span data-stu-id="ee7f4-121">Value</span></span>|<span data-ttu-id="ee7f4-122">Descripción</span><span class="sxs-lookup"><span data-stu-id="ee7f4-122">Description</span></span>|  
 |-----------|-----------------|  
-|Los valores aceptados para cada parte del número de versión van de 0 a 65535.|No es aplicable|  
+|<span data-ttu-id="ee7f4-123">Los valores válidos para cada parte del número de versión van del 0 al 65535.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-123">Valid values for each part of the version number are 0 to 65535.</span></span>|<span data-ttu-id="ee7f4-124">No es aplicable.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-124">Not applicable.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="ee7f4-125">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ee7f4-125">Child Elements</span></span>  
+ <span data-ttu-id="ee7f4-126">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-126">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="ee7f4-127">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ee7f4-127">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`buildproviders`|Define una colección de proveedores de compilación que se utiliza para compilar archivos de recursos personalizados.  Puede tener cualquier número de proveedores de compilación.|  
-|`compilation`|Configura todas las opciones de compilación que utiliza ASP.NET.|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`System.web`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
+|<span data-ttu-id="ee7f4-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="ee7f4-128">Element</span></span>|<span data-ttu-id="ee7f4-129">Descripción</span><span class="sxs-lookup"><span data-stu-id="ee7f4-129">Description</span></span>|  
+|-------------|-----------------|  
+|`buildproviders`|<span data-ttu-id="ee7f4-130">Define una colección de proveedores de generación que se utiliza para compilar archivos de recursos personalizados.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-130">Defines a collection of build providers used to compile custom resource files.</span></span> <span data-ttu-id="ee7f4-131">Puede tener cualquier número de proveedores de generación.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-131">You can have any number of build providers.</span></span>|  
+|`compilation`|<span data-ttu-id="ee7f4-132">Configura todas las opciones de compilación que utiliza ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-132">Configures all the compilation settings that ASP.NET uses.</span></span>|  
+|`configuration`|<span data-ttu-id="ee7f4-133">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.web`|<span data-ttu-id="ee7f4-134">Especifica el elemento raíz de la sección de configuración de ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-134">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## Comentarios  
- Que el runtime usa **\<codeBase\>** que establece en un archivo de directivas del archivo de configuración o el editor de equipo, el archivo también debe redirigir la versión del ensamblado.  Los archivos de configuración de la aplicación pueden tener una configuración de código base sin redirigir la versión de ensamblado.  Una vez determinada la versión de ensamblado que se utiliza, el motor de ejecución aplica la configuración de código base del archivo que determina la versión.  Si no se indica un código base, el motor de ejecución intenta localizar el ensamblado del modo habitual.  
+## <a name="remarks"></a><span data-ttu-id="ee7f4-135">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ee7f4-135">Remarks</span></span>  
+ <span data-ttu-id="ee7f4-136">En tiempo de ejecución usar el  **\<codeBase >** establecer en un archivo de configuración del equipo o el archivo de directiva de edición, el archivo también debe redirigir la versión del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-136">For the runtime to use the **\<codeBase>** setting in a machine configuration file or publisher policy file, the file must also redirect the assembly version.</span></span> <span data-ttu-id="ee7f4-137">Archivos de configuración de la aplicación pueden tener un valor de código base sin redirigir la versión del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-137">Application configuration files can have a codebase setting without redirecting the assembly version.</span></span> <span data-ttu-id="ee7f4-138">Después de determinar qué versión del ensamblado, el tiempo de ejecución aplica la configuración de código base del archivo que determina la versión.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-138">After determining which assembly version to use, the runtime applies the codebase setting from the file that determines the version.</span></span> <span data-ttu-id="ee7f4-139">Si no se indica ningún código base, el tiempo de ejecución sondea el ensamblado de la manera habitual.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-139">If no codebase is indicated, the runtime probes for the assembly in the usual way.</span></span>  
   
- Si el ensamblado tiene un nombre seguro, el código base puede estar en cualquier lugar de la intranet local o en Internet.  Si es un ensamblado privado, la configuración de código base debe ser una ruta de acceso relativa a un directorio de la aplicación.  
+ <span data-ttu-id="ee7f4-140">Si el ensamblado tiene un nombre seguro, la configuración de código base puede ser en cualquier parte en la intranet local o Internet.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-140">If the assembly has a strong name, the codebase setting can be anywhere on the local intranet or the Internet.</span></span> <span data-ttu-id="ee7f4-141">Si el ensamblado es un ensamblado privado, la configuración de código base debe ser una ruta de acceso relativa al directorio de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-141">If the assembly is a private assembly, the codebase setting must be a path relative to the application's directory.</span></span>  
   
- Para los ensamblados sin nombre seguro, se omite la versión y el cargador utiliza la primera aparición \<del código\> base dentro \<dependentAssembly\>.  Si existe una entrada en el archivo de configuración de la aplicación que redirija el enlace a otro ensamblado, la redirección tendrá prioridad incluso aunque la versión del ensamblado no coincida con la solicitud de enlace.  
+ <span data-ttu-id="ee7f4-142">Para los ensamblados sin un nombre seguro, se ignora la versión y el cargador usa la primera aparición de \<codebase > dentro de \<dependentAssembly >.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-142">For assemblies without a strong name, version is ignored and the loader uses the first appearance of \<codebase> inside \<dependentAssembly>.</span></span> <span data-ttu-id="ee7f4-143">Si hay una entrada en el archivo de configuración de aplicación que redirija el enlace a otro ensamblado, la redirección tendrá prioridad incluso si la versión del ensamblado no coincide con la solicitud de enlace.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-143">If there is an entry in the application configuration file that redirects binding to another assembly, the redirection will take precedence even if the assembly version doesnt match the binding request.</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra cómo especificar dónde puede buscar el motor de ejecución un ensamblado.  
+## <a name="example"></a><span data-ttu-id="ee7f4-144">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ee7f4-144">Example</span></span>  
+ <span data-ttu-id="ee7f4-145">En el ejemplo siguiente se muestra cómo especificar dónde encuentre el runtime un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ee7f4-145">The following example shows how to specify where the runtime can find an assembly.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -94,8 +97,8 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Especificar la ubicación de un ensamblado](../../../../../docs/framework/configure-apps/specify-assembly-location.md)   
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="ee7f4-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="ee7f4-146">See Also</span></span>  
+ [<span data-ttu-id="ee7f4-147">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="ee7f4-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="ee7f4-148">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="ee7f4-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="ee7f4-149">Especificar la ubicación de un ensamblado</span><span class="sxs-lookup"><span data-stu-id="ee7f4-149">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [<span data-ttu-id="ee7f4-150">Cómo el motor en tiempo de ejecución ubica ensamblados</span><span class="sxs-lookup"><span data-stu-id="ee7f4-150">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

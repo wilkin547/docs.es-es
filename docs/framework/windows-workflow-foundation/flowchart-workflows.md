@@ -1,40 +1,44 @@
 ---
-title: "Flujos de trabajo del diagrama de flujo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Flujos de trabajo del diagrama de flujo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 568725f9a112756a773eddab9f56411f4d4fa86e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Flujos de trabajo del diagrama de flujo
-Un diagrama de flujo es un paradigma conocido para diseñar programas.La actividad Flowchart se usa normalmente para implementar flujos de trabajo no secuenciales, aunque se puede usar para flujos de trabajo secuenciales si no se usa ningún nodo `FlowDecision`.  
+# <a name="flowchart-workflows"></a><span data-ttu-id="e2781-102">Flujos de trabajo del diagrama de flujo</span><span class="sxs-lookup"><span data-stu-id="e2781-102">Flowchart Workflows</span></span>
+<span data-ttu-id="e2781-103">Un diagrama de flujo es un paradigma conocido para diseñar programas.</span><span class="sxs-lookup"><span data-stu-id="e2781-103">A flowchart is a well-known paradigm for designing programs.</span></span> <span data-ttu-id="e2781-104">La actividad Flowchart se usa normalmente para implementar flujos de trabajo no secuenciales, aunque se puede usar para flujos de trabajo secuenciales si no se usa ningún nodo `FlowDecision`.</span><span class="sxs-lookup"><span data-stu-id="e2781-104">The Flowchart activity is typically used to implement non-sequential workflows, but can be used for sequential workflows if no `FlowDecision` nodes are used.</span></span>  
   
-## Estructura de flujo de trabajo de gráfico de flujo  
- Una actividad de diagrama de flujo es una actividad que contiene una colección de actividades que se ejecutarán.Los diagramas de flujo también contienen elementos de control de flujo como <xref:System.Activities.Statements.FlowDecision> y <xref:System.Activities.Statements.FlowSwitch> que dirigen la ejecución entre las actividades contenidas según los valores de las variables.  
+## <a name="flowchart-workflow-structure"></a><span data-ttu-id="e2781-105">Estructura de flujo de trabajo de gráfico de flujo</span><span class="sxs-lookup"><span data-stu-id="e2781-105">Flowchart Workflow Structure</span></span>  
+ <span data-ttu-id="e2781-106">Una actividad de diagrama de flujo es una actividad que contiene una colección de actividades que se ejecutarán.</span><span class="sxs-lookup"><span data-stu-id="e2781-106">A Flowchart activity is an activity that contains a collection of activities to be executed.</span></span>  <span data-ttu-id="e2781-107">Los diagramas de flujo también contienen elementos de control de flujo como <xref:System.Activities.Statements.FlowDecision> y <xref:System.Activities.Statements.FlowSwitch%601> que dirigen la ejecución entre las actividades contenidas según los valores de las variables.</span><span class="sxs-lookup"><span data-stu-id="e2781-107">Flowcharts also contain flow control elements such as <xref:System.Activities.Statements.FlowDecision> and <xref:System.Activities.Statements.FlowSwitch%601> that direct execution between contained activities based on the values of variables.</span></span>  
   
-## Tipos de nodos de flujo  
- Se usan tipos diferentes de elementos en función del tipo de control de flujo necesario cuando el elemento se ejecuta.Los tipos de elemento del diagrama de flujo incluyen:  
+## <a name="types-of-flow-nodes"></a><span data-ttu-id="e2781-108">Tipos de nodos de flujo</span><span class="sxs-lookup"><span data-stu-id="e2781-108">Types of Flow Nodes</span></span>  
+ <span data-ttu-id="e2781-109">Se usan tipos diferentes de elementos en función del tipo de control de flujo necesario cuando el elemento se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="e2781-109">Different types of elements are used depending on the type of flow control required when the element executes.</span></span> <span data-ttu-id="e2781-110">Los tipos de elemento del diagrama de flujo incluyen:</span><span class="sxs-lookup"><span data-stu-id="e2781-110">Types of flowchart elements include:</span></span>  
   
--   `FlowStep`: modela un paso de ejecución en el diagrama de flujo.  
+-   <span data-ttu-id="e2781-111">`FlowStep`: modela un paso de ejecución en el diagrama de flujo.</span><span class="sxs-lookup"><span data-stu-id="e2781-111">`FlowStep` - Models one step of execution in the flowchart.</span></span>  
   
--   `FlowDecision`: crea una bifurcación de la ejecución basándose en una condición booleana, similar a <xref:System.Activities.Statements.If>.  
+-   <span data-ttu-id="e2781-112">`FlowDecision`: la ejecución de bifurcaciones basada en una condición booleana, similar a <xref:System.Activities.Statements.If>.</span><span class="sxs-lookup"><span data-stu-id="e2781-112">`FlowDecision` - Branches execution based on a Boolean condition, similar to <xref:System.Activities.Statements.If>.</span></span>  
   
--   `FlowSwitch`: crea una bifurcación de la ejecución basándose en un modificador exclusivo, similar a <xref:System.Activities.Statements.Switch%601>.  
+-   <span data-ttu-id="e2781-113">`FlowSwitch`: la ejecución de bifurcaciones basada en un modificador exclusivo, similar a <xref:System.Activities.Statements.Switch%601>.</span><span class="sxs-lookup"><span data-stu-id="e2781-113">`FlowSwitch` – Branches execution based on an exclusive switch, similar to <xref:System.Activities.Statements.Switch%601>.</span></span>  
   
- Cada vínculo tiene una propiedad `Action` que define una clase <xref:System.Activities.ActivityAction> que se puede usar para ejecutar actividades secundarias, además de una o más propiedades `Next` que definen qué elemento o elementos ejecutar cuando el elemento actual finalice la ejecución.  
+ <span data-ttu-id="e2781-114">Cada vínculo tiene una propiedad `Action` que define una clase <xref:System.Activities.ActivityAction> que se puede usar para ejecutar actividades secundarias, además de una o más propiedades `Next` que definen qué elemento o elementos ejecutar cuando el elemento actual finalice la ejecución.</span><span class="sxs-lookup"><span data-stu-id="e2781-114">Each link has an `Action` property that defines a <xref:System.Activities.ActivityAction> that can be used to execute child activities, and one or more `Next` properties that define which element or elements to execute when the current element finishes execution.</span></span>  
   
-### Crear un secuencia de actividad básica con un nodo FlowStep  
- Para modelar una secuencia básica en la que dos actividades se ejecutan sucesivamente, se usa el elemento `FlowStep`.En el siguiente ejemplo, se usan dos elementos `FlowStep` para ejecutar dos actividades en secuencia.  
+### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a><span data-ttu-id="e2781-115">Crear un secuencia de actividad básica con un nodo FlowStep</span><span class="sxs-lookup"><span data-stu-id="e2781-115">Creating a Basic Activity Sequence with a FlowStep Node</span></span>  
+ <span data-ttu-id="e2781-116">Para modelar una secuencia básica en la que dos actividades se ejecutan sucesivamente, se usa el elemento `FlowStep`.</span><span class="sxs-lookup"><span data-stu-id="e2781-116">To model a basic sequence in which two activities execute in turn, the `FlowStep` element is used.</span></span> <span data-ttu-id="e2781-117">En el siguiente ejemplo, se usan dos elementos `FlowStep` para ejecutar dos actividades en secuencia.</span><span class="sxs-lookup"><span data-stu-id="e2781-117">In the following example, two `FlowStep` elements are used to execute two activities in sequence.</span></span>  
   
-```  
+```xml  
 <Flowchart>  
   <FlowStep>      
   <Assign DisplayName="Get Name">  
@@ -52,13 +56,12 @@ Un diagrama de flujo es un paradigma conocido para diseñar programas.La activid
     </FlowStep.Next>  
   </FlowStep>  
 </Flowchart>  
-  
 ```  
   
-### Crear un diagrama de flujo condicional con un nodo FlowDecision  
- Para modelar un nodo de flujo condicional en un flujo de trabajo de diagrama de flujo \(es decir, para crear un vínculo que funcione como el símbolo de la decisión de un diagrama de flujo tradicional\), se usa un nodo <xref:System.Activities.Statements.FlowDecision>.La propiedad <xref:System.Activities.Statements.FlowDecision.Condition%2A> del nodo está establecida en una expresión que define la condición, y las propiedades <xref:System.Activities.Statements.FlowDecision.True%2A> y <xref:System.Activities.Statements.FlowDecision.False%2A> están establecidas en instancias de <xref:System.Activities.Statements.FlowNode> que se ejecutarán si la expresión se evalúa como `true` o `false`.En el siguiente ejemplo se muestra cómo definir un flujo de trabajo que usa un nodo <xref:System.Activities.Statements.FlowDecision>.  
+### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a><span data-ttu-id="e2781-118">Crear un diagrama de flujo condicional con un nodo FlowDecision</span><span class="sxs-lookup"><span data-stu-id="e2781-118">Creating a Conditional Flowchart with a FlowDecision Node</span></span>  
+ <span data-ttu-id="e2781-119">Para modelar un nodo de flujo condicional en un flujo de trabajo de diagrama de flujo (es decir, para crear un vínculo que funcione como el símbolo de la decisión de un diagrama de flujo tradicional), se usa un nodo <xref:System.Activities.Statements.FlowDecision>.</span><span class="sxs-lookup"><span data-stu-id="e2781-119">To model a conditional flow node in a flowchart workflow (that is, to create a link that functions as a traditional flowchart's decision symbol), a <xref:System.Activities.Statements.FlowDecision> node is used.</span></span> <span data-ttu-id="e2781-120">La propiedad <xref:System.Activities.Statements.FlowDecision.Condition%2A> del nodo está establecida en una expresión que define la condición. Las propiedades <xref:System.Activities.Statements.FlowDecision.True%2A> y <xref:System.Activities.Statements.FlowDecision.False%2A> están establecidas en instancias de <xref:System.Activities.Statements.FlowNode> para que se ejecuten si la expresión se evalúa como `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="e2781-120">The <xref:System.Activities.Statements.FlowDecision.Condition%2A> property of the node is set to an expression that defines the condition, and the <xref:System.Activities.Statements.FlowDecision.True%2A> and <xref:System.Activities.Statements.FlowDecision.False%2A> properties are set to <xref:System.Activities.Statements.FlowNode> instances to be executed if the expression evaluates to `true` or `false`.</span></span> <span data-ttu-id="e2781-121">En el siguiente ejemplo se muestra cómo definir un flujo de trabajo que usa un nodo <xref:System.Activities.Statements.FlowDecision>.</span><span class="sxs-lookup"><span data-stu-id="e2781-121">The following example shows how to define a workflow that uses a <xref:System.Activities.Statements.FlowDecision> node.</span></span>  
   
-```  
+```xml  
 <Flowchart>  
   <FlowStep>  
     <Read Result="[s]"/>  
@@ -79,13 +82,12 @@ Un diagrama de flujo es un paradigma conocido para diseñar programas.La activid
     </FlowStep.Next>  
   </FlowStep>  
 </Flowchart>  
-  
 ```  
   
-### Crear modificadores exclusivos con un nodo FlowSwitch  
- Para modelar un diagrama de flujo en el que se selecciona una ruta de acceso exclusiva según un valor coincidente, se usa el nodo <xref:System.Activities.Statements.FlowSwitch%601>.La propiedad <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> se establece en <xref:System.Activities.Activity%601> con un parámetro de tipo de <xref:System.Object> que define el valor con el que se van a hacer coincidir las opciones.La propiedad <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> define un diccionario de claves y objetos <xref:System.Activities.Statements.FlowNode> para hacer coincidir con la expresión condicional, y un conjunto de objetos <xref:System.Activities.Statements.FlowNode> que definen cómo debe fluir la ejecución si el caso especificado coincide con la expresión condicional.<xref:System.Activities.Statements.FlowSwitch%601> también define una propiedad <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> que define a su vez la manera en que debe fluir la ejecución si no hay casos que coincidan con la expresión de la condición.En el siguiente ejemplo se muestra cómo definir un flujo de trabajo que usa un elemento <xref:System.Activities.Statements.FlowSwitch%601>.  
+### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a><span data-ttu-id="e2781-122">Crear modificadores exclusivos con un nodo FlowSwitch</span><span class="sxs-lookup"><span data-stu-id="e2781-122">Creating an Exclusive Switch with a FlowSwitch Node</span></span>  
+ <span data-ttu-id="e2781-123">Para modelar un diagrama de flujo en el que se selecciona una ruta de acceso exclusiva según un valor coincidente, se usa el nodo <xref:System.Activities.Statements.FlowSwitch%601>.</span><span class="sxs-lookup"><span data-stu-id="e2781-123">To model a flowchart in which one exclusive path is selected based on a matching value, the <xref:System.Activities.Statements.FlowSwitch%601> node is used.</span></span> <span data-ttu-id="e2781-124">La propiedad <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> se establece en <xref:System.Activities.Activity%601> con un parámetro de tipo de <xref:System.Object> que define el valor con el que se van a hacer coincidir las opciones.</span><span class="sxs-lookup"><span data-stu-id="e2781-124">The <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> property is set to a <xref:System.Activities.Activity%601> with a type parameter of <xref:System.Object> that defines the value to match choices against.</span></span> <span data-ttu-id="e2781-125">La propiedad <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> define un diccionario de claves y objetos <xref:System.Activities.Statements.FlowNode> para hacer coincidir con la expresión condicional, y un conjunto de objetos <xref:System.Activities.Statements.FlowNode> que definen cómo debe fluir la ejecución si el caso especificado coincide con la expresión condicional.</span><span class="sxs-lookup"><span data-stu-id="e2781-125">The <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> property defines a dictionary of keys and <xref:System.Activities.Statements.FlowNode> objects to match against the conditional expression, and a set of <xref:System.Activities.Statements.FlowNode> objects that define how execution should flow if the given case matches the conditional expression.</span></span> <span data-ttu-id="e2781-126"><xref:System.Activities.Statements.FlowSwitch%601> también define una propiedad <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> que define a su vez la manera en que debe fluir la ejecución si no hay casos que coincidan con la expresión de la condición.</span><span class="sxs-lookup"><span data-stu-id="e2781-126">The <xref:System.Activities.Statements.FlowSwitch%601> also defines a <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> property that defines how execution should flow if no cases match the condition expression.</span></span> <span data-ttu-id="e2781-127">En el siguiente ejemplo se muestra cómo definir un flujo de trabajo que usa un elemento <xref:System.Activities.Statements.FlowSwitch%601>.</span><span class="sxs-lookup"><span data-stu-id="e2781-127">The following example demonstrates how to define a workflow that uses a <xref:System.Activities.Statements.FlowSwitch%601> element.</span></span>  
   
-```  
+```xml  
 <Flowchart>  
     <FlowSwitch>  
       <FlowStep x:Key="Red">  
@@ -99,5 +101,4 @@ Un diagrama de flujo es un paradigma conocido para diseñar programas.La activid
       </FlowStep>  
     </FlowSwitch>  
 </Flowchart>  
-  
 ```

@@ -1,199 +1,202 @@
 ---
-title: "Tutorial: Usar solo procedimientos almacenados (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Tutorial: Usar solo procedimientos almacenados (C#)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 52c9cfeab362a1603c1d18a9caa1601cd76711b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Usar solo procedimientos almacenados (C#)
-Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos ejecutando procedimientos almacenados solamente.  Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
+# <a name="walkthrough-using-only-stored-procedures-c"></a><span data-ttu-id="d7adf-102">Tutorial: Usar solo procedimientos almacenados (C#)</span><span class="sxs-lookup"><span data-stu-id="d7adf-102">Walkthrough: Using Only Stored Procedures (C#)</span></span>
+<span data-ttu-id="d7adf-103">Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos ejecutando procedimientos almacenados solamente.</span><span class="sxs-lookup"><span data-stu-id="d7adf-103">This walkthrough provides a basic end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario for accessing data by executing stored procedures only.</span></span> <span data-ttu-id="d7adf-104">Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.</span><span class="sxs-lookup"><span data-stu-id="d7adf-104">This approach is often used by database administrators to limit how the datastore is accessed.</span></span>  
   
 > [!NOTE]
->  También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`.  Para obtener más información, consulte [Personalizar operaciones de actualización, inserción y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+>  <span data-ttu-id="d7adf-105">También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`.</span><span class="sxs-lookup"><span data-stu-id="d7adf-105">You can also use stored procedures in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications to override default behavior, especially for `Create`, `Update`, and `Delete` processes.</span></span> <span data-ttu-id="d7adf-106">Para obtener más información, consulte [personalizar operaciones de inserción, actualización y eliminar](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span><span class="sxs-lookup"><span data-stu-id="d7adf-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>  
   
- En este tutorial, utilizará dos métodos asignados a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist.  La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para crear un archivo de C\#.  Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
+ <span data-ttu-id="d7adf-107">En este tutorial, utilizará dos métodos asignados a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist.</span><span class="sxs-lookup"><span data-stu-id="d7adf-107">For purposes of this walkthrough, you will use two methods that have been mapped to stored procedures in the Northwind sample database: CustOrdersDetail and CustOrderHist.</span></span> <span data-ttu-id="d7adf-108">La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para crear un archivo de C#.</span><span class="sxs-lookup"><span data-stu-id="d7adf-108">The mapping occurs when you run the SqlMetal command-line tool to generate a C# file.</span></span> <span data-ttu-id="d7adf-109">Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.</span><span class="sxs-lookup"><span data-stu-id="d7adf-109">For more information, see the Prerequisites section later in this walkthrough.</span></span>  
   
- En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  Los desarrolladores de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también pueden utilizar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar funcionalidad de procedimiento almacenado.  Consulte [LINQ to SQL Tools en Visual Studio](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md).  
+ <span data-ttu-id="d7adf-110">En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d7adf-110">This walkthrough does not rely on the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].</span></span> <span data-ttu-id="d7adf-111">Los desarrolladores de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también pueden utilizar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar funcionalidad de procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="d7adf-111">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can also use the [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] to implement stored procedure functionality.</span></span> <span data-ttu-id="d7adf-112">Vea [LINQ a las herramientas SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span><span class="sxs-lookup"><span data-stu-id="d7adf-112">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
- Este tutorial se escribió con la configuración de desarrollo de Visual C\#.  
+ <span data-ttu-id="d7adf-113">Este tutorial se escribió con la configuración de desarrollo de Visual C#.</span><span class="sxs-lookup"><span data-stu-id="d7adf-113">This walkthrough was written by using Visual C# Development Settings.</span></span>  
   
-## Requisitos previos  
- En este tutorial se requiere lo siguiente:  
+## <a name="prerequisites"></a><span data-ttu-id="d7adf-114">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="d7adf-114">Prerequisites</span></span>  
+ <span data-ttu-id="d7adf-115">En este tutorial se requiere lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="d7adf-115">This walkthrough requires the following:</span></span>  
   
--   Este tutorial utiliza una carpeta dedicada \("c:\\linqtest7"\) que contiene los archivos.  Cree esta carpeta antes de empezar el tutorial.  
+-   <span data-ttu-id="d7adf-116">Este tutorial utiliza una carpeta dedicada ("c:\linqtest7") que contiene los archivos.</span><span class="sxs-lookup"><span data-stu-id="d7adf-116">This walkthrough uses a dedicated folder ("c:\linqtest7") to hold files.</span></span> <span data-ttu-id="d7adf-117">Cree esta carpeta antes de empezar el tutorial.</span><span class="sxs-lookup"><span data-stu-id="d7adf-117">Create this folder before you begin the walkthrough.</span></span>  
   
--   Base de datos de ejemplo Northwind.  
+-   <span data-ttu-id="d7adf-118">Base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="d7adf-118">The Northwind sample database.</span></span>  
   
-     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft.  Para obtener más información, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\\linqtest7.  
+     <span data-ttu-id="d7adf-119">Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="d7adf-119">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="d7adf-120">Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="d7adf-120">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="d7adf-121">Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest7.</span><span class="sxs-lookup"><span data-stu-id="d7adf-121">After you have downloaded the database, copy the northwnd.mdf file to the c:\linqtest7 folder.</span></span>  
   
--   Un archivo de código de C\# generado a partir de la base de datos Northwind.  
+-   <span data-ttu-id="d7adf-122">Un archivo de código de C# generado a partir de la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="d7adf-122">A C# code file generated from the Northwind database.</span></span>  
   
-     Este tutorial se escribió utilizando la herramienta SqlMetal con la línea de comandos siguiente:  
+     <span data-ttu-id="d7adf-123">Este tutorial se escribió utilizando la herramienta SqlMetal con la línea de comandos siguiente:</span><span class="sxs-lookup"><span data-stu-id="d7adf-123">This walkthrough was written by using the SqlMetal tool with the following command line:</span></span>  
   
-     **sqlmetal \/code:"c:\\linqtest7\\northwind.cs" \/language:csharp "c:\\linqtest7\\northwnd.mdf" \/sprocs \/functions \/pluralize**  
+     <span data-ttu-id="d7adf-124">**SqlMetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions / plural**</span><span class="sxs-lookup"><span data-stu-id="d7adf-124">**sqlmetal /code:"c:\linqtest7\northwind.cs" /language:csharp "c:\linqtest7\northwnd.mdf" /sprocs /functions /pluralize**</span></span>  
   
-     Para obtener más información, consulte [SqlMetal.exe \(Herramienta de generación de código\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     <span data-ttu-id="d7adf-125">Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="d7adf-125">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## Información general  
- Este tutorial se compone de seis tareas principales:  
+## <a name="overview"></a><span data-ttu-id="d7adf-126">Información general</span><span class="sxs-lookup"><span data-stu-id="d7adf-126">Overview</span></span>  
+ <span data-ttu-id="d7adf-127">Este tutorial se compone de seis tareas principales:</span><span class="sxs-lookup"><span data-stu-id="d7adf-127">This walkthrough consists of six main tasks:</span></span>  
   
--   Configurar la solución de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   <span data-ttu-id="d7adf-128">Configurar la solución de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d7adf-128">Setting up the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span></span>  
   
--   Agregar el ensamblado System.Data.Linq al proyecto.  
+-   <span data-ttu-id="d7adf-129">Agregar el ensamblado System.Data.Linq al proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7adf-129">Adding the System.Data.Linq assembly to the project.</span></span>  
   
--   Agregar el archivo de código de la base de datos al proyecto.  
+-   <span data-ttu-id="d7adf-130">Agregar el archivo de código de la base de datos al proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7adf-130">Adding the database code file to the project.</span></span>  
   
--   Crear una conexión con la base de datos.  
+-   <span data-ttu-id="d7adf-131">Crear una conexión con la base de datos.</span><span class="sxs-lookup"><span data-stu-id="d7adf-131">Creating a connection with the database.</span></span>  
   
--   Configurar la interfaz de usuario.  
+-   <span data-ttu-id="d7adf-132">Configurar la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="d7adf-132">Setting up the user interface.</span></span>  
   
--   Ejecutar y probar la aplicación.  
+-   <span data-ttu-id="d7adf-133">Ejecutar y probar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d7adf-133">Running and testing the application.</span></span>  
   
-## Crear una solución LINQ to SQL  
- En esta primera tarea, va a crear una solución de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] que contiene las referencias necesarias para compilar y ejecutar un proyecto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="d7adf-134">Crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d7adf-134">Creating a LINQ to SQL Solution</span></span>  
+ <span data-ttu-id="d7adf-135">En esta primera tarea, va a crear una solución de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] que contiene las referencias necesarias para compilar y ejecutar un proyecto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d7adf-135">In this first task, you create a [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
   
-#### Para crear una solución LINQ to SQL  
+#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="d7adf-136">Para crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d7adf-136">To create a LINQ to SQL solution</span></span>  
   
-1.  En el menú [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] de **Archivo**, elija **Nuevo** y, a continuación, haga clic en **Proyecto**.  
+1.  <span data-ttu-id="d7adf-137">En el [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-137">On the [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-2.  En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto**, haga clic en **Visual C\#**.  
+2.  <span data-ttu-id="d7adf-138">En el **tipos de proyecto** panel en el **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-138">In the **Project types** pane in the **New Project** dialog box, click **Visual C#**.</span></span>  
   
-3.  En el panel **Plantillas**, haga clic en **Aplicación de Windows Forms**.  
+3.  <span data-ttu-id="d7adf-139">En el panel **Plantillas** , haga clic en **Aplicación de Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-139">In the **Templates** pane, click **Windows Forms Application**.</span></span>  
   
-4.  En el cuadro **Nombre**, escriba SprocOnlyApp.  
+4.  <span data-ttu-id="d7adf-140">En el **nombre** , escriba **SprocOnlyApp**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-140">In the **Name** box, type **SprocOnlyApp**.</span></span>  
   
-5.  En el cuadro **Ubicación**, compruebe dónde desea almacenar los archivos de proyecto.  
+5.  <span data-ttu-id="d7adf-141">En el **ubicación** cuadro, compruebe dónde desea almacenar los archivos de proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7adf-141">In the **Location** box, verify where you want to store your project files.</span></span>  
   
-6.  Haga clic en **Aceptar**.  
+6.  <span data-ttu-id="d7adf-142">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-142">Click **OK**.</span></span>  
   
-     Se abre el Diseñador de Windows Forms.  
+     <span data-ttu-id="d7adf-143">Se abre el Diseñador de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="d7adf-143">The Windows Forms Designer opens.</span></span>  
   
-## Agregar la referencia al ensamblado de LINQ to SQL  
- El ensamblado de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no está incluido en la plantilla Aplicación de Windows Forms estándar.  Tendrá que agregar el ensamblado como se explica en los pasos siguientes:  
+## <a name="adding-the-linq-to-sql-assembly-reference"></a><span data-ttu-id="d7adf-144">Agregar la referencia al ensamblado de LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d7adf-144">Adding the LINQ to SQL Assembly Reference</span></span>  
+ <span data-ttu-id="d7adf-145">El ensamblado de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no está incluido en la plantilla Aplicación de Windows Forms estándar.</span><span class="sxs-lookup"><span data-stu-id="d7adf-145">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly is not included in the standard Windows Forms Application template.</span></span> <span data-ttu-id="d7adf-146">Tendrá que agregar el ensamblado como se explica en los pasos siguientes:</span><span class="sxs-lookup"><span data-stu-id="d7adf-146">You will have to add the assembly yourself, as explained in the following steps:</span></span>  
   
-#### Para agregar System.Data.Linq.dll  
+#### <a name="to-add-systemdatalinqdll"></a><span data-ttu-id="d7adf-147">Para agregar System.Data.Linq.dll</span><span class="sxs-lookup"><span data-stu-id="d7adf-147">To add System.Data.Linq.dll</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario del mouse en **Referencias** y, a continuación, haga clic en **Agregar referencia**.  
+1.  <span data-ttu-id="d7adf-148">En **el Explorador de soluciones**, haga clic en **referencias**y, a continuación, haga clic en **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-148">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
   
-2.  En el cuadro de diálogo **Agregar referencia**, haga clic en **.NET**, en el ensamblado System.Data.Linq y, a continuación, en **Aceptar**.  
+2.  <span data-ttu-id="d7adf-149">En el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, haga clic en el ensamblado System.Data.Linq y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-149">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
   
-     El ensamblado se agrega al proyecto.  
+     <span data-ttu-id="d7adf-150">El ensamblado se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7adf-150">The assembly is added to the project.</span></span>  
   
-## Agregar el archivo de código de Northwind al proyecto  
- En este paso se asume que ha utilizado la herramienta SqlMetal para generar un archivo de código a partir de la base de datos de ejemplo Northwind.  Para obtener más información, vea la sección Requisitos previos, anteriormente en este tutorial.  
+## <a name="adding-the-northwind-code-file-to-the-project"></a><span data-ttu-id="d7adf-151">Agregar el archivo de código de Northwind al proyecto</span><span class="sxs-lookup"><span data-stu-id="d7adf-151">Adding the Northwind Code File to the Project</span></span>  
+ <span data-ttu-id="d7adf-152">En este paso se asume que ha utilizado la herramienta SqlMetal para generar un archivo de código a partir de la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="d7adf-152">This step assumes that you have used the SqlMetal tool to generate a code file from the Northwind sample database.</span></span> <span data-ttu-id="d7adf-153">Para obtener más información, vea la sección Requisitos previos, anteriormente en este tutorial.</span><span class="sxs-lookup"><span data-stu-id="d7adf-153">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
   
-#### Para agregar el archivo de código de Northwind al proyecto  
+#### <a name="to-add-the-northwind-code-file-to-the-project"></a><span data-ttu-id="d7adf-154">Para agregar el archivo de código de Northwind al proyecto</span><span class="sxs-lookup"><span data-stu-id="d7adf-154">To add the northwind code file to the project</span></span>  
   
-1.  En el menú **Proyecto**, haga clic en **Agregar elemento existente**.  
+1.  <span data-ttu-id="d7adf-155">En el **proyecto** menú, haga clic en **Agregar elemento existente**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-155">On the **Project** menu, click **Add Existing Item**.</span></span>  
   
-2.  En el cuadro de diálogo **Agregar elemento existente**, vaya a la ubicación del archivo c:\\linqtest7\\northwind.cs y, a continuación, haga clic en **Agregar**.  
+2.  <span data-ttu-id="d7adf-156">En el **Agregar elemento existente** cuadro de diálogo Mover a c:\linqtest7\northwind.cs y, a continuación, haga clic en **agregar**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-156">In the **Add Existing Item** dialog box, move to c:\linqtest7\northwind.cs, and then click **Add**.</span></span>  
   
-     El archivo northwind.cs se agrega al proyecto.  
+     <span data-ttu-id="d7adf-157">El archivo northwind.cs se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="d7adf-157">The northwind.cs file is added to the project.</span></span>  
   
-## Crear una conexión de base de datos  
- En este paso, definirá la conexión con la base de datos de ejemplo Northwind.  En este tutorial se utiliza "c:\\linqtest7\\northwnd.mdf" como ruta de acceso.  
+## <a name="creating-a-database-connection"></a><span data-ttu-id="d7adf-158">Crear una conexión de base de datos</span><span class="sxs-lookup"><span data-stu-id="d7adf-158">Creating a Database Connection</span></span>  
+ <span data-ttu-id="d7adf-159">En este paso, definirá la conexión con la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="d7adf-159">In this step, you define the connection to the Northwind sample database.</span></span> <span data-ttu-id="d7adf-160">En este tutorial se utiliza "c:\linqtest7\northwnd.mdf" como ruta de acceso.</span><span class="sxs-lookup"><span data-stu-id="d7adf-160">This walkthrough uses "c:\linqtest7\northwnd.mdf" as the path.</span></span>  
   
-#### Para crear la conexión a la base de datos  
+#### <a name="to-create-the-database-connection"></a><span data-ttu-id="d7adf-161">Para crear la conexión a la base de datos</span><span class="sxs-lookup"><span data-stu-id="d7adf-161">To create the database connection</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario del mouse en **Form1.cs** y, a continuación, en **Ver código**.  
+1.  <span data-ttu-id="d7adf-162">En **el Explorador de soluciones**, haga clic en **Form1.cs**y, a continuación, haga clic en **ver código**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-162">In **Solution Explorer**, right-click **Form1.cs**, and then click **View Code**.</span></span>  
   
-2.  Escriba el código siguiente en la clase `Form1`:  
+2.  <span data-ttu-id="d7adf-163">Escriba el código siguiente en la clase `Form1`:</span><span class="sxs-lookup"><span data-stu-id="d7adf-163">Type the following code into the `Form1` class:</span></span>  
   
      [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
   
-## Configurar la interfaz de usuario  
- En esta tarea preparará una interfaz para que los usuarios puedan ejecutar procedimientos almacenados para tener acceso a los datos de la base de datos.  En las aplicaciones que desarrolla con este tutorial, los usuarios pueden tener acceso a los datos de la base de datos únicamente mediante los procedimientos almacenados que están incrustados en la aplicación.  
+## <a name="setting-up-the-user-interface"></a><span data-ttu-id="d7adf-164">Configurar la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="d7adf-164">Setting up the User Interface</span></span>  
+ <span data-ttu-id="d7adf-165">En esta tarea preparará una interfaz para que los usuarios puedan ejecutar procedimientos almacenados para tener acceso a los datos de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="d7adf-165">In this task you set up an interface so that users can execute stored procedures to access data in the database.</span></span> <span data-ttu-id="d7adf-166">En las aplicaciones que desarrolla con este tutorial, los usuarios pueden tener acceso a los datos de la base de datos únicamente mediante los procedimientos almacenados que están incrustados en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d7adf-166">In the applications that you are developing with this walkthrough, users can access data in the database only by using the stored procedures embedded in the application.</span></span>  
   
-#### Para configurar la interfaz de usuario  
+#### <a name="to-set-up-the-user-interface"></a><span data-ttu-id="d7adf-167">Para configurar la interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="d7adf-167">To set up the user interface</span></span>  
   
-1.  Regrese al Diseñador de Windows Forms \(**Form1.cs\[Design\]**\).  
+1.  <span data-ttu-id="d7adf-168">Volver a las ventanas de diseñador de formularios (**Form1.cs [Diseño]**).</span><span class="sxs-lookup"><span data-stu-id="d7adf-168">Return to the Windows Forms Designer (**Form1.cs[Design]**).</span></span>  
   
-2.  En el menú **Ver**, haga clic en **Cuadro de herramientas**.  
+2.  <span data-ttu-id="d7adf-169">En el menú **Ver** , haga clic en **Cuadro de herramientas**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-169">On the **View** menu, click **Toolbox**.</span></span>  
   
-     Se abrirá el cuadro de herramientas.  
+     <span data-ttu-id="d7adf-170">Se abrirá el cuadro de herramientas.</span><span class="sxs-lookup"><span data-stu-id="d7adf-170">The toolbox opens.</span></span>  
   
     > [!NOTE]
-    >  Haga clic en el icono para **ocultar automáticamente** de forma que el cuadro de herramientas se mantenga abierto mientras realiza los demás pasos de esta sección.  
+    >  <span data-ttu-id="d7adf-171">Haga clic en el **Ocultar automáticamente** PIN para mantener abierto el cuadro de herramientas mientras realiza los demás pasos de esta sección.</span><span class="sxs-lookup"><span data-stu-id="d7adf-171">Click the **AutoHide** pushpin to keep the toolbox open while you perform the remaining steps in this section.</span></span>  
   
-3.  Arrastre dos botones, dos cuadros de texto y dos etiquetas desde el cuadro de herramientas hasta **Form1**.  
+3.  <span data-ttu-id="d7adf-172">Arrastre dos botones, dos cuadros de texto y dos etiquetas desde el cuadro de herramientas en **Form1**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-172">Drag two buttons, two text boxes, and two labels from the toolbox onto **Form1**.</span></span>  
   
-     Organice los controles como en la ilustración anexa.  Expanda **Form1** para que los controles tengan el espacio necesario.  
+     <span data-ttu-id="d7adf-173">Organice los controles como en la ilustración anexa.</span><span class="sxs-lookup"><span data-stu-id="d7adf-173">Arrange the controls as in the accompanying illustration.</span></span> <span data-ttu-id="d7adf-174">Expanda **Form1** para que los controles tengan el espacio necesario.</span><span class="sxs-lookup"><span data-stu-id="d7adf-174">Expand **Form1** so that the controls fit easily.</span></span>  
   
-4.  Haga clic con el botón secundario del mouse en **label1** y, a continuación, haga clic en **Propiedades**.  
+4.  <span data-ttu-id="d7adf-175">Haga clic en **label1**y, a continuación, haga clic en **propiedades**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-175">Right-click **label1**, and then click **Properties**.</span></span>  
   
-5.  Cambie la propiedad de **texto** de **label1** a **Enter OrderID:**.  
+5.  <span data-ttu-id="d7adf-176">Cambiar el **texto** propiedad de **label1** a **Enter OrderID:**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-176">Change the **Text** property from **label1** to **Enter OrderID:**.</span></span>  
   
-6.  De la misma manera, para **label2**, cambie la propiedad de **texto** de **label2** a **Enter CustomerID:**.  
+6.  <span data-ttu-id="d7adf-177">En la misma manera para **label2**, cambie la **texto** propiedad de **label2** a **Enter CustomerID:**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-177">In the same way for **label2**, change the **Text** property from **label2** to **Enter CustomerID:**.</span></span>  
   
-7.  De la misma manera, cambie la propiedad de **texto** de **button1** a **Order Details**.  
+7.  <span data-ttu-id="d7adf-178">En la misma manera, cambie la **texto** propiedad **button1** a **Order Details**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-178">In the same way, change the **Text** property for **button1** to **Order Details**.</span></span>  
   
-8.  Cambie la propiedad de **texto** para **button2** a **Order History**.  
+8.  <span data-ttu-id="d7adf-179">Cambiar el **texto** propiedad **button2** a **el historial de pedidos**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-179">Change the **Text** property for **button2** to **Order History**.</span></span>  
   
-     Amplíe los controles de botón para que todo el texto esté visible.  
+     <span data-ttu-id="d7adf-180">Amplíe los controles de botón para que todo el texto esté visible.</span><span class="sxs-lookup"><span data-stu-id="d7adf-180">Widen the button controls so that all the text is visible.</span></span>  
   
-#### Para administrar los clics de botón  
+#### <a name="to-handle-button-clicks"></a><span data-ttu-id="d7adf-181">Para administrar los clics de botón</span><span class="sxs-lookup"><span data-stu-id="d7adf-181">To handle button clicks</span></span>  
   
-1.  Haga doble clic en **Order Details** en **Form1** para abrir el controlador de eventos button1 en el editor de código.  
+1.  <span data-ttu-id="d7adf-182">Haga doble clic en **Order Details** en **Form1** para abrir el controlador de eventos de button1 en el editor de código.</span><span class="sxs-lookup"><span data-stu-id="d7adf-182">Double-click **Order Details** on **Form1** to open the button1 event handler in the code editor.</span></span>  
   
-2.  Escriba el código siguiente en el controlador `button1`:  
+2.  <span data-ttu-id="d7adf-183">Escriba el código siguiente en el controlador `button1`:</span><span class="sxs-lookup"><span data-stu-id="d7adf-183">Type the following code into the `button1` handler:</span></span>  
   
      [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
   
-3.  Ahora, haga doble clic en **button2** en **Form1** para abrir el controlador `button2`.  
+3.  <span data-ttu-id="d7adf-184">Ahora haga doble clic en **button2** en **Form1** para abrir el `button2` controlador</span><span class="sxs-lookup"><span data-stu-id="d7adf-184">Now double-click **button2** on **Form1** to open the `button2` handler</span></span>  
   
-4.  Escriba el código siguiente en el controlador `button2`:  
+4.  <span data-ttu-id="d7adf-185">Escriba el código siguiente en el controlador `button2`:</span><span class="sxs-lookup"><span data-stu-id="d7adf-185">Type the following code into the `button2` handler:</span></span>  
   
      [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
   
-## Probar la aplicación  
- Ha llegado el momento de probar la aplicación.  Observe que su contacto con el almacén de datos se limita a las acciones que puedan realizar los dos procedimientos almacenados.  Esas acciones son: devolver los productos incluidos para cualquier orderID que escriba o devolver un historial de los productos solicitados para cualquier CustomerID que escriba.  
+## <a name="testing-the-application"></a><span data-ttu-id="d7adf-186">Probar la aplicación</span><span class="sxs-lookup"><span data-stu-id="d7adf-186">Testing the Application</span></span>  
+ <span data-ttu-id="d7adf-187">Ha llegado el momento de probar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="d7adf-187">Now it is time to test your application.</span></span> <span data-ttu-id="d7adf-188">Observe que su contacto con el almacén de datos se limita a las acciones que puedan realizar los dos procedimientos almacenados.</span><span class="sxs-lookup"><span data-stu-id="d7adf-188">Note that your contact with the datastore is limited to whatever actions the two stored procedures can take.</span></span> <span data-ttu-id="d7adf-189">Esas acciones son: devolver los productos incluidos para cualquier orderID que escriba o devolver un historial de los productos solicitados para cualquier CustomerID que escriba.</span><span class="sxs-lookup"><span data-stu-id="d7adf-189">Those actions are to return the products included for any orderID you enter, or to return a history of products ordered for any CustomerID you enter.</span></span>  
   
-#### Para probar la aplicación  
+#### <a name="to-test-the-application"></a><span data-ttu-id="d7adf-190">Para probar la aplicación</span><span class="sxs-lookup"><span data-stu-id="d7adf-190">To test the application</span></span>  
   
-1.  Presione F5 para iniciar la depuración.  
+1.  <span data-ttu-id="d7adf-191">Presione F5 para iniciar la depuración.</span><span class="sxs-lookup"><span data-stu-id="d7adf-191">Press F5 to start debugging.</span></span>  
   
-     Aparece Form1.  
+     <span data-ttu-id="d7adf-192">Aparece Form1.</span><span class="sxs-lookup"><span data-stu-id="d7adf-192">Form1 appears.</span></span>  
   
-2.  En el cuadro **Enter OrderID**, escriba `10249` y, a continuación, haga clic en **Order Details**.  
+2.  <span data-ttu-id="d7adf-193">En el **Enter OrderID** , escriba `10249`y, a continuación, haga clic en **Order Details**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-193">In the **Enter OrderID** box, type `10249`, and then click **Order Details**.</span></span>  
   
-     Un cuadro de mensaje muestra los productos incluidos en el pedido 10249.  
+     <span data-ttu-id="d7adf-194">Un cuadro de mensaje muestra los productos incluidos en el pedido 10249.</span><span class="sxs-lookup"><span data-stu-id="d7adf-194">A message box lists the products included in order 10249.</span></span>  
   
-     Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
+     <span data-ttu-id="d7adf-195">Haga clic en **Aceptar** para cerrar el cuadro de mensaje.</span><span class="sxs-lookup"><span data-stu-id="d7adf-195">Click **OK** to close the message box.</span></span>  
   
-3.  En el cuadro **Enter CustomerID**, escriba `ALFKI` y, a continuación, haga clic en **Order History**.  
+3.  <span data-ttu-id="d7adf-196">En el **Enter CustomerID** , escriba `ALFKI`y, a continuación, haga clic en **el historial de pedidos**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-196">In the **Enter CustomerID** box, type `ALFKI`, and then click **Order History**.</span></span>  
   
-     Aparece un cuadro de mensaje con el historial de pedidos del cliente ALFKI.  
+     <span data-ttu-id="d7adf-197">Aparece un cuadro de mensaje con el historial de pedidos del cliente ALFKI.</span><span class="sxs-lookup"><span data-stu-id="d7adf-197">A message box appears that lists the order history for customer ALFKI.</span></span>  
   
-     Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
+     <span data-ttu-id="d7adf-198">Haga clic en **Aceptar** para cerrar el cuadro de mensaje.</span><span class="sxs-lookup"><span data-stu-id="d7adf-198">Click **OK** to close the message box.</span></span>  
   
-4.  En el cuadro **Enter OrderID**, escriba `123` y, a continuación, haga clic en **Order Details**.  
+4.  <span data-ttu-id="d7adf-199">En el **Enter OrderID** , escriba `123`y, a continuación, haga clic en **Order Details**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-199">In the **Enter OrderID** box, type `123`, and then click **Order Details**.</span></span>  
   
-     Aparece un cuadro de mensaje con el texto "No results".  
+     <span data-ttu-id="d7adf-200">Aparece un cuadro de mensaje con el texto "No results".</span><span class="sxs-lookup"><span data-stu-id="d7adf-200">A message box appears that displays "No results."</span></span>  
   
-     Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
+     <span data-ttu-id="d7adf-201">Haga clic en **Aceptar** para cerrar el cuadro de mensaje.</span><span class="sxs-lookup"><span data-stu-id="d7adf-201">Click **OK** to close the message box.</span></span>  
   
-5.  En el menú **Depurar**, haga clic en **Detener depuración**.  
+5.  <span data-ttu-id="d7adf-202">En el **depurar** menú, haga clic en **detener la depuración**.</span><span class="sxs-lookup"><span data-stu-id="d7adf-202">On the **Debug** menu, click **Stop debugging**.</span></span>  
   
-     La sesión de depuración se cierra.  
+     <span data-ttu-id="d7adf-203">La sesión de depuración se cierra.</span><span class="sxs-lookup"><span data-stu-id="d7adf-203">The debug session closes.</span></span>  
   
-6.  Cuando termine de experimentar, haga clic en **Cerrar proyecto** en el menú **Archivo** y guarde su proyecto cuando se le solicite.  
+6.  <span data-ttu-id="d7adf-204">Cuando termine de experimentar, haga clic en **cerrar proyecto** en el **archivo** menú y guarde el proyecto cuando se le pida.</span><span class="sxs-lookup"><span data-stu-id="d7adf-204">If you have finished experimenting, you can click **Close Project** on the **File** menu, and save your project when you are prompted.</span></span>  
   
-## Pasos siguientes  
- Puede mejorar este proyecto realizando algunos cambios.  Por ejemplo, podría enumerar los procedimientos almacenados disponibles en un cuadro de lista y permitir que el usuario seleccione qué procedimientos debe ejecutar.  También podría transmitir el resultado de los informes a un archivo de texto.  
+## <a name="next-steps"></a><span data-ttu-id="d7adf-205">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="d7adf-205">Next Steps</span></span>  
+ <span data-ttu-id="d7adf-206">Puede mejorar este proyecto realizando algunos cambios.</span><span class="sxs-lookup"><span data-stu-id="d7adf-206">You can enhance this project by making some changes.</span></span> <span data-ttu-id="d7adf-207">Por ejemplo, podría enumerar los procedimientos almacenados disponibles en un cuadro de lista y permitir que el usuario seleccione qué procedimientos debe ejecutar.</span><span class="sxs-lookup"><span data-stu-id="d7adf-207">For example, you could list available stored procedures in a list box and have the user select which procedures to execute.</span></span> <span data-ttu-id="d7adf-208">También podría transmitir el resultado de los informes a un archivo de texto.</span><span class="sxs-lookup"><span data-stu-id="d7adf-208">You could also stream the output of the reports to a text file.</span></span>  
   
-## Vea también  
- [Aprender mediante tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)   
- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a><span data-ttu-id="d7adf-209">Vea también</span><span class="sxs-lookup"><span data-stu-id="d7adf-209">See Also</span></span>  
+ [<span data-ttu-id="d7adf-210">Aprender con tutoriales</span><span class="sxs-lookup"><span data-stu-id="d7adf-210">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
+ [<span data-ttu-id="d7adf-211">Procedimientos almacenados</span><span class="sxs-lookup"><span data-stu-id="d7adf-211">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

@@ -1,49 +1,53 @@
 ---
-title: "107 -- BookmarkResumptionRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 107 -- BookmarkResumptionRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa2d37ed-2bfa-439b-89e8-a9354027f155
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 247a439dcbe566e74fd0157fbd92b9cb6c96e375
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 107 -- BookmarkResumptionRecord
-## Propiedades  
+# <a name="107----bookmarkresumptionrecord"></a><span data-ttu-id="0fa91-102">107 -- BookmarkResumptionRecord</span><span class="sxs-lookup"><span data-stu-id="0fa91-102">107 -- BookmarkResumptionRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="0fa91-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="0fa91-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|107|  
-|Palabras clave|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
-|Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="0fa91-104">Id.</span><span class="sxs-lookup"><span data-stu-id="0fa91-104">Id</span></span>|<span data-ttu-id="0fa91-105">107</span><span class="sxs-lookup"><span data-stu-id="0fa91-105">107</span></span>|  
+|<span data-ttu-id="0fa91-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="0fa91-106">Keywords</span></span>|<span data-ttu-id="0fa91-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="0fa91-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="0fa91-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="0fa91-108">Level</span></span>|<span data-ttu-id="0fa91-109">Información</span><span class="sxs-lookup"><span data-stu-id="0fa91-109">Information</span></span>|  
+|<span data-ttu-id="0fa91-110">Canal</span><span class="sxs-lookup"><span data-stu-id="0fa91-110">Channel</span></span>|<span data-ttu-id="0fa91-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="0fa91-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descripción  
- El participante de seguimiento de ETW emite este evento cuando una instancia de flujo de trabajo emite BookmarkResumptionRecord.  
+## <a name="description"></a><span data-ttu-id="0fa91-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="0fa91-112">Description</span></span>  
+ <span data-ttu-id="0fa91-113">El participante de seguimiento de ETW emite este evento cuando una instancia de flujo de trabajo emite BookmarkResumptionRecord.</span><span class="sxs-lookup"><span data-stu-id="0fa91-113">This event is emitted by the ETW tracking participant when a workflow instance emits a BookmarkResumptionRecord.</span></span>  
   
-## Mensaje  
- TrackRecord \= BookmarkResumptionRecord, InstanceID\=%1, RecordNumber\=%2,EventTime\=%3, Name\=%4, SubInstanceID\=%5,  OwnerActivityName\=%6, OwnerActivityId \=%7, OwnerActivityInstanceId\=%8, OwnerActivityTypeName\=%9, Annotations\=%10, ProfileName \= %11  
+## <a name="message"></a><span data-ttu-id="0fa91-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="0fa91-114">Message</span></span>  
+ <span data-ttu-id="0fa91-115">TrackRecord = BookmarkResumptionRecord, InstanceID=%1, RecordNumber=%2,EventTime=%3, Name=%4, SubInstanceID=%5, OwnerActivityName=%6, OwnerActivityId =%7, OwnerActivityInstanceId=%8, OwnerActivityTypeName=%9, Annotations=%10, ProfileName = %11</span><span class="sxs-lookup"><span data-stu-id="0fa91-115">TrackRecord = BookmarkResumptionRecord, InstanceID=%1, RecordNumber=%2,EventTime=%3, Name=%4, SubInstanceID=%5,  OwnerActivityName=%6, OwnerActivityId =%7, OwnerActivityInstanceId=%8, OwnerActivityTypeName=%9, Annotations=%10, ProfileName = %11</span></span>  
   
-## Detalles  
+## <a name="details"></a><span data-ttu-id="0fa91-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="0fa91-116">Details</span></span>  
   
-|Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|InstanceId|xs:GUID|El id. de instancia del flujo de trabajo.|  
-|RecordNumber|xs:long|El número de secuencia del registro emitido.|  
-|EventTime|xs:dateTime|La hora en UTC cuando se emitió el evento.|  
-|Name|xs:string|El nombre del marcador que se reanudó.|  
-|SubInstanceID|xs:GUID|El id. del ámbito del marcador.|  
-|OwnerActivityName|xs:string|El nombre de la actividad de marcador.|  
-|OwnerActivityId|xs:string|El id. de la actividad del marcador.|  
-|OwnerActivityInstanceId|xs:string|El id. de instancia de la actividad del marcador.|  
-|OwnerActivityTypeName|xs:string|El tipo de la actividad del marcador.|  
-|Annotations|xs:string|Las anotaciones que se agregaron a este evento.Los valores se almacenan en un elemento xml con el formato\<items\>\< item  name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>.Si no se especifica ninguna anotación, la cadena contendrá \<items\/\>.El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<items\>...\<\/items.\>|  
-|ProfileName|xs:string|El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.|  
-|HostReference|xs:string|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.Su formato se define como 'Ruta de acceso virtual de la aplicación del nombre del sitio web&#124;Ruta de acceso virtual del servicio&#124;NombreServicio' Ejemplo: 'Sitio web predeterminado\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
-|AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="0fa91-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="0fa91-117">Data Item Name</span></span>|<span data-ttu-id="0fa91-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="0fa91-118">Data Item Type</span></span>|<span data-ttu-id="0fa91-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="0fa91-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="0fa91-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="0fa91-120">InstanceId</span></span>|<span data-ttu-id="0fa91-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="0fa91-121">xs:GUID</span></span>|<span data-ttu-id="0fa91-122">El id. de instancia del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="0fa91-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="0fa91-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="0fa91-123">RecordNumber</span></span>|<span data-ttu-id="0fa91-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="0fa91-124">xs:long</span></span>|<span data-ttu-id="0fa91-125">El número de secuencia del registro emitido.</span><span class="sxs-lookup"><span data-stu-id="0fa91-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="0fa91-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="0fa91-126">EventTime</span></span>|<span data-ttu-id="0fa91-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="0fa91-127">xs:dateTime</span></span>|<span data-ttu-id="0fa91-128">La hora en UTC cuando se emitió el evento.</span><span class="sxs-lookup"><span data-stu-id="0fa91-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="0fa91-129">Name</span><span class="sxs-lookup"><span data-stu-id="0fa91-129">Name</span></span>|<span data-ttu-id="0fa91-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-130">xs:string</span></span>|<span data-ttu-id="0fa91-131">El nombre del marcador que se reanudó.</span><span class="sxs-lookup"><span data-stu-id="0fa91-131">The name of the bookmark that was resumed</span></span>|  
+|<span data-ttu-id="0fa91-132">SubInstanceID</span><span class="sxs-lookup"><span data-stu-id="0fa91-132">SubInstanceID</span></span>|<span data-ttu-id="0fa91-133">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="0fa91-133">xs:GUID</span></span>|<span data-ttu-id="0fa91-134">El id. del ámbito del marcador.</span><span class="sxs-lookup"><span data-stu-id="0fa91-134">The id of the bookmark scope</span></span>|  
+|<span data-ttu-id="0fa91-135">OwnerActivityName</span><span class="sxs-lookup"><span data-stu-id="0fa91-135">OwnerActivityName</span></span>|<span data-ttu-id="0fa91-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-136">xs:string</span></span>|<span data-ttu-id="0fa91-137">El nombre de la actividad de marcador.</span><span class="sxs-lookup"><span data-stu-id="0fa91-137">The name of the bookmark activity</span></span>|  
+|<span data-ttu-id="0fa91-138">OwnerActivityId</span><span class="sxs-lookup"><span data-stu-id="0fa91-138">OwnerActivityId</span></span>|<span data-ttu-id="0fa91-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-139">xs:string</span></span>|<span data-ttu-id="0fa91-140">El id. de la actividad del marcador.</span><span class="sxs-lookup"><span data-stu-id="0fa91-140">The id of the bookmark activity</span></span>|  
+|<span data-ttu-id="0fa91-141">OwnerActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="0fa91-141">OwnerActivityInstanceId</span></span>|<span data-ttu-id="0fa91-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-142">xs:string</span></span>|<span data-ttu-id="0fa91-143">El id. de instancia de la actividad del marcador.</span><span class="sxs-lookup"><span data-stu-id="0fa91-143">The instance id of the bookmark activity</span></span>|  
+|<span data-ttu-id="0fa91-144">OwnerActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="0fa91-144">OwnerActivityTypeName</span></span>|<span data-ttu-id="0fa91-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-145">xs:string</span></span>|<span data-ttu-id="0fa91-146">El tipo de la actividad del marcador.</span><span class="sxs-lookup"><span data-stu-id="0fa91-146">The type of the bookmark activity</span></span>|  
+|<span data-ttu-id="0fa91-147">Anotaciones</span><span class="sxs-lookup"><span data-stu-id="0fa91-147">Annotations</span></span>|<span data-ttu-id="0fa91-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-148">xs:string</span></span>|<span data-ttu-id="0fa91-149">Las anotaciones que se agregaron a este evento.</span><span class="sxs-lookup"><span data-stu-id="0fa91-149">The annotations that were added to this event.</span></span>  <span data-ttu-id="0fa91-150">Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "annotationName" Type = "> annotationValue\</artículo > \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="0fa91-150">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="0fa91-151">Si se especifica ninguna anotación, a continuación, la cadena contiene \<elementos / >.</span><span class="sxs-lookup"><span data-stu-id="0fa91-151">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="0fa91-152">El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.</span><span class="sxs-lookup"><span data-stu-id="0fa91-152">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="0fa91-153">Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<elementos >...  \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="0fa91-153">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="0fa91-154">ProfileName</span><span class="sxs-lookup"><span data-stu-id="0fa91-154">ProfileName</span></span>|<span data-ttu-id="0fa91-155">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-155">xs:string</span></span>|<span data-ttu-id="0fa91-156">El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.</span><span class="sxs-lookup"><span data-stu-id="0fa91-156">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="0fa91-157">HostReference</span><span class="sxs-lookup"><span data-stu-id="0fa91-157">HostReference</span></span>|<span data-ttu-id="0fa91-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-158">xs:string</span></span>|<span data-ttu-id="0fa91-159">En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.</span><span class="sxs-lookup"><span data-stu-id="0fa91-159">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="0fa91-160">El formato se define como ' ruta de acceso Virtual de sitio Web de nombre de aplicación &#124; Ruta de acceso Virtual del servicio &#124; NombreServicio ' ejemplo: ' sitio Web/CalculatorApplication &#124;/CalculatorService.svc &#124; predeterminada CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="0fa91-160">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="0fa91-161">AppDomain</span><span class="sxs-lookup"><span data-stu-id="0fa91-161">AppDomain</span></span>|<span data-ttu-id="0fa91-162">xs:string</span><span class="sxs-lookup"><span data-stu-id="0fa91-162">xs:string</span></span>|<span data-ttu-id="0fa91-163">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="0fa91-163">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

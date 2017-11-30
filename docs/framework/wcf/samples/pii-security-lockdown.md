@@ -1,69 +1,72 @@
 ---
-title: "Bloqueo de seguridad PII | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Bloqueo de seguridad PII
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-caps.latest.revision: 25
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 93849fc315409b769a06cdd216bbc86e83cf6155
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Bloqueo de seguridad PII
-Este ejemplo muestra cómo controlar varias características relacionadas con la seguridad de un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] por:  
+# <a name="pii-security-lockdown"></a><span data-ttu-id="b9fe1-102">Bloqueo de seguridad PII</span><span class="sxs-lookup"><span data-stu-id="b9fe1-102">PII Security Lockdown</span></span>
+<span data-ttu-id="b9fe1-103">Este ejemplo muestra cómo controlar varias características relacionadas con la seguridad de un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] por:</span><span class="sxs-lookup"><span data-stu-id="b9fe1-103">This sample demonstrates how to control several security-related features of a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service by:</span></span>  
   
--   Cifrado de información confidencial en el archivo de configuración de un servicio.  
+-   <span data-ttu-id="b9fe1-104">Cifrado de información confidencial en el archivo de configuración de un servicio.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-104">Encrypting sensitive information in a service's configuration file.</span></span>  
   
--   Encerrar los elementos en el archivo de configuración para que los subdirectorios del servicio anidados no puedan reemplazar los valores.  
+-   <span data-ttu-id="b9fe1-105">Encerrar los elementos en el archivo de configuración para que los subdirectorios del servicio anidados no puedan reemplazar los valores.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-105">Locking elements in the configuration file so that nested service subdirectories cannot override settings.</span></span>  
   
--   Controlar el registro de Información de identificación personal \(PII\) en los registros de seguimiento y de mensajes.  
+-   <span data-ttu-id="b9fe1-106">Controlar el registro de Información de identificación personal (PII) en los registros de seguimiento y de mensajes.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-106">Controlling the logging of Personally Identifiable Information (PII) in trace and message logs.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="b9fe1-107">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="b9fe1-108">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-108">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="b9fe1-109">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b9fe1-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b9fe1-110">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-110">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
-## Explicación  
- Cada una de estas características puede utilizarse por separado o conjuntamente para controlar los aspectos de la seguridad de un servicio.  Ésta no es una guía definitiva para proteger un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="discussion"></a><span data-ttu-id="b9fe1-111">Explicación</span><span class="sxs-lookup"><span data-stu-id="b9fe1-111">Discussion</span></span>  
+ <span data-ttu-id="b9fe1-112">Cada una de estas características puede utilizarse por separado o conjuntamente para controlar los aspectos de la seguridad de un servicio.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-112">Each of these features can be used separately or together to control aspects of a service's security.</span></span> <span data-ttu-id="b9fe1-113">Ésta no es una guía definitiva para proteger un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b9fe1-113">This is not a definitive guide to securing a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- Los archivos de configuración de .NET Framework pueden contener información confidencial como cadenas de conexión para conectar a las bases de datos.  En escenarios compartidos hospedados en web puede ser deseable cifrar esta información en el archivo de configuración para un servicio, para que los datos que contiene el archivo de configuración sean resistentes a la vista casual.  La versión de .NET Framework 2.0 y posteriores tienen la capacidad de cifrar partes del archivo de configuración utilizando la interfaz del programa de aplicaciones Windows Data Protection \(DPAPI\) o el proveedor Criptográfico de RSA.  El aspnet\_regiis.exe, que utiliza DPAPI o RSA, puede cifrar partes selectas de un archivo de configuración.  
+ <span data-ttu-id="b9fe1-114">Los archivos de configuración de .NET Framework pueden contener información confidencial como cadenas de conexión para conectar a las bases de datos.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-114">The .NET Framework configuration files can contain sensitive information such as connection strings to connect to databases.</span></span> <span data-ttu-id="b9fe1-115">En escenarios compartidos hospedados en web puede ser deseable cifrar esta información en el archivo de configuración para un servicio, para que los datos que contiene el archivo de configuración sean resistentes a la vista casual.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-115">In shared, Web-hosted scenarios it may be desirable to encrypt this information in the configuration file for a service so that the data contained within the configuration file is resistant to casual viewing.</span></span> <span data-ttu-id="b9fe1-116">La versión de .NET Framework 2.0 y posteriores tienen la capacidad de cifrar partes del archivo de configuración utilizando la interfaz del programa de aplicaciones Windows Data Protection (DPAPI) o el proveedor Criptográfico de RSA.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-116">.NET Framework 2.0 and later has the ability to encrypt portions of the configuration file using the Windows Data Protection application programming interface (DPAPI) or the RSA Cryptographic provider.</span></span> <span data-ttu-id="b9fe1-117">El aspnet_regiis.exe, que utiliza DPAPI o RSA, puede cifrar partes selectas de un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-117">The aspnet_regiis.exe using the DPAPI or RSA can encrypt select portions of a configuration file.</span></span>  
   
- En escenarios hospedados en web es posible tener los servicios en subdirectorios de otros servicios.  El valor predeterminado semántico para determinar los valores de configuración permite a los archivos de configuración de los directorios anidados reemplazar los valores de configuración del directorio primario.  En algunas situaciones puede no ser deseable por varias razones.  La configuración de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el bloqueo de valores de configuración para que la configuración anidada genere excepciones cuando se ejecute un servicio anidados usando valores de configuración invalidados.  
+ <span data-ttu-id="b9fe1-118">En escenarios hospedados en web es posible tener los servicios en subdirectorios de otros servicios.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-118">In Web-hosted scenarios it is possible to have services in subdirectories of other services.</span></span> <span data-ttu-id="b9fe1-119">El valor predeterminado semántico para determinar los valores de configuración permite a los archivos de configuración de los directorios anidados reemplazar los valores de configuración del directorio primario.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-119">The default semantic for determining configuration values allows configuration files in the nested directories to override the configuration values in the parent directory.</span></span> <span data-ttu-id="b9fe1-120">En algunas situaciones puede no ser deseable por varias razones.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-120">In certain situations this may be undesirable for a variety of reasons.</span></span> <span data-ttu-id="b9fe1-121">La configuración de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el bloqueo de valores de configuración para que la configuración anidada genere excepciones cuando se ejecute un servicio anidados usando valores de configuración invalidados.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-121">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service configuration supports the locking of configuration values so that nested configuration generates exceptions when a nested service is run using overridden configuration values.</span></span>  
   
- Este ejemplo muestra cómo controlar el registro de información de identificación personal conocida \(PII\) en los registros de seguimiento y mensajes, como el nombre de usuario y contraseña.  De forma predeterminada, el registro de PII conocida está deshabilitado, sin embargo en ciertas situaciones el registro de PII puede ser importante para depurar una aplicación.  Este ejemplo se basa en el [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md).  Además, este ejemplo utiliza traza y registro de mensajes.  Para obtener más información, consulte el ejemplo [Seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+ <span data-ttu-id="b9fe1-122">Este ejemplo muestra cómo controlar el registro de información de identificación personal conocida (PII) en los registros de seguimiento y mensajes, como el nombre de usuario y contraseña.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-122">This sample demonstrates how to control the logging of known Personally Identifiable Information (PII) in trace and message logs, such as username and password.</span></span> <span data-ttu-id="b9fe1-123">De forma predeterminada, el registro de PII conocida está deshabilitado, sin embargo en ciertas situaciones el registro de PII puede ser importante para depurar una aplicación.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-123">By default, logging of known PII is disabled however in certain situations logging of PII can be important in debugging an application.</span></span> <span data-ttu-id="b9fe1-124">En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="b9fe1-124">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="b9fe1-125">Además, este ejemplo utiliza traza y registro de mensajes.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-125">In addition, this sample uses tracing and message logging.</span></span> <span data-ttu-id="b9fe1-126">Para obtener más información, consulte el [seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-126">For more information, see the [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) sample.</span></span>  
   
-## Cifrar los elementos de configuración  
- Para los propósitos de seguridad en un entorno de hospedaje en web compartido, puede ser deseable cifrar ciertos elementos de configuración, como cadenas de conexión a bases de datos que pueden contener información confidencial.  Un elemento de configuración se puede cifrar con la herramienta aspnet\_regiis.exe situada en la carpeta de .NET Framework; por ejemplo, %WINDIR%\\Micrsoft.NET\\Framework\\v4.0.20728.  
+## <a name="encrypting-configuration-file-elements"></a><span data-ttu-id="b9fe1-127">Cifrar los elementos de configuración</span><span class="sxs-lookup"><span data-stu-id="b9fe1-127">Encrypting Configuration File Elements</span></span>  
+ <span data-ttu-id="b9fe1-128">Para los propósitos de seguridad en un entorno de hospedaje en web compartido, puede ser deseable cifrar ciertos elementos de configuración, como cadenas de conexión a bases de datos que pueden contener información confidencial.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-128">For security purposes in a shared Web-hosting environment, it may be desirable to encrypt certain configuration elements, such as database connection strings that may contain sensitive information.</span></span> <span data-ttu-id="b9fe1-129">Un elemento de configuración se puede cifrar con la herramienta aspnet_regiis.exe situada en la carpeta de .NET Framework; por ejemplo, %WINDIR%\Micrsoft.NET\Framework\v4.0.20728.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-129">A configuration element may be encrypted using the aspnet_regiis.exe tool found in the .NET Framework folder For example, %WINDIR%\Micrsoft.NET\Framework\v4.0.20728.</span></span>  
   
-#### Para cifrar los valores de la sección appSettings de Web.config para el ejemplo  
+#### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a><span data-ttu-id="b9fe1-130">Para cifrar los valores de la sección appSettings de Web.config para el ejemplo</span><span class="sxs-lookup"><span data-stu-id="b9fe1-130">To encrypt the values in the appSettings section in Web.config for the sample</span></span>  
   
-1.  Abra un símbolo del sistema con Inicio \-\>Ejecutar...  Escriba `cmd` y haga clic en **Aceptar**.  
+1.  <span data-ttu-id="b9fe1-131">Abra un símbolo del sistema con Inicio ->Ejecutar...</span><span class="sxs-lookup"><span data-stu-id="b9fe1-131">Open a command prompt by using Start->Run….</span></span> <span data-ttu-id="b9fe1-132">Escriba en `cmd` y haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-132">Type in `cmd` and click **OK**.</span></span>  
   
-2.  Navegue al directorio .NET Framework actual ejecutando el comando siguiente: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
+2.  <span data-ttu-id="b9fe1-133">Navegue al directorio .NET Framework actual ejecutando el comando siguiente: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-133">Navigate to the current .NET Framework directory by issuing the following command: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.</span></span>  
   
-3.  Cifre la configuración del appSettings en la carpeta Web.config ejecutando el comando siguiente: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
+3.  <span data-ttu-id="b9fe1-134">Cifre la configuración del appSettings en la carpeta Web.config ejecutando el comando siguiente: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-134">Encrypt the appSettings configuration settings in the Web.config folder by issuing the following command: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.</span></span>  
   
- Para encontrar más información sobre cómo cifrar secciones de archivos de configuración, lea las instrucciones sobre DPAPI en la configuración de ASP.NET \([Crear aplicaciones ASP.NET seguras: Autenticación, Autorización y Comunicación segura](http://go.microsoft.com/fwlink/?LinkId=95137)\) y las instrucciones sobre RSA en la configuración de ASP.NET \([Cómo: Cifrar secciones de configuración en ASP.NET 2.0 mediante RSA](http://go.microsoft.com/fwlink/?LinkId=95138)\).  
+ <span data-ttu-id="b9fe1-135">Para obtener más información acerca del cifrado de secciones de archivos de configuración puede encontrarse al leer un tema de procedimientos en DPAPI en la configuración de ASP.NET ([Building Secure ASP.NET Applications: autenticación, autorización y comunicación segura](http://go.microsoft.com/fwlink/?LinkId=95137)) y un tema de procedimientos de RSA en la configuración de ASP.NET ([How To: cifrar secciones de configuración en ASP.NET 2.0 utilizando RSA](http://go.microsoft.com/fwlink/?LinkId=95138)).</span><span class="sxs-lookup"><span data-stu-id="b9fe1-135">More information about encrypting sections of configuration files can be found by reading a how-to on DPAPI in ASP.NET configuration ([Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication](http://go.microsoft.com/fwlink/?LinkId=95137)) and a how-to on RSA in ASP.NET configuration ([How To: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA](http://go.microsoft.com/fwlink/?LinkId=95138)).</span></span>  
   
-## Bloquear los elementos de archivo de configuración  
- En escenarios hospedados en web, es posible tener los servicios en subdirectorios de servicios.  En estas situaciones, los valores de configuración para el servicio en el subdirectorio se calculan examinando los valores en Machine.config y combinando consecutivamente con cualquier archivo Web.config en directorios primarios bajando el árbol de directorios y combinando finalmente el archivo Web.config en el directorio que contiene el servicio.  El comportamiento predeterminado para la mayoría de los elementos de configuración es permitir los archivos de configuración de los subdirectorios reemplazar los valores establecidos en los directorios primarios.  En ciertas situaciones puede ser deseable para evitar que los archivos de configuración en subdirectorios invaliden los valores establecidos en la configuración del directorio primario.  
+## <a name="locking-configuration-file-elements"></a><span data-ttu-id="b9fe1-136">Bloquear los elementos de archivo de configuración</span><span class="sxs-lookup"><span data-stu-id="b9fe1-136">Locking configuration file elements</span></span>  
+ <span data-ttu-id="b9fe1-137">En escenarios hospedados en web, es posible tener los servicios en subdirectorios de servicios.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-137">In Web-hosted scenarios, it is possible to have services in subdirectories of services.</span></span> <span data-ttu-id="b9fe1-138">En estas situaciones, los valores de configuración para el servicio en el subdirectorio se calculan examinando los valores en Machine.config y combinando consecutivamente con cualquier archivo Web.config en directorios primarios bajando el árbol de directorios y combinando finalmente el archivo Web.config en el directorio que contiene el servicio.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-138">In these situations, configuration values for the service in the subdirectory are calculated by examining values in Machine.config and successively merging with any Web.config files in parent directories moving down the directory tree and finally merging the Web.config file in the directory that contains the service.</span></span> <span data-ttu-id="b9fe1-139">El comportamiento predeterminado para la mayoría de los elementos de configuración es permitir los archivos de configuración de los subdirectorios reemplazar los valores establecidos en los directorios primarios.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-139">The default behavior for most configuration elements is to allow configuration files in subdirectories to override the values set in parent directories.</span></span> <span data-ttu-id="b9fe1-140">En ciertas situaciones puede ser deseable para evitar que los archivos de configuración en subdirectorios invaliden los valores establecidos en la configuración del directorio primario.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-140">In certain situations it may be desirable to prevent configuration files in subdirectories from overriding values set in parent directory configuration.</span></span>  
   
- .NET Framework proporciona una manera de bloquear los elementos de archivo de configuración para que las configuraciones que reemplazan los elementos de configuración bloqueados produzcan excepciones en tiempo de ejecución.  
+ <span data-ttu-id="b9fe1-141">.NET Framework proporciona una manera de bloquear los elementos de archivo de configuración para que las configuraciones que reemplazan los elementos de configuración bloqueados produzcan excepciones en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-141">The .NET Framework provides a way to lock configuration file elements so that configurations that override locked configuration elements throw run-time exceptions.</span></span>  
   
- Un elemento de configuración se puede bloquear si se especifica el atributo `lockItem` para un nodo en el archivo de configuración. Por ejemplo, para bloquear el nodo CalculatorServiceBehavior en el archivo de configuración de modo que los servicios de calculadora de los archivos de configuración anidados no puedan cambiar el comportamiento, se puede usar la configuración siguiente.  
+ <span data-ttu-id="b9fe1-142">Un elemento de configuración se puede bloquear si se especifica el atributo `lockItem` para un nodo en el archivo de configuración. Por ejemplo, para bloquear el nodo CalculatorServiceBehavior en el archivo de configuración de modo que los servicios de calculadora de los archivos de configuración anidados no puedan cambiar el comportamiento, se puede usar la configuración siguiente.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-142">A configuration element can be locked by specifying the `lockItem` attribute for a node in the configuration file, for example, to lock the CalculatorServiceBehavior node in the configuration file so that calculator services in nested configuration files cannot change the behavior, the following configuration can be used.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.serviceModel>  
       <behaviors>   
@@ -78,14 +81,14 @@ Este ejemplo muestra cómo controlar varias características relacionadas con la
 </configuration>  
 ```  
   
- El bloqueo de los elementos de configuración puede ser más específico.  Se puede especificar una lista de elementos como valor de `lockElements` para bloquear un conjunto de elementos dentro de una colección de subelementos.  Se puede especificar una lista de atributos como el valor a `lockAttributes` para bloquear un conjunto de atributos dentro de un elemento.  Una colección completa de elementos o atributos se puede bloquear salvo una lista especificada especificando los atributos`lockAllElementsExcept` o`lockAllAttributesExcept` en un nodo.  
+ <span data-ttu-id="b9fe1-143">El bloqueo de los elementos de configuración puede ser más específico.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-143">Locking of configuration elements can be more specific.</span></span> <span data-ttu-id="b9fe1-144">Se puede especificar una lista de elementos como valor de `lockElements` para bloquear un conjunto de elementos dentro de una colección de subelementos.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-144">A list of elements can be specified as the value to the `lockElements` to lock a set of elements within a collection of sub-elements.</span></span> <span data-ttu-id="b9fe1-145">Se puede especificar una lista de atributos como el valor a `lockAttributes` para bloquear un conjunto de atributos dentro de un elemento.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-145">A list of attributes can be specified as the value to the `lockAttributes` to lock a set of attributes within an element.</span></span> <span data-ttu-id="b9fe1-146">Una colección completa de elementos o atributos se puede bloquear salvo una lista especificada especificando los atributos`lockAllElementsExcept` o`lockAllAttributesExcept` en un nodo.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-146">An entire collection of elements or attributes can be locked except for a specified list by specifying the `lockAllElementsExcept` or `lockAllAttributesExcept` attributes on a node.</span></span>  
   
-## Configuración de registro de PII  
- Dos modificadores controlan el registro de PII: un valor de nivel de equipo situado en Machine.config gracias al cual un administrador de equipo puede permitir o denegar el registro de PII y un valor de aplicación que permite a un administrador de aplicación alternar el registro de PII para cada origen en un archivo Web.config o App.config.  
+## <a name="pii-logging-configuration"></a><span data-ttu-id="b9fe1-147">Configuración de registro de PII</span><span class="sxs-lookup"><span data-stu-id="b9fe1-147">PII Logging Configuration</span></span>  
+ <span data-ttu-id="b9fe1-148">Dos modificadores controlan el registro de PII: un valor de nivel de equipo situado en Machine.config gracias al cual un administrador de equipo puede permitir o denegar el registro de PII y un valor de aplicación que permite a un administrador de aplicación alternar el registro de PII para cada origen en un archivo Web.config o App.config.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-148">Logging of PII is controlled by two switches: a computer-wide setting found in Machine.config that allows a computer administrator to permit or deny logging of PII and an application setting that allows an application administrator to toggle logging of PII for each source in a Web.config or App.config file.</span></span>  
   
- El valor de nivel de equipo se controla estableciendo `enableLoggingKnownPii` en `true` o `false`, en el elemento `machineSettings` de Machine.config.  Por ejemplo, lo siguiente permite a las aplicaciones activar el registro de PII.  
+ <span data-ttu-id="b9fe1-149">El valor de nivel de equipo se controla estableciendo `enableLoggingKnownPii` en `true` o `false`, en el elemento `machineSettings` de Machine.config. Por ejemplo, lo siguiente permite a las aplicaciones activar el registro de PII.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-149">The computer-wide setting is controlled by setting `enableLoggingKnownPii` to `true` or `false`, in the `machineSettings` element in Machine.config. For example, the following allows applications to turn on logging of PII.</span></span>  
   
-```  
+```xml  
 <configuration>  
     <system.serviceModel>  
         <machineSettings enableLoggingKnownPii="true" />  
@@ -94,13 +97,13 @@ Este ejemplo muestra cómo controlar varias características relacionadas con la
 ```  
   
 > [!NOTE]
->  El archivo Machine.config tiene una ubicación predeterminada: %WINDIR%\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG.  
+>  <span data-ttu-id="b9fe1-150">El archivo Machine.config tiene una ubicación predeterminada: %WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-150">The Machine.config file has a default location: %WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG.</span></span>  
   
- Si el atributo `enableLoggingKnownPii` no se encuentra en Machine.config, no se permite el registo de PII.  
+ <span data-ttu-id="b9fe1-151">Si el atributo `enableLoggingKnownPii` no se encuentra en Machine.config, no se permite el registo de PII.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-151">If the `enableLoggingKnownPii` attribute is not present in Machine.config, logging of PII is not allowed.</span></span>  
   
- Para habilitar el registro de PII para una aplicación se establece el atributo `logKnownPii` del elemento de origen en `true` o `false` en el archivo Web.config o App.config.  Por ejemplo, lo siguiente habilita el registro de PII para el registro de mensajes y el registro de seguimiento.  
+ <span data-ttu-id="b9fe1-152">Para habilitar el registro de PII para una aplicación se establece el atributo `logKnownPii` del elemento de origen en `true` o `false` en el archivo Web.config o App.config.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-152">Enabling logging of PII for an application is done by setting the `logKnownPii` attribute of the source element to `true` or `false` in the Web.config or App.config file.</span></span> <span data-ttu-id="b9fe1-153">Por ejemplo, lo siguiente habilita el registro de PII para el registro de mensajes y el registro de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-153">For example, the following enables logging of PII for both message logging and trace logging.</span></span>  
   
-```  
+```xml  
 <configuration>  
     <system.diagnostics>  
         <sources>  
@@ -119,35 +122,35 @@ Este ejemplo muestra cómo controlar varias características relacionadas con la
 </configuration>  
 ```  
   
- Si no se especifica el atributo `logKnownPii`, a continuación, PII no está registrado.  
+ <span data-ttu-id="b9fe1-154">Si no se especifica el atributo `logKnownPii`, a continuación, PII no está registrado.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-154">If the `logKnownPii` attribute is not specified, then PII is not logged.</span></span>  
   
- PII solo está registrado si ambos `enableLoggingKnownPii` están establecidos en `true`, y `logKnownPii` está establecido en `true`.  
+ <span data-ttu-id="b9fe1-155">PII solo está registrado si ambos `enableLoggingKnownPii` están establecidos en `true`, y `logKnownPii` está establecido en `true`.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-155">PII is only logged if both `enableLoggingKnownPii` is set to `true`, and `logKnownPii` is set to `true`.</span></span>  
   
 > [!NOTE]
->  System.Diagnostics omite todos los atributos en todos los orígenes exceptuando el primero enumerado en el archivo de configuración.  Agregar el atributo `logKnownPii` al segundo origen en el archivo de configuración no tiene ningún efecto.  
+>  <span data-ttu-id="b9fe1-156">System.Diagnostics omite todos los atributos en todos los orígenes exceptuando el primero enumerado en el archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-156">System.Diagnostics ignores all attributes on all sources except the first one listed in the configuration file.</span></span> <span data-ttu-id="b9fe1-157">Agregar el atributo `logKnownPii` al segundo origen en el archivo de configuración no tiene ningún efecto.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-157">Adding the `logKnownPii` attribute to the second source in the configuration file has no effect.</span></span>  
   
 > [!IMPORTANT]
->  La ejecución de este ejemplo implica la modificación manual de Machine.config.  Se debería tener cuidado al modificar Machine.config, ya que los valores incorrectos o la sintaxis pueden evitar que todas las aplicaciones .NET Framework se ejecuten.  
+>  <span data-ttu-id="b9fe1-158">La ejecución de este ejemplo implica la modificación manual de Machine.config. Se debería tener cuidado al modificar Machine.config, ya que los valores incorrectos o la sintaxis pueden evitar que todas las aplicaciones .NET Framework se ejecuten.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-158">To run this sample involves manual modification of Machine.config. Care should be taken when modifying Machine.config as incorrect values or syntax may prevent all .NET Framework applications from running.</span></span>  
   
- También es posible cifrar elementos de archivo de configuración mediante DPAPI y RSA.  Para obtener más información, vea los siguientes vínculos:  
+ <span data-ttu-id="b9fe1-159">También es posible cifrar elementos de archivo de configuración mediante DPAPI y RSA.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-159">It is also possible to encrypt configuration file elements using DPAPI and RSA.</span></span> <span data-ttu-id="b9fe1-160">Para obtener más información, vea los siguientes vínculos:</span><span class="sxs-lookup"><span data-stu-id="b9fe1-160">For more information, see the following links:</span></span>  
   
--   [Crear aplicaciones ASP.NET seguras: Autenticación, Autorización y Comunicación segura](http://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [<span data-ttu-id="b9fe1-161">Creación de aplicaciones ASP.NET seguras: Autenticación, autorización y comunicación segura</span><span class="sxs-lookup"><span data-stu-id="b9fe1-161">Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication</span></span>](http://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Cómo: Cifrar secciones de configuración en ASP.NET 2.0 mediante RSA](http://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [<span data-ttu-id="b9fe1-162">Cómo: Cifrar secciones de configuración en ASP.NET 2.0 mediante RSA</span><span class="sxs-lookup"><span data-stu-id="b9fe1-162">How To: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA</span></span>](http://go.microsoft.com/fwlink/?LinkId=95138)  
   
-#### Para configurar, compilar y ejecutar el ejemplo  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b9fe1-163">Para configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="b9fe1-163">To set up, build and run the sample</span></span>  
   
-1.  Asegúrese de que ha llevado a cabo el [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="b9fe1-164">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b9fe1-164">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Edite Machine.config para establecer el atributo `enableLoggingKnownPii` en `true`, agregando los nodos primarios si es necesario.  
+2.  <span data-ttu-id="b9fe1-165">Edite Machine.config para establecer el atributo `enableLoggingKnownPii` en `true`, agregando los nodos primarios si es necesario.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-165">Edit Machine.config to set the `enableLoggingKnownPii` attribute to `true`, adding the parent nodes if necessary.</span></span>  
   
-3.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones en [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="b9fe1-166">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b9fe1-166">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Para ejecutar el ejemplo en una configuración con un solo equipo o con varios, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="b9fe1-167">Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b9fe1-167">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-#### Para limpiar el ejemplo  
+#### <a name="to-clean-up-the-sample"></a><span data-ttu-id="b9fe1-168">Para limpiar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="b9fe1-168">To clean up the sample</span></span>  
   
-1.  Edite Machine.config para establecer el atributo `enableLoggingKnownPii` en `false`.  
+1.  <span data-ttu-id="b9fe1-169">Edite Machine.config para establecer el atributo `enableLoggingKnownPii` en `false`.</span><span class="sxs-lookup"><span data-stu-id="b9fe1-169">Edit Machine.config to set the `enableLoggingKnownPii` attribute to `false`.</span></span>  
   
-## Vea también  
- [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="b9fe1-170">Vea también</span><span class="sxs-lookup"><span data-stu-id="b9fe1-170">See Also</span></span>  
+ [<span data-ttu-id="b9fe1-171">Ejemplos de supervisión de AppFabric</span><span class="sxs-lookup"><span data-stu-id="b9fe1-171">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

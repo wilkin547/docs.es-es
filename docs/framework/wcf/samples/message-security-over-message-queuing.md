@@ -1,106 +1,109 @@
 ---
-title: "Seguridad del mensaje mediante Message Queuing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguridad de mensajes mediante Message Queuing
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: 22
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 6e3d87ab31b7a0910b270e81c28985ffe9279d4c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Seguridad del mensaje mediante Message Queuing
-Este ejemplo muestra cómo implementar una aplicación que utiliza WS\-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ.En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.  
+# <a name="message-security-over-message-queuing"></a><span data-ttu-id="2aff8-102">Seguridad de mensajes mediante Message Queuing</span><span class="sxs-lookup"><span data-stu-id="2aff8-102">Message Security over Message Queuing</span></span>
+<span data-ttu-id="2aff8-103">Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ.</span><span class="sxs-lookup"><span data-stu-id="2aff8-103">This sample demonstrates how to implement an application that uses WS-Security with X.509v3 certificate authentication for the client and requires server authentication using the server's X.509v3 certificate over MSMQ.</span></span> <span data-ttu-id="2aff8-104">En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.</span><span class="sxs-lookup"><span data-stu-id="2aff8-104">Message security is sometimes more desirable to ensure that the messages in the MSMQ store stay encrypted and the application can perform its own authentication of the message.</span></span>  
   
- Este ejemplo se basa en el ejemplo [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).Los mensajes se cifran y firman.  
+ <span data-ttu-id="2aff8-105">En este ejemplo se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo.</span><span class="sxs-lookup"><span data-stu-id="2aff8-105">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="2aff8-106">Los mensajes se cifran y firman.</span><span class="sxs-lookup"><span data-stu-id="2aff8-106">The messages are encrypted and signed.</span></span>  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2aff8-107">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="2aff8-107">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="2aff8-108">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2aff8-108">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente.Si la cola no está presente, el servicio creará una.Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ.Siga estos pasos para crear una cola en Windows 2008.  
+2.  <span data-ttu-id="2aff8-109">Si se ejecuta el servicio primero, comprobará que la cola esté presente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-109">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="2aff8-110">Si la cola no está presente, el servicio creará una.</span><span class="sxs-lookup"><span data-stu-id="2aff8-110">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="2aff8-111">Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ.</span><span class="sxs-lookup"><span data-stu-id="2aff8-111">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="2aff8-112">Siga estos pasos para crear una cola en Windows 2008.</span><span class="sxs-lookup"><span data-stu-id="2aff8-112">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Abra el Administrador del servidor en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="2aff8-113">Abra el Administrador del servidor en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2aff8-113">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Expanda la pestaña **Características**.  
+    2.  <span data-ttu-id="2aff8-114">Expanda el **características** ficha.</span><span class="sxs-lookup"><span data-stu-id="2aff8-114">Expand the **Features** tab.</span></span>  
   
-    3.  Haga clic con el botón secundario en **Cola de mensajes privados** y seleccione **Nuevo**, **Cola privada**.  
+    3.  <span data-ttu-id="2aff8-115">Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.</span><span class="sxs-lookup"><span data-stu-id="2aff8-115">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Active la casilla **Transaccional**.  
+    4.  <span data-ttu-id="2aff8-116">Compruebe el **transaccional** cuadro.</span><span class="sxs-lookup"><span data-stu-id="2aff8-116">Check the **Transactional** box.</span></span>  
   
-    5.  Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.  
+    5.  <span data-ttu-id="2aff8-117">Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.</span><span class="sxs-lookup"><span data-stu-id="2aff8-117">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  Para compilar el código de la edición .NET de C\# o Visual Basic de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="2aff8-118">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2aff8-118">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-### Para ejecutar el ejemplo en el mismo equipo  
+### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="2aff8-119">Para ejecutar el ejemplo en el mismo equipo</span><span class="sxs-lookup"><span data-stu-id="2aff8-119">To run the sample on the same computer</span></span>  
   
-1.  Asegúrese de que la ruta de acceso incluye la carpeta que contiene Makecert.exe y FindPrivateKey.exe.  
+1.  <span data-ttu-id="2aff8-120">Asegúrese de que la ruta de acceso incluye la carpeta que contiene Makecert.exe y FindPrivateKey.exe.</span><span class="sxs-lookup"><span data-stu-id="2aff8-120">Ensure that the path includes the folder that contains Makecert.exe and FindPrivateKey.exe.</span></span>  
   
-2.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo.Esto instala todos los certificados requeridos para ejecutar el ejemplo.  
-  
-    > [!NOTE]
-    >  Asegúrese de que quita los certificados ejecutando Cleanup.bat cuando haya terminado con el ejemplo.Otros ejemplos de seguridad usan los mismos certificados.  
-  
-3.  Inicie Service.exe desde \\service\\bin.  
-  
-4.  Inicie Client.exe desde \\client\\bin.La actividad del cliente se muestra en la aplicación de consola del cliente.  
-  
-5.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
-  
-### Para ejecutar el ejemplo en varios equipos  
-  
-1.  Copie también los archivos Setup.bat, Cleanup.bat e ImportClientCert.bat en el equipo del servicio.  
-  
-2.  Cree un directorio en el equipo cliente para los archivos binarios del cliente.  
-  
-3.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente.Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
-  
-4.  En el servidor, ejecute `setup.bat service`.Al ejecutar `setup.bat` con el argumento `service` se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.  
-  
-5.  Edite el archivo service.exe.config del servicio para reflejar el nuevo nombre del certificado \(en el atributo `findValue` de [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\), que es igual que el nombre de dominio completo del equipo.  
-  
-6.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
-  
-7.  En el cliente, ejecute `setup.bat client`.Al ejecutar `setup.bat` con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.  
-  
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.También debe cambiar el nombre del certificado del servicio para que sea igual que el nombre de dominio completo del equipo del servicio \(en el atributo `findValue` del elemento `defaultCertificate` de `serviceCertificate`, bajo `clientCredentials`\).  
-  
-9. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
-  
-10. En el cliente, ejecute `ImportServiceCert.bat`.De esta forma se importa el certificado del servicio desde el archivo Service.cer al almacén CurrentUser \- TrustedPeople.  
-  
-11. En el servidor, ejecute `ImportClientCert.bat`. De esta manera se importa el certificado de cliente del archivo Client.cer en el almacén LocalMachine \- TrustedPeople.  
-  
-12. En el equipo del servicio, inicie Service.exe desde el símbolo del sistema.  
-  
-13. En el equipo cliente, inicie Client.exe desde el símbolo del sistema.Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
-  
-### Para limpiar después del ejemplo  
-  
--   Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+2.  <span data-ttu-id="2aff8-121">Ejecute Setup.bat desde la carpeta de instalación del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="2aff8-121">Run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="2aff8-122">De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="2aff8-122">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos.Si ha ejecutado ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en varios equipos, asegúrese de borrar los certificados del servicio que se hayan instalado en el almacén CurrentUser \- TrustedPeople.Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  <span data-ttu-id="2aff8-123">Asegúrese de que quita los certificados ejecutando Cleanup.bat cuando haya terminado con el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="2aff8-123">Ensure that you remove the certificates by running Cleanup.bat when you have finished with the sample.</span></span> <span data-ttu-id="2aff8-124">Otros ejemplos de seguridad usan los mismos certificados.</span><span class="sxs-lookup"><span data-stu-id="2aff8-124">Other security samples use the same certificates.</span></span>  
   
-## Requisitos  
- Este ejemplo exige que MSMQ se instale y se ejecute.  
+3.  <span data-ttu-id="2aff8-125">Inicie Service.exe desde \service\bin.</span><span class="sxs-lookup"><span data-stu-id="2aff8-125">Launch Service.exe from \service\bin.</span></span>  
   
-## Demostraciones  
- El cliente cifra el mensaje mediante la clave pública del servicio y firma el mensaje con su propio certificado.El servicio que lee el mensaje de la cola autentica el certificado de cliente con el certificado en su almacén de personas de confianza.Después descifra el mensaje y lo envía a la operación de servicio.  
+4.  <span data-ttu-id="2aff8-126">Inicie Client.exe desde \client\bin.</span><span class="sxs-lookup"><span data-stu-id="2aff8-126">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="2aff8-127">La actividad del cliente se muestra en la aplicación de consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-127">Client activity is displayed on the client console application.</span></span>  
   
- Dado que el mensaje de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se lleva como carga útil en el cuerpo del mensaje de MSMQ, el cuerpo permanece cifrado en el almacén de MSMQ.Esto protege el mensaje de la divulgación no deseada del mensaje.Tenga en cuenta que el propio MSMQ no sabe si el mensaje que transporta está cifrado.  
+5.  <span data-ttu-id="2aff8-128">Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="2aff8-128">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
- El ejemplo muestra cómo se puede utilizar la autenticación mutua en el nivel de mensaje con MSMQ.Los certificados se intercambian fuera de banda.Siempre es el caso de la aplicación con cola porque el servicio y el cliente no tienen que estar al mismo tiempo conectados y ejecutándose.  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="2aff8-129">Para ejecutar el ejemplo en varios equipos</span><span class="sxs-lookup"><span data-stu-id="2aff8-129">To run the sample across computers</span></span>  
   
-## Descripción  
- El código de servicio y de cliente del ejemplo es el mismo que el ejemplo [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) pero con una única diferencia.En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.  
+1.  <span data-ttu-id="2aff8-130">Copie también los archivos Setup.bat, Cleanup.bat e ImportClientCert.bat en el equipo del servicio.</span><span class="sxs-lookup"><span data-stu-id="2aff8-130">Copy the Setup.bat, Cleanup.bat, and ImportClientCert.bat files to the service computer.</span></span>  
+  
+2.  <span data-ttu-id="2aff8-131">Cree un directorio en el equipo cliente para los archivos binarios del cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-131">Create a directory on the client computer for the client binaries.</span></span>  
+  
+3.  <span data-ttu-id="2aff8-132">Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-132">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="2aff8-133">Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-133">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
+  
+4.  <span data-ttu-id="2aff8-134">En el servidor, ejecute `setup.bat service`.</span><span class="sxs-lookup"><span data-stu-id="2aff8-134">On the server, run `setup.bat service`.</span></span> <span data-ttu-id="2aff8-135">Ejecuta `setup.bat` con el `service` argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.</span><span class="sxs-lookup"><span data-stu-id="2aff8-135">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computer and exports the service certificate to a file named Service.cer.</span></span>  
+  
+5.  <span data-ttu-id="2aff8-136">Editar service.exe.config del servicio para reflejar el nuevo nombre de certificado (en el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo.</span><span class="sxs-lookup"><span data-stu-id="2aff8-136">Edit service's service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) which is the same as the fully-qualified domain name of the computer.</span></span>  
+  
+6.  <span data-ttu-id="2aff8-137">Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-137">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
+  
+7.  <span data-ttu-id="2aff8-138">En el cliente, ejecute `setup.bat client`.</span><span class="sxs-lookup"><span data-stu-id="2aff8-138">On the client, run `setup.bat client`.</span></span> <span data-ttu-id="2aff8-139">Al ejecutar `setup.bat`con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.</span><span class="sxs-lookup"><span data-stu-id="2aff8-139">Running `setup.bat` with the `client` argument creates a client certificate named client.com and exports the client certificate to a file named Client.cer.</span></span>  
+  
+8.  <span data-ttu-id="2aff8-140">En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.</span><span class="sxs-lookup"><span data-stu-id="2aff8-140">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="2aff8-141">Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.</span><span class="sxs-lookup"><span data-stu-id="2aff8-141">Do this by replacing localhost with the fully-qualified domain name of the server.</span></span>  <span data-ttu-id="2aff8-142">También debe cambiar el nombre del certificado del servicio para que sea igual que el nombre de dominio completo del equipo del servicio (en el atributo `findValue` del elemento `defaultCertificate` de `serviceCertificate`, bajo `clientCredentials`).</span><span class="sxs-lookup"><span data-stu-id="2aff8-142">You must also change the certificate name of the service to be the same as the fully-qualified domain name of the service computer (in the `findValue` attribute in the `defaultCertificate` element of `serviceCertificate` under `clientCredentials`).</span></span>  
+  
+9. <span data-ttu-id="2aff8-143">Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.</span><span class="sxs-lookup"><span data-stu-id="2aff8-143">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
+  
+10. <span data-ttu-id="2aff8-144">En el cliente, ejecute `ImportServiceCert.bat`.</span><span class="sxs-lookup"><span data-stu-id="2aff8-144">On the client, run `ImportServiceCert.bat`.</span></span> <span data-ttu-id="2aff8-145">Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="2aff8-145">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
+  
+11. <span data-ttu-id="2aff8-146">En el servidor, ejecute `ImportClientCert.bat`. De esta manera se importa el certificado de cliente del archivo Client.cer en el almacén LocalMachine - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="2aff8-146">On the server, run `ImportClientCert.bat`, This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
+  
+12. <span data-ttu-id="2aff8-147">En el equipo del servicio, inicie Service.exe desde el símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="2aff8-147">On the service computer, launch Service.exe from the command prompt.</span></span>  
+  
+13. <span data-ttu-id="2aff8-148">En el equipo cliente, inicie Client.exe desde el símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="2aff8-148">On the client computer, launch Client.exe from the command prompt.</span></span> <span data-ttu-id="2aff8-149">Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="2aff8-149">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
+  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="2aff8-150">Para realizar una limpieza después de ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="2aff8-150">To clean up after the sample</span></span>  
+  
+-   <span data-ttu-id="2aff8-151">Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="2aff8-151">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="2aff8-152">Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos.</span><span class="sxs-lookup"><span data-stu-id="2aff8-152">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="2aff8-153">Si ha ejecutado ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en varios equipos, asegúrese de borrar los certificados del servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="2aff8-153">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="2aff8-154">Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="2aff8-154">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="2aff8-155">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2aff8-155">Requirements</span></span>  
+ <span data-ttu-id="2aff8-156">Este ejemplo exige que MSMQ se instale y se ejecute.</span><span class="sxs-lookup"><span data-stu-id="2aff8-156">This sample requires that MSMQ is installed and running.</span></span>  
+  
+## <a name="demonstrates"></a><span data-ttu-id="2aff8-157">Demostraciones</span><span class="sxs-lookup"><span data-stu-id="2aff8-157">Demonstrates</span></span>  
+ <span data-ttu-id="2aff8-158">El cliente cifra el mensaje mediante la clave pública del servicio y firma el mensaje con su propio certificado.</span><span class="sxs-lookup"><span data-stu-id="2aff8-158">The client encrypts the message using the public key of the service and signs the message using its own certificate.</span></span> <span data-ttu-id="2aff8-159">El servicio que lee el mensaje de la cola autentica el certificado de cliente con el certificado en su almacén de personas de confianza.</span><span class="sxs-lookup"><span data-stu-id="2aff8-159">The service reading the message from the queue authenticates the client certificate with the certificate in its trusted people store.</span></span> <span data-ttu-id="2aff8-160">Después descifra el mensaje y lo envía a la operación de servicio.</span><span class="sxs-lookup"><span data-stu-id="2aff8-160">It then decrypts the message and dispatches the message to the service operation.</span></span>  
+  
+ <span data-ttu-id="2aff8-161">Dado que el mensaje de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se lleva como carga útil en el cuerpo del mensaje de MSMQ, el cuerpo permanece cifrado en el almacén de MSMQ.</span><span class="sxs-lookup"><span data-stu-id="2aff8-161">Because the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] message is carried as a payload in the body of the MSMQ message, the body remains encrypted in the MSMQ store.</span></span> <span data-ttu-id="2aff8-162">Esto protege el mensaje de la divulgación no deseada del mensaje.</span><span class="sxs-lookup"><span data-stu-id="2aff8-162">This secures the message from unwanted disclosure of the message.</span></span> <span data-ttu-id="2aff8-163">Tenga en cuenta que el propio MSMQ no sabe si el mensaje que transporta está cifrado.</span><span class="sxs-lookup"><span data-stu-id="2aff8-163">Note that MSMQ itself is not aware whether the message it is carrying is encrypted.</span></span>  
+  
+ <span data-ttu-id="2aff8-164">El ejemplo muestra cómo se puede utilizar la autenticación mutua en el nivel de mensaje con MSMQ.</span><span class="sxs-lookup"><span data-stu-id="2aff8-164">The sample demonstrates how mutual authentication at the message level can be used with MSMQ.</span></span> <span data-ttu-id="2aff8-165">Los certificados se intercambian fuera de banda.</span><span class="sxs-lookup"><span data-stu-id="2aff8-165">The certificates are exchanged out-of-band.</span></span> <span data-ttu-id="2aff8-166">Siempre es el caso de la aplicación con cola porque el servicio y el cliente no tienen que estar al mismo tiempo conectados y ejecutándose.</span><span class="sxs-lookup"><span data-stu-id="2aff8-166">This is always the case with queued application because the service and the client do not have to be up and running at the same time.</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="2aff8-167">Descripción</span><span class="sxs-lookup"><span data-stu-id="2aff8-167">Description</span></span>  
+ <span data-ttu-id="2aff8-168">El código de cliente y el servicio de ejemplo son los mismos que los [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo con una diferencia.</span><span class="sxs-lookup"><span data-stu-id="2aff8-168">The sample client and service code are the same as the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample with one difference.</span></span> <span data-ttu-id="2aff8-169">En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.</span><span class="sxs-lookup"><span data-stu-id="2aff8-169">The operation contract is annotated with protection level, which suggests that the message must be signed and encrypted.</span></span>  
   
 ```  
 // Define a service contract.   
@@ -112,11 +115,11 @@ public interface IOrderProcessor
 }  
 ```  
   
- Para asegurarse de que el mensaje se protege utilizando el token necesario para identificar el servicio y el cliente, App.config contiene la información de la credencial.  
+ <span data-ttu-id="2aff8-170">Para asegurarse de que el mensaje se protege utilizando el token necesario para identificar el servicio y el cliente, App.config contiene la información de la credencial.</span><span class="sxs-lookup"><span data-stu-id="2aff8-170">To ensure that the message is secured using the required token to identify the service and client, the App.config contains credential information.</span></span>  
   
- La configuración del cliente especifica el certificado de servicio para autenticar el servicio.Utiliza su almacén LocalMachine como almacén de confianza para confiar en la validez del servicio.También especifica el certificado de cliente que está asociado con el mensaje para la autenticación del servicio del cliente.  
+ <span data-ttu-id="2aff8-171">La configuración del cliente especifica el certificado de servicio para autenticar el servicio.</span><span class="sxs-lookup"><span data-stu-id="2aff8-171">The client configuration specifies the service certificate to authenticate the service.</span></span> <span data-ttu-id="2aff8-172">Utiliza su almacén LocalMachine como almacén de confianza para confiar en la validez del servicio.</span><span class="sxs-lookup"><span data-stu-id="2aff8-172">It uses its LocalMachine store as the trusted store to rely on the validity of the service.</span></span> <span data-ttu-id="2aff8-173">También especifica el certificado de cliente que está asociado con el mensaje para la autenticación del servicio del cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-173">It also specifies the client certificate that is attached with the message for service authentication of the client.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   
@@ -172,12 +175,11 @@ public interface IOrderProcessor
 </configuration>  
 ```  
   
- Observe que el modo de seguridad se ha definido en "Message" y que ClientCredentialType se ha establecido en "Certificate".  
+ <span data-ttu-id="2aff8-174">Observe que el modo de seguridad se ha definido en "Message" y que ClientCredentialType se ha establecido en "Certificate".</span><span class="sxs-lookup"><span data-stu-id="2aff8-174">Note that the security mode is set to Message and the ClientCredentialType is set to Certificate.</span></span>  
   
- La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio.El nombre del asunto del certificado del servidor se especifica en el atributo `findValue` en [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ <span data-ttu-id="2aff8-175">La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio.</span><span class="sxs-lookup"><span data-stu-id="2aff8-175">The service configuration includes a service behavior that specifies the service's credentials that are used when the client authenticates the service.</span></span> <span data-ttu-id="2aff8-176">El nombre de sujeto del certificado de servidor se especifica en el `findValue` de atributo en el [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).</span><span class="sxs-lookup"><span data-stu-id="2aff8-176">The server certificate subject name is specified in the `findValue` attribute in the [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).</span></span>  
   
-```  
-  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   
@@ -249,10 +251,9 @@ public interface IOrderProcessor
   </system.serviceModel>  
   
 </configuration>  
-  
 ```  
   
- El ejemplo muestra cómo controlar la autenticación mediante la configuración y cómo obtener la identidad del autor de la llamada desde el contexto de seguridad, tal y como se muestra en el siguiente código de ejemplo:  
+ <span data-ttu-id="2aff8-177">El ejemplo muestra cómo controlar la autenticación mediante la configuración y cómo obtener la identidad del autor de la llamada desde el contexto de seguridad, tal y como se muestra en el siguiente código de ejemplo:</span><span class="sxs-lookup"><span data-stu-id="2aff8-177">The sample demonstrates controlling authentication using configuration, and how to obtain the caller’s identity from the security context, as shown in the following sample code:</span></span>  
   
 ```  
     // Service class which implements the service contract.  
@@ -278,7 +279,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- Cuando se ejecuta, el código de servicio muestra la identificación del cliente.Se proporciona a continuación la siguiente salida de ejemplo desde el código de servicio:  
+ <span data-ttu-id="2aff8-178">Cuando se ejecuta, el código de servicio muestra la identificación del cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-178">When run, the service code displays the client identification.</span></span> <span data-ttu-id="2aff8-179">Se proporciona a continuación la siguiente salida de ejemplo desde el código de servicio:</span><span class="sxs-lookup"><span data-stu-id="2aff8-179">The following is a sample output from the service code:</span></span>  
   
 ```  
 The service is ready.  
@@ -294,35 +295,33 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
         Order status: Pending  
 ```  
   
-## Comentarios  
+## <a name="comments"></a><span data-ttu-id="2aff8-180">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2aff8-180">Comments</span></span>  
   
--   Crear el certificado del cliente.  
+-   <span data-ttu-id="2aff8-181">Crear el certificado del cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-181">Creating the client certificate.</span></span>  
   
-     La línea siguiente en el archivo por lotes crea el certificado de cliente.El nombre de cliente especificado se utiliza en el nombre del asunto del certificado creado.El certificado se guarda en el almacén `My`, en la ubicación de almacenamiento `CurrentUser`.  
+     <span data-ttu-id="2aff8-182">La línea siguiente en el archivo por lotes crea el certificado de cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-182">The following line in the batch file creates the client certificate.</span></span> <span data-ttu-id="2aff8-183">El nombre de cliente especificado se utiliza en el nombre del asunto del certificado creado.</span><span class="sxs-lookup"><span data-stu-id="2aff8-183">The client name specified is used in the subject name of the certificate created.</span></span> <span data-ttu-id="2aff8-184">El certificado se guarda en el almacén `My`, en la ubicación de almacenamiento `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="2aff8-184">The certificate is stored in `My` store at the `CurrentUser` store location.</span></span>  
   
     ```  
     echo ************  
     echo making client cert  
     echo ************  
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-  
     ```  
   
--   Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.  
+-   <span data-ttu-id="2aff8-185">Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.</span><span class="sxs-lookup"><span data-stu-id="2aff8-185">Installing the client certificate into server’s trusted certificate store.</span></span>  
   
-     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma.Para que un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] otorgue confianza a un certificado instalado en el almacén TrustedPeople, el modo de validación de certificado del cliente debe establecerse en el valor `PeerOrChainTrust` o `PeerTrust`.Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.  
+     <span data-ttu-id="2aff8-186">La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma.</span><span class="sxs-lookup"><span data-stu-id="2aff8-186">The following line in the batch file copies the client certificate into the server's TrustedPeople store so that the server can make the relevant trust or no-trust decisions.</span></span> <span data-ttu-id="2aff8-187">Para que un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] otorgue confianza a un certificado instalado en el almacén TrustedPeople, el modo de validación de certificado del cliente debe establecerse en el valor `PeerOrChainTrust` o `PeerTrust`.</span><span class="sxs-lookup"><span data-stu-id="2aff8-187">For a certificate installed in the TrustedPeople store to be trusted by a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service, the client certificate validation mode must be set to `PeerOrChainTrust` or `PeerTrust` value.</span></span> <span data-ttu-id="2aff8-188">Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="2aff8-188">See the previous service configuration sample to learn how this can be done using a configuration file.</span></span>  
   
     ```  
     echo ************  
     echo copying client cert to server's LocalMachine store  
     echo ************  
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
-  
     ```  
   
--   Crear el certificado de servidor.  
+-   <span data-ttu-id="2aff8-189">Crear el certificado de servidor.</span><span class="sxs-lookup"><span data-stu-id="2aff8-189">Creating the server certificate.</span></span>  
   
-     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar:  
+     <span data-ttu-id="2aff8-190">Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar:</span><span class="sxs-lookup"><span data-stu-id="2aff8-190">The following lines from the Setup.bat batch file create the server certificate to be used:</span></span>  
   
     ```  
     echo ************  
@@ -334,26 +333,26 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     La variable %SERVER\_NAME% especifica el nombre del servidor.El certificado se almacena en el almacén LocalMachine.Si el archivo por lotes de la instalación se ejecuta con un argumento de servicio \(como `setup.bat service`\), %SERVER\_NAME% contiene el nombre de dominio completo del equipo.De lo contrario, de forma predeterminada es localhost.  
+     <span data-ttu-id="2aff8-191">La variable %SERVER_NAME% especifica el nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="2aff8-191">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="2aff8-192">El certificado se almacena en el almacén LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="2aff8-192">The certificate is stored in the LocalMachine store.</span></span> <span data-ttu-id="2aff8-193">Si el archivo por lotes de instalación se ejecuta con un argumento de servicio (como por ejemplo, `setup.bat service`) % SERVER_NAME % contiene el nombre de dominio completo del equipo. En caso contrario, el valor predeterminado es localhost</span><span class="sxs-lookup"><span data-stu-id="2aff8-193">If the setup batch file is run with an argument of service (such as, `setup.bat service`) the %SERVER_NAME% contains the fully-qualified domain name of the computer.Otherwise it defaults to localhost</span></span>  
   
--   Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.  
+-   <span data-ttu-id="2aff8-194">Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-194">Installing server certificate into the client’s trusted certificate store.</span></span>  
   
-     La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente.Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
+     <span data-ttu-id="2aff8-195">La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente.</span><span class="sxs-lookup"><span data-stu-id="2aff8-195">The following line copies the server certificate into the client trusted people store.</span></span> <span data-ttu-id="2aff8-196">Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.</span><span class="sxs-lookup"><span data-stu-id="2aff8-196">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="2aff8-197">Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.</span><span class="sxs-lookup"><span data-stu-id="2aff8-197">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
     > [!NOTE]
-    >  Si está utilizando una edición que no esté en inglés americanode Microsoft Windows, debe modificar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\\NETWORK SERVICE" con su equivalente regional.  
+    >  <span data-ttu-id="2aff8-198">Si está utilizando una edición que no esté en inglés de EE. UU. de Microsoft Windows, debe modificar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.</span><span class="sxs-lookup"><span data-stu-id="2aff8-198">If you are using a non-U.S. English edition of Microsoft Windows you must edit the Setup.bat file and replace the "NT AUTHORITY\NETWORK SERVICE" account name with your regional equivalent.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="2aff8-199">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="2aff8-199">The samples may already be installed on your computer.</span></span> <span data-ttu-id="2aff8-200">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="2aff8-200">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="2aff8-201">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="2aff8-201">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2aff8-202">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="2aff8-202">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="2aff8-203">Vea también</span><span class="sxs-lookup"><span data-stu-id="2aff8-203">See Also</span></span>

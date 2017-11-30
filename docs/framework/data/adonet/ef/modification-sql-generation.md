@@ -1,46 +1,49 @@
 ---
-title: "Generar SQL de modificaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Generar SQL de modificación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0c41f818c554b61dd6e63818627cb494f7c01577
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Generar SQL de modificaci&#243;n
-En esta sección se describe cómo desarrollar un módulo de generación de SQL de modificación para el proveedor \(de bases de datos conformes a SQL:1999\).  Este módulo es responsable de la conversión de un árbol de comandos de modificación en las instrucciones INSERT, UPDATE o DELETE de SQL adecuadas.  
+# <a name="modification-sql-generation"></a><span data-ttu-id="20d6f-102">Generar SQL de modificación</span><span class="sxs-lookup"><span data-stu-id="20d6f-102">Modification SQL Generation</span></span>
+<span data-ttu-id="20d6f-103">En esta sección se describe cómo desarrollar un módulo de generación de SQL de modificación para el proveedor (de bases de datos conformes a SQL:1999).</span><span class="sxs-lookup"><span data-stu-id="20d6f-103">This section discusses how to develop a modification SQL generation module for your (SQL:1999-compliant database) provider.</span></span> <span data-ttu-id="20d6f-104">Este módulo es responsable de la conversión de un árbol de comandos de modificación en las instrucciones INSERT, UPDATE o DELETE de SQL adecuadas.</span><span class="sxs-lookup"><span data-stu-id="20d6f-104">This module is responsible for translating a modification command tree into the appropriate SQL INSERT, UPDATE or DELETE statements.</span></span>  
   
- Para obtener información sobre la generación de SQL para las instrucciones SELECT, vea [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
+ <span data-ttu-id="20d6f-105">Para obtener información sobre la generación de SQL con las instrucciones select, vea [generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).</span><span class="sxs-lookup"><span data-stu-id="20d6f-105">For information about SQL generation for select statements, see [SQL Generation](../../../../../docs/framework/data/adonet/ef/sql-generation.md).</span></span>  
   
-## Información general sobre los árboles de comandos de modificación  
- El módulo de generación de SQL de modificación genera instrucciones SQL de modificación específicas de la base de datos en función de un DbModificationCommandTree de entrada determinado.  
+## <a name="overview-of-modification-command-trees"></a><span data-ttu-id="20d6f-106">Información general sobre los árboles de comandos de modificación</span><span class="sxs-lookup"><span data-stu-id="20d6f-106">Overview of Modification Command Trees</span></span>  
+ <span data-ttu-id="20d6f-107">El módulo de generación de SQL de modificación genera instrucciones SQL de modificación específicas de la base de datos en función de un DbModificationCommandTree de entrada determinado.</span><span class="sxs-lookup"><span data-stu-id="20d6f-107">The modification SQL generation module generates database-specific modification SQL statements based on a given input DbModificationCommandTree.</span></span>  
   
- DbModificationCommandTree es una representación del modelo de objetos de una operación DML de modificación \(una operación de inserción, actualización o eliminación\), que hereda de DbCommandTree.  Hay tres implementaciones de DbModificationCommandTree:  
+ <span data-ttu-id="20d6f-108">DbModificationCommandTree es una representación del modelo de objetos de una operación DML de modificación (una operación de inserción, actualización o eliminación), que hereda de DbCommandTree.</span><span class="sxs-lookup"><span data-stu-id="20d6f-108">A DbModificationCommandTree is an object model representation of a modification DML operation (an insert, an update, or a delete operation), inheriting from DbCommandTree.</span></span> <span data-ttu-id="20d6f-109">Hay tres implementaciones de DbModificationCommandTree:</span><span class="sxs-lookup"><span data-stu-id="20d6f-109">There are three implementations of DbModificationCommandTree:</span></span>  
   
--   DbInsertCommandTree  
+-   <span data-ttu-id="20d6f-110">DbInsertCommandTree</span><span class="sxs-lookup"><span data-stu-id="20d6f-110">DbInsertCommandTree</span></span>  
   
--   DbUpdateCommandTree  
+-   <span data-ttu-id="20d6f-111">DbUpdateCommandTree</span><span class="sxs-lookup"><span data-stu-id="20d6f-111">DbUpdateCommandTree</span></span>  
   
--   DbDeleteCommandTree  
+-   <span data-ttu-id="20d6f-112">DbDeleteCommandTree</span><span class="sxs-lookup"><span data-stu-id="20d6f-112">DbDeleteCommandTree</span></span>  
   
- DbModificationCommandTree y sus implementaciones que son generadas por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] siempre representan una operación de una sola fila.  En esta sección se describen estos tipos con sus restricciones en .NET Framework versión 3.5.  
+ <span data-ttu-id="20d6f-113">DbModificationCommandTree y sus implementaciones producidos por el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] siempre representan una operación única fila.</span><span class="sxs-lookup"><span data-stu-id="20d6f-113">DbModificationCommandTree and its implementations that are produced by the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] always represent a single row operation.</span></span> <span data-ttu-id="20d6f-114">En esta sección se describen estos tipos con sus restricciones en .NET Framework versión 3.5.</span><span class="sxs-lookup"><span data-stu-id="20d6f-114">This section describes these types with their constraints in the .NET Framework version 3.5.</span></span>  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3\-dd19\-48d0\-b91e\-30a76415bf5f")  
+ <span data-ttu-id="20d6f-115">![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")</span><span class="sxs-lookup"><span data-stu-id="20d6f-115">![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")</span></span>  
   
- DbModificationCommandTree tiene una propiedad de destino que representa el conjunto de destinos para la operación de modificación.  La propiedad Expression del destino, que define el conjunto de entrada, siempre es DbScanExpression.  DbScanExpression puede representar una tabla o una vista, o bien un conjunto de datos definidos con una consulta si la propiedad de metadatos de consulta de definición del destino no es NULL.  
+ <span data-ttu-id="20d6f-116">DbModificationCommandTree tiene una propiedad de destino que representa el conjunto de destinos para la operación de modificación.</span><span class="sxs-lookup"><span data-stu-id="20d6f-116">DbModificationCommandTree has a Target property that represents the target set for the modification operation.</span></span> <span data-ttu-id="20d6f-117">La propiedad Expression del destino, que define el conjunto de entrada, siempre es DbScanExpression.</span><span class="sxs-lookup"><span data-stu-id="20d6f-117">The Target’s Expression property, which defines the input set is always DbScanExpression.</span></span>  <span data-ttu-id="20d6f-118">Una expresión DbScanExpression puede representar una tabla o una vista o un conjunto de datos definida con una consulta si la propiedad de metadatos "Definición de consulta" de su objetivo es distinto de null.</span><span class="sxs-lookup"><span data-stu-id="20d6f-118">A DbScanExpression can either represent a table or a view, or a set of data defined with a query if the metadata property "Defining Query" of its Target is non-null.</span></span>  
   
- Una expresión DbScanExpression que representa una consulta solo puede alcanzar un proveedor como destino de la modificación si el conjunto se definió mediante una consulta de definición del modelo pero no se proporcionó ninguna función para la operación de modificación correspondiente.  Es posible que los proveedores no puedan admitir este tipo de escenario \(por ejemplo, SqlClient no puede\).  
+ <span data-ttu-id="20d6f-119">Una expresión DbScanExpression que representa una consulta solo puede alcanzar un proveedor como destino de la modificación si el conjunto se definió mediante una consulta de definición del modelo pero no se proporcionó ninguna función para la operación de modificación correspondiente.</span><span class="sxs-lookup"><span data-stu-id="20d6f-119">A DbScanExpression that represents a query could only reach a provider as a target of modification if the set was defined by using a defining query in the model but no function was provided for the corresponding modification operation.</span></span> <span data-ttu-id="20d6f-120">Es posible que los proveedores no puedan admitir este tipo de escenario (por ejemplo, SqlClient no puede).</span><span class="sxs-lookup"><span data-stu-id="20d6f-120">Providers may not be able to support such a scenario (SqlClient, for example, does not).</span></span>  
   
- DbInsertCommandTree representa una operación de inserción de una sola fila expresada como un árbol de comandos.  
+ <span data-ttu-id="20d6f-121">DbInsertCommandTree representa una operación de inserción de una sola fila expresada como un árbol de comandos.</span><span class="sxs-lookup"><span data-stu-id="20d6f-121">DbInsertCommandTree represents a single row insert operation expressed as a command tree.</span></span>  
   
 ```  
 public sealed class DbInsertCommandTree : DbModificationCommandTree {  
@@ -49,99 +52,99 @@ public sealed class DbInsertCommandTree : DbModificationCommandTree {
 }  
 ```  
   
- DbUpdateCommandTree representa una operación de actualización de una sola fila expresada como un árbol de comandos.  
+ <span data-ttu-id="20d6f-122">DbUpdateCommandTree representa una operación de actualización de una sola fila expresada como un árbol de comandos.</span><span class="sxs-lookup"><span data-stu-id="20d6f-122">DbUpdateCommandTree represents a single-row update operation expressed as a command tree.</span></span>  
   
- DbDeleteCommandTree representa una operación de eliminación de una sola fila expresada como un árbol de comandos.  
+ <span data-ttu-id="20d6f-123">DbDeleteCommandTree representa una operación de eliminación de una sola fila expresada como un árbol de comandos.</span><span class="sxs-lookup"><span data-stu-id="20d6f-123">DbDeleteCommandTree represents a single row delete operation expressed as a command tree.</span></span>  
   
-### Restricciones en las propiedades del árbol de comandos de modificación  
- La información y restricciones siguientes se aplican a las propiedades del árbol de comandos de modificación.  
+### <a name="restrictions-on-modification-command-tree-properties"></a><span data-ttu-id="20d6f-124">Restricciones en las propiedades del árbol de comandos de modificación</span><span class="sxs-lookup"><span data-stu-id="20d6f-124">Restrictions on Modification Command Tree Properties</span></span>  
+ <span data-ttu-id="20d6f-125">La información y restricciones siguientes se aplican a las propiedades del árbol de comandos de modificación.</span><span class="sxs-lookup"><span data-stu-id="20d6f-125">The following information and restrictions apply to the modification command tree properties.</span></span>  
   
-#### Returning en DbInsertCommandTree y DbUpdateCommandTree  
- Cuando no es NULL, Returning indica que el comando devuelve un lector.  De lo contrario, el comando debe devolver un valor escalar que indique el número de filas afectadas \(insertadas o actualizadas\).  
+#### <a name="returning-in-dbinsertcommandtree-and-dbupdatecommandtree"></a><span data-ttu-id="20d6f-126">Returning en DbInsertCommandTree y DbUpdateCommandTree</span><span class="sxs-lookup"><span data-stu-id="20d6f-126">Returning in DbInsertCommandTree and DbUpdateCommandTree</span></span>  
+ <span data-ttu-id="20d6f-127">Cuando no es NULL, Returning indica que el comando devuelve un lector.</span><span class="sxs-lookup"><span data-stu-id="20d6f-127">When non-null, Returning indicates that the command returns a reader.</span></span> <span data-ttu-id="20d6f-128">De lo contrario, el comando debe devolver un valor escalar que indique el número de filas afectadas (insertadas o actualizadas).</span><span class="sxs-lookup"><span data-stu-id="20d6f-128">Otherwise, the command should return a scalar value indicating the number of rows affected (inserted or updated).</span></span>  
   
- El valor de Returning especifica una proyección de resultados que se van a devolver en función de la fila insertada o actualizada.  Solo puede ser de tipo DbNewInstanceExpression que representa una fila, y cada uno de sus argumentos es DbPropertyExpression en una expresión DbVariableReferenceExpression que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.  Las propiedades representadas por las expresiones DbPropertyExpressions utilizadas en la propiedad Returning siempre son valores calculados o generados por el almacén.  En DbInsertCommandTree, Returning no es NULL cuando al menos una propiedad de la tabla en la que se inserta la fila se especifica como calculada o generada por el almacén \(se marca como StoreGeneratedPattern.Identity o StoreGeneratedPattern.Computed en ssdl\).  En DbUpdateCommandTrees, Returning no es NULL cuando al menos una propiedad de la tabla en la que se actualiza la fila se especifica como calculada en el almacén \(se marca como StoreGeneratedPattern.Computed en ssdl\).  
+ <span data-ttu-id="20d6f-129">El valor de Returning especifica una proyección de resultados que se van a devolver en función de la fila insertada o actualizada.</span><span class="sxs-lookup"><span data-stu-id="20d6f-129">The Returning value specifies a projection of results to be returned based on the inserted or the updated row.</span></span> <span data-ttu-id="20d6f-130">Solo puede ser de tipo DbNewInstanceExpression que representa una fila, y cada uno de sus argumentos es DbPropertyExpression en una expresión DbVariableReferenceExpression que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.</span><span class="sxs-lookup"><span data-stu-id="20d6f-130">It can only be of type DbNewInstanceExpression representing a row, with each of its arguments being a DbPropertyExpression over a DbVariableReferenceExpression representing a reference to the Target of the corresponding DbModificationCommandTree.</span></span> <span data-ttu-id="20d6f-131">Las propiedades representadas por las expresiones DbPropertyExpressions utilizadas en la propiedad Returning siempre son valores calculados o generados por el almacén.</span><span class="sxs-lookup"><span data-stu-id="20d6f-131">The properties represented by the DbPropertyExpressions used in the property Returning are always store generated or computed values.</span></span> <span data-ttu-id="20d6f-132">En DbInsertCommandTree, Returning no es NULL cuando al menos una propiedad de la tabla en la que se inserta la fila se especifica como calculada o generada por el almacén (se marca como StoreGeneratedPattern.Identity o StoreGeneratedPattern.Computed en ssdl).</span><span class="sxs-lookup"><span data-stu-id="20d6f-132">In DbInsertCommandTree, Returning is not null when at least one property of the table in which the row is being inserted is specified as store generated or computed (marked as StoreGeneratedPattern.Identity or StoreGeneratedPattern.Computed in the ssdl).</span></span> <span data-ttu-id="20d6f-133">En DbUpdateCommandTrees, Returning no es NULL cuando al menos una propiedad de la tabla en la que se actualiza la fila se especifica como calculada en el almacén (se marca como StoreGeneratedPattern.Computed en ssdl).</span><span class="sxs-lookup"><span data-stu-id="20d6f-133">In DbUpdateCommandTrees, Returning is not null when at least one property of the table in which the row is being updated is specified as store computed (marked as StoreGeneratedPattern.Computed in the ssdl).</span></span>  
   
-#### SetClauses en DbInsertCommandTree y DbUpdateCommandTree  
- SetClauses especifica la lista de cláusulas de inserción o actualización que definen la operación de inserción o actualización.  
+#### <a name="setclauses-in-dbinsertcommandtree-and-dbupdatecommandtree"></a><span data-ttu-id="20d6f-134">SetClauses en DbInsertCommandTree y DbUpdateCommandTree</span><span class="sxs-lookup"><span data-stu-id="20d6f-134">SetClauses in DbInsertCommandTree and DbUpdateCommandTree</span></span>  
+ <span data-ttu-id="20d6f-135">SetClauses especifica la lista de cláusulas de inserción o actualización que definen la operación de inserción o actualización.</span><span class="sxs-lookup"><span data-stu-id="20d6f-135">SetClauses specifies the list of insert or update set clauses that define the insert or update operation.</span></span>  
   
 ```  
 The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.   
 ```  
   
- Property especifica la propiedad que se debe actualizar.  Siempre es DbPropertyExpression en DbVariableReferenceExpression, que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.  
+ <span data-ttu-id="20d6f-136">Property especifica la propiedad que se debe actualizar.</span><span class="sxs-lookup"><span data-stu-id="20d6f-136">Property specifies the property that should be updated.</span></span> <span data-ttu-id="20d6f-137">Siempre es DbPropertyExpression en DbVariableReferenceExpression, que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.</span><span class="sxs-lookup"><span data-stu-id="20d6f-137">It is always a DbPropertyExpression over a DbVariableReferenceExpression, which represents a reference to the Target of the corresponding DbModificationCommandTree.</span></span>  
   
- Value especifica el nuevo valor con el que se actualiza la propiedad.  Es de tipo DbConstantExpression o DbNullExpression.  
+ <span data-ttu-id="20d6f-138">Value especifica el nuevo valor con el que se actualiza la propiedad.</span><span class="sxs-lookup"><span data-stu-id="20d6f-138">Value specifies the new value with which to update the property.</span></span> <span data-ttu-id="20d6f-139">Es de tipo DbConstantExpression o DbNullExpression.</span><span class="sxs-lookup"><span data-stu-id="20d6f-139">It is either of type DbConstantExpression or DbNullExpression.</span></span>  
   
-#### Predicate en DbUpdateCommandTree y DbDeleteCommandTree  
- Predicate especifica el predicado que se usa para determinar qué miembros de la colección de destino se deben actualizar o eliminar.  Es un árbol de expresión generado del siguiente subconjunto de DbExpressions:  
+#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a><span data-ttu-id="20d6f-140">Predicate en DbUpdateCommandTree y DbDeleteCommandTree</span><span class="sxs-lookup"><span data-stu-id="20d6f-140">Predicate in DbUpdateCommandTree and DbDeleteCommandTree</span></span>  
+ <span data-ttu-id="20d6f-141">Predicate especifica el predicado que se usa para determinar qué miembros de la colección de destino se deben actualizar o eliminar.</span><span class="sxs-lookup"><span data-stu-id="20d6f-141">Predicate specifies the predicate used to determine which members of the target collection should be updated or deleted.</span></span> <span data-ttu-id="20d6f-142">Es un árbol de expresión generado del siguiente subconjunto de DbExpressions:</span><span class="sxs-lookup"><span data-stu-id="20d6f-142">It is an expression tree built of the following subset of DbExpressions:</span></span>  
   
--   DbComparisonExpression de tipo Equals, en el que el elemento secundario derecho es DbPropertyExression según se restringe a continuación y el elemento secundario izquierdo es DbConstantExpression.  
+-   <span data-ttu-id="20d6f-143">DbComparisonExpression de tipo Equals, en el que el elemento secundario derecho es DbPropertyExression según se restringe a continuación y el elemento secundario izquierdo es DbConstantExpression.</span><span class="sxs-lookup"><span data-stu-id="20d6f-143">DbComparisonExpression of kind Equals, with the right child being a DbPropertyExression as restricted below and the left child a DbConstantExpression.</span></span>  
   
--   DbConstantExpression  
+-   <span data-ttu-id="20d6f-144">DbConstantExpression</span><span class="sxs-lookup"><span data-stu-id="20d6f-144">DbConstantExpression</span></span>  
   
--   DbIsNullExpression en DbPropertyExpresison tal y como se restringe a continuación  
+-   <span data-ttu-id="20d6f-145">DbIsNullExpression en DbPropertyExpresison tal y como se restringe a continuación</span><span class="sxs-lookup"><span data-stu-id="20d6f-145">DbIsNullExpression over a DbPropertyExpresison as restricted below</span></span>  
   
--   DbPropertyExpression en DbVariableReferenceExpression, que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.  
+-   <span data-ttu-id="20d6f-146">DbPropertyExpression en DbVariableReferenceExpression, que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.</span><span class="sxs-lookup"><span data-stu-id="20d6f-146">DbPropertyExpression over a DbVariableReferenceExpression representing a reference to the Target of the corresponding DbModificationCommandTree.</span></span>  
   
--   DbAndExpression  
+-   <span data-ttu-id="20d6f-147">DbAndExpression</span><span class="sxs-lookup"><span data-stu-id="20d6f-147">DbAndExpression</span></span>  
   
--   DbNotExpression  
+-   <span data-ttu-id="20d6f-148">DbNotExpression</span><span class="sxs-lookup"><span data-stu-id="20d6f-148">DbNotExpression</span></span>  
   
--   DbOrExpression  
+-   <span data-ttu-id="20d6f-149">DbOrExpression</span><span class="sxs-lookup"><span data-stu-id="20d6f-149">DbOrExpression</span></span>  
   
-## Generación de SQL de modificación en el proveedor de ejemplo  
- El [proveedor de ejemplo de Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) muestra los componentes de los proveedores de datos ADO.NET que admiten [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Tiene como destino una base de datos de SQL Server 2005 y se implementa como un contenedor en el proveedor de datos ADO.NET 2.0 System.Data.SqlClient.  
+## <a name="modification-sql-generation-in-the-sample-provider"></a><span data-ttu-id="20d6f-150">Generación de SQL de modificación en el proveedor de ejemplo</span><span class="sxs-lookup"><span data-stu-id="20d6f-150">Modification SQL Generation in the Sample Provider</span></span>  
+ <span data-ttu-id="20d6f-151">El [proveedor de ejemplo de Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) muestra los componentes de proveedores de datos de ADO.NET que admiten la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="20d6f-151">The [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) demonstrates the components of ADO.NET Data Providers that support the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="20d6f-152">Tiene como destino una base de datos de SQL Server 2005 y se implementa como un contenedor en el proveedor de datos ADO.NET 2.0 System.Data.SqlClient.</span><span class="sxs-lookup"><span data-stu-id="20d6f-152">It targets a SQL Server 2005 database and is implemented as a wrapper on top of System.Data.SqlClient ADO.NET 2.0 Data Provider.</span></span>  
   
- El módulo de generación de SQL de modificación del proveedor de ejemplo \(situado en el archivo SQL Generation\\DmlSqlGenerator.cs\) toma un árbol DbModificationCommandTree como entrada y genera una única instrucción SQL de modificación posiblemente seguida por una instrucción SELECT para devolver un lector si se especifica en DbModificationCommandTree.  Observe que la base de datos de SQL Server de destino afecta a la forma de los comandos generados.  
+ <span data-ttu-id="20d6f-153">El módulo de generación de SQL de modificación del proveedor de ejemplo (situado en el archivo SQL Generation\DmlSqlGenerator.cs) toma un árbol DbModificationCommandTree como entrada y genera una única instrucción SQL de modificación posiblemente seguida por una instrucción SELECT para devolver un lector si se especifica en DbModificationCommandTree.</span><span class="sxs-lookup"><span data-stu-id="20d6f-153">The modification SQL generation module of the sample provider (located in the file SQL Generation\DmlSqlGenerator.cs) takes an input DbModificationCommandTree and produces a single modification SQL statement possibly followed by a select statement to return a reader if specified by the DbModificationCommandTree.</span></span> <span data-ttu-id="20d6f-154">Observe que la base de datos de SQL Server de destino afecta a la forma de los comandos generados.</span><span class="sxs-lookup"><span data-stu-id="20d6f-154">Note that the shape of the commands generated is affected by the target SQL Server database.</span></span>  
   
-### Clases auxiliares: ExpressionTranslator  
- ExpressionTranslator actúa como un traductor ligero común para todas las propiedades del árbol de comandos de modificación de tipo DbExpression.  Únicamente admite la traducción de los tipos de expresión a los que están restringidas las propiedades del árbol de comandos de modificación y se genera con las restricciones determinadas en mente.  
+### <a name="helper-classes-expressiontranslator"></a><span data-ttu-id="20d6f-155">Clases auxiliares: ExpressionTranslator</span><span class="sxs-lookup"><span data-stu-id="20d6f-155">Helper Classes: ExpressionTranslator</span></span>  
+ <span data-ttu-id="20d6f-156">ExpressionTranslator actúa como un traductor ligero común para todas las propiedades del árbol de comandos de modificación de tipo DbExpression.</span><span class="sxs-lookup"><span data-stu-id="20d6f-156">ExpressionTranslator serves as a common lightweight translator for all modification command tree properties of type DbExpression.</span></span> <span data-ttu-id="20d6f-157">Únicamente admite la traducción de los tipos de expresión a los que están restringidas las propiedades del árbol de comandos de modificación y se genera con las restricciones determinadas en mente.</span><span class="sxs-lookup"><span data-stu-id="20d6f-157">It supports translation of only the expression types to which the properties of the modification command tree are constrained and is built with the particular constraints in mind.</span></span>  
   
- La siguiente información describe la visita de tipos de expresión específicos \(se omiten los nodos con traducciones triviales\).  
+ <span data-ttu-id="20d6f-158">La siguiente información describe la visita de tipos de expresión específicos (se omiten los nodos con traducciones triviales).</span><span class="sxs-lookup"><span data-stu-id="20d6f-158">The following information discusses visiting specific expression types (nodes with trivial translations are omitted).</span></span>  
   
-### DbComparisonExpression  
- Cuando ExpressionTranslator se construye con preserveMemberValues \= true y la constante de la derecha es DbConstantExpression \(en lugar de DbNullExpression\), asocia el operando izquierdo \(DbPropertyExpressions\) a DbConstantExpression.  Se utiliza eso si es necesario generar una instrucción Select devuelta para identificar la fila afectada.  
+### <a name="dbcomparisonexpression"></a><span data-ttu-id="20d6f-159">DbComparisonExpression</span><span class="sxs-lookup"><span data-stu-id="20d6f-159">DbComparisonExpression</span></span>  
+ <span data-ttu-id="20d6f-160">Cuando ExpressionTranslator se construye con preserveMemberValues = true y la constante de la derecha es DbConstantExpression (en lugar de DbNullExpression), asocia el operando izquierdo (DbPropertyExpressions) a DbConstantExpression.</span><span class="sxs-lookup"><span data-stu-id="20d6f-160">When the ExpressionTranslator is constructed with preserveMemberValues = true, and when the constant to the right is a DbConstantExpression (instead of DbNullExpression), it associates the left operand (a DbPropertyExpressions) with that DbConstantExpression.</span></span> <span data-ttu-id="20d6f-161">Se utiliza eso si es necesario generar una instrucción Select devuelta para identificar la fila afectada.</span><span class="sxs-lookup"><span data-stu-id="20d6f-161">That is used if a return Select statement needs to be generated to identify the affected row.</span></span>  
   
-### DbConstantExpression  
- Se crea un parámetro para cada constante visitada.  
+### <a name="dbconstantexpression"></a><span data-ttu-id="20d6f-162">DbConstantExpression</span><span class="sxs-lookup"><span data-stu-id="20d6f-162">DbConstantExpression</span></span>  
+ <span data-ttu-id="20d6f-163">Se crea un parámetro para cada constante visitada.</span><span class="sxs-lookup"><span data-stu-id="20d6f-163">For each visited constant a parameter is created.</span></span>  
   
-### DbPropertyExpression  
- Dado que la instancia de DbPropertyExpression siempre representa la tabla de entrada, a menos que la generación haya creado un alias \(lo que solo sucede en escenarios de actualización cuando se utiliza una variable de tabla\), no es necesario especificar ningún alias para la entrada; la traducción tiene como valor predeterminado el nombre de propiedad.  
+### <a name="dbpropertyexpression"></a><span data-ttu-id="20d6f-164">DbPropertyExpression</span><span class="sxs-lookup"><span data-stu-id="20d6f-164">DbPropertyExpression</span></span>  
+ <span data-ttu-id="20d6f-165">Dado que la instancia de DbPropertyExpression siempre representa la tabla de entrada, a menos que la generación haya creado un alias (lo que solo sucede en escenarios de actualización cuando se utiliza una variable de tabla), no es necesario especificar ningún alias para la entrada; la traducción tiene como valor predeterminado el nombre de propiedad.</span><span class="sxs-lookup"><span data-stu-id="20d6f-165">Given that the Instance of the DbPropertyExpression always represents the input table, unless the generation has created an alias (which only happens in update scenarios when a table variable is used), no alias needs to be specified for the input; the translation defaults to the property name.</span></span>  
   
-## Generar un comando SQL de inserción  
- Para una implementación DbInsertCommandTree determinada en el proveedor de ejemplo, el comando de inserción generado sigue una de las dos plantillas de inserción siguientes.  
+## <a name="generating-an-insert-sql-command"></a><span data-ttu-id="20d6f-166">Generar un comando SQL de inserción</span><span class="sxs-lookup"><span data-stu-id="20d6f-166">Generating an Insert SQL Command</span></span>  
+ <span data-ttu-id="20d6f-167">Para una implementación DbInsertCommandTree determinada en el proveedor de ejemplo, el comando de inserción generado sigue una de las dos plantillas de inserción siguientes.</span><span class="sxs-lookup"><span data-stu-id="20d6f-167">For a given DbInsertCommandTree in the sample provider, the generated insert command follows one of the two insert templates below.</span></span>  
   
- La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL.  El elemento de predicado "@@ROWCOUNT \> 0" es true si se insertó una fila.  El elemento de predicado "keyMemberI \= keyValueI &#124; scope\_identity\(\)" toma la forma "keyMemberI \= scope\_identity\(\)" únicamente si keyMemeberI es una clave generada por el almacén, ya que scope\_identity\(\) devuelve el último valor de identidad insertado en una columna de identidad \(generada por el almacén\).  
+ <span data-ttu-id="20d6f-168">La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL.</span><span class="sxs-lookup"><span data-stu-id="20d6f-168">The first template has a command to perform the insert given the values in the list of SetClauses, and a SELECT statement to return the properties specified in the Returning property for the inserted row if the Returning property was not null.</span></span> <span data-ttu-id="20d6f-169">El elemento de predicado "@@ROWCOUNT > 0" es true si se ha insertado una fila.</span><span class="sxs-lookup"><span data-stu-id="20d6f-169">The predicate element "@@ROWCOUNT > 0" is true if a row was inserted.</span></span> <span data-ttu-id="20d6f-170">El elemento de predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY () "toma la forma" keyMemberI = SCOPE_IDENTITY () "únicamente si keyMemeberI es una clave generada por el almacén, ya que SCOPE_IDENTITY () devuelve el último valor identity insertado en una columna de identidad (generada por el almacén).</span><span class="sxs-lookup"><span data-stu-id="20d6f-170">The predicate element "keyMemberI =  keyValueI &#124; scope_identity()" takes the shape  "keyMemberI =  scope_identity()" only if keyMemeberI is a store-generated key, because scope_identity() returns the last identity value inserted into an identity (store-generated) column.</span></span>  
   
 ```  
 -- first insert Template  
-INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
+INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
 VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES   
   
 [SELECT <returning>   
- FROM <target>   
+ FROM <target>  
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- La segunda plantilla es necesaria si la inserción especifica la inserción de una fila cuya clave principal es generada por el almacén pero no es de tipo entero y, por tanto, no se puede usar con scope\_identity\(\).  También se usa si existe una clave compuesta generada por el almacén.  
+ <span data-ttu-id="20d6f-171">La segunda plantilla es necesaria si la inserción especifica la inserción de una fila cuya clave principal es generada por el almacén pero no es de tipo entero y, por tanto, no se puede usar con scope_identity().</span><span class="sxs-lookup"><span data-stu-id="20d6f-171">The second template is needed if the insert specifies inserting a row where the primary key is store-generated but is not an integer type and therefore can't be used with scope_identity()).</span></span> <span data-ttu-id="20d6f-172">También se usa si existe una clave compuesta generada por el almacén.</span><span class="sxs-lookup"><span data-stu-id="20d6f-172">It is also used if there is a compound store-generated key.</span></span>  
   
 ```  
 -- second insert template  
 DECLARE @generated_keys TABLE [(keyMember0, … keyMemberN)  
   
-INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
- OUTPUT inserted.KeyMember0, …, inserted.KeyMemberN INTO @generated_keys  
- VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES   
+INSERT <target>   [ (setClauseProperty0, .. setClausePropertyN)]    
+ OUTPUT inserted.KeyMember0, …, inserted.KeyMemberN INTO @generated_keys  
+ VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES  
   
 [SELECT <returning_over_t>   
- FROM @generated_keys  AS g   
+ FROM @generated_keys  AS g  
 JOIN <target> AS t ON g.KeyMember0 = t.KeyMember0 AND … g.KeyMemberN = t.KeyMemberN  
- WHERE @@ROWCOUNT > 0   
+ WHERE @@ROWCOUNT > 0  
 ```  
   
- A continuación se muestra un ejemplo que utiliza el modelo incluido con el proveedor de ejemplo.  Genera un comando de inserción a partir de una implementación DbInsertCommandTree.  
+ <span data-ttu-id="20d6f-173">A continuación se muestra un ejemplo que utiliza el modelo incluido con el proveedor de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="20d6f-173">The following is an example that uses the model that is included with the sample provider.</span></span> <span data-ttu-id="20d6f-174">Genera un comando de inserción a partir de una implementación DbInsertCommandTree.</span><span class="sxs-lookup"><span data-stu-id="20d6f-174">It generates an insert command from a DbInsertCommandTree.</span></span>  
   
- El siguiente código inserta una categoría:  
+ <span data-ttu-id="20d6f-175">El siguiente código inserta una categoría:</span><span class="sxs-lookup"><span data-stu-id="20d6f-175">The following code inserts a Category:</span></span>  
   
 ```  
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {  
@@ -153,7 +156,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }  
 ```  
   
- Este código genera el siguiente árbol de comandos, que se pasa al proveedor:  
+ <span data-ttu-id="20d6f-176">Este código genera el siguiente árbol de comandos, que se pasa al proveedor:</span><span class="sxs-lookup"><span data-stu-id="20d6f-176">This code produces the following command tree, which is passed to the provider:</span></span>  
   
 ```  
 DbInsertCommandTree  
@@ -182,7 +185,7 @@ DbInsertCommandTree
       |_Var(target).CategoryID  
 ```  
   
- El comando de almacén que el proveedor de ejemplo genera es la siguiente instrucción SQL:  
+ <span data-ttu-id="20d6f-177">El comando de almacén que el proveedor de ejemplo genera es la siguiente instrucción SQL:</span><span class="sxs-lookup"><span data-stu-id="20d6f-177">The store command that the sample provider produces is the following SQL statement:</span></span>  
   
 ```  
 insert [dbo].[Categories]([CategoryName], [Description], [Picture])  
@@ -192,27 +195,27 @@ from [dbo].[Categories]
 where @@ROWCOUNT > 0 and [CategoryID] = scope_identity()  
 ```  
   
-## Generar un comando SQL de actualización  
- Para una implementación DbUpdateCommandTree determinada, el comando de actualización generado se basa en la siguiente plantilla:  
+## <a name="generating-an-update-sql-command"></a><span data-ttu-id="20d6f-178">Generar un comando SQL de actualización</span><span class="sxs-lookup"><span data-stu-id="20d6f-178">Generating an Update SQL Command</span></span>  
+ <span data-ttu-id="20d6f-179">Para una implementación DbUpdateCommandTree determinada, el comando de actualización generado se basa en la siguiente plantilla:</span><span class="sxs-lookup"><span data-stu-id="20d6f-179">For a given DbUpdateCommandTree, the generated update command is based on the following template:</span></span>  
   
 ```  
 -- UPDATE Template   
-UPDATE <target>   
+UPDATE <target>   
 SET setClauseProprerty0 = setClauseValue0,  .. setClauseProprertyN = setClauseValueN  | @i = 0  
 WHERE <predicate>  
   
 [SELECT <returning>   
- FROM <target>   
+ FROM <target>  
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- La cláusula SET incluye la cláusula SET falsa \("@i \= 0"\) solamente si no se especifica ninguna cláusula SET.  Esto permite garantizar que las columnas calculadas en el almacén se vuelven a calcular.  
+ <span data-ttu-id="20d6f-180">La cláusula set incluye la cláusula set falsa ("@i = 0") solo si no se especifica ninguna cláusula.</span><span class="sxs-lookup"><span data-stu-id="20d6f-180">The set clause has the fake set clause ("@i = 0") only if no set clauses are specified.</span></span> <span data-ttu-id="20d6f-181">Esto permite garantizar que las columnas calculadas en el almacén se vuelven a calcular.</span><span class="sxs-lookup"><span data-stu-id="20d6f-181">This is to ensure that any store-computed columns are recomputed.</span></span>  
   
- Únicamente si la propiedad Returning no es NULL, se genera una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning.  
+ <span data-ttu-id="20d6f-182">Únicamente si la propiedad Returning no es NULL, se genera una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning.</span><span class="sxs-lookup"><span data-stu-id="20d6f-182">Only if the Returning property is not null, a select statement is generated to return the properties specified in the Returning property.</span></span>  
   
- En el siguiente ejemplo se utiliza el modelo que se incluye con el proveedor de ejemplo para generar un comando de actualización.  
+ <span data-ttu-id="20d6f-183">En el siguiente ejemplo se utiliza el modelo que se incluye con el proveedor de ejemplo para generar un comando de actualización.</span><span class="sxs-lookup"><span data-stu-id="20d6f-183">The following example uses the model that is included with the sample provider to generate an update command.</span></span>  
   
- El siguiente código de usuario actualiza una categoría:  
+ <span data-ttu-id="20d6f-184">El siguiente código de usuario actualiza una categoría:</span><span class="sxs-lookup"><span data-stu-id="20d6f-184">The following user code updates a Category:</span></span>  
   
 ```  
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {  
@@ -222,7 +225,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }  
 ```  
   
- Este código de usuario genera el siguiente árbol de comandos, que se pasa al proveedor:  
+ <span data-ttu-id="20d6f-185">Este código de usuario genera el siguiente árbol de comandos, que se pasa al proveedor:</span><span class="sxs-lookup"><span data-stu-id="20d6f-185">This user code produces the following command tree, which is passed to the provider:</span></span>  
   
 ```  
 DbUpdateCommandTree  
@@ -243,7 +246,7 @@ DbUpdateCommandTree
 |_Returning   
 ```  
   
- El proveedor de ejemplo genera el siguiente comando de almacén:  
+ <span data-ttu-id="20d6f-186">El proveedor de ejemplo genera el siguiente comando de almacén:</span><span class="sxs-lookup"><span data-stu-id="20d6f-186">The sample provider produces the following store command:</span></span>  
   
 ```  
 update [dbo].[Categories]  
@@ -251,18 +254,18 @@ set [CategoryName] = @p0
 where ([CategoryID] = @p1)   
 ```  
   
-### Generar un comando SQL de eliminación  
- Para una implementación DbDeleteCommandTree determinada, el comando DELETE generado se basa en la siguiente plantilla:  
+### <a name="generating-a-delete-sql-command"></a><span data-ttu-id="20d6f-187">Generar un comando SQL de eliminación</span><span class="sxs-lookup"><span data-stu-id="20d6f-187">Generating a Delete SQL Command</span></span>  
+ <span data-ttu-id="20d6f-188">Para una implementación DbDeleteCommandTree determinada, el comando DELETE generado se basa en la siguiente plantilla:</span><span class="sxs-lookup"><span data-stu-id="20d6f-188">For a given DbDeleteCommandTree, the generated DELETE command is based on the following template:</span></span>  
   
 ```  
 -- DELETE Template   
-DELETE <target>   
+DELETE <target>   
 WHERE <predicate>  
 ```  
   
- En el siguiente ejemplo se utiliza el modelo que se incluye con el proveedor de ejemplo para generar un comando de eliminación.  
+ <span data-ttu-id="20d6f-189">En el siguiente ejemplo se utiliza el modelo que se incluye con el proveedor de ejemplo para generar un comando de eliminación.</span><span class="sxs-lookup"><span data-stu-id="20d6f-189">The following example uses the model that is included with the sample provider to generate a delete command.</span></span>  
   
- El siguiente código de usuario elimina una categoría:  
+ <span data-ttu-id="20d6f-190">El siguiente código de usuario elimina una categoría:</span><span class="sxs-lookup"><span data-stu-id="20d6f-190">The following user code deletes a Category:</span></span>  
   
 ```  
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {  
@@ -272,7 +275,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }  
 ```  
   
- Este código de usuario genera el siguiente árbol de comandos, que se pasa al proveedor.  
+ <span data-ttu-id="20d6f-191">Este código de usuario genera el siguiente árbol de comandos, que se pasa al proveedor.</span><span class="sxs-lookup"><span data-stu-id="20d6f-191">This user code produces the following command tree, which is passed to the provider.</span></span>  
   
 ```  
 DbDeleteCommandTree  
@@ -286,12 +289,12 @@ DbDeleteCommandTree
     |_10  
 ```  
   
- El proveedor de ejemplo genera el siguiente comando de almacén:  
+ <span data-ttu-id="20d6f-192">El proveedor de ejemplo genera el siguiente comando de almacén:</span><span class="sxs-lookup"><span data-stu-id="20d6f-192">The following store command is produced by the sample provider:</span></span>  
   
 ```  
 delete [dbo].[Categories]  
 where ([CategoryID] = @p0)  
 ```  
   
-## Vea también  
- [Escribir un proveedor de datos de Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a><span data-ttu-id="20d6f-193">Vea también</span><span class="sxs-lookup"><span data-stu-id="20d6f-193">See Also</span></span>  
+ [<span data-ttu-id="20d6f-194">Escribir un proveedor de datos de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="20d6f-194">Writing an Entity Framework Data Provider</span></span>](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

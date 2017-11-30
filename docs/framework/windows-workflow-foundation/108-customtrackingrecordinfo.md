@@ -1,49 +1,53 @@
 ---
-title: "108 - CustomTrackingRecordInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 108 - CustomTrackingRecordInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5bee501e-4e00-42cd-b949-e88009c3d4e8
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fbbae172ea5030b44656dfe850cddfd498764fed
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 108 - CustomTrackingRecordInfo
-## Propiedades  
+# <a name="108---customtrackingrecordinfo"></a><span data-ttu-id="33647-102">108 - CustomTrackingRecordInfo</span><span class="sxs-lookup"><span data-stu-id="33647-102">108 - CustomTrackingRecordInfo</span></span>
+## <a name="properties"></a><span data-ttu-id="33647-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="33647-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|108|  
-|Palabras clave|UserEvents, EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
-|Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="33647-104">Id.</span><span class="sxs-lookup"><span data-stu-id="33647-104">Id</span></span>|<span data-ttu-id="33647-105">108</span><span class="sxs-lookup"><span data-stu-id="33647-105">108</span></span>|  
+|<span data-ttu-id="33647-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="33647-106">Keywords</span></span>|<span data-ttu-id="33647-107">UserEvents, EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="33647-107">UserEvents, EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="33647-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="33647-108">Level</span></span>|<span data-ttu-id="33647-109">Información</span><span class="sxs-lookup"><span data-stu-id="33647-109">Information</span></span>|  
+|<span data-ttu-id="33647-110">Canal</span><span class="sxs-lookup"><span data-stu-id="33647-110">Channel</span></span>|<span data-ttu-id="33647-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="33647-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descripción  
- El participante de seguimiento de ETW emite este evento cuando una actividad dentro de una instancia de flujo de trabajo emite CustomTrackingRecord con información de nivel.  
+## <a name="description"></a><span data-ttu-id="33647-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="33647-112">Description</span></span>  
+ <span data-ttu-id="33647-113">El participante de seguimiento de ETW emite este evento cuando una actividad dentro de una instancia de flujo de trabajo emite CustomTrackingRecord con información de nivel.</span><span class="sxs-lookup"><span data-stu-id="33647-113">This event is emitted by the ETW tracking participant when a activity within a workflow instance emits CustomTrackingRecord with level Info.</span></span>  
   
-## Mensaje  
- TrackRecord \= CustomTrackingRecord, InstanceID \= %1, RecordNumber\=%2, EventTime\=%3,  Name\=%4, ActivityName\=%5, ActivityId\=%6, ActivityInstanceId\=%7, ActivityTypeName\=%8, Data\=%9, Annotations\=%10, ProfileName \= %11  
+## <a name="message"></a><span data-ttu-id="33647-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="33647-114">Message</span></span>  
+ <span data-ttu-id="33647-115">TrackRecord = CustomTrackingRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityName=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Data=%9, Annotations=%10, ProfileName = %11</span><span class="sxs-lookup"><span data-stu-id="33647-115">TrackRecord = CustomTrackingRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3,  Name=%4, ActivityName=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Data=%9, Annotations=%10, ProfileName = %11</span></span>  
   
-## Detalles  
+## <a name="details"></a><span data-ttu-id="33647-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="33647-116">Details</span></span>  
   
-|Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|InstanceId|xs:GUID|El id. de instancia del flujo de trabajo.|  
-|RecordNumber|xs:long|El número de secuencia del registro emitido.|  
-|EventTime|xs:dateTime|La hora en UTC cuando se emitió el evento.|  
-|Name|xs:string|El nombre de la clase CustomTrackingRecord.|  
-|ActivityName|xs:string|El nombre de la actividad que emitió la clase CustomTrackingRecord.|  
-|ActivityId|xs:string|El id. de la actividad que emitió la clase CustomTrackingRecord.|  
-|ActivityInstanceId|xs:string|El id. de instancia de la actividad que emitió la clase CustomTrackingRecord.|  
-|ActivityTypeName|xs:string|El nombre de la actividad que emitió la clase CustomTrackingRecord.|  
-|Data|xs:string|Los datos a los que se realizó el seguimiento con este evento.Los valores están almacenados en un elemento de xml con el formato \<items\>\< item  name \= "dataName" type\="System.String"\>dataValue\<\/item\>\<\/items\>.Si no se realizara el seguimiento de ningún dato, la cadena contendría \<items\/\>.El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de los datos con \<items\>...\<\/items.\>Los tipos siguientes están almacenados como valores posibles ya que los devuelve ToString\(\); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime.Todos los demás tipos se serializan con System.Runtime.Serialization.NetDataContractSerializer.|  
-|Annotations|xs:string|Las anotaciones que se agregaron a este evento.Los valores se almacenan en un elemento xml con el formato\<items\>\< item  name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>.Si no se especifica ninguna anotación, la cadena contendrá \<items\/\>.El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<items\>...\<\/items.\>|  
-|ProfileName|xs:string|El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.|  
-|HostReference|xs:string|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.Su formato se define como 'Ruta de acceso virtual de la aplicación del nombre del sitio web&#124;Ruta de acceso virtual del servicio&#124;NombreServicio' Ejemplo: 'Sitio web predeterminado\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
-|AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="33647-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="33647-117">Data Item Name</span></span>|<span data-ttu-id="33647-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="33647-118">Data Item Type</span></span>|<span data-ttu-id="33647-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="33647-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="33647-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="33647-120">InstanceId</span></span>|<span data-ttu-id="33647-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="33647-121">xs:GUID</span></span>|<span data-ttu-id="33647-122">El id. de instancia del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="33647-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="33647-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="33647-123">RecordNumber</span></span>|<span data-ttu-id="33647-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="33647-124">xs:long</span></span>|<span data-ttu-id="33647-125">El número de secuencia del registro emitido.</span><span class="sxs-lookup"><span data-stu-id="33647-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="33647-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="33647-126">EventTime</span></span>|<span data-ttu-id="33647-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="33647-127">xs:dateTime</span></span>|<span data-ttu-id="33647-128">La hora en UTC cuando se emitió el evento.</span><span class="sxs-lookup"><span data-stu-id="33647-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="33647-129">Name</span><span class="sxs-lookup"><span data-stu-id="33647-129">Name</span></span>|<span data-ttu-id="33647-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-130">xs:string</span></span>|<span data-ttu-id="33647-131">El nombre de la clase CustomTrackingRecord.</span><span class="sxs-lookup"><span data-stu-id="33647-131">The name of the CustomTrackingRecord</span></span>|  
+|<span data-ttu-id="33647-132">ActivityName</span><span class="sxs-lookup"><span data-stu-id="33647-132">ActivityName</span></span>|<span data-ttu-id="33647-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-133">xs:string</span></span>|<span data-ttu-id="33647-134">El nombre de la actividad que emitió la clase CustomTrackingRecord.</span><span class="sxs-lookup"><span data-stu-id="33647-134">The name of the activity that emitted the CustomTrackingRecord</span></span>|  
+|<span data-ttu-id="33647-135">ActivityId</span><span class="sxs-lookup"><span data-stu-id="33647-135">ActivityId</span></span>|<span data-ttu-id="33647-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-136">xs:string</span></span>|<span data-ttu-id="33647-137">El id. de la actividad que emitió la clase CustomTrackingRecord.</span><span class="sxs-lookup"><span data-stu-id="33647-137">The id of the activity that emitted the CustomTrackingRecord</span></span>|  
+|<span data-ttu-id="33647-138">ActivityInstance</span><span class="sxs-lookup"><span data-stu-id="33647-138">ActivityInstanceId</span></span>|<span data-ttu-id="33647-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-139">xs:string</span></span>|<span data-ttu-id="33647-140">El id. de instancia de la actividad que emitió la clase CustomTrackingRecord.</span><span class="sxs-lookup"><span data-stu-id="33647-140">The instance id of the activity that emitted the CustomTrackingRecord</span></span>|  
+|<span data-ttu-id="33647-141">ActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="33647-141">ActivityTypeName</span></span>|<span data-ttu-id="33647-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-142">xs:string</span></span>|<span data-ttu-id="33647-143">El nombre de la actividad que emitió la clase CustomTrackingRecord.</span><span class="sxs-lookup"><span data-stu-id="33647-143">The name of the activity that emitted the CustomTrackingRecord</span></span>|  
+|<span data-ttu-id="33647-144">Datos</span><span class="sxs-lookup"><span data-stu-id="33647-144">Data</span></span>|<span data-ttu-id="33647-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-145">xs:string</span></span>|<span data-ttu-id="33647-146">Los datos a los que se realizó el seguimiento con este evento.</span><span class="sxs-lookup"><span data-stu-id="33647-146">The data that was tracked with this event.</span></span>  <span data-ttu-id="33647-147">Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "dataName" Type = "> dataValue\</artículo > \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="33647-147">The values are stored in an xml element in the format \<items>\< item  name = "dataName" type="System.String">dataValue\</item>\</items>.</span></span>  <span data-ttu-id="33647-148">Si no se realizara el seguimiento de ningún dato, la cadena contiene \<elementos / >.</span><span class="sxs-lookup"><span data-stu-id="33647-148">If no data was tracked then the string contains \<items/>.</span></span> <span data-ttu-id="33647-149">El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.</span><span class="sxs-lookup"><span data-stu-id="33647-149">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="33647-150">Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de datos con \<elementos >...  \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="33647-150">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the data value with \<items>...\</items>.</span></span>  <span data-ttu-id="33647-151">Los tipos siguientes están almacenados como valores posibles ya que los devuelve ToString(); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime.</span><span class="sxs-lookup"><span data-stu-id="33647-151">The following types are stored as their value as returned by ToString(); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime.</span></span>  <span data-ttu-id="33647-152">Todos los demás tipos se serializan con System.Runtime.Serialization.NetDataContractSerializer.</span><span class="sxs-lookup"><span data-stu-id="33647-152">All other types are serialized using System.Runtime.Serialization.NetDataContractSerializer.</span></span>|  
+|<span data-ttu-id="33647-153">Anotaciones</span><span class="sxs-lookup"><span data-stu-id="33647-153">Annotations</span></span>|<span data-ttu-id="33647-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-154">xs:string</span></span>|<span data-ttu-id="33647-155">Las anotaciones que se agregaron a este evento.</span><span class="sxs-lookup"><span data-stu-id="33647-155">The annotations that were added to this event.</span></span>  <span data-ttu-id="33647-156">Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "annotationName" Type = "> annotationValue\</artículo > \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="33647-156">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="33647-157">Si se especifica ninguna anotación, a continuación, la cadena contiene \<elementos / >.</span><span class="sxs-lookup"><span data-stu-id="33647-157">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="33647-158">El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.</span><span class="sxs-lookup"><span data-stu-id="33647-158">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="33647-159">Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<elementos >...  \< /artículos >.</span><span class="sxs-lookup"><span data-stu-id="33647-159">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="33647-160">ProfileName</span><span class="sxs-lookup"><span data-stu-id="33647-160">ProfileName</span></span>|<span data-ttu-id="33647-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-161">xs:string</span></span>|<span data-ttu-id="33647-162">El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.</span><span class="sxs-lookup"><span data-stu-id="33647-162">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="33647-163">HostReference</span><span class="sxs-lookup"><span data-stu-id="33647-163">HostReference</span></span>|<span data-ttu-id="33647-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-164">xs:string</span></span>|<span data-ttu-id="33647-165">En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.</span><span class="sxs-lookup"><span data-stu-id="33647-165">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="33647-166">El formato se define como ' ruta de acceso Virtual de sitio Web de nombre de aplicación &#124; Ruta de acceso Virtual del servicio &#124; NombreServicio ' ejemplo: ' sitio Web/CalculatorApplication &#124;/CalculatorService.svc &#124; predeterminada CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="33647-166">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="33647-167">AppDomain</span><span class="sxs-lookup"><span data-stu-id="33647-167">AppDomain</span></span>|<span data-ttu-id="33647-168">xs:string</span><span class="sxs-lookup"><span data-stu-id="33647-168">xs:string</span></span>|<span data-ttu-id="33647-169">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="33647-169">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

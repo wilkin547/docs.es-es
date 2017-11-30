@@ -1,51 +1,55 @@
 ---
-title: "Actividad RangeEnumeration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Actividad RangeEnumeration
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ca5b78f4-94fa-4aa7-830d-26039ac422c8
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 024cdc9ae082171fb33a63493ac0fbfdd45d3c72
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Actividad RangeEnumeration
-En este ejemplo se muestra cómo crear una actividad personalizada que recorra en iteración una colección de números. La tabla que sigue detalla los archivos principales incluidos en el ejemplo.  
+# <a name="rangeenumeration-activity"></a><span data-ttu-id="00bc9-102">Actividad RangeEnumeration</span><span class="sxs-lookup"><span data-stu-id="00bc9-102">RangeEnumeration Activity</span></span>
+<span data-ttu-id="00bc9-103">En este ejemplo se muestra cómo crear una actividad personalizada que recorra en iteración una colección de números. La tabla que sigue detalla los archivos principales incluidos en el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="00bc9-103">This sample demonstrates how to create a custom activity that iterates over a collection of numbers.The following table details the main files included in the sample.</span></span>  
   
-|Nombre de archivo|Descripción|  
-|-----------------------|-----------------|  
-|RangeEnumeration.cs|Define una actividad personalizada denominada `RangeEnumeration` que invalida la clase <xref:System.Activities.NativeActivity> y recorre en bucle una serie de números.|  
-|RangeEnumerationSample.cs|Una aplicación cliente que utiliza la actividad `RangeEnumeration` para recorrer en iteración una colección de números.|  
-  
- En la tabla siguiente se detallan las propiedades de la actividad `RangeEnumeration`.  
-  
-|Propiedad|Descripción|  
+|<span data-ttu-id="00bc9-104">Nombre del archivo</span><span class="sxs-lookup"><span data-stu-id="00bc9-104">File name</span></span>|<span data-ttu-id="00bc9-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="00bc9-105">Description</span></span>|  
 |---------------|-----------------|  
-|Start|El entero a partir del cual se inicia el bucle.|  
-|Stop|El entero en el que detener el bucle.|  
-|Step|Especifica cuánto se recorre en iteración cada vez.|  
-|Body|Especifica el código para ejecutar durante cada iteración.|  
+|<span data-ttu-id="00bc9-106">RangeEnumeration.cs</span><span class="sxs-lookup"><span data-stu-id="00bc9-106">RangeEnumeration.cs</span></span>|<span data-ttu-id="00bc9-107">Define una actividad personalizada denominada `RangeEnumeration` que invalida la clase <xref:System.Activities.NativeActivity> y recorre en bucle una serie de números.</span><span class="sxs-lookup"><span data-stu-id="00bc9-107">Defines a custom activity named `RangeEnumeration` that overrides the <xref:System.Activities.NativeActivity> class and loops through a series of numbers.</span></span>|  
+|<span data-ttu-id="00bc9-108">RangeEnumerationSample.cs</span><span class="sxs-lookup"><span data-stu-id="00bc9-108">RangeEnumerationSample.cs</span></span>|<span data-ttu-id="00bc9-109">Una aplicación cliente que utiliza la actividad `RangeEnumeration` para recorrer en iteración una colección de números.</span><span class="sxs-lookup"><span data-stu-id="00bc9-109">A client application that uses the `RangeEnumeration` activity to iterate over a collection of numbers.</span></span>|  
   
-#### Para utilizar este ejemplo  
+ <span data-ttu-id="00bc9-110">En la tabla siguiente se detallan las propiedades de la actividad `RangeEnumeration`.</span><span class="sxs-lookup"><span data-stu-id="00bc9-110">The following table details the properties of the `RangeEnumeration` activity.</span></span>  
   
-1.  Abra el archivo de solución de RangeEnumeration.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+|<span data-ttu-id="00bc9-111">Propiedad</span><span class="sxs-lookup"><span data-stu-id="00bc9-111">Property</span></span>|<span data-ttu-id="00bc9-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="00bc9-112">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="00bc9-113">Iniciar</span><span class="sxs-lookup"><span data-stu-id="00bc9-113">Start</span></span>|<span data-ttu-id="00bc9-114">El entero a partir del cual se inicia el bucle.</span><span class="sxs-lookup"><span data-stu-id="00bc9-114">The integer to start the loop from.</span></span>|  
+|<span data-ttu-id="00bc9-115">Detener</span><span class="sxs-lookup"><span data-stu-id="00bc9-115">Stop</span></span>|<span data-ttu-id="00bc9-116">El entero en el que detener el bucle.</span><span class="sxs-lookup"><span data-stu-id="00bc9-116">The integer to stop the loop at.</span></span>|  
+|<span data-ttu-id="00bc9-117">Paso</span><span class="sxs-lookup"><span data-stu-id="00bc9-117">Step</span></span>|<span data-ttu-id="00bc9-118">Especifica cuánto se recorre en iteración cada vez.</span><span class="sxs-lookup"><span data-stu-id="00bc9-118">Specifies how much to iterate each time.</span></span>|  
+|<span data-ttu-id="00bc9-119">Body</span><span class="sxs-lookup"><span data-stu-id="00bc9-119">Body</span></span>|<span data-ttu-id="00bc9-120">Especifica el código para ejecutar durante cada iteración.</span><span class="sxs-lookup"><span data-stu-id="00bc9-120">Specifies the code to execute during each iteration.</span></span>|  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="00bc9-121">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="00bc9-121">To use this sample</span></span>  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+1.  <span data-ttu-id="00bc9-122">Abra el archivo de solución de RangeEnumeration.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="00bc9-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the RangeEnumeration.sln solution file.</span></span>  
+  
+2.  <span data-ttu-id="00bc9-123">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="00bc9-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
+  
+3.  <span data-ttu-id="00bc9-124">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="00bc9-124">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="00bc9-125">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="00bc9-125">The samples may already be installed on your machine.</span></span> <span data-ttu-id="00bc9-126">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="00bc9-126">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="00bc9-127">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="00bc9-127">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="00bc9-128">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="00bc9-128">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\RangeEnumeration`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\RangeEnumeration`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="00bc9-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="00bc9-129">See Also</span></span>

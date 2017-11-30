@@ -1,30 +1,36 @@
 ---
-title: "Recuperar datos binarios | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Recuperar datos binarios
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bd524ed605f1fe125480bae0949745f4f045f03a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Recuperar datos binarios
-El objeto **DataReader** carga de forma predeterminada los datos que recibe en una fila, siempre que hay disponibles suficientes datos para llenarla.  Sin embargo, los objetos binarios grandes \(BLOB\) se deben tratar de otra forma, ya que pueden llegar a contener grandes cantidades de datos \(del orden de gigabytes\) que no pueden almacenarse en una sola fila.  El método **Command.ExecuteReader** se puede sobrecargar para aceptar un argumento <xref:System.Data.CommandBehavior> y modificar el comportamiento predeterminado de **DataReader**.  Puede pasar <xref:System.Data.CommandBehavior> al método **ExecuteReader** para modificar el comportamiento predeterminado de **DataReader** de forma que en lugar de cargar los datos por filas, los vaya cargando secuencialmente a medida que los vaya recibiendo.  Este sistema es idóneo para cargar BLOB y otras estructuras de datos grandes.  Tenga en cuenta que este comportamiento puede depender del origen de datos.  Por ejemplo, si se devuelve un BLOB desde Microsoft Access, el BLOB completo se cargará en memoria, en lugar de hacerlo secuencialmente a medida que se recibe.  
+# <a name="retrieving-binary-data"></a><span data-ttu-id="ac03c-102">Recuperar datos binarios</span><span class="sxs-lookup"><span data-stu-id="ac03c-102">Retrieving Binary Data</span></span>
+<span data-ttu-id="ac03c-103">De forma predeterminada, el **DataReader** carga los datos entrantes como una fila tan pronto como hay una fila completa de datos.</span><span class="sxs-lookup"><span data-stu-id="ac03c-103">By default, the **DataReader** loads incoming data as a row as soon as an entire row of data is available.</span></span> <span data-ttu-id="ac03c-104">Sin embargo, los objetos binarios grandes (BLOB) se deben tratar de otra forma, ya que pueden llegar a contener grandes cantidades de datos (del orden de gigabytes) que no pueden almacenarse en una sola fila.</span><span class="sxs-lookup"><span data-stu-id="ac03c-104">Binary large objects (BLOBs) need different treatment, however, because they can contain gigabytes of data that cannot be contained in a single row.</span></span> <span data-ttu-id="ac03c-105">El **Command.ExecuteReader** método tiene una sobrecarga que vaya a realizar una <xref:System.Data.CommandBehavior> argumento para modificar el comportamiento predeterminado de la **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="ac03c-105">The **Command.ExecuteReader** method has an overload that will take a <xref:System.Data.CommandBehavior> argument to modify the default behavior of the **DataReader**.</span></span> <span data-ttu-id="ac03c-106">Puede pasar <xref:System.Data.CommandBehavior.SequentialAccess> a la **ExecuteReader** método para modificar el comportamiento predeterminado de la **DataReader** para que en lugar de cargar filas de datos, los vaya cargando secuencialmente a medida que se recibe.</span><span class="sxs-lookup"><span data-stu-id="ac03c-106">You can pass <xref:System.Data.CommandBehavior.SequentialAccess> to the **ExecuteReader** method to modify the default behavior of the **DataReader** so that instead of loading rows of data, it will load data sequentially as it is received.</span></span> <span data-ttu-id="ac03c-107">Este sistema es idóneo para cargar BLOB y otras estructuras de datos grandes.</span><span class="sxs-lookup"><span data-stu-id="ac03c-107">This is ideal for loading BLOBs or other large data structures.</span></span> <span data-ttu-id="ac03c-108">Tenga en cuenta que este comportamiento puede depender del origen de datos.</span><span class="sxs-lookup"><span data-stu-id="ac03c-108">Note that this behavior may depend on your data source.</span></span> <span data-ttu-id="ac03c-109">Por ejemplo, si se devuelve un BLOB desde Microsoft Access, el BLOB completo se cargará en memoria, en lugar de hacerlo secuencialmente a medida que se recibe.</span><span class="sxs-lookup"><span data-stu-id="ac03c-109">For example, returning a BLOB from Microsoft Access will load the entire BLOB being loaded into memory, rather than sequentially as it is received.</span></span>  
   
- Al configurar **DataReader** para que utilice **SequentialAccess** debe tener en cuenta la secuencia en que va a tener acceso a los datos devueltos.  El comportamiento predeterminado de **DataReader**, consistente en cargar una fila completa de datos en cuanto hay datos suficientes, permite tener acceso a ellos en cualquier orden hasta que se lee la fila siguiente.  Sin embargo, al utilizar **SequentialAccess** es necesario tener acceso a los campos que devuelve **DataReader** en el orden adecuado.  Por ejemplo, si la consulta devuelve tres columnas y la tercera es un BLOB, debe devolver los valores de los campos primero y segundo antes de tener acceso a los datos BLOB del tercer campo.  Si trata de tener acceso al tercer campo antes que al primero o el segundo, puede que éstos dejen de estar disponibles.  Esto se debe a que **SequentialAccess** cambia la forma en que el **DataReader** devuelve los datos, haciendo que lo haga de forma secuencial con lo que los datos dejan de estar disponibles en el momento en que el **DataReader** lee datos posteriores.  
+ <span data-ttu-id="ac03c-110">Al establecer el **DataReader** usar **SequentialAccess**, es importante tener en cuenta la secuencia en la que obtener acceso a los campos devueltos.</span><span class="sxs-lookup"><span data-stu-id="ac03c-110">When setting the **DataReader** to use **SequentialAccess**, it is important to note the sequence in which you access the fields returned.</span></span> <span data-ttu-id="ac03c-111">El comportamiento predeterminado de la **DataReader**, lo que carga una fila completa en cuanto esté disponible, podrá tener acceso a los campos devueltos en cualquier orden hasta que se lee la fila siguiente.</span><span class="sxs-lookup"><span data-stu-id="ac03c-111">The default behavior of the **DataReader**, which loads an entire row as soon as it is available, allows you to access the fields returned in any order until the next row is read.</span></span> <span data-ttu-id="ac03c-112">Cuando se usa **SequentialAccess** sin embargo, debe tener acceso a los campos devueltos por la **DataReader** en orden.</span><span class="sxs-lookup"><span data-stu-id="ac03c-112">When using **SequentialAccess** however, you must access the fields returned by the **DataReader** in order.</span></span> <span data-ttu-id="ac03c-113">Por ejemplo, si la consulta devuelve tres columnas y la tercera es un BLOB, debe devolver los valores de los campos primero y segundo antes de tener acceso a los datos BLOB del tercer campo.</span><span class="sxs-lookup"><span data-stu-id="ac03c-113">For example, if your query returns three columns, the third of which is a BLOB, you must return the values of the first and second fields before accessing the BLOB data in the third field.</span></span> <span data-ttu-id="ac03c-114">Si trata de tener acceso al tercer campo antes que al primero o el segundo, puede que éstos dejen de estar disponibles.</span><span class="sxs-lookup"><span data-stu-id="ac03c-114">If you access the third field before the first or second fields, the first and second field values are no longer available.</span></span> <span data-ttu-id="ac03c-115">Esto es porque **SequentialAccess** ha modificado el **DataReader** devolver datos de secuencia y los datos no está disponible después de la **DataReader** ha leer con posterioridad a él.</span><span class="sxs-lookup"><span data-stu-id="ac03c-115">This is because **SequentialAccess** has modified the **DataReader** to return data in sequence and the data is not available after the **DataReader** has read past it.</span></span>  
   
- Cuando intente obtener acceso a los datos del campo BLOB, utilice los descriptores de acceso con información de tipos **GetBytes** o **GetChars** del **DataReader**, que llenan una matriz con los datos.  En el caso de los datos de caracteres, puede utilizar también **GetString**; no obstante,  si desea conservar los recursos del sistema, es mejor que no cargue un valor BLOB completo en una sola variable de cadena.  En lugar de ello, puede especificar un tamaño determinado de búfer para los datos que se van a devolver, así como la ubicación de comienzo para leer el primer byte o carácter de los datos devueltos.  **GetBytes** y **GetChars** devuelven un valor de tipo `long` que representa el número de bytes o caracteres devueltos.  Si pasa una matriz con valores null a **GetBytes** o **GetChars**, el valor de tipo long devuelto contiene el número total de bytes o caracteres del BLOB.  También puede especificar un índice de la matriz como posición de comienzo para la lectura de datos.  
+ <span data-ttu-id="ac03c-116">Cuando se obtiene acceso a los datos del campo BLOB, utilice la **GetBytes** o **GetChars** escrito descriptores de acceso de la **DataReader**, que llenan una matriz con los datos.</span><span class="sxs-lookup"><span data-stu-id="ac03c-116">When accessing the data in the BLOB field, use the **GetBytes** or **GetChars** typed accessors of the **DataReader**, which fill an array with data.</span></span> <span data-ttu-id="ac03c-117">También puede usar **GetString** para datos de caracteres; sin embargo.</span><span class="sxs-lookup"><span data-stu-id="ac03c-117">You can also use **GetString** for character data; however.</span></span> <span data-ttu-id="ac03c-118">si desea conservar los recursos del sistema, es mejor que no cargue un valor BLOB completo en una sola variable de cadena.</span><span class="sxs-lookup"><span data-stu-id="ac03c-118">to conserve system resources you might not want to load an entire BLOB value into a single string variable.</span></span> <span data-ttu-id="ac03c-119">En lugar de ello, puede especificar un tamaño determinado de búfer para los datos que se van a devolver, así como la ubicación de comienzo para leer el primer byte o carácter de los datos devueltos.</span><span class="sxs-lookup"><span data-stu-id="ac03c-119">You can instead specify a specific buffer size of data to be returned, and a starting location for the first byte or character to be read from the returned data.</span></span> <span data-ttu-id="ac03c-120">**GetBytes** y **GetChars** devolverá un `long` valor, que representa el número de bytes o caracteres devueltos.</span><span class="sxs-lookup"><span data-stu-id="ac03c-120">**GetBytes** and **GetChars** will return a `long` value, which represents the number of bytes or characters returned.</span></span> <span data-ttu-id="ac03c-121">Si se pasa una matriz con valores null a **GetBytes** o **GetChars**, el valor de tipo long devuelto contiene el número total de bytes o caracteres del BLOB.</span><span class="sxs-lookup"><span data-stu-id="ac03c-121">If you pass a null array to **GetBytes** or **GetChars**, the long value returned will be the total number of bytes or characters in the BLOB.</span></span> <span data-ttu-id="ac03c-122">También puede especificar un índice de la matriz como posición de comienzo para la lectura de datos.</span><span class="sxs-lookup"><span data-stu-id="ac03c-122">You can optionally specify an index in the array as a starting position for the data being read.</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo se devuelve el identificador y el logotipo del publicador desde la base de datos de ejemplo **pubs** de Microsoft SQL Server.  El identificador del publicador \(`pub_id`\) es un campo de caracteres, mientras que el logotipo es una imagen de BLOB.  Como el campo **logo** es un mapa de bits, el ejemplo devuelve datos binarios mediante **GetBytes**.  Tenga en cuenta que la necesidad de tener acceso a los datos de forma secuencial hace que en la fila actual de datos se tenga acceso al identificador de publicador antes que al logotipo.  
+## <a name="example"></a><span data-ttu-id="ac03c-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ac03c-123">Example</span></span>  
+ <span data-ttu-id="ac03c-124">El ejemplo siguiente devuelve el Id. de publicador y el logotipo de la **pubs** base de datos de ejemplo en Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="ac03c-124">The following example returns the publisher ID and logo from the **pubs** sample database in Microsoft SQL Server.</span></span> <span data-ttu-id="ac03c-125">El identificador del publicador (`pub_id`) es un campo de caracteres, mientras que el logotipo es una imagen de BLOB.</span><span class="sxs-lookup"><span data-stu-id="ac03c-125">The publisher ID (`pub_id`) is a character field, and the logo is an image, which is a BLOB.</span></span> <span data-ttu-id="ac03c-126">Dado que la **logotipo** campo es un mapa de bits, el ejemplo devuelve datos binarios mediante **GetBytes**.</span><span class="sxs-lookup"><span data-stu-id="ac03c-126">Because the **logo** field is a bitmap, the example returns binary data using **GetBytes**.</span></span> <span data-ttu-id="ac03c-127">Tenga en cuenta que la necesidad de tener acceso a los datos de forma secuencial hace que en la fila actual de datos se tenga acceso al identificador de publicador antes que al logotipo.</span><span class="sxs-lookup"><span data-stu-id="ac03c-127">Notice that the publisher ID is accessed for the current row of data before the logo, because the fields must be accessed sequentially.</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -88,7 +94,6 @@ Loop
 ' Close the reader and the connection.  
 reader.Close()  
 connection.Close()  
-  
 ```  
   
 ```csharp  
@@ -145,7 +150,7 @@ while (reader.Read())
   }  
   
   // Write the remaining buffer.  
-  writer.Write(outByte, 0, (int)retval - 1);  
+  writer.Write(outByte, 0, (int)retval);  
   writer.Flush();  
   
   // Close the output file.  
@@ -158,7 +163,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## Vea también  
- [Working with DataReaders](http://msdn.microsoft.com/es-es/126a966a-d08d-4d22-a19f-f432908b2b54)   
- [Datos binarios y de valores grandes de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="ac03c-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="ac03c-128">See Also</span></span>  
+ [<span data-ttu-id="ac03c-129">Trabajar con DataReaders</span><span class="sxs-lookup"><span data-stu-id="ac03c-129">Working with DataReaders</span></span>](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [<span data-ttu-id="ac03c-130">Datos binarios y datos de valores grandes de SQL Server</span><span class="sxs-lookup"><span data-stu-id="ac03c-130">SQL Server Binary and Large-Value Data</span></span>](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="ac03c-131">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="ac03c-131">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

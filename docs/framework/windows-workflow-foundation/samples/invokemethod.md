@@ -1,77 +1,81 @@
 ---
-title: "InvokeMethod | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: InvokeMethod
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0fc081f4958420b7f3a1236441f33cf124dade54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# InvokeMethod
-En este ejemplo se muestran las maneras diferentes de utilizar la actividad <xref:System.Activities.Statements.InvokeMethod> para invocar métodos de una clase.  
+# <a name="invokemethod"></a><span data-ttu-id="68b0b-102">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="68b0b-102">InvokeMethod</span></span>
+<span data-ttu-id="68b0b-103">En este ejemplo se muestran las maneras diferentes de utilizar la actividad <xref:System.Activities.Statements.InvokeMethod> para invocar métodos de una clase.</span><span class="sxs-lookup"><span data-stu-id="68b0b-103">This sample shows the different ways of using the <xref:System.Activities.Statements.InvokeMethod> activity to invoke methods of a class.</span></span>  
   
- Un método pertenece a una clase y representa un conjunto contenido de operaciones.La actividad <xref:System.Activities.Statements.InvokeMethod> proporciona la capacidad de llamar a los métodos en objetos o tipos, pasar parámetros y obtener el valor devuelto.Los métodos se pueden invocar sincrónica o asincrónicamente.  
+ <span data-ttu-id="68b0b-104">Un método pertenece a una clase y representa un conjunto contenido de operaciones.</span><span class="sxs-lookup"><span data-stu-id="68b0b-104">A method belongs to a class and represents a contained set of operations.</span></span> <span data-ttu-id="68b0b-105">La actividad <xref:System.Activities.Statements.InvokeMethod> proporciona la capacidad de llamar a los métodos en objetos o tipos, pasar parámetros y obtener el valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="68b0b-105">The <xref:System.Activities.Statements.InvokeMethod> activity gives you the ability to call methods against objects or types, pass in parameters, and get the return value.</span></span> <span data-ttu-id="68b0b-106">Los métodos se pueden invocar sincrónica o asincrónicamente.</span><span class="sxs-lookup"><span data-stu-id="68b0b-106">Methods can be invoked synchronously or asynchronously.</span></span>  
   
-## Detalles del ejemplo  
- En este ejemplo se utiliza la actividad <xref:System.Activities.Statements.InvokeMethod> para realizar los siguientes escenarios:  
+## <a name="sample-details"></a><span data-ttu-id="68b0b-107">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="68b0b-107">Sample Details</span></span>  
+ <span data-ttu-id="68b0b-108">En este ejemplo se utiliza la actividad <xref:System.Activities.Statements.InvokeMethod> para realizar los siguientes escenarios:</span><span class="sxs-lookup"><span data-stu-id="68b0b-108">This sample uses the <xref:System.Activities.Statements.InvokeMethod> activity to perform the following scenarios:</span></span>  
   
-1.  Invocar un método de instancia sin parámetros.  
+1.  <span data-ttu-id="68b0b-109">Invoque un método de instancia sin parámetros.</span><span class="sxs-lookup"><span data-stu-id="68b0b-109">Invoke an instance method without parameters.</span></span>  
   
-2.  Invocar un método de instancia con dos parámetros \(<xref:System.String> y <xref:System.Int32>\).  
+2.  <span data-ttu-id="68b0b-110">Invocar un método de instancia con dos parámetros (<xref:System.String> y <xref:System.Int32>).</span><span class="sxs-lookup"><span data-stu-id="68b0b-110">Invoke an instance method with two parameters (<xref:System.String> and <xref:System.Int32>).</span></span>  
   
-3.  Invocar un método de instancia con dos parámetros \(<xref:System.String> y <xref:System.Int32>\) y una matriz de parámetros de tipo <xref:System.String>\[\].  
+3.  <span data-ttu-id="68b0b-111">Invocar un método de instancia con dos parámetros (<xref:System.String> y <xref:System.Int32>) y una matriz de parámetros de tipo <xref:System.String>[].</span><span class="sxs-lookup"><span data-stu-id="68b0b-111">Invoke an instance method with two parameters (<xref:System.String> and <xref:System.Int32>) and a parameter array of type <xref:System.String>[].</span></span>  
   
-4.  Invocar un método de instancia con dos parámetros de tipo <xref:System.Int32> y un resultado de tipo <xref:System.Int32>.En este escenario, el valor de resultado se enlaza a una variable y se utiliza en otra actividad.Se muestra en la consola utilizando la actividad <xref:System.Activities.Statements.WriteLine>.  
+4.  <span data-ttu-id="68b0b-112">Invocar un método de instancia con dos parámetros de tipo <xref:System.Int32> y un resultado de tipo <xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-112">Invoke an instance method with two parameters of type <xref:System.Int32> and a result of type <xref:System.Int32>.</span></span> <span data-ttu-id="68b0b-113">En este escenario, el valor de resultado se enlaza a una variable y se utiliza en otra actividad.</span><span class="sxs-lookup"><span data-stu-id="68b0b-113">In this scenario, the result value is bound to a variable and used in another activity.</span></span> <span data-ttu-id="68b0b-114">Se muestra en la consola utilizando la actividad <xref:System.Activities.Statements.WriteLine>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-114">It is displayed in the console using the <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-5.  Invocar un método estático con dos parámetros de tipo <xref:System.String> y <xref:System.Int32>.  
+5.  <span data-ttu-id="68b0b-115">Invocar un método estático con dos parámetros de tipo <xref:System.String> y <xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-115">Invoke a static method with two parameters of type <xref:System.String> and <xref:System.Int32>.</span></span>  
   
-6.  Invocar un método de instancia con un parámetro genérico de tipo <xref:System.String>.  
+6.  <span data-ttu-id="68b0b-116">Invocar un método de instancia con un parámetro genérico de tipo <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-116">Invoke an instance method with one generic parameter of type <xref:System.String>.</span></span>  
   
-7.  Invocar un método estático con dos parámetros genéricos de tipo <xref:System.String> y <xref:System.Int32>.  
+7.  <span data-ttu-id="68b0b-117">Invocar un método estático con dos parámetros genéricos de tipo <xref:System.String> y <xref:System.Int32>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-117">Invoke a static method with two generic parameters of type <xref:System.String> and <xref:System.Int32>.</span></span>  
   
-8.  Invocar un método de instancia que tiene un parámetro pasado por referencia de tipo <xref:System.String>.En este escenario, el parámetro de referencia se enlaza a una variable \(`outParam`\) y se utiliza en otra actividad.Se muestra en la consola utilizando la actividad <xref:System.Activities.Statements.WriteLine>.  
+8.  <span data-ttu-id="68b0b-118">Invocar un método de instancia que tiene un parámetro pasado por referencia de tipo <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-118">Invoke an instance method that has one parameter passed by reference of type <xref:System.String>.</span></span> <span data-ttu-id="68b0b-119">En este escenario, el parámetro de referencia se enlaza a una variable (`outParam`) y se utiliza en otra actividad.</span><span class="sxs-lookup"><span data-stu-id="68b0b-119">In this scenario, the reference parameter is bound to a variable (`outParam`) and used in another activity.</span></span> <span data-ttu-id="68b0b-120">Se muestra en la consola utilizando la actividad <xref:System.Activities.Statements.WriteLine>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-120">It is displayed on the console using the <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-9. Invocar un método de instancia asincrónico.  
+9. <span data-ttu-id="68b0b-121">Invoque un método de instancia asincrónico.</span><span class="sxs-lookup"><span data-stu-id="68b0b-121">Invoke an asynchronous instance method.</span></span>  
   
-10. Invocar dos métodos diferentes en la misma instancia de un objeto utilizando dos actividades <xref:System.Activities.Statements.InvokeMethod>.  
+10. <span data-ttu-id="68b0b-122">Invocar dos métodos diferentes en la misma instancia de un objeto utilizando dos actividades <xref:System.Activities.Statements.InvokeMethod>.</span><span class="sxs-lookup"><span data-stu-id="68b0b-122">Invoke two different methods on the same instance of an object using two <xref:System.Activities.Statements.InvokeMethod> activities.</span></span>  
   
-11. Almacenar un valor en una instancia de un objeto.  
+11. <span data-ttu-id="68b0b-123">Almacenar un valor en una instancia de un objeto.</span><span class="sxs-lookup"><span data-stu-id="68b0b-123">Store a value in an instance of an object.</span></span>  
   
-12. Recuperar un valor de una instancia de un objeto.  
+12. <span data-ttu-id="68b0b-124">Recuperar un valor de una instancia de un objeto.</span><span class="sxs-lookup"><span data-stu-id="68b0b-124">Retrieve a value from an instance of an object.</span></span>  
   
-## Para utilizar este ejemplo  
- Este ejemplo se proporciona en dos versiones.La primera versión de este ejemplo muestra el uso de <xref:System.Activities.Statements.InvokeMethod> mediante código de C\# utilizando el modelo de programación de [!INCLUDE[wf](../../../../includes/wf-md.md)] y se puede encontrar en la carpeta CodedWorkflow\\CS.La segunda versión muestra el uso de <xref:System.Activities.Statements.InvokeMethod> utilizando XAML y se puede encontrar en la carpeta DesignerWorkflow\\CS.  
+## <a name="to-use-this-sample"></a><span data-ttu-id="68b0b-125">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="68b0b-125">To use this sample</span></span>  
+ <span data-ttu-id="68b0b-126">Este ejemplo se proporciona en dos versiones.</span><span class="sxs-lookup"><span data-stu-id="68b0b-126">This sample is provided in two versions.</span></span> <span data-ttu-id="68b0b-127">La primera versión de este ejemplo muestra el uso de <xref:System.Activities.Statements.InvokeMethod> mediante código de C# utilizando el modelo de programación de [!INCLUDE[wf](../../../../includes/wf-md.md)] y se puede encontrar en la carpeta CodedWorkflow\CS.</span><span class="sxs-lookup"><span data-stu-id="68b0b-127">The first version of this sample demonstrates the usage of <xref:System.Activities.Statements.InvokeMethod> through C# code using the [!INCLUDE[wf](../../../../includes/wf-md.md)] programming model and can be found under the CodedWorkflow\CS folder.</span></span> <span data-ttu-id="68b0b-128">La segunda versión muestra el uso de <xref:System.Activities.Statements.InvokeMethod> utilizando XAML y se puede encontrar en la carpeta DesignerWorkflow\CS.</span><span class="sxs-lookup"><span data-stu-id="68b0b-128">The second version demonstrates the usage of <xref:System.Activities.Statements.InvokeMethod> using XAML and can be found under the DesignerWorkflow\CS folder.</span></span>  
   
-#### Para ejecutar el ejemplo de flujo de trabajo codificado  
+#### <a name="to-run-the-coded-workflow-sample"></a><span data-ttu-id="68b0b-129">Para ejecutar el ejemplo de flujo de trabajo codificado</span><span class="sxs-lookup"><span data-stu-id="68b0b-129">To run the coded workflow sample</span></span>  
   
-1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución InvokeMethodUsage.sln en la carpeta CodedWorkflow\\CS.  
+1.  <span data-ttu-id="68b0b-130">Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución InvokeMethodUsage.sln en la carpeta CodedWorkflow\CS.</span><span class="sxs-lookup"><span data-stu-id="68b0b-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the InvokeMethodUsage.sln solution file in the CodedWorkflow\CS folder.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="68b0b-131">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="68b0b-131">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  <span data-ttu-id="68b0b-132">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="68b0b-132">To run the solution, press CTRL+F5.</span></span>  
   
-#### Para ejecutar el ejemplo de flujo de trabajo de diseñador  
+#### <a name="to-run-the-designer-workflow-sample"></a><span data-ttu-id="68b0b-133">Para ejecutar el ejemplo de flujo de trabajo de diseñador</span><span class="sxs-lookup"><span data-stu-id="68b0b-133">To run the designer workflow sample</span></span>  
   
-1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución InvokeMethodUsage.sln en la carpeta DesignerWorkflow\\CS.  
+1.  <span data-ttu-id="68b0b-134">Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución InvokeMethodUsage.sln en la carpeta DesignerWorkflow\CS.</span><span class="sxs-lookup"><span data-stu-id="68b0b-134">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the InvokeMethodUsage.sln solution file in the DesignerWorkflow\CS folder.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="68b0b-135">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="68b0b-135">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  <span data-ttu-id="68b0b-136">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="68b0b-136">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="68b0b-137">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="68b0b-137">The samples may already be installed on your machine.</span></span> <span data-ttu-id="68b0b-138">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="68b0b-138">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="68b0b-139">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="68b0b-139">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="68b0b-140">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="68b0b-140">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="68b0b-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="68b0b-141">See Also</span></span>

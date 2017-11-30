@@ -1,74 +1,77 @@
 ---
-title: "Administrar permisos con procedimientos almacenados en SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Administrar permisos con procedimientos almacenados en SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 806cd23060dde3f7b466df0d4ce39162353380e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Administrar permisos con procedimientos almacenados en SQL Server
-Un modo de establecer varias líneas de defensa en torno a su base de datos consiste en implementar el acceso a todos los datos usando procedimientos almacenados o roles definidos por el usuario.  Debe revocar o denegar todos los permisos a los objetos subyacentes, como tablas, y conceder permisos a los procedimientos almacenados.  Esto crea un perímetro de seguridad en torno a sus datos y objetos de base de datos.  
+# <a name="managing-permissions-with-stored-procedures-in-sql-server"></a><span data-ttu-id="d9dec-102">Administrar permisos con procedimientos almacenados en SQL Server</span><span class="sxs-lookup"><span data-stu-id="d9dec-102">Managing Permissions with Stored Procedures in SQL Server</span></span>
+<span data-ttu-id="d9dec-103">Un modo de establecer varias líneas de defensa en torno a su base de datos consiste en implementar el acceso a todos los datos usando procedimientos almacenados o roles definidos por el usuario.</span><span class="sxs-lookup"><span data-stu-id="d9dec-103">One method of creating multiple lines of defense around your database is to implement all data access using stored procedures or user-defined functions.</span></span> <span data-ttu-id="d9dec-104">Debe revocar o denegar todos los permisos a los objetos subyacentes, como tablas, y conceder permisos a los procedimientos almacenados.</span><span class="sxs-lookup"><span data-stu-id="d9dec-104">You revoke or deny all permissions to underlying objects, such as tables, and grant EXECUTE permissions on stored procedures.</span></span> <span data-ttu-id="d9dec-105">Esto crea un perímetro de seguridad en torno a sus datos y objetos de base de datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-105">This effectively creates a security perimeter around your data and database objects.</span></span>  
   
-## Ventajas de los procedimientos almacenados  
- Los procedimientos almacenados ofrecen las siguientes ventajas:  
+## <a name="stored-procedure-benefits"></a><span data-ttu-id="d9dec-106">Ventajas de los procedimientos almacenados</span><span class="sxs-lookup"><span data-stu-id="d9dec-106">Stored Procedure Benefits</span></span>  
+ <span data-ttu-id="d9dec-107">Los procedimientos almacenados ofrecen las siguientes ventajas:</span><span class="sxs-lookup"><span data-stu-id="d9dec-107">Stored procedures have the following benefits:</span></span>  
   
--   La lógica de datos y las reglas de negocios se pueden encapsular de forma que los usuarios sólo puedan tener acceso a los datos y objetos tal y como dispongan los desarrolladores y los administradores de las bases de datos.  
+-   <span data-ttu-id="d9dec-108">La lógica de datos y las reglas de negocios se pueden encapsular de forma que los usuarios sólo puedan tener acceso a los datos y objetos tal y como dispongan los desarrolladores y los administradores de las bases de datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-108">Data logic and business rules can be encapsulated so that users can access data and objects only in ways that developers and database administrators intend.</span></span>  
   
--   Se pueden usar procedimientos almacenados parametrizados que validen todos los datos introducidos por lo usuarios para frustrar ataques de inyección de SQL.  Si utiliza SQL dinámico, asegúrese de parametrizar los comandos y no incluya nunca directamente valores de parámetros en la cadena de la consulta.  
+-   <span data-ttu-id="d9dec-109">Se pueden usar procedimientos almacenados parametrizados que validen todos los datos introducidos por lo usuarios para frustrar ataques de inyección de SQL.</span><span class="sxs-lookup"><span data-stu-id="d9dec-109">Parameterized stored procedures that validate all user input can be used to thwart SQL injection attacks.</span></span> <span data-ttu-id="d9dec-110">Si utiliza SQL dinámico, asegúrese de parametrizar los comandos y no incluya nunca directamente valores de parámetros en la cadena de la consulta.</span><span class="sxs-lookup"><span data-stu-id="d9dec-110">If you use dynamic SQL, be sure to parameterize your commands, and never include parameter values directly into a query string.</span></span>  
   
--   Se pueden rechazar las consultas ad hoc y las modificaciones de datos.  Esto evita que los usuarios puedan destruir datos de forma malintencionada o por error, o que ejecuten consultas que perjudiquen al rendimiento del servidor o la red.  
+-   <span data-ttu-id="d9dec-111">Se pueden rechazar las consultas ad hoc y las modificaciones de datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-111">Ad hoc queries and data modifications can be disallowed.</span></span> <span data-ttu-id="d9dec-112">Esto evita que los usuarios puedan destruir datos de forma malintencionada o por error, o que ejecuten consultas que perjudiquen al rendimiento del servidor o la red.</span><span class="sxs-lookup"><span data-stu-id="d9dec-112">This prevents users from maliciously or inadvertently destroying data or executing queries that impair performance on the server or the network.</span></span>  
   
--   Los errores se pueden controlar en el código de procedimiento sin que tengan que pasar directamente a las aplicaciones cliente.  De esta forma, se evita que se devuelvan los mensajes de error, lo que podría resultar una ayuda para un ataque por sondeo.  Registre los errores y contrólelos en el servidor.  
+-   <span data-ttu-id="d9dec-113">Los errores se pueden controlar en el código de procedimiento sin que tengan que pasar directamente a las aplicaciones cliente.</span><span class="sxs-lookup"><span data-stu-id="d9dec-113">Errors can be handled in procedure code without being passed directly to client applications.</span></span> <span data-ttu-id="d9dec-114">De esta forma, se evita que se devuelvan los mensajes de error, lo que podría resultar una ayuda para un ataque por sondeo.</span><span class="sxs-lookup"><span data-stu-id="d9dec-114">This prevents error messages from being returned that could aid in a probing attack.</span></span> <span data-ttu-id="d9dec-115">Registre los errores y contrólelos en el servidor.</span><span class="sxs-lookup"><span data-stu-id="d9dec-115">Log errors and handle them on the server.</span></span>  
   
--   Es posible escribir los procedimientos almacenados una vez y que después tengan acceso a ellos muchas aplicaciones.  
+-   <span data-ttu-id="d9dec-116">Es posible escribir los procedimientos almacenados una vez y que después tengan acceso a ellos muchas aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="d9dec-116">Stored procedures can be written once, and accessed by many applications.</span></span>  
   
--   Las aplicaciones cliente no tienen por qué saber nada de las estructuras de datos subyacentes.  El código de procedimiento almacenado se puede cambiar sin necesidad de hacer cambios en las aplicaciones cliente, siempre y cuando los cambios no afectan a listas de parámetros ni a tipos de datos devueltos.  
+-   <span data-ttu-id="d9dec-117">Las aplicaciones cliente no tienen por qué saber nada de las estructuras de datos subyacentes.</span><span class="sxs-lookup"><span data-stu-id="d9dec-117">Client applications do not need to know anything about the underlying data structures.</span></span> <span data-ttu-id="d9dec-118">El código de procedimiento almacenado se puede cambiar sin necesidad de hacer cambios en las aplicaciones cliente, siempre y cuando los cambios no afectan a listas de parámetros ni a tipos de datos devueltos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-118">Stored procedure code can be changed without requiring changes in client applications as long as the changes do not affect parameter lists or returned data types.</span></span>  
   
--   Los procedimientos almacenados pueden reducir el tráfico en la red combinando varias operaciones en una llamada a procedimiento.  
+-   <span data-ttu-id="d9dec-119">Los procedimientos almacenados pueden reducir el tráfico en la red combinando varias operaciones en una llamada a procedimiento.</span><span class="sxs-lookup"><span data-stu-id="d9dec-119">Stored procedures can reduce network traffic by combining multiple operations into one procedure call.</span></span>  
   
-## Ejecución de procedimiento almacenado  
- Los procedimientos almacenados aprovechan el encadenamiento de propiedad para proporcionar acceso a los datos de forma que los usuarios no necesiten tener permiso explícito para obtener acceso a los objetos de basase de datos.  Hay una cadena de conexión cuando los objetos que tienen acceso los unos a los otros secuencialmente son propiedad del mismo usuario.  Por ejemplo, un procedimiento almacenado puede llamar a otros procedimientos almacenados o un procedimiento almacenado puede tener acceso a varias tablas.  Si todos los objetos de la cadena de ejecución tienen el mismo propietario, SQL Server sólo comprueba el permiso EXECUTE para el autor de la llamada, no los permisos del autor de la llamada sobre los demás objetos.  Por eso, sólo necesita conceder permisos EXECUTE para los procedimientos almacenados; puede revocar o denegar todos los permisos para las tablas subyacentes.  
+## <a name="stored-procedure-execution"></a><span data-ttu-id="d9dec-120">Ejecución de procedimiento almacenado</span><span class="sxs-lookup"><span data-stu-id="d9dec-120">Stored Procedure Execution</span></span>  
+ <span data-ttu-id="d9dec-121">Los procedimientos almacenados aprovechan el encadenamiento de propiedad para proporcionar acceso a los datos de forma que los usuarios no necesiten tener permiso explícito para obtener acceso a los objetos de basase de datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-121">Stored procedures take advantage of ownership chaining to provide access to data so that users do not need to have explicit permission to access database objects.</span></span> <span data-ttu-id="d9dec-122">Hay una cadena de conexión cuando los objetos que tienen acceso los unos a los otros secuencialmente son propiedad del mismo usuario.</span><span class="sxs-lookup"><span data-stu-id="d9dec-122">An ownership chain exists when objects that access each other sequentially are owned by the same user.</span></span> <span data-ttu-id="d9dec-123">Por ejemplo, un procedimiento almacenado puede llamar a otros procedimientos almacenados o un procedimiento almacenado puede tener acceso a varias tablas.</span><span class="sxs-lookup"><span data-stu-id="d9dec-123">For example, a stored procedure can call other stored procedures, or a stored procedure can access multiple tables.</span></span> <span data-ttu-id="d9dec-124">Si todos los objetos de la cadena de ejecución tienen el mismo propietario, SQL Server sólo comprueba el permiso EXECUTE para el autor de la llamada, no los permisos del autor de la llamada sobre los demás objetos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-124">If all objects in the chain of execution have the same owner, then SQL Server only checks the EXECUTE permission for the caller, not the caller's permissions on other objects.</span></span> <span data-ttu-id="d9dec-125">Por eso, sólo necesita conceder permisos EXECUTE para los procedimientos almacenados; puede revocar o denegar todos los permisos para las tablas subyacentes.</span><span class="sxs-lookup"><span data-stu-id="d9dec-125">Therefore you need to grant only EXECUTE permissions on stored procedures; you can revoke or deny all permissions on the underlying tables.</span></span>  
   
-## Procedimientos recomendados  
- No basta con escribir procedimientos almacenados para proteger correctamente una aplicación.  También se deberían tener en cuenta las siguientes vulnerabilidades de seguridad potenciales.  
+## <a name="best-practices"></a><span data-ttu-id="d9dec-126">Procedimientos recomendados</span><span class="sxs-lookup"><span data-stu-id="d9dec-126">Best Practices</span></span>  
+ <span data-ttu-id="d9dec-127">No basta con escribir procedimientos almacenados para proteger correctamente una aplicación.</span><span class="sxs-lookup"><span data-stu-id="d9dec-127">Simply writing stored procedures isn't enough to adequately secure your application.</span></span> <span data-ttu-id="d9dec-128">También se deberían tener en cuenta las siguientes vulnerabilidades de seguridad potenciales.</span><span class="sxs-lookup"><span data-stu-id="d9dec-128">You should also consider the following potential security holes.</span></span>  
   
--   Conceda permisos EXECUTE para los procedimientos almacenados a los roles de base de datos que quiere que puedan tener acceso a los datos.  
+-   <span data-ttu-id="d9dec-129">Conceda permisos EXECUTE para los procedimientos almacenados a los roles de base de datos que quiere que puedan tener acceso a los datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-129">Grant EXECUTE permissions on the stored procedures for database roles you want to be able to access the data.</span></span>  
   
--   Revoque o deniegue todos los permisos a las tablas subyacentes para todas los roles y usuarios de la base de datos, incluido el rol `public`.  Todos los usuarios heredan permisos de public.  Por eso, denegar permisos a `public` supone que sólo los propietarios y los miembros `sysadmin` tendrán acceso; todos los demás usuarios no podrán heredar permisos de su pertenencia a otros roles.  
+-   <span data-ttu-id="d9dec-130">Revoque o deniegue todos los permisos a las tablas subyacentes para todas los roles y usuarios de la base de datos, incluido el rol `public`.</span><span class="sxs-lookup"><span data-stu-id="d9dec-130">Revoke or deny all permissions to the underlying tables for all roles and users in the database, including the `public` role.</span></span> <span data-ttu-id="d9dec-131">Todos los usuarios heredan permisos de public.</span><span class="sxs-lookup"><span data-stu-id="d9dec-131">All users inherit permissions from public.</span></span> <span data-ttu-id="d9dec-132">Por eso, denegar permisos a `public` supone que sólo los propietarios y los miembros `sysadmin` tendrán acceso; todos los demás usuarios no podrán heredar permisos de su pertenencia a otros roles.</span><span class="sxs-lookup"><span data-stu-id="d9dec-132">Therefore denying permissions to `public` means that only owners and `sysadmin` members have access; all other users will be unable to inherit permissions from membership in other roles.</span></span>  
   
--   No agregue usuarios ni roles a los roles `sysadmin` o `db_owner`.  Los administradores del sistema y los propietarios de bases de datos pueden tener acceso a todos los objetos de base de datos.  
+-   <span data-ttu-id="d9dec-133">No agregue usuarios ni roles a los roles `sysadmin` o `db_owner`.</span><span class="sxs-lookup"><span data-stu-id="d9dec-133">Do not add users or roles to the `sysadmin` or `db_owner` roles.</span></span> <span data-ttu-id="d9dec-134">Los administradores del sistema y los propietarios de bases de datos pueden tener acceso a todos los objetos de base de datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-134">System administrators and database owners can access all database objects.</span></span>  
   
--   Deshabilite la cuenta `guest`.  Esto evitará que usuarios anónimos se conecten a la base de datos.  La cuenta de invitado está deshabilitada por defecto en las nuevas bases de datos.  
+-   <span data-ttu-id="d9dec-135">Deshabilite la cuenta `guest`.</span><span class="sxs-lookup"><span data-stu-id="d9dec-135">Disable the `guest` account.</span></span> <span data-ttu-id="d9dec-136">Esto evitará que usuarios anónimos se conecten a la base de datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-136">This will prevent anonymous users from connecting to the database.</span></span> <span data-ttu-id="d9dec-137">La cuenta de invitado está deshabilitada por defecto en las nuevas bases de datos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-137">The guest account is disabled by default in new databases.</span></span>  
   
--   Implemente el control de errores y registre los errores.  
+-   <span data-ttu-id="d9dec-138">Implemente el control de errores y registre los errores.</span><span class="sxs-lookup"><span data-stu-id="d9dec-138">Implement error handling and log errors.</span></span>  
   
--   Cree procedimientos almacenados parametrizados que validen todos los datos introducidos por los usuarios.  Trate todos los datos introducidos por los usuarios como si no fueran de confianza.  
+-   <span data-ttu-id="d9dec-139">Cree procedimientos almacenados parametrizados que validen todos los datos introducidos por los usuarios.</span><span class="sxs-lookup"><span data-stu-id="d9dec-139">Create parameterized stored procedures that validate all user input.</span></span> <span data-ttu-id="d9dec-140">Trate todos los datos introducidos por los usuarios como si no fueran de confianza. </span><span class="sxs-lookup"><span data-stu-id="d9dec-140">Treat all user input as untrusted.</span></span>  
   
--   Evite el SQL dinámico a menos que sea absolutamente necesario.  Utilice la función Transact\-SQL QUOTENAME\(\) para delimitar un valor de cadena y evite usar el delimitador en la cadena de entrada.  
+-   <span data-ttu-id="d9dec-141">Evite el SQL dinámico a menos que sea absolutamente necesario.</span><span class="sxs-lookup"><span data-stu-id="d9dec-141">Avoid dynamic SQL unless absolutely necessary.</span></span> <span data-ttu-id="d9dec-142">Utilice la función Transact-SQL QUOTENAME() para delimitar un valor de cadena y evite usar el delimitador en la cadena de entrada.</span><span class="sxs-lookup"><span data-stu-id="d9dec-142">Use the Transact-SQL QUOTENAME() function to delimit a string value and escape any occurrence of the delimiter in the input string.</span></span>  
   
-## Recursos externos  
- Para obtener más información, vea los siguientes recursos.  
+## <a name="external-resources"></a><span data-ttu-id="d9dec-143">Recursos externos</span><span class="sxs-lookup"><span data-stu-id="d9dec-143">External Resources</span></span>  
+ <span data-ttu-id="d9dec-144">Para obtener más información, vea los siguientes recursos.</span><span class="sxs-lookup"><span data-stu-id="d9dec-144">For more information, see the following resources.</span></span>  
   
-|Recurso|Descripción|  
-|-------------|-----------------|  
-|[Procedimientos almacenados](http://msdn.microsoft.com/library/ms190782.aspx) e [Inyección de código SQL](http://go.microsoft.com/fwlink/?LinkId=98234) en los Libros en pantalla de SQL Server.|Temas que describen cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.|  
+|<span data-ttu-id="d9dec-145">Recurso</span><span class="sxs-lookup"><span data-stu-id="d9dec-145">Resource</span></span>|<span data-ttu-id="d9dec-146">Descripción</span><span class="sxs-lookup"><span data-stu-id="d9dec-146">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="d9dec-147">[Procedimientos almacenados](http://msdn.microsoft.com/library/ms190782.aspx) y [inyección de código SQL](http://go.microsoft.com/fwlink/?LinkId=98234) en libros en pantalla de SQL Server</span><span class="sxs-lookup"><span data-stu-id="d9dec-147">[Stored Procedures](http://msdn.microsoft.com/library/ms190782.aspx) and [SQL Injection](http://go.microsoft.com/fwlink/?LinkId=98234) in SQL Server Books Online</span></span>|<span data-ttu-id="d9dec-148">Temas que describen cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.</span><span class="sxs-lookup"><span data-stu-id="d9dec-148">Topics describe how to create stored procedures and how SQL Injection works.</span></span>|  
   
-## Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Información general sobre seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Escribir SQL dinámico seguro en SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)   
- [Firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)   
- [Personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)   
- [Modificar datos con procedimientos almacenados](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d9dec-149">Vea también</span><span class="sxs-lookup"><span data-stu-id="d9dec-149">See Also</span></span>  
+ [<span data-ttu-id="d9dec-150">Proteger aplicaciones de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d9dec-150">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="d9dec-151">Información general de seguridad de SQL Server</span><span class="sxs-lookup"><span data-stu-id="d9dec-151">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="d9dec-152">Escenarios de seguridad de la aplicación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="d9dec-152">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="d9dec-153">Escribir SQL dinámico seguro en SQL Server</span><span class="sxs-lookup"><span data-stu-id="d9dec-153">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [<span data-ttu-id="d9dec-154">Firmar procedimientos almacenados en SQL Server</span><span class="sxs-lookup"><span data-stu-id="d9dec-154">Signing Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="d9dec-155">Personalizar permisos con suplantación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="d9dec-155">Customizing Permissions with Impersonation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [<span data-ttu-id="d9dec-156">Modificar datos con procedimientos almacenados</span><span class="sxs-lookup"><span data-stu-id="d9dec-156">Modifying Data with Stored Procedures</span></span>](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="d9dec-157">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="d9dec-157">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

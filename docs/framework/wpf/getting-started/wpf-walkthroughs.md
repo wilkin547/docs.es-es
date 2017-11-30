@@ -1,60 +1,63 @@
 ---
-title: "Tutoriales de WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tutoriales [WPF]"
-  - "tutoriales de WPF"
+title: Tutoriales de WPF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- walkthroughs [WPF]
+- WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c4c67033711575e0e13785fd448114a6042d8e8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Tutoriales de WPF
-Los tutoriales proporcionan instrucciones paso a paso para los escenarios más comunes.  Por tanto, constituyen un buen punto de partida para conocer el producto o algunas de sus características en especial.  
+# <a name="wpf-walkthroughs"></a><span data-ttu-id="78eff-102">Tutoriales de WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-102">WPF Walkthroughs</span></span>
+<span data-ttu-id="78eff-103">Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes.</span><span class="sxs-lookup"><span data-stu-id="78eff-103">Walkthroughs give step-by-step instructions for common scenarios.</span></span> <span data-ttu-id="78eff-104">Esto hace que sean un buen punto de partida para conocer el producto o una característica en particular.</span><span class="sxs-lookup"><span data-stu-id="78eff-104">This makes them a good place to start learning about the product or a particular feature area.</span></span>  
   
- Este tema contiene vínculos a los tutoriales de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+ <span data-ttu-id="78eff-105">Este tema contiene vínculos a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] tutoriales.</span><span class="sxs-lookup"><span data-stu-id="78eff-105">This topic contains links to [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] walkthroughs.</span></span>  
   
-## Tutoriales de WPF Designer  
+## <a name="wpf-designer-walkthroughs"></a><span data-ttu-id="78eff-106">Tutoriales de WPF Designer</span><span class="sxs-lookup"><span data-stu-id="78eff-106">WPF Designer Walkthroughs</span></span>  
   
-|Título|Descripción|  
-|------------|-----------------|  
-|[Tutorial: Compilar una aplicación de WPF sencilla con WPF Designer](http://msdn.microsoft.com/es-es/2d412231-dbdf-4e69-b060-4f2b246c2027)|Muestra cómo compilar una aplicación WPF sencilla con [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
-|[Tutorial: Crear un diseño dinámico](http://msdn.microsoft.com/es-es/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Muestra cómo crear un diseño dinámico usando un control panel <xref:System.Windows.Controls.Grid>.|  
-|[Tutorial: Crear una aplicación cuyo tamaño pueda ser modificado mediante WPF Designer](http://msdn.microsoft.com/es-es/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Muestra cómo crear diseños de ventanas que el usuario puede cambiar de tamaño en tiempo de ejecución.|  
-|[Tutorial: Crear un enlace de datos mediante WPF Designer](http://msdn.microsoft.com/es-es/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Muestra cómo usar [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para crear enlaces de datos que conecten datos a un control.|  
-|[Tutorial: Usar DesignInstance para enlazar datos en el diseñador](http://msdn.microsoft.com/es-es/a4d3747a-bd43-42bc-b66d-477856a6769c)|Muestra cómo usar [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para crear enlaces de datos en tiempo de diseño para un contexto de datos que se asigna en tiempo de ejecución.|  
+|<span data-ttu-id="78eff-107">Título</span><span class="sxs-lookup"><span data-stu-id="78eff-107">Title</span></span>|<span data-ttu-id="78eff-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="78eff-108">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="78eff-109">Tutorial: Compilar una aplicación de WPF sencilla con WPF Designer</span><span class="sxs-lookup"><span data-stu-id="78eff-109">Walkthrough: Building a Simple WPF Application with the WPF Designer</span></span>](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|<span data-ttu-id="78eff-110">Muestra cómo crear una aplicación de WPF sencilla con la [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="78eff-110">Demonstrates how to build a simple WPF application with the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>|  
+|[<span data-ttu-id="78eff-111">Tutorial: Crear un diseño dinámico</span><span class="sxs-lookup"><span data-stu-id="78eff-111">Walkthrough: Constructing a Dynamic Layout</span></span>](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|<span data-ttu-id="78eff-112">Muestra cómo crear un diseño dinámico mediante el uso de un <xref:System.Windows.Controls.Grid> panel de control.</span><span class="sxs-lookup"><span data-stu-id="78eff-112">Demonstrates creating a dynamic layout by using a <xref:System.Windows.Controls.Grid> panel control.</span></span>|  
+|[<span data-ttu-id="78eff-113">Tutorial: Crear una aplicación puede cambiar el tamaño mediante el diseñador WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-113">Walkthrough: Creating a Resizable Application by Using the WPF Designer</span></span>](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|<span data-ttu-id="78eff-114">Muestra cómo crear diseños de ventana que se puede cambiar el tamaño por el usuario en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="78eff-114">Demonstrates how to create window layouts that are resizable by the user at run time.</span></span>|  
+|[<span data-ttu-id="78eff-115">Tutorial: Crear un enlace mediante el diseñador WPF de datos</span><span class="sxs-lookup"><span data-stu-id="78eff-115">Walkthrough: Creating a Data Binding by Using the WPF Designer</span></span>](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|<span data-ttu-id="78eff-116">Muestra cómo utilizar el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para crear los enlaces de datos que se conectan los datos a un control.</span><span class="sxs-lookup"><span data-stu-id="78eff-116">Demonstrates how to use the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] to create data bindings that connect data to a control.</span></span>|  
+|[<span data-ttu-id="78eff-117">Tutorial: Usar DesignInstance para enlazar a datos en el diseñador</span><span class="sxs-lookup"><span data-stu-id="78eff-117">Walkthrough: Using a DesignInstance to Bind to Data in the Designer</span></span>](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|<span data-ttu-id="78eff-118">Muestra cómo utilizar el [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para crear los enlaces de datos en tiempo de diseño para un contexto de datos que se asigna en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="78eff-118">Demonstrates how to use the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] to create data bindings at design time for a data context that is assigned at run time.</span></span>|  
   
-## Tutoriales de WPF  
+## <a name="wpf-walkthroughs"></a><span data-ttu-id="78eff-119">Tutoriales de WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-119">WPF Walkthroughs</span></span>  
   
-|Título|Descripción|  
-|------------|-----------------|  
-|[Tutorial: Introducción a WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Muestra cómo crear una aplicación WPF utilizando muchas de las características comunes de WPF, como controles, diseño y enlace de datos.|  
-|[Crear un botón mediante el uso de XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Muestra cómo crear un botón animado.|  
-|[Crear un botón mediante Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Muestra el proceso de creación de un botón personalizado mediante Microsoft Expression Blend.|  
-|[Tutorial: Mostrar los datos de una base de datos de SQL Server en un control DataGrid](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Muestra cómo recuperar datos de una base de datos de SQL Server y mostrar esos datos en un control <xref:System.Windows.Controls.DataGrid>.|  
+|<span data-ttu-id="78eff-120">Título</span><span class="sxs-lookup"><span data-stu-id="78eff-120">Title</span></span>|<span data-ttu-id="78eff-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="78eff-121">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="78eff-122">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-122">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|<span data-ttu-id="78eff-123">Muestra cómo crear una aplicación de WPF utilizando muchas de las características comunes de WPF, incluidos los controles, diseño y el enlace de datos.</span><span class="sxs-lookup"><span data-stu-id="78eff-123">Demonstrates creating a WPF application using many of the common features of WPF including controls, layout and data binding.</span></span>|  
+|[<span data-ttu-id="78eff-124">Crear un botón mediante el uso de XAML</span><span class="sxs-lookup"><span data-stu-id="78eff-124">Create a Button by Using XAML</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|<span data-ttu-id="78eff-125">Muestra cómo crear un botón animado.</span><span class="sxs-lookup"><span data-stu-id="78eff-125">Demonstrates how to create an animated button.</span></span>|  
+|[<span data-ttu-id="78eff-126">Crear un botón mediante Microsoft Expression Blend</span><span class="sxs-lookup"><span data-stu-id="78eff-126">Create a Button by Using Microsoft Expression Blend</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|<span data-ttu-id="78eff-127">Muestra el proceso de creación de un botón personalizado mediante Microsoft Expression Blend.</span><span class="sxs-lookup"><span data-stu-id="78eff-127">Demonstrates the process of creating a customized button by using Microsoft Expression Blend.</span></span>|  
+|[<span data-ttu-id="78eff-128">Mostrar los datos de una base de datos de SQL Server en un control DataGrid</span><span class="sxs-lookup"><span data-stu-id="78eff-128">Walkthrough: Display Data from a SQL Server Database in a DataGrid Control</span></span>](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|<span data-ttu-id="78eff-129">Muestra cómo recuperar datos de una base de datos de SQL Server y mostrar dichos datos en un <xref:System.Windows.Controls.DataGrid> control.</span><span class="sxs-lookup"><span data-stu-id="78eff-129">Demonstrates how to retrieve data from a SQL Server database and display that data in a <xref:System.Windows.Controls.DataGrid> control.</span></span>|  
   
-## Migración e interoperabilidad en WPF  
+## <a name="migration-and-interoperability-in-wpf"></a><span data-ttu-id="78eff-130">Migración e interoperabilidad en WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-130">Migration and Interoperability in WPF</span></span>  
   
-|Título|Descripción|  
-|------------|-----------------|  
-|[Tutorial: Hospedar un control de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Muestra cómo hospedar un control <xref:System.Windows.Forms.MaskedTextBox?displayProperty=fullName> de Windows Forms en una aplicación WPF.|  
-|[Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Muestra cómo hospedar un control compuesto de entrada de datos de [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] en una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|[Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Muestra cómo hospedar un control compuesto de entrada de datos de WPF en una aplicación de Windows Forms.|  
-|[Tutorial: Organizar controles de formularios Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Muestra cómo usar las características de diseño de WPF para organizar controles de Windows Forms en una aplicación híbrida.|  
-|[Tutorial: Enlazar a datos en aplicaciones híbridas](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Muestra cómo usar el enlace de datos en aplicaciones híbridas que incluyen controles tanto de Windows Forms como de WPF.|  
+|<span data-ttu-id="78eff-131">Título</span><span class="sxs-lookup"><span data-stu-id="78eff-131">Title</span></span>|<span data-ttu-id="78eff-132">Descripción</span><span class="sxs-lookup"><span data-stu-id="78eff-132">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="78eff-133">Tutorial: Hospedar un control de Windows Forms en WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-133">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|<span data-ttu-id="78eff-134">Muestra cómo hospedar un formulario Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control en una aplicación WPF.</span><span class="sxs-lookup"><span data-stu-id="78eff-134">Demonstrates how to host a Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> control in a WPF application.</span></span>|  
+|[<span data-ttu-id="78eff-135">Tutorial: Hospedar un control compuesto de formularios Windows Forms en WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-135">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|<span data-ttu-id="78eff-136">Muestra cómo hospedar un [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] control compuesto de entrada de datos en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación.</span><span class="sxs-lookup"><span data-stu-id="78eff-136">Demonstrates how to host a [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] data-entry composite control in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>|  
+|[<span data-ttu-id="78eff-137">Tutorial: Hospedar un control compuesto de WPF en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="78eff-137">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|<span data-ttu-id="78eff-138">Muestra cómo hospedar un control compuesto de entrada de datos WPF en una aplicación de formularios Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="78eff-138">Demonstrates how to host a WPF data-entry composite control in a Windows Forms application.</span></span>|  
+|[<span data-ttu-id="78eff-139">Tutorial: Organizar controles de formularios Windows Forms en WPF</span><span class="sxs-lookup"><span data-stu-id="78eff-139">Walkthrough: Arranging Windows Forms Controls in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|<span data-ttu-id="78eff-140">Muestra cómo utilizar las características de diseño WPF para organizar los controles de formularios Windows Forms en una aplicación híbrida.</span><span class="sxs-lookup"><span data-stu-id="78eff-140">Demonstrates how to use WPF layout features to arrange Windows Forms controls in a hybrid application.</span></span>|  
+|[<span data-ttu-id="78eff-141">Tutorial: Enlazar a datos en aplicaciones híbridas</span><span class="sxs-lookup"><span data-stu-id="78eff-141">Walkthrough: Binding to Data in Hybrid Applications</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|<span data-ttu-id="78eff-142">Muestra cómo utilizar el enlace de datos en aplicaciones híbridas que incluyen controles de formularios Windows Forms y WPF.</span><span class="sxs-lookup"><span data-stu-id="78eff-142">Demonstrates how to use data binding in hybrid applications that include both Windows Forms and WPF controls.</span></span>|  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a><span data-ttu-id="78eff-143">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="78eff-143">Related Sections</span></span>  
   
-|Título|Descripción|  
-|------------|-----------------|  
-|[Visual Studio Walkthroughs](http://msdn.microsoft.com/es-es/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Aporta una lista relacionada de tutoriales para todas las áreas de programación de Visual Studio.|
+|<span data-ttu-id="78eff-144">Título</span><span class="sxs-lookup"><span data-stu-id="78eff-144">Title</span></span>|<span data-ttu-id="78eff-145">Descripción</span><span class="sxs-lookup"><span data-stu-id="78eff-145">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="78eff-146">Tutoriales de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="78eff-146">Visual Studio Walkthroughs</span></span>](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|<span data-ttu-id="78eff-147">Proporciona una lista relacionada de tutoriales para todas las áreas de la programación en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="78eff-147">Gives a related list of walkthroughs for all areas of programming in Visual Studio.</span></span>|

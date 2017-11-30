@@ -1,35 +1,38 @@
 ---
-title: "C&#243;mo migrar el c&#243;digo del servicio web ASP.NET a Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo migrar el código del servicio web ASP.NET a Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 94d6cc499caddc8b3cbbf8ba7845e4de5441165c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo migrar el c&#243;digo del servicio web ASP.NET a Windows Communication Foundation
-El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a><span data-ttu-id="8967e-102">Cómo migrar el código del servicio web ASP.NET a Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="8967e-102">How to: Migrate ASP.NET Web Service Code to the Windows Communication Foundation</span></span>
+<span data-ttu-id="8967e-103">El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8967e-103">The following procedure describes how to migrate an ASP.NET Web Service to [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span>  
   
-## Procedimiento  
+## <a name="procedure"></a><span data-ttu-id="8967e-104">Procedimiento</span><span class="sxs-lookup"><span data-stu-id="8967e-104">Procedure</span></span>  
   
-#### Para migrar un servicio web ASP.NET a WCF  
+#### <a name="to-migrate-aspnet-web-service-code-to-wcf"></a><span data-ttu-id="8967e-105">Para migrar un servicio web ASP.NET a WCF</span><span class="sxs-lookup"><span data-stu-id="8967e-105">To migrate ASP.NET Web service code to WCF</span></span>  
   
-1.  Asegúrese de que existe un conjunto completo de pruebas para el servicio.  
+1.  <span data-ttu-id="8967e-106">Asegúrese de que existe un conjunto completo de pruebas para el servicio.</span><span class="sxs-lookup"><span data-stu-id="8967e-106">Ensure that a comprehensive set of tests exist for the service.</span></span>  
   
-2.  Genere el WSDL del servicio y guarde una copia en la misma carpeta que el archivo .asmx del servicio.  
+2.  <span data-ttu-id="8967e-107">Genere el WSDL del servicio y guarde una copia en la misma carpeta que el archivo .asmx del servicio.</span><span class="sxs-lookup"><span data-stu-id="8967e-107">Generate the WSDL for the service and save a copy in the same folder as the service’s .asmx file.</span></span>  
   
-3.  Actualice el servicio Web ASP.NET para que pueda usar .NET 2.0.  Primero implemente .NET Framework 2.0 para la aplicación en IIS y, a continuación, use Visual Studio 2005 para automatizar el proceso de conversión de código, tal como se explica en [Guía detallada para convertir proyectos web de Visual Studio .NET 2002\/2003 a Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492).  Ejecute el conjunto de pruebas.  
+3.  <span data-ttu-id="8967e-108">Actualice el servicio Web ASP.NET para que pueda usar .NET 2.0.</span><span class="sxs-lookup"><span data-stu-id="8967e-108">Upgrade the ASP.NET Web service to use .NET 2.0.</span></span> <span data-ttu-id="8967e-109">Implementar primero la versión 2.0 de .NET Framework a la aplicación en IIS y, a continuación, usar Visual Studio 2005 para automatizar el proceso de conversión de código, como se documenta en [guía paso a paso para convertir proyectos Web de Visual Studio .NET 2002/2003 a Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492).</span><span class="sxs-lookup"><span data-stu-id="8967e-109">First deploy the .NET Framework 2.0 to the application in IIS, and then use Visual Studio 2005 to automate the code conversion process, as documented in [Step-By-Step Guide to Converting Web Projects from Visual Studio .NET 2002/2003 to Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492).</span></span> <span data-ttu-id="8967e-110">Ejecute el conjunto de pruebas.</span><span class="sxs-lookup"><span data-stu-id="8967e-110">Run the set of tests.</span></span>  
   
-4.  Proporcione los valores explícitos para `Namespace` y los parámetros `Name` de los atributos <xref:System.Web.Services.WebService>, si aún no se han proporcionado.  Repita la acción para el parámetro `MessageName` de <xref:System.Web.Services.WebMethodAttribute>.  Si aún no se han proporcionado los valores explícitos de los encabezados HTTP de SOAPAction mediante los cuales se enrutan las solicitudes a los métodos, especifique explícitamente el valor predeterminado del parámetro `Action` con <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.  
+4.  <span data-ttu-id="8967e-111">Proporcione los valores explícitos para `Namespace` y los parámetros `Name` de los atributos <xref:System.Web.Services.WebService>, si aún no se han proporcionado.</span><span class="sxs-lookup"><span data-stu-id="8967e-111">Provide explicit values for the `Namespace` and `Name` parameters of the <xref:System.Web.Services.WebService> attributes if they are not provided already.</span></span> <span data-ttu-id="8967e-112">Repita la acción para el parámetro `MessageName` de <xref:System.Web.Services.WebMethodAttribute>.</span><span class="sxs-lookup"><span data-stu-id="8967e-112">Do the same for the `MessageName` parameter of the <xref:System.Web.Services.WebMethodAttribute>.</span></span> <span data-ttu-id="8967e-113">Si aún no se han proporcionado los valores explícitos de los encabezados HTTP de SOAPAction mediante los cuales se enrutan las solicitudes a los métodos, especifique explícitamente el valor predeterminado del parámetro `Action` con <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.</span><span class="sxs-lookup"><span data-stu-id="8967e-113">If explicit values are not already provided for the SOAPAction HTTP headers by which requests are routed to methods, then explicitly specify the default value of the `Action` parameter with a <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.</span></span>  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -49,9 +52,9 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
     }  
     ```  
   
-5.  Pruebe el cambio.  
+5.  <span data-ttu-id="8967e-114">Pruebe el cambio.</span><span class="sxs-lookup"><span data-stu-id="8967e-114">Test the change.</span></span>  
   
-6.  Mueva cualquier código sustantivo de los cuerpos de los métodos de la clase, a una clase distinta a la que utiliza la clase original.  
+6.  <span data-ttu-id="8967e-115">Mueva cualquier código sustantivo de los cuerpos de los métodos de la clase, a una clase distinta a la que utiliza la clase original.</span><span class="sxs-lookup"><span data-stu-id="8967e-115">Move any substantive code in the bodies of the methods of the class to a separate class that the original class is made to use.</span></span>  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -79,13 +82,13 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
     }  
     ```  
   
-7.  Pruebe el cambio.  
+7.  <span data-ttu-id="8967e-116">Pruebe el cambio.</span><span class="sxs-lookup"><span data-stu-id="8967e-116">Test the change.</span></span>  
   
-8.  Agregue las referencias de los ensamblados System.ServiceModel y System.Runtime.Serialization [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al proyecto de servicio web ASP.NET.  
+8.  <span data-ttu-id="8967e-117">Agregue las referencias de los ensamblados System.ServiceModel y System.Runtime.Serialization [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] al proyecto de servicio web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="8967e-117">Add references to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] assemblies System.ServiceModel and System.Runtime.Serialization to the ASP.NET Web service project.</span></span>  
   
-9. Ejecute [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar una clase de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del WSDL.  Agregue el módulo de clase generado a la solución.  
+9. <span data-ttu-id="8967e-118">Ejecutar [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clase de cliente desde el archivo WSDL.</span><span class="sxs-lookup"><span data-stu-id="8967e-118">Run [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class from the WSDL.</span></span> <span data-ttu-id="8967e-119">Agregue el módulo de clase generado a la solución.</span><span class="sxs-lookup"><span data-stu-id="8967e-119">Add the generated class module to the solution.</span></span>  
   
-10. El módulo de clase generado en el paso anterior contiene la definición de una interfaz.  
+10. <span data-ttu-id="8967e-120">El módulo de clase generado en el paso anterior contiene la definición de una interfaz.</span><span class="sxs-lookup"><span data-stu-id="8967e-120">The class module generated in the preceding step contains the definition of an interface.</span></span>  
   
     ```  
     [System.ServiceModel.ServiceContractAttribute()]  
@@ -98,7 +101,7 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
     }  
     ```  
   
-     Modifique la definición de la clase de servicio web ASP.NET para definir la clase como implementación de esa interfaz, como muestra el código siguiente.  
+     <span data-ttu-id="8967e-121">Modifique la definición de la clase de servicio web ASP.NET para definir la clase como implementación de esa interfaz, como muestra el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="8967e-121">Modify the definition of the ASP.NET Web service class so that the class is defined as implementing that interface, as shown in the following sample code.</span></span>  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -120,9 +123,9 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
     }  
     ```  
   
-11. Compile el proyecto.  Pueden producirse errores debido a que el código generado en el paso nueve duplicó algunas definiciones de tipo.  Repare esos errores, normalmente eliminando las definiciones de los tipos existentes anteriormente.  Pruebe el cambio.  
+11. <span data-ttu-id="8967e-122">Compile el proyecto.</span><span class="sxs-lookup"><span data-stu-id="8967e-122">Compile the project.</span></span> <span data-ttu-id="8967e-123">Pueden producirse errores debido a que el código generado en el paso nueve duplicó algunas definiciones de tipo.</span><span class="sxs-lookup"><span data-stu-id="8967e-123">There may be some errors due to the code generated in step nine that duplicated some type definitions.</span></span> <span data-ttu-id="8967e-124">Repare esos errores, normalmente eliminando las definiciones de los tipos existentes anteriormente.</span><span class="sxs-lookup"><span data-stu-id="8967e-124">Repair those errors, usually by deleting the pre-existing definitions of the types.</span></span> <span data-ttu-id="8967e-125">Pruebe el cambio.</span><span class="sxs-lookup"><span data-stu-id="8967e-125">Test the change.</span></span>  
   
-12. Quite los atributos específicos de ASP.NET, como <xref:System.Web.Services.WebService>, <xref:System.Web.Services.WebMethodAttribute> y <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.  
+12. <span data-ttu-id="8967e-126">Quite los atributos específicos de ASP.NET, como <xref:System.Web.Services.WebService>, <xref:System.Web.Services.WebMethodAttribute> y <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.</span><span class="sxs-lookup"><span data-stu-id="8967e-126">Remove the ASP.NET-specific attributes, such as the <xref:System.Web.Services.WebService>, <xref:System.Web.Services.WebMethodAttribute> and <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.</span></span>  
   
     ```  
     public class Adder: AdderSoap  
@@ -141,19 +144,19 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
     }  
     ```  
   
-13. Configure la clase, que ahora es un tipo de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], para exigir el modo de compatibilidad de ASP.NET [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si el servicio web ASP.NET se basa en alguno de los siguientes:  
+13. <span data-ttu-id="8967e-127">Configure la clase, que ahora es un tipo de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], para exigir el modo de compatibilidad de ASP.NET [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si el servicio web ASP.NET se basa en alguno de los siguientes:</span><span class="sxs-lookup"><span data-stu-id="8967e-127">Configure the class, which is now a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service type, to require [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET compatibility mode if the ASP.NET Web service relied on any of the following:</span></span>  
   
-    -   La clase <xref:System.Web.HttpContext>.  
+    -   <span data-ttu-id="8967e-128">La clase <xref:System.Web.HttpContext>.</span><span class="sxs-lookup"><span data-stu-id="8967e-128">The <xref:System.Web.HttpContext> class.</span></span>  
   
-    -   Los perfiles ASP.NET  
+    -   <span data-ttu-id="8967e-129">Los perfiles ASP.NET</span><span class="sxs-lookup"><span data-stu-id="8967e-129">The ASP.NET Profiles.</span></span>  
   
-    -   Las listas ACL en archivos .asmx.  
+    -   <span data-ttu-id="8967e-130">Las listas ACL en archivos .asmx.</span><span class="sxs-lookup"><span data-stu-id="8967e-130">ACLs on .asmx files.</span></span>  
   
-    -   Las opciones de autenticación de IIS.  
+    -   <span data-ttu-id="8967e-131">Las opciones de autenticación de IIS.</span><span class="sxs-lookup"><span data-stu-id="8967e-131">IIS authentication options.</span></span>  
   
-    -   Las opciones de suplantación de ASP.NET  
+    -   <span data-ttu-id="8967e-132">Las opciones de suplantación de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="8967e-132">ASP.NET impersonation options.</span></span>  
   
-    -   La globalización de ASP.NET  
+    -   <span data-ttu-id="8967e-133">La globalización de ASP.NET</span><span class="sxs-lookup"><span data-stu-id="8967e-133">ASP.NET globalization.</span></span>  
   
     ```  
     [System.ServiceModel.AspNetCompatibilityRequirements(  
@@ -161,18 +164,18 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
     public class Adder: AdderSoap  
     ```  
   
-14. Cambie el nombre del archivo .asmx original a .asmx .old.  
+14. <span data-ttu-id="8967e-134">Cambie el nombre del archivo .asmx original a .asmx .old.</span><span class="sxs-lookup"><span data-stu-id="8967e-134">Rename the original .asmx file to .asmx.old.</span></span>  
   
-15. Cree un archivo de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con la extensión .asmx y guárdelo en la raíz de la aplicación en IIS.  
+15. <span data-ttu-id="8967e-135">Cree un archivo de servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] con la extensión .asmx y guárdelo en la raíz de la aplicación en IIS.</span><span class="sxs-lookup"><span data-stu-id="8967e-135">Create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service file for the service, give it the extension, .asmx, and save it into the application root in IIS.</span></span>  
   
-    ```  
+    ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. Agregue una configuración [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el servicio a su archivo Web.config.  Configure el servicio para utilizar [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), para utilizar el archivo de servicio con la extensión .asmx, creado en los pasos anteriores, y para no generar WSDL para sí mismo sino utilizar el WSDL del paso dos.  Configúrelo también para utilizar el modo de compatibilidad de ASP.NET, si fuese necesario.  
+16. <span data-ttu-id="8967e-136">Agregue una configuración [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para el servicio a su archivo Web.config.</span><span class="sxs-lookup"><span data-stu-id="8967e-136">Add a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration for the service to its Web.config file.</span></span> <span data-ttu-id="8967e-137">Configurar el servicio para utilizar la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), para usar el archivo de servicio con la extensión .asmx creada en los pasos anteriores y no generar WSDL para sí mismo, pero usar el WSDL del paso dos.</span><span class="sxs-lookup"><span data-stu-id="8967e-137">Configure the service to use the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), to use the service file with the .asmx extension created in the preceding steps, and to not generate WSDL for itself, but to use the WSDL from step two.</span></span> <span data-ttu-id="8967e-138">Configúrelo también para utilizar el modo de compatibilidad de ASP.NET, si fuese necesario.</span><span class="sxs-lookup"><span data-stu-id="8967e-138">Also configure it to use ASP.NET compatibility mode if necessary.</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
      <system.web>  
@@ -193,7 +196,7 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
       <service name="MyOrganization.Adder "  
         behaviorConfiguration="AdderBehavior">  
        <endpoint   
-        address="”  
+        address=""  
         binding="basicHttpBinding"  
         contract="AdderSoap "/>  
        </service>  
@@ -212,14 +215,13 @@ El procedimiento siguiente describe cómo migrar un servicio web ASP.NET a [!INC
        aspNetCompatibilityEnabled ="true"/>  
      </system.serviceModel>  
     </configuration>  
-  
     ```  
   
-17. Guarde la configuración.  
+17. <span data-ttu-id="8967e-139">Guarde la configuración.</span><span class="sxs-lookup"><span data-stu-id="8967e-139">Save the configuration.</span></span>  
   
-18. Compile el proyecto.  
+18. <span data-ttu-id="8967e-140">Compile el proyecto.</span><span class="sxs-lookup"><span data-stu-id="8967e-140">Compile the project.</span></span>  
   
-19. Ejecute el conjunto de pruebas para asegurarse de que todos los cambios funcionan.  
+19. <span data-ttu-id="8967e-141">Ejecute el conjunto de pruebas para asegurarse de que todos los cambios funcionan.</span><span class="sxs-lookup"><span data-stu-id="8967e-141">Run the set of tests to make sure all the changes work.</span></span>  
   
-## Vea también  
- [Cómo: Migrar el código de cliente de servicio web ASP.NET a Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="8967e-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="8967e-142">See Also</span></span>  
+ [<span data-ttu-id="8967e-143">Cómo: migrar código de cliente de servicio Web ASP.NET a Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="8967e-143">How to: Migrate ASP.NET Web Service Client Code to the Windows Communication Foundation</span></span>](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

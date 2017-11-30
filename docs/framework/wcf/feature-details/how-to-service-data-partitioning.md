@@ -1,34 +1,37 @@
 ---
-title: "C&#243;mo: Particionar datos de servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Particionar datos de servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-caps.latest.revision: 3
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 7104aa2fee49a21dab7fcc8392a9d4bb291203fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Particionar datos de servicio
-Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino.La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada.Por ejemplo, puede que los mensajes de gran importancia o de clientes "Oro" se deban procesar con una prioridad más alta que los mensajes de un cliente estándar.  
+# <a name="how-to-service-data-partitioning"></a><span data-ttu-id="4178f-102">Cómo: Particionar datos de servicio</span><span class="sxs-lookup"><span data-stu-id="4178f-102">How To: Service Data Partitioning</span></span>
+<span data-ttu-id="4178f-103">Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino.</span><span class="sxs-lookup"><span data-stu-id="4178f-103">This topic outlines the basic steps required to partition messages across multiple instances of the same destination service.</span></span> <span data-ttu-id="4178f-104">La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada.</span><span class="sxs-lookup"><span data-stu-id="4178f-104">Service data partitioning is typically used when you need to scale a service in order to provide better quality of service, or when you need to handle requests from different customers in a specific way.</span></span> <span data-ttu-id="4178f-105">Por ejemplo, los mensajes de gran importancia o los clientes "Gold" pueden deben procesarse en una prioridad más alta que los mensajes de un cliente estándar.</span><span class="sxs-lookup"><span data-stu-id="4178f-105">For example, messages from high value or "Gold" customers may need to be processed at a higher priority than messages from a standard customer.</span></span>  
   
- En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc.Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el extremo de calculator1 procesa mensajes recibidos de los clientes importantes, y el extremo de calculator2 procesa los mensajes de otros clientes.  
+ <span data-ttu-id="4178f-106">En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc.</span><span class="sxs-lookup"><span data-stu-id="4178f-106">In this example, messages are routed to one of two instances of the regularCalc service.</span></span> <span data-ttu-id="4178f-107">Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el extremo de calculator1 procesa mensajes recibidos de los clientes importantes, y el extremo de calculator2 procesa los mensajes de otros clientes.</span><span class="sxs-lookup"><span data-stu-id="4178f-107">Both instances of the service are identical; however the service represented by the calculator1 endpoint processes messages received from high value customers, the calculator 2 endpoint processes messages from other customers</span></span>  
   
- El mensaje enviado del cliente no tiene ningún dato único que se pueda usar para identificar a qué instancia de servicio debería enrutarse el mensaje.Para permitir que cada cliente enrute datos a un destino concreto, implementaremos dos extremos de servicio que se usarán para recibir mensajes.  
+ <span data-ttu-id="4178f-108">El mensaje enviado del cliente no tiene ningún dato único que se pueda usar para identificar a qué instancia de servicio debería enrutarse el mensaje.</span><span class="sxs-lookup"><span data-stu-id="4178f-108">The message sent from the client does not have any unique data that can be used to identify which service instance the message should be routed to.</span></span> <span data-ttu-id="4178f-109">Para permitir que cada cliente enrute datos a un destino concreto, implementaremos dos extremos de servicio que se usarán para recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="4178f-109">To allow each client to route data to a specific destination service we will implement two service endpoints that will be used to receive messages.</span></span>  
   
 > [!NOTE]
->  Aunque este ejemplo utiliza extremos concretos para crear una partición de los datos, esto también se puede lograr mediante la información incluida en el propio mensaje, como el encabezado o la información del cuerpo del mensaje.  
+>  <span data-ttu-id="4178f-110">Aunque este ejemplo utiliza extremos concretos para crear una partición de los datos, esto también se puede lograr mediante la información incluida en el propio mensaje, como el encabezado o la información del cuerpo del mensaje.</span><span class="sxs-lookup"><span data-stu-id="4178f-110">While this example uses specific endpoints to partition data, this could also be accomplished using information contained within the message itself such as header or body data.</span></span>  
   
-### Implementación de partición de datos de servicio  
+### <a name="implement-service-data-partitioning"></a><span data-ttu-id="4178f-111">Implementación de partición de datos de servicio</span><span class="sxs-lookup"><span data-stu-id="4178f-111">Implement Service Data Partitioning</span></span>  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio.En el siguiente ejemplo, se definen dos extremos que se utilizarán para recibir mensajes.También se definen los extremos del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.  
+1.  <span data-ttu-id="4178f-112">Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio.</span><span class="sxs-lookup"><span data-stu-id="4178f-112">Create the basic Routing Service configuration by specifying the service endpoints exposed by the service.</span></span> <span data-ttu-id="4178f-113">En el siguiente ejemplo, se definen dos extremos que se utilizarán para recibir mensajes.</span><span class="sxs-lookup"><span data-stu-id="4178f-113">The following example defines two endpoints, which will be used to receive messages.</span></span> <span data-ttu-id="4178f-114">También se definen los extremos del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.</span><span class="sxs-lookup"><span data-stu-id="4178f-114">It also defines the client endpoints, which are used to send messages to the regularCalc service instances.</span></span>  
   
     ```xml  
     <services>  
@@ -63,10 +66,9 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
                   binding="netTcpBinding"  
                   contract="*" />  
      </client>  
-  
     ```  
   
-2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.En este ejemplo, se usa el filtro EndpointName para determinar qué extremo de servicio recibe el mensaje.En el siguiente ejemplo, se definen los filtros y la sección de enrutamiento necesarios.  
+2.  <span data-ttu-id="4178f-115">Defina los filtros usados para enrutar mensajes a los extremos del destino.</span><span class="sxs-lookup"><span data-stu-id="4178f-115">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="4178f-116">En este ejemplo, se usa el filtro EndpointName para determinar qué extremo de servicio recibe el mensaje.</span><span class="sxs-lookup"><span data-stu-id="4178f-116">For this example, the EndpointName filter is used to determine which service endpoint received the message.</span></span> <span data-ttu-id="4178f-117">En el siguiente ejemplo, se definen los filtros y la sección de enrutamiento necesarios.</span><span class="sxs-lookup"><span data-stu-id="4178f-117">The following example defines the necessary routing section and filters.</span></span>  
   
     ```xml  
     <filters>  
@@ -79,9 +81,9 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
     </filters>  
     ```  
   
-3.  Defina la tabla de filtro, que asocia cada filtro a un extremo del cliente.En este ejemplo, el mensaje se enrutará según el extremo concreto en el que se recibió.Como el mensaje solo puede coincidir con uno de los dos posibles filtros, no hay necesidad de utilizar la prioridad del filtro para controlar el orden en el que se evalúan los filtros.  
+3.  <span data-ttu-id="4178f-118">Defina la tabla de filtro, que asocia cada filtro a un extremo del cliente.</span><span class="sxs-lookup"><span data-stu-id="4178f-118">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="4178f-119">En este ejemplo, el mensaje se enrutará según el extremo concreto en el que se recibió.</span><span class="sxs-lookup"><span data-stu-id="4178f-119">In this example, the message will be routed based on the specific endpoint it was received over.</span></span> <span data-ttu-id="4178f-120">Como el mensaje solo puede coincidir con uno de los dos posibles filtros, no hay necesidad de utilizar la prioridad del filtro para controlar el orden en el que se evalúan los filtros.</span><span class="sxs-lookup"><span data-stu-id="4178f-120">Since the message can only match one of the two possible filters, there is no need for using filter priority to control to the order in which filters are evaluated.</span></span>  
   
-     El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.  
+     <span data-ttu-id="4178f-121">El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.</span><span class="sxs-lookup"><span data-stu-id="4178f-121">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -91,10 +93,9 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
          <add filterName="NormalPriority" endpointName="CalcEndpoint2"/>  
        </filterTable>  
     </filterTables>  
-  
     ```  
   
-4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los extremos de servicio mediante el comportamiento de enrutamiento.En el siguiente ejemplo, se muestra cómo asociar "filterTable1" a los extremos de servicio:  
+4.  <span data-ttu-id="4178f-122">Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los puntos de conexión de servicio mediante el comportamiento de enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="4178f-122">To evaluate incoming messages against the filters contained in the table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span> <span data-ttu-id="4178f-123">En el ejemplo siguiente se muestra cómo asociar "filterTable1" a los extremos de servicio:</span><span class="sxs-lookup"><span data-stu-id="4178f-123">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -105,11 +106,10 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Ejemplo  
- A continuación, se muestra una lista completa del archivo de configuración.  
+## <a name="example"></a><span data-ttu-id="4178f-124">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4178f-124">Example</span></span>  
+ <span data-ttu-id="4178f-125">A continuación, se muestra una lista completa del archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="4178f-125">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -183,5 +183,5 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
 </configuration>  
 ```  
   
-## Vea también  
- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a><span data-ttu-id="4178f-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="4178f-126">See Also</span></span>  
+ [<span data-ttu-id="4178f-127">Servicios de enrutamiento</span><span class="sxs-lookup"><span data-stu-id="4178f-127">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,71 +1,74 @@
 ---
-title: "Implementing the UI Automation MultipleView Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, MultipleView control pattern"
-  - "MultipleView control pattern"
-  - "control patterns, MultipleView"
+title: "Implementación del patrón de control MultipleView de UI Automation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, MultipleView control pattern
+- MultipleView control pattern
+- control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-caps.latest.revision: 15
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 899f260dfef1d1e28a5a3605de772cdb7d358b64
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation MultipleView Control Pattern
+# <a name="implementing-the-ui-automation-multipleview-control-pattern"></a><span data-ttu-id="33abf-102">Implementación del patrón de control MultipleView de UI Automation</span><span class="sxs-lookup"><span data-stu-id="33abf-102">Implementing the UI Automation MultipleView Control Pattern</span></span>
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="33abf-103">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="33abf-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="33abf-104">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="33abf-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IMultipleViewProvider>, incluida la información sobre eventos y propiedades. Al final del tema se ofrecen vínculos a referencias adicionales.  
+ <span data-ttu-id="33abf-105">En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IMultipleViewProvider>, incluida la información sobre eventos y propiedades.</span><span class="sxs-lookup"><span data-stu-id="33abf-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IMultipleViewProvider>, including information about events and properties.</span></span> <span data-ttu-id="33abf-106">Al final del tema se ofrecen vínculos a referencias adicionales.</span><span class="sxs-lookup"><span data-stu-id="33abf-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- El patrón de control <xref:System.Windows.Automation.MultipleViewPattern> se usa para admitir controles que ofrecen y pueden cambiar entre varias representaciones del mismo conjunto de información o controles secundarios.  
+ <span data-ttu-id="33abf-107">El patrón de control <xref:System.Windows.Automation.MultipleViewPattern> se usa para admitir controles que ofrecen y pueden cambiar entre varias representaciones del mismo conjunto de información o controles secundarios.</span><span class="sxs-lookup"><span data-stu-id="33abf-107">The <xref:System.Windows.Automation.MultipleViewPattern> control pattern is used to support controls that provide, and are able to switch between, multiple representations of the same set of information or child controls.</span></span>  
   
- Entre los ejemplos de controles que pueden presentar varias vistas se incluyen la vista de lista \(que puede mostrar su contenido como miniaturas, mosaicos, iconos o detalles\), gráficos [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] \(circulares, de líneas, de barras, valor de celda con una fórmula\), documentos [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] \(normal, diseño web, diseño de impresión, diseño de lectura, esquema\), calendario [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] \(año, mes, semana, día\) y máscaras [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)]. Las vistas admitidas las determina el desarrollador del control y son específicas de cada control.  
+ <span data-ttu-id="33abf-108">Entre los ejemplos de controles que pueden presentar varias vistas se incluyen la vista de lista (que puede mostrar su contenido como miniaturas, mosaicos, iconos o detalles), gráficos [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] (circulares, de líneas, de barras, valor de celda con una fórmula), documentos [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (normal, diseño web, diseño de impresión, diseño de lectura, esquema), calendario [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] (año, mes, semana, día) y máscaras [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="33abf-108">Examples of controls that can present multiple views include the list view (which can show its contents as thumbnails, tiles, icons, or details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] charts (pie, line, bar, cell value with a formula), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] documents (normal, Web layout, print layout, reading layout, outline), [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] calendar (year, month, week, day), and [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] skins.</span></span> <span data-ttu-id="33abf-109">Las vistas admitidas las determina el desarrollador del control y son específicas de cada control.</span><span class="sxs-lookup"><span data-stu-id="33abf-109">The supported views are determined by the control developer and are specific to each control.</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Directrices y convenciones de implementación  
- Al implementar el patrón de control Multiple View, tenga en cuenta las siguientes directrices y convenciones:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="33abf-110">Directrices y convenciones de implementación</span><span class="sxs-lookup"><span data-stu-id="33abf-110">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="33abf-111">Al implementar el patrón de control Multiple View, tenga en cuenta las siguientes directrices y convenciones:</span><span class="sxs-lookup"><span data-stu-id="33abf-111">When implementing the Multiple View control pattern, note the following guidelines and conventions:</span></span>  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> también se debe implementar en un contenedor que administre la vista actual si es diferente de un control que ofrece la vista actual. Por ejemplo, el Explorador de Windows contiene un control de lista para el contenido de la carpeta actual, mientras que la vista del control se administra desde la aplicación del Explorador de Windows.  
+-   <span data-ttu-id="33abf-112"><xref:System.Windows.Automation.Provider.IMultipleViewProvider> también se debe implementar en un contenedor que administre la vista actual si es diferente de un control que ofrece la vista actual.</span><span class="sxs-lookup"><span data-stu-id="33abf-112"><xref:System.Windows.Automation.Provider.IMultipleViewProvider> should also be implemented on a container that manages the current view if it is different from a control that provides the current view.</span></span> <span data-ttu-id="33abf-113">Por ejemplo, el Explorador de Windows contiene un control de lista para el contenido de la carpeta actual, mientras que la vista del control se administra desde la aplicación del Explorador de Windows.</span><span class="sxs-lookup"><span data-stu-id="33abf-113">For example, Windows Explorer contains a List control for the current folder content while the view for the control is managed from the Windows Explorer application.</span></span>  
   
--   No se considera que un control que puede ordenar su contenido admita varias vistas.  
+-   <span data-ttu-id="33abf-114">No se considera que un control que puede ordenar su contenido admita varias vistas.</span><span class="sxs-lookup"><span data-stu-id="33abf-114">A control that is able to sort its content is not considered to support multiple views.</span></span>  
   
--   La colección de vistas debe ser idéntica en todas las instancias.  
+-   <span data-ttu-id="33abf-115">La colección de vistas debe ser idéntica en todas las instancias.</span><span class="sxs-lookup"><span data-stu-id="33abf-115">The collection of views must be identical across instances.</span></span>  
   
--   Los nombres de vista deben ser adecuados para su usarlo en texto a voz, Braille y otras aplicaciones de lenguaje natural.  
+-   <span data-ttu-id="33abf-116">Los nombres de vista deben ser adecuados para su usarlo en texto a voz, Braille y otras aplicaciones de lenguaje natural.</span><span class="sxs-lookup"><span data-stu-id="33abf-116">View names must be suitable for use in Text to Speech, Braille, and other human-readable applications.</span></span>  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
-## Miembros requeridos para IMultipleViewProvider  
- Para implementar IMultipleViewProvider, se requieren las siguientes propiedades y métodos.  
+## <a name="required-members-for-imultipleviewprovider"></a><span data-ttu-id="33abf-117">Miembros requeridos para IMultipleViewProvider</span><span class="sxs-lookup"><span data-stu-id="33abf-117">Required Members for IMultipleViewProvider</span></span>  
+ <span data-ttu-id="33abf-118">Para implementar IMultipleViewProvider, se requieren las siguientes propiedades y métodos.</span><span class="sxs-lookup"><span data-stu-id="33abf-118">The following properties and methods are required for implementing IMultipleViewProvider.</span></span>  
   
-|Miembros requeridos|Tipo de miembro|Notas|  
-|-------------------------|---------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|Método|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|Método|Ninguna|  
+|<span data-ttu-id="33abf-119">Miembros requeridos</span><span class="sxs-lookup"><span data-stu-id="33abf-119">Required members</span></span>|<span data-ttu-id="33abf-120">Tipo de miembro</span><span class="sxs-lookup"><span data-stu-id="33abf-120">Member type</span></span>|<span data-ttu-id="33abf-121">Notas</span><span class="sxs-lookup"><span data-stu-id="33abf-121">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.CurrentView%2A>|<span data-ttu-id="33abf-122">Propiedad</span><span class="sxs-lookup"><span data-stu-id="33abf-122">Property</span></span>|<span data-ttu-id="33abf-123">Ninguno</span><span class="sxs-lookup"><span data-stu-id="33abf-123">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetSupportedViews%2A>|<span data-ttu-id="33abf-124">Método</span><span class="sxs-lookup"><span data-stu-id="33abf-124">Method</span></span>|<span data-ttu-id="33abf-125">Ninguno</span><span class="sxs-lookup"><span data-stu-id="33abf-125">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A>|<span data-ttu-id="33abf-126">Método</span><span class="sxs-lookup"><span data-stu-id="33abf-126">Method</span></span>|<span data-ttu-id="33abf-127">Ninguno</span><span class="sxs-lookup"><span data-stu-id="33abf-127">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A>|<span data-ttu-id="33abf-128">Método</span><span class="sxs-lookup"><span data-stu-id="33abf-128">Method</span></span>|<span data-ttu-id="33abf-129">Ninguno</span><span class="sxs-lookup"><span data-stu-id="33abf-129">None</span></span>|  
   
- No hay ningún evento asociado a este patrón de control.  
+ <span data-ttu-id="33abf-130">No hay ningún evento asociado a este patrón de control.</span><span class="sxs-lookup"><span data-stu-id="33abf-130">There are no events associated with this control pattern.</span></span>  
   
 <a name="Exceptions"></a>   
-## Excepciones  
- Los proveedores debe generar las siguientes excepciones.  
+## <a name="exceptions"></a><span data-ttu-id="33abf-131">Excepciones</span><span class="sxs-lookup"><span data-stu-id="33abf-131">Exceptions</span></span>  
+ <span data-ttu-id="33abf-132">Los proveedores debe generar las siguientes excepciones.</span><span class="sxs-lookup"><span data-stu-id="33abf-132">Provider must throw the following exceptions.</span></span>  
   
-|Tipo de excepción|Condición|  
-|-----------------------|---------------|  
-|<xref:System.ArgumentException>|Cuando se llama a <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> o <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> con un parámetro que no es miembro de la colección de vistas compatible.|  
+|<span data-ttu-id="33abf-133">Tipo de excepción</span><span class="sxs-lookup"><span data-stu-id="33abf-133">Exception type</span></span>|<span data-ttu-id="33abf-134">Condición</span><span class="sxs-lookup"><span data-stu-id="33abf-134">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.ArgumentException>|<span data-ttu-id="33abf-135">Cuando se llama a <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> o <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> con un parámetro que no es miembro de la colección de vistas compatible.</span><span class="sxs-lookup"><span data-stu-id="33abf-135">When either <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> or <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> is called with a parameter that is not a member of the supported views collection.</span></span>|  
   
-## Vea también  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="33abf-136">Vea también</span><span class="sxs-lookup"><span data-stu-id="33abf-136">See Also</span></span>  
+ [<span data-ttu-id="33abf-137">Información general del patrones de Control UI Automation</span><span class="sxs-lookup"><span data-stu-id="33abf-137">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="33abf-138">Patrones de Control compatibles en un proveedor de UI Automation</span><span class="sxs-lookup"><span data-stu-id="33abf-138">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="33abf-139">Patrones de Control UI Automation para clientes</span><span class="sxs-lookup"><span data-stu-id="33abf-139">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="33abf-140">Información general sobre el árbol de automatización de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="33abf-140">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="33abf-141">Usar almacenamiento en caché en la UI Automation</span><span class="sxs-lookup"><span data-stu-id="33abf-141">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -1,45 +1,48 @@
 ---
-title: "Proveedor de tokens SAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Proveedor de tokens SAML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fc6eaa916507c7e1c530d4ee757097bf0bffcd34
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Proveedor de tokens SAML
-Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado.  Se usa un proveedor de tokens en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proporcionar las credenciales a la infraestructura de seguridad.  En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluye el Proveedor de tokens del administrador de credenciales predeterminado.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] también se distribuye con un proveedor de tokens de [!INCLUDE[infocard](../../../../includes/infocard-md.md)].  Los proveedores de tokens personalizados son útiles en los casos siguientes:  
+# <a name="saml-token-provider"></a><span data-ttu-id="43ab0-102">Proveedor de tokens SAML</span><span class="sxs-lookup"><span data-stu-id="43ab0-102">SAML Token Provider</span></span>
+<span data-ttu-id="43ab0-103">Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado.</span><span class="sxs-lookup"><span data-stu-id="43ab0-103">This sample demonstrates how to implement a custom client SAML token provider.</span></span> <span data-ttu-id="43ab0-104">Se usa un proveedor de tokens en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para proporcionar las credenciales a la infraestructura de seguridad.</span><span class="sxs-lookup"><span data-stu-id="43ab0-104">A token provider in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used for supplying credentials to the security infrastructure.</span></span> <span data-ttu-id="43ab0-105">En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje.</span><span class="sxs-lookup"><span data-stu-id="43ab0-105">The token provider in general examines the target and issues appropriate credentials so that the security infrastructure can secure the message.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="43ab0-106"> incluye el Proveedor de tokens del administrador de credenciales predeterminado.</span><span class="sxs-lookup"><span data-stu-id="43ab0-106"> ships with the default Credential Manager Token Provider.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="43ab0-107"> también se distribuye con un proveedor de tokens de [!INCLUDE[infocard](../../../../includes/infocard-md.md)].</span><span class="sxs-lookup"><span data-stu-id="43ab0-107"> also ships with an [!INCLUDE[infocard](../../../../includes/infocard-md.md)] token provider.</span></span> <span data-ttu-id="43ab0-108">Los proveedores de tokens personalizados son útiles en los casos siguientes:</span><span class="sxs-lookup"><span data-stu-id="43ab0-108">Custom token providers are useful in the following cases:</span></span>  
   
--   Si tiene un almacén de credenciales con el que estos proveedores de tokens no pueden funcionar.  
+-   <span data-ttu-id="43ab0-109">Si tiene un almacén de credenciales con el que estos proveedores de tokens no pueden funcionar.</span><span class="sxs-lookup"><span data-stu-id="43ab0-109">If you have a credential store that these token providers cannot operate with.</span></span>  
   
--   Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto en el que el usuario proporciona detalles cuando el marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza las credenciales.  
+-   <span data-ttu-id="43ab0-110">Si desea proporcionar su propio mecanismo personalizado para transformar las credenciales desde el punto en el que el usuario proporciona detalles cuando el marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza las credenciales.</span><span class="sxs-lookup"><span data-stu-id="43ab0-110">If you want to provide your own custom mechanism for transforming the credentials from the point when the user provides the details to when the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework uses the credentials.</span></span>  
   
--   Si está creando un token personalizado.  
+-   <span data-ttu-id="43ab0-111">Si está creando un token personalizado.</span><span class="sxs-lookup"><span data-stu-id="43ab0-111">If you are building a custom token.</span></span>  
   
- Este ejemplo muestra cómo crear un proveedor de tokens personalizado que permite que un token de SAML obtenido de fuera del marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se pueda utilizar.  
+ <span data-ttu-id="43ab0-112">Este ejemplo muestra cómo crear un proveedor de tokens personalizado que permite que un token de SAML obtenido de fuera del marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se pueda utilizar.</span><span class="sxs-lookup"><span data-stu-id="43ab0-112">This sample shows how to build a custom token provider that allows a SAML token obtained from outside of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework to be used.</span></span>  
   
- En resumen, este ejemplo muestra lo siguiente:  
+ <span data-ttu-id="43ab0-113">En resumen, este ejemplo muestra lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="43ab0-113">To summarize, this sample demonstrates the following:</span></span>  
   
--   Cómo se puede configurar un cliente con un proveedor de tokens personalizado.  
+-   <span data-ttu-id="43ab0-114">Cómo se puede configurar un cliente con un proveedor de tokens personalizado.</span><span class="sxs-lookup"><span data-stu-id="43ab0-114">How a client can be configured with a custom token provider.</span></span>  
   
--   Cómo un token de SAML se puede pasar a las credenciales del cliente personalizadas.  
+-   <span data-ttu-id="43ab0-115">Cómo un token de SAML se puede pasar a las credenciales del cliente personalizadas.</span><span class="sxs-lookup"><span data-stu-id="43ab0-115">How a SAML token can be passed to the custom client credentials.</span></span>  
   
--   Cómo el token de SAML se proporciona al marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <span data-ttu-id="43ab0-116">Cómo el token de SAML se proporciona al marco de cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="43ab0-116">How the SAML token is provided to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client framework.</span></span>  
   
--   Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.  
+-   <span data-ttu-id="43ab0-117">Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-117">How the server is authenticated by the client using the server's X.509 certificate.</span></span>  
   
- El servicio expone dos extremos para comunicarse con el servicio, definidos mediante el archivo de configuración App.config.  Cada extremo está compuesto por una dirección, un enlace y un contrato.  El enlace se configura con un `wsFederationHttpBinding` estándar, que usa la seguridad de mensaje.  Un extremo espera que el cliente autentique con un token de SAML que utiliza una clave de prueba simétrica mientras el otro espera que el cliente autentique con un token de SAML que utiliza una clave de prueba asimétrica.  El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`.  El comportamiento `serviceCredentials` le permite configurar un certificado del servicio.  Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje.  La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las instrucciones de configuración al final de este tema.  El comportamiento `serviceCredentials` también le permite configurar certificados en los que se confia para firmar los tokens de SAML.  La configuración siguiente hace referencia al certificado 'Alice' instalado durante el ejemplo.  
+ <span data-ttu-id="43ab0-118">El servicio expone dos extremos para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada extremo está compuesto por una dirección, un enlace y un contrato.</span><span class="sxs-lookup"><span data-stu-id="43ab0-118">The service exposes two endpoints for communicating with the service, defined using the configuration file App.config. Each endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="43ab0-119">El enlace se configura con un `wsFederationHttpBinding` estándar, que usa la seguridad de mensaje.</span><span class="sxs-lookup"><span data-stu-id="43ab0-119">The binding is configured with a standard `wsFederationHttpBinding`, which uses Message security.</span></span> <span data-ttu-id="43ab0-120">Un extremo espera que el cliente autentique con un token de SAML que utiliza una clave de prueba simétrica mientras el otro espera que el cliente autentique con un token de SAML que utiliza una clave de prueba asimétrica.</span><span class="sxs-lookup"><span data-stu-id="43ab0-120">One endpoint expects the client to authenticate with a SAML token that uses a symmetric proof key while the other expects the client to authenticate with a SAML token that uses an asymmetric proof key.</span></span> <span data-ttu-id="43ab0-121">El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`.</span><span class="sxs-lookup"><span data-stu-id="43ab0-121">The service also configures the service certificate using `serviceCredentials` behavior.</span></span> <span data-ttu-id="43ab0-122">El comportamiento `serviceCredentials` le permite configurar un certificado del servicio.</span><span class="sxs-lookup"><span data-stu-id="43ab0-122">The `serviceCredentials` behavior allows you to configure a service certificate.</span></span> <span data-ttu-id="43ab0-123">Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje.</span><span class="sxs-lookup"><span data-stu-id="43ab0-123">A service certificate is used by a client to authenticate the service and provide message protection.</span></span> <span data-ttu-id="43ab0-124">La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las instrucciones de configuración al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="43ab0-124">The following configuration references the "localhost" certificate installed during the sample setup as described in the setup instructions at the end of this topic.</span></span> <span data-ttu-id="43ab0-125">El comportamiento `serviceCredentials` también le permite configurar certificados en los que se confia para firmar los tokens de SAML.</span><span class="sxs-lookup"><span data-stu-id="43ab0-125">The `serviceCredentials` behavior also allows you to configure certificates that are trusted to sign SAML tokens.</span></span> <span data-ttu-id="43ab0-126">La configuración siguiente hace referencia al certificado 'Alice' instalado durante el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="43ab0-126">The following configuration references the 'Alice' certificate installed during the sample.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
  <services>  
   <service   
@@ -118,13 +121,13 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 </system.serviceModel>  
 ```  
   
- Los siguientes pasos muestran cómo desarrollar un proveedor de tokens personalizado SAML y cómo integrarlo en la estructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ <span data-ttu-id="43ab0-127">Los siguientes pasos muestran cómo desarrollar un proveedor de tokens personalizado SAML y cómo integrarlo en la estructura de seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="43ab0-127">The following steps show how to develop a custom SAML token provider and integrate it with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]: security framework:</span></span>  
   
-1.  Escriba un proveedor de tokens personalizado SAML.  
+1.  <span data-ttu-id="43ab0-128">Escriba un proveedor de tokens personalizado SAML.</span><span class="sxs-lookup"><span data-stu-id="43ab0-128">Write a custom SAML token provider.</span></span>  
   
-     El ejemplo implementa un proveedor de tokens de SAML personalizado que devuelve un token de seguridad basado en una aserción de SAML que se proporciona en el momento de la construcción.  
+     <span data-ttu-id="43ab0-129">El ejemplo implementa un proveedor de tokens de SAML personalizado que devuelve un token de seguridad basado en una aserción de SAML que se proporciona en el momento de la construcción.</span><span class="sxs-lookup"><span data-stu-id="43ab0-129">The sample implements a custom SAML token provider that returns a security token based on a SAML assertion that is provided at construction time.</span></span>  
   
-     Para realizar esta tarea, el proveedor de tokens personalizado se deriva de la clase <xref:System.IdentityModel.Selectors.SecurityTokenProvider> e invalida el método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>.  Este método crea y devuelve un nuevo `SecurityToken`.  
+     <span data-ttu-id="43ab0-130">Para realizar esta tarea, el proveedor de tokens personalizado se deriva de la clase <xref:System.IdentityModel.Selectors.SecurityTokenProvider> e invalida el método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>.</span><span class="sxs-lookup"><span data-stu-id="43ab0-130">To perform this task, the custom token provider is derived from the <xref:System.IdentityModel.Selectors.SecurityTokenProvider> class and overrides the <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> method.</span></span> <span data-ttu-id="43ab0-131">Este método crea y devuelve un nuevo `SecurityToken`.</span><span class="sxs-lookup"><span data-stu-id="43ab0-131">This method creates and returns a new `SecurityToken`.</span></span>  
   
     ```  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -163,9 +166,9 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     }  
     ```  
   
-2.  Escribir el administrador de tokens de seguridad personalizado.  
+2.  <span data-ttu-id="43ab0-132">Escribir el administrador de tokens de seguridad personalizado.</span><span class="sxs-lookup"><span data-stu-id="43ab0-132">Write custom security token manager.</span></span>  
   
-     La clase <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`.  Un administrador de tokens de seguridad también se utiliza para crear autenticadores de tokens y serializadores de tokens, aunque en este ejemplo no se explica.  En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens personalizado SAML cuando los requisitos de tokens pasados indican que se solicita el token SAML.  Si la clase \(vea el paso 3\) de credenciales del cliente no ha especificado una aserción, el administrador de tokens de seguridad crea una instancia adecuada.  
+     <span data-ttu-id="43ab0-133">La clase <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`.</span><span class="sxs-lookup"><span data-stu-id="43ab0-133">The <xref:System.IdentityModel.Selectors.SecurityTokenManager> class is used to create <xref:System.IdentityModel.Selectors.SecurityTokenProvider> for specific <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> that is passed to it in `CreateSecurityTokenProvider` method.</span></span> <span data-ttu-id="43ab0-134">Un administrador de tokens de seguridad también se utiliza para crear autenticadores de tokens y serializadores de tokens, aunque en este ejemplo no se explica.</span><span class="sxs-lookup"><span data-stu-id="43ab0-134">A security token manager is also used to create token authenticators and token serializer, but those are not covered by this sample.</span></span> <span data-ttu-id="43ab0-135">En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens personalizado SAML cuando los requisitos de tokens pasados indican que se solicita el token SAML.</span><span class="sxs-lookup"><span data-stu-id="43ab0-135">In this sample the custom security token manager inherits from the <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> class and overrides the `CreateSecurityTokenProvider` method to return the custom SAML token provider when the passed token requirements indicate that the SAML token is requested.</span></span> <span data-ttu-id="43ab0-136">Si la clase (vea el paso 3) de credenciales del cliente no ha especificado una aserción, el administrador de tokens de seguridad crea una instancia adecuada.</span><span class="sxs-lookup"><span data-stu-id="43ab0-136">If the client credentials class (see step 3) has not specified an assertion, the security token manager creates an appropriate instance.</span></span>  
   
     ```  
     public class SamlSecurityTokenManager :  
@@ -233,12 +236,11 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
        return base.CreateSecurityTokenProvider(tokenRequirement);  
       }  
     }  
-  
     ```  
   
-3.  Escribir una credencial de cliente personalizada.  
+3.  <span data-ttu-id="43ab0-137">Escribir una credencial de cliente personalizada.</span><span class="sxs-lookup"><span data-stu-id="43ab0-137">Write a custom client credential.</span></span>  
   
-     Se usa una clase de credenciales de cliente para representar las credenciales que se configuran para el proxy de cliente y crear un administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y un serializador de tokens.  
+     <span data-ttu-id="43ab0-138">Se usa una clase de credenciales de cliente para representar las credenciales que se configuran para el proxy de cliente y crear un administrador de tokens de seguridad que se utiliza para obtener autenticadores, proveedores y un serializador de tokens.</span><span class="sxs-lookup"><span data-stu-id="43ab0-138">Client credentials class is used to represent the credentials that are configured for the client proxy and creates a security token manager that is used to obtain token authenticators, token providers and token serializer.</span></span>  
   
     ```  
     public class SamlClientCredentials : ClientCredentials  
@@ -279,9 +281,9 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     }  
     ```  
   
-4.  Configure el cliente para utilizar la credencial del cliente personalizada.  
+4.  <span data-ttu-id="43ab0-139">Configure el cliente para utilizar la credencial del cliente personalizada.</span><span class="sxs-lookup"><span data-stu-id="43ab0-139">Configure the client to use the custom client credential.</span></span>  
   
-     Para que el cliente pueda utilizar la credencial de cliente personalizada, el ejemplo elimina la clase de credencial de cliente predeterminada y proporciona la nueva.  
+     <span data-ttu-id="43ab0-140">Para que el cliente pueda utilizar la credencial de cliente personalizada, el ejemplo elimina la clase de credencial de cliente predeterminada y proporciona la nueva.</span><span class="sxs-lookup"><span data-stu-id="43ab0-140">The sample deletes the default client credential class and supplies the new client credential class so the client can use the custom client credential.</span></span>  
   
     ```  
     // Create new credentials class  
@@ -304,18 +306,18 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     client.ChannelFactory.Endpoint.Behaviors.Add(samlCC);  
     ```  
   
- En el servicio, las notificaciones asociadas al llamador se muestran.  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.  Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ <span data-ttu-id="43ab0-141">En el servicio, las notificaciones asociadas al llamador se muestran.</span><span class="sxs-lookup"><span data-stu-id="43ab0-141">On the service, the claims associated with the caller are displayed.</span></span> <span data-ttu-id="43ab0-142">Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-142">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="43ab0-143">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-143">Press ENTER in the client window to shut down the client.</span></span>  
   
-## Instalar el archivo por lotes  
- El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con el certificado pertinente para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado de servidor.  Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.  
+## <a name="setup-batch-file"></a><span data-ttu-id="43ab0-144">Instalar el archivo por lotes</span><span class="sxs-lookup"><span data-stu-id="43ab0-144">Setup Batch File</span></span>  
+ <span data-ttu-id="43ab0-145">El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con el certificado pertinente para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado de servidor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-145">The Setup.bat batch file included with this sample allows you to configure the server with the relevant certificate to run a self-hosted application that requires server certificate-based security.</span></span> <span data-ttu-id="43ab0-146">Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.</span><span class="sxs-lookup"><span data-stu-id="43ab0-146">This batch file must be modified to work across computers or to work in a non-hosted case.</span></span>  
   
- A continuación, se proporciona una breve descripción de las diferentes secciones de los archivos por lotes de manera que se puedan modificar para ejecutarse con la configuración adecuada.  
+ <span data-ttu-id="43ab0-147">A continuación, se proporciona una breve descripción de las diferentes secciones de los archivos por lotes de manera que se puedan modificar para ejecutarse con la configuración adecuada.</span><span class="sxs-lookup"><span data-stu-id="43ab0-147">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration.</span></span>  
   
--   Crear el certificado de servidor:  
+-   <span data-ttu-id="43ab0-148">Crear el certificado de servidor:</span><span class="sxs-lookup"><span data-stu-id="43ab0-148">Creating the server certificate:</span></span>  
   
-     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.  La variable `%SERVER_NAME%`especifica el nombre del servidor.  Cambie esta variable para especificar su propio nombre de servidor.  El valor predeterminado en este archivo por lotes es el host local.  
+     <span data-ttu-id="43ab0-149">Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="43ab0-149">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="43ab0-150">La variable `%SERVER_NAME%`especifica el nombre del servidor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-150">The `%SERVER_NAME%` variable specifies the server name.</span></span> <span data-ttu-id="43ab0-151">Cambie esta variable para especificar su propio nombre de servidor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-151">Change this variable to specify your own server name.</span></span> <span data-ttu-id="43ab0-152">El valor predeterminado en este archivo por lotes es el host local.</span><span class="sxs-lookup"><span data-stu-id="43ab0-152">The default value in this batch file is localhost.</span></span>  
   
-     El certificado se almacena en el almacén My \(Personal\), en la ubicación de almacenamiento LocalMachine.  
+     <span data-ttu-id="43ab0-153">El certificado se almacena en el almacén My (Personal), en la ubicación de almacenamiento LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="43ab0-153">The certificate is stored in My (Personal) store under the LocalMachine store location.</span></span>  
   
     ```  
     echo ************  
@@ -327,19 +329,19 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Instalar el certificado del servidor en el almacén de certificados de confianza de cliente:  
+-   <span data-ttu-id="43ab0-154">Instalar el certificado del servidor en el almacén de certificados de confianza de cliente:</span><span class="sxs-lookup"><span data-stu-id="43ab0-154">Installing the server certificate into the client's trusted certificate store:</span></span>  
   
-     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente.  Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.  Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
+     <span data-ttu-id="43ab0-155">Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-155">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="43ab0-156">Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.</span><span class="sxs-lookup"><span data-stu-id="43ab0-156">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="43ab0-157">Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-157">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
--   Crear el certificado de emisor.  
+-   <span data-ttu-id="43ab0-158">Crear el certificado de emisor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-158">Creating the issuer certificate.</span></span>  
   
-     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de emisor que se va a usar.  La variable `%USER_NAME%` especifica el nombre del emisor.  Cambie esta variable para especificar el nombre del emisor.  El valor predeterminado en este archivo por lotes es Alice.  
+     <span data-ttu-id="43ab0-159">Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de emisor que se va a usar.</span><span class="sxs-lookup"><span data-stu-id="43ab0-159">The following lines from the Setup.bat batch file create the issuer certificate to be used.</span></span> <span data-ttu-id="43ab0-160">La variable `%USER_NAME%` especifica el nombre del emisor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-160">The `%USER_NAME%` variable specifies the issuer name.</span></span> <span data-ttu-id="43ab0-161">Cambie esta variable para especificar el nombre del emisor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-161">Change this variable to specify your own issuer name.</span></span> <span data-ttu-id="43ab0-162">El valor predeterminado en este archivo por lotes es Alice.</span><span class="sxs-lookup"><span data-stu-id="43ab0-162">The default value in this batch file is Alice.</span></span>  
   
-     El certificado está almacenado en My store en la ubicación del almacén CurrentUser.  
+     <span data-ttu-id="43ab0-163">El certificado está almacenado en My store en la ubicación del almacén CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="43ab0-163">The certificate is stored in My store under the CurrentUser store location.</span></span>  
   
     ```  
     echo ************  
@@ -351,61 +353,60 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe  
     ```  
   
--   Instalar el certificado del emisor en el almacén de certificados de confianza del servidor.  
+-   <span data-ttu-id="43ab0-164">Instalar el certificado del emisor en el almacén de certificados de confianza del servidor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-164">Installing the issuer certificate into the server's trusted certificate store.</span></span>  
   
-     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente.  Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.  Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado del servidor con el certificado de emisor.  
+     <span data-ttu-id="43ab0-165">Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-165">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="43ab0-166">Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.</span><span class="sxs-lookup"><span data-stu-id="43ab0-166">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="43ab0-167">Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado del servidor con el certificado de emisor.</span><span class="sxs-lookup"><span data-stu-id="43ab0-167">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the server certificate store with the issuer certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
-  
     ```  
   
-#### Para configurar y compilar el ejemplo  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="43ab0-168">Para configurar y compilar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="43ab0-168">To set up and build the sample</span></span>  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="43ab0-169">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="43ab0-169">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Para compilar la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="43ab0-170">Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="43ab0-170">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
 > [!NOTE]
->  Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del extremo en la configuración del cliente para que coincida con el código de cliente.  
+>  <span data-ttu-id="43ab0-171">Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del punto de conexión en la configuración del cliente para que coincida con el código de cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-171">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
-#### Para ejecutar el ejemplo en el mismo equipo  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="43ab0-172">Para ejecutar el ejemplo en el mismo equipo</span><span class="sxs-lookup"><span data-stu-id="43ab0-172">To run the sample on the same computer</span></span>  
   
-1.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ejecutado con privilegios de administrador.  De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
+1.  <span data-ttu-id="43ab0-173">Ejecute Setup.bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ejecutado con privilegios de administrador.</span><span class="sxs-lookup"><span data-stu-id="43ab0-173">Run Setup.bat from the sample installation folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt run with administrator privileges.</span></span> <span data-ttu-id="43ab0-174">De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="43ab0-174">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  La variable de entorno PATH que se establece en el símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] señala al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
+    >  <span data-ttu-id="43ab0-175">El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="43ab0-175">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="43ab0-176">La variable de entorno PATH que se establece en el símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] señala al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="43ab0-176">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-2.  Inicie Service.exe desde \\service\\bin.  
+2.  <span data-ttu-id="43ab0-177">Inicie Service.exe desde \service\bin.</span><span class="sxs-lookup"><span data-stu-id="43ab0-177">Launch Service.exe from service\bin.</span></span>  
   
-3.  Inicie Client.exe desde \\client\\bin.  La actividad del cliente se muestra en la aplicación de consola del cliente.  
+3.  <span data-ttu-id="43ab0-178">Inicie Client.exe desde \client\bin.</span><span class="sxs-lookup"><span data-stu-id="43ab0-178">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="43ab0-179">La actividad del cliente se muestra en la aplicación de consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-179">Client activity is displayed on the client console application.</span></span>  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  <span data-ttu-id="43ab0-180">Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="43ab0-180">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Para ejecutar el ejemplo en varios equipos  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="43ab0-181">Para ejecutar el ejemplo en varios equipos</span><span class="sxs-lookup"><span data-stu-id="43ab0-181">To run the sample across computers</span></span>  
   
-1.  Cree un directorio en el equipo del servicio para los binarios del servicio.  
+1.  <span data-ttu-id="43ab0-182">Cree un directorio en el equipo del servicio para los binarios del servicio.</span><span class="sxs-lookup"><span data-stu-id="43ab0-182">Create a directory on the service computer for the service binaries.</span></span>  
   
-2.  Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio.  Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
+2.  <span data-ttu-id="43ab0-183">Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio.</span><span class="sxs-lookup"><span data-stu-id="43ab0-183">Copy the service program files to the service directory on the service computer.</span></span> <span data-ttu-id="43ab0-184">Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.</span><span class="sxs-lookup"><span data-stu-id="43ab0-184">Also copy the Setup.bat and Cleanup.bat files to the service computer.</span></span>  
   
-3.  Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo.  El archivo Service.exe.config debe actualizarse para reflejar este nuevo nombre de certificado.  Puede crear el certificado de servidor modificando el archivo por lotes Setup.bat.  Observe que el archivo setup.bat se debe ejecutar en una ventana de símbolo del sistema de Visual Studio abierta con privilegios de administrador.  Debe establecer la variable `%SERVER_NAME%` en el nombre de host completo del equipo que se utiliza para hospedar el servicio.  
+3.  <span data-ttu-id="43ab0-185">Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo.</span><span class="sxs-lookup"><span data-stu-id="43ab0-185">You must have a server certificate with the subject name that contains the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="43ab0-186">El archivo Service.exe.config debe actualizarse para reflejar este nuevo nombre de certificado.</span><span class="sxs-lookup"><span data-stu-id="43ab0-186">The Service.exe.config file must be updated to reflect this new certificate name.</span></span> <span data-ttu-id="43ab0-187">Puede crear el certificado de servidor modificando el archivo por lotes Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="43ab0-187">You can create server certificate by modifying the Setup.bat batch file.</span></span> <span data-ttu-id="43ab0-188">Observe que el archivo setup.bat se debe ejecutar en una ventana de símbolo del sistema de Visual Studio abierta con privilegios de administrador.</span><span class="sxs-lookup"><span data-stu-id="43ab0-188">Note that the setup.bat file must be run in a Visual Studio command prompt window opened with administrator privileges.</span></span> <span data-ttu-id="43ab0-189">Debe establecer la variable `%SERVER_NAME%` en el nombre de host completo del equipo que se utiliza para hospedar el servicio.</span><span class="sxs-lookup"><span data-stu-id="43ab0-189">You must set the `%SERVER_NAME%` variable to the fully-qualified host name of the computer that is used to host the service.</span></span>  
   
-4.  Copie el certificado de servidor en el almacén CurrentUser\-TrustedPeople del cliente.  Este paso no es necesario cuando el certificado de servidor procede de un emisor de confianza para el cliente.  
+4.  <span data-ttu-id="43ab0-190">Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-190">Copy the server certificate into the CurrentUser-TrustedPeople store of the client.</span></span> <span data-ttu-id="43ab0-191">Este paso no es necesario cuando el certificado de servidor procede de un emisor de confianza para el cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-191">This step is not necessary when the server certificate is issued by a client trusted issuer.</span></span>  
   
-5.  En el archivo Service.exe.config situado en el equipo del servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
+5.  <span data-ttu-id="43ab0-192">En el archivo Service.exe.config situado en el equipo del servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.</span><span class="sxs-lookup"><span data-stu-id="43ab0-192">In the Service.exe.config file on the service computer, change the value of the base address to specify a fully-qualified computer name instead of localhost.</span></span>  
   
-6.  En el equipo del servicio, ejecute Service.exe desde un símbolo del sistema.  
+6.  <span data-ttu-id="43ab0-193">En el equipo del servicio, ejecute Service.exe desde un símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="43ab0-193">On the service computer, run Service.exe from a command prompt.</span></span>  
   
-7.  Copie los archivos de programa del cliente de la carpeta \\client\\bin\\, bajo la carpeta específica del lenguaje, al equipo cliente.  
+7.  <span data-ttu-id="43ab0-194">Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.</span><span class="sxs-lookup"><span data-stu-id="43ab0-194">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.  
+8.  <span data-ttu-id="43ab0-195">En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.</span><span class="sxs-lookup"><span data-stu-id="43ab0-195">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span>  
   
-9. En el equipo cliente, inicie `Client.exe` desde una ventana de símbolo del sistema.  
+9. <span data-ttu-id="43ab0-196">En el equipo cliente, inicie `Client.exe` desde una ventana de símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="43ab0-196">On the client computer, launch `Client.exe` from a command prompt window.</span></span>  
   
-10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. <span data-ttu-id="43ab0-197">Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="43ab0-197">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Para realizar una limpieza después de ejecutar el ejemplo  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="43ab0-198">Para realizar una limpieza después de ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="43ab0-198">To clean up after the sample</span></span>  
   
-1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+1.  <span data-ttu-id="43ab0-199">Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="43ab0-199">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="43ab0-200">Vea también</span><span class="sxs-lookup"><span data-stu-id="43ab0-200">See Also</span></span>

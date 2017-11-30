@@ -1,35 +1,38 @@
 ---
-title: "3385 - WindowsStreamSecurityOnAcceptUpgrade | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3385 - WindowsStreamSecurityOnAcceptUpgrade
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d17dc6a-befb-49f0-a150-c4875405ce7a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c52c939a70097635c3ea3948ff1261c4886cedef
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3385 - WindowsStreamSecurityOnAcceptUpgrade
-## Propiedades  
+# <a name="3385---windowsstreamsecurityonacceptupgrade"></a><span data-ttu-id="6f593-102">3385 - WindowsStreamSecurityOnAcceptUpgrade</span><span class="sxs-lookup"><span data-stu-id="6f593-102">3385 - WindowsStreamSecurityOnAcceptUpgrade</span></span>
+## <a name="properties"></a><span data-ttu-id="6f593-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="6f593-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|3385|  
-|Palabras clave|Seguridad|  
-|Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="6f593-104">Id.</span><span class="sxs-lookup"><span data-stu-id="6f593-104">ID</span></span>|<span data-ttu-id="6f593-105">3385</span><span class="sxs-lookup"><span data-stu-id="6f593-105">3385</span></span>|  
+|<span data-ttu-id="6f593-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="6f593-106">Keywords</span></span>|<span data-ttu-id="6f593-107">Seguridad</span><span class="sxs-lookup"><span data-stu-id="6f593-107">Security</span></span>|  
+|<span data-ttu-id="6f593-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="6f593-108">Level</span></span>|<span data-ttu-id="6f593-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="6f593-109">Verbose</span></span>|  
+|<span data-ttu-id="6f593-110">Canal</span><span class="sxs-lookup"><span data-stu-id="6f593-110">Channel</span></span>|<span data-ttu-id="6f593-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="6f593-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descripción  
- Este evento se genera en la seguridad de secuencia de Windows que acepta la actualización de seguridad.  
+## <a name="description"></a><span data-ttu-id="6f593-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="6f593-112">Description</span></span>  
+ <span data-ttu-id="6f593-113">Este evento se genera en la seguridad de secuencia de Windows que acepta la actualización de seguridad.</span><span class="sxs-lookup"><span data-stu-id="6f593-113">This event is emitted on the Windows stream security accepting security upgrade.</span></span>  
   
-## Mensaje  
- Seguridad de transmisión por secuencias de Windows al aceptar la actualización.  
+## <a name="message"></a><span data-ttu-id="6f593-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="6f593-114">Message</span></span>  
+ <span data-ttu-id="6f593-115">Seguridad de transmisión por secuencias de Windows al aceptar la actualización.</span><span class="sxs-lookup"><span data-stu-id="6f593-115">Windows streaming security on accepting upgrade.</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="6f593-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="6f593-116">Details</span></span>

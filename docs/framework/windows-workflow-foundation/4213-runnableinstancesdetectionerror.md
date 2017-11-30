@@ -1,38 +1,42 @@
 ---
-title: "4213 - RunnableInstancesDetectionError | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4213 - RunnableInstancesDetectionError
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 979ec935-bd9f-4798-be9a-25e08c4b94cf
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f4ceb99ffed46a4d05d2f20b380ea3438f20113b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 4213 - RunnableInstancesDetectionError
-## Propiedades  
+# <a name="4213---runnableinstancesdetectionerror"></a><span data-ttu-id="554c1-102">4213 - RunnableInstancesDetectionError</span><span class="sxs-lookup"><span data-stu-id="554c1-102">4213 - RunnableInstancesDetectionError</span></span>
+## <a name="properties"></a><span data-ttu-id="554c1-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="554c1-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|4213|  
-|Palabras clave|WFInstanceStore|  
-|Nivel|Error|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="554c1-104">Id.</span><span class="sxs-lookup"><span data-stu-id="554c1-104">ID</span></span>|<span data-ttu-id="554c1-105">4213</span><span class="sxs-lookup"><span data-stu-id="554c1-105">4213</span></span>|  
+|<span data-ttu-id="554c1-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="554c1-106">Keywords</span></span>|<span data-ttu-id="554c1-107">WFInstanceStore</span><span class="sxs-lookup"><span data-stu-id="554c1-107">WFInstanceStore</span></span>|  
+|<span data-ttu-id="554c1-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="554c1-108">Level</span></span>|<span data-ttu-id="554c1-109">Error</span><span class="sxs-lookup"><span data-stu-id="554c1-109">Error</span></span>|  
+|<span data-ttu-id="554c1-110">Canal</span><span class="sxs-lookup"><span data-stu-id="554c1-110">Channel</span></span>|<span data-ttu-id="554c1-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="554c1-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- No se pudieron detectar las instancias ejecutables por una excepción  
+## <a name="description"></a><span data-ttu-id="554c1-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="554c1-112">Description</span></span>  
+ <span data-ttu-id="554c1-113">No se pudieron detectar las instancias ejecutables por una excepción</span><span class="sxs-lookup"><span data-stu-id="554c1-113">Detection of runnable instances failed due to an exception</span></span>  
   
-## Mensaje  
- No se pudieron detectar las instancias ejecutables por la siguiente excepción  
+## <a name="message"></a><span data-ttu-id="554c1-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="554c1-114">Message</span></span>  
+ <span data-ttu-id="554c1-115">No se pudieron detectar las instancias ejecutables por la siguiente excepción</span><span class="sxs-lookup"><span data-stu-id="554c1-115">Detection of runnable instances failed due to the following exception</span></span>  
   
-## Detalles  
+## <a name="details"></a><span data-ttu-id="554c1-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="554c1-116">Details</span></span>  
   
-|Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|Excepción|xs:string|Detalles de la excepción para la excepción|  
-|AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="554c1-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="554c1-117">Data Item Name</span></span>|<span data-ttu-id="554c1-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="554c1-118">Data Item Type</span></span>|<span data-ttu-id="554c1-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="554c1-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="554c1-120">Excepción</span><span class="sxs-lookup"><span data-stu-id="554c1-120">Exception</span></span>|<span data-ttu-id="554c1-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="554c1-121">xs:string</span></span>|<span data-ttu-id="554c1-122">Detalles de la excepción para la excepción</span><span class="sxs-lookup"><span data-stu-id="554c1-122">The exception details for the exception</span></span>|  
+|<span data-ttu-id="554c1-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="554c1-123">AppDomain</span></span>|<span data-ttu-id="554c1-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="554c1-124">xs:string</span></span>|<span data-ttu-id="554c1-125">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="554c1-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

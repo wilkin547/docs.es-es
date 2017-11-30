@@ -1,32 +1,28 @@
 ---
-title: "Aplaza la ejecución de ejemplo (Visual Basic) | Documentos de Microsoft"
+title: "Ejemplo de ejecución aplazada (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff3d6988ce826fea0aee1987a7c546f5c863e71d
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: a4d2146901d9282b0df706b483afef79f714f660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Ejemplo de ejecución aplazada (Visual Basic)
-En este tema se muestra cómo la ejecución aplazada y la evaluación diferid afectan a la ejecución de las consultas de LINQ to XML.  
+# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="823af-102">Ejemplo de ejecución aplazada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="823af-102">Deferred Execution Example (Visual Basic)</span></span>
+<span data-ttu-id="823af-103">En este tema se muestra cómo la ejecución aplazada y la evaluación diferid afectan a la ejecución de las consultas de LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="823af-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra el orden de ejecución cuando se usa un método de extensión que utiliza la ejecución aplazada. El ejemplo declara una matriz de tres cadenas. A continuación recorre en iteración la recopilación devuelta por `ConvertCollectionToUpperCase`.  
+## <a name="example"></a><span data-ttu-id="823af-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="823af-104">Example</span></span>  
+ <span data-ttu-id="823af-105">El siguiente ejemplo muestra el orden de ejecución cuando se usa un método de extensión que utiliza la ejecución aplazada.</span><span class="sxs-lookup"><span data-stu-id="823af-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="823af-106">El ejemplo declara una matriz de tres cadenas.</span><span class="sxs-lookup"><span data-stu-id="823af-106">The example declares an array of three strings.</span></span> <span data-ttu-id="823af-107">A continuación recorre en iteración la recopilación devuelta por `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="823af-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -57,7 +53,7 @@ Module Module1
 End Module  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="823af-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="823af-108">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source abc  
@@ -68,9 +64,9 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- Tenga en cuenta que durante el recorrido en iteración de la recopilación devuelta por `ConvertCollectionToUpperCase`, cada elemento se recupera de la matriz de cadenas de origen y se convierte a mayúsculas antes de que se recupere el siguiente elemento de la matriz de cadenas de origen.  
+ <span data-ttu-id="823af-109">Tenga en cuenta que durante el recorrido en iteración de la recopilación devuelta por `ConvertCollectionToUpperCase`, cada elemento se recupera de la matriz de cadenas de origen y se convierte a mayúsculas antes de que se recupere el siguiente elemento de la matriz de cadenas de origen.</span><span class="sxs-lookup"><span data-stu-id="823af-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- Puede ver que no se convierte a mayúsculas toda la matriz de cadenas antes de que se procese cada elemento en el bucle `foreach` de `Main`.  
+ <span data-ttu-id="823af-110">Puede ver que no se convierte a mayúsculas toda la matriz de cadenas antes de que se procese cada elemento en el bucle `foreach` de `Main`.</span><span class="sxs-lookup"><span data-stu-id="823af-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Deferred ejecución (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+## <a name="see-also"></a><span data-ttu-id="823af-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="823af-111">See Also</span></span>  
+ [<span data-ttu-id="823af-112">Tutorial: Deferred ejecución (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="823af-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
