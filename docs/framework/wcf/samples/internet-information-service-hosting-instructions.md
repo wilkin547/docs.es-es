@@ -1,58 +1,58 @@
 ---
-title: "Instrucciones de hospedaje Internet Information Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: Instrucciones de hospedaje Internet Information Services
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3c815ffe88918502f7d040bdeb1ff1b201cec832
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Instrucciones de hospedaje Internet Information Services
-Para ejecutar los ejemplos que son hospedados por Internet Information Services \(IIS\), debe asegurarse de que IIS está instalado correctamente y se está ejecutando.  
+# <a name="internet-information-service-hosting-instructions"></a>Instrucciones de hospedaje Internet Information Services
+Para ejecutar los ejemplos que son hospedados por Internet Information Services (IIS), debe asegurarse de que IIS está instalado correctamente y se está ejecutando.  
   
-### Para instalar la versión 7.5 de IIS en Windows Server 2008 R2  
+### <a name="to-install-iis-version-75-on-windows-server-2008-r2"></a>Para instalar la versión 7.5 de IIS en Windows Server 2008 R2  
   
-1.  En **Administrador del servidor**, seleccione **Roles**. En **Resumen de roles**, haga clic en **Agregar roles**.  
+1.  De **el administrador del servidor**, seleccione **Roles.** En **resumen de funciones**, haga clic en **agregar Roles**.  
   
-2.  Haga clic en **Siguiente** para mostrar el cuadro de diálogo **Seleccionar roles de servidor**.  
+2.  Haga clic en **siguiente** para mostrar la **seleccionar Roles de servidor** cuadro de diálogo.  
   
-3.  Seleccione **Servidor de aplicación** en la lista **Roles** y, a continuación, haga clic en **Siguiente** dos veces para mostrar el cuadro de diálogo **Seleccionar servicios de roles** para el rol Servidor de aplicación.  
+3.  Seleccione **Application Server** desde el **Roles** lista y, a continuación, haga clic en **siguiente** dos veces para mostrar el **seleccionar servicios de rol** cuadro de diálogo para el Rol de servidor de aplicaciones.  
   
-4.  Seleccione la casilla **Servidor web \(IIS\)**.  Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar características requeridas**.  Haga clic en **Siguiente** dos veces para mostrar el cuadro de diálogo **Seleccionar servicios de rol** para el rol de servidor web \(IIS\).  
+4.  Seleccione el **servidor Web (IIS)** casilla de verificación. Si se le pide que instale características y servicios de rol adicionales, haga clic en **agregar características requeridas**. Haga clic en **siguiente** dos veces para mostrar el **seleccionar servicios de rol** cuadro de diálogo para el rol de servidor Web (IIS).  
   
-5.  Expanda **Herramientas de administración** y **Compatibilidad con la administración de IIS 6**.  Seleccione **Herramientas de scripting de IIS 6**.  Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar servicios de rol requeridos**.  Haga clic en **Siguiente**.  
+5.  Expanda **herramientas de administración**y, a continuación, expanda **compatibilidad con la administración de IIS 6**. Seleccione **IIS herramientas de Scripting 6**. Si se le pide que instale características y servicios de rol adicionales, haga clic en **agregar servicios de rol requeridos**. Haga clic en **Siguiente**.  
   
-6.  Si el resumen de selecciones es correcto, haga clic en **Instalar**.  
+6.  Si el resumen de selecciones es correcto, haga clic en **instalar**.  
   
-7.  Cuando la instalación esté completa, haga clic en **Cerrar**.  
+7.  Cuando se completa la instalación, haga clic en **cerrar**.  
   
-### Para instalar IIS versión 7.5 en Windows 7  
+### <a name="to-install-iis-version-75-on-windows-7"></a>Para instalar IIS versión 7.5 en Windows 7  
   
-1.  Haga clic en **Inicio** y, a continuación, en **Panel de control**.  
+1.  Haga clic en **iniciar**y, a continuación, haga clic en **el Panel de Control**.  
   
-2.  Abra el grupo **Programas**.  
+2.  Abra la **programas** grupo.  
   
-3.  En **Programas y características**, haga clic en **Activar o desactivar las características de Windows**.  
+3.  En **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
   
-4.  Se muestra el cuadro de diálogo **Control de cuentas de usuario**.  Haga clic en **Continuar**.  
+4.  El **User Account Control** se muestra el cuadro de diálogo. Haga clic en **Continuar**.  
   
-5.  Se muestra el cuadro de diálogo **Características de Windows**.  Expanda el elemento con la etiqueta **Internet Information Services**.  
+5.  El **las características de Windows** se muestra el cuadro de diálogo. Expanda el elemento con la etiqueta **Internet Information Services**.  
   
-6.  Expanda el elemento con la etiqueta **Servicios World Wide Web**.  
+6.  Expanda el elemento con la etiqueta **servicios World Wide Web**.  
   
-7.  Expanda el elemento con la etiqueta **Características de desarrollo de aplicaciones**.  
+7.  Expanda el elemento con la etiqueta **Application Development Features**.  
   
 8.  Asegúrese de que los siguientes elementos están seleccionados:  
   
@@ -62,55 +62,55 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
     3.  **Extensiones ISAPI**  
   
-    4.  **filtros ISAPI**  
+    4.  **Filtros ISAPI**  
   
-9. En el elemento con la etiqueta **Servicios de World Wide Web**, expanda **Características HTTP comunes**.  
+9. En el elemento con la etiqueta **servicios World Wide Web**, expanda **características Http comunes**.  
   
-10. Asegúrese de que **Contenido Estático** está seleccionado.  
+10. Asegúrese de que **contenido estático** está seleccionada.  
   
-11. En el elemento con la etiqueta **Servicios World Wide Web**, expanda **Seguridad**.  
+11. En el elemento con la etiqueta **servicios World Wide Web**, expanda **seguridad**.  
   
-12. Asegúrese de que la opción **Autenticación de Windows** está seleccionada.  
+12. Asegúrese de que **autenticación de Windows** está seleccionada.  
   
-13. En el directorio **Internet Information Services**, expanda el elemento con la etiqueta **Herramientas de administración web** y, a continuación, seleccione **Consola de administración de IIS**.  
+13. En el **Internet Information Services** directory, expanda el elemento con la etiqueta **herramientas de administración Web**y, a continuación, seleccione **consola de administración de IIS**.  
   
-14. Expanda el elemento con la etiqueta **Compatibilidad con la administración de IIS 6** y seleccione **Herramientas de scripting de IIS 6**.  
+14. Expanda el elemento con la etiqueta **compatibilidad con la administración de IIS 6**y, a continuación, seleccione **herramientas de Scripting de IIS 6**.  
   
-15. En el directorio **Internet Information Services**, expanda el elemento con la etiqueta **Microsoft .NET Framework 3.5.1** y, a continuación, seleccione **Activación HTTP de Windows Communication Foundation**.  
+15. En el **Internet Information Services** directory, expanda el elemento con la etiqueta **Microsoft .NET Framework 3.5.1**y, a continuación, seleccione **activación Http de Windows Communication Foundation**.  
   
 16. Haga clic en **Aceptar**.  
   
-### Para instalar la versión de IIS 7.0 en Windows Server 2008  
+### <a name="to-install-iis-version-70-on-windows-server-2008"></a>Para instalar la versión de IIS 7.0 en Windows Server 2008  
   
-1.  En **Administrador del servidor**, seleccione **Roles**.  En **Resumen de roles**, haga clic en **Agregar roles**.  
+1.  De **el administrador del servidor**, seleccione **Roles**. En **resumen de funciones**, haga clic en **agregar Roles**.  
   
-2.  Haga clic en **Siguiente** para mostrar el cuadro de diálogo **Seleccionar roles de servidor**.  
+2.  Haga clic en **siguiente** para mostrar la **seleccionar Roles de servidor** cuadro de diálogo.  
   
-3.  Seleccione **Servidor de aplicación** en la lista **Roles** y, a continuación, haga clic en **Siguiente** dos veces para mostrar el cuadro de diálogo **Seleccionar servicios de roles** para el rol Servidor de aplicación.  
+3.  Seleccione **Application Server** desde el **Roles** lista y, a continuación, haga clic en **siguiente** dos veces para mostrar el **seleccionar servicios de rol** cuadro de diálogo para el Rol de servidor de aplicaciones.  
   
-4.  Active la casilla **Servidor web \(IIS\)**.  Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar características requeridas**.  Haga clic en **Siguiente** dos veces para mostrar el cuadro de diálogo **Seleccionar servicios de rol** para el rol de servidor web \(IIS\).  
+4.  Seleccione **servidor Web (IIS)** casilla de verificación. Si se le pide que instale características y servicios de rol adicionales, haga clic en **agregar características requeridas**. Haga clic en **siguiente** dos veces para mostrar el **seleccionar servicios de rol** cuadro de diálogo para el rol de servidor Web (IIS).  
   
-5.  Expanda **Herramientas de administración** y **Compatibilidad con la administración de IIS 6**.  Seleccione **Herramientas de scripting de IIS 6**.  Si se le pide que instale características y servicios de rol adicionales, haga clic en **Agregar servicios de rol requeridos**.  Haga clic en **Siguiente**.  
+5.  Expanda **herramientas de administración**y, a continuación, expanda **compatibilidad con la administración de IIS 6**. Seleccione **IIS herramientas de Scripting 6**. Si se le pide que instale características y servicios de rol adicionales, haga clic en **agregar servicios de rol requeridos**. Haga clic en **Siguiente**.  
   
-6.  Si el resumen de selecciones es correcto, haga clic en **Instalar**.  
+6.  Si el resumen de selecciones es correcto, haga clic en **instalar**.  
   
-7.  Cuando la instalación esté completa, haga clic en **Cerrar**.  
+7.  Cuando se completa la instalación, haga clic en **cerrar**.  
   
-### Para instalar IIS versión 7.0 en Windows Vista  
+### <a name="to-install-iis-version-70-on-windows-vista"></a>Para instalar IIS versión 7.0 en Windows Vista  
   
 1.  Haga clic en Inicio y, a continuación, en Panel de control.  
   
-2.  Seleccione el grupo **Programas**.  
+2.  Seleccione el **programas** grupo.  
   
-3.  En **Programas y características**, haga clic en **Activar o desactivar las características de Windows**.  
+3.  En **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
   
-4.  Se muestra el cuadro de diálogo **Control de cuentas de usuario**.  Haga clic en **Continuar**.  
+4.  El **User Account Control** se muestra el cuadro de diálogo. Haga clic en **Continuar**.  
   
-5.  Se muestra el cuadro de diálogo **Características de Windows**.  Expanda el elemento con la etiqueta **Internet Information Services**.  
+5.  El **las características de Windows** se muestra el cuadro de diálogo. Expanda el elemento con la etiqueta **Internet Information Services**.  
   
-6.  Expanda el elemento con la etiqueta **Servicios World Wide Web**.  
+6.  Expanda el elemento con la etiqueta **servicios World Wide Web**.  
   
-7.  Expanda el elemento con la etiqueta **Características de desarrollo de aplicaciones**.  
+7.  Expanda el elemento con la etiqueta **Application Development Features**.  
   
 8.  Asegúrese de que los siguientes elementos están seleccionados:  
   
@@ -120,64 +120,64 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
   
     3.  **Extensiones ISAPI**  
   
-    4.  **filtros ISAPI**  
+    4.  **Filtros ISAPI**  
   
-9. Expanda el elemento con la etiqueta **Herramientas de Administración Web** y, después, seleccione **Consola de Administración IIS**.  
+9. Expanda el elemento con la etiqueta **herramientas de administración Web**y, a continuación, seleccione **consola de administración de IIS**.  
   
-10. En el elemento con la etiqueta **Servicios de World Wide Web**, expanda **Características HTTP comunes**.  
+10. En el elemento con la etiqueta **servicios World Wide Web**, expanda **características Http comunes**.  
   
-11. Asegúrese de que **Contenido Estático** está seleccionado.  
+11. Asegúrese de que **contenido estático** está seleccionada.  
   
-12. En el elemento con la etiqueta **Servicios World Wide Web**, expanda **Seguridad**.  
+12. En el elemento con la etiqueta **servicios World Wide Web**, expanda **seguridad**.  
   
-13. Asegúrese de que la opción **Autenticación de Windows** está seleccionada.  
+13. Asegúrese de que **autenticación de Windows** está seleccionada.  
   
-14. Expanda el elemento con la etiqueta **Compatibilidad con la administración de IIS 6** y seleccione **Herramientas de scripting de IIS 6**.  
+14. Expanda el elemento con la etiqueta **compatibilidad con la administración de IIS 6**y, a continuación, seleccione **herramientas de Scripting de IIS 6**.  
   
-15. Expanda el elemento con la etiqueta **Microsoft .NET Framework 3.0** y seleccione **Activación HTTP de Windows Communication Foundation**.  
+15. Expanda el elemento con la etiqueta **Microsoft .NET Framework 3.0**y, a continuación, seleccione **activación Http de Windows Communication Foundation**.  
   
-16. Haga clic en **Aceptar**.  
+16. Haga clic en**Aceptar**.  
   
-### Instalar la versión 6.0 de IIS en Windows Server 2003  
+### <a name="to-install-iis-version-60-on-windows-server-2003"></a>Instalar la versión 6.0 de IIS en Windows Server 2003  
   
-1.  En **Administrar el servidor**, haga clic en **Agregar o quitar un rol** y, a continuación, haga clic en**Siguiente**.  
+1.  De **Administre su servidor**, haga clic en **agregar o quitar un rol**y, a continuación, haga clic en **siguiente**.  
   
-2.  Seleccione **Servidor de aplicación \(IIS, ASP.NET\)** en la lista **Rol del servidor** y, a continuación, haga clic en **Siguiente**.  
+2.  Seleccione **servidor de aplicaciones (IIS, ASP.NET)** desde el **rol de servidor** lista y, a continuación, haga clic en **siguiente**.  
   
-3.  Seleccione la casilla **Habilitar ASP.NET** y haga clic en **Siguiente**.  
+3.  Seleccione **habilitar ASP.NET** casilla de verificación y, a continuación, haga clic en **siguiente**.  
   
 4.  Si el resumen de selecciones es correcto, haga clic en Siguiente.  
   
-### Para instalar la versión 5.1 de IIS en Windows XP con Service Pack 2 y Service Pack 3 instalados  
+### <a name="to-install-iis-version-51-on-windows-xp-with-service-pack-2-and-service-pack-3-installed"></a>Para instalar la versión 5.1 de IIS en Windows XP con Service Pack 2 y Service Pack 3 instalados  
   
-1.  En el Panel de control, haga clic en **Agregar o quitar programas**.  
+1.  En el Panel de Control, haga clic en **agregar o quitar programas**.  
   
-2.  En el cuadro de diálogo **Agregar o quitar programas**, haga clic en **Agregar o quitar componentes de Windows**.  
+2.  En el **agregar o quitar programas** cuadro de diálogo, haga clic en **agregar o quitar componentes de Windows**.  
   
-3.  En el **Asistente para componentes de Windows**, active la casilla **Internet Information Services \(IIS\)** y a continuación haga clic en **Siguiente**.  
+3.  En el **Asistente para componentes de Windows**, seleccione la **Internet Information Services (IIS)** casilla de verificación y, a continuación, haga clic en **siguiente**.  
   
-4.  Si se muestra el cuadro de diálogo **Archivos necesarios**, inserte su disco de instalación del sistema operativo, vaya a la carpeta i386 y, a continuación, haga clic en **Aceptar**.  
+4.  Si el **archivos necesarios** se muestra el cuadro de diálogo, inserte el disco de instalación de sistema operativo, vaya a la carpeta i386 y, a continuación, haga clic en **Aceptar**.  
   
-5.  Cuando la instalación esté completa, haga clic en **Finalizar**.  
+5.  Cuando se completa la instalación, haga clic en **finalizar**.  
   
-6.  Cierre el cuadro de diálogo **Agregar o quitar programas** y, a continuación, cierre **Panel de control**.  
+6.  Cerrar la **agregar o quitar programas** cuadro de diálogo y, a continuación, cierre **el Panel de Control**.  
   
-### Para comprobar la instalación de IIS y ASP.NET  
+### <a name="to-verify-the-installation-of-iis-and-aspnet"></a>Para comprobar la instalación de IIS y ASP.NET  
   
-1.  Guarde el archivo HTML encontrado al final de este tema en el directorio raíz \\InetPub\\wwwroot y denomínelo Default.aspx.  
+1.  Guarde el archivo HTML encontrado al final de este tema en el directorio raíz \InetPub\wwwroot y denomínelo Default.aspx.  
   
 2.  Abra una ventana del explorador.  
   
-3.  Escriba `http://localhost/Default.aspx` en el cuadro de dirección y presione ENTRAR.  
+3.  Tipo `http://localhost/Default.aspx` en el cuadro Dirección y, a continuación, presione ENTRAR.  
   
 4.  Debe aparecer una página web con el texto "Hello World".  
   
 > [!NOTE]
->  Cada vez que instale una nueva versión de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], debe volver a registrar aspnet\_isapi como una extensión de servicio Web para IIS.  Para ello, ejecute el comando `aspnet_regiis –I –enable`.  
+>  Cada vez que instale una nueva versión de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], debe volver a registrar aspnet_isapi como una extensión de servicio Web para IIS. Para ello, ejecute el comando `aspnet_regiis –I –enable`.  
   
-## Código de ejemplo  
+## <a name="sample-code"></a>Código de ejemplo  
   
-```  
+```xml  
 <html>  
    <body>  
        <form >  

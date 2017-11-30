@@ -1,32 +1,36 @@
 ---
-title: "Sondeo en aplicaciones de consola | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sondear aplicaciones de consola
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Sondeo en aplicaciones de consola
-Las operaciones asincrónicas de ADO.NET permiten iniciar en un subproceso operaciones de base de datos que requieren mucho tiempo mientras en otro subproceso se realizan otras tareas.  En la mayoría de los casos, al final llegará a un punto en el que la aplicación no debe continuar hasta que se complete la operación de base de datos.  En tales casos, resulta útil sondear la operación asincrónica para determinar si se ha completado.  
+# <a name="polling-in-console-applications"></a>Sondear aplicaciones de consola
+Las operaciones asincrónicas de ADO.NET permiten iniciar en un subproceso operaciones de base de datos que requieren mucho tiempo mientras en otro subproceso se realizan otras tareas. En la mayoría de los casos, al final llegará a un punto en el que la aplicación no debe continuar hasta que se complete la operación de base de datos. En tales casos, resulta útil sondear la operación asincrónica para determinar si se ha completado.  
   
  Para averiguar si la operación se ha completado, puede utilizar la propiedad <xref:System.IAsyncResult.IsCompleted%2A>.  
   
-## Ejemplo  
- La siguiente aplicación de consola actualiza los datos de la base de datos de ejemplo **AdventureWorks**, y realiza su trabajo de forma asincrónica.  Para emular un proceso cuya ejecución tiene una larga duración, en este ejemplo se inserta una instrucción WAITFOR en el texto de comando.  Normalmente, no intentaría hacer que sus comandos se ejecutaran de forma más lenta, pero en este caso facilita la demostración del comportamiento asincrónico.  
+## <a name="example"></a>Ejemplo  
+ La siguiente aplicación de consola actualiza los datos de la **AdventureWorks** base de datos de ejemplo, realiza su trabajo de forma asincrónica. Para emular un proceso cuya ejecución tiene una larga duración, en este ejemplo se inserta una instrucción WAITFOR en el texto de comando. Normalmente, no intentaría hacer que sus comandos se ejecutaran de forma más lenta, pero en este caso facilita la demostración del comportamiento asincrónico.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
   
@@ -102,9 +106,7 @@ Module Module1
 End Module   
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -198,6 +200,6 @@ class Class1
 }  
 ```  
   
-## Vea también  
- [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

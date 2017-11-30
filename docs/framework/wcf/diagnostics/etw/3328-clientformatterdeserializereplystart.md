@@ -1,35 +1,38 @@
 ---
-title: "3328 - ClientFormatterDeserializeReplyStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3328 - ClientFormatterDeserializeReplyStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3e8cb064-3052-481e-8a81-3e311d9ce138
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d381fda0769714b80533495e866084491ae8c152
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3328 - ClientFormatterDeserializeReplyStart
-## Propiedades  
+# <a name="3328---clientformatterdeserializereplystart"></a>3328 - ClientFormatterDeserializeReplyStart
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|3328|  
 |Palabras clave|ServiceModel|  
 |Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Se genera este evento cuando el cliente inició a deserializar el mensaje de respuesta.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  El cliente inició la deserialización del mensaje de respuesta.  
   
-## Detalles
+## <a name="details"></a>Detalles

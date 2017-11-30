@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b468a8cfd050943513cbe858c3ba985ee922b23f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 919a789b1ae3e5900fe8bd79f5c8b127d81bb2e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="pnrp-caches"></a>Cachés PNRP
 Las cachés del Protocolo de resolución de nombres de mismo nivel (PNRP) son colecciones locales de puntos de conexión de mismo nivel seleccionados de forma algorítmica y mantenidos en el elemento de mismo nivel.  
@@ -52,4 +46,3 @@ Las cachés del Protocolo de resolución de nombres de mismo nivel (PNRP) son co
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Net.PeerToPeer>
-

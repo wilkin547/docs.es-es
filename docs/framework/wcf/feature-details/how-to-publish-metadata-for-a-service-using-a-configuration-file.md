@@ -1,28 +1,31 @@
 ---
-title: "C&#243;mo publicar metadatos para un servicio mediante un archivo de configuraci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo publicar metadatos para un servicio mediante un archivo de configuración"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e94fe7135d51c4e1578ca69768b6d0ba2aa6ae6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo publicar metadatos para un servicio mediante un archivo de configuraci&#243;n
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Cómo publicar metadatos para un servicio mediante un archivo de configuración
 Este es uno de los dos temas de instrucciones para la publicación de metadatos para un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Hay dos maneras de especificar cómo debería publicar metadatos un servicio: mediante un archivo de configuración y mediante código. En este tema se muestra cómo publicar metadatos para un servicio mediante un archivo de configuración.  
   
 > [!CAUTION]
->  En este tema se muestra cómo publicar metadatos de forma no segura. Cualquier cliente puede recuperar los metadatos del servicio. Si necesita el servicio para publicar metadatos de forma segura, vea [extremo seguro de metadatos personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+>  En este tema se muestra cómo publicar metadatos de forma no segura. Cualquier cliente puede recuperar los metadatos del servicio. Si necesita el servicio para publicar metadatos de forma segura, consulte [extremo seguro de metadatos personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]publicación de metadatos en el código, vea [Cómo: Publicar metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). La publicación de metadatos permite a los clientes recuperar los metadatos mediante una solicitud GET WS-Transfer o mediante una solicitud HTTP/GET usando la cadena de solicitud `?wsdl`. Para estar seguro de que el código funciona, cree un servicio básico de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para simplificar, se proporciona un servicio autohospedado básico en el código siguiente.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la publicación de metadatos en el código, vea [Cómo: Publicar metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). La publicación de metadatos permite a los clientes recuperar los metadatos mediante una solicitud GET WS-Transfer o mediante una solicitud HTTP/GET usando la cadena de solicitud `?wsdl`. Para estar seguro de que el código funciona, cree un servicio básico de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para simplificar, se proporciona un servicio autohospedado básico en el código siguiente.  
   
 ```csharp  
 using System;  
@@ -95,7 +98,6 @@ namespace Metadata.Samples
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Publicación de metadatos para un servicio WCF mediante un archivo de configuración  
@@ -176,9 +178,9 @@ namespace Metadata.Samples
   
 10. Utilice Internet Explorer para ir a la dirección base del servicio (http://localhost:8001/MetadataSample en este ejemplo) y comprobar que la publicación de los metadatos está activada. Si no, un mensaje en la parte superior de la página resultante muestra: "La publicación de metadatos para este servicio está deshabilitad actualmente".  
   
-### <a name="to-use-default-endpoints"></a>Para usar puntos de conexión predeterminados  
+### <a name="to-use-default-endpoints"></a>Para usar extremos predeterminados  
   
-1.  Para configurar los metadatos en un servicio que usa extremos predeterminados, especifique el <xref:System.ServiceModel.Description.ServiceMetadataBehavior> en la configuración de archivos como en el ejemplo anterior, pero no se especifica ningún extremo. El archivo de configuración debería tener el aspecto siguiente.  
+1.  Para configurar metadatos en un servicio que usa extremos predeterminados, especifique el <xref:System.ServiceModel.Description.ServiceMetadataBehavior> en el archivo de configuración como en el ejemplo anterior, pero no especifique ningún extremo. El archivo de configuración debería tener el aspecto siguiente.  
   
     ```xml  
     <configuration>  
@@ -195,7 +197,7 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     Dado que el servicio tiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> con el `httpGetEnabled` establecido en `true`, el servicio tiene habilitada la publicación de metadatos y porque no se agregó ningún extremo explícitamente, el tiempo de ejecución agrega los extremos predeterminados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]extremos predeterminados, enlaces y comportamientos, vea [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     Dado que el servicio tiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> con `httpGetEnabled` establecido en `true`, el servicio tiene metadatos de publicación habilitados y como no se agregó ningún extremo explícitamente, el tiempo de ejecución agrega los extremos predeterminados. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]puntos de conexión predeterminados, enlaces y comportamientos, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de código muestra la implementación de un servicio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] básico y el archivo de configuración que publica los metadatos del servicio.  
@@ -270,9 +272,9 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>   
- [Cómo: hospedar un servicio WCF en una aplicación administrada](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
- [Autohospedaje](../../../../docs/framework/wcf/samples/self-host.md)   
- [Introducción a la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)   
- [Uso de metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)   
- [Cómo: Publicar metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
+ [Cómo hospedar un servicio WCF en una aplicación administrada](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [Autohospedaje](../../../../docs/framework/wcf/samples/self-host.md)  
+ [Introducción a la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Uso de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [Cómo: publicar los metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

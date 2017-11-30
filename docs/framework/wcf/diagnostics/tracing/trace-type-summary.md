@@ -1,30 +1,33 @@
 ---
-title: "Resumen del tipo de seguimiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Resumen del tipo de seguimiento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d8e82f153e996ffebc2aba614f42c5cfa949e7ec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Resumen del tipo de seguimiento
-En [Source Levels](http://go.microsoft.com/fwlink/?LinkID=94943) se definen los distintos niveles de seguimiento: crítico, error, advertencia, información y detallado; además, se proporciona una descripción de la marca `ActivityTracing`, que alterna el resultado de los eventos de límite de seguimiento y de transferencia de actividad.  
+# <a name="trace-type-summary"></a>Resumen del tipo de seguimiento
+[Niveles de origen](http://go.microsoft.com/fwlink/?LinkID=94943) define distintos niveles de seguimiento: crítico, Error, advertencia, información y detallado, así, proporciona una descripción de la `ActivityTracing` marca, que alterna el resultado de seguimiento de eventos de transferencia de límite y la actividad.  
   
- También puede consultar [TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169) para ver los tipos de rastros que se pueden emitir desde <xref:System.Diagnostics>.  
+ También puede revisar [TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169) para los tipos de seguimientos que se pueden emitir desde <xref:System.Diagnostics>.  
   
  La tabla siguiente enumera los más importantes.  
   
 |Tipo de traza|Descripción|  
-|-------------------|-----------------|  
+|----------------|-----------------|  
 |Crítico|Error irrecuperable o bloqueo de la aplicación.|  
 |Error|Error recuperable.|  
 |Advertencia|Mensaje informativo.|  
@@ -38,7 +41,7 @@ En [Source Levels](http://go.microsoft.com/fwlink/?LinkID=94943) se definen los 
   
  Una actividad se define como una combinación de los tipos de trazas anteriores.  
   
- La siguiente expresión se utiliza habitualmente para definir una actividad ideal en un ámbito local \(origen de la traza\),  
+ La siguiente expresión se utiliza habitualmente para definir una actividad ideal en un ámbito local (origen de la traza),  
   
  `R = Start (Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop`  
   
@@ -50,7 +53,7 @@ En [Source Levels](http://go.microsoft.com/fwlink/?LinkID=94943) se definen los 
   
 -   No debe presentar traza alguna entre las trazas de suspensión y reanudación, en caso de que éstas existan  
   
--   Puede tener cuantas trazas crítico\/error\/advertencia\/información\/detalles\/transferencia, siempre y cuando se cumplan las condiciones anteriores  
+-   Puede tener cuantas trazas crítico/error/advertencia/información/detalles/transferencia, siempre y cuando se cumplan las condiciones anteriores  
   
  La siguiente expresión se utiliza habitualmente para definir una actividad ideal en el ámbito global,  
   
@@ -58,7 +61,7 @@ En [Source Levels](http://go.microsoft.com/fwlink/?LinkID=94943) se definen los 
 R+   
 ```  
   
- en la que R es la expresión regular para una actividad en el ámbito local.  Esto se traduce en,  
+ en la que R es la expresión regular para una actividad en el ámbito local. Esto se traduce en,  
   
 ```  
 [R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  

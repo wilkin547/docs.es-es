@@ -1,23 +1,27 @@
 ---
-title: "Par&#225;metros REF CURSOR en un OracleDataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Parámetros REF CURSOR en un objeto OracleDataReader"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bebc77755f376cdb13b97ce4532cd79307fc7ec3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Par&#225;metros REF CURSOR en un OracleDataReader
-En este ejemplo de Microsoft Visual Basic se ejecuta un procedimiento almacenado PL\/SQL que devuelve un parámetro REF CURSOR, y se lee el valor mediante un <xref:System.Data.OracleClient.OracleDataReader>.  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a>Parámetros REF CURSOR en un objeto OracleDataReader
+En este ejemplo de Microsoft Visual Basic se ejecuta un procedimiento almacenado PL/SQL que devuelve un parámetro REF CURSOR, y se lee el valor mediante un <xref:System.Data.OracleClient.OracleDataReader>.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -48,6 +52,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## Vea también  
- [Cursores REF CURSOR de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Cursores REF cursor de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

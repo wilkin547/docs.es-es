@@ -1,25 +1,29 @@
 ---
-title: "Usar variables con un conjunto de reglas de .NET Framework 3.5 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Usar variables con un conjunto de reglas de .NET Framework 3.5
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9b5cc982aaad92258102b313d8fc19a9ff1521a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Usar variables con un conjunto de reglas de .NET Framework 3.5
-En este ejemplo se muestra cómo crear un flujo de trabajo que utiliza la actividad <xref:System.Activities.Statements.Interop> para integrar una actividad personalizada escrita en [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] que utiliza directiva y reglas.El flujo de trabajo pasa datos a la actividad personalizada enlazando las variables a las propiedades de dependencia expuestas por la actividad personalizada.  
+# <a name="using-variables-with-a-net-framework-35-ruleset"></a>Usar variables con un conjunto de reglas de .NET Framework 3.5
+En este ejemplo se muestra cómo crear un flujo de trabajo que utiliza la actividad <xref:System.Activities.Statements.Interop> para integrar una actividad personalizada escrita en [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] que utiliza directiva y reglas. El flujo de trabajo pasa datos a la actividad personalizada enlazando las variables a las propiedades de dependencia expuestas por la actividad personalizada.  
   
-## Ejemplo de tutorial  
+## <a name="sample-walkthrough"></a>Ejemplo de tutorial  
   
-#### Para examinar TravelRuleLibrary  
+#### <a name="to-examine-travelrulelibrary"></a>Para examinar TravelRuleLibrary  
   
 1.  Con [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], abra el archivo de solución InteropWith35RuleSet.sln.  
   
@@ -31,28 +35,28 @@ En este ejemplo se muestra cómo crear un flujo de trabajo que utiliza la activi
   
      Aparece el editor de reglas para mostrar las reglas.  
   
-4.  Haga clic con el botón secundario en `DiscountPolicy` y seleccione la opción **Ver código** para examinar el código C\# lateral de la actividad.  
+4.  Haga clic con el `DiscountPolicy` y seleccione la **ver código** opción para examinar el código C# lateral de la actividad.  
   
-     Observe el valor de propiedad de dependencia para `DiscountLevel`.Esto equivale a los argumentos en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].[!INCLUDE[crabout](../../../../includes/crabout-md.md)] los argumentos, vea [Variables y argumentos](../../../../docs/framework/windows-workflow-foundation//variables-and-arguments.md).  
+     Observe el valor de propiedad de dependencia para `DiscountLevel`. Esto equivale a los argumentos en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]argumentos, vea [Variables y argumentos](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
-## InteropWith35RuleSet  
- Es un proyecto de flujo de trabajo secuencial que utiliza la actividad <xref:System.Activities.Statements.Interop> para integrar con el conjunto de reglas personalizado creado en el proyecto `TravelRuleLibrary`.Las variables se crean en la actividad <xref:System.Activities.Statements.Sequence> de nivel superior.La actividad <xref:System.Activities.Statements.Interop> se utiliza para la integración con la actividad `TravelRuleSet`.Las variables que se declaran en <xref:System.Activities.Statements.Sequence> se utilizan para enlazar con las propiedades de dependencia.  
+## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
+ Es un proyecto de flujo de trabajo secuencial que utiliza la actividad <xref:System.Activities.Statements.Interop> para integrar con el conjunto de reglas personalizado creado en el proyecto `TravelRuleLibrary`. Las variables se crean en la actividad <xref:System.Activities.Statements.Sequence> de nivel superior. La actividad <xref:System.Activities.Statements.Interop> se utiliza para la integración con la actividad `TravelRuleSet`. Las variables que se declaran en <xref:System.Activities.Statements.Sequence> se utilizan para enlazar con las propiedades de dependencia.  
   
-## Para utilizar este ejemplo  
+## <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
 1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución InteropWith35RuleSet.sln.  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  Para ejecutar la solución, presione CTRL+F5.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

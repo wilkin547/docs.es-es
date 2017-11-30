@@ -1,36 +1,32 @@
 ---
-title: "Cómo: buscar elementos en un Namespace (XPath-LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar elementos en un Namespace (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d665ddc1e7ad7340b05c97e790195abbc53e4f95
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 257d4c37f849bbc50aac6b9cb4531d1084163db2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos en un Namespace (XPath-LINQ to XML) (Visual Basic)
-Las expresiones XPath pueden buscar nodos en un espacio de nombres específico. Las expresiones XPath usan prefijos de espacio de nombres para especificar espacios de nombre. Para analizar una expresión XPath que contiene prefijos de espacio de nombres, debe pasar un objeto a los métodos XPath que implementa <xref:System.Xml.IXmlNamespaceResolver>.</xref:System.Xml.IXmlNamespaceResolver> Este ejemplo utiliza <xref:System.Xml.XmlNamespaceManager>.</xref:System.Xml.XmlNamespaceManager>  
+Las expresiones XPath pueden buscar nodos en un espacio de nombres específico. Las expresiones XPath usan prefijos de espacio de nombres para especificar espacios de nombre. Para analizar una expresión XPath que contiene prefijos de espacio de nombre, debe pasar un objeto a los métodos XPath que implementan <xref:System.Xml.IXmlNamespaceResolver>. Este ejemplo usa <xref:System.Xml.XmlNamespaceManager>.  
   
  La expresión XPath es:  
   
  `./aw:*`  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se lee un árbol XML que contiene dos espacios de nombres. Utiliza un <xref:System.Xml.XmlReader>para leer el documento XML.</xref:System.Xml.XmlReader> A continuación, se obtiene un <xref:System.Xml.XmlNameTable>desde el <xref:System.Xml.XmlReader>y una <xref:System.Xml.XmlNamespaceManager>de las <xref:System.Xml.XmlNameTable>.</xref:System.Xml.XmlNameTable> </xref:System.Xml.XmlNamespaceManager> </xref:System.Xml.XmlReader> </xref:System.Xml.XmlNameTable> Usa el <xref:System.Xml.XmlNamespaceManager>al seleccionar elementos.</xref:System.Xml.XmlNamespaceManager>  
+ En el ejemplo siguiente se lee un árbol XML que contiene dos espacios de nombres. Usa un objeto <xref:System.Xml.XmlReader> para leer el documento XML. Después obtiene un objeto <xref:System.Xml.XmlNameTable> de <xref:System.Xml.XmlReader> y un objeto <xref:System.Xml.XmlNamespaceManager> de <xref:System.Xml.XmlNameTable>. Utiliza <xref:System.Xml.XmlNamespaceManager> al seleccionar elementos.  
   
 ```vb  
 Dim reader As XmlReader = _  

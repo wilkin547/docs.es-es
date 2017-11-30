@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - COM interop, qualifying .NET types
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68ecd5e4c562f1eecb31ee539adb70d67455a584
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6487c151f49f6084977deb600e7f93e5eb7acee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Habilitar tipos de .NET para la interoperación
 Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga en cuenta los requisitos de interoperabilidad COM en tiempo de diseño. Los tipos administrados (clase, interfaz, estructura y enumeración) se integran fácilmente con los tipos COM si se cumplen las directrices siguientes:  
@@ -63,9 +56,8 @@ Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga e
  Cuando se exporta a COM, se simplifica la jerarquía de herencia de un tipo administrado. El control de versiones también difiere entre los entornos administrados y no administrados. Los tipos expuestos a COM no tienen las mismas características de control de versiones que otros tipos administrados.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>   
- [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Presentar la interfaz de clase](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)   
- [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md)   
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
+ [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Introducción a la interfaz de clase](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md)  
  [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-

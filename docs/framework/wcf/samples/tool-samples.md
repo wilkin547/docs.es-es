@@ -1,25 +1,28 @@
 ---
-title: "Ejemplos de herramientas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ejemplos de herramientas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ccf90c64-31de-4a18-9208-28887735ce80
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9f68600a85b9bb35b7ce953c411ce8d3f3d0ceb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplos de herramientas
+# <a name="tool-samples"></a>Ejemplos de herramientas
 Esta sección contiene herramientas de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)  
  Describe cómo usar la herramienta ConfigurationCodeGenerator.exe para exponer sus implementaciones de canales personalizadas en el sistema de configuración.  
   

@@ -1,27 +1,30 @@
 ---
-title: "Flujo de transacciones por segundo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Flujo de transacciones por segundo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9f661e1-576c-48fc-9fdf-91853e0749e8
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6769b3d875471ddb56b3888a49f72978f4ee786b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Flujo de transacciones por segundo
+# <a name="transactions-flowed-per-second"></a>Flujo de transacciones por segundo
 Nombre del contador: flujo de transacciones por segundo  
   
-## Descripción  
- Número de transacciones en esta operación en un segundo.  Este contador se incrementa cuando se encuentra presente un id. de transacción en un mensaje enviado a la operación.  
+## <a name="description"></a>Descripción  
+ Número de transacciones en esta operación en un segundo. Este contador se incrementa cuando se encuentra presente un id. de transacción en un mensaje enviado a la operación.  
   
- Este es un tipo de contador de rendimiento [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.  
+ Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)
+ (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

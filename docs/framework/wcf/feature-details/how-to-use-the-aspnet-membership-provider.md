@@ -1,46 +1,49 @@
 ---
-title: "C&#243;mo: Utilizar el proveedor de pertenencia de ASP.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF y ASP.NET"
-  - "WCF, autorización"
-  - "WCF, seguridad"
+title: "Cómo: Utilizar el proveedor de pertenencia de ASP.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF and ASP.NET
+- WCF, authorization
+- WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 74056ae23b08850b9c9a564248d6e276fc518a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Utilizar el proveedor de pertenencia de ASP.NET
-El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es una característica que permite a los programadores de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] crear sitios web que permiten a los usuarios crear combinaciones únicas de nombre de usuario y contraseña.Con esta función, cualquier usuario puede establecer una cuenta en el sitio e iniciar sesión para obtener acceso exclusivo al sitio y a sus servicios.Esto contrasta con la seguridad de Windows, que exige a los usuarios que tengan cuentas en un dominio de Windows.En su lugar, cualquier usuario que proporcione sus credenciales \(la combinación de nombre de usuario\/contraseña\) puede utilizar el sitio y sus servicios.  
+# <a name="how-to-use-the-aspnet-membership-provider"></a>Cómo: Utilizar el proveedor de pertenencia de ASP.NET
+El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es una característica que permite a los programadores de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] crear sitios web que permiten a los usuarios crear combinaciones únicas de nombre de usuario y contraseña. Con esta función, cualquier usuario puede establecer una cuenta en el sitio e iniciar sesión para obtener acceso exclusivo al sitio y a sus servicios. Esto contrasta con la seguridad de Windows, que exige a los usuarios que tengan cuentas en un dominio de Windows. En su lugar, cualquier usuario que proporcione sus credenciales (la combinación de nombre de usuario/contraseña) puede utilizar el sitio y sus servicios.  
   
- Para obtener una aplicación de ejemplo, consulte [Proveedor de pertenencia y roles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md).Para obtener información acerca de cómo utilizar la característica del proveedor de funciones de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], vea [Cómo: Utilizar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Para una aplicación de ejemplo, vea [proveedor de pertenencia y rol](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obtener información sobre el uso de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] característica de proveedor de roles, consulte [Cómo: utilizar el proveedor de funciones de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
- La característica de pertenencia requiere el uso de una base de datos de SQL Server para almacenar la información de usuario.La característica también incluye métodos para realizar una pregunta a cualquier usuario que haya olvidado su contraseña.  
+ La característica de pertenencia requiere el uso de una base de datos de SQL Server para almacenar la información de usuario. La característica también incluye métodos para realizar una pregunta a cualquier usuario que haya olvidado su contraseña.  
   
- Los programadores de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se pueden aprovechar de estas características con fines de aumento de la seguridad.Cuando se integran en una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los usuarios deben proporcionar una combinación de nombre de usuario y contraseña a la aplicación cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Para transferir los datos al servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], use un enlace que admita credenciales de nombre de usuario\/contraseña, como el <xref:System.ServiceModel.WSHttpBinding> \(en configuración, el [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)\) y establezca el tipo de credenciales en `UserName`.En el servicio, la seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] autentica al usuario en función del nombre de usuario y contraseña y también asigna la función especificada por la función [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ Los programadores de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se pueden aprovechar de estas características con fines de aumento de la seguridad. Cuando se integran en una aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los usuarios deben proporcionar una combinación de nombre de usuario y contraseña a la aplicación cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Para transferir los datos a la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de servicio, utilice un enlace que admita las credenciales de nombre y contraseña de usuario, como el <xref:System.ServiceModel.WSHttpBinding> (en la configuración, la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) y establezca la credencial del cliente Escriba a `UserName`. En el servicio, la seguridad [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] autentica al usuario en función del nombre de usuario y contraseña y también asigna la función especificada por la función [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no proporciona métodos para rellenar la base de datos con combinaciones de nombre de usuario\/contraseña u otra información de usuario.  
+>  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no proporciona métodos para rellenar la base de datos con combinaciones de nombre de usuario/contraseña u otra información de usuario.  
   
-### Para configurar el proveedor de pertenencia  
+### <a name="to-configure-the-membership-provider"></a>Para configurar el proveedor de pertenencia  
   
-1.  En el archivo Web.config, bajo el elemento \<`system.web`\>, cree un elemento \<`membership`\>.  
+1.  En el archivo Web.config, en el <`system.web`> elemento, crear una <`membership`> elemento.  
   
 2.  Bajo el elemento `<membership>`, cree un elemento `<providers>`.  
   
-3.  Como elemento secundario del elemento \<`providers`\>, agregue un elemento `<clear />` para vaciar la colección de proveedores.  
+3.  Como elemento secundario de la <`providers`> elemento, agregue un `<clear />` elemento para vaciar la colección de proveedores.  
   
-4.  Bajo el elemento `<clear />`, cree un elemento \<`add`\> con los siguientes atributos establecidos en los valores adecuados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer`, `requiresUniqueEmail`, y `passwordFormat`.El atributo `name` se utiliza más adelante como un valor en el archivo de configuración.El siguiente ejemplo lo define en `SqlMembershipProvider`.  
+4.  En el `<clear />` elemento, crear una <`add`> elemento con los siguientes atributos se establece en valores adecuados: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, y `passwordFormat`. El atributo `name` se utiliza más adelante como un valor en el archivo de configuración. El siguiente ejemplo lo define en `SqlMembershipProvider`.  
   
      En el ejemplo siguiente se muestra la sección de configuración.  
   
@@ -63,15 +66,15 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
     </membership>  
     ```  
   
-### Para configurar la seguridad de servicio para que acepte la combinación de nombre de usuario\/contraseña  
+### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Para configurar la seguridad de servicio con el fin de que acepte la combinación de nombre de usuario y contraseña  
   
-1.  En el archivo de configuración, en el elemento [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md), agregue un elemento [\<enlaces\>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md).  
+1.  En el archivo de configuración, en la [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, agregue un [ \<enlaces >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Agregue un [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces.Para [!INCLUDE[crabout](../../../../includes/crabout-md.md)] que crea un elemento de enlace [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vea [Cómo: Especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Agregar un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) a la sección de enlaces. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]crear un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enlace elemento, vea [Cómo: especificar un enlace de servicio en la configuración](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 3.  Establezca el atributo `mode` del elemento `<security>` en `Message`:  
   
-4.  Establezca el atributo `clientCredentialType` del elemento \<`message`\> en `UserName`:Esto especifica que un par de nombre de usuario y contraseña se utilizará como credencial del cliente.  
+4.  Establecer el `clientCredentialType` atributo de la <`message`> elemento `UserName`. Esto especifica que un par de nombre de usuario y contraseña se utilizará como credencial del cliente.  
   
      El siguiente ejemplo muestra el código de configuración para el enlace.  
   
@@ -90,24 +93,24 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
     </system.serviceModel>  
     ```  
   
-### Para configurar un servicio para que utilice el proveedor de pertenencia  
+### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Para configurar un servicio para que utilice el proveedor de pertenencia  
   
-1.  Agregue un elemento secundario al elemento `<system.serviceModel>`, agregue un elemento [\<comportamientos\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+1.  Como elemento secundario de la `<system.serviceModel>` elemento, agregue un [ \<comportamientos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
   
-2.  Agregue [\<serviceBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) al elemento \<`behaviors`\>.  
+2.  Agregar un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) a la <`behaviors`> elemento.  
   
-3.  Añada [\<comportamiento\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) y defina el atributo `name` en un valor adecuado.  
+3.  Agregar un [ \<comportamiento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) y establezca el `name` de atributo en un valor adecuado.  
   
-4.  Agregue [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) al elemento \<`behavior`\>.  
+4.  Agregar un [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) a la <`behavior`> elemento.  
   
-5.  Agregue [\<userNameAuthentication\>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) al elemento `<serviceCredentials>`.  
+5.  Agregar un [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) a la `<serviceCredentials>` elemento.  
   
 6.  Defina el atributo `userNamePasswordValidationMode` a `MembershipProvider`.  
   
     > [!IMPORTANT]
     >  Si no se establece el valor `userNamePasswordValidationMode`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la autenticación de Windows en lugar del proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
-7.  Establezca el atributo `membershipProviderName` en el nombre del proveedor \(especificado al agregar el proveedor en el primer procedimiento de este tema\).El ejemplo siguiente muestra el fragmento `<serviceCredentials>` en este punto.  
+7.  Establezca el atributo `membershipProviderName` en el nombre del proveedor (especificado al agregar el proveedor en el primer procedimiento de este tema). El ejemplo siguiente muestra el fragmento `<serviceCredentials>` en este punto.  
   
     ```xml  
     <behaviors>  
@@ -121,13 +124,12 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
           </behavior>  
        </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El siguiente código muestra la configuración para un servicio que utiliza la característica de pertenencia de ASP.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -160,9 +162,8 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
     </bindings>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Vea también  
- [Cómo: Utilizar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo: utilizar el proveedor de funciones de ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  [Proveedor de pertenencia y roles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

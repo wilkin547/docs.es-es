@@ -1,25 +1,28 @@
 ---
-title: "Contract | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Contract1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2e92c5d804fca3c04506e951a5c341c89eed1c54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Contract
+# <a name="contract"></a>Contrato
 Contrato  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class Contract  
@@ -36,80 +39,80 @@ class Contract
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase Contrato no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase Contrato tiene las siguientes propiedades:  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El id. del appdomain de appdomain que hospeda el contrato.  
   
-### Comportamientos  
+### <a name="behaviors"></a>Comportamientos  
  Tipo de datos: matriz de comportamientos  
   
  Tipo de acceso: solo lectura  
   
  Los comportamientos asociados a este contrato.  
   
-### Nombre  
+### <a name="name"></a>Nombre  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Nombre del contrato en WSDL.  
   
-### Espacio de nombres  
+### <a name="namespace"></a>Espacio de nombres  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El espacio de nombres del elemento `portType` en WSDL.  
   
-### Operaciones  
+### <a name="operations"></a>Operaciones  
  Tipo de datos: matriz de operación  
   
  Tipo de acceso: solo lectura  
   
  Las operaciones de este contrato.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El Identificador del proceso del proceso que hospeda el contrato.  
   
-### ref  
+### <a name="ref"></a>ref  
  Tipo de datos: Contrato  
   
  Tipo de acceso: solo lectura  
   
  El tipo de devolución de llamada cuando el contrato es un contrato dúplex.  
   
-### SessionMode  
+### <a name="sessionmode"></a>SessionMode  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Indica si el contrato requiere el enlace asociado a este contrato para utilizar las sesiones del canal.  
   
-### Tipo  
+### <a name="type"></a>Tipo  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Tipo del contrato.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Description.ContractDescription>

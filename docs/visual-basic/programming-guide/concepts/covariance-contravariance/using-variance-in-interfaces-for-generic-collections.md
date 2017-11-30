@@ -1,44 +1,65 @@
 ---
-title: "Usar la varianza en Interfaces para las colecciones genéricas (Visual Basic) | Documentos de Microsoft"
+title: "Usar la varianza en Interfaces para las colecciones genéricas (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 86184c7de3fe16148bf954b16d703ca682216337
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b8944bf8f6377ddc633f81dccd9f379bf176d9f3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Usar la varianza en Interfaces para las colecciones genéricas (Visual Basic)
-Una interfaz covariante permite que sus métodos devuelvan tipos más derivados que los especificados en la interfaz. Una interfaz contravariante permite que sus métodos acepten parámetros de menos tipos derivados que los especificados en la interfaz.  
+Una interfaz covariante permite que sus métodos devuelvan tipos más derivados que los especificados en la interfaz. Una interfaz contravariante permite que sus métodos acepten parámetros de tipos menos derivados que los especificados en la interfaz.  
   
- En .NET Framework 4, varias interfaces existentes, empezaron a estar covariantes y contravariante. Estos incluyen <xref:System.Collections.Generic.IEnumerable%601>y <xref:System.IComparable%601>.</xref:System.IComparable%601> </xref:System.Collections.Generic.IEnumerable%601> Esto permite reutilizar los métodos que funcionan con colecciones genéricas de tipos base para las colecciones de tipos derivados.  
+ Varias interfaces existentes en .NET Framework 4 pasaron a ser covariantes y contravariantes. Por ejemplo, <xref:System.Collections.Generic.IEnumerable%601> y <xref:System.IComparable%601>. Esto permite volver a usar métodos que funcionan con colecciones genéricas de tipos base para colecciones de tipos derivados.  
   
- Para obtener una lista de interfaces variantes de .NET Framework, vea [varianza en Interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+ Para obtener una lista de interfaces variantes en .NET Framework, vea [varianza en Interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Convertir colecciones genéricas  
- En el ejemplo siguiente se muestra las ventajas de la compatibilidad con la covarianza en la <xref:System.Collections.Generic.IEnumerable%601>interfaz.</xref:System.Collections.Generic.IEnumerable%601> El `PrintFullName` método acepta una colección de los `IEnumerable(Of Person)` tipo como parámetro. Sin embargo, se puede reutilizar para una colección de la `IEnumerable(Of Person)` tipo porque `Employee` hereda `Person`.  
+ En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la covarianza en la interfaz <xref:System.Collections.Generic.IEnumerable%601>. El método `PrintFullName` acepta una colección del tipo `IEnumerable(Of Person)` como parámetro. Pero se puede volver a usar para una colección del tipo `IEnumerable(Of Person)` porque `Employee` hereda `Person`.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+' Simple hierarchy of classes.  
+Public Class Person  
+    Public Property FirstName As String  
+    Public Property LastName As String  
+End Class  
+  
+Public Class Employee  
+    Inherits Person  
+End Class  
+  
+' The method has a parameter of the IEnumerable(Of Person) type.  
+Public Sub PrintFullName(ByVal persons As IEnumerable(Of Person))  
+    For Each person As Person In persons  
+        Console.WriteLine(  
+            "Name: " & person.FirstName & " " & person.LastName)  
+    Next  
+End Sub  
+  
+Sub Main()  
+    Dim employees As IEnumerable(Of Employee) = New List(Of Employee)  
+  
+    ' You can pass IEnumerable(Of Employee),   
+    ' although the method expects IEnumerable(Of Person).  
+  
+    PrintFullName(employees)  
+  
+End Sub  
+```  
+  
 ## <a name="comparing-generic-collections"></a>Comparar colecciones genéricas  
- En el ejemplo siguiente se muestra las ventajas de la compatibilidad con la contravarianza en el <xref:System.Collections.Generic.IComparer%601>interfaz.</xref:System.Collections.Generic.IComparer%601> La clase `PersonComparer` implementa la interfaz `IComparer(Of Person)`. Sin embargo, puede volver a usar esta clase para comparar una secuencia de objetos de la `Employee` tipo porque `Employee` hereda `Person`.  
+ En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la contravarianza en la interfaz <xref:System.Collections.Generic.IComparer%601>. La clase `PersonComparer` implementa la interfaz `IComparer(Of Person)`. Pero se puede volver a usar esta clase para comparar una secuencia de objetos del tipo `Employee` porque `Employee` hereda `Person`.  
   
 ```vb  
 ' Simple hierarhcy of classes.  
@@ -98,4 +119,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Varianza en Interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+ [Varianza en interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

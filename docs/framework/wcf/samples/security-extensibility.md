@@ -1,33 +1,36 @@
 ---
-title: "Extensibilidad de la seguridad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Extensibilidad de la seguridad
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Extensibilidad de la seguridad
+# <a name="security-extensibility"></a>Extensibilidad de la seguridad
 Esta sección contiene ejemplos que muestran la seguridad personalizada en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## En esta sección  
- [Proveedor de token emitido duradero](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Proveedor del Token emitido duradero](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  Muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
   
  [Proveedor de tokens SAML](../../../../docs/framework/wcf/samples/saml-token-provider.md)  
  Muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado.  
   
- [Tokens auxiliares](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
- Muestra cómo agregar los tokens adicionales a un mensaje que utiliza WS\-Security.  
+ [Los Tokens auxiliares](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
+ Muestra cómo agregar los tokens adicionales a un mensaje que utiliza WS-Security.  
   
  [Autenticador de tokens](../../../../docs/framework/wcf/samples/token-authenticator.md)  
  Muestra cómo implementar un autenticador de tokens personalizado.  
@@ -47,5 +50,5 @@ Esta sección contiene ejemplos que muestran la seguridad personalizada en [!INC
  [Token personalizado](../../../../docs/framework/wcf/samples/custom-token.md)  
  Muestra cómo agregar una implementación de token personalizada en una aplicación [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
- [Validación de cliente](../../../../docs/framework/wcf/samples/client-validation.md)  
- Muestra cómo escribir un comportamiento de extremo de cliente que valida el extremo de servicio para asegurarse de que el extremo de servicio puede utilizarse con seguridad.
+ [Validación del cliente](../../../../docs/framework/wcf/samples/client-validation.md)  
+ Muestra cómo escribir un comportamiento de punto de conexión de cliente que valida el punto de conexión de servicio para asegurarse de que el punto de conexión de servicio puede utilizarse con seguridad.

@@ -1,40 +1,36 @@
 ---
-title: "Cómo: recuperar párrafos de un documento de Office Open XML (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: recuperar párrafos de un documento XML abierto de Office (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 303fffb8a548805f4ae7c1e66d683b35b9faf2b0
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Cómo: recuperar párrafos de un documento de Office Open XML (Visual Basic)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Cómo: recuperar párrafos de un documento XML abierto de Office (Visual Basic)
 Este tema presenta un ejemplo que abre un documento XML abierto de Office y recupera una colección de todos los párrafos del documento.  
   
- Para obtener más información acerca de Office Open XML, vea [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Para obtener más información sobre el formato Office Open XML, visite [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo abre un paquete XML abierto de Office y usa las relaciones de dicho paquete para buscar las partes del documento y del estilo. A continuación, consulta el documento y proyecta una colección de un tipo anónimo que contiene el párrafo <xref:System.Xml.Linq.XElement>nodo, el nombre de estilo de cada párrafo y el texto de cada párrafo.</xref:System.Xml.Linq.XElement>  
+ Este ejemplo abre un paquete XML abierto de Office y usa las relaciones de dicho paquete para buscar las partes del documento y del estilo. A continuación, consulta el documento y proyecta una colección de un tipo anónimo que contiene el nodo <xref:System.Xml.Linq.XElement> del párrafo, así como el nombre de estilo y el texto de cada párrafo.  
   
  El ejemplo usa un método de extensión denominado `StringConcatenate`, también proporcionado.  
   
  Para obtener un tutorial que explica cómo funciona este ejemplo, vea [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos en el <xref:System.IO.Packaging?displayProperty=fullName>espacio de nombres.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -165,7 +161,7 @@ Module Module1
 End Module  
 ```  
   
- Cuando se ejecuta con el documento XML abierto descrito en [crear Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo produce el siguiente resultado:  
+ Cuando se ejecuta con el documento de Open XML de ejemplo descrito en [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo produce el siguiente resultado:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

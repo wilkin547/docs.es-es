@@ -1,27 +1,33 @@
 ---
-title: "Agregar columnas a la DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Agregar columnas a un objeto DataTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6107c21ed04c9c39d69c5c784244d8f6bf9560e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Agregar columnas a la DataTable
-<xref:System.Data.DataTable> contiene una colección de objetos <xref:System.Data.DataColumn> a los que hace referencia la propiedad **Columns** de la tabla.  Esta colección de columnas, junto con las restricciones que haya, define el esquema, o estructura, de la tabla.  
+# <a name="adding-columns-to-a-datatable"></a>Agregar columnas a un objeto DataTable
+A <xref:System.Data.DataTable> contiene una colección de <xref:System.Data.DataColumn> objetos al que hace referencia el **columnas** propiedad de la tabla. Esta colección de columnas, junto con las restricciones que haya, define el esquema, o estructura, de la tabla.  
   
- Los objetos **DataColumn** de una tabla se crean con el constructor **DataColumn** o llamando al método **Add** de la propiedad **Columns** de la tabla, que es una <xref:System.Data.DataColumnCollection>.  El método **Add** acepta argumentos **ColumnName**, **DataType** y **Expression** opcionales y crea una nueva **DataColumn** como miembro de la colección.  También acepta un objeto **DataColumn** existente y lo agrega a la colección y devuelve una referencia a la **DataColumn** agregada si se solicita.  Puesto que los objetos **DataTable** no son específicos de ningún origen de datos, al especificar el tipo de datos de una **DataColumn** se usan los tipos de .NET Framework.  
+ Crear **DataColumn** objetos dentro de una tabla utilizando la **DataColumn** constructor, o mediante una llamada a la **agregar** método de la **columnas**propiedad de la tabla, que es un <xref:System.Data.DataColumnCollection>. El **agregar** método acepta opcional **ColumnName**, **DataType**, y **expresión** argumentos y crea un nuevo  **Objeto DataColumn** como un miembro de la colección. También acepta existente **DataColumn** objeto y lo agrega a la colección y devuelve una referencia al agregado **DataColumn** si se solicita. Dado que **DataTable** objetos no son específicos de cualquier origen de datos, tipos de .NET Framework se utilizan cuando se especifica el tipo de datos de un **DataColumn**.  
   
- En el siguiente ejemplo, se agregan cuatro columnas a **DataTable**.  
+ En el ejemplo siguiente se agrega cuatro columnas a una **DataTable**.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -34,7 +40,6 @@ workCol.Unique = true
 workTable.Columns.Add("CustLName", Type.GetType("System.String"))  
 workTable.Columns.Add("CustFName", Type.GetType("System.String"))  
 workTable.Columns.Add("Purchases", Type.GetType("System.Double"))  
-  
 ```  
   
 ```csharp  
@@ -49,17 +54,17 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- En el ejemplo, advierta que las propiedades de la columna **CustID** se configuran de manera que no admitan valores **DBNull** y restrinjan los valores para que sean únicos.  Sin embargo, si se define la columna **CustID** como columna de clave principal de la tabla, la propiedad **AllowDBNull** se establecerá automáticamente en **false** y la propiedad **Unique** se establecerá automáticamente en **true**.  Para obtener más información, consulta [Definir claves principales](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ En el ejemplo, observe que las propiedades de la **CustID** columna se establece en no permitir **DBNull** valores y para restringir los valores sean únicos. Sin embargo, si define la **CustID** columna como columna de clave principal de la tabla, el **AllowDBNull** propiedad se establecerá automáticamente en **false** y la **Unique** propiedad se establecerá automáticamente en **true**. Para obtener más información, consulte [definir claves principales](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
 > [!CAUTION]
->  Si no se proporciona un nombre para una determinada columna, ésta recibe el nombre predeterminado incremental Column*N,* \(que empieza por "Column1"\), cuando la columna se agrega a la colección **DataColumnCollection**.  Se recomienda evitar la convención de nomenclatura "Column*N*" al proporcionar un nombre de columna, ya que el nombre que se proporcione podría entrar en conflicto con un nombre de columna predeterminado existente en **DataColumnCollection**.  Si el nombre proporcionado ya existe, se inicia una excepción.  
+>  Si no se proporciona un nombre de columna para una columna, la columna tiene un nombre predeterminado incremental de columna*N,* empieza por "Column1", cuando se agrega a la **DataColumnCollection**. Se recomienda evitar la convención de nomenclatura "columna*N*" al proporcionar un nombre de columna, ya que el nombre que se proporcione podría entrar en conflicto con un nombre de columna predeterminado existente en el **DataColumnCollection**. Si el nombre proporcionado ya existe, se inicia una excepción.  
   
- Si está utilizando <xref:System.Xml.XLinq.XElement> como <xref:System.Data.DataColumn.DataType%2A> de una <xref:System.Data.DataColumn> en la <xref:System.Data.DataTable>, la serialización XML no funcionará cuando lea los datos.  Por ejemplo, si escribe un <xref:System.Xml.XmlDocument> utilizando el método `DataTable.WriteXml`, durante la serialización a XML hay un nodo primario adicional en el <xref:System.Xml.XLinq.XElement>.  Para solucionar este problema, utilice el tipo <xref:System.Data.SqlTypes.SqlXml> en lugar de <xref:System.Xml.XLinq.XElement>.  `ReadXml` y `WriteXml` funcionan correctamente con <xref:System.Data.SqlTypes.SqlXml>.  
+ Si está utilizando <xref:System.Xml.Linq.XElement> como <xref:System.Data.DataColumn.DataType%2A> de una <xref:System.Data.DataColumn> en la <xref:System.Data.DataTable>, la serialización XML no funcionará cuando lea los datos. Por ejemplo, si escribe un <xref:System.Xml.XmlDocument> utilizando el método `DataTable.WriteXml`, durante la serialización a XML hay un nodo primario adicional en el <xref:System.Xml.Linq.XElement>. Para solucionar este problema, utilice el tipo <xref:System.Data.SqlTypes.SqlXml> en lugar de <xref:System.Xml.Linq.XElement>. `ReadXml` y `WriteXml` funcionan correctamente con <xref:System.Data.SqlTypes.SqlXml>.  
   
-## Vea también  
- <xref:System.Data.DataColumn>   
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataTable>   
- [Definición de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Data.DataColumn>  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataTable>  
+ [Definición de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [Objetos DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

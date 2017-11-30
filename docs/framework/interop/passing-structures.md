@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- platform invoke, calling unmanaged functions
+- csharp
+- vb
+helpviewer_keywords: platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e0cd4b8c76eca00ad7fbfcb03162a6705f72768
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9002d6e86b91f0ed21dae41f82af31f04291c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="passing-structures"></a>Pasar estructuras
 Muchas funciones no administradas esperan que el usuario pase, como parámetro de la función, miembros de estructuras (tipos definidos por el usuario en Visual Basic) o miembros de clases definidos en código administrado. Al pasar estructuras o clases al código no administrado mediante la invocación de plataforma, debe proporcionarse información adicional para mantener la distribución y alineación originales. En este tema se presenta el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, que se utiliza para definir tipos con formato. Para estructuras y clases administradas, se puede seleccionar entre varios comportamientos de distribución previsibles que proporciona la enumeración **LayoutKind**.  
@@ -188,8 +183,7 @@ public class TestPlatformInvoke
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
  <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
-

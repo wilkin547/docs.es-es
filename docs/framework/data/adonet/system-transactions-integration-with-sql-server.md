@@ -1,42 +1,48 @@
 ---
-title: "Integraci&#243;n de System.Transactions con SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Integración de System.Transactions con SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2299a974fc9c6af9e5fba0de6e16ab72de8b5e10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Integraci&#243;n de System.Transactions con SQL Server
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 2.0 incorporó un nuevo marco de trabajo de transacciones al que se puede obtener acceso a través del espacio de nombres <xref:System.Transactions>. Este marco de trabajo expone las transacciones de tal forma que se integra completamente en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluyendo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+# <a name="systemtransactions-integration-with-sql-server"></a>Integración de System.Transactions con SQL Server
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 2.0 incorporó un nuevo marco de trabajo de transacciones al que se puede obtener acceso a través del espacio de nombres <xref:System.Transactions> . Este marco de trabajo expone las transacciones de tal forma que se integra completamente en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluyendo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- Además de las mejoras de programación, <xref:System.Transactions> y [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] pueden funcionar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera \(local\) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
+ Además de las mejoras de programación, <xref:System.Transactions> y [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] pueden funcionar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
   
  A partir de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> admite las transacciones promocionadas al trabajar con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. son automáticas, es decir, no necesitan que intervenga el programador.  
   
- Las transacciones promocionadas solo están disponibles cuando se utiliza el proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para SQL Server \(`SqlClient`\) con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Las transacciones promocionadas solo están disponibles cuando se utiliza el proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para SQL Server (`SqlClient`) con [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
-## Creación de transacciones promocionadas  
- El proveedor de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para SQL Server ofrece compatibilidad con transacciones promocionadas, que se administran a través de las clases del espacio de nombres [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de <xref:System.Transactions>. Las transacciones promocionadas optimizan las transacciones distribuidas ya que aplazan la creación de las mismas hasta que es necesario. Si solo se necesita un administrador de recursos, no tiene lugar ninguna transacción distribuida.  
+## <a name="creating-promotable-transactions"></a>Creación de transacciones promocionadas  
+ El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedor para SQL Server proporciona compatibilidad con transacciones promocionadas, que se administran a través de las clases en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> espacio de nombres. Las transacciones promocionadas optimizan las transacciones distribuidas ya que aplazan la creación de las mismas hasta que es necesario. Si solo se necesita un administrador de recursos, no tiene lugar ninguna transacción distribuida.  
   
 > [!NOTE]
 >  En un caso que no es de plena confianza, se requiere <xref:System.Transactions.DistributedTransactionPermission> cuando la transacción se promueve al nivel de transacción distribuida.  
   
-## Situaciones de uso de transacciones promocionadas  
- Normalmente, las transacciones distribuidas consumen muchos recursos del sistema, siendo el encargado de administrarlas Microsoft DTC \(Coordinador de transacciones distribuidas\), que integra todos los administradores de recursos a los que se tiene acceso en la transacción. Una transacción promocionada es una forma especial de transacción de <xref:System.Transactions> que delega con efectividad el trabajo en una transacción de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simple.<xref:System.Transactions>, <xref:System.Data.SqlClient> y [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] coordinan el trabajo que supone administrar la transacción y promoverla a una transacción completamente distribuida cuando es necesario.  
+## <a name="promotable-transaction-scenarios"></a>Situaciones de uso de transacciones promocionadas  
+ Normalmente, las transacciones distribuidas consumen muchos recursos del sistema, siendo el encargado de administrarlas Microsoft DTC (Coordinador de transacciones distribuidas), que integra todos los administradores de recursos a los que se tiene acceso en la transacción. Una transacción promocionada es una forma especial de transacción de <xref:System.Transactions> que delega con efectividad el trabajo en una transacción de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simple. <xref:System.Transactions>, <xref:System.Data.SqlClient>y [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] coordinan el trabajo que supone administrar la transacción y promoverla a una transacción completamente distribuida cuando es necesario.  
   
  La ventaja de utilizar transacciones promocionadas es que cuando se abre una conexión utilizando una transacción <xref:System.Transactions.TransactionScope> activa, y no hay ninguna otra conexión abierta, la transacción se confirma como una transacción ligera, en lugar de incurrir en la sobrecarga adicional de una transacción completamente distribuida.  
   
-### Palabras clave de cadena de conexión  
+### <a name="connection-string-keywords"></a>Palabras clave de cadena de conexión  
  La propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> admite una palabra clave, `Enlist`, que indica si <xref:System.Data.SqlClient> detectará contextos transaccionales e inscribirá automáticamente la conexión en una transacción distribuida. Si `Enlist=true`, la conexión se inscribe automáticamente en el contexto de transacción actual del subproceso de apertura. Si `Enlist=false`, la conexión `SqlClient` no interactúa con una transacción distribuida. El valor predeterminado de `Enlist` es true. Si no se especifica `Enlist` en la cadena de conexión, la conexión se da de alta automáticamente en una transacción distribuida si se detecta una al abrirse la conexión.  
   
  Las palabras clave `Transaction Binding` en una cadena de conexión <xref:System.Data.SqlClient.SqlConnection> controlan la asociación de la conexión con una transacción `System.Transactions` dada de alta. También está disponible mediante la propiedad <xref:System.Data.SqlClient.SqlConnectionStringBuilder.TransactionBinding%2A> de <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
@@ -44,27 +50,27 @@ caps.handback.revision: 6
  La siguiente tabla describe los posibles valores.  
   
 |Palabra clave|Descripción|  
-|-------------------|-----------------|  
+|-------------|-----------------|  
 |Desenlace implícito|El valor predeterminado. La conexión se separa de la transacción cuando termina, y vuelve a cambiar al modo de confirmación automática.|  
 |Desenlace explícito|La conexión sigue adjuntada a la transacción hasta que ésta se cierra. La conexión producirá errores si no está activa o no coincide con <xref:System.Transactions.Transaction.Current%2A>.|  
   
-## Uso de TransactionScope  
- La clase <xref:System.Transactions.TransactionScope> crea un bloque de código transaccional al inscribir implícitamente las conexiones en una transacción distribuida. Debe llamar al método <xref:System.Transactions.TransactionScope.Complete%2A> al final del bloque <xref:System.Transactions.TransactionScope> antes de abandonarlo. Al salir del bloque se invoca el método <xref:System.Transactions.TransactionScope.Dispose%2A>. Si se ha producido una excepción que ocasiona que el código salga del ámbito, la transacción se considera anulada.  
+## <a name="using-transactionscope"></a>Uso de TransactionScope  
+ La clase <xref:System.Transactions.TransactionScope> crea un bloque de código transaccional al inscribir implícitamente las conexiones en una transacción distribuida. Debe llamar al método <xref:System.Transactions.TransactionScope.Complete%2A> al final del bloque <xref:System.Transactions.TransactionScope> antes de abandonarlo. Al salir del bloque se invoca el método <xref:System.Transactions.TransactionScope.Dispose%2A> . Si se ha producido una excepción que ocasiona que el código salga del ámbito, la transacción se considera anulada.  
   
- Se recomienda el uso de un bloque `using` para asegurarse de que se llama a <xref:System.Transactions.TransactionScope.Dispose%2A> en el objeto <xref:System.Transactions.TransactionScope> cuando se sale de dicho bloque. Si no se confirman ni revierten las transacciones pendientes, el rendimiento puede verse seriamente afectado ya que el tiempo de espera predeterminado de <xref:System.Transactions.TransactionScope> es un minuto. Si no utiliza una instrucción `using`, todo el trabajo deberá realizarlo en un bloque `Try` y llamar explícitamente al método <xref:System.Transactions.TransactionScope.Dispose%2A> en el bloque `Finally`.  
+ Se recomienda el uso de un bloque `using` para asegurarse de que se llama a <xref:System.Transactions.TransactionScope.Dispose%2A> en el objeto <xref:System.Transactions.TransactionScope> cuando se sale de dicho bloque. Si no se confirman ni revierten las transacciones pendientes, el rendimiento puede verse seriamente afectado ya que el tiempo de espera predeterminado de <xref:System.Transactions.TransactionScope> es un minuto. Si no utiliza una instrucción `using` , todo el trabajo deberá realizarlo en un bloque `Try` y llamar explícitamente al método <xref:System.Transactions.TransactionScope.Dispose%2A> en el bloque `Finally` .  
   
- Si se produce una excepción en <xref:System.Transactions.TransactionScope>, la transacción se marca como incoherente y se abandona. Se revertirá cuando se elimine el <xref:System.Transactions.TransactionScope>. Si no se produce ninguna excepción, las transacciones participantes se confirman.  
+ Si se produce una excepción en <xref:System.Transactions.TransactionScope>, la transacción se marca como incoherente y se abandona. Se revertirá cuando se elimine el <xref:System.Transactions.TransactionScope> . Si no se produce ninguna excepción, las transacciones participantes se confirman.  
   
 > [!NOTE]
->  La clase `TransactionScope` crea una transacción con un <xref:System.Transactions.Transaction.IsolationLevel%2A> predeterminado de `Serializable`. Dependiendo de la aplicación, podría estudiar la posibilidad de reducir el nivel de aislamiento para evitar una elevada contención en la aplicación.  
+>  La clase `TransactionScope` crea una transacción con un <xref:System.Transactions.Transaction.IsolationLevel%2A> predeterminado de `Serializable` . Dependiendo de la aplicación, podría estudiar la posibilidad de reducir el nivel de aislamiento para evitar una elevada contención en la aplicación.  
   
 > [!NOTE]
 >  Se recomienda que solo realice actualizaciones, inserciones y eliminaciones en transacciones distribuidas, ya que consumen una cantidad considerable de recursos de base de datos. Las instrucciones SELECT pueden bloquear los recursos de base de datos de forma innecesaria y, en algunas situaciones, es posible que tengan que utilizarse transacciones para las selecciones. Todo el trabajo que no sea de base de datos debe realizarse fuera del ámbito de la transacción, a menos que estén implicados otros administradores de recursos de transacción. Aunque una excepción en el ámbito de la transacción impide que se confirme la misma, la clase <xref:System.Transactions.TransactionScope> no deja revertir los cambios que haya realizado el código fuera del ámbito de la propia transacción. Si es necesario realizar alguna acción cuando se revierta la transacción, deberá escribir su propia implementación de la interfaz <xref:System.Transactions.IEnlistmentNotification> y darla de alta explícitamente en la transacción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Trabajar con <xref:System.Transactions> requiere disponer de una referencia a System.Transactions.dll.  
   
- La siguiente función muestra cómo crear una transacción promocionada en dos instancias de SQL Server diferentes, representadas por dos objetos <xref:System.Data.SqlClient.SqlConnection> diferentes, que se incluyen en un bloque <xref:System.Transactions.TransactionScope>. El código crea el bloque <xref:System.Transactions.TransactionScope> con una instrucción `using` y abre la primera conexión, que automáticamente se da de alta en <xref:System.Transactions.TransactionScope>. La transacción se inscribe inicialmente como una transacción ligera y no como una completamente distribuida. La segunda conexión se inscribe en <xref:System.Transactions.TransactionScope> únicamente si el comando de la primera conexión no produce una excepción. Cuando se abre la segunda conexión, la transacción se promociona automáticamente a una transacción completamente distribuida. Se invoca el método <xref:System.Transactions.TransactionScope.Complete%2A>, que confirma la transacción únicamente si no se han producido excepciones. Si en algún punto del bloque <xref:System.Transactions.TransactionScope> se ha producido una excepción, no se llamará a `Complete` y, cuando se elimine <xref:System.Transactions.TransactionScope> al final de su bloque `using`, se revertirá la transacción distribuida.  
+ La siguiente función muestra cómo crear una transacción promocionada en dos instancias de SQL Server diferentes, representadas por dos objetos <xref:System.Data.SqlClient.SqlConnection> diferentes, que se incluyen en un bloque <xref:System.Transactions.TransactionScope> . El código crea el bloque <xref:System.Transactions.TransactionScope> con una instrucción `using` y abre la primera conexión, que automáticamente se da de alta en <xref:System.Transactions.TransactionScope>. La transacción se inscribe inicialmente como una transacción ligera y no como una completamente distribuida. La segunda conexión se inscribe en <xref:System.Transactions.TransactionScope> únicamente si el comando de la primera conexión no produce una excepción. Cuando se abre la segunda conexión, la transacción se promociona automáticamente a una transacción completamente distribuida. Se invoca el método <xref:System.Transactions.TransactionScope.Complete%2A> , que confirma la transacción únicamente si no se han producido excepciones. Si en algún punto del bloque <xref:System.Transactions.TransactionScope> se ha producido una excepción, no se llamará a `Complete` y, cuando se elimine <xref:System.Transactions.TransactionScope> al final de su bloque `using` , se revertirá la transacción distribuida.  
   
 ```csharp  
 // This function takes arguments for the 2 connection strings and commands in order  
@@ -232,6 +238,6 @@ Public Function CreateTransactionScope( _
 End Function  
 ```  
   
-## Vea también  
- [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Las transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

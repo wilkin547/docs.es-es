@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; (elemento) de &lt;ws2007FederationHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; (elemento) de &lt;ws2007FederationHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-caps.latest.revision: 10
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 79976b015f35bdd71a5f95a018d85c0ba41ce0b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; (elemento) de &lt;ws2007FederationHttpBinding&gt;
-Define la configuración de seguridad del elemento [\<ws2007FederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md).  
+# <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>&lt;security&gt; (elemento) de &lt;ws2007FederationHttpBinding&gt;
+Define la configuración de seguridad de la [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
   
-## Sintaxis  
+ \<sistema. ServiceModel >  
+\<enlaces >  
+\<ws2007FederationHttpBinding >  
+\<enlace >  
+\<seguridad >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <ws2007FederationBinding>  
     <binding >  
         <security mode="None/Message/TransportWithMessageCredential">  
@@ -37,44 +45,44 @@ Define la configuración de seguridad del elemento [\<ws2007FederationHttpBindin
 </ws2007FederationBinding>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|`mode`|Opcional.  Especifica el tipo de seguridad que se aplica.  El valor predeterminado es `Message`.  Este atributo es del tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|---------------|-----------------|  
+|`mode`|Opcional. Especifica el tipo de seguridad que se aplica. El valor predeterminado es `Message`. Este atributo es del tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
   
-## Atributo de modo  
+## <a name="mode-attribute"></a>Atributo de modo  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Ninguna|El mensaje SOAP no es seguro durante la transferencia.|  
-|Mensaje|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP.  De forma predeterminada, el cuerpo se cifra y firma.  El servicio se debe configurar con un certificado.  La autenticación del cliente está basada en el token emitido al cliente por un servicio del token de seguridad.|  
-|TransportWithMessageCredential|HTTPS proporciona integridad, confidencialidad y autenticación del servidor.  El servicio se debe configurar con un certificado.  La autenticación del cliente se proporciona por medio de la seguridad del mensaje SOAP y está basada en el token emitido al cliente por un servicio de token de seguridad.|  
+|Mensaje|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo se cifra y firma. El servicio se debe configurar con un certificado. La autenticación del cliente está basada en el token emitido al cliente por un servicio del token de seguridad.|  
+|TransportWithMessageCredential|HTTPS proporciona integridad, confidencialidad y autenticación del servidor. El servicio se debe configurar con un certificado. La autenticación del cliente se proporciona por medio de la seguridad del mensaje SOAP y está basada en el token emitido al cliente por un servicio de token de seguridad.|  
   
-### Elementos secundarios  
-  
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<message\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Define la configuración de seguridad del nivel del mensaje.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
-  
-### Elementos primarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<enlace\>](../../../../../docs/framework/misc/binding.md)|Define todas las funciones de enlace de [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|-------------|-----------------|  
+|[\<mensaje >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Define la configuración de seguridad del nivel del mensaje. Este elemento es del tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   
-## Vea también  
- <xref:System.ServiceModel.WSFederationHttpSecurity>   
- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>   
- [Cómo: Crear un WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)   
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Selección de tipos de credenciales](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<enlace\>](../../../../../docs/framework/misc/binding.md)
+### <a name="parent-elements"></a>Elementos primarios  
+  
+|Elemento|Descripción|  
+|-------------|-----------------|  
+|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace de la [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+  
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.WSFederationHttpSecurity>  
+ <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
+ [Cómo: crear un WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Al seleccionar un tipo de credencial](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
+ [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<enlace >](../../../../../docs/framework/misc/binding.md)

@@ -1,27 +1,30 @@
 ---
-title: "Extensibilidad de metadatos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Extensibilidad de metadatos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36eb5940fa1d869948a94fcbbb1945aea1c534ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Extensibilidad de metadatos
+# <a name="metadata-extensibility"></a>Extensibilidad de metadatos
 Esta sección contiene ejemplos que muestran los metadatos personalizados.  
   
-## En esta sección  
- [Extremo personalizado de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
- Muestra cómo implementar un servicio con un extremo de metadatos seguro que utiliza uno de los enlaces de intercambio que no es de metadatos y cómo configurar [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o clientes para capturar los metadatos de este extremo de metadatos.  
+## <a name="in-this-section"></a>En esta sección  
+ [Punto de conexión de metadatos seguro personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
+ Muestra cómo implementar un servicio con un punto de conexión seguro de metadatos que utiliza uno de los enlaces de intercambio de metadatos no y cómo configurar [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) o capturar los metadatos de los clientes estos extremos de metadatos.  
   
- [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- Muestra cómo implementar un <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=fullName> en un atributo <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> personalizado para exportar las propiedades de atributo como anotaciones WSDL, entre otras funcionalidades.
+ [Publicación de WSDL personalizado](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
+ Muestra cómo implementar un <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> en un atributo <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> personalizado para exportar las propiedades de atributo como anotaciones WSDL, entre otras funcionalidades.

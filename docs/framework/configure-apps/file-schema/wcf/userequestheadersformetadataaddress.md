@@ -1,52 +1,60 @@
 ---
-title: "&lt;useRequestHeadersForMetadataAddress&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;useRequestHeadersForMetadataAddress&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c538939a97e43239048853b5d6c32251d557d7e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;useRequestHeadersForMetadataAddress&gt;
+# <a name="ltuserequestheadersformetadataaddressgt"></a>&lt;useRequestHeadersForMetadataAddress&gt;
 Habilita la recuperación de información de direcciones de metadatos de los encabezados de mensajes de solicitud.  
   
-## Sintaxis  
+\<sistema. ServiceModel >  
+\<comportamientos >  
+\<serviceBehaviors >  
+\<comportamiento >  
+\<useRequestHeadersForMetadataAddress >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-<useRequestHeadersForMetadataAddress>  
-   <defaultPorts>  
-      <add scheme="http" port="integer" />  
-   </defaultPorts>  
+```xml  
+<useRequestHeadersForMetadataAddress>
+  <defaultPorts>
+    <add scheme="http" port="integer" />
+  </defaultPorts>
 </useRequestHeadersForMetadataAddress>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<defaultPorts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Colección de puertos predeterminados que enumeran los extremos de comunicaciones predeterminados que escucha la aplicación cliente.|  
+|-------------|-----------------|  
+|[\<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<comportamiento\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|-------------|-----------------|  
+|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>

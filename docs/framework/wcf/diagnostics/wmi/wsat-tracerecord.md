@@ -1,25 +1,28 @@
 ---
-title: "WSAT_TraceRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WSAT_TraceRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3966311bc10b5ad2ee401ef9e3e13c8f36e14505
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# WSAT_TraceRecord
-WSAT\_TraceRecord  
+# <a name="wsattracerecord"></a>WSAT_TraceRecord
+WSAT_TraceRecord  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class WSAT_TraceRecord : WSAT_TraceEvent  
@@ -30,32 +33,32 @@ class WSAT_TraceRecord : WSAT_TraceEvent
 };  
 ```  
   
-## Métodos  
- La clase WSAT\_TraceRecord no define ningún método.  
+## <a name="methods"></a>Métodos  
+ La clase WSAT_TraceRecord no define ningún método.  
   
-## Propiedades  
- La clase WSAT\_TraceRecord tiene las propiedades siguientes:  
+## <a name="properties"></a>Propiedades  
+ La clase WSAT_TraceRecord tiene las propiedades siguientes:  
   
-### ActivityID  
+### <a name="activityid"></a>ActivityID  
  Tipo de datos: objeto  
 Tipo de acceso: solo lectura  
   
  El id. de actividad del registro de seguimiento.  
   
-### EventID  
+### <a name="eventid"></a>EventID  
  Tipo de datos: sint32  
 Tipo de acceso: solo lectura  
   
  El id. de evento del registro de seguimiento.  
   
-### TraceRecord  
+### <a name="tracerecord"></a>TraceRecord  
  Tipo de datos: cadena  
 Tipo de acceso: solo lectura  
   
  Registro de seguimiento  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|

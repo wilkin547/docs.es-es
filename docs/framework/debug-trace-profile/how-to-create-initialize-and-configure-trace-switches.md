@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace switches, configuring
 - tracing [.NET Framework], trace switches
@@ -21,29 +18,28 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5ba232e3c84f7bfa089822d4a4f792b179bf32
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f5fa8a0fbe6dc08811162ba9b1d4198af9256fc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Cómo: Crear, inicializar y configurar modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
   
 <a name="create"></a>   
 ## <a name="creating-and-initializing-a-trace-switch"></a>Crear e inicializar modificadores de seguimiento  
- Para poder usar los modificadores de seguimiento, primero debe crearlos y colocarlos en el código. Existen dos clases predefinidas desde las que puede crear objetos modificadores: la clase <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> y la clase <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName>. Debe usar <xref:System.Diagnostics.BooleanSwitch> si solo le preocupa si aparece o no un mensaje de seguimiento, y <xref:System.Diagnostics.TraceSwitch> para distinguir entre los niveles de seguimiento. Si utiliza <xref:System.Diagnostics.TraceSwitch>, puede definir sus propios mensajes de depuración y asociarlos a diferentes niveles de seguimiento. Puede utilizar ambos tipos de modificadores con el seguimiento o la depuración. De forma predeterminada, <xref:System.Diagnostics.BooleanSwitch> está deshabilitado y <xref:System.Diagnostics.TraceSwitch> está establecido en el nivel <xref:System.Diagnostics.TraceLevel.Off?displayProperty=fullName>. Los modificadores de seguimiento pueden crearse y colocarse en cualquier parte del código que pueda utilizarlos.  
+ Para poder usar los modificadores de seguimiento, primero debe crearlos y colocarlos en el código. Existen dos clases predefinidas desde las que puede crear objetos modificadores: la clase <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> y la clase <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Debe usar <xref:System.Diagnostics.BooleanSwitch> si solo le preocupa si aparece o no un mensaje de seguimiento, y <xref:System.Diagnostics.TraceSwitch> para distinguir entre los niveles de seguimiento. Si utiliza <xref:System.Diagnostics.TraceSwitch>, puede definir sus propios mensajes de depuración y asociarlos a diferentes niveles de seguimiento. Puede utilizar ambos tipos de modificadores con el seguimiento o la depuración. De forma predeterminada, <xref:System.Diagnostics.BooleanSwitch> está deshabilitado y <xref:System.Diagnostics.TraceSwitch> está establecido en el nivel <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. Los modificadores de seguimiento pueden crearse y colocarse en cualquier parte del código que pueda utilizarlos.  
   
  Aunque puede establecer niveles de seguimiento y otras opciones de configuración en el código, le recomendamos que utilice el archivo de configuración para administrar el estado de los modificadores. El motivo es que administrar la configuración de los modificadores en el sistema de configuración le proporciona mayor flexibilidad: puede activar y desactivar los diversos modificadores y cambiar los niveles sin volver a compilar la aplicación.  
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Para crear e inicializar modificadores de seguimiento  
   
-1.  Defina un modificador de tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName> y establezca el nombre y la descripción del modificador.  
+1.  Defina un modificador de tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> o tipo <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> y establezca el nombre y la descripción del modificador.  
   
 2.  Configure el modificador de seguimiento. Para más información, vea [Configuración de modificadores de seguimiento](#configure).  
   
@@ -72,7 +68,7 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
  En una aplicación implementada, el código de seguimiento se habilita volviendo a configurar los modificadores cuando la aplicación no se está ejecutando. Normalmente, esto implica activar y desactivar los modificadores cambiando los niveles de seguimiento y, luego, reiniciar la aplicación.  
   
- Cuando crea una instancia de un modificador, también la inicializa especificando dos argumentos: un argumento *displayName* y un argumento *description*. El argumento *displayName* del constructor establece la propiedad <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=fullName> de la instancia de clase <xref:System.Diagnostics.Switch>. *displayName* es el nombre que se usa para configurar el modificador en el archivo .config, y el argumento *description* debería devolver una breve descripción del modificador e indicar qué mensajes controla.  
+ Cuando crea una instancia de un modificador, también la inicializa especificando dos argumentos: un argumento *displayName* y un argumento *description*. El argumento *displayName* del constructor establece la propiedad <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> de la instancia de clase <xref:System.Diagnostics.Switch>. *displayName* es el nombre que se usa para configurar el modificador en el archivo .config, y el argumento *description* debería devolver una breve descripción del modificador e indicar qué mensajes controla.  
   
  Además de especificar el nombre de un modificador para configurarlo, también debe especificar un valor para el modificador. El valor es un entero. Para <xref:System.Diagnostics.BooleanSwitch>, un valor de 0 corresponde a **Desactivado**, y cualquier valor distinto de cero corresponde a **Activado**. Para <xref:System.Diagnostics.TraceSwitch>, 0, 1, 2, 3 y 4 corresponden a **Desactivado**, **Error**, **Advertencia**, **Información** y **Detallado**, respectivamente. Todos los números mayores de 4 se tratan como **Detallado**, y todos los números menores de cero se tratan como **Desactivado**.  
   
@@ -138,8 +134,7 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Cómo: agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Esquema de la configuración de seguimiento y depuración](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-

@@ -1,41 +1,44 @@
 ---
-title: "209 - MessageInspectorBeforeSendInvoked | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 209 - MessageInspectorBeforeSendInvoked
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d710875-fb77-4463-978b-bc86d59d84cd
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8de4338fd9d1d18ab1f689df39b2247a29d2dcf5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 209 - MessageInspectorBeforeSendInvoked
-## Propiedades  
+# <a name="209---messageinspectorbeforesendinvoked"></a>209 - MessageInspectorBeforeSendInvoked
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|209|  
-|Palabras clave|Solución de problemas, ServiceModel|  
+|Palabras clave|Troubleshooting, ServiceModel|  
 |Nivel|Información|  
-|Canal|Microsoft\-Windows\-Servidor de aplicaciones\-Aplicaciones\/Analítico|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Se emite este evento cuando el modelo de servicio ha invocado el método `BeforeSend` en un inspector de mensaje.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  El distribuidor invocó 'BeforeSendRequest' en un MessageInspector de tipo '%1'.  
   
-## Detalles  
+## <a name="details"></a>Detalles  
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|TypeName|`xs:string`|Nombre completo \(FullName\) de CLR del tipo de `MessageInspector` invocado.|  
-|HostReference|`xs:string`|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.El formato se define como 'Ruta de acceso virtual de la aplicación del nombre del sitio web&#124;Ruta de acceso virtual del servicio&#124;NombreServicio'.Ejemplo: 'Sitio web predeterminado\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
+|--------------------|--------------------|-----------------|  
+|TypeName|`xs:string`|Nombre completo (FullName) de CLR del tipo del `MessageInspector` invocado.|  
+|HostReference|`xs:string`|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web. El formato se define como ' ruta de acceso Virtual de sitio Web de nombre de aplicación &#124; Ruta de acceso Virtual del servicio &#124; ServiceName'. Ejemplo: ' sitio Web/CalculatorApplication &#124;/CalculatorService.svc &#124; predeterminada CalculatorService'.|  
 |AppDomain|`xs:string`|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|

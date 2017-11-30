@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6c0665a379f02a74bd0f3631aa26b41dd6ece5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Aislamiento de red para aplicaciones de la Tienda Windows
 Es posible usar las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Http> y <xref:System.Net.Http.Headers> para desarrollar aplicaciones de la Tienda Windows o aplicaciones de escritorio. Cuando se usan en una aplicación de la Tienda Windows, las clases de estos espacios de nombres se ven afectadas por el aislamiento de red, que forma parte del modelo de seguridad para las aplicaciones usado por [!INCLUDE[win8](../../../includes/win8-md.md)]. Las funcionalidades de red correspondientes deben estar habilitadas en el manifiesto de la aplicación de la Tienda Windows para que el sistema permita el acceso a la red.  
@@ -41,10 +35,9 @@ Es posible usar las clases de los espacios de nombres <xref:System.Net>, <xref:S
  Para obtener más información sobre cómo configurar las funcionalidades de red y las herramientas de aislamiento que se usan para la solución de problemas de aislamiento de red, vea [Cómo configurar las funcionalidades de aislamiento de red](http://go.microsoft.com/fwlink/?LinkID=228265) en la documentación para desarrolladores de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar con un servicio web](http://go.microsoft.com/fwlink/?LinkID=245696)   
- [Directrices y lista de comprobación para el aislamiento de red](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [Inicio rápido: conectarse mediante HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [Cómo usar controladores HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [Cómo proteger conexiones HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)   
+ [Conectarse a un servicio web](http://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Directrices y lista de comprobación para el aislamiento de red](http://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Inicio rápido: Conectarse usando HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Cómo utilizar controladores de HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Cómo proteger las conexiones de HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
  [Ejemplo de HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
-

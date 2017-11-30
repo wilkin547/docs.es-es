@@ -1,29 +1,35 @@
 ---
-title: "Paginar a trav&#233;s de un resultado de consulta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Paginar un resultado de consulta
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b4a51eec840b74d04aaab97226191b2ed30d8826
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Paginar a trav&#233;s de un resultado de consulta
-La paginación a través del resultado de una consulta es un proceso que consiste en devolver los resultados de una consulta en subconjuntos menores de datos, o páginas.  Se trata de una práctica frecuente para presentar los resultados a un usuario en fragmentos pequeños y fáciles de administrar.  
+# <a name="paging-through-a-query-result"></a>Paginar un resultado de consulta
+La paginación a través del resultado de una consulta es un proceso que consiste en devolver los resultados de una consulta en subconjuntos menores de datos, o páginas. Se trata de una práctica frecuente para presentar los resultados a un usuario en fragmentos pequeños y fáciles de administrar.  
   
- **DataAdapter** permite devolver únicamente una página de datos mediante sobrecargas del método **Fill**.  Sin embargo, quizás no sea la mejor opción para paginar a través de resultados de consultas grandes ya que, aunque el **DataAdapter** rellena la <xref:System.Data.DataTable> o el <xref:System.Data.DataSet> de destino solo con los registros solicitados, se siguen utilizando los recursos para devolver toda la consulta.  Para devolver una página de datos a partir de un origen de datos sin utilizar los recursos necesarios para devolver toda la consulta, hay que especificar otros criterios adicionales para la consulta que reduzcan las filas devueltas a las filas únicamente necesarias.  
+ El **DataAdapter** permite devolver únicamente una página de datos, a través de las sobrecargas de la **rellenar** método. Sin embargo, esto no sería la mejor opción para paginar a través de los resultados de consultas grandes ya que, aunque la **DataAdapter** rellena el destino <xref:System.Data.DataTable> o <xref:System.Data.DataSet> con solo los registros solicitados, los recursos para devolver el todavía se utilizan toda la consulta. Para devolver una página de datos a partir de un origen de datos sin utilizar los recursos necesarios para devolver toda la consulta, hay que especificar otros criterios adicionales para la consulta que reduzcan las filas devueltas a las filas únicamente necesarias.  
   
- Para utilizar el método **Fill** para devolver una página de datos, especifique un parámetro **startRecord** que represente el primer registro de la página de datos y un parámetro **maxRecords** que represente el número de registros de la página de datos.  
+ Para usar el **rellenar** método para devolver una página de datos, especifique un **startRecord** parámetro, para el primer registro en la página de datos y un **maxRecords** parámetro para el número de registros en la página de datos.  
   
- En el siguiente ejemplo de código se muestra cómo utilizar el método **Fill** para devolver la primera página del resultado de una consulta cuando el tamaño de la página es de cinco registros.  
+ En el ejemplo de código siguiente se muestra cómo utilizar el **rellenar** método para devolver la primera página del resultado de una consulta cuando el tamaño de página es de cinco registros.  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -50,7 +56,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- En el ejemplo anterior, el **DataSet** solo se rellena con cinco registros pero se devuelve toda la tabla **Pedidos**.  Para rellenar el **DataSet** con esos mismos cinco registros, pero devolver únicamente cinco registros, hay que utilizar las cláusulas TOP y WHERE en la instrucción SQL, como en el ejemplo de código siguiente.  
+ En el ejemplo anterior, el **conjunto de datos** solo se rellena con cinco registros, pero toda la **pedidos** se devuelve la tabla. Para rellenar el **conjunto de datos** con esos mismos cinco registros, pero devolver únicamente cinco registros, usar la parte superior y las cláusulas WHERE en la instrucción SQL, como en el ejemplo de código siguiente.  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -87,7 +93,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- Para devolver la siguiente página de registros utilizando la sobrecarga del método **Fill** que toma los parámetros **startRecord** y **maxRecords**, hay que incrementar el índice del registro actual en el tamaño de página y rellenar la tabla.  Recuerde que el servidor de bases de datos devuelve todos los resultados de la consulta aunque solo se agregue una página de registros al **DataSet**.  En el siguiente ejemplo de código se vacía el contenido de las filas de la tabla antes de rellenarse con la siguiente página de datos.  Quizás se desee conservar un cierto número de filas devueltas en una caché local para reducir los viajes al servidor de bases de datos.  
+ Para devolver la siguiente página de registros utilizando la sobrecarga de la **rellenar** método que toma el **startRecord** y **maxRecords** parámetros, incrementar el índice del registro actual por el tamaño de página y rellenar la tabla. Recuerde que el servidor de base de datos devuelve los resultados de la consulta completa, aunque solo una página de registros se agrega a la **conjunto de datos**. En el siguiente ejemplo de código se vacía el contenido de las filas de la tabla antes de rellenarse con la siguiente página de datos. Quizás se desee conservar un cierto número de filas devueltas en una caché local para reducir los viajes al servidor de bases de datos.  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -105,7 +111,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- Para devolver la siguiente página de registros sin que el servidor de bases de datos tenga que devolver toda la consulta, hay que especificar criterios restrictivos en la instrucción SELECT.  Como el ejemplo anterior conservaba el último registro devuelto, es posible utilizarlo en la cláusula WHERE con el fin de especificar un punto de partida para la consulta, como se muestra en el ejemplo de código siguiente.  
+ Para devolver la siguiente página de registros sin que el servidor de bases de datos tenga que devolver toda la consulta, hay que especificar criterios restrictivos en la instrucción SELECT. Como el ejemplo anterior conservaba el último registro devuelto, es posible utilizarlo en la cláusula WHERE con el fin de especificar un punto de partida para la consulta, como se muestra en el ejemplo de código siguiente.  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  
@@ -127,6 +133,6 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## Vea también  
- [DataAdapters y DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

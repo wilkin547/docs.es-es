@@ -1,71 +1,80 @@
 ---
-title: "&lt;securityTokenHandlerConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;securityTokenHandlerConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: be98c93452c9c7a37ecad5b03f5160ea08f2c82e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;securityTokenHandlerConfiguration&gt;
-mode  
+# <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
+Proporciona la configuración de la colección de controladores de tokens.  
   
-## Sintaxis  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<securityTokenHandlerConfiguration >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
-          maximumClockSkew=TimeSpan>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
+          maximumClockSkew=TimeSpan>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Atributos y elementos  
- En las próximas secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
+ En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|saveBootstrapContext|Especifica si debe incluirse bootstrap símbolos \(tokens\) en el símbolo de sesión.  El valor también puede establecer en una colección de controladores de símbolo \(token\) estableciendo la `saveBootstrapContext` de atributo en el [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento.  Opcional.|  
-|Elemento|Descripción  Controla el sesgo de d reloj máximo permitido al realizar operaciones de sensibles al tiempo, como la validación de la hora de caducidad de una sesión de inicio de sesión.  El atributo  es necesario.  Para obtener más información acerca de cómo especificar <xref:System.TimeSpan> valores, consulte [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).  El desfase de reloj máximo también puede establecer el nivel de servicio estableciendo la `maximumClockSkew` de atributo en el [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento.  Un valor establecido en la colección de controladores de símbolo \(token\) reemplaza el valor establecido en el servicio.|  
+|---------------|-----------------|  
+|saveBootstrapContext|Especifica si los tokens de arranque deben incluirse en el token de sesión. El valor también puede establecerse en una colección de controlador de token estableciendo la `saveBootstrapContext` del atributo en el [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento. Un valor establecido en la colección de controlador de token reemplaza al valor establecido en el servicio.|  
+|maximumClockSkew|Un <xref:System.TimeSpan> que define el sesgo de reloj permitido máximo. Controla el sesgo de reloj permitido máximo al realizar operaciones de sujetos a limitación temporal, como la validación de la fecha de expiración de una sesión de inicio de sesión. El valor predeterminado es 5 minutos, "00: 05:00". Para obtener más información sobre cómo especificar <xref:System.TimeSpan> valores, consulte [valores de intervalo de tiempo](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). El sesgo de reloj máximo también se puede establecer en el nivel de servicio estableciendo el `maximumClockSkew` del atributo en el [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento. Un valor establecido en la colección de controlador de token reemplaza al valor establecido en el servicio.|  
   
-### Elementos secundarios  
-  
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Especifica el conjunto de identificadores URI que son aceptables identificadores de esta parte que confía.  Opcional.|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|El atributo  es necesario.  Se puede especificar en el nivel de servicio o en una colección de controladores de token de seguridad.  Opcional.|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Elemento  Descripción  Si un controlador específico está configurado con su propio control de validación, se pasan estos valores.  Opcional.|  
-|[\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura el registro de nombre de emisor que utiliza controladores en la colección de controladores de símbolo \(token\).  Opcional.|  
-|[\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registra a la resolución de símbolo \(token\) de emisor que utiliza controladores en la colección de controladores de símbolo \(token\).  Se utiliza la resolución de símbolo \(token\) de emisor para resolver el token de firma de tokens y los mensajes entrantes.  Opcional.|  
-|[\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registra a la resolución de símbolo \(token\) de servicio que utiliza controladores en la colección de controladores de símbolo \(token\).  La resolución del servicio de símbolo \(token\) se utiliza para resolver el token de cifrado de mensajes y los tokens entrantes.  Opcional.|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Permite la detección de reproducción de símbolo \(token\) y especifica la hora de caducidad de símbolos \(tokens\).  Se puede especificar en el nivel de servicio o en una colección de controladores de token de seguridad.  Opcional.|  
-  
-### Elementos primarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Especifica una colección de controladores de token de seguridad registrados con el extremo.|  
+|-------------|-----------------|  
+|[\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Especifica el conjunto de URI que son identificadores aceptables de este usuario de confianza. Opcional.|  
+|[\<almacena en memoria caché >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra las memorias caché que se utiliza para la detección de reproducción de tokens y símbolos de sesión. Puede especificarse en el nivel de servicio o en una colección de controlador de token de seguridad. Opcional.|  
+|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controla la configuración que usan los controladores de tokens para validar certificados. Puede especificarse en el nivel de servicio o en una colección de controlador de token de seguridad. Estos valores se sustituyen si se configura un controlador específico con su propio validador. Opcional.|  
+|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura el registro de nombre de emisor que se usa por los controladores de la colección de controlador de token. Opcional.|  
+|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registra a la resolución del token de emisor que se usa por los controladores de la colección de controlador de token. La resolución del token de emisor se utiliza para resolver el token de firma en mensajes y los tokens entrantes. Opcional.|  
+|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registra a la resolución del token de servicio que usa controladores en la colección de controlador de token. La resolución del token de servicio se utiliza para resolver el token de cifrado de mensajes y los tokens entrantes. Opcional.|  
+|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Habilita la detección de reproducción de tokens y especifica la hora de expiración de símbolos (tokens). Puede especificarse en el nivel de servicio o en una colección de controlador de token de seguridad. Opcional.|  
   
-## Comentarios  
- Esta sección proporciona los valores de propiedad para una <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> objeto.  Configuración de esta sección reemplaza a los configurados en el servicio.  Algunas de estas opciones a su vez, se pueden, reemplazar por los valores que se especifican cuando se agrega un controlador a la colección de controladores de token de seguridad.  
+### <a name="parent-elements"></a>Elementos primarios  
   
-## Ejemplo  
+|Elemento|Descripción|  
+|-------------|-----------------|  
+|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Especifica una colección de controladores de tokens de seguridad que están registrados con el punto de conexión.|  
   
-```  
+## <a name="remarks"></a>Comentarios  
+ Esta sección proporcionan valores de propiedad para un <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> objeto. Configuración realizada en esta sección reemplaza a las que configura en el servicio. Algunas de estas opciones a su vez, pueden reemplazarse por los valores que se especifican cuando se agrega un controlador a la colección de controlador de token de seguridad.  
+  
+## <a name="example"></a>Ejemplo  
+  
+```xml  
 <system.identityModel>  
   <identityConfiguration>  
     <securityTokenHandlers>   

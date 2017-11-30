@@ -1,55 +1,61 @@
 ---
-title: "Simultaneidad optimista | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Simultaneidad optimista
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 45939dcec8b8db8e1b06ebfc67d89bfead67575a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Simultaneidad optimista
-En un entorno multiusuario existen dos modelos para actualizar datos en una base de datos: simultaneidad optimista y simultaneidad pesimista.  El objeto <xref:System.Data.DataSet> está diseñado para fomentar el uso de la simultaneidad optimista en actividades cuya ejecución tiene una larga duración, como cuando se trabaja con interacción remota y cuando los usuarios interactúan con datos.  
+# <a name="optimistic-concurrency"></a>Simultaneidad optimista
+En un entorno multiusuario existen dos modelos para actualizar datos en una base de datos: simultaneidad optimista y simultaneidad pesimista. El objeto <xref:System.Data.DataSet> está diseñado para fomentar el uso de la simultaneidad optimista en actividades cuya ejecución tiene una larga duración, como cuando se trabaja con interacción remota y cuando los usuarios interactúan con datos.  
   
- La simultaneidad pesimista implica bloquear filas en el origen de datos para impedir que otros usuarios modifiquen los datos de tal forma que el usuario actual resulte afectado.  En un modelo pesimista, cuando un usuario realiza una acción que hace que se aplique un bloqueo, otros usuarios no pueden realizar acciones que entrarían en conflicto con el bloqueo hasta que el propietario del bloqueo lo libere.  Este modelo se utiliza principalmente en aquellos entornos en los que hay mucha contención de datos, de manera que el costo de proteger los datos con bloqueos es menor que el costo de revertir transacciones si se producen conflictos de simultaneidad.  
+ La simultaneidad pesimista implica bloquear filas en el origen de datos para impedir que otros usuarios modifiquen los datos de tal forma que el usuario actual resulte afectado. En un modelo pesimista, cuando un usuario realiza una acción que hace que se aplique un bloqueo, otros usuarios no pueden realizar acciones que entrarían en conflicto con el bloqueo hasta que el propietario del bloqueo lo libere. Este modelo se utiliza principalmente en aquellos entornos en los que hay mucha contención de datos, de manera que el costo de proteger los datos con bloqueos es menor que el costo de revertir transacciones si se producen conflictos de simultaneidad.  
   
- Por tanto, en un modelo de simultaneidad pesimista, un usuario que actualiza una fila establece un bloqueo.  Hasta que el usuario no haya terminado la actualización y liberado el bloqueo, nadie más podrá modificar dicha fila.  Por este motivo, la simultaneidad pesimista resulta más adecuada cuando los tiempos de bloqueo son cortos, como ocurre en el procesamiento de registros mediante programación.  La simultaneidad pesimista no es una opción escalable cuando los usuarios interactúan con los datos y hacen que los registros queden bloqueados durante períodos de tiempo relativamente largos.  
+ Por tanto, en un modelo de simultaneidad pesimista, un usuario que actualiza una fila establece un bloqueo. Hasta que el usuario no haya terminado la actualización y liberado el bloqueo, nadie más podrá modificar dicha fila. Por este motivo, la simultaneidad pesimista resulta más adecuada cuando los tiempos de bloqueo son cortos, como ocurre en el procesamiento de registros mediante programación. La simultaneidad pesimista no es una opción escalable cuando los usuarios interactúan con los datos y hacen que los registros queden bloqueados durante períodos de tiempo relativamente largos.  
   
 > [!NOTE]
 >  Si necesita actualizar varias filas en una misma operación, entonces crear una transacción es una opción más escalable que utilizar el bloqueo pesimista.  
   
- Por el contrario, los usuarios que utilizan la simultaneidad optimista no bloquean una fila cuando la leen.  Cuando un usuario desea actualizar una fila, la aplicación debe determinar si otro usuario la ha modificado o no desde que se leyó.  La simultaneidad optimista suele utilizarse en entornos con poca contención de datos.  Esto mejora el rendimiento porque no es necesario bloquear registros, a la vez que el bloqueo de registros requiere recursos adicionales del servidor.  Además, para mantener bloqueos de registros es necesaria una conexión persistente con el servidor de bases de datos.  Como éste no es el caso en un modelo de simultaneidad optimista, las conexiones con el servidor pueden atender a un mayor número de clientes en menos tiempo.  
+ Por el contrario, los usuarios que utilizan la simultaneidad optimista no bloquean una fila cuando la leen. Cuando un usuario desea actualizar una fila, la aplicación debe determinar si otro usuario la ha modificado o no desde que se leyó. La simultaneidad optimista suele utilizarse en entornos con poca contención de datos. Esto mejora el rendimiento porque no es necesario bloquear registros, a la vez que el bloqueo de registros requiere recursos adicionales del servidor. Además, para mantener bloqueos de registros es necesaria una conexión persistente con el servidor de bases de datos. Como éste no es el caso en un modelo de simultaneidad optimista, las conexiones con el servidor pueden atender a un mayor número de clientes en menos tiempo.  
   
- En un modelo de simultaneidad optimista, se considera que ha habido una infracción si, después de que un usuario recibe un valor de la base de datos, otro usuario modifica el valor antes de que el primer usuario haya intentado modificarlo.  En el ejemplo siguiente se describe cómo el servidor resuelve una infracción de simultaneidad.  
+ En un modelo de simultaneidad optimista, se considera que ha habido una infracción si, después de que un usuario recibe un valor de la base de datos, otro usuario modifica el valor antes de que el primer usuario haya intentado modificarlo. En el ejemplo siguiente se describe cómo el servidor resuelve una infracción de simultaneidad.  
   
  Las siguientes tablas muestran un ejemplo de simultaneidad optimista.  
   
  A la 1:00 p.m., el Usuario1 lee una fila de la base de datos con los valores siguientes:  
   
- **IdCliente     Apellido     Nombre**  
+ **IdCliente Apellido Nombre**  
   
- 101          Martínez             Cris  
+ 101 Martínez Cris  
   
 |Nombre de columna|Valor original|Valor actual|Valor en la base de datos|  
-|-----------------------|--------------------|------------------|-------------------------------|  
+|-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
 |LastName|Martínez|Martínez|Martínez|  
 |Nombre|Cris|Cris|Cris|  
   
  A la 1:01 p.m., el Usuario2 lee la misma fila.  
   
- A la 1:03 p.m., el Usuario2 cambia **Nombre** de "Cris" a "Cristina" y actualiza la base de datos.  
+ A la 1:03 p.m., el Usuario2 cambia **FirstName** de "Cris" a "Cristina" y actualiza la base de datos.  
   
 |Nombre de columna|Valor original|Valor actual|Valor en la base de datos|  
-|-----------------------|--------------------|------------------|-------------------------------|  
+|-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
 |LastName|Martínez|Martínez|Martínez|  
 |Nombre|Cris|Cristina|Cris|  
@@ -59,23 +65,23 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
  A la 1:05 p.m., el Usuario1 cambia el nombre de "Cris" a "Jaime" e intenta actualizar la fila.  
   
 |Nombre de columna|Valor original|Valor actual|Valor en la base de datos|  
-|-----------------------|--------------------|------------------|-------------------------------|  
+|-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
 |LastName|Martínez|Martínez|Martínez|  
 |Nombre|Cris|Jaime|Cristina|  
   
- En este momento, el Usuario1 encuentra una infracción de la simultaneidad optimista porque los valores de la base de datos \("Jaime"\) ya no coinciden con los valores originales que esperaba el Usuario1 \("Cris"\).  La infracción de simultaneidad simplemente permite saber que se ha producido un error de actualización.  Ahora hay que tomar la decisión de sobrescribir los cambios realizados por el Usuario2 con los efectuados por el Usuario1 o cancelar los cambios del Usuario1.  
+ En este momento, el Usuario1 encuentra una infracción de la simultaneidad optimista porque los valores de la base de datos ("Jaime") ya no coinciden con los valores originales que esperaba el Usuario1 ("Cris"). La infracción de simultaneidad simplemente permite saber que se ha producido un error de actualización. Ahora hay que tomar la decisión de sobrescribir los cambios realizados por el Usuario2 con los efectuados por el Usuario1 o cancelar los cambios del Usuario1.  
   
-## Probar si hay infracciones de la simultaneidad optimista  
- Existen varias técnicas para probar si se ha producido una infracción de la simultaneidad optimista.  Una de ellas consiste en incluir una columna de marca de tiempo en la tabla.  Las bases de datos suelen ofrecer funcionalidad de marca de tiempo que puede utilizarse para identificar la fecha y la hora en que se actualizó el registro por última vez.  Mediante esta técnica se incluye una columna de marca de tiempo en la definición de la tabla.  Siempre que se actualiza el registro, se actualiza la marca de tiempo de manera que queden reflejadas la fecha y la hora actuales.  Al hacer una prueba para ver si hay infracciones de la simultaneidad optimista, la columna de marca de tiempo se devuelve con cualquier consulta del contenido de la tabla.  Cuando se intenta realizar una actualización, se compara el valor de marca de tiempo de la base de datos con el valor de marca de tiempo original contenido en la fila modificada.  Si coinciden, se realiza la actualización y se actualiza la columna de marca de tiempo con la hora actual con el fin de reflejar la actualización.  Si no coinciden, se ha producido una infracción de la simultaneidad optimista.  
+## <a name="testing-for-optimistic-concurrency-violations"></a>Probar si hay infracciones de la simultaneidad optimista  
+ Existen varias técnicas para probar si se ha producido una infracción de la simultaneidad optimista. Una de ellas consiste en incluir una columna de marca de tiempo en la tabla. Las bases de datos suelen ofrecer funcionalidad de marca de tiempo que puede utilizarse para identificar la fecha y la hora en que se actualizó el registro por última vez. Mediante esta técnica se incluye una columna de marca de tiempo en la definición de la tabla. Siempre que se actualiza el registro, se actualiza la marca de tiempo de manera que queden reflejadas la fecha y la hora actuales. Al hacer una prueba para ver si hay infracciones de la simultaneidad optimista, la columna de marca de tiempo se devuelve con cualquier consulta del contenido de la tabla. Cuando se intenta realizar una actualización, se compara el valor de marca de tiempo de la base de datos con el valor de marca de tiempo original contenido en la fila modificada. Si coinciden, se realiza la actualización y se actualiza la columna de marca de tiempo con la hora actual con el fin de reflejar la actualización. Si no coinciden, se ha producido una infracción de la simultaneidad optimista.  
   
- Otra técnica para probar si hay alguna infracción relacionada con la simultaneidad optimista consiste en comprobar que todos los valores de columna originales de una fila siguen coincidiendo con los existentes en la base de datos.  Por ejemplo, observe la siguiente consulta:  
+ Otra técnica para probar si hay alguna infracción relacionada con la simultaneidad optimista consiste en comprobar que todos los valores de columna originales de una fila siguen coincidiendo con los existentes en la base de datos. Por ejemplo, observe la siguiente consulta:  
   
 ```  
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- Para probar si hay alguna infracción relacionada con la simultaneidad optimista al actualizar una fila de **Tabla1**, se utilizaría la siguiente instrucción UPDATE:  
+ Para comprobar una infracción de simultaneidad optimista al actualizar una fila en **Table1**, se utilizaría la siguiente instrucción UPDATE:  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -86,28 +92,28 @@ WHERE Col1 = @OldCol1Value AND
       Col3 = @OldCol3Value  
 ```  
   
- La actualización se realizará siempre y cuando los valores originales coincidan con los valores de la base de datos.  Si se ha modificado algún valor, la actualización no modificará la fila porque la cláusula WHERE no encontrará ninguna coincidencia.  
+ La actualización se realizará siempre y cuando los valores originales coincidan con los valores de la base de datos. Si se ha modificado algún valor, la actualización no modificará la fila porque la cláusula WHERE no encontrará ninguna coincidencia.  
   
- Se recomienda devolver siempre un valor de clave principal único en la consulta.  De lo contrario, la instrucción UPDATE anterior puede actualizar más de una fila, lo que quizás no sea su intención.  
+ Se recomienda devolver siempre un valor de clave principal único en la consulta. De lo contrario, la instrucción UPDATE anterior puede actualizar más de una fila, lo que quizás no sea su intención.  
   
- Si una columna del origen de datos admite valores nulos, quizás sea necesario extender la cláusula WHERE para comprobar si hay alguna referencia nula coincidente en la tabla local y en el origen de datos.  Por ejemplo, la siguiente instrucción UPDATE comprueba que una referencia nula de la fila local sigue coincidiendo con una referencia nula del origen de datos o que el valor de la fila local sigue coincidiendo con el valor del origen de datos.  
+ Si una columna del origen de datos admite valores nulos, quizás sea necesario extender la cláusula WHERE para comprobar si hay alguna referencia nula coincidente en la tabla local y en el origen de datos. Por ejemplo, la siguiente instrucción UPDATE comprueba que una referencia nula de la fila local sigue coincidiendo con una referencia nula del origen de datos o que el valor de la fila local sigue coincidiendo con el valor del origen de datos.  
   
 ```  
 UPDATE Table1 Set Col1 = @NewVal1  
   WHERE (@OldVal1 IS NULL AND Col1 IS NULL) OR Col1 = @OldVal1  
 ```  
   
- También se puede decidir la aplicación de criterios menos restrictivos al utilizar un modelo de simultaneidad optimista.  Por ejemplo, si solo se utilizan las columnas de clave principal en la cláusula WHERE se sobrescribirán los datos, independientemente de que las otras columnas se hayan actualizado o no desde la última consulta.  También se puede aplicar una cláusula WHERE solo a determinadas columnas, lo que hará que se sobrescriban los datos a menos que se hayan actualizado ciertos campos desde que se consultaron por última vez.  
+ También se puede decidir la aplicación de criterios menos restrictivos al utilizar un modelo de simultaneidad optimista. Por ejemplo, si solo se utilizan las columnas de clave principal en la cláusula WHERE se sobrescribirán los datos, independientemente de que las otras columnas se hayan actualizado o no desde la última consulta. También se puede aplicar una cláusula WHERE solo a determinadas columnas, lo que hará que se sobrescriban los datos a menos que se hayan actualizado ciertos campos desde que se consultaron por última vez.  
   
-### Evento DataAdapter.RowUpdated  
- El evento **RowUpdated** del objeto <xref:System.Data.Common.DataAdapter> puede utilizarse junto con las técnicas descritas anteriormente para informar a la aplicación de las infracciones de la simultaneidad optimista.  **RowUpdated** se produce después de cada intento de actualizar una fila **Modified** de un **DataSet**.  Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc.  El objeto <xref:System.Data.Common.RowUpdatedEventArgs> devuelve una propiedad **RecordsAffected** con el número de filas afectadas por un determinado comando de actualización para una fila modificada de una tabla.  Si se establece que el comando de actualización compruebe la simultaneidad optimista, la propiedad **RecordsAffected** devolverá un valor 0 cuando se haya producido una infracción en la simultaneidad optimista, ya que no se actualizó ningún registro.  En tal caso se inicia una excepción.  El evento **RowUpdated** le permite controlar este caso y evitar la excepción al establecer un valor **RowUpdatedEventArgs.Status** apropiado, como **UpdateStatus.SkipCurrentRow**.  Para obtener más información sobre el evento **RowUpdated**, consulte [Control de eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
+ El **RowUpdated** eventos de la <xref:System.Data.Common.DataAdapter> objeto puede utilizarse junto con las técnicas descritas anteriormente, para proporcionar una notificación a la aplicación de las infracciones de simultaneidad optimista. **RowUpdated** se produce después de cada intento de actualizar una **Modified** fila de un **conjunto de datos**. Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc. El <xref:System.Data.Common.RowUpdatedEventArgs> objeto devuelve un **RecordsAffected** propiedad que contiene el número de filas afectadas por un determinado comando de actualización para una fila modificada en una tabla. Si establece el comando de actualización para comprobar la simultaneidad optimista, la **RecordsAffected** propiedad, como resultado, devolverá un valor de 0 cuando se ha producido una infracción de simultaneidad optimista, porque se actualizó ningún registro. En tal caso se inicia una excepción. El **RowUpdated** evento le permite controlar este caso y evitar la excepción al establecer un adecuado **RowUpdatedEventArgs.Status** valor, como  **UpdateStatus.SkipCurrentRow**. Para obtener más información sobre la **RowUpdated** eventos, vea [control de eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- De forma opcional, es posible establecer **DataAdapter.ContinueUpdateOnError** como **true** antes de llamar a **Update** y responder a la información de error almacenada en la propiedad **RowError** de una fila determinada cuando **Update** se complete.  Para obtener más información, consulta [Información de errores de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Si lo desea, puede establecer **DataAdapter.ContinueUpdateOnError** a **true**, antes de llamar a **actualización**y responder a la información de error almacenada en la **RowError** propiedad de una determinada fila cuando la **actualización** se ha completado. Para obtener más información, consulte [información de Error de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
-## Ejemplo de simultaneidad optimista  
- A continuación se muestra un ejemplo sencillo que establece **UpdateCommand** de **DataAdapter** para probar la simultaneidad optimista y, a continuación, utiliza el evento **RowUpdated** para probar si hay infracciones relacionadas con la simultaneidad optimista.  Cuando se encuentra una infracción de la simultaneidad optimista, la aplicación establece el **RowError** de la fila para la que se emitió la actualización con el fin de reflejar la existencia de una infracción de la simultaneidad optimista.  
+## <a name="optimistic-concurrency-example"></a>Ejemplo de simultaneidad optimista  
+ El siguiente es un ejemplo sencillo que establece el **UpdateCommand** de un **DataAdapter** para comprobar la simultaneidad optimista y, a continuación, usa el **RowUpdated** eventos para comprobar la infracciones de simultaneidad optimista. Cuando se detecta una infracción de simultaneidad optimista, la aplicación establece el **RowError** de la fila que se emitió la actualización para reflejar una infracción de simultaneidad optimista.  
   
- Hay que tener en cuenta que los valores de los parámetros pasados a la cláusula WHERE del comando UPDATE se asignan a los valores **Original** de sus respectivas columnas.  
+ Tenga en cuenta que los valores de parámetro pasados a la cláusula WHERE del comando UPDATE se asignan a la **Original** valores de sus respectivas columnas.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -210,9 +216,9 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## Vea también  
- [Recuperación y modificación de datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Actualizar orígenes de datos con DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [Información de errores de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)   
- [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Información de Error de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
+ [Las transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

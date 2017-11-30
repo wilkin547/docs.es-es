@@ -1,34 +1,40 @@
 ---
-title: "Suscribirse a eventos de UI Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Automatización de la interfaz de usuario, para suscribirse a eventos"
-  - "suscribirse a eventos de UI Automation"
-  - "suscribirse a eventos"
-  - "realizar escuchas para eventos"
+title: Suscribirse a eventos de UI Automation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- UI Automation, subscribing to events
+- subscribing to UI Automation events
+- events, subscribing to
+- listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
-caps.latest.revision: 16
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 39275c38e4a7d28248b46f1116990c5bbe21a15f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Suscribirse a eventos de UI Automation
+# <a name="subscribe-to-ui-automation-events"></a>Suscribirse a eventos de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a desarrolladores de .NET Framework que quieran usar los recursos administrados [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] clases definidas en el <xref:System.Windows.Automation> espacio de nombres. Para obtener la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  En este tema se muestra cómo suscribirse a eventos generados por los proveedores de UI Automation.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente registra un controlador de eventos para el evento que se desencadena cuando se invoca un control como un botón y lo quita cuando se cierra el formulario de la aplicación. El evento se identifica mediante un <xref:System.Windows.Automation.AutomationEvent> pasa como parámetro a <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.  
+ El ejemplo de código siguiente registra un controlador de eventos para el evento que se desencadena cuando se invoca un control como un botón y lo quita cuando se cierra el formulario de la aplicación. El evento se identifica mediante un <xref:System.Windows.Automation.AutomationEvent> pasa como un parámetro para <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.  
   
  [!code-csharp[UIAClient_snip#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#101)]
  [!code-vb[UIAClient_snip#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#101)]  
@@ -40,7 +46,7 @@ caps.handback.revision: 16
  [!code-vb[UIAClient_snip#102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#102)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>   
- <xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>   
- <xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>   
+ <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>  
+ <xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>  
+ <xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>  
  [Información general sobre eventos UI Automation](../../../docs/framework/ui-automation/ui-automation-events-overview.md)

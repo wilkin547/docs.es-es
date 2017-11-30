@@ -1,28 +1,34 @@
 ---
-title: "C&#243;mo: Devolver el promedio de una secuencia num&#233;rica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Devolver el valor medio de una secuencia numérica"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 87a23bce302ac7eed3081b5670cb8c532a550cde
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Devolver el promedio de una secuencia num&#233;rica
+# <a name="return-the-average-value-from-a-numeric-sequence"></a>Devolver el valor medio de una secuencia numérica
 El operador <xref:System.Linq.Enumerable.Average%2A> calcula el promedio de una secuencia de valores numéricos.  
   
 > [!NOTE]
->  La conversión de `Average` de valores enteros en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se calcula como un entero, no como double.  
+>  La conversión de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de valores enteros en `Average` se calcula como un entero, no como double.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se devuelve el promedio de los valores `Freight` de la tabla `Orders`.  
   
  Los resultados de la base de datos de ejemplo Northwind serían `78.2442`.  
@@ -30,7 +36,7 @@ El operador <xref:System.Linq.Enumerable.Average%2A> calcula el promedio de una 
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se devuelve el promedio de precio unitario de todos los `Products` de la tabla `Products`.  
   
  Los resultados de la base de datos de ejemplo Northwind serían `28.8663`.  
@@ -38,10 +44,10 @@ El operador <xref:System.Linq.Enumerable.Average%2A> calcula el promedio de una 
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza al operador `Average` para buscar `Products` cuyo precio unitario es más alto que el precio unitario promedio de la categoría a la que pertenece.  A continuación, el ejemplo muestra los resultados en grupos.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se utiliza al operador `Average` para buscar `Products` cuyo precio unitario es más alto que el precio unitario promedio de la categoría a la que pertenece. A continuación, el ejemplo muestra los resultados en grupos.  
   
- Observe que este ejemplo requiere el uso de la palabra clave `var` en C\#, porque el tipo de valor devuelto es anónimo.  
+ Observe que este ejemplo requiere el uso de la palabra clave `var` en C#, porque el tipo de valor devuelto es anónimo.  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
@@ -118,5 +124,5 @@ El operador <xref:System.Linq.Enumerable.Average%2A> calcula el promedio de una 
   
  `Gravad lax`  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Consultas de agregado](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

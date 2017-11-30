@@ -1,40 +1,43 @@
 ---
-title: "Informaci&#243;n general sobre seguridad de SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Información general sobre la seguridad de SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d93d077153cd15534175c1e60e63a765ce893c71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre seguridad de SQL Server
-Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es la mejor manera de enfrentarse a las amenazas a la seguridad.  SQL Server proporciona una arquitectura de seguridad diseñada para permitir a los administradores de bases de datos y desarrolladores crear aplicaciones de base de datos seguras y contrarrestar las amenazas.  En cada versión de SQL Server se han introducido mejoras a las versiones anteriores con nuevas características y funcionalidades.  No obstante, la seguridad no es una característica integrada más.  Cada aplicación tiene requisitos de seguridad propios.  Los desarrolladores tienen que saber cuál es la combinación de características y funcionalidades más apropiada para contrarrestar las amenazas conocidas, así como anticiparse a las que puedan ir apareciendo en el futuro.  
+# <a name="overview-of-sql-server-security"></a>Información general sobre la seguridad de SQL Server
+Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es la mejor manera de enfrentarse a las amenazas a la seguridad. SQL Server proporciona una arquitectura de seguridad diseñada para permitir a los administradores de bases de datos y desarrolladores crear aplicaciones de base de datos seguras y contrarrestar las amenazas. En cada versión de SQL Server se han introducido mejoras a las versiones anteriores con nuevas características y funcionalidades. No obstante, la seguridad no es una característica integrada más. Cada aplicación tiene requisitos de seguridad propios. Los desarrolladores tienen que saber cuál es la combinación de características y funcionalidades más apropiada para contrarrestar las amenazas conocidas, así como anticiparse a las que puedan ir apareciendo en el futuro.  
   
- Una instancia de SQL Server contiene un conjunto jerárquico de entidades, empezando por el servidor.  Cada servidor contiene varias bases de datos y, a su vez, cada base de datos contiene un conjunto de objetos susceptibles de ser protegidos.  Cada SQL Server que se protege tiene  *permisos* asociados que se pueden conceder a una *entidad de seguridad*, la cual a su vez puede ser un elemento único, un grupo o un proceso al que se le otorga permiso de acceso a SQL Server.  La arquitectura de seguridad de SQL Server administra el acceso a entidades protegidas mediante *autenticación* y *autorización*.  
+ Una instancia de SQL Server contiene un conjunto jerárquico de entidades, empezando por el servidor. Cada servidor contiene varias bases de datos y, a su vez, cada base de datos contiene una colección de objetos susceptibles de ser protegidos. Cada elemento protegible de SQL Server tiene asociados *permisos* que se pueden conceder a un *principal*, que es un grupo individual, o proceso que tienen acceso a SQL Server. El marco de seguridad de SQL Server administra el acceso a entidades protegidas mediante *autenticación* y *autorización*.  
   
--   La autenticación es el proceso de inicio de sesión en SQL Server por el que una entidad de seguridad solicita el acceso mediante el envío de credenciales que el servidor evalúa.  La autenticación establece la identidad del usuario o proceso que se autentica.  
+-   La autenticación es el proceso de inicio de sesión en SQL Server por el que una entidad de seguridad solicita el acceso mediante el envío de credenciales que el servidor evalúa. La autenticación establece la identidad del usuario o proceso que se autentica.  
   
 -   La autorización es el proceso con el que se determinan los recursos susceptibles de protegerse a los que tiene acceso una entidad de seguridad, así como las operaciones que les están permitidas a dichos recursos.  
   
  Los temas de esta sección abordan los conceptos básicos de seguridad de SQL Server y proporcionan vínculos a la documentación completa de la versión de los Libros en pantalla de SQL Server que corresponda.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  Describe los inicios de sesión y autenticación en SQL Server y proporciona vínculos a recursos adicionales.  
   
  [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  Describe funciones fijas de bases de datos y servidores, funciones de base de datos personalizadas y cuentas integradas, y proporciona vínculos a recursos adicionales.  
   
- [Propiedad y separación usuario\-esquema en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [Propiedad y separación usuario-esquema en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  Describe la propiedad de los objetos y separación entre usuario y esquema, y proporciona vínculos a recursos adicionales.  
   
  [Autorización y permisos en SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
@@ -46,8 +49,8 @@ Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es 
  [Seguridad de la integración de CLR en SQL Server](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
  Proporciona vínculos a recursos de seguridad de la integración CLR.  
   
-## Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Seguridad en SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [Seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [Escenarios de seguridad de la aplicación en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

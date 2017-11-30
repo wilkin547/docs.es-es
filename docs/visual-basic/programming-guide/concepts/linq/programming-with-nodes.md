@@ -1,40 +1,31 @@
 ---
-title: Programar con nodos (Visual Basic) | Documentos de Microsoft
+title: Programar con nodos (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 52fb60b95b869a79900f84c2a1a7a6151bb5b58f
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5f56e98d4a732b6cc69dde87d0efe8e87506b48b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Programar con nodos (Visual Basic)
-Los desarrolladores de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] que deben escribir programar como un editor de XML, un sistema de transformación o un sistema de escritura de informes a menudo deben escribir programas que funcionan en un nivel de granularidad más fino que los elementos y los atributos. A menudo deben trabajar en el nivel del nodo, manipulando nodos de texto, procesando instrucciones y comentarios. En este tema se proporcionan algunos detalles acerca de la programación en el nivel del nodo.  
+Los desarrolladores de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que deben escribir programar como un editor de XML, un sistema de transformación o un sistema de escritura de informes a menudo deben escribir programas que funcionan en un nivel de granularidad más fino que los elementos y los atributos. A menudo deben trabajar en el nivel del nodo, manipulando nodos de texto, procesando instrucciones y comentarios. En este tema se proporcionan algunos detalles acerca de la programación en el nivel del nodo.  
   
 ## <a name="node-details"></a>Detalles del nodo  
  Existen varios detalles de programación que un programador que trabaja en el nivel de nodo debe conocer.  
   
 ### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>La propiedad primaria de los nodos secundarios de XDocument está establecida en NULL  
- El <xref:System.Xml.Linq.XObject.Parent%2A>propiedad contiene el elemento primario <xref:System.Xml.Linq.XElement>, no el nodo primario.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XObject.Parent%2A> Nodos secundarios de <xref:System.Xml.Linq.XDocument>tener ningún elemento primario <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> Su elemento primario es el documento, por lo que la <xref:System.Xml.Linq.XObject.Parent%2A>propiedad para esos nodos se establece en null.</xref:System.Xml.Linq.XObject.Parent%2A>  
+ La propiedad <xref:System.Xml.Linq.XObject.Parent%2A> contiene el <xref:System.Xml.Linq.XElement> primario, no el nodo primario. Los nodos secundarios de <xref:System.Xml.Linq.XDocument> no tienen <xref:System.Xml.Linq.XElement> primario. Su elemento primario es el documento, de forma que la propiedad <xref:System.Xml.Linq.XObject.Parent%2A> para esos nodos se establece en NULL.  
   
  En el siguiente ejemplo se muestra esto:  
   
@@ -52,7 +43,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>Los nodos de texto adyacentes son posibles  
- En varios modelos de programación XML, los nodos de texto adyacente siempre están combinados. A veces se denomina normalización de los nodos de texto. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] no normaliza nodos de texto. Si agrega dos nodos de texto al mismo elemento, tendrá como resultado nodos de texto adyacentes. Sin embargo, si agrega contenido especificado como una cadena en lugar de como un <xref:System.Xml.Linq.XText>nodo, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] puede combinar la cadena con un nodo de texto adyacente.</xref:System.Xml.Linq.XText>  
+ En varios modelos de programación XML, los nodos de texto adyacente siempre están combinados. A veces se denomina normalización de los nodos de texto. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no normaliza nodos de texto. Si agrega dos nodos de texto al mismo elemento, tendrá como resultado nodos de texto adyacentes. En cambio, si agrega contenido especificado como una cadena en lugar de un nodo <xref:System.Xml.Linq.XText>, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] puede combinar la cadena con un nodo de texto adyacente.  
   
  En el siguiente ejemplo se muestra esto:  
   
@@ -111,15 +102,15 @@ Console.WriteLine(child2)
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
 ### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Los espacios de nombres son atributos en el árbol LINQ to XML  
- Aunque las declaraciones del espacio de nombres tienen una sintaxis idéntica a los atributos, en algunas interfaces de programación como XSLT y XPath, las declaraciones de espacios de nombres no se consideran atributos. Sin embargo, en [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], espacios de nombres se almacenan como <xref:System.Xml.Linq.XAttribute>objetos en el árbol XML.</xref:System.Xml.Linq.XAttribute> Si recorre en iteración los atributos de un elemento que contiene una declaración de espacio de nombres, verá la declaración de espacio de nombres como uno de los elementos de la recopilación devuelta.  
+ Aunque las declaraciones del espacio de nombres tienen una sintaxis idéntica a los atributos, en algunas interfaces de programación como XSLT y XPath, las declaraciones de espacios de nombres no se consideran atributos. No obstante, en [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], los espacios de nombres se almacenan como objetos <xref:System.Xml.Linq.XAttribute> en el árbol XML. Si recorre en iteración los atributos de un elemento que contiene una declaración de espacio de nombres, verá la declaración de espacio de nombres como uno de los elementos de la recopilación devuelta.  
   
- El <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>propiedad indica si un atributo es una declaración de espacio de nombres.</xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>  
+ La propiedad <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> indica si un atributo es una declaración de espacio de nombres.  
   
 ```vb  
 Dim root As XElement = _   
@@ -142,7 +133,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Los métodos del eje XPath no devuelven un espacio en blanco secundario de XDocument  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]permite nodos de texto secundarios de un <xref:System.Xml.Linq.XDocument>, siempre y cuando los nodos de texto contengan solamente espacios en blanco.</xref:System.Xml.Linq.XDocument> Sin embargo, el modelo de objetos de XPath no incluye un espacio en blanco como nodos secundarios de un documento, así que cuando recorra en iteración los elementos secundarios de un <xref:System.Xml.Linq.XDocument>con el <xref:System.Xml.Linq.XContainer.Nodes%2A>eje, se devolverán los nodos de texto de espacio en blanco.</xref:System.Xml.Linq.XContainer.Nodes%2A> </xref:System.Xml.Linq.XDocument> Sin embargo, cuando recorra en iteración los elementos secundarios de un <xref:System.Xml.Linq.XDocument>usando los métodos de eje de XPath, no se devolverán los nodos de texto de espacio en blanco.</xref:System.Xml.Linq.XDocument>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite nodos de texto secundarios de un <xref:System.Xml.Linq.XDocument> mientras los nodos de texto contengan solamente espacios en blanco. No obstante, el modelo del objeto XPath no incluye el espacio en blanco como nodos secundarios de un documento, así que cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando el eje <xref:System.Xml.Linq.XContainer.Nodes%2A>, se devolverán los nodos de texto del espacio en blanco. Sin embargo, cuando recorra en iteración los elementos secundarios de <xref:System.Xml.Linq.XDocument> usando los métodos del eje de XPath, no se devolverán los nodos de texto de espacio en blanco.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -167,7 +158,7 @@ Console.WriteLine(nodes.OfType(Of XText)().Count())
 ```  
   
 ### <a name="xdeclaration-objects-are-not-nodes"></a>Los objetos XDeclaration no son nodos  
- Cuando recorra en iteración los nodos secundarios de un <xref:System.Xml.Linq.XDocument>, no verá el objeto de declaración XML.</xref:System.Xml.Linq.XDocument> Es una propiedad del documento, no un nodo secundario de él.  
+ Cuando recorra en iteración los nodos secundarios de <xref:System.Xml.Linq.XDocument>, no verá el objeto de declaración XML. Es una propiedad del documento, no un nodo secundario de él.  
   
 ```vb  
 Dim doc As XDocument = _  
@@ -183,12 +174,11 @@ Console.WriteLine(doc.Nodes().Count())
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <Root />  
 1  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Avanzada de LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+ [Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
