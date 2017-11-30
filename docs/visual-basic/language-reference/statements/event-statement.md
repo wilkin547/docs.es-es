@@ -1,53 +1,36 @@
 ---
-title: "Event (instrucción) | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Event (Instrucción)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
-dev_langs:
-- VB
 helpviewer_keywords:
-- Event statement
-- declaring events, syntax
-- Public keyword, Event statements
-- Custom keyword
-- declarations, events
+- Event statement [Visual Basic]
+- declaring events [Visual Basic], syntax
+- Public keyword [Visual Basic], Event statements
+- Custom keyword [Visual Basic]
+- declarations [Visual Basic], events
 - event keyword [Visual Basic]
-- WithEvents keyword, Event statements
+- WithEvents keyword [Visual Basic], Event statements
 - events [Visual Basic], declaring
-- ByVal keyword, Event statements
+- ByVal keyword [Visual Basic], Event statements
 - events [Visual Basic], custom
-- ByRef keyword, Event statements
+- ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b0ea8074f996622df3cd88a7e87fc1156b63dcaf
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="event-statement"></a>Event (Instrucción)
 Declara un evento definido por el usuario.  
@@ -82,8 +65,8 @@ End Event
   
 |Parte|Descripción|  
 |---|---|  
-|`attrlist`|Opcional. Lista de atributos que se aplican a este evento. Los diversos atributos se separan con comas. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) en corchetes angulares ("`<`"y"`>`").|  
-|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al evento. Puede ser uno de los siguientes:<br /><br /> -   [Pública](../../../visual-basic/language-reference/modifiers/public.md): cualquier código que puede tener acceso al elemento que lo declara puede tener acceso a él.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md): sólo el código dentro de su clase o una clase derivada.<br />-   [Amigo](../../../visual-basic/language-reference/modifiers/friend.md): sólo el código en el mismo ensamblado.<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md): sólo el código en el elemento que lo declara puede tener acceso a él.<br /><br /> Puede especificar `Protected Friend` para habilitar el acceso desde el código de la clase del evento, una clase derivada o el mismo ensamblado.|  
+|`attrlist`|Opcional. Lista de atributos que se aplican a este evento. Los diversos atributos se separan con comas. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) corchetes angulares ("`<`"y"`>`").|  
+|`accessmodifier`|Opcional. Especifica qué código puede tener acceso al evento. Puede ser uno de los siguientes:<br /><br /> -   [Pública](../../../visual-basic/language-reference/modifiers/public.md): cualquier código que puede tener acceso al elemento que lo declara puede tener acceso a él.<br />-   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md): solo el código de su clase o una clase derivada puede obtener acceso a él.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): solo el código en el mismo ensamblado puede tener acceso a él.<br />-   [Privada](../../../visual-basic/language-reference/modifiers/private.md): sólo el código en el elemento que lo declara puede tener acceso a él.<br /><br /> Puede especificar `Protected Friend` para habilitar el acceso desde el código de la clase del evento, una clase derivada o el mismo ensamblado.|  
 |`Shared`|Opcional. Especifica que este evento no está asociado a una instancia específica de una clase o estructura.|  
 |`Shadows`|Opcional. Indica que este evento vuelve a declarar y oculta un elemento de programación con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un elemento `Private` reemplaza un elemento de clase base, el código que no tiene permiso para acceder al elemento `Private` accede en su lugar al elemento de clase base.|  
 |`eventname`|Obligatorio. Nombre del evento; sigue las convenciones estándar de nomenclatura de variables.|  
@@ -106,16 +89,16 @@ End Event
 ## <a name="remarks"></a>Comentarios  
  Una vez declarado el evento, use la instrucción `RaiseEvent` para generar el evento. Un evento típico podría declararse y provocarse tal como se muestra en los fragmentos siguientes:  
   
- [!code-vb[VbVbalrEvents&#13;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
 >  Puede declarar argumentos de evento del mismo modo que los argumentos de procedimientos, con las siguientes excepciones: los eventos no pueden tener argumentos con nombre, argumentos `ParamArray` o argumentos `Optional`. Los eventos no tienen valores devueltos.  
   
  Para controlar un evento, debe asociarlo a una subrutina del controlador de eventos mediante la instrucción `Handles` o `AddHandler`. Las firmas de la subrutina y del evento deben coincidir. Para controlar un evento compartido, debe usar la instrucción `AddHandler`.  
   
- Solo se puede usar `Event` en un nivel de módulo. Esto significa que la *contexto de la declaración* de un evento debe ser una clase, estructura, módulo o interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento ni un bloque. Para obtener más información, consulte [contextos de declaración y niveles de acceso predeterminados](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Solo se puede usar `Event` en un nivel de módulo. Esto significa que la *contexto de la declaración* para un evento debe ser una clase, estructura, módulo o interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
- En la mayoría de los casos, puede usar la primera sintaxis de la sección Sintaxis de este tema para declarar los eventos. Sin embargo, algunos escenarios requieren un mayor control sobre el comportamiento detallado del evento. La última sintaxis de la sección Sintaxis de este tema, que usa la palabra clave `Custom`, proporciona ese control permitiéndole definir eventos personalizados. En un evento personalizado, debe especificar exactamente lo que sucede cuando el código agrega o quita un controlador de eventos a o desde el evento, o cuando el código provoca el evento. Para obtener ejemplos, vea [Cómo: declarar personalizados para conservar la memoria de eventos](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) y [Cómo: declarar personalizado eventos para evitar bloquear](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ En la mayoría de los casos, puede usar la primera sintaxis de la sección Sintaxis de este tema para declarar los eventos. Sin embargo, algunos escenarios requieren un mayor control sobre el comportamiento detallado del evento. La última sintaxis de la sección Sintaxis de este tema, que usa la palabra clave `Custom`, proporciona ese control permitiéndole definir eventos personalizados. En un evento personalizado, debe especificar exactamente lo que sucede cuando el código agrega o quita un controlador de eventos a o desde el evento, o cuando el código provoca el evento. Para obtener ejemplos, vea [Cómo: declarar personalizada para conservar la memoria de eventos](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) y [Cómo: declarar personalizado eventos que evitan bloqueos](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usan eventos para contar los segundos de 10 a 0. El código muestra algunos de los métodos, propiedades e instrucciones relacionados con eventos. Esto incluye la instrucción `RaiseEvent`.  
@@ -130,26 +113,26 @@ End Event
   
  Agregue una variable `WithEvents` a la sección de declaraciones de la clase `Form1`:  
   
- [!code-vb[VbVbalrEvents&#14;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
   
  Agregue el código siguiente al código de `Form1`. Sustituya los procedimientos duplicados que existan, como `Form_Load` o `Button_Click`.  
   
- [!code-vb[VbVbalrEvents&#15;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
   
- Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón **iniciar**. El primer cuadro de texto empieza la cuenta atrás de los segundos. Cuando transcurre el tiempo (10 segundos), el primer cuadro de texto muestra "Done".  
+ Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón con la etiqueta **iniciar**. El primer cuadro de texto empieza la cuenta atrás de los segundos. Cuando transcurre el tiempo (10 segundos), el primer cuadro de texto muestra "Done".  
   
 > [!NOTE]
 >  El método `My.Application.DoEvents` no procesa los eventos de la misma manera que el formulario. Para habilitar el formulario de modo que controle directamente los eventos, puede usar multithreading. Para obtener más información, consulte [subprocesos](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
   
 ## <a name="see-also"></a>Vea también  
- [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
- [Implements (instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md)   
- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)   
- [AddHandler (instrucción)](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [RemoveHandler (instrucción)](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [Identificadores](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [Cómo: declarar eventos personalizados para conservar memoria](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)   
- [Cómo: declarar eventos personalizados para evitar bloqueos](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)   
- [Compartido](../../../visual-basic/language-reference/modifiers/shared.md)   
+ [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
+ [Implements (instrucción)](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [AddHandler (instrucción)](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [RemoveHandler (instrucción)](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Declarar eventos personalizados para conservar memoria](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [Declarar eventos personalizados para evitar bloqueos](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

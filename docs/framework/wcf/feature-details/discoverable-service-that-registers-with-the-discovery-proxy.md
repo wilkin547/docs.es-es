@@ -1,22 +1,25 @@
 ---
-title: "C&#243;mo: Implementar un servicio reconocible que se registra con el proxy de detecci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Implementar un servicio reconocible que se registra con el proxy de detección"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar un servicio reconocible que se registra con el proxy de detecci&#243;n
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Cómo: Implementar un servicio reconocible que se registra con el proxy de detección
 Este tema es el segundo de cuatro temas que describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementa un proxy de detección. En este tema, creará un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que enviará mensajes de anuncio (`Hello` y `Bye`) al proxy de detección, haciendo que se registre y se elimine del registro con el proxy de detección.  
   
 ### <a name="to-define-the-service-contract"></a>Para definir el contrato de servicio  
@@ -33,14 +36,14 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
   
 4.  Agregue las siguientes instrucciones de uso.  
   
-    ```  
+    ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
 5.  Dentro de CalculatorService.cs, defina el contrato de servicios.  
   
-    ```  
+    ```csharp  
     // Define a service contract.  
         [ServiceContract(Namespace = "http://Microsoft.Samples.Discovery")]  
         public interface ICalculatorService  
@@ -54,12 +57,11 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
             [OperationContract]  
             double Divide(double n1, double n2);  
         }  
-  
     ```  
   
 6.  También dentro de CalculatorService.cs, implemente el contrato de servicios.  
   
-    ```  
+    ```csharp  
     // Service class which implements the service contract.      
         public class CalculatorService : ICalculatorService  
         {  
@@ -95,7 +97,6 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
                 return result;  
             }  
         }  
-  
     ```  
   
 ### <a name="to-host-the-service"></a>Para hospedar el servicio  
@@ -104,18 +105,16 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
   
 2.  Agregue las siguientes instrucciones de uso.  
   
-    ```  
+    ```csharp 
     using System;  
     using System.ServiceModel;  
     using System.ServiceModel.Description;  
     using System.ServiceModel.Discovery;  
-  
     ```  
   
 3.  Agregue el código siguiente en el método `Main()`:  
   
-    ```  
-  
+    ```csharp  
     // Define the base address of the service  
     Uri baseAddress = new Uri("net.tcp://localhost:9002/CalculatorService/" + Guid.NewGuid().ToString());  
     // Define the endpoint address where announcement messages will be sent  
@@ -165,12 +164,12 @@ Este tema es el segundo de cuatro temas que describe cómo implementar un proxy 
     }  
     ```  
   
- Ha completado la implementación de un servicio que se puede detectar. Ir a [Cómo: implementar una aplicación cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ Ha completado la implementación de un servicio que se puede detectar. Ir a [Cómo: implementar una aplicación de cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Ejemplo  
  Esta es la lista completa del código empleado en este tema.  
   
-```  
+```csharp  
 // CalculatorService.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -231,10 +230,9 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -295,10 +293,8 @@ namespace Microsoft.Samples.Discovery
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
+
 ## <a name="see-also"></a>Vea también  
- [Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)   
- [Cómo: implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [Cómo: implementar una aplicación cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [Cómo: implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Cómo: implementar una aplicación de cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

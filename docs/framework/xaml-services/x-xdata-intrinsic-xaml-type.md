@@ -1,62 +1,65 @@
 ---
-title: "x:XData Intrinsic XAML Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:XData"
-  - "XData"
-  - "xXData"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:XData directive element"
-  - "XData in XAML [XAML Services]"
-  - "x:XData XAML directive element [XAML Services]"
+title: "x:XData (Tipo XAML intrínseco)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:XData
+- XData
+- xXData
+helpviewer_keywords:
+- XAML [XAML Services], x:XData directive element
+- XData in XAML [XAML Services]
+- x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-caps.latest.revision: 17
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# x:XData Intrinsic XAML Type
-Habilita la colocación de islas de datos XML dentro de una producción XAML.  Los procesadores XAML no deben tratar los elementos XML incluidos en `x:XData` como si fueran una parte del espacio de nombres XAML predeterminado activo o de cualquier otro espacio de nombres XAML.  `x:XData` puede contener XML arbitrario con formato correcto.  
+# <a name="xxdata-intrinsic-xaml-type"></a>x:XData (Tipo XAML intrínseco)
+Permite la colocación de XML, Islas de datos dentro de una producción de XAML. Elementos XML dentro de `x:XData` no deben tratarse por los procesadores XAML como si fueran una parte del espacio de nombres XAML de manera predeterminada de actuar o cualquier otro espacio de nombres XAML. `x:XData`puede contener código XML arbitrario con formato correcto.  
   
-## Uso de elementos de objeto XAML  
+## <a name="xaml-object-element-usage"></a>Uso de elementos de objeto XAML  
   
 ```  
 <x:XData>  
-  <elementDataRoot>  
-    [elementData]  
-  </elementDataRoot>  
+  <elementDataRoot>  
+    [elementData]  
+  </elementDataRoot>  
 </x:XData>  
 ```  
   
-## Valores XAML  
+## <a name="xaml-values"></a>Valores XAML  
   
 |||  
 |-|-|  
-|`elementDataRoot`|El único elemento raíz de la isla de datos adjunta.  Para la mayoría de los consumidores eventuales, XML que no tiene una raíz única que se considere no válida.  En concreto, se requiere una sola raíz si `x:XData` está pensado como origen de datos XML de WPF o de muchas otras tecnologías que usan los orígenes XML para el enlace de datos.|  
-|`[elementData]`|Opcional.  XML que representa los datos XML.  Cualquier número de elementos se puede contener como datos de elementos, y los elementos anidados se pueden contener en otros elementos; sin embargo, se aplican las reglas generales de XML.|  
+|`elementDataRoot`|El elemento raíz único de la isla de datos adjunta. Para la mayoría de los consumidores eventuales, XML que no tiene una raíz se considera no válida. En concreto, una única raíz es necesaria si la `x:XData` está pensado como un origen de datos XML para WPF o muchas otras tecnologías que usan orígenes de XML para el enlace de datos.|  
+|`[elementData]`|Opcional. Código XML que representa los datos XML. Puede contener cualquier número de elementos como los datos del elemento y los elementos anidados pueden estar contenidos en otros elementos; Sin embargo, se aplican las reglas generales de XML.|  
   
-## Comentarios  
- Los elementos XML dentro de un objeto `x:XData` pueden volver a declarar todos los posibles espacios de nombres y prefijos del contenedor XMLDOM dentro de los datos.  
+## <a name="remarks"></a>Comentarios  
+ Los elementos XML dentro de un `x:XData` objeto puede volver a declarar todos los posibles espacios de nombres y prefijos del contenedor XMLDOM dentro de los datos.  
   
- El acceso mediante programación a los datos XML y al tipo XAML intrínseco `x:XData` es posible en los servicios XAML de .NET Framework a través de la clase <xref:System.Windows.Markup.XData>.  
+ Acceso mediante programación a los datos XML y la `x:XData` tipo XAML intrínseco es posible en los servicios XAML de .NET Framework a través de la <xref:System.Windows.Markup.XData> clase.  
   
-## Notas de uso de WPF  
- El objeto `x:XData` se utiliza principalmente como objeto secundario de <xref:System.Windows.Data.XmlDataProvider> o bien, como alternativa, como el objeto secundario de la propiedad <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> de la propiedad \( en XAML, esto se expresa normalmente en sintaxis de propiedades de elemento\).  
+## <a name="wpf-usage-notes"></a>Notas de uso WPF  
+ El `x:XData` objeto se usa principalmente como un objeto secundario de un <xref:System.Windows.Data.XmlDataProvider>, o bien, como el objeto secundario de la <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> propiedad (en XAML, esto se expresa normalmente en la sintaxis de elemento de propiedad).  
   
- Normalmente, los datos deberían volver a definir el espacio de nombres XML base dentro de la isla de datos de manera que sea un nuevo espacio de nombres XML predeterminado \(establecido en una cadena vacía\).  Es lo más fácil para las islas de datos simples, porque las expresiones <xref:System.Windows.Data.Binding.XPath%2A> utilizadas para hacer referencia y enlazar a los datos pueden evitar la inclusión de prefijos.  En las islas de datos más complejas podrían definirse varios prefijos para los datos y utilizarse un prefijo concreto para el espacio de nombres XML de la raíz.  En este caso, todas las referencias a las expresiones <xref:System.Windows.Data.Binding.XPath%2A> deberán incluir el prefijo adecuado asignado por el espacio de nombres.  Para obtener más información, vea [Información general sobre el enlace de datos](../../../ocs/framework/wpf/data/data-binding-overview.md).  
+ Los datos normalmente deben volver a definir el espacio de nombres XML base dentro de la isla de datos como un nuevo espacio de nombres XML (establecido en una cadena vacía). Esto es más fácil para islas de datos simple porque la <xref:System.Windows.Data.Binding.XPath%2A> expresiones que se usan para hacer referencia y enlazar a los datos pueden evitar la inclusión de prefijos. Islas de datos más complejas pueden definir varios prefijos para los datos y usar un prefijo concreto para el espacio de nombres XML en la raíz. En este caso, todas las <xref:System.Windows.Data.Binding.XPath%2A> las referencias a expresiones deben incluir el prefijo de espacio de nombres asignado adecuado. Para obtener más información, consulte [Información general sobre el enlace de datos](../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Técnicamente, `x:XData` se pueden utilizar como contenido de cualquier propiedad de tipo <xref:System.Xml.Serialization.IXmlSerializable>.  Sin embargo, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName>. es la única implementación notable.  
+ Técnicamente, `x:XData` puede utilizarse como el contenido de cualquier propiedad de tipo <xref:System.Xml.Serialization.IXmlSerializable>. Sin embargo, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> es la única implementación notable.  
   
-## Vea también  
- <xref:System.Windows.Data.XmlDataProvider>   
- [Información general sobre el enlace de datos](../../../ocs/framework/wpf/data/data-binding-overview.md)   
- [Enlazar extensión de marcado](../../../ocs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Data.XmlDataProvider>  
+ [Información general sobre el enlace de datos](../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Binding (extensión de marcado)](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

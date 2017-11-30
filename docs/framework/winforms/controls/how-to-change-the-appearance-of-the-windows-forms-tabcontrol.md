@@ -1,80 +1,83 @@
 ---
-title: "C&#243;mo: Cambiar la apariencia del control TabControl de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "botones, mostrar fichas como"
-  - "iconos, mostrar en fichas"
-  - "TabControl (control) [Windows Forms], cambiar la apariencia de la página"
-  - "pestañas, controlar la apariencia"
+title: "Cómo: Cambiar la apariencia del control TabControl de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- icons [Windows Forms], displaying on tabs
+- TabControl control [Windows Forms], changing page appearance
+- tabs [Windows Forms], controlling appearance
+- buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b244930f0837d3b1d548e0f7a8c77dd80e1ce039
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Cambiar la apariencia del control TabControl de formularios Windows Forms
-Puede cambiar la apariencia de fichas de formularios Windows Forms utilizando propiedades del control <xref:System.Windows.Forms.TabControl> y los objetos <xref:System.Windows.Forms.TabPage> que constituyen las fichas individuales en el control.  Al establecer estas propiedades, podrá mostrar imágenes en las fichas, mostrar fichas en posición vertical en lugar de hacerlo en horizontal, mostrar varias filas de fichas y habilitar o deshabilitar las fichas mediante programación.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Cómo: Cambiar la apariencia del control TabControl de formularios Windows Forms
+Puede cambiar la apariencia de fichas en formularios Windows Forms mediante las propiedades de la <xref:System.Windows.Forms.TabControl> y <xref:System.Windows.Forms.TabPage> objetos que componen las fichas individuales en el control. Al establecer estas propiedades, puede mostrar imágenes en las fichas, mostrar pestañas verticalmente en lugar de horizontalmente, mostrar varias filas de fichas y habilitar o deshabilitar las fichas mediante programación.  
   
-### Para mostrar un icono en la parte de etiqueta de una ficha  
+### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>Para mostrar un icono en la parte de la etiqueta de una pestaña  
   
-1.  Agregue un control <xref:System.Windows.Forms.ImageList> al formulario.  
+1.  Agregar un <xref:System.Windows.Forms.ImageList> control al formulario.  
   
-2.  Agregue imágenes a la lista de imágenes.  
+2.  Agregar imágenes a la lista de imágenes.  
   
-     Para obtener más información sobre las listas de imágenes, vea [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) y [Cómo: Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+     Para obtener más información acerca de las listas de imágenes, vea [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) y [Cómo: agregar o quitar imágenes con el componente ImageList de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
-3.  Establezca la propiedad <xref:System.Windows.Forms.TabControl.ImageList%2A> del <xref:System.Windows.Forms.TabControl> en el control <xref:System.Windows.Forms.ImageList>.  
+3.  Establecer el <xref:System.Windows.Forms.TabControl.ImageList%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a la <xref:System.Windows.Forms.ImageList> control.  
   
-4.  Establezca la propiedad <xref:System.Windows.Forms.TabPage.ImageIndex%2A> del objeto <xref:System.Windows.Forms.TabPage> en el índice de una imagen adecuada de la lista.  
+4.  Establecer el <xref:System.Windows.Forms.TabPage.ImageIndex%2A> propiedad de la <xref:System.Windows.Forms.TabPage> al índice de una imagen adecuada en la lista.  
   
-### Para crear varias filas de fichas  
+### <a name="to-create-multiple-rows-of-tabs"></a>Para crear varias filas de fichas  
   
-1.  Agregue el número de páginas de fichas que desea.  
+1.  Agregue el número de páginas de ficha que desee.  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.TabControl.Multiline%2A> del control <xref:System.Windows.Forms.TabControl> en `true`.  
+2.  Establecer el <xref:System.Windows.Forms.TabControl.Multiline%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a `true`.  
   
-3.  Si las fichas no aparecen ya en varias filas, establezca la propiedad <xref:System.Windows.Forms.Control.Width%2A> del control <xref:System.Windows.Forms.TabControl> para que sea más estrecha que el total de las fichas.  
+3.  Si las fichas no aparecen ya en varias filas, establezca la <xref:System.Windows.Forms.Control.Width%2A> propiedad de la <xref:System.Windows.Forms.TabControl> sea más estrechas que todas las fichas.  
   
-### Para organizar las fichas a un lado del control  
+### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Para organizar las fichas en el lado del control  
   
--   Establezca la propiedad <xref:System.Windows.Forms.TabControl.Alignment%2A> del control <xref:System.Windows.Forms.TabControl> en <xref:System.Windows.Forms.TabAlignment> o <xref:System.Windows.Forms.TabAlignment>.  
+-   Establecer el <xref:System.Windows.Forms.TabControl.Alignment%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAlignment.Left> o <xref:System.Windows.Forms.TabAlignment.Right>.  
   
-### Habilitar o deshabilitar mediante programación todos los controles de una pestaña  
+### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Para habilitar o deshabilitar todos los controles en una ficha mediante programación  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.TabPage.Enabled%2A> del control <xref:System.Windows.Forms.TabPage> en `true` o `false`.  
+1.  Establecer el <xref:System.Windows.Forms.TabPage.Enabled%2A> propiedad de la <xref:System.Windows.Forms.TabPage> a `true` o `false`.  
   
     ```vb  
     TabPage1.Enabled = False  
-  
     ```  
   
     ```csharp  
     tabPage1.Enabled = false;  
-  
     ```  
   
     ```cpp  
     tabPage1->Enabled = false;  
     ```  
   
-### Para mostrar las fichas en forma de botones  
+### <a name="to-display-tabs-as-buttons"></a>Para mostrar fichas como botones  
   
--   Establezca la propiedad <xref:System.Windows.Forms.TabControl.Appearance%2A> del control <xref:System.Windows.Forms.TabControl> en <xref:System.Windows.Forms.TabAppearance> o <xref:System.Windows.Forms.TabAppearance>.  
+-   Establecer el <xref:System.Windows.Forms.TabControl.Appearance%2A> propiedad de la <xref:System.Windows.Forms.TabControl> a <xref:System.Windows.Forms.TabAppearance.Buttons> o <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
-## Vea también  
- [TabControl \(Control\)](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)   
- [Información general del control TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [Cómo: Agregar un control a una página de fichas](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [Cómo: Deshabilitar páginas de ficha](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)   
- [Cómo: Agregar y quitar fichas con el control TabControl de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>Vea también  
+ [TabControl (control)](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ [Información general del control TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [Agregar un control a una página de fichas](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Deshabilitar páginas de ficha](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [Agregar y quitar fichas con el control TabControl de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

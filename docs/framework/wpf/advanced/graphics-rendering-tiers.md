@@ -1,145 +1,148 @@
 ---
-title: "Niveles de representaci&#243;n de gr&#225;ficos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "niveles de representación de gráficos"
-  - "gráficos, rendimiento"
-  - "gráficos, niveles de representación"
-  - "representar gráficos"
-  - "niveles de representación"
+title: "Niveles de representación de gráficos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], performance
+- rendering graphics [WPF]
+- rendering tiers [WPF]
+- graphics rendering tiers [WPF]
+- graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: 44
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 43
+caps.latest.revision: "44"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4a64ca2f0da2e10a3042b5f9c30baf3caa37534e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Niveles de representaci&#243;n de gr&#225;ficos
-Un nivel de representación define un nivel de rendimiento y funcionalidad del hardware gráfico de un dispositivo en el que se ejecuta una aplicación d[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="graphics-rendering-tiers"></a>Niveles de representación de gráficos
+Un nivel de representación define un nivel de funcionalidad y rendimiento de hardware gráfico para un dispositivo que ejecuta un aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-   
+
   
 <a name="graphics_hardware"></a>   
-## Hardware gráfico  
+## <a name="graphics-hardware"></a>Hardware gráfico  
  Las características del hardware gráfico que más afectan a los niveles de representación son:  
   
--   **RAM de vídeo**: la cantidad de memoria de vídeo en el hardware gráfico determina el tamaño y el número de búferes que se pueden utilizar para la composición de gráficos.  
+-   **RAM de vídeo** La cantidad de memoria de vídeo en el hardware gráfico determina el tamaño y el número de búferes que puede utilizarse para la composición de gráficos.  
   
--   **Sombreador de píxeles**: un sombreador de píxeles es una función de procesamiento de gráficos que calcula los efectos por píxel.  Según la resolución de los gráficos mostrados, puede haber varios millones de píxeles que deban procesarse en cada fotograma mostrado.  
+-   **Sombreador de píxeles** Un sombreador de píxeles es una función de procesamiento de gráficos que calcula los efectos píxel por píxel. Según la resolución de los gráficos mostrados, puede haber varios millones de píxeles que deban procesarse en cada fotograma mostrado.  
   
--   **Sombreador de vértices**: un sombreador de vértices es una función de procesamiento de gráficos que realiza operaciones matemáticas con los datos de los vértices del objeto.  
+-   **Sombreador de vértices** Un sombreador de vértices es una función de procesamiento de gráficos que realiza operaciones matemáticas en los datos de vértice del objeto.  
   
--   **Compatibilidad con texturas múltiples**: la compatibilidad con texturas múltiples hace referencia a la capacidad de aplicar dos o más texturas distintas durante una operación de mezcla en un objeto gráfico 3D.  El grado de compatibilidad con texturas múltiples viene determinado por el número de unidades de textura múltiple en el hardware gráfico.  
+-   **Compatibilidad con texturas múltiples** La compatibilidad con texturas múltiples hace referencia a la capacidad de aplicar dos o más texturas distintas durante una operación de combinación en un objeto gráfico 3D. El grado de compatibilidad con texturas múltiples queda determinado por el número de unidades de múltiples texturas en el hardware gráfico.  
   
 <a name="rendering_tier_definitions"></a>   
-## Representar definiciones de nivel  
- Las características del hardware gráfico determinan la capacidad de representación de una aplicación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  El sistema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define tres niveles de representación:  
+## <a name="rendering-tier-definitions"></a>Definiciones de niveles de representación  
+ Las características del hardware gráfico determinan la capacidad de representación de una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. El sistema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] define tres niveles de representación:  
   
--   **Nivel de representación 0** Sin aceleración de hardware gráfico.  Todas las características de gráficos usan aceleración de software.  El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es inferior a la versión 9.0.  
+-   **Nivel de representación 0** Sin aceleración de hardware gráfico. Todas las características de gráficos utilizan la aceleración de software. El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es mayor que la versión 9.0.  
   
--   **Nivel de representación 1** Algunas de las características de gráficos usan aceleración de hardware gráfico.  El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es mayor o igual a la versión 9.0.  
+-   **Nivel de representación 1** Algunas características de gráficos utilizan la aceleración de hardware gráfico. El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es mayor o igual que la versión 9.0.  
   
--   **Nivel de representación 2** La mayoría de las características gráficas utilizan la aceleración de hardware gráfico.  El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es mayor o igual a la versión 9.0.  
+-   **Nivel de representación 2** La mayoría de las características de gráficos utiliza la aceleración de hardware gráfico. El nivel de versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es mayor o igual que la versión 9.0.  
   
- La propiedad <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=fullName> permite recuperar el nivel de representación en tiempo de ejecución de la aplicación.  Utilice el nivel de representación para determinar si el dispositivo admite ciertas características de aceleración de gráficos por hardware.  La aplicación puede tomar a continuación diferentes rutas de código en tiempo de ejecución en función del nivel de representación que admita el dispositivo.  
+ El <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> propiedad le permite recuperar el nivel de representación en tiempo de ejecución de la aplicación. El nivel de representación se utiliza para determinar si el dispositivo admite ciertas características de aceleración de gráficos mediante hardware. La aplicación puede emprender diferentes rutas de código en tiempo de ejecución según el nivel de representación que admita el dispositivo.  
   
-### Nivel de representación 0  
- Un valor de nivel de representación 0 significa que no hay ninguna aceleración de hardware gráfico disponible para la aplicación en el dispositivo.  En este nivel, debe suponer que el software representará todos los gráficos sin aceleración por hardware.  La funcionalidad de este nivel corresponde a una versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] inferior a la 9.0.  
+### <a name="rendering-tier-0"></a>Nivel de representación 0  
+ Un valor de nivel de representación de 0 significa que no hay ninguna aceleración de gráficos mediante hardware disponible para la aplicación en el dispositivo. En este nivel del sistema, debe suponer que todos los gráficos se representarán mediante software sin aceleración de hardware. La funcionalidad de este nivel corresponde a una versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] que es menor que 9.0.  
   
-### Nivel de representación 1 y nivel de representación 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>Nivel de representación 1 y nivel de representación 2  
   
 > [!NOTE]
->  A partir de .NET Framework 4, el nivel de representación 1 se ha redefinido para que solo incluya hardware gráfico compatible con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 9.0 o posterior.  El hardware gráfico compatible con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 7.0 u 8.0 se define ahora como el nivel de representación 0.  
+>  A partir de .NET Framework 4, el nivel de representación 1 se ha redefinido para incluir solo el hardware gráfico que admite [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 9.0 o posterior. El hardware gráfico que admite [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 7 u 8 ahora se define como el nivel de representación 0.  
   
- Un valor de nivel de representación 1 o 2 significa que la mayoría de las características gráficas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizarán la aceleración por hardware, siempre y cuando no se hayan agotado los recursos necesarios del sistema.  Esto corresponde a la versión 9.0 o posterior de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  
+ Un valor de nivel de representación de 1 o 2 significa que la mayoría de las características gráficas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizará la aceleración de hardware si los recursos necesarios del sistema están disponibles y no se han agotado. Esto corresponde a una versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] que es mayor o igual que 9.0.  
   
- En la tabla siguiente se muestran las diferencias de los requisitos de hardware gráfico para el nivel de presentación 1 y el nivel de presentación 2:  
+ En la tabla siguiente se muestra las diferencias en los gráficos requisitos de hardware para el nivel de representación 1 y nivel 2 de representación:  
   
 |Característica|Nivel 1|Nivel 2|  
-|--------------------|-------------|-------------|  
+|-------------|------------|------------|  
 |Versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]|Debe ser mayor o igual que 9.0.|Debe ser mayor o igual que 9.0.|  
-|RAM de vídeo|Debe ser mayor o igual que 60 MB.|Debe ser mayor o igual a 120 MB.|  
-|Sombreador de píxeles|El nivel de versión debe mayor o igual a 2.0.|El nivel de versión debe mayor o igual a 2.0.|  
-|Sombreador de vértices|Ningún requisito.|El nivel de versión debe mayor o igual a 2.0.|  
+|RAM de vídeo|Debe ser mayor o igual que 60MB.|Debe ser mayor o igual a 120MB.|  
+|Sombreador de píxeles|Nivel de versión debe ser mayor o igual a 2.0.|Nivel de versión debe ser mayor o igual a 2.0.|  
+|Sombreador de vértices|Ningún requisito.|Nivel de versión debe ser mayor o igual a 2.0.|  
 |Unidades de múltiples texturas|Ningún requisito.|El número de unidades debe ser mayor o igual que 4.|  
   
- Las siguientes características y funciones tienen aceleración por hardware para el nivel de presentación 1 y 2:  
+ Las siguientes características y funcionalidades se aceleran mediante hardware para el nivel de representación 1 y el nivel de representación 2:  
   
 |Característica|Notas|  
-|--------------------|-----------|  
-|Representación en 2D|Se admite la mayor parte de la representación en 2D.|  
-|Rasterización en 3D|Se admite la mayoría de la rasterización en 3D.|  
-|Filtrado anisotrópico en 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] intenta utilizar el filtrado anisotrópico al representar contenido en 3D.  El filtrado anisotrópico hace referencia a la mejora de la calidad de imagen de las texturas en superficies que se encuentran lejos y formando un ángulo agudo respecto a la cámara.|  
-|Asignación MIP para 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] intenta utilizar la asignación MIP al representar contenido en 3D. La asignación MIP mejora la calidad de representación de texturas cuando una textura ocupa un campo de visión más pequeño en <xref:System.Windows.Controls.Viewport3D>.|  
-|Degradados radiales|Aunque sea compatible, evite el uso de <xref:System.Windows.Media.RadialGradientBrush> en objetos grandes.|  
-|Cálculos de iluminación 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] realiza la iluminación por vértices, lo que significa que debe calcularse una intensidad de luz en cada vértice para cada material que se aplique a una malla.|  
+|-------------|-----------|  
+|Representación 2D|Se admite la mayoría de la representación 2D.|  
+|Rasterización 3D|Se admite la mayoría de la rasterización 3D.|  
+|Filtrado anisotrópico 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] intenta utilizar el filtrado anisotrópico al representar contenido 3D. El filtrado anisotrópico se refiere a la mejora de la calidad de imagen de las texturas en superficies que están lejos y significativamente en ángulo con respecto a la cámara.|  
+|Asignación MIP para 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] intenta utilizar la asignación MIP al representar contenido 3D. Asignación de MIP mejora la calidad de representación de textura cuando una textura ocupa un campo de vista más pequeño en un <xref:System.Windows.Controls.Viewport3D>.|  
+|Degradados radiales|Aunque se admite, evite el uso de <xref:System.Windows.Media.RadialGradientBrush> en objetos grandes.|  
+|Cálculos de iluminación 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] realiza la iluminación por vértices, lo que significa que debe calcularse una intensidad de luz en cada vértice para cada material aplicado a una malla.|  
 |Representación de texto|La representación de fuentes por debajo del nivel de píxel utiliza sombreadores de píxeles disponibles en el hardware gráfico.|  
   
- Las siguientes características y funciones solo tienen aceleración por hardware para el nivel de presentación 2:  
+ Las siguientes características y funcionalidades se aceleran mediante hardware para el nivel de representación 2 únicamente:  
   
 |Característica|Notas|  
-|--------------------|-----------|  
-|Suavizado de contorno 3D|El suavizado de contorno 3D solamente se admite en los sistemas operativos compatibles con el Modelo de controladores de pantalla de Windows \(WDDM\), como [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|-------------|-----------|  
+|Suavizado de contorno 3D|El suavizado de contorno 3D solo se admite en sistemas operativos que admiten Windows Display Driver Model (WDDM), como [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
   
- Las siguientes características y funciones **no** tienen aceleración por hardware:  
+ Las siguientes características y funcionalidades **no** se aceleran mediante hardware :  
   
 |Característica|Notas|  
-|--------------------|-----------|  
-|Contenido impreso|Todo el contenido impreso se representa utilizando el conducto de software [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|Contenido rasterizado que utiliza <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Contenido representado usando el método <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> de <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Contenido en mosaico que utiliza <xref:System.Windows.Media.TileBrush>|Contenido en mosaico en el que la propiedad <xref:System.Windows.Media.TileBrush.TileMode%2A> de <xref:System.Windows.Media.TileBrush> esté establecida en <xref:System.Windows.Media.TileMode>.|  
-|Superficies que superan el tamaño de textura máximo del hardware gráfico|Para la mayoría del hardware gráfico, las superficies grandes tienen un tamaño de 2048x2048 o 4096x4096 píxeles.|  
-|Cualquier operación cuyos requisitos de RAM de vídeo superen la memoria del hardware gráfico|Puede supervisar el uso de la RAM de vídeo de la aplicación mediante la herramienta Perforator, que se incluye en [WPF Performance Suite](../Topic/WPF%20Performance%20Suite.md) del SDK de Windows.|  
-|Ventanas superpuestas|Las ventanas superpuestas permiten a las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] representar contenido en la pantalla en una ventana no rectangular.  En los sistemas operativos compatibles con el Modelo de controladores de pantalla de Windows \(WDDM\), como [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)], las ventanas superpuestas se aceleran mediante hardware.  En otros sistemas, tales como [!INCLUDE[winxp](../../../../includes/winxp-md.md)], las ventanas superpuestas se representan mediante software, sin aceleración de hardware.<br /><br /> Puede habilitar las ventanas superpuestas en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estableciendo las siguientes propiedades <xref:System.Windows.Window>:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> \= <xref:System.Windows.WindowStyle><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> \= `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> \= <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|-------------|-----------|  
+|Contenido impreso|Todo el contenido impreso se representa utilizando la canalización de software [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
+|Contenido rasterizado que utiliza<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Cualquier contenido que se representa mediante el <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> método <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Contenido en mosaico que usa<xref:System.Windows.Media.TileBrush>|Mosaico contenido en el que el <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad de la <xref:System.Windows.Media.TileBrush> está establecido en <xref:System.Windows.Media.TileMode.Tile>.|  
+|Superficies que superan el tamaño máximo de textura del hardware gráfico|Para la mayoría del hardware gráfico, las superficies grandes tienen un tamaño de 2048 × 2048 o 4096 × 4096 píxeles.|  
+|Cualquier operación cuyos requisitos de RAM de vídeo superen la memoria del hardware gráfico|Puede supervisar el uso de RAM de vídeo de las aplicaciones mediante la herramienta Perforator que se incluye en [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) en el SDK de Windows.|  
+|Ventanas superpuestas|Las ventanas superpuestas permiten que las aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] representen contenido en la pantalla en una ventana no rectangular. En los sistemas operativos que admiten Windows Display Driver Model (WDDM), como [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] y [!INCLUDE[win7](../../../../includes/win7-md.md)], las ventanas superpuestas se aceleran mediante hardware. En otros sistemas, como [!INCLUDE[winxp](../../../../includes/winxp-md.md)], las ventanas superpuestas se representan con software, sin aceleración de hardware.<br /><br /> Puede habilitar las ventanas superpuestas en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estableciendo lo siguiente <xref:System.Windows.Window> propiedades:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
-## Otros recursos  
- Los recursos siguientes pueden ayudarle a analizar las características de rendimiento de la aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+## <a name="other-resources"></a>Otros recursos  
+ Los siguientes recursos pueden ayudarle a analizar las características de rendimiento de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-### Configuración del Registro en la representación de gráficos  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro valores del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+### <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro valores de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Configuración|Descripción|  
-|-------------------|-----------------|  
-|**Deshabilitar la opción de aceleración de hardware**|Especifica si la aceleración de hardware debe estar habilitada.|  
+|Parámetro|Descripción|  
+|-------------|-----------------|  
+|**Opción de deshabilitación de aceleración de hardware**|Especifica si se debe habilitar la aceleración de hardware.|  
 |**Valor máximo de muestreo múltiple**|Especifica el grado de muestreo múltiple para el suavizado de contorno del contenido [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  
-|**Valor de fecha de controlador de vídeo necesario**|Especifica si el sistema deshabilita la aceleración de hardware para los controladores publicados antes de noviembre de 2004.|  
-|**Usar la opción de rasterizador de referencia**|Especifica si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe utilizar el rasterizador de referencia.|  
+|**Configuración obligatoria de fecha del controlador de vídeo**|Especifica si el sistema deshabilita la aceleración de hardware para los controladores publicados antes de noviembre de 2004.|  
+|**Opción de uso del rasterizador de referencia**|Especifica si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe utilizar el rasterizador de referencia.|  
   
- Cualquier utilidad de configuración externa que pueda hacer referencia a los valores del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede tener acceso a estos valores.  Estos valores se pueden crear o modificar también mediante el acceso directo a los valores utilizando el Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  Para obtener más información, vea [Configuración del Registro en la representación de gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Es posible acceder a estos parámetros mediante una utilidad de configuración externa que pueda hacer referencia a la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos valores de configuración también pueden crearse o modificarse mediante el acceso a los valores directamente a través del Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Para obtener más información, consulte [Configuración del Registro en la representación de gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
   
-### Herramientas de generación de perfiles de rendimiento para WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona un conjunto de herramientas de generación de perfiles de rendimiento que permiten analizar el funcionamiento de la aplicación en tiempo de ejecución y determinar los tipos de optimización de rendimiento que se pueden aplicar.  La tabla siguiente muestra las herramientas de generación de perfiles de rendimiento que se incluyen en la herramienta [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite:  
+### <a name="wpf-performance-profiling-tools"></a>Herramientas de generación de perfiles de rendimiento para WPF  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece un conjunto de herramientas de generación de perfiles de rendimiento que le permiten analizar el comportamiento en tiempo de ejecución de la aplicación y determinar los tipos de optimizaciones de rendimiento que puede aplicar. En la tabla siguiente se muestran las herramientas de generación de perfiles de rendimiento que se incluyen en la herramienta de [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite:  
   
 |Herramienta|Descripción|  
-|-----------------|-----------------|  
+|----------|-----------------|  
 |Perforator|Se utiliza para analizar el comportamiento de representación.|  
-|Visual Profiler|Se utiliza para generar perfiles de uso de servicios [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tales como el diseño y el control de eventos, mediante elementos del árbol visual.|  
+|Visual Profiler|Se utiliza para la generación de perfiles de uso de los servicios de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tales como el diseño y el control de eventos, mediante elementos del árbol visual.|  
   
- WPF Performance Suite proporciona una vista gráfica completa de los datos de rendimiento.  Para obtener más información sobre las herramientas de rendimiento de WPF, vea [WPF Performance Suite](../Topic/WPF%20Performance%20Suite.md).  
+ WPF Performance Suite proporciona una vista gráfica enriquecida de los datos de rendimiento. Para obtener más información acerca de las herramientas de rendimiento de WPF, consulte [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
   
-### Herramienta de diagnóstico de DirectX  
- La herramienta de diagnóstico de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], Dxdiag.exe, está diseñada para ayudarle a solucionar problemas relacionados con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  La carpeta de instalación predeterminada para la herramienta de diagnóstico de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es:  
+### <a name="directx-diagnostic-tool"></a>Herramienta de diagnóstico de DirectX  
+ La Herramienta de diagnóstico de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], Dxdiag.exe, está diseñada para ayudarle a solucionar problemas relacionados con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. La carpeta predeterminada de instalación para la Herramienta de diagnóstico de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] es:  
   
  `~\Windows\System32`  
   
- Al ejecutar la herramienta de diagnóstico de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], la ventana principal contiene un conjunto de fichas que permiten mostrar y diagnosticar información relacionada con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  Por ejemplo, la ficha **System** proporciona información del sistema sobre el equipo y especifica la versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] que está instalada en el equipo.  
+ Al ejecutar la Herramienta de diagnóstico de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], la ventana principal contiene un conjunto de pestañas que permiten mostrar y diagnosticar información relacionada con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Por ejemplo, la pestaña **Sistema** proporciona información del sistema acerca del equipo y especifica la versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] que está instalada en el equipo.  
   
- ![Captura de pantalla: Herramienta de diagnóstico DirectX](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool\_01")  
-Ventana principal de la herramienta de diagnóstico de DirectX  
+ ![Captura de pantalla: Herramienta de diagnóstico de DirectX](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+Ventana principal de la Herramienta de diagnóstico de DirectX  
   
-## Vea también  
- <xref:System.Windows.Media.RenderCapability>   
- <xref:System.Windows.Media.RenderOptions>   
- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [WPF Performance Suite](../Topic/WPF%20Performance%20Suite.md)   
- [Configuración del Registro en la representación de gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Media.RenderCapability>  
+ <xref:System.Windows.Media.RenderOptions>  
+ [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
+ [Configuración del Registro en la representación de gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
  [Sugerencias y trucos para animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

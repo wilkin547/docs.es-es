@@ -1,36 +1,34 @@
 ---
-title: "No se encuentra el archivo (error en tiempo de ejecuci&#243;n de Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID53"
-dev_langs: 
-  - "VB"
+title: "No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 410c19d740275917225108d9173d9635fd211040
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# No se encuentra el archivo (error en tiempo de ejecuci&#243;n de Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-No se ha encontrado el archivo donde está especificado.  Este error tiene las causas posibles siguientes:  
+# <a name="file-not-found-visual-basic-run-time-error"></a>No se encuentra el archivo (error en tiempo de ejecución de Visual Basic)
+No se encontró el archivo cuando se especifique. El error tiene las siguientes causas posibles:  
   
--   La instrucción hace referencia a un archivo que no existe.  
+-   Una instrucción hace referencia a un archivo que no existe.  
   
--   Se ha intentado llamar a un procedimiento en una biblioteca de vínculos dinámicos \(DLL\), pero la biblioteca especificada en la cláusula `Lib` de la instrucción `Declare` no se puede encontrar.  
+-   Se intentó llamar a un procedimiento en una biblioteca de vínculos dinámicos (DLL), pero la biblioteca especificada en el `Lib` cláusula de la `Declare` no se encuentra la instrucción.  
   
--   Ha intentado abrir un proyecto o cargar un archivo de texto que no existe.  
+-   Se intentó abrir un proyecto o cargar un archivo de texto que no existe.  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Compruebe que ha escrito correctamente la especificación de nombre de archivo y la ruta de acceso.  
+1.  Compruebe la ortografía del nombre de archivo y la especificación de ruta de acceso.  
   
-## Vea también  
- [Declare \(Instrucción\)](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)

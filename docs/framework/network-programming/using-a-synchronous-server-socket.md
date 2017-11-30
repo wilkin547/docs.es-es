@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - synchronous server sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4ecba2d6c5026a3b2f7d65540fcf40dd71ba3d7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce50fa5cf8664f93753312ee5f1db2b3058c3fd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-a-synchronous-server-socket"></a>Usar un socket de servidor sincrónico
 Los sockets de servidor sincrónico suspenden la ejecución de la aplicación hasta que se recibe una solicitud de conexión en el socket. Los sockets de servidor sincrónico no son adecuados para las aplicaciones que hacen un uso intensivo de la red durante su funcionamiento, pero pueden ser adecuados para las aplicaciones de red simple.  
@@ -88,7 +85,6 @@ handler.Close();
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Using an Asynchronous Server Socket (Empleo de un socket de servidor asincrónico)](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
- [Ejemplo de sockets de servidor sincrónicos](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
+ [Usar un Socket de servidor asincrónicos](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Ejemplo de sockets de servidor sincrónicos](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
  [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
-

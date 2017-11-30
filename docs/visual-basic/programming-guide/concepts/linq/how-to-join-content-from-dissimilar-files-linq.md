@@ -1,37 +1,29 @@
 ---
-title: "Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00a3e776afbed3fd87a1f91eb83ada5d505aadfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Cómo: combinar contenido de archivos no similares (LINQ) (Visual Basic)
-En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por comas que comparten un valor común que se utiliza como una clave coincidente. Esta técnica puede ser útil si tiene que combinar datos de dos hojas de cálculo o de una hoja de cálculo y de un archivo que tiene otro formato, en un nuevo archivo. Puede modificar el ejemplo para que funcione con cualquier tipo de texto estructurados.  
+En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por comas que comparten un valor común que se usa como clave coincidente. Esta técnica puede ser útil si tiene que combinar datos de dos hojas de cálculo o si tiene que combinar en un archivo nuevo datos procedentes de una hoja de cálculo y de un archivo que tiene otro formato. Puede modificar el ejemplo para adaptarlo a cualquier tipo de texto estructurado.  
   
 ### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  
   
-1.  Copie las líneas siguientes en un archivo denominado scores.csv y guárdelo en la carpeta del proyecto. El archivo representa datos de hoja de cálculo. La columna 1 es el identificador del estudiante y las columnas 2 a 5 son las puntuaciones.  
+1.  Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto. El archivo representa datos de una hoja de cálculo. La columna 1 es el identificador del estudiante y las columnas comprendidas entre la 2 y la 5 son las notas de las pruebas.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ En este ejemplo se muestra cómo combinar datos de dos archivos delimitados por 
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copie las líneas siguientes en un archivo denominado names.csv y guárdelo en la carpeta del proyecto. El archivo representa una hoja de cálculo que contiene el apellido del alumno, nombre y su identificador.  
+2.  Copie las líneas siguientes en un archivo llamado names.csv y guárdelo en la carpeta del proyecto. El archivo representa una hoja de cálculo que contiene el nombre, los apellidos y el identificador de los estudiantes.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -135,8 +127,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

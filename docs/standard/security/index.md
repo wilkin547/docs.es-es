@@ -8,27 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, security
 - security [.NET Framework], about security
 - application development [.NET Framework], security
 - security [.NET Framework]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2c487c76a6a0b42370b7b70099d5baba58f42db
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-in-the-net-framework"></a>Seguridad en .NET Framework
 Common Language Runtime y .NET Framework proporcionan muchas clases y servicios útiles que permiten a los desarrolladores escribir código seguro fácilmente y permiten a los administradores del sistema personalizar los permisos concedidos al código para que pueda acceder a los recursos protegidos. Además, CLR y .NET Framework proporcionan clases y servicios útiles que facilitan el uso de criptografía y la seguridad basada en roles.  
@@ -58,4 +52,3 @@ Common Language Runtime y .NET Framework proporcionan muchas clases y servicios 
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Guía de desarrollo](../../../docs/framework/development-guide.md)  
  Proporciona una guía para todas las áreas y tareas tecnológicas principales para el desarrollo de aplicaciones, como la creación, configuración, depuración, seguridad e implementación de la aplicación, e información sobre programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.
-

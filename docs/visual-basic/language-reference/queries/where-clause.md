@@ -1,61 +1,59 @@
 ---
-title: "Where (Cl&#225;usula, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryWhere"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "consultas [Visual Basic], Where"
-  - "Where (cláusula)"
-  - "Where (instrucción)"
+title: "Where (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryWhere
+helpviewer_keywords:
+- Where statement [Visual Basic]
+- queries [Visual Basic], Where
+- Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8c2572f513d00bc72e869cf28d382be799f7a303
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Where (Cl&#225;usula, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica la condición de filtrado de una consulta.  
+# <a name="where-clause-visual-basic"></a>Where (Cláusula, Visual Basic)
+Especifica la condición de filtrado para una consulta.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Where condition  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
  `condition`  
- Obligatorio.  Expresión que determina si se incluyen en la colección de salida los valores del elemento actual de la colección.  La expresión debe evaluarse como un valor de tipo `Boolean` o el equivalente de un valor de tipo `Boolean`.  Si la condición se evalúa como `True`, se incluye el elemento en el resultado de la consulta; de lo contrario, se excluye el elemento del resultado.  
+ Obligatorio. Una expresión que determina si se incluyen los valores para el elemento actual de la colección en la colección de salida. La expresión debe evaluarse como un `Boolean` valor o el equivalente de un `Boolean` valor. Si la condición se evalúa como `True`, el elemento se incluye en el resultado de la consulta; en caso contrario, el elemento se excluye de los resultados de la consulta.  
   
-## Comentarios  
- La cláusula `Where` permite filtrar los datos de una consulta seleccionando únicamente los elementos que cumplen determinados criterios.  Los elementos cuyos valores hacen que la cláusula `Where` se evalúe como `True` se incluyen en el resultado de la consulta; los demás elementos se excluyen.  La expresión que se usa en una cláusula `Where` debe evaluarse como un valor de tipo `Boolean` o el equivalente de un valor de tipo `Boolean`, como un entero que se evalúa como `False` cuando su valor es cero.  Puede combinar varias expresiones en una cláusula `Where` mediante operadores lógicos, como `And`, `Or`, `AndAlso`, `OrElse`, `Is` e `IsNot`.  
+## <a name="remarks"></a>Comentarios  
+ El `Where` cláusula le permite filtrar los datos de consulta seleccionando únicamente los elementos que cumplen determinados criterios. Los elementos cuyos valores hacen que la `Where` cláusula se evalúe como `True` se incluyen en el resultado de la consulta; otros elementos se excluyen. La expresión que se utiliza en una `Where` cláusula debe evaluarse como un `Boolean` o el equivalente de un `Boolean`, como un entero que se evalúa como `False` cuando su valor es cero. Puede combinar varias expresiones en un `Where` cláusula mediante operadores lógicos, como `And`, `Or`, `AndAlso`, `OrElse`, `Is`, y `IsNot`.  
   
- De forma predeterminada, no se evalúan las expresiones de consulta hasta que se obtenga acceso a ellas; por ejemplo, cuando se enlazan a datos o se recorren en iteración en un bucle `For`.  Como resultado, no se evalúa la cláusula `Where` hasta que se obtenga acceso a la consulta.  Si se usan valores externos a la consulta en la cláusula `Where`, asegúrese de que se usa el valor adecuado en la cláusula `Where` cuando se ejecute la consulta.  Para obtener más información sobre la ejecución de consultas, vea [Escribir la primera consulta con LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ De forma predeterminada, no se evalúan las expresiones de consulta hasta que se accede a estos, por ejemplo, cuando estén enlazados a datos o recorridos en iteración a través de un `For` bucle. Como resultado, el `Where` cláusula no se evalúa hasta que se tiene acceso a la consulta. Si se usan valores externos a la consulta que se usan en el `Where` cláusula, asegúrese de que se usa el valor adecuado en el `Where` cláusula en el momento en que se ejecuta la consulta. Para obtener más información acerca de la ejecución de la consulta, vea [escribir la primera consulta con LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
- Puede llamar a las funciones en una cláusula `Where` para realizar un cálculo u operación con un valor del elemento actual de la colección.  Al llamar a una función en una cláusula `Where`, es posible que la consulte se ejecute inmediatamente en el momento de su definición y no cuando se obtiene acceso a ella.  Para obtener más información sobre la ejecución de consultas, vea [Escribir la primera consulta con LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ Puede llamar a funciones dentro de un `Where` cláusula para realizar un cálculo o una operación en un valor desde el elemento actual de la colección. Llamar a una función un `Where` cláusula puede hacer que la consulta que se ejecute inmediatamente cuando se define en lugar de cuando se tiene acceso. Para obtener más información acerca de la ejecución de la consulta, vea [escribir la primera consulta con LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
-## Ejemplo  
- La siguiente expresión de consulta usa una cláusula `From` para declarar una variable de rango `cust` para cada objeto `Customer` de la colección `customers`.  La cláusula `Where` usa la variable de rango para restringir el resultado a los clientes de la región especificada.  El bucle `For Each` muestra el nombre de la compañía de cada cliente en el resultado de la consulta.  
+## <a name="example"></a>Ejemplo  
+ Consulta la siguiente expresión utiliza una `From` cláusula para declarar una variable de rango `cust` para cada `Customer` objeto en el `customers` colección. El `Where` cláusula utiliza la variable de rango para restringir los resultados a los clientes de la región especificada. El `For Each` bucle muestra el nombre de la compañía de cada cliente en el resultado de la consulta.  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
-## Ejemplo  
- El ejemplo siguiente utiliza `And` y operadores lógicos de `Or` en la cláusula de `Where` .  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se utiliza `And` y `Or` operadores lógicos en el `Where` cláusula.  
   
  [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
-## Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)   
- [From \(Cláusula\)](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Select \(Cláusula\)](../../../visual-basic/language-reference/queries/select-clause.md)   
- [For Each...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

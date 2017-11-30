@@ -1,33 +1,25 @@
 ---
-title: "Cómo: buscar archivos con un atributo especificado o un nombre (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar archivos con un atributo especificado o el nombre (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db0e3f415df80e8e4c551bd8493814cb3f4fe5ee
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2b46750876e683e8ca5801d5c37267bf3d681cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Cómo: buscar archivos con un atributo especificado o un nombre (Visual Basic)
-En este ejemplo se muestra cómo buscar todos los archivos que tienen una extensión de nombre de archivo especificado (por ejemplo, ".txt") en un árbol de directorio especificado. También muestra cómo devolver el archivo más reciente o más antiguo en el árbol según la hora de creación.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Cómo: buscar archivos con un atributo especificado o el nombre (Visual Basic)
+En este ejemplo se muestra cómo encontrar todos los archivos con una determinada extensión de nombre de archivo (por ejemplo, ".txt") en un árbol de directorios especificado. También se muestra cómo devolver el archivo más reciente o más antiguo del árbol por fecha de creación.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -78,8 +70,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Crear un proyecto que tiene como destino .NET Framework versión 3.5 o superior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

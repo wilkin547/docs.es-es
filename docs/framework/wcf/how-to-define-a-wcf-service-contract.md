@@ -1,42 +1,41 @@
 ---
-title: "Definici&#243;n de un contrato de servicio de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "contratos de servicio [WCF], definición"
+title: "Definición de un contrato de servicio de Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-caps.latest.revision: 58
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 58
+caps.latest.revision: "58"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2ffe53d3e44f86feadc292eccb1692bd58a0c056
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Definici&#243;n de un contrato de servicio de Windows Communication Foundation
-Es la primera de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].Para obtener información general de las seis tareas, vea el tema [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Definición de un contrato de servicio de Windows Communication Foundation
+Es la primera de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.  
   
- Al crear un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], la primera tarea es definir un contrato de servicio.El contrato de servicio especifica qué operaciones admite el servicio.Una operación se puede considerar un método de servicio Web.Los contratos se crean mediante la definición de una interfaz de C\+\+, C\# o Visual Basic \(VB\).Cada método de la interfaz se corresponde con una operación de servicio concreta.Cada interfaz debe tener <xref:System.ServiceModel.ServiceContractAttribute> aplicado y cada operación debe tener el atributo <xref:System.ServiceModel.OperationContractAttribute> aplicado.Si un método de una interfaz que tiene el atributo <xref:System.ServiceModel.ServiceContractAttribute> no tiene el atributo <xref:System.ServiceModel.OperationContractAttribute>, el servicio no expone ese método.  
+ Al crear un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], la primera tarea es definir un contrato de servicio. El contrato de servicio especifica qué operaciones admite el servicio. Una operación se puede considerar un método de servicio Web. Los contratos se crean mediante la definición de una interfaz de C++, C# o Visual Basic (VB). Cada método de la interfaz se corresponde con una operación de servicio concreta. Cada interfaz debe tener <xref:System.ServiceModel.ServiceContractAttribute> aplicado y cada operación debe tener el atributo <xref:System.ServiceModel.OperationContractAttribute> aplicado. Si un método de una interfaz que tiene el atributo <xref:System.ServiceModel.ServiceContractAttribute> no tiene el atributo <xref:System.ServiceModel.OperationContractAttribute>, el servicio no expone ese método.  
   
- El código usado para esta tarea se proporciona en el ejemplo que sigue al procedimiento.  
+ El código utilizado para esta tarea se proporciona en el ejemplo que sigue al procedimiento.  
   
-### Para definir un contrato de servicio  
+### <a name="to-define-a-service-contract"></a>Para definir un contrato de servicio  
   
-1.  Abra [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] como administrador haciendo clic con el botón secundario en el programa en el menú **Inicio** y seleccionando **Ejecutar como administrador**.  
+1.  Abra [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] como administrador haciendo clic en el programa en el **iniciar** menú y seleccionando **ejecutar como administrador**.  
   
-2.  Para crear un proyecto de biblioteca de servicio WCF, haga clic en el menú **Archivo** y seleccione **Nuevo** y **Proyecto**.En el lado izquierdo del cuadro de diálogo **Nuevo proyecto**, expanda **Visual C\#** para un proyecto de C\# u **Otros lenguajes** y después **Visual Basic** para un proyecto de Visual Basic.Bajo el lenguaje seleccionado, seleccione **WCF** y aparecerá una lista de plantillas de proyecto en la sección central del cuadro de diálogo.Seleccione **Biblioteca de servicios WCF** y escriba `GettingStartedLib` en el cuadro de texto **Nombre** y `GettingStarted` en el cuadro de texto **Nombre de la solución** en la parte inferior del cuadro de diálogo.  
+2.  Crear un proyecto de biblioteca de servicios WCF, haga clic en el **archivo** menú y seleccionando **New**, **proyecto**. En el **nuevo proyecto** cuadro de diálogo, en el lado izquierdo del cuadro de diálogo expandir **Visual C#** para un proyecto de C# o **otros lenguajes** y, a continuación, **Visual Basic** para un proyecto de Visual Basic. En el idioma seleccionado, seleccione **WCF** y se mostrará una lista de plantillas de proyecto en la sección central del cuadro de diálogo. Seleccione **biblioteca de servicios WCF**y el tipo de `GettingStartedLib` en el **nombre** cuadro de texto y `GettingStarted` en el **nombre de la solución** cuadro de texto en la parte inferior del cuadro de diálogo.  
   
-3.  Visual Studio creará el proyecto que contiene 3 archivos: IService1.cs \(o IService1.vb\), Service1.cs \(o Service1.vb\) y App.config.El archivo IService1 contiene un contrato de servicio predeterminado.El archivo Service1 contiene una implementación predeterminada del contrato de servicio.El archivo App.config contiene la configuración necesaria para cargar el servicio predeterminado con el host de servicio WCF de Visual Studio.Para obtener más información acerca de la herramienta Host de servicio de WCF, vea [Host de servicio WCF \(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md).  
+3.  Visual Studio creará el proyecto que contiene 3 archivos: IService1.cs (o IService1.vb), Service1.cs (o Service1.vb) y App.config.  El archivo IService1 contiene un contrato de servicio predeterminado.  El archivo Service1 contiene una implementación predeterminada del contrato de servicio. El archivo App.config contiene la configuración necesaria para cargar el servicio predeterminado con el host de servicio WCF de Visual Studio. Para obtener más información acerca de la herramienta de Host de servicio WCF, vea [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
-4.  Abra el archivo IService1.cs o IService1.vb y elimine el código dentro de la declaración de espacio de nombres que sale de la declaración de espacio de nombres.Dentro de la declaración de espacio de nombres se define una nueva interfaz denominada `ICalculator` como se muestra en el código siguiente.  
+4.  Abra el archivo IService1.cs o IService1.vb y elimine el código dentro de la declaración de espacio de nombres que sale de la declaración de espacio de nombres. Dentro de la declaración de espacio de nombres se define una nueva interfaz denominada `ICalculator` como se muestra en el código siguiente.  
   
     ```  
     // IService.cs  
@@ -62,7 +61,6 @@ Es la primera de las seis tareas necesarias para crear una aplicación básica d
                 double Divide(double n1, double n2);  
             }  
     }  
-  
     ```  
   
     ```  
@@ -85,17 +83,16 @@ Es la primera de las seis tareas necesarias para crear una aplicación básica d
             Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
         End Interface  
     End Namespace  
-  
     ```  
   
-     Este contrato define una calculadora en línea.Observe que la interfaz `ICalculator` se marca con el atributo <xref:System.ServiceModel.ServiceContractAttribute>.Este atributo define un espacio de nombres que se usa para eliminar la ambigüedad del nombre del contrato.Cada operación de calculadora se marca con el atributo <xref:System.ServiceModel.OperationContractAttribute>.  
+     Este contrato define una calculadora en línea. Observe que la interfaz `ICalculator` se marca con el atributo <xref:System.ServiceModel.ServiceContractAttribute>. Este atributo define un espacio de nombres que se usa para eliminar la ambigüedad del nombre del contrato. Cada operación de calculadora se marca con el atributo <xref:System.ServiceModel.OperationContractAttribute>.  
   
     > [!NOTE]
-    >  Al usar los atributos para anotar una interfaz, miembro o clase, puede quitar la parte del atributo del nombre de atributo.Por tanto, la clase <xref:System.ServiceModel.ServiceContractAttribute> se convierte en `[ServiceContract]` en C\# o `<ServiceContract>` en Visual Basic.  
+    >  Al usar los atributos para anotar una interfaz, miembro o clase, puede quitar la parte "Attribute" del nombre de atributo. Por tanto, la clase <xref:System.ServiceModel.ServiceContractAttribute> se convierte en `[ServiceContract]` en C# o `<ServiceContract>` en Visual Basic.  
   
-## Vea también  
- <xref:System.ServiceModel.ServiceContractAttribute>   
- <xref:System.ServiceModel.OperationContractAttribute>   
- [Cómo implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)   
- [Introducción:](../../../docs/framework/wcf/samples/getting-started-sample.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.ServiceContractAttribute>  
+ <xref:System.ServiceModel.OperationContractAttribute>  
+ [Cómo implementar un contrato de servicio](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [Introducción](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [Autohospedaje](../../../docs/framework/wcf/samples/self-host.md)

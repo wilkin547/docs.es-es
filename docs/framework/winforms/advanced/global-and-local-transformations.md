@@ -1,71 +1,75 @@
 ---
-title: "Transformaciones globales y locales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "matrices, con transformaciones"
-  - "transformaciones, globales"
-  - "transformaciones, locales"
+title: Transformaciones globales y locales
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- matrices [Windows Forms], using transformations
+- transformations [Windows Forms], global
+- transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Transformaciones globales y locales
-Una transformación global es una transformación que se aplica a todos los elementos dibujados por un objeto <xref:System.Drawing.Graphics> determinado.  Por el contrario, una transformación local es una transformación que se aplica a un elemento específico que se va a dibujar.  
+# <a name="global-and-local-transformations"></a>Transformaciones globales y locales
+Una transformación global es una transformación que se aplica a todos los elementos dibujados por un determinado <xref:System.Drawing.Graphics> objeto. En cambio, una transformación local es una transformación que se aplica a un elemento específico que se va a dibujar.  
   
-## Transformaciones globales  
- Para crear una transformación global hay que construir un objeto <xref:System.Drawing.Graphics> y, después, manipular su propiedad <xref:System.Drawing.Graphics.Transform%2A>.  La propiedad <xref:System.Drawing.Graphics.Transform%2A> es un objeto <xref:System.Drawing.Drawing2D.Matrix>, por lo que puede almacenar cualquier secuencia de transformaciones afines.  La transformación que se almacena en la propiedad <xref:System.Drawing.Graphics.Transform%2A> se denomina transformación de coordenadas universales.  La clase <xref:System.Drawing.Graphics> proporciona varios métodos para compilar una transformación universal compuesta: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A> y <xref:System.Drawing.Graphics.TranslateTransform%2A>.  En el siguiente ejemplo se dibuja una elipse dos veces: una, antes de crear una transformación de coordenadas universales y otra, después.  La transformación, en primer lugar, ajusta la escala de la elipse en un factor de 0,5 en la dirección del eje, después, traslada 50 unidades la elipse en la dirección del eje x y, por último, rota la elipse 30 grados.  
+## <a name="global-transformations"></a>Transformaciones globales  
+ Para crear una transformación global, construir un <xref:System.Drawing.Graphics> objeto y, a continuación, manipular su <xref:System.Drawing.Graphics.Transform%2A> propiedad. El <xref:System.Drawing.Graphics.Transform%2A> propiedad es una <xref:System.Drawing.Drawing2D.Matrix> de objeto, por lo que puede almacenar cualquier secuencia de transformaciones afines. La transformación se almacena en la <xref:System.Drawing.Graphics.Transform%2A> propiedad se denomina la transformación universal. El <xref:System.Drawing.Graphics> clase proporciona varios métodos para crear una transformación universal compuesta: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, y <xref:System.Drawing.Graphics.TranslateTransform%2A>. En el ejemplo siguiente se dibuja una elipse dos veces: una vez antes de crear una transformación de coordenadas universales y otra después. La transformación primero escala por un factor de 0,5 en la dirección del eje y, a continuación, traduce 50 unidades en la dirección del eje x y, a continuación, gira 30 grados.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- En la siguiente ilustración se muestran las matrices que forman parte de la transformación.  
+ En la siguiente ilustración muestra las matrices implicados en la transformación.  
   
- ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05\_art14")  
+ ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")  
   
 > [!NOTE]
->  En el ejemplo anterior se rota la elipse alrededor del origen del sistema de coordenadas, que está en la esquina superior izquierda del área de cliente.  Esto produce un resultado diferente al de la rotación de la elipse alrededor de su propio centro.  
+>  En el ejemplo anterior, la elipse gira sobre el origen del sistema de coordenadas, que se encuentra en la esquina superior izquierda del área cliente. Esto produce un resultado diferente a la rotación de la elipse alrededor de su propio centro.  
   
-## Transformaciones locales  
- Una transformación local se aplica a un elemento específico que se va a dibujar.  Por ejemplo, un objeto <xref:System.Drawing.Drawing2D.GraphicsPath> tiene un método <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> que permite transformar los puntos de datos de ese trazado.  En el siguiente ejemplo se dibuja un rectángulo sin transformación y un trazado con una transformación de rotación.  Se supone que no hay transformación de coordenadas universales.  
+## <a name="local-transformations"></a>Transformaciones locales  
+ Una transformación local se aplica a un elemento específico que se va a dibujar. Por ejemplo, un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto tiene una <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> método que permite transformar los puntos de datos de dicha ruta de acceso. En el ejemplo siguiente se dibuja un rectángulo sin transformación y un trazado con una transformación de giro. (Se supone que no hay ninguna transformación universal.)  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- La transformación de coordenadas universales puede combinarse con transformaciones locales para conseguir resultados diversos.  Por ejemplo, la transformación de coordenadas universales puede utilizarse para revisar el sistema de coordenadas, y las transformaciones locales pueden utilizarse para rotar y ajustar la escala de objetos dibujados en el nuevo sistema de coordenadas.  
+ Puede combinar la transformación universal con transformaciones locales para conseguir una gran variedad de resultados. Por ejemplo, puede usar la transformación universal para revisar el sistema de coordenadas y usar transformaciones locales para girar y escalar objetos dibujados en el nuevo sistema de coordenadas.  
   
- Supongamos que desea que el sistema de coordenadas tenga el origen a 200 píxeles del borde izquierdo del área de cliente y a 150 píxeles de la parte superior del área de cliente.  Además, supongamos que desea que la unidad de medida sea el píxel, con el eje x apuntando hacia la derecha y el eje y hacia arriba.  El sistema de coordenadas predeterminado tiene el eje y apuntando hacia abajo, así que es necesario realizar una reflexión a través del eje horizontal.  En la siguiente ilustración se muestra la matriz de dicha reflexión.  
+ Imagine que desea que un sistema de coordenadas que tiene su origen a 200 píxeles desde el borde izquierdo del área cliente y 150 píxeles de la parte superior del área cliente. Además, supongamos que desea que la unidad de medida que sea el píxel, con el eje x apuntando hacia la derecha y el eje y apuntando hacia arriba. El sistema de coordenadas predeterminado tiene el eje y apuntando hacia abajo, por lo que necesita realizar una reflexión en el eje horizontal. En la siguiente ilustración muestra la matriz de dicha reflexión.  
   
- ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.png "AboutGdip05\_art15")  
+ ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")  
   
- A continuación, supongamos que es necesario realizar una traslación de 200 unidades hacia la derecha y 150 unidades hacia abajo.  
+ A continuación, imagine que necesita realizar una conversión de 200 unidades a la derecha y 150 unidades hacia abajo.  
   
- En el siguiente ejemplo se establece el sistema de coordenadas descrito mediante el establecimiento de la transformación de coordenadas universales de un objeto <xref:System.Drawing.Graphics>.  
+ El ejemplo siguiente establece el sistema de coordenadas descrito mediante el establecimiento de la transformación universal de un <xref:System.Drawing.Graphics> objeto.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- En el siguiente código \(ubicado al final del ejemplo anterior\) se crea un trazado formado por un rectángulo único con la esquina inferior izquierda en el origen del nuevo sistema de coordenadas.  El rectángulo se ha rellenado una vez sin transformación local y otra vez con una transformación local.  La transformación local está compuesta por un ajuste de escala horizontal en un factor de 2 seguido de una rotación de 30 grados.  
+ El código siguiente (que se coloca al final del ejemplo anterior) crea una ruta de acceso que consta de un rectángulo con la esquina inferior izquierda en el origen del nuevo sistema de coordenadas. El rectángulo se rellena una vez sin transformación local y otra vez con una transformación local. La transformación local consta de un ajuste de escala horizontal en un factor de 2 seguido de una rotación de 30 grados.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- En la siguiente ilustración se muestra el nuevo sistema de coordenadas y los dos rectángulos.  
+ En la siguiente ilustración muestra el nuevo sistema de coordenadas y los dos rectángulos.  
   
- ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.png "AboutGdip05\_art16")  
+ ![Transformaciones](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
-## Vea también  
- [Sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Usar transformaciones en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Vea también  
+ [Sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Usar transformaciones en la interfaz GDI+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

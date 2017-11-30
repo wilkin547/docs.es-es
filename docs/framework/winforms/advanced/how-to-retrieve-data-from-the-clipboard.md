@@ -1,67 +1,71 @@
 ---
-title: "How to: Retrieve Data from the Clipboard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pasting Clipboard data"
-  - "Clipboard, retrieving data"
+title: "Cómo: Recuperar datos del Portapapeles"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- pasting Clipboard data
+- Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c2f71c6738f19e70826b95626377097de0cd9b3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Retrieve Data from the Clipboard
-La clase <xref:System.Windows.Forms.Clipboard> proporciona métodos que puede utilizar para interactuar con la característica Portapapeles del sistema operativo Windows.  Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos.  Por ejemplo, los procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar.  El Portapapeles también resulta de utilidad para transferir información de una aplicación a otra.  
+# <a name="how-to-retrieve-data-from-the-clipboard"></a>Cómo: Recuperar datos del Portapapeles
+La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la característica de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir información desde una aplicación a otra.  
   
- Algunas aplicaciones almacenan datos en el Portapapeles en varios formatos para aumentar el número de otras aplicaciones que pueden utilizar potencialmente los datos.  Un formato de Portapapeles es una cadena que identifica el formato.  Una aplicación que utiliza el formato identificado puede recuperar los datos asociados en el Portapapeles.  La clase <xref:System.Windows.Forms.DataFormats> proporciona los nombres de formato predefinidos para su uso.  También puede utilizar sus propios nombres de formato o utilizar un tipo de objeto como su formato.  Para obtener información sobre cómo agregar datos al Portapapeles, vea [How to: Add Data to the Clipboard](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md).  
+ Algunas aplicaciones almacenan datos en el Portapapeles en varios formatos para aumentar el número de otras aplicaciones que pueden utilizar potencialmente los datos. Un formato de Portapapeles es una cadena que identifica el formato. Una aplicación que utiliza el formato identificado puede recuperar los datos asociados en el Portapapeles. La <xref:System.Windows.Forms.DataFormats> clase proporciona nombres de formato predefinidos para su uso. También puede utilizar sus propios nombres de formato o utilizar un tipo de objeto como su formato. Para obtener información acerca de cómo agregar datos al Portapapeles, vea [Cómo: agregar datos al Portapapeles](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md).  
   
- Para determinar si el Portapapeles contiene datos en un formato determinado, utilice uno de los métodos `Contains`*Formato* o el método <xref:System.Windows.Forms.Clipboard.GetData%2A>.  Para recuperar datos del Portapapeles, utilice uno de los métodos `Get`*Formato* o el método <xref:System.Windows.Forms.Clipboard.GetData%2A>.  Estos métodos son nuevos en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+ Para determinar si el Portapapeles contiene datos en un formato determinado, utilice uno de los `Contains` *formato* métodos o <xref:System.Windows.Forms.Clipboard.GetData%2A> método. Para recuperar datos desde el Portapapeles, utilice uno de los `Get` *formato* métodos o <xref:System.Windows.Forms.Clipboard.GetData%2A> método. Estos métodos son nuevos en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
- Para tener acceso a los datos del Portapapeles utilizando versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], utilice el método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> y llame a los métodos de la interfaz <xref:System.Windows.Forms.IDataObject> devuelta.  Para determinar si un formato determinado está disponible en el objeto devuelto, por ejemplo, llame al método <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>.  
+ Para acceder a los datos del Portapapeles con versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], use la <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> método y llamar a los métodos de devuelto <xref:System.Windows.Forms.IDataObject>. Para determinar si un formato determinado está disponible en el objeto devuelto, por ejemplo, llamar a la <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> método.  
   
 > [!NOTE]
->  Todas las aplicaciones basadas en Windows comparten el Portapapeles del sistema.  Por consiguiente, el contenido está sujeto a cambios cuando pase a otra aplicación.  
+>  Todas las aplicaciones basadas en Windows comparten el Portapapeles del sistema. Por lo tanto, el contenido está sujeto a cambios cuando se cambia a otra aplicación.  
 >   
->  La clase <xref:System.Windows.Forms.Clipboard> sólo se puede utilizar en subprocesos establecidos en modo STA \(Subprocesamiento controlado simple\).  Para utilizar esta clase, cerciórese de que el método `Main` está marcado con el atributo <xref:System.STAThreadAttribute>.  
+>  La <xref:System.Windows.Forms.Clipboard> clase solo puede usarse en subprocesos establecidos en modo de apartamento de un único subproceso. Para utilizar esta clase, asegúrese de que su `Main` método está marcado con el <xref:System.STAThreadAttribute> atributo.  
   
-### Para recuperar datos del Portapapeles en un solo formato común  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Para recuperar datos del Portapapeles en un solo formato común  
   
-1.  Utilice el método <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A> o <xref:System.Windows.Forms.Clipboard.GetText%2A>.  Opcionalmente, utilice primero los métodos `Contains`*Formato* correspondientes para determinar si los datos están disponibles en un formato determinado.  Estos métodos sólo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Use la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> método. También puede utilizar la correspondiente `Contains` *formato* métodos primero para determinar si los datos están disponibles en un formato determinado. Estos métodos solo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### Para recuperar datos del Portapapeles en un formato personalizado  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Para recuperar datos del Portapapeles en un formato personalizado  
   
-1.  Utilice el método <xref:System.Windows.Forms.Clipboard.GetData%2A> con un nombre de formato personalizado.  Este método sólo está disponible en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Use la <xref:System.Windows.Forms.Clipboard.GetData%2A> método con un nombre de formato personalizado. Este método solo está disponible en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
-     También puede utilizar los nombres de formato predefinidos con el método <xref:System.Windows.Forms.Clipboard.SetData%2A>.  Para obtener más información, vea <xref:System.Windows.Forms.DataFormats>.  
+     También puede utilizar nombres de formato predefinidos con el <xref:System.Windows.Forms.Clipboard.SetData%2A> método. Para obtener más información, consulta <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### Para recuperar datos del Portapapeles en varios formatos  
+### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Para recuperar datos desde el Portapapeles en varios formatos  
   
-1.  Utilice el método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>.  Debe utilizar este método para recuperar datos del Portapapeles en versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1.  Utilice el método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Debe usar este método para recuperar datos del Portapapeles en versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## Vea también  
- [Drag\-and\-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)   
- [How to: Add Data to the Clipboard](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
+## <a name="see-also"></a>Vea también  
+ [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
+ [Agregar datos al Portapapeles](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)

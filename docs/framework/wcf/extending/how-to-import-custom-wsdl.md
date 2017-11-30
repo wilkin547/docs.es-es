@@ -1,27 +1,30 @@
 ---
-title: "C&#243;mo importar WSDL personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo importar WSDL personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 00a845fe5c8321d521fb7baa3b16bd009fc3e660
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo importar WSDL personalizado
-En este tema se describe cómo importar WSDL personalizado.  Para administrar el WSDL personalizado, debe implementar la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension>.  
+# <a name="how-to-import-custom-wsdl"></a>Cómo importar WSDL personalizado
+En este tema se describe cómo importar WSDL personalizado. Para administrar el WSDL personalizado, debe implementar la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension>.  
   
-### Para importar el WSDL personalizado  
+### <a name="to-import-custom-wsdl"></a>Para importar el WSDL personalizado  
   
-1.  Implemente <xref:System.ServiceModel.Description.IWsdlImportExtension>.  Implemente el método <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> para modificar los metadatos antes de que se importen.  Implemente los métodos <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> y <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> para modificar contratos y extremos importados de los metadatos.  Para tener acceso al contrato o extremo importados, utilice el objeto de contexto \(<xref:System.ServiceModel.Description.WsdlContractConversionContext> correspondiente o <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>\):  
+1.  Implemente <xref:System.ServiceModel.Description.IWsdlImportExtension>. Implemente el método <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> para modificar los metadatos antes de que se importen. Implemente los métodos <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> y <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> para modificar contratos y extremos importados de los metadatos. Para tener acceso al contrato o extremo importados, utilice el objeto de contexto (<xref:System.ServiceModel.Description.WsdlContractConversionContext> correspondiente o <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>):  
   
     ```  
     public class WsdlDocumentationImporter : IWsdlImportExtension  
@@ -59,9 +62,9 @@ En este tema se describe cómo importar WSDL personalizado.  Para administrar el
        }  
     ```  
   
-2.  Configure la aplicación de cliente para utilizar el importador de WSDL personalizado.  Tenga en cuenta que si está utilizando Svcutil.exe, debería agregar esta configuración al archivo de configuración para Svcutil.exe \(Svcutil.exe.config\):  
+2.  Configure la aplicación de cliente para utilizar el importador de WSDL personalizado. Tenga en cuenta que si está utilizando Svcutil.exe, debería agregar esta configuración al archivo de configuración para Svcutil.exe (Svcutil.exe.config):  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
           <client>  
             <endpoint   
@@ -76,17 +79,15 @@ En este tema se describe cómo importar WSDL personalizado.  Para administrar el
             </metadata>  
           </client>  
         </system.serviceModel>  
-  
     ```  
   
-3.  Cree una nueva instancia <xref:System.ServiceModel.Description.WsdlImporter> \(pasar la instancia <xref:System.ServiceModel.Description.MetadataSet> que contiene los documentos WSDL que desea importar\) y llame a <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:  
+3.  Cree una nueva instancia <xref:System.ServiceModel.Description.WsdlImporter> (pasar la instancia <xref:System.ServiceModel.Description.MetadataSet> que contiene los documentos WSDL que desea importar) y llame a <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>:  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);          System.Collections.ObjectModel.Collection<ContractDescription> contracts  = importer.ImportAllContracts();  
-  
     ```  
   
-## Vea también  
- [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)   
- [Exportación e importación de metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)   
- [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+## <a name="see-also"></a>Vea también  
+ [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)  
+ [Exportación e importación de metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ [Publicación de WSDL personalizado](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

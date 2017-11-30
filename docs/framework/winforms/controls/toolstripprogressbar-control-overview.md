@@ -1,44 +1,44 @@
 ---
-title: "Informaci&#243;n general del control ToolStripProgressBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripProgressBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles de progreso"
-  - "barras de herramientas [Windows Forms], barras de progreso"
-  - "ToolStripProgressBar (control) [Windows Forms], acerca del control ToolStripProgressBar"
+title: "Información general del control ToolStripProgressBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripProgressBar
+helpviewer_keywords:
+- toolbars [Windows Forms], progress bars
+- progress controls [Windows Forms]
+- ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Informaci&#243;n general del control ToolStripProgressBar
-<xref:System.Windows.Forms.ToolStripProgressBar> combina las funciones de espacio compartido y representación de todos los controles <xref:System.Windows.Forms.ToolStrip> con sus funciones típicas de seguimiento de procesos.  Es más usual que un control <xref:System.Windows.Forms.StatusStrip> hospede un control <xref:System.Windows.Forms.ToolStripProgressBar> a que lo haga un control <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="toolstripprogressbar-control-overview"></a>Información general del control ToolStripProgressBar
+El <xref:System.Windows.Forms.ToolStripProgressBar> combina el espacio compartido y la funcionalidad de procesamiento de todos los <xref:System.Windows.Forms.ToolStrip> controles con su funcionalidad de seguimiento de procesos típico. A <xref:System.Windows.Forms.ToolStripProgressBar> más normalmente está hospedado por <xref:System.Windows.Forms.StatusStrip>y menos frecuentemente, un <xref:System.Windows.Forms.ToolStrip>.  
   
- Aunque <xref:System.Windows.Forms.ToolStripProgressBar> reemplaza y agrega funcionalidad al control en versiones anteriores, <xref:System.Windows.Forms.ToolStripProgressBar> se conserva a efectos de compatibilidad con versiones anteriores y de uso futuro, según sea el caso.  
+ Aunque <xref:System.Windows.Forms.ToolStripProgressBar> reemplaza y agrega funcionalidad al control en versiones anteriores, <xref:System.Windows.Forms.ToolStripProgressBar> se conserva para compatibilidad con versiones anteriores y uso futuro, si lo desea.  
   
-### Miembros importantes de ToolStripProgressBar  
+### <a name="important-toolstripprogressbar-members"></a>Miembros importantes de ToolStripProgressBar  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Obtiene o establece un valor que representa el retardo entre cada actualización de presentación de <xref:System.Windows.Forms.ProgressBarStyle>, en milisegundos.|  
-|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Obtiene o establece el límite superior del intervalo definido para este control <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|Obtiene o establece el límite inferior del intervalo definido para este control <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|Obtiene o establece el estilo que <xref:System.Windows.Forms.ToolStripProgressBar> utiliza para mostrar el progreso de una operación.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|Obtiene o establece el valor del control <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|Avanza la posición actual de la barra de progreso en la cantidad especificada por la propiedad <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Obtiene o establece un valor que representa el retraso entre cada <xref:System.Windows.Forms.ProgressBarStyle.Marquee> mostrar actualización, en milisegundos.|  
+|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Obtiene o establece el límite superior del intervalo que se define para este <xref:System.Windows.Forms.ToolStripProgressBar>.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|Obtiene o establece el límite inferior del intervalo que se define para este <xref:System.Windows.Forms.ToolStripProgressBar>.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|Obtiene o establece el estilo que el <xref:System.Windows.Forms.ToolStripProgressBar> usa para mostrar el progreso de una operación.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|Obtiene o establece el valor actual de la <xref:System.Windows.Forms.ToolStripProgressBar>.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|Hace avanzar la posición actual de la barra de progreso en la cantidad de la <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> propiedad.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Windows.Forms.ToolStripProgressBar>

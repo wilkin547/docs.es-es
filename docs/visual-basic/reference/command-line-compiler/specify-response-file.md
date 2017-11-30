@@ -1,56 +1,54 @@
 ---
-title: "@ (Especificar archivo de respuesta, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "@ (Especificar archivo de respuesta) (opción del compilador) [Visual Basic]"
+title: '@ (Especificar archivo de respuesta, Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ced258713983ded06fa70cb65d56071b41cdc75b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# @ (Especificar archivo de respuesta, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="-specify-response-file-visual-basic"></a>@ (Especificar archivo de respuesta, Visual Basic)
 Especifica un archivo que contiene opciones del compilador y archivos de código fuente para compilar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 @response_file  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `response_file`  
- Obligatorio.  Archivo que especifica opciones del compilador o archivos de código fuente para compilar.  Escriba el nombre de archivo entre comillas \(" "\) si contiene espacios.  
+ Obligatorio. Un archivo que enumera las opciones del compilador o archivos de código fuente para compilar. Ponga el nombre de archivo entre comillas ("") si contiene un espacio.  
   
-## Comentarios  
- El compilador procesa las opciones de compilador y los archivos de código fuente especificados en un archivo de respuesta como si se hubieran especificado en la línea de comandos.  
+## <a name="remarks"></a>Comentarios  
+ El compilador procesa las opciones del compilador y archivos de código fuente especificados en un archivo de respuesta como si se hubieran especificado en la línea de comandos.  
   
- Para especificar varios archivos de respuesta en una compilación, hay que especificar varias opciones de archivo de respuesta, como las siguientes.  
+ Para especificar más de un archivo de respuesta en una compilación, especifique varias opciones de archivo de respuesta, como el siguiente.  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- En una misma línea de un archivo de respuesta, pueden aparecer varias opciones del compilador y archivos de código fuente.  Una especificación de opción del compilador debe aparecer en una única línea \(no puede abarcar varias líneas\).  Los archivos de respuesta pueden contener comentarios que empiezan con el símbolo `#`.  
+ En una respuesta del archivo, varias opciones del compilador y archivos de código fuente pueden aparecer en una sola línea. Una especificación de opción del compilador solo debe aparecer en una línea (no puede abarcar varias líneas). Archivos de respuesta pueden contener comentarios que comienzan por la `#` símbolos.  
   
- Se pueden combinar opciones especificadas en la línea de comandos con opciones especificadas en varios archivos de respuesta.  El compilador procesa las opciones de comandos cuando las encuentra.  Por consiguiente, los argumentos de la línea de comandos pueden imponerse a opciones utilizadas anteriormente en archivos de respuesta.  Y, a la inversa, las opciones de un archivo de respuesta pueden imponerse a opciones incluidas previamente en la línea de comandos o en otros archivos de respuesta.  
+ Puede combinar opciones especificadas en la línea de comandos con las opciones especificadas en uno o varios archivos de respuesta. El compilador procesa las opciones de comando a medida que los encuentra. Por lo tanto, los argumentos de línea de comandos pueden invalidar las opciones enumeradas anteriormente en archivos de respuesta. Por el contrario, opciones en un archivo de respuesta invalidan las opciones enumeradas en la línea de comandos o en otros archivos de respuesta.  
   
- Visual Basic proporciona el archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe.  El archivo Vbc.rsp se incluye de forma predeterminada, a menos que se utilice la opción `/noconfig`.  Para obtener más información, vea [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
+ Visual Basic proporciona el archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe. El archivo Vbc.rsp se incluye de forma predeterminada, a menos que el `/noconfig` se utiliza la opción. Para obtener más información, consulte [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
   
 > [!NOTE]
->  La opción `@` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
+>  El `@` opción no está disponible en el entorno de desarrollo de Visual Studio, que está disponible sólo cuando se compila desde la línea de comandos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Las líneas siguientes proceden de un archivo de respuesta de ejemplo.  
   
 ```  
@@ -61,14 +59,14 @@ source1.vb
 source2.vb  
 ```  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo se utiliza la opción `@` con el archivo de respuesta denominado `File1.rsp`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `@` opción con el archivo de respuesta denominado `File1.rsp`.  
   
 ```  
 vbc @file1.rsp  
 ```  
   
-## Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
+## <a name="see-also"></a>Vea también  
+ [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

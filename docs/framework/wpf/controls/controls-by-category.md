@@ -1,28 +1,30 @@
 ---
-title: "Agrupar controles por categor&#237;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controles, enumerados por categoría"
+title: "Agrupar controles por categoría"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Agrupar controles por categor&#237;a
-Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] se pueden agrupar lógicamente en varias categorías.  Estas categorías se pueden utilizar para seleccionar el control adecuado para cada escenario ayudándolo a ver qué controles tienen modelos del uso o funcionalidades similares.  
+# <a name="controls-by-category"></a>Agrupar controles por categoría
+Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] se pueden agrupar lógicamente en varias categorías. Estas categorías se pueden usar para seleccionar el control adecuado para su escenario al ayudarle a ver qué controles tienen patrones de uso o funcionalidad similares.  
   
-## Diseño  
- Los controles de diseño se utilizan para administrar el tamaño, las dimensiones, la posición y la organización de los elementos secundarios.  
+## <a name="layout"></a>Diseño  
+ Los controles de diseño se utilizan para administrar el tamaño, las dimensiones, la posición y la disposición de los elementos secundarios.  
   
 -   <xref:System.Windows.Controls.Border>  
   
@@ -62,15 +64,15 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
-## Botones  
- El botón es uno de los controles de interfaz de usuario más básicos.  Las aplicaciones suelen realizar algún tipo de tarea en el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> cuando un usuario hace clic en un botón.  
+## <a name="buttons"></a>Botones  
+ Los botones son uno de los controles de interfaz de usuario más básicos. Las aplicaciones suelen realizar alguna tarea en el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos cuando un usuario hace clic en ellos.  
   
 -   <xref:System.Windows.Controls.Button>  
   
 -   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## Presentación de datos  
- Los controles de presentación de datos se utilizan para mostrar información de un origen de datos.  
+## <a name="data-display"></a>Presentación de datos  
+ Los controles de presentación de datos se usan para mostrar información de un origen de datos.  
   
 -   <xref:System.Windows.Controls.DataGrid>  
   
@@ -78,15 +80,15 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.TreeView>  
   
-## Presentación y selección de fechas  
- Los controles de fecha se utilizan para mostrar y seleccionar información del calendario.  
+## <a name="date-display-and-selection"></a>Presentación y selección de fechas  
+ Los controles de fecha se utilizan para mostrar y seleccionar la información del calendario.  
   
 -   <xref:System.Windows.Controls.Calendar>  
   
 -   <xref:System.Windows.Controls.DatePicker>  
   
-## Menús  
- Los menús se utilizan para agrupar acciones relacionadas o proporcionar ayuda contextual.  
+## <a name="menus"></a>Menús  
+ Los menús se usan para agrupar acciones relacionadas o para proporcionar ayuda contextual.  
   
 -   <xref:System.Windows.Controls.ContextMenu>  
   
@@ -94,8 +96,8 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.ToolBar>  
   
-## Selection  
- Los controles de selección se utilizan para permitir al usuario seleccionar una o más opciones.  
+## <a name="selection"></a>Selección  
+ Los controles de selección se usan para permitir al usuario seleccionar una o más opciones.  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -107,8 +109,8 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.Slider>  
   
-## Navegación  
- Los controles de exploración mejoran o extienden la experiencia de navegación en la aplicación, creando marcos de destino o el aspecto de una aplicación con fichas.  
+## <a name="navigation"></a>Navegación  
+ Los controles de navegación mejoran o amplían la experiencia de navegación en la aplicación, creando marcos de destino o apariencia de una aplicación con fichas.  
   
 -   <xref:System.Windows.Controls.Frame>  
   
@@ -120,8 +122,8 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.TabControl>  
   
-## Cuadros de diálogo  
- Los cuadros de diálogo proporcionan compatibilidad concreta para los escenarios de interacción con el usuario más comunes, como la impresión.  
+## <a name="dialog-boxes"></a>Cuadros de diálogo  
+ Los cuadros de diálogo proporcionan compatibilidad concreta con los escenarios de interacción con el usuario más comunes, como la impresión.  
   
 -   <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -129,8 +131,8 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:Microsoft.Win32.SaveFileDialog>  
   
-## Información del usuario  
- Los controles de información del usuario proporcionan comentarios contextuales o aclaraciones sobre la interfaz de usuario de una aplicación.  Normalmente, el usuario no puede interactuar con estos controles.  
+## <a name="user-information"></a>Información de usuario  
+ Los controles de información del usuario proporcionan comentarios contextuales o aclaraciones sobre la interfaz de usuario de una aplicación. Normalmente, el usuario no puede interactuar con estos controles.  
   
 -   <xref:System.Windows.Controls.AccessText>  
   
@@ -146,8 +148,8 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.ToolTip>  
   
-## Documentos  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye varios controles especializados para ver documentos.  Estos controles optimizan la experiencia de lectura, basándose en el escenario de destino del usuario.  
+## <a name="documents"></a>Documentos  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye varios controles especializados para ver documentos. Estos controles optimizan la experiencia de lectura, según el escenario de destino del usuario.  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -159,7 +161,7 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.StickyNoteControl>  
   
-## Entrada  
+## <a name="input"></a>Entrada  
  Los controles de entrada permiten al usuario escribir texto y otros contenidos.  
   
 -   <xref:System.Windows.Controls.TextBox>  
@@ -168,8 +170,8 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.PasswordBox>  
   
-## Multimedia  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye compatibilidad integrada para hospedar contenido de audio y vídeo, así como [códecs](GTMT) para la mayoría de los formatos de imagen más populares.  
+## <a name="media"></a>Multimedia  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye compatibilidad integrada para hospedar contenido de audio y vídeo, así como [códecs] para la mayoría de los formatos de imagen más conocidos.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -177,12 +179,12 @@ Los controles de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.
   
 -   <xref:System.Windows.Controls.SoundPlayerAction>  
   
-## Entrada de lápiz digital  
- Los controles de entrada de lápiz digital proporcionan compatibilidad integrada con las características de [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], como la lectura y escritura de entradas de lápiz.  
+## <a name="digital-ink"></a>Entrada manuscrita digital  
+ Los controles de entrada manuscrita digital proporcionan compatibilidad integrada con características de [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], como la lectura y escritura de entradas manuscritas.  
   
 -   <xref:System.Windows.Controls.InkCanvas>  
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Biblioteca de controles](../../../../docs/framework/wpf/controls/control-library.md)

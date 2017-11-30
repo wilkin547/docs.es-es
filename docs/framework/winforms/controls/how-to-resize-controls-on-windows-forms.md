@@ -1,50 +1,51 @@
 ---
-title: "C&#243;mo: Cambiar el tama&#241;o de los controles en formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Size.Height"
-  - "Size.Width"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms], cambiar el tamaño"
-  - "tamaño, controles"
-  - "controles de Windows Forms, tamaño"
+title: "Cómo: Cambiar el tamaño de los controles en formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Size.Height
+- Size.Width
+helpviewer_keywords:
+- controls [Windows Forms], resizing
+- size [Windows Forms], controls
+- Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84915ecf08c9ef5471ec3a48685893c42ef13013
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Cambiar el tama&#241;o de los controles en formularios Windows Forms
-Puede cambiar el tamaño de los controles individuales y de varios controles del mismo o diferente tipo, como <xref:System.Windows.Forms.Button> y los controles <xref:System.Windows.Forms.GroupBox>.  
+# <a name="how-to-resize-controls-on-windows-forms"></a>Cómo: Cambiar el tamaño de los controles en formularios Windows Forms
+Puede cambiar el tamaño de los controles individuales, y puede cambiar el tamaño varios controles del mismo o diferente tipo, como <xref:System.Windows.Forms.Button> y <xref:System.Windows.Forms.GroupBox> controles.  
   
-### Para cambiar el tamaño de un control  
+### <a name="to-resize-a-control"></a>Para cambiar el tamaño de un control  
   
-1.  Haga clic en el control cuyo tamaño va a cambiar y arrastre uno de los ocho cuadros de tamaño.  
+1.  Haga clic en el control para cambiar de tamaño y arrastre uno de los controladores de tamaño de ocho.  
   
     > [!NOTE]
-    >  Seleccione el control y presione las teclas de DIRECCIÓN manteniendo presionada la tecla MAYÚS para, a su vez, cambiar el tamaño del control un píxel.  Presione la tecla de dirección ABAJO o DERECHA mientras mantiene presionada la tecla MAYÚS y CTRL para cambiar el tamaño del control en los aumentos de tamaño grandes.  
+    >  Seleccione el control y presione las teclas de dirección mientras mantiene presionada la tecla MAYÚS para cambiar el tamaño del control un píxel a la vez. Presione las teclas de flecha hacia abajo o hacia la derecha manteniendo presionadas las teclas MAYÚS y CTRL para cambiar el tamaño del control en incrementos grandes.  
   
-### Para cambiar el tamaño de múltiples controles en un formulario  
+### <a name="to-resize-multiple-controls-on-a-form"></a>Para cambiar el tamaño de varios controles en un formulario  
   
-1.  Mantenga presionada la tecla CTRL o MAYÚS y seleccione los controles que desea cambiar el tamaño.  El tamaño del primer control que selecciona se utiliza para los otros controles.  
+1.  Mantenga presionada la tecla CTRL o MAYÚS y seleccione los controles que desea cambiar el tamaño. El tamaño del primer control que seleccione se utiliza para los demás controles.  
   
-2.  En el menú **Formato**, elija **Igualar tamaño** y, a continuación, uno de los siguientes comandos:  Los tres primeros comandos cambian las dimensiones de los controles para que coincidan con las del primer control seleccionado.  
+2.  En el **formato** menú, elija **Igualar tamaño**y seleccione una de las cuatro opciones. Los tres primeros comandos cambian las dimensiones de los controles para que coincida con el primer control seleccionado.  
   
-## Vea también  
- [Controles de Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)   
- [How to: Resize Windows Forms Using the Designer](http://msdn.microsoft.com/es-es/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)
+## <a name="see-also"></a>Vea también  
+ [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [Cómo: cambiar el tamaño de formularios Windows Forms mediante el diseñador](http://msdn.microsoft.com/en-us/3fe57c94-851c-45d7-a6f6-6b85f3c4a104)

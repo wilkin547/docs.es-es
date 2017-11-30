@@ -1,35 +1,38 @@
 ---
-title: "Versiones de contratos de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "contratos de datos [WCF], control de versiones"
-  - "control de versiones [WCF]"
-  - "control de versiones [WCF], contratos de datos"
+title: Versiones de contratos de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- versioning [WCF], data contracts
+- versioning [WCF]
+- data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 58e88e319da6d78071293ce92bb7e9ebb33224bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Versiones de contratos de datos
-A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios.  En este tema se explica cómo controlar las versiones de los contratos de datos.  En este tema se describen los mecanismos de control de versiones de los contratos de datos.  Para obtener información general completa y una guía preceptiva del control de versiones, consulte [Procedimientos recomendados: Creación de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+# <a name="data-contract-versioning"></a>Versiones de contratos de datos
+A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y la orientación preceptiva del control de versiones, vea [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
-## Cambios con interrupción yCambios sin interrupción  
- Los cambios en un contrato de datos pueden ser con o sin interrupción.  Cuando un contrato de datos se cambia de una manera sin interrupción, una aplicación que use la versión anterior del contrato puede comunicarse con una aplicación utilizando la versión más reciente y una aplicación que utilice la versión más reciente del contrato puede comunicarse con una aplicación que utilice la versión anterior.  Por otro lado, un cambio con interrupción evita la comunicación en una o ambas direcciones.  
+## <a name="breaking-vs-nonbreaking-changes"></a>Cambios con interrupción y Cambios sin interrupción  
+ Los cambios en un contrato de datos pueden ser con o sin interrupción. Cuando un contrato de datos se cambia de una manera sin interrupción, una aplicación que use la versión anterior del contrato puede comunicarse con una aplicación utilizando la versión más reciente y una aplicación que utilice la versión más reciente del contrato puede comunicarse con una aplicación que utilice la versión anterior. Por otro lado, un cambio con interrupción evita la comunicación en una o ambas direcciones.  
   
- Los cambios realizados en un tipo que no afecten a la forma de la transmisión y recepción son cambios sin interrupción.  Tales cambios no cambian el contrato de datos, solo el tipo subyacente.  Por ejemplo, puede cambiar el nombre de un campo de una manera sin interrupción si establece a continuación la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> de <xref:System.Runtime.Serialization.DataMemberAttribute> en el nombre de la versión anterior.  El código siguiente muestra la versión 1 de un contrato de datos.  
+ Los cambios realizados en un tipo que no afecten a la forma de la transmisión y recepción son cambios sin interrupción. Tales cambios no cambian el contrato de datos, solo el tipo subyacente. Por ejemplo, puede cambiar el nombre de un campo de una manera sin interrupción si establece a continuación la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> de <xref:System.Runtime.Serialization.DataMemberAttribute> en el nombre de la versión anterior. El código siguiente muestra la versión 1 de un contrato de datos.  
   
  [!code-csharp[C_DataContractVersioning#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#1)]
  [!code-vb[C_DataContractVersioning#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#1)]  
@@ -39,7 +42,7 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
  [!code-csharp[C_DataContractVersioning#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#2)]
  [!code-vb[C_DataContractVersioning#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#2)]  
   
- Algunos cambios modifican los datos transmitidos, pero puede que sean o no cambios con interrupción.  Los siguientes cambios siempre son con interrupción:  
+ Algunos cambios modifican los datos transmitidos, pero puede que sean o no cambios con interrupción. Los siguientes cambios siempre son con interrupción:  
   
 -   Cambio del valor <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> o <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> de un contrato de datos.  
   
@@ -47,25 +50,25 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
   
 -   Cambio de nombre de un miembro de datos.  
   
--   Cambio del contrato de datos de un miembro de datos.  Por ejemplo, cambiar el tipo de miembro de datos de entero a cadena, o de un tipo con un contrato de datos denominado "Cliente" a un tipo con un contrato de datos denominado "Persona."  
+-   Cambio del contrato de datos de un miembro de datos. Por ejemplo, cambiar el tipo de miembro de datos de entero a cadena, o de un tipo con un contrato de datos denominado "Cliente" a un tipo con un contrato de datos denominado "Persona."  
   
  Los cambios siguientes también son posibles.  
   
-## Agregar y eliminar miembros de datos  
- En la mayoría de los casos, agregar o eliminar un miembro de datos no es un cambio con interrupción, a menos que requiera validez estricta de esquema \(las nuevas instancias se validan frente al esquema anterior\).  
+## <a name="adding-and-removing-data-members"></a>Agregar y eliminar miembros de datos  
+ En la mayoría de los casos, agregar o eliminar un miembro de datos no es un cambio con interrupción, a menos que requiera validez estricta de esquema (las nuevas instancias se validan frente al esquema anterior).  
   
- Cuando un tipo con un campo adicional se deserializa en un tipo con un campo que falta, se pasa por alto la información adicional.  \(También se puede almacenar para recorridos de ida y vuelta; para obtener más información, consulte [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)\).  
+ Cuando un tipo con un campo adicional se deserializa en un tipo con un campo que falta, se pasa por alto la información adicional. (También puede ser almacenados para fines de ida y vuelta; para obtener más información, consulte [contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).  
   
- Cuando un tipo con un campo que falta se deserializa en un tipo con un campo adicional, el campo adicional se deja en su valor predeterminado, normalmente cero o `null`.  \(El valor predeterminado se puede cambiar; para obtener más información, consulte [Devoluciones de llamadas en la serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)\).  
+ Cuando un tipo con un campo que falta se deserializa en un tipo con un campo adicional, el campo adicional se deja en su valor predeterminado, normalmente cero o `null`. (El valor predeterminado se puede cambiar; para obtener más información, consulte [devoluciones de llamada de serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)  
   
  Por ejemplo, puede utilizar la clase `CarV1` en un cliente y la clase `CarV2` en un servicio, o puede utilizar la clase `CarV1` en un servicio y la clase `CarV2` en un cliente.  
   
  [!code-csharp[C_DataContractVersioning#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#3)]
  [!code-vb[C_DataContractVersioning#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#3)]  
   
- El extremo de versión 2 puede enviar datos correctamente al extremo de versión 1.  La serialización de la versión 2 del contrato de datos de `Car` produce un XML similar al siguiente.  
+ El punto de conexión de versión 2 puede enviar datos correctamente al punto de conexión de versión 1. La serialización de la versión 2 del contrato de datos de `Car` produce un XML similar al siguiente.  
   
-```  
+```xml  
 <Car>  
     <Model>Porsche</Model>  
     <HorsePower>300</HorsePower>  
@@ -74,65 +77,65 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
   
  El motor de deserialización en V1 no encuentra un miembro de datos coincidente para el campo `HorsePower` y descarta esos datos.  
   
- Asimismo, el extremo de versión 1 puede enviar datos al extremo de versión 2.  La serialización de la versión 1 del contrato de datos de `Car` produce un XML similar al siguiente.  
+ Asimismo, el extremo de versión 1 puede enviar datos al extremo de versión 2. La serialización de la versión 1 del contrato de datos de `Car` produce un XML similar al siguiente.  
   
-```  
+```xml  
 <Car>  
     <Model>Porsche</Model>  
 </Car>  
 ```  
   
- El deserializador de versión 2 no sabe qué valor asignar al campo `HorsePower`, porque no hay datos coincidentes en el XML de entrada.  En su lugar, el campo se establece en el valor predeterminado de 0.  
+ El deserializador de versión 2 no sabe qué valor asignar al campo `HorsePower`, porque no hay datos coincidentes en el XML de entrada. En su lugar, el campo se establece en el valor predeterminado de 0.  
   
-## Miembros de datos necesarios  
- Un miembro de datos se puede marcar como necesario estableciendo la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de <xref:System.Runtime.Serialization.DataMemberAttribute> en `true`.  Si faltan datos necesarios al deserializar, se genera una excepción en lugar de establecer el miembro de datos en su valor predeterminado.  
+## <a name="required-data-members"></a>Miembros de datos necesarios  
+ Un miembro de datos se puede marcar como necesario estableciendo la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de <xref:System.Runtime.Serialization.DataMemberAttribute> en `true`. Si faltan datos necesarios al deserializar, se genera una excepción en lugar de establecer el miembro de datos en su valor predeterminado.  
   
- Agregar un miembro de datos necesario es un cambio con interrupción.  Es decir, el tipo más nuevo todavía puede enviarse a los extremos con el tipo anterior, pero no al revés.  Eliminar un miembro de datos marcado como necesario en cualquier versión anterior también es un cambio con interrupción.  
+ Agregar un miembro de datos necesario es un cambio con interrupción. Es decir, el tipo más nuevo todavía puede enviarse a los extremos con el tipo anterior, pero no al revés. Eliminar un miembro de datos marcado como necesario en cualquier versión anterior también es un cambio con interrupción.  
   
  Cambiar el valor de la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de `true` a `false` no es un cambio con interrupción, pero cambiarlo de `false` a `true` puede ser un cambio con interrupción si cualquier versión anterior del tipo no tiene el miembro de datos en cuestión.  
   
 > [!NOTE]
->  Aunque la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> se establezca en `true`, el dato entrante puede ser nulo o cero, y se debe preparar un tipo para afrontar esta posibilidad.  No utilice <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> como mecanismo de seguridad frente a datos entrante no válidos.  
+>  Aunque la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> se establezca en `true`, el dato entrante puede ser nulo o cero, y se debe preparar un tipo para afrontar esta posibilidad. No utilice <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> como mecanismo de seguridad frente a datos entrante no válidos.  
   
-## Valores predeterminados ignorados  
- Es posible, aunque no es recomendable, configurar la propiedad `EmitDefaultValue` en el atributo DataMemberAttribute para `false`, tal y como se describe en [Valores predeterminados de los miembros de datos](../../../../docs/framework/wcf/feature-details/data-member-default-values.md).  Si este valor es `false`, no se emitirá el miembro de datos si está establecido en su valor predeterminado \(normalmente null o cero\).  Esto no es compatible con miembros de datos necesarios en versiones diferentes de dos maneras:  
+## <a name="omitted-default-values"></a>Valores predeterminados ignorados  
+ Es posible (aunque no se recomienda) para establecer el `EmitDefaultValue` propiedad en el atributo DataMemberAttribute para `false`, tal y como se describe en [valores predeterminados de miembro de datos](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Si este valor es `false`, no se emitirá el miembro de datos si está establecido en su valor predeterminado (normalmente null o cero). Esto no es compatible con miembros de datos necesarios en versiones diferentes de dos maneras:  
   
--   Un contrato de datos con un miembro de datos necesario en una versión no puede recibir datos predeterminados \(null o cero\) de una versión diferente en la que el miembro de datos tenga `EmitDefaultValue` establecido en `false`.  
+-   Un contrato de datos con un miembro de datos necesario en una versión no puede recibir datos predeterminados (null o cero) de una versión diferente en la que el miembro de datos tenga `EmitDefaultValue` establecido en `false`.  
   
--   Un miembro de datos necesario que tiene `EmitDefaultValue` establecido en `false` no se puede utilizar para serializar su valor predeterminado \(null o cero\), pero puede recibir este tipo de valor en la deserialización.  Esto crea un problema de ida y vuelta \(los datos se pueden leer pero los mismos datos no se pueden escribir a continuación\).  Por consiguiente, si `IsRequired` es `true` y `EmitDefaultValue` es `false` en una versión, la misma combinación se debería aplicar al resto de versiones, de tal manera que ninguna versión del contrato de datos pudiese generar un valor que no resulte en un recorrido de ida y vuelta.  
+-   Un miembro de datos necesario que tiene `EmitDefaultValue` establecido en `false` no se puede utilizar para serializar su valor predeterminado (null o cero), pero puede recibir este tipo de valor en la deserialización. Esto crea un problema de ida y vuelta (los datos se pueden leer pero los mismos datos no se pueden escribir a continuación). Por consiguiente, si `IsRequired` es `true` y `EmitDefaultValue` es `false` en una versión, la misma combinación se debería aplicar al resto de versiones, de tal manera que ninguna versión del contrato de datos pudiese generar un valor que no resulte en un recorrido de ida y vuelta.  
   
-## Consideraciones del esquema  
- Para obtener una explicación sobre el esquema que se produce para los tipos de contrato de datos, consulte [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+## <a name="schema-considerations"></a>Consideraciones del esquema  
+ Para obtener una explicación de lo que el esquema se genera para tipos de contrato de datos, vea [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- El esquema de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generado para los tipos de contrato de datos no realiza ninguna previsión para el control de versiones.  Es decir, el esquema exportado desde una cierta versión de un tipo contiene solo esos miembros de datos presentes en esa versión.  La implementación de la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject>, no cambia el esquema de un tipo.  
+ El esquema de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generado para los tipos de contrato de datos no realiza ninguna previsión para el control de versiones. Es decir, el esquema exportado desde una cierta versión de un tipo contiene solo esos miembros de datos presentes en esa versión. La implementación de la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject>, no cambia el esquema de un tipo.  
   
- Los miembros de datos se exportan de forma predeterminada al esquema como elementos opcionales.  Es decir, el valor de `minOccurs` \(atributo XML\) se establece en 0.  Los miembros de datos necesarios se exportan con `minOccurs` establecido en 1.  
+ Los miembros de datos se exportan de forma predeterminada al esquema como elementos opcionales. Es decir, el valor de `minOccurs` (atributo XML) se establece en 0. Los miembros de datos necesarios se exportan con `minOccurs` establecido en 1.  
   
- Muchos de los cambios considerados como cambios sin interrupción son, en realidad, cambios con interrupción si se requiere una adherencia estricta al esquema.  En el ejemplo anterior, una instancia de `CarV1` simplemente con el elemento `Model` validaría frente al esquema `CarV2` \(que tiene `Model` y `Horsepower`, pero ambos son opcionales\).  Sin embargo, lo inverso no es cierto: una instancia de `CarV2` produciría un error en la validación frente al esquema `CarV1`.  
+ Muchos de los cambios considerados como cambios sin interrupción son, en realidad, cambios con interrupción si se requiere una adherencia estricta al esquema. En el ejemplo anterior, una instancia de `CarV1` simplemente con el elemento `Model` validaría frente al esquema `CarV2` (que tiene `Model` y `Horsepower`, pero ambos son opcionales). Sin embargo, lo inverso no es cierto: una instancia de `CarV2` produciría un error en la validación frente al esquema `CarV1`.  
   
- El recorrido de ida y vuelta implica algunas consideraciones adicionales.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la sección "Consideraciones del esquema" de [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ El recorrido de ida y vuelta implica algunas consideraciones adicionales. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]sección "Consideraciones del esquema" [contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
-### Otros cambios permitidos  
- Implementar la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> es un cambio sin interrupción.  Sin embargo, la compatibilidad con el recorrido de ida y vuelta no existe para las versiones del tipo anterior a la versión en la que <xref:System.Runtime.Serialization.IExtensibleDataObject> se implementó.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+### <a name="other-permitted-changes"></a>Otros cambios permitidos  
+ Implementar la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> es un cambio sin interrupción. Sin embargo, la compatibilidad con el recorrido de ida y vuelta no existe para las versiones del tipo anterior a la versión en la que <xref:System.Runtime.Serialization.IExtensibleDataObject> se implementó. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
-## Enumeraciones  
- Agregar o eliminar un miembro de enumeración es un cambio con interrupción.  Cambiar el nombre de un miembro de enumeración es un cambio con interrupción, a menos que su nombre de contrato se mantenga igual que en la versión anterior mediante el atributo `EnumMemberAtttribute`.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+## <a name="enumerations"></a>Enumeraciones  
+ Agregar o eliminar un miembro de enumeración es un cambio con interrupción. Cambiar el nombre de un miembro de enumeración es un cambio con interrupción, a menos que su nombre de contrato se mantenga igual que en la versión anterior mediante el atributo `EnumMemberAtttribute`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tipos de enumeración en contratos de datos](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
-## Colecciones  
- La mayoría de los cambios de colección son cambios sin interrupción, puesto que la mayoría de los tipos de colección son intercambiables entre sí en el modelo del contrato de datos.  Sin embargo, personalizar una colección no personalizada o viceversa es un cambio con interrupción.  Asimismo, cambiar la configuración de personalización de la colección es un cambio brusco; es decir, implica cambiar su espacio de nombres y nombre de contrato de datos, repitiendo el nombre del elemento, el nombre del elemento de la clave y el nombre del elemento del valor.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] personalización de colecciones, consulte [Tipos de colección en contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).    
-Naturalmente, cambiar el contrato de datos del contenido de una colección \(por ejemplo, cambiar de una lista de enteros a una lista de cadenas\) es un cambio brusco.  
+## <a name="collections"></a>Colecciones  
+ La mayoría de los cambios de colección son cambios sin interrupción, puesto que la mayoría de los tipos de colección son intercambiables entre sí en el modelo del contrato de datos. Sin embargo, personalizar una colección no personalizada o viceversa es un cambio con interrupción. Asimismo, cambiar la configuración de personalización de la colección es un cambio brusco; es decir, implica cambiar su espacio de nombres y nombre de contrato de datos, repitiendo el nombre del elemento, el nombre del elemento de la clave y el nombre del elemento del valor. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]personalización de colecciones, vea [tipos de colección en contratos de datos](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+Naturalmente, cambiar el contrato de datos del contenido de una colección (por ejemplo, cambiar de una lista de enteros a una lista de cadenas) es un cambio brusco.  
   
-## Vea también  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>   
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>   
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>   
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>   
- <xref:System.Runtime.Serialization.SerializationException>   
- <xref:System.Runtime.Serialization.IExtensibleDataObject>   
- [Devoluciones de llamadas en la serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)   
- [Procedimientos recomendados: Creación de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)   
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
+ <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
+ <xref:System.Runtime.Serialization.SerializationException>  
+ <xref:System.Runtime.Serialization.IExtensibleDataObject>  
+ [Devoluciones de llamada de serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
+ [Procedimientos recomendados: creación de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

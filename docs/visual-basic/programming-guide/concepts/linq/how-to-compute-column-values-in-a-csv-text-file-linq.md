@@ -1,37 +1,29 @@
 ---
-title: "Cómo: calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Cómo: calcular valores de columna en un archivo de texto CSV (LINQ) (Visual Basic)
-Este ejemplo muestra cómo realizar cálculos agregados como suma, promedio, Min y Max en las columnas de un archivo .csv. Los principios del ejemplo que se muestran aquí se pueden aplicar a otros tipos de texto estructurados.  
+En este ejemplo se muestra cómo efectuar cálculos agregados (como sumas, promedios, mínimos y máximos) en las columnas de un archivo .csv. Los principios de ejemplo que se muestran aquí se pueden aplicar a otros tipos de textos estructurados.  
   
 ### <a name="to-create-the-source-file"></a>Para crear el archivo de origen  
   
-1.  Copie las líneas siguientes en un archivo denominado scores.csv y guárdelo en la carpeta del proyecto. Se supone que la primera columna representa un identificador del alumno, y las columnas subsiguientes representan las calificaciones de cuatro exámenes.  
+1.  Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto. Imagínese que la primera columna representa un identificador de estudiante y que las columnas siguientes representan las notas de cuatro exámenes.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- La consulta funciona mediante la <xref:System.String.Split%2A>método para convertir cada línea de texto en una matriz.</xref:System.String.Split%2A> Cada elemento de matriz representa una columna. Por último, el texto de cada columna se convierte en su representación numérica. Si el archivo es un archivo separado por tabulaciones, simplemente actualice el argumento de la `Split` método `\t`.  
+ La consulta funciona usando el método <xref:System.String.Split%2A> para convertir cada línea de texto en una matriz. Cada elemento de matriz representa una columna. Por último, el texto de cada columna se convierte en su representación numérica. Si el archivo es un archivo separado por tabulaciones, actualice el argumento del método `Split` a `\t`.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cc01267fa8c5bc2f052ffe2c5851794888e48b34
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: f463b5263ac91dd61db2208581f291c170bf2b33
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 Un enlace seguro e interoperable que deriva de [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) y admite la seguridad federada.  
@@ -102,7 +100,7 @@ Un enlace seguro e interoperable que deriva de [ \<wsFederationHttpBinding >](..
 |[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- La federación es la capacidad de compartir identidades en varias empresas o dominios de confianza para la autenticación y autorización. Utiliza el protocolo WS-Trust para asignar la representación de identidad de un dominio de confianza a otro. El enlace HTTP federado admite la seguridad de SOAP así como la seguridad de modo mixto, pero no permite la seguridad de transporte. Los servicios configurados con este enlace deben utilizar el transporte de HTTP. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ La federación es la capacidad de compartir identidades en varias empresas o dominios de confianza para la autenticación y autorización. Utiliza el protocolo WS-Trust para asignar la representación de identidad de un dominio de confianza a otro. El enlace HTTP federado admite la seguridad de SOAP así como la seguridad de modo mixto, pero no permite la seguridad de transporte. Los servicios configurados con este enlace deben utilizar el transporte de HTTP. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -138,11 +136,10 @@ Un enlace seguro e interoperable que deriva de [ \<wsFederationHttpBinding >](..
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.WS2007FederationHttpBinding>   
- <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>   
- [\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WS2007FederationHttpBinding>  
+ <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>  
+ [\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
+ [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)
-

@@ -1,46 +1,52 @@
 ---
-title: "C&#243;mo: Animar la geometr&#237;a de un rect&#225;ngulo mediante fotogramas clave | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, RectangleGeometry (objetos) con fotogramas clave"
-  - "fotogramas clave, animar objetos RectangleGeometry con"
-  - "RectangleGeometry (objetos), animar con fotogramas clave"
+title: "Cómo: Animar la geometría de un rectángulo mediante fotogramas clave"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- key frames [WPF], animating RectangleGeometry objects with
+- RectangleGeometry objects [WPF], animating with key frames
+- animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b6c23f894b6fa93a3889356416bd95f61fff8beb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Animar la geometr&#237;a de un rect&#225;ngulo mediante fotogramas clave
-En este ejemplo, se muestra cómo animar la propiedad <xref:System.Windows.Media.RectangleGeometry.Rect%2A> de <xref:System.Windows.Media.RectangleGeometry> mediante fotogramas clave.  
+# <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Cómo: Animar la geometría de un rectángulo mediante fotogramas clave
+Este ejemplo muestra cómo animar la <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propiedad de un <xref:System.Windows.Media.RectangleGeometry> mediante el uso de fotogramas clave.  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza la clase <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> para animar la propiedad <xref:System.Windows.Media.RectangleGeometry.Rect%2A> de <xref:System.Windows.Media.RectangleGeometry>.  Esta animación utiliza tres fotogramas clave de la siguiente manera:  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se usa el <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> clase para animar la <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propiedad de un <xref:System.Windows.Media.RectangleGeometry>. Esta animación utiliza tres fotogramas clave de la siguiente manera:  
   
-1.  Durante los primeros dos segundos, utiliza una instancia de la clase <xref:System.Windows.Media.Animation.LinearRectKeyFrame> para animar un cambio gradual en la posición, ancho y alto de un rectángulo.  Los fotogramas clave lineales como <xref:System.Windows.Media.Animation.LinearRectKeyFrame> crean una transición lineal suave entre valores.  
+1.  Durante los primeros dos segundos, utiliza una instancia de la <xref:System.Windows.Media.Animation.LinearRectKeyFrame> clase para animar un cambio gradual en la posición, el ancho y el alto de un rectángulo. Al igual que los fotogramas clave lineales <xref:System.Windows.Media.Animation.LinearRectKeyFrame> crear una transición lineal suave entre valores.  
   
-2.  Durante el final del medio segundo siguiente, utiliza una instancia de la clase <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> para reducir de repente el alto del rectángulo.  Los fotogramas clave discretos como <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> crean cambios súbitos entre los valores; es decir, la disminución de alto se produce de forma rápida y brusca.  
+2.  Durante el final de la siguiente medio segundo, utiliza una instancia de la <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> clase repentinamente reducir el alto del rectángulo. Los fotogramas clave discretos como <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> crear cambios bruscos entre valores, es decir, la disminución de alto se produce con rapidez y no es sutil.  
   
-3.  Durante los dos últimos segundos, utiliza una instancia de la clase <xref:System.Windows.Media.Animation.SplineRectKeyFrame> para volver a establecer el rectángulo a su tamaño y posición originales.  Los fotogramas clave [spline](GTMT) como <xref:System.Windows.Media.Animation.SplineRectKeyFrame> crean una transición variable entre los valores según los valores de la propiedad <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A>.  En este ejemplo, el cambio comienza despacio y se acelera exponencialmente hacia el final del segmento temporal.  
+3.  Durante los últimos dos segundos, utiliza una instancia de la <xref:System.Windows.Media.Animation.SplineRectKeyFrame> clase para cambiar el rectángulo a su tamaño y posición original. Al igual que los fotogramas clave spline <xref:System.Windows.Media.Animation.SplineRectKeyFrame> crear una transición variable entre los valores según los valores de la <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> propiedad. En este ejemplo, el cambio comienza despacio y se acelera exponencialmente hacia el final del segmento temporal.  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
- [!code-xml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- Para obtener el ejemplo completo, vea [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](http://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## Vea también  
- <xref:System.Windows.Media.RectangleGeometry>   
- <xref:System.Windows.Media.RectangleGeometry.Rect%2A>   
- <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>   
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Temas "Cómo..." de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Media.RectangleGeometry>  
+ <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
+ <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>  
+ [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

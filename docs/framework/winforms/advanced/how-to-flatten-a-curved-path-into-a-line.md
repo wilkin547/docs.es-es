@@ -1,40 +1,40 @@
 ---
-title: "C&#243;mo: Aplanar un trazado curvo en una l&#237;nea | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "curvas, aplanar"
-  - "dibujar, aplanar curvas"
-  - "Flatten (método)"
-  - "gráficos, aplanar curvas de líneas"
-  - "GraphicsPath (objeto)"
-  - "rutas de acceso, aplanar"
+title: "Cómo: Aplanar un trazado curvo en una línea"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], flattening curves into lines
+- curves [Windows Forms], flattening
+- GraphicsPath object
+- paths [Windows Forms], flattening
+- drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 62dedc987c2b622dc3f3aa81dac3cdea6dd75740
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Aplanar un trazado curvo en una l&#237;nea
-Un objeto <xref:System.Drawing.Drawing2D.GraphicsPath> almacena una secuencia de líneas y curvas spline de Bézier.  Se pueden agregar varios tipos de curvas \(elipses, arcos, curvas spline cardinales\) a un trazado, pero cada curva se convierte en una curva spline de Bézier antes de almacenarse en el trazado.  El aplanamiento de un trazado consiste en convertir cada curva spline de Bézier del trazado en una secuencia de líneas rectas.  En la siguiente ilustración se muestra un trazado antes y después del aplanamiento.  
+# <a name="how-to-flatten-a-curved-path-into-a-line"></a>Cómo: Aplanar un trazado curvo en una línea
+Un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto almacena una secuencia de líneas y curvas spline de Bézier. Puede agregar varios tipos de curvas (elipses, arcos, curvas spline cardinales) a una ruta de acceso, pero cada curva se convierte en una curva spline de Bézier antes de almacenarse en la ruta de acceso. Una ruta de acceso de aplanamiento consiste en convertir cada curva spline de Bézier en la ruta de acceso a una secuencia de líneas rectas. En la siguiente ilustración muestra una ruta de acceso antes y después de la reducción.  
   
- ![Líneas rectas y curvas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.png "AboutGdip02\_Art32A")  
+ ![Líneas rectas y curvas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  
   
-### Para aplanar un trazado  
+### <a name="to-flatten-a-path"></a>Para aplanar un trazado  
   
--   Llame al método <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> de un objeto <xref:System.Drawing.Drawing2D.GraphicsPath>.  El método <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> recibe un argumento de aplanamiento que especifica la distancia máxima entre el trazado aplanado y el trazado original.  
+-   Llame a la <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> método de una <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. El <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> método recibe un argumento de aplanamiento que especifica la distancia máxima entre el trazado aplanado y la ruta de acceso original.  
   
-## Vea también  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=fullName>   
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
+ [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [Crear y dibujar trazados](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

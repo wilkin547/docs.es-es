@@ -1,30 +1,34 @@
 ---
-title: "Definir un evento en los controles de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles personalizados [Windows Forms], eventos mediante código"
-  - "eventos [Windows Forms], definir en controles personalizados de Windows Forms"
+title: Definir un evento en los controles de formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- events [Windows Forms], defining within Windows Forms custom controls
+- custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 592efefecb0428f87e5ac612c8fb162aa2fe85dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Definir un evento en los controles de formularios Windows Forms
-Para obtener información detallada sobre cómo definir eventos personalizados, vea [Eventos](../../../../docs/standard/events/index.md).  Si define un evento que no tiene datos asociados, use el tipo base de datos de evento, <xref:System.EventArgs>, y use <xref:System.EventHandler> como delegado de evento.  Todo lo que queda por hacer es definir un miembro de evento y un método `On`*EventName* protegido que genera el evento.  
+# <a name="defining-an-event-in-windows-forms-controls"></a>Definir un evento en los controles de formularios Windows Forms
+Para obtener más información acerca de cómo definir eventos personalizados, vea [eventos](../../../../docs/standard/events/index.md). Si define un evento que no tiene datos asociados, use el tipo base de datos de evento, <xref:System.EventArgs>, y use <xref:System.EventHandler> como delegado de evento. Todo lo que queda por hacer es definir un miembro de evento y un protegido `On` *EventName* método que genera el evento.  
   
- El fragmento de código siguiente muestra cómo el control personalizado `FlashTrackBar` define un evento personalizado `ValueChanged`.  Para obtener el código completo de la muestra de `FlashTrackBar`, vea [Cómo: Crear un control de formularios Windows Forms que muestre el progreso](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ El fragmento de código siguiente muestra cómo el control personalizado `FlashTrackBar` define un evento personalizado `ValueChanged`. Para obtener el código completo para la `FlashTrackBar` de ejemplo, vea el [Cómo: crear un Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ```vb  
 Option Explicit  
@@ -83,7 +87,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## Vea también  
- [Eventos de los controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)   
- [Eventos](../../../../docs/standard/events/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Eventos de los controles de Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Eventos](../../../../docs/standard/events/index.md)  
  [Eventos](../../../../docs/standard/events/index.md)

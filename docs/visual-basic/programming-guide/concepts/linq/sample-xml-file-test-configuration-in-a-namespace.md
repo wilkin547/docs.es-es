@@ -1,33 +1,25 @@
 ---
-title: "Archivo XML de ejemplo: Configuración de pruebas en un Namespace3 | Documentos de Microsoft"
+title: "Archivo XML de ejemplo: Probar la configuración de un Namespace3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 176524376e10ab157c7d6bc33f254b1431fd6478
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 58e0adcad36b42b0dc994a0c878ebd4e069186ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Archivo XML de ejemplo: Configuración de prueba en un espacio de nombres
-El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Se trata de un archivo de configuración de pruebas. El XML se encuentra en un espacio de nombres.  
+El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Se trata de un archivo de configuración de pruebas. El XML se encuentra en un espacio de nombres.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
   

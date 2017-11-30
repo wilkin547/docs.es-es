@@ -1,38 +1,44 @@
 ---
-title: "Cambiar mediante programaci&#243;n la selecci&#243;n en un control RichTextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cambiar las selecciones en un control RichTextBox [WPF]"
-  - "cambiar las selecciones en un cuadro de texto [WPF]"
+title: "Cambiar mediante programación la selección en un control RichTextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- changing selections in a text box [WPF]
+- changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbfb61db786286209ed24e79026d4759a46c84d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Cambiar mediante programaci&#243;n la selecci&#243;n en un control RichTextBox
-En este ejemplo se muestra cómo cambiar mediante programación la selección actual en un control <xref:System.Windows.Controls.RichTextBox>.  Esta selección es la misma que si el usuario hubiera seleccionado el contenido mediante la interfaz de usuario.  
+# <a name="change-selection-in-a-richtextbox-programmatically"></a>Cambiar mediante programación la selección en un control RichTextBox
+Este ejemplo muestra cómo cambiar mediante programación la selección actual en un <xref:System.Windows.Controls.RichTextBox>. Esta selección es el mismo, como si el usuario hubiera seleccionado el contenido mediante la interfaz de usuario.  
   
-## Ejemplo  
- En el código [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] siguiente se describe un control <xref:System.Windows.Controls.RichTextBox> con nombre con contenido simple.  
+## <a name="example"></a>Ejemplo  
+ El siguiente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] código describe un conjunto con nombre <xref:System.Windows.Controls.RichTextBox> control con contenido simple.  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/ChangeSelectionProgrammaticaly.xaml#changeselectionprogrammaticalyexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/ChangeSelectionProgrammaticaly.xaml#changeselectionprogrammaticalyexamplewholepage)]  
   
-## Ejemplo  
- En el código siguiente se selecciona mediante programación un texto arbitrario cuando el usuario hace clic dentro de <xref:System.Windows.Controls.RichTextBox>.  
+## <a name="example"></a>Ejemplo  
+ El siguiente código selecciona mediante programación un texto arbitrario cuando el usuario hace clic dentro de la <xref:System.Windows.Controls.RichTextBox>.  
   
  [!code-csharp[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/ChangeSelectionProgrammaticaly.xaml.cs#changeselectionprogrammaticalycodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/ChangeSelectionProgrammaticaly.xaml.vb#changeselectionprogrammaticalycodeexamplewholepage)]  
   
-## Vea también  
- [Información general sobre el control RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)   
+## <a name="see-also"></a>Vea también  
+ [RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) (Introducción a RichTextBox)  
  [Información general sobre TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)

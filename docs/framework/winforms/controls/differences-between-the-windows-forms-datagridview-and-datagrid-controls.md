@@ -1,58 +1,59 @@
 ---
-title: "Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadrículas de datos"
-  - "DataGrid (control) [Windows Forms], comparado con el control DataGridView"
-  - "DataGridView (control) [Windows Forms], comparado con el control DataGrid"
+title: Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms
+- DataGrid control [Windows Forms], DataGridView control compared
+- DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38373b8e3201ea0a6c32d972c7ac9c72888d5eae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms
-El control <xref:System.Windows.Forms.DataGridView> es un nuevo control que reemplaza el control <xref:System.Windows.Forms.DataGrid>.  El control <xref:System.Windows.Forms.DataGridView> proporciona muchas características básicas y avanzadas que faltan en el control <xref:System.Windows.Forms.DataGrid>.  Además, la arquitectura del control <xref:System.Windows.Forms.DataGridView> hace mucho más fácil la ampliación y personalización que el control <xref:System.Windows.Forms.DataGrid>.  
+# <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms
+El <xref:System.Windows.Forms.DataGridView> trata de un nuevo control que reemplaza el <xref:System.Windows.Forms.DataGrid> control. El <xref:System.Windows.Forms.DataGridView> control proporciona varias características básicas y avanzadas que faltan en el <xref:System.Windows.Forms.DataGrid> control. Además, la arquitectura de la <xref:System.Windows.Forms.DataGridView> control, resulta más fácil ampliar y personalizar que el <xref:System.Windows.Forms.DataGrid> control.  
   
- En la tabla siguiente se describen algunas características principales disponibles en el control <xref:System.Windows.Forms.DataGridView> que faltan en el control <xref:System.Windows.Forms.DataGrid>.  
+ La tabla siguiente describen algunas de las principales características disponibles en la <xref:System.Windows.Forms.DataGridView> control que faltan en el <xref:System.Windows.Forms.DataGrid> control.  
   
 |Característica del control DataGridView|Descripción|  
-|---------------------------------------------|-----------------|  
-|Varios tipos de columna|El control <xref:System.Windows.Forms.DataGridView> proporciona más tipos de columna integrados que el control <xref:System.Windows.Forms.DataGrid>.  Estos tipos de columna satisfacen las necesidades de los escenario más habituales, pero también son más fáciles de ampliar y reemplazar que los tipos de columna del control <xref:System.Windows.Forms.DataGrid>.  Para obtener más información, vea [Tipos de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).|  
-|Varias maneras de mostrar los datos|El control <xref:System.Windows.Forms.DataGrid> se limita a mostrar los datos desde un origen de datos externo.  El control <xref:System.Windows.Forms.DataGridView>, sin embargo, puede mostrar datos independientes almacenados en el control, datos de un origen de datos enlazado, o datos sin enlazar y enlazados juntos.  También puede implementar el modo virtual en el control <xref:System.Windows.Forms.DataGridView> para proporcionar una administración de datos personalizada.  Para obtener más información, vea [Modos de presentación de datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).|  
-|Varias maneras de personalizar la presentación de datos|El control <xref:System.Windows.Forms.DataGridView> proporciona muchas propiedades y eventos que le permiten especificar cómo dar formato y mostrar los datos.  Por ejemplo, puede cambiar la apariencia de las celdas, filas y columnas dependiendo de los datos que contiene, o puede reemplazar los datos de un tipo de datos con datos equivalentes de otro tipo.  Para obtener más información, vea [Formato de datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md).|  
-|Varias opciones para cambiar la apariencia y comportamiento de celdas, filas, columnas y encabezados|El control <xref:System.Windows.Forms.DataGridView> le permite trabajar de varias maneras con componentes de cuadrícula individuales.  Por ejemplo, puede inmovilizar filas y columnas para evitar que se desplacen; ocultar filas, columnas y encabezados; cambiar la forma de ajustar los tamaños de fila, columna y encabezado; cambiar la forma de los usuarios de realizar selecciones; y proporcionar menús contextuales e información sobre herramientas para celdas, filas y columnas individuales.|  
+|----------------------------------|-----------------|  
+|Varios tipos de columna|El <xref:System.Windows.Forms.DataGridView> control proporciona los tipos de columna integrados más que el <xref:System.Windows.Forms.DataGrid> control. Estos tipos de columna satisfacer las necesidades de los escenarios más comunes, pero también son más fáciles de ampliar o reemplazar a los tipos de columna en el <xref:System.Windows.Forms.DataGrid> control. Para obtener más información, consulte [tipos de columna en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).|  
+|Varias maneras de mostrar datos|El <xref:System.Windows.Forms.DataGrid> control se limita a mostrar los datos desde un origen de datos externo. El <xref:System.Windows.Forms.DataGridView> control, sin embargo, puede mostrar datos sin enlazar almacenados en el control, los datos de un origen de datos enlazado o datos dependientes e independientes entre sí. También puede implementar el modo virtual en el <xref:System.Windows.Forms.DataGridView> control para proporcionar una administración de datos personalizados. Para obtener más información, consulte [modos de presentación de datos en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).|  
+|Varias maneras de personalizar la presentación de datos|El <xref:System.Windows.Forms.DataGridView> control proporciona muchas propiedades y eventos que le permiten especificar cómo se da formato y mostrar los datos. Por ejemplo, puede cambiar la apariencia de celdas, filas y columnas dependiendo de los datos que contienen, o puede reemplazar los datos de un tipo de datos con datos equivalentes de otro tipo. Para obtener más información, consulte [formato de los datos en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md).|  
+|Varias opciones para cambiar el comportamiento y apariencia de la celda, fila, columna y encabezado|El <xref:System.Windows.Forms.DataGridView> control le permite trabajar con componentes individuales de la cuadrícula de numerosas maneras. Por ejemplo, puede inmovilizar filas y columnas para evitar que se desplacen; Ocultar filas, columnas y encabezados; cambiar la manera en que se ajustan los tamaños de fila, columna y encabezado; cambiar la manera en que los usuarios realizar selecciones; y proporcionan información sobre herramientas y menús contextuales para las columnas, filas y celdas individuales.|  
   
- El control <xref:System.Windows.Forms.DataGrid> se conserva para compatibilidad con versiones anteriores y para necesidades especiales.  En casi todas las ocasiones, debería utilizar el control <xref:System.Windows.Forms.DataGridView>.  La única característica disponible en el control <xref:System.Windows.Forms.DataGrid> que no dispone el control <xref:System.Windows.Forms.DataGridView> es la presentación jerárquica de información desde dos tablas relacionadas en un único control.  Debe utilizar dos controles <xref:System.Windows.Forms.DataGridView> para mostrar información desde dos tablas que tienen una relación de principal\-detalle.  
+ El <xref:System.Windows.Forms.DataGrid> control se conserva por compatibilidad con versiones anteriores y para necesidades especiales. Para casi todos los propósitos, debe usar el <xref:System.Windows.Forms.DataGridView> control. La única característica que está disponible en la <xref:System.Windows.Forms.DataGrid> control que no está disponible en el <xref:System.Windows.Forms.DataGridView> control es la presentación jerárquica de información de dos tablas relacionadas en un control único. Debe utilizar dos <xref:System.Windows.Forms.DataGridView> controles para mostrar información de dos tablas que tienen una relación principal-detalle.  
   
-## Actualizar el control DataGridView  
- Si cuenta con aplicaciones que utilizan el control <xref:System.Windows.Forms.DataGrid> en un sencillo escenario de enlace a datos sin personalizaciones, simplemente reemplace el control antiguo con el nuevo.  Ambos controles utiliza la arquitectura enlazada a datos de los formularios Windows Forms, por lo que el control <xref:System.Windows.Forms.DataGridView> mostrará los datos enlazados sin necesitar ninguna configuración adicional.  Sin embargo, también querrá sacar el máximo partido a las mejoras de los enlaces a datos enlazando sus datos a un componente<xref:System.Windows.Forms.BindingSource>, que puede enlazar a continuación al control <xref:System.Windows.Forms.DataGridView>.  Para obtener más información, vea [BindingSource \(Componente\)](../../../../docs/framework/winforms/controls/bindingsource-component.md).  
+## <a name="upgrading-to-the-datagridview-control"></a>Actualización para el Control DataGridView  
+ Si tiene aplicaciones existentes que utilicen el <xref:System.Windows.Forms.DataGrid> control en un escenario sencillo de enlace a datos sin personalizaciones, simplemente puede reemplazar el control antiguo con el nuevo control. Ambos controles utilizan la arquitectura de enlace de datos de formularios Windows Forms estándar, por lo que el <xref:System.Windows.Forms.DataGridView> control mostrará los datos enlazados con no necesitan configuraciones adicionales. Quizá desee considerar sacar partido de las mejoras de enlace de datos, sin embargo, enlazando los datos a un <xref:System.Windows.Forms.BindingSource> componente, que, a continuación, puede enlazar a la <xref:System.Windows.Forms.DataGridView> control. Para obtener más información, consulte [BindingSource (componente)](../../../../docs/framework/winforms/controls/bindingsource-component.md).  
   
- Como el control <xref:System.Windows.Forms.DataGridView> muestra una arquitectura totalmente nueva, no hay ninguna ruta de conversión sencilla que le permite utilizar personalizaciones de <xref:System.Windows.Forms.DataGrid> con el control <xref:System.Windows.Forms.DataGridView>.  Sin embargo, muchas personalizaciones de <xref:System.Windows.Forms.DataGrid> son innecesarias con el control <xref:System.Windows.Forms.DataGridView> debido a las características integradas disponibles en el nuevo control.  Si ha creado tipos de columna personalizadas para el control <xref:System.Windows.Forms.DataGrid> que desea utilizar con el control <xref:System.Windows.Forms.DataGridView>, tendrá que implementarlos de nuevo mediante la nueva arquitectura.  Para obtener más información, vea [Personalizar el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md).  
+ Dado que la <xref:System.Windows.Forms.DataGridView> control tiene una arquitectura totalmente nueva, no hay ninguna ruta de conversión sencilla que le permitirá usar <xref:System.Windows.Forms.DataGrid> personalizaciones con el <xref:System.Windows.Forms.DataGridView> control. Muchos <xref:System.Windows.Forms.DataGrid> personalizaciones no son necesarios con el <xref:System.Windows.Forms.DataGridView> controlar, sin embargo, debido a las funciones integradas disponibles en el nuevo control. Si ha creado tipos de columna personalizada para la <xref:System.Windows.Forms.DataGrid> control que desea usar con el <xref:System.Windows.Forms.DataGridView> (control), tendrá que implementarlas utilizando la nueva arquitectura de nuevo. Para obtener más información, consulte [personalizar el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md).  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGrid>   
- <xref:System.Windows.Forms.BindingSource>   
- [Control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Control DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [BindingSource \(Componente\)](../../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [Tipos de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)   
- [Estilos de celda en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [Modos de presentación de datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)   
- [Formato de datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)   
- [Opciones de ajuste de tamaño en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)   
- [Modos de ordenación de columnas del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)   
- [Modos de selección en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)   
- [Personalizar el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGrid>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [DataGridView (control)](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [DataGrid (control)](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [Estilos de celda en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [Modos de presentación de datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
+ [Formato de datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
+ [Opciones de ajuste de tamaño en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
+ [Modos de ordenación de columnas del control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+ [Modos de selección en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)  
+ [Personalizar el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

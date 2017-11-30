@@ -1,72 +1,73 @@
 ---
-title: "C&#243;mo: Delimitar controles en formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anchor (propiedad), habilitar formularios de tamaño ajustable"
-  - "controles [Windows Forms], delimitar"
-  - "controles [Windows Forms], colocar"
-  - "formularios, cambiar el tamaño"
-  - "cambiar el tamaño de los formularios"
-  - "resolución de pantalla y presentación de controles"
-  - "controles de Windows Forms, resoluciones de pantalla"
-  - "controles de Windows Forms, tamaño"
-  - "Windows Forms, cambiar el tamaño"
+title: "Cómo: Delimitar controles en formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Anchor property [Windows Forms], enabling resizable forms
+- Windows Forms controls, screen resolutions
+- resizing forms [Windows Forms]
+- Windows Forms controls, size
+- screen resolution and control display
+- controls [Windows Forms], anchoring
+- forms [Windows Forms], resizing
+- Windows Forms, resizing
+- controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Delimitar controles en formularios Windows Forms
-Si está diseñando un formulario cuyo tamaño pueda cambiar el usuario en tiempo de ejecución, es recomendable que los controles del formulario ajusten correctamente su tamaño y su ubicación.  Para cambiar dinámicamente el tamaño de los controles con el formulario, puede utilizar la propiedad <xref:System.Windows.Forms.Control.Anchor%2A> de los controles de formularios Windows Forms.  La propiedad <xref:System.Windows.Forms.Control.Anchor%2A> define una posición de delimitación para el control.  Cuando se delimita un control en un formulario y se cambia el tamaño del formulario, el control conserva la distancia entre el control y las posiciones de delimitación.  Por ejemplo, si tiene un control <xref:System.Windows.Forms.TextBox> delimitado en los bordes izquierdo, derecho e inferior del formulario, al cambiar el tamaño del formulario, el control <xref:System.Windows.Forms.TextBox> cambia su tamaño horizontalmente, de modo que conserve la misma distancia desde los lados derecho e izquierdo del formulario.  Además, el control se ubica verticalmente de forma que se encuentre siempre a la misma distancia del borde inferior del formulario.  Si un control no está delimitado y el tamaño del formulario cambia, la posición del control relativa a los bordes del formulario cambia.  
+# <a name="how-to-anchor-controls-on-windows-forms"></a>Cómo: Delimitar controles en formularios Windows Forms
+Si va a diseñar un formulario que el usuario puede cambiar el tamaño en tiempo de ejecución, deben cambiar el tamaño de los controles en el formulario y la posición correctamente. Para cambiar el tamaño de los controles de forma dinámica con el formulario, puede usar el <xref:System.Windows.Forms.Control.Anchor%2A> propiedad de los controles de formularios Windows Forms. El <xref:System.Windows.Forms.Control.Anchor%2A> propiedad define una posición de delimitación para el control. Cuando un control se acopla a un formulario y se cambia el tamaño del formulario, el control mantiene la distancia entre el control y las posiciones de delimitación. Por ejemplo, si tiene un <xref:System.Windows.Forms.TextBox> control que está anclada a la izquierda, derecha y los bordes de la parte inferior del formulario, tal y como se cambia el tamaño del formulario, el <xref:System.Windows.Forms.TextBox> control cambia de tamaño horizontalmente para que mantiene la misma distancia desde los lados derecho e izquierdos del formulario. Además, el control se ubica verticalmente para que su ubicación es siempre la misma distancia desde el borde inferior del formulario. Si un control no se acopla y se cambia el tamaño del formulario, se cambia la posición del control en relación con los bordes del formulario.  
   
- La propiedad <xref:System.Windows.Forms.Control.Anchor%2A> interactúa con la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A>.  Para obtener más información, consulte [Información general sobre la propiedad AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ El <xref:System.Windows.Forms.Control.Anchor%2A> propiedad interactúa con el <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad. Para obtener más información, consulte [AutoSize Property Overview](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Para delimitar un control en un formulario  
+### <a name="to-anchor-a-control-on-a-form"></a>Para fijar un control en un formulario  
   
-1.  Seleccione el control que desee delimitar.  
+1.  Seleccione el control que desee anclar.  
   
     > [!NOTE]
-    >  Se pueden delimitar varios controles simultáneamente haciendo clic en cada uno de los controles con la tecla CTRL presionada y siguiendo el resto del procedimiento.  
+    >  Se pueden delimitar varios controles simultáneamente al presionar la tecla CTRL, haga clic en cada control para seleccionarlo y, a continuación, siguiendo el resto de este procedimiento.  
   
-2.  En la ventana **Propiedades**, haga clic en la flecha que se encuentra a la derecha de la propiedad <xref:System.Windows.Forms.Control.Anchor%2A>.  
+2.  En el **propiedades** ventana, haga clic en la flecha situada a la derecha de la <xref:System.Windows.Forms.Control.Anchor%2A> propiedad.  
   
-     Aparecerá un editor que muestra una cruz.  
+     Se muestra un editor que muestra una cruz.  
   
-3.  Para establecer una delimitación, haga clic en la sección superior, izquierda, derecha o inferior de la cruz.  
+3.  Para establecer un delimitador, haga clic en la parte superior, izquierda, derecha o sección de la parte inferior de la cruz.  
   
-     De forma predeterminada, los controles se delimitan arriba y a la izquierda.  
+     Los controles se fija con respecto a la parte superior y deja de forma predeterminada.  
   
-4.  Para borrar un lado delimitado del control, haga clic en el brazo correspondiente de la cruz.  
+4.  Para borrar un lado del control que ha sido anclado, haga clic en el brazo correspondiente de la cruz.  
   
-5.  Para cerrar el editor de propiedades <xref:System.Windows.Forms.Control.Anchor%2A>, haga clic de nuevo en el nombre de propiedad <xref:System.Windows.Forms.Control.Anchor%2A>.  
+5.  Para cerrar la <xref:System.Windows.Forms.Control.Anchor%2A> editor de propiedades, haga clic en el <xref:System.Windows.Forms.Control.Anchor%2A> nuevo nombre de propiedad.  
   
- Cuando se muestre el formulario en tiempo de ejecución, el tamaño del control cambiará para permanecer ubicado a la misma distancia del borde del formulario.  La distancia desde el borde delimitado permanece siempre igual a la distancia definida cuando se ubicó el control en el Diseñador de Windows Forms.  
+ Cuando se muestre el formulario en tiempo de ejecución, el control cambia de tamaño para mantener la posición en la misma distancia desde el borde del formulario. La distancia desde el borde delimitado siempre permanece igual la distancia definida cuando se coloca el control en el Diseñador de Windows Forms.  
   
 > [!NOTE]
->  Ciertos controles, tales como el control <xref:System.Windows.Forms.ComboBox>, tienen el alto limitado.  Al delimitar el control a la parte inferior de su formulario o contenedor no es posible forzarlo para que supere su límite de alto.  
+>  Ciertos controles, como el <xref:System.Windows.Forms.ComboBox> controlar, tienen un límite de su alto. Delimitar el control a la parte inferior de su formulario o contenedor, no puede forzar el control supere el límite de alto.  
   
- Los controles heredados deben estar protegidos \(`Protected`\) para que se puedan delimitar.  Para cambiar el nivel de acceso de un control, establezca su propiedad `Modifiers` en la ventana **Propiedades**.  
+ Los controles heredados deben estar `Protected` para poder ser delimitados. Para cambiar el nivel de acceso de un control, establezca su `Modifiers` propiedad en el **propiedades** ventana.  
   
-## Vea también  
- [Controles de Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Información general sobre la propiedad AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [Cómo: Acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>Vea también  
+ [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Información general sobre la propiedad AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Procedimiento para acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Tutorial: Diseñar controles de Windows Forms con relleno, márgenes y la propiedad AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

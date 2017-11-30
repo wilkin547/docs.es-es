@@ -1,96 +1,98 @@
 ---
-title: "Informaci&#243;n general sobre sistemas de temporizaci&#243;n y animaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación [WPF]"
-  - "sistema de temporización [WPF]"
+title: "Información general sobre sistemas de temporización y animación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- timing system [WPF]
+- animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 484aa47744de95c849b237112f1a383c2c2cb0b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre sistemas de temporizaci&#243;n y animaci&#243;n
-En este tema se describe cómo el sistema del control de tiempo utiliza las clases de animación, <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> para animar propiedades.  
+# <a name="animation-and-timing-system-overview"></a>Información general sobre sistemas de temporización y animación
+Este tema describe cómo el sistema de temporización usa la animación, <xref:System.Windows.Media.Animation.Timeline>, y <xref:System.Windows.Media.Animation.Clock> clases para animar propiedades.  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## Requisitos previos  
- Para entender este tema, debe poder utilizar animaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para animar propiedades, como se describe en [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  También ayuda conocer las [propiedades de dependencia](GTMT); para obtener más información, vea [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+## <a name="prerequisites"></a>Requisitos previos  
+ Para entender este tema, debe poder utilizar animaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para animar propiedades, como se describe en [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). También ayuda conocer las propiedades de dependencia; para más información, vea [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
   
 <a name="timelinesandclocks"></a>   
-## Escalas de tiempo y relojes  
- En [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) se describía cómo un objeto <xref:System.Windows.Media.Animation.Timeline> representa un segmento de tiempo, y cómo una animación es un tipo de objeto <xref:System.Windows.Media.Animation.Timeline> que produce valores de salida.  Por sí mismo, un objeto <xref:System.Windows.Media.Animation.Timeline>, no hace nada más que describir un segmento de tiempo.  Es el objeto <xref:System.Windows.Media.Animation.Clock> de la escala de tiempo el que hace el trabajo real.  Igualmente, la animación realmente no anima las propiedades: una clase de animación describe cómo se deben calcular los valores de salida, pero es el objeto <xref:System.Windows.Media.Animation.Clock> creado para la animación el que controla el resultado de la animación y lo aplica a las propiedades.  
+## <a name="timelines-and-clocks"></a>Escalas de tiempo y relojes  
+ El [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) se describe cómo un <xref:System.Windows.Media.Animation.Timeline> representa un segmento de tiempo y una animación es un tipo de <xref:System.Windows.Media.Animation.Timeline> que genera valores de salida. Por sí mismo, un <xref:System.Windows.Media.Animation.Timeline>, no hace nada más que describir un segmento de tiempo. Es la escala de tiempo <xref:System.Windows.Media.Animation.Clock> objeto que realiza el trabajo real. Del mismo modo, animación realmente no animar propiedades: una clase de animación describe cómo se deben calcular los valores de salida, pero es el <xref:System.Windows.Media.Animation.Clock> que se creó para la animación que controla la salida de la animación y se aplica a las propiedades.  
   
- Un objeto <xref:System.Windows.Media.Animation.Clock> es un tipo especial de objeto que mantiene el estado de tiempo de ejecución relacionado con el control de tiempo para el objeto <xref:System.Windows.Media.Animation.Timeline>.  Proporciona tres bits de información que son esenciales a la animación y el sistema de control de tiempo: <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>, <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A> y <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>.  Un objeto <xref:System.Windows.Media.Animation.Clock> determina la hora actual, el progreso y el estado utilizando los comportamientos de control de tiempo descritos por <xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, etc.  
+ A <xref:System.Windows.Media.Animation.Clock> es un tipo especial de objeto que mantiene el estado de tiempo de ejecución relacionados con el control de tiempo para el <xref:System.Windows.Media.Animation.Timeline>. Proporciona tres bits de información que son esenciales para la animación y el sistema de control de tiempo: <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>, <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A>, y <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>. A <xref:System.Windows.Media.Animation.Clock> determina su hora actual, el progreso y el estado mediante los comportamientos de control de tiempo descritos por su <xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, y así sucesivamente.  
   
- En la mayoría de los casos, se crea automáticamente un objeto <xref:System.Windows.Media.Animation.Clock> para la escala de tiempo.  Al animar utilizando un objeto <xref:System.Windows.Media.Animation.Storyboard> o el método <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>, se crean automáticamente relojes para las escalas de tiempo y las animaciones, y se aplican a sus propiedades concretas.  También se puede crear un objeto <xref:System.Windows.Media.Animation.Clock> explícitamente usando el método <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> del objeto <xref:System.Windows.Media.Animation.Timeline>.  El método <xref:System.Windows.Media.MediaTimeline.CreateClock%2A?displayProperty=fullName> crea un reloj del tipo adecuado para el objeto <xref:System.Windows.Media.Animation.Timeline> en el que se llama.  Si el objeto <xref:System.Windows.Media.Animation.Timeline> contiene escalas de tiempo secundarias, también crea objetos <xref:System.Windows.Media.Animation.Clock> para ellas.  Los objetos <xref:System.Windows.Media.Animation.Clock> resultantes se organizan en árboles que coinciden con la estructura del árbol de objetos <xref:System.Windows.Media.Animation.Timeline> a partir del cual se crean.  
+ En la mayoría de los casos, un <xref:System.Windows.Media.Animation.Clock> se crea automáticamente la escala de tiempo. Cuando se anima mediante el uso de un <xref:System.Windows.Media.Animation.Storyboard> o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método, relojes automáticamente se crean para su escalas de tiempo y las animaciones y se aplican a sus propiedades de destino. También puede crear un <xref:System.Windows.Media.Animation.Clock> explícitamente mediante la <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> método de su <xref:System.Windows.Media.Animation.Timeline>. El <xref:System.Windows.Media.MediaTimeline.CreateClock%2A?displayProperty=nameWithType> método crea un reloj del tipo adecuado para el <xref:System.Windows.Media.Animation.Timeline> en el que se llama. Si el <xref:System.Windows.Media.Animation.Timeline> contiene escalas de tiempo secundarias, crea <xref:System.Windows.Media.Animation.Clock> objetos también para ellos. Resultante <xref:System.Windows.Media.Animation.Clock> objetos estén organizados en árboles que coinciden con la estructura de la <xref:System.Windows.Media.Animation.Timeline> árbol de los objetos desde que se han creado.  
   
- Hay diferentes tipos de relojes para diferentes tipos de escalas de tiempo.  La tabla siguiente muestra los tipos de <xref:System.Windows.Media.Animation.Clock> que corresponden a algunos de los diferentes tipos de <xref:System.Windows.Media.Animation.Timeline>.  
+ Hay diferentes tipos de relojes para diferentes tipos de escalas de tiempo. La tabla siguiente muestra la <xref:System.Windows.Media.Animation.Clock> tipos que corresponden a algunos de los diferentes <xref:System.Windows.Media.Animation.Timeline> tipos.  
   
-|Tipo de escala de tiempo|Tipo de reloj|Propósito del reloj|  
-|------------------------------|-------------------|-------------------------|  
-|Animación \(hereda de <xref:System.Windows.Media.Animation.AnimationTimeline>\)|<xref:System.Windows.Media.Animation.AnimationClock>|Genera valores de salida para una propiedad de dependencia.|  
+|Tipos de objetos Timeline|Tipo de reloj|Propósito del reloj|  
+|-------------------|----------------|-------------------|  
+|Animación (hereda de <xref:System.Windows.Media.Animation.AnimationTimeline>)|<xref:System.Windows.Media.Animation.AnimationClock>|Genera valores de salida para una propiedad de dependencia.|  
 |<xref:System.Windows.Media.MediaTimeline>|<xref:System.Windows.Media.MediaClock>|Procesa un archivo multimedia.|  
-|<xref:System.Windows.Media.Animation.ParallelTimeline>|<xref:System.Windows.Media.Animation.ClockGroup>|Agrupa y controla sus objetos <xref:System.Windows.Media.Animation.Clock> secundarios|  
-|<xref:System.Windows.Media.Animation.Storyboard>|<xref:System.Windows.Media.Animation.ClockGroup>|Agrupa y controla sus objetos <xref:System.Windows.Media.Animation.Clock> secundarios|  
+|<xref:System.Windows.Media.Animation.ParallelTimeline>|<xref:System.Windows.Media.Animation.ClockGroup>|Agrupa y controla su elemento secundario <xref:System.Windows.Media.Animation.Clock> objetos|  
+|<xref:System.Windows.Media.Animation.Storyboard>|<xref:System.Windows.Media.Animation.ClockGroup>|Agrupa y controla su elemento secundario <xref:System.Windows.Media.Animation.Clock> objetos|  
   
- Puede aplicar cualquier objeto <xref:System.Windows.Media.Animation.AnimationClock> que cree a las propiedades de dependencia compatibles utilizando el método <xref:System.Windows.Media.Animation.IAnimatable.ApplyAnimationClock%2A>.  
+ Puede aplicar cualquiera <xref:System.Windows.Media.Animation.AnimationClock> objetos crear para propiedades de dependencia compatibles con el <xref:System.Windows.Media.Animation.IAnimatable.ApplyAnimationClock%2A> método.  
   
- En los escenarios de rendimiento intensivo, tales como la animación de grandes números de objetos similares, la administración del uso del propio objeto <xref:System.Windows.Media.Animation.Clock> puede proporcionar ventajas de rendimiento.  
+ En escenarios de rendimiento intensivo, tales como la animación de grandes números de objetos similares, administrar su propio <xref:System.Windows.Media.Animation.Clock> uso puede proporcionar ventajas de rendimiento.  
   
 <a name="timemanager"></a>   
-## Los relojes y el administrador de tiempo  
- Al animar los objetos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], es el administrador de tiempo el que administra los objetos <xref:System.Windows.Media.MediaPlayer.Clock%2A> creados para las escalas de tiempo.  El administrador de tiempo es la raíz de un árbol de objetos <xref:System.Windows.Media.MediaPlayer.Clock%2A> y controla el flujo de tiempo en ese árbol.  El administrador de tiempo se crea automáticamente para cada aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y no es visible para el desarrollador de aplicaciones. El administrador de tiempo "marca pasos" muchas veces por segundo; el número real de pasos que se producen cada segundo varía, en función de los recursos disponibles en el sistema.  Durante cada uno de estos pasos, el administrador de tiempo calcula el estado de todos los objetos <xref:System.Windows.Media.Animation.ClockState><xref:System.Windows.Media.Animation.Clock>del árbol de control de tiempo.  
+## <a name="clocks-and-the-time-manager"></a>Los relojes y el administrador de tiempo  
+ Al animar objetos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], es el Administrador de tiempo que administra el <xref:System.Windows.Media.MediaPlayer.Clock%2A> objetos creados para las escalas de tiempo. El administrador de tiempo es la raíz de un árbol de objetos <xref:System.Windows.Media.MediaPlayer.Clock%2A> y controla el flujo de tiempo en ese árbol.  El administrador de tiempo se crea automáticamente para cada aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y no es visible para el desarrollador de aplicaciones. El administrador de tiempo "marca pasos" muchas veces por segundo; el número real de pasos que se producen cada segundo varía, en función de los recursos disponibles en el sistema. Durante cada uno de estos pasos, el Administrador de tiempo calcula el estado de todos los <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> objetos en el árbol de control de tiempo.  
   
- En la ilustración siguiente se muestra la relación entre el administrador de tiempo, <xref:System.Windows.Media.Animation.AnimationClock> y una propiedad de dependencia animada.  
+ En la siguiente ilustración muestra la relación entre el Administrador de tiempo, y <xref:System.Windows.Media.Animation.AnimationClock>y una propiedad de dependencia animada.  
   
- ![Componentes del sistema de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm\_clocks\_1clock1prop")  
-Animar una propiedad  
+ ![Componentes del sistema de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+Animación de una propiedad  
   
- Cuando el administrador horario marca un paso, actualiza el tiempo de cada objeto <xref:System.Windows.Media.Animation.Clock> <xref:System.Windows.Media.Animation.ClockState> de la aplicación.  Si el objeto <xref:System.Windows.Media.Animation.Clock> es un objeto <xref:System.Windows.Media.Animation.AnimationClock>, utiliza el método <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> del objeto <xref:System.Windows.Media.Animation.AnimationTimeline> a partir del que fue creado para calcular su valor de salida actual.  El objeto <xref:System.Windows.Media.Animation.AnimationClock> proporciona al objeto <xref:System.Windows.Media.Animation.AnimationTimeline> la hora local actual, un valor de entrada, que es normalmente el valor base de la propiedad, y un valor de destino predeterminado.  Al recuperar el valor de un elemento animado por propiedad utilizando el método <xref:System.Windows.DependencyObject.GetValue%2A> o su descriptor de acceso CLR, se obtiene el resultado de su objeto <xref:System.Windows.Media.Animation.AnimationClock>.  
+ Cuando el Administrador de tiempo tics, actualiza el tiempo de cada <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> en la aplicación. Si el <xref:System.Windows.Media.Animation.Clock> es un <xref:System.Windows.Media.Animation.AnimationClock>, usa el <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> método de la <xref:System.Windows.Media.Animation.AnimationTimeline> desde que se creó calcular su actual valor de salida. El <xref:System.Windows.Media.Animation.AnimationClock> proporciona la <xref:System.Windows.Media.Animation.AnimationTimeline> con la hora local actual, un valor de entrada, que normalmente es el valor base de la propiedad y un valor de destino predeterminado. Cuando se recupera el valor de un elemento animado por propiedad mediante la <xref:System.Windows.DependencyObject.GetValue%2A> método o su descriptor de acceso CLR, obtendrá el resultado de su <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-#### Grupos de relojes  
- En la sección anterior se describió cómo hay diferentes tipos de objetos <xref:System.Windows.Media.Animation.Clock> para los diferentes tipos de escala de tiempo.  En la ilustración siguiente se muestra la relación entre el administrador de tiempo, un objeto <xref:System.Windows.Media.Animation.ClockGroup>, un objeto <xref:System.Windows.Media.Animation.AnimationClock> y una propiedad de dependencia animada.  Un objeto <xref:System.Windows.Media.Animation.ClockGroup> se crea para las escalas de tiempo que agrupan otras escalas de tiempo, tales como la clase <xref:System.Windows.Media.Animation.Storyboard>, que agrupa animaciones y otras escalas de tiempo.  
+#### <a name="clock-groups"></a>Grupos de relojes  
+ La sección anterior describe cómo hay diferentes tipos de <xref:System.Windows.Media.Animation.Clock> objetos de diferentes tipos de escalas de tiempo. En la siguiente ilustración muestra la relación entre el Administrador de tiempo, un <xref:System.Windows.Media.Animation.ClockGroup>, <xref:System.Windows.Media.Animation.AnimationClock>y una propiedad de dependencia animada. A <xref:System.Windows.Media.Animation.ClockGroup> se crea para las escalas de tiempo que agrupan otras escalas de tiempo, como la <xref:System.Windows.Media.Animation.Storyboard> (clase), que agrupa animaciones y otras escalas de tiempo.  
   
- ![Componentes del sistema de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm\_clocks\_2clock1clockgroup2prop")  
+ ![Componentes del sistema de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 Un objeto ClockGroup  
   
-#### Composición  
- Es posible asociar varios relojes a una única propiedad, en cuyo caso cada reloj utiliza el valor de salida del reloj anterior como su valor base.  En la ilustración siguiente se muestran tres objetos <xref:System.Windows.Media.Animation.AnimationClock> aplicados a la misma propiedad.  El reloj1 utiliza el valor base de la propiedad animada como entrada y lo utiliza para generar el resultado.  El reloj2 toma el resultado del reloj1 como entrada y lo utiliza para generar el resultado.  El reloj3 toma el resultado del reloj2 como entrada y lo utiliza para generar el resultado.  Cuando varios relojes afectan simultáneamente a la misma propiedad, se dice que están en una cadena de composición.  
+#### <a name="composition"></a>Composición  
+ Es posible asociar varios relojes a una única propiedad, en cuyo caso cada reloj utiliza el valor de salida del reloj anterior como su valor base. En la siguiente ilustración se muestra tres <xref:System.Windows.Media.Animation.AnimationClock> objetos que se aplican a la misma propiedad. El reloj1 utiliza el valor base de la propiedad animada como entrada y lo utiliza para generar la salida. El reloj2 toma la salida del reloj1 como entrada y lo utiliza para generar la salida. El reloj3 toma la salida del reloj2 como entrada y lo utiliza para generar la salida. Cuando varios relojes afectan simultáneamente a la misma propiedad, se dice que están en una cadena de composición.  
   
- ![Componentes del sistema de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm\_clocks\_2clock1prop")  
+ ![Componentes del sistema de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 Una cadena de composición  
   
- Tenga en cuenta que, aunque se crea una relación entre la entrada y la salida de los objetos <xref:System.Windows.Media.Animation.AnimationClock> de la cadena de composición, sus comportamientos de control de tiempo no se ven afectados; los objetos <xref:System.Windows.Media.Animation.Clock> \(incluidos los objetos <xref:System.Windows.Media.Animation.AnimationClock>\) tienen una dependencia jerárquica de sus objetos <xref:System.Windows.Media.Animation.Clock> primarios.  
+ Tenga en cuenta que, aunque se crea una relación entre la entrada y salida de la <xref:System.Windows.Media.Animation.AnimationClock> objetos de la cadena de composición, sus comportamientos de control de tiempo no se ven afectados; <xref:System.Windows.Media.Animation.Clock> objetos (incluidos los <xref:System.Windows.Media.Animation.AnimationClock> objetos) tienen una dependencia jerárquica en su elemento primario <xref:System.Windows.Media.Animation.Clock> objetos.  
   
- Para aplicar varios relojes a la misma propiedad, utilice el miembro <xref:System.Windows.Media.Animation.HandoffBehavior> de <xref:System.Windows.Media.Animation.HandoffBehavior> cuando aplique una animación de <xref:System.Windows.Media.Animation.Storyboard>, o un objeto <xref:System.Windows.Media.Animation.AnimationClock>.  
+ Para aplicar varios relojes a la misma propiedad, utilice la <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior> al aplicar un <xref:System.Windows.Media.Animation.Storyboard>, animación, o <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-#### Pasos y consolidación de eventos  
+#### <a name="ticks-and-event-consolidation"></a>Pasos y consolidación de eventos  
  Además de calcular valores de salida, el administrador de tiempo hace otras cosas a cada paso que marca: determina el estado de cada reloj y genera los eventos adecuados.  
   
- Aunque los pasos se producen con frecuencia, pueden ocurrir muchas cosas entre ellos.  Por ejemplo, un objeto <xref:System.Windows.Media.Animation.Clock> se puede detener, iniciarse y detenerse de nuevo, en cuyo caso sus valores <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> habrán cambiado tres veces.  En teoría, el evento <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> se podría provocarse varias veces en un único paso; sin embargo, el motor de control de tiempo consolida los eventos, para que el evento <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> pueda provocarse como máximo una vez por paso.  Esto es verdadero para todos los eventos de control de tiempo: como máximo se provoca un evento de cada tipo para un objeto <xref:System.Windows.Media.Animation.Clock> determinado.  
+ Aunque los ciclos se producen con frecuencia, pueden ocurrir muchas cosas entre ellos. Por ejemplo, un <xref:System.Windows.Media.Animation.Clock> podría detener, iniciarse y detenerse de nuevo, en cuyo caso su <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> valor habrá cambiado tres veces. En teoría, el <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> evento se podría provocar varias veces en un único paso; sin embargo, el motor de tiempo consolida los eventos, para que la <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> evento se puede generar como máximo una vez por TIC. Esto es cierto para todos los eventos de sincronización: a lo sumo un evento de cada tipo se genera para un determinado <xref:System.Windows.Media.Animation.Clock> objeto.  
   
- Cuando un objeto <xref:System.Windows.Media.Animation.Clock> cambia de estado y vuelve a su estado original entre pasos \(por ejemplo al cambiar de <xref:System.Windows.Media.Animation.ClockState> a <xref:System.Windows.Media.Animation.ClockState> y de nuevo a <xref:System.Windows.Media.Animation.ClockState>\), el evento asociado continúa produciéndose.  
+ Cuando un <xref:System.Windows.Media.Animation.Clock> cambia de estado y devuelve a su estado original entre los ciclos de (por ejemplo, cambiar de <xref:System.Windows.Media.Animation.ClockState.Active> a <xref:System.Windows.Media.Animation.ClockState.Stopped> y de vuelta a <xref:System.Windows.Media.Animation.ClockState.Active>), sigue produciendo el evento asociado.  
   
- \(Para obtener más información acerca de los eventos de control de tiempo, vea [Información general sobre eventos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md).\)  
+ Para más información acerca de los eventos de control de tiempo, vea [Información general sobre eventos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
   
 <a name="currentvaluesbasevaluesofproperties"></a>   
-## Valores actuales y valores base de propiedades  
- Una propiedad que se pueda animar puede tener dos valores: un valor base y un valor actual.  Al establecer propiedades mediante su descriptor de acceso CLR o el método <xref:System.Windows.DependencyObject.SetValue%2A>, se establece su valor base.  Cuando no se anima una propiedad, su valor base y su valor actual son el mismo.  
+## <a name="current-values-and-base-values-of-properties"></a>Valores actuales y valores base de propiedades  
+ Una propiedad que se pueda animar puede tener dos valores: un valor base y un valor actual. Al establecer la propiedad mediante su descriptor de acceso CLR o <xref:System.Windows.DependencyObject.SetValue%2A> método, establezca su valor base. Cuando no se anima una propiedad, su valor base y su valor actual son el mismo.  
   
- Cuando se anima una propiedad, el objeto <xref:System.Windows.Media.Animation.AnimationClock> establece el valor *actual* de la propiedad.  Al recuperar el valor de la propiedad a través de su descriptor de acceso CLR o del método <xref:System.Windows.DependencyObject.GetValue%2A> se devuelve el resultado del objeto <xref:System.Windows.Media.Animation.AnimationClock> cuando el objeto <xref:System.Windows.Media.Animation.AnimationClock> es <xref:System.Windows.Media.Animation.ClockState> o <xref:System.Windows.Media.Animation.ClockState>.  Puede recuperar el valor base de la propiedad utilizando el método <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A>.  
+ Al animar una propiedad, el <xref:System.Windows.Media.Animation.AnimationClock> establece la propiedad *actual* valor. Recuperar el valor de la propiedad a través de su descriptor de acceso CLR o <xref:System.Windows.DependencyObject.GetValue%2A> método devuelve el resultado de la <xref:System.Windows.Media.Animation.AnimationClock> cuando el <xref:System.Windows.Media.Animation.AnimationClock> es <xref:System.Windows.Media.Animation.ClockState.Active> o <xref:System.Windows.Media.Animation.ClockState.Filling>. Puede recuperar el valor de la propiedad base mediante el <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> método.  
   
-## Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Información general sobre eventos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)   
+## <a name="see-also"></a>Vea también  
+ [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Información general sobre eventos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
  [Información general sobre comportamientos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

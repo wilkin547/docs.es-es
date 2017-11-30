@@ -1,36 +1,34 @@
 ---
-title: "Las clases derivadas no pueden provocar eventos de clase base | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30029"
-  - "bc30029"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30029"
+title: Las clases derivadas no pueden provocar eventos de clase base
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30029
+- bc30029
+helpviewer_keywords: BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 70dde8b96980adfd618e38b9ce142cdec56a6b13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Las clases derivadas no pueden provocar eventos de clase base
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un evento sólo se puede provocar desde el espacio de nombres donde se declaró.  Por lo tanto, una clase no puede provocar eventos de ninguna otra clase, incluso una de la cual se derive.  
+# <a name="derived-classes-cannot-raise-base-class-events"></a>Las clases derivadas no pueden provocar eventos de clase base
+Un evento se puede generar solo desde el espacio de declaración en el que se declara. Por lo tanto, una clase no puede provocar los eventos de cualquier otra clase, incluso uno del que se deriva.  
   
- **Identificador de error:** BC30029  
+ **Id. de error:** BC30029  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Mueva la instrucción `Event` o `RaiseEvent` para que pertenezcan a la misma clase.  
+-   Mover el `Event` instrucción o `RaiseEvent` instrucción para que estén en la misma clase.  
   
-## Vea también  
- [Event \(Instrucción\)](../../../visual-basic/language-reference/statements/event-statement.md)   
- [RaiseEvent \(Instrucción\)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

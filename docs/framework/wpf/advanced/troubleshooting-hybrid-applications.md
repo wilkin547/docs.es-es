@@ -1,133 +1,136 @@
 ---
-title: "Soluci&#243;n de problemas de aplicaciones h&#237;bridas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aplicaciones híbridas [interoperabilidad con WPF]"
-  - "interoperabilidad [WPF], Windows Forms"
-  - "bucles de mensajes [WPF]"
-  - "controles superpuestos"
-  - "formularios Windows Forms [WPF], interoperabilidad con"
-  - "Windows Forms, interoperabilidad con WPF"
+title: "Solución de problemas de aplicaciones híbridas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- overlapping controls [WPF]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- hybrid applications [WPF interoperability]
+- message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: 26
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c2bcd9572ab5f8547916d95fc11e0cffc864ad2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Soluci&#243;n de problemas de aplicaciones h&#237;bridas
-<a name="introduction"></a> En este tema se muestra una lista de algunos problemas comunes que se pueden producir al crear aplicaciones híbridas, que utilizan las dos tecnologías, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+# <a name="troubleshooting-hybrid-applications"></a>Solución de problemas de aplicaciones híbridas
+<a name="introduction"></a> En este tema se enumeran algunos problemas comunes que se pueden producir al crear aplicaciones híbridas, que usan las dos tecnologías, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
-   
+
   
 <a name="overlapping_controls"></a>   
-## Controles superpuestos  
- Los controles no se pueden superponer como cabría esperar.  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] utiliza un HWND independiente para cada control.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza un HWND para todo el contenido de una página.  Esta diferencia de implementación da lugar a comportamientos de superposición inesperados.  
+## <a name="overlapping-controls"></a>Controles superpuestos  
+ Los controles no se pueden superponer como cabría esperar. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] usa un HWND independiente para cada control. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa un HWND para todo el contenido de una página. Esta diferencia de implementación da lugar a comportamientos de superposición inesperados.  
   
  Un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] siempre aparece encima del contenido de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- El contenido de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado en un control de <xref:System.Windows.Forms.Integration.ElementHost> aparece en el orden z del control <xref:System.Windows.Forms.Integration.ElementHost>.  Es posible superponer controles <xref:System.Windows.Forms.Integration.ElementHost>, pero el contenido de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado no se combina ni interactúa.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]contenido hospedado en un <xref:System.Windows.Forms.Integration.ElementHost> control aparece en el orden z de los <xref:System.Windows.Forms.Integration.ElementHost> control. Es posible que se superpongan <xref:System.Windows.Forms.Integration.ElementHost> controles, pero hospedado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido no combinar o interactuar.  
   
 <a name="child_property"></a>   
-## Propiedad secundaria  
- Las clases <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost> pueden hospedar un solo control o elemento secundario.  Para hospedar más de un control o elemento, debe utilizar un contenedor como contenido secundario.  Por ejemplo, puede agregar controles de botón y casilla de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] a un control <xref:System.Windows.Forms.Panel?displayProperty=fullName> y, a continuación, asignar el panel a la propiedad <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> del control <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  Sin embargo, no puede agregar los controles de botón y casilla por separado al mismo control <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+## <a name="child-property"></a>Child Property  
+ El <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost> clases pueden hospedar sólo un único control o elemento secundario. Para hospedar más de un control o elemento, se debe usar un contenedor como contenido secundario. Por ejemplo, podría agregar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles de botón y casilla de verificación para una <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> de control y, a continuación, asignar el panel para realizar un <xref:System.Windows.Forms.Integration.WindowsFormsHost> del control <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> propiedad. Sin embargo, no se puede agregar los controles de botón y casilla de verificación por separado en el mismo <xref:System.Windows.Forms.Integration.WindowsFormsHost> control.  
   
 <a name="scaling"></a>   
-## Ajustar la escala  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tienen modelos diferentes de ajuste de escala.  Algunas transformaciones de ajuste de escala de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] resultan lógicas para los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], pero otras, no.  Por ejemplo, ajustar la escala de un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] a 0 funcionará, pero si intenta ajustar la escala del mismo control a un valor distinto de cero, el tamaño del control sigue siendo 0.  Para obtener más información, consulte [Consideraciones sobre el diseño del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+## <a name="scaling"></a>Cambiar escala  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tienen modelos diferentes de escala. Algunas transformaciones de escala de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] resultan lógicas para los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], pero otras no. Por ejemplo, ajustar la escala de un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] a 0 funcionará, pero si se intenta ajustar la escala del mismo control a un valor distinto de cero, el tamaño del control sigue siendo 0. Para más información, vea [Consideraciones sobre el diseño del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
-## Adaptador  
- Puede producirse confusión al trabajar con las clases <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost>, porque incluyen un contenedor oculto.  Las clases <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost> tienen un contenedor oculto, denominado *adaptador*, que utilizan para hospedar el contenido.  Para el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, el adaptador se deriva de la clase <xref:System.Windows.Forms.ContainerControl?displayProperty=fullName>.  Para el control <xref:System.Windows.Forms.Integration.ElementHost>, el adaptador se deriva del elemento <xref:System.Windows.Controls.DockPanel>.  Cuando encuentre referencias al adaptador en otros temas sobre interoperación, se refieren a este contenedor.  
+## <a name="adapter"></a>Adaptador  
+ Puede haber confusión cuando se trabaja la <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost> clases, porque incluyen un contenedor oculto. Tanto el <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost> clases tienen un contenedor oculto, denominado un *adaptador*, que utiliza para hospedar contenido. Para el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento, el adaptador se deriva de la <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType> clase. Para el <xref:System.Windows.Forms.Integration.ElementHost> (control), el adaptador se deriva de la <xref:System.Windows.Controls.DockPanel> elemento. Cuando se encuentren referencias al adaptador en otros temas sobre interoperación, se refieren a este contenedor.  
   
 <a name="nesting"></a>   
-## Anidamiento  
- No se admite anidar un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> dentro de un control <xref:System.Windows.Forms.Integration.ElementHost>.  Tampoco se admite anidar un control <xref:System.Windows.Forms.Integration.ElementHost> dentro de un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+## <a name="nesting"></a>Anidamiento  
+ Anidar un <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento dentro de un <xref:System.Windows.Forms.Integration.ElementHost> no se admite el control. Anidar un <xref:System.Windows.Forms.Integration.ElementHost> control dentro de un <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento tampoco se admite.  
   
 <a name="focus"></a>   
-## Focus  
- El foco funciona de manera diferente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], lo que significa que pueden producirse problemas de foco en las aplicaciones híbridas.  Por ejemplo, si tiene el foco dentro de un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, y minimiza y restaura la página o muestra un cuadro de diálogo modal, puede perderse el foco del elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> sigue teniendo el foco, pero puede que el control contenido en él no lo tenga.  
+## <a name="focus"></a>Foco  
+ El foco funciona de manera diferente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], lo que significa que pueden producirse problemas de foco en una aplicación híbrida. Por ejemplo, si tiene el foco dentro de un <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento y bien minimizar y restaurar la página o mostrar un cuadro de diálogo modal, centrarse en el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento podrían perderse. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento todavía tiene el foco, pero el control dentro de él, no.  
   
- El foco afecta también a la validación de datos.  La validación funciona en un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, pero no funciona cuando se presiona la tecla TAB para salir del elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, o para cambiar entre dos elementos <xref:System.Windows.Forms.Integration.WindowsFormsHost> diferentes.  
+ El foco también afecta a la validación de datos. Funciona la validación en un <xref:System.Windows.Forms.Integration.WindowsFormsHost> , pero no funciona a medida que cambia de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento, o entre dos diferentes <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos.  
   
 <a name="property_mapping"></a>   
-## Asignación de propiedad  
- Algunas asignaciones de propiedad exigen una ardua labor de interpretación a fin de salvar las diferencias de implementación entre ambas tecnologías, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Las asignaciones de propiedad permiten que el código reaccione ante los cambios de fuentes, colores y otras propiedades.  En general, las asignaciones de propiedad funcionan realizando escuchas para detectar eventos de cambio de propiedad \(*Property*Changed\) o llamadas a On*Property*Changed, y estableciendo las propiedades adecuadas en el control secundario o en su adaptador.  Para obtener más información, vea [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+## <a name="property-mapping"></a>Asignación de propiedades  
+ Algunas asignaciones de propiedades requieren una ardua labor de interpretación a fin de salvar las diferencias de implementación entre ambas tecnologías, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Las asignaciones de propiedad permiten que el código reaccione ante los cambios de fuentes, colores y otras propiedades. En general, las asignaciones de propiedad funcionan realizando escuchas para detectar eventos *Propiedad*Changed o llamadas a On*Propiedad*Changed, y estableciendo las propiedades adecuadas en el control secundario o en su adaptador. Para más información, vea [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
-## Propiedades relacionadas con el diseño en el contenido hospedado  
- Cuando se asigna la propiedad <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A?displayProperty=fullName> o <xref:System.Windows.Forms.Integration.ElementHost.Child%2A?displayProperty=fullName>, automáticamente se establecen varias propiedades relacionadas con el diseño en el contenido hospedado.  Cambiar estas propiedades de contenido puede producir comportamientos de diseño inesperados.  
+## <a name="layout-related-properties-on-hosted-content"></a>Propiedades relacionadas con el diseño en el contenido hospedado  
+ Cuando el <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.Integration.ElementHost.Child%2A?displayProperty=nameWithType> se asigna la propiedad, se establecen automáticamente varias propiedades relacionadas con el diseño en el contenido hospedado. Cambiar estas propiedades de contenido puede producir comportamientos de diseño inesperados.  
   
- El contenido hospedado se acopla para rellenar el elemento primario <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost>.  Para habilitar este comportamiento de relleno, se establecen varias propiedades al establecer la propiedad secundaria.  En la tabla siguiente se muestra qué propiedades de contenido establecen las clases <xref:System.Windows.Forms.Integration.ElementHost> y <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+ El contenido hospedado se acopla para rellenar el <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost> primario. Para habilitar este comportamiento de relleno, se establecen varias propiedades al establecer la propiedad secundaria. La tabla siguiente indica que se establecen propiedades de contenido por el <xref:System.Windows.Forms.Integration.ElementHost> y <xref:System.Windows.Forms.Integration.WindowsFormsHost> clases.  
   
-|Clase host|Propiedades de contenido|  
-|----------------|------------------------------|  
+|Clase de host|Propiedades de contenido|  
+|----------------|------------------------|  
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- No se establezca directamente estas propiedades en el contenido hospedado.  Para obtener más información, consulte [Consideraciones sobre el diseño del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ No establezca estas propiedades directamente en el contenido hospedado. Para más información, vea [Consideraciones sobre el diseño del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="navigation_applications"></a>   
-## Aplicaciones de navegación  
- Las aplicaciones de navegación pueden no mantener el estado del usuario.  El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> vuelve a crear los controles cuando se utiliza en una aplicación de navegación.  La nueva creación de los controles secundarios se produce cuando el usuario sale de la página que hospeda el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> y, a continuación, vuelve a ella.  Todo el contenido que el usuario haya escrito se perderá.  
+## <a name="navigation-applications"></a>Aplicaciones de navegación  
+ Es posible que las aplicaciones de navegación no mantengan el estado del usuario. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento vuelve a crear sus controles cuando se utiliza en una aplicación de navegación. Volver a crear los controles secundarios se produce cuando el usuario se desplaza fuera de la página que hospeda el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento y, a continuación, devuelve a él. Todo el contenido que el usuario haya escrito se perderá.  
   
 <a name="message_loop_interoperation"></a>   
-## Interoperación de bucles de mensajes  
- Cuando se trabaja con bucles de mensajes de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], puede que los mensajes no se procesen como cabría esperar.  El constructor <xref:System.Windows.Forms.Integration.WindowsFormsHost> llama al método <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>.  Este método agrega un filtro de mensajes al bucle de mensajes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Este filtro llama al método <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName> si el destino del mensaje es <xref:System.Windows.Forms.Control?displayProperty=fullName> y convierte o envía el mensaje.  
+## <a name="message-loop-interoperation"></a>Interoperación de bucles de mensajes  
+ Cuando se trabaja con bucles de mensajes de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], es posible que los mensajes no se procesen de la forma esperada. El <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> llama al método el <xref:System.Windows.Forms.Integration.WindowsFormsHost> constructor. Este método agrega un filtro de mensajes al bucle de mensajes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este filtro llama el <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> método si un <xref:System.Windows.Forms.Control?displayProperty=nameWithType> era el destino del mensaje y convierte o envía el mensaje.  
   
- Si muestra <xref:System.Windows.Window> en un bucle de mensajes de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=fullName>, no podrá escribir nada a menos que llame al método <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>.  El método <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> toma <xref:System.Windows.Window> y agrega un objeto <xref:System.Windows.Forms.IMessageFilter?displayProperty=fullName>, que reenruta los mensajes relacionados con claves al bucle de mensajes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Para obtener más información, vea [Arquitectura de entrada de interoperabilidad entre formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+ Si muestra un <xref:System.Windows.Window> en un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bucle de mensajes con <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, no es posible escribir nada a menos que llame a la <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> método. El <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> método toma un <xref:System.Windows.Window> y agrega un <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, que vuelve a enrutar mensajes relacionados con la clave para el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bucle de mensajes. Para más información, vea [Arquitectura de entrada de interoperabilidad entre formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
   
 <a name="opacity_and_layering"></a>   
-## Opacidad y disposición en capas  
- La clase <xref:System.Windows.Interop.HwndHost> no admite las capas.  Esto significa que establecer la propiedad <xref:System.Windows.UIElement.Opacity%2A> en el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> no surte ningún efecto, y que no se producirá ninguna mezcla con las demás ventanas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cuya propiedad <xref:System.Windows.Window.AllowsTransparency%2A> esté establecida en `true`.  
+## <a name="opacity-and-layering"></a>Opacidad y disposición en capas  
+ La <xref:System.Windows.Interop.HwndHost> clase no admite las capas. Esto significa que esa configuración el <xref:System.Windows.UIElement.Opacity%2A> propiedad en el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento no tiene ningún efecto y se producirá ninguna mezcla con otros [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] windows que tienen <xref:System.Windows.Window.AllowsTransparency%2A> establecido en `true`.  
   
 <a name="dispose"></a>   
-## Desechar  
- No desechar correctamente las clases puede malgastar recursos.  En sus aplicaciones híbridas, asegurarse de desechar las clases <xref:System.Windows.Forms.Integration.ElementHost> y <xref:System.Windows.Forms.Integration.WindowsFormsHost>, pues de lo contrario puede malgastar recursos.  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] desecha los controles <xref:System.Windows.Forms.Integration.ElementHost> cuando se cierra su elemento primario <xref:System.Windows.Forms.Form>no modal. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] desecha los elementos <xref:System.Windows.Forms.Integration.WindowsFormsHost> cuando se cierra la aplicación.  Es posible mostrar un elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> en un objeto <xref:System.Windows.Window> en un bucle de mensajes de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  En este caso, puede que el código no reciba la notificación de que la aplicación se está cerrando.  
+## <a name="dispose"></a>Desechar  
+ No desechar correctamente las clases puede hacer que se pierdan recursos. En las aplicaciones híbridas, asegúrese de que el <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost> se eliminan clases o se podrían producir pérdida de recursos. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]se deshace <xref:System.Windows.Forms.Integration.ElementHost> controla cuándo su no modal <xref:System.Windows.Forms.Form> primario se cierra. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]se deshace <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos cuando se cierra la aplicación. Es posible mostrar un <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento en un <xref:System.Windows.Window> en un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bucle de mensajes. En este caso, es posible que el código no reciba la notificación de que la aplicación se está cerrando.  
   
 <a name="enabling_visual_styles"></a>   
-## Habilitar estilos visuales  
- Puede que los estilos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] no estén habilitados en un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  Se llama al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName> en la plantilla para una aplicación de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  Aunque este método no se llama de forma predeterminada, si utiliza [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] para crear un proyecto, obtendrá los estilos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] para los controles, si la versión 6,0 de Comctl32.dll está disponible. Se debe llamar al método de <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> antes de que los identificadores se crean en el subproceso.  Para obtener más información, consulte [Cómo: Habilitar estilos visuales en una aplicación híbrida](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+## <a name="enabling-visual-styles"></a>Habilitar los estilos visuales  
+ Es posible que los elementos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] no estén habilitados en un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. El <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método se llama en la plantilla para un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicación. Aunque este método no se llama de forma predeterminada, si usa [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] para crear un proyecto, obtendrá los elementos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] para los controles, si está disponible la versión 6.0 de Comctl32.dll. Debe llamar a la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método antes de que se crean identificadores en el subproceso. Para más información, vea [Cómo: Habilitar estilos visuales en una aplicación híbrida](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
-## Controles con licencia  
- Los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] con licencia que muestran información de licencias en un cuadro de mensaje al usuario pueden provocar un comportamiento inesperado en una aplicación híbrida.  Algunos controles con licencia muestran un cuadro de diálogo en respuesta, a fin de administrar la creación.  Por ejemplo, un control con licencia podría informar al usuario de que se requiere una licencia o de que al usuario le quedan tres usos de prueba del control.  
+## <a name="licensed-controls"></a>Controles con licencia  
+ Los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] con licencia que muestran información de licencia en un cuadro de mensaje al usuario pueden provocar un comportamiento inesperado en una aplicación híbrida. Algunos controles con licencia muestran un cuadro de diálogo como respuesta a la creación de controladores. Por ejemplo, un control con licencia podría informar al usuario de que se requiere una licencia o de que al usuario le quedan tres usos de prueba del control.  
   
- El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> se deriva de la clase <xref:System.Windows.Interop.HwndHost> y el controlador del control secundario se crea dentro del método <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A>.  La clase <xref:System.Windows.Interop.HwndHost> no permite procesar los mensajes en el método <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A>, pero al mostrar un cuadro de diálogo se provoca el envío de mensajes.  Para habilitar este escenario de licencias, llame al método <xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=fullName> del control antes de asignarlo como elemento secundario del elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+ El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento se deriva de la <xref:System.Windows.Interop.HwndHost> clase y el identificador del control secundario se crea dentro de la <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> método. El <xref:System.Windows.Interop.HwndHost> clase no permitir que los mensajes se procesan en el <xref:System.Windows.Forms.Integration.WindowsFormsHost.BuildWindowCore%2A> método, pero mostrar un cuadro de diálogo hace que se envíen mensajes. Para habilitar este escenario de licencias, llame a la <xref:System.Windows.Forms.Control.CreateControl%2A?displayProperty=nameWithType> método en el control antes de asignarlo como el <xref:System.Windows.Forms.Integration.WindowsFormsHost> secundario del elemento.  
   
 <a name="wpf_designer"></a>   
-## Diseñador de WPF  
- Puede diseñar el contenido de WPF mediante [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].  En las secciones siguientes se indican algunos problemas comunes que se pueden producir al crear aplicaciones híbridas con [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+## <a name="wpf-designer"></a>WPF Designer  
+ Puede diseñar el contenido de WPF mediante [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]. En las secciones siguientes se indican algunos problemas comunes que se pueden producir al crear aplicaciones híbridas con [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-### BackColorTransparent se omite en tiempo de diseño  
- La propiedad <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> puede no funcionar según lo previsto en tiempo de diseño.  
+### <a name="backcolortransparent-is-ignored-at-design-time"></a>BackColorTransparent se omite en tiempo de diseño  
+ El <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> propiedad podría no funcionar según lo esperado en tiempo de diseño.  
   
- Si un control de WPF no está en un elemento primario visible, el motor de tiempo de ejecución de WPF omite el valor <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A>.  La razón por la que se puede omitir <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> es porque el objeto <xref:System.Windows.Forms.Integration.ElementHost> se crea en un <xref:System.AppDomain>independiente.  Sin embargo, al ejecutar la aplicación, <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> funciona según lo previsto.  
+ Si un control WPF no está en un elemento primario visible, el tiempo de ejecución WPF omite el <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> valor. El motivo que <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> puede omitirse porque <xref:System.Windows.Forms.Integration.ElementHost> se crea el objeto en otro <xref:System.AppDomain>. Sin embargo, al ejecutar la aplicación, <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> funcionan según lo esperado.  
   
-### Aparece la lista de errores en tiempo de diseño cuando se elimina la carpeta obj  
+### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>Aparece la lista de errores en tiempo de diseño cuando se elimina la carpeta obj  
  Si se elimina la carpeta obj, aparece la lista de errores en tiempo de diseño.  
   
- Al diseñar mediante <xref:System.Windows.Forms.Integration.ElementHost>, el Diseñador de Windows Forms utiliza los archivos generados en la carpeta Debug o Release situada en la carpeta obj del proyecto.  Si elimina estos archivos, aparece la lista de errores en tiempo de diseño.  Para corregir este problema, recompile el proyecto.  Para obtener más información, vea [Errores en tiempo de diseño en el Diseñador de Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
+ Cuando se diseña mediante <xref:System.Windows.Forms.Integration.ElementHost>, el Diseñador de Windows Forms utiliza los archivos generados en la carpeta Debug o Release en la carpeta del proyecto obj. Si se eliminan estos archivos, aparece la lista de errores en tiempo de diseño. Para corregir este problema, recompile el proyecto. Para más información, vea [Errores en tiempo de diseño en el Diseñador de Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
   
 <a name="elementhost_and_ime"></a>   
-## ElementHost e IME  
- Los controles de WPF hospedados en <xref:System.Windows.Forms.Integration.ElementHost> no admiten actualmente la propiedad <xref:System.Windows.Forms.Control.ImeMode%2A>.  Los controles hospedados omitirán los cambios realizados en <xref:System.Windows.Forms.Control.ImeMode%2A>.  
+## <a name="elementhost-and-ime"></a>ElementHost e IME  
+ Controles de WPF hospedan en un <xref:System.Windows.Forms.Integration.ElementHost> no admiten actualmente la <xref:System.Windows.Forms.Control.ImeMode%2A> propiedad. Cambia a <xref:System.Windows.Forms.Control.ImeMode%2A> se pasará por alto los controles hospedados.  
   
-## Vea también  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Interoperabilidad en WPF Designer](http://msdn.microsoft.com/es-es/2cb7c1ca-2a75-463b-8801-fba81e2b7042)   
- [Arquitectura de entrada de interoperabilidad entre formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)   
- [Cómo: Habilitar estilos visuales en una aplicación híbrida](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)   
- [Consideraciones sobre el diseño del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)   
- [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)   
- [Errores en tiempo de diseño en el Diseñador de Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [Interoperabilidad en WPF Designer](http://msdn.microsoft.com/en-us/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
+ [Arquitectura de entrada de interoperabilidad entre formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
+ [Habilitar estilos visuales en una aplicación híbrida](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
+ [Consideraciones sobre el diseño del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
+ [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
+ [Errores en tiempo de diseño en el Diseñador de Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
  [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

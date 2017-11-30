@@ -1,164 +1,165 @@
 ---
-title: "Interfaces relacionadas con el enlace de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "datos [Windows Forms], interfaces de enlace de datos"
-  - "enlace de datos, interfaces"
-  - "IBindingList (interfaz), enlace de datos en formularios Windows Forms"
-  - "IBindingListView (interfaz)"
-  - "IDataErrorInfo (interfaz), enlace de datos en formularios Windows Forms"
-  - "IEditableObject (interfaz), enlace de datos en formularios Windows Forms"
-  - "IList (interfaz), enlace de datos en formularios Windows Forms"
-  - "INotifyPropertyChanged (interfaz)"
-  - "interfaces, enlace de datos en formularios Windows Forms"
+title: Interfaces relacionadas con el enlace de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], data-binding interfaces
+- INotifyPropertyChanged interface
+- IBindingListView interface
+- IList interface [Windows Forms], Windows Forms data binding
+- IBindingList interface [Windows Forms], Windows Forms data binding
+- interfaces [Windows Forms], Windows Forms data binding
+- IEditableObject interface [Windows Forms], Windows Forms data binding
+- data binding [Windows Forms], interfaces
+- IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8108cd3c5ae305b6def5324385cb12c94cd42774
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Interfaces relacionadas con el enlace de datos
-Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear muchas estructuras de datos distintas para satisfacer las necesidades de enlace de la aplicación y de los datos con los que trabaja.  Quizá desee crear sus propias clases que proporcionen o utilicen datos de formularios Windows Forms.  Estos objetos pueden ofrecer diversos niveles de funcionalidad y complejidad, desde el enlace básico de datos hasta la compatibilidad en tiempo de diseño, la comprobación de errores, la notificación de cambios o, incluso, la compatibilidad con una reversión estructurada de las modificaciones realizadas en los propios datos.  
+# <a name="interfaces-related-to-data-binding"></a>Interfaces relacionadas con el enlace de datos
+Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias estructuras de datos distintas para satisfacer las necesidades de enlace de la aplicación y los datos con los que trabaja. Es posible que quiera crear sus propias clases que proporcionen o consuman datos en Windows Forms. Estos objetos pueden ofrecer varios niveles de funcionalidad y complejidad, desde el enlace de datos básico hasta proporcionar compatibilidad en tiempo de diseño, comprobación de errores, notificación de cambios o incluso compatibilidad con la reversión estructurada de los cambios hechos en los datos.  
   
-## Consumidores de interfaces de enlace de datos  
- En las secciones siguientes se describen dos grupos de objetos de interfaz.  El primer grupo muestra interfaces que se implementan en orígenes de datos por autores de orígenes de datos.  Estas interfaces están diseñadas para que consumidores del origen de datos las utilicen, que la mayoría de los casos son controles o componentes de formularios Windows Forms.  El segundo grupo muestra interfaces diseñadas para que las utilicen los autores de componentes.  Los autores de componentes utilizan estas interfaces cuando crean componentes que admiten que el motor de enlace de datos de formularios Windows Forms utilice el enlace de datos.  Estas interfaces pueden implementarse en las clases asociadas al formulario para habilitar el enlace de datos; cada caso presenta una clase que implementa una interfaz que habilita la interacción con los datos.  Las herramientas con experiencia en diseño de datos de desarrollo rápido de aplicaciones \(RAD\) de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ya aprovechan esta funcionalidad.  
+## <a name="consumers-of-data-binding-interfaces"></a>Consumidores de interfaces de enlace de datos  
+ En las secciones siguientes se describen dos grupos de objetos de interfaz. El primer grupo muestra las interfaces que los autores de orígenes de datos implementan en los orígenes de datos. Estas interfaces están diseñadas para que los consumidores de orígenes de datos las usen, los que en muchos casos son controles o componentes de Windows Forms. En el segundo grupo se muestran interfaces diseñadas para su uso por parte de los autores de componentes. Los autores de componentes usan estas interfaces cuando crean un componente que admite que el motor de enlace de datos de Windows Forms use el enlace de datos. Puede implementar estas interfaces dentro de las clases asociadas con el formulario para habilitar el enlace de datos; en cada caso se presenta una clase que implementa una interfaz que permite interactuar con los datos. Las herramientas con experiencia en el diseño de datos de desarrollo rápido de aplicaciones (RAD) de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ya aprovechan esta funcionalidad.  
   
-### Interfaces para la implementación de los autores de orígenes de datos  
- Las interfaces siguientes están diseñadas para ser utilizadas por controles de formularios Windows Forms:  
+### <a name="interfaces-for-implementation-by-data-source-authors"></a>Interfaces para la implementación por parte de los autores del origen de datos  
+ Las interfaces siguientes están diseñadas para ser usadas por los controles de Windows Forms:  
   
--   La interfaz <xref:System.Collections.IList>  
+-   <xref:System.Collections.IList> (interfaz)  
   
-     Una clase que implementa la interfaz <xref:System.Collections.IList> podría ser <xref:System.Array>, <xref:System.Collections.ArrayList> o <xref:System.Collections.CollectionBase>.  Estas son listas de elementos indizadas de tipo <xref:System.Object>.  Estas listas deben contener tipos homogéneos porque el primer elemento del índice determina el tipo.  <xref:System.Collections.IList> solo debe estar disponible para el enlace en tiempo de ejecución.  
-  
-    > [!NOTE]
-    >  Si desea crear una lista de objetos comerciales para enlaces con formularios Windows Forms, considere utilizar la clase <xref:System.ComponentModel.BindingList%601>.  <xref:System.ComponentModel.BindingList%601> es una clase extensible que implementa las interfaces principales necesarias para el enlace de datos bidireccional de formularios Windows Forms.  
-  
--   La interfaz <xref:System.ComponentModel.IBindingList>  
-  
-     Una clase que implementa la interfaz <xref:System.ComponentModel.IBindingList> proporciona un nivel mucho mayor de funcionalidad de enlace de datos.  Esta implementación ofrece posibilidades de ordenación básicas y notificación de cambios, ambas para cuando cambian los elementos de lista \(por ejemplo, el tercer elemento de una lista de clientes tiene un cambio en el campo Dirección\), así como cuando cambia la lista en sí \(por ejemplo, aumenta o disminuye el número de elementos de la lista\).  Es importante la notificación de cambios si tiene previsto tener varios controles enlazados a los mismos datos y desea que los cambios de datos realizados en uno de los controles se propaguen a los demás controles enlazados.  
+     Una clase que implementa el <xref:System.Collections.IList> interfaz podría ser un <xref:System.Array>, <xref:System.Collections.ArrayList>, o <xref:System.Collections.CollectionBase>. Se trata de listas de elementos de tipo indizadas <xref:System.Object>. Estas listas deben contener tipos homogéneos, porque el primer elemento del índice determina el tipo. <xref:System.Collections.IList>estaría disponible para el enlace en tiempo de ejecución.  
   
     > [!NOTE]
-    >  La notificación de cambios para la interfaz <xref:System.ComponentModel.IBindingList> se habilita mediante la propiedad <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> que, cuando es `true`, provoca un evento <xref:System.ComponentModel.IBindingList.ListChanged>, que indica que ha cambiado la lista o un elemento de la lista.  
+    >  Si desea crear una lista de objetos comerciales para enlaces con formularios Windows Forms, considere la posibilidad de usar el <xref:System.ComponentModel.BindingList%601>. El <xref:System.ComponentModel.BindingList%601> es una clase extensible que implementa las interfaces principales necesarias para el enlace de datos bidireccional de formularios Windows Forms.  
   
-     La propiedad <xref:System.ComponentModel.ListChangedType> del parámetro <xref:System.ComponentModel.ListChangedEventArgs> describe el tipo de cambio.  Por lo tanto, cada vez que se actualiza el modelo de datos, cualquier vista dependiente, como otros controles enlazados al mismo origen de datos, también se actualizará.  No obstante, cuando los objetos contenidos en la lista cambien deberán enviar una notificación a la lista, para que ésta pueda provocar el evento <xref:System.ComponentModel.IBindingList.ListChanged>.  
+-   <xref:System.ComponentModel.IBindingList> (interfaz)  
   
-    > [!NOTE]
-    >  La clase <xref:System.ComponentModel.BindingList%601> proporciona una implementación genérica de la interfaz <xref:System.ComponentModel.IBindingList>.  
-  
--   La interfaz <xref:System.ComponentModel.IBindingListView>  
-  
-     Una clase que implementa la interfaz <xref:System.ComponentModel.IBindingListView> proporciona todas las funciones de una implementación de <xref:System.ComponentModel.IBindingList>, así como funciones de filtrado y ordenación avanzada.  Esta implementación proporciona el filtrado basado en cadena y la ordenación multicolumna con pares de descriptor de propiedad y dirección.  
-  
--   La interfaz <xref:System.ComponentModel.IEditableObject>  
-  
-     Una clase que implementa la interfaz <xref:System.ComponentModel.IEditableObject> permite que un objeto controle cuándo se hacen permanentes los cambios realizados en el objeto.  Esta implementación ofrece los métodos <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A> y <xref:System.ComponentModel.IEditableObject.CancelEdit%2A>, que le permiten revertir los cambios realizados en el objeto.  A continuación figura una breve descripción del funcionamiento de los métodos <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A> y <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> y cómo funcionan entre ellos para permitir la posibilidad de revertir los cambios realizados en los datos:  
-  
-    -   El método <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> señala el inicio de una modificación de un objeto.  Un objeto que implemente esta interfaz necesitará almacenar las actualizaciones que se produzcan después de la llamada al método <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> de modo que puedan descartarse las actualizaciones si se llama al método <xref:System.ComponentModel.IEditableObject.CancelEdit%2A>.  En el enlace de datos de formularios Windows Forms, puede llamar varias veces al método <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> dentro del ámbito de una transacción de edición única \(por ejemplo, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>\).  Las implementaciones de <xref:System.ComponentModel.IEditableObject> deberían mantener el seguimiento que comprueba si se ha llamado ya al método <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> y omitir las llamadas subsiguientes a <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>.  Dado que es posible llamar varias veces a este método, es importante que las llamadas subsiguientes no sean destructivas; es decir, las llamadas subsiguientes a <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> no pueden destruir las actualizaciones realizadas ni modificar los datos guardados en la primera llamada a <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>.  
-  
-    -   El método <xref:System.ComponentModel.IEditableObject.EndEdit%2A> inserta en el objeto subyacente los cambios realizados desde la llamada a <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, si el objeto se encuentra en modo de edición.  
-  
-    -   El método <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> descarta los cambios realizados en el objeto.  
-  
-     Para obtener más información sobre cómo funcionan los métodos: <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A> y <xref:System.ComponentModel.IEditableObject.CancelEdit%2A>, vea [Guardar los datos en conjuntos de datos](../Topic/Save%20data%20back%20to%20the%20database.md).  
-  
-     El control <xref:System.Windows.Forms.DataGridView> utiliza esta noción transaccional de funciones de datos.  
-  
--   La interfaz <xref:System.ComponentModel.ICancelAddNew>  
-  
-     Una clase que implementa la interfaz <xref:System.ComponentModel.ICancelAddNew> normalmente implementa la interfaz <xref:System.ComponentModel.IBindingList> y permite revertir las agregaciones realizadas en el origen de datos con el método <xref:System.ComponentModel.IBindingList.AddNew%2A>.  Si el origen de datos implementa la interfaz <xref:System.ComponentModel.IBindingList>, establezca también que implemente la interfaz <xref:System.ComponentModel.ICancelAddNew>.  
-  
--   La interfaz <xref:System.ComponentModel.IDataErrorInfo>  
-  
-     Una clase que implementa la interfaz <xref:System.ComponentModel.IDataErrorInfo> permite a los objetos ofrecer la información de error personalizada a los controles enlazados:  
-  
-    -   La propiedad <xref:System.ComponentModel.IDataErrorInfo.Error%2A> devuelve un texto de mensaje de error general \(por ejemplo, "Se produjo un error"\).  
-  
-    -   La propiedad <xref:System.ComponentModel.IDataErrorInfo.Item%2A> devuelve una cadena con el mensaje de error específico de la columna \(por ejemplo, "El valor de la columna `State`  no es válido"\).  
-  
--   La interfaz <xref:System.Collections.IEnumerable>  
-  
-     [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] utiliza normalmente una clase que implementa la interfaz <xref:System.Collections.IEnumerable>.  Sólo está disponible la compatibilidad de formularios Windows Forms con esta interfaz a través del componente <xref:System.Windows.Forms.BindingSource>.  
+     Una clase que implementa el <xref:System.ComponentModel.IBindingList> interfaz proporciona un nivel mucho mayor de funcionalidad de enlace de datos. La implementación ofrece funcionalidades de ordenación y notificación de cambios, ambas para cuando los elementos de la lista cambian (por ejemplo, el tercer elemento de una lista de clientes tiene un cambio en el campo Address), así como cuando cambia la lista misma (por ejemplo, si el número de elementos de la lista aumenta o disminuye). La notificación de cambios es importante si planea tener varios controles enlazados a los mismos datos y desea que los cambios de datos que se hacen en uno de los controles se propague a los otros controles enlazados.  
   
     > [!NOTE]
-    >  El componente <xref:System.Windows.Forms.BindingSource> copia todos los elementos <xref:System.Collections.IEnumerable> en una lista independiente para fines de enlace.  
+    >  Notificación de cambios está habilitada para la <xref:System.ComponentModel.IBindingList> interfaz a través de la <xref:System.ComponentModel.IBindingList.SupportsChangeNotification%2A> propiedad que, cuando `true`, genera un <xref:System.ComponentModel.IBindingList.ListChanged> evento, que indica la lista cambiado o un elemento en la lista cambia.  
   
--   La interfaz <xref:System.ComponentModel.ITypedList>  
-  
-     Una clase de colecciones que implementa la interfaz <xref:System.ComponentModel.ITypedList> proporciona la posibilidad de controlar el orden y el conjunto de propiedades expuestas al control enlazado.  
+     Describe el tipo de cambio del <xref:System.ComponentModel.ListChangedType> propiedad de la <xref:System.ComponentModel.ListChangedEventArgs> parámetro. Por lo tanto, siempre que se actualiza el modelo de datos, también se actualizará toda vista dependiente, como otros controles enlazados al mismo origen de datos. Sin embargo, tendrá los objetos contenidos en la lista notificar a la lista cuando cambian de modo que puede generar la lista el <xref:System.ComponentModel.IBindingList.ListChanged> eventos.  
   
     > [!NOTE]
-    >  Cuando implementa el método <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> y la matriz <xref:System.ComponentModel.PropertyDescriptor> no es null, la última entrada de la matriz será el descriptor de propiedad que describe la propiedad de lista que es otra lista de elementos.  
+    >  El <xref:System.ComponentModel.BindingList%601> proporciona una implementación genérica de la <xref:System.ComponentModel.IBindingList> interfaz.  
   
--   La interfaz <xref:System.ComponentModel.ICustomTypeDescriptor>  
+-   <xref:System.ComponentModel.IBindingListView> (interfaz)  
   
-     Una clase que implementa la interfaz <xref:System.ComponentModel.ICustomTypeDescriptor> proporciona información dinámica sobre sí misma.  Esta interfaz es similar a <xref:System.ComponentModel.ITypedList> pero la utilizan objetos en lugar de listas.  <xref:System.Data.DataRowView> utiliza esta interfaz para proyectar el esquema de las filas subyacentes.  La clase <xref:System.ComponentModel.CustomTypeDescriptor> proporciona una implementación sencilla de <xref:System.ComponentModel.ICustomTypeDescriptor>.  
+     Una clase que implementa el <xref:System.ComponentModel.IBindingListView> interfaz proporciona toda la funcionalidad de una implementación de <xref:System.ComponentModel.IBindingList>, así como filtrado y avanzado las funcionalidades de ordenación. Esta implementación ofrece filtrado basado en cadena y ordenación en varias columnas con pares de descriptor de propiedad y dirección.  
   
-    > [!NOTE]
-    >  Para admitir el enlace en tiempo de diseño a tipos que implementan <xref:System.ComponentModel.ICustomTypeDescriptor>, el tipo debe implementar también <xref:System.ComponentModel.IComponent> y existir como una instancia en el formulario.  
+-   <xref:System.ComponentModel.IEditableObject> (interfaz)  
   
--   La interfaz <xref:System.ComponentModel.IListSource>  
+     Una clase que implementa el <xref:System.ComponentModel.IEditableObject> interfaz permite que un objeto controlar cuándo se hacen permanentes los cambios realizados en ese objeto. Esta implementación ofrece la <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, y <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> métodos, lo que permite revertir los cambios realizados en el objeto. Aquí te mostramos una breve explicación del funcionamiento de la <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, y <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> métodos y cómo funcionan entre sí para habilitar la posibilidad de revertir los cambios realizados en los datos:  
   
-     Una clase que implementa la interfaz <xref:System.ComponentModel.IListSource> habilita el enlace basado en lista en objetos que no son lista.  El método <xref:System.ComponentModel.IListSource.GetList%2A> de <xref:System.ComponentModel.IListSource> se usa para devolver una lista enlazable de un objeto que no hereda de <xref:System.Collections.IList>.  La clase <xref:System.Data.DataSet> utiliza <xref:System.ComponentModel.IListSource>.  
+    -   El <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> método indica el inicio de una operación de edición de un objeto. Un objeto que implementa esta interfaz necesitará almacenar las actualizaciones después de la <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> llamada al método de tal manera que las actualizaciones se pueden descartar si el <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> se llama al método. En Windows Forms de enlace de datos, se puede llamar a <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> varias veces dentro del ámbito de una sola transacción Editar (por ejemplo, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>). Las implementaciones de <xref:System.ComponentModel.IEditableObject> debe realizar un seguimiento de si <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> ya se ha llamado y omitir las llamadas subsiguientes a <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>. Dado que este método se puede llamar varias veces, es importante que las llamadas subsiguientes a él sean destructivas; es decir, posteriores <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> llamadas no pueden destruir las actualizaciones que se han realizado o cambian los datos que se guardan en la primera <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> llamar.  
   
--   La interfaz <xref:System.ComponentModel.IRaiseItemChangedEvents>  
+    -   El <xref:System.ComponentModel.IEditableObject.EndEdit%2A> método inserta los cambios realizados desde <xref:System.ComponentModel.IEditableObject.BeginEdit%2A> se llama en el objeto subyacente, si el objeto está actualmente en modo de edición.  
   
-     Una clase que implementa la interfaz <xref:System.ComponentModel.IRaiseItemChangedEvents> es una lista enlazable que también implementa la interfaz <xref:System.ComponentModel.IBindingList>.  Esta interfaz se utiliza para indicar si su tipo provoca eventos <xref:System.ComponentModel.IBindingList.ListChanged> de tipo <xref:System.ComponentModel.ListChangedType> a través de la propiedad <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A>.  
+    -   El <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> método descarta los cambios realizados en el objeto.  
   
-    > [!NOTE]
-    >  Implemente <xref:System.ComponentModel.IRaiseItemChangedEvents> si el origen de datos proporciona la conversión de propiedad a evento de lista descrita anteriormente e interactúa con el componente <xref:System.Windows.Forms.BindingSource>.  De lo contrario, <xref:System.Windows.Forms.BindingSource> también ejecutará la conversión de propiedad a evento de lista, lo que provocará un rendimiento más lento.  
+     Para obtener más información acerca de cómo los <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, y <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> métodos de trabajo, consulte [guardar los datos en la base de datos](/visualstudio/data-tools/save-data-back-to-the-database).  
   
--   La interfaz <xref:System.ComponentModel.ISupportInitialize>  
+     Esta noción transaccional de la funcionalidad de datos es utilizada por el <xref:System.Windows.Forms.DataGridView> control.  
   
-     Un componente que implementa la interfaz <xref:System.ComponentModel.ISupportInitialize> aprovecha las ventajas de las optimizaciones por lotes para establecer las propiedades e inicializar propiedades codependientes.  <xref:System.ComponentModel.ISupportInitialize> contiene dos métodos:  
+-   <xref:System.ComponentModel.ICancelAddNew> (interfaz)  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> señala que comienza la inicialización del objeto.  
+     Una clase que implementa el <xref:System.ComponentModel.ICancelAddNew> normalmente implementa la interfaz la <xref:System.ComponentModel.IBindingList> de interfaz y le permite revertir las agregaciones realizadas en el origen de datos con el <xref:System.ComponentModel.IBindingList.AddNew%2A> método. Si su origen de datos implementa la <xref:System.ComponentModel.IBindingList> interfaz, también tendrá implementar la <xref:System.ComponentModel.ICancelAddNew> interfaz.  
   
-    -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> señala que finaliza la inicialización del objeto.  
+-   <xref:System.ComponentModel.IDataErrorInfo> (interfaz)  
   
--   La interfaz <xref:System.ComponentModel.ISupportInitializeNotification>  
+     Una clase que implementa el <xref:System.ComponentModel.IDataErrorInfo> interfaz permite a objetos que permite ver información de error personalizados para controles enlazados:  
   
-     Un componente que implementa la interfaz <xref:System.ComponentModel.ISupportInitializeNotification> también implementa la interfaz <xref:System.ComponentModel.ISupportInitialize>.  Esta interfaz permite notificar a otros componentes <xref:System.ComponentModel.ISupportInitialize> que la inicialización está completa.  La interfaz <xref:System.ComponentModel.ISupportInitializeNotification> contiene dos miembros:  
+    -   El <xref:System.ComponentModel.IDataErrorInfo.Error%2A> propiedad devuelve el texto del mensaje de error general (por ejemplo, "se produjo un error").  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> devuelve un valor `boolean` que indica si se inicializa el componente.  
+    -   El <xref:System.ComponentModel.IDataErrorInfo.Item%2A> propiedad devuelve una cadena con el mensaje de error específico de la columna (por ejemplo, "el valor de la `State` columna no es válida").  
   
-    -   Se produce el evento <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> cuando se llama al método <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>.  
+-   <xref:System.Collections.IEnumerable> (interfaz)  
   
--   La interfaz <xref:System.ComponentModel.INotifyPropertyChanged>  
-  
-     Una clase que implementa esta interfaz es un tipo que provoca un evento cuando cualquiera de sus valores de propiedad cambia.  Esta interfaz está diseñada para reemplazar al modelo de tener un evento de cambio para cada propiedad de un control.  Cuando se utiliza en una clase <xref:System.ComponentModel.BindingList%601>, un objeto comercial debe implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> y BindingList\`1 convertirá los eventos <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> a eventos <xref:System.ComponentModel.BindingList%601.ListChanged> de tipo <xref:System.ComponentModel.ListChangedType>.  
+     Una clase que implementa el <xref:System.Collections.IEnumerable> normalmente consume interfaz [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Compatibilidad con formularios Windows Forms para esta interfaz solo está disponible a través de la <xref:System.Windows.Forms.BindingSource> componente.  
   
     > [!NOTE]
-    >  Para que se produzca la notificación de cambios en un enlace entre un cliente enlazado y un origen de datos, o el tipo de origen de datos enlazado implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> \(preferido\) o puede proporcionar eventos *nombreDePropiedad*`Changed` para el tipo enlazado, pero no ambos.  
+    >  El <xref:System.Windows.Forms.BindingSource> componente copia todos los <xref:System.Collections.IEnumerable> elementos en una lista independiente para fines de enlace.  
   
-### Interfaces para la implementación por creadores de componente  
- Las interfaces siguientes están diseñadas para que las utilice el motor de enlace de datos de formularios Windows Forms:  
+-   <xref:System.ComponentModel.ITypedList> (interfaz)  
   
--   La interfaz <xref:System.Windows.Forms.IBindableComponent>  
-  
-     Una clase que implementa esta interfaz es un componente que no sea un control que admite el enlace de datos.  Esta clase devuelve los enlaces de datos y el contexto de enlace del componente a través de las propiedades <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> y <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> de esta interfaz.  
+     Una clase de colecciones que implementa el <xref:System.ComponentModel.ITypedList> interfaz proporciona la capacidad de controlar el orden y el conjunto de propiedades expuestas para el control enlazado.  
   
     > [!NOTE]
-    >  Si el componente hereda de <xref:System.Windows.Forms.Control>, no tiene que implementar la interfaz <xref:System.Windows.Forms.IBindableComponent>.  
+    >  Cuando se implementa el <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> método y el <xref:System.ComponentModel.PropertyDescriptor> matriz no es null, la última entrada de la matriz será el descriptor de propiedad que describe la propiedad de la lista que es otra lista de elementos.  
   
--   La interfaz <xref:System.Windows.Forms.ICurrencyManagerProvider>  
+-   <xref:System.ComponentModel.ICustomTypeDescriptor> (interfaz)  
   
-     Una clase que implementa la interfaz <xref:System.Windows.Forms.ICurrencyManagerProvider> es un componente que proporciona su propio <xref:System.Windows.Forms.CurrencyManager> para administrar los enlaces asociados a este componente determinado.  La propiedad <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> proporciona el acceso al <xref:System.Windows.Forms.CurrencyManager> personalizado.  
+     Una clase que implementa el <xref:System.ComponentModel.ICustomTypeDescriptor> interfaz proporciona información dinámica sobre sí misma. Esta interfaz es similar a <xref:System.ComponentModel.ITypedList> , pero se usa para objetos en lugar de listas. Esta interfaz se usa por <xref:System.Data.DataRowView> para proyectar el esquema de las filas subyacentes. Una implementación simple de <xref:System.ComponentModel.ICustomTypeDescriptor> proporcionada por el <xref:System.ComponentModel.CustomTypeDescriptor> clase.  
   
     > [!NOTE]
-    >  Una clase que hereda de <xref:System.Windows.Forms.Control> administra enlaces automáticamente mediante la propiedad <xref:System.Windows.Forms.Control.BindingContext%2A>, de modo que es bastante raro que se den casos en que tenga que implementar <xref:System.Windows.Forms.ICurrencyManagerProvider>.  
+    >  Para admitir el enlace en tiempo de diseño para los tipos que implementan <xref:System.ComponentModel.ICustomTypeDescriptor>, también debe implementar el tipo <xref:System.ComponentModel.IComponent> y existir como una instancia en el formulario.  
   
-## Vea también  
- [Enlace de datos y formularios Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [Cómo: Crear un control con enlace simple en Windows Forms](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)   
+-   <xref:System.ComponentModel.IListSource> (interfaz)  
+  
+     Una clase que implementa el <xref:System.ComponentModel.IListSource> interfaz habilita el enlace basado en lista en objetos de fuera de la lista. El <xref:System.ComponentModel.IListSource.GetList%2A> método <xref:System.ComponentModel.IListSource> se utiliza para devolver una lista enlazable de un objeto que no hereda de <xref:System.Collections.IList>. <xref:System.ComponentModel.IListSource>se usa por la <xref:System.Data.DataSet> clase.  
+  
+-   <xref:System.ComponentModel.IRaiseItemChangedEvents> (interfaz)  
+  
+     Una clase que implementa el <xref:System.ComponentModel.IRaiseItemChangedEvents> interfaz es una lista enlazable que también implementa la <xref:System.ComponentModel.IBindingList> interfaz. Esta interfaz se utiliza para indicar si su tipo provoca <xref:System.ComponentModel.IBindingList.ListChanged> eventos de tipo <xref:System.ComponentModel.ListChangedType.ItemChanged> a través de su <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> propiedad.  
+  
+    > [!NOTE]
+    >  Debe implementar la <xref:System.ComponentModel.IRaiseItemChangedEvents> si el origen de datos proporciona la propiedad a la conversión de eventos de lista se ha descrito anteriormente y está interactuando con el <xref:System.Windows.Forms.BindingSource> componente. En caso contrario, el <xref:System.Windows.Forms.BindingSource> también llevan a cabo la propiedad a la conversión de eventos de lista provocar un rendimiento más lento.  
+  
+-   <xref:System.ComponentModel.ISupportInitialize> (interfaz)  
+  
+     Un componente que implementa la <xref:System.ComponentModel.ISupportInitialize> interfaz tiene ventajas de las optimizaciones por lotes para establecer las propiedades e inicializar propiedades codependientes. El <xref:System.ComponentModel.ISupportInitialize> contiene dos métodos:  
+  
+    -   <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>indica que la inicialización del objeto se está iniciando.  
+  
+    -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A>indica que la inicialización del objeto está finalizando.  
+  
+-   <xref:System.ComponentModel.ISupportInitializeNotification> (interfaz)  
+  
+     Un componente que implementa la <xref:System.ComponentModel.ISupportInitializeNotification> interfaz también implementa el <xref:System.ComponentModel.ISupportInitialize> interfaz. Esta interfaz permite notificar a otros <xref:System.ComponentModel.ISupportInitialize> componentes que la inicialización está completa. El <xref:System.ComponentModel.ISupportInitializeNotification> interfaz contiene dos miembros:  
+  
+    -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A>Devuelve un `boolean` valor que indica si el componente se ha inicializado.  
+  
+    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized>se produce cuando <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> se llama.  
+  
+-   <xref:System.ComponentModel.INotifyPropertyChanged> (interfaz)  
+  
+     Una clase que implementa esta interfaz es un tipo que genera un evento cuando cambia cualquiera de sus valores de propiedad. Esta interfaz está diseñada para reemplazar el patrón de tener un evento de cambio para cada propiedad de un control. Cuando se utiliza en un <xref:System.ComponentModel.BindingList%601>, un objeto comercial debe implementar la <xref:System.ComponentModel.INotifyPropertyChanged> interfaz y la BindingList\`1 convertirá <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> eventos para <xref:System.ComponentModel.BindingList%601.ListChanged> eventos de tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
+  
+    > [!NOTE]
+    >  Para cambiar notificación que se produzca en un enlace entre un cliente enlazado y datos del origen de tipo de origen de datos enlazado debería implementar cualquiera el <xref:System.ComponentModel.INotifyPropertyChanged> interfaz (opción preferida) o se pueden proporcionar *propertyName* `Changed` eventos para el tipo enlazado, pero no ambos.  
+  
+### <a name="interfaces-for-implementation-by-component-authors"></a>Interfaces para la implementación por parte de los autores de componentes  
+ Las interfaces siguientes están diseñadas para que las use el motor de enlace de datos de Windows Forms:  
+  
+-   <xref:System.Windows.Forms.IBindableComponent> (interfaz)  
+  
+     Una clase que implementa esta interfaz es un componente no de control que admite el enlace de datos. Esta clase devuelve los enlaces de datos y el contexto de enlace del componente a través de la <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> y <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> propiedades de esta interfaz.  
+  
+    > [!NOTE]
+    >  Si el componente hereda de <xref:System.Windows.Forms.Control>, no es necesario implementar la <xref:System.Windows.Forms.IBindableComponent> interfaz.  
+  
+-   <xref:System.Windows.Forms.ICurrencyManagerProvider> (interfaz)  
+  
+     Una clase que implementa el <xref:System.Windows.Forms.ICurrencyManagerProvider> interfaz es un componente que proporciona su propia <xref:System.Windows.Forms.CurrencyManager> para administrar los enlaces asociados a este componente determinado. Acceso a la opción de instalación <xref:System.Windows.Forms.CurrencyManager> proporcionada por el <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> propiedad.  
+  
+    > [!NOTE]
+    >  Una clase que hereda de <xref:System.Windows.Forms.Control> administra enlaces automáticamente mediante su <xref:System.Windows.Forms.Control.BindingContext%2A> propiedad, por lo que casos en que necesite implementar el <xref:System.Windows.Forms.ICurrencyManagerProvider> es habitual.  
+  
+## <a name="see-also"></a>Vea también  
+ [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Crear un control con enlace simple en Windows Forms](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
  [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

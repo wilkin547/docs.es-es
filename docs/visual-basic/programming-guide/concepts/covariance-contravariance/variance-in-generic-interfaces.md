@@ -1,62 +1,95 @@
 ---
-title: "Varianza en Interfaces genéricas (Visual Basic) | Documentos de Microsoft"
+title: "Varianza en Interfaces genéricas (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c53c27bdb085213046553fc4b08f11336880a7c2
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d05ccdc97efd5dd193bbbe0d15dd227ec71910d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Varianza en Interfaces genéricas (Visual Basic)
-.NET framework 4 introdujo la compatibilidad con la varianza para varias interfaces genéricas existentes. Compatibilidad con la varianza habilita la conversión implícita de las clases que implementan estas interfaces. Las interfaces siguientes son ahora variantes:  
+En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. La compatibilidad con la varianza permite la conversión implícita de clases que implementan estas interfaces. Las interfaces siguientes ahora son variantes:  
   
--   <xref:System.Collections.Generic.IEnumerable%601>(T es covariante)</xref:System.Collections.Generic.IEnumerable%601>  
+-   <xref:System.Collections.Generic.IEnumerable%601> (T es covariante)  
   
--   <xref:System.Collections.Generic.IEnumerator%601>(T es covariante)</xref:System.Collections.Generic.IEnumerator%601>  
+-   <xref:System.Collections.Generic.IEnumerator%601> (T es covariante)  
   
--   <xref:System.Linq.IQueryable%601>(T es covariante)</xref:System.Linq.IQueryable%601>  
+-   <xref:System.Linq.IQueryable%601> (T es covariante)  
   
--   <xref:System.Linq.IGrouping%602>(`TKey` y `TElement` son covariantes)</xref:System.Linq.IGrouping%602>  
+-   <xref:System.Linq.IGrouping%602> (`TKey` y `TElement` son covariantes)  
   
--   <xref:System.Collections.Generic.IComparer%601>(T es contravariante)</xref:System.Collections.Generic.IComparer%601>  
+-   <xref:System.Collections.Generic.IComparer%601> (T es contravariante)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>(T es contravariante)</xref:System.Collections.Generic.IEqualityComparer%601>  
+-   <xref:System.Collections.Generic.IEqualityComparer%601> (T es contravariante)  
   
--   <xref:System.IComparable%601>(T es contravariante)</xref:System.IComparable%601>  
+-   <xref:System.IComparable%601> (T es contravariante)  
   
- La covarianza permite que un método de tipo de valor devuelto más derivado que el definido por el parámetro de tipo genérico de la interfaz. Para ilustrar la característica de covarianza, considere estas interfaces genéricas: `IEnumerable(Of Object)` y `IEnumerable(Of String)`. El `IEnumerable(Of String)` interfaz no hereda la `IEnumerable(Of Object)` interfaz. Sin embargo, el `String` tipo heredar el `Object` tipo y en algunos casos desee asignar objetos de estas interfaces entre sí. Esto se muestra en el ejemplo de código siguiente.  
+ La covarianza permite que un método tenga un tipo de valor devuelto más derivado que los que se definen en los parámetros de tipo genérico de la interfaz. Para ilustrar la característica de la covarianza, considere estas interfaces genéricas: `IEnumerable(Of Object)` y `IEnumerable(Of String)`. La interfaz `IEnumerable(Of String)` no hereda la interfaz `IEnumerable(Of Object)`. En cambio, el tipo `String` hereda el tipo `Object`, y en algunos casos puede que quiera asignar objetos de estas interfaces entre sí. Esto se muestra en el ejemplo de código siguiente.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- En versiones anteriores de .NET Framework, este código produce un error de compilación en Visual Basic con `Option Strict On`. Pero ahora puede usar `strings` en lugar de `objects`, como se muestra en el ejemplo anterior, porque la <xref:System.Collections.Generic.IEnumerable%601>interfaz es covariante.</xref:System.Collections.Generic.IEnumerable%601>  
+```vb  
+Dim strings As IEnumerable(Of String) = New List(Of String)  
+Dim objects As IEnumerable(Of Object) = strings  
+```  
   
- La contravarianza permite un método tenga tipos de argumento menos derivados que el especificado por el parámetro genérico de la interfaz. Para ilustrar la contravarianza, suponga que ha creado un `BaseComparer` clase para comparar instancias de la `BaseClass` clase. La clase `BaseComparer` implementa la interfaz `IEqualityComparer(Of BaseClass)`. Porque la <xref:System.Collections.Generic.IEqualityComparer%601>interfaz es ahora contravariante, puede usar `BaseComparer` para comparar instancias de las clases que heredan la `BaseClass` clase</xref:System.Collections.Generic.IEqualityComparer%601> Esto se muestra en el ejemplo de código siguiente.  
+ En versiones anteriores de .NET Framework, este código produce un error de compilación en Visual Basic con `Option Strict On`. Pero ahora puede usar `strings` en lugar de `objects`, como se muestra en el ejemplo anterior, porque la interfaz <xref:System.Collections.Generic.IEnumerable%601> es covariante.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
- Para obtener más ejemplos, vea [utilizar varianza en Interfaces para las colecciones genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
+ La contravarianza permite que un método tenga tipos de argumento menos derivados que los que se especifican en el parámetro genérico de la interfaz. Para ilustrar la contravarianza, se presupone que ha creado una clase `BaseComparer` para comparar instancias de la clase `BaseClass`. La clase `BaseComparer` implementa la interfaz `IEqualityComparer(Of BaseClass)`. Como la interfaz <xref:System.Collections.Generic.IEqualityComparer%601> ahora es contravariante, puede usar `BaseComparer` para comparar instancias de clases que heredan la clase `BaseClass`. Esto se muestra en el ejemplo de código siguiente.  
   
- Para tipos de referencia sólo se admite la varianza en interfaces genéricas. Tipos de valor no admiten la varianza. Por ejemplo, `IEnumerable(Of Integer)` no se puede convertir implícitamente a `IEnumerable(Of Object)`, como enteros se representan mediante un tipo de valor.  
+```vb  
+' Simple hierarchy of classes.  
+Class BaseClass  
+End Class  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- También es importante recordar que las clases que implementan interfaces variantes siguen siendo invariables. Por ejemplo, aunque <xref:System.Collections.Generic.List%601>implementa la interfaz covariante <xref:System.Collections.Generic.IEnumerable%601>, no se puede convertir implícitamente `List(Of Object)` a `List(Of String)`.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.Generic.List%601> Esto se muestra en el ejemplo de código siguiente.  
+Class DerivedClass  
+    Inherits BaseClass  
+End Class  
+  
+' Comparer class.  
+Class BaseComparer  
+    Implements IEqualityComparer(Of BaseClass)  
+  
+    Public Function Equals1(ByVal x As BaseClass,  
+                            ByVal y As BaseClass) As Boolean _  
+                            Implements IEqualityComparer(Of BaseClass).Equals  
+        Return (x.Equals(y))  
+    End Function  
+  
+    Public Function GetHashCode1(ByVal obj As BaseClass) As Integer _  
+        Implements IEqualityComparer(Of BaseClass).GetHashCode  
+        Return obj.GetHashCode  
+    End Function  
+End Class  
+Sub Test()  
+    Dim baseComparer As IEqualityComparer(Of BaseClass) = New BaseComparer  
+    ' Implicit conversion of IEqualityComparer(Of BaseClass) to   
+    ' IEqualityComparer(Of DerivedClass).  
+    Dim childComparer As IEqualityComparer(Of DerivedClass) = baseComparer  
+End Sub  
+```  
+  
+ Para obtener más ejemplos, vea [usar varianza en Interfaces para las colecciones genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
+  
+ La varianza para interfaces genéricas solo es compatible con tipos de referencia. Los tipos de valor no admiten la varianza. Por ejemplo, `IEnumerable(Of Integer)` no puede convertirse implícitamente en `IEnumerable(Of Object)`, porque los enteros se representan mediante un tipo de valor.  
+  
+```vb  
+Dim integers As IEnumerable(Of Integer) = New List(Of Integer)  
+' The following statement generates a compiler error  
+' with Option Strict On, because Integer is a value type.  
+' Dim objects As IEnumerable(Of Object) = integers  
+```  
+  
+ También es importante recordar que las clases que implementan las interfaces variantes siguen siendo invariables. Por ejemplo, aunque <xref:System.Collections.Generic.List%601> implementa la interfaz covariante <xref:System.Collections.Generic.IEnumerable%601>, no puede convertir `List(Of Object)` en `List(Of String)` implícitamente. Esto se muestra en el siguiente código de ejemplo.  
   
 ```vb  
 ' The following statement generates a compiler error  
@@ -68,7 +101,7 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar la varianza en Interfaces para las colecciones genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)   
- [Crear Interfaces genéricas variantes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)   
- [Interfaces genéricas](http://msdn.microsoft.com/library/88bf5b04-d371-4edb-ba38-01ec7cabaacf)   
+ [Usar la varianza en interfaces para las colecciones genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
+ [Crear interfaces genéricas variantes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
+ [Interfaces genéricas](../../../../standard/generics/interfaces.md)  
  [Varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

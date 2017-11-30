@@ -1,33 +1,35 @@
 ---
-title: "C&#243;mo: Crear texto de tama&#241;o variable en un control ComboBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadros combinados, dibujar texto"
-  - "ComboBox (control) [Windows Forms], dibujar texto personalizado"
-  - "ComboBox (control) [Windows Forms], ejemplos [C#]"
-  - "ejemplos [Windows Forms], ComboBox (control)"
-  - "texto, dibujar en cuadros combinados"
+title: "Cómo: Crear texto de tamaño variable en un control ComboBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- text [Windows Forms], drawing in combo boxes
+- examples [Windows Forms], ComboBox control
+- combo boxes [Windows Forms], drawing text
+- ComboBox control [Windows Forms], examples [C#]
+- ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear texto de tama&#241;o variable en un control ComboBox
-En este ejemplo se muestra el dibujo personalizado de texto en un control <xref:System.Windows.Forms.ComboBox>.  Cuando un elemento cumple un determinado criterio, se dibuja en una fuente mayor y se vuelve color rojo.  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Cómo: Crear texto de tamaño variable en un control ComboBox
+Este ejemplo muestra el dibujo personalizado de texto en un <xref:System.Windows.Forms.ComboBox> control. Cuando un elemento cumple determinados criterios, se dibuja en una fuente mayor y se vuelve color rojo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```vb  
 Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
@@ -62,22 +64,22 @@ e.Bounds.X, e.Bounds.Y)
 End Sub  
 ```  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
 -   Un formulario Windows Forms.  
   
--   Un control <xref:System.Windows.Forms.ComboBox> denominado  `ListBox1`  con tres elementos en la propiedad <xref:System.Windows.Forms.ComboBox.Items%2A>.  En este ejemplo, los tres elementos se denominan  `"One", Two", and Three"`.  La propiedad <xref:System.Windows.Forms.ComboBox.DrawMode%2A> de  `ComboBox1`  se debe establecer en <xref:System.Windows.Forms.DrawMode>.  
+-   A <xref:System.Windows.Forms.ComboBox> control denominado `ListBox1` con tres elementos en el <xref:System.Windows.Forms.ComboBox.Items%2A> propiedad. En este ejemplo, los tres elementos se denominan `"One", Two", and Three"`. El <xref:System.Windows.Forms.ComboBox.DrawMode%2A> propiedad de `ComboBox1` debe establecerse en <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
   
     > [!NOTE]
-    >  Esta técnica también se aplica al control <xref:System.Windows.Forms.ListBox>: puede sustituir <xref:System.Windows.Forms.ListBox> para el <xref:System.Windows.Forms.ComboBox>.  
+    >  Esta técnica también es aplicable a la <xref:System.Windows.Forms.ListBox> control, puede sustituir un <xref:System.Windows.Forms.ListBox> para el <xref:System.Windows.Forms.ComboBox>.  
   
--   Referencias a los espacios de nombres <xref:System.Windows.Forms?displayProperty=fullName> y <xref:System.Drawing?displayProperty=fullName>.  
+-   Referencias a los espacios de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> y <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## Vea también  
- <xref:System.Windows.Forms.ComboBox.DrawItem>   
- <xref:System.Windows.Forms.DrawItemEventArgs>   
- <xref:System.Windows.Forms.ComboBox.MeasureItem>   
- [Controles compatibles con dibujos propietarios integrados](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)   
- [ListBox \(Control\)](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)   
- [ComboBox \(Control\)](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.ComboBox.DrawItem>  
+ <xref:System.Windows.Forms.DrawItemEventArgs>  
+ <xref:System.Windows.Forms.ComboBox.MeasureItem>  
+ [Controles compatibles con dibujos propietarios integrados](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [ListBox (control)](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ [ComboBox (control)](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

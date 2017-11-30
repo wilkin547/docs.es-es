@@ -1,45 +1,46 @@
 ---
-title: "Mouse Pointers in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pointers, setting [Windows Forms]"
-  - "mouse pointers"
-  - "mouse cursors"
-  - "mouse pointers, setting [Windows Forms]"
-  - "cursors, setting [Windows Forms]"
-  - "mouse, cursors"
+title: "Punteros del mouse (ratón) en formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pointers [Windows Forms], setting
+- mouse pointers
+- mouse cursors
+- mouse pointers [Windows Forms], setting
+- cursors [Windows Forms], setting
+- mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4fb0e193ccbced719f30ede91cb59cd51dd349a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Mouse Pointers in Windows Forms
-El *puntero* del mouse, al que a veces se denomina cursor, es un mapa de bits que especifica un punto de foco en la pantalla para la entrada de datos proporcionados por el usuario a través del mouse.  Este tema proporciona información general sobre el puntero del mouse en formularios Windows Forms y describe algunas formas de modificarlo y controlarlo.  
+# <a name="mouse-pointers-in-windows-forms"></a>Punteros del mouse (ratón) en formularios Windows Forms
+El mouse *puntero*, que a veces se conoce como el cursor es un mapa de bits que especifica un punto de enfoque en la pantalla para la entrada de usuario con el mouse. En este tema se proporciona información general del puntero del mouse (ratón) en formularios Windows Forms y describe algunas de las formas para modificar y controlar el puntero del mouse.  
   
-## Acceso al puntero del mouse  
- La clase <xref:System.Windows.Forms.Cursor> representa el puntero del mouse y cada <xref:System.Windows.Forms.Control> tiene una propiedad <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> que especifica el puntero para ese control.  La clase <xref:System.Windows.Forms.Cursor> contiene las propiedades que describen el puntero, como <xref:System.Windows.Forms.Cursor.Position%2A> y <xref:System.Windows.Forms.Cursor.HotSpot%2A>, así como los métodos que pueden modificar la apariencia del puntero, como <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A> y <xref:System.Windows.Forms.Cursor.DrawStretched%2A>.  
+## <a name="accessing-the-mouse-pointer"></a>Obtener acceso al puntero del Mouse  
+ El puntero del mouse está representado por la <xref:System.Windows.Forms.Cursor> (clase) y cada <xref:System.Windows.Forms.Control> tiene un <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> propiedad que especifica el puntero para ese control. El <xref:System.Windows.Forms.Cursor> clase contiene propiedades que describen el puntero, como la <xref:System.Windows.Forms.Cursor.Position%2A> y <xref:System.Windows.Forms.Cursor.HotSpot%2A> propiedades y métodos que pueden modificar la apariencia del puntero, como la <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, y <xref:System.Windows.Forms.Cursor.DrawStretched%2A> métodos.  
   
-## Controlar el puntero del mouse  
- Es posible que a veces desee limitar el área donde se puede utilizar el puntero del mouse o cambiar su posición.  Puede obtener o establecer la ubicación actual del mouse utilizando la propiedad <xref:System.Windows.Forms.Cursor.Position%2A> de <xref:System.Windows.Forms.Cursor>.  Además, puede limitar el área que puede utilizar el puntero del mouse estableciendo la propiedad <xref:System.Windows.Forms.Cursor.Clip%2A>.  El área de recorte, de manera predeterminada, es la pantalla completa.  
+## <a name="controlling-the-mouse-pointer"></a>Controlar el puntero del Mouse  
+ En ocasiones, puede que desee limitar el área en el que se puede utilizar el puntero del mouse o cambiar la posición del mouse. Puede obtener o establecer la ubicación actual del mouse (ratón) con el <xref:System.Windows.Forms.Cursor.Position%2A> propiedad de la <xref:System.Windows.Forms.Cursor>. Además, puede limitar el área que puede utilizarse el puntero del mouse puede configuración el <xref:System.Windows.Forms.Cursor.Clip%2A> propiedad. El área de recorte, de forma predeterminada, es la pantalla completa.  
   
-## Cambiar el puntero del mouse  
- Cambiar el puntero del mouse es una forma significativa de proporcionar información al usuario.  Por ejemplo, el puntero del mouse puede modificarse en los controladores de los eventos <xref:System.Windows.Forms.Control.MouseEnter> y <xref:System.Windows.Forms.Control.MouseLeave> para informar al usuario de los cálculos que se están realizando y para limitar la interacción del usuario en el control.  A veces, el puntero del mouse cambiará debido a eventos del sistema, por ejemplo cuando la aplicación realice operaciones de arrastrar y colocar.  
+## <a name="changing-the-mouse-pointer"></a>Cambiar el puntero del Mouse  
+ Cambiar el puntero del mouse es un aspecto importante de proporcionar comentarios al usuario. Por ejemplo, el puntero del mouse puede modificarse en los controladores de la <xref:System.Windows.Forms.Control.MouseEnter> y <xref:System.Windows.Forms.Control.MouseLeave> para indicar al usuario que se están produciendo los cálculos y para limitar la interacción del usuario en el control de eventos. A veces, el puntero del mouse cambiará debido a eventos del sistema, como cuando la aplicación está implicada en una operación de arrastrar y colocar.  
   
- La forma principal de cambiar el puntero del mouse es estableciendo <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> o la propiedad <xref:System.Windows.Forms.Control.DefaultCursor%2A> de un control en un nuevo <xref:System.Windows.Forms.Cursor>.  Para obtener ejemplos para cambiar el puntero del mouse, vea el ejemplo de código en la clase <xref:System.Windows.Forms.Cursor>.  Además, la clase <xref:System.Windows.Forms.Cursors> expone un conjunto de objetos <xref:System.Windows.Forms.Cursor> para diferentes tipos de punteros, como el puntero que se muestra como una mano.  Para mostrar un puntero de espera, que se asemeja a un reloj de arena, siempre que el puntero del mouse esté sobre un control, utilice la propiedad <xref:System.Windows.Forms.Control.UseWaitCursor%2A> de la clase<xref:System.Windows.Forms.Control>.  
+ La manera principal para cambiar el puntero del mouse está definiendo el <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.Control.DefaultCursor%2A> propiedad de un control a una nueva <xref:System.Windows.Forms.Cursor>. Para obtener ejemplos de cambiar el puntero del mouse, vea el ejemplo de código en el <xref:System.Windows.Forms.Cursor> clase. Además, el <xref:System.Windows.Forms.Cursors> clase expone un conjunto de <xref:System.Windows.Forms.Cursor> objetos para muchos tipos distintos de punteros, como un puntero que se parece a una mano. Para mostrar el puntero de espera, que es similar a un reloj de arena, siempre que el puntero del mouse está sobre el control, use la <xref:System.Windows.Forms.Control.UseWaitCursor%2A> propiedad de la <xref:System.Windows.Forms.Control> clase.  
   
-## Vea también  
- <xref:System.Windows.Forms.Cursor>   
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)   
- [Drag\-and\-Drop Functionality in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.Cursor>  
+ [Entradas mediante el mouse en una aplicación de Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [Funcionalidad de arrastrar y soltar en Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
