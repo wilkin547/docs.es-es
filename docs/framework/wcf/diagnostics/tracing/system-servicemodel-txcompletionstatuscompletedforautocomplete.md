@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.TxCompletionStatusCompletedForAutocomplete | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 79ec2a3f-8407-4c4c-a1bc-2b0e6e21c543
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 122793b08f452890fdb70749b58916744a6c1c66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
+# <a name="systemservicemodeltxcompletionstatuscompletedforautocomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForAutocomplete
 La transacción especificada para la operación especificada se completó debido a que el miembro `OperationBehaviorAttribute.TransactionAutoComplete` se estableció en `true`.  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Seguido si la infraestructura completa automáticamente la transacción en nombre del usuario.  
   
-## Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Vea también  
+ [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

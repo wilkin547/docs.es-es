@@ -1,30 +1,34 @@
 ---
-title: "Marcadores | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Bookmarks1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f570db1e677445239cec537f66bdf66fad66b37d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Marcadores
-Los marcadores son el mecanismo que permite a una actividad esperar datos pasivamente sin tener que mantener un subproceso de flujo de trabajo.Cuando una actividad indica que está esperando un estímulo, puede crear un marcador.Esto indica al tiempo de ejecución que la ejecución de la actividad no debería considerarse completada aun cuando se devuelva el método que se está ejecutando actualmente \(que creó <xref:System.Activities.Bookmark>\).  
+# <a name="bookmarks"></a>Marcadores
+Los marcadores son el mecanismo que permite a una actividad esperar datos pasivamente sin tener que mantener un subproceso de flujo de trabajo. Cuando una actividad indica que está esperando un estímulo, puede crear un marcador. Esto indica al tiempo de ejecución que la ejecución de la actividad no debería considerarse completada aun cuando se devuelva el método que se está ejecutando actualmente (que creó <xref:System.Activities.Bookmark>).  
   
-## Fundamentos de los marcadores  
- <xref:System.Activities.Bookmark> representa un punto en el que la ejecución se puede reanudar \(y, a través de la cual, se puede entregar los datos\) dentro de una instancia de flujo de trabajo.Normalmente, a <xref:System.Activities.Bookmark> se le proporciona un nombre y el código externo \(host o extensión\) será el responsable de reanudar el marcador con datos pertinentes.Cuando se reanuda <xref:System.Activities.Bookmark>, el tiempo de ejecución del flujo de trabajo programa el delegado de <xref:System.Activities.BookmarkCallback> que estuvo asociado con ese <xref:System.Activities.Bookmark> en el momento de su creación.  
+## <a name="bookmark-basics"></a>Fundamentos de los marcadores  
+ <xref:System.Activities.Bookmark> representa un punto en el que la ejecución se puede reanudar (y, a través de la cual, se puede entregar los datos) dentro de una instancia de flujo de trabajo. Normalmente, a <xref:System.Activities.Bookmark> se le proporciona un nombre y el código externo (host o extensión) será el responsable de reanudar el marcador con datos pertinentes. Cuando se reanuda <xref:System.Activities.Bookmark>, el tiempo de ejecución del flujo de trabajo programa el delegado de <xref:System.Activities.BookmarkCallback> que estuvo asociado con ese <xref:System.Activities.Bookmark> en el momento de su creación.  
   
-## Opciones de marcador  
- La clase <xref:System.Activities.BookmarkOptions> especifica el tipo de <xref:System.Activities.Bookmark> que se crea.Los posibles valores que no se excluyen mutuamente son <xref:System.Activities.BookmarkOptions>, <xref:System.Activities.BookmarkOptions> y <xref:System.Activities.BookmarkOptions>.Use <xref:System.Activities.BookmarkOptions>, el valor predeterminado, al crear un <xref:System.Activities.Bookmark> que se espera que se reanude una vez.Use <xref:System.Activities.BookmarkOptions> al crear un <xref:System.Activities.Bookmark> que se puede reanudar varias veces.Use <xref:System.Activities.BookmarkOptions> al crear un <xref:System.Activities.Bookmark> que posiblemente no se reanude nunca.A diferencia de los marcadores que se crean usando el <xref:System.Activities.BookmarkOptions>predeterminado, los marcadores <xref:System.Activities.BookmarkOptions> no impiden que se complete una actividad.  
+## <a name="bookmark-options"></a>Opciones de marcador  
+ La clase <xref:System.Activities.BookmarkOptions> especifica el tipo de <xref:System.Activities.Bookmark> que se crea. Los posibles valores que no se excluyen mutuamente son <xref:System.Activities.BookmarkOptions.None>, <xref:System.Activities.BookmarkOptions.MultipleResume> y <xref:System.Activities.BookmarkOptions.NonBlocking>. Use <xref:System.Activities.BookmarkOptions.None>, el valor predeterminado, al crear un <xref:System.Activities.Bookmark> que se espera que se reanude una vez. Use <xref:System.Activities.BookmarkOptions.MultipleResume> al crear un <xref:System.Activities.Bookmark> que se puede reanudar varias veces. Use <xref:System.Activities.BookmarkOptions.NonBlocking> al crear un <xref:System.Activities.Bookmark> que posiblemente no se reanude nunca. A diferencia de los marcadores que se crean usando el <xref:System.Activities.BookmarkOptions>predeterminado, los marcadores <xref:System.Activities.BookmarkOptions.NonBlocking> no impiden que se complete una actividad.  
   
-## Reanudar marcadores  
- Los marcadores pueden reanudarse según el código fuera de un flujo de trabajo usando una de las sobrecargas de <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>.En este ejemplo, se crea una actividad `ReadLine`.Cuando se ejecuta, la actividad `ReadLine` crea un <xref:System.Activities.Bookmark>, registra una devolución de llamada y, a continuación, espera a que se reanude <xref:System.Activities.Bookmark>.Cuando lo haga, la actividad `ReadLine` asigna los datos que se pasaron con <xref:System.Activities.Bookmark> a su argumento <xref:System.Activities.Activity%601.Result%2A>.  
+## <a name="bookmark-resumption"></a>Reanudar marcadores  
+ Los marcadores pueden reanudarse según el código fuera de un flujo de trabajo usando una de las sobrecargas de <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A>. En este ejemplo, se crea una actividad `ReadLine`. Cuando se ejecuta, la actividad `ReadLine` crea un <xref:System.Activities.Bookmark>, registra una devolución de llamada y, a continuación, espera a que se reanude <xref:System.Activities.Bookmark>. Cuando lo haga, la actividad `ReadLine` asigna los datos que se pasaron con <xref:System.Activities.Bookmark> a su argumento <xref:System.Activities.Activity%601.Result%2A>.  
   
 ```csharp  
 public sealed class ReadLine : NativeActivity<string>  
@@ -56,7 +60,7 @@ public sealed class ReadLine : NativeActivity<string>
 }  
 ```  
   
- En este ejemplo, se crea un flujo de trabajo que usa la actividad `ReadLine` para recopilar el nombre del usuario y mostrarlo en la ventana de la consola.La aplicación host realiza el trabajo real de recopilación de datos y los pasa al flujo de trabajo al reanudar <xref:System.Activities.Bookmark>.  
+ En este ejemplo, se crea un flujo de trabajo que usa la actividad `ReadLine` para recopilar el nombre del usuario y mostrarlo en la ventana de la consola. La aplicación host realiza el trabajo real de recopilación de datos y los pasa al flujo de trabajo al reanudar <xref:System.Activities.Bookmark>.  
   
 ```csharp  
 Variable<string> name = new Variable<string>  
@@ -116,7 +120,7 @@ wfApp.ResumeBookmark("UserName", Console.ReadLine());
 syncEvent.WaitOne();  
 ```  
   
- Cuando se ejecuta la actividad `ReadLine`, crea un <xref:System.Activities.Bookmark> denominado `UserName` y, a continuación, espera a que se reanude el marcador.El host recopila los datos deseados y, a continuación, reanuda <xref:System.Activities.Bookmark>.El flujo de trabajo se reanuda, muestra el nombre y, a continuación, finaliza.Tenga en cuenta que no se necesita el código de sincronización con respecto a la reanudación del marcador.Se puede reanudar <xref:System.Activities.Bookmark> sólo cuando el flujo de trabajo está inactivo y, si no lo está, la llamada a <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> se bloquea hasta que el flujo de trabajo se vuelve inactivo.  
+ Cuando se ejecuta la actividad `ReadLine`, crea un <xref:System.Activities.Bookmark> denominado `UserName` y, a continuación, espera a que se reanude el marcador. El host recopila los datos deseados y, a continuación, reanuda <xref:System.Activities.Bookmark>. El flujo de trabajo se reanuda, muestra el nombre y, a continuación, finaliza. Tenga en cuenta que no se necesita el código de sincronización con respecto a la reanudación del marcador. Se puede reanudar <xref:System.Activities.Bookmark> sólo cuando el flujo de trabajo está inactivo y, si no lo está, la llamada a <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> se bloquea hasta que el flujo de trabajo se vuelve inactivo.  
   
-## Resultado de reanudación del marcador  
- <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> devuelve un valor de enumeración de <xref:System.Activities.BookmarkResumptionResult> para indicar los resultados de la solicitud de reanudación del marcador.Los valores de devolución posibles son <xref:System.Activities.BookmarkResumptionResult>, <xref:System.Activities.BookmarkResumptionResult> y <xref:System.Activities.BookmarkResumptionResult>.Los hosts y extensiones pueden usar este valor para determinar cómo continuar.
+## <a name="bookmark-resumption-result"></a>Resultado de reanudación del marcador  
+ <xref:System.Activities.WorkflowApplication.ResumeBookmark%2A> devuelve un valor de enumeración de <xref:System.Activities.BookmarkResumptionResult> para indicar los resultados de la solicitud de reanudación del marcador. Los valores de devolución posibles son <xref:System.Activities.BookmarkResumptionResult.Success>, <xref:System.Activities.BookmarkResumptionResult.NotReady> y <xref:System.Activities.BookmarkResumptionResult.NotFound>. Los hosts y extensiones pueden usar este valor para determinar cómo continuar.

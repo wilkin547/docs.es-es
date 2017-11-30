@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Usar un socket de cliente asincrónico
 Un socket de cliente asincrónico no suspende la aplicación mientras espera a que finalicen las operaciones de red. En lugar de eso, usa el modelo de programación asincrónico estándar de .NET Framework para procesar la conexión de red en un subproceso mientras la aplicación continúa ejecutándose en el subproceso original. Los sockets asincrónicos son adecuados para aplicaciones que hacen un uso intensivo de la red o que no pueden esperar a que finalicen las operaciones de red antes de continuar.  
@@ -43,9 +40,9 @@ Un socket de cliente asincrónico no suspende la aplicación mientras espera a q
   
  Las operaciones asincrónicas necesitan un método de devolución de llamada para devolver el resultado de la operación. Si la aplicación no necesita conocer el resultado, no se necesita ningún método de devolución de llamada. El código de ejemplo de esta sección muestra cómo usar un método para iniciar la conexión a un dispositivo de red y un método de devolución de llamada para completar la conexión, un método para empezar a enviar datos y un método de devolución de llamada para completar el envío y un método para iniciar la recepción de datos y un método de devolución de llamada para finalizar la recepción de datos.  
   
- Los sockets asincrónicos usan varios subprocesos del grupo de subprocesos del sistema para procesar las conexiones de red. Un subproceso es responsable de iniciar el envío o la recepción de datos; otros subprocesos completan la conexión al dispositivo de red y envían o reciben los datos. En los ejemplos siguientes se usan instancias de la clase <xref:System.Threading.ManualResetEvent?displayProperty=fullName> para suspender la ejecución del subproceso principal e indicar cuándo puede continuar la ejecución.  
+ Los sockets asincrónicos usan varios subprocesos del grupo de subprocesos del sistema para procesar las conexiones de red. Un subproceso es responsable de iniciar el envío o la recepción de datos; otros subprocesos completan la conexión al dispositivo de red y envían o reciben los datos. En los ejemplos siguientes se usan instancias de la clase <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> para suspender la ejecución del subproceso principal e indicar cuándo puede continuar la ejecución.  
   
- En el ejemplo siguiente, para conectar un socket asincrónico a un dispositivo de red, el método `Connect` inicializa un **socket** y luego llama al método <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>, pasando un punto de conexión remoto que representa al dispositivo de red, el método de devolución de llamada de conexión y un objeto de estado (el **socket** de cliente), que se usa para pasar información de estado entre llamadas asincrónicas. El ejemplo implementa el método `Connect` para conectar el **socket** especificado al punto de conexión indicado. Asume un elemento global **ManualResetEvent** denominado `connectDone`.  
+ En el ejemplo siguiente, para conectar un socket asincrónico a un dispositivo de red, el método `Connect` inicializa un **socket** y luego llama al método <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType>, pasando un punto de conexión remoto que representa al dispositivo de red, el método de devolución de llamada de conexión y un objeto de estado (el **socket** de cliente), que se usa para pasar información de estado entre llamadas asincrónicas. El ejemplo implementa el método `Connect` para conectar el **socket** especificado al punto de conexión indicado. Asume un elemento global **ManualResetEvent** denominado `connectDone`.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -298,7 +295,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Listening with Sockets (Escucha con sockets)](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [Ejemplo de sockets de cliente asincrónicos](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-

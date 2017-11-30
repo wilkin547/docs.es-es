@@ -1,44 +1,36 @@
 ---
-title: "Cómo: realizar una transformación de transmisión por secuencias de documentos XML grandes (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: realizar una transformación de transmisión por secuencias de documentos XML grandes (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f35e42e29e316fe1610a011263aa68e622fb95a5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d211cbd1c94d485e0c41d23eb12dcae28ae7ad6e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Cómo: realizar una transformación de transmisión por secuencias de documentos XML grandes (Visual Basic)
 A veces tiene que transformar los archivos XML grandes y escribir la aplicación para que sea predecible la superficie en memoria de la aplicación. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
   
- Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Estándar de cierto operadores de consulta, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, ordenan y finalmente producen el primer elemento de la secuencia.</xref:System.Linq.Enumerable.OrderBy%2A> Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña para la aplicación.  
+ Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Ciertos operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia. Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña para la aplicación.  
   
  Incluso si utiliza la técnica descrita en [Cómo: transmitir por secuencias fragmentos de XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), si intenta ensamblar un árbol XML que contiene el documento transformado, uso será excesiva de memoria.  
   
- Hay dos grandes enfoques. Un enfoque consiste en utilizar las características de procesamiento aplazada de <xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement> Otro enfoque consiste en crear un <xref:System.Xml.XmlWriter>y usar las capacidades de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] escribir elementos en una <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> En este tema se muestran ambos enfoques.  
+ Hay dos grandes enfoques. Un enfoque consiste en utilizar las características de procesamiento aplazada de <xref:System.Xml.Linq.XStreamingElement>. El otro enfoque consiste en crear un <xref:System.Xml.XmlWriter> y utilizar las capacidades de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>. En este tema se muestran ambos enfoques.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se basa en el ejemplo de [Cómo: transmitir por secuencias fragmentos de XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ En el siguiente ejemplo se basa en el ejemplo de [Cómo: transmitir por secuencias fragmentos de XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Este ejemplo utiliza las funciones de ejecución aplazada de <xref:System.Xml.Linq.XStreamingElement>para transmitir el resultado.</xref:System.Xml.Linq.XStreamingElement> Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
+ Este ejemplo utiliza las funciones de ejecución aplazada de <xref:System.Xml.Linq.XStreamingElement> para transmitir por secuencias el resultado. Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
   
  Observe que se escribe el eje personalizado (`StreamCustomerItem`) específicamente para que espere un documento que tiene los elementos `Customer`, `Name` e `Item`, y que esos elementos se organizarán como en el documento Source.xml siguiente. No obstante, una implementación más sólida estaría preparada para analizar un documento no válido.  
   
@@ -263,15 +255,15 @@ End Class
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente también se basa en el ejemplo de [Cómo: transmitir por secuencias fragmentos de XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ En el ejemplo siguiente también se basa en el ejemplo de [Cómo: transmitir por secuencias fragmentos de XML con acceso a la información de encabezado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Este ejemplo utiliza la capacidad de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] escribir elementos en una <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
+ Este ejemplo utiliza la capacidad de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para escribir elementos en un <xref:System.Xml.XmlWriter>. Este ejemplo puede transformar un documento muy grande a la vez que mantiene una pequeña superficie de memoria.  
   
  Observe que se escribe el eje personalizado (`StreamCustomerItem`) específicamente para que espere un documento que tiene los elementos `Customer`, `Name` e `Item`, y que esos elementos se organizarán como en el documento Source.xml siguiente. Una implementación más sólida, sin embargo, validaría el documento de origen con XSD o se prepararía para analizar un documento no válido.  
   
  Este ejemplo utiliza el mismo documento de origen, Source.xml, que el ejemplo anterior de este tema. También produce exactamente el mismo resultado.  
   
- Uso <xref:System.Xml.Linq.XStreamingElement>para transmitir el resultado que XML es preferible de escribir en un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XStreamingElement>  
+ Se prefiere usar la clase <xref:System.Xml.Linq.XStreamingElement> para la transmisión por secuencias de la salida XML a sobrescribir una clase <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Module Module1  
@@ -457,4 +449,4 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Avanzada de LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

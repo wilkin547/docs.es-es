@@ -1,30 +1,25 @@
 ---
-title: "Cómo: recuperar el valor de un atributo (LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: recuperar el valor de un atributo (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a1661b1ea00eb7e377fc4d8a57ba27a558052b46
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 5eed0c34f79a4a338dda7b26049f2c1510443736
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Cómo: recuperar el valor de un atributo (LINQ to XML) (Visual Basic)
-Este tema muestra cómo obtener el valor de los atributos. Hay dos formas principales: puede convertir un <xref:System.Xml.Linq.XAttribute>al tipo deseado; el operador de conversión explícita convierte el contenido del elemento o atributo en el tipo especificado.</xref:System.Xml.Linq.XAttribute> Como alternativa, puede utilizar el <xref:System.Xml.Linq.XAttribute.Value%2A>propiedad.</xref:System.Xml.Linq.XAttribute.Value%2A> Sin embargo, la conversión suele ser el mejor método. Si convierte el atributo a un tipo que admite valores NULL, resulta más fácil escribir el código al recuperar el valor de un atributo que podría existir o no. Para obtener ejemplos de esta técnica, consulte [Cómo: recuperar el valor de un elemento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+Este tema muestra cómo obtener el valor de los atributos. Hay dos formas principales: puede convertir un elemento <xref:System.Xml.Linq.XAttribute> al tipo deseado; el operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado. Como alternativa, puede usar la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A>. Sin embargo, la conversión suele ser el mejor método. Si convierte el atributo a un tipo que admite valores NULL, resulta más fácil escribir el código al recuperar el valor de un atributo que podría existir o no. Para obtener ejemplos de esta técnica, consulte [Cómo: recuperar el valor de un elemento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Ejemplo  
  En Visual Basic, puede usar la propiedad del atributo integrado para recuperar el valor de un atributo.  
@@ -81,4 +76,4 @@ abcde
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ejes LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+ [Ejes de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

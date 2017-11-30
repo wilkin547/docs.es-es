@@ -1,39 +1,43 @@
 ---
-title: "3502 - InferredOperationDescription | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3502 - InferredOperationDescription
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6aebb614-3c72-4537-ba11-3cc7200ef1f1
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 044d67bc2b721451ade04947484899266d288d8c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3502 - InferredOperationDescription
-## Propiedades  
+# <a name="3502---inferredoperationdescription"></a>3502 - InferredOperationDescription
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|3502|  
 |Palabras clave|WFServices|  
 |Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Indica que un OperationDescription se ha inferido de WorkflowService.  
   
-## Mensaje  
- OperationDescription con Name\='%1' en el contrato '%2' se ha inferido de WorkflowService.  IsOneWay\=%3.  
+## <a name="message"></a>Mensaje  
+ OperationDescription con Name='%1' en el contrato '%2' se ha inferido de WorkflowService. IsOneWay=%3.  
   
-## Detalles  
+## <a name="details"></a>Detalles  
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |OperationName|xs:string|Nombre de la operación.|  
 |ContractName|xs:string|El nombre del contrato.|  
 |IsOneWay|xs:string|True o false para indicar si el contrato es unidireccional.|  

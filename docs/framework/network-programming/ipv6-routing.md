@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5cbd5188bb33fd6d38633ca4670689a94f110a2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 21edbfee91a759b0b48f9dd6c0c9e900cdff93f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-routing"></a>Enrutamiento de IPv6
 Una de las ventajas de IPv6 es el mecanismo de enrutamiento flexible. Debido a la manera en que se asignaban y todavía se asignan los identificadores de red IPv4, los enrutadores que se encuentran en las redes troncales de Internet deben mantener grandes tablas de enrutamiento. Estos enrutadores deben conocer todas las rutas con el fin de reenviar los paquetes que se dirigen potencialmente a cualquier nodo de Internet. Con su capacidad para agregar direcciones, IPv6 permite el direccionamiento flexible y reduce drásticamente el tamaño de las tablas de enrutamiento. En esta nueva arquitectura de direccionamiento, los enrutadores intermedios deben realizar un seguimiento únicamente de la parte local de su red para reenviar los mensajes de forma adecuada.  
@@ -49,6 +43,5 @@ Una de las ventajas de IPv6 es el mecanismo de enrutamiento flexible. Debido a l
 -   Redireccionamiento. Enviado por los enrutadores para indicar una dirección mejor de próximo salto a un destino determinado para un nodo de envío.  
   
 ## <a name="see-also"></a>Vea también  
- [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Sockets](../../../docs/framework/network-programming/sockets.md)
-

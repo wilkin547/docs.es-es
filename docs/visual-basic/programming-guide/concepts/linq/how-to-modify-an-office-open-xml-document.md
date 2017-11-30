@@ -1,36 +1,32 @@
 ---
-title: "Cómo: modificar un documento de Office Open XML (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: modificar un documento XML abierto de Office (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 04de8ce23af62d7abb6bc5274e96868f830c4320
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0d2f6b9bc7acf7c9108112b61fe8edf70c549cac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Cómo: modificar un documento de Office Open XML (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Cómo: modificar un documento XML abierto de Office (Visual Basic)
 En este tema se presenta un ejemplo que abre un documento XML abierto de Office, lo modifica y lo guarda.  
   
- Para obtener más información acerca de Office Open XML, vea [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Para más información sobre Office Open XML, visite [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo busca el primer elemento de párrafo del documento. Recupera el texto del párrafo y, a continuación, elimina todas las ejecuciones de texto del párrafo. Crea una nueva ejecución de texto que está formada por el texto del primer párrafo que se ha convertido a mayúsculas. A continuación serializa el XML cambiado en el paquete de XML abierto y lo cierra.  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos en el <xref:System.IO.Packaging?displayProperty=fullName>espacio de nombres.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -150,7 +146,7 @@ End Module
   
  Si abre `SampleDoc.docx` tras ejecutar este programa, puede ver que este programa ha convertido el primer párrafo del documento a mayúsculas.  
   
- Cuando se ejecuta con el documento XML abierto descrito en [crear Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo produce el siguiente resultado:  
+ Cuando se ejecuta con el documento de Open XML de ejemplo descrito en [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este ejemplo produce el siguiente resultado:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

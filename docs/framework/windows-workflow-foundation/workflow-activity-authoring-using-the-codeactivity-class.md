@@ -1,24 +1,28 @@
 ---
-title: "Crear actividad de flujo de trabajo mediante la clase CodeActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Crear actividad de flujo de trabajo mediante la clase CodeActivity
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f9894926ba93461d332eaac248c71d20ea4e7d30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Crear actividad de flujo de trabajo mediante la clase CodeActivity
+# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Crear actividad de flujo de trabajo mediante la clase CodeActivity
 Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pueden implementar el comportamiento imperativo básico al invalidar el método <xref:System.Activities.CodeActivity.Execute%2A>.  
   
-## Usar CodeActivityContext  
- Se puede tener acceso a las características del tiempo de ejecución del flujo de trabajo desde dentro del método <xref:System.Activities.CodeActivity.Execute%2A> usando los miembros del parámetro `context`, del tipo <xref:System.Activities.CodeActivityContext>.Las características disponibles mediante <xref:System.Activities.CodeActivityContext> incluyen lo siguiente:  
+## <a name="using-codeactivitycontext"></a>Usar CodeActivityContext  
+ Se puede tener acceso a las características del tiempo de ejecución del flujo de trabajo desde dentro del método <xref:System.Activities.CodeActivity.Execute%2A> usando los miembros del parámetro `context`, del tipo <xref:System.Activities.CodeActivityContext>. Las características disponibles mediante <xref:System.Activities.CodeActivityContext> incluyen lo siguiente:  
   
 -   Obtener y establecer los valores de variables y argumentos.  
   
@@ -26,15 +30,15 @@ Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pued
   
 -   Obtenga acceso a las propiedades de ejecución de la actividad con <xref:System.Activities.CodeActivityContext.GetProperty%2A>.  
   
-#### Para crear una actividad personalizada que herede de CodeActivity  
+#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Para crear una actividad personalizada que herede de CodeActivity  
   
 1.  Abra [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Seleccione **Archivo**, **Nuevo** y, a continuación, **Proyecto**.Seleccione **Workflow 4.0** debajo de **Visual C\#** en la ventana **Tipos de proyecto** y seleccione el nodo **v2010**.Seleccione **Biblioteca de actividad** en la ventana **Plantillas**.Dé al nuevo proyecto el nombre "HelloActivity".  
+2.  Seleccione **archivo**, **nueva**y, a continuación, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **biblioteca de actividades** en el **plantillas** ventana. Dé al nuevo proyecto el nombre "HelloActivity".  
   
-3.  Haga clic con el botón secundario en Activity.xaml en el proyecto HelloActivity y seleccione **Eliminar**.  
+3.  Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.  
   
-4.  Haga clic con el botón secundario en el proyecto HelloActivity y seleccione **Agregar** y después **Clase**.Dé a la nueva clase el nombre "HelloActivity.cs".  
+4.  Haga clic en el proyecto HelloActivity y seleccione **agregar** y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".  
   
 5.  En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.  
   
@@ -68,5 +72,4 @@ Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pued
         record.Data.Add(new KeyValuePair<String, Object>("ExecutionTime", DateTime.Now));  
         context.Track(record);  
     }  
-  
     ```

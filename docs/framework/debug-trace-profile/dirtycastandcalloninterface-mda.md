@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
 - dispatch-only mode
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 838348b3af485025ee196931237527333be73235
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: eebbf48f084a0c0125bf40e5e14b8c71c1b0a6ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>MDA de dirtyCastAndCallOnInterface
 El Asistente para la depuración administrada (MDA) `dirtyCastAndCallOnInterface` se activa cuando se intenta realizar una llamada enlazada en tiempo de compilación a través de una vtable en una interfaz de clase que se ha marcado solo como enlazada en tiempo de ejecución.  
@@ -65,6 +58,5 @@ El Asistente para la depuración administrada (MDA) `dirtyCastAndCallOnInterface
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

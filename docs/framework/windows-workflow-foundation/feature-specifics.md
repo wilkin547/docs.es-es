@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
 ms.openlocfilehash: 1e7a223248b574e30c266c3c9ac66bf317f1d19f
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] agrega una serie de características a Windows Workflow Foundation. Este documento describe algunas de las nuevas características y proporciona detalles sobre los escenarios en que pueden ser útiles.  
@@ -353,7 +352,7 @@ ms.lasthandoff: 09/25/2017
   
     1.  Se utiliza el perfil predeterminado.  
   
-    2.  Abra el Visor de eventos y habilite el canal analítico en el siguiente nodo: **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows **, **Servidor de aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro**.  
+    2.  Abra el Visor de eventos y habilite el canal analítico en el siguiente nodo: **Visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows** , **Servidor de aplicaciones**. Haga clic en **analítico** y seleccione **Habilitar registro**.  
   
     3.  Ejecute el servicio de flujo de trabajo.  
   
@@ -373,4 +372,3 @@ ms.lasthandoff: 09/25/2017
 2.  Ejemplos: [persistencia](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
 3.  Documentación conceptual: [almacén de instancias de flujo de trabajo de SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
-

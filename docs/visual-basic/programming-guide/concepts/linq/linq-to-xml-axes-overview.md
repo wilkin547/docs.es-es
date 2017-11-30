@@ -1,36 +1,31 @@
 ---
-title: "Información general sobre los ejes de LINQ to XML (Visual Basic) | Microsoft Docs"
+title: "Información general sobre los ejes de LINQ to XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ec77ddc5cf689fc0bcc4cf9faddb00201ca7b721
-ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
-
-
+ms.openlocfilehash: ae01d8c7257eb03d091a9e249475ef46a67a1c44
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Información general sobre los ejes de LINQ to XML (Visual Basic)
 Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, puede realizar consultas sobre él para encontrar elementos y atributos, así como para recuperar sus valores. Las colecciones se recuperan mediante los *métodos de eje*, también denominados *ejes*. Algunos de los ejes son métodos de las clases <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument>, que devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601>. Algunos de los métodos Axes son métodos de extensión de la clase <xref:System.Xml.Linq.Extensions>. Los ejes que se han implementado como métodos de extensión trabajan colecciones y devuelven colecciones.  
   
  Como se describe en [Información general acerca de la clase XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), un objeto <xref:System.Xml.Linq.XElement> representa un nodo de elemento único. El contenido de un elemento puede ser complejo (a veces conocido como contenido estructurado) o puede ser un elemento simple. Un elemento simple puede estar vacío o contener un valor. Si el nodo incluye contenido estructurado, puede utilizar diferentes métodos del eje para recuperar enumeraciones con los elementos descendientes. Los métodos de ejes que se utilizan con más frecuencia son <xref:System.Xml.Linq.XContainer.Elements%2A> y <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
- Además de los métodos de eje, que devuelven colecciones, existen otros dos métodos que usará con regularidad en consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve un único <xref:System.Xml.Linq.XElement>. El método <xref:System.Xml.Linq.XElement.Attribute%2A> devuelve un único <xref:System.Xml.Linq.XAttribute>.  
+ Además de los métodos de eje, que devuelven colecciones, existen otros dos métodos que usará con regularidad en consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve un único <xref:System.Xml.Linq.XElement>. El método <xref:System.Xml.Linq.XElement.Attribute%2A> devuelve un único <xref:System.Xml.Linq.XAttribute>.  
   
- Por diversas razones, las consultas de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] ofrecen el mecanismo más potente para examinar árboles, extraer datos de ellos y para transformarlos. Las consultas de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] trabajan sobre objetos que implementan <xref:System.Collections.Generic.IEnumerable%601> y los ejes [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> y <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>. Para poder realizar las consultas, necesitará estas colecciones.  
+ Por diversas razones, las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ofrecen el mecanismo más potente para examinar árboles, extraer datos de ellos y para transformarlos. Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] trabajan sobre objetos que implementan <xref:System.Collections.Generic.IEnumerable%601> y los ejes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> y <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>. Para poder realizar las consultas, necesitará estas colecciones.  
   
  A parte de los métodos de ejes que permiten recuperar colecciones de elementos y atributos, existen métodos de ejes que le permiten iterar por un árbol con gran detalle. Por ejemplo, en vez de tratar directamente con los elementos y los atributos, podría trabajar con los nodos del árbol. Los nodos tienen un nivel de granularidad mayor que los elementos y atributos. Si trabaja con nodos, podrá examinar comentarios XML, nodos de texto, instrucciones de procesamiento, etc. Esta funcionalidad resultaría interesante, por ejemplo, para una persona que estuviese escribiendo un procesador de textos y quisiera guardar los documentos en formato XML. No obstante, la mayoría de programadores en XML se centran más en los elementos, los atributos y sus valores.  
   
@@ -39,34 +34,34 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios dependientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran después de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren después de este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran antes que este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren antes que este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus antecesores. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus descendientes. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios dependientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran después de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren después de este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran antes que este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren antes que este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus antecesores. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus descendientes. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="method-for-retrieving-a-single-element"></a>Método para recuperar un único elemento  
  El siguiente método recupera un único elemento secundario a partir del objeto <xref:System.Xml.Linq.XElement>.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>|Devuelve el objeto del primer elemento <xref:System.Xml.Linq.XElement> secundario que tenga el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Devuelve el objeto del primer elemento <xref:System.Xml.Linq.XElement> secundario que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>Método para recuperar una colección de atributos  
  El siguiente método recupera atributos a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> de todos los atributos.|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> de todos los atributos.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>Método para recuperar un único atributo  
  El siguiente método recupera un único atributo a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>|Devuelve el <xref:System.Xml.Linq.XAttribute> que tenga el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Devuelve el <xref:System.Xml.Linq.XAttribute> que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Ejes de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

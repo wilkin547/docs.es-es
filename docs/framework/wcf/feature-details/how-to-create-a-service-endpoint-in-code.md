@@ -1,27 +1,33 @@
 ---
-title: "C&#243;mo crear un extremo de servicio en c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo crear un punto de conexión de servicio en código"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ae688c0f6de534db3e0cdc707bc56301ddb94c8a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo crear un extremo de servicio en c&#243;digo
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Cómo crear un punto de conexión de servicio en código
 En este ejemplo, se define un contrato de `ICalculator` para un servicio de la calculadora, el servicio se implementa en la clase `CalculatorService` y a continuación, su extremo se define mediante código, donde se especifica que el servicio debe utilizar la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código.Normalmente, no resulta muy práctico definir los extremos en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio.Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  
+ Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código. Normalmente, no resulta muy práctico definir los extremos en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  
   
-#### Creación de un extremo de servicio mediante código  
+#### <a name="to-create-a-service-endpoint-in-code"></a>Creación de un extremo de servicio mediante código  
   
 1.  Cree la interfaz que define el contrato de servicios.  
   
@@ -48,7 +54,7 @@ En este ejemplo, se define un contrato de `ICalculator` para un servicio de la c
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] los extremos predeterminados, vea [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los extremos predeterminados, consulte [configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## Vea también  
- [Cómo: Especificar un enlace de servicio en el código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+## <a name="see-also"></a>Vea también  
+ [Cómo especificar un enlace de servicio en el código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

@@ -1,27 +1,33 @@
 ---
-title: "Aplicar una transformaci&#243;n XSLT a un DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Aplicar una transformación XSL a un DataSet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Aplicar una transformaci&#243;n XSLT a un DataSet
-El método **WriteXml** del <xref:System.Data.DataSet> le permite escribir el contenido de un **DataSet** como datos XML.  Normalmente se transforma ese XML en otro formato mediante transformaciones XSL \(XSLT\).  Sin embargo, la sincronización de un **DataSet** con un <xref:System.Xml.XmlDataDocument> le permite aplicar una hoja de estilos de XSLT al contenido de un **DataSet** sin tener que escribir primero el contenido del **DataSet** como datos XML mediante **WriteXml**.  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a>Aplicar una transformación XSL a un DataSet
+El **WriteXml** método de la <xref:System.Data.DataSet> le permite escribir el contenido de un **conjunto de datos** como datos XML. Normalmente se transforma ese XML en otro formato mediante transformaciones XSL (XSLT). Sin embargo, la sincronización una **conjunto de datos** con una <xref:System.Xml.XmlDataDocument> le permite aplicar una hoja de estilos XSLT al contenido de un **conjunto de datos** sin tener que escribir primero el contenido de la  **Conjunto de datos** como datos XML mediante **WriteXml**.  
   
- En el siguiente ejemplo se llena un **DataSet** con tablas y relaciones, se sincroniza el **DataSet** con un **XmlDataDocument** y se escribe una parte del **DataSet** como un archivo HTML utilizando una hoja de estilos de XSLT.  A continuación se muestra el contenido de la hoja de estilos XSLT.  
+ El ejemplo siguiente rellena un **conjunto de datos** con tablas y relaciones, se sincroniza el **conjunto de datos** con una **XmlDataDocument**y se escribe una parte de la  **Conjunto de datos** como un archivo HTML utilizando una hoja de estilos XSLT. A continuación se muestra el contenido de la hoja de estilos XSLT.  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
   
 <xsl:template match="CustomerOrders">  
@@ -60,10 +66,10 @@ El método **WriteXml** del <xref:System.Data.DataSet> le permite escribir el co
 </xsl:stylesheet>  
 ```  
   
- En el código siguiente se rellena el **DataSet** y se aplica la hoja de estilos XSLT.  
+ El siguiente código rellena el **conjunto de datos** y se aplica la hoja de estilos XSLT.  
   
 > [!NOTE]
->  Si se aplica una hoja de estilos XSLT a un **DataSet** que contenga relaciones, se obtiene un mayor rendimiento al establecer la propiedad **Nested** de la <xref:System.Data.DataRelation> como **true** para cada relación anidada.  Esto le permite utilizar hojas de estilos XSLT que implementan un procesamiento natural, de arriba abajo, para navegar por la jerarquía y transformar los datos, en lugar de utilizar ejes de ubicación XPath de rendimiento intensivo \(por ejemplo, el elemento anterior y el siguiente en expresiones de prueba de nodos de la hoja de estilos\) para navegar por ésta.  Para obtener más información sobre las relaciones anidadas, vea [Anidar DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+>  Si va a aplicar una hoja de estilos XSLT a un **conjunto de datos** que contenga relaciones, conseguirá un rendimiento óptimo si establece la **Nested** propiedad de la <xref:System.Data.DataRelation> a **true**para cada relación anidada. Esto le permite utilizar hojas de estilos XSLT que implementan un procesamiento natural, de arriba abajo, para navegar por la jerarquía y transformar los datos, en lugar de utilizar ejes de ubicación XPath de rendimiento intensivo (por ejemplo, el elemento anterior y el siguiente en expresiones de prueba de nodos de la hoja de estilos) para navegar por ésta. Para obtener más información sobre las relaciones anidadas, vea [anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -127,6 +133,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## Vea también  
- [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

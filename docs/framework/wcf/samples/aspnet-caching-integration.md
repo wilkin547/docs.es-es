@@ -1,72 +1,75 @@
 ---
-title: "Integraci&#243;n de almacenamiento en cach&#233; de ASP.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Integración de almacenamiento en caché de ASP.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a8830f1c19b7a91d6c22d3b5955624c7d8a86f5f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Integraci&#243;n de almacenamiento en cach&#233; de ASP.NET
-En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF.  Vea el ejemplo de [Servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) para obtener una versión autohospedada de este escenario que explique la implementación del servicio a fondo.  Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.  
+# <a name="aspnet-caching-integration"></a>Integración de almacenamiento en caché de ASP.NET
+En este ejemplo se muestra cómo utilizar la memoria caché de resultados de ASP.NET con el modelo de programación HTTP wEB de WCF. Vea la [servicio de recurso básico](../../../../docs/framework/wcf/samples/basic-resource-service.md) ejemplo para obtener una versión de este escenario que se explica la implementación del servicio en profundidad hospedada por sí mismo. Este tema se centra en la característica de integración de la memoria caché de resultados de ASP.NET.  
   
-## Demostraciones  
+## <a name="demonstrates"></a>Demostraciones  
  Integración con la memoria caché de resultados de ASP.NET  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
-## Explicación  
- En el ejemplo se utiliza <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> para utilizar el almacenamiento en la memoria caché de resultados de ASP.NET con el servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> se aplica a las operaciones de servicio y proporciona el nombre de un perfil de la memoria caché en un archivo de configuración que se debería aplicar a las respuestas de la operación dada.  
+## <a name="discussion"></a>Explicación  
+ En el ejemplo se utiliza <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> para utilizar el almacenamiento en la memoria caché de resultados de ASP.NET con el servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> se aplica a las operaciones de servicio y proporciona el nombre de un perfil de la memoria caché en un archivo de configuración que se debería aplicar a las respuestas de la operación dada.  
   
- En el archivo Service.cs del proyecto Servicio del ejemplo, ambas operaciones, `GetCustomers` y `GetCustomer`, se marcan con <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, que proporciona el nombre del perfil de la memoria caché "CacheFor60Seconds".  En el archivo Web.config del proyecto Servicio, el perfil de la memoria caché "CacheFor60Seconds" se proporciona bajo el elemento \<`caching`\> de \<`system.web`\>.  Para este perfil de la memoria caché, el valor del atributo `duration` es "60", de modo que las respuestas asociadas a este perfil están almacenadas en la memoria caché, en la caché de resultados de ASP.NET durante 60 segundos.  Además, para este perfil de la memoria caché, el atributo `varmByParam` se establece en "format" de modo que las solicitudes con valores diferentes para el parámetro de cadena de consulta `format` tengan sus respuestas almacenadas en memoria caché de forma independiente.  Por último, el atributo `varyByHeader` del perfil de la memoria caché se establece en "Accept", de modo que las solicitudes con diferentes valores de encabezado Accept tienen sus respuestas almacenadas en memoria caché separadamente.  
+ En el archivo Service.cs del proyecto de servicio de ejemplo, tanto la `GetCustomer` y `GetCustomers` operaciones se marcan con la <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, que proporciona el nombre del perfil de caché "CacheFor60Seconds". En el archivo Web.config del proyecto de servicio, el perfil de caché "CacheFor60Seconds" se proporciona en el <`caching`> elemento de <`system.web`>. Para este perfil de caché, el valor de la `duration` atributo es "60", por lo que las respuestas asociadas con este perfil se almacenan en caché en la caché de resultados ASP.NET durante 60 segundos. Además, para este perfil de caché, el `varmByParam` atributo está establecido en "format" de modo que las solicitudes con valores diferentes para el `format` consulta al parámetro de cadena tienen sus respuestas en caché por separado. Por último, el perfil de caché `varyByHeader` atributo está establecido en "Accept", por lo que las solicitudes con diferentes valores de encabezado Accept tienen sus respuestas en caché por separado.  
   
- Program.cs en el proyecto cliente muestra el modo en que se puede crear este tipo de cliente utilizando <xref:System.Net.HttpWebRequest>.  Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF.  También es posible tener acceso al servicio utilizando otras clases de .NET Framework como el generador de canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y <xref:System.Net.WebClient>.  Otros ejemplos del SDK \(como [Servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) y [Selección de formato automática](../../../../docs/framework/wcf/samples/automatic-format-selection.md)\) ilustran cómo utilizar estas clases para comunicarse con un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Program.cs en el proyecto cliente muestra el modo en que se puede crear este tipo de cliente utilizando <xref:System.Net.HttpWebRequest>. Observe que se trata simplemente de una manera de tener acceso a un servicio de WCF. También es posible tener acceso al servicio utilizando otras clases de .NET Framework como el generador de canales de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y <xref:System.Net.WebClient>. Otros ejemplos del SDK (como el [servicio HTTP básico](../../../../docs/framework/wcf/samples/basic-http-service.md) ejemplo y la [la selección automática de formato](../../../../docs/framework/wcf/samples/automatic-format-selection.md) ejemplo) muestran cómo utilizar estas clases para comunicarse con un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] servicio.  
   
-## Para ejecutar el ejemplo  
+## <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
  El ejemplo consta de tres proyectos:  
   
--   **Servicio**: proyecto de aplicación web que incluye un servicio HTTP WCF hospedado en ASP.NET.  
+-   **Servicio**: proyecto de aplicación Web que incluye un servicio HTTP WCF hospedado en ASP.NET.  
   
--   **Cliente**: proyecto de aplicación de consola que realiza las llamadas al servicio.  
+-   **Cliente**: un proyecto de aplicación de consola que realiza llamadas al servicio.  
   
--   **Común**: biblioteca compartida que contiene el tipo Customer utilizado por el cliente y el servicio.  
+-   **Common**: una biblioteca compartida que contiene el tipo de cliente utilizado por el cliente y el servicio.  
   
  Cuando se ejecuta la aplicación de consola Cliente, el cliente realiza las solicitudes al servicio y escribe la información pertinente de las respuestas en la ventana de la consola.  
   
-#### Para ejecutar el ejemplo  
+#### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   
 1.  Abra la solución para obtener el ejemplo de integración del almacenamiento en caché de ASP.NET.  
   
-2.  Presione Ctrl\+MAYÚS\+B para compilar la solución.  
+2.  Presione Ctrl+MAYÚS+B para compilar la solución.  
   
-3.  Si no está abierta aún, presione CTRL\+W\+S para abrir la ventana del **Explorador de soluciones**.  
+3.  Si el **el Explorador de soluciones** ventana ya no está abierta, presione CTRL + W + S.  
   
-4.  En la ventana del  **Explorador de soluciones**, haga clic con el botón secundario en el proyecto **Servicio** y seleccione **Iniciar nueva instancia**.  De esta forma se inicia el servidor de desarrollo de ASP.NET, que hospeda el servicio.  
+4.  Desde el **el Explorador de soluciones** (ventana), haga clic derecho el **servicio** de proyecto y seleccione **Iniciar nueva instancia**. De esta forma se inicia el servidor de desarrollo de ASP.NET, que hospeda el servicio.  
   
-5.  En la ventana del  **Explorador de soluciones**, haga clic con el botón secundario en el proyecto **Cliente** y seleccione **Iniciar nueva instancia**.  
+5.  Desde el **el Explorador de soluciones** (ventana), haga clic derecho el **cliente** de proyecto y seleccione **Iniciar nueva instancia**.  
   
-6.  La ventana de la consola del cliente aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este.  Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador.  
+6.  La ventana de la consola del cliente aparece y proporciona el URI del servicio en ejecución y el URI de la página de Ayuda HTML para este. Puede ver la página de Ayuda HTML en cualquier momento escribiendo su URI en un explorador.  
   
 7.  A medida que el ejemplo se ejecuta, el cliente escribe el estado de la actividad actual.  
   
 8.  Presione cualquier tecla para terminar la aplicación de consola del cliente.  
   
-9. Presione MAYÚS\+F5 para dejar de depurar el servicio.  
+9. Presione MAYÚS+F5 para dejar de depurar el servicio.  
   
-10. En el Área de notificación de Windows, haga clic con el botón secundario en el icono del servidor de desarrollo de ASP.NET y seleccione **Detener**.
+10. En el área de notificación de Windows, haga clic con el icono del servidor de desarrollo de ASP.NET y seleccione **detener**.

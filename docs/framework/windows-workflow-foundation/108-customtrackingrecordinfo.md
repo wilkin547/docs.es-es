@@ -1,49 +1,53 @@
 ---
-title: "108 - CustomTrackingRecordInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 108 - CustomTrackingRecordInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5bee501e-4e00-42cd-b949-e88009c3d4e8
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fbbae172ea5030b44656dfe850cddfd498764fed
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 108 - CustomTrackingRecordInfo
-## Propiedades  
+# <a name="108---customtrackingrecordinfo"></a>108 - CustomTrackingRecordInfo
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|108|  
 |Palabras clave|UserEvents, EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
 |Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  El participante de seguimiento de ETW emite este evento cuando una actividad dentro de una instancia de flujo de trabajo emite CustomTrackingRecord con información de nivel.  
   
-## Mensaje  
- TrackRecord \= CustomTrackingRecord, InstanceID \= %1, RecordNumber\=%2, EventTime\=%3,  Name\=%4, ActivityName\=%5, ActivityId\=%6, ActivityInstanceId\=%7, ActivityTypeName\=%8, Data\=%9, Annotations\=%10, ProfileName \= %11  
+## <a name="message"></a>Mensaje  
+ TrackRecord = CustomTrackingRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityName=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Data=%9, Annotations=%10, ProfileName = %11  
   
-## Detalles  
+## <a name="details"></a>Detalles  
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
+|--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|El id. de instancia del flujo de trabajo.|  
 |RecordNumber|xs:long|El número de secuencia del registro emitido.|  
 |EventTime|xs:dateTime|La hora en UTC cuando se emitió el evento.|  
 |Name|xs:string|El nombre de la clase CustomTrackingRecord.|  
 |ActivityName|xs:string|El nombre de la actividad que emitió la clase CustomTrackingRecord.|  
 |ActivityId|xs:string|El id. de la actividad que emitió la clase CustomTrackingRecord.|  
-|ActivityInstanceId|xs:string|El id. de instancia de la actividad que emitió la clase CustomTrackingRecord.|  
+|ActivityInstance|xs:string|El id. de instancia de la actividad que emitió la clase CustomTrackingRecord.|  
 |ActivityTypeName|xs:string|El nombre de la actividad que emitió la clase CustomTrackingRecord.|  
-|Data|xs:string|Los datos a los que se realizó el seguimiento con este evento.Los valores están almacenados en un elemento de xml con el formato \<items\>\< item  name \= "dataName" type\="System.String"\>dataValue\<\/item\>\<\/items\>.Si no se realizara el seguimiento de ningún dato, la cadena contendría \<items\/\>.El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de los datos con \<items\>...\<\/items.\>Los tipos siguientes están almacenados como valores posibles ya que los devuelve ToString\(\); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime.Todos los demás tipos se serializan con System.Runtime.Serialization.NetDataContractSerializer.|  
-|Annotations|xs:string|Las anotaciones que se agregaron a este evento.Los valores se almacenan en un elemento xml con el formato\<items\>\< item  name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>.Si no se especifica ninguna anotación, la cadena contendrá \<items\/\>.El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW.Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<items\>...\<\/items.\>|  
+|Datos|xs:string|Los datos a los que se realizó el seguimiento con este evento.  Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "dataName" Type = "> dataValue\</artículo > \< /artículos >.  Si no se realizara el seguimiento de ningún dato, la cadena contiene \<elementos / >. El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW. Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de datos con \<elementos >...  \< /artículos >.  Los tipos siguientes están almacenados como valores posibles ya que los devuelve ToString(); string,char,bool,int,short,long,uint,ushort,ulong,System.Single,float,double,System.Guid,System.DateTimeOffset,System.DateTime.  Todos los demás tipos se serializan con System.Runtime.Serialization.NetDataContractSerializer.|  
+|Anotaciones|xs:string|Las anotaciones que se agregaron a este evento.  Los valores se almacenan en un elemento xml con el formato \<elementos >\< nombre de elemento = "annotationName" Type = "> annotationValue\</artículo > \< /artículos >.  Si se especifica ninguna anotación, a continuación, la cadena contiene \<elementos / >. El tamaño del evento ETW está limitado por el tamaño de búfer de ETW o la carga útil máxima para un evento ETW. Si el tamaño del evento supera los límites de ETW, el evento se trunca quitando las anotaciones y reemplazando el valor de anotación con \<elementos >...  \< /artículos >.|  
 |ProfileName|xs:string|El nombre o el perfil de seguimiento que dio como resultado que se emitiera este evento.|  
-|HostReference|xs:string|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.Su formato se define como 'Ruta de acceso virtual de la aplicación del nombre del sitio web&#124;Ruta de acceso virtual del servicio&#124;NombreServicio' Ejemplo: 'Sitio web predeterminado\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
+|HostReference|xs:string|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.  El formato se define como ' ruta de acceso Virtual de sitio Web de nombre de aplicación &#124; Ruta de acceso Virtual del servicio &#124; NombreServicio ' ejemplo: ' sitio Web/CalculatorApplication &#124;/CalculatorService.svc &#124; predeterminada CalculatorService'|  
 |AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|

@@ -1,29 +1,25 @@
 ---
-title: "Cómo: cambiar el Namespace para un árbol XML completo (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: cambiar el Namespace para todo un árbol XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: af216e734c85806056e37d92733a3e4d49f8b73c
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 1c5ee83840f9d8b4105e7af53008a329dfde37d3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Cómo: cambiar el Namespace para un árbol XML completo (Visual Basic)
-En ocasiones, tendrá que cambiar, mediante programación, el espacio de nombres de un elemento o de un atributo. Esto resulta sencillo con LINQ to XML. El <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>se puede establecer la propiedad.</xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> El <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>no se puede establecer la propiedad, pero puede copiar fácilmente los atributos en un <xref:System.Collections.Generic.List%601?displayProperty=fullName>, quite los atributos existentes y, a continuación, agregar nuevos atributos que se encuentran en el espacio de nombres deseado.</xref:System.Collections.Generic.List%601?displayProperty=fullName> </xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Cómo: cambiar el Namespace para todo un árbol XML (Visual Basic)
+En ocasiones, tendrá que cambiar, mediante programación, el espacio de nombres de un elemento o de un atributo. Esto resulta sencillo con LINQ to XML. Es posible modificar la propiedad <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. No es posible modificar la propiedad <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, pero es posible copiar con facilidad los atributos en un <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, eliminar los atributos existentes y, a continuación, agregar los atributos nuevos que se encuentran en el espacio de nombres deseado.  
   
  Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   

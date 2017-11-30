@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - type equivalence
 - embedded interop types
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9a7b39047edcd8e2c770e17a33dd73e75ee5083
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4b29ed1c3659b1705640888ded5fe21432dc6ada
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalencia de tipos y tipos de interoperabilidad incrustados
 A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Common Language Runtime admite la incrustación de información de tipos COM directamente en ensamblados administrados, en lugar de exigir a los ensamblados administrados obtener información de tipos COM de ensamblados de interoperabilidad. Dado que la información de tipos incrustada solo incluye los tipos y miembros que realmente usa un ensamblado administrado, dos ensamblados administrados pueden tener vistas muy diferentes del mismo tipo COM. Cada ensamblado administrado tiene un objeto <xref:System.Type> diferente para representar su vista del tipo COM. Common Language Runtime admite la equivalencia de tipos entre estas distintas vistas de interfaces, estructuras, enumeraciones y delegados.  
@@ -53,9 +46,9 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Comm
   
  Si un tipo no tiene el atributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute>, o si tiene un atributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> que no especifica ámbito ni identificador, se puede seguir considerando para la equivalencia como se indica a continuación:  
   
--   En las interfaces se usa el valor de la propiedad <xref:System.Runtime.InteropServices.GuidAttribute> en lugar de <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=fullName> y se emplea la propiedad <xref:System.Type.FullName%2A?displayProperty=fullName> (es decir, el nombre del tipo, incluido el espacio de nombres) en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=fullName>.  
+-   En las interfaces se usa el valor de la propiedad <xref:System.Runtime.InteropServices.GuidAttribute> en lugar de <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=nameWithType> y se emplea la propiedad <xref:System.Type.FullName%2A?displayProperty=nameWithType> (es decir, el nombre del tipo, incluido el espacio de nombres) en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=nameWithType>.  
   
--   En estructuras, enumeraciones y delegados, se usa el elemento <xref:System.Runtime.InteropServices.GuidAttribute> del ensamblado contenedor en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> y se emplea la propiedad <xref:System.Type.FullName%2A?displayProperty=fullName> en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>.  
+-   En estructuras, enumeraciones y delegados, se usa el elemento <xref:System.Runtime.InteropServices.GuidAttribute> del ensamblado contenedor en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> y se emplea la propiedad <xref:System.Type.FullName%2A?displayProperty=nameWithType> en lugar de la propiedad <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>.  
   
 <a name="type_equiv"></a>   
 ### <a name="marking-com-types-for-type-equivalence"></a>Marcado de tipos COM para la equivalencia de tipos  
@@ -66,7 +59,6 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Comm
 -   Convierta el tipo en un tipo de importación de COM. Una interfaz es un tipo de importación de COM si tiene el atributo <xref:System.Runtime.InteropServices.ComImportAttribute>. Una interfaz, una estructura, una enumeración o un delegado es un tipo de importación de COM si el ensamblado en el que se define tiene el atributo <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Type.IsEquivalentTo%2A>   
- [Utilizar tipos COM en código administrado](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
+ <xref:System.Type.IsEquivalentTo%2A>  
+ [Utilizar tipos COM en código administrado](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [Importar una biblioteca de tipos como un ensamblado](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-

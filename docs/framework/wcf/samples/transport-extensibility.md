@@ -1,30 +1,33 @@
 ---
-title: "Extensibilidad de transporte | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Extensibilidad de transporte
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3c9108be-f60f-4035-9f57-1da58c325420
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3351da4b7eeb319a9d2fb395874d1c3866a2ef5f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Extensibilidad de transporte
+# <a name="transport-extensibility"></a>Extensibilidad de transporte
 Esta sección contiene ejemplos que muestran los transportes personalizados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Activación UDP](../../../../docs/framework/wcf/samples/udp-activation.md)  
- Se explica cómo ampliar el ejemplo [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) para admitir la activación del proceso usando el Servicio de activación de procesos de Windows \(WAS\).  
+ Muestra cómo extender el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo para admitir la activación de procesos mediante Windows Process Activation Service (WAS).  
   
- [Transporte: transacciones personalizadas sobre UDP](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)  
+ [Transporte: Transacciones personalizadas sobre UDP](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)  
  Muestra cómo ampliar el ejemplo de transporte UDP para admitir el flujo de transacción personalizado y el uso de la propiedad <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
- [Transporte: interoperabilidad de WSE 3.0 TCP](../../../../docs/framework/wcf/samples/transport-wse-3-0-tcp-interoperability.md)  
+ [Transporte: Interoperabilidad WSE 3.0 TCP](../../../../docs/framework/wcf/samples/transport-wse-3-0-tcp-interoperability.md)  
  Este ejemplo muestra cómo implementar una sesión dúplex TCP como un transporte [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] personalizado.

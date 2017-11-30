@@ -1,43 +1,46 @@
 ---
-title: "218 - ClientOperationCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 218 - ClientOperationCompleted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b069bced-7bb2-4e01-8227-e5dbda17af09
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ea826aa99e847f74c5a44113f2ae16d7322873f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 218 - ClientOperationCompleted
-## Propiedades  
+# <a name="218---clientoperationcompleted"></a>218 - ClientOperationCompleted
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|218|  
-|Palabras clave|Solución de problemas, ServiceModel|  
+|Palabras clave|Troubleshooting, ServiceModel|  
 |Nivel|Información|  
-|Canal|Microsoft\-Windows\-Servidor de aplicaciones\-Aplicaciones\/Analítico|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
- Los clientes emiten este evento justo después de finalizar una operación.Para las operaciones unidireccionales, esto es en cuanto se haya enviado correctamente el mensaje.Para las operaciones de solicitud\-respuesta, esto es una vez recibida la respuesta.  
+## <a name="description"></a>Descripción  
+ Los clientes emiten este evento justo después de finalizar una operación. Para las operaciones unidireccionales, esto es en cuanto se haya enviado correctamente el mensaje. Para las operaciones de solicitud-respuesta, esto es una vez recibida la respuesta.  
   
-## Mensaje  
- El cliente ha terminado de ejecutar la acción '%1' asociada al contrato '%2'.El mensaje se envió a '%3'.  
+## <a name="message"></a>Mensaje  
+ El cliente ha terminado de ejecutar la acción '%1' asociada al contrato '%2'. El mensaje se envió a '%3'.  
   
-## Detalles  
+## <a name="details"></a>Detalles  
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|Action|xs:string|El encabezado de acción de SOAP del mensaje saliente.|  
-|Contract Name|`xs:string`|El nombre del contrato.Ejemplo: ICalculadora.|  
-|Destination|`xs:string`|La dirección del extremo de servicio a la que se ha enviado el mensaje.|  
-|HostReference|`xs:string`|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web.El formato se define como 'Ruta de acceso virtual de la aplicación del nombre del sitio web&#124;Ruta de acceso virtual del servicio&#124;NombreServicio'.Ejemplo: 'Sitio web predeterminado\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'.|  
+|--------------------|--------------------|-----------------|  
+|Acción|xs:string|El encabezado de acción de SOAP del mensaje saliente.|  
+|Contract Name|`xs:string`|El nombre del contrato. Ejemplo: ICalculadora.|  
+|Destino|`xs:string`|La dirección del punto de conexión de servicio a la que se ha enviado el mensaje.|  
+|HostReference|`xs:string`|En el caso de los servicios hospedados en web, este campo identifica de manera única el servicio en la jerarquía web. El formato se define como ' ruta de acceso Virtual de sitio Web de nombre de aplicación &#124; Ruta de acceso Virtual del servicio &#124; ServiceName'. Ejemplo: ' sitio Web/CalculatorApplication &#124;/CalculatorService.svc &#124; predeterminada CalculatorService'.|  
 |AppDomain|`xs:string`|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|

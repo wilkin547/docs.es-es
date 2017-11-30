@@ -7,31 +7,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a23a2690b0df30eaa815d0b321200af3a3403e5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 696aeb619f14a5ebe9a760cbd78a0d0fa876edc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
 En el ejemplo de código siguiente se muestra cómo modificar el archivo de configuración de equipo, *machine.config*, para permitir la compatibilidad con IPv6. El archivo *machine.config* se almacena en la carpeta *%Windir%\Microsoft.NET\Framework* en el directorio donde se ha instalado Windows. Hay un archivo *machine.config* distinto en las carpetas bajo *%Windir%\Microsoft.NET\Framework* para cada versión de .NET Framework instalada en el equipo (por ejemplo, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
   
  Estos valores se pueden crear también en el archivo de configuración de la aplicación, que tiene prioridad sobre el archivo de configuración del equipo.  
   
- Para .NET Framework versión 1.1 y anterior, el valor del modificador de la configuración **ipv6 enabled** especifica si los miembros de la clase <xref:System.Net.Dns?displayProperty=fullName> devuelven las direcciones de IPv6.  
+ Para .NET Framework versión 1.1 y anterior, el valor del modificador de la configuración **ipv6 enabled** especifica si los miembros de la clase <xref:System.Net.Dns?displayProperty=nameWithType> devuelven las direcciones de IPv6.  
   
- En la versión 2.0 de .NET Framework y versiones posteriores, si Windows admite IPv6, entonces todos los miembros de la clase <xref:System.Net.Dns?displayProperty=fullName> (por ejemplo, el método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName>), devolverán las direcciones de IPv6 con una limitación. Los miembros obsoletos de la clase <xref:System.Net.Dns?displayProperty=fullName> (por ejemplo, el método <xref:System.Net.Dns.Resolve%2A?displayProperty=fullName>) leerán y reconocerán el valor en el archivo de configuración.  
+ En la versión 2.0 de .NET Framework y versiones posteriores, si Windows admite IPv6, entonces todos los miembros de la clase <xref:System.Net.Dns?displayProperty=nameWithType> (por ejemplo, el método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>), devolverán las direcciones de IPv6 con una limitación. Los miembros obsoletos de la clase <xref:System.Net.Dns?displayProperty=nameWithType> (por ejemplo, el método <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) leerán y reconocerán el valor en el archivo de configuración.  
   
 > [!NOTE]
 >  En la versión 2.0 de .NET Framework y versiones posteriores, IPv6 está habilitada de manera predeterminada. Para .NET Framework versión 1.1 y anteriores, IPv6 está deshabilitada de manera predeterminada.  
@@ -51,7 +45,6 @@ En el ejemplo de código siguiente se muestra cómo modificar el archivo de conf
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Direccionamiento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)   
- [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)   
+ [Direccionamiento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)  
+ [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [Elemento \<ipv6> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
-

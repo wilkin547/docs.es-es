@@ -1,33 +1,29 @@
 ---
-title: Crear el documento de origen Office Open XML (Visual Basic) | Documentos de Microsoft
+title: Crear el documento XML abierto de Office de origen (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 928a3c34836464e7603c485b64c9c426913ae7b2
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c573f703ea3d7550dabd994f538e28e197874715
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Crear el documento de origen Office Open XML (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Crear el documento XML abierto de Office de origen (Visual Basic)
 En este tema se muestra cómo crear el documento WordprocessingML XML abierto de Office que usan los otros ejemplos de este tutorial. Si sigue estas instrucciones, su resultado coincidirá con el resultado proporcionado en cada ejemplo.  
   
  No obstante, los ejemplos de este tutorial funcionarán con cualquier documento WordprocessingML válido.  
   
- Para crear el documento que se utiliza en este tutorial, debe tener Microsoft Office 2007 o posterior instalado, o debe tener Microsoft Office 2003 con el paquete de compatibilidad de Microsoft Office para Word, Excel y formatos de archivo de PowerPoint 2007.  
+ Para crear el documento que se usa en este tutorial, debe tener Microsoft Office 2007 o posterior instalado o bien tener Microsoft Office 2003 con el paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint 2007.  
   
 ## <a name="creating-the-wordprocessingml-document"></a>Crear el documento WordprocessingML  
   
@@ -64,7 +60,7 @@ En este tema se muestra cómo crear el documento WordprocessingML XML abierto de
 6.  Guarde el documento y déle el nombre SampleDoc.docx.  
   
     > [!NOTE]
-    >  Si está utilizando Microsoft Word 2003, seleccione **documento de Word 2007** en el **Guardar como tipo** lista desplegable.  
+    >  Si está usando Microsoft Word 2003, seleccione **Documento de Word 2007** en la lista desplegable **Guardar como tipo**.  
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

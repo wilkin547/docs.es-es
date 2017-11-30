@@ -1,6 +1,6 @@
 ---
 title: Funciones (F#)
-description: Funciones (F#)
+description: "Obtenga información acerca de las funciones en F # y cómo F # admite construcciones comunes de programación funcionales."
 keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 7a5fff4746157b430c6f1a492c23e9ea3d7b82c3
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9750e37647a3e382c7a8308c3ffede15729012d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="functions"></a>Funciones
 
 Las funciones son la unidad fundamental de la ejecución del programa en cualquier lenguaje de programación. Al igual que en otros lenguajes, una función de F# tiene un nombre, puede tener parámetros y tomar argumentos, y tiene un cuerpo. F# también admite construcciones de programación funcional como el tratamiento de las funciones como valores, el uso de funciones sin nombre en expresiones, la composición de funciones para crear nuevas funciones, funciones currificadas y la definición implícita de funciones mediante la aplicación parcial de argumentos de función.
@@ -116,7 +115,7 @@ Después, se proporcionaría el argumento adicional según sea necesario para la
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>Funciones recursivas
-Las *funciones recursivas* son funciones que se llaman a sí mismas. Requieren que se especifique la palabra clave **rec** después de la palabra clave **let**. La función recursiva se invoca desde el interior del cuerpo de la función de la misma forma que se invocaría cualquier llamada de función. La siguiente función recursiva calcula el número *n* de Fibonacci. La secuencia de números de Fibonacci se conoce desde la antigüedad y es una secuencia en la que cada número sucesivo es la suma de los dos números anteriores en la secuencia.
+Las *funciones recursivas* son funciones que se llaman a sí mismas. Requieren que se especifique la palabra clave **rec** después de la palabra clave **let**. La función recursiva se invoca desde el interior del cuerpo de la función de la misma forma que se invocaría cualquier llamada de función. La siguiente función recursiva calcula el  *n* número de Fibonacci. La secuencia de números de Fibonacci se conoce desde la antigüedad y es una secuencia en la que cada número sucesivo es la suma de los dos números anteriores en la secuencia.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -188,11 +187,11 @@ let result2 = Compose2 2
 
 // Pipelining
 // Pipeline operator
-// ( <| ) : ('T -> 'U) -> 'T -> 'U
+// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
 let Pipeline1 x = addOne <| timesTwo x
 
 // Backward pipeline operator
-// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
+// ( <| ) : ('T -> 'U) -> 'T -> 'U
 let Pipeline2 x = addOne x |> timesTwo
 
 // Result is 5
@@ -210,4 +209,3 @@ Los métodos de un tipo se pueden sobrecargar, pero no las funciones. Para más 
 [Valores](../values/index.md)
 
 [Referencia del lenguaje F#](../index.md)
-

@@ -1,106 +1,109 @@
 ---
-title: "Seguridad del mensaje mediante Message Queuing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguridad de mensajes mediante Message Queuing
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: 22
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 6e3d87ab31b7a0910b270e81c28985ffe9279d4c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Seguridad del mensaje mediante Message Queuing
-Este ejemplo muestra cómo implementar una aplicación que utiliza WS\-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ.En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.  
+# <a name="message-security-over-message-queuing"></a>Seguridad de mensajes mediante Message Queuing
+Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ. En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.  
   
- Este ejemplo se basa en el ejemplo [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).Los mensajes se cifran y firman.  
+ En este ejemplo se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. Los mensajes se cifran y firman.  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente.Si la cola no está presente, el servicio creará una.Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ.Siga estos pasos para crear una cola en Windows 2008.  
+2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.  
   
     1.  Abra el Administrador del servidor en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Expanda la pestaña **Características**.  
+    2.  Expanda el **características** ficha.  
   
-    3.  Haga clic con el botón secundario en **Cola de mensajes privados** y seleccione **Nuevo**, **Cola privada**.  
+    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.  
   
-    4.  Active la casilla **Transaccional**.  
+    4.  Compruebe el **transaccional** cuadro.  
   
-    5.  Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.  
+    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.  
   
-3.  Para compilar el código de la edición .NET de C\# o Visual Basic de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-### Para ejecutar el ejemplo en el mismo equipo  
+### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
 1.  Asegúrese de que la ruta de acceso incluye la carpeta que contiene Makecert.exe y FindPrivateKey.exe.  
   
-2.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo.Esto instala todos los certificados requeridos para ejecutar el ejemplo.  
+2.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  Asegúrese de que quita los certificados ejecutando Cleanup.bat cuando haya terminado con el ejemplo.Otros ejemplos de seguridad usan los mismos certificados.  
+    >  Asegúrese de que quita los certificados ejecutando Cleanup.bat cuando haya terminado con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
   
-3.  Inicie Service.exe desde \\service\\bin.  
+3.  Inicie Service.exe desde \service\bin.  
   
-4.  Inicie Client.exe desde \\client\\bin.La actividad del cliente se muestra en la aplicación de consola del cliente.  
+4.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-5.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### Para ejecutar el ejemplo en varios equipos  
+### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
 1.  Copie también los archivos Setup.bat, Cleanup.bat e ImportClientCert.bat en el equipo del servicio.  
   
 2.  Cree un directorio en el equipo cliente para los archivos binarios del cliente.  
   
-3.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente.Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
+3.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-4.  En el servidor, ejecute `setup.bat service`.Al ejecutar `setup.bat` con el argumento `service` se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.  
+4.  En el servidor, ejecute `setup.bat service`. Ejecuta `setup.bat` con el `service` argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.  
   
-5.  Edite el archivo service.exe.config del servicio para reflejar el nuevo nombre del certificado \(en el atributo `findValue` de [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\), que es igual que el nombre de dominio completo del equipo.  
+5.  Editar service.exe.config del servicio para reflejar el nuevo nombre de certificado (en el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo.  
   
 6.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-7.  En el cliente, ejecute `setup.bat client`.Al ejecutar `setup.bat` con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.  
+7.  En el cliente, ejecute `setup.bat client`. Al ejecutar `setup.bat`con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.También debe cambiar el nombre del certificado del servicio para que sea igual que el nombre de dominio completo del equipo del servicio \(en el atributo `findValue` del elemento `defaultCertificate` de `serviceCertificate`, bajo `clientCredentials`\).  
+8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.  También debe cambiar el nombre del certificado del servicio para que sea igual que el nombre de dominio completo del equipo del servicio (en el atributo `findValue` del elemento `defaultCertificate` de `serviceCertificate`, bajo `clientCredentials`).  
   
 9. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
   
-10. En el cliente, ejecute `ImportServiceCert.bat`.De esta forma se importa el certificado del servicio desde el archivo Service.cer al almacén CurrentUser \- TrustedPeople.  
+10. En el cliente, ejecute `ImportServiceCert.bat`. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
   
-11. En el servidor, ejecute `ImportClientCert.bat`. De esta manera se importa el certificado de cliente del archivo Client.cer en el almacén LocalMachine \- TrustedPeople.  
+11. En el servidor, ejecute `ImportClientCert.bat`. De esta manera se importa el certificado de cliente del archivo Client.cer en el almacén LocalMachine - TrustedPeople.  
   
 12. En el equipo del servicio, inicie Service.exe desde el símbolo del sistema.  
   
-13. En el equipo cliente, inicie Client.exe desde el símbolo del sistema.Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. En el equipo cliente, inicie Client.exe desde el símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### Para limpiar después del ejemplo  
+### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 -   Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos.Si ha ejecutado ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en varios equipos, asegúrese de borrar los certificados del servicio que se hayan instalado en el almacén CurrentUser \- TrustedPeople.Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en varios equipos, asegúrese de borrar los certificados del servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Este ejemplo exige que MSMQ se instale y se ejecute.  
   
-## Demostraciones  
- El cliente cifra el mensaje mediante la clave pública del servicio y firma el mensaje con su propio certificado.El servicio que lee el mensaje de la cola autentica el certificado de cliente con el certificado en su almacén de personas de confianza.Después descifra el mensaje y lo envía a la operación de servicio.  
+## <a name="demonstrates"></a>Demostraciones  
+ El cliente cifra el mensaje mediante la clave pública del servicio y firma el mensaje con su propio certificado. El servicio que lee el mensaje de la cola autentica el certificado de cliente con el certificado en su almacén de personas de confianza. Después descifra el mensaje y lo envía a la operación de servicio.  
   
- Dado que el mensaje de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se lleva como carga útil en el cuerpo del mensaje de MSMQ, el cuerpo permanece cifrado en el almacén de MSMQ.Esto protege el mensaje de la divulgación no deseada del mensaje.Tenga en cuenta que el propio MSMQ no sabe si el mensaje que transporta está cifrado.  
+ Dado que el mensaje de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se lleva como carga útil en el cuerpo del mensaje de MSMQ, el cuerpo permanece cifrado en el almacén de MSMQ. Esto protege el mensaje de la divulgación no deseada del mensaje. Tenga en cuenta que el propio MSMQ no sabe si el mensaje que transporta está cifrado.  
   
- El ejemplo muestra cómo se puede utilizar la autenticación mutua en el nivel de mensaje con MSMQ.Los certificados se intercambian fuera de banda.Siempre es el caso de la aplicación con cola porque el servicio y el cliente no tienen que estar al mismo tiempo conectados y ejecutándose.  
+ El ejemplo muestra cómo se puede utilizar la autenticación mutua en el nivel de mensaje con MSMQ. Los certificados se intercambian fuera de banda. Siempre es el caso de la aplicación con cola porque el servicio y el cliente no tienen que estar al mismo tiempo conectados y ejecutándose.  
   
-## Descripción  
- El código de servicio y de cliente del ejemplo es el mismo que el ejemplo [Enlace MSMQ por transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) pero con una única diferencia.En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.  
+## <a name="description"></a>Descripción  
+ El código de cliente y el servicio de ejemplo son los mismos que los [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo con una diferencia. En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.  
   
 ```  
 // Define a service contract.   
@@ -114,9 +117,9 @@ public interface IOrderProcessor
   
  Para asegurarse de que el mensaje se protege utilizando el token necesario para identificar el servicio y el cliente, App.config contiene la información de la credencial.  
   
- La configuración del cliente especifica el certificado de servicio para autenticar el servicio.Utiliza su almacén LocalMachine como almacén de confianza para confiar en la validez del servicio.También especifica el certificado de cliente que está asociado con el mensaje para la autenticación del servicio del cliente.  
+ La configuración del cliente especifica el certificado de servicio para autenticar el servicio. Utiliza su almacén LocalMachine como almacén de confianza para confiar en la validez del servicio. También especifica el certificado de cliente que está asociado con el mensaje para la autenticación del servicio del cliente.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   
@@ -174,10 +177,9 @@ public interface IOrderProcessor
   
  Observe que el modo de seguridad se ha definido en "Message" y que ClientCredentialType se ha establecido en "Certificate".  
   
- La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio.El nombre del asunto del certificado del servidor se especifica en el atributo `findValue` en [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ La configuración de servicio incluye un comportamiento de servicio que especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre de sujeto del certificado de servidor se especifica en el `findValue` de atributo en el [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
-```  
-  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   
@@ -249,7 +251,6 @@ public interface IOrderProcessor
   </system.serviceModel>  
   
 </configuration>  
-  
 ```  
   
  El ejemplo muestra cómo controlar la autenticación mediante la configuración y cómo obtener la identidad del autor de la llamada desde el contexto de seguridad, tal y como se muestra en el siguiente código de ejemplo:  
@@ -278,7 +279,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- Cuando se ejecuta, el código de servicio muestra la identificación del cliente.Se proporciona a continuación la siguiente salida de ejemplo desde el código de servicio:  
+ Cuando se ejecuta, el código de servicio muestra la identificación del cliente. Se proporciona a continuación la siguiente salida de ejemplo desde el código de servicio:  
   
 ```  
 The service is ready.  
@@ -294,30 +295,28 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
         Order status: Pending  
 ```  
   
-## Comentarios  
+## <a name="comments"></a>Comentarios  
   
 -   Crear el certificado del cliente.  
   
-     La línea siguiente en el archivo por lotes crea el certificado de cliente.El nombre de cliente especificado se utiliza en el nombre del asunto del certificado creado.El certificado se guarda en el almacén `My`, en la ubicación de almacenamiento `CurrentUser`.  
+     La línea siguiente en el archivo por lotes crea el certificado de cliente. El nombre de cliente especificado se utiliza en el nombre del asunto del certificado creado. El certificado se guarda en el almacén `My`, en la ubicación de almacenamiento `CurrentUser`.  
   
     ```  
     echo ************  
     echo making client cert  
     echo ************  
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-  
     ```  
   
 -   Instalar el certificado del cliente en el almacén de certificados de confianza del servidor.  
   
-     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma.Para que un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] otorgue confianza a un certificado instalado en el almacén TrustedPeople, el modo de validación de certificado del cliente debe establecerse en el valor `PeerOrChainTrust` o `PeerTrust`.Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.  
+     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] otorgue confianza a un certificado instalado en el almacén TrustedPeople, el modo de validación de certificado del cliente debe establecerse en el valor `PeerOrChainTrust` o `PeerTrust`. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo puede hacerse usando un archivo de configuración.  
   
     ```  
     echo ************  
     echo copying client cert to server's LocalMachine store  
     echo ************  
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
-  
     ```  
   
 -   Crear el certificado de servidor.  
@@ -334,26 +333,26 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     La variable %SERVER\_NAME% especifica el nombre del servidor.El certificado se almacena en el almacén LocalMachine.Si el archivo por lotes de la instalación se ejecuta con un argumento de servicio \(como `setup.bat service`\), %SERVER\_NAME% contiene el nombre de dominio completo del equipo.De lo contrario, de forma predeterminada es localhost.  
+     La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes de instalación se ejecuta con un argumento de servicio (como por ejemplo, `setup.bat service`) % SERVER_NAME % contiene el nombre de dominio completo del equipo. En caso contrario, el valor predeterminado es localhost  
   
 -   Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.  
   
-     La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente.Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
+     La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
     > [!NOTE]
-    >  Si está utilizando una edición que no esté en inglés americanode Microsoft Windows, debe modificar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\\NETWORK SERVICE" con su equivalente regional.  
+    >  Si está utilizando una edición que no esté en inglés de EE. UU. de Microsoft Windows, debe modificar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

@@ -1,30 +1,33 @@
 ---
-title: "Descripci&#243;n del servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Descripción del servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d3251d960b00d34c08826957e0db9c30bd5aae3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Descripci&#243;n del servicio
-El ejemplo Descripción del servicio muestra cómo un servicio puede recuperar su información de descripción de servicio en el tiempo de ejecución.El ejemplo está basado en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md), con una operación de servicio adicional definida para devolver información descriptiva sobre el servicio.La información que se devuelve muestra las direcciones base y extremos para el servicio.El servicio proporciona esta información mediante las clases <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> y <xref:System.ServiceModel.Description.ServiceDescription>.  
+# <a name="service-description"></a>Descripción del servicio
+El ejemplo Descripción del servicio muestra cómo un servicio puede recuperar su información de descripción de servicio en el tiempo de ejecución. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), con una operación de servicio adicional definida para devolver información descriptiva sobre el servicio. La información que se devuelve muestra las direcciones base y puntos de conexión para el servicio. El servicio proporciona esta información mediante las clases <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> y <xref:System.ServiceModel.Description.ServiceDescription>.  
   
- En este ejemplo, el cliente es una aplicación de consola \(.exe\) e Internet Information Services \(IIS\) hospeda el servicio.  
+ En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- Este ejemplo tiene una versión modificada del contrato de la calculadora llamado `IServiceDescriptionCalculator`.El contrato define una operación de servicio adicional denominada `GetServiceDescriptionInfo` que devuelve una cadena de varias líneas al cliente que describe la dirección o direcciones base, así como el extremo o extremos para el servicio.  
+ Este ejemplo tiene una versión modificada del contrato de la calculadora llamado `IServiceDescriptionCalculator`. El contrato define una operación de servicio adicional denominada `GetServiceDescriptionInfo` que devuelve una cadena de varias líneas al cliente que describe la dirección o direcciones base, así como el extremo o extremos para el servicio.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -41,10 +44,9 @@ public interface IServiceDescriptionCalculator
     [OperationContract]  
     string GetServiceDescriptionInfo();  
 }  
-  
 ```  
   
- El código de implementación para `GetServiceDescriptionInfo` utiliza <xref:System.ServiceModel.Description.ServiceDescription> para enumerar los extremos del servicio.Dado que los extremos de servicio pueden tener direcciones relativas, muestra primero una lista de direcciones base para el servicio.Para obtener toda esta información, el código obtiene su contexto de operación mediante <xref:System.ServiceModel.OperationContext.Current%2A>.<xref:System.ServiceModel.ServiceHost> y su objeto <xref:System.ServiceModel.Description.ServiceDescription> se recupera del contexto de la operación.Para hacer una lista de los extremos base para el servicio, el código recorre en iteración la colección <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> del host del servicio.Para hacer una lista de los extremos de servicio para el servicio, el código recorre en iteración la colección de extremos de la descripción del servicio.  
+ El código de implementación para `GetServiceDescriptionInfo` utiliza <xref:System.ServiceModel.Description.ServiceDescription> para enumerar los extremos del servicio. Dado que los extremos de servicio pueden tener direcciones relativas, muestra primero una lista de direcciones base para el servicio. Para obtener toda esta información, el código obtiene su contexto de operación mediante <xref:System.ServiceModel.OperationContext.Current%2A>. <xref:System.ServiceModel.ServiceHost> y su objeto <xref:System.ServiceModel.Description.ServiceDescription> se recupera del contexto de la operación. Para hacer una lista de los extremos base para el servicio, el código recorre en iteración la colección <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> del host del servicio. Para hacer una lista de los extremos de servicio para el servicio, el código recorre en iteración la colección de extremos de la descripción del servicio.  
   
 ```  
 public string GetServiceDescriptionInfo()  
@@ -69,10 +71,9 @@ public string GetServiceDescriptionInfo()
     }  
      return info;  
 }  
-  
 ```  
   
- Al ejecutar el ejemplo, se ven las operaciones de la calculadora y después la información del servicio devuelta por la operación `GetServiceDescriptionInfo`.Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ Al ejecutar el ejemplo, se ven las operaciones de la calculadora y después la información del servicio devuelta por la operación `GetServiceDescriptionInfo`. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ```  
 Add(15,3) = 18  
@@ -94,21 +95,21 @@ Service endpoints:
 Press <ENTER> to terminate client.  
 ```  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración con un único equipo o con varios, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

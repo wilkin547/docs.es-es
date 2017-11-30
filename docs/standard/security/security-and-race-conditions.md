@@ -1,36 +1,37 @@
 ---
-title: "Security and Race Conditions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], race conditions"
-  - "race conditions"
-  - "secure coding, race conditions"
-  - "code security, race conditions"
+title: Seguridad y condiciones de carrera
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security [.NET Framework], race conditions
+- race conditions
+- secure coding, race conditions
+- code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c092113f670c5799d98dcb13c9c713bbd1a47fb6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Security and Race Conditions
-Otra de las áreas que preocupan es la posibilidad de los ataques mediante condiciones de carrera en las vulnerabilidades de seguridad.  Esto puede suceder de varias formas.  En los subtemas que aparecen a continuación se describen los principales riesgos que debe evitar el programador.  
+# <a name="security-and-race-conditions"></a>Seguridad y condiciones de carrera
+Otra área de preocupación es la posibilidad de vulnerabilidades de seguridad utilizado por las condiciones de carrera. Hay varias maneras en que esto puede ocurrir. Los subtemas siguientes describen algunos de los principales riesgos que debe evitar el programador.  
   
-## Condiciones de carrera en el método Dispose  
- Si el método **Dispose** de una clase \(para obtener más información, vea [Garbage Collection](../../../docs/standard/garbage-collection/index.md)\) no está sincronizado, es posible que el código de limpieza de **Dispose** se ejecute más de una vez, tal como se muestra en el ejemplo siguiente.  
+## <a name="race-conditions-in-the-dispose-method"></a>Condiciones de carrera en el método Dispose  
+ Si una clase **Dispose** (método) (para obtener más información, consulte [recolección](../../../docs/standard/garbage-collection/index.md)) no es sincronizada, es posible que ese código de limpieza dentro de **Dispose** se puede ejecutar más de vez, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Sub Dispose()  
@@ -39,7 +40,6 @@ Sub Dispose()
        myObj = Nothing  
     End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -53,13 +53,13 @@ void Dispose()
 }  
 ```  
   
- Como la implementación del método **Dispose** no está sincronizada, es posible que un primer subproceso llame a `Cleanup` y que, a continuación, lo haga un segundo subproceso antes de establecer el valor de `_myObj` en **null**.  En función de lo que ocurra cuando se ejecute el código `Cleanup`, esto puede convertirse en un problema de seguridad.  El problema principal con las implementaciones **Dispose** que no están sincronizadas es la utilización de identificadores de recursos como archivos.  Una eliminación incorrecta puede provocar la utilización del identificador erróneo, que con frecuencia crea puntos vulnerables en la seguridad.  
+ Dado que esto **Dispose** implementación no está sincronizada, es posible que `Cleanup` al primer subproceso y, a continuación, un segundo subproceso antes de llamar a `_myObj` está establecido en **null**. Si se trata de un problema de seguridad depende de lo que sucede cuando el `Cleanup` ejecuta el código. Un problema importante con sincronizado **Dispose** implementaciones implica el uso de identificadores de recursos como archivos. Eliminación incorrecta puede provocar el identificador incorrecto para usarse, lo que conduce a menudo a vulnerabilidades de seguridad.  
   
-## Condiciones de carrera en constructores  
- En algunas aplicaciones, es posible que otros subprocesos tengan acceso a miembros de clase antes de que finalice la ejecución de sus constructores.  En el caso de que ocurra esto, debe revisar todos los constructores de clases para asegurarse de que no hay ningún problema de seguridad, o sincronizar los subprocesos si es necesario.  
+## <a name="race-conditions-in-constructors"></a>Condiciones de carrera en constructores  
+ En algunas aplicaciones, es posible que otros subprocesos tener acceso a los miembros de clase antes de que finalice la ejecución sus constructores de clase. Debe revisar todos los constructores de clase para asegurarse de que no hay ningún problema de seguridad, si esto debería ocurrir o sincronizar los subprocesos si es necesario.  
   
-## Condiciones de carrera con objetos en caché  
- El código que almacena en caché la información relacionada con la seguridad o que utiliza la operación [Assert](../../../docs/framework/misc/using-the-assert-method.md) de seguridad de acceso del código puede también ser vulnerable a condiciones de carrera si otras partes de la clase no están sincronizadas correctamente, como se muestra en el ejemplo siguiente.  
+## <a name="race-conditions-with-cached-objects"></a>Condiciones de carrera con objetos en caché  
+ Código que almacena en caché información de seguridad o que utiliza la seguridad de acceso del código [Assert](../../../docs/framework/misc/using-the-assert-method.md) operación podría también ser vulnerable a condiciones de carrera si otras partes de la clase no están sincronizadas correctamente, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -78,7 +78,6 @@ Sub DoOtherWork()
         DoSomethingTrusted()  
     End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -105,12 +104,12 @@ void DoOtherWork()
 }  
 ```  
   
- Si hay otras rutas de acceso a `DoOtherWork` que se pueden llamar desde otro subproceso con el mismo objeto, un llamador que no sea de confianza puede conseguir pasar una petición.  
+ Si hay otras rutas de acceso a `DoOtherWork` que se pueden llamar desde otro subproceso con el mismo objeto, un llamador no es de confianza puede posponerse más allá de una petición.  
   
- Si el código detecta información relacionada con la seguridad, asegúrese de que revisa este punto vulnerable.  
+ Si el código almacena en caché información de seguridad, asegúrese de que revisarlo para esta vulnerabilidad.  
   
-## Condiciones de carrera en finalizadores  
- Las condiciones de carrera también se producen en un objeto que hace referencia a un recurso estático o no administrado que, posteriormente, libera en su finalizador.  Si hay varios objetos que comparten un recurso que se manipula en un finalizador de la clase, se deben sincronizar los accesos a ese recurso en todos los objetos.  
+## <a name="race-conditions-in-finalizers"></a>Condiciones de anticipación en finalizadores  
+ También pueden producirse condiciones de carrera en un objeto que hace referencia a un recurso estático o no administrado que, a continuación, libera en su finalizador. Si varios objetos que comparten un recurso que se ha manipulado de finalizador de la clase, los objetos deben sincronizar todo el acceso a ese recurso.  
   
-## Vea también  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

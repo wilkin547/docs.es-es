@@ -1,41 +1,44 @@
 ---
-title: "C&#243;mo: Personalizar el tama&#241;o de un control de posici&#243;n en un objeto ScrollBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "personalizar tamaño del control de posición"
-  - "ScrollBar (control)"
-  - "tamaño del control de posición"
+title: "Cómo: Personalizar el tamaño de un control de posición en un objeto ScrollBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ScrollBar control [WPF]
+- customizing thumb size [WPF]
+- thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c550aa425eedf4b434e061f05326bf6a6de91f9d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Personalizar el tama&#241;o de un control de posici&#243;n en un objeto ScrollBar
-En este tema se explica cómo establecer el control <xref:System.Windows.Controls.Primitives.Thumb> de un objeto <xref:System.Windows.Controls.Primitives.ScrollBar> en un tamaño fijo, y cómo especificar un tamaño mínimo para el control <xref:System.Windows.Controls.Primitives.Thumb> de un objeto <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+# <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Cómo: Personalizar el tamaño de un control de posición en un objeto ScrollBar
+Este tema explica cómo establecer el <xref:System.Windows.Controls.Primitives.Thumb> de un <xref:System.Windows.Controls.Primitives.ScrollBar> a un tamaño fijo y cómo especificar un tamaño mínimo para el <xref:System.Windows.Controls.Primitives.Thumb> de un <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-## Descripción  
- En el ejemplo siguiente se crea un objeto <xref:System.Windows.Controls.Primitives.ScrollBar> que tiene un control <xref:System.Windows.Controls.Primitives.Thumb> con un tamaño fijo.  En el ejemplo se establece la propiedad <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> del control <xref:System.Windows.Controls.Primitives.Thumb> en <xref:System.Double.NaN> y se establece el alto de <xref:System.Windows.Controls.Primitives.Thumb>.  Para crear un objeto <xref:System.Windows.Controls.Primitives.ScrollBar> horizontal con un control <xref:System.Windows.Controls.Primitives.Thumb> de ancho fijo, establezca el ancho de <xref:System.Windows.Controls.Primitives.Thumb>.  
+## <a name="description"></a>Descripción  
+ En el ejemplo siguiente se crea un <xref:System.Windows.Controls.Primitives.ScrollBar> que tiene un <xref:System.Windows.Controls.Primitives.Thumb> con un tamaño fijo. El ejemplo se establece la <xref:System.Windows.Controls.Primitives.Track.ViewportSize%2A> propiedad de la <xref:System.Windows.Controls.Primitives.Thumb> a <xref:System.Double.NaN> y establece el alto de la <xref:System.Windows.Controls.Primitives.Thumb>.  Para crear una horizontal <xref:System.Windows.Controls.Primitives.ScrollBar> con un <xref:System.Windows.Controls.Primitives.Thumb> que tiene un ancho fijo, establezca el ancho de la <xref:System.Windows.Controls.Primitives.Thumb>.  
   
-## Código  
- [!code-xml[ScrollBarCustomThumbSize#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#1)]  
+## <a name="code"></a>Código  
+ [!code-xaml[ScrollBarCustomThumbSize#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#1)]  
   
-## Descripción  
- En el ejemplo siguiente se crea un objeto <xref:System.Windows.Controls.Primitives.ScrollBar> que tiene un control <xref:System.Windows.Controls.Primitives.Thumb> con un tamaño mínimo.  En el ejemplo siguiente se establece el valor de <xref:System.Windows.SystemParameters.VerticalScrollBarButtonHeightKey%2A>.  Para crear un objeto <xref:System.Windows.Controls.Primitives.ScrollBar> horizontal con un control <xref:System.Windows.Controls.Primitives.Thumb> de ancho mínimo, establezca <xref:System.Windows.SystemParameters.HorizontalScrollBarButtonWidthKey%2A>.  
+## <a name="description"></a>Descripción  
+ En el ejemplo siguiente se crea un <xref:System.Windows.Controls.Primitives.ScrollBar> que tiene un <xref:System.Windows.Controls.Primitives.Thumb> con un tamaño mínimo. En el ejemplo se establece el valor de <xref:System.Windows.SystemParameters.VerticalScrollBarButtonHeightKey%2A>. Para crear una horizontal <xref:System.Windows.Controls.Primitives.ScrollBar> con un <xref:System.Windows.Controls.Primitives.Thumb> que tiene un ancho mínimo, establezca el <xref:System.Windows.SystemParameters.HorizontalScrollBarButtonWidthKey%2A>.  
   
-## Código  
- [!code-xml[ScrollBarCustomThumbSize#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#2)]  
+## <a name="code"></a>Código  
+ [!code-xaml[ScrollBarCustomThumbSize#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#2)]  
   
-## Vea también  
- [Estilos y plantillas de ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
+## <a name="see-also"></a>Vea también  
+ [ScrollBar Styles and Templates](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md) (Estilos y plantillas de ScrollBar)

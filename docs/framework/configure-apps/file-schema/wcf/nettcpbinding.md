@@ -5,26 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-helpviewer_keywords:
-- netTcpBinding Element
+helpviewer_keywords: netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cfa05d2ced97c9c666453ea5ecaf7144add5e23a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 9928a845545c2328ed86d182ceb37381522d70ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Especifica un enlace seguro, confiable y optimizado, adecuado para la comunicación entre equipos. De forma predeterminada, genera una pila de comunicación en tiempo de ejecución con Seguridad de Windows para la seguridad y autenticación de mensajes, TCP para la entrega de mensajes y codificación binaria de mensajes.  
@@ -158,10 +152,9 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.NetTcpBinding>   
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.NetTcpBinding>  
+ <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
+ [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)
-

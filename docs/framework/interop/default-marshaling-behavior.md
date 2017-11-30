@@ -5,30 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, default
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4fad3c0021c14d11cd88a209c7a56cdb58e75fe6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7fe48904a59751da3f4089153b32ac68cc6f4b6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -87,7 +83,7 @@ BSTR MethodOne (BSTR b) {
   
 -   Para invocación de plataforma, se serializa un delegado como un puntero de función no administrada de forma predeterminada.  
   
--   Para interoperabilidad COM, se serializa un delegado como una interfaz COM de tipo **_Delegate** de forma predeterminada. La interfaz **_Delegate** se define en la biblioteca de tipos Mscorlib.tlb y contiene el método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName>, que permite llamar al método al que hace referencia el delegado.  
+-   Para interoperabilidad COM, se serializa un delegado como una interfaz COM de tipo **_Delegate** de forma predeterminada. La interfaz **_Delegate** se define en la biblioteca de tipos Mscorlib.tlb y contiene el método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, que permite llamar al método al que hace referencia el delegado.  
   
  En la siguiente tabla se muestran las opciones de serialización para el tipo de datos de delegado administrado. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para serializar los delegados.  
   
@@ -365,34 +361,34 @@ interface _Graphics {
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Tipos de valor System  
- El espacio de nombres <xref:System> tiene varios tipos de valor que representan la forma de conversión boxing de los tipos primitivos en runtime. Por ejemplo, la estructura <xref:System.Int32?displayProperty=fullName> de tipo de valor representa la forma de conversión boxing de **ELEMENT_TYPE_I4**. En lugar de serializar estos tipos como estructuras, como otros tipos con formato, se serializan de la misma forma que los tipos primitivos a los que aplican conversión boxing. Por tanto, **System.Int32** se serializa como **ELEMENT_TYPE_I4** en lugar de como una estructura que contiene un único miembro de tipo **long**. La tabla siguiente contiene una lista de los tipos de valor en el espacio de nombres **System** que son representaciones de conversión boxing de tipos primitivos.  
+ El espacio de nombres <xref:System> tiene varios tipos de valor que representan la forma de conversión boxing de los tipos primitivos en runtime. Por ejemplo, la estructura <xref:System.Int32?displayProperty=nameWithType> de tipo de valor representa la forma de conversión boxing de **ELEMENT_TYPE_I4**. En lugar de serializar estos tipos como estructuras, como otros tipos con formato, se serializan de la misma forma que los tipos primitivos a los que aplican conversión boxing. Por tanto, **System.Int32** se serializa como **ELEMENT_TYPE_I4** en lugar de como una estructura que contiene un único miembro de tipo **long**. La tabla siguiente contiene una lista de los tipos de valor en el espacio de nombres **System** que son representaciones de conversión boxing de tipos primitivos.  
   
 |Tipo de valor System|Tipo de elemento|  
 |-----------------------|------------------|  
-|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT_TYPE_BOOLEAN**|  
-|<xref:System.SByte?displayProperty=fullName>|**ELEMENT_TYPE_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**ELEMENT_TYPE_UI1**|  
-|<xref:System.Char?displayProperty=fullName>|**ELEMENT_TYPE_CHAR**|  
-|<xref:System.Int16?displayProperty=fullName>|**ELEMENT_TYPE_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT_TYPE_U2**|  
-|<xref:System.Int32?displayProperty=fullName>|**ELEMENT_TYPE_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT_TYPE_U4**|  
-|<xref:System.Int64?displayProperty=fullName>|**ELEMENT_TYPE_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT_TYPE_U8**|  
-|<xref:System.Single?displayProperty=fullName>|**ELEMENT_TYPE_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**ELEMENT_TYPE_R8**|  
-|<xref:System.String?displayProperty=fullName>|**ELEMENT_TYPE_STRING**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT_TYPE_I**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT_TYPE_U**|  
+|<xref:System.Boolean?displayProperty=nameWithType>|**ELEMENT_TYPE_BOOLEAN**|  
+|<xref:System.SByte?displayProperty=nameWithType>|**ELEMENT_TYPE_I1**|  
+|<xref:System.Byte?displayProperty=nameWithType>|**ELEMENT_TYPE_UI1**|  
+|<xref:System.Char?displayProperty=nameWithType>|**ELEMENT_TYPE_CHAR**|  
+|<xref:System.Int16?displayProperty=nameWithType>|**ELEMENT_TYPE_I2**|  
+|<xref:System.UInt16?displayProperty=nameWithType>|**ELEMENT_TYPE_U2**|  
+|<xref:System.Int32?displayProperty=nameWithType>|**ELEMENT_TYPE_I4**|  
+|<xref:System.UInt32?displayProperty=nameWithType>|**ELEMENT_TYPE_U4**|  
+|<xref:System.Int64?displayProperty=nameWithType>|**ELEMENT_TYPE_I8**|  
+|<xref:System.UInt64?displayProperty=nameWithType>|**ELEMENT_TYPE_U8**|  
+|<xref:System.Single?displayProperty=nameWithType>|**ELEMENT_TYPE_R4**|  
+|<xref:System.Double?displayProperty=nameWithType>|**ELEMENT_TYPE_R8**|  
+|<xref:System.String?displayProperty=nameWithType>|**ELEMENT_TYPE_STRING**|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_I**|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|**ELEMENT_TYPE_U**|  
   
  Hay algunos tipos de valor del espacio de nombres **System** que se tratan de forma diferente. Dado que el código no administrado ya tiene formatos establecidos para estos tipos, la serialización tiene reglas especiales para serializarlos. En la tabla siguiente se enumeran los tipos de valor especiales del espacio de nombres **System**, así como el tipo no administrado al que se serializan.  
   
 |Tipo de valor System|Tipo IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=fullName>|**DATE**|  
-|<xref:System.Decimal?displayProperty=fullName>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=fullName>|**GUID**|  
-|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE_COLOR**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  El código siguiente muestra la definición de los tipos no administrados **DATE**, **GUID**, **DECIMAL** y **OLE_COLOR** de la biblioteca de tipos Stdole2.  
   
@@ -451,9 +447,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)   
- [Serialización predeterminada para matrices](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
- [Serialización predeterminada para objetos](../../../docs/framework/interop/default-marshaling-for-objects.md)   
+ [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)  
+ [Serialización predeterminada para matrices](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
+ [Serialización predeterminada para objetos](../../../docs/framework/interop/default-marshaling-for-objects.md)  
  [Serialización predeterminada para cadenas](../../../docs/framework/interop/default-marshaling-for-strings.md)
-

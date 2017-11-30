@@ -1,35 +1,38 @@
 ---
-title: "712 - DispatchMessageStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 712 - DispatchMessageStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e1894a6-9c44-4533-aaec-64063a2cbb06
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6ad264da95bafde075b1f57e025f17a851865bec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 712 - DispatchMessageStop
-## Propiedades  
+# <a name="712---dispatchmessagestop"></a>712 - DispatchMessageStop
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|712|  
 |Palabras clave|ServiceModel|  
 |Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Este evento se genera cuando el envío del mensaje se ha completado.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  Distribución de mensajes completada.  
   
-## Detalles
+## <a name="details"></a>Detalles

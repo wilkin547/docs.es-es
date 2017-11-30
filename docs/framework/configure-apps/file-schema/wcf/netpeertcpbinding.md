@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- netPeerBinding element
+helpviewer_keywords: netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: db7fcfcd4d86bd3ed2bfc7aff033684a0ea14d74
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: bf978034e25d0d644803eed98fc73a60952d817b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 Define un enlace para la mensajería TCP concreta del canal del par.  
@@ -114,12 +111,11 @@ Define un enlace para la mensajería TCP concreta del canal del par.
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.NetPeerTcpBinding>   
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<enlace >](../../../../../docs/framework/misc/binding.md)   
- [NET TCP del mismo nivel](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)   
+ <xref:System.ServiceModel.NetPeerTcpBinding>  
+ <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
+ [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<enlace >](../../../../../docs/framework/misc/binding.md)  
+ [NET TCP del mismo nivel](http://msdn.microsoft.com/en-us/31f4db66-edb2-40a6-b92a-14098e92acae)  
  [Redes de punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-

@@ -1,23 +1,29 @@
 ---
-title: "ChildViews y relaciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Objetos ChildView y Relation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 22c25a2633695b4b688a7185b6c612d918f12e2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# ChildViews y relaciones
-Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria.  Por ejemplo, en el código siguiente se muestran **Categories** y los **Products** relacionados en orden alfabético por **CategoryName** y **ProductName**.  
+# <a name="childviews-and-relations"></a>Objetos ChildView y Relation
+Si existe una relación entre tablas de un <xref:System.Data.DataSet>, puede crear una <xref:System.Data.DataView> que contenga filas de la tabla secundaria relacionada mediante el método <xref:System.Data.DataRowView.CreateChildView%2A> de la <xref:System.Data.DataRowView> para las filas de la tabla primaria. Por ejemplo, el código siguiente muestra **categorías** y sus relacionados **productos** en orden alfabético por **CategoryName** y **ProductName** .  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -47,7 +53,6 @@ For Each catDRV In catView
     Console.WriteLine(vbTab & prodDRV("ProductName"))  
   Next  
 Next  
-  
 ```  
   
 ```csharp  
@@ -78,9 +83,9 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## Vea también  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

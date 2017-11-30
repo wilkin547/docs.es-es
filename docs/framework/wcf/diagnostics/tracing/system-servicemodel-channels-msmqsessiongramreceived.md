@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.MsmqSessiongramReceived | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqSessiongramReceived
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 66cfc20b-3bf0-48f6-a715-d82d88f5e71e
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 91ca35c7255b3f6c16e92d7a13eb32e294b8a7c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqSessiongramReceived
+# <a name="systemservicemodelchannelsmsmqsessiongramreceived"></a>System.ServiceModel.Channels.MsmqSessiongramReceived
 System.ServiceModel.Channels.MsmqSessiongramReceived  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Sesión de transporte de MSMQ recibida.  
   
-## Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Vea también  
+ [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

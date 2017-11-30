@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: 866294ebef7d16848f4fde28c05c6b3455969893
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>Ejemplos de serialización de .NET Framework
 En esta sección se muestra cómo serializar los objetos en .NET Framework.  
@@ -43,4 +42,3 @@ En esta sección se muestra cómo serializar los objetos en .NET Framework.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Serialización](../../../docs/standard/serialization/index.md)
-
